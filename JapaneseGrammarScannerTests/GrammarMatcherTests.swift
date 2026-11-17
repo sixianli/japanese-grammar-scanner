@@ -118,3 +118,34 @@ final class FavoritesStoreTests: XCTestCase {
         XCTAssertFalse(store.isFavorite("tai"))
     }
 }
+
+final class LocalizationTests: XCTestCase {
+    func testLanguageDetection() {
+        XCTAssertEqual(ContentLanguage.from(identifier: "zh-Hans"), .zhHans)
+        XCTAssertEqual(ContentLanguage.from(identifier: "zh-Hant-TW"), .zhHant)
+        XCTAssertEqual(ContentLanguage.from(identifier: "zh-HK"), .zhHant)
+        XCTAssertEqual(ContentLanguage.from(identifier: "ko-KR"), .ko)
+        XCTAssertEqual(ContentLanguage.from(identifier: "es-MX"), .es)
+        XCTAssertEqual(ContentLanguage.from(identifier: "vi"), .vi)
+        XCTAssertEqual(ContentLanguage.from(identifier: "en-GB"), .en)
+        XCTAssertEqual(ContentLanguage.from(identifier: "fr"), .en, "不支持的语言回退到英语")
+    }
+
+    /// 每种语言的讲解都必须完整覆盖所有语法点（不能回退显示简体中文）。
+    func testEveryLanguageLocalizesEveryPoint() {
+        let base = GrammarLibrary(language: .zhHans)
+        for lang in ContentLanguage.allCases where lang != .zhHans {
+            let lib = GrammarLibrary(language: lang)
+            XCTAssertEqual(lib.points.count, base.points.count, "\(lang)")
+            for p in lib.points {
+                guard let b = base.point(id: p.id) else { continue }
+                XCTAssertNotEqual(p.meaning, b.meaning, "\(lang.rawValue) 缺少 \(p.id) 的讲解")
+                XCTAssertNotEqual(p.etymology, b.etymology, "\(lang.rawValue) 缺少 \(p.id) 的词源")
+                XCTAssertEqual(p.examples.map(\.ja), b.examples.map(\.ja), "日语例句不应被翻译")
+                if lang != .zhHant {
+                    XCTAssertNotEqual(p.examples.first?.translation, b.examples.first?.translation, "\(lang.rawValue) \(p.id) 例句未翻译")
+                }
+            }
+        }
+    }
+}

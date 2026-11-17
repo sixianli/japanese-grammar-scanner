@@ -25,10 +25,12 @@ struct LibraryView: View {
                 ForEach(availableLevels.filter { levelFilter == nil || $0 == levelFilter }) { level in
                     let items = filtered.filter { $0.level == level }
                     if !items.isEmpty {
-                        Section("\(level.rawValue)（\(items.count)）") {
+                        Section {
                             ForEach(items) { p in
                                 NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p) }
                             }
+                        } header: {
+                            Text(verbatim: "\(level.rawValue) (\(items.count))")
                         }
                     }
                 }

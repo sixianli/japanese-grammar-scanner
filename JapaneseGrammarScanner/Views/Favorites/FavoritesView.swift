@@ -27,7 +27,7 @@ struct FavoritesView: View {
                     .toolbar { EditButton() }
                 }
             }
-            .navigationTitle("收藏（\(favorites.ids.count)）")
+            .navigationTitle(Text("收藏") + Text(verbatim: favorites.ids.isEmpty ? "" : " (\(favorites.ids.count))"))
             .withAppRoutes()
         }
     }

@@ -18,7 +18,7 @@ struct GrammarChooserModifier: ViewModifier {
         ) { c in
             ForEach(c.grammarIDs, id: \.self) { id in
                 if let p = library.point(id: id) {
-                    Button("\(p.title)（\(p.level.rawValue)）") { onSelect(id) }
+                    Button { onSelect(id) } label: { Text(verbatim: "\(p.title) (\(p.level.rawValue))") }
                 }
             }
             Button("取消", role: .cancel) { cluster = nil }

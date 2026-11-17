@@ -103,7 +103,7 @@ struct ScanResultView: View {
         } else {
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
-                    Text(ids.isEmpty ? "没有识别到收录的语法点" : "识别到 \(ids.count) 个语法点")
+                    (ids.isEmpty ? Text("没有识别到收录的语法点") : Text("识别到 \(ids.count) 个语法点"))
                         .font(.title3.bold())
                     Spacer()
                     LevelLegend(levels: Array(Set(ids.compactMap { library.point(id: $0)?.level })).sorted())
@@ -177,7 +177,7 @@ struct ScanResultView: View {
         let matcher = library.matcher
         let outcome: Result<ScanResult, Error> = await Task.detached(priority: .userInitiated) { () -> Result<ScanResult, Error> in
             guard let cg = image.cgImage else {
-                return .failure(NSError(domain: "Scan", code: 1, userInfo: [NSLocalizedDescriptionKey: "无法读取图片"]))
+                return .failure(NSError(domain: "Scan", code: 1, userInfo: [NSLocalizedDescriptionKey: String(localized: "无法读取图片")]))
             }
             do {
                 let ocr = try TextRecognizer.recognize(cgImage: cg, orientation: .init(image.imageOrientation))

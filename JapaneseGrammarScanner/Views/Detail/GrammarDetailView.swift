@@ -43,7 +43,7 @@ struct GrammarDetailView: View {
                         ForEach(Array(p.examples.enumerated()), id: \.offset) { _, ex in
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(highlightedExample(ex.ja, point: p)).font(.title3)
-                                Text(ex.zh).font(.subheadline).foregroundStyle(.secondary)
+                                Text(ex.translation).font(.subheadline).foregroundStyle(.secondary)
                             }
                         }
                     }
@@ -70,7 +70,7 @@ struct GrammarDetailView: View {
                     Image(systemName: favorites.isFavorite(p.id) ? "star.fill" : "star")
                         .foregroundStyle(favorites.isFavorite(p.id) ? Color.yellow : Color.accentColor)
                 }
-                .accessibilityLabel(favorites.isFavorite(p.id) ? "取消收藏" : "收藏")
+                .accessibilityLabel(favorites.isFavorite(p.id) ? Text("取消收藏") : Text("收藏"))
             }
         }
     }
@@ -128,7 +128,7 @@ struct GrammarDetailView: View {
 }
 
 private struct DetailSection<Content: View>: View {
-    let title: String
+    let title: LocalizedStringKey
     let icon: String
     @ViewBuilder let content: Content
 
@@ -145,7 +145,7 @@ private struct DetailSection<Content: View>: View {
 }
 
 private struct LabeledBlock<Content: View>: View {
-    let label: String
+    let label: LocalizedStringKey
     @ViewBuilder let content: Content
 
     var body: some View {
@@ -166,7 +166,7 @@ private struct BulletList: View {
         VStack(alignment: .leading, spacing: 8) {
             ForEach(Array(items.enumerated()), id: \.offset) { _, item in
                 HStack(alignment: .firstTextBaseline, spacing: 8) {
-                    Text("•").foregroundStyle(.secondary)
+                    Text(verbatim: "•").foregroundStyle(.secondary)
                     Text(item)
                 }
             }

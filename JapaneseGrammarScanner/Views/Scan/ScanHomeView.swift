@@ -63,7 +63,7 @@ struct ScanHomeView: View {
         }
     }
 
-    private func messageView(icon: String, text: String, showSettings: Bool) -> some View {
+    private func messageView(icon: String, text: LocalizedStringKey, showSettings: Bool) -> some View {
         VStack(spacing: 16) {
             Image(systemName: icon).font(.system(size: 44))
             Text(text).multilineTextAlignment(.center)
@@ -86,7 +86,7 @@ struct ScanHomeView: View {
         return VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Image(systemName: "text.viewfinder")
-                Text(ids.isEmpty ? "将相机对准书本上的日文" : "识别到 \(ids.count) 个语法点，点击高亮或下方标签查看")
+                (ids.isEmpty ? Text("将相机对准书本上的日文") : Text("识别到 \(ids.count) 个语法点，点击高亮或下方标签查看"))
                     .font(.subheadline.weight(.medium))
                 Spacer()
                 if ids.isEmpty {
@@ -163,7 +163,7 @@ struct ScanHomeView: View {
         .padding(.bottom, 24)
     }
 
-    private func controlIcon(_ name: String, label: String) -> some View {
+    private func controlIcon(_ name: String, label: LocalizedStringKey) -> some View {
         VStack(spacing: 4) {
             Image(systemName: name)
                 .font(.title2)

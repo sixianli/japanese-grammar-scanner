@@ -104,6 +104,8 @@ def main() -> int:
             if hit:
                 errors.append(f"{where}: 反例被误命中 ({hit}): {neg}")
 
+    errors += validate_l10n(files)
+
     print(f"共 {len(points)} 个语法点, {len(files)} 个文件")
     if errors:
         print(f"发现 {len(errors)} 个问题:")
@@ -112,6 +114,63 @@ def main() -> int:
         return 1
     print("全部通过 ✅")
     return 0
+
+
+# 只出现在简体/繁体中文、不会出现在日语里的常用字，用于检查译文是否残留中文
+CHINESE_ONLY = set("这們们吗嗎么麼说說时为為个個词詞动语語义義过過还還没沒让讓对對该該种種样樣从從进進这這")
+L10N_LANGS = ["en", "ko", "es", "vi", "zh-Hant"]
+
+
+def validate_l10n(base_files):
+    """校验 l10n/l10n_<lang>_<level>.json 翻译文件与基础文件结构一致。"""
+    errors = []
+    l10n_dir = os.path.join(GRAMMAR_DIR, "l10n")
+    for base_path in base_files:
+        level = os.path.basename(base_path)[len("grammar_"):-len(".json")]
+        with open(base_path, encoding="utf-8") as f:
+            base = json.load(f)
+        for lang in L10N_LANGS:
+            path = os.path.join(l10n_dir, f"l10n_{lang}_{level}.json")
+            name = os.path.basename(path)
+            if not os.path.exists(path):
+                errors.append(f"{name}: 缺少翻译文件")
+                continue
+            try:
+                with open(path, encoding="utf-8") as f:
+                    tr = json.load(f)
+            except Exception as e:  # noqa: BLE001
+                errors.append(f"{name}: JSON 解析失败: {e}")
+                continue
+            if [t.get("id") for t in tr] != [b["id"] for b in base]:
+                errors.append(f"{name}: id 列表/顺序与 {os.path.basename(base_path)} 不一致")
+                continue
+            for b, t in zip(base, tr):
+                where = f"{name}:{b['id']}"
+                for k in ["meaning", "connection", "etymology"]:
+                    if not isinstance(t.get(k), str) or not t[k].strip():
+                        errors.append(f"{where}: 缺少 {k}")
+                for k in ["usage", "scenarios"]:
+                    v = t.get(k)
+                    if not isinstance(v, list) or len(v) != len(b[k]) or not all(isinstance(x, str) and x.strip() for x in v):
+                        errors.append(f"{where}: {k} 条数应为 {len(b[k])}")
+                ex = t.get("examples")
+                if not isinstance(ex, list) or len(ex) != len(b["examples"]) or not all(isinstance(x, str) and x.strip() for x in ex):
+                    errors.append(f"{where}: examples 应为 {len(b['examples'])} 条译文字符串")
+                sim = t.get("similar")
+                if not isinstance(sim, list) or len(sim) != len(b["similar"]):
+                    errors.append(f"{where}: similar 条数应为 {len(b['similar'])}")
+                else:
+                    for s_ in sim:
+                        if not isinstance(s_, dict) or not s_.get("title") or not s_.get("explanation"):
+                            errors.append(f"{where}: similar 需要 title/explanation")
+                if lang != "zh-Hant":
+                    texts = [t.get("meaning", ""), t.get("connection", ""), t.get("etymology", "")]
+                    texts += (t.get("usage") or []) + (t.get("scenarios") or []) + [x for x in (ex or []) if isinstance(x, str)]
+                    texts += [s_.get("explanation", "") + s_.get("title", "") for s_ in (sim or []) if isinstance(s_, dict)]
+                    bad = sorted({c for txt in texts for c in str(txt) if c in CHINESE_ONLY})
+                    if bad:
+                        errors.append(f"{where}: 译文残留中文字符 {''.join(bad)}")
+    return errors
 
 
 if __name__ == "__main__":

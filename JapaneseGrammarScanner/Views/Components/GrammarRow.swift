@@ -16,7 +16,7 @@ struct GrammarRow: View {
                     Text(point.title).font(.headline)
                     LevelBadge(level: point.level)
                     if let occurrences, occurrences > 1 {
-                        Text("×\(occurrences)").font(.caption).foregroundStyle(.secondary)
+                        Text(verbatim: "×\(occurrences)").font(.caption).foregroundStyle(.secondary)
                     }
                 }
                 Text(point.meaning)
@@ -33,7 +33,7 @@ struct GrammarRow: View {
                     .font(.title3)
             }
             .buttonStyle(.borderless)
-            .accessibilityLabel(favorites.isFavorite(point.id) ? "取消收藏" : "收藏")
+            .accessibilityLabel(favorites.isFavorite(point.id) ? Text("取消收藏") : Text("收藏"))
         }
         .padding(.vertical, 4)
     }

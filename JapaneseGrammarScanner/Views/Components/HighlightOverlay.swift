@@ -50,7 +50,7 @@ struct HighlightOverlay: View {
                         )
                         .overlay(alignment: .topTrailing) {
                             if cluster.grammarIDs.count > 1 {
-                                Text("\(cluster.grammarIDs.count)")
+                                Text(verbatim: "\(cluster.grammarIDs.count)")
                                     .font(.system(size: 9, weight: .bold))
                                     .foregroundStyle(.white)
                                     .padding(3)
