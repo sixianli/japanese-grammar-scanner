@@ -8,18 +8,54 @@
 
 /* Begin PBXFileReference section */
 		A10000000000000000000001 /* JapaneseGrammarScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseGrammarScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000001 /* JapaneseGrammarScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JapaneseGrammarScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXContainerItemProxy section */
+		A20000000000000000000009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10000000000000000000009 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10000000000000000000006;
+			remoteInfo = JapaneseGrammarScanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A10000000000000000000010 /* Exceptions for "JapaneseGrammarScanner" folder in "JapaneseGrammarScanner" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A10000000000000000000006 /* JapaneseGrammarScanner */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A10000000000000000000002 /* JapaneseGrammarScanner */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A10000000000000000000010 /* Exceptions for "JapaneseGrammarScanner" folder in "JapaneseGrammarScanner" target */,
+			);
 			path = JapaneseGrammarScanner;
+			sourceTree = "<group>";
+		};
+		A20000000000000000000002 /* JapaneseGrammarScannerTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = JapaneseGrammarScannerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A10000000000000000000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A20000000000000000000003 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				A10000000000000000000002 /* JapaneseGrammarScanner */,
+				A20000000000000000000002 /* JapaneseGrammarScannerTests */,
 				A10000000000000000000005 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				A10000000000000000000001 /* JapaneseGrammarScanner.app */,
+				A20000000000000000000001 /* JapaneseGrammarScannerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +108,29 @@
 			productReference = A10000000000000000000001 /* JapaneseGrammarScanner.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A20000000000000000000006 /* JapaneseGrammarScannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2000000000000000000000B /* Build configuration list for PBXNativeTarget "JapaneseGrammarScannerTests" */;
+			buildPhases = (
+				A20000000000000000000007 /* Sources */,
+				A20000000000000000000003 /* Frameworks */,
+				A20000000000000000000008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2000000000000000000000A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A20000000000000000000002 /* JapaneseGrammarScannerTests */,
+			);
+			name = JapaneseGrammarScannerTests;
+			packageProductDependencies = (
+			);
+			productName = JapaneseGrammarScannerTests;
+			productReference = A20000000000000000000001 /* JapaneseGrammarScannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +143,10 @@
 				TargetAttributes = {
 					A10000000000000000000006 = {
 						CreatedOnToolsVersion = 16.0;
+					};
+					A20000000000000000000006 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = A10000000000000000000006;
 					};
 				};
 			};
@@ -102,12 +167,20 @@
 			projectRoot = "";
 			targets = (
 				A10000000000000000000006 /* JapaneseGrammarScanner */,
+				A20000000000000000000006 /* JapaneseGrammarScannerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A10000000000000000000008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A20000000000000000000008 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -124,7 +197,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A20000000000000000000007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2000000000000000000000A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A10000000000000000000006 /* JapaneseGrammarScanner */;
+			targetProxy = A20000000000000000000009 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A1000000000000000000000C /* Debug */ = {
@@ -185,6 +273,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JapaneseGrammarScanner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "语法扫描";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "需要使用相机扫描书本上的日文，以识别其中的语法点。";
@@ -216,6 +305,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JapaneseGrammarScanner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "语法扫描";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "需要使用相机扫描书本上的日文，以识别其中的语法点。";
@@ -238,6 +328,42 @@
 			};
 			name = Release;
 		};
+		A2000000000000000000000C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.JapaneseGrammarScannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JapaneseGrammarScanner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JapaneseGrammarScanner";
+			};
+			name = Debug;
+		};
+		A2000000000000000000000D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.JapaneseGrammarScannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JapaneseGrammarScanner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JapaneseGrammarScanner";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -255,6 +381,15 @@
 			buildConfigurations = (
 				A1000000000000000000000E /* Debug */,
 				A1000000000000000000000F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2000000000000000000000B /* Build configuration list for PBXNativeTarget "JapaneseGrammarScannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2000000000000000000000C /* Debug */,
+				A2000000000000000000000D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
