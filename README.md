@@ -5,6 +5,7 @@
 - **完全离线、不使用任何大模型**：OCR 使用 Apple 端侧 Vision 框架；语法识别使用内置的规则（正则）；全部讲解资料是打包在 App 里的静态 JSON。
 - 讲解内容包括：**意思、用法（接续 + 要点）、使用场景、词源、例句、相似/相近语法的扩展对比**（可直接跳转到相近语法）。
 - **收藏**：在列表或讲解页点 ☆ 收藏，“收藏”页可查看、排序、删除。
+- **多语言**：界面与全部语法讲解支持 English、한국어、Español、Tiếng Việt、简体中文、繁體中文。跟随系统语言（也可在 iOS 设置 → 本 App → 语言 中单独切换），其它语言回退为英语。
 
 ## 功能
 
@@ -52,6 +53,13 @@ tools/
 1. **OCR**：`VNRecognizeTextRequest`（`ja-JP`，accurate）。书本排版的换行是任意的，因此各行直接拼接（只在句末标点后换行），这样跨行的语法也能识别。
 2. **语法识别**：每个语法点在 JSON 的 `patterns` 中定义若干正则（用前后断言排除常见误判）。同一语法的重叠命中会合并；`subsumes` 用于抑制被更长语法“包含”的命中（如「なければならない」里的「ば」）。
 3. **高亮**：重叠的命中合并为一个可点击的高亮块；通过 `VNRecognizedText.boundingBox(for:)` 拿到子串在图片上的位置，跨行的命中会在每一行分别画框。
+
+## 多语言
+
+- 界面文字：`JapaneseGrammarScanner/Localizable.xcstrings`、`InfoPlist.xcstrings`（由 `tools/make_strings.py` 生成）。
+- 语法讲解：基础文件 `grammar_*.json` 含日语例句、识别规则与简体中文讲解；`Resources/Grammar/l10n/l10n_<语言>_<等级>.json` 为其它语言的讲解，App 启动时按语言覆盖。
+- 繁体中文由 `tools/make_zh_hant.py`（OpenCC，台湾用语）从简体生成，日语片段保持不变；带中文说明的标题由 `tools/l10n_titles.py` 写入。
+- `tools/validate_grammar.py` 会检查每种语言的条目、顺序、数组长度，以及译文是否残留中文。
 
 ## 扩充语法资料
 
