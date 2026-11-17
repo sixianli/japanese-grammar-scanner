@@ -94,6 +94,8 @@ jobs:
           APP=build/Build/Products/Debug-iphonesimulator/JapaneseGrammarScanner.app
           BID=com.example.JapaneseGrammarScanner
           xcrun simctl install "$UDID" "$APP"
+          xcrun simctl privacy "$UDID" grant camera "$BID" || true
+          xcrun simctl privacy "$UDID" grant photos "$BID" || true
           for lang in en ko es vi zh-Hans zh-Hant; do
             mkdir -p "screenshots/$lang"
             i=1

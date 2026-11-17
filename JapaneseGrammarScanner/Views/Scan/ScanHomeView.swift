@@ -29,8 +29,8 @@ struct ScanHomeView: View {
             }
         }
         .onAppear {
-            updateCameraState()
             applyDemoMode()
+            updateCameraState()
         }
         .onDisappear { camera.stop() }
         .onChange(of: path) { _, _ in updateCameraState() }
@@ -177,7 +177,7 @@ struct ScanHomeView: View {
     // MARK: -
 
     private func updateCameraState() {
-        if path.isEmpty && scenePhase == .active {
+        if path.isEmpty && scenePhase == .active && DemoMode.screen != "library" && DemoMode.screen != "favorites" {
             camera.start()
         } else {
             camera.stop()
