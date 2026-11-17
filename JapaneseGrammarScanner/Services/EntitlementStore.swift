@@ -44,8 +44,8 @@ final class EntitlementStore: ObservableObject {
     var hasFullAccess: Bool {
         if testFlightFallbackUnlock { return true }
         switch access {
-        case .unlocked, .trial: true
-        case .trialExpired, .notStarted: false
+        case .unlocked, .trial: return true
+        case .trialExpired, .notStarted: return false
         }
     }
 
