@@ -1,0 +1,28 @@
+# 等待最新上传的构建在 App Store Connect 处理完成，并加入所有内部测试群组。
+name: TestFlight Status
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "要检查的版本号（留空 = 最新上传的构建）"
+        required: false
+  push:
+    branches: ["claude/**"]
+    paths: [".github/workflows/testflight.yml", "tools/testflight_status.py"]
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install pyjwt cryptography
+      - name: Wait for processing and distribute to internal testers
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+          BUNDLE_ID: ${{ vars.BUNDLE_ID }}
+          VERSION: ${{ inputs.version || '1.1' }}
+        run: python3 tools/testflight_status.py
