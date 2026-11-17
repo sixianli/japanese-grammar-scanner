@@ -75,7 +75,7 @@ final class EntitlementStore: ObservableObject {
 
     private func applyTestFlightFallbackIfNeeded() async {
         guard products.isEmpty, access != .unlocked else { return }
-        if case .verified(let appTx) = try? await AppTransaction.shared, appTx.environment == .sandbox {
+        if case .verified(let appTx)? = try? await AppTransaction.shared, appTx.environment == .sandbox {
             testFlightFallbackUnlock = true
         }
     }
