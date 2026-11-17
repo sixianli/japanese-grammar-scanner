@@ -28,7 +28,10 @@ struct ScanHomeView: View {
                 path.append(.grammar(id))
             }
         }
-        .onAppear { updateCameraState() }
+        .onAppear {
+            updateCameraState()
+            applyDemoMode()
+        }
         .onDisappear { camera.stop() }
         .onChange(of: path) { _, _ in updateCameraState() }
         .onChange(of: scenePhase) { _, _ in updateCameraState() }
@@ -68,6 +71,9 @@ struct ScanHomeView: View {
                 Button("打开设置") { UIApplication.shared.open(url) }
                     .buttonStyle(.borderedProminent)
             }
+            Button("试试示例书页", action: openSample)
+                .buttonStyle(.bordered)
+                .tint(.white)
         }
         .foregroundStyle(.white)
         .padding()
@@ -83,6 +89,13 @@ struct ScanHomeView: View {
                 Text(ids.isEmpty ? "将相机对准书本上的日文" : "识别到 \(ids.count) 个语法点，点击高亮或下方标签查看")
                     .font(.subheadline.weight(.medium))
                 Spacer()
+                if ids.isEmpty {
+                    Button("试试示例", action: openSample)
+                        .font(.caption.weight(.semibold))
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 5)
+                        .background(.white.opacity(0.2), in: Capsule())
+                }
             }
             if !ids.isEmpty {
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -168,6 +181,21 @@ struct ScanHomeView: View {
             camera.start()
         } else {
             camera.stop()
+        }
+    }
+
+    private func openSample() {
+        if let image = UIImage(named: "SamplePage") {
+            path.append(.scan(ScanImage(image: image.normalizedForOCR())))
+        }
+    }
+
+    private func applyDemoMode() {
+        guard path.isEmpty else { return }
+        switch DemoMode.screen {
+        case "result": openSample()
+        case "detail": path.append(.grammar(DemoMode.grammarID))
+        default: break
         }
     }
 

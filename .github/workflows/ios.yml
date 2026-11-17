@@ -30,7 +30,7 @@ jobs:
           import json,sys
           d=json.load(sys.stdin)['devices']
           c=[(k,x) for k,v in d.items() if 'iOS' in k for x in v if x['name'].startswith('iPhone')]
-          c.sort(key=lambda t:t[0])
+          c.sort(key=lambda t:(t[0], t[1]['name'].endswith('Pro Max')))
           print(c[-1][1]['udid'])")
           echo "udid=$UDID" >> "$GITHUB_OUTPUT"
       - name: Test
@@ -58,3 +58,52 @@ jobs:
         with:
           name: build-log
           path: build.log
+
+  screenshots:
+    runs-on: macos-15
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Boot iPhone Pro Max simulator
+        id: sim
+        run: |
+          sudo xcode-select -s /Applications/Xcode_16.4.app || true
+          UDID=$(xcrun simctl list devices available -j | python3 -c "
+          import json,sys
+          d=json.load(sys.stdin)['devices']
+          c=[(k,x) for k,v in d.items() if 'iOS' in k for x in v if x['name'].endswith('Pro Max')]
+          c.sort(key=lambda t:t[0])
+          print(c[-1][1]['udid'])")
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl status_bar "$UDID" override --time 9:41 --batteryState charged --batteryLevel 100 --wifiBars 3 --cellularBars 4
+      - name: Build app
+        run: |
+          set -o pipefail
+          xcodebuild build -project JapaneseGrammarScanner.xcodeproj -scheme JapaneseGrammarScanner \
+            -destination "id=${{ steps.sim.outputs.udid }}" -derivedDataPath build CODE_SIGNING_ALLOWED=NO | tail -5
+      - name: Capture screenshots
+        run: |
+          UDID=${{ steps.sim.outputs.udid }}
+          APP=build/Build/Products/Debug-iphonesimulator/JapaneseGrammarScanner.app
+          BID=com.example.JapaneseGrammarScanner
+          xcrun simctl install "$UDID" "$APP"
+          mkdir -p screenshots
+          i=1
+          for screen in result detail scan library favorites; do
+            xcrun simctl terminate "$UDID" "$BID" 2>/dev/null || true
+            xcrun simctl launch "$UDID" "$BID" -AppleLanguages "(zh-Hans)" -AppleLocale zh_CN -demoScreen "$screen"
+            sleep 12
+            xcrun simctl io "$UDID" screenshot "screenshots/${i}_${screen}.png"
+            i=$((i+1))
+          done
+          xcrun simctl terminate "$UDID" "$BID" || true
+          xcrun simctl launch "$UDID" "$BID" -AppleLanguages "(zh-Hans)" -AppleLocale zh_CN -demoScreen detail -demoGrammar ni-mo-kakawarazu
+          sleep 8
+          xcrun simctl io "$UDID" screenshot "screenshots/6_detail2.png"
+          ls -la screenshots
+      - uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: screenshots
