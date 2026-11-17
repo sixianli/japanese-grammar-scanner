@@ -79,7 +79,10 @@ def main():
     glow = layer.filter(ImageFilter.GaussianBlur(22))
     im = Image.alpha_composite(Image.alpha_composite(im.convert("RGBA"), glow), layer).convert("RGB")
 
-    im.resize((1024, 1024), Image.LANCZOS).save(OUT)
+    final = im.resize((1024, 1024), Image.LANCZOS)
+    final.save(OUT)
+    # 同一张图也作为普通图片资源（引导页中显示）
+    final.save(os.path.join(os.path.dirname(os.path.dirname(OUT)), "AppIconImage.imageset", "AppIconImage.png"))
     print("saved", OUT)
 
 

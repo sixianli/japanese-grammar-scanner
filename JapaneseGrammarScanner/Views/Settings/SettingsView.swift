@@ -19,6 +19,11 @@ struct SettingsView: View {
                 Button("恢复购买") { Task { await store.restore() } }
                     .disabled(store.isPurchasing)
             }
+            Section("帮助") {
+                Button("使用引导") {
+                    NotificationCenter.default.post(name: .showOnboarding, object: nil)
+                }
+            }
             Section("关于") {
                 Link("隐私政策", destination: AppLinks.privacy)
                 Link("使用条款", destination: AppLinks.terms)
