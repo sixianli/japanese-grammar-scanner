@@ -4,12 +4,14 @@ import SwiftUI
 struct JapaneseGrammarScannerApp: App {
     @StateObject private var library = GrammarLibrary.shared
     @StateObject private var favorites = FavoritesStore()
+    @StateObject private var entitlements = EntitlementStore()
 
     var body: some Scene {
         WindowGroup {
             RootTabView()
                 .environmentObject(library)
                 .environmentObject(favorites)
+                .environmentObject(entitlements)
         }
     }
 }
@@ -23,6 +25,9 @@ struct RootTabView: View {
         }
     }()
     @EnvironmentObject private var favorites: FavoritesStore
+    @EnvironmentObject private var entitlements: EntitlementStore
+    @AppStorage("didShowWelcomePaywall") private var didShowWelcomePaywall = false
+    @State private var showWelcomePaywall = false
 
     var body: some View {
         TabView(selection: $tab) {
@@ -35,6 +40,14 @@ struct RootTabView: View {
             FavoritesView()
                 .tabItem { Label("收藏", systemImage: "star") }
                 .tag(2)
+        }
+        .sheet(isPresented: $showWelcomePaywall) { PaywallView() }
+        .onChange(of: entitlements.isLoaded) { _, loaded in
+            // 首次启动且从未开始试用时，介绍一次免费试用（之后不再自动弹出）
+            if loaded, entitlements.access == .notStarted, !didShowWelcomePaywall, DemoMode.screen == nil {
+                didShowWelcomePaywall = true
+                showWelcomePaywall = true
+            }
         }
         .onAppear {
             if DemoMode.screen == "favorites", favorites.ids.isEmpty {

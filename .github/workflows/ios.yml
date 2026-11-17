@@ -101,7 +101,7 @@ jobs:
             i=1
             for screen in result detail scan library favorites; do
               xcrun simctl terminate "$UDID" "$BID" 2>/dev/null || true
-              xcrun simctl launch "$UDID" "$BID" -AppleLanguages "($lang)" -demoScreen "$screen"
+              xcrun simctl launch "$UDID" "$BID" -AppleLanguages "($lang)" -demoUnlocked -demoScreen "$screen"
               sleep 8
               xcrun simctl io "$UDID" screenshot "screenshots/$lang/${i}_${screen}.png"
               i=$((i+1))

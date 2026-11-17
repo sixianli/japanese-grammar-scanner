@@ -5,6 +5,7 @@ struct GrammarDetailView: View {
     let grammarID: String
     @EnvironmentObject private var library: GrammarLibrary
     @EnvironmentObject private var favorites: FavoritesStore
+    @EnvironmentObject private var entitlements: EntitlementStore
 
     var body: some View {
         if let point = library.point(id: grammarID) {
@@ -37,6 +38,9 @@ struct GrammarDetailView: View {
                     }
                 }
 
+                if !entitlements.hasFullAccess {
+                    LockedContentCard()
+                } else {
                 // 用法：每个义项一张卡片（意思讲解 / 接续 / 例句）
                 SectionCard(icon: "list.bullet.rectangle.portrait.fill", title: "用法", tint: .blue) {
                     VStack(alignment: .leading, spacing: 14) {
@@ -84,6 +88,7 @@ struct GrammarDetailView: View {
                             if index < p.similar.count - 1 { Divider() }
                         }
                     }
+                }
                 }
             }
             .padding()
