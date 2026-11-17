@@ -37,7 +37,12 @@ final class EntitlementStore: ObservableObject {
 
     private var updatesTask: Task<Void, Never>?
 
+    /// TestFlight / 沙盒环境下，若 App Store Connect 尚未配置内购商品（加载不到），临时开放全部内容，
+    /// 避免测试者无法体验讲解。正式 App Store 版本不受影响。
+    @Published private(set) var testFlightFallbackUnlock = false
+
     var hasFullAccess: Bool {
+        if testFlightFallbackUnlock { return true }
         switch access {
         case .unlocked, .trial: true
         case .trialExpired, .notStarted: false
@@ -62,10 +67,18 @@ final class EntitlementStore: ObservableObject {
         Task {
             await loadProducts()
             await refresh()
+            await applyTestFlightFallbackIfNeeded()
         }
     }
 
     deinit { updatesTask?.cancel() }
+
+    private func applyTestFlightFallbackIfNeeded() async {
+        guard products.isEmpty, access != .unlocked else { return }
+        if case .verified(let appTx) = try? await AppTransaction.shared, appTx.environment == .sandbox {
+            testFlightFallbackUnlock = true
+        }
+    }
 
     func loadProducts() async {
         do {
