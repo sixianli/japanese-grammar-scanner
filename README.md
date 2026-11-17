@@ -1,5 +1,9 @@
 # 日语语法扫描（Japanese Grammar Scanner）
 
+> © 2026 sixianli. 保留所有权利。本仓库源码仅供在 GitHub 上浏览，未经作者书面许可，禁止复制、修改、分发或用于任何用途（包括上架应用商店）。
+>
+> © 2026 sixianli. All rights reserved. This source code is published for viewing on GitHub only. No permission is granted to copy, modify, distribute, or use it for any purpose (including publishing to app stores) without the author's prior written consent.
+
 一个 iOS App：用相机扫描书本上的日文（或从相册选图片），自动识别文本中的语法点并**全部高亮**，点击高亮即可查看该语法点的详细讲解。
 
 - **完全离线、不使用任何大模型**：OCR 使用 Apple 端侧 Vision 框架；语法识别使用内置的规则（正则）；全部讲解资料是打包在 App 里的静态 JSON。
