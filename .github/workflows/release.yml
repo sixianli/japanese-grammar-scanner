@@ -1,0 +1,103 @@
+# 一键打包并上传到 App Store Connect（TestFlight → 提交审核）。
+#
+# 需要先在 GitHub 仓库 Settings → Secrets and variables → Actions 中配置：
+#   Secrets:
+#     ASC_KEY_ID          App Store Connect API Key 的 Key ID
+#     ASC_ISSUER_ID       App Store Connect API 的 Issuer ID
+#     ASC_KEY_P8          API Key 文件（AuthKey_XXXX.p8）的完整文本内容
+#   Variables:
+#     APPLE_TEAM_ID       Apple Developer Team ID（10 位）
+#     BUNDLE_ID           在 App Store Connect 中创建 App 时使用的 Bundle ID
+# API Key 需在 App Store Connect → 用户和访问 → 集成 → App Store Connect API 中创建，角色选 “App 管理”。
+name: Release to App Store Connect
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "版本号 (MARKETING_VERSION)，如 1.0"
+        required: true
+        default: "1.0"
+
+jobs:
+  upload:
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode
+        run: |
+          sudo xcode-select -s /Applications/Xcode_16.4.app || true
+          xcodebuild -version
+      - name: Check configuration
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+          TEAM_ID: ${{ vars.APPLE_TEAM_ID }}
+          BUNDLE_ID: ${{ vars.BUNDLE_ID }}
+        run: |
+          for v in ASC_KEY_ID ASC_ISSUER_ID ASC_KEY_P8 TEAM_ID BUNDLE_ID; do
+            if [ -z "${!v}" ]; then echo "::error::缺少配置 $v，请按 release.yml 顶部说明配置"; exit 1; fi
+          done
+      - name: Validate data
+        run: python3 tools/validate_grammar.py
+      - name: Write API key
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          mkdir -p ~/.appstoreconnect/private_keys
+          printf '%s' "$ASC_KEY_P8" > ~/.appstoreconnect/private_keys/AuthKey_${ASC_KEY_ID}.p8
+      - name: Archive
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          set -o pipefail
+          xcodebuild archive \
+            -project JapaneseGrammarScanner.xcodeproj \
+            -scheme JapaneseGrammarScanner \
+            -configuration Release \
+            -destination "generic/platform=iOS" \
+            -archivePath build/App.xcarchive \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath ~/.appstoreconnect/private_keys/AuthKey_${ASC_KEY_ID}.p8 \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
+            DEVELOPMENT_TEAM=${{ vars.APPLE_TEAM_ID }} \
+            PRODUCT_BUNDLE_IDENTIFIER=${{ vars.BUNDLE_ID }} \
+            MARKETING_VERSION=${{ inputs.version }} \
+            CURRENT_PROJECT_VERSION=${{ github.run_number }} \
+            CODE_SIGN_STYLE=Automatic \
+            | tail -40
+      - name: Upload to App Store Connect
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          cat > build/ExportOptions.plist <<PLIST
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>destination</key><string>upload</string>
+            <key>teamID</key><string>${{ vars.APPLE_TEAM_ID }}</string>
+            <key>signingStyle</key><string>automatic</string>
+            <key>uploadSymbols</key><true/>
+            <key>manageAppVersionAndBuildNumber</key><false/>
+          </dict>
+          </plist>
+          PLIST
+          set -o pipefail
+          xcodebuild -exportArchive \
+            -archivePath build/App.xcarchive \
+            -exportOptionsPlist build/ExportOptions.plist \
+            -exportPath build/export \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath ~/.appstoreconnect/private_keys/AuthKey_${ASC_KEY_ID}.p8 \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
+            | tail -40
+          echo "✅ 已上传，约 10–30 分钟后可在 App Store Connect → TestFlight 中看到构建版本。"
