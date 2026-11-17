@@ -88,26 +88,24 @@ jobs:
           set -o pipefail
           xcodebuild build -project JapaneseGrammarScanner.xcodeproj -scheme JapaneseGrammarScanner \
             -destination "id=${{ steps.sim.outputs.udid }}" -derivedDataPath build CODE_SIGNING_ALLOWED=NO | tail -5
-      - name: Capture screenshots
+      - name: Capture screenshots (all languages)
         run: |
           UDID=${{ steps.sim.outputs.udid }}
           APP=build/Build/Products/Debug-iphonesimulator/JapaneseGrammarScanner.app
           BID=com.example.JapaneseGrammarScanner
           xcrun simctl install "$UDID" "$APP"
-          mkdir -p screenshots
-          i=1
-          for screen in result detail scan library favorites; do
-            xcrun simctl terminate "$UDID" "$BID" 2>/dev/null || true
-            xcrun simctl launch "$UDID" "$BID" -AppleLanguages "(zh-Hans)" -AppleLocale zh_CN -demoScreen "$screen"
-            sleep 12
-            xcrun simctl io "$UDID" screenshot "screenshots/${i}_${screen}.png"
-            i=$((i+1))
+          for lang in en ko es vi zh-Hans zh-Hant; do
+            mkdir -p "screenshots/$lang"
+            i=1
+            for screen in result detail scan library favorites; do
+              xcrun simctl terminate "$UDID" "$BID" 2>/dev/null || true
+              xcrun simctl launch "$UDID" "$BID" -AppleLanguages "($lang)" -demoScreen "$screen"
+              sleep 8
+              xcrun simctl io "$UDID" screenshot "screenshots/$lang/${i}_${screen}.png"
+              i=$((i+1))
+            done
           done
-          xcrun simctl terminate "$UDID" "$BID" || true
-          xcrun simctl launch "$UDID" "$BID" -AppleLanguages "(zh-Hans)" -AppleLocale zh_CN -demoScreen detail -demoGrammar ni-mo-kakawarazu
-          sleep 8
-          xcrun simctl io "$UDID" screenshot "screenshots/6_detail2.png"
-          ls -la screenshots
+          find screenshots -name "*.png" | sort
       - uses: actions/upload-artifact@v4
         with:
           name: screenshots
