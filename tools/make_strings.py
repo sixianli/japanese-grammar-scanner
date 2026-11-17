@@ -63,7 +63,8 @@ S = {
     "未开始试用": ("Trial not started", "체험 시작 전", "Prueba no iniciada", "Chưa bắt đầu dùng thử"),
     "用于离线生成例句的假名注音数据": ("Used offline to generate furigana for example sentences", "예문 후리가나 데이터를 오프라인으로 생성하는 데 사용", "Se usa sin conexión para generar el furigana de los ejemplos", "Dùng ngoại tuyến để tạo furigana cho câu ví dụ"),
     "用于把讲解转换为繁体中文": ("Used to convert explanations to Traditional Chinese", "설명을 번체 중국어로 변환하는 데 사용", "Se usa para convertir las explicaciones al chino tradicional", "Dùng để chuyển giải thích sang tiếng Trung phồn thể"),
-    "用于绘制 App 图标与示例书页图片": ("Used to draw the app icon and sample page image", "앱 아이콘과 예시 페이지 이미지 제작에 사용", "Se usa para dibujar el icono y la página de ejemplo", "Dùng để vẽ biểu tượng ứng dụng và trang sách mẫu"),
+    "用于绘制 App 图标": ("Used to draw the app icon", "앱 아이콘 제작에 사용", "Se usa para dibujar el icono de la app", "Dùng để vẽ biểu tượng ứng dụng"),
+    "用于绘制示例书页图片": ("Used to draw the sample page image", "예시 페이지 이미지 제작에 사용", "Se usa para dibujar la página de ejemplo", "Dùng để vẽ trang sách mẫu"),
     "本 App 的语法讲解为原创内容。文字识别使用 Apple Vision 框架在设备上完成。以下第三方开源组件仅在构建阶段用于生成 App 内的静态数据或图片：": (
         "All grammar explanations are original content. Text recognition runs on-device with Apple's Vision framework. The open-source components below were used only at build time to generate static data or images:",
         "이 앱의 문법 설명은 모두 독자적으로 작성되었습니다. 문자 인식은 Apple Vision 프레임워크로 기기에서 처리됩니다. 아래 오픈소스 구성 요소는 빌드 단계에서 정적 데이터나 이미지를 만드는 데만 사용되었습니다:",

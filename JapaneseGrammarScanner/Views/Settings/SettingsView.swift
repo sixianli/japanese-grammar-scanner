@@ -59,7 +59,8 @@ struct LicensesView: View {
     private let items: [Item] = [
         Item(name: "SudachiPy / SudachiDict", usage: "用于离线生成例句的假名注音数据", license: "Apache License 2.0 · © Works Applications Co., Ltd.", url: "https://github.com/WorksApplications/sudachi.rs"),
         Item(name: "OpenCC", usage: "用于把讲解转换为繁体中文", license: "Apache License 2.0 · © Carbo Kuo and contributors", url: "https://github.com/BYVoid/OpenCC"),
-        Item(name: "IPA Font", usage: "用于绘制 App 图标与示例书页图片", license: "IPA Font License Agreement v1.0 · © IPA", url: "https://moji.or.jp/ipafont/"),
+        Item(name: "Noto Serif JP", usage: "用于绘制 App 图标", license: "SIL Open Font License 1.1 · © Google LLC / Adobe", url: "https://fonts.google.com/noto/specimen/Noto+Serif+JP"),
+        Item(name: "IPA Font", usage: "用于绘制示例书页图片", license: "IPA Font License Agreement v1.0 · © IPA", url: "https://moji.or.jp/ipafont/"),
     ]
 
     var body: some View {
