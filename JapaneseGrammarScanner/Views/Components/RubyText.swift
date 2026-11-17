@@ -155,7 +155,8 @@ struct RubyText: View {
 
     private var flow: some View {
         let groups = AtomBuilder.groups(AtomBuilder.atoms(from: segments))
-        return FlowLayout(lineSpacing: style.lineSpacing) {
+        // 注音行本身已经占了一定高度，这里把行距收紧，避免段落显得松散
+        return FlowLayout(lineSpacing: max(0, style.lineSpacing - 5)) {
             ForEach(Array(groups.enumerated()), id: \.offset) { _, group in
                 if group.first?.isLineBreak == true {
                     Color.clear.frame(width: 0, height: 0).layoutValue(key: LineBreakKey.self, value: true)
