@@ -40,6 +40,12 @@ struct LibraryView: View {
             }
             .searchable(text: $query, prompt: "搜索语法、意思或例句")
             .navigationTitle("语法库")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink { SettingsView() } label: { Image(systemName: "gearshape") }
+                        .accessibilityLabel(Text("设置"))
+                }
+            }
             .withAppRoutes()
         }
     }

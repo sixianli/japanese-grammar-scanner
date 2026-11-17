@@ -1,30 +1,84 @@
 [
   {
     "id": "tai",
-    "meaning": "Expresses the speaker's own desire to do something (first-person wish): \"I want to ...\". In questions, it asks about the listener's wishes.",
-    "connection": "Verb masu-stem (drop ます) + たい (e.g. 行きます→行きたい, 食べます→食べたい, します→したい)",
-    "usage": [
-      "「〜たい」 itself conjugates like an i-adjective: たい／たくない／たかった／たくなかった／たくて／たければ. For polite speech add 「です」: 行きたいです, 行きたくないです.",
-      "In principle it only expresses the wishes of the speaker (first person), or of the listener (second person) in questions. For a third person, use 「〜たがる／たがっている」, or 「〜たいと言っている」, 「〜たいそうだ」, etc.",
-      "The object can be marked with 「を」, but 「が」 is also common to highlight the thing desired: 水を飲みたい／水が飲みたい. Particles of other verbs such as 「〜に会う」 or 「〜へ行く」 stay unchanged.",
-      "Asking a superior or an elder directly with 「〜たいですか」 sounds presumptuous; use softer forms such as 「〜なさいますか」 or 「〜はいかがですか」 instead.",
-      "「〜たい」 is very common after 「〜てみる」 and 「〜ている」: 食べてみたい (I'd like to try eating it), ずっとここにいたい (I want to stay here forever)."
+    "meaning": "The speaker wants to do something. In questions, it asks what the listener wants to do.",
+    "connection": "Verb masu-stem (drop ます) + たい (conjugates like an i-adjective)",
+    "senses": [
+      {
+        "label": "Want to (desire)",
+        "meaning": "The speaker wants to do something. Use it only for yourself, or in questions to the listener. For someone else's wishes, switch to 「〜たがる」 or 「〜たいと言っている」.",
+        "connection": "Verb masu-stem (drop ます) + たい (行きます→行きたい; 食べます→食べたい; します→したい)",
+        "examples": [
+          "I want to go to Hokkaido over summer vacation.",
+          "I want some cold water.",
+          "What do you want to eat?"
+        ]
+      },
+      {
+        "label": "Don't want to",
+        "meaning": "「〜たくない」 means you don't want to do something. It often signals lack of interest or a refusal. Polite forms: 「〜たくないです」 or 「〜たくありません」.",
+        "connection": "Verb masu-stem + たくない／たくないです／たくありません",
+        "examples": [
+          "I don't feel like going anywhere today.",
+          "I don't want to see that person."
+        ]
+      },
+      {
+        "label": "Wanted to",
+        "meaning": "「〜たかった」 is a past wish. It often carries regret: you wanted to, but it didn't happen.",
+        "connection": "Verb masu-stem + たかった／たかったです",
+        "examples": [
+          "When I was a kid, I wanted to be a pilot.",
+          "I really wish we could have talked longer."
+        ]
+      },
+      {
+        "label": "Want to try / aspirations",
+        "meaning": "After 「〜てみる」, it means you'd like to try something once. 「〜たいと思っています」 and 「〜たいと考えています」 are softer and more formal than plain 「〜たい」.",
+        "connection": "Verb te-form + みたい; verb masu-stem + たいと思う／たいと考える",
+        "examples": [
+          "I've always wanted to try authentic ramen at least once.",
+          "In the future, I'd like to work for a Japanese company."
+        ]
+      }
     ],
-    "scenarios": [
-      "Talking about your own wishes in everyday conversation: 「夏休みに北海道へ行きたいです。」",
-      "Asking a friend what they want: 「何が食べたい？」",
-      "The negative expresses not feeling like doing something: 「今日はどこにも出かけたくない。」",
-      "The past tense recalls a past wish or expresses regret: 「子どものころ、パイロットになりたかった。」",
-      "Stating aspirations in applications or essays: 「将来は日本の会社で働きたいと考えています。」"
+    "notes": [
+      "「〜たい」 conjugates like an i-adjective: たい／たくない／たかった／たくて／たければ.",
+      "The object can take 「を」 or 「が」: 「水を飲みたい」 / 「水が飲みたい」. 「が」 puts more focus on the thing you want. Other particles stay the same, as in 「に会う」 and 「へ行く」.",
+      "Asking a superior or an elder 「〜たいですか」 directly sounds presumptuous. Use 「〜なさいますか」 or 「〜はいかがですか」 instead."
     ],
-    "etymology": "Modern 「たい」 comes from the Classical Japanese desiderative auxiliary 「たし」 (conjugated like a ku-type adjective). Its attributive form 「たき」 became 「たい」 through i-onbin (sound change to い) and replaced the conclusive form as the modern form. 「たし」 began to appear in the late Heian period, and from the Kamakura period onward it gradually replaced 「まほし」, the Heian-period auxiliary of desire. As for the origin of 「たし」, one theory links it to the adjective 「いたし」 (甚し, \"extreme, intense\"), but this is not settled. Because it developed from an adjective-type auxiliary, modern 「たい」 still conjugates like an i-adjective.",
-    "examples": [
-      "I want to go to Hokkaido during summer vacation.",
-      "I want to drink some cold water.",
-      "I don't want to go anywhere today.",
-      "When I was a child, I wanted to become a pilot.",
-      "I've been thinking I'd like to try authentic ramen at least once."
-    ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Deciding what to eat with a friend",
+          "description": "Between friends, plain form is the natural way to ask what someone wants.",
+          "example": "What do you want to eat today? — I kind of want ramen."
+        },
+        {
+          "title": "Talking about vacation plans",
+          "description": "Adding 「なあ」 at the end makes a personal wish sound natural.",
+          "example": "I'd love to go to Okinawa this summer."
+        },
+        {
+          "title": "Too tired to go out",
+          "description": "The negative form gently turns down an invitation or shows you're not in the mood.",
+          "example": "I'm tired, so I don't want to go anywhere today."
+        }
+      ],
+      "work": [
+        {
+          "title": "Stating your goals in a job interview",
+          "description": "In formal settings, 「〜たいと考えております」 sounds composed and serious.",
+          "example": "I would like to take on marketing work at your company."
+        },
+        {
+          "title": "Asking your boss for a day off",
+          "description": "「〜たいのですが」 states your wish politely and indirectly.",
+          "example": "I was hoping to take next Friday off..."
+        }
+      ]
+    },
+    "etymology": "「たい」 comes from 「たし」, a Classical Japanese auxiliary of desire. Its attributive form 「たき」 became 「たい」 through i-onbin (a sound change to い), and it later replaced the conclusive form as the modern form. 「たし」 appeared around the late Heian period. From the Kamakura period on, it replaced the older 「まほし」. One theory links it to the adjective 「いたし」 (甚し, “extreme”), but this is not settled. Because it began as an adjective-type auxiliary, 「たい」 still conjugates like an i-adjective.",
     "similar": [
       {
         "title": "〜がほしい",
@@ -46,30 +100,83 @@
   },
   {
     "id": "te-kudasai",
-    "meaning": "Please (do something). Used to politely request, instruct, or urge the listener to do an action.",
-    "connection": "Verb te-form + ください (e.g. 待つ→待ってください, 読む→読んでください, 見る→見てください)",
-    "usage": [
-      "「ください」 is the imperative form of the honorific verb 「くださる」, so 「〜てください」 is essentially a polite command or request; the listener has little room to refuse.",
-      "Watch the voicing in the te-form: godan verbs ending in む・ぶ・ぬ・ぐ become 「〜んで／〜いで」: 読んでください, 泳いでください.",
-      "For more politeness use a question form: 「〜てくださいませんか」, 「〜ていただけませんか」; among friends say 「〜て」, 「〜てね」, or 「〜てくれる？」.",
-      "For a negative request (please don't), use 「〜ないでください」; 「〜てくださらない」 is not used this way.",
-      "It can also be written with kanji as 「〜て下さい」, but modern official documents and newspapers tend to write 「ください」 in kana."
+    "meaning": "“Please do ...” Politely asks, instructs, or invites someone to do something.",
+    "connection": "Verb te-form + ください",
+    "senses": [
+      {
+        "label": "Asking for help",
+        "meaning": "Politely asks someone to do something for you. Used with shop staff, strangers, and coworkers. It is softer than a command, but the listener has little room to say no.",
+        "connection": "Verb te-form + ください (待つ→待ってください; 読む→読んでください)",
+        "examples": [
+          "Excuse me, could you wait a moment, please?",
+          "Please speak a little more slowly."
+        ]
+      },
+      {
+        "label": "Instructions",
+        "meaning": "Teachers, doctors, and manuals use it to give directions and cautions. Polite but clear: “Do it this way.”",
+        "connection": "Verb te-form + ください",
+        "examples": [
+          "Please open your textbooks to page 30.",
+          "Please take this medicine after meals."
+        ]
+      },
+      {
+        "label": "Offers and invitations",
+        "meaning": "Often paired with 「どうぞ」 to warmly invite someone to eat, sit, come in, and so on. It's kindness, not an order.",
+        "connection": "どうぞ + verb te-form + ください",
+        "examples": [
+          "Please, help yourself to plenty.",
+          "Please, have a seat over here."
+        ]
+      },
+      {
+        "label": "More polite request",
+        "meaning": "「〜てくださいませんか」 is phrased as a question. It leaves the listener room to refuse, so it is more polite than 「〜てください」.",
+        "connection": "Verb te-form + くださいませんか／くださいますか",
+        "examples": [
+          "Would you mind writing your name here?"
+        ]
+      }
     ],
-    "scenarios": [
-      "A teacher giving instructions to students: 「教科書の30ページを開いてください。」",
-      "Service settings such as shop staff or station announcements: 「白線の内側までお下がりください。」 (the honorific pattern 「お〜ください」)",
-      "Asking a stranger for help: 「すみません、ちょっと待ってください。」",
-      "Advice or precautions from doctors, instruction leaflets, etc.: 「この薬は食後に飲んでください。」",
-      "Urging or warmly inviting someone: 「どうぞ、たくさん食べてください。」"
+    "notes": [
+      "Watch the voiced te-form: godan verbs ending in む・ぶ・ぬ・ぐ become 「〜んで／〜いで」: 読んでください, 泳いでください.",
+      "「ください」 is the imperative of 「くださる」. With superiors it can sound direct; 「〜ていただけますか」 is safer.",
+      "To ask someone not to do something, use 「〜ないでください」. 「〜てくださらない」 is not used for this.",
+      "Among friends it is often shortened to 「〜て」 or 「〜てね」: ちょっと待って."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Asking a passerby to take a photo",
+          "description": "The go-to phrase for asking a stranger a small favor.",
+          "example": "Excuse me, could you take a picture for us?"
+        },
+        {
+          "title": "Welcoming a guest inside",
+          "description": "The host warmly invites a visitor to come in.",
+          "example": "Please, come on in."
+        },
+        {
+          "title": "Didn't catch it on the phone",
+          "description": "Asking the other person to repeat what they said.",
+          "example": "Sorry, could you say that again?"
+        }
+      ],
+      "work": [
+        {
+          "title": "A teacher in class",
+          "description": "A teacher gives students instructions, politely but clearly.",
+          "example": "Everyone, please open your textbooks."
+        },
+        {
+          "title": "Giving a coworker a task",
+          "description": "Fine with coworkers or juniors. With a superior, switch to 「〜ていただけますか」.",
+          "example": "Please make 10 copies of this document."
+        }
+      ]
+    },
     "etymology": "「ください」 is the imperative of the verb 「くださる」 (下さる). 「くださる」 comes from 「くだす」 (下す, originally \"to hand down from above, to bestow\") plus the honorific auxiliary 「る」, meaning \"a superior bestows something on an inferior\". Its imperative was originally 「くだされ」, which changed to 「ください」 from the Edo period onward. Literally, 「〜てください」 means \"please bestow on me the favor of (doing this action)\", which gives it its polite tone; but since it is still formally an imperative, people often switch to softer forms such as 「〜ていただけますか」 with superiors.",
-    "examples": [
-      "Please open your textbooks to page 30.",
-      "Excuse me, please wait a moment.",
-      "Please take this medicine after meals.",
-      "Please speak a little more slowly.",
-      "Could you please write your name here?"
-    ],
     "similar": [
       {
         "title": "〜ないでください",
@@ -91,29 +198,74 @@
   },
   {
     "id": "naide-kudasai",
-    "meaning": "Please don't (do something). Used to politely forbid or discourage an action, or to tell someone they needn't do something.",
-    "connection": "Verb nai-form + でください (e.g. 入る→入らないでください, 心配する→心配しないでください, 忘れる→忘れないでください)",
-    "usage": [
-      "Made of the negative auxiliary 「ない」 + the conjunctive particle 「で」 + 「ください」. Note that it is 「ないで」, not 「なくて」: ×入らなくてください.",
-      "Forming the nai-form: godan verbs change the final sound to the a-row (書く→書かない); ichidan verbs drop る (見る→見ない); する→しない; 来る→こない; verbs ending in 「〜う」 become 「〜わない」 (買う→買わない).",
-      "Softer versions: 「〜ないでくださいませんか」, 「〜ないでいただけますか」; in casual speech among friends it is often shortened to 「〜ないで」 or 「〜ないでね」.",
-      "It sounds gentler than 「〜てはいけない」: 「〜てはいけない」 is a prohibition based on rules, while 「〜ないでください」 is the speaker's personal request.",
-      "Also often used out of consideration for the other person: 「気にしないでください」 (please don't worry about it), 「無理しないでください」 (please don't push yourself)."
+    "meaning": "“Please don't ...” Politely forbids or discourages something, or tells someone they needn't do it.",
+    "connection": "Verb nai-form + でください",
+    "senses": [
+      {
+        "label": "Polite prohibition",
+        "meaning": "Asks someone not to do something. Common on signs, in announcements, and in reminders. It is softer than 「〜てはいけない」: a request from the speaker, not a rule.",
+        "connection": "Verb nai-form + でください (吸う→吸わないでください; 触る→触らないでください)",
+        "examples": [
+          "Please don't smoke here.",
+          "Please do not touch the artwork."
+        ]
+      },
+      {
+        "label": "Reassurance and care",
+        "meaning": "Tells someone not to worry, not to mind, or not to push themselves. It shows concern for the listener.",
+        "connection": "心配する／気にする／無理する, etc. + ないでください",
+        "examples": [
+          "Please don't worry. It's fine.",
+          "Don't overdo it, okay?"
+        ]
+      },
+      {
+        "label": "Reminders",
+        "meaning": "Reminds someone not to forget, not to be late, and so on. Adding 「ね」 makes it warmer.",
+        "connection": "Verb nai-form + でください(ね)",
+        "examples": [
+          "Don't forget our plans tomorrow, okay?",
+          "Please don't be late tomorrow."
+        ]
+      }
     ],
-    "scenarios": [
-      "Signs and announcements in public places: 「ここでタバコを吸わないでください。」",
-      "Notices in museums and galleries: 「作品に触らないでください。」",
-      "Comforting or showing concern for someone: 「心配しないでください。大丈夫ですから。」",
-      "Reminding someone not to forget: 「明日の約束、忘れないでくださいね。」",
-      "Between close people, 「ください」 is often dropped: 「行かないで」, 「泣かないで」."
+    "notes": [
+      "It's 「ないで」, not 「なくて」: ×入らなくてください.",
+      "Making the nai-form: 書く→書かない, 見る→見ない, する→しない, 来る→こない, 買う→買わない.",
+      "A softer version is 「〜ないでいただけますか」. With people you're close to, just say 「〜ないで」 or 「〜ないでね」."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Visiting a sick friend",
+          "description": "Friends comfort each other and usually drop 「ください」.",
+          "example": "Don't worry, okay? You'll get better soon."
+        },
+        {
+          "title": "Saying goodbye to a partner",
+          "description": "Close people simply say 「〜ないで」.",
+          "example": "Don't cry. We'll see each other again."
+        },
+        {
+          "title": "A sign in the park",
+          "description": "Signs in public places often use this polite prohibition.",
+          "example": "Please keep off the grass."
+        }
+      ],
+      "work": [
+        {
+          "title": "Reminding a coworker before a meeting",
+          "description": "Reminding someone to be on time.",
+          "example": "Please don't be late for tomorrow's meeting."
+        },
+        {
+          "title": "An internal company notice",
+          "description": "Office rules stated in a polite tone.",
+          "example": "Please do not take equipment out of the meeting room."
+        }
+      ]
+    },
     "etymology": "「ないで」 consists of the negative auxiliary 「ない」 and the conjunctive particle 「で」. It is generally thought that the negative auxiliary 「ない」 spread in the Kanto (Edo) dialect during the Edo period; before that, Classical Japanese 「ず」 was widely used, and \"without doing ... and ...\" was usually expressed as 「〜ずに」 or 「〜ずして」. 「ないで」 developed in Edo speech along with it. 「ください」 is the imperative of 「くださる（下さる）」 (see 〜てください). So 「〜ないでください」 literally means \"please bestow on me the favor of not doing ...\".",
-    "examples": [
-      "Please don't smoke here.",
-      "Please don't touch the artwork.",
-      "Please don't worry. It's fine.",
-      "Please don't forget our plans for tomorrow, okay?"
-    ],
     "similar": [
       {
         "title": "〜てください",
@@ -131,30 +283,86 @@
   },
   {
     "id": "te-iru",
-    "meaning": "1) An action in progress (is ...ing); 2) a continuing state resulting from an action (has ... / is in a ... state); 3) habitual or repeated actions; 4) experience or record (something that happened in the past and stands as a present record).",
-    "connection": "Verb te-form + いる (colloquial contraction: 〜てる／〜でる; humble or written: 〜ておる／〜ております)",
-    "usage": [
-      "「いる」 conjugates as an ichidan verb: ている／ています／ていた／ていない／ていません／ていて.",
-      "Durative verbs (読む, 食べる, 走る) + ている usually mean an action in progress: 本を読んでいる. Punctual (instantaneous) verbs (死ぬ, 結婚する, 来る, 知る) + ている express a resulting state: 結婚している (is married), 窓が開いている (the window is open).",
-      "For 「知る」, the affirmative is only 「知っている」, but the negative is 「知らない」 (not ×知っていない).",
-      "In speech the い is often dropped: 読んでる, 見てた, 知ってない; in Kansai and in humble written style, 「〜ておる／〜ております」 is used: お待ちしております.",
-      "Used to describe clothing, appearance, and states: 眼鏡をかけている (wears glasses), 赤い服を着ている (is wearing red clothes); and habits: 毎朝ジョギングしている."
+    "meaning": "Shows an action in progress or a resulting state that continues. It can also express habits or past experience.",
+    "connection": "Verb te-form + いる (casual: 〜てる／〜でる; humble-polite: 〜ております)",
+    "senses": [
+      {
+        "label": "In progress",
+        "meaning": "With verbs that describe ongoing activity (読む, 食べる, 降る), 「ている」 means the action is happening now, like English “-ing”.",
+        "connection": "Durative verb te-form + いる",
+        "examples": [
+          "It's raining now.",
+          "What are you doing? — Watching TV.",
+          "The kids are playing in the park."
+        ]
+      },
+      {
+        "label": "Resulting state",
+        "meaning": "With instantaneous change verbs (開く, 結婚する, 知る), 「ている」 shows the state left after the change. 「窓が開いている」 doesn't mean “is opening”; it means “is open”.",
+        "connection": "Change-of-state verb te-form + いる (also common with wearing verbs like 着る and かける)",
+        "examples": [
+          "The window is open.",
+          "My older sister is already married.",
+          "The person wearing glasses is Mr. Tanaka."
+        ]
+      },
+      {
+        "label": "Habits and jobs",
+        "meaning": "Things done repeatedly over a long period, or someone's current job or status. Often used with 「毎朝」 or 「いつも」.",
+        "connection": "Verb te-form + いる (often with 「毎日」 or 「いつも」)",
+        "examples": [
+          "I go jogging every morning.",
+          "My older brother works for a company in Tokyo."
+        ]
+      },
+      {
+        "label": "Experience and record",
+        "meaning": "Presents a past event as part of someone's experience or record today. Common in résumés and news reports.",
+        "connection": "Verb te-form + いる",
+        "examples": [
+          "My father studied in America when he was young.",
+          "She has won this tournament twice before."
+        ]
+      }
     ],
-    "scenarios": [
-      "Describing what is happening right now: 「今、雨が降っています。」",
-      "Explaining a current state or status: 「兄は東京の会社に勤めています。」, 「もう結婚しています。」",
-      "Describing habits: 「毎朝6時に起きている。」",
-      "The humble form in business emails and announcements: 「皆様のお越しをお待ちしております。」",
-      "Casual contractions among friends: 「何してるの？」「テレビ見てる。」"
+    "notes": [
+      "「いる」 conjugates as an ichidan verb: ている／ています／ていた／ていない.",
+      "For 「知る」, the affirmative is 「知っている」, but the negative is 「知らない」, not ×知っていない.",
+      "In speech, the 「い」 is often dropped: 読んでる, 見てた.",
+      "「〜ております」 is the humble-polite form used in business: お待ちしております."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Asking what someone's up to on the phone",
+          "description": "Friends usually shorten it to 「〜てる」.",
+          "example": "What are you doing right now? — Eating."
+        },
+        {
+          "title": "Pointing out a family member",
+          "description": "The resulting-state use describes what someone is wearing.",
+          "example": "The person in the red clothes is my sister."
+        },
+        {
+          "title": "Telling family about the weather",
+          "description": "Describing something happening right now.",
+          "example": "It's snowing outside!"
+        }
+      ],
+      "work": [
+        {
+          "title": "Closing a business email",
+          "description": "「〜ております」 is the formal version.",
+          "example": "I look forward to hearing from you."
+        },
+        {
+          "title": "Introducing your job",
+          "description": "Explaining your current role.",
+          "example": "I currently work in sales at an IT company."
+        }
+      ]
+    },
     "etymology": "「いる」 was written 「ゐる」 (居る) in older Japanese and originally meant \"to sit, to stay put somewhere\". Classical Japanese used the auxiliaries 「たり」 and 「り」 to express the continuation or result of an action; from the medieval period on, 「〜てゐる」 (te-form + 居る) gradually developed and, in the modern era, became the main form for progressive and resultant states. Western Japan still widely uses 「〜とる／〜ておる」; 「おる」 (居る) was also originally a verb of existence, but in standard Japanese it became the humble or formal counterpart of 「いる」.",
-    "examples": [
-      "It's raining right now.",
-      "My older brother works for a company in Tokyo.",
-      "The window is open, isn't it?",
-      "What are you doing? — I'm watching TV.",
-      "We look forward to welcoming you all."
-    ],
     "similar": [
       {
         "title": "〜てある",
@@ -172,30 +380,83 @@
   },
   {
     "id": "te-mo-ii",
-    "meaning": "1) Permission: may / can do ...; 2) in question form, asking permission: May I ...?; 3) 「〜なくてもいい」: don't have to ...; 4) concession or willingness: ... is fine too.",
-    "connection": "Verb te-form + もいい; i-adjective 〜くて + もいい; na-adjective / noun + でもいい; negative: 〜なくてもいい",
-    "usage": [
-      "「いい」 can be replaced by 「よい／良い」 (written), 「かまわない／構わない」 (more formal), or 「大丈夫」 (casual): 写真を撮ってもかまいません.",
-      "Asking permission: 「〜てもいいですか」, 「〜てもよろしいですか」 (more polite); answers: 「ええ、どうぞ」, 「すみません、ちょっと…」.",
-      "「〜なくてもいい」 means \"don't have to\": 明日は来なくてもいいです (You don't need to come tomorrow).",
-      "With nouns / na-adjectives: 「明日でもいいですか」 (Is tomorrow okay?), 「安ければ、古くてもいい」 (If it's cheap, it's fine even if it's old).",
-      "The past tense of 「いい」 must be 「よかった」: 行ってもよかった (it would have been fine to go)."
+    "meaning": "Gives permission (“you may ...”) or asks for it. 「〜なくてもいい」 means “you don't have to”.",
+    "connection": "Verb te-form + もいい; noun / na-adjective + でもいい; negative: 〜なくてもいい",
+    "senses": [
+      {
+        "label": "Permission",
+        "meaning": "Tells someone they may do something. Common from a superior to a junior, or from a host to a guest. Replacing 「いい」 with 「かまわない」 is more formal.",
+        "connection": "Verb te-form + もいい／もかまわない",
+        "examples": [
+          "You can go home for today.",
+          "You may take photos here."
+        ]
+      },
+      {
+        "label": "Asking permission",
+        "meaning": "As a question, it means “May I ...?” More polite: 「〜てもよろしいでしょうか」. Reply with 「ええ、どうぞ」 or 「すみません、ちょっと…」.",
+        "connection": "Verb te-form + もいいですか／もよろしいですか",
+        "examples": [
+          "May I take pictures in this room?",
+          "Would it be all right if I sat here?"
+        ]
+      },
+      {
+        "label": "Don't have to",
+        "meaning": "「〜なくてもいい」 means it's fine not to do something; there's no need. It is the opposite of 「〜なければならない」 (must).",
+        "connection": "Verb nai-form (drop い) + くてもいい",
+        "examples": [
+          "You don't have to pay right now.",
+          "You don't need to come tomorrow."
+        ]
+      },
+      {
+        "label": "Concession (that's fine too)",
+        "meaning": "Steps back: it isn't ideal, but it's acceptable. Often follows nouns and adjectives. It can also show willingness to go along with something.",
+        "connection": "Noun / na-adjective + でもいい; i-adjective 〜くて + もいい",
+        "examples": [
+          "Would tomorrow be okay?",
+          "If it's cheap, I don't mind if it's old.",
+          "I can help you if you like."
+        ]
+      }
     ],
-    "scenarios": [
-      "Asking a teacher or shop staff for permission: 「この部屋で写真を撮ってもいいですか。」",
-      "A superior giving permission to a subordinate: 「今日はもう帰ってもいいですよ。」",
-      "Telling someone they don't need to do something: 「お金は今すぐ払わなくてもいいです。」",
-      "Conceding or offering to go along: 「手伝ってもいいよ。」 (I don't mind helping)",
-      "In formal situations: 「〜てもよろしいでしょうか」, 「〜ても構いませんか」."
+    "notes": [
+      "The past uses 「よかった」: 行ってもよかった (I could have gone).",
+      "In writing, 「〜てもよい」 is common. In casual speech, people also say 「〜ても大丈夫」."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Using the bathroom at a friend's place",
+          "description": "Friends ask permission in plain form.",
+          "example": "Can I use your bathroom?"
+        },
+        {
+          "title": "Rescheduling with a friend",
+          "description": "「でもいい」 offers a compromise.",
+          "example": "Is it okay if we meet at 4 instead?"
+        },
+        {
+          "title": "Telling family not to wait up",
+          "description": "Permission used as a kind gesture.",
+          "example": "I'll be late, so feel free to go to bed."
+        }
+      ],
+      "work": [
+        {
+          "title": "Asking a question in a meeting",
+          "description": "Use 「よろしいでしょうか」 when asking a superior or client.",
+          "example": "Excuse me, may I ask a quick question?"
+        },
+        {
+          "title": "A boss says no overtime needed",
+          "description": "「〜なくてもいい」 means there's no need.",
+          "example": "You don't need to work overtime today."
+        }
+      ]
+    },
     "etymology": "Made of the conjunctive particle 「て」 + the concessive particle 「も」 (\"even if\") + the adjective 「いい」. Literally \"even if you do ..., it is good\", which extended to permission. 「いい」 is a colloquial variant of 「よい」; it is generally thought that forms such as 「えい」 and 「いい」 became popular in speech from the Edo period onward, while written language still mostly uses 「よい」. That is why its conjugations (よかった, よければ) are still based on 「よい」.",
-    "examples": [
-      "May I take photos in this room?",
-      "You can go home now for today.",
-      "You don't have to pay right now.",
-      "Would it be all right if I sat here?",
-      "Is tomorrow okay?"
-    ],
     "similar": [
       {
         "title": "〜てはいけない",
@@ -213,28 +474,82 @@
   },
   {
     "id": "te-wa-ikenai",
-    "meaning": "Must not ..., not allowed to .... Expresses a prohibition based on rules or reason, or strongly discourages the listener.",
-    "connection": "Verb te-form + はいけない (ては → colloquial 〜ちゃ; では → 〜じゃ); i-adjective 〜くては / noun・na-adjective 〜では + いけない",
-    "usage": [
-      "Polite: 「〜てはいけません」; colloquial contractions: 「〜ちゃいけない」, 「〜じゃいけない」, 「〜ちゃだめ」.",
-      "「いけない」 can be replaced with 「だめだ」 (casual) or 「ならない」 (written, regulations, maxims): 嘘をついてはならない.",
-      "It is too blunt toward superiors; outside of explaining rules, people usually use 「〜ないでください」 or 「〜はご遠慮ください」 instead.",
-      "The negative question 「〜てはいけませんか」 asks for permission: 明日休んではいけませんか (Would it be all right if I took tomorrow off?).",
-      "Nouns / na-adjectives take 「では」: こんな字ではいけない (Handwriting like this won't do)."
+    "meaning": "“You must not ...” Prohibition based on rules or common sense. It can also be a strong warning.",
+    "connection": "Verb te-form + はいけない (casual: 〜ちゃいけない／〜じゃいけない)",
+    "senses": [
+      {
+        "label": "Rule-based prohibition",
+        "meaning": "States the rules of a school, company, or society. The tone is objective and clear. Polite form: 「〜てはいけません」.",
+        "connection": "Verb te-form + はいけない／はいけません",
+        "examples": [
+          "You may not use your phone during class.",
+          "Swimming is not allowed here."
+        ]
+      },
+      {
+        "label": "Casual prohibition",
+        "meaning": "Parents to children, or friends to each other, warning strongly. In speech it contracts to 「〜ちゃだめ」 or 「〜じゃだめ」, which sounds very direct.",
+        "connection": "ては→ちゃ, では→じゃ + いけない／だめ",
+        "examples": [
+          "Don't play in the street!",
+          "You shouldn't eat that much."
+        ]
+      },
+      {
+        "label": "Formal prohibition",
+        "meaning": "「〜てはならない」 appears in laws, maxims, and writing. It sounds solemn.",
+        "connection": "Verb te-form + はならない",
+        "examples": [
+          "One must not steal what belongs to others.",
+          "We must never forget this failure."
+        ]
+      },
+      {
+        "label": "Asking for permission",
+        "meaning": "The negative question 「〜てはいけませんか」 means “Would it be a problem if ...?” It gently asks for permission.",
+        "connection": "Verb te-form + はいけませんか",
+        "examples": [
+          "Would it be all right if I took tomorrow off?"
+        ]
+      }
     ],
-    "scenarios": [
-      "School or company rules: 「授業中に携帯電話を使ってはいけません。」",
-      "Parents warning children: 「道路で遊んじゃだめ！」",
-      "Written language such as laws, notices, and maxims: 「人の物を盗んではならない。」",
-      "A doctor's instructions: 「今日はお風呂に入ってはいけません。」"
+    "notes": [
+      "It is too blunt toward superiors. Except when explaining rules, use 「〜ないでください」 or 「〜はご遠慮ください」 instead.",
+      "Nouns and na-adjectives take 「では」: こんな字ではいけない (Handwriting like this won't do).",
+      "Careful: 「〜なくてはいけない」 means “must”, not a prohibition."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "A parent teaching a child",
+          "description": "The contracted form sounds stern.",
+          "example": "You must never go off with a stranger."
+        },
+        {
+          "title": "Doctor's orders",
+          "description": "Explaining what you must observe for your health.",
+          "example": "You shouldn't take a bath today."
+        },
+        {
+          "title": "A friend warning against drunk driving",
+          "description": "Friends warn each other directly.",
+          "example": "If you're driving, you can't drink."
+        }
+      ],
+      "work": [
+        {
+          "title": "New employee training",
+          "description": "Explaining company rules in a neutral tone.",
+          "example": "Do not share internal company information with outsiders."
+        },
+        {
+          "title": "Exam room rules",
+          "description": "The proctor announces the rules.",
+          "example": "Dictionaries may not be used during the exam."
+        }
+      ]
+    },
     "etymology": "「いけない」 is the negative of the verb 「いける」 (行ける, \"can go, works out\"), originally meaning \"cannot go, doesn't work\", and by extension \"no good, not allowed\". 「〜ては」 = the conjunctive particle 「て」 + the topic particle 「は」, setting up a hypothetical condition: \"if you do ..., it won't work\", hence a prohibition. 「〜ちゃ」 and 「〜じゃ」 are contracted sound changes of 「ては」 and 「では」. In the written form 「〜てはならない」, 「ならない」 is the negative of 「成る」, meaning \"won't hold, is not acceptable\".",
-    "examples": [
-      "You must not use your phone during class.",
-      "You can't swim here.",
-      "Don't play in the street!",
-      "One must not steal other people's things."
-    ],
     "similar": [
       {
         "title": "〜ないでください",
@@ -252,30 +567,82 @@
   },
   {
     "id": "nakereba-naranai",
-    "meaning": "Must ..., have to .... Expresses obligation or necessity (not doing it is not acceptable). Includes synonymous forms such as 〜なくてはいけない／〜なくちゃ／〜なきゃ／〜ないといけない.",
-    "connection": "Verb nai-form (drop い) + ければならない／くてはいけない; i-adjective 〜く + なければならない; noun・na-adjective + でなければならない",
-    "usage": [
-      "The final part 「ならない」 and 「いけない」 are interchangeable: 〜なければいけない, 〜なくてはならない. Polite: 〜なければなりません／いけません.",
-      "「ならない」 is more formal and expresses social norms or objective obligations; 「いけない」 is more conversational and often expresses necessity in one's personal circumstances.",
-      "Colloquial contractions: なければ→なきゃ, なくては→なくちゃ, often with the second half omitted: 「もう行かなきゃ」, 「宿題しなくちゃ」.",
-      "「〜ないといけない／〜ないとだめ」 are also very common and more conversational.",
-      "For the negative (don't have to), use 「〜なくてもいい」; ×なければならなくない is not used."
+    "meaning": "“Must / have to.” Expresses obligation or necessity: not doing it is not an option.",
+    "connection": "Verb nai-form (drop い) + ければならない／くてはいけない; verb nai-form + といけない",
+    "senses": [
+      {
+        "label": "Duty and rules",
+        "meaning": "Social rules or objective obligations. 「〜なければならない」 leans formal. Polite form: 「〜なければなりません」.",
+        "connection": "Verb nai-form (drop い) + ければならない／ければなりません",
+        "examples": [
+          "In Japan, cars must drive on the left.",
+          "Environmental problems must be addressed by the whole world."
+        ]
+      },
+      {
+        "label": "Personal necessity",
+        "meaning": "Something you have to do in a specific situation. 「〜なくてはいけない」 and 「〜ないといけない」 sound more conversational.",
+        "connection": "Verb nai-form (drop い) + くてはいけない; verb nai-form + といけない",
+        "examples": [
+          "I have to get up early tomorrow.",
+          "You have to take the medicine every day."
+        ]
+      },
+      {
+        "label": "Casual contractions",
+        "meaning": "In everyday speech it shrinks to 「〜なきゃ」 or 「〜なくちゃ」, and the rest is often dropped. Common when talking to yourself or excusing yourself.",
+        "connection": "なければ→なきゃ; なくては→なくちゃ",
+        "examples": [
+          "Oh, look at the time. I've got to go home.",
+          "I need to write my report."
+        ]
+      },
+      {
+        "label": "Must be ...",
+        "meaning": "After nouns or adjectives, it means “has to be ...” and states a requirement.",
+        "connection": "i-adjective 〜く + なければならない; noun / na-adjective + でなければならない",
+        "examples": [
+          "Answers must be accurate.",
+          "The classroom needs to be brighter."
+        ]
+      }
     ],
-    "scenarios": [
-      "Explaining rules or obligations: 「日本では車は左側を走らなければなりません。」",
-      "Talking about your schedule or things you have to do: 「明日は早く起きなければならない。」",
-      "Taking leave among friends: 「あ、もうこんな時間。帰らなきゃ。」",
-      "Reminding yourself, talking to yourself: 「レポート、書かなくちゃ。」",
-      "Formal written or spoken expression such as papers and speeches: 「環境問題は世界全体で考えなければならない。」"
+    "notes": [
+      "「ならない」 is more formal and objective; 「いけない」 is more conversational and personal. They can be mixed: 〜なければいけない, 〜なくてはならない.",
+      "For “don't have to”, use 「〜なくてもいい」. ×なければならなくない is wrong."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Leaving a party early",
+          "description": "Friends use the contracted form and drop the ending.",
+          "example": "Sorry, I have an early start tomorrow, so I've got to head home."
+        },
+        {
+          "title": "Suddenly remembering to buy something",
+          "description": "Reminding yourself out loud.",
+          "example": "Oh, I need to buy milk."
+        },
+        {
+          "title": "After seeing the doctor",
+          "description": "Explaining something you personally have to do.",
+          "example": "The doctor told me to, so I have to take medicine every day."
+        }
+      ],
+      "work": [
+        {
+          "title": "Reminding someone of a deadline",
+          "description": "A work obligation stated in formal polite speech.",
+          "example": "The report must be submitted by Friday."
+        },
+        {
+          "title": "Explaining company rules",
+          "description": "Stating a rule objectively.",
+          "example": "You must show your employee ID when entering the building."
+        }
+      ]
+    },
     "etymology": "「なければ」 is the hypothetical form 「なけれ」 of the negative auxiliary 「ない」 + the conjunctive particle 「ば」 (\"if not ...\"), and 「ならない」 is the negative of the verb 「なる」 (成る, \"to hold, to work out\"). Literally, \"if you don't do ..., it won't work\" — a double negative expressing \"must\". 「なくては〜」 works the same way (\"if you don't, then ...\"). The colloquial 「なきゃ」 is a further contraction of 「なけりゃ」 (a sound change of なければ), and 「なくちゃ」 is a sound change of 「なくては」.",
-    "examples": [
-      "In Japan, cars must drive on the left.",
-      "I have to get up early tomorrow.",
-      "Oh, it's already this late. I have to go home.",
-      "I've got to write my report.",
-      "You have to take the medicine every day."
-    ],
     "similar": [
       {
         "title": "〜なくてもいい",
@@ -297,28 +664,82 @@
   },
   {
     "id": "mashou",
-    "meaning": "1) Proposes or calls on the listener to do something together with the speaker: Let's ...; 2) 「〜ましょうか」 offers to do something for the listener (Shall I ...?) or suggests doing something together (Shall we ...?); 3) used for instructions and calls to action (textbooks, notices).",
-    "connection": "Verb masu-stem (drop ます) + ましょう (e.g. 行きます→行きましょう, 休みます→休みましょう)",
-    "usage": [
-      "It is the polite counterpart of 「〜よう／〜おう」 (volitional form): 行こう→行きましょう, 食べよう→食べましょう.",
-      "「〜ましょうか」 has two uses: (1) Shall we do it together? (行きましょうか); (2) offering help (荷物を持ちましょうか = Shall I carry your bags?).",
-      "When replying to an invitation, 「ええ、〜ましょう」 expresses agreement: 「行きませんか」「ええ、行きましょう」.",
-      "In notices, textbooks, and slogans it is a soft way of giving instructions: 「ゴミは持ち帰りましょう」, 「次の文を読みましょう」.",
-      "In casual speech it is sometimes said as 「〜ましょ」: さあ、行きましょ."
+    "meaning": "“Let's ...” Invites someone to do something together, or offers to do something for them.",
+    "connection": "Verb masu-stem (drop ます) + ましょう／ましょうか",
+    "senses": [
+      {
+        "label": "Let's do it together",
+        "meaning": "Invites the listener to do something with you. The tone is upbeat and assumes they'll agree. It is the polite version of 「〜(よ)う」.",
+        "connection": "Verb masu-stem + ましょう (行きます→行きましょう; 休みます→休みましょう)",
+        "examples": [
+          "Let's take a break soon.",
+          "Let's go home together."
+        ]
+      },
+      {
+        "label": "Offering help",
+        "meaning": "「〜ましょうか」 offers “Shall I ...?” It asks whether the listener would like your help.",
+        "connection": "Verb masu-stem + ましょうか",
+        "examples": [
+          "That looks heavy. Shall I carry it?",
+          "Shall I open the window?"
+        ]
+      },
+      {
+        "label": "Consulting (shall we?)",
+        "meaning": "「〜ましょうか」 also discusses what to do together. It shows more respect for the other person's opinion than 「〜ましょう」.",
+        "connection": "Question word / verb masu-stem + ましょうか",
+        "examples": [
+          "Where shall we meet?",
+          "Shall we take a short break?"
+        ]
+      },
+      {
+        "label": "Calls to action",
+        "meaning": "Textbooks, notices, and slogans use it to give gentle instructions to everyone.",
+        "connection": "Verb masu-stem + ましょう",
+        "examples": [
+          "Now, let's read the textbook.",
+          "Please put out your garbage on the designated days."
+        ]
+      }
     ],
-    "scenarios": [
-      "Making a suggestion among coworkers or friends: 「そろそろ休みましょう。」",
-      "Offering to help someone: 「重そうですね。持ちましょうか。」",
-      "A teacher to students: 「では、教科書を読みましょう。」",
-      "Posters and notices: 「ゴミは決められた日に出しましょう。」"
+    "notes": [
+      "It is also the way to accept an invitation: 「行きませんか」「ええ、行きましょう」.",
+      "In speech it is sometimes shortened to 「〜ましょ」: さあ、行きましょ."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Deciding to eat with a friend",
+          "description": "Suggesting you do something together.",
+          "example": "I'm hungry. Let's get something to eat."
+        },
+        {
+          "title": "Helping an elderly person with luggage",
+          "description": "Offering help with humble language sounds even more polite.",
+          "example": "May I carry your bags for you?"
+        },
+        {
+          "title": "Cheering each other on during a hike",
+          "description": "Encouraging everyone to keep going.",
+          "example": "We're almost there. Let's keep going!"
+        }
+      ],
+      "work": [
+        {
+          "title": "Chairing a meeting",
+          "description": "Announcing the start and rallying everyone.",
+          "example": "It's time, so let's begin the meeting."
+        },
+        {
+          "title": "Dividing tasks with a coworker",
+          "description": "Volunteering to take on a task.",
+          "example": "Shall I prepare the materials?"
+        }
+      ]
+    },
     "etymology": "「ましょう」 consists of 「ませ」, the irrealis form of the polite auxiliary 「ます」, and the conjectural/volitional auxiliary 「う」. 「う」 comes from Classical Japanese 「む」, which changed via 「ん」 to 「う」. 「ませう」 then became 「ましょう」 through palatalization. 「ます」 itself is generally thought to have evolved from 「まゐらす」 (参らす, a humble verb of offering) via 「まらする」 and 「まする」, becoming the ordinary polite auxiliary from the Edo period onward.",
-    "examples": [
-      "Let's take a break soon.",
-      "That looks heavy. Shall I carry it for you?",
-      "Now then, let's read the textbook.",
-      "Please put out your garbage on the designated days."
-    ],
     "similar": [
       {
         "title": "〜ませんか",
@@ -336,28 +757,65 @@
   },
   {
     "id": "masenka",
-    "meaning": "Won't you ... (with me)? Why don't we ...? Politely invites or encourages the listener using a negative question.",
-    "connection": "Verb masu-stem (drop ます) + ませんか (e.g. 行きます→行きませんか)",
-    "usage": [
-      "By asking \"won't you ...?\" as a negative question, it leaves the decision to the listener; it respects their wishes more than 「〜ましょう」 and is the most common polite way to invite someone.",
-      "Often combined with 「一緒に」, 「よかったら」, 「今度」, etc.: よかったら、一緒に映画を見に行きませんか.",
-      "Accepting: 「いいですね、行きましょう」; declining: 「すみません、その日はちょっと…」 (indirect, without saying \"no\" outright).",
-      "Among friends, use the plain 「〜ない？」: 一緒に帰らない？ (rising intonation).",
-      "Note: 「わかりませんか」, 「ありませんか」, etc. are ordinary negative questions (Don't you understand? / Isn't there any?), not invitations; 「〜てくれませんか」 and 「〜てくださいませんか」 are requests."
+    "meaning": "“Won't you ...? / Would you like to ...?” A polite invitation phrased as a negative question.",
+    "connection": "Verb masu-stem (drop ます) + ませんか",
+    "senses": [
+      {
+        "label": "Inviting someone",
+        "meaning": "The “won't you ...?” form leaves the decision to the listener. It shows more respect than 「〜ましょう」 and is the most common polite invitation.",
+        "connection": "Verb masu-stem + ませんか (often with 「一緒に」, 「よかったら」, or 「今度」)",
+        "examples": [
+          "Would you like to play tennis together this weekend?",
+          "If you'd like, why not come over to my place sometime?"
+        ]
+      },
+      {
+        "label": "Offering refreshments",
+        "meaning": "A polite way to offer food, drink, or a rest. It often comes with 「〜でも」, which keeps it casual and low-pressure.",
+        "connection": "(Noun + でも) + verb masu-stem + ませんか",
+        "examples": [
+          "Would you like some tea or something?",
+          "Shall we take a little break?"
+        ]
+      }
     ],
-    "scenarios": [
-      "Inviting coworkers or friends: 「週末、一緒にテニスをしませんか。」",
-      "Offering someone something: 「お茶でも飲みませんか。」",
-      "Making a suggestion: 「ちょっと休みませんか。」",
-      "Inviting someone you've just met; more polite than 「〜ましょう」."
+    "notes": [
+      "People rarely say a direct “no” when declining: 「すみません、その日はちょっと…」.",
+      "Between friends, use plain 「〜ない？」 with rising intonation: 一緒に帰らない？",
+      "「わかりませんか」 and 「ありませんか」 are just ordinary questions. 「〜てくれませんか」 is a request. Neither is an invitation."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Inviting a friend to a movie",
+          "description": "A polite invitation that lets the other person decide.",
+          "example": "Want to go see a movie on Saturday?"
+        },
+        {
+          "title": "Inviting a neighbor",
+          "description": "The most tactful choice with someone you don't know well yet.",
+          "example": "Would you like to have tea together sometime?"
+        },
+        {
+          "title": "Taking a photo with a travel companion",
+          "description": "A casual suggestion on the spot.",
+          "example": "Shall we take a picture together here?"
+        }
+      ],
+      "work": [
+        {
+          "title": "Inviting a coworker to lunch",
+          "description": "A polite invitation between colleagues.",
+          "example": "Tanaka-san, would you like to have lunch together?"
+        },
+        {
+          "title": "Suggesting a break in a meeting",
+          "description": "A suggestion framed as a question.",
+          "example": "Shall we take a short break?"
+        }
+      ]
+    },
     "etymology": "「ません」 is 「ませ」, the irrealis form of the polite auxiliary 「ます」, plus the negative auxiliary 「ぬ」 (which changed to 「ん」). The final 「か」 is the question particle. Inviting through a negative question is a common indirect strategy in Japanese: instead of saying \"let's go\", you ask \"won't you go?\", leaving the other person room to say no.",
-    "examples": [
-      "Would you like to play tennis together this weekend?",
-      "How about some tea?",
-      "If you'd like, why don't you come over to my place sometime?",
-      "Shall we take a short break?"
-    ],
     "similar": [
       {
         "title": "〜ましょう",
@@ -375,28 +833,82 @@
   },
   {
     "id": "tari-tari",
-    "meaning": "1) Gives a few representative examples out of several actions: things like ... and ...; 2) two opposite actions alternating: sometimes ..., sometimes ...; 3) a single 「〜たりする」 softly gives one example: ... or something like that.",
-    "connection": "Verb ta-form + り (だり when the ta-form ends in だ), 〜たり〜たりする; i-adjective 〜かったり; noun・na-adjective 〜だったり",
-    "usage": [
-      "The pattern usually ends with 「する」, which carries tense and politeness: 「〜たり〜たりしました」. 「〜たり〜たりです」 is mostly used in noun-like descriptions (毎日、洗濯したり掃除したりです).",
-      "The list is non-exhaustive and implies \"among other things\"; to list actions in sequence, use 「〜て、〜て」.",
-      "Alternating opposite actions: 行ったり来たりする (go back and forth), 泣いたり笑ったり (crying and laughing by turns).",
-      "With adjectives and nouns, it expresses an unstable state: 天気は晴れたり曇ったり, 値段は高かったり安かったり.",
-      "A single 「〜たりする」 gives a soft example or expresses uncertainty: たまに一人で映画を見たりします."
+    "meaning": "Lists a few representative actions (“do things like A and B”), or shows actions or states alternating back and forth.",
+    "connection": "Verb ta-form + り, verb ta-form + り + する",
+    "senses": [
+      {
+        "label": "Listing examples",
+        "meaning": "Picks a few examples from many activities, implying there are others. It says nothing about order. The final 「する」 closes the list and carries the tense.",
+        "connection": "Verb ta-form + り, verb ta-form + り + する (読んだり、聞いたり)",
+        "examples": [
+          "On my days off, I read books, listen to music, that kind of thing.",
+          "Over the weekend I did some cleaning and laundry."
+        ]
+      },
+      {
+        "label": "Back and forth",
+        "meaning": "Two opposite actions alternate, like “back and forth” or “on and off”.",
+        "connection": "Two opposite verbs in ta-form + り + する",
+        "examples": [
+          "He is pacing back and forth in the room.",
+          "The light keeps flickering on and off."
+        ]
+      },
+      {
+        "label": "Changing states",
+        "meaning": "With adjectives or nouns, it shows a state that keeps changing, sometimes one way, sometimes the other.",
+        "connection": "i-adjective 〜かったり; noun / na-adjective 〜だったり; verbs also possible",
+        "examples": [
+          "Lately it's been hot one day and cold the next.",
+          "The weather is alternating between sunny and cloudy."
+        ]
+      },
+      {
+        "label": "Softened example",
+        "meaning": "A single 「〜たりする」 gives one example softly, like “or anything like that”. Common in reminders and when talking about habits.",
+        "connection": "Verb ta-form + り + する／しない",
+        "examples": [
+          "Please don't do things like sleeping in class.",
+          "Now and then I go see a movie on my own."
+        ]
+      }
     ],
-    "scenarios": [
-      "Describing weekend or holiday activities: 「休みの日は本を読んだり、音楽を聞いたりします。」",
-      "Describing back-and-forth movement: 「彼は部屋の中を行ったり来たりしている。」",
-      "Saying conditions keep changing: 「最近は暑かったり寒かったりで、体調を崩しやすい。」",
-      "A gentle warning: 「授業中に寝たりしないでください。」"
+    "notes": [
+      "To list every action in order, use 「〜て、〜て」, not 「〜たり」.",
+      "As a description, it can also end with 「〜たり〜たりです」."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Chatting about the weekend",
+          "description": "Giving examples of what you did.",
+          "example": "On Sunday I did some shopping and met up with friends."
+        },
+        {
+          "title": "Reacting to a movie",
+          "description": "Two opposite emotions alternating.",
+          "example": "That movie had me crying and laughing."
+        },
+        {
+          "title": "Sharing travel stories",
+          "description": "Listing activities from a trip.",
+          "example": "In Kyoto I visited temples, drank matcha, and so on."
+        }
+      ],
+      "work": [
+        {
+          "title": "Talking about hobbies in an interview",
+          "description": "Giving examples and hinting there's more.",
+          "example": "On my days off, I go jogging, read books, things like that."
+        },
+        {
+          "title": "A reminder from your boss",
+          "description": "A gentle warning using one example.",
+          "example": "Please don't be looking at your phones during meetings."
+        }
+      ]
+    },
     "etymology": "「たり」 comes from the Classical Japanese perfective/continuative auxiliary 「たり」, which is itself a contraction of 「て」 + 「あり」 (てあり→たり). From the medieval period on, 「〜たり〜たり」 was used to list two or more actions, gradually developing into the modern listing use. The modern past auxiliary 「た」 also arose from 「たる」, the attributive form of 「たり」, losing its final syllable; so 「たり」 and 「た」 share the same origin, and both show the same voicing in 「〜んだり」 and 「〜いだり」.",
-    "examples": [
-      "On my days off, I do things like read books and listen to music.",
-      "He is pacing back and forth in the room.",
-      "Lately it's been hot one day and cold the next.",
-      "Please don't do things like sleeping in class."
-    ],
     "similar": [
       {
         "title": "〜て、〜て",
@@ -414,28 +926,75 @@
   },
   {
     "id": "ta-koto-ga-aru",
-    "meaning": "Have (ever) done .... Expresses past experience; the negative 「〜たことがない」 means \"have never done ...\".",
-    "connection": "Verb ta-form + ことがある (negative: 〜たことがない; polite: 〜たことがあります／ありません)",
-    "usage": [
-      "Expresses life experience, usually something not done often and worth mentioning. It is not used for recent everyday actions like \"went to the supermarket yesterday\"; just say 「昨日スーパーへ行きました」.",
-      "Question: 「〜たことがありますか」; answers: 「はい、あります」, 「いいえ、ありません／一度もありません」.",
-      "In speech 「が」 is often dropped or replaced with 「は／も」: 食べたことある？, 行ったことはない, 見たこともない.",
-      "Often combined with 「一度」, 「何度も」, 「まだ」, or 「一度も〜ない」: 富士山には一度も登ったことがない.",
-      "Don't confuse it with \"dictionary form + ことがある\" (sometimes ...): たまに遅刻することがある (I'm occasionally late), which has nothing to do with experience."
+    "meaning": "“Have done ... before.” Expresses past experience. The negative means “have never ...”.",
+    "connection": "Verb ta-form + ことがある／ことがない",
+    "senses": [
+      {
+        "label": "Have done before",
+        "meaning": "Something you have experienced in your life, usually notable or out of the ordinary. Not for recent everyday events like “I went to the supermarket yesterday”.",
+        "connection": "Verb ta-form + ことがある (polite: 〜たことがあります; 「が」 is often dropped in speech)",
+        "examples": [
+          "Have you ever been to Japan?",
+          "I have worked in China.",
+          "Have you read that book?"
+        ]
+      },
+      {
+        "label": "Have never done",
+        "meaning": "The negative 「〜たことがない」 means you've never done it. 「一度も」 or 「まだ」 often add emphasis.",
+        "connection": "Verb ta-form + ことがない／ことがありません",
+        "examples": [
+          "I have never once eaten natto.",
+          "I still haven't climbed Mt. Fuji."
+        ]
+      },
+      {
+        "label": "Emphasizing rarity",
+        "meaning": "「こんな〜は〜たことがない」 means “I've never seen anything like it”. It stresses how extreme something is.",
+        "connection": "こんな／これほど + noun + は + verb ta-form + ことがない",
+        "examples": [
+          "I've never seen such beautiful scenery.",
+          "I've never had such a delicious cake."
+        ]
+      }
     ],
-    "scenarios": [
-      "Talking about experiences when first meeting someone: 「日本へ行ったことがありますか。」",
-      "Talking about foods you've eaten: 「納豆は食べたことがありません。」",
-      "Emphasizing something rare: 「こんなきれいな景色は見たことがない。」",
-      "Describing your experience in an interview or self-introduction: 「中国で働いたことがあります。」"
+    "notes": [
+      "「が」 can become 「は」 or 「も」: 行ったことはない, 見たこともない.",
+      "Answers: 「はい、あります」 / 「いいえ、一度もありません」.",
+      "Dictionary form + 「ことがある」 means “sometimes ...”, not experience: たまに遅刻することがある."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Making small talk with someone new",
+          "description": "Asking about someone's experiences to start a conversation.",
+          "example": "Have you ever had Japanese food?"
+        },
+        {
+          "title": "Recommending a movie to a friend",
+          "description": "「が」 is dropped in casual speech.",
+          "example": "Have you seen this movie? It's really good."
+        },
+        {
+          "title": "Remembering a trip",
+          "description": "Talking about a rare experience.",
+          "example": "I've been to Hokkaido only once."
+        }
+      ],
+      "work": [
+        {
+          "title": "Describing experience in an interview",
+          "description": "Explaining past work experience.",
+          "example": "I previously worked at a trading company."
+        },
+        {
+          "title": "Checking a team member's experience",
+          "description": "Asking whether someone has done it before assigning a task.",
+          "example": "Have you used this machine before?"
+        }
+      ]
+    },
     "etymology": "Made of the past auxiliary 「た」 + the formal noun 「こと」 (事, \"matter, fact\") + the case particle 「が」 + the existential verb 「ある」. Literally \"there exists the fact of having done ...\", i.e. \"to have the experience of ...\". 「た」 comes from the classical perfective auxiliary 「たり」 (て + あり). 「こと」 is written with the kanji 「事」, but as a grammatical formal noun it is usually written in kana.",
-    "examples": [
-      "Have you ever been to Japan?",
-      "I've never eaten natto, not even once.",
-      "I've never seen such beautiful scenery.",
-      "Have you read that book?"
-    ],
     "similar": [
       {
         "title": "Dictionary form + ことがある",
@@ -453,28 +1012,74 @@
   },
   {
     "id": "mae-ni",
-    "meaning": "Before .... Indicates that the action in the main clause happens before the action (or event) in the preceding clause.",
-    "connection": "Verb dictionary form + まえに; noun + の + まえに; time-quantity expression + まえに (三年前に = three years ago)",
-    "usage": [
-      "The preceding verb is always in the dictionary form, even if the whole sentence is in the past: ×寝た前に → ○寝る前に歯を磨いた.",
-      "It can be followed by 「に」 to mark a point in time, and other particles such as 「前は」, 「前から」, or 「前で」 are possible, but 「前に」 is the most common for \"do something before ...\".",
-      "For time, \"noun + の + 前に\" usually takes action nouns (食事, 試験, 出発, 授業); 「駅の前に」 is a location (\"in front of the station\"), not this grammar point.",
-      "Quantity expressions attach directly to 「前に」: 三年前に日本に来ました (I came to Japan three years ago).",
-      "Usually written with the kanji 「前に」; children's books and textbooks sometimes write 「まえに」 in kana."
+    "meaning": "“Before ...” The main action happens before another action or event.",
+    "connection": "Verb dictionary form + まえに; noun + の + まえに; time expression + まえに",
+    "senses": [
+      {
+        "label": "Before an action",
+        "meaning": "The second action comes before the first. The verb before 「前に」 is always in dictionary form, even if the whole sentence is in the past.",
+        "connection": "Verb dictionary form + 前に (×寝た前に → ○寝る前に)",
+        "examples": [
+          "I brush my teeth before going to bed.",
+          "Please close the windows before you go out.",
+          "Before coming to Japan, I studied a little Japanese."
+        ]
+      },
+      {
+        "label": "Before an event",
+        "meaning": "Follows nouns for actions or events, such as 食事, 試験, and 会議. Note that 「駅の前に」 means “in front of the station” (a place), which is a different use.",
+        "connection": "Action noun + の + 前に",
+        "examples": [
+          "Let's wash our hands before eating.",
+          "Please read the materials before the meeting."
+        ]
+      },
+      {
+        "label": "(Time) ago",
+        "meaning": "After a length of time, it means “that long ago”, counting back from now. No 「の」 in between.",
+        "connection": "Time expression + 前に (三年前に, 10分前に)",
+        "examples": [
+          "I came to Japan three years ago.",
+          "I arrived at the station 10 minutes ago."
+        ]
+      }
     ],
-    "scenarios": [
-      "Describing daily habits: 「寝る前に歯を磨きます。」",
-      "Reminders and instructions: 「出かける前に、窓を閉めてください。」",
-      "Arranging the order of things: 「授業の前に宿題を出しなさい。」",
-      "Explaining rules: 「食事の前に手を洗いましょう。」"
+    "notes": [
+      "It's usually written in kanji as 「前に」; textbooks sometimes write 「まえに」 in kana.",
+      "「前に」 only shows order. For a deadline, use 「までに」: 5時までに来てください."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Your bedtime routine",
+          "description": "Describing the order of your daily activities.",
+          "example": "I always read a little before going to sleep."
+        },
+        {
+          "title": "Reminding family before going out",
+          "description": "Telling someone to do something first.",
+          "example": "Check the gas before you leave, okay?"
+        },
+        {
+          "title": "Taking photos before eating",
+          "description": "Talking about a little habit.",
+          "example": "I like to take a picture of my food before I eat."
+        }
+      ],
+      "work": [
+        {
+          "title": "Preparing for a meeting",
+          "description": "Explaining the order of tasks.",
+          "example": "I'll email the materials before the meeting."
+        },
+        {
+          "title": "Handing over work before a business trip",
+          "description": "Planning what to finish before leaving.",
+          "example": "I'll get my work wrapped up before I leave on my business trip."
+        }
+      ]
+    },
     "etymology": "「まえ」 is written 「前」. Its origin is generally thought to be 「ま（目）」 (eye) + 「へ（方）」 (direction), i.e. \"the direction the eyes face\", originally meaning \"in front\" in space. It later extended from a spatial to a temporal meaning (\"ahead of a certain moment\"), giving the temporal use of 「〜前に」. This shift from space to time is common across languages; English \"before\" likewise originally meant \"in front of\" (as in \"stand before the king\").",
-    "examples": [
-      "I brush my teeth before going to bed.",
-      "Please close the windows before you go out.",
-      "Let's wash our hands before eating.",
-      "Before coming to Japan, I studied a little Japanese."
-    ],
     "similar": [
       {
         "title": "〜たあとで",
@@ -492,28 +1097,73 @@
   },
   {
     "id": "ta-ato-de",
-    "meaning": "After .... Indicates that the action in the main clause happens after the preceding action is completed.",
-    "connection": "Verb ta-form + あとで (後で); noun + の + あとで",
-    "usage": [
-      "The preceding verb is always in the ta-form, even when the sentence refers to the future: ご飯を食べた後で、散歩します.",
-      "「で」 can be dropped: 「〜た後、〜」 (common in writing and news); 「〜た後に」 emphasizes the point in time; 「〜た後は」 contrasts before and after.",
-      "Noun form: 授業の後で, 仕事の後で.",
-      "「あとで」 used on its own is an adverb meaning \"later, afterwards\": あとで電話します.",
-      "Compared with 「〜てから」, 「〜た後で」 simply states the order; there can be a long gap between the two actions, and it doesn't stress \"immediately after\"."
+    "meaning": "“After ...” The second action happens after the first one is finished.",
+    "connection": "Verb ta-form + あとで; noun + の + あとで",
+    "senses": [
+      {
+        "label": "After an action",
+        "meaning": "One action is finished, then the next happens. The verb is always in ta-form, even when talking about the future. It only shows order; the second action doesn't have to follow right away.",
+        "connection": "Verb ta-form + 後で (あとで)",
+        "examples": [
+          "I'm going to the gym after work.",
+          "You can play games after you've done your homework."
+        ]
+      },
+      {
+        "label": "After an event",
+        "meaning": "Follows nouns for activities, such as 授業, 仕事, and 会議.",
+        "connection": "Noun + の + 後で",
+        "examples": [
+          "Let's talk a bit after the meeting.",
+          "After class, I asked the teacher a question."
+        ]
+      },
+      {
+        "label": "Shortened forms and variants",
+        "meaning": "Dropping 「で」 gives 「〜た後、〜」, common in writing and news. 「〜た後に」 focuses on a point in time. 「〜た後は」 contrasts before and after.",
+        "connection": "Verb ta-form + 後、／後に／後は",
+        "examples": [
+          "After watching the movie, we ate at a restaurant.",
+          "After I graduate, I plan to work in my hometown."
+        ]
+      }
     ],
-    "scenarios": [
-      "Describing a daily routine: 「仕事が終わった後で、ジムに行きます。」",
-      "Explaining precautions: 「食べた後で、すぐに運動しないでください。」",
-      "Narrating past events: 「映画を見た後、レストランで食事をした。」",
-      "Scheduling: 「会議の後で、少し話しましょう。」"
+    "notes": [
+      "「あとで」 on its own is an adverb meaning “later”: あとで電話します.",
+      "「〜てから」 stresses finishing one thing and then doing the next, in close sequence. 「〜た後で」 simply shows which came first."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Going for a walk after dinner",
+          "description": "Planning what to do and in what order.",
+          "example": "Let's go for a walk after we eat."
+        },
+        {
+          "title": "A beer after a bath",
+          "description": "Talking about a moment you enjoy.",
+          "example": "Nothing beats a beer after a hot bath."
+        },
+        {
+          "title": "Coffee after a movie with a friend",
+          "description": "Noun + の + 後で.",
+          "example": "Want to go to a café after the movie?"
+        }
+      ],
+      "work": [
+        {
+          "title": "Reporting after a meeting",
+          "description": "Explaining the order of tasks.",
+          "example": "After the meeting ends, I'll report to the department manager."
+        },
+        {
+          "title": "A teacher calls a student in after class",
+          "description": "Specifying a time.",
+          "example": "Please come to the staff room after class."
+        }
+      ]
+    },
     "etymology": "「あと」 is written 「後」 or 「跡」, originally meaning \"footprint, trace\"; it is generally considered cognate with 「跡」 (one theory derives it from 「あ（足）」 \"foot\" + 「と（処）」 \"place\"). From \"the trace left after passing\" it came to mean \"behind\" in space, and then \"after\" in time. 「で」 is a case particle marking a time frame or circumstance. 「〜た後で」 literally means \"in the time after having done ...\".",
-    "examples": [
-      "After work, I go to the gym.",
-      "After watching the movie, we ate at a restaurant.",
-      "You can play games after you've done your homework.",
-      "Let's talk a bit after the meeting."
-    ],
     "similar": [
       {
         "title": "〜てから",
@@ -531,28 +1181,75 @@
   },
   {
     "id": "nagara",
-    "meaning": "1) While ...ing: the same subject does two actions at the same time; 2) (advanced) although ...: expresses contrast (N2 level, e.g. 「知りながら」, 「残念ながら」).",
-    "connection": "Verb masu-stem (drop ます) + ながら (e.g. 聞きます→聞きながら, 食べます→食べながら)",
-    "usage": [
-      "Both actions must have the same subject. The main action goes at the end of the sentence; the action before 「ながら」 is the secondary, accompanying one: 音楽を聞きながら勉強する (the main activity is studying).",
-      "The preceding verb is generally durative (聞く, 歩く, 食べる); punctual verbs (着く, 死ぬ) cannot be used for \"while doing\".",
-      "It can also express long-term parallel activities: 働きながら大学に通う (attend university while working).",
-      "「ながら」 can be followed by 「も」: 「〜ながらも」 expresses contrast, \"although ..., still ...\" — a more advanced use.",
-      "Set phrases: 「残念ながら」 (unfortunately), 「昔ながらの」 (traditional, as in the old days), 「涙ながらに」 (in tears)."
+    "meaning": "“While doing ...” Two actions at the same time. In advanced use, it also means “although ...”.",
+    "connection": "Verb masu-stem (drop ます) + ながら",
+    "senses": [
+      {
+        "label": "Simultaneous actions",
+        "meaning": "One person does two things at once. The action before 「ながら」 is secondary; the one at the end of the sentence is the main action. The verb before it is usually one that continues over time.",
+        "connection": "Verb masu-stem + ながら (聞きます→聞きながら; 食べます→食べながら)",
+        "examples": [
+          "I read the paper while drinking coffee.",
+          "My mother is singing as she cooks.",
+          "Please don't look at your phone while walking."
+        ]
+      },
+      {
+        "label": "Over a period of time",
+        "meaning": "Doing two things in parallel over a longer period, such as working while going to school.",
+        "connection": "Verb masu-stem + ながら",
+        "examples": [
+          "I attend a Japanese language school while working part-time.",
+          "I study at university while working."
+        ]
+      },
+      {
+        "label": "Contrast (although)",
+        "meaning": "An N2-level use: “although ..., still ...”. It usually follows 「知る」, 「ある」, or adjectives, and often appears as 「〜ながらも」.",
+        "connection": "Verb masu-stem / i-adjective / noun + ながら(も)",
+        "examples": [
+          "I knew it was wrong, but I lied anyway.",
+          "Our home may be small, but it's a happy one."
+        ]
+      }
     ],
-    "scenarios": [
-      "Describing daily habits: 「コーヒーを飲みながら新聞を読みます。」",
-      "Safety warnings: 「歩きながらスマホを見ないでください。」",
-      "Describing one's lifestyle, e.g. attending a Japanese language school 「アルバイトをしながら」 (while working part-time).",
-      "Contrast in written language: 「悪いと知りながら、嘘をついてしまった。」"
+    "notes": [
+      "Both actions must have the same subject. For different subjects, use 「〜ている間」.",
+      "Instantaneous verbs (着く, 死ぬ) can't be used for simultaneous actions.",
+      "Set phrases: 「残念ながら」 (unfortunately), 「昔ながらの」 (traditional, old-style), 「涙ながらに」 (in tears)."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Watching the news over breakfast",
+          "description": "Describing a daily habit.",
+          "example": "I watch the news while eating breakfast."
+        },
+        {
+          "title": "Walking with music",
+          "description": "Talking about something you enjoy.",
+          "example": "I like walking in the park while listening to music."
+        },
+        {
+          "title": "Telling a child to focus",
+          "description": "A parent warns a child not to get distracted.",
+          "example": "No doing homework in front of the TV."
+        }
+      ],
+      "work": [
+        {
+          "title": "Working and studying",
+          "description": "Describing your current lifestyle.",
+          "example": "I work during the day and go to vocational school at night."
+        },
+        {
+          "title": "Taking notes in a meeting",
+          "description": "An instruction to staff or students.",
+          "example": "Please take notes as you listen."
+        }
+      ]
+    },
     "etymology": "「ながら」 already existed in Classical Japanese. It is generally thought to come from the Old Japanese genitive particle 「な」 (equivalent to 「の」) + the noun 「から」 (\"nature, original state, same condition\", cognate with 「柄（がら）」), originally meaning \"keeping the original state of ...\", as in 「昔ながら」 (just as in the old days) and 「涙ながら」 (with tears). From \"maintaining a state\" it developed both the meaning \"while an action continues\" (simultaneity) and the contrastive meaning \"although in a certain state, ...\".",
-    "examples": [
-      "I read the newspaper while drinking coffee.",
-      "Please don't look at your phone while walking.",
-      "I attend a Japanese language school while working part-time.",
-      "My mother is cooking while singing."
-    ],
     "similar": [
       {
         "title": "〜たり〜たりする",
@@ -570,29 +1267,74 @@
   },
   {
     "id": "kara-reason",
-    "meaning": "Because ..., so .... Expresses a cause or reason; relatively subjective, often used to give grounds for the speaker's judgment, intention, request, or command.",
-    "connection": "Plain or polite form of verbs / i-adjectives + から; noun・na-adjective + だから／ですから",
-    "usage": [
-      "It can follow the plain or polite form: 雨が降るから／雨が降りますから; nouns and na-adjectives need 「だ」: 雨だから, 静かだから.",
-      "The main clause can be a command, request, intention, guess, or other subjective expression: 危ないから、触らないで. In this respect it is freer than 「ので」.",
-      "It can stand at the end of a sentence as 「〜からだ／〜からです」 to state the reason: 遅れたのは、電車が止まったからです.",
-      "When answering 「どうして」, you can give just the reason: 「どうして休んだの？」「熱があったから。」",
-      "Distinguish it from the case particle 「から」 marking a starting point (東京から, 9時から); 「〜てから」 means \"after doing ...\" and is not a reason either."
+    "meaning": "“Because ...” Gives a cause or reason. It is fairly subjective and is often followed by requests, commands, or intentions.",
+    "connection": "Verb / adjective (plain or polite) + から; noun / na-adjective + だから",
+    "senses": [
+      {
+        "label": "Giving a reason",
+        "meaning": "Explains the basis for your judgment, decision, or request. The main clause can be a command, request, or intention. In this respect it is freer than 「ので」.",
+        "connection": "Verb / i-adjective (plain) + から; noun / na-adjective + だから",
+        "examples": [
+          "We're out of time, so please hurry.",
+          "I'm tired today, so I'm going to bed early.",
+          "It's raining, so I don't want to go out."
+        ]
+      },
+      {
+        "label": "Reason at the end",
+        "meaning": "「〜からだ／〜からです」 at the end of a sentence explains the reason afterward, often in the pattern 「〜のは〜からだ」. When answering 「どうして」, you can give just the reason.",
+        "connection": "Plain form + からだ／からです",
+        "examples": [
+          "The reason I was late is that the train stopped.",
+          "“Why were you off?” “Because I had a fever.”"
+        ]
+      },
+      {
+        "label": "Polite form + から",
+        "meaning": "Using polite 「〜ますから」 or 「〜ですから」 before it sounds more courteous. Common when explaining things to guests or elders.",
+        "connection": "Verb masu-form / です + から",
+        "examples": [
+          "Tomorrow is a day off, so please take it easy.",
+          "I'll be right back, so please wait here."
+        ]
+      }
     ],
-    "scenarios": [
-      "Giving a reason with a request: 「時間がないから、急いでください。」",
-      "Explaining among friends: 「今日は疲れたから、早く寝るね。」",
-      "Answering why: 「どうして遅れたんですか。」「バスが来なかったからです。」",
-      "Warnings: 「危ないから、触らないで！」"
+    "notes": [
+      "When giving reasons to a superior or asking for time off, 「ので」 is more appropriate.",
+      "Don't confuse it with 「から」 meaning “from” (東京から, 9時から) or with 「〜てから」 (after doing). Neither is a reason."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Planning the weekend with family",
+          "description": "Giving a reason and making a suggestion.",
+          "example": "It's raining today, so let's watch a movie at home."
+        },
+        {
+          "title": "Warning a child",
+          "description": "Followed by a command, 「から」 sounds natural.",
+          "example": "It's dangerous, so don't touch it!"
+        },
+        {
+          "title": "Answering a friend's question",
+          "description": "Answering 「なんで」 with just the reason.",
+          "example": "“Why aren't you eating?” “Because I just ate.”"
+        }
+      ],
+      "work": [
+        {
+          "title": "Asking a coworker to get ready",
+          "description": "Explaining why and making a request to a peer or junior.",
+          "example": "The client will be here soon, so go get the meeting room ready."
+        },
+        {
+          "title": "A teacher's advice to students",
+          "description": "Giving a reason in polite form.",
+          "example": "There's a test tomorrow, so get to bed early, okay?"
+        }
+      ]
+    },
     "etymology": "「から」 was originally a case particle marking a starting point or route (\"from ...\"). As for its origin, it is generally thought to be cognate with the noun 「柄（から）」 (nature, cause, root), though there are other theories. Since a cause can be seen as the \"starting point\" of an event, the starting-point 「から」 naturally extended to a conjunctive particle of cause and reason; this use became widespread from the medieval period onward. (Compare English \"from\" in \"suffering from the cold\".)",
-    "examples": [
-      "We're out of time, so please hurry.",
-      "I'm tired today, so I'm going to bed early.",
-      "Tomorrow is a day off, so please take it easy.",
-      "The reason I was late is that the train stopped.",
-      "It's raining, so I don't want to go out."
-    ],
     "similar": [
       {
         "title": "〜ので",
@@ -615,28 +1357,75 @@
   },
   {
     "id": "node",
-    "meaning": "Because ..., (so) .... Expresses a cause or reason in a more objective, softer, and more polite tone than 「から」; mostly used to state objective cause-and-effect or to explain a situation.",
-    "connection": "Plain form of verbs / i-adjectives + ので; noun・na-adjective + なので (e.g. 雨なので, 静かなので); in formal speech the polite form + ので is also possible (〜ますので, 〜ですので)",
-    "usage": [
-      "Nouns and na-adjectives take 「なので」, not 「だので」: 学生なので, 暇なので.",
-      "「ので」 presents the cause-and-effect as an objective fact, so it suits explaining reasons, apologizing, or asking permission from superiors and clients: 体調が悪いので、早退させていただけますか.",
-      "In formal situations you can say 「〜ますので」 or 「〜ですので」: 資料をお送りしますので、ご確認ください.",
-      "In casual speech it is often pronounced 「んで」: 時間ないんで、また今度.",
-      "It is generally not used at the end of a sentence as 「〜のでだ」; to put a reason at the end, use 「〜からだ」. Note that 「〜のです／〜のではない」 is the explanatory 「のだ」, not 「ので」."
+    "meaning": "“Because / since ...” Gives a cause or reason. More objective, softer, and politer than 「から」.",
+    "connection": "Verb / i-adjective plain form + ので; noun / na-adjective + なので; formal: 〜ますので／〜ですので",
+    "senses": [
+      {
+        "label": "Objective cause and effect",
+        "meaning": "Presents cause and effect as an objective fact. Common when explaining circumstances or natural results.",
+        "connection": "Verb / i-adjective plain form + ので; noun / na-adjective + なので",
+        "examples": [
+          "This road is narrow, so cars can't get through.",
+          "Tomorrow is Sunday, so there's no school."
+        ]
+      },
+      {
+        "label": "Polite reasons",
+        "meaning": "Used to give a reason to a superior or client when asking for time off, apologizing, or making a request. It sounds gentle rather than like an excuse.",
+        "connection": "Verb plain form + ので (followed by 「〜させてください」, 「〜いただけますか」, etc.)",
+        "examples": [
+          "I have a fever, so please let me take today off.",
+          "I'm not feeling well. Would it be all right if I left early?"
+        ]
+      },
+      {
+        "label": "Formal version",
+        "meaning": "In business, 「〜ますので」 and 「〜ですので」 are even more polite. Common in emails and notices.",
+        "connection": "Verb masu-form / です + ので",
+        "examples": [
+          "I'll send you the materials, so please take a look.",
+          "I'll be on a business trip next week, so my replies may be delayed."
+        ]
+      }
     ],
-    "scenarios": [
-      "Explaining the reason when asking for leave or apologizing: 「熱があるので、今日は休ませてください。」",
-      "Business emails: 「来週出張しますので、返信が遅れるかもしれません。」",
-      "Objectively explaining a situation: 「この道は狭いので、車が通れません。」",
-      "Shop notices: 「本日は定休日なので、お休みです。」"
+    "notes": [
+      "Nouns and na-adjectives take 「なので」, not ×だので.",
+      "In speech it often becomes 「んで」: 時間ないんで、また今度.",
+      "With commands like 「危ないから触るな」, 「から」 sounds more natural.",
+      "「〜のです」 and 「〜のではない」 are the explanatory 「のだ」, not 「ので」."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Turning down a friend's invitation",
+          "description": "Giving a reason keeps it polite and gentle.",
+          "example": "Sorry, I have something on tomorrow, so I can't make it."
+        },
+        {
+          "title": "Greeting neighbors before moving",
+          "description": "Politely explaining why you've come.",
+          "example": "We're moving next week, so we came to say goodbye."
+        },
+        {
+          "title": "A sign on a shop door",
+          "description": "Stating the situation objectively.",
+          "example": "We are closed today for our regular holiday."
+        }
+      ],
+      "work": [
+        {
+          "title": "Calling in to take the day off",
+          "description": "Give the reason first, then the request.",
+          "example": "My child has a fever, so I'll be taking today off."
+        },
+        {
+          "title": "Explaining in a business email",
+          "description": "「〜ておりますので」 is more formal.",
+          "example": "I'm out of the office today, so I'll get in touch tomorrow."
+        }
+      ]
+    },
     "etymology": "「ので」 combines the nominalizing particle (formal noun) 「の」 with 「で」, the continuative form of the copula 「だ」; literally something like \"it is the fact that ..., (so)\". It is generally thought that this form began to be used as a conjunctive particle in the late Edo period and became widespread after the Meiji era. Because it explains a cause by nominalizing the preceding clause (「の」) and then asserting it, it feels more objective and softer than 「から」.",
-    "examples": [
-      "I have a fever, so please let me take today off.",
-      "This road is narrow, so cars can't get through.",
-      "Tomorrow is Sunday, so there's no school.",
-      "I'll send you the materials, so please take a look."
-    ],
     "similar": [
       {
         "title": "〜から",
@@ -654,28 +1443,84 @@
   },
   {
     "id": "ga-hoshii",
-    "meaning": "Want (something). Expresses the speaker's desire for a thing; in questions, asks what the listener wants.",
-    "connection": "Noun + が + ほしい (欲しい); ほしい conjugates as an i-adjective",
-    "usage": [
-      "「ほしい」 is an i-adjective: ほしい／ほしくない／ほしかった／ほしくて; for politeness add 「です」: ほしいです.",
-      "The desired object is marked with 「が」 (not ×を ほしい); in negatives or contrasts it often becomes 「は」: 車はほしくない.",
-      "In principle it is used only for the first person and the second person in questions; for a third person use 「ほしがる／ほしがっている」: 弟は新しいゲームをほしがっている.",
-      "Asking a superior directly 「何がほしいですか」 is not very polite; you can say 「何かご希望はありますか」 instead.",
-      "「〜てほしい」 (wanting someone else to do something) is a different use: 早く元気になってほしい."
+    "meaning": "“Want (something).” Expresses the speaker's desire for a thing.",
+    "connection": "Noun + が + ほしい (欲しい); conjugates like an i-adjective",
+    "senses": [
+      {
+        "label": "Wanting something",
+        "meaning": "You want a certain thing. Use it only for yourself, or in questions to the listener.",
+        "connection": "Noun + が + ほしい／ほしいです",
+        "examples": [
+          "I want a new computer.",
+          "What do you want for your birthday?"
+        ]
+      },
+      {
+        "label": "Not wanting",
+        "meaning": "The negative 「ほしくない」 means you don't want or need it. In negatives and contrasts, 「が」 often becomes 「は」 or 「も」.",
+        "connection": "Noun + は／も + ほしくない",
+        "examples": [
+          "I don't want anything right now.",
+          "I don't want a car."
+        ]
+      },
+      {
+        "label": "Wanted (past)",
+        "meaning": "「ほしかった」 is a past wish, often with nostalgia or regret.",
+        "connection": "Noun + が + ほしかった",
+        "examples": [
+          "When I was a kid, I wanted a dog.",
+          "I've wanted this bag for ages."
+        ]
+      },
+      {
+        "label": "Someone else wants",
+        "meaning": "For a third person's wishes, use 「ほしがる」, usually as 「ほしがっている」. The object then takes 「を」.",
+        "connection": "Noun + を + ほしがる／ほしがっている",
+        "examples": [
+          "My little brother wants a new game.",
+          "The child is crying because he wants a toy."
+        ]
+      }
     ],
-    "scenarios": [
-      "Saying what you want: 「新しいパソコンがほしいです。」",
-      "Asking a friend: 「誕生日に何がほしい？」",
-      "Saying you don't need anything: 「今は何もほしくない。」",
-      "Recalling a past wish: 「子どものころ、犬がほしかった。」"
+    "notes": [
+      "「ほしい」 is an i-adjective: ほしい／ほしくない／ほしかった／ほしくて.",
+      "The desired thing takes 「が」, not ×をほしい.",
+      "Asking a superior 「何がほしいですか」 is impolite. Try 「何かご希望はありますか」 instead.",
+      "「〜てほしい」 is a different pattern meaning you want someone to do something: 早く元気になってほしい."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Asking a friend about a gift",
+          "description": "Friends ask each other directly.",
+          "example": "What do you want for your birthday?"
+        },
+        {
+          "title": "Spotting clothes you love while shopping",
+          "description": "Expressing a strong desire.",
+          "example": "I really want this dress!"
+        },
+        {
+          "title": "Wishing for a pet",
+          "description": "「なあ」 at the end adds a wistful tone.",
+          "example": "I wish I had a cat."
+        }
+      ],
+      "work": [
+        {
+          "title": "Asking a teacher or boss for more time",
+          "description": "Stating what you need in a fairly soft way.",
+          "example": "I'd like a little more time."
+        },
+        {
+          "title": "Chatting with coworkers about equipment",
+          "description": "Fine among coworkers. When asking a superior what they want, use 「ご希望」 instead.",
+          "example": "It'd be nice to have a bigger monitor, wouldn't it?"
+        }
+      ]
+    },
     "etymology": "「ほしい」 comes from the Classical Japanese adjective 「ほし」 (欲し, shiku-type conjugation), cognate with the old verb 「ほる」 (欲る, \"to want\"). The attributive form 「ほしき」 became 「ほしい」 through i-onbin. It is written 「欲しい」 in kanji, but as an auxiliary adjective (〜てほしい) it is usually written in kana.",
-    "examples": [
-      "I want a new computer.",
-      "What do you want for your birthday?",
-      "I don't want anything right now.",
-      "When I was a child, I really wanted a dog."
-    ],
     "similar": [
       {
         "title": "〜たい",
@@ -693,28 +1538,82 @@
   },
   {
     "id": "tsumori",
-    "meaning": "1) Intend to, plan to ... (an intention or plan thought out in advance); 2) 「ta-form / noun の + つもり」: believe (mistakenly) that ..., consider it as ... (a perception that doesn't match reality).",
-    "connection": "Verb dictionary form + つもりだ; negative: verb nai-form + つもりだ (intend not to) / dictionary form + つもりはない (have no intention at all); verb ta-form・noun の + つもり",
-    "usage": [
-      "Expresses a considered, fairly firm intention; more planned than 「〜たい」 (a wish) or 「〜(よ)うと思う」 (a thought one has at the moment).",
-      "There are two negatives: 「行かないつもりだ」 (I intend not to go) and 「行くつもりはない」 (I have no intention whatsoever of going; stronger).",
-      "Asking a superior directly 「〜つもりですか」 can sound like interrogating their intentions and is not very polite; say 「〜ご予定ですか」 instead.",
-      "「〜たつもり」: thinking you have done something when you actually haven't: 鍵をかけたつもりだったが、開いていた.",
-      "「Noun のつもり」: treating it as ...: 旅行のつもりで出張を楽しむ; 「どういうつもりだ」 (What do you think you're doing?) is an accusation."
+    "meaning": "“Intend to / plan to ...” A plan decided in advance. It can also mean “thought I had ...” or “meant it as ...”.",
+    "connection": "Verb dictionary form / nai-form + つもりだ; verb ta-form / noun + の + つもり",
+    "senses": [
+      {
+        "label": "Intend to do",
+        "meaning": "A plan you have thought about and are fairly sure of. More planned than 「〜たい」 and more firm than 「〜(よ)うと思う」.",
+        "connection": "Verb dictionary form + つもりだ",
+        "examples": [
+          "I plan to study abroad in Japan next year.",
+          "I'm planning to go back to my home country for summer vacation."
+        ]
+      },
+      {
+        "label": "Not intending to",
+        "meaning": "There are two negatives. 「〜ないつもりだ」 means you intend not to do it. 「〜つもりはない」 means you have no such intention at all, which is stronger.",
+        "connection": "Verb nai-form + つもりだ; verb dictionary form + つもりはない",
+        "examples": [
+          "I intend never to smoke again.",
+          "I have no intention of joining that company."
+        ]
+      },
+      {
+        "label": "Thought I had",
+        "meaning": "Ta-form + 「つもり」 means you believed you did something, but in reality you didn't. Often 「〜つもりだったが」.",
+        "connection": "Verb ta-form + つもり(だった)",
+        "examples": [
+          "I thought I'd locked it, but it was open.",
+          "I thought I'd explained it well. Was it hard to follow?"
+        ]
+      },
+      {
+        "label": "Meant as / treat as",
+        "meaning": "Noun + の + 「つもり」 means treating something as something else, or explains what you really meant.",
+        "connection": "Noun + の + つもり",
+        "examples": [
+          "I only meant it as a joke.",
+          "I enjoyed the business trip as if it were a vacation."
+        ]
+      }
     ],
-    "scenarios": [
-      "Talking about plans: 「来年、日本に留学するつもりです。」",
-      "Expressing a resolution not to do something: 「もう二度とタバコは吸わないつもりだ。」",
-      "Making your position clear when declining: 「その会社に入るつもりはありません。」",
-      "Justifying yourself or reflecting: 「冗談のつもりだったんです。」"
+    "notes": [
+      "Asking a superior 「〜つもりですか」 directly can sound like an interrogation. Use 「〜ご予定ですか」 instead.",
+      "「どういうつもりだ」 is a confrontation: “What do you think you're doing?”"
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Chatting about weekend plans",
+          "description": "Telling a friend what you plan to do.",
+          "example": "I'm planning to just relax at home this weekend."
+        },
+        {
+          "title": "New Year's resolutions",
+          "description": "Stating your determination.",
+          "example": "This year I'm really going to quit drinking."
+        },
+        {
+          "title": "Apologizing to a friend",
+          "description": "Explaining that it wasn't on purpose.",
+          "example": "Sorry, I didn't mean to make you angry."
+        }
+      ],
+      "work": [
+        {
+          "title": "Stating your commitment in an interview",
+          "description": "Expressing a long-term plan.",
+          "example": "I intend to work at your company for a long time."
+        },
+        {
+          "title": "Asked about changing jobs",
+          "description": "「つもりはない」 makes your position clear.",
+          "example": "For now, I have no plans to change jobs."
+        }
+      ]
+    },
     "etymology": "「つもり」 is the nominalized continuative form of the verb 「積もる」 (つもる, \"to pile up\", extended to \"to estimate, to calculate\"). Written 「積もり」 or 「積り」, it originally meant \"estimate, budget\", a sense still preserved in 「見積もり」 (quotation, estimate). From \"estimating in advance\" it came to mean \"one's inner calculation, intention\". 「心算」 is a borrowed-kanji spelling for this meaning; today it is generally written in kana as 「つもり」.",
-    "examples": [
-      "I plan to study abroad in Japan next year.",
-      "I'm determined never to smoke again.",
-      "I have no intention of joining that company.",
-      "I thought I had locked it, but it was open."
-    ],
     "similar": [
       {
         "title": "〜(よ)うと思う",
@@ -736,28 +1635,82 @@
   },
   {
     "id": "hou-ga-ii",
-    "meaning": "You'd better ..., it would be best to .... Gives advice or a warning to the listener; the negative 「〜ないほうがいい」 means \"you'd better not ...\".",
-    "connection": "Verb ta-form + ほうがいい (advise doing); verb nai-form + ほうがいい (advise not doing); the dictionary form is also possible",
-    "usage": [
-      "When advising someone to do something, the ta-form is generally used: 早く寝たほうがいい. The dictionary form (早く寝るほうがいい) leans toward general statements or comparisons.",
-      "To advise against something, use 「〜ないほうがいい」; ×〜なかったほうがいい is not used.",
-      "「いい」 can be replaced with 「よい／良い」 (written) or 「よろしい」 (formal). Polite: 〜たほうがいいですよ.",
-      "The tone is fairly direct; saying 「〜たほうがいいです」 to a superior can sound like you're lecturing them, so the softer 「〜てはいかがでしょうか」 is better.",
-      "The past 「〜たほうがよかった」 expresses regret: もっと勉強したほうがよかった (I should have studied more)."
+    "meaning": "“You'd better / you should ...” Gives advice or a warning. The negative means “you'd better not ...”.",
+    "connection": "Verb ta-form + ほうがいい; verb nai-form + ほうがいい",
+    "senses": [
+      {
+        "label": "Advising to do",
+        "meaning": "Recommends doing something. The ta-form is the norm and sounds fairly clear. Politely: 「〜たほうがいいですよ」.",
+        "connection": "Verb ta-form + ほうがいい (方がいい)",
+        "examples": [
+          "You look pale. You should go to bed early tonight.",
+          "You really should quit smoking."
+        ]
+      },
+      {
+        "label": "Advising not to",
+        "meaning": "Recommends not doing something. Use the nai-form; ×なかったほうがいい is wrong.",
+        "connection": "Verb nai-form + ほうがいい",
+        "examples": [
+          "You'd better not walk alone at night.",
+          "You shouldn't drink unboiled water."
+        ]
+      },
+      {
+        "label": "Regret",
+        "meaning": "「〜たほうがよかった」 expresses regret: “I should have ...”.",
+        "connection": "Verb ta-form + ほうがよかった",
+        "examples": [
+          "We should have left earlier.",
+          "I should have brought an umbrella."
+        ]
+      },
+      {
+        "label": "General advice",
+        "meaning": "With the dictionary form, it leans toward general truths or comparisons, not advice for a specific situation.",
+        "connection": "Verb dictionary form + ほうがいい",
+        "examples": [
+          "It's better to study a foreign language a little every day."
+        ]
+      }
     ],
-    "scenarios": [
-      "Showing concern or advising a friend: 「顔色が悪いよ。今日は早く寝たほうがいい。」",
-      "Advice from a doctor or senior: 「タバコはやめたほうがいいですよ。」",
-      "Warning against something: 「夜、一人で歩かないほうがいい。」",
-      "Reflecting on the past: 「もっと早く出発したほうがよかった。」"
+    "notes": [
+      "「いい」 can become 「よい」 (written) or 「よろしい」 (formal).",
+      "Saying it to a superior can sound like you're lecturing them. A softer option is 「〜てはいかがでしょうか」.",
+      "Noun + 「のほうがいい」 shows preference, not advice: コーヒーより紅茶のほうがいい."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "A friend has a cold",
+          "description": "Showing concern and giving advice.",
+          "example": "If you have a fever, you should go to the doctor."
+        },
+        {
+          "title": "Tips for a tourist",
+          "description": "Sharing experience and making a suggestion.",
+          "example": "Kyoto gets crowded, so it's best to go early in the morning."
+        },
+        {
+          "title": "Talking a friend out of going",
+          "description": "Advising against something.",
+          "example": "That place is expensive, so I wouldn't go there."
+        }
+      ],
+      "work": [
+        {
+          "title": "A senior advising a junior",
+          "description": "Fine to use directly with juniors.",
+          "example": "It's a good idea to double-check important emails before sending them."
+        },
+        {
+          "title": "A gentle suggestion to your boss",
+          "description": "With superiors, adding 「〜かと思います」 softens it.",
+          "example": "I think it might be best to book the venue in advance."
+        }
+      ]
+    },
     "etymology": "「ほう」 is written 「方」, originally meaning \"direction, side\", and by extension \"one side\" of two alternatives. 「〜ほうがいい」 literally means \"the side of (doing ...) is better\". It was originally a comparative expression (AよりBのほうがいい); the item being compared was later omitted, and it became a fixed pattern for giving advice. 「いい」 is the colloquial form of 「よい」, so its past tense is 「よかった」.",
-    "examples": [
-      "You look pale. You'd better go to bed early today.",
-      "You really should quit smoking.",
-      "You'd better not walk alone at night.",
-      "We should have left earlier."
-    ],
     "similar": [
       {
         "title": "〜なければならない",

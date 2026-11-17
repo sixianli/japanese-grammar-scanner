@@ -24,7 +24,7 @@ final class GrammarLibraryTests: XCTestCase {
     func testEveryExampleIsRecognizedByItsOwnPatterns() {
         for p in library.points {
             let regexes = p.patterns.compactMap { try? NSRegularExpression(pattern: $0) }
-            for ex in p.examples {
+            for ex in p.allExamples {
                 let range = NSRange(location: 0, length: (ex.ja as NSString).length)
                 let hit = regexes.contains { $0.firstMatch(in: ex.ja, range: range) != nil }
                 XCTAssertTrue(hit, "\(p.id) 例句未被识别: \(ex.ja)")
@@ -139,13 +139,44 @@ final class LocalizationTests: XCTestCase {
             XCTAssertEqual(lib.points.count, base.points.count, "\(lang)")
             for p in lib.points {
                 guard let b = base.point(id: p.id) else { continue }
-                XCTAssertNotEqual(p.meaning, b.meaning, "\(lang.rawValue) 缺少 \(p.id) 的讲解")
-                XCTAssertNotEqual(p.etymology, b.etymology, "\(lang.rawValue) 缺少 \(p.id) 的词源")
-                XCTAssertEqual(p.examples.map(\.ja), b.examples.map(\.ja), "日语例句不应被翻译")
+                // 繁体中文由简体自动转换，个别句子恰好没有需要转换的字，可能与简体完全相同
                 if lang != .zhHant {
-                    XCTAssertNotEqual(p.examples.first?.translation, b.examples.first?.translation, "\(lang.rawValue) \(p.id) 例句未翻译")
+                    XCTAssertNotEqual(p.meaning, b.meaning, "\(lang.rawValue) 缺少 \(p.id) 的讲解")
+                    XCTAssertNotEqual(p.etymology, b.etymology, "\(lang.rawValue) 缺少 \(p.id) 的词源")
+                }
+                XCTAssertEqual(p.allExamples.map(\.ja), b.allExamples.map(\.ja), "日语例句不应被翻译")
+                if lang != .zhHant {
+                    XCTAssertNotEqual(p.allExamples.first?.translation, b.allExamples.first?.translation, "\(lang.rawValue) \(p.id) 例句未翻译")
                 }
             }
         }
+    }
+}
+
+final class FuriganaTests: XCTestCase {
+    /// 所有含汉字的日语例句都必须有注音数据。
+    func testAllExamplesHaveFurigana() {
+        let kanji = try! NSRegularExpression(pattern: "[\\u3400-\\u9fff々]")
+        for p in GrammarLibrary(language: .zhHans).points {
+            let sentences = p.allExamples.map(\.ja) + (p.scenes.daily + p.scenes.work).map(\.example.ja)
+            for ja in sentences where kanji.firstMatch(in: ja, range: NSRange(location: 0, length: (ja as NSString).length)) != nil {
+                XCTAssertTrue(FuriganaStore.shared.hasRuby(ja), "\(p.id) 缺少注音: \(ja)")
+                XCTAssertEqual(FuriganaStore.shared.segments(for: ja).map(\.base).joined(), ja, "注音片段拼接后应等于原文")
+            }
+        }
+    }
+}
+
+final class EntitlementTests: XCTestCase {
+    func testTrialAndUnlockStates() {
+        let start = Date(timeIntervalSince1970: 1_800_000_000)
+        typealias S = EntitlementStore
+        XCTAssertEqual(S.access(purchases: [:], now: start), .notStarted)
+        if case .trial = S.access(purchases: [S.ProductID.trial: start], now: start.addingTimeInterval(6 * 86_400)) {} else {
+            XCTFail("第 6 天应仍在试用期")
+        }
+        XCTAssertEqual(S.access(purchases: [S.ProductID.trial: start], now: start.addingTimeInterval(8 * 86_400)), .trialExpired)
+        XCTAssertEqual(S.access(purchases: [S.ProductID.trial: start, S.ProductID.lifetime: start], now: start.addingTimeInterval(30 * 86_400)), .unlocked)
+        XCTAssertEqual(S.access(purchases: [S.ProductID.lifetime: start], now: start), .unlocked)
     }
 }

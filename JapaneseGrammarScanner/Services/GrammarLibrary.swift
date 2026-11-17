@@ -36,7 +36,7 @@ final class GrammarLibrary: ObservableObject {
         guard !q.isEmpty else { return points }
         let normalizedQ = q.replacingOccurrences(of: "〜", with: "").replacingOccurrences(of: "~", with: "")
         return points.filter { p in
-            let fields = [p.title, p.reading ?? "", p.meaning] + p.examples.map(\.ja) + p.examples.map(\.translation)
+            let fields = [p.title, p.reading ?? "", p.meaning] + p.allExamples.map(\.ja) + p.allExamples.map(\.translation) + p.senses.map(\.label)
             return fields.contains { $0.localizedCaseInsensitiveContains(normalizedQ) }
                 || p.level.rawValue.caseInsensitiveCompare(q) == .orderedSame
         }

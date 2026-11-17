@@ -35,6 +35,10 @@ struct ScanHomeView: View {
         .onDisappear { camera.stop() }
         .onChange(of: path) { _, _ in updateCameraState() }
         .onChange(of: scenePhase) { _, _ in updateCameraState() }
+        .onReceive(NotificationCenter.default.publisher(for: .openSamplePage)) { _ in
+            path = []
+            openSample()
+        }
         .onChange(of: photoItem) { _, item in
             guard let item else { return }
             Task { await loadPhoto(item) }

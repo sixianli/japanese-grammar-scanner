@@ -35,14 +35,26 @@ def main():
             base = json.load(f)
         out = []
         for p in base:
+            item = {"id": p["id"]}
+            if re.search(r"[（(][^）)]*[\u4e00-\u9fff]", p["title"]):
+                item["title"] = conv(p["title"])
             out.append({
-                "id": p["id"],
+                **item,
                 "meaning": conv(p["meaning"]),
                 "connection": conv(p["connection"]),
-                "usage": [conv(x) for x in p["usage"]],
-                "scenarios": [conv(x) for x in p["scenarios"]],
+                "senses": [{
+                    "label": conv(x["label"]),
+                    "meaning": conv(x["meaning"]),
+                    "connection": conv(x["connection"]),
+                    "examples": [conv(e["zh"]) for e in x["examples"]],
+                } for x in p["senses"]],
+                "notes": [conv(x) for x in p.get("notes", [])],
+                "scenes": {k: [{
+                    "title": conv(sc["title"]),
+                    "description": conv(sc["description"]),
+                    "example": conv(sc["example"]["zh"]),
+                } for sc in p["scenes"][k]] for k in ("daily", "work")},
                 "etymology": conv(p["etymology"]),
-                "examples": [conv(e["zh"]) for e in p["examples"]],
                 "similar": [{"title": conv(s["title"]), "explanation": conv(s["explanation"])} for s in p["similar"]],
             })
         dst = os.path.join(GRAMMAR_DIR, "l10n", f"l10n_zh-Hant_{level}.json")

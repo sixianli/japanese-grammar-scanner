@@ -15,6 +15,26 @@ struct GrammarPoint: Codable, Identifiable, Hashable {
         }
     }
 
+    /// 一个义项（用法）：意思讲解 + 接续讲解 + 最常见例句（≤3）。
+    struct Sense: Codable, Hashable {
+        var label: String
+        var meaning: String
+        var connection: String
+        var examples: [Example]
+    }
+
+    /// 一个具体使用场景。
+    struct Scene: Codable, Hashable {
+        var title: String
+        var description: String
+        var example: Example
+    }
+
+    struct Scenes: Codable, Hashable {
+        var daily: [Scene]
+        var work: [Scene]
+    }
+
     struct Similar: Codable, Hashable {
         /// 若相近语法也收录在库中，则有 id，可跳转。
         let id: String?
@@ -26,30 +46,68 @@ struct GrammarPoint: Codable, Identifiable, Hashable {
     var title: String
     let reading: String?
     let level: JLPTLevel
+    /// 一句话概述。
     var meaning: String
+    /// 总体接续。
     var connection: String
-    var usage: [String]
-    var scenarios: [String]
+    var senses: [Sense]
+    var notes: [String]
+    var scenes: Scenes
     var etymology: String
-    var examples: [Example]
     var similar: [Similar]
     let patterns: [String]
     let subsumes: [String]?
+    /// 是否在扫描时高亮。最基础的助词等（は・が・を…）设为 false：收录在语法库，但不在扫描结果中高亮。
+    let scannable: Bool
+
+    enum CodingKeys: String, CodingKey {
+        case id, title, reading, level, meaning, connection, senses, notes, scenes, etymology, similar, patterns, subsumes, scannable
+    }
+
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        id = try c.decode(String.self, forKey: .id)
+        title = try c.decode(String.self, forKey: .title)
+        reading = try c.decodeIfPresent(String.self, forKey: .reading)
+        level = try c.decode(JLPTLevel.self, forKey: .level)
+        meaning = try c.decode(String.self, forKey: .meaning)
+        connection = try c.decode(String.self, forKey: .connection)
+        senses = try c.decode([Sense].self, forKey: .senses)
+        notes = try c.decodeIfPresent([String].self, forKey: .notes) ?? []
+        scenes = try c.decode(Scenes.self, forKey: .scenes)
+        etymology = try c.decode(String.self, forKey: .etymology)
+        similar = try c.decode([Similar].self, forKey: .similar)
+        patterns = try c.decode([String].self, forKey: .patterns)
+        subsumes = try c.decodeIfPresent([String].self, forKey: .subsumes)
+        scannable = try c.decodeIfPresent(Bool.self, forKey: .scannable) ?? true
+    }
+
+    /// 所有义项的例句。
+    var allExamples: [Example] { senses.flatMap(\.examples) }
 
     static func == (lhs: GrammarPoint, rhs: GrammarPoint) -> Bool { lhs.id == rhs.id }
     func hash(into hasher: inout Hasher) { hasher.combine(id) }
 
-    /// 用某种语言的讲解覆盖当前内容。结构不一致的字段保持原样。
+    /// 用某种语言的讲解覆盖当前内容。结构不一致的部分保持原样（回退为简体中文）。
     mutating func apply(_ l: GrammarLocalization) {
         if let t = l.title, !t.isEmpty { title = t }
         meaning = l.meaning
         connection = l.connection
-        if l.usage.count == usage.count { usage = l.usage }
-        if l.scenarios.count == scenarios.count { scenarios = l.scenarios }
         etymology = l.etymology
-        if l.examples.count == examples.count {
-            for i in examples.indices { examples[i].translation = l.examples[i] }
+        if l.senses.count == senses.count {
+            for i in senses.indices {
+                let ls = l.senses[i]
+                senses[i].label = ls.label
+                senses[i].meaning = ls.meaning
+                senses[i].connection = ls.connection
+                if ls.examples.count == senses[i].examples.count {
+                    for j in senses[i].examples.indices { senses[i].examples[j].translation = ls.examples[j] }
+                }
+            }
         }
+        if let ln = l.notes, ln.count == notes.count { notes = ln }
+        Self.apply(l.scenes.daily, to: &scenes.daily)
+        Self.apply(l.scenes.work, to: &scenes.work)
         if l.similar.count == similar.count {
             for i in similar.indices {
                 similar[i].title = l.similar[i].title
@@ -57,10 +115,37 @@ struct GrammarPoint: Codable, Identifiable, Hashable {
             }
         }
     }
+
+    private static func apply(_ texts: [GrammarLocalization.SceneText], to scenes: inout [Scene]) {
+        guard texts.count == scenes.count else { return }
+        for i in scenes.indices {
+            scenes[i].title = texts[i].title
+            scenes[i].description = texts[i].description
+            scenes[i].example.translation = texts[i].example
+        }
+    }
 }
 
-/// 某种语言的讲解（l10n/l10n_<语言>_<等级>.json 中的一项）。
+/// 某种语言的讲解（l10n/l10n_<语言>_<等级>.json 中的一项）。日语例句不翻译，只给译文。
 struct GrammarLocalization: Decodable {
+    struct SenseText: Decodable {
+        let label: String
+        let meaning: String
+        let connection: String
+        let examples: [String]
+    }
+
+    struct SceneText: Decodable {
+        let title: String
+        let description: String
+        let example: String
+    }
+
+    struct ScenesText: Decodable {
+        let daily: [SceneText]
+        let work: [SceneText]
+    }
+
     struct SimilarText: Decodable {
         let title: String
         let explanation: String
@@ -70,10 +155,10 @@ struct GrammarLocalization: Decodable {
     let title: String?
     let meaning: String
     let connection: String
-    let usage: [String]
-    let scenarios: [String]
+    let senses: [SenseText]
+    let notes: [String]?
+    let scenes: ScenesText
     let etymology: String
-    let examples: [String]
     let similar: [SimilarText]
 }
 

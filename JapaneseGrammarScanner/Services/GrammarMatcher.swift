@@ -12,7 +12,7 @@ final class GrammarMatcher {
     private let subsumesByID: [String: Set<String>]
 
     init(points: [GrammarPoint]) {
-        let builtRules = points.map { point -> Rule in
+        let builtRules = points.filter(\.scannable).map { point -> Rule in
             let regexes = point.patterns.compactMap { pattern -> NSRegularExpression? in
                 do {
                     return try NSRegularExpression(pattern: pattern)
