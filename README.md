@@ -18,7 +18,7 @@
 
 ## 运行
 
-要求：Xcode 16+，iOS 17+（相机功能需要真机）。
+要求：Xcode 26+（App Store 上传要求 iOS 26 SDK），App 支持 iOS 17+（相机功能需要真机）。
 
 ```bash
 open JapaneseGrammarScanner.xcodeproj
