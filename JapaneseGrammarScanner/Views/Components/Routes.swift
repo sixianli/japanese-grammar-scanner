@@ -1,0 +1,44 @@
+import SwiftUI
+import UIKit
+
+/// 导航目的地。
+enum Route: Hashable {
+    case grammar(String)
+    case scan(ScanImage)
+}
+
+/// 要做识别的一张图片（来自相机定格或相册）。
+struct ScanImage: Hashable, Identifiable {
+    let id = UUID()
+    let image: UIImage
+
+    static func == (lhs: ScanImage, rhs: ScanImage) -> Bool { lhs.id == rhs.id }
+    func hash(into hasher: inout Hasher) { hasher.combine(id) }
+}
+
+extension View {
+    /// 统一注册所有导航目的地。
+    func withAppRoutes() -> some View {
+        navigationDestination(for: Route.self) { route in
+            switch route {
+            case .grammar(let id):
+                GrammarDetailView(grammarID: id)
+            case .scan(let scanImage):
+                ScanResultView(scanImage: scanImage)
+            }
+        }
+    }
+}
+
+extension JLPTLevel {
+    /// 高亮颜色按 JLPT 等级区分。
+    var color: Color {
+        switch self {
+        case .n5: Color(red: 0.20, green: 0.70, blue: 0.40)
+        case .n4: Color(red: 0.15, green: 0.55, blue: 0.95)
+        case .n3: Color(red: 0.98, green: 0.60, blue: 0.10)
+        case .n2: Color(red: 0.65, green: 0.35, blue: 0.90)
+        case .n1: Color(red: 0.92, green: 0.25, blue: 0.30)
+        }
+    }
+}
