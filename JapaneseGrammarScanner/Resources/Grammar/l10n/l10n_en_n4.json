@@ -1,29 +1,67 @@
 [
   {
     "id": "te-shimau",
-    "meaning": "1) An action is completely finished, done all the way (\"... up, ... off, finish ...ing\"); 2) something happened that the speaker did not want and that cannot be undone, with a tone of regret, remorse, or frustration (\"accidentally ...\", \"ended up ...ing\").",
-    "connection": "Verb te-form + しまう (colloquial contraction: 〜ちゃう／〜じゃう)",
-    "usage": [
-      "It attaches to the verb te-form, and しまう itself conjugates as a godan verb: てしまった, てしまいます, てしまおう, てしまえば, てしまって.",
-      "Colloquial contractions: てしまう→ちゃう, でしまう→じゃう; てしまった→ちゃった／じゃった, てしまいます→ちゃいます. Kansai dialect also has forms like 〜てもうた.",
-      "The \"completion\" meaning often goes with words like 全部・もう・早く, and the volitional 〜てしまおう is common for \"let's just get it all done\". The \"regret\" meaning usually uses the past 〜てしまった, often with the speaker as subject.",
-      "With non-volitional verbs (忘れる, 壊れる, 遅れる, etc.) it almost always means regret; with volitional verbs either meaning is possible, and context decides.",
-      "Formal writing usually uses the full form 〜てしまう; ちゃう／じゃう are colloquial and unsuitable for formal texts or formal situations with superiors."
+    "meaning": "Shows that an action is completely finished, or that something unwanted or irreversible happened, with a tone of regret or frustration.",
+    "connection": "Verb te-form + しまう (casual: 〜ちゃう／〜じゃう)",
+    "senses": [
+      {
+        "label": "Finish completely",
+        "meaning": "The action is done completely, all the way through, like “finish off” or “... up”. Often used with 「全部」, 「もう」, or 「早く」. The volitional 「〜てしまおう」 means “let's just get it all done”.",
+        "connection": "Volitional verb te-form + しまう／しまった／しまおう",
+        "examples": [
+          "I finished all my homework.",
+          "Let's get this job done today.",
+          "I ate the whole cake by myself."
+        ]
+      },
+      {
+        "label": "Regret / something unexpected",
+        "meaning": "Something the speaker didn't want, and can't undo, has happened. It carries regret or frustration, like “accidentally ...” or “ended up ...”. Usually in the past: 「〜てしまった」.",
+        "connection": "Verb te-form + しまった (with non-volitional verbs like 「忘れる」, 「壊れる」, 「遅れる」, it almost always has this meaning)",
+        "examples": [
+          "I left my umbrella on the train.",
+          "I'm sorry I was late for our appointment.",
+          "I broke a precious plate."
+        ]
+      }
     ],
-    "scenarios": [
-      "Apologizing or expressing regret to someone: 「約束の時間に遅れてしまって、すみません。」",
-      "Casual complaining among friends: 「またケーキ食べちゃった。」",
-      "Deciding to just get something done: 「今日中にレポートを書いてしまおう。」",
-      "In narration, conveying an unexpected or irreversible result: 「彼はそのまま国へ帰ってしまった。」"
+    "notes": [
+      "Casual contractions: てしまう→ちゃう, でしまう→じゃう; てしまった→ちゃった／じゃった.",
+      "「ちゃう／じゃう」 are casual. In formal writing or with superiors, use 「〜てしまう」.",
+      "With volitional verbs, either meaning is possible. Context decides."
     ],
-    "etymology": "しまう is written 「仕舞う」 in kanji, originally meaning \"to end, to settle; to put away, to tidy up\", and is cognate with the noun 「仕舞い（しまい）」 \"end, finish\" (as in 「おしまい」 \"it's over\"). From \"settling a matter\" it came to mean \"completing an action fully\", and from \"the matter is settled and can't be undone\" it gained its tone of regret. The colloquial ちゃう developed from てしまう via ちまう; 〜ちまう is already found in colloquial speech of the Edo to Meiji periods.",
-    "examples": [
-      "I finished all my homework.",
-      "I (accidentally) left my umbrella on the train.",
-      "I broke an important plate.",
-      "Let's wait until the child finishes reading the book.",
-      "After taking the medicine, I fell asleep right away."
-    ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Confessing to a friend",
+          "description": "When admitting you couldn't resist something, casual 「ちゃった」 sounds natural.",
+          "example": "I ate cake again."
+        },
+        {
+          "title": "Doing chores on the weekend",
+          "description": "The volitional 「〜てしまおう」 is for getting the rest done in one go.",
+          "example": "Let's get the cleaning done this morning."
+        },
+        {
+          "title": "Upset after losing something",
+          "description": "「〜てしまった」 expresses regret over a loss.",
+          "example": "I lost my wallet."
+        }
+      ],
+      "work": [
+        {
+          "title": "Apologizing to a client or boss",
+          "description": "When your mistake causes trouble, apologize formally with 「〜てしまい、申し訳ありません」.",
+          "example": "I apologize for the delay in getting back to you."
+        },
+        {
+          "title": "Finishing work before leaving",
+          "description": "Telling coworkers you'll finish what you're working on first.",
+          "example": "I'll just finish putting this document together."
+        }
+      ]
+    },
+    "etymology": "「しまう」 is written 「仕舞う」 in kanji. Its original meaning is “to finish, to wrap up; to put away”. It shares a root with 「おしまい」 (“the end”). From “wrapping something up” it came to mean “doing something completely”, and then took on a tone of regret that “it can't be undone”. The casual 「ちゃう」 comes from the sound change 「てしまう→ちまう→ちゃう」.",
     "similar": [
       {
         "title": "〜ておく",
@@ -41,29 +79,75 @@
   },
   {
     "id": "te-oku",
-    "meaning": "1) Doing something in advance to prepare for the future (\"do ... ahead of time\"); 2) keeping a state as it is, leaving it alone (\"leave ... as is\"); 3) doing something for the time being (\"do ... for now\").",
-    "connection": "Verb te-form + おく (colloquial contraction: 〜とく／〜どく)",
-    "usage": [
-      "おく conjugates as a godan verb: ておいた, ておきます, ておこう, ておいて, ておけば, ておかないと.",
-      "Colloquial contractions: ておく→とく, でおく→どく; ておいて→といて, ておいた→といた, ておこう→とこう. E.g. 「買っとく」, 「読んどいて」.",
-      "The \"preparation\" meaning is most common and often pairs with 前に・までに・あらかじめ. The \"leave as is\" meaning often uses 〜ておいてください／〜ておく to mean \"keep it as it is, don't touch it\", as in 「窓は開けておいてください」.",
-      "To ask someone, use 〜ておいてください／〜ておいてくれる？; to state your own intention, use 〜ておきます, which sounds proactive and considerate.",
-      "It can be written 「〜て置く」 with kanji, but as an auxiliary verb in modern writing it is usually written in kana."
+    "meaning": "Doing something in advance to prepare for the future, or deliberately leaving something as it is. It can also mean “do it for now”.",
+    "connection": "Verb te-form + おく (casual: 〜とく／〜どく)",
+    "senses": [
+      {
+        "label": "Preparing in advance",
+        "meaning": "Getting something done ahead of time for a later purpose, like “do ... beforehand”. This is the most common use. It often goes with 「前に」, 「までに」, or 「あらかじめ」.",
+        "connection": "Verb te-form + おく／おきます／おいてください",
+        "examples": [
+          "I booked the hotel before the trip.",
+          "Please make copies of the materials by tomorrow.",
+          "Let's buy the drinks before the party."
+        ]
+      },
+      {
+        "label": "Leaving as is",
+        "meaning": "Deliberately keeping a state as it is, without changing it, like “leave it ...”. It is intentional and carries no criticism.",
+        "connection": "Verb te-form + おく (often 「〜ておいてください」 or 「〜ておいていい」)",
+        "examples": [
+          "You can leave the window open.",
+          "Please put it back where it was after you use it."
+        ]
+      },
+      {
+        "label": "For now",
+        "meaning": "“I'll just do this for now and deal with the rest later.” A light tone, often used to say what you'll do.",
+        "connection": "Verb te-form + おく (often with 「とりあえず」 or 「一応」)",
+        "examples": [
+          "For now, I'll just write my name.",
+          "I'll check with the teacher, just in case."
+        ]
+      }
     ],
-    "scenarios": [
-      "Preparing before a trip, exam, or meeting: 「旅行の前にホテルを予約しておきます。」",
-      "Assigning tasks at work: 「明日までに資料をコピーしておいてください。」",
-      "Casual speech among friends: 「ビール冷やしとくね。」",
-      "Keeping things as they are: 「エアコンはつけておいていいよ。」"
+    "notes": [
+      "Casual contractions: ておく→とく, でおく→どく; ておいて→といて, ておいた→といた. For example, 「買っとく」 and 「読んどいて」.",
+      "Use 「〜ておいてください」 to ask someone else. Say 「〜ておきます」 about yourself; it sounds proactive and thoughtful.",
+      "As an auxiliary verb, it is usually written in kana as 「おく」, not 「置く」."
     ],
-    "etymology": "おく is written 「置く」, originally meaning \"to put, to place, to set down\". Putting something somewhere and leaving it there extended to \"keeping a certain state for later use\", so 〜ておく developed both the \"advance preparation\" and \"leave as is\" uses. In speech, the two vowels of te-o run together, the o drops, and 〜とく results.",
-    "examples": [
-      "I booked a hotel before the trip.",
-      "Please put it back where it was after using it.",
-      "It's fine to leave the window open.",
-      "I'll have this book read by tomorrow.",
-      "Let's buy the drinks before the party."
-    ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Getting ready for a party at home",
+          "description": "Preparing before friends arrive. Casual speech uses 「〜とく」.",
+          "example": "I'll put the beer in the fridge."
+        },
+        {
+          "title": "Before a trip",
+          "description": "Booking tickets or hotels in advance with 「〜ておく」.",
+          "example": "I already bought the shinkansen tickets."
+        },
+        {
+          "title": "A word from family",
+          "description": "Telling someone to leave something as it is.",
+          "example": "It's fine to leave the AC on."
+        }
+      ],
+      "work": [
+        {
+          "title": "A boss assigns a task",
+          "description": "Asking for preparation before a meeting with 「〜ておいてください」.",
+          "example": "Please read the materials before the meeting."
+        },
+        {
+          "title": "Reassuring a client",
+          "description": "「〜ておきます」 shows you'll take care of it ahead of time.",
+          "example": "Then I'll go ahead and book a meeting room."
+        }
+      ]
+    },
+    "etymology": "「おく」 is written 「置く」 in kanji and originally means “to put, to set down”. Putting something somewhere and leaving it there came to mean “keeping a state for later use”. This gave rise to two uses: “preparing in advance” and “leaving as is”. In speech, the vowels in te-o run together and the o drops out, giving 「〜とく」.",
     "similar": [
       {
         "title": "〜てある",
@@ -81,29 +165,83 @@
   },
   {
     "id": "te-miru",
-    "meaning": "Try doing something and see how it turns out (\"try ...ing\", \"... and see\").",
+    "meaning": "Trying something to see how it turns out: “try ...ing”, “... and see”.",
     "connection": "Verb te-form + みる",
-    "usage": [
-      "みる conjugates as an ichidan verb: てみた, てみます, てみよう, てみたい, てみて, てみれば, てみない？",
-      "As an auxiliary verb it is generally written in kana as 「みる」, not 「見る」; when written 「見る」 it is usually the content verb \"to see\".",
-      "Common combinations: 〜てみたい (I'd like to try), 〜てみてください (please try), 〜てみませんか (would you like to try?), 〜てみたら (when I tried ..., I found ... / why don't you try ...).",
-      "〜てみたら／〜てみると is often followed by an unexpected discovery: 「食べてみたら、おいしかった。」",
-      "Don't confuse it with 〜てみせる, which means \"show someone how to do it\" or \"I'll definitely do it\"."
+    "senses": [
+      {
+        "label": "Try doing",
+        "meaning": "Doing something to see what happens. It's like “try it and see” in English, where “see” is also part of the idea.",
+        "connection": "Verb te-form + みる／みた／みます",
+        "examples": [
+          "Let's look up words we don't know in the dictionary.",
+          "I tried writing a letter in Japanese.",
+          "May I try on these shoes?"
+        ]
+      },
+      {
+        "label": "Want to try",
+        "meaning": "「〜てみたい」 means you'd like to give something a try, usually something new to you. It sounds lighter and softer than plain 「〜たい」.",
+        "connection": "Verb te-form + みたい(です)",
+        "examples": [
+          "I'd like to visit Hokkaido someday.",
+          "Someday I'd like to try wearing a kimono."
+        ]
+      },
+      {
+        "label": "Suggestions and invitations",
+        "meaning": "「〜てみてください」 and 「〜てみませんか」 encourage someone to give it a try. Softer than a direct order or invitation.",
+        "connection": "Verb te-form + みてください／みませんか／みたら？",
+        "examples": [
+          "Please try this on.",
+          "Why don't we give it a try together?"
+        ]
+      },
+      {
+        "label": "Tried it and found",
+        "meaning": "「〜てみたら」 and 「〜てみると」 are followed by a surprise discovery or result: “When I tried ..., it turned out ...”.",
+        "connection": "Verb te-form + みたら／みると + what you found",
+        "examples": [
+          "I tried the new restaurant, and it was really good.",
+          "When I actually tried it, it was surprisingly easy."
+        ]
+      }
     ],
-    "scenarios": [
-      "Making a suggestion: 「この服、着てみてください。」",
-      "Expressing a wish: 「一度富士山に登ってみたいです。」",
-      "Describing an experience and discovery: 「日本料理を作ってみたら、意外と簡単だった。」",
-      "Inviting someone: 「一緒にやってみませんか。」"
+    "notes": [
+      "As an auxiliary verb, it is usually written in kana as 「みる」. Written 「見る」, it usually means literally “to look”.",
+      "Don't confuse it with 「〜てみせる」, which means “to show someone how” or “to make sure you do it”."
     ],
-    "etymology": "みる is 「見る」 (to see). \"Do it and then see what happens\" — the meaning shifted from \"see\" to \"try\", a typical example in Japanese of a content verb becoming grammaticalized as an auxiliary verb. English shows a similar link between seeing and trying: \"try it and see\", \"let's see if it fits\".",
-    "examples": [
-      "May I try these shoes on?",
-      "I'd like to visit Hokkaido at least once.",
-      "I tried eating at the new restaurant, and it was really good.",
-      "Let's look up words we don't know in the dictionary.",
-      "I tried writing a letter in Japanese."
-    ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Trying on clothes in a shop",
+          "description": "Asking a clerk if you can try something on.",
+          "example": "May I try this on?"
+        },
+        {
+          "title": "Talking about travel dreams with a friend",
+          "description": "Naming a place you want to experience.",
+          "example": "I'd love to swim in the sea in Okinawa."
+        },
+        {
+          "title": "Sharing a cooking experience",
+          "description": "Explaining what you found after trying.",
+          "example": "I tried making Japanese food, and it was easier than I expected."
+        }
+      ],
+      "work": [
+        {
+          "title": "Proposing a new method to your boss",
+          "description": "「〜てみてはいかがでしょうか」 makes a polite suggestion.",
+          "example": "Why don't we try a new approach?"
+        },
+        {
+          "title": "A teacher encouraging students",
+          "description": "Having students try on their own first.",
+          "example": "First, try thinking about it yourself."
+        }
+      ]
+    },
+    "etymology": "「みる」 is simply 「見る」 (to look, to see). “Do it and then see the result”: the meaning “see” weakened into “try”. English shows a similar idea in phrases like “try it and see” or “have a go and see”.",
     "similar": [
       {
         "title": "〜ようとする",
@@ -121,29 +259,65 @@
   },
   {
     "id": "te-aru",
-    "meaning": "Indicates that someone intentionally did an action and its result remains (\"has been ...ed\", \"is ...ed\"), often implying it was done for some purpose.",
+    "meaning": "Someone did something on purpose, and the result is still there. It often implies it was done for a reason.",
     "connection": "Transitive verb te-form + ある",
-    "usage": [
-      "In principle it follows transitive verbs (書く, 置く, 貼る, 並べる, 予約する, etc.) and expresses the persistence of an action's result; for the resulting state of intransitive verbs use 〜ている (窓が開いている).",
-      "The object often becomes the subject with 「が」: 「黒板に字が書いてある」; when stressing preparation, 「を」 can be kept: 「ホテルを予約してある」.",
-      "The agent (who did it) usually isn't mentioned; the focus is on \"this is the state now\".",
-      "Conjugation: てあります, てあった, てあって; the negative is usually 〜ていない or 〜てない, not 〜てあらない.",
-      "Often paired with 〜ておく: once the preparation with 〜ておく is done, the result is 〜てある."
+    "senses": [
+      {
+        "label": "Deliberate resulting state",
+        "meaning": "Describes a state you can see and implies someone did it on purpose: “has been ...ed”. The doer is usually not mentioned, and the object often takes 「が」.",
+        "connection": "Noun が + transitive verb te-form + ある (「書く」, 「貼る」, 「置く」, 「飾る」, 「並べる」, etc.)",
+        "examples": [
+          "Today's schedule is written on the blackboard.",
+          "There's a calendar on the wall.",
+          "Old books are lined up on the bookshelf."
+        ]
+      },
+      {
+        "label": "Already prepared",
+        "meaning": "Stresses that something was done in advance for a purpose and is now ready: “already ...”. It's often the result of 「〜ておく」. Here 「を」 can also be kept.",
+        "connection": "Noun を／が + transitive verb te-form + ある (often with 「もう」)",
+        "examples": [
+          "The hotel's already booked, so don't worry.",
+          "There was beer chilling in the fridge."
+        ]
+      }
     ],
-    "scenarios": [
-      "Describing a room or the way a scene is set up: 「テーブルの上に花が飾ってあります。」",
-      "Explaining the content of notices or writing: 「ここに名前が書いてあります。」",
-      "Confirming preparations: 「もう切符は買ってあるから、大丈夫。」",
-      "Instructions and signboards: 「入口に地図が貼ってある。」"
+    "notes": [
+      "As a rule it follows transitive verbs. For the resulting state of intransitive verbs, use 「〜ている」 (窓が開いている).",
+      "The negative is usually 「〜ていない」 or 「〜てない」, not 「〜てあらない」."
     ],
-    "etymology": "ある is 「有る／在る」, expressing the existence of inanimate things. \"The result of a completed action exists there\", so transitive te-form + ある expresses the persistence of a human-made result. Classical Japanese already had a similar use of 〜てあり, and the perfective auxiliary 〜たり itself later arose from the fusion of 「て＋あり」.",
-    "examples": [
-      "Today's schedule is written on the blackboard.",
-      "There's a calendar put up on the wall.",
-      "The hotel is already booked, so please don't worry.",
-      "There was beer chilling in the fridge.",
-      "Old books are lined up on the bookshelf."
-    ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Describing a room",
+          "description": "Showing a guest how the room is decorated.",
+          "example": "There are flowers on the table."
+        },
+        {
+          "title": "Confirming travel plans",
+          "description": "Telling family the tickets are taken care of.",
+          "example": "I already bought the tickets, so we're fine."
+        },
+        {
+          "title": "Reading a sign",
+          "description": "Saying what is written on a notice or sign.",
+          "example": "It says “No Smoking” here."
+        }
+      ],
+      "work": [
+        {
+          "title": "Reporting to your boss",
+          "description": "Saying that everything for the meeting is ready.",
+          "example": "The meeting materials are already prepared."
+        },
+        {
+          "title": "Saying where documents are",
+          "description": "Telling a coworker where something is.",
+          "example": "The documents are on the desk."
+        }
+      ]
+    },
+    "etymology": "「ある」 is 「有る／在る」, which expresses the existence of inanimate things. “The result of an action exists there”, so “transitive verb te-form + ある” shows that a deliberate result remains. Classical Japanese already had 「〜てあり」, and the perfective auxiliary 「たり」 itself comes from the fusion of 「て＋あり」.",
     "similar": [
       {
         "title": "〜ている",
@@ -157,28 +331,73 @@
   },
   {
     "id": "you-ni-naru",
-    "meaning": "Expresses a gradual change in ability, habit, or state: from not being able to do something to being able to, or from not doing it to starting to do it (\"come to ...\", \"start ...ing\", \"become able to ...\").",
-    "connection": "Verb dictionary form / potential form + ようになる; verb nai-form + ようになる (〜なくなる is also common)",
-    "usage": [
-      "With potential verbs it expresses gaining an ability: 「泳げるようになった」, 「漢字が読めるようになった」.",
-      "With ordinary verbs it expresses a change in habits or behavior: 「毎朝ジョギングするようになった」.",
-      "The past 〜ようになった is common, indicating that the change has happened; 〜ようになりたい expresses a hope.",
-      "For a negative change, 〜なくなる is more natural (「食べなくなった」); 〜ないようになる is possible but sounds stiffer.",
-      "Changes in nouns and adjectives don't use this pattern; use noun + になる and adjective く + なる instead (「先生になる」, 「暑くなる」)."
+    "meaning": "A change in ability, habit, or situation: from not being able to being able, or from not doing to starting to do.",
+    "connection": "Verb dictionary form / potential form / nai-form + ようになる",
+    "senses": [
+      {
+        "label": "Becoming able to",
+        "meaning": "With potential verbs, it shows gaining an ability: “now I can ...”. Usually in the past 「〜ようになった」, since the change has happened.",
+        "connection": "Potential verb (話せる, 読める, 泳げる, etc.) + ようになる",
+        "examples": [
+          "I practiced every day, and now I can play the piano.",
+          "With glasses, I can see the writing on the blackboard clearly.",
+          "I want to be able to speak Japanese soon."
+        ]
+      },
+      {
+        "label": "Change of habit",
+        "meaning": "With regular verbs, it shows a change in behavior or habit: “have started to ...”. It can also describe changes in society.",
+        "connection": "Verb dictionary form + ようになる",
+        "examples": [
+          "Since coming to Japan, I've started eating sashimi.",
+          "Lately, I've started shopping on my phone."
+        ]
+      },
+      {
+        "label": "No longer ...",
+        "meaning": "With the nai-form, it means “no longer ...”. However, 「〜なくなる」 is more natural; 「〜ないようになる」 sounds a bit stiff.",
+        "connection": "Verb nai-form + ようになる (more common: 〜なくなる)",
+        "examples": [
+          "The baby has stopped crying at night."
+        ]
+      }
     ],
-    "scenarios": [
-      "Talking about learning progress, e.g. saying you can now understand the news in Japanese: 「ニュースがわかるようになりました。」",
-      "Talking about changed habits: 「日本に来てから、納豆を食べるようになった。」",
-      "Talking about social change: 「最近は、スマホで買い物ができるようになった。」",
-      "Talking about a child growing up: 「娘は一人で服が着られるようになった。」"
+    "notes": [
+      "Changes in nouns and adjectives don't use this pattern. Say 「先生になる」 or 「暑くなる」.",
+      "「ように」 without 「なる」 may be purpose (忘れないようにメモする) or comparison, which are different grammar points."
     ],
-    "etymology": "「よう」 is written 「様」, originally meaning \"appearance, state, manner\"; 「に」 marks the result of a change, and 「なる」 means \"to become\". Literally, \"to become the state of ...\". As a formal noun in modern Japanese, 「様」 is usually written in kana.",
-    "examples": [
-      "By practicing every day, I've become able to play the piano.",
-      "Since coming to Japan, I've started eating sashimi.",
-      "Once I put on glasses, I could see the writing on the blackboard clearly.",
-      "I want to be able to speak Japanese soon."
-    ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Talking about your progress",
+          "description": "Telling a friend how your Japanese has improved.",
+          "example": "I can understand the news in Japanese now."
+        },
+        {
+          "title": "Talking about a child growing up",
+          "description": "A parent describes a new skill.",
+          "example": "My daughter can dress herself now."
+        },
+        {
+          "title": "Talking about habits",
+          "description": "Describing a change after moving somewhere new.",
+          "example": "I've started jogging every morning."
+        }
+      ],
+      "work": [
+        {
+          "title": "A new employee settling in",
+          "description": "Reporting progress at work to a boss.",
+          "example": "I can finally work on my own now."
+        },
+        {
+          "title": "Introducing a new system",
+          "description": "Explaining what becomes possible after an update.",
+          "example": "Starting next month, you'll be able to apply online."
+        }
+      ]
+    },
+    "etymology": "「よう」 is written 「様」 in kanji, originally meaning “appearance, state”. 「に」 marks the result of a change, and 「なる」 means “to become”. Literally, it means “to become the state of ...”. When 「様」 is used as a formal noun, it is usually written in kana.",
     "similar": [
       {
         "title": "〜ようにする",
@@ -196,28 +415,73 @@
   },
   {
     "id": "you-ni-suru",
-    "meaning": "1) Making a conscious effort to do (or not do) something; 2) 〜ようにしている expresses a long-standing habit (\"try to ..., make a point of ...\").",
+    "meaning": "Making a conscious effort to do (or not do) something. 「〜ようにしている」 describes a habit you keep up.",
     "connection": "Verb dictionary form / nai-form + ようにする",
-    "usage": [
-      "〜ようにする: resolving to do something from now on; 〜ようにしている: a habit already formed and kept up.",
-      "The negative is 〜ないようにする: 「遅刻しないようにします」 (I'll make sure not to be late).",
-      "When asking others, 〜ようにしてください is softer than 〜てください and stresses \"please make sure to\": 「明日は8時に来るようにしてください」.",
-      "The final する conjugates normally: ようにした, ようにします, ようにしよう, ようにして.",
-      "The subject is usually a person acting with intention; the preceding verb can be volitional or potential (「見えるようにする」 = make it visible)."
+    "senses": [
+      {
+        "label": "Making an effort",
+        "meaning": "A resolution to be careful to do or not do something from now on: “try to ...”, “make sure to ...”. The point is the effort, not necessarily 100% success.",
+        "connection": "Verb dictionary form / nai-form + ようにする／ようにします",
+        "examples": [
+          "Starting tomorrow, I'll try to get up earlier.",
+          "Let's try not to look at our phones before bed."
+        ]
+      },
+      {
+        "label": "Ongoing habit",
+        "meaning": "「〜ようにしている」 is a habit you have formed and keep up: “I make a point of ...”.",
+        "connection": "Verb dictionary form / nai-form + ようにしている",
+        "examples": [
+          "For my health, I make a point of walking every day.",
+          "I make sure to eat vegetables every day."
+        ]
+      },
+      {
+        "label": "Polite request",
+        "meaning": "「〜ようにしてください」 asks others to make sure they do something. It is softer than 「〜てください」 and stresses “please be careful to ...”.",
+        "connection": "Verb dictionary form / nai-form + ようにしてください",
+        "examples": [
+          "Please make sure you aren't late for class.",
+          "Please be sure to come at eight tomorrow."
+        ]
+      }
     ],
-    "scenarios": [
-      "Talking about healthy habits: 「毎日野菜を食べるようにしています。」",
-      "Instructions at work: 「会議には遅れないようにしてください。」",
-      "Reflecting on yourself or making a resolution: 「これからはもっと早く寝るようにします。」",
-      "Explaining arrangements: 「子どもにも見えるように、字を大きくするようにした。」"
+    "notes": [
+      "The subject must be a person acting on purpose. It can also follow potential verbs, meaning “make it possible to ...” (見えるようにする).",
+      "The 「ように」 in 「このようにして」 means “in this way”. It isn't this grammar point."
     ],
-    "etymology": "「よう（様）」 means \"appearance, state\", and 「にする」 means \"to make it into\". Literally, \"to make (one's behavior) into the state of ...\", from which it came to mean \"make an effort to, make sure to\".",
-    "examples": [
-      "For my health, I make a point of walking every day.",
-      "From tomorrow, I'll try to get up earlier.",
-      "Please make sure you aren't late for class.",
-      "Let's try not to look at our phones before bed."
-    ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Talking about healthy habits",
+          "description": "Explaining your lifestyle to a friend.",
+          "example": "I try not to eat much at night."
+        },
+        {
+          "title": "Reflecting on yourself",
+          "description": "Making a resolution after a mistake.",
+          "example": "From now on, I'll try to go to bed earlier."
+        },
+        {
+          "title": "A parent warning a child",
+          "description": "Reminding a child to be careful.",
+          "example": "Make sure you don't play in the street."
+        }
+      ],
+      "work": [
+        {
+          "title": "A boss reminding staff",
+          "description": "Reminding everyone to be on time before a meeting.",
+          "example": "Please make sure you're not late for the meeting."
+        },
+        {
+          "title": "Reassuring a client after a mistake",
+          "description": "Promising to be more careful in the future.",
+          "example": "We will make sure that this kind of mistake does not happen again."
+        }
+      ]
+    },
+    "etymology": "「よう（様）」 means “appearance, state”, and 「にする」 means “to make into”. Literally, “to make (your behavior) into the state of ...”. From this came the meaning “to make an effort to do, to be careful to do”.",
     "similar": [
       {
         "title": "〜ようになる",
@@ -235,28 +499,74 @@
   },
   {
     "id": "kamoshirenai",
-    "meaning": "Expresses that the speaker thinks something is possible, with low certainty (about 50% or less): \"may, might, perhaps, maybe\".",
-    "connection": "Plain form of verbs / i-adjectives + かもしれない; na-adjective stem / noun + かもしれない (without だ)",
-    "usage": [
-      "It follows the plain form, but nouns and na-adjectives don't take だ: 「雨かもしれない」, 「暇かもしれない」 (✕雨だかもしれない).",
-      "Polite: かもしれません; guess about the past: 〜たかもしれない; \"it might have been the case (back then)\": 〜かもしれなかった.",
-      "In casual speech it is often shortened to 〜かも: 「明日、雨かも。」, 「それ、いいかもね。」",
-      "Often paired with もしかしたら／もしかすると／ひょっとしたら to lower certainty even further.",
-      "Can be used to express your opinion indirectly: 「ちょっと難しいかもしれませんね。」 (really a polite \"no\")."
+    "meaning": "The speaker thinks something is possible but isn't sure: “maybe”, “might”.",
+    "connection": "Verb / i-adjective plain form + かもしれない; na-adjective stem / noun + かもしれない (no 「だ」)",
+    "senses": [
+      {
+        "label": "Possibility",
+        "meaning": "Something may be true, with about 50% certainty or less: “maybe”, “might”. Often paired with 「もしかしたら」 or 「ひょっとすると」.",
+        "connection": "Plain form + かもしれない／かもしれません; past guess: 〜たかもしれない",
+        "examples": [
+          "It might rain in the afternoon.",
+          "He may have already gone home.",
+          "That person might be a teacher, you know."
+        ]
+      },
+      {
+        "label": "Softening an opinion",
+        "meaning": "Makes your opinion sound less certain, and therefore gentler. Often it is really a polite “no” or a suggestion.",
+        "connection": "Plain form + かもしれません (often with 「ちょっと」 or 「少し」)",
+        "examples": [
+          "That plan might be a bit difficult.",
+          "This color might be better."
+        ]
+      },
+      {
+        "label": "Casual 「かも」",
+        "meaning": "In casual speech it is often shortened to 「〜かも」. Relaxed, mostly between friends.",
+        "connection": "Plain form + かも (at the end; 「ね」 or 「よ」 can follow)",
+        "examples": [
+          "This cake might be a little too sweet.",
+          "It might rain tomorrow."
+        ]
+      }
     ],
-    "scenarios": [
-      "Uncertain forecasts about weather or plans: 「午後から雨が降るかもしれません。」",
-      "Expressing an opinion tactfully: 「その計画は少し無理かもしれません。」",
-      "A casual guess among friends: 「あの人、先生かも。」",
-      "Pointing out a risk: 「遅れるかもしれないから、早めに出よう。」"
+    "notes": [
+      "Nouns and na-adjectives take no 「だ」: 雨かもしれない (✕雨だかもしれない).",
+      "Degree of certainty: 〜に違いない ＞ 〜はずだ ＞ 〜だろう ＞ 〜かもしれない."
     ],
-    "etymology": "Made of the question particle 「か」 + the particle 「も」 + 「知れない」 (cannot be known). Literally, \"whether it is ... can't be known\", i.e. \"it may be ...\". 「知れない」 can be written in kanji as 「かも知れない」, but today kana is more common. The casual shortening 〜かも has spread in the last few decades.",
-    "examples": [
-      "It might rain from the afternoon.",
-      "He may have already gone home.",
-      "That person might be a teacher, you know.",
-      "This cake might be a little too sweet."
-    ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Checking the weather before going out",
+          "description": "Reminding family to take an umbrella.",
+          "example": "It might rain, so let's take an umbrella."
+        },
+        {
+          "title": "A casual guess with friends",
+          "description": "Guessing who someone is when you see them.",
+          "example": "That guy might be a teacher."
+        },
+        {
+          "title": "Might be late for a date",
+          "description": "Letting someone know in advance you may be late.",
+          "example": "I might be a little late."
+        }
+      ],
+      "work": [
+        {
+          "title": "Gently rejecting a proposal",
+          "description": "Politely voicing doubts about a coworker's idea in a meeting.",
+          "example": "That schedule might be a little unrealistic."
+        },
+        {
+          "title": "Flagging a risk",
+          "description": "Reporting a possible problem to your boss.",
+          "example": "We might not make the delivery deadline."
+        }
+      ]
+    },
+    "etymology": "It is made of the question particle 「か」 + the particle 「も」 + 「知れない」 (“cannot be known”). Literally, “whether it is ... or not cannot be known”, hence “maybe”. Today it is usually written in kana. The casual short form 「〜かも」 became widespread in the last few decades.",
     "similar": [
       {
         "title": "〜はずだ",
@@ -274,28 +584,74 @@
   },
   {
     "id": "hazu-da",
-    "meaning": "1) A confident inference based on some grounds or reasoning (\"should be ..., ought to ...\"); 2) 〜はずだった expresses what should have happened but didn't; 3) a sudden realization: \"no wonder ...\".",
-    "connection": "Plain form of verbs / i-adjectives + はずだ; na-adjective + な + はずだ; noun + の + はずだ",
-    "usage": [
-      "There must be grounds for the judgment: 「チケットは昨日送ったから、今日届くはずだ。」",
-      "Polite: はずです; before nouns: はずの〜; connective: はずなのに, はずで.",
-      "〜はずだった／〜はずでした means \"was supposed to ... (but didn't)\": 「3時に着くはずだったのに、遅れてしまった。」",
-      "There are two negative inferences: 〜ないはずだ (it shouldn't be ...) and 〜はずがない (there's no way ...); the latter is much stronger.",
-      "It cannot express your own intention or decision: ✕「明日行くはずです」 (to say \"I plan to go\", use 〜つもりだ／予定だ)."
+    "meaning": "A confident conclusion based on evidence or logic (“should be ...”). It can also mean “was supposed to ...” or “no wonder ...”.",
+    "connection": "Verb / i-adjective plain form + はずだ; na-adjective + な + はずだ; noun + の + はずだ",
+    "senses": [
+      {
+        "label": "Should be (by logic)",
+        "meaning": "A fairly confident conclusion based on facts or evidence: “should”, “ought to”. There must be grounds for it, often given with 「〜から」 or 「〜ので」.",
+        "connection": "Plain form + はずだ／はずです (noun + の, na-adjective + な)",
+        "examples": [
+          "I sent the package yesterday, so it should arrive today.",
+          "He lived in Japan for ten years, so his Japanese must be good.",
+          "It's Sunday, so the bank should be closed."
+        ]
+      },
+      {
+        "label": "Was supposed to",
+        "meaning": "「〜はずだった」 means something should have happened but didn't. It carries surprise or disappointment and is often followed by 「のに」.",
+        "connection": "Plain form + はずだった／はずでした (often followed by 「のに」 or 「が」)",
+        "examples": [
+          "The train was supposed to arrive at 9, but it still hasn't come.",
+          "Today was supposed to be my day off, but some work suddenly came up."
+        ]
+      },
+      {
+        "label": "No wonder",
+        "meaning": "Once you learn the cause, the result suddenly makes sense: “no wonder ...”. Often with 「道理で」 or 「なるほど」.",
+        "connection": "(Cause) + plain form of the result + はずだ",
+        "examples": [
+          "The AC isn't on. No wonder it's hot.",
+          "So he pulled an all-nighter yesterday. No wonder he's sleepy."
+        ]
+      }
     ],
-    "scenarios": [
-      "Inferring from facts: 「鍵はかばんに入れたはずです。」",
-      "Confirming a schedule: 「会議は3時からのはずですが……。」",
-      "Expressing that things didn't go as expected: 「今日は晴れるはずだったのに。」",
-      "A sudden realization: 「彼は日本に10年住んでいたのか。」 — so no wonder his Japanese is good (〜上手なはずだ)."
+    "notes": [
+      "There are two negative conclusions: 「〜ないはずだ」 (it shouldn't be) and 「〜はずがない」 (it can't be). The second is much stronger.",
+      "It can't express your own will or plans: ✕「明日行くはずです」. Say 「行くつもりです／行く予定です」 instead."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Waiting for a delivery",
+          "description": "Estimating arrival from the shipping date.",
+          "example": "I sent it yesterday, so it should get there by tomorrow."
+        },
+        {
+          "title": "Can't find something",
+          "description": "Remembering where you put it.",
+          "example": "I'm sure I put the keys in my bag, but they're not there."
+        },
+        {
+          "title": "A sudden realization",
+          "description": "Once you know the cause, it all makes sense.",
+          "example": "The window was open. No wonder it's cold."
+        }
+      ],
+      "work": [
+        {
+          "title": "Confirming meeting arrangements",
+          "description": "Concluding someone should know based on the notice sent.",
+          "example": "I emailed the department manager, so he should be aware."
+        },
+        {
+          "title": "Explaining a missed plan",
+          "description": "Telling a coworker the original plan didn't work out.",
+          "example": "It was supposed to be done today, but it looks like it'll take until tomorrow."
+        }
+      ]
+    },
     "etymology": "「はず」 is written 「筈」 in kanji. It originally referred to the notch at the end of an arrow that fits onto the bowstring (矢筈). The arrow's notch and the string \"naturally have to fit together\", which gave rise to the meaning \"it stands to reason, it must be so\". As a formal noun in modern Japanese it is usually written in kana.",
-    "examples": [
-      "I sent the package yesterday, so it should arrive today.",
-      "He lived in Japan for ten years, so his Japanese must be good.",
-      "The train was supposed to arrive at nine, but it still hasn't come.",
-      "Today is Sunday, so the bank should be closed."
-    ],
     "similar": [
       {
         "title": "〜はずがない",
@@ -317,29 +673,76 @@
   },
   {
     "id": "sou-da-appearance",
-    "meaning": "1) An intuitive judgment based on appearance (\"looks ..., seems ...\"); 2) with verbs, a sign or feeling that something is about to happen (\"looks like it's about to ...\").",
-    "connection": "Verb masu-stem (drop ます) + そうだ; i-adjective (drop い) + そうだ (いい→よさそう, ない→なさそう); na-adjective stem + そうだ",
-    "usage": [
-      "Conjugates like a na-adjective: そうな + noun (おいしそうなケーキ), そうに + verb (楽しそうに話す), そうです, そうだった.",
-      "Irregular forms: いい→よさそう, ない→なさそう, adjective negative 〜くない→〜くなさそう.",
-      "With verbs it means \"about to ...\": 「雨が降りそうだ」, 「シャツのボタンが取れそうだ」. Negative: 降りそうもない／降りそうにない.",
-      "Used only for your own judgment of what you see; it can't be used for facts obvious at a glance: ✕「このりんごは赤そうだ」. Qualities like \"pretty\" or \"cute\" that are apparent at a glance generally don't take it either (きれいそう).",
-      "Nouns cannot directly take the appearance そうだ (✕学生そうだ); use 〜らしい／〜みたいだ／〜っぽい instead."
+    "meaning": "An impression based on how something looks (“looks ...”). With verbs, it means something is about to happen (“looks like it's going to ...”).",
+    "connection": "Verb masu-stem + そうだ; i-adjective minus い + そうだ (いい→よさそう, ない→なさそう); na-adjective stem + そうだ",
+    "senses": [
+      {
+        "label": "Looks ...",
+        "meaning": "A judgment based on what you see: “looks ...”, “seems ...”. Only for qualities you haven't confirmed. Don't use it for facts obvious at a glance.",
+        "connection": "i-adjective minus い / na-adjective stem + そうだ (そうな + noun, そうに + verb)",
+        "examples": [
+          "This cake looks delicious.",
+          "The kids are playing and look like they're having fun.",
+          "He looked down."
+        ]
+      },
+      {
+        "label": "About to ...",
+        "meaning": "With verbs, it predicts from signs that something is about to happen: “looks like it's going to ...”, “is about to ...”. Often with 「今にも」.",
+        "connection": "Verb masu-stem + そうだ (e.g. 降りそう, 落ちそう, 泣きそう)",
+        "examples": [
+          "The sky looks like it's going to rain any minute.",
+          "This shirt button is about to come off."
+        ]
+      },
+      {
+        "label": "Doesn't look likely",
+        "meaning": "「〜そうもない」 and 「〜そうにない」 mean it doesn't look like something will happen.",
+        "connection": "Verb masu-stem + そうもない／そうにない",
+        "examples": [
+          "It doesn't look like this work will be done today.",
+          "The rain doesn't look like it'll stop."
+        ]
+      }
     ],
-    "scenarios": [
-      "On seeing food: 「わあ、おいしそう！」",
-      "Describing someone's expression or state: 「彼女はうれしそうに笑った。」",
-      "Warning that something is about to happen: 「棚の上の箱が落ちそうですよ。」",
-      "Judging the weather: 「今にも雨が降りそうな空だ。」"
+    "notes": [
+      "Irregular forms: いい→よさそう, ない→なさそう, 〜くない→〜くなさそう.",
+      "Nouns can't attach directly: ✕学生そうだ. Use 「学生みたいだ」 or 「学生らしい」 instead.",
+      "Not used for things obvious at a glance, like 「きれい」 or 「赤い」: ✕このりんごは赤そうだ.",
+      "Don't confuse it with hearsay 「降るそうだ」. The appearance form attaches to the masu-stem (降りそうだ)."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "At a pastry shop",
+          "description": "A natural comment on the cakes in the window.",
+          "example": "Wow, that cake looks so good!"
+        },
+        {
+          "title": "Checking on a friend",
+          "description": "Asking when a friend looks worn out.",
+          "example": "You look sleepy. Were you up late last night?"
+        },
+        {
+          "title": "Looking at the sky before going out",
+          "description": "Seeing dark clouds and judging it will rain soon.",
+          "example": "It looks like rain, so let's bring an umbrella."
+        }
+      ],
+      "work": [
+        {
+          "title": "Reporting progress",
+          "description": "Estimating whether work will finish on time.",
+          "example": "At this rate, it looks like we'll be done by Friday."
+        },
+        {
+          "title": "Reacting to a proposal",
+          "description": "Giving a first impression of an idea in a meeting.",
+          "example": "This project sounds interesting."
+        }
+      ]
+    },
     "etymology": "「そう」 comes from the kanji 「相」 (さう), originally meaning \"outward appearance, look\" (as in 人相 \"physiognomy\" and 手相 \"palm lines\"). From the medieval period onward 「〜さうなり」 was used as an auxiliary of appearance, which later became modern 〜そうだ. It has a different origin from the hearsay 〜そうだ, which is why the two attach differently.",
-    "examples": [
-      "This cake looks delicious, doesn't it?",
-      "The sky looks like it could rain at any moment.",
-      "The children are playing happily.",
-      "It doesn't look like this job will be finished today.",
-      "He looked rather low on energy."
-    ],
     "similar": [
       {
         "title": "〜そうだ (hearsay)",
@@ -353,34 +756,70 @@
         "title": "〜らしい",
         "explanation": "〜らしい mostly judges based on outside information or hearsay, with the speaker keeping some distance; 〜そうだ is the speaker's direct impression from what they see."
       }
-    ],
-    "title": "〜そうだ (looks like)"
+    ]
   },
   {
     "id": "sou-da-hearsay",
-    "meaning": "Passes on information heard from someone else, or read or seen in newspapers, on TV, etc. (\"I hear that ..., apparently ..., they say ...\").",
-    "connection": "Plain form of verbs / i-adjectives / na-adjectives / nouns + そうだ (nouns・na-adjectives: 〜だそうだ)",
-    "usage": [
-      "It follows the plain form, and nouns and na-adjectives take だ: 「雨だそうだ」, 「静かだそうだ」; the past tense can precede it too: 「行ったそうだ」.",
-      "It is only used in a few forms such as そうだ／そうです／そうで; it has no negative, no past (✕そうだった), and no そうな／そうに.",
-      "The source of information is often shown with 〜によると／〜の話では／〜では: 「天気予報によると、明日は雪だそうです。」",
-      "The speaker is only relaying information and takes no responsibility for its content; the tone is objective. It cannot be used for one's own experiences.",
-      "To distinguish it from the appearance 〜そうだ, look at what precedes it: 降るそうだ (hearsay) vs. 降りそうだ (appearance), 高いそうだ (hearsay) vs. 高そうだ (appearance)."
+    "meaning": "Passes on information heard from others or seen in the media: “I heard that ...”, “apparently ...”.",
+    "connection": "Plain form of any word + そうだ (noun / na-adjective: 〜だそうだ)",
+    "senses": [
+      {
+        "label": "I heard / apparently",
+        "meaning": "Relays information from other people, newspapers, TV, and so on, as is. The speaker is just passing it on and takes no responsibility for it. The tone is neutral. Often paired with 「〜によると」 or 「〜の話では」.",
+        "connection": "Verb / i-adjective plain form + そうだ; noun / na-adjective + だそうだ",
+        "examples": [
+          "According to the weather forecast, it's going to rain tomorrow.",
+          "I heard Tanaka-san is getting married next month.",
+          "Apparently his father is a doctor."
+        ]
+      },
+      {
+        "label": "Reporting past events",
+        "meaning": "It can follow a past form to report something that already happened. 「そうだ」 itself does not change to the past.",
+        "connection": "Verb / adjective ta-form + そうだ (✕そうだった)",
+        "examples": [
+          "I heard there was an accident near the station yesterday.",
+          "Apparently that shop closed last month."
+        ]
+      }
     ],
-    "scenarios": [
-      "Relaying news or weather forecasts: 「ニュースによると、来月から電気代が上がるそうです。」",
-      "Passing on what someone said: 「田中さんは来週国へ帰るそうですよ。」",
-      "Sharing a review you heard: 「あの店のラーメンはとてもおいしいそうだ。」",
-      "Citing information in written language or reports: 「調査では、若者の読書時間が減っているそうである。」"
+    "notes": [
+      "Only forms like 「そうだ／そうです／そうで」 exist. There is no negative or past, and no 「そうな」 or 「そうに」.",
+      "Tell it apart from the appearance form by what comes before: 降るそうだ (hearsay) vs. 降りそうだ (appearance); 高いそうだ (hearsay) vs. 高そうだ (appearance).",
+      "It can't be used for things you experienced yourself."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Passing on the forecast",
+          "description": "Telling family what you saw before heading out.",
+          "example": "I saw on the news that it's supposed to snow tonight."
+        },
+        {
+          "title": "Gossiping with friends",
+          "description": "Repeating news you heard from someone else.",
+          "example": "I heard Yamada-san is moving next month."
+        },
+        {
+          "title": "Talking about a restaurant",
+          "description": "Passing on someone else's opinion of a place.",
+          "example": "I hear that restaurant is really expensive."
+        }
+      ],
+      "work": [
+        {
+          "title": "Relaying news from above",
+          "description": "Passing on to coworkers what the department manager said.",
+          "example": "According to the manager, the meeting starts at three."
+        },
+        {
+          "title": "Updating your boss about a client",
+          "description": "Reporting news heard from the client.",
+          "example": "I hear they'll be on holiday starting next week."
+        }
+      ]
+    },
     "etymology": "The hearsay そうだ is generally thought to come from expressions like 「…と言う相（さう）だ」, meaning \"it is said to be the case that ...\"; from the Edo period onward it was used in the form 「〜さうだ」 to relay hearsay. Although it is written the same way as the appearance 〜そうだ, the two long ago split into separate auxiliaries, and they attach in completely different ways.",
-    "examples": [
-      "According to the weather forecast, it will rain tomorrow.",
-      "I hear Mr. Tanaka is getting married next month.",
-      "Apparently that restaurant is really expensive.",
-      "Apparently his father is a doctor.",
-      "I heard there was an accident near the station yesterday."
-    ],
     "similar": [
       {
         "title": "〜そうだ (appearance)",
@@ -394,33 +833,69 @@
         "title": "〜って／〜とのことだ",
         "explanation": "In speech, 〜って is often used to relay information (「明日休みだって」); 〜とのことだ is a formal, written way of reporting, common in business."
       }
-    ],
-    "title": "〜そうだ (hearsay)"
+    ]
   },
   {
     "id": "rashii",
-    "meaning": "1) A guess or hearsay based on information heard or seen (\"apparently ..., it seems ..., I hear ...\"); 2) as a suffix after nouns, \"like a typical ..., having the typical qualities of ...\" (男らしい = manly).",
-    "connection": "Plain form of verbs / i-adjectives + らしい; na-adjective stem / noun + らしい (without だ)",
-    "usage": [
-      "Conjugates as an i-adjective: らしかった, らしく, らしくない, らしいです.",
-      "In the guessing sense the basis is outside information (hearsay, visible signs), and the speaker keeps their distance and doesn't take full responsibility: 「彼は会社を辞めたらしい。」",
-      "In the suffix sense, \"noun + らしい\" means fitting the typical nature of that noun: 「今日は春らしい天気だ」, 「彼女らしくない」 (it's not like her).",
-      "In the guessing sense the negative comes before: 「来ないらしい」; in the suffix sense the negative is 〜らしくない.",
-      "Note that 素晴らしい, 新しい, 珍しい, いやらしい, etc. are independent adjectives; the らしい in them is not this grammar point."
+    "meaning": "A guess or hearsay based on what you've heard or seen (“seems ...”). After nouns, it can also mean “typical of ...”.",
+    "connection": "Verb / i-adjective plain form + らしい; na-adjective stem / noun + らしい (no 「だ」)",
+    "senses": [
+      {
+        "label": "Guess / hearsay",
+        "meaning": "A guess based on outside information, such as something you heard or signs you saw: “seems ...”, “I hear ...”. The speaker keeps some distance and doesn't take full responsibility.",
+        "connection": "Plain form + らしい (nouns and na-adjective stems attach directly); negative goes before it: 〜ないらしい",
+        "examples": [
+          "The road is wet. It seems it rained during the night.",
+          "I hear that shop is closing next month.",
+          "It seems he quit his job."
+        ]
+      },
+      {
+        "label": "Typical of ...",
+        "meaning": "As a suffix after a noun, it means having the typical qualities of that noun: “...-like”, “just like ...”. The negative 「〜らしくない」 means “not like ...”.",
+        "connection": "Noun + らしい (春らしい, 男らしい, 子どもらしい, 彼女らしい)",
+        "examples": [
+          "It's a warm, spring-like day today.",
+          "Saying something like that isn't like her."
+        ]
+      }
     ],
-    "scenarios": [
-      "Passing on news you only half believe: 「あの店、来月閉まるらしいよ。」",
-      "Guessing from signs: 「道がぬれている。夜中に雨が降ったらしい。」",
-      "Judging whether someone or something lives up to its name: 「今日は本当に夏らしい一日だった。」",
-      "Commenting on someone casually: 「そんなことを言うなんて、君らしくないね。」"
+    "notes": [
+      "It conjugates like an i-adjective: らしかった, らしく, らしくない.",
+      "「素晴らしい」, 「新しい」, 「珍しい」, and 「いやらしい」 are independent adjectives, not this grammar point."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Guessing from signs",
+          "description": "Seeing the wet ground and guessing it rained.",
+          "example": "The ground is wet. Looks like it rained."
+        },
+        {
+          "title": "Catching up on a friend's news",
+          "description": "Repeating something you heard, without being sure.",
+          "example": "I heard Sato-san has a girlfriend now."
+        },
+        {
+          "title": "Commenting on the weather",
+          "description": "Remarking on how seasonal the weather feels.",
+          "example": "It's real autumn weather today."
+        }
+      ],
+      "work": [
+        {
+          "title": "Sharing unconfirmed news",
+          "description": "Telling coworkers about something not yet official.",
+          "example": "Apparently we're switching to a new system next month."
+        },
+        {
+          "title": "Complimenting a coworker",
+          "description": "Praising someone's work as very much their style.",
+          "example": "So careful down to the last detail. That's Tanaka-san for you."
+        }
+      ]
+    },
     "etymology": "There are several theories about the origin of らしい. It is generally thought to be related to the old suffix 「〜らし」, meaning \"appearance, being like\" (as in 「男らし」), and to have gradually developed its use as an auxiliary of inference from the medieval to the early modern period. Classical Japanese also had a separate conjectural auxiliary 「らし」 (expressing an inference based on evidence), but scholars disagree on whether there is a direct line of descent between the two.",
-    "examples": [
-      "The road is wet. It seems it rained during the night.",
-      "I hear that shop is closing next month.",
-      "It's a warm, truly spring-like day today.",
-      "Saying something like that isn't like her."
-    ],
     "similar": [
       {
         "title": "〜ようだ／〜みたいだ",
@@ -438,34 +913,79 @@
   },
   {
     "id": "you-da",
-    "meaning": "1) An inference based on the speaker's own observations or feelings (\"it seems ..., it looks like ...\"); 2) simile (\"like ...\"); 3) giving examples (\"such as ...\"). 〜みたいだ is the colloquial form of 〜ようだ.",
-    "connection": "ようだ: plain form of verbs / i-adjectives, na-adjective + な, noun + の + ようだ; みたいだ: plain form of verbs / i-adjectives, na-adjective stem, noun + みたいだ",
-    "usage": [
-      "Conjugates as a na-adjective: ような + noun, ように + verb, ようです, ようだった; likewise みたいな, みたいに, みたいです.",
-      "Differences in attachment: nouns 学生のようだ ↔ 学生みたいだ; na-adjectives 静かなようだ ↔ 静かみたいだ.",
-      "Similes often pair with まるで: 「まるで夢のようだ」, 「まるで子どもみたいに喜ぶ」.",
-      "Examples use ような／みたいな: 「東京のような大きな町」, 「りんごみたいな果物」.",
-      "〜ようだ is more written and formal; 〜みたいだ is more colloquial and casual and is not suitable for formal writing.",
-      "〜ように after a verb can also be \"purpose\" or 〜ようになる／〜ようにする, which are separate grammar points; this entry mainly covers forms like 「noun + のように」 and ようだ／ような."
+    "meaning": "A guess based on your own observation (“it seems ...”). It also makes comparisons (“like ...”) and gives examples. 「みたいだ」 is the casual form.",
+    "connection": "ようだ: plain form / na-adjective + な / noun + の + ようだ; みたいだ: plain form / na-adjective stem / noun + みたいだ",
+    "senses": [
+      {
+        "label": "Inference",
+        "meaning": "A guess based on what you yourself see or feel: “it seems ...”, “it looks like ...”. The basis is the speaker's direct observation.",
+        "connection": "Plain form + ようだ／みたいだ (noun: 学生のようだ／学生みたいだ)",
+        "examples": [
+          "It seems no one is here. The lights are off.",
+          "I feel like I've met that person somewhere.",
+          "I think I've caught a cold."
+        ]
+      },
+      {
+        "label": "Comparison",
+        "meaning": "Compares one thing to another: “like ...”, “as ... as ...”. Often paired with 「まるで」.",
+        "connection": "Noun + の + ようだ／ような／ように; noun + みたいだ／みたいな／みたいに",
+        "examples": [
+          "Her hands were as cold as ice.",
+          "That sounds just like a dream."
+        ]
+      },
+      {
+        "label": "Giving examples",
+        "meaning": "Gives a concrete example: “such as ...”, “like ...”.",
+        "connection": "Noun + の + ような + noun; noun + みたいな + noun",
+        "examples": [
+          "I want to live in a big city like Tokyo.",
+          "I like fruits like apples."
+        ]
+      }
     ],
-    "scenarios": [
-      "Inferring from signs: 「誰もいないようです。電気が消えています。」",
-      "Similes in descriptions (common in literature): 「雪のように白い肌。」",
-      "Casual speech among friends: 「あの二人、付き合ってるみたいだよ。」",
-      "Giving examples: 「パンダのような珍しい動物が見たい。」"
+    "notes": [
+      "「ようだ」 is more formal and written; 「みたいだ」 is conversational and not suited to formal writing.",
+      "They attach differently: 静かなようだ ↔ 静かみたいだ; 学生のようだ ↔ 学生みたいだ.",
+      "「ようになる」, 「ようにする」, and 「〜ように」 (purpose) are separate grammar points."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Noticing things at home",
+          "description": "Coming home and guessing that no one's back yet.",
+          "example": "Looks like nobody's home yet."
+        },
+        {
+          "title": "Describing a beautiful view",
+          "description": "An exclamation at stunning scenery.",
+          "example": "The scenery is just like a painting."
+        },
+        {
+          "title": "Feeling unwell",
+          "description": "Telling family how you feel.",
+          "example": "I think I have a bit of a fever."
+        }
+      ],
+      "work": [
+        {
+          "title": "Reporting an observation",
+          "description": "Giving your boss your read on a situation, with polite 「ようです」.",
+          "example": "It appears there's a problem with the system."
+        },
+        {
+          "title": "Explaining with an example",
+          "description": "Showing in a meeting what kind of thing you want.",
+          "example": "Could you prepare materials like this?"
+        }
+      ]
+    },
     "etymology": "「よう」 is the kanji 「様」, meaning \"appearance, state\", and with the copula だ it means \"it is the appearance of ...\". 「みたい」 developed through contraction from 「〜を見たような」 → 「〜みたような」 → 「みたい」, and is generally thought to have settled in colloquial speech after the Meiji era; that is why it still attaches directly to nouns.",
-    "examples": [
-      "It seems no one is here. The lights are off.",
-      "Her hands were as cold as ice.",
-      "I want to live in a big city like Tokyo.",
-      "I feel like I've met that person somewhere.",
-      "It's like something out of a dream, isn't it?"
-    ],
     "similar": [
       {
         "title": "〜らしい",
-        "explanation": "〜ようだ is based on the speaker's own observations, 〜らしい on outside information. Similes can only use 〜ようだ／みたいだ, not らしい (✕夢らしい话)."
+        "explanation": "〜ようだ is based on the speaker's own observations, 〜らしい on outside information. Similes can only use 〜ようだ／みたいだ, not らしい (✕夢らしい話)."
       },
       {
         "title": "〜そうだ (appearance)",
@@ -479,29 +999,83 @@
   },
   {
     "id": "ba-conditional",
-    "meaning": "Expresses a hypothetical condition: \"if ..., then ...\". It focuses on the first clause being a necessary condition for the second, and is also used for general rules, proverbs, and advice such as 〜ばいい (all you need to do is ...).",
-    "connection": "Verb ba-form / conditional form (godan: 書く→書けば; ichidan: 食べる→食べれば; する→すれば; 来る→来れば); i-adjective: 高い→高ければ; na-adjective・noun: 静かなら(ば)／雨なら(ば)",
-    "usage": [
-      "Formation: godan verbs change the final sound to the e-row + ば (行けば, 読めば, 話せば); ichidan verbs drop る and add れば (見れば); i-adjectives drop い and add ければ (安ければ); negative 〜ない→〜なければ.",
-      "The first clause is the condition and the second the result; the first clause is usually stative or conditional. When both clauses share a subject and the first has a volitional verb, the second generally can't be a command, request, or intention (✕早く行けば、席を取ってください) — use 〜たら instead.",
-      "Common set expressions: 〜ばいい (all you need to do is ... / it would be good to ...), 〜ばよかった (I wish I had ..., regret), 〜ば〜ほど (the more ..., the more ...).",
-      "Common in proverbs and general rules: 「春が来れば、花が咲く。」",
-      "Note that 〜ば is part of a conjugated form; the 「ば」 in 「てばかり」, 「例えば」, 「言葉」, etc. is not this grammar point."
+    "meaning": "A hypothetical condition: “if ..., then ...”. It stresses that the first part is the condition for the second. Also used in set phrases for general rules, advice, and regret.",
+    "connection": "Verb conditional form + ば (書けば, 食べれば, すれば, 来れば); i-adjective → 〜ければ; na-adjective / noun → 〜なら(ば)",
+    "senses": [
+      {
+        "label": "Hypothetical condition",
+        "meaning": "“If A is true, then B is true.” The focus is on A as the required condition for B. A is usually a state or condition.",
+        "connection": "Verb conditional form + ば; i-adjective minus い + ければ; negative: 〜なければ",
+        "examples": [
+          "If it's cheap, I'll buy it.",
+          "If you have time, let's go together."
+        ]
+      },
+      {
+        "label": "General rule",
+        "meaning": "Whenever A happens, B always follows. Common for natural laws, proverbs, and common sense.",
+        "connection": "Verb conditional form + ば + result in present tense",
+        "examples": [
+          "When spring comes, the cherry blossoms bloom.",
+          "Add 3 to 2 and you get 5."
+        ]
+      },
+      {
+        "label": "Advice: 「〜ばいい」",
+        "meaning": "「〜ばいい」 means “you just need to ...” or “it's fine if you ...”. It gives advice or asks what to do.",
+        "connection": "Verb conditional form + ばいい (asking how: どうすればいいですか)",
+        "examples": [
+          "If you don't understand, just ask the teacher.",
+          "What should I do?"
+        ]
+      },
+      {
+        "label": "Regret: 「〜ばよかった」",
+        "meaning": "「〜ばよかった」 means “I should have ...”. It expresses regret about something you didn't do.",
+        "connection": "Verb conditional form + ばよかった",
+        "examples": [
+          "We should have left earlier.",
+          "I should have brought an umbrella."
+        ]
+      }
     ],
-    "scenarios": [
-      "Giving advice: 「わからなければ、先生に聞けばいいですよ。」",
-      "Expressing regret: 「もっと勉強すればよかった。」",
-      "Explaining rules or conditions: 「この薬を飲めば、すぐ治ります。」",
-      "The more ..., the more ...: 「練習すればするほど上手になる。」"
+    "notes": [
+      "When both parts share a subject and the first is a volitional verb, the second usually can't be a command, request, or intention. Use 「〜たら」 instead.",
+      "「〜ば〜ほど」 means “the more ..., the more ...”: 練習すればするほど上手になる.",
+      "The 「ば」 in 「てばかり」, 「例えば」, and 「言葉」 is not this grammar point."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Hesitating while shopping",
+          "description": "Deciding whether to buy based on price while out with a friend.",
+          "example": "If it were a bit cheaper, I'd buy it."
+        },
+        {
+          "title": "Asking for directions",
+          "description": "Asking a passerby the way.",
+          "example": "How do I get to the station?"
+        },
+        {
+          "title": "Regret after the fact",
+          "description": "Frustrated after missing the train.",
+          "example": "I should have left home a little earlier."
+        }
+      ],
+      "work": [
+        {
+          "title": "Advising a junior",
+          "description": "Telling a newcomer what to do if they run into trouble.",
+          "example": "If you have any problems, feel free to come to me anytime."
+        },
+        {
+          "title": "Discussing conditions",
+          "description": "Explaining a prerequisite for a plan in a meeting.",
+          "example": "If the budget allows, we can start next month."
+        }
+      ]
+    },
     "etymology": "In Classical Japanese, \"irrealis form + ば\" expressed a hypothetical condition (\"if ...\"), while \"realis form + ば\" expressed a fixed condition (\"because ..., since ...\"). From the medieval period onward, realis + ば gradually took on the hypothetical meaning too, and the irrealis + ば use declined. So the modern \"conditional (hypothetical) form\" actually evolved from the classical \"realis form\" (已然形), which is why some grammar books still call it by that name.",
-    "examples": [
-      "If you don't understand, just ask the teacher.",
-      "If it's cheap, I'll buy it.",
-      "When spring comes, the cherry blossoms bloom.",
-      "I wish I had left earlier.",
-      "The more you practice Japanese, the better you get."
-    ],
     "similar": [
       {
         "title": "〜たら",
@@ -515,35 +1089,86 @@
         "title": "〜と",
         "explanation": "〜と expresses inevitable or habitual results (「春になると暖かくなる」), and its second clause cannot be an intention or request; 〜ば can also express general rules but puts more emphasis on the condition."
       }
-    ],
-    "title": "〜ば (conditional)"
+    ]
   },
   {
     "id": "tara",
-    "meaning": "1) Hypothetical condition: \"if ...\"; 2) definite condition: \"when / once ..., (then)\", doing the second action after the first is realized; 3) with a past-tense main clause, \"when I ..., (I found that) ...\"; 4) 〜たらどう？ makes a suggestion.",
-    "connection": "Ta-form of verbs, adjectives, and nouns + ら (行ったら, 食べたら, 高かったら, 静かだったら, 雨だったら)",
-    "usage": [
-      "Simple to form: just add ら to the past form ending in た／だ; the negative is 〜なかったら.",
-      "The most widely usable conditional: the second clause can be a command, request, intention, or invitation (「駅に着いたら、電話してください」).",
-      "It can express time sequence, \"as soon as / once ...\": 「家に帰ったら、すぐ宿題をします。」 Here the first clause is certain to happen and isn't a real hypothesis.",
-      "With a past-tense second clause, it expresses an unexpected discovery: 「窓を開けたら、雪が降っていた。」",
-      "Common uses: 〜たらいい (it would be good to ...), 〜たらどうですか (why don't you ...?, a suggestion), もし〜たら (if ...).",
-      "It is more colloquial than 〜ば; in formal situations you can use 〜ましたら (「わかりましたら、お知らせください」)."
+    "meaning": "The most versatile conditional. It covers hypotheticals (“if ...”), sure sequences (“when / after ...”), unexpected discoveries, and suggestions.",
+    "connection": "Ta-form of verbs, adjectives, or nouns + ら (行ったら, 高かったら, 静かだったら, 雨だったら)",
+    "senses": [
+      {
+        "label": "Hypothetical condition",
+        "meaning": "“If ...” The main clause can be a command, request, intention, or invitation, so it is more flexible than 「〜ば」. Often paired with 「もし」.",
+        "connection": "Ta-form + ら; negative: 〜なかったら",
+        "examples": [
+          "If it rains, the game will be canceled.",
+          "If they're cheap, I'd like to buy two."
+        ]
+      },
+      {
+        "label": "When / once ...",
+        "meaning": "The first event is sure to happen: “once A happens, do B”. It isn't really a hypothesis.",
+        "connection": "Verb ta-form + ら + next action (often a request or intention)",
+        "examples": [
+          "Please call me when you get to the station.",
+          "When I get home, I'll do my homework right away."
+        ]
+      },
+      {
+        "label": "Discovery",
+        "meaning": "With a past-tense main clause, it shows something you unexpectedly found after doing A: “When I ..., I found ...”.",
+        "connection": "Verb ta-form + ら + past tense (〜ていた／〜だった)",
+        "examples": [
+          "When I opened the window, it was snowing outside.",
+          "When I got home, I found my mother had come over."
+        ]
+      },
+      {
+        "label": "Suggestion",
+        "meaning": "「〜たらどう(ですか)」 and 「〜たらいい」 make suggestions: “Why don't you ...?”, “You could just ...”.",
+        "connection": "Verb ta-form + らどうですか／らいい",
+        "examples": [
+          "If you're tired, why not take a short break?",
+          "You could just ask the teacher."
+        ]
+      }
     ],
-    "scenarios": [
-      "Everyday arrangements: 「駅に着いたら、電話してね。」",
-      "Giving advice: 「疲れたら、少し休んだらどうですか。」",
-      "Describing an unexpected discovery: 「箱を開けたら、中は空だった。」",
-      "Expressing a hypothetical wish: 「もし宝くじが当たったら、世界旅行をしたい。」"
+    "notes": [
+      "It sounds more conversational than 「〜ば」. In formal settings, use 「〜ましたら」 (わかりましたら、お知らせください).",
+      "The 「たら／だら」 in words like 「だらけ」 and 「はたらく」 is not this grammar point."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Meeting up with a friend",
+          "description": "Asking a friend to get in touch on arrival.",
+          "example": "Send me a LINE when you get there."
+        },
+        {
+          "title": "Giving a friend advice",
+          "description": "A suggestion when a friend isn't feeling well.",
+          "example": "Why don't you go see a doctor?"
+        },
+        {
+          "title": "Telling about a surprise",
+          "description": "Telling family about something unexpected.",
+          "example": "When I opened my bag, my wallet wasn't there."
+        }
+      ],
+      "work": [
+        {
+          "title": "Assigning a task",
+          "description": "Asking a team member to report when finished.",
+          "example": "Let me know when you're done."
+        },
+        {
+          "title": "Formally inviting a client to get in touch",
+          "description": "Using 「〜ましたら」 in an email for politeness.",
+          "example": "If you have any questions, please contact us."
+        }
+      ]
+    },
     "etymology": "〜たら comes from 「たら」, the irrealis form of the Classical Japanese perfective auxiliary 「たり」, plus the conjunctive particle 「ば」, i.e. 「〜たらば」, meaning \"if ... has happened\". Later ば dropped off, leaving only 〜たら. The written form 「〜たらば」 can still occasionally be seen today.",
-    "examples": [
-      "Please call me when you get to the station.",
-      "If it rains, the game will be canceled.",
-      "When I opened the window, it was snowing outside.",
-      "If you're tired, why don't you rest for a bit?",
-      "If they're cheap, I'd like to buy two."
-    ],
     "similar": [
       {
         "title": "〜ば",
@@ -561,28 +1186,74 @@
   },
   {
     "id": "nara",
-    "meaning": "1) Takes up what the other person said or the current topic and uses it as a premise for advice, an opinion, or a judgment (\"if (that's the case) ..., if it's ...\"); 2) introduces a topic (\"speaking of ..., as for ...\"); 3) general hypothesis (\"if ...\").",
-    "connection": "Plain form of verbs / i-adjectives + なら; na-adjective stem / noun + なら (also written 〜ならば; colloquially 〜んなら／〜のなら)",
-    "usage": [
-      "The most typical use is taking up the other person's topic to give advice: A「京都へ行きたいんです。」 B「京都へ行くなら、秋がいいですよ。」",
-      "The time order of the two clauses can be reversed: 「旅行に行くなら、カメラを買ったほうがいい」 (buy the camera first, then travel) — something 〜ば／〜たら can't do.",
-      "Noun + なら can introduce a topic, like \"if it's ... you're asking about\": 「田中さんなら、図書館にいますよ。」",
-      "In formal or emphatic speech say 〜ならば; in casual speech 〜のなら／〜んなら is common: 「行くんなら、早く行こう。」",
-      "Note that the なら in 「さようなら」, 「ならない」, 「並ぶ（ならぶ）」, and 「習う（ならう）」 is not this grammar point."
+    "meaning": "Picks up what someone said or a topic and uses it as a premise for advice or a judgment (“if that's the case ...”). Also used to mark a topic and for general conditions.",
+    "connection": "Verb / i-adjective plain form + なら; na-adjective stem / noun + なら (also 「ならば」; casual 「のなら／んなら」)",
+    "senses": [
+      {
+        "label": "Advice based on what was said",
+        "meaning": "Takes what the other person said as a premise and gives advice or an opinion: “If you're going to ...”. This is the most typical use of 「なら」.",
+        "connection": "Verb / i-adjective plain form + なら (often followed by 「〜がいい」 or 「〜たほうがいい」)",
+        "examples": [
+          "If you're going to Kyoto, autumn is a great time.",
+          "If you're buying a computer, this store is cheap."
+        ]
+      },
+      {
+        "label": "Topic marker",
+        "meaning": "Noun + 「なら」 narrows the topic to a specific person or thing: “as for ...”, “if it's ... you want”. Often used to answer someone's question.",
+        "connection": "Noun + なら",
+        "examples": [
+          "If you're looking for Tanaka-san, he's in the library.",
+          "If you want beer, there's some in the fridge."
+        ]
+      },
+      {
+        "label": "General condition",
+        "meaning": "Simply means “if ...”. 「ならば」 is used for formality or emphasis.",
+        "connection": "Plain form / noun / na-adjective stem + なら(ば)",
+        "examples": [
+          "If you're going, I'll go too.",
+          "If that's true, it's a serious matter."
+        ]
+      }
     ],
-    "scenarios": [
-      "Responding to what someone said with advice: 「パソコンを買うなら、この店が安いですよ。」",
-      "Introducing the topic to answer a question: 「鍵なら、机の上にありますよ。」",
-      "Expressing a conditional willingness: 「あなたが行くなら、私も行きます。」",
-      "Hypotheses in written language: 「もし事実ならば、大きな問題だ。」"
+    "notes": [
+      "The order of events can be reversed: 「旅行に行くなら、カメラを買ったほうがいい」 (buy the camera first, then travel). 「〜ば」 and 「〜たら」 can't do this.",
+      "In speech, 「〜のなら／〜んなら」 is common: 行くんなら、早く行こう.",
+      "The 「なら」 in 「さようなら」, 「ならない」, 「習う」, and 「並ぶ」 is not this grammar point."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "A friend wants to travel",
+          "description": "Recommending a place based on what your friend said.",
+          "example": "If you're going to a hot spring, I recommend Hakone."
+        },
+        {
+          "title": "Family looking for something",
+          "description": "Answering a family member's question.",
+          "example": "The scissors? They're in the drawer."
+        },
+        {
+          "title": "A friend wants to buy something",
+          "description": "Giving advice based on their plans.",
+          "example": "If you want something cheap, you're better off buying online."
+        }
+      ],
+      "work": [
+        {
+          "title": "A coworker looking for someone",
+          "description": "Telling a coworker where the person is.",
+          "example": "If you're looking for the manager, she's in the meeting room."
+        },
+        {
+          "title": "Advising a client",
+          "description": "Recommending a plan based on the client's needs.",
+          "example": "If you'll be using it with a large group, this plan is a better deal."
+        }
+      ]
+    },
     "etymology": "「なら」 is the irrealis form of the Classical Japanese copula 「なり」; with the conjunctive particle 「ば」 it forms 「ならば」, meaning \"if it is ...\". In modern colloquial speech ば is often dropped, giving 〜なら.",
-    "examples": [
-      "If you're going to Kyoto, autumn is a good time.",
-      "If you're looking for Mr. Tanaka, he's in the library.",
-      "If you're going, I'll go too.",
-      "If that's really true, it's a serious matter."
-    ],
     "similar": [
       {
         "title": "〜たら",
@@ -600,29 +1271,83 @@
   },
   {
     "id": "passive",
-    "meaning": "Passive voice: 1) direct passive, \"be ...ed (by)\" (the subject directly receives the action); 2) indirect passive / suffering passive (being troubled by someone else's action, \"... happened (and it bothered me)\"); 3) objective description with an inanimate subject (common in news and explanatory texts: 「この寺は500年前に建てられた」).",
-    "connection": "Godan verbs: final sound to the a-row + れる (書く→書かれる, 言う→言われる); ichidan verbs: drop る + られる (食べる→食べられる, 見る→見られる); する→される; 来る→来（こ）られる",
-    "usage": [
-      "The passive form conjugates as an ichidan verb: られた, られます, られて, られない. The agent is marked with 「に」 (母に叱られた); in writing, creators or makers often take 「によって」 (この絵はピカソによって描かれた).",
-      "The suffering passive can use intransitive verbs: 「雨に降られた」 (I got caught in the rain), 「子どもに泣かれた」 (the child cried, and I was at a loss). In English these are usually not translated with a passive at all.",
-      "Possessor passive: 「電車で足を踏まれた」 (someone stepped on my foot on the train); the subject is the person, and the affected body part or belonging takes 「を」.",
-      "Watch for overlapping forms: the passive of ichidan verbs and 来る is identical to the potential and honorific forms (食べられる = be eaten / can eat / eat (honorific)), and only context can tell them apart. This entry's patterns prioritize recall and will flag all of these identical forms, so judge by the meaning of the sentence.",
-      "「生まれる」, 「疲れる」, 「別れる」, 「慣れる」, 「流れる」, etc. are independent verbs, not passives. The patterns try to exclude their kana spellings, but occasional false hits are still possible."
+    "meaning": "The passive voice: the subject receives someone else's action (“be ...ed”), or is troubled by someone's action. Also used for objective descriptions.",
+    "connection": "Godan: change the ending to the あ-row + れる (書かれる, 言われる); ichidan: drop る + られる (食べられる); する→される; 来る→来られる",
+    "senses": [
+      {
+        "label": "Direct passive",
+        "meaning": "The subject directly receives someone else's action: “be ...ed (by ...)”. The doer is marked with 「に」.",
+        "connection": "Doer に + verb passive form (叱られる, ほめられる, 呼ばれる)",
+        "examples": [
+          "When I was a child, I often got scolded by my mother.",
+          "I was happy to be praised by my teacher."
+        ]
+      },
+      {
+        "label": "Possessor passive",
+        "meaning": "Your body part or belonging is affected by someone else's action. The person is the subject, and the affected part or item takes 「を」.",
+        "connection": "Person が／は + doer に + thing を + passive form",
+        "examples": [
+          "Someone stepped on my foot on the train.",
+          "My wallet was stolen by a thief."
+        ]
+      },
+      {
+        "label": "Suffering passive",
+        "meaning": "You are troubled by someone's action or by nature. Intransitive verbs can be used too. In English it's often best expressed as something happening “on” you, as in “it rained on me”.",
+        "connection": "Doer に + intransitive / transitive verb passive form (雨に降られる, 子どもに泣かれる)",
+        "examples": [
+          "I got caught in the rain on the way home and got soaked.",
+          "The baby kept crying in the middle of the night, so I couldn't sleep."
+        ]
+      },
+      {
+        "label": "Objective description",
+        "meaning": "With a thing as the subject, it states facts objectively. Common in news and explanatory writing. The doer is often omitted, or a creator is marked with 「によって」.",
+        "connection": "Thing は／が + passive form (〜によって 〜られる)",
+        "examples": [
+          "This temple was built 500 years ago.",
+          "Japanese is studied all over the world.",
+          "This painting was painted by Picasso."
+        ]
+      }
     ],
-    "scenarios": [
-      "Describing what happened to you (often unpleasant): 「先生に叱られました。」",
-      "Objective description in news, reports, and explanatory texts: 「この橋は100年前に造られた。」",
-      "Expressing annoyance: 「隣の人にたばこを吸われて、困った。」",
-      "Passive expressions in academic and formal writing: 「この方法は広く使われている。」"
+    "notes": [
+      "For ichidan verbs and 「来る」, the passive looks the same as the potential and honorific forms (食べられる = be eaten / can eat / eat [honorific]). Context decides.",
+      "「生まれる」, 「疲れる」, 「別れる」, and 「慣れる」 are independent verbs, not passives."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Complaining to a friend",
+          "description": "Telling about a bad moment on the train.",
+          "example": "Someone stepped on my foot on a packed train, and it hurt."
+        },
+        {
+          "title": "Getting praised",
+          "description": "Sharing good news with family at home.",
+          "example": "My teacher praised me today!"
+        },
+        {
+          "title": "Introducing a sightseeing spot",
+          "description": "A guide explains a building's history.",
+          "example": "This castle was built 400 years ago."
+        }
+      ],
+      "work": [
+        {
+          "title": "Objective statements in news and reports",
+          "description": "Stating facts objectively in a report.",
+          "example": "The new product is scheduled to be released next month."
+        },
+        {
+          "title": "Explaining an assigned task",
+          "description": "Telling a coworker the work came from the boss.",
+          "example": "The department manager asked me to take on a new job."
+        }
+      ]
+    },
     "etymology": "The passive auxiliaries れる／られる come from Classical Japanese 「る／らる」. 「る・らる」 had four uses — spontaneous, potential, passive, and honorific — and their original core meaning is generally thought to have been \"spontaneous\" (something happening by itself), from which the other uses derived. This is the historical reason why the passive, potential, and honorific forms look the same in modern Japanese.",
-    "examples": [
-      "When I was a child, I often got scolded by my mother.",
-      "Someone stepped on my foot on the train.",
-      "This temple was built 500 years ago.",
-      "I got caught in the rain on the way home and got soaked.",
-      "Japanese is studied all over the world."
-    ],
     "similar": [
       {
         "title": "〜せる・〜させる (causative)",
@@ -636,34 +1361,86 @@
         "title": "Honorific 〜れる・〜られる",
         "explanation": "In 「先生が来られました」, られる is honorific (the teacher came), not passive. Check whether the subject is someone to be respected and whether there is an agent marked with 「に」."
       }
-    ],
-    "title": "〜れる・〜られる (passive)"
+    ]
   },
   {
     "id": "causative",
-    "meaning": "Causative voice: 1) compulsion or command, \"make (someone) do ...\"; 2) permission or allowing, \"let (someone) do ..., let (someone) do as they like\"; 3) causing an emotion, \"make (someone happy, worried, etc.)\".",
-    "connection": "Godan verbs: final sound to the a-row + せる (行く→行かせる, 読む→読ませる, 言う→言わせる); ichidan verbs: drop る + させる (食べる→食べさせる); する→させる; 来る→来（こ）させる",
-    "usage": [
-      "The causative conjugates as an ichidan verb: させた, させます, させて, させない, させられる.",
-      "Particle for the person made to act: with intransitive verbs 「を」 is common (子どもを公園で遊ばせる); with transitive verbs use 「に」 (子どもに野菜を食べさせる), since there is already a 「を」.",
-      "The permission sense often appears as 〜させてあげる／〜させてやる; to ask permission for yourself, use 〜させてください／〜させていただけませんか (「今日は早く帰らせてください」).",
-      "The causative-passive 〜させられる means \"be made to do\": 「母に野菜を食べさせられた」; for godan verbs it is often contracted in speech to 〜される (行かされる, 待たされる), which is hard to tell apart from the passive.",
-      "Emotional causative: 「親を心配させる」, 「みんなを笑わせる」. The causative is generally not used directly toward superiors, as it may sound rude."
+    "meaning": "The causative voice: making or letting someone do something (by force or by permission). It can also mean causing someone to feel an emotion.",
+    "connection": "Godan: change the ending to the あ-row + せる (行かせる, 読ませる); ichidan: drop る + させる (食べさせる); する→させる; 来る→来させる",
+    "senses": [
+      {
+        "label": "Making someone do",
+        "meaning": "Someone in a higher position makes someone do something: “make (someone) do ...”. With transitive verbs, the person made to act takes 「に」. With intransitive verbs, 「を」 is common.",
+        "connection": "Person に + object を + causative form; person を + intransitive causative form",
+        "examples": [
+          "The mother makes her child eat vegetables every day.",
+          "The teacher had the students write an essay."
+        ]
+      },
+      {
+        "label": "Letting someone do",
+        "meaning": "Allowing someone to do what they want, or leaving them free to: “let (someone) ...”. Often 「〜させてあげる」.",
+        "connection": "Causative form + てあげる／てやる／ておく",
+        "examples": [
+          "I let the kids play freely in the park.",
+          "My daughter said she wanted to study abroad, so I let her go."
+        ]
+      },
+      {
+        "label": "Please let me ...",
+        "meaning": "「〜させてください」 asks permission to do something yourself: “Please let me ...”. More polite: 「〜させていただけませんか」.",
+        "connection": "Causative te-form + ください／いただけませんか",
+        "examples": [
+          "Excuse me, please let me rest for a bit.",
+          "Please let me handle that job."
+        ]
+      },
+      {
+        "label": "Causing emotions",
+        "meaning": "Making someone feel something or react: “make (someone) happy / worried / wait”.",
+        "connection": "Person を + causative of an emotion verb (心配させる, 笑わせる, 待たせる)",
+        "examples": [
+          "His jokes always make everyone laugh.",
+          "Sorry to keep you waiting so long."
+        ]
+      }
     ],
-    "scenarios": [
-      "Parents or teachers with children: 「子どもに毎日本を読ませています。」",
-      "Asking permission at work (a very common polite expression): 「この仕事、私にやらせてください。」",
-      "Describing being forced to do something: 「会議で長い時間待たせられた。」",
-      "Causing an emotion: 「そんなことを言って、母を悲しませてしまった。」"
+    "notes": [
+      "The causative-passive 「〜させられる」 means “be made to do”: 母に野菜を食べさせられた. For godan verbs, speech often shortens it to 「行かされる」 or 「待たされる」.",
+      "Avoid using the causative directly toward superiors; it can sound rude."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Parents setting rules",
+          "description": "Explaining a household rule.",
+          "example": "Every night, I make my kids brush their teeth."
+        },
+        {
+          "title": "Apologizing for being late",
+          "description": "Saying sorry for keeping a friend waiting.",
+          "example": "Sorry I kept you waiting!"
+        },
+        {
+          "title": "Letting a child do what they love",
+          "description": "A parent lets their child learn something they enjoy.",
+          "example": "My son loves soccer, so we've signed him up for lessons."
+        }
+      ],
+      "work": [
+        {
+          "title": "Asking your boss",
+          "description": "Politely asking permission with 「〜させていただけませんか」.",
+          "example": "Would it be possible for me to take tomorrow off?"
+        },
+        {
+          "title": "Volunteering for a task",
+          "description": "Offering to take something on in a meeting.",
+          "example": "Please let me take charge of that matter."
+        }
+      ]
+    },
     "etymology": "The causative auxiliaries せる／させる come from Classical Japanese 「す／さす」 (there was also 「しむ」). 「す」 attached to the irrealis form of yodan verbs and 「さす」 to other verbs, corresponding one-to-one with modern godan + せる and ichidan + させる. From the medieval period on, both shifted to shimo-ichidan conjugation and became 「せる・させる」. Classical 「す・さす」 also had an honorific use (as in 「せさせ給ふ」), which has disappeared in modern Japanese.",
-    "examples": [
-      "The mother makes her child eat vegetables every day.",
-      "The teacher had the students write essays.",
-      "Excuse me, please let me rest for a bit.",
-      "His jokes always make everyone laugh.",
-      "Sorry for keeping you waiting so long."
-    ],
     "similar": [
       {
         "title": "〜れる・〜られる (passive)",
@@ -677,34 +1454,78 @@
         "title": "Transitive verbs",
         "explanation": "Some transitive/intransitive verb pairs are close in meaning to the causative: 「子どもを起こす」 (wake the child up, transitive) vs. 「子どもを起きさせる」 (make the child get up by themselves). The transitive verb means acting directly; the causative means having the other person do it themselves."
       }
-    ],
-    "title": "〜せる・〜させる (causative)"
+    ]
   },
   {
     "id": "te-ageru",
-    "meaning": "Expresses that the speaker (or the speaker's side) does something for someone else, giving them a favor (\"do ... for someone\"). Use 〜てさしあげる for superiors and 〜てやる for juniors, animals, and plants.",
-    "connection": "Verb te-form + あげる (humble: 〜てさしあげる; toward inferiors: 〜てやる)",
-    "usage": [
-      "The giver of the favor is the subject (usually the speaker or the speaker's side), and the recipient is marked with 「に」 or 「の」: 「妹に本を読んであげた」, 「友だちの宿題を手伝ってあげた」.",
-      "あげる conjugates as an ichidan verb: てあげた, てあげます, てあげよう, てあげたい, てあげて.",
-      "Saying 「〜てあげましょうか」 directly to an elder or superior sounds condescending, as if bestowing a favor; the polite way is 「お〜しましょうか」 (お持ちしましょうか).",
-      "〜てやる is used toward juniors, animals, and plants (「犬に餌をやる」, 「花に水をやる」), and can also mean \"I'll show you\" (in a defiant sense) (「絶対に勝ってやる」).",
-      "When the recipient is the speaker, 〜てあげる cannot be used; use 〜てくれる instead."
+    "meaning": "The speaker (or their side) does something for someone else as a favor. Use 「てさしあげる」 toward superiors and 「てやる」 toward juniors, animals, and plants.",
+    "connection": "Verb te-form + あげる (humble: 〜てさしあげる; downward: 〜てやる)",
+    "senses": [
+      {
+        "label": "Doing for others",
+        "meaning": "The giver (usually your side) does something for someone else: “do ... for someone”. The receiver is marked with 「に」 or 「の」.",
+        "connection": "Person に／person の + thing を + verb te-form + あげる",
+        "examples": [
+          "I read a book to my little sister.",
+          "I showed a lost person the way to the station.",
+          "That looks heavy. Let me carry it for you."
+        ]
+      },
+      {
+        "label": "For superiors (humble)",
+        "meaning": "「〜てさしあげる」 is the humble form for elders and superiors. Even so, saying it to their face sounds like you're doing them a favor, so 「お〜します」 is usually used instead.",
+        "connection": "Verb te-form + さしあげる",
+        "examples": [
+          "I carried my teacher's bag for her."
+        ]
+      },
+      {
+        "label": "For juniors and animals",
+        "meaning": "「〜てやる」 is for doing things for juniors, animals, or plants. It can also mean “I'll show you!” in a defiant tone.",
+        "connection": "Verb te-form + やる",
+        "examples": [
+          "Every morning, I take the dog out for a walk.",
+          "I fixed my little brother's bike for him.",
+          "This time I'm definitely going to win."
+        ]
+      }
     ],
-    "scenarios": [
-      "Between friends and family: 「荷物、持ってあげるよ。」",
-      "Describing how you helped someone: 「道に迷った人に駅までの道を教えてあげました。」",
-      "Toward children or pets: 「子どもに絵本を読んでやる。」",
-      "Business or toward superiors (humble): 「お客様に資料をお送りしてさしあげました。」 (in actual business, お送りしました is more common)"
+    "notes": [
+      "Saying 「〜てあげましょうか」 directly to a superior sounds condescending. The polite way is 「お持ちしましょうか」.",
+      "It can't be used when the speaker receives the favor. Use 「〜てくれる」 instead."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Looking after younger siblings",
+          "description": "Telling a friend how you helped your brother.",
+          "example": "I helped my little brother with his homework."
+        },
+        {
+          "title": "Helping a friend",
+          "description": "Offering to help when a friend is carrying something heavy.",
+          "example": "I'll carry that bag for you."
+        },
+        {
+          "title": "Taking care of a pet",
+          "description": "Explaining your daily pet care.",
+          "example": "Making breakfast for the cat is my job every morning."
+        }
+      ],
+      "work": [
+        {
+          "title": "Mentoring a junior",
+          "description": "Telling a coworker how you helped a new hire.",
+          "example": "I showed the new hire how to do the job."
+        },
+        {
+          "title": "Avoid with superiors",
+          "description": "Don't say 「〜てあげましょうか」 to a superior. Use the humble 「お〜します」 instead.",
+          "example": "Shall I carry the documents for you, sir? (not ✕持ってあげましょうか)"
+        }
+      ]
+    },
     "etymology": "あげる is written 「上げる」, originally meaning \"to raise, to lift up\". Lifting something up to offer it to a person of higher status gave rise to the meaning \"to give\". It was originally a humble word but gradually became neutral, meaning ordinary \"give\", so its original humble role was taken over by さしあげる (差し上げる).",
-    "examples": [
-      "I read a book to my little sister.",
-      "That looks heavy. Let me carry it for you.",
-      "I showed a lost person the way to the station.",
-      "Every morning I take the dog for a walk.",
-      "I carried my teacher's bag for them."
-    ],
     "similar": [
       {
         "title": "〜てくれる",
@@ -722,29 +1543,74 @@
   },
   {
     "id": "te-kureru",
-    "meaning": "Expresses that someone else does something for the speaker (or the speaker's side), who benefits and feels grateful (\"(someone) does ... for me\"). Use 〜てくださる for superiors.",
+    "meaning": "Someone does something for the speaker (or their side), and the speaker is grateful. Use 「てくださる」 for superiors.",
     "connection": "Verb te-form + くれる (honorific: 〜てくださる)",
-    "usage": [
-      "The giver of the favor is the subject (marked with が／は), and the recipient is the speaker or their \"in-group\", such as family; 「私に」 is usually omitted.",
-      "くれる conjugates as an ichidan verb (imperative くれ): てくれた, てくれます, てくれない？, てくれ.",
-      "〜てくれない？／〜てくれませんか is a common way to make a request, softer than 〜てください; 〜てくれ is a blunt command used mainly by men toward equals or juniors.",
-      "The masu-form of the honorific 〜てくださる is 〜てくださいます (not くださります), and the past is 〜てくださった／〜てくださいました.",
-      "It can't be used when the recipient isn't on the speaker's side: ✕「田中さんが山田さんに教えてくれた」 (between outsiders, use 〜てあげた)."
+    "senses": [
+      {
+        "label": "Someone does it for me",
+        "meaning": "The giver is the subject, and the receiver is “me” or my side. 「私に」 is usually left out. It conveys gratitude.",
+        "connection": "Person が + verb te-form + くれる／くれた",
+        "examples": [
+          "My friends helped me move.",
+          "Thank you for coming.",
+          "My mom always listens to me."
+        ]
+      },
+      {
+        "label": "A superior does it for me",
+        "meaning": "「〜てくださる」 is the honorific form, for when an elder or superior does something for you. Its masu-form is 「くださいます」.",
+        "connection": "Verb te-form + くださる／くださいます／くださった",
+        "examples": [
+          "My teacher corrected my essay for me.",
+          "The company president drove me to the station."
+        ]
+      },
+      {
+        "label": "Requests",
+        "meaning": "「〜てくれない？」 and 「〜てくれませんか」 ask someone for help, more softly than 「〜てください」. 「〜てくれ」 is a blunt order used by men toward equals or juniors.",
+        "connection": "Verb te-form + くれない？／くれませんか／くれ",
+        "examples": [
+          "Could you pass me the salt?",
+          "Excuse me, could you open the door for me?"
+        ]
+      }
     ],
-    "scenarios": [
-      "Expressing thanks: 「手伝ってくれて、ありがとう。」",
-      "Making a request: 「ちょっと窓を開けてくれない？」",
-      "Describing help you received: 「先生が丁寧に説明してくださいました。」",
-      "Complaining that someone doesn't help: 「夫は全然家事をしてくれない。」"
+    "notes": [
+      "It can't be used when the receiver isn't on your side: ✕「田中さんが山田さんに教えてくれた」. Between outsiders, use 「〜てあげた」.",
+      "「〜てください」 is a request form and isn't the 「てくださる」 covered here."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Thanking a friend",
+          "description": "Thanking a friend for making the effort to visit.",
+          "example": "Thanks for coming all this way."
+        },
+        {
+          "title": "Asking family for help at the table",
+          "description": "Casually asking someone to pass something.",
+          "example": "Can you pass the soy sauce?"
+        },
+        {
+          "title": "Talking about family help",
+          "description": "Telling a friend about a parent's support.",
+          "example": "My dad gave me a ride to the station."
+        }
+      ],
+      "work": [
+        {
+          "title": "Thanking your boss",
+          "description": "Showing gratitude for guidance with the honorific form.",
+          "example": "The department manager took the time to teach me carefully."
+        },
+        {
+          "title": "Asking a coworker for help",
+          "description": "A small favor asked in a soft tone.",
+          "example": "Could you make a copy of this for me?"
+        }
+      ]
+    },
     "etymology": "くれる is written 「呉れる」; the old verb 「くる（呉る）」 meant \"to give (to an inferior, to oneself)\". From the medieval period on it was used specifically in the direction \"someone gives to me\", forming, together with あげる and もらう, Japanese's distinctive system of giving and receiving verbs. くださる is written 「下さる」, originally \"to bestow (from above)\", hence its honorific nature.",
-    "examples": [
-      "My friend helped me move.",
-      "Thank you for coming.",
-      "Could you pass me the salt?",
-      "My teacher corrected my essay for me.",
-      "My mother always listens to me."
-    ],
     "similar": [
       {
         "title": "〜てあげる",
@@ -762,29 +1628,74 @@
   },
   {
     "id": "te-morau",
-    "meaning": "Expresses that the speaker (or their side) has someone do something for them, or benefits from someone's action (\"have / get (someone) to do ... for me\"). Use 〜ていただく for superiors.",
+    "meaning": "You have someone do something for you, or you benefit from someone's action. Use 「ていただく」 for superiors.",
     "connection": "Verb te-form + もらう (humble: 〜ていただく)",
-    "usage": [
-      "The recipient is the subject (usually \"I\"), and the giver is marked with 「に」 (sometimes 「から」): 「友だちに宿題を手伝ってもらった」.",
-      "もらう conjugates as a godan verb: てもらった, てもらいます, てもらえる, てもらいたい.",
-      "Requests: 〜てもらえませんか／〜ていただけませんか (could you please ...?) are very common, polite ways to ask.",
-      "〜てもらいたい／〜ていただきたい express wanting someone to do something and sound more formal than 〜てほしい.",
-      "It can express both actively asking (「医者に診てもらう」) and simply benefiting (「先生にほめてもらった」)."
+    "senses": [
+      {
+        "label": "Having someone do it for me",
+        "meaning": "The receiver (usually me) is the subject, and the giver is marked with 「に」. It can mean you asked for it or simply that you benefited: “have / get someone to ...”.",
+        "connection": "Person に + verb te-form + もらう; for superiors: 〜ていただく",
+        "examples": [
+          "I had my friends help me move.",
+          "I had a doctor examine me at the hospital.",
+          "My teacher kindly corrected my essay."
+        ]
+      },
+      {
+        "label": "Polite requests",
+        "meaning": "「〜てもらえませんか」 and 「〜ていただけませんか」 are very polite, very common request forms: “Could you possibly ...?”.",
+        "connection": "Verb te-form + もらえませんか／いただけませんか",
+        "examples": [
+          "Excuse me, could you take a picture for me?",
+          "Could you explain it once more, please?"
+        ]
+      },
+      {
+        "label": "Wanting someone to do",
+        "meaning": "「〜てもらいたい」 and 「〜ていただきたい」 express wanting someone to do something. More formal than 「〜てほしい」.",
+        "connection": "Verb te-form + もらいたい／いただきたい",
+        "examples": [
+          "I'd really like you to read this book.",
+          "We'd like all of you to take part as well."
+        ]
+      }
     ],
-    "scenarios": [
-      "Asking for help in daily life: 「友だちに写真を撮ってもらいました。」",
-      "Polite requests (common in business): 「すみません、もう一度説明していただけませんか。」",
-      "Going to a professional for treatment or repairs: 「病院で医者に診てもらった。」",
-      "Expressing a wish: 「この本をぜひ読んでもらいたい。」"
+    "notes": [
+      "The giver can also be marked with 「から」: 先生から教えてもらった.",
+      "「もらう」 alone (receiving an item) and 「いただきます」 (said before eating) are not this grammar point."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Asking someone to take a photo",
+          "description": "Politely asking a passerby at a tourist spot.",
+          "example": "Excuse me, could you take a picture for us?"
+        },
+        {
+          "title": "Talking about a friend's help",
+          "description": "Telling family how a friend helped.",
+          "example": "A friend gave me a ride to the station."
+        },
+        {
+          "title": "At the hair salon",
+          "description": "Saying you got your hair cut.",
+          "example": "I got my hair cut yesterday."
+        }
+      ],
+      "work": [
+        {
+          "title": "Asking your boss to review something",
+          "description": "Politely asking a superior to check materials.",
+          "example": "Could you take a look at these materials?"
+        },
+        {
+          "title": "Assigning a task to a junior",
+          "description": "Saying what you want them to do.",
+          "example": "I'd like you to have this summarized by tomorrow."
+        }
+      ]
+    },
     "etymology": "もらう is written 「貰う」, originally meaning \"to ask for and receive\". いただく is written 「頂く／戴く」, originally \"to place on top of one's head\" — when receiving something from a person of higher status, one raised it above one's head out of respect — and so it became the humble word for \"to receive\" (the 「いただきます」 said before meals comes from this too).",
-    "examples": [
-      "I had my friend help me move.",
-      "Excuse me, could you take a picture for me?",
-      "I had a doctor examine me at the hospital.",
-      "I had my teacher correct my essay.",
-      "I'd really like you to read this book."
-    ],
     "similar": [
       {
         "title": "〜てくれる",
@@ -802,29 +1713,66 @@
   },
   {
     "id": "noni",
-    "meaning": "Expresses contrast: the result is the opposite of what the first clause would lead you to expect, with the speaker's dissatisfaction, regret, surprise, or reproach (\"even though ..., (still) ...\"). At the end of a sentence it expresses regret or dissatisfaction (\"if only ...\", \"... but oh well\").",
-    "connection": "Plain form of verbs / i-adjectives + のに; na-adjective・noun + なのに",
-    "usage": [
-      "Nouns and na-adjectives connect with な: 「日曜日なのに」, 「静かなのに」 (✕日曜日だのに).",
-      "The second clause is an established or definite fact; it cannot be a command, request, or intention: ✕「雨なのに、出かけてください」.",
-      "It carries strong emotion and is often used to express dissatisfaction or regret: 「せっかく作ったのに、誰も食べてくれない。」",
-      "Sentence-final uses: 「〜ばいいのに」 (it would be nice if ...), 「来ればよかったのに」 (you should have come).",
-      "Note there is also a purpose 「〜のに」 (「この箱は物を入れるのに便利だ」) unrelated to contrast; this entry's patterns try to exclude common combinations (のに便利・必要・使う, etc.)."
+    "meaning": "Contrast: the result goes against expectations, with a tone of dissatisfaction, regret, or surprise (“even though ...”). At the end of a sentence, it expresses regret.",
+    "connection": "Verb / i-adjective plain form + のに; na-adjective / noun + なのに",
+    "senses": [
+      {
+        "label": "Even though ...",
+        "meaning": "The result is the opposite of what the first part leads you to expect. It carries dissatisfaction, regret, or blame. The second part is something that has happened or is certain.",
+        "connection": "Plain form + のに; noun / na-adjective + なのに (✕日曜日だのに)",
+        "examples": [
+          "We'd made plans, but he never showed up.",
+          "Even though it's Sunday, I have to go to the office.",
+          "It's already April, and it's still cold."
+        ]
+      },
+      {
+        "label": "Regret at the end",
+        "meaning": "At the end of a sentence, it expresses regret or frustration that things didn't go as hoped: “If only ...”, “I wish ...”. Often 「〜ばいいのに」 or 「〜ばよかったのに」.",
+        "connection": "〜ば + いいのに／よかったのに; plain form + のに (sentence-final)",
+        "examples": [
+          "You should have told me.",
+          "If only you lived a bit closer.",
+          "And I went to all the trouble of making it..."
+        ]
+      }
     ],
-    "scenarios": [
-      "Expressing dissatisfaction: 「約束したのに、彼は来なかった。」",
-      "Expressing regret: 「もう少しで勝てたのに。」",
-      "Expressing surprise: 「もう4月なのに、まだ寒い。」",
-      "Reproach or regret (sentence-final): 「言ってくれればよかったのに。」"
+    "notes": [
+      "The second part can't be a command, request, or intention: ✕「雨なのに、出かけてください」. Use 「〜けど」 or 「〜ても」 instead.",
+      "Purpose 「〜のに」 (物を入れるのに便利だ) has a different meaning and isn't covered here."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Upset with a friend",
+          "description": "Complaining when a friend didn't keep their word.",
+          "example": "I was waiting for you. Why didn't you come?"
+        },
+        {
+          "title": "Complaining about the weather",
+          "description": "When the weather doesn't match the season.",
+          "example": "It's already spring, and it's snowing."
+        },
+        {
+          "title": "Feeling sorry for someone",
+          "description": "When a friend missed out on something good.",
+          "example": "You should have come too."
+        }
+      ],
+      "work": [
+        {
+          "title": "Disappointed with a result",
+          "description": "Telling a coworker your efforts didn't pay off.",
+          "example": "We prepared so much, but we didn't win the contract."
+        },
+        {
+          "title": "Watching your tone at work",
+          "description": "「のに」 sounds accusing. When explaining to a boss or client, use 「〜が」 instead.",
+          "example": "I did get in touch, but I didn't receive a reply. (not ✕連絡したのに)"
+        }
+      ]
+    },
     "etymology": "Made of the formal noun / nominalizing particle 「の」 + the case particle 「に」, originally meaning \"in the situation of ...\". From the early modern period onward it became fixed as a contrastive conjunctive particle expressing a result contrary to expectation and the speaker's dissatisfaction.",
-    "examples": [
-      "He promised, but he didn't come.",
-      "Even though it's Sunday, I have to go to the office.",
-      "I studied so hard, but I still failed the exam.",
-      "It's already April, and it's still cold, isn't it?",
-      "You should have told me."
-    ],
     "similar": [
       {
         "title": "〜けれども／〜が",
@@ -838,33 +1786,78 @@
         "title": "〜ので",
         "explanation": "〜ので expresses a cause (\"because ..., so\"); 〜のに expresses contrast (\"even though ...\"). Be careful not to confuse them."
       }
-    ],
-    "title": "〜のに (contrast)"
+    ]
   },
   {
     "id": "shi",
-    "meaning": "1) Lists several parallel facts or reasons (\"... and ..., and what's more ...\"); 2) gives one or two reasons while implying there are others (\"because ..., (and besides ...)\").",
-    "connection": "Plain form of verbs / i-adjectives / na-adjectives / nouns + し (noun・na-adjective: 〜だし); also after polite forms: 〜ですし, 〜ますし",
-    "usage": [
-      "Common patterns: 「Aし、Bし、（それに）C」, 「Aし、Bから、〜」, used to list reasons or features.",
-      "Nouns and na-adjectives take だ: 「静かだし、便利だし」, 「雨だし」.",
-      "It can follow polite forms: 「この部屋は広いですし、駅にも近いです。」",
-      "The items listed usually point in the same evaluative direction (all advantages or all drawbacks); often paired with も: 「頭もいいし、性格もいい」.",
-      "Sentence-final use: 「だって、雨だし。」 means \"well, (because) ..., you know\", giving a soft reason or excuse in casual speech."
+    "meaning": "Lists parallel facts or reasons (“... and ..., and ...”), or gives one or two reasons while implying there are more.",
+    "connection": "Plain form + し (noun / na-adjective: 〜だし); also after polite forms: 〜ですし／〜ますし",
+    "senses": [
+      {
+        "label": "Listing",
+        "meaning": "Lists several facts or features pointing the same way (all good or all bad): “not only ... but also ...”. Often paired with 「も」.",
+        "connection": "Aし、Bし、(それに) C; often 「〜も〜し、〜も〜」",
+        "examples": [
+          "This apartment is spacious and close to the station, so it's really convenient.",
+          "He's kind, and he's a good cook too.",
+          "He's smart, and he has a great personality."
+        ]
+      },
+      {
+        "label": "Giving reasons",
+        "meaning": "Gives one or two reasons, implies there are others, then leads to a conclusion. It sounds softer than 「から」 and doesn't pin everything on one reason.",
+        "connection": "Reason + し、(reason + し、) + conclusion",
+        "examples": [
+          "It's raining and it's cold today, so I don't want to go out.",
+          "We're short on time, so let's take a taxi."
+        ]
+      },
+      {
+        "label": "Sentence-final excuse",
+        "meaning": "At the end of a sentence, it states only the reason and leaves the conclusion for the listener to infer, like “... you know”. Often used in speech to make excuses softly.",
+        "connection": "Plain form + し。(often with 「だって」)",
+        "examples": [
+          "Well, it's raining.",
+          "It's fine. I'm free anyway."
+        ]
+      }
     ],
-    "scenarios": [
-      "Evaluating someone or something: 「彼は優しいし、頭もいい。」",
-      "Giving reasons or declining an invitation: 「今日は疲れたし、雨も降っているし、家にいます。」",
-      "Recommending: 「この店は安いし、おいしいし、おすすめですよ。」",
-      "Making excuses casually: 「別にいいじゃん、まだ時間あるし。」"
+    "notes": [
+      "Nouns and na-adjectives need 「だ」: 静かだし, 雨だし.",
+      "The 「し」 in 「ただし」 and 「わたし」 is not this grammar point."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Recommending a restaurant",
+          "description": "Listing a place's good points for a friend.",
+          "example": "That place is cheap and tasty. I recommend it."
+        },
+        {
+          "title": "Turning down an invitation",
+          "description": "Listing reasons to decline gently.",
+          "example": "I'm tired today, and I have an early start tomorrow, so I'm heading home."
+        },
+        {
+          "title": "A sentence-final excuse",
+          "description": "Giving a reason when asked why you didn't do something.",
+          "example": "Well, it's such a hassle."
+        }
+      ],
+      "work": [
+        {
+          "title": "Making a suggestion in a meeting",
+          "description": "Listing reasons to support a proposal, using polite 「ですし」.",
+          "example": "It's cheap and it doesn't take much time, so I think this method is best."
+        },
+        {
+          "title": "Evaluating a new hire",
+          "description": "Listing a new employee's strengths to your boss.",
+          "example": "He works fast, and he's conscientious."
+        }
+      ]
+    },
     "etymology": "The conjunctive particle 「し」 is generally thought to derive from 「し」, the attributive form of the Classical Japanese past auxiliary 「き」, or from the emphatic adverbial particle 「し」; from the early modern period it developed into a conjunctive particle for listing parallel items and reasons. There are several theories about its origin, and none is settled.",
-    "examples": [
-      "This room is spacious and close to the station, so it's very convenient.",
-      "It's raining and cold today, so I don't want to go out.",
-      "He's kind, and he's a good cook too.",
-      "We don't have much time, so let's take a taxi."
-    ],
     "similar": [
       {
         "title": "〜から",
@@ -882,29 +1875,74 @@
   },
   {
     "id": "sugiru",
-    "meaning": "Expresses that a degree exceeds the limit or appropriate range (\"too ..., overly ..., over-...\"), usually with a negative evaluation.",
-    "connection": "Verb masu-stem (drop ます) + すぎる; i-adjective (drop い) + すぎる (いい→よすぎる, ない→なさすぎる); na-adjective stem + すぎる",
-    "usage": [
-      "すぎる conjugates as an ichidan verb: すぎた, すぎます, すぎて, すぎない.",
-      "Verbs: 「食べすぎる」, 「飲みすぎる」, 「働きすぎる」; adjectives: 「高すぎる」, 「静かすぎる」; negative ない→なさすぎる (自信がなさすぎる).",
-      "It can be nominalized as 〜すぎ: 「食べすぎに注意」, 「それは言いすぎだよ」.",
-      "It is generally negative, but in casual speech it is also used for exaggerated praise: 「かわいすぎる！」, 「おいしすぎる！」",
-      "It has a kanji spelling (with the character meaning \"pass\"), but as an auxiliary element it is usually written in kana; すぎ after a clock time (\"past ten o'clock\") refers to time and is not this grammar point."
+    "meaning": "Something goes beyond the proper limit: “too ...”, “over-...”. Usually negative.",
+    "connection": "Verb masu-stem + すぎる; i-adjective minus い + すぎる (いい→よすぎる, ない→なさすぎる); na-adjective stem + すぎる",
+    "senses": [
+      {
+        "label": "Doing too much",
+        "meaning": "With verbs, it means overdoing an action: “too much”, “over-...”.",
+        "connection": "Verb masu-stem + すぎる (食べすぎる, 飲みすぎる, 働きすぎる)",
+        "examples": [
+          "I ate too much cake yesterday.",
+          "Please don't drink too much."
+        ]
+      },
+      {
+        "label": "Too ...",
+        "meaning": "With adjectives, a quality goes beyond what is appropriate: “too ...”, “overly ...”.",
+        "connection": "i-adjective minus い / na-adjective stem + すぎる",
+        "examples": [
+          "This bag is too expensive for me to buy.",
+          "This room is too quiet. It feels a bit lonely.",
+          "Having too little confidence isn't good either."
+        ]
+      },
+      {
+        "label": "Noun 「〜すぎ」",
+        "meaning": "As the noun 「〜すぎ」, it refers to the excess itself. Very common in speech.",
+        "connection": "Verb masu-stem / adjective stem + すぎ(だ／に)",
+        "examples": [
+          "That's going a bit too far.",
+          "Be careful not to overeat."
+        ]
+      }
     ],
-    "scenarios": [
-      "Commenting on prices while shopping: 「このかばんは高すぎて、買えません。」",
-      "Health warnings: 「お酒を飲みすぎないようにしてください。」",
-      "Reflecting on yourself: 「昨日は食べすぎた。」",
-      "Exaggerated praise in young people's speech: 「この猫、かわいすぎる！」"
+    "notes": [
+      "It's usually negative, but in casual speech it's also used for exaggerated praise: かわいすぎる！おいしすぎる！",
+      "「10時過ぎ」 (past ten o'clock), 「時間が過ぎる」 (time passes), and 「〜にすぎない」 are not this grammar point."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "After a big meal",
+          "description": "Feeling uncomfortable from eating too much.",
+          "example": "I'm stuffed. I ate too much."
+        },
+        {
+          "title": "Shopping",
+          "description": "Deciding something is too pricey to buy.",
+          "example": "This coat is a bit too expensive."
+        },
+        {
+          "title": "Over-the-top praise",
+          "description": "Reacting to a cute little animal.",
+          "example": "This kitten is way too cute!"
+        }
+      ],
+      "work": [
+        {
+          "title": "Worrying about an overworked coworker",
+          "description": "Telling a coworker not to wear themselves out.",
+          "example": "Haven't you been working too hard lately? Take a little break."
+        },
+        {
+          "title": "Evaluating a plan",
+          "description": "Pointing out a problem with the plan.",
+          "example": "I think this schedule is too tight."
+        }
+      ]
+    },
     "etymology": "すぎる is written with the kanji meaning \"pass\", and originally meant \"to pass by, to go through (a place or time)\". Going past a certain point means \"exceeding\" it, which extended to \"going beyond the limit\" in degree. In Classical Japanese it was the kami-nidan verb すぐ, which later became the kami-ichidan すぎる. (English \"overdo\" and \"go too far\" follow a similar logic.)",
-    "examples": [
-      "I ate too much cake yesterday.",
-      "This bag is too expensive for me to buy.",
-      "This room is too quiet; it's a bit lonely.",
-      "Please don't drink too much.",
-      "That's going a bit too far."
-    ],
     "similar": [
       {
         "title": "あまり〜ない",
@@ -922,28 +1960,66 @@
   },
   {
     "id": "yasui",
-    "meaning": "1) Doing something is easy or convenient (\"easy to ...\"); 2) something tends to happen easily (\"apt to ..., prone to ...\").",
-    "connection": "Verb masu-stem (drop ます) + やすい",
-    "usage": [
-      "Conjugates as an i-adjective: やすかった, やすくない, やすく（なる）, やすさ.",
-      "\"Easy to do\" is usually a positive evaluation: 「この本は字が大きくて読みやすい」, 「使いやすいパソコン」.",
-      "\"Prone to happen\" usually follows non-volitional verbs and is often negative: 「冬は風邪をひきやすい」, 「このガラスは割れやすい」.",
-      "Written 「〜易い」 in kanji but usually in kana; note it sounds the same as 「安い」 (cheap) but means something different.",
-      "The opposite is 〜にくい; in formal writing, \"prone to (something bad)\" can also be expressed with 〜がちだ."
+    "meaning": "Something is easy or convenient to do, or something tends to happen: “easy to ...”, “prone to ...”.",
+    "connection": "Verb masu-stem + やすい",
+    "senses": [
+      {
+        "label": "Easy to do",
+        "meaning": "An action is easy or convenient to do. Usually positive: “easy to ...”.",
+        "connection": "Volitional verb masu-stem + やすい (読みやすい, 使いやすい, わかりやすい)",
+        "examples": [
+          "This pen is really easy to write with.",
+          "The teacher's explanation was easy to understand.",
+          "I want a computer that's easy to use."
+        ]
+      },
+      {
+        "label": "Prone to happen",
+        "meaning": "Something tends to change or happen easily. Usually with non-volitional verbs, and often negative: “prone to ...”, “tends to ...”.",
+        "connection": "Non-volitional verb masu-stem + やすい (割れやすい, 風邪をひきやすい)",
+        "examples": [
+          "It's easy to catch a cold in winter, so please take care.",
+          "This glass breaks easily."
+        ]
+      }
     ],
-    "scenarios": [
-      "Reviewing products or tools: 「このペンはとても書きやすいです。」",
-      "Explaining precautions: 「雨の日は道がすべりやすいので、気をつけてください。」",
-      "Evaluating explanations or writing: 「先生の説明はわかりやすい。」",
-      "Describing someone's tendencies: 「彼は怒りやすい人だ。」"
+    "notes": [
+      "It conjugates like an i-adjective: やすかった, やすくない, やすくなる.",
+      "It sounds the same as 「安い」 (cheap), but the meaning is different.",
+      "The opposite is 「〜にくい」. In writing, “prone to (bad things)” can also be 「〜がちだ」."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Choosing a product",
+          "description": "Comparing items in a shop.",
+          "example": "This bag is light and easy to carry."
+        },
+        {
+          "title": "Talking about health",
+          "description": "Saying you get sick easily when seasons change.",
+          "example": "It's easy to get run down when the seasons change."
+        },
+        {
+          "title": "Recommending a study book",
+          "description": "Telling a friend about an easy-to-follow book.",
+          "example": "This book is really easy to understand."
+        }
+      ],
+      "work": [
+        {
+          "title": "Improving materials",
+          "description": "A boss asks for clearer documents.",
+          "example": "Please make the materials a little easier to read."
+        },
+        {
+          "title": "Describing the workplace",
+          "description": "Telling a coworker about the new office.",
+          "example": "The new office is spacious and easy to work in."
+        }
+      ]
+    },
     "etymology": "やすい is written 「易い」 and shares its origin with 「安い」; the old word 「やすし」 originally meant \"calm, carefree, at ease\". From \"feeling at ease\" it extended to \"easy to do\", and it became the second element of compound adjectives after the verb continuative form.",
-    "examples": [
-      "This pen is very easy to write with.",
-      "The teacher's explanation was easy to understand.",
-      "It's easy to catch a cold in winter, so please be careful.",
-      "This glass breaks easily."
-    ],
     "similar": [
       {
         "title": "〜にくい",
@@ -961,28 +2037,74 @@
   },
   {
     "id": "nikui",
-    "meaning": "Doing something is difficult or not easy, or something does not easily change (\"hard to ..., difficult to ..., doesn't easily ...\").",
-    "connection": "Verb masu-stem (drop ます) + にくい",
-    "usage": [
-      "Conjugates as an i-adjective: にくかった, にくくない, にくく（なる）, にくさ.",
-      "It can express the difficulty of an action (「この字は小さくて読みにくい」) or a quality that doesn't easily change (「割れにくいコップ」, 「燃えにくい素材」, often positive in this case).",
-      "It can express psychological difficulty: 「先生には言いにくい」, 「頼みにくい」.",
-      "Written 「〜難い（にくい）」 in kanji but usually in kana.",
-      "The near-synonym 〜づらい stresses that doing it is painful or uncomfortable (physically or mentally) and is common in speech; 〜がたい (N2) is written language meaning \"(psychologically) hard to ...\"."
+    "meaning": "Something is hard or awkward to do, or doesn't easily happen: “hard to ...”, “not easily ...”.",
+    "connection": "Verb masu-stem + にくい",
+    "senses": [
+      {
+        "label": "Hard to do",
+        "meaning": "An action is difficult or inconvenient to do: “hard to ...”.",
+        "connection": "Volitional verb masu-stem + にくい (読みにくい, 歩きにくい, 使いにくい)",
+        "examples": [
+          "This writing is so small it's hard to read.",
+          "My new shoes were still hard to walk in."
+        ]
+      },
+      {
+        "label": "Awkward to say or ask",
+        "meaning": "Hesitating to do something out of consideration for others: “it's awkward to ...”, “hard to bring up”.",
+        "connection": "Masu-stem of 「言う」, 「聞く」, 「頼む」, etc. + にくい",
+        "examples": [
+          "There are some things I feel awkward asking my teacher.",
+          "He looks busy, so it's hard to ask him."
+        ]
+      },
+      {
+        "label": "Doesn't easily happen",
+        "meaning": "Something doesn't change or happen easily. Here it's usually positive and often describes product features.",
+        "connection": "Non-volitional verb masu-stem + にくい (割れにくい, 燃えにくい, 汚れにくい)",
+        "examples": [
+          "This glass doesn't break easily.",
+          "These clothes are made of a stain-resistant material."
+        ]
+      }
     ],
-    "scenarios": [
-      "Evaluating tools or products: 「この靴は歩きにくい。」",
-      "Finding it hard to bring something up: 「お金のことは、友だちには頼みにくい。」",
-      "Advertising a product's strengths: 「この服はしわになりにくい素材です。」",
-      "Commenting on writing or pronunciation: 「この言葉は発音しにくい。」"
+    "notes": [
+      "It conjugates like an i-adjective: にくかった, にくくない, にくくなる.",
+      "The similar 「〜づらい」 focuses on the action being painful or uncomfortable and is more conversational.",
+      "「憎い」 (hateful) and 「肉」 (meat, as in とりにく) are not this grammar point."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Food that's hard to eat",
+          "description": "Explaining why something is awkward to eat.",
+          "example": "This fish has so many bones, it's hard to eat."
+        },
+        {
+          "title": "Opening up to a friend",
+          "description": "Bringing up something you feel awkward saying.",
+          "example": "It's kind of hard to tell my parents, but..."
+        },
+        {
+          "title": "Choosing a product",
+          "description": "A clerk points out a product's strengths.",
+          "example": "This frying pan doesn't burn food easily."
+        }
+      ],
+      "work": [
+        {
+          "title": "Raising a difficult issue",
+          "description": "Gently telling your boss something hard to say.",
+          "example": "I'm sorry to have to say this, but it doesn't look like we'll make the deadline."
+        },
+        {
+          "title": "Giving feedback on a system",
+          "description": "Telling the person in charge the system is clunky.",
+          "example": "This system is a bit hard to use."
+        }
+      ]
+    },
     "etymology": "にくい is written 「憎い／難い」; the old word 「にくし」 originally meant \"hateful, detestable\". From \"hateful to do\" it extended to \"hard to do\", and as the second element of compound adjectives after the verb continuative form it expresses difficulty. Used on its own, 「憎い」 still keeps the meaning \"hateful\".",
-    "examples": [
-      "These characters are small and hard to read.",
-      "This glass doesn't break easily.",
-      "There are some things that are a little hard to ask the teacher.",
-      "The new shoes were still hard to walk in."
-    ],
     "similar": [
       {
         "title": "〜やすい",
@@ -1000,28 +2122,74 @@
   },
   {
     "id": "you-to-omou",
-    "meaning": "Expresses the speaker's intention or plan (\"I think I'll ..., I'm going to ...\"). 〜(よ)うと思っている expresses a plan held for some time.",
-    "connection": "Verb volitional form + と思う (godan: 行く→行こう; ichidan: 食べる→食べよう; する→しよう; 来る→来（こ）よう)",
-    "usage": [
-      "Forming the volitional: godan verbs change the final sound to the o-row + う (書こう, 読もう, 話そう, 買おう); ichidan verbs drop る + よう (見よう); する→しよう; 来る→来よう.",
-      "〜(よ)うと思う: a decision or idea at the moment of speaking; 〜(よ)うと思っている: a plan held for some time, which can also be used for a third person (「兄は留学しようと思っている」).",
-      "For the first person use 〜と思う, 〜と思います; a third person's plans are generally expressed with 〜と思っている or 〜つもりらしい.",
-      "The past 〜(よ)うと思った often means \"I was going to ... (but didn't)\": 「電話しようと思ったけど、忘れた。」",
-      "You can also say 〜(よ)うと考えている, which is more formal and sounds more carefully considered."
+    "meaning": "The speaker's intention or plan: “I think I'll ...”, “I'm going to ...”. 「〜ようと思っている」 is a plan held for some time.",
+    "connection": "Verb volitional form + と思う (行こう, 食べよう, しよう, 来よう)",
+    "senses": [
+      {
+        "label": "A decision now",
+        "meaning": "「〜(よ)うと思う」 is a decision or idea made at the moment of speaking. The subject is first person: “I think I'll ...”.",
+        "connection": "Verb volitional form + と思う／と思います",
+        "examples": [
+          "I think I'll go see a movie with friends this weekend.",
+          "I think I'll go to bed early tonight."
+        ]
+      },
+      {
+        "label": "A plan held for a while",
+        "meaning": "「〜(よ)うと思っている」 is a plan you've had for some time. It can also be used for a third person.",
+        "connection": "Verb volitional form + と思っている／と思っています",
+        "examples": [
+          "I'm planning to study abroad in Japan next year.",
+          "My brother has been thinking of buying a car."
+        ]
+      },
+      {
+        "label": "Meant to, but didn't",
+        "meaning": "「〜(よ)うと思った」 often means you had the idea at the time but didn't end up doing it. Often followed by 「けど」 or 「のに」.",
+        "connection": "Verb volitional form + と思った(けど／が)",
+        "examples": [
+          "I meant to call yesterday, but I forgot.",
+          "Just as I was about to go out, it started raining."
+        ]
+      }
     ],
-    "scenarios": [
-      "Talking about weekend or holiday plans: 「週末は映画を見に行こうと思います。」",
-      "Talking about life plans: 「将来、日本で働こうと思っています。」",
-      "Explaining something you didn't get around to: 「昨日電話しようと思ったんですが、時間がなくて……。」",
-      "Announcing a resolution: 「今年こそ、たばこをやめようと思う。」"
+    "notes": [
+      "Volitional form: godan verbs change the ending to the お-row + う (書こう, 読もう, 買おう); ichidan verbs drop る + よう; する→しよう; 来る→来よう.",
+      "For a more formal, well-considered plan, say 「〜(よ)うと考えている」.",
+      "Plain form + 「と思う」 (来ると思う) is a guess, not this grammar point."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Talking about weekend plans",
+          "description": "Answering when a friend asks about your weekend.",
+          "example": "I think I'll just relax at home this weekend."
+        },
+        {
+          "title": "New Year's goals",
+          "description": "Announcing your resolution to family.",
+          "example": "This year I'm going to exercise every day."
+        },
+        {
+          "title": "Explaining something you didn't do",
+          "description": "Telling a friend why you didn't get in touch.",
+          "example": "I meant to contact you, but I was so busy."
+        }
+      ],
+      "work": [
+        {
+          "title": "Career plans in an interview",
+          "description": "Explaining your future plans in an interview.",
+          "example": "In the future, I'm thinking of working overseas."
+        },
+        {
+          "title": "Reporting your plans to your boss",
+          "description": "Explaining what you'll work on next.",
+          "example": "I'm planning to put the materials together this afternoon."
+        }
+      ]
+    },
     "etymology": "The volitional 〜(よ)う comes from the Classical Japanese conjectural auxiliary 「む」 (→ん→う), which expressed intention and conjecture; 「よう」 is the form 「う」 took after ichidan verbs. Classical 「〜むと思ふ」 already meant \"I intend to ...\", and modern 〜(よ)うと思う directly inherits this structure.",
-    "examples": [
-      "I'm thinking of going to see a movie with friends this weekend.",
-      "I'm planning to study abroad in Japan next year.",
-      "I meant to call yesterday, but I forgot.",
-      "I think I'll go to bed early today."
-    ],
     "similar": [
       {
         "title": "〜つもりだ",
@@ -1039,28 +2207,92 @@
   },
   {
     "id": "tokoro-da",
-    "meaning": "Indicates the stage of an action in time: 1) dictionary form + ところだ: about to do (\"be just about to ...\"); 2) 〜ているところだ: in the middle of doing (\"be in the middle of ...ing\"); 3) ta-form + ところだ: just finished (\"have just ...\"); 4) 〜ところだった: almost ... (but didn't).",
-    "connection": "Verb dictionary form / ている form / ta-form + ところだ",
-    "usage": [
-      "Three stages: 「今から食べるところだ」 (about to eat) → 「今食べているところだ」 (eating right now) → 「今食べたところだ」 (just finished eating). Often used with 今から, ちょうど, 今, たった今, etc.",
-      "〜ところだった means \"almost ... (but it didn't actually happen)\", often with もう少しで: 「もう少しで遅刻するところだった。」",
-      "〜ところに／〜ところへ means \"just as ... (someone came / something happened)\": 「出かけようとしたところへ電話がかかってきた。」",
-      "〜ところを means \"at the moment when ... (being seen, interrupted)\": 「お忙しいところをすみません」.",
-      "「ところ」 originally means \"place\"; distinguish this from concrete noun uses such as 「住むところ」 (a place to live)."
+    "meaning": "Shows what stage an action is at: about to start, in progress, or just finished. Also has related uses such as “almost ...”.",
+    "connection": "Verb dictionary form / ている-form / ta-form + ところだ",
+    "senses": [
+      {
+        "label": "About to",
+        "meaning": "The action is about to start but hasn't yet: “just about to ...”. Often with 「今から」, 「これから」, or 「ちょうど」.",
+        "connection": "Verb dictionary form + ところだ",
+        "examples": [
+          "I'm just about to head out.",
+          "I'm about to have dinner."
+        ]
+      },
+      {
+        "label": "In the middle of",
+        "meaning": "The action is in progress: “in the middle of ...”. It stresses being in the process right now more than 「〜ている」 does.",
+        "connection": "Verb ている-form + ところだ (often with 「今」)",
+        "examples": [
+          "I'm making dinner right now.",
+          "We're looking into that matter now."
+        ]
+      },
+      {
+        "label": "Just finished",
+        "meaning": "The action has just ended: “have just ...”. Often with 「たった今」, 「今」, or 「ちょうど」.",
+        "connection": "Verb ta-form + ところだ",
+        "examples": [
+          "I just got to the station.",
+          "I've just finished work."
+        ]
+      },
+      {
+        "label": "Almost",
+        "meaning": "「〜ところだった」 means something almost happened but didn't. Often paired with 「もう少しで」 or 「危うく」.",
+        "connection": "Verb dictionary form + ところだった",
+        "examples": [
+          "I almost missed the train.",
+          "That was close. I nearly hit a car."
+        ]
+      },
+      {
+        "label": "Just when ...",
+        "meaning": "「〜ところに／へ」 means something else happened at that moment (someone came, the phone rang, etc.). 「〜ところを」 means you were seen or interrupted in the middle of something.",
+        "connection": "Verb (various forms) + ところに／ところへ／ところを",
+        "examples": [
+          "Just as I was about to go out, the phone rang.",
+          "My teacher saw me while I was smoking.",
+          "Sorry to bother you when you're so busy."
+        ]
+      }
     ],
-    "scenarios": [
-      "Answering someone's question: 「今、ちょうど出かけるところです。」",
-      "Explaining what you're doing on the phone: 「今、ご飯を作っているところなんだ。」",
-      "Saying you've just finished: 「たった今、駅に着いたところです。」",
-      "A close call: 「もう少しで車にぶつかるところだった。」"
+    "notes": [
+      "「ところ」 originally means “place”. Don't confuse it with noun uses like 「住むところ」 (a place to live).",
+      "「ところで」 means “by the way” and changes the topic. It isn't this grammar point."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "A friend calls",
+          "description": "Explaining what you're doing right now.",
+          "example": "Sorry, I'm in the middle of eating."
+        },
+        {
+          "title": "Telling someone where you are",
+          "description": "Letting a waiting friend know you just arrived.",
+          "example": "I just got to the station."
+        },
+        {
+          "title": "A close call",
+          "description": "Telling family about a near accident.",
+          "example": "I almost fell down the stairs today."
+        }
+      ],
+      "work": [
+        {
+          "title": "Updating your boss on progress",
+          "description": "Saying the work is in progress.",
+          "example": "I'm currently putting the materials together."
+        },
+        {
+          "title": "Apologizing for interrupting",
+          "description": "Greeting someone who is busy.",
+          "example": "I'm very sorry to trouble you when you're so busy."
+        }
+      ]
+    },
     "etymology": "「ところ」 is written 「所」, originally meaning \"place, location\". From a \"position\" in space it extended to a \"position, stage\" in the progress of time, giving the uses \"about to / in the middle of / just finished\". As a formal noun it is usually written in kana. (Compare English \"at this point\" used for time.)",
-    "examples": [
-      "I'm just about to go out.",
-      "I'm in the middle of making dinner right now.",
-      "I've just this moment arrived at the station.",
-      "I very nearly missed the train."
-    ],
     "similar": [
       {
         "title": "〜たばかり",
@@ -1078,28 +2310,73 @@
   },
   {
     "id": "ta-bakari",
-    "meaning": "Expresses that little time has passed since an action was completed (\"have just ...\"), focusing on the speaker's subjective feeling that the time is short.",
-    "connection": "Verb ta-form + ばかりだ (colloquial: 〜たばっかり)",
-    "usage": [
-      "Conjugates like a noun: たばかりだ, たばかりです, たばかりの + noun, たばかりなのに, たばかりで.",
-      "How long counts as \"just\" depends on the speaker's feeling: 「先月日本に来たばかりです」 (even a month later it still counts as \"just arrived\").",
-      "Often combined with 〜のに or 〜から: \"even though I just ...\", \"since I just ...\": 「買ったばかりなのに、壊れた。」",
-      "In speech 〜たばっかり is common; there is also 〜たてだ (焼きたて, できたて), meaning \"freshly made\", limited to a few verbs.",
-      "Distinguish it from 「〜てばかりいる」 (always ..., do nothing but ...), which follows the te-form and means something completely different."
+    "meaning": "Not much time has passed since an action was completed: “just ...”. It stresses that the speaker feels the time was short.",
+    "connection": "Verb ta-form + ばかりだ (casual: 〜たばっかり)",
+    "senses": [
+      {
+        "label": "Just did",
+        "meaning": "Not long has passed since the action. How long depends on the speaker's feeling; even a month later, you can still say “I just ...”.",
+        "connection": "Verb ta-form + ばかりだ／ばかりです",
+        "examples": [
+          "I just came to Japan last week.",
+          "I only just joined this company, so I don't know anything yet."
+        ]
+      },
+      {
+        "label": "Just ...ed (before a noun)",
+        "meaning": "「〜たばかりの + noun」 describes a noun: “freshly ...ed”, “just ...ed”.",
+        "connection": "Verb ta-form + ばかりの + noun",
+        "examples": [
+          "I lost the umbrella I had just bought.",
+          "Newborn babies are really tiny."
+        ]
+      },
+      {
+        "label": "Only just ..., and yet",
+        "meaning": "「〜たばかりなのに」 means “even though I only just ...”, with surprise or frustration.",
+        "connection": "Verb ta-form + ばかりなのに",
+        "examples": [
+          "I just ate, and I'm already hungry.",
+          "I just bought it, and it's already broken."
+        ]
+      }
     ],
-    "scenarios": [
-      "Introducing yourself: 「先週日本に来たばかりです。よろしくお願いします。」",
-      "Complaining: 「買ったばかりのパソコンがもう壊れた。」",
-      "Explaining your state: 「今起きたばかりで、まだ眠い。」",
-      "Explaining a lack of experience: 「入社したばかりなので、まだわからないことが多いです。」"
+    "notes": [
+      "「〜たところだ」 stresses the objective moment something ended; 「〜たばかりだ」 stresses the subjective feeling that not much time has passed.",
+      "Don't confuse it with 「〜てばかりいる」 (“always doing ...”). That follows the te-form and means something completely different."
     ],
+    "scenes": {
+      "daily": [
+        {
+          "title": "Introducing yourself",
+          "description": "Introducing yourself somewhere new.",
+          "example": "I just moved to Tokyo."
+        },
+        {
+          "title": "Complaining about something broken",
+          "description": "Grumbling to a friend about something new.",
+          "example": "I dropped my brand-new phone and cracked it."
+        },
+        {
+          "title": "Declining food",
+          "description": "Telling a friend you just ate when they offer food.",
+          "example": "I just ate, so I'm good."
+        }
+      ],
+      "work": [
+        {
+          "title": "A new hire asking for guidance",
+          "description": "Saying you've just joined and asking for help.",
+          "example": "I've only just joined the company, so I'd appreciate any guidance."
+        },
+        {
+          "title": "Explaining a project has just started",
+          "description": "Updating your boss on a project.",
+          "example": "This project has only just started."
+        }
+      ]
+    },
     "etymology": "「ばかり」 comes from 「はかり」, the noun form of the verb 「計る（はかる）」 (to measure), originally meaning \"estimate, approximate extent\"; it later became voiced as the adverbial particle 「ばかり」, meaning \"about, only, just\". 〜たばかり thus means \"only (that little time) since doing it\", hence \"have just done\".",
-    "examples": [
-      "I just came to Japan last week.",
-      "I lost the umbrella I had just bought.",
-      "I only just ate, but I'm already hungry.",
-      "Newborn babies are very small."
-    ],
     "similar": [
       {
         "title": "〜たところだ",

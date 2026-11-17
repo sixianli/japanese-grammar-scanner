@@ -57,9 +57,11 @@ struct GrammarPoint: Codable, Identifiable, Hashable {
     var similar: [Similar]
     let patterns: [String]
     let subsumes: [String]?
+    /// 是否在扫描时高亮。最基础的助词等（は・が・を…）设为 false：收录在语法库，但不在扫描结果中高亮。
+    let scannable: Bool
 
     enum CodingKeys: String, CodingKey {
-        case id, title, reading, level, meaning, connection, senses, notes, scenes, etymology, similar, patterns, subsumes
+        case id, title, reading, level, meaning, connection, senses, notes, scenes, etymology, similar, patterns, subsumes, scannable
     }
 
     init(from decoder: Decoder) throws {
@@ -77,6 +79,7 @@ struct GrammarPoint: Codable, Identifiable, Hashable {
         similar = try c.decode([Similar].self, forKey: .similar)
         patterns = try c.decode([String].self, forKey: .patterns)
         subsumes = try c.decodeIfPresent([String].self, forKey: .subsumes)
+        scannable = try c.decodeIfPresent(Bool.self, forKey: .scannable) ?? true
     }
 
     /// 所有义项的例句。

@@ -9,7 +9,9 @@
 翻译文件 Resources/Grammar/l10n/l10n_<语言>_<等级>.json：
   * 与基础文件 id / 顺序 / 各数组长度一致，无空字段，译文不残留中文
 
-用法: python3 tools/validate_grammar.py [--base-only]
+用法: python3 tools/validate_grammar.py [--base-only] [--only <文件名片段>]
+  --only n3_b04      只报告文件名包含该片段的文件的问题（并行编写时使用）
+tools/grammar_catalog.json（全部语法点清单）中的 id 也视为已存在，可在 similar 中引用。
 """
 import glob
 import json
@@ -28,6 +30,36 @@ L10N_LANGS = ["en", "ko", "es", "vi", "zh-Hant"]
 # 只出现在中文、在日语中不使用的字（简体字及与日语新字体不同的繁体字），用于检查译文是否残留中文。
 # 注意不要加入日语也使用的汉字（語、過、進、為、個、義、種、詞、従、話 等）。
 CHINESE_ONLY = set("这们吗么说时为个词动语义过还没让对该种样从进這們嗎麼說對該讓樣")
+
+
+# 简体中文专用字（日语中不使用），用于检查「」里的日语引文是否混入简体字
+SIMPLIFIED_ONLY = set("这们吗么说时为个词动语义过还没让对该种样从进话见长门问间东车马鸟鱼读写买卖发电气书习师图钱银铁关开汉韩实运办务边应与专业")
+QUOTE_RE = re.compile(r"「([^」]+)」")
+
+
+def check_quotes(texts, where, errors):
+    for t in texts:
+        if not isinstance(t, str):
+            continue
+        for m in QUOTE_RE.finditer(t):
+            inner = m.group(1)
+            # 含假名、且不是「名词＋の」这类夹带中文说明的接续公式 → 视为日语引文
+            if re.search(r"[\u3040-\u30ff]", inner) and "＋" not in inner and "+" not in inner:
+                bad = sorted({c for c in inner if c in SIMPLIFIED_ONLY})
+                if bad:
+                    errors.append(f"{where}: 日语引文「{inner}」混入简体字 {''.join(bad)}")
+
+
+def all_strings(obj):
+    if isinstance(obj, str):
+        yield obj
+    elif isinstance(obj, dict):
+        for k, v in obj.items():
+            if k not in ("patterns", "negativeExamples"):
+                yield from all_strings(v)
+    elif isinstance(obj, list):
+        for v in obj:
+            yield from all_strings(v)
 
 
 def is_str(v):
@@ -115,17 +147,25 @@ def validate_base(files):
             gid = gp.get("id", "<无 id>")
             where = f"{name}:{gid}"
             check_point(gp, where, errors)
+            check_quotes(all_strings(gp), where, errors)
             if gid in points:
                 errors.append(f"{where}: id 重复")
             points[gid] = (where, gp)
 
+    known = set(points)
+    catalog = os.path.join(ROOT, "tools", "grammar_catalog.json")
+    if os.path.exists(catalog):
+        with open(catalog, encoding="utf-8") as f:
+            known |= {it["id"] for it in json.load(f)}
     for gid, (where, gp) in points.items():
+        if "scannable" in gp and not isinstance(gp["scannable"], bool):
+            errors.append(f"{where}: scannable 必须是 true/false")
         for s in gp.get("similar") or []:
             sid = s.get("id") if isinstance(s, dict) else None
-            if sid and sid not in points:
+            if sid and sid not in known:
                 errors.append(f"{where}: similar 引用了不存在的 id {sid}")
         for sid in gp.get("subsumes") or []:
-            if sid not in points:
+            if sid not in known:
                 errors.append(f"{where}: subsumes 引用了不存在的 id {sid}")
         compiled = []
         for p in gp.get("patterns") or []:
@@ -226,6 +266,9 @@ def main() -> int:
     errors, points = validate_base(files)
     if "--base-only" not in sys.argv:
         errors += validate_l10n(files)
+    if "--only" in sys.argv:
+        frag = sys.argv[sys.argv.index("--only") + 1]
+        errors = [e for e in errors if frag in e.split(":")[0]]
     print(f"共 {len(points)} 个语法点, {len(files)} 个文件")
     if errors:
         print(f"发现 {len(errors)} 个问题:")
