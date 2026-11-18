@@ -216,3 +216,21 @@ final class ContentRulesTests: XCTestCase {
         XCTAssertEqual(p.titleForm, "〜そうだ")
     }
 }
+
+@MainActor
+final class HistoryStoreTests: XCTestCase {
+    func testSpacedReview() {
+        let defaults = UserDefaults(suiteName: "HistoryStoreTests")!
+        defaults.removePersistentDomain(forName: "HistoryStoreTests")
+        let store = HistoryStore(defaults: defaults)
+        let t0 = Date(timeIntervalSince1970: 1_800_000_000)
+        store.recordViewed("te-shimau", now: t0)
+        XCTAssertTrue(store.dueForReview(now: t0.addingTimeInterval(3600)).isEmpty, "刚看过不需要复习")
+        XCTAssertEqual(store.dueForReview(now: t0.addingTimeInterval(86_400 + 1)), ["te-shimau"], "1 天后需要复习")
+        store.recordViewed("te-shimau", now: t0.addingTimeInterval(86_400 + 1))
+        XCTAssertTrue(store.dueForReview(now: t0.addingTimeInterval(2 * 86_400)).isEmpty, "复习后进入 3 天间隔")
+        XCTAssertEqual(store.dueForReview(now: t0.addingTimeInterval(5 * 86_400)), ["te-shimau"])
+        XCTAssertTrue(store.learnedIDs.contains("te-shimau"))
+        store.clearViewed()
+    }
+}
