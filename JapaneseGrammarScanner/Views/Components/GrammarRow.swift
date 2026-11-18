@@ -14,6 +14,10 @@ struct GrammarRow: View {
             VStack(alignment: .leading, spacing: 4) {
                 HStack(alignment: .top, spacing: 6) {
                     Text(point.displayTitle).font(.headline)
+                    if point.frequency == .high {
+                        Image(systemName: "flame.fill").font(.caption).foregroundStyle(.red)
+                            .accessibilityLabel(Text("常考"))
+                    }
                     LevelBadge(level: point.level)
                     if let occurrences, occurrences > 1 {
                         Text(verbatim: "×\(occurrences)").font(.caption).foregroundStyle(.secondary)

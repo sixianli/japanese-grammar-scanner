@@ -13,6 +13,8 @@ final class GrammarLibrary: ObservableObject {
     init(bundle: Bundle = .main, language: ContentLanguage = .current) {
         self.language = language
         var loaded = GrammarLibrary.loadPoints(from: bundle)
+        let freq = GrammarLibrary.loadFrequency(from: bundle)
+        for i in loaded.indices { loaded[i].frequency = freq[loaded[i].id] }
         if language != .zhHans {
             let localizations = GrammarLibrary.loadLocalizations(language, from: bundle)
             for i in loaded.indices {
@@ -63,6 +65,13 @@ final class GrammarLibrary: ObservableObject {
             urls += bundle.urls(forResourcesWithExtension: "json", subdirectory: sub) ?? []
         }
         return Array(Set(urls.filter { $0.lastPathComponent.hasPrefix(prefix) }))
+    }
+
+    private static func loadFrequency(from bundle: Bundle) -> [String: ExamFrequency] {
+        guard let url = jsonURLs(in: bundle, prefix: "frequency").first,
+              let data = try? Data(contentsOf: url),
+              let raw = try? JSONDecoder().decode([String: String].self, from: data) else { return [:] }
+        return raw.compactMapValues(ExamFrequency.init(rawValue:))
     }
 
     private static func loadLocalizations(_ language: ContentLanguage, from bundle: Bundle) -> [String: GrammarLocalization] {

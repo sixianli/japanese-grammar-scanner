@@ -170,6 +170,9 @@ struct GrammarDetailView: View {
             if !p.titleNote.isEmpty {
                 Text(verbatim: p.titleNote).font(.subheadline).foregroundStyle(.secondary)
             }
+            if let f = p.frequency {
+                FrequencyBadge(frequency: f).padding(.top, 2)
+            }
         }
         .padding(.horizontal, 4)
     }

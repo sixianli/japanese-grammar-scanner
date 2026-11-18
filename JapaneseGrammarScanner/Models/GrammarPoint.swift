@@ -61,6 +61,8 @@ struct GrammarPoint: Codable, Identifiable, Hashable {
     let kanji: String?
     /// 其它常见写法（用于搜索）。
     let aliases: [String]
+    /// JLPT 出题频率（来自 Resources/Grammar/frequency.json，根据公开资料整理，仅供参考）
+    var frequency: ExamFrequency?
     let patterns: [String]
     let subsumes: [String]?
     /// 是否在扫描时高亮。最基础的助词等（は・が・を…）设为 false：收录在语法库，但不在扫描结果中高亮。
@@ -190,6 +192,11 @@ struct GrammarLocalization: Decodable {
     let etymology: String
     let formation: String?
     let similar: [SimilarText]
+}
+
+/// JLPT 出题频率三档
+enum ExamFrequency: String, Codable {
+    case high, medium, low
 }
 
 enum JLPTLevel: String, Codable, CaseIterable, Comparable, Identifiable {
