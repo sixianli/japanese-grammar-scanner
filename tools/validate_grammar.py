@@ -84,8 +84,8 @@ def check_point(gp, where, errors):
         errors.append(f"{where}: level 非法 {gp.get('level')}")
 
     senses = gp.get("senses")
-    if not isinstance(senses, list) or not (1 <= len(senses) <= 6):
-        errors.append(f"{where}: senses 需要 1~6 个义项")
+    if not isinstance(senses, list) or not (1 <= len(senses) <= 8):
+        errors.append(f"{where}: senses 需要 1~8 个义项")
         senses = []
     for i, s in enumerate(senses):
         w = f"{where}.senses[{i}]"
@@ -95,9 +95,19 @@ def check_point(gp, where, errors):
         for k in ["label", "meaning", "connection"]:
             if not is_str(s.get(k)):
                 errors.append(f"{w}: 缺少 {k}")
+        if "level" in s and s["level"] not in LEVELS:
+            errors.append(f"{w}: level 非法 {s['level']}")
         ex = s.get("examples")
         if not isinstance(ex, list) or not (1 <= len(ex) <= 3) or not all(is_example(e) for e in ex):
             errors.append(f"{w}: examples 需要 1~3 个 {{ja, zh}}")
+
+    sense_levels = [s.get("level", gp.get("level")) for s in senses if isinstance(s, dict)]
+    if sense_levels and gp.get("level") in LEVELS and all(l in LEVELS for l in sense_levels):
+        order = ["N5", "N4", "N3", "N2", "N1"]
+        if min(sense_levels, key=order.index) != gp["level"]:
+            errors.append(f"{where}: 语法点 level 应等于各义项中最低的等级")
+    if re.search(r"（[^）ぁ-ゟ゠-ヿ]*[\u4e00-\u9fff][^）ぁ-ゟ゠-ヿ]*）", gp.get("title") or ""):
+        errors.append(f"{where}: 标题不应带中文说明（同形语法已合并为一个语法点）")
 
     notes = gp.get("notes", [])
     if not isinstance(notes, list) or not (1 <= len(notes) <= 5) or not all(is_str(n) for n in notes):

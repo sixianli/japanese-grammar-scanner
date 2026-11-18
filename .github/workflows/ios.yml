@@ -19,13 +19,13 @@ jobs:
         run: python3 tools/validate_grammar.py
 
   build-and-test:
-    runs-on: macos-15
+    runs-on: xcode-27
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - name: Show Xcode
         run: |
-          sudo xcode-select -s "$(ls -d /Applications/Xcode_26*.app | sort -V | tail -1)"
+          sudo xcode-select -s "$(ls -d /Applications/Xcode_27*.app | sort -V | tail -1)"
           xcodebuild -version
           xcrun simctl list devices available | grep -E "iPhone" | head -20
       - name: Pick simulator
@@ -65,14 +65,14 @@ jobs:
           path: build.log
 
   screenshots:
-    runs-on: macos-15
+    runs-on: xcode-27
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - name: Boot iPhone Pro Max simulator
         id: sim
         run: |
-          sudo xcode-select -s "$(ls -d /Applications/Xcode_26*.app | sort -V | tail -1)"
+          sudo xcode-select -s "$(ls -d /Applications/Xcode_27*.app | sort -V | tail -1)"
           UDID=$(xcrun simctl list devices available -j | python3 -c "
           import json,sys
           d=json.load(sys.stdin)['devices']
