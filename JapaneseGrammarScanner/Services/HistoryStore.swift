@@ -36,17 +36,20 @@ final class HistoryStore: ObservableObject {
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
-        recentGrammarIDs = defaults.stringArray(forKey: Self.viewedKey) ?? []
+        let base = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+        directory = base.appendingPathComponent("ScanHistory", isDirectory: true)
+        let recentIDs = defaults.stringArray(forKey: Self.viewedKey) ?? []
+        recentGrammarIDs = recentIDs
         if let data = defaults.data(forKey: Self.recordsKey),
            let records = try? JSONDecoder().decode([String: ViewRecord].self, from: data) {
             viewRecords = records
         } else {
             // 旧版本只记录了 id 列表：迁移为今天查看过
             let now = Date()
-            for id in recentGrammarIDs { viewRecords[id] = ViewRecord(id: id, firstViewed: now, lastViewed: now, stage: 0) }
+            var migrated: [String: ViewRecord] = [:]
+            for id in recentIDs { migrated[id] = ViewRecord(id: id, firstViewed: now, lastViewed: now, stage: 0) }
+            viewRecords = migrated
         }
-        let base = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
-        directory = base.appendingPathComponent("ScanHistory", isDirectory: true)
         try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
         if let data = try? Data(contentsOf: indexURL),
            let list = try? JSONDecoder().decode([ScanRecord].self, from: data) {
