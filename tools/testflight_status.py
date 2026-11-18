@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """查询 App Store Connect：等待最新构建处理完成，并把它加入所有内部测试群组（TestFlight）。
-环境变量：ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8, BUNDLE_ID, [VERSION]
+环境变量：ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8, BUNDLE_ID, [VERSION], [BUILD]
 """
 import json
 import os
@@ -38,10 +38,14 @@ def main():
     app = call("GET", "/apps?" + urllib.parse.urlencode({"filter[bundleId]": os.environ["BUNDLE_ID"]}))["data"][0]
     print("App:", app["attributes"]["name"], app["id"])
     version = os.environ.get("VERSION")
+    # 指定构建号时，一直等到这个构建出现并处理完成（新上传的构建要过几分钟才会出现在列表里）
+    want_build = os.environ.get("BUILD") or None
     for attempt in range(60):
         q = {"filter[app]": app["id"], "sort": "-uploadedDate", "limit": "1", "include": "preReleaseVersion"}
         if version:
             q["filter[preReleaseVersion.version]"] = version
+        if want_build:
+            q["filter[version]"] = want_build
         res = call("GET", "/builds?" + urllib.parse.urlencode(q))
         if res["data"]:
             b = res["data"][0]
