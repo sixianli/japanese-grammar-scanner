@@ -8,6 +8,7 @@ struct HomeView: View {
 
     @EnvironmentObject private var library: GrammarLibrary
     @EnvironmentObject private var history: HistoryStore
+    @EnvironmentObject private var favorites: FavoritesStore
     @State private var path: [Route] = []
     @State private var photoItem: PhotosPickerItem?
     @State private var confirmClear: ClearTarget?
@@ -197,15 +198,34 @@ struct HomeView: View {
     // MARK: 今日复习
 
     private var reviewSection: some View {
-        let due = history.dueForReview().compactMap { library.point(id: $0) }
+        // 重要性：在你扫描的材料里出现越多、或已收藏的语法，同样快忘时更优先
+        let due = history.dueForReview { id in
+            1 + 0.25 * Double(min(history.scanCount(of: id), 8)) + (favorites.isFavorite(id) ? 0.5 : 0)
+        }
+        let items = due.compactMap { item in library.point(id: item.id).map { ($0, item.retention) } }
         return VStack(alignment: .leading, spacing: 10) {
             SectionHeader(icon: "brain.head.profile", title: "今日复习", tint: .orange)
-            if due.isEmpty {
-                EmptyHint(text: "今天没有需要复习的语法。看过的语法会按 1、3、7、14、30 天的间隔提醒你复习。")
+            if items.isEmpty {
+                EmptyHint(text: "今天没有需要复习的语法。看过的语法会按遗忘曲线，在快要忘记时提醒你复习。")
             } else {
-                Text("按遗忘曲线安排，点开回顾一遍即完成复习。")
+                Text("按遗忘曲线排序：最快要忘记的排在最前面。点开回顾一遍即完成复习。")
                     .font(.footnote).foregroundStyle(.secondary)
-                GrammarList(points: due)
+                VStack(spacing: 0) {
+                    ForEach(items, id: \.0.id) { p, retention in
+                        NavigationLink(value: Route.grammar(p.id)) {
+                            HStack(alignment: .top) {
+                                GrammarRow(point: p)
+                                RetentionBadge(retention: retention).padding(.top, 4)
+                            }
+                            .contentShape(Rectangle())
+                        }
+                        .buttonStyle(.plain)
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 6)
+                        if p.id != items.last?.0.id { Divider().padding(.leading, 28) }
+                    }
+                }
+                .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 16))
             }
         }
     }
@@ -284,6 +304,21 @@ struct HomeView: View {
                 GrammarList(points: points)
             }
         }
+    }
+}
+
+/// 记忆保持率标签：越低越红
+private struct RetentionBadge: View {
+    let retention: Double
+
+    var body: some View {
+        let pct = Int((retention * 100).rounded())
+        let color: Color = retention < 0.5 ? .red : (retention < 0.75 ? .orange : .yellow)
+        VStack(spacing: 2) {
+            Text("记忆约 \(pct)%").font(.caption2.weight(.semibold)).foregroundStyle(color)
+            ProgressView(value: retention).tint(color).frame(width: 52)
+        }
+        .accessibilityElement(children: .combine)
     }
 }
 

@@ -226,11 +226,26 @@ final class HistoryStoreTests: XCTestCase {
         let t0 = Date(timeIntervalSince1970: 1_800_000_000)
         store.recordViewed("te-shimau", now: t0)
         XCTAssertTrue(store.dueForReview(now: t0.addingTimeInterval(3600)).isEmpty, "刚看过不需要复习")
-        XCTAssertEqual(store.dueForReview(now: t0.addingTimeInterval(86_400 + 1)), ["te-shimau"], "1 天后需要复习")
+        XCTAssertEqual(store.dueForReview(now: t0.addingTimeInterval(86_400 + 1)).map(\.id), ["te-shimau"], "1 天后需要复习")
         store.recordViewed("te-shimau", now: t0.addingTimeInterval(86_400 + 1))
         XCTAssertTrue(store.dueForReview(now: t0.addingTimeInterval(2 * 86_400)).isEmpty, "复习后进入 3 天间隔")
-        XCTAssertEqual(store.dueForReview(now: t0.addingTimeInterval(5 * 86_400)), ["te-shimau"])
+        XCTAssertEqual(store.dueForReview(now: t0.addingTimeInterval(5 * 86_400)).map(\.id), ["te-shimau"])
         XCTAssertTrue(store.learnedIDs.contains("te-shimau"))
+        store.clearViewed()
+    }
+
+    /// 遗忘越多（保持率越低）的排在越前面
+    func testReviewPrioritizesLowestRetention() {
+        let defaults = UserDefaults(suiteName: "HistoryStoreTests2")!
+        defaults.removePersistentDomain(forName: "HistoryStoreTests2")
+        let store = HistoryStore(defaults: defaults)
+        let t0 = Date(timeIntervalSince1970: 1_800_000_000)
+        store.recordViewed("tai", now: t0)                              // 看过 10 天
+        store.recordViewed("nagara", now: t0.addingTimeInterval(8 * 86_400)) // 看过 2 天
+        let due = store.dueForReview(now: t0.addingTimeInterval(10 * 86_400))
+        XCTAssertEqual(due.map(\.id), ["tai", "nagara"])
+        XCTAssertLessThan(due[0].retention, due[1].retention)
+        XCTAssertEqual(HistoryStore.retention(.init(id: "x", firstViewed: t0, lastViewed: t0, stage: 0), now: t0.addingTimeInterval(86_400)), 0.9, accuracy: 1e-9)
         store.clearViewed()
     }
 }

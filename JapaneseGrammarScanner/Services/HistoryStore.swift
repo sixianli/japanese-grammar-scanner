@@ -81,19 +81,50 @@ final class HistoryStore: ObservableObject {
         defaults.removeObject(forKey: Self.recordsKey)
     }
 
-    /// 是否到了复习时间（最后阶段之后不再提醒）
-    nonisolated static func isDue(_ r: ViewRecord, now: Date) -> Bool {
-        guard r.stage < reviewIntervals.count else { return false }
-        return now.timeIntervalSince(r.lastViewed) >= reviewIntervals[r.stage] * 86_400
+    /// 复习阈值：估计的记忆保持率降到 90% 以下就该复习
+    nonisolated static let reviewThreshold = 0.9
+
+    /// 记忆稳定度 S（天）：使间隔天数恰好对应保持率降到 90%，即 R(interval) = 0.9
+    nonisolated static func stability(stage: Int) -> Double {
+        let interval = reviewIntervals[min(stage, reviewIntervals.count - 1)]
+        return interval / -log(reviewThreshold)
     }
 
-    /// 今天该复习的语法点（最久没看的排前面）
-    func dueForReview(now: Date = Date(), limit: Int = 5) -> [String] {
+    /// 艾宾浩斯遗忘曲线估算的当前记忆保持率 R = e^(-t/S)
+    nonisolated static func retention(_ r: ViewRecord, now: Date) -> Double {
+        let days = max(0, now.timeIntervalSince(r.lastViewed) / 86_400)
+        return exp(-days / stability(stage: r.stage))
+    }
+
+    /// 是否到了复习时间（已完成全部阶段的不再提醒）
+    nonisolated static func isDue(_ r: ViewRecord, now: Date) -> Bool {
+        guard r.stage < reviewIntervals.count else { return false }
+        return retention(r, now: now) <= reviewThreshold + 1e-9
+    }
+
+    struct ReviewItem: Hashable {
+        let id: String
+        /// 估计的记忆保持率 0~1
+        let retention: Double
+    }
+
+    /// 今天该复习的语法点：按“最快要忘掉”优先（保持率越低越靠前），
+    /// 同时按重要性加权（在扫描材料中出现次数、是否收藏）。
+    func dueForReview(now: Date = Date(), limit: Int = 5, importance: (String) -> Double = { _ in 1 }) -> [ReviewItem] {
         viewRecords.values
             .filter { Self.isDue($0, now: now) }
-            .sorted { $0.lastViewed < $1.lastViewed }
+            .map { r -> (ReviewItem, Double) in
+                let ret = Self.retention(r, now: now)
+                return (ReviewItem(id: r.id, retention: ret), (1 - ret) * importance(r.id))
+            }
+            .sorted { $0.1 != $1.1 ? $0.1 > $1.1 : $0.0.id < $1.0.id }
             .prefix(limit)
-            .map(\.id)
+            .map { $0.0 }
+    }
+
+    /// 某个语法点出现在多少次扫描中
+    func scanCount(of id: String) -> Int {
+        scans.reduce(0) { $0 + ($1.grammarIDs.contains(id) ? 1 : 0) }
     }
 
     /// 学过（看过讲解）的语法点
