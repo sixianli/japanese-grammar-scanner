@@ -9,7 +9,9 @@ struct HomeView: View {
     @EnvironmentObject private var library: GrammarLibrary
     @EnvironmentObject private var history: HistoryStore
     @EnvironmentObject private var favorites: FavoritesStore
+    @EnvironmentObject private var entitlements: EntitlementStore
     @State private var path: [Route] = []
+    @State private var showPaywall = false
     @State private var photoItem: PhotosPickerItem?
     @State private var confirmClear: ClearTarget?
 
@@ -23,6 +25,7 @@ struct HomeView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 26) {
                     scanCard
+                    if entitlements.showsTrialEndingReminder { trialReminder }
                     if isNewUser {
                         // 新用户：入门引导
                         starterSection
@@ -40,6 +43,7 @@ struct HomeView: View {
             .background(Color(.systemGroupedBackground))
             .navigationTitle("首页")
             .withAppRoutes()
+            .sheet(isPresented: $showPaywall) { PaywallView() }
             .onChange(of: photoItem) { _, item in
                 guard let item else { return }
                 Task {
@@ -55,6 +59,37 @@ struct HomeView: View {
                 }
             }
         }
+    }
+
+    // MARK: 试用提醒（只在最后 2 天和结束后出现）
+
+    private var trialReminder: some View {
+        Button { showPaywall = true } label: {
+            HStack(spacing: 12) {
+                Image(systemName: "hourglass")
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundStyle(.orange)
+                    .frame(width: 34, height: 34)
+                    .background(Color.orange.opacity(0.14), in: Circle())
+                VStack(alignment: .leading, spacing: 2) {
+                    if let days = entitlements.trialDaysLeft() {
+                        Text("免费试用还剩 \(days) 天").font(.subheadline.weight(.semibold))
+                    } else {
+                        Text("免费试用已结束").font(.subheadline.weight(.semibold))
+                    }
+                    if let price = entitlements.lifetimeProduct?.displayPrice {
+                        Text("一次性 \(price) 永久解锁，不订阅").font(.caption).foregroundStyle(.secondary)
+                    } else {
+                        Text("一次性购买永久解锁，不订阅").font(.caption).foregroundStyle(.secondary)
+                    }
+                }
+                Spacer(minLength: 0)
+                Image(systemName: "chevron.right").font(.footnote.weight(.semibold)).foregroundStyle(.tertiary)
+            }
+            .padding(14)
+            .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 16))
+        }
+        .buttonStyle(.plain)
     }
 
     // MARK: 扫描入口

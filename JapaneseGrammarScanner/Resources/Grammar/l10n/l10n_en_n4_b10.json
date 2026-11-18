@@ -34,10 +34,10 @@
       }
     ],
     "notes": [
-      "The object takes 「に」. You can't say ✕「ミスを気がつく」.",
-      "「気がつく」 and 「気づく」 mean basically the same; 「気づく」 is a bit more written and concise.",
-      "It can be written 「気が付く」 in kanji, but 「つく」 in kana is more common.",
-      "「気がつく人」 means \"an attentive, considerate person\" — a separate usage."
+      "The thing you notice takes 「に」, not 「を」: ✕「ミスを気がついた」→ ○「ミスに気がついた」. 「気づく」 also takes 「に」.",
+      "Don't confuse it with 「気をつける」 (be careful, watch out); the meaning is completely different. To say \"watch out for cars\": ✕「車に気がついてください」→ ○「車に気をつけてください」.",
+      "Saying 「〜に気がつきませんでしたか」 to a boss or client sounds like you're blaming them for being careless, which is rude. The honorific form is 「お気づきになる」; to point out a problem, you can say 「〜の点、ご確認いただけますか」.",
+      "When Japanese people fail to notice someone's needs, they often apologize with 「気がつかなくて、すみません」. 「気がつく人」 is praise meaning \"a thoughtful, attentive person\", not \"a person who noticed something\"."
     ],
     "scenes": {
       "daily": [
@@ -73,18 +73,19 @@
     "etymology": "「気」 means mind or attention, and 「つく」 means \"to attach, to arise\". Literally \"your mind attaches to something\", hence \"to notice\". 「気づく」 is a compound verb formed by dropping 「が」 from 「気が付く」.",
     "similar": [
       {
-        "title": "〜がわかる",
-        "explanation": "「わかる」 means understanding content; 「に気がつく」 means something you hadn't noticed enters your awareness. 「間違いがわかる」 = figuring out what the mistake is; 「間違いに気がつく」 = noticing there is a mistake."
-      },
-      {
-        "title": "〜を見つける",
-        "explanation": "「見つける」 means finding something, often as the result of searching, and takes 「を」. 「に気がつく」 is noticing by chance and takes 「に」."
-      },
-      {
         "title": "〜ような気がする",
-        "explanation": "「気がする」 means \"to have a feeling that, to seem\" — a vague sense. 「気がつく」 means actually realizing a fact."
+        "explanation": "Same root: both are built on 「気」 (mind, feeling). 「〜ような気がする」 means \"I have a feeling that...\", and the content isn't necessarily certain; 「〜に気がつく」 means actually noticing a fact. 「間違えたような気がする」 (I feel like I made a mistake) ↔「間違えたことに気がついた」 (I realized I had made a mistake)."
+      },
+      {
+        "title": "〜がわかる・〜ができる",
+        "explanation": "Similar meaning. 「わかる」 means figuring out the content or understanding the reason; 「気がつく」 only means something you hadn't noticed has entered your awareness, without necessarily understanding it. 「間違いがわかった」 leans toward \"I figured out what was wrong\"; 「間違いに気がついた」 leans toward \"I noticed there was a mistake\"."
+      },
+      {
+        "title": "〜が見える・〜が聞こえる",
+        "explanation": "Similar meaning: both describe perception that happens without effort. 「〜が見える／聞こえる」 is simply your eyes or ears picking something up; 「〜に気がつく」 is noticing at the level of awareness. You can see something and still not notice it: 「見えていたのに気がつかなかった」."
       }
-    ]
+    ],
+    "formation": "It is made of 「に」 + 「気」 + 「が」 + 「つく」. 「気」 is your mind or attention, and 「つく」 means \"to attach, to arise\". Together they mean \"your mind attaches itself to something\": something that wasn't in your awareness enters it, hence \"to notice, to become aware\". The subject of the phrase is 「気」, so it's your mind attaching on its own; that's why it describes noticing naturally or by chance, not actively searching. 「に」 marks where your attention arrives, so the object can only take 「に」, never 「を」. With no object, 「気がつく」 means \"your awareness comes back to you\", which extends to \"come to, snap out of it\". 「気づく」 is the single verb formed by dropping 「が」."
   },
   {
     "id": "te-manner-accompanying",
@@ -114,9 +115,10 @@
       }
     ],
     "notes": [
-      "For manner, the two actions happen almost at once and share a subject. This differs from the sequential 「〜て」 (\"do A, then B\").",
-      "The negative manner uses 「〜ないで」: 「傘を持たないで出かけた」 (went out without an umbrella).",
-      "For two separate actions done at the same time, 「〜ながら」 is more natural."
+      "To express a means such as transport, use 「〜て」, not 「〜ながら」: ✕「バスに乗りながら会社に来る」→ ○「バスに乗って会社に来る」. 「ながら」 means doing two separate things at the same time.",
+      "For a negative manner or state, use 「〜ないで／〜ずに」, not 「〜なくて」: ✕「傘を持たなくて出かけた」→ ○「傘を持たないで出かけた」. 「〜なくて」 expresses a reason.",
+      "Put the first verb directly in the te-form for an accompanying state; don't add 「〜ている」: ✕「眼鏡をかけていて新聞を読む」→ ○「眼鏡をかけて新聞を読む」.",
+      "Both parts must share the same subject. With different subjects, it no longer expresses manner or state but sequence or reason: 「母が運転して、私は寝ていた」 means \"My mother drove, and I slept\"."
     ],
     "scenes": {
       "daily": [
@@ -152,22 +154,23 @@
     "etymology": "「て」 comes from the continuative form of the classical perfective auxiliary 「つ」, used to link verbs. From \"finish one action, then do the next\" it spread to manner, accompanying state, cause, and more.",
     "similar": [
       {
+        "title": "〜て (te-form: linking and sequence)",
+        "explanation": "Same root: both are the verb te-form. The sequential 「〜て」 links two actions completed one after the other (「顔を洗って、ご飯を食べる」); in this usage, the first part is the manner or state in which you do the second, and the two happen almost at the same time (「歩いて行く」)."
+      },
+      {
         "title": "〜ながら",
-        "explanation": "「ながら」 means two actions happen at the same time, with the second as the main action (音楽を聞きながら勉強する). 「〜て」 shows manner or state; the first part serves the second (歩いて行く). You don't say ✕「歩きながら行く」 for a means of getting somewhere."
+        "explanation": "Similar meaning; both can be translated as \"while ...ing\". 「ながら」 means one person doing two separate things at the same time, with the second as the main action (「音楽を聞きながら勉強する」); with 「〜て」, the first part is the means or posture for the second, not a separate activity (「座って話す」)."
       },
       {
         "title": "〜で (means / method)",
-        "explanation": "「で」 after a noun marks a tool or means (バスで行く); 「〜て」 uses a verb to show manner (バスに乗って行く). Similar meaning, different structure."
-      },
-      {
-        "title": "〜ないで (without doing)",
-        "explanation": "This is the negative of this usage. 「傘をさして歩く」 = walk with an umbrella up; 「傘をささないで歩く」 = walk without an umbrella."
+        "explanation": "Similar meaning: both express means. 「で」 follows a noun (「バスで行く」); 「〜て」 uses a verb to describe exactly how you do it (「バスに乗って行く」). When a noun works, 「で」 is more concise."
       },
       {
         "title": "〜まま",
-        "explanation": "「〜たまま」 stresses that a state that should have changed didn't, often sounding odd or improper (靴を履いたまま家に入る). 「〜て」 just neutrally describes an accompanying state."
+        "explanation": "Similar meaning: both can express an accompanying state. 「〜たまま」 stresses that a state that should have changed stays the same, often with a sense that it's inappropriate (「靴を履いたまま部屋に入る」); 「〜て」 just neutrally describes your posture as you do something (「靴を履いて出かける」)."
       }
-    ]
+    ],
+    "formation": "It is made of a verb te-form + a following verb. 「て」 is generally thought to come from the classical completion auxiliary 「つ」, whose basic idea is \"finish one action and move on to the next\". Once the first action is done, its result (having sat down, having put on glasses) remains, and you do the second action in that state; this gives the \"accompanying state\" use (「座って話す」 = talk sitting down). When the first action is itself the process of achieving the second, it becomes \"means or method\" (「歩いて行く」 = go on foot). 「て」 has no specific meaning of its own; whether it shows manner, state or sequence depends on the first verb. And because both parts are one person's continuous series of actions, the subject must be the same."
   },
   {
     "id": "naide-oku",
@@ -195,9 +198,10 @@
       }
     ],
     "notes": [
-      "It's the counterpart of 「〜ておく」: 「〜ておく」 is doing something in advance; 「〜ないでおく」 is purposely not doing it in advance.",
-      "In speech, 「ないでおく」 often contracts to 「ないどく」, as in 「言わないどくね」.",
-      "「〜ずにおく」 means the same but sounds more formal/written."
+      "Don't mix it up with 「〜ておく」; the meaning is the exact opposite: 「母には言っておこう」 is \"I'll tell Mom in advance\", while 「母には言わないでおこう」 is \"I won't tell Mom for now\".",
+      "The connection is nai-form + 「でおく」; you can't use 「なくて」: ✕「言わなくておく」→ ○「言わないでおく」.",
+      "「〜ないでおく」 carries a deliberate intention, with the future in mind. When something simply hasn't been done, use 「〜ないでいる」: 「ずっと連絡しないでいる」 (I still haven't contacted them) describes an ongoing situation, not a deliberate choice.",
+      "The casual contraction 「〜ないどく」 is only for family and friends; to a boss or client it sounds too casual. To ask someone to keep from doing something, 「〜ないでおいていただけますか」 is more polite than 「〜ないでおいてください」."
     ],
     "scenes": {
       "daily": [
@@ -234,17 +238,18 @@
     "similar": [
       {
         "title": "〜ておく",
-        "explanation": "「〜ておく」 is doing something in advance for later (ビールを冷やしておく); 「〜ないでおく」 is purposely not doing something for later (ビールを開けないでおく)."
+        "explanation": "Same root: both are built on 「おく」 (put down, handle something for later), and both carry the intention of thinking ahead. The difference is doing vs. not doing: 「〜ておく」 means doing something in advance (「ビールを冷やしておく」), while 「〜ないでおく」 means deliberately not doing it for now (「ビールを開けないでおく」)."
       },
       {
         "title": "〜ないで (without doing)",
-        "explanation": "「〜ないで」 only means \"doing something else without doing ~\" (朝ご飯を食べないで出かける). It lacks the idea of deliberately keeping things that way with the future in mind."
+        "explanation": "Same root: both contain 「〜ないで」. 「〜ないで」 simply means \"do something else without doing ...\" (「朝ご飯を食べないで出かける」), with no sense of deliberately keeping things that way for later; 「〜ないでおく」 isn't followed by another action, and its focus is on deliberately not doing something."
       },
       {
         "title": "〜まま",
-        "explanation": "「〜ままにしておく」 also means leaving things as they are, but focuses on the state not changing (窓を開けたままにしておく); 「〜ないでおく」 focuses on not doing an action."
+        "explanation": "Similar meaning: both can express leaving things as they are. 「〜ままにしておく」 focuses on the state not changing (「窓を開けたままにしておく」); 「〜ないでおく」 focuses on not performing an action (「窓を閉めないでおく」)."
       }
-    ]
+    ],
+    "formation": "It is made of a verb nai-form + 「で」 + 「おく」. 「〜ないで」 means \"in a state of not doing ...\", and 「おく」 originally means \"to put, to place\"; in 「〜ておく」 it extends to \"take care of something and leave it for later\". Together they mean \"leave the state of not doing as it is\", so it expresses deliberately not doing something and keeping things the way they are. Since 「おく」 itself carries the intention \"for later\", the meaning \"not doing it for the time being\" follows naturally. The written 「〜ずにおく」 simply replaces 「ないで」 with the literary 「ずに」; the structure and meaning are the same."
   },
   {
     "id": "soreni-conjunction",
@@ -273,10 +278,10 @@
       }
     ],
     "notes": [
-      "「それに」 is fairly casual; formal writing tends to use 「また」「さらに」「その上」.",
-      "Both parts must point in the same direction; it can't be used for contrast.",
-      "In 「それに乗る」 or 「それに答える」, 「それ＋に」 is just a pronoun + particle, not the conjunction.",
-      "「それにしても」 (\"even so, still\") is a different word."
+      "Both sentences must point in the same direction (both pluses or both minuses); it can't express contrast: ✕「この店は安い。それに、まずい。」→ ○「この店は安い。でも、まずい。」",
+      "It doesn't express time order: ✕「ご飯を食べた。それに、歯を磨いた。」→ ○「ご飯を食べた。それから、歯を磨いた。」",
+      "「それに」 is conversational. In a report to your boss, a business email or formal writing, it sounds too casual; use 「また」, 「さらに」 or 「加えて」 instead.",
+      "「それにしても」 (even so, still) and phrases like 「それに乗る」 or 「それに答える」 (pronoun + particle) are not this conjunction; don't read them as \"besides\"."
     ],
     "scenes": {
       "daily": [
@@ -312,18 +317,23 @@
     "etymology": "Made of the demonstrative 「それ」 + the particle 「に」 expressing addition. Literally \"on top of that\", it later became fixed as a conjunction.",
     "similar": [
       {
+        "title": "〜その上 (sentence-initial: moreover)",
+        "explanation": "Similar meaning: both mean \"on top of that\". 「その上」 is more formal and often adds a step up (even better, or even worse); 「それに」 is conversational and light, and is often used to add another reason."
+      },
+      {
         "title": "〜そして (at the start: and then / and also)",
-        "explanation": "「そして」 neutrally lists things or shows sequence, in both speech and writing; 「それに」 stresses \"one more thing\", is mostly spoken, and carries the speaker's evaluation."
+        "explanation": "Similar meaning: both can mean \"and also\". 「そして」 neutrally lists things or shows sequence, in both speech and writing; 「それに」 only adds one more point in the same direction, never shows sequence, and carries the speaker's evaluation."
       },
       {
         "title": "〜それから (at the start: after that / also)",
-        "explanation": "「それから」 mainly shows time order, or adds something that just came to mind; 「それに」 piles up evaluations or reasons in the same direction."
+        "explanation": "Same root: both are conjunctions made of 「それ」 + a particle. 「それから」 mainly shows time order, or adds one more thing that comes to mind (「それから、牛乳も買ってきて」); 「それに」 piles on evaluations or reasons in the same direction."
       },
       {
-        "title": "その上",
-        "explanation": "「その上」 is close to 「それに」 but more formal, and often stresses escalation: \"good on top of good\" or \"bad on top of bad\"."
+        "title": "〜し",
+        "explanation": "Similar meaning, and the two are often used together. 「〜し」 lists reasons inside a sentence (「安いし、おいしい」); 「それに」 adds one more at the start of a sentence. They often combine: 「安いし、それにおいしい」."
       }
-    ]
+    ],
+    "formation": "It is made of the demonstrative 「それ」 + the particle 「に」. 「それ」 points to what was just said, and this 「に」 is the \"adding\" 「に」 (as in 「AにBを加える」, add B to A). Together they mean \"on top of that, add...\", so what follows is new information piled onto what came before. Because it's \"adding on top\", the second part must be of the same kind and point in the same direction; it can't be the opposite, and it can't show time order. Used with reasons, it stacks them one on another, which is why the sentence often ends with 「〜し」 or 「〜から」."
   },
   {
     "id": "sorede-conjunction",
@@ -352,9 +362,10 @@
       }
     ],
     "notes": [
-      "「それで」 is generally not followed by commands, requests, invitations, or intentions — use 「だから」 for those: ✕「雨だ。それで傘を持って行きなさい」.",
-      "In speech it's often shortened to 「で、」, as in 「で、どうしたの？」.",
-      "「それでは」「それでも」「それでいい」 have other meanings and aren't this pattern."
+      "It can't be followed by a command, request, invitation or intention; use 「だから」 there: ✕「雨だ。それで、傘を持って行きなさい。」→ ○「雨だ。だから、傘を持って行きなさい。」",
+      "「それで？」 and its short form 「で？」, used to urge someone on, sound casual; to a boss or client they come across as impatient and rude. Say 「それで、どうなりましたか」 or 「その後はいかがでしたか」 instead.",
+      "When apologizing, say 「申し訳ありません」 first and then explain; opening with 「電車が止まって、それで遅れました」 easily sounds like you're making excuses.",
+      "「それでは」 (well then), 「それでも」 (even so) and 「それでいい」 (that's fine) all mean different things; don't read them as \"so\"."
     ],
     "scenes": {
       "daily": [
@@ -390,18 +401,19 @@
     "etymology": "Made of the demonstrative 「それ」 + the particle 「で」 for cause or means. Literally \"because of that\", it became fixed as a cause-and-effect conjunction.",
     "similar": [
       {
-        "title": "だから",
-        "explanation": "「だから」 expresses the speaker's subjective judgment and can be followed by commands, requests, or intentions (だから早く寝なさい). 「それで」 is a more objective account of cause and effect, mostly for past events, and isn't followed by commands."
+        "title": "〜そのため (sentence-initial: therefore / to that end)",
+        "explanation": "Similar meaning: both express cause and effect. 「そのため」 is more formal and common in news, reports and announcements; 「それで」 is conversational and often used to tell about your own experiences."
       },
       {
-        "title": "〜そのため (at the start: therefore / for that reason)",
-        "explanation": "「そのため」 is more formal and common in news and reports; 「それで」 is more conversational."
+        "title": "〜から (reason)",
+        "explanation": "Similar meaning. Sentence-initial 「だから」 is 「だ」 + 「から」 and carries the speaker's subjective judgment, so it can be followed by a command, request or intention (「だから早く寝なさい」); 「それで」 tends to objectively narrate a cause and effect that already happened, and isn't followed by commands."
       },
       {
         "title": "〜それから (at the start: after that / also)",
-        "explanation": "「それから」 only shows time order, with no cause and effect; 「それで」 stresses that the two are cause and result."
+        "explanation": "Same root: both are conjunctions made of 「それ」 + a particle. 「それから」 only shows time order (「顔を洗った。それから、朝ご飯を食べた」), with no cause and effect; 「それで」 stresses that the two parts are cause and result."
       }
-    ]
+    ],
+    "formation": "It is made of the demonstrative 「それ」 + the particle 「で」. 「それ」 points to what was just said, and 「で」 is the 「で」 of cause or occasion (as in 「病気で休む」). Together they mean \"because of that\", so the second sentence is a natural result of the first. This 「で」 marks a fairly objective cause and lacks the speaker's assertion that 「から」 carries, so 「それで」 is mostly used to narrate causes and effects that already happened, and isn't followed by commands or intentions. In its \"urging\" use, it means \"building on that (what happened next?)\", inviting the other person to go on."
   },
   {
     "id": "tokoroga-conjunction",
@@ -430,9 +442,9 @@
       }
     ],
     "notes": [
-      "The second sentence is a fact that happened or exists; it can't be the speaker's intention, a command, or a request.",
-      "「ところが」 stresses \"unexpectedly\" more strongly than 「しかし」 or 「でも」.",
-      "「〜たところが」 after a verb's ta-form means \"I did ~, and then ~\" — different from the sentence-initial conjunction."
+      "Don't confuse it with 「ところで」 (changing the subject); one sound apart, the meaning is completely different: ✕「簡単だと思った。ところで、難しかった。」→ ○「簡単だと思った。ところが、難しかった。」",
+      "The second sentence can only be a fact that has happened or objectively exists; it can't be an intention, command or request: ✕「準備は大変だ。ところが、頑張ろう。」→ ○「準備は大変だ。でも、頑張ろう。」",
+      "It can't be used to state your own objection: ✕「その案はいいと思います。ところが、費用が高すぎます。」→ ○「しかし、費用が高すぎます。」"
     ],
     "scenes": {
       "daily": [
@@ -469,16 +481,21 @@
     "similar": [
       {
         "title": "〜しかし (at the start: however)",
-        "explanation": "「しかし」 is a general \"but\", usable for arguments and opinions; 「ところが」 specifically means \"the result was unexpected\", and the second part must be a fact."
+        "explanation": "Similar meaning: both express contrast. 「しかし」 is a general \"but\" and can be used in arguments and to state opinions; 「ところが」 specifically means \"the result was the opposite of what was expected\", the second sentence must be a fact, and it carries surprise."
       },
       {
-        "title": "〜でも (at the start: but)",
-        "explanation": "「でも」 is a casual \"but\", also used for excuses and objections; 「ところが」 is more narrative and stresses surprise."
+        "title": "〜でも (sentence-initial: but)",
+        "explanation": "Similar meaning. 「でも」 is the conversational \"but\" and can also be used to make excuses, push back or state resolve (「でも、頑張る」); 「ところが」 is narrative, stresses surprise, and can't be followed by an intention."
+      },
+      {
+        "title": "〜ところで (sentence-initial: by the way)",
+        "explanation": "Same root: both are made of 「ところ」 + a particle. 「ところで」 means \"by the way\" and changes the subject, with no logical link between the sentences; 「ところが」 means \"but, unexpectedly\", and the second sentence goes against what the first led you to expect."
       },
       {
         "title": "〜たところ (result)",
-        "explanation": "「〜たところ」 follows a verb and means \"when I did ~, I found...\"; the result isn't necessarily surprising. Sentence-initial 「ところが」 always carries a sense of surprise against expectations."
+        "explanation": "Same root: sentence-initial 「ところが」 originally came from 「〜たところが」 breaking away from the verb before it. 「〜たところ」 follows a verb and means \"when I did ..., (I found)\", and the result isn't necessarily surprising; sentence-initial 「ところが」 always carries the surprise of an expectation falling through."
       }
-    ]
+    ],
+    "formation": "It is made of the formal noun 「ところ」 + the conjunctive particle 「が」. 「ところ」 means \"the situation, the circumstances\" and treats what came before as a situation that has already arisen; 「が」 is the contrastive 「が」. Together they mean \"in that situation, however...\". It was originally attached to a verb as 「〜たところが」 (did ..., but as it turned out...), then broke away from the verb to become a sentence-initial conjunction. Because it narrates how a situation developed, the second sentence is something that actually happened, which gives it the surprise of an expectation falling through, and it can't take the speaker's intentions or commands. 「ところで」, also built on 「ところ」, uses the 「で」 of setting (\"in this situation\"), so it became a way to change the subject; the two mean completely different things."
   }
 ]

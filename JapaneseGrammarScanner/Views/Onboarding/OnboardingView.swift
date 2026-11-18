@@ -4,6 +4,7 @@ import SwiftUI
 struct OnboardingView: View {
     /// 用户点「开始使用」或「先用示例书页试试」时调用；参数表示是否要打开示例。
     let onFinish: (_ openSample: Bool) -> Void
+    @EnvironmentObject private var store: EntitlementStore
     @State private var page = 0
     private let pageCount = 5
 
@@ -12,7 +13,8 @@ struct OnboardingView: View {
             HStack {
                 Spacer()
                 if page < pageCount - 1 {
-                    Button("跳过") { onFinish(false) }
+                    // 跳到最后一页（那里写明了试用时长与到期后的价格）
+                    Button("跳过") { withAnimation { page = pageCount - 1 } }
                         .font(.subheadline.weight(.medium))
                         .padding(.horizontal, 20)
                         .padding(.top, 8)
@@ -65,20 +67,39 @@ struct OnboardingView: View {
                     Button {
                         onFinish(false)
                     } label: {
-                        Text("开始使用").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 6)
+                        Text("免费开始使用").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 6)
                     }
                     .buttonStyle(.borderedProminent)
                     Button("先用示例书页试试") { onFinish(true) }
                         .font(.subheadline.weight(.medium))
-                        .padding(.top, 4)
+                        .padding(.top, 2)
+                    trialNote
                 }
             }
             .tint(Brand.red)
             .padding(.horizontal, 28)
             .padding(.bottom, 24)
-            .frame(height: 110, alignment: .top)
+            .frame(height: 150, alignment: .top)
         }
         .background(Color(.systemBackground))
+    }
+
+    /// 审核要求（Guideline 3.1.1）：试用开始前写明时长、到期后需要付费的内容与价格。
+    private var trialNote: some View {
+        Group {
+            if store.access == .unlocked {
+                EmptyView()
+            } else if let price = store.lifetimeProduct?.displayPrice {
+                Text("前 \(EntitlementStore.trialDays) 天免费使用全部功能。之后可一次性 \(price) 永久解锁完整讲解，不订阅、不自动扣费。")
+            } else {
+                Text("前 \(EntitlementStore.trialDays) 天免费使用全部功能。之后可一次性购买永久解锁完整讲解，不订阅、不自动扣费。")
+            }
+        }
+        .font(.caption)
+        .foregroundStyle(.secondary)
+        .multilineTextAlignment(.center)
+        .fixedSize(horizontal: false, vertical: true)
+        .padding(.top, 2)
     }
 }
 

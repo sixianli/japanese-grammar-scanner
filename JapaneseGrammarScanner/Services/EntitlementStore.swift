@@ -4,18 +4,18 @@ import StoreKit
 /// 内购与试用状态（StoreKit 2，无需服务器）。
 ///
 /// 收费方式：
-/// - `trial`：免费（价格 0）的非消耗型项目「7 天免费试用」。按 App Review Guideline 3.1.1，
+/// - `trial`：免费（价格 0）的非消耗型项目「14 天免费试用」。按 App Review Guideline 3.1.1，
 ///   非订阅 App 通过价格为 0 的非消耗型内购提供限时试用。试用开始时间 = 该交易的购买时间，绑定 Apple ID，重装不会重置。
 /// - `lifetime`：一次性买断，永久解锁全部讲解。
 @MainActor
 final class EntitlementStore: ObservableObject {
     enum ProductID {
-        static let trial = "jgs.trial.7day"
+        static let trial = "jgs.trial.14day"
         static let lifetime = "jgs.unlock.lifetime"
         static let all = [trial, lifetime]
     }
 
-    static let trialDays = 7
+    static let trialDays = 14
 
     enum Access: Equatable {
         /// 已买断
@@ -139,6 +139,24 @@ final class EntitlementStore: ObservableObject {
             lastError = error.localizedDescription
         }
         await refresh()
+    }
+
+    /// 试用快结束（最后 2 天）或已结束，首页给一次温和提醒。
+    var showsTrialEndingReminder: Bool {
+        if testFlightFallbackUnlock { return false }
+        switch access {
+        case .trial: return (trialDaysLeft() ?? 99) <= 2
+        case .trialExpired: return true
+        default: return false
+        }
+    }
+
+    /// 新手引导结束时开始试用（价格 0 的内购；用户已在引导最后一页看到试用时长与到期后的价格）。
+    func startTrialIfNeeded() async {
+        guard access == .notStarted, !testFlightFallbackUnlock else { return }
+        if products.isEmpty { await loadProducts() }
+        guard let trial = trialProduct else { return }
+        await purchase(trial)
     }
 
     /// 试用剩余天数（向上取整）。

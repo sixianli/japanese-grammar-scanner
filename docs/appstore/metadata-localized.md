@@ -31,7 +31,7 @@ For every grammar point:
 • Similar grammar — clear comparisons, one tap away
 
 LIBRARY & FAVORITES
-• Built-in JLPT N5–N2 grammar, browse by level or search
+• Built-in JLPT N5–N1 grammar, browse by level or search
 • Save the grammar you want to review
 
 PRIVATE & OFFLINE
@@ -62,7 +62,7 @@ Explanations available in English, 한국어, Español, Tiếng Việt, 简体�
 • 의미 · 용법(접속) · 사용 장면 · 어원 · 예문 · 비슷한 문법 비교
 
 【문법 사전과 즐겨찾기】
-• JLPT N5–N2 주요 문법 수록, 레벨별 보기·검색
+• JLPT N5–N1 전체 문법 수록, 레벨별 보기·검색
 • 중요한 문법은 즐겨찾기로 복습
 
 【개인정보 보호·오프라인】
@@ -91,7 +91,7 @@ EXPLICACIONES CLARAS
 • Significado · Uso y formación · Cuándo se usa · Origen · Ejemplos traducidos · Comparación con gramática similar
 
 BIBLIOTECA Y FAVORITOS
-• Gramática JLPT N5–N2 incluida, por nivel o con búsqueda
+• Gramática JLPT N5–N1 completa incluida, por nivel o con búsqueda
 • Guarda la gramática que quieras repasar
 
 PRIVADO Y SIN CONEXIÓN
@@ -120,7 +120,7 @@ PRIVADO Y SIN CONEXIÓN
 • Ý nghĩa · Cách dùng · Tình huống sử dụng · Nguồn gốc · Ví dụ có dịch · So sánh ngữ pháp tương tự
 
 【TỪ ĐIỂN VÀ YÊU THÍCH】
-• Ngữ pháp JLPT N5–N2, xem theo cấp độ hoặc tìm kiếm
+• Toàn bộ ngữ pháp JLPT N5–N1, xem theo cấp độ hoặc tìm kiếm
 • Lưu các mẫu cần ôn tập
 
 【RIÊNG TƯ VÀ NGOẠI TUYẾN】
@@ -155,7 +155,7 @@ PRIVADO Y SIN CONEXIÓN
 • 意思 · 用法（接續）· 使用場景 · 詞源 · 例句 · 相近語法比較
 
 【語法庫與收藏】
-• 內建 N5–N2 常用語法，可依等級瀏覽、搜尋
+• 內建 N5–N1 全部語法，可依等級瀏覽、搜尋
 • 收藏重點語法，隨時複習
 
 【隱私與離線】

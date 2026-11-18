@@ -1,7 +1,7 @@
 import StoreKit
 import SwiftUI
 
-/// 付费页：开始 7 天免费试用 / 一次性买断 / 恢复购买。
+/// 付费页：开始 14 天免费试用 / 一次性买断 / 恢复购买。
 /// 按审核要求清楚写明：试用时长、试用包含的内容、到期后不会自动扣费、买断价格。
 struct PaywallView: View {
     @EnvironmentObject private var store: EntitlementStore
@@ -62,7 +62,7 @@ struct PaywallView: View {
 
     private var features: some View {
         VStack(alignment: .leading, spacing: 14) {
-            FeatureRow(icon: "books.vertical.fill", tint: .blue, text: "全部 N5–N2 语法点的完整讲解")
+            FeatureRow(icon: "books.vertical.fill", tint: .blue, text: "全部 N5–N1 语法点的完整讲解")
             FeatureRow(icon: "list.bullet.rectangle.portrait.fill", tint: .orange, text: "按义项分段的用法、接续与例句")
             FeatureRow(icon: "person.2.wave.2.fill", tint: .green, text: "日常生活与职场的使用场景")
             FeatureRow(icon: "scroll.fill", tint: .brown, text: "词源与相近语法对比")
@@ -100,7 +100,7 @@ struct PaywallView: View {
                     Task { await store.purchase(trial) }
                 } label: {
                     VStack(spacing: 2) {
-                        Text("开始 7 天免费试用").font(.headline)
+                        Text("开始 \(EntitlementStore.trialDays) 天免费试用").font(.headline)
                         Text("免费 · 到期后不会自动扣费").font(.caption)
                     }
                     .frame(maxWidth: .infinity)
@@ -136,7 +136,7 @@ struct PaywallView: View {
 
     private var footer: some View {
         VStack(spacing: 8) {
-            Text("免费试用期为 7 天，期间可使用全部内容。试用结束后不会自动收费；如需继续查看完整讲解，可一次性购买永久解锁。扫描识别与语法高亮始终免费。")
+            Text("免费试用期为 \(EntitlementStore.trialDays) 天，期间可使用全部内容。试用结束后不会自动收费；如需继续查看完整讲解，可一次性购买永久解锁。扫描识别与语法高亮始终免费。")
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
@@ -187,7 +187,13 @@ struct LockedContentCard: View {
             Button {
                 showPaywall = true
             } label: {
-                Text(store.access == .notStarted ? "开始 7 天免费试用" : "查看解锁方式")
+                Group {
+                    if store.access == .notStarted {
+                        Text("开始 \(EntitlementStore.trialDays) 天免费试用")
+                    } else {
+                        Text("查看解锁方式")
+                    }
+                }
                     .font(.headline)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 6)

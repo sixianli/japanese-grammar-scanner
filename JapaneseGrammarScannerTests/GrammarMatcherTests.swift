@@ -172,10 +172,10 @@ final class EntitlementTests: XCTestCase {
         let start = Date(timeIntervalSince1970: 1_800_000_000)
         typealias S = EntitlementStore
         XCTAssertEqual(S.access(purchases: [:], now: start), .notStarted)
-        if case .trial = S.access(purchases: [S.ProductID.trial: start], now: start.addingTimeInterval(6 * 86_400)) {} else {
-            XCTFail("第 6 天应仍在试用期")
+        if case .trial = S.access(purchases: [S.ProductID.trial: start], now: start.addingTimeInterval(13 * 86_400)) {} else {
+            XCTFail("第 13 天应仍在试用期")
         }
-        XCTAssertEqual(S.access(purchases: [S.ProductID.trial: start], now: start.addingTimeInterval(8 * 86_400)), .trialExpired)
+        XCTAssertEqual(S.access(purchases: [S.ProductID.trial: start], now: start.addingTimeInterval(15 * 86_400)), .trialExpired)
         XCTAssertEqual(S.access(purchases: [S.ProductID.trial: start, S.ProductID.lifetime: start], now: start.addingTimeInterval(30 * 86_400)), .unlocked)
         XCTAssertEqual(S.access(purchases: [S.ProductID.lifetime: start], now: start), .unlocked)
     }
