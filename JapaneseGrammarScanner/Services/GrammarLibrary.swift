@@ -6,6 +6,8 @@ final class GrammarLibrary: ObservableObject {
 
     let points: [GrammarPoint]
     private let byID: [String: GrammarPoint]
+    /// 与 `points` 一一对应的预处理搜索文本（去掉 〜、忽略大小写和全半角）。
+    private let searchIndex: [String]
     let matcher: GrammarMatcher
 
     let language: ContentLanguage
@@ -21,7 +23,9 @@ final class GrammarLibrary: ObservableObject {
                 if let l = localizations[loaded[i].id] { loaded[i].apply(l) }
             }
         }
-        points = loaded.sorted { ($0.level, $0.reading ?? $0.title) < ($1.level, $1.reading ?? $1.title) }
+        let sorted = loaded.sorted { ($0.level, $0.reading ?? $0.title) < ($1.level, $1.reading ?? $1.title) }
+        points = sorted
+        searchIndex = sorted.map(GrammarLibrary.searchText(for:))
         byID = Dictionary(loaded.map { ($0.id, $0) }, uniquingKeysWith: { first, _ in first })
         matcher = GrammarMatcher(points: loaded)
     }
@@ -46,22 +50,37 @@ final class GrammarLibrary: ObservableObject {
         points.filter { $0.level == level }
     }
 
-    /// 语法库搜索：标题、读音、意思、例句都参与匹配。
+    /// 语法库搜索：标题、汉字写法、别名、读音、意思、例句都参与匹配。
     func search(_ query: String) -> [GrammarPoint] {
         let q = query.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !q.isEmpty else { return points }
-        let normalizedQ = q.replacingOccurrences(of: "〜", with: "").replacingOccurrences(of: "~", with: "")
-        return points.filter { p in
-            var fields: [String] = [p.title, p.displayTitle, p.kanji ?? "", p.reading ?? "", p.meaning]
-            fields.append(contentsOf: p.aliases)
-            fields.append(contentsOf: p.senses.map(\.label))
-            for example in p.allExamples {
-                fields.append(example.ja)
-                fields.append(example.translation)
+        let key = GrammarLibrary.fold(q)
+        var result: [GrammarPoint] = []
+        for (i, p) in points.enumerated() {
+            if (!key.isEmpty && searchIndex[i].contains(key))
+                || p.level.rawValue.caseInsensitiveCompare(q) == .orderedSame {
+                result.append(p)
             }
-            return fields.contains { $0.localizedCaseInsensitiveContains(normalizedQ) }
-                || p.level.rawValue.caseInsensitiveCompare(q) == .orderedSame
         }
+        return result
+    }
+
+    /// 搜索用的规范化：去掉 〜/～/~，忽略大小写与全半角。
+    static func fold(_ s: String) -> String {
+        var t = s
+        for mark in ["〜", "～", "~"] { t = t.replacingOccurrences(of: mark, with: "") }
+        return t.folding(options: [.caseInsensitive, .widthInsensitive], locale: nil)
+    }
+
+    private static func searchText(for p: GrammarPoint) -> String {
+        var fields: [String] = [p.title, p.displayTitle, p.kanji ?? "", p.reading ?? "", p.meaning]
+        fields.append(contentsOf: p.aliases)
+        fields.append(contentsOf: p.senses.map(\.label))
+        for example in p.allExamples {
+            fields.append(example.ja)
+            fields.append(example.translation)
+        }
+        return fold(fields.joined(separator: "\n"))
     }
 
     /// 资源可能被平铺到 Bundle 根目录，也可能保留在子目录中，都兼容。
