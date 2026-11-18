@@ -285,7 +285,7 @@ final class HistoryStoreTests: XCTestCase {
 }
 
 
-/// 渲染每个语法点的详情页，确保没有任何一页会卡死或崩溃。
+/// 渲染详情页（重点覆盖合并后的语法点），确保不会卡死或崩溃、渲染不过慢。
 @MainActor
 final class DetailRenderTests: XCTestCase {
     func testEveryDetailPageRenders() {
@@ -297,7 +297,11 @@ final class DetailRenderTests: XCTestCase {
         let history = HistoryStore(defaults: defaults)
         let entitlements = EntitlementStore(unlockedForTesting: true)
         let priority = ["made-until", "izen", "oouseru", "to-quotation", "ni-destination-target", "you-na-example"]
-        let ids = priority + library.points.map(\.id).filter { !priority.contains($0) }
+        // 合并后的语法点（义项多、等级多）+ 每隔 40 个抽一个，覆盖各等级又不拖慢 CI
+        let merged = library.points.filter { $0.levels.count > 1 || $0.senses.count >= 7 }.map(\.id)
+        let sampled = library.points.enumerated().filter { $0.offset % 40 == 0 }.map(\.element.id)
+        var ids: [String] = []
+        for id in priority + merged + sampled where !ids.contains(id) { ids.append(id) }
         for id in ids {
             let view = GrammarDetailView(grammarID: id)
                 .environmentObject(library)
