@@ -219,7 +219,7 @@ enum JLPTLevel: String, Codable, CaseIterable, Comparable, Identifiable {
 
 /// 讲解内容使用的语言。
 enum ContentLanguage: String, CaseIterable {
-    case zhHans = "zh-Hans", zhHant = "zh-Hant", en, ko, es, vi
+    case zhHans = "zh-Hans", zhHant = "zh-Hant", en, ko, es, vi, my
 
     /// 根据 App 当前生效的本地化语言（跟随系统，可在 设置 → App → 语言 中单独修改）决定。
     static var current: ContentLanguage {
@@ -235,6 +235,7 @@ enum ContentLanguage: String, CaseIterable {
         if id.hasPrefix("ko") { return .ko }
         if id.hasPrefix("es") { return .es }
         if id.hasPrefix("vi") { return .vi }
+        if id.hasPrefix("my") { return .my }
         return .en
     }
 }

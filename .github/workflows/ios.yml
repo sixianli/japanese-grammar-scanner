@@ -96,7 +96,7 @@ jobs:
           xcrun simctl install "$UDID" "$APP"
           xcrun simctl privacy "$UDID" grant camera "$BID" || true
           xcrun simctl privacy "$UDID" grant photos "$BID" || true
-          for lang in en ko es vi zh-Hans zh-Hant; do
+          for lang in en ko es vi my zh-Hans zh-Hant; do
             mkdir -p "screenshots/$lang"
             i=1
             for screen in onboarding home result detail scan library favorites; do

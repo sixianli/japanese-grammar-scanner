@@ -127,6 +127,7 @@ final class LocalizationTests: XCTestCase {
         XCTAssertEqual(ContentLanguage.from(identifier: "ko-KR"), .ko)
         XCTAssertEqual(ContentLanguage.from(identifier: "es-MX"), .es)
         XCTAssertEqual(ContentLanguage.from(identifier: "vi"), .vi)
+        XCTAssertEqual(ContentLanguage.from(identifier: "my-MM"), .my)
         XCTAssertEqual(ContentLanguage.from(identifier: "en-GB"), .en)
         XCTAssertEqual(ContentLanguage.from(identifier: "fr"), .en, "不支持的语言回退到英语")
     }

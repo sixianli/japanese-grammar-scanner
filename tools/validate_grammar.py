@@ -26,7 +26,7 @@ LEVELS = {"N5", "N4", "N3", "N2", "N1"}
 REQUIRED_STR = ["id", "title", "level", "meaning", "connection", "etymology", "formation"]
 REMOVED_FIELDS = ["usage", "scenarios", "examples"]
 FORBIDDEN_REGEX = [r"\(\?P", r"\\A", r"\\Z", r"\(\?#"]
-L10N_LANGS = ["en", "ko", "es", "vi", "zh-Hant"]
+L10N_LANGS = ["en", "ko", "es", "vi", "my", "zh-Hant"]
 # 只出现在中文、在日语中不使用的字（简体字及与日语新字体不同的繁体字），用于检查译文是否残留中文。
 # 注意不要加入日语也使用的汉字（語、過、進、為、個、義、種、詞、従、話 等）。
 CHINESE_ONLY = set("这们吗么说时为个词动语义过还没让对该种样从进這們嗎麼說對該讓樣")
