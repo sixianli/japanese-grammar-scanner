@@ -1,7 +1,6 @@
 [
   {
     "id": "soshite-conjunction",
-    "title": "〜そして (at the start: and then / and also)",
     "meaning": "Links two sentences or two items. It shows the order of actions, or adds one more point to what came before.",
     "connection": "Sentence. そして、sentence / Noun、そして noun",
     "senses": [
@@ -94,7 +93,6 @@
   },
   {
     "id": "sorekara-conjunction",
-    "title": "〜それから (at the start: after that / also)",
     "meaning": "Shows time order (“after that”). It is also used to add something (“also”, “and”).",
     "connection": "Sentence. それから、sentence / Noun、それから noun",
     "senses": [
@@ -185,24 +183,15 @@
   },
   {
     "id": "to-quotation",
-    "title": "〜と (quotation: 〜と言う・〜と思う)",
-    "meaning": "The quoting particle 「と」. It comes after what someone says or thinks, followed by a verb like 「言う」, 「思う」, or 「聞く」.",
-    "connection": "「Direct quote」 / plain-form sentence + と + 言う・思う・聞く・書く etc.",
+    "meaning": "The particle 「と」 has several uses: it quotes what is said or thought (〜と言う・〜と思う), links nouns to mean “and” or marks a partner in a joint or mutual action, and expresses a condition meaning “whenever / as soon as ...”.",
+    "connection": "「Exact words」 / plain-form sentence (noun / na-adjective + だ) + と + 言う・思う・聞く; noun + と + noun / verb; verb dictionary form / ない form + と (condition)",
     "senses": [
       {
-        "label": "Direct quotation",
-        "meaning": "Quotes someone's exact words, placed inside 「」, like “say, ‘...’”. Keep the original style (です・ます etc.) as it was.",
-        "connection": "「Exact words」 + と + 言う／言いました",
+        "label": "Quotation (direct and indirect)",
+        "meaning": "Reports what someone said. A direct quotation keeps the exact words inside 「」; an indirect quotation turns the content into a plain-form sentence, and 「だ」 is often added after nouns and na-adjectives.",
+        "connection": "「Exact words」 / plain-form sentence (noun / na-adjective + だ) + と + 言う／言っていた",
         "examples": [
           "The teacher said, “There's a test tomorrow.”",
-          "I said “thank you” to my friend."
-        ]
-      },
-      {
-        "label": "Indirect quotation",
-        "meaning": "Reports what someone said in your own words, using the plain form, like “say that ...”. Add 「だ」 after nouns and na-adjectives.",
-        "connection": "Plain-form sentence (noun / na-adjective + だ) + と + 言う／言っていた",
-        "examples": [
           "Mr. Tanaka said he isn't coming tomorrow.",
           "My mother says she likes this shop."
         ]
@@ -226,14 +215,63 @@
           "I wrote “thank you” in the letter.",
           "He answered, “Yes.”"
         ]
+      },
+      {
+        "label": "Listing (and)",
+        "meaning": "Lists nouns one by one: “A and B”. 「と」 gives a complete list: these items and nothing else. It can only join nouns, not verbs or adjectives.",
+        "connection": "Noun + と + noun (+ と + noun)",
+        "examples": [
+          "I bought bread and milk.",
+          "There are a book and a pen on the desk.",
+          "My family is my father, my mother and my younger sister."
+        ]
+      },
+      {
+        "label": "Doing something together",
+        "meaning": "Shows who you do something with: “with”. 「〜と一緒に」 (“together with”) is also common and makes the meaning clearer.",
+        "connection": "Person + と (一緒に) + verb",
+        "examples": [
+          "Yesterday I saw a movie with a friend.",
+          "This weekend I'm traveling with my family.",
+          "I went shopping with my mother."
+        ]
+      },
+      {
+        "label": "Partner in a mutual action",
+        "meaning": "Marks the other person in an action that needs two sides: “marry”, “argue with”, “talk with”. These verbs can't take 「一緒に」.",
+        "connection": "Person + と + 結婚する／話す／会う／けんかする／相談する",
+        "examples": [
+          "I'm getting married to my girlfriend next year.",
+          "Yesterday I talked with my teacher.",
+          "I had a fight with my younger brother."
+        ]
+      },
+      {
+        "label": "Natural result",
+        "meaning": "Once A happens, B always follows. Used for natural laws, operating machines, giving directions, etc. Like “when / whenever ...”.",
+        "connection": "Verb dictionary form / nai-form + と (〜になると・〜を押すと・まっすぐ行くと)",
+        "examples": [
+          "When spring comes, the cherry blossoms bloom.",
+          "If you press this button, water comes out.",
+          "My dad turns on the TV as soon as he gets home."
+        ]
+      },
+      {
+        "label": "Discovery",
+        "meaning": "「〜と、〜た」 means that after doing A, you found B. The second clause is in the past and is often something unexpected.",
+        "connection": "Verb dictionary form + と、〜た (窓を開けると、〜ていた)",
+        "examples": [
+          "When I opened the window, it was snowing.",
+          "When I got home, my mother was there."
+        ]
       }
     ],
     "notes": [
       "In indirect quotes, add 「だ」 after nouns and na-adjectives: ✕「学生と思う」→ ○「学生だと思う」; ✕「静かと言った」→ ○「静かだと言った」.",
-      "「〜と思います」 only expresses the speaker's own thoughts. ✕「田中さんは行くと思います」 is understood as “I think Tanaka will go”. To report what Tanaka himself thinks, say 「田中さんは行こうと思っています」 or 「田中さんは行くと言っていました」.",
       "Quotative 「と」 follows a sentence, while 「と」 meaning “with” follows a person or thing. Mixing them up changes the meaning completely: 「友達と言いました」 is “I said it together with a friend”, but 「友達だと言いました」 is “(he) said (they) were a friend”.",
-      "When passing on your own boss's words to someone outside your company, use humble language: ○「部長は明日伺うと申しておりました」. Raising your own boss with 「おっしゃっていました」 is rude here. When passing on the boss's words to a colleague inside the company, use 「おっしゃっていました」.",
-      "In speech, 「と」 often becomes 「って」 (「行くって言った」). But with superiors or clients, or in formal documents, 「って」 sounds too casual, so use 「と」."
+      "「と」 gives a complete list; to give just a few examples, use 「や」: 「パンと牛乳を買った」 (bought only these two things); 「パンや牛乳を買った」 (bought these and other things).",
+      "The partner in mutual actions like 「結婚する」 or 「けんかする」 takes 「と」, not 「を」: ✕「彼女を結婚します」→ ○「彼女と結婚します」.",
+      "The second clause can't be an intention, wish, command, or request: ✕「駅に着くと、電話してください」→ ○「駅に着いたら、電話してください」; ✕「お金があると、旅行したい」→ ○「お金があったら、旅行したい」."
     ],
     "scenes": {
       "daily": [
@@ -248,9 +286,19 @@
           "example": "I think the last scene was good."
         },
         {
-          "title": "Asking how to say something",
-          "description": "Asking what something is called in Japanese.",
-          "example": "What do you call this in Japanese?"
+          "title": "Weekend chat",
+          "description": "Friends talking about who they went out with.",
+          "example": "On Sunday I went shopping with my older sister."
+        },
+        {
+          "title": "At a convenience store",
+          "description": "Telling the clerk what you want.",
+          "example": "A rice ball and a tea, please."
+        },
+        {
+          "title": "Giving directions",
+          "description": "A local explains the way to a tourist.",
+          "example": "Turn right at the second corner, and you'll see the station."
         }
       ],
       "work": [
@@ -263,210 +311,46 @@
           "title": "Passing on a phone message",
           "description": "Telling your boss what a client said on the phone.",
           "example": "Mr. Yamada called to say he'll be a little late for the meeting."
+        },
+        {
+          "title": "Reporting to your boss",
+          "description": "Telling your boss you discussed something with a client.",
+          "example": "I talked it over with the client yesterday."
+        },
+        {
+          "title": "Instruction manual",
+          "description": "A manual describes what happens when you operate a device.",
+          "example": "When you turn on the power, the lamp lights up."
         }
       ]
     },
-    "etymology": "The quoting 「と」 has the same origin as the 「と」 meaning “and / with”. Since ancient times it has introduced what is said or thought (as in classical 「〜と言ふ」 and 「〜と思ふ」). It is one of the oldest uses in Japanese.",
-    "formation": "The structure is “content + と + a verb such as 言う・思う・聞く・書く”. 「と」 works like quotation marks around the content, marking “this is what was said, thought or written”. That's why what comes before 「と」 can be a whole sentence, even the original words in 「」. The actual action is decided by the verb that follows: with 「言う」 it's saying, with 「思う」 thinking, with 「聞く」 hearing it from someone. 「と」 itself carries no tense or politeness; whether something was said, and to whom, is all carried by the verb after it (「言いました」「思っています」「申しました」). And because 「と」 only marks the content, in an indirect quote the content has to become a plain-form sentence, and nouns and na-adjectives need 「だ」 to form a complete sentence.",
+    "etymology": "「と」 is a case particle already found in Old Japanese. Its core idea is “pairing two things as a set”: it pairs nouns (and, together with), pairs a content with the act of saying or thinking (quotation), and later developed into a conjunctive particle that pairs two clauses (condition).",
+    "formation": "All the senses come from the same idea of tightly pairing what comes before と with what comes after. Noun + と + noun pairs two things (“and”); person + と + verb pairs that person as a partner in the action (together, mutual actions); content + と + 言う・思う pairs the content with the act of saying or thinking, like putting quotation marks around it (quotation); clause + と + clause pairs two events so that B follows automatically once A occurs (condition). To tell them apart, look at what is around 「と」: between nouns it usually means “and”, after a full sentence followed by 言う・思う it is a quotation, and before another clause expressing a natural result it is a condition.",
     "similar": [
-      {
-        "title": "〜と言う (quotation)",
-        "explanation": "Same origin: 「〜と言う」 is quotative 「と」 + 「言う」, and focuses on quoting what someone says. This entry looks at the particle 「と」 itself, which also works with verbs like 「思う・聞く・書く・答える」."
-      },
-      {
-        "title": "〜と思う (I think)",
-        "explanation": "Same origin: 「〜と思う」 is quotative 「と」 + 「思う」, and expresses the speaker's thoughts and judgments. The 「と」 in this entry can also introduce what was said, heard, or written."
-      },
       {
         "title": "〜って (quotation, topic)",
         "explanation": "Close in meaning: 「って」 is the casual spoken form of quotative 「と」, common between friends (「明日休みだって」). In formal situations and in writing, use 「と」."
       },
       {
-        "title": "〜と言っていた (reported speech)",
-        "explanation": "Close in meaning: 「〜と言っていた」 is specifically for passing on to a third person what someone said (“he said that…”). 「〜と言いました」 just describes the act of saying, so for reporting, 「言っていた」 sounds more natural."
-      }
-    ]
-  },
-  {
-    "id": "verb-noun-modification",
-    "title": "〜 verb + noun (verbs describing nouns: relative clauses)",
-    "meaning": "Put a verb's plain form right before a noun to describe it. It works like an English relative clause (“the book that I bought”), but the clause comes before the noun.",
-    "connection": "Verb plain form (dictionary form / た-form / ている-form / ない-form) + noun",
-    "senses": [
-      {
-        "label": "Dictionary form",
-        "meaning": "Describes a habit, something planned, or a general fact, like “the ... that (will) do”. The verb links straight to the noun with no 「の」 in between.",
-        "connection": "Verb dictionary form + noun (人・所・時・日 etc.)",
-        "examples": [
-          "I bought the milk I drink every morning.",
-          "Who is the person going to Japan?"
-        ]
+        "title": "〜や〜など",
+        "explanation": "Both list things with “and” and are close in meaning: 「と」 gives a complete list (only these); 「や」 gives a partial list (a few examples, there are others)."
       },
       {
-        "label": "た-form",
-        "meaning": "Describes something that happened in the past, or a state left after an action, like “the ... that did”.",
-        "connection": "Verb た-form + noun",
-        "examples": [
-          "This is the book I bought yesterday.",
-          "The person wearing glasses is the teacher."
-        ]
+        "title": "〜ば (hypothetical)",
+        "explanation": "Both are conditionals. 「ば」 focuses on the condition itself (“as long as ..., then ...”), and when both clauses share a subject, the second can be an intention or wish (「時間があれば、行きたい」). 「と」 focuses on an inevitable result, and its second clause can't be volitional."
       },
       {
-        "label": "ている-form",
-        "meaning": "Describes an action in progress or an ongoing state, like “the ... that is doing”.",
-        "connection": "Verb ている-form + noun",
-        "examples": [
-          "The person reading a newspaper over there is Mr. Tanaka.",
-          "The town I live in is quiet."
-        ]
+        "title": "〜たら",
+        "explanation": "「たら」 has the widest range, and its second clause can be a request or intention (「着いたら電話して」). 「と」 is limited to natural laws, operating machines, habits, and “discoveries”. In everyday conversation, 「たら」 is the safest choice when unsure."
       },
       {
-        "label": "ない-form",
-        "meaning": "Describes something negative, like “the ... that doesn't”.",
-        "connection": "Verb ない-form + noun",
-        "examples": [
-          "I look up words I don't know in the dictionary.",
-          "Please call the people who didn't come."
-        ]
-      }
-    ],
-    "notes": [
-      "Don't put 「の」 between a verb and a noun, even if 「の」 feels like “of” or “'s”: ✕「私が買ったの本」→ ○「私が買った本」 (the book I bought). This is one of the most common learner mistakes.",
-      "Inside a clause that modifies a noun, the subject takes 「が」 (or 「の」), not 「は」: ✕「私は作った料理を食べてください」 gets garbled into something like “As for me… please eat the cooked food” → ○「私が作った料理を食べてください」.",
-      "Use the plain form, not the masu-form, to modify a noun: ✕「昨日買いました本」→ ○「昨日買った本」. Even in a polite sentence, 「です・ます」 only appears at the very end.",
-      "Mixing up the dictionary form and the ta-form changes the meaning completely: 「日本へ行く人」 is “a person who is going to Japan”, 「日本へ行った人」 is “a person who has been to Japan”; 「結婚する人」 is “a person who is getting married”, 「結婚した人」 is “a married person”."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "Looking for someone",
-          "description": "Describing a person to a friend in a crowd.",
-          "example": "The person wearing red clothes over there is my younger sister."
-        },
-        {
-          "title": "Showing something",
-          "description": "Showing a friend a souvenir you bought on a trip.",
-          "example": "This is a souvenir I bought in Kyoto."
-        },
-        {
-          "title": "Finding a place",
-          "description": "Talking with a friend about where to eat.",
-          "example": "Do you know a place where you can eat cheap, tasty food?"
-        }
-      ],
-      "work": [
-        {
-          "title": "Checking meeting materials",
-          "description": "Asking a coworker where the materials for a meeting are.",
-          "example": "Where are the materials for tomorrow's meeting?"
-        },
-        {
-          "title": "Introducing the person in charge",
-          "description": "Introducing yourself to a client as the person handling a project.",
-          "example": "I'm Sato, in charge of this project."
-        }
-      ]
-    },
-    "etymology": "In classical Japanese, verbs had two separate forms: the conclusive form (shūshikei) to end a sentence, and the attributive form (rentaikei) to describe nouns. In modern Japanese the two merged, so the plain form can now describe a noun directly.",
-    "formation": "In Japanese, modifiers always come before the noun they describe: modifier first, main noun last. This is the opposite of English, where a relative clause follows the noun (“the book that I bought”). On top of that, the plain form of a Japanese verb can modify a noun directly, with no linking word like “that / which / who” and no 「の」, so it's simply 「買った本」. The verb enters the clause with its own form: the dictionary form shows a habit or something about to happen, the ta-form something that has happened, the te-iru form something ongoing or continuing, and the nai-form a negative. So “the book I'll buy / I bought / I'm buying / I didn't buy” are told apart only by the verb form. The subject inside the clause takes 「が」, not 「は」, because 「は」 marks the topic of the whole sentence and can't reach inside a relative clause. The whole “clause + noun” works as one noun in the sentence, so it can be followed by 「は・を・に」 and other particles as usual.",
-    "similar": [
-      {
-        "title": "〜 (verb plain form) + noun (relative clause)",
-        "explanation": "Close in meaning: both cover the same kind of structure. That entry starts from the general rules of noun modification; this one sorts out the differences in meaning by verb form (dictionary form, ta-form, te-iru form, nai-form)."
-      },
-      {
-        "title": "〜 (plain-form clause) + noun (noun modification)",
-        "explanation": "Close in meaning: that entry widens the scope to any plain-form clause modifying a noun, including adjective and noun sentences, with forms like 「静かな」 and 「学生だった」. This entry covers verbs only."
-      },
-      {
-        "title": "〜の (replacing が in a relative clause)",
-        "explanation": "Another way to say the same thing: the subject 「が」 in a relative clause can be replaced with 「の」: 「私が買った本」 = 「私の買った本」. 「の」 sounds slightly more written and softer."
-      }
-    ]
-  },
-  {
-    "id": "ga-no-swap",
-    "title": "〜の (replacing が in a relative clause)",
-    "meaning": "In a clause that describes a noun, the subject marker 「が」 can be replaced with 「の」. The meaning stays the same.",
-    "connection": "Noun + の + plain-form verb / adjective + noun",
-    "senses": [
-      {
-        "label": "Verb clauses",
-        "meaning": "「の」 marks the subject (the doer) of the clause. 「母の作った料理」＝「母が作った料理」. It sounds a little more literary and gentle.",
-        "connection": "Noun + の + verb plain form + noun",
-        "examples": [
-          "The food my mother makes is delicious.",
-          "This is the town where I was born.",
-          "On rainy days, I stay home."
-        ]
-      },
-      {
-        "label": "Adjective clauses",
-        "meaning": "When describing a person or thing, 「〜が + adjective + noun」 is often said as 「〜の + adjective + noun」. Many of these are set expressions.",
-        "connection": "Noun + の + i-adjective / na-adjective + noun",
-        "examples": [
-          "The tall person is my older brother.",
-          "Did you see a girl with long hair?"
-        ]
-      }
-    ],
-    "notes": [
-      "「が」 can become 「の」 only inside a clause that modifies a noun. The subject of the main sentence can't be changed: ✕「母の料理を作った」 turns into “(someone) cooked Mom's dish” → ○「母が料理を作った」.",
-      "「私の好きな人」 means “the person I like”, not “the person who likes me”. The latter is 「私のことが好きな人」. Mixing up 「の」 and 「を」 completely reverses who likes whom.",
-      "In 「田中さんの描いた絵」, 「の」 marks the subject (the picture Tanaka painted), not ownership (a picture Tanaka owns). Don't translate it as “Tanaka's picture” and lose the idea of who painted it.",
-      "If the clause also has a 「を」 object, 「が」 usually can't become 「の」: ✕「母の子どもにご飯を作った日」→ ○「母が子どもにご飯を作った日」."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "Talking about your hometown",
-          "description": "Telling a friend about the place where you grew up.",
-          "example": "This is the town where I grew up."
-        },
-        {
-          "title": "Describing someone's looks",
-          "description": "Describing what a person looks like to a friend.",
-          "example": "The girl with big eyes is my younger sister."
-        },
-        {
-          "title": "Reading novels",
-          "description": "Novels and song lyrics often use the literary 「〜の + verb + noun」.",
-          "example": "I want to go to the town where you live."
-        }
-      ],
-      "work": [
-        {
-          "title": "Citing a document",
-          "description": "Saying who wrote a document.",
-          "example": "This is the report the department manager wrote."
-        },
-        {
-          "title": "Presenting products",
-          "description": "Presenting products customers chose at a product briefing.",
-          "example": "Let me introduce the products our customers chose."
-        }
-      ]
-    },
-    "etymology": "In classical Japanese, both 「の」 and 「が」 could mark the subject, and both could show possession. In modern Japanese, 「が」 mainly marks the subject, but the old subject use of 「の」 survives in clauses that describe nouns.",
-    "formation": "The most basic job of 「の」 is linking two nouns (AのB). In “noun + の + verb/adjective + noun”, the “verb + noun” part is treated as one big noun, so the noun in front can hook onto it with 「の」: 「母の｜作った料理」, literally “Mom's | cooked dish”, understood as “the dish Mom cooked”. So this 「の」 needs a noun after it to catch it: it appears only in clauses that modify nouns, never at the end of a sentence. In classical Japanese, 「の」 could mark the subject in general; in modern Japanese, this use survives only in relative clauses. When the clause also contains a 「を」 object, the structure is generally thought to become too complex for 「の」 to reach across to the noun, so 「が」 is used instead.",
-    "similar": [
-      {
-        "title": "〜が (subject)",
-        "explanation": "Close in meaning: both mark the subject. 「が」 works in any sentence; 「の」 can replace 「が」 only inside a clause that modifies a noun, and sounds slightly more written and softer."
-      },
-      {
-        "title": "〜の (possession / modification)",
-        "explanation": "Same origin: the 「の」 here is the same 「の」 that links nouns. 「私の本」 shows ownership (my book); 「私の買った本」 shows the subject (the book I bought). Check whether a noun or a verb/adjective comes right after 「の」."
-      },
-      {
-        "title": "〜 verb + noun (verbs describing nouns: relative clauses)",
-        "explanation": "Same meaning, same structure: a verb modifying a noun is the overall pattern, and the subject inside the clause usually takes 「が」. This entry covers the variant where the subject takes 「の」 instead; the meaning doesn't change."
+        "title": "〜なら",
+        "explanation": "「なら」 picks up the other person's topic and gives advice (「京都へ行くなら、新幹線がいい」), with no time sequence between the clauses. 「と」 means the second event follows as soon as the first one happens."
       }
     ]
   },
   {
     "id": "no-mae-position",
-    "title": "〜の前・〜の上・〜の中 (position words)",
     "meaning": "Use “noun + の + position word” to say where something is: on the desk, in front of the station, inside the box.",
     "connection": "Noun + の + 前・上・中・下・横・隣 etc. + に／で／を",
     "senses": [
@@ -560,7 +444,6 @@
   },
   {
     "id": "particle-omission",
-    "title": "〜 dropping particles (casual speech)",
     "meaning": "In everyday conversation, particles like 「は」, 「を」, 「が」, and 「へ・に」 are often dropped. This makes speech sound casual and friendly.",
     "connection": "Noun (は・を・が・へ dropped) + predicate (mostly casual, plain form)",
     "senses": [

@@ -93,7 +93,6 @@
   },
   {
     "id": "ni-kai-frequency",
-    "title": "〜に〜回 (frecuencia)",
     "meaning": "Indica cuántas veces se hace algo en un periodo de tiempo, es decir, la frecuencia: “... veces al día / a la semana”.",
     "connection": "Sustantivo de periodo + に + número + 回／度",
     "senses": [
@@ -380,7 +379,6 @@
   },
   {
     "id": "kosoado-determiners",
-    "title": "〜この・その・あの・どの + sustantivo",
     "meaning": "Palabras que van delante de un sustantivo para indicar de cuál se trata: “este ...”, “ese ...”, “aquel ...”, “¿qué ...?”.",
     "connection": "この／その／あの／どの + sustantivo",
     "senses": [
@@ -572,9 +570,8 @@
   },
   {
     "id": "kara-from",
-    "title": "〜から (punto de partida)",
-    "meaning": "Va detrás de un sustantivo e indica el punto de partida en el tiempo o en el espacio, o el origen de una acción o información: “desde ...”, “de ...”.",
-    "connection": "Sustantivo + から",
+    "meaning": "Tras un sustantivo indica el punto de partida en el tiempo o el lugar, el origen de una acción o información, o el lugar por donde se pasa («desde …, de …»); tras una oración da una razón que el hablante plantea de forma subjetiva («porque …, así que …»).",
+    "connection": "Sustantivo + から (punto de partida, origen, paso); verbo / adjetivo (forma simple o cortés) + から; sustantivo / adjetivo na + だから (causa, razón)",
     "senses": [
       {
         "label": "Inicio en el tiempo",
@@ -611,13 +608,42 @@
           "Un gato entró por la ventana.",
           "Entre por esta entrada, por favor."
         ]
+      },
+      {
+        "label": "Dar un motivo",
+        "meaning": "Explica en qué se basa un juicio, una decisión o una petición propia. La oración principal puede ser una orden, una petición o una intención; en esto es más libre que「ので」.",
+        "connection": "Verbo / adjetivo-い (forma llana) + から; sustantivo / adjetivo-な + だから",
+        "examples": [
+          "No hay tiempo, así que dese prisa.",
+          "Hoy estoy cansado, así que me acuesto temprano.",
+          "Como llueve, no quiero salir."
+        ]
+      },
+      {
+        "label": "La causa al final",
+        "meaning": "「〜からだ／〜からです」al final de la oración explica la causa a posteriori. Es típica la estructura「〜のは〜からだ」. Para responder a「どうして」basta con dar el motivo.",
+        "connection": "Forma llana + からだ／からです",
+        "examples": [
+          "Llegué tarde porque se paró el tren.",
+          "—¿Por qué faltaste? —Porque tenía fiebre."
+        ]
+      },
+      {
+        "label": "Forma cortés + から",
+        "meaning": "Con「〜ますから」o「〜ですから」suena más educado. Es frecuente al explicar algo a clientes o a personas mayores.",
+        "connection": "Forma ます / です + から",
+        "examples": [
+          "Mañana es día libre, así que descanse bien.",
+          "Vuelvo enseguida; espere aquí, por favor."
+        ]
       }
     ],
     "notes": [
       "Forma て del verbo + 「から」 significa «después de ...», pero forma simple + 「から」 significa «porque»: son totalmente distintos. 「食べてから行く」 = voy después de comer; 「食べるから行く」 = voy porque voy a comer.",
       "Con algunos verbos, el lugar del que se sale solo admite 「を」: ✕「大学から卒業する」→ ○「大学を卒業する」.",
       "Para un intervalo, combina 「から」 con 「まで」: ✕「九時から五時に働く」→ ○「九時から五時まで働く」.",
-      "En avisos y comunicados, el punto de partida suele escribirse con 「より」: 「九時より開始」 significa lo mismo que 「九時から始まる」."
+      "「から」 lleva la afirmación subjetiva del hablante. Usarlo para explicar a un superior o a un cliente un retraso o una ausencia suena a insistir en que tienes razón o a buscar excusas; usa 「ので」: ✕「電車が遅れたから、遅刻しました」 → ○「電車が遅れたので、遅刻してしまいました」.",
+      "Tras sustantivos y adjetivos な hay que añadir 「だ」: ○「雨だから」, no ✕「雨から」. Con 「ので」 es 「雨なので」; no confundas ambos."
     ],
     "scenes": {
       "daily": [
@@ -635,6 +661,16 @@
           "title": "Un regalo",
           "description": "Le cuentas a un amigo quién te regaló algo.",
           "example": "Este es un suéter que me regaló mi abuela."
+        },
+        {
+          "title": "Planear el fin de semana en familia",
+          "description": "Dar un motivo y hacer una propuesta.",
+          "example": "Hoy llueve, así que veamos una película en casa."
+        },
+        {
+          "title": "Advertir a un niño",
+          "description": "Seguido de una orden,「から」resulta muy natural.",
+          "example": "¡Es peligroso, no lo toques!"
         }
       ],
       "work": [
@@ -647,34 +683,48 @@
           "title": "Transmitir un aviso",
           "description": "Informas a tu jefe de que ha llamado un cliente.",
           "example": "Hace un momento llamaron de la empresa A."
+        },
+        {
+          "title": "Pedir a un compañero que prepare algo",
+          "description": "Explicar el motivo y pedir algo a un igual o subordinado.",
+          "example": "Ya casi llegan los clientes, así que deja lista la sala de reuniones."
+        },
+        {
+          "title": "El profesor aconseja a los alumnos",
+          "description": "Dar el motivo en forma cortés.",
+          "example": "Mañana hay examen, así que acuéstense temprano, ¿eh?"
         }
       ]
     },
-    "etymology": "Se suele relacionar 「から」 con la palabra antigua 「から（柄）」, ligada a las ideas de “paso” y “causa”. En japonés antiguo, 「から」 marcaba sobre todo el lugar por donde se pasaba; luego pasó a marcar el punto de partida y, más tarde, la causa (“porque”).",
-    "formation": "「から」 es una partícula de caso de punto de partida; tras un sustantivo significa «tomando esto como punto de salida». El punto de partida puede ser espacial (「駅から」) o temporal (「九時から」). Yendo más allá, si algo viene de una persona, indica el origen (「母から」); si se entra por una abertura como una ventana, indica el lugar de paso (「窓から」). El núcleo de todos los usos es «partiendo de ...»; el 「から」 de causa tras una oración también es una extensión: «partiendo de esta razón».",
+    "etymology": "「から」 era originalmente una partícula de caso que indicaba punto de partida o trayecto («desde …»). Se cree que está relacionada con la palabra antigua 「柄（から）」, que significaba «por medio de, naturaleza, causa». En japonés antiguo marcaba sobre todo el lugar por donde se pasa, luego se extendió al punto de partida y de ahí a la partícula conjuntiva de causa, que se generalizó a partir de la época medieval.",
+    "formation": "El núcleo es «partiendo de …». Tras un sustantivo, el punto de partida puede ser un tiempo (「九時から」), un lugar (「駅から」) o un origen (「母から」); entrar por una abertura como una ventana da el lugar de paso (「窓から」). Tras una oración, tomar un hecho como punto de partida de otro da una causa: 「時間がないから急ぐ」 = partiendo de «no hay tiempo», concluyo «me daré prisa». Como este punto de partida lo fija el hablante, suena subjetivo y puede seguirse directamente de órdenes, peticiones o decisiones; por eso también es menos cortés que 「ので」, que presenta la causa como un hecho objetivo.",
     "similar": [
       {
         "title": "〜より (punto de partida / escrito)",
         "explanation": "「より」 también marca el punto de partida, pero solo en lengua escrita, como avisos y cartas: 「会議は十時より行います」. En la conversación diaria se usa siempre 「から」."
       },
       {
-        "title": "〜を (recorrido / salida)",
-        "explanation": "El 「を」 de 「家を出る」 se fija en «salir de» un lugar; el 「から」 de 「家から出る」 se fija en el punto desde el que se sale de dentro. Expresiones como 「大学を卒業する」 o 「電車を降りる」 usan 「を」 por costumbre."
-      },
-      {
-        "title": "〜から (causa / razón)",
-        "explanation": "Es el mismo 「から」: tras un sustantivo marca el punto de partida (「駅から」) y tras una oración indica la razón (「雨だから」「寒いから」). «Partir de una causa para llegar a un resultado» puede verse como una extensión del sentido de punto de partida."
-      },
-      {
         "title": "〜から〜まで",
         "explanation": "「から」 combinado con 「まで」 marca el inicio y el final de un intervalo: 「九時から五時まで」「東京から大阪まで」."
+      },
+      {
+        "title": "〜ので",
+        "explanation": "Ambos expresan causa. 「から」 es subjetivo y puede ir seguido directamente de órdenes o intenciones; 「ので」 es objetivo y suave, y es el preferido para dar razones en situaciones corteses."
+      },
+      {
+        "title": "〜のだから・〜んだから",
+        "explanation": "Forma enfática del mismo origen: presenta la razón como un hecho que ambos ya conocen, «ya que..., deberías...», a menudo con tono de reproche o de persuasión (「子どもじゃないんだから、自分でやりなさい」)."
+      },
+      {
+        "title": "〜からこそ",
+        "explanation": "Mismo origen: con 「こそ」 se subraya «precisamente porque...», destacando que esa es la verdadera razón (「好きだからこそ厳しく言う」)."
       }
     ]
   },
   {
     "id": "ja-nakute",
-    "meaning": "Niega la primera parte y afirma la segunda: “no A, sino B”. Se usa para corregir o aclarar.",
-    "connection": "Sustantivo + じゃなくて／ではなくて／ではなく + sustantivo (だ)",
+    "meaning": "Niega el primer elemento y afirma el segundo: «no A, sino B», para corregir un malentendido o explicar la situación real; 「じゃなくて」 es coloquial y 「ではなくて」 / 「ではなく」 son escritos.",
+    "connection": "Sustantivo / raíz de adjetivo な + じゃなくて / ではなくて / ではなく / でなく + sustantivo (だ); verbo / adjetivo い en forma simple + の (ん) + ではなく / じゃなくて",
     "senses": [
       {
         "label": "No A, sino B (coloquial)",
@@ -703,13 +753,23 @@
           "No lo memorices: entiéndelo.",
           "No estoy molesto, estoy preocupado por ti."
         ]
+      },
+      {
+        "label": "Forma escrita abreviada (でなく)",
+        "meaning": "Los verbos y adjetivos usan 「のではなく」. En lengua escrita se puede quitar 「は」 y decir 「でなく」.",
+        "connection": "Forma simple + のではなく; sustantivo + でなく",
+        "examples": [
+          "En lugar de huir, deberías enfrentarte al problema.",
+          "Lo importante no es el resultado, sino el proceso."
+        ]
       }
     ],
     "notes": [
       "Lo importante es la segunda parte, B: 「コーヒーじゃなくて、お茶」 = lo que quiero es té. Si inviertes A y B, dices justo lo contrario.",
       "「だけじゃなくて」 significa «no solo ..., sino también ...». Sin 「だけ」 pasa a ser «no ..., sino ...»: 「英語だけじゃなくて中国語も話せる」 ≠ 「英語じゃなくて中国語を話せる」.",
       "Con verbos y adjetivos い, añade 「の／ん」: ✕「覚えるじゃなくて」→ ○「覚えるんじゃなくて」; ✕「高いじゃなくて」→ ○「高いんじゃなくて」.",
-      "Corregir a tu jefe o a un cliente con un 「〜じゃなくて」 directo suena brusco, como si le llevaras la contraria. Mejor di 「恐れ入りますが、〜ではなく〜です」."
+      "Corregir a tu jefe o a un cliente con un 「〜じゃなくて」 directo suena brusco, como si le llevaras la contraria. Mejor di 「恐れ入りますが、〜ではなく〜です」.",
+      "「ではなくても」 y 「でなくてもいい」 significan “aunque no sea ...”, que no es esta gramática."
     ],
     "scenes": {
       "daily": [
@@ -727,6 +787,11 @@
           "title": "Hora equivocada",
           "description": "Tu amigo se confundió con la hora de la cita y lo corriges.",
           "example": "No es a las tres, es a las cuatro."
+        },
+        {
+          "title": "Aclarar un malentendido",
+          "description": "Explicar a un amigo lo que pasa de verdad.",
+          "example": "No estoy molesto, solo un poco cansado."
         }
       ],
       "work": [
@@ -739,16 +804,22 @@
           "title": "Explicar el enfoque",
           "description": "Un jefe explica al equipo lo más importante del trabajo.",
           "example": "Lo importante no es la cantidad, sino la calidad."
+        },
+        {
+          "title": "Intervención en una reunión",
+          "description": "Subrayar el verdadero objetivo.",
+          "example": "Lo que buscamos no es aumentar las ventas, sino mejorar la satisfacción del cliente."
+        },
+        {
+          "title": "Informe",
+          "description": "Explicar la causa de un problema.",
+          "example": "La causa no está en un error individual, sino en un fallo del sistema."
         }
       ]
     },
-    "etymology": "Viene de 「ではない」, la negación de 「だ」, puesta en forma て (「ではなくて」) para unir dos partes. En el habla, 「では」 se contrae en 「じゃ」, y en la escritura se suele omitir la 「て」: 「ではなく」.",
-    "formation": "Se compone de 「で」 (forma conjuntiva de la cópula 「だ」) + 「は」 (tema, contraste) + 「なく」 (forma conjuntiva de 「ない」) + 「て」 (enlace). 「ではない」 es «no es»; al pasar a la forma de enlace 「ではなくて」, la oración no termina ahí sino que continúa, y se obtiene la estructura «negar A y luego dar B». 「は」 aporta por sí mismo un matiz de contraste («A no, hay otra cosa»), así que a continuación aparece de forma natural el B correcto. En la lengua hablada 「では」 se contrae en 「じゃ」; en la escrita se suele omitir 「て」 y se escribe 「ではなく」.",
+    "etymology": "Se compone de la forma continuativa 「で」 de la cópula 「だ」, la partícula de tema/contraste 「は」 y la forma continuativa 「なく」 de 「ない」 (+ 「て」), es decir, la forma de pausa de 「ではない」. 「では」 se contrae en 「じゃ」 en la lengua hablada; por escrito suele omitirse 「て」 (「ではなく」) y, en un estilo aún más formal, también 「は」 (「でなく」).",
+    "formation": "Se construye con 「で」 (forma continuativa de la cópula 「だ」) + 「は」 (tema/contraste) + 「なく」 (continuativa de 「ない」) + 「て」 (conexión). 「Aではない」 es «no es A»; al cambiar el 「ない」 final por la continuativa 「なく（て）」, la oración no termina ahí sino que continúa, y se forma la estructura «primero se niega A, luego se da B». 「は」 aporta contraste e insinúa «A no es; hay otra cosa», así que lo correcto B aparece de forma natural: de ahí viene el sentido de «corrección». 「じゃ」 es la contracción hablada de 「では」; 「ではなく」 omite 「て」 y 「でなく」 omite además 「は」, cada vez más formal, lo que explica la división entre registro hablado y escrito entre los sentidos. Con verbos y adjetivos い, 「の（ん）」 los convierte primero en una unidad nominal, que entra en el mismo marco «no A, sino B» (「覚えるのではなく、理解する」).",
     "similar": [
-      {
-        "title": "〜ではなく（て）・〜じゃなくて",
-        "explanation": "Es prácticamente el mismo patrón; esa entrada se centra en el escrito 「ではなく」. En textos formales y discursos se usa sobre todo 「AではなくB」, y en la conversación diaria, 「AじゃなくてB」."
-      },
       {
         "title": "〜じゃない・〜ではありません",
         "explanation": "Mismo origen: 「じゃない」 es la forma hablada de 「ではない」. 「〜じゃない」 solo dice «no es A» y cierra la oración; 「〜じゃなくて」 niega A y luego añade el B correcto."
@@ -760,12 +831,15 @@
       {
         "title": "〜というより",
         "explanation": "「AというよりB」 significa «más que A, B»: no niega del todo A, solo considera que B es más adecuado. 「AじゃなくてB」 niega A con claridad."
+      },
+      {
+        "title": "〜代わりに",
+        "explanation": "「代わりに」 significa usar B “en lugar de” A, y A no es necesariamente erróneo (「肉の代わりに豆腐を使う」). 「ではなく」 corrige, así que A mismo se niega."
       }
     ]
   },
   {
     "id": "to-omou",
-    "title": "〜と思う (creo que)",
     "meaning": "Expresa lo que piensa, opina o supone el hablante: “creo que ...”, “pienso que ...”.",
     "connection": "Forma simple + と思う (sustantivo / adjetivo な + だと思う)",
     "senses": [
@@ -859,7 +933,6 @@
   },
   {
     "id": "to-iu-quote",
-    "title": "〜と言う (cita)",
     "meaning": "Sirve para contar lo que dijo alguien o para decir cómo se llama algo: “decir ...”, “llamarse ...”.",
     "connection": "「Cita」／forma simple + と言う",
     "senses": [
@@ -952,7 +1025,6 @@
   },
   {
     "id": "wa-yori-comparison",
-    "title": "〜は〜より〜 (comparación)",
     "meaning": "Toma B como referencia y dice que A es más en algún aspecto: “A es más ... que B”.",
     "connection": "Sustantivo A + は + sustantivo B + より + adjetivo / verbo",
     "senses": [
@@ -1045,9 +1117,8 @@
   },
   {
     "id": "naa-exclamation",
-    "title": "〜なあ・〜な (exclamación)",
-    "meaning": "Va al final de la oración y expresa la emoción, la reflexión o el deseo del hablante. Suele decirse para uno mismo.",
-    "connection": "Forma simple + なあ／な (sustantivo / adjetivo な + だなあ)",
+    "meaning": "「な」 al final de la oración tiene dos usos muy distintos: tras una oración en forma simple (「なあ」 si se alarga) expresa exclamación, deseo o nostalgia del hablante, casi siempre para sí mismo; tras un verbo en forma de diccionario es una prohibición brusca: «no...».",
+    "connection": "Forma simple + なあ／な (sustantivo・adjetivo na + だなあ); verbo en forma de diccionario + な (prohibición)",
     "senses": [
       {
         "label": "Exclamación",
@@ -1076,13 +1147,42 @@
           "¡Qué bien lo pasaba cuando era estudiante!",
           "Aquel viaje estuvo genial."
         ]
+      },
+      {
+        "label": "Prohibición fuerte",
+        "meaning": "Prohíbe algo directamente. Es brusco y enérgico; lo usan sobre todo hombres con personas menores o en emergencias.",
+        "connection": "Forma de diccionario + な (行くな, 触るな, するな, 来るな)",
+        "examples": [
+          "¡No lo toques, es peligroso!",
+          "Prohibido fumar aquí.",
+          "¡No vuelvas nunca más!"
+        ]
+      },
+      {
+        "label": "Ánimo y consuelo",
+        "meaning": "En frases como 「心配するな」, 「負けるな」, 「泣くな」 sirve para animar o consolar, con un tono cálido pero firme.",
+        "connection": "心配するな, 負けるな, 泣くな, 気にするな, 諦めるな",
+        "examples": [
+          "No te preocupes. Todo se arreglará.",
+          "¡No te rindas! ¡Aguanta hasta el final!"
+        ]
+      },
+      {
+        "label": "Carteles y citas",
+        "meaning": "Se usa en carteles y avisos (sin dirigirse a nadie en particular), o como 「〜なと言われた」 para citar una prohibición ajena.",
+        "connection": "Forma de diccionario + な (carteles); forma de diccionario + なと言う／なと言われた",
+        "examples": [
+          "No pisar el césped.",
+          "El médico me dijo que no tomara alcohol."
+        ]
       }
     ],
     "notes": [
       "「なあ」 y 「な」 son exclamaciones como para uno mismo; decírselas directamente a un jefe o a un invitado suena informal y descortés: ✕「部長、これおいしいなあ」→ ○「おいしいですね」.",
       "Forma de diccionario del verbo + 「な」 es una prohibición (「行くな」 = ¡no vayas!) y suena muy brusca. Para exclamar, los verbos suelen ir en 「〜たい」, en forma た o en forma ない: 「行きたいなあ」.",
       "Los sustantivos y adjetivos な necesitan 「だ」: ✕「きれいなあ」→ ○「きれいだなあ」.",
-      "Decir 「〜ほしいなあ」 o 「〜食べたいなあ」 delante de otros suele entenderse como una indirecta para que te lo den; en el momento equivocado parece una frescura."
+      "Es brusco y muy descortés con superiores, mayores, invitados o desconocidos. La forma cortés es 「〜ないでください」, y entre conocidos 「〜ないで」: ✕ (a un invitado)「触るな」→ ○「触らないでください」.",
+      "Un 「な」 al final de la frase también puede ser exclamativo: 「よく食べるな」 es «¡cuánto come!», no «no comas». El 「な」 de prohibición suena corto y enérgico; el exclamativo también va tras adjetivos y 「だ」, y a menudo se alarga en 「なあ」."
     ],
     "scenes": {
       "daily": [
@@ -1092,14 +1192,24 @@
           "example": "¡Guau, qué bonito es el monte Fuji!"
         },
         {
-          "title": "Lunes por la mañana",
-          "description": "Te levantas el lunes sin ganas de ir a trabajar.",
-          "example": "Ay, cómo me gustaría dormir un poco más."
-        },
-        {
           "title": "Envidia de un amigo",
           "description": "Un amigo dice que se va de viaje y te da envidia.",
           "example": "¿Hawái? ¡Qué suerte!"
+        },
+        {
+          "title": "Cuando a un amigo lo dejan",
+          "description": "Consuelas a un amigo que está triste.",
+          "example": "No te deprimas tanto."
+        },
+        {
+          "title": "Padre a hijo",
+          "description": "Un padre le prohíbe con firmeza acercarse a un lugar peligroso.",
+          "example": "No te acerques al río."
+        },
+        {
+          "title": "Leer un cartel",
+          "description": "Carteles de prohibición en parques u obras.",
+          "example": "¡Peligro! Prohibido el paso."
         }
       ],
       "work": [
@@ -1109,14 +1219,19 @@
           "example": "¡Qué día tan ajetreado!"
         },
         {
-          "title": "Leyendo una novela",
-          "description": "En las novelas, los pensamientos de los personajes suelen usar 「なあ」.",
-          "example": "¡Cómo me gustaría volver a aquel pueblo una vez más!"
+          "title": "Normas de seguridad",
+          "description": "Un cartel de seguridad en una fábrica.",
+          "example": "No toque las máquinas en funcionamiento."
+        },
+        {
+          "title": "Transmitir una orden del jefe",
+          "description": "Le dices a un compañero lo que el jefe prohibió.",
+          "example": "El gerente me dijo que estos documentos no salgan de la oficina."
         }
       ]
     },
-    "etymology": "「な」 es una partícula final antigua de exclamación. 「なあ」 es 「な」 alargado para reforzar la emoción. Se considera de la misma familia que las partículas exclamativas antiguas 「な」 y 「かな」.",
-    "formation": "Se forma con una oración en forma simple más la partícula final 「な」; 「なあ」 es 「な」 alargado. 「な」 ya expresa exclamación, y alargarlo en 「なあ」 muestra la emoción más abiertamente. Como es una exclamación sobre lo que uno siente y no necesita respuesta, se usa sobre todo al hablar solo. Tras 「〜たい」 se convierte en exclamación de deseo («¡cuánto me gustaría ...!»), y tras el pasado, en nostalgia («¡qué tiempos aquellos!»).",
+    "etymology": "La 「な」 exclamativa es una antigua partícula final, y 「なあ」 es 「な」 alargada para reforzar el sentimiento; se considera de la misma línea que las partículas clásicas 「な」 y 「かな」. La 「な」 prohibitiva también es una partícula final clásica; el japonés clásico usaba a menudo la forma 「な〜そ」 (な行きそ = no vayas), que luego se redujo a 「〜な」 al final de la oración.",
+    "formation": "Ambas son la partícula final 「な」 al final de la oración, pero lo que la precede es distinto. Añadida a una afirmación en forma simple, expresa el sentimiento del hablante; alargada en 「なあ」, el sentimiento se nota más. No necesita respuesta del oyente, por lo que se usa sobre todo como monólogo; tras 「〜たい」 pasa a ser un deseo («cómo me gustaría...») y tras la forma pasada, una nostalgia («qué bien lo pasábamos»). Unida directamente a un verbo en forma de diccionario, dice «no» a toda la acción sin ningún amortiguador, de ahí su tono seco y fuerte: una prohibición. No tiene relación con la negación 「ない」 y el verbo queda en afirmativo, que es donde más se equivocan los estudiantes. Ambos usos giran en torno al hablante y son coloquiales, por lo que son arriesgados con superiores.",
     "similar": [
       {
         "title": "〜ね",
@@ -1127,16 +1242,23 @@
         "explanation": "Mismo origen: 「かな」 combina el 「か」 interrogativo con el 「な」 exclamativo y expresa duda o una pregunta a uno mismo: 「明日は晴れるかな」. 「なあ」 en sí es exclamación o deseo."
       },
       {
-        "title": "〜ものだ (lo normal / sentimiento)",
-        "explanation": "「〜ものだ」 también puede expresar un sentimiento: 「時間がたつのは早いものだ」, una exclamación general del tipo «así son las cosas». 「なあ」 es una exclamación directa ante lo que tienes delante; a menudo se combinan en 「ものだなあ」."
+        "title": "〜ないでください",
+        "explanation": "Significado parecido: ambos significan «no ...». 「〜ないでください」 es una petición cortés válida con cualquiera; 「〜な」 es una prohibición directa y grosera."
+      },
+      {
+        "title": "〜てはいけない",
+        "explanation": "Significado parecido: ambos expresan prohibición. 「〜てはいけない」 explica una norma («no se puede ...») y es más objetivo; 「〜な」 es el hablante prohibiendo directamente, y es más fuerte."
+      },
+      {
+        "title": "〜てくれと言う・〜なと言う (órdenes en estilo indirecto)",
+        "explanation": "Significado parecido: 「〜なと言う」 simplemente mete el 「な」 de prohibición dentro de una cita: 「医者に飲むなと言われた」 (el médico me dijo que no bebiera). Para transmitirlo con cortesía se puede decir 「飲まないように言われた」."
       }
     ]
   },
   {
     "id": "noun-modifying-clause",
-    "title": "〜(forma simple del verbo) + sustantivo (oración de relativo)",
-    "meaning": "Se pone un verbo en forma simple justo delante de un sustantivo para describirlo. Equivale a una oración de relativo en español: “el libro que compré”.",
-    "connection": "Verbo en forma simple (forma de diccionario, forma た, forma ない, forma ている) + sustantivo",
+    "meaning": "Se coloca una oración en forma simple justo delante de un sustantivo para describirlo, como “el ... que ...”: sirven verbos (formas diccionario, た, ない, ている), adjetivos y frases nominales, sin 「の」 en medio.",
+    "connection": "Oración en forma simple (verbo, adjetivo, sustantivo + だった, etc.) + sustantivo",
     "senses": [
       {
         "label": "Forma de diccionario + sustantivo",
@@ -1180,15 +1302,27 @@
         "connection": "Sustantivo + が + verbo en forma simple + sustantivo",
         "examples": [
           "La comida que hace mi madre es deliciosa.",
-          "La ciudad donde vivo es tranquila."
+          "La ciudad donde vivo es tranquila.",
+          "La comida que hace mi madre es la más rica."
+        ]
+      },
+      {
+        "label": "Oraciones con adjetivo o sustantivo",
+        "meaning": "Los adjetivos い van directamente delante del sustantivo; los adjetivos な llevan 「な」. Con sustantivos se usa 「の」 en presente y 「だった」 en pasado.",
+        "connection": "Adjetivo い + sustantivo／adjetivo な な + sustantivo／sustantivo の・sustantivo だった + sustantivo",
+        "examples": [
+          "Una niña de ojos grandes está sonriendo.",
+          "Escuché una canción que me gustaba cuando era niño.",
+          "Quiero vivir en una ciudad con buen transporte."
         ]
       }
     ],
     "notes": [
       "Los estudiantes suelen añadir un 「の」 de más: ✕「昨日買ったの本」→ ○「昨日買った本」. El verbo va directamente delante del sustantivo, sin nada en medio.",
       "El sujeto dentro de la parte modificadora lleva 「が」 o 「の」, no 「は」: ✕「私は買った本」→ ○「私が買った本」.",
-      "El verbo de la parte modificadora va en forma simple, no en forma ます: ✕「昨日買いました本」→ ○「昨日買った本」.",
-      "Para un estado actual, usa 「ている」 o la forma た: 「眼鏡をかけている人」 = la persona que lleva gafas; 「眼鏡をかける人」 es «la persona que (habitualmente o en el futuro) se pone gafas», con otro significado."
+      "Confundir la forma de diccionario y la forma た cambia el sentido por completo: 「日本へ行く人」 es «una persona que va a ir a Japón», 「日本へ行った人」 es «una persona que ha estado en Japón»; 「結婚する人」 es «una persona que se va a casar», 「結婚した人」 es «una persona casada».",
+      "Para un estado actual, usa 「ている」 o la forma た: 「眼鏡をかけている人」 = la persona que lleva gafas; 「眼鏡をかける人」 es «la persona que (habitualmente o en el futuro) se pone gafas», con otro significado.",
+      "Ante un sustantivo, los adjetivos な llevan 「な」 y los sustantivos 「の」, nunca 「だ」: ✕「静かだ町」→ ○「静かな町」; ✕「父が医者だ友だち」→ ○「父が医者の友だち」."
     ],
     "scenes": {
       "daily": [
@@ -1206,6 +1340,11 @@
           "title": "Recomendar un libro",
           "description": "Le recomiendas a un amigo un libro que has leído.",
           "example": "Este es un libro que escribió mi autor favorito."
+        },
+        {
+          "title": "Recomendar un restaurante",
+          "description": "Le recomiendas a un amigo el puesto de ramen frente a la estación.",
+          "example": "El ramen del local que está frente a la estación está muy rico."
         }
       ],
       "work": [
@@ -1218,20 +1357,17 @@
           "title": "Explicar la situación",
           "description": "Le explicas a tu jefe el trabajo pendiente.",
           "example": "Hay tres tareas que todavía no están terminadas."
+        },
+        {
+          "title": "Presentar un producto",
+          "description": "Le presentas a un cliente un producto popular.",
+          "example": "Este es un producto muy popular entre los jóvenes."
         }
       ]
     },
-    "etymology": "Los verbos y adjetivos japoneses tienen una “forma atributiva” que va directamente ante el sustantivo. En el japonés moderno, la forma atributiva del verbo es igual a la forma de diccionario, por eso la forma simple describe el sustantivo directamente.",
-    "formation": "En japonés, los modificadores siempre van delante del sustantivo al que modifican. En el japonés moderno, la forma atributiva del verbo (la que se une a un sustantivo) coincide con la forma de diccionario, así que basta con poner una oración en forma simple delante de un sustantivo para que toda ella lo modifique como un gran adjetivo. El tiempo y la afirmación o negación se conservan dentro de esa oración, de modo que puede expresar «lo que se hará, lo que se hizo, lo que no se hace, lo que se está haciendo». El sujeto de la oración modificadora pasa a 「が／の」 porque 「は」 lo convertiría en tema de toda la oración principal y lo sacaría de la oración modificadora.",
+    "etymology": "Los predicados japoneses (verbos y adjetivos) tienen una “forma atributiva” (連体形) que se une al sustantivo; de ahí el término 「連体修飾」, “modificación atributiva”. En japonés moderno la forma atributiva de verbos y adjetivos い coincide con la forma diccionario, por lo que parece que la forma simple se coloca sin más delante del sustantivo.",
+    "formation": "En japonés los modificadores van siempre antes del sustantivo, así que una oración completa en forma simple puede colocarse tal cual delante de él: 「昨日買った」 + 「本」 → 「昨日買った本」. No hace falta nada parecido al “的” chino, por eso no se añade 「の」. La oración conserva su propio tiempo y polaridad, de modo que la forma del verbo distingue “el que hará (forma diccionario), el que hizo (forma た), el que no hace (forma ない), el que está haciendo (forma ている)”; son formas de una misma estructura, por eso forman un solo punto gramatical. Los adjetivos y las frases nominales siguen el mismo principio, salvo que 「だ」 de sustantivos y adjetivos な pasa a la forma atributiva 「な」 (normalmente 「の」 tras sustantivo) y el pasado es 「だった」. Como la oración es solo parte del grupo nominal, no usa 「です・ます」 y su sujeto lleva 「が」 o 「の」 en lugar de 「は」, que marca el tema de toda la frase.",
     "similar": [
-      {
-        "title": "〜(oración en forma simple) + sustantivo (modificación nominal)",
-        "explanation": "Entrada general de la misma estructura: cualquier oración en forma simple (también las de adjetivo o de sustantivo) puede ir delante de un sustantivo para modificarlo. Esta entrada se centra en las distintas formas verbales que modifican."
-      },
-      {
-        "title": "〜の (en lugar de が en la oración modificadora)",
-        "explanation": "El sujeto marcado con 「が」 en la parte modificadora puede cambiarse por 「の」: 「母が作った料理」 = 「母の作った料理」. El significado es el mismo; lo segundo es algo más formal."
-      },
       {
         "title": "〜な + sustantivo (modificación con adjetivo な)",
         "explanation": "También es modificación nominal: los adjetivos な llevan 「な」 delante de un sustantivo (「静かな町」), mientras que la forma simple del verbo va directamente delante del sustantivo, sin nada más."
@@ -1240,7 +1376,6 @@
   },
   {
     "id": "counters-josuushi",
-    "title": "〜(número) + contador (〜本・〜人・〜枚など)",
     "meaning": "Al contar en japonés, después del número se añade un contador que indica el tipo de cosa, algo parecido a “dos hojas de papel” o “tres botellas de agua” en español.",
     "connection": "Número + contador (〜つ・〜本・〜人・〜枚, etc.)",
     "senses": [
@@ -1349,7 +1484,6 @@
   },
   {
     "id": "shikashi-conjunction",
-    "title": "〜しかし (al inicio: sin embargo)",
     "meaning": "Va al principio de la oración e indica que lo que sigue contrasta o se opone a lo anterior: “pero”, “sin embargo”. Se usa sobre todo por escrito.",
     "connection": "Oración. しかし、oración.",
     "senses": [

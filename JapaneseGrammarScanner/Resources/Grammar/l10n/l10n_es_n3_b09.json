@@ -1,7 +1,6 @@
 [
   {
     "id": "koto-de-means",
-    "title": "〜ことで (medio)",
     "meaning": "Indica que, al hacer algo, se consigue un resultado o un cambio: «haciendo ...», «al ...».",
     "connection": "Forma de diccionario／forma ない／forma た del verbo + ことで",
     "senses": [
@@ -76,7 +75,6 @@
   },
   {
     "id": "ta-mono-da",
-    "title": "〜たものだ (recuerdo)",
     "meaning": "Recuerda con nostalgia algo que se hacía a menudo o cómo eran las cosas antes: «solía ...».",
     "connection": "Forma た del verbo + ものだ (coloquial: 〜たもんだ)",
     "senses": [
@@ -156,9 +154,8 @@
   },
   {
     "id": "mono-da",
-    "title": "〜ものだ (lo normal / emoción)",
-    "meaning": "Expresa la naturaleza de las cosas o el sentido común («así son las cosas»). También sirve para aconsejar o para exclamar ante algo («¡qué ...!»).",
-    "connection": "Forma de diccionario／forma ない del verbo, adjetivo-い + ものだ; adjetivo-な + な + ものだ",
+    "meaning": "Expresa la naturaleza de las cosas o el sentido común (“por naturaleza ... suele ...”), da un consejo moral (“uno debe ...”), manifiesta una emoción ante algo que se tiene delante (“qué ... es”) y, tras la forma た, evoca con nostalgia lo que se hacía a menudo en el pasado (“solía ...”).",
+    "connection": "Verbo en forma de diccionario / forma ない, adjetivo い, adjetivo な + な + ものだ; para el recuerdo, verbo en forma た + ものだ (coloquial: もんだ)",
     "senses": [
       {
         "label": "Naturaleza / lo normal",
@@ -167,7 +164,7 @@
         "examples": [
           "Todo el mundo se equivoca.",
           "Los padres siempre se preocupan por sus hijos.",
-          "Cuanto mejor es la medicina, más amarga es."
+          "Los sentimientos de las personas cambian; así es."
         ]
       },
       {
@@ -176,7 +173,8 @@
         "connection": "Forma de diccionario del verbo + ものだ (suele usarlo alguien mayor con alguien más joven)",
         "examples": [
           "Hay que escuchar a los demás hasta que terminen de hablar.",
-          "Con los superiores se usa keigo."
+          "Con los superiores se usa keigo.",
+          "Si alguien te da algo, se le dan las gracias."
         ]
       },
       {
@@ -187,13 +185,23 @@
           "¡Qué rápido pasa el tiempo!",
           "La vida es algo misterioso."
         ]
+      },
+      {
+        "label": "Recuerdos",
+        "meaning": "Recuerda con nostalgia algo que se hacía a menudo: «solía …». Suele ir con 「よく」, 「昔は」 o 「子供のころ」.",
+        "connection": "Verbo en forma た + ものだ",
+        "examples": [
+          "De niño solía nadar en este río.",
+          "En mi época de estudiante, solíamos charlar hasta muy tarde cada noche."
+        ]
       }
     ],
     "notes": [
       "El uso de consejo apela al “sentido común social” para aleccionar al interlocutor. Decir 「〜するものですよ」 a un superior o a un cliente implica que no conocen el sentido común, lo cual es muy descortés; solo se usa con subordinados y niños.",
       "Con la forma de diccionario es una verdad general, y con la forma た pasa a ser recuerdo, así que equivocar el tiempo cambia el significado: 「子供はよく遊ぶものだ」 (a los niños les encanta jugar) ↔ 「子供のころはよく遊んだものだ」 (de niño jugaba mucho).",
       "La negación del uso de consejo es 「〜ものではない」 (“no se debe ...”): 「人の悪口を言うものではない」. No se dice ✕「〜ものではないだ」 ni ✕「〜ものじゃないだ」.",
-      "Expresa una regla general, no un hecho particular y concreto: ✕「田中さんは毎日遅刻するものだ」 (suena a sentencia, “Tanaka es así”) → ○「田中さんは毎日遅刻する」."
+      "Expresa una regla general, no un hecho particular y concreto: ✕「田中さんは毎日遅刻するものだ」 (suena a sentencia, “Tanaka es así”) → ○「田中さんは毎日遅刻する」.",
+      "「〜たいものだ」 es un deseo fuerte (「一度行ってみたいものだ」), no un recuerdo. 「たい」 y 「た」 difieren en una sola sílaba, así que hay que distinguirlos al oír y al leer."
     ],
     "scenes": {
       "daily": [
@@ -211,6 +219,11 @@
           "title": "Padres que enseñan",
           "description": "Los padres les enseñan modales básicos a sus hijos.",
           "example": "Antes de comer, hay que lavarse las manos."
+        },
+        {
+          "title": "En una reunión de antiguos alumnos",
+          "description": "Te reencuentras con compañeros tras muchos años y recordáis el pasado.",
+          "example": "Antes solíamos jugar aquí juntos, ¿eh?"
         }
       ],
       "work": [
@@ -220,13 +233,19 @@
           "example": "El teléfono se contesta lo más rápido posible."
         },
         {
+          "title": "En un discurso",
+          "description": "En una despedida por jubilación, alguien reflexiona sobre los años.",
+          "example": "Treinta años parecen mucho, pero vistos en retrospectiva pasan volando."
+        },
+        {
           "title": "Leer una columna de opinión",
           "description": "En una columna, el autor reflexiona sobre la vida.",
           "example": "El valor de la salud solo se entiende cuando se pierde."
         }
       ]
     },
-    "etymology": "「もの」 significa originalmente «cosa», y pasó a significar «la naturaleza general de las cosas». Con 「だ」 se obtiene «así son las cosas», de donde surgieron los usos de consejo y exclamación.",
+    "etymology": "「もの」 se escribía 「物」 y significaba «cosa». Como sustantivo formal alude a la naturaleza general de las cosas; con 「だ」 indica «así es por naturaleza». De ahí surgieron los usos de emoción, recuerdo y consejo.",
+    "formation": "Se forma con el sustantivo formal 「もの」 y la cópula 「だ」. El sustantivo 「もの」 significa originalmente «cosa», pero como sustantivo formal designa «la naturaleza general o el estado habitual de las cosas»; así, 「〜ものだ」 viene a decir «es una cosa así por naturaleza» y presenta un asunto como regla general. Si se enuncia la regla directamente, es el uso de verdad general; si se le dice al interlocutor como «así debería ser», es el consejo; si ante lo que se tiene delante se exclama «ah, así es esto», es la emoción; y si se une a la forma た y se evocan con cariño hechos repetidos del pasado como «así eran las cosas», es el recuerdo. Los cuatro usos nacen de la misma idea central: resumir un asunto como un estado general.",
     "similar": [
       {
         "title": "〜べきだ",
@@ -241,15 +260,17 @@
         "explanation": "Mismo origen, significado cercano: ambos usan 「もの」 para hablar de la esencia de las cosas. 「というものだ」 se usa sobre todo para emitir un juicio sobre un asunto concreto (「それはわがままというものだ」 = eso es lo que se llama egoísmo); 「ものだ」 expresa una naturaleza general o el sentido común."
       },
       {
+        "title": "〜ものではない",
+        "explanation": "Mismo origen: es la forma negativa de este punto gramatical. La negación del uso de consejo 「〜ものだ」 («se debe») es 「〜ものではない」 («no se debe»), y no 「〜ないものだ」."
+      },
+      {
         "title": "〜たものだ (recuerdo)",
         "explanation": "Mismo origen: se une a la forma た y expresa nostalgia por lo que se hacía a menudo o asombro ante el cambio (「ずいぶん変わったものだ」)."
       }
-    ],
-    "formation": "「〜ものだ」 = el sustantivo formal 「もの」 + la cópula 「だ」. 「もの」 significa originalmente “cosa”, pero aquí no señala un objeto concreto sino “este tipo de cosas en conjunto”, así que 「〜ものだ」 viene a decir “así son esas cosas”. Reduce un caso particular a la naturaleza de las cosas, y de ahí el sentido de verdad general (「人は間違えるものだ」). Como “así debe ser”, decírselo a otra persona se convierte en un consejo basado en el sentido común, “hay que ...” (「目上の人には敬語を使うものだ」). Y dicho ante algo que tenemos delante, “así son las cosas”, es una exclamación al verlo con nuevos ojos, el sentido de sentimiento (「時間がたつのは早いものだ」). Los tres usos nacen de la misma idea central: “la verdadera naturaleza de las cosas”."
+    ]
   },
   {
     "id": "mono-reason",
-    "title": "〜もの・〜もん (excusa)",
     "meaning": "Al final de la oración, da un motivo para justificarse o para hacerse el niño mimado: «¡es que ...!».",
     "connection": "Forma llana + もの／もん (suele ir con 「だって」)",
     "senses": [
@@ -270,7 +291,7 @@
         "examples": [
           "Es lógico que se enoje. Al fin y al cabo, rompiste tu promesa.",
           "No te preocupes. Ya no soy un niño.",
-          "Es que es la verdad."
+          "Es un niño; no se puede hacer nada."
         ]
       }
     ],
@@ -278,7 +299,8 @@
       "Tiene un tono mimoso y de berrinche; dicho a un superior o a un cliente, o en un entorno formal, suena infantil e irresponsable: ✕「資料が間に合いませんでした。忙しかったんだもん」→ ○「申し訳ありません。立て込んでおりまして、間に合いませんでした」.",
       "Si un hombre adulto dice 「〜もん」 suena infantil; incluso los adultos solo lo usan con la familia, la pareja o amigos muy cercanos.",
       "Los sustantivos y los adjetivos な necesitan 「だ」 o 「なんだ」: ✕「子供もん」「好きもん」→ ○「子供だもん」「好きなんだもん」.",
-      "El 「もの／もん」 final da solo la razón y deja la conclusión, “así que no me culpes”, para que el oyente la capte. Si hace falta continuar con un resultado, se usa 「〜ものだから」 o 「〜もので」."
+      "El 「もの／もん」 final da solo la razón y deja la conclusión, “así que no me culpes”, para que el oyente la capte. Si hace falta continuar con un resultado, se usa 「〜ものだから」 o 「〜もので」.",
+      "Es mimoso e infantil, y solo se usa entre personas íntimas como familiares y amigos. Decir 「知らなかったんだもん」 a un superior o cliente es muy descortés; hay que decir 「存じ上げませんでした。申し訳ありません」."
     ],
     "scenes": {
       "daily": [
@@ -296,13 +318,18 @@
           "title": "Entre pareja",
           "description": "Das un motivo con tono mimoso a tu pareja.",
           "example": "Es que tenía ganas de verte."
+        },
+        {
+          "title": "Consolar a un amigo",
+          "description": "Un amigo cocina por primera vez y le sale mal; tú lo animas.",
+          "example": "Es la primera vez; no pasa nada si sale mal."
         }
       ],
       "work": [
         {
-          "title": "Ver doramas o leer manga",
-          "description": "Los personajes de series y manga japoneses usan mucho 「もん」 para sonar infantiles o tiernos.",
-          "example": "¡Es que me gusta!"
+          "title": "Charla relajada entre compañeros",
+          "description": "Comentario ligero entre compañeros de confianza; no se usa en contextos formales.",
+          "example": "Es viernes, ¿no? Normal que tengas ganas de irte pronto a casa."
         },
         {
           "title": "Una maestra de preescolar escucha",
@@ -312,6 +339,7 @@
       ]
     },
     "etymology": "Se suele pensar que viene de expresiones como 「ものだから」 o 「ものを」 en las que se omitió el final, dejando solo el motivo al final de la oración. 「もん」 es la forma coloquial de 「もの」.",
+    "formation": "Se suele considerar que el 「もの」 final de oración procede de expresiones como 「ものだから」 o 「ものを」 con la segunda mitad omitida. 「もの」 envuelve la razón como “es que las cosas son así”, y la oración se corta justo en la razón, dejando la conclusión (“así que no me eches la culpa / no hay remedio”) para que la deduzca el oyente. Dar solo la razón y pedir comprensión crea un tono mimoso y de berrinche. A menudo va con 「だって」 (“pero es que”), formando el esquema de excusa “es que ..., ¿sabes?”. 「もん」 es la variante coloquial de 「もの」 y suena aún más informal e infantil.",
     "similar": [
       {
         "title": "〜ものだから",
@@ -322,11 +350,10 @@
         "explanation": "Mismo origen, significado cercano: 「〜もので」 y 「〜ものですから」 también son excusas del tipo “porque ... (no pude evitarlo)”, pero con un tono cortés que puede usarse con superiores (「電車が遅れたもので…」); el 「もん」 final es solo para personas cercanas."
       },
       {
-        "title": "〜から (causa / razón)",
-        "explanation": "Significado cercano: 「〜から」 es una explicación neutra de la causa, válida en cualquier situación; 「〜もん」 da la razón añadiendo un tono mimoso y de protesta, “tienes que comprenderme”."
+        "title": "〜のだから・〜んだから",
+        "explanation": "「〜んだから」 al final de frase también subraya la razón (「だって忙しかったんだから」), con más fuerza y cierto reproche, pero sin mimo. Cuando un adulto explica una razón, resulta más natural que 「〜もん」."
       }
-    ],
-    "formation": "Se suele considerar que el 「もの」 final de oración procede de expresiones como 「ものだから」 o 「ものを」 con la segunda mitad omitida. 「もの」 envuelve la razón como “es que las cosas son así”, y la oración se corta justo en la razón, dejando la conclusión (“así que no me eches la culpa / no hay remedio”) para que la deduzca el oyente. Dar solo la razón y pedir comprensión crea un tono mimoso y de berrinche. A menudo va con 「だって」 (“pero es que”), formando el esquema de excusa “es que ..., ¿sabes?”. 「もん」 es la variante coloquial de 「もの」 y suena aún más informal e infantil."
+    ]
   },
   {
     "id": "mono-dakara",

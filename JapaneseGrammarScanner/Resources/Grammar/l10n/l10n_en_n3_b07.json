@@ -1,8 +1,8 @@
 [
   {
     "id": "to-sureba",
-    "meaning": "Takes a hypothesis or a known fact as a premise, then draws a conclusion or asks a question: “supposing ...”, “if that's the case, then ...”.",
-    "connection": "Verb / i-adjective plain form, na-adjective / noun (+ だ) + とすれば・としたら・とすると",
+    "meaning": "Takes a supposition or a known situation as a premise and draws a conclusion or asks a question: “supposing that...”, “if that is so, then...”; it can also open a sentence to pick up what the other person said.",
+    "connection": "Verb / い-adjective plain form, な-adjective / noun (+ だ) + とすれば / としたら / とすると; sentence-initially: だとしたら / だとすれば / とすると",
     "senses": [
       {
         "label": "Pure hypothesis",
@@ -30,6 +30,14 @@
           "If you were to live abroad, which country would be good?",
           "If I leave now, which train should I take?"
         ]
+      },
+      {
+        "label": "At the start of a sentence",
+        "meaning": "「だとしたら」, 「だとすれば」 and 「とすると」 can start a sentence to reason from what the other person said: “in that case”.",
+        "connection": "Start of sentence + だとしたら／だとすれば／とすると、〜",
+        "examples": [
+          "“I heard that restaurant is closed today.” “In that case, let's go somewhere else.”"
+        ]
       }
     ],
     "notes": [
@@ -55,6 +63,11 @@
           "title": "Planning a trip",
           "description": "Talking with family about where to go on vacation.",
           "example": "If we travel over summer break, Hokkaido would be nice."
+        },
+        {
+          "title": "Discussing a rumor",
+          "description": "You hear a friend is quitting their job.",
+          "example": "If he's really leaving the company, it'll be lonely around here."
         }
       ],
       "work": [
@@ -67,10 +80,16 @@
           "title": "News commentary",
           "description": "A commentator draws a conclusion from a news report.",
           "example": "If this report is true, it will probably become a serious problem."
+        },
+        {
+          "title": "Research paper",
+          "description": "A paper proposes a hypothesis and reasons from it.",
+          "example": "If this hypothesis is correct, the conventional explanation needs to be reconsidered."
         }
       ]
     },
-    "etymology": "Made of the quoting particle 「と」 plus 「する」 (here meaning “to assume, to treat as”) in a conditional form. 「とすれば」 uses 「ば」, 「としたら」 uses 「たら」, and 「とすると」 uses conditional 「と」, so each version matches one of the three conditional forms.",
+    "etymology": "Formed from the quoting particle 「と」 plus a conditional form of the verb 「する」 (here meaning “to assume, to suppose”). 「とすれば」 uses 「ば」, 「としたら」 uses 「たら」 and 「とすると」 uses the conditional 「と」. The sentence-initial 「だとしたら」, 「だとすれば」 and 「とすると」 first turn the other person's words into a statement and then treat it as a supposition.",
+    "formation": "Formed from the quoting particle 「と」 + the verb 「する」 + a conditional form 「ば / たら / と」. Here 「する」 does not mean “do” but “regard as, set as” (as in 「AをBとする」); 「と」 presents the whole preceding clause as a proposition, so nouns and な-adjectives first take 「だ」 to make a full sentence (「本当だとすれば」). Literally it is “if we set ... as fact” — the first half is only “set up”, not a confirmed fact, so it naturally carries the nuance of a hypothesis or “taking ... as a premise for now”. This one core produces every sense here: setting up a situation that may not exist and stating the result (pure supposition); provisionally taking something heard or seen as true and drawing a logical conclusion (inference from a premise); setting a premise and then asking a question or for an opinion (before a question); and first turning the other person's words into a 「だ」 statement and then supposing it, which lets it open a sentence to pick up their words (sentence-initial use). The three conditional forms also keep their own character: 「たら」 is colloquial and casual, 「ば」 is more written and logical, and 「と」 expresses a natural result, so 「とすると」 suits “in that case it must follow that...” inferences best, and the main clause does not take commands or volition.",
     "similar": [
       {
         "title": "〜なら",
@@ -88,8 +107,7 @@
         "title": "〜としても",
         "explanation": "Same origin: both come from 「と」 + 「する」 (“to assume”). 「〜としても」 is concessive, “even if we assume ... (the result doesn't change)” (「雨だとしても行く」); 「〜とすれば」 is straightforward, “if we assume ..., then ...”."
       }
-    ],
-    "formation": "It is built from the quotative particle 「と」 + the verb 「する」 + a conditional form 「ば／たら／と」. The 「する」 here doesn't mean “do” but “to assume, to set as” (as in 「AをBとする」). 「と」 introduces the whole preceding clause as a proposition, which is why a noun or na-adjective needs 「だ」 to make a full sentence (「本当だとすれば」). Literally it means “if we set ... as the case”. The first half is only “set up”, not a confirmed fact, so the phrase naturally carries a sense of hypothesis, or “let's take ... as a premise”. The three conditional forms also bring their own character: 「たら」 is colloquial and casual; 「ば」 is more written and logical; 「と」 expresses a natural consequence, so 「とすると」 suits inferences of the kind “in that case, it follows that ...”, and its second half takes no commands or statements of will."
+    ]
   },
   {
     "id": "moshimo-tara",
@@ -175,7 +193,6 @@
   },
   {
     "id": "nai-to",
-    "title": "〜ないと (if not)",
     "meaning": "“If you don't do something, a bad result will follow, or something won't be possible.” Often used to urge, remind, or state a necessary condition.",
     "connection": "Verb nai-form + と + second clause (bad result / negative)",
     "senses": [
@@ -265,99 +282,6 @@
       }
     ],
     "formation": "It is made of the negative auxiliary 「ない」 + the conditional particle 「と」. 「と」 expresses a condition where “once the first part holds, the second part inevitably follows” (「春になると暖かくなる」). Put a negative into the first part and you get “as long as you don't do ..., ... will inevitably happen”, so the second part is naturally a bad consequence or “can't do”. Since 「と」 states a rule-like inevitable result rather than the speaker's will, the second half cannot hold a request, command, or statement of will. When speakers use this “if not ..., then ...” form to alert someone, it takes on an urging tone; and if the latter half 「いけない」 is dropped, it becomes the sentence-final 「〜ないと。」 (“I've got to ...”)."
-  },
-  {
-    "id": "to-ii-wish",
-    "title": "〜といい・〜たらいい (wish)",
-    "meaning": "Expresses the speaker's hope that something will come true: “I hope ...”, “it would be nice if ...”.",
-    "connection": "Verb / adjective plain form (non-past) + といい／verb ta-form + らいい + ね・な・のに・けど",
-    "senses": [
-      {
-        "label": "Wishing someone well",
-        "meaning": "Expresses a kind hope about someone else's situation: “I hope ...”. Usually 「〜といいですね」 or 「〜といいね」. The tone is gentle and warm.",
-        "connection": "Verb dictionary form・nai-form + といいですね／といいね",
-        "examples": [
-          "I hope it's sunny tomorrow.",
-          "I hope you pass the exam."
-        ]
-      },
-      {
-        "label": "Your own wish",
-        "meaning": "States your own heartfelt wish: “it would be nice if ...”. Use 「〜といいな（あ）」 or 「〜たらいいな」, often when talking to yourself or to someone close.",
-        "connection": "Plain form + といいな（あ）／verb ta-form + らいいな（あ）",
-        "examples": [
-          "I can't wait for summer vacation. I hope I can go to the beach.",
-          "It would be nice to live in Japan someday."
-        ]
-      },
-      {
-        "label": "Unmet wish / worry",
-        "meaning": "「〜といいのに／たらいいのに」 expresses regret that reality differs from your wish. 「〜といいんだけど」 means “I hope so, but I'm a little worried”.",
-        "connection": "Plain form + といいのに／といいんだけど; verb ta-form + らいいのに",
-        "examples": [
-          "I wish the holidays were longer.",
-          "I hope he makes it in time, but I'm not sure.",
-          "I wish every day were Sunday."
-        ]
-      }
-    ],
-    "notes": [
-      "The sentence-final particle decides the meaning: 「早く寝るといいよ」 is advice (“you should go to bed early”), while 「早く寝られるといいね」 is a wish (“I hope you can get to bed early”). Change 「ね」 to 「よ」 and a good wish turns into instruction.",
-      "Saying 「頑張るといいですね」 about something the other person controls sounds condescending, as if you were evaluating them, especially toward a superior. Reserve wishes for things beyond their control, like the weather or results (「うまくいくといいですね」).",
-      "For something that has already happened but whose result is unknown, use 「〜ているといい」: ✕「無事に着いたといいね」→ ○「無事に着いているといいね」.",
-      "「〜といいのに」 carries dissatisfaction that “reality isn't like that”. Saying 「もう少し静かだといいのに」 to someone will be heard as a complaint about them."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "Cheering on a friend",
-          "description": "A friend is heading to a job interview, and you wish them luck as you part.",
-          "example": "I hope the interview goes well."
-        },
-        {
-          "title": "Planning an outing",
-          "description": "Checking the forecast before a weekend trip and talking to yourself.",
-          "example": "I hope it doesn't rain this weekend."
-        },
-        {
-          "title": "Visiting someone in the hospital",
-          "description": "What you say when visiting a sick friend.",
-          "example": "I hope you get well soon."
-        }
-      ],
-      "work": [
-        {
-          "title": "Mid-project",
-          "description": "Talking with a colleague about a project's progress and sharing your hopes.",
-          "example": "I hope this project finishes on schedule, but..."
-        },
-        {
-          "title": "Small talk with a client",
-          "description": "A polite closing line in an email or meeting.",
-          "example": "We hope the new system will be of help to you."
-        }
-      ]
-    },
-    "etymology": "Made of the conditional particle 「と」 or 「たら」 plus the adjective 「いい（良い）」, literally “if ..., it's good”. From “it would be good if ...” it came to express a wish, and endings like 「ね」, 「な」, or 「のに」 add different nuances.",
-    "similar": [
-      {
-        "title": "〜たらいい",
-        "explanation": "Same origin: both are built from “condition + 「いい」”. 「〜たらいい（ですよ）」 mainly gives advice (“it'd be good if ... / you should ...”), and in the question form asks “what should I do?”. This grammar point adds 「ね／な」 to express a wish. The difference mostly lies in whether the sentence ends in 「よ」, 「か」, or 「ね」, 「な」."
-      },
-      {
-        "title": "〜てほしい・〜てもらいたい",
-        "explanation": "「〜てほしい」 says directly “I want someone to do ...”, so the desire is clear, and toward a superior it feels imposing. 「〜といいね」 only says “it'd be nice if ...”, without specifying who does it, so the tone is softer."
-      },
-      {
-        "title": "〜ないかな (wish)",
-        "explanation": "「〜ないかな」 is a wish said to oneself, with a feeling of eager waiting (「早く夏休みにならないかな」); 「〜といいな」 is calmer, just voicing “it'd be nice if ...”. The two are often used together."
-      },
-      {
-        "title": "〜ば〜のに",
-        "explanation": "Both 「〜ばいいのに」 and 「〜といいのに」 express regret, “it would be nice if ... (but it isn't)”. When about another person's behavior, 「〜ばいいのに」 often carries blame, “why don't you ...?”."
-      }
-    ],
-    "formation": "It is the conditional particle 「と」 or 「たら」 + the adjective 「いい（良い）」, literally “if ..., it's good”. The sentence only voices a “condition” and the evaluation “good”; saying aloud that “it would be good if it came true” naturally turns into a wish. Because the sentence stops at an evaluation, the tone depends on the sentence-final particle: 「ね」 shares an expectation with the listener (a good wish), 「な（あ）」 is talking to oneself, 「のに」 is regret that reality isn't so, and 「けど」 carries anxiety. Swap in 「よ」 and it becomes advice (“it'd be good to do this”), which is why wishes and advice are easily confused. With 「と」 the condition takes the present (dictionary) form, and with 「たら」 it takes the た form."
   },
   {
     "id": "ba-noni",
@@ -791,89 +715,6 @@
       }
     ],
     "formation": "It is the noun 「ふり（振り）」 + 「を」 + 「する」. 「ふり」 comes from the continuative form of the verb 「振る」 (to wave), and originally meant bodily movement or posture (as in 「身振り」 and 「素振り」); 「Xふり」 is “the appearance or manner of X”. Add 「をする」 and it is “to put on the look of X”. Because it is only an outward “look”, it implies that “inside it isn't so”, which is how it comes to mean “pretend”. Since 「ふり」 is a noun, what precedes it connects like any ordinary noun modifier: a plain-form verb directly, 「の」 after a noun, 「な」 after a na-adjective. In speech, 「を」 is often dropped to give 「ふりする」."
-  },
-  {
-    "id": "you-ni-example",
-    "title": "〜ように・〜ような (examples)",
-    "meaning": "Gives a concrete example or point of reference: “like ...”, “such as ...”, “as shown ...”. Used to give examples and explain.",
-    "connection": "Noun + の + ような + noun／noun + の + ように + verb・adjective",
-    "senses": [
-      {
-        "label": "Such as ...",
-        "meaning": "「AのようなB」 gives A as a typical example of B: “B such as A”, “B like A”. Often used with 「や」 or 「など」 to list items.",
-        "connection": "Noun + の + ような + noun (common: AやBのような〜)",
-        "examples": [
-          "In big cities like Tokyo and Osaka, rent is expensive.",
-          "I like sweet fruits such as apples."
-        ]
-      },
-      {
-        "label": "Like ... (doing something)",
-        "meaning": "「Aのように〜」 uses A as a model or reference for how or how much: “like A”, “the way A does”.",
-        "connection": "Noun + の + ように + verb・adjective",
-        "examples": [
-          "I want to be able to speak as well as my senpai.",
-          "In this town, old buildings are cherished, just like in Kyoto."
-        ]
-      },
-      {
-        "label": "As follows / as shown",
-        "meaning": "「次のように」, 「以下のように」, and 「図のように」 introduce or point to specific content: “as follows”, “as shown in the figure”. Common in explanations and documents.",
-        "connection": "次・以下・下記・図・表 + の + ように",
-        "examples": [
-          "The results can be summarized as follows.",
-          "Please draw a line as shown in the figure."
-        ]
-      }
-    ],
-    "notes": [
-      "「ような」 is followed by a noun, 「ように」 by a verb or adjective: ✕「東京のように大都市」→ ○「東京のような大都市」.",
-      "「あなたのような人」 can be either praise or put-down; 「あなたのような人には分からない」 is very hurtful, so mind your tone and what follows.",
-      "A noun must take 「の」: ✕「先輩ように」→ ○「先輩のように」. With demonstratives use 「このような／そのような」.",
-      "In formal documents and reports use 「次のように」 or 「以下のように」; don't replace them with the colloquial 「次みたいに」."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "Talking about what you like",
-          "description": "Chatting with a friend about your favorite kinds of movies.",
-          "example": "I like fantasy movies like Harry Potter."
-        },
-        {
-          "title": "Reading instructions",
-          "description": "Putting furniture together by following the manual.",
-          "example": "Assemble the parts as shown in the manual's diagram."
-        }
-      ],
-      "work": [
-        {
-          "title": "Writing a report",
-          "description": "Introducing survey results in a report.",
-          "example": "The results of the survey are as follows."
-        },
-        {
-          "title": "Introducing the company to a client",
-          "description": "Explaining what kinds of products the company handles.",
-          "example": "Our company handles electronic devices such as computers and smartphones."
-        }
-      ]
-    },
-    "etymology": "「よう」 is written 「様」 and originally meant “appearance, look”. 「〜のような」 and 「〜のように」 literally mean “having the appearance of ...”, which led to uses for similes and examples. As grammar, it's usually written in kana.",
-    "similar": [
-      {
-        "title": "〜ような・〜ように・〜みたいな (simile / example)",
-        "explanation": "Same origin: the N4 「〜ような・〜ように」 is mainly for simile (“like ...”) (「雪のような肌」); this grammar point focuses on giving examples and references (「東京のような大都市」 = “big cities like Tokyo”). A simile compares different things, while an example picks one instance from the same kind."
-      },
-      {
-        "title": "〜ように (as mentioned)",
-        "explanation": "Same origin: 「ご存じのように」 and 「前に述べたように」 come at the start of a sentence, meaning “as ...”, to bring in what both parties already know; the 「AのようにB」 of this grammar point explains how or to what degree B is done, taking A as the reference."
-      },
-      {
-        "title": "〜といった",
-        "explanation": "「AやBといったC」 also gives examples, but usually lists two or more and is more written; 「AのようなC」 can give just one example and is used in both speech and writing."
-      }
-    ],
-    "formation": "It is the formal noun 「よう（様）」 + 「な」 or 「に」. 「様」 originally means “appearance, manner”, so 「Aのよう」 is “the way A looks”. With 「な」 it modifies a noun (「AのようなB」 = “a B of the type that A is”), and with 「に」 it modifies a verb or adjective (「Aのように〜する」 = “do it the way A does”). Treating A as a “sample” to explain B gives an example (A is one instance of the type B) or a reference (“like A”). 「次のように」 is “in the manner below”, that is, “as follows”. Because 「よう」 is a noun, a preceding noun takes 「の」, and demonstratives use 「この／その」."
   },
   {
     "id": "masu-you-ni",

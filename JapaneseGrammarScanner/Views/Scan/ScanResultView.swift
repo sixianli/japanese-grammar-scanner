@@ -123,7 +123,7 @@ struct ScanResultView: View {
 
     @ViewBuilder
     private func resultSections(_ result: ScanResult) -> some View {
-        let ids = result.orderedGrammarIDs
+        let ids = library.displayableIDs(result.orderedGrammarIDs)
         if result.text.isEmpty {
             ContentUnavailableView("没有识别到日文", systemImage: "text.magnifyingglass",
                                    description: Text("请让文字清晰、光线充足，尽量正对书页拍摄。"))
@@ -187,7 +187,7 @@ struct ScanResultView: View {
                             textWasEdited = true
                             selectedClusterID = nil
                             phase = .done(result)
-                            if let recordID { history.updateScan(recordID, grammarIDs: result.orderedGrammarIDs) }
+                            if let recordID { history.updateScan(recordID, grammarIDs: library.displayableIDs(result.orderedGrammarIDs)) }
                             isEditing = false
                         }
                     }
@@ -215,10 +215,13 @@ struct ScanResultView: View {
         switch outcome {
         case .success(let r):
             phase = .done(r)
+            let ids = library.displayableIDs(r.orderedGrammarIDs)
             if let existing = scanImage.historyID {
                 recordID = existing
+                // 重新识别的结果可能与保存时略有不同：以现在显示的为准，首页「继续上次」的数字随之一致
+                history.updateScan(existing, grammarIDs: ids)
             } else if !scanImage.isSample, !r.text.isEmpty, DemoMode.screen == nil {
-                recordID = history.recordScan(image: scanImage.image, grammarIDs: r.orderedGrammarIDs)
+                recordID = history.recordScan(image: scanImage.image, grammarIDs: ids)
             }
         case .failure(let e): phase = .failed(e.localizedDescription)
         }

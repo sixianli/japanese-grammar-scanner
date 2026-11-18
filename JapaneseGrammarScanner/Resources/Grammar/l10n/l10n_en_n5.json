@@ -1226,8 +1226,8 @@
   },
   {
     "id": "nagara",
-    "meaning": "“While doing ...” Two actions at the same time. In advanced use, it also means “although ...”.",
-    "connection": "Verb masu-stem (drop ます) + ながら",
+    "meaning": "After the verb ます-stem it means “while doing ... (also) doing ...” (simultaneous actions or two activities carried on in parallel); it also expresses concession, “although ... yet ...”, and forms set phrases such as 「残念ながら」.",
+    "connection": "Verb ます-stem + ながら; concessive: verb ている form, い-adjective dictionary form, な-adjective stem, or noun + ながら（も）",
     "senses": [
       {
         "label": "Simultaneous actions",
@@ -1249,19 +1249,42 @@
         ]
       },
       {
-        "label": "Contrast (although)",
-        "meaning": "An N2-level use: “although ..., still ...”. It usually follows 「知る」, 「ある」, or adjectives, and often appears as 「〜ながらも」.",
-        "connection": "Verb masu-stem / i-adjective / noun + ながら(も)",
+        "label": "Even though (one knows)",
+        "meaning": "The first part is an ongoing state or awareness, yet the person does something that contradicts it. It often carries blame, regret, or self-mockery. 「〜ていながら」 and 「〜でありながら」 are very common.",
+        "connection": "Verb te-iru form + ながら（も）／noun + でありながら（も）; common: 「知っていながら」, 「分かっていながら」, 「知りながら」",
         "examples": [
-          "I knew it was wrong, but I lied anyway.",
-          "Our home may be small, but it's a happy one."
+          "He knew what was going on, yet he said nothing.",
+          "I know it's bad for me, but I still end up smoking.",
+          "Even though he's a doctor, he doesn't care about his own health."
+        ]
+      },
+      {
+        "label": "Although ... still",
+        "meaning": "The first part is a quality or attribute, and the second part is an evaluation that goes against it, as in “small but ...” or “only a child, but ...”. It sounds fairly literary and often takes 「も」.",
+        "connection": "i-adjective dictionary form／na-adjective stem／noun + ながら（も）; e.g. 「狭いながらも」, 「小さいながらも」, 「子供ながら」",
+        "examples": [
+          "Our home: small, but full of joy.",
+          "This shop is small, but it's always packed with customers.",
+          "He's just a child, but he has a mind of his own."
+        ]
+      },
+      {
+        "label": "Set phrases",
+        "meaning": "Fixed expressions used to open politely or to sound modest. They are courteous and common in greetings and letters.",
+        "connection": "「残念ながら」, 「失礼ながら」, 「恐縮ながら」, 「陰ながら」, 「微力ながら」, 「我ながら」, etc.",
+        "examples": [
+          "Unfortunately, I can't take part this time.",
+          "Excuse me, but may I ask your name?",
+          "I'm rooting for you from the sidelines."
         ]
       }
     ],
     "notes": [
       "Both actions must have the same subject; for different subjects, use 「〜間」: ✕「母が料理しながら、私はテレビを見た」 → ○「母が料理している間、私はテレビを見た」.",
       "The main action goes after; what comes before 「ながら」 is the secondary action. In 「音楽を聞きながら勉強する」 the focus is on studying; swap them and the focus shifts too.",
-      "In Japan, looking at your phone while walking (「歩きスマホ」) or eating while walking is seen as bad manners; doing something else while a superior or client is talking (「〜しながら聞く」) is also considered disrespectful."
+      "In Japan, looking at your phone while walking (「歩きスマホ」) or eating while walking is seen as bad manners; doing something else while a superior or client is talking (「〜しながら聞く」) is also considered disrespectful.",
+      "With an action verb, 「ます-stem＋ながら」 means “while doing ...” by default: 「テレビを見ながら勉強した」 is “studied while watching TV”, not “although I watched TV, I studied”. To express contrast, use 「〜ていながら（も）」 or add 「も」.",
+      "「生まれながら（に）」, 「昔ながらの」 and 「涙ながらに」 mean “as it is / with ...” and have no contrastive meaning, so do not translate them as “although”."
     ],
     "scenes": {
       "daily": [
@@ -1271,14 +1294,24 @@
           "example": "I watch the news while eating breakfast."
         },
         {
-          "title": "Walking with music",
-          "description": "Talking about something you enjoy.",
-          "example": "I like walking in the park while listening to music."
-        },
-        {
           "title": "Telling a child to focus",
           "description": "A parent warns a child not to get distracted.",
           "example": "No doing homework in front of the TV."
+        },
+        {
+          "title": "Making fun of yourself to a friend",
+          "description": "You did it even though you knew you shouldn't, with a bit of self-mockery.",
+          "example": "I knew I was on a diet, but I ate the cake anyway."
+        },
+        {
+          "title": "Describing your home",
+          "description": "Modestly saying your place is small but comfortable.",
+          "example": "It's small, but it's a cozy room."
+        },
+        {
+          "title": "Turning down an invitation",
+          "description": "Politely saying you can't come.",
+          "example": "Unfortunately, I have plans that day."
         }
       ],
       "work": [
@@ -1291,122 +1324,35 @@
           "title": "Taking notes in a meeting",
           "description": "An instruction to staff or students.",
           "example": "Please take notes as you listen."
+        },
+        {
+          "title": "Thanking a client in a business email",
+          "description": "Expressing modesty and support to a client.",
+          "example": "I would be glad to help in whatever small way I can."
+        },
+        {
+          "title": "A news report about a company",
+          "description": "Describing a company that is small but strong.",
+          "example": "Although small, the company is known for its advanced technology."
         }
       ]
     },
     "etymology": "「ながら」 already existed in Classical Japanese. It is generally thought to come from the Old Japanese genitive particle 「な」 (equivalent to 「の」) + the noun 「から」 (\"nature, original state, same condition\", cognate with 「柄（がら）」), originally meaning \"keeping the original state of ...\", as in 「昔ながら」 (just as in the old days) and 「涙ながら」 (with tears). From \"maintaining a state\" it developed both the meaning \"while an action continues\" (simultaneity) and the contrastive meaning \"although in a certain state, ...\".",
-    "formation": "「ながら」 is generally thought to come from the classical particle 「な」 (equivalent to 「の」) + 「から」 (nature, as it is), originally meaning \"keeping things as they are\". Attached to the verb masu-stem, it means \"doing B while keeping up the state of doing A\", that is, simultaneous actions. Since A is only the state being kept up and B is the real main action of the sentence, the focus falls on the second part, and the subject is naturally the same person. \"Keeping up a state\" can also be read as \"despite being in state A...\", which gives the contrastive use: 「知りながら」 (despite knowing), 「狭いながらも」 (though small).",
+    "formation": "「ながら」is generally thought to come from the old attributive 「な」 plus 「から（柄）」, meaning “nature, manner”, so it originally meant “while remaining in the state of ...”. If you do B while remaining in state A, two things hold at once, which gives “while doing ... and ...”. When A should have prevented B but B happens anyway, “doing B while still in state A” turns into the contrastive “although A, B”. Adding 「も」 (“even”) stresses “even in state A ...” and makes the contrast clearer. Because the core idea is “remaining in a state”, the first part of the contrastive use is usually a stative word: 「〜ている」, 「ある」, an adjective, or a noun.",
     "similar": [
       {
         "title": "〜つつ",
         "explanation": "Same meaning (\"while...\") and also has a contrastive use (「悪いと知りつつ」), but 「つつ」 is written language; in everyday conversation use 「ながら」."
       },
       {
-        "title": "〜ながら（も） (contrast)",
-        "explanation": "Same origin: with 「も」 added, it is used only for contrast, \"although...\", and can also follow nouns and adjectives (「狭いながらも」, 「子どもながら」); mostly in writing."
-      },
-      {
         "title": "〜間・〜間に",
         "explanation": "「間」 sets a period of time as the background, and the two clauses can have different subjects (「母が料理している間、私は…」); 「ながら」 is one person doing two things at the same time."
       },
       {
-        "title": "〜て (manner / accompanying state)",
-        "explanation": "In 「歩いて行く」 and 「座って食べる」, the first action is the manner or state of the second; 「〜ながら」 is two actions happening at the same time. 「歩きながら話す」 is talking while walking, not going somewhere on foot."
+        "title": "〜ものの",
+        "explanation": "「ものの」 focuses on “that is true, but what should follow didn't”, and often follows the ta-form (「買ったものの、一度も使っていない」). 「ながらも」 focuses on the clash between state and action, or attribute and evaluation, in the same subject, and can follow adjectives and nouns."
       }
     ]
-  },
-  {
-    "id": "kara-reason",
-    "meaning": "“Because ...” Gives a cause or reason. It is fairly subjective and is often followed by requests, commands, or intentions.",
-    "connection": "Verb / adjective (plain or polite) + から; noun / na-adjective + だから",
-    "senses": [
-      {
-        "label": "Giving a reason",
-        "meaning": "Explains the basis for your judgment, decision, or request. The main clause can be a command, request, or intention. In this respect it is freer than 「ので」.",
-        "connection": "Verb / i-adjective (plain) + から; noun / na-adjective + だから",
-        "examples": [
-          "We're out of time, so please hurry.",
-          "I'm tired today, so I'm going to bed early.",
-          "It's raining, so I don't want to go out."
-        ]
-      },
-      {
-        "label": "Reason at the end",
-        "meaning": "「〜からだ／〜からです」 at the end of a sentence explains the reason afterward, often in the pattern 「〜のは〜からだ」. When answering 「どうして」, you can give just the reason.",
-        "connection": "Plain form + からだ／からです",
-        "examples": [
-          "The reason I was late is that the train stopped.",
-          "“Why were you off?” “Because I had a fever.”"
-        ]
-      },
-      {
-        "label": "Polite form + から",
-        "meaning": "Using polite 「〜ますから」 or 「〜ですから」 before it sounds more courteous. Common when explaining things to guests or elders.",
-        "connection": "Verb masu-form / です + から",
-        "examples": [
-          "Tomorrow is a day off, so please take it easy.",
-          "I'll be right back, so please wait here."
-        ]
-      }
-    ],
-    "notes": [
-      "「から」 carries the speaker's own assertion. Using it to explain lateness or time off to a superior or client sounds like you're insisting you're right or making excuses; use 「ので」 instead: ✕「電車が遅れたから、遅刻しました」 → ○「電車が遅れたので、遅刻してしまいました」.",
-      "After nouns and na-adjectives add 「だ」: ○「雨だから」, not ✕「雨から」. With 「ので」 it's 「雨なので」; don't mix the two up.",
-      "A bare 「〜から！」 or 「〜からね」 at the end of a sentence often sounds like a warning or a sulk (「もう知らないから！」); don't use it to elders or superiors.",
-      "「〜てから」 (after...) and starting-point 「から」 (from...) don't express reasons: 「食べてから行く」 = go after eating."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "Planning the weekend with family",
-          "description": "Giving a reason and making a suggestion.",
-          "example": "It's raining today, so let's watch a movie at home."
-        },
-        {
-          "title": "Warning a child",
-          "description": "Followed by a command, 「から」 sounds natural.",
-          "example": "It's dangerous, so don't touch it!"
-        },
-        {
-          "title": "Answering a friend's question",
-          "description": "Answering 「なんで」 with just the reason.",
-          "example": "“Why aren't you eating?” “Because I just ate.”"
-        }
-      ],
-      "work": [
-        {
-          "title": "Asking a coworker to get ready",
-          "description": "Explaining why and making a request to a peer or junior.",
-          "example": "The client will be here soon, so go get the meeting room ready."
-        },
-        {
-          "title": "A teacher's advice to students",
-          "description": "Giving a reason in polite form.",
-          "example": "There's a test tomorrow, so get to bed early, okay?"
-        }
-      ]
-    },
-    "etymology": "「から」 was originally a case particle marking a starting point or route (\"from ...\"). As for its origin, it is generally thought to be cognate with the noun 「柄（から）」 (nature, cause, root), though there are other theories. Since a cause can be seen as the \"starting point\" of an event, the starting-point 「から」 naturally extended to a conjunctive particle of cause and reason; this use became widespread from the medieval period onward. (Compare English \"from\" in \"suffering from the cold\".)",
-    "formation": "「から」 is originally a case particle marking a starting point, \"from...\". Treat one event as the \"starting point\" of another and it becomes a reason: 「時間がないから急ぐ」 = starting from \"there's no time\", you arrive at \"hurry\". The speaker is the one who sets this starting point, so 「から」 has a subjective tone and can lead straight into a command, request or resolution (「危ないから触るな」). And precisely because it is \"a reason the speaker asserts\", using it in an excuse sounds like insisting \"I'm in the right\", which is less polite than 「ので」, which presents the cause as an objective fact.",
-    "similar": [
-      {
-        "title": "〜ので",
-        "explanation": "Both express reasons. 「から」 is subjective and can be followed directly by commands or intentions; 「ので」 is objective and gentle, and is preferred for giving reasons in polite situations."
-      },
-      {
-        "title": "〜のだから・〜んだから",
-        "explanation": "An emphatic form of the same origin: it presents the reason as a fact both sides already know, \"since..., you should...\", often with a tone of blame or persuasion (「子どもじゃないんだから、自分でやりなさい」)."
-      },
-      {
-        "title": "〜からこそ",
-        "explanation": "Same origin: adding 「こそ」 stresses \"precisely because...\", highlighting that this is the real reason (「好きだからこそ厳しく言う」)."
-      },
-      {
-        "title": "〜から (starting point)",
-        "explanation": "Same origin: the reason use grew out of the starting-point meaning \"from...\" (a cause is where a result starts). 「東京から来た」 is a starting point; 「時間がないから」 is a reason. After a noun it marks a starting point; after a clause (or noun + だ) it marks a reason."
-      }
-    ],
-    "title": "〜から (reason)"
   },
   {
     "id": "node",

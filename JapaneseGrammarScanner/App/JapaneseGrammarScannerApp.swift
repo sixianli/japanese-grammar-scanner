@@ -35,6 +35,8 @@ struct RootTabView: View {
     }()
     @EnvironmentObject private var favorites: FavoritesStore
     @EnvironmentObject private var entitlements: EntitlementStore
+    @EnvironmentObject private var history: HistoryStore
+    @EnvironmentObject private var library: GrammarLibrary
     @AppStorage("didCompleteOnboarding") private var didCompleteOnboarding = false
     @State private var showOnboarding = false
 
@@ -70,11 +72,18 @@ struct RootTabView: View {
         }
         .onReceive(NotificationCenter.default.publisher(for: .showOnboarding)) { _ in showOnboarding = true }
         .onAppear {
+            favorites.migrate(aliases: library.aliases)
+            history.migrate(aliases: library.aliases)
             if !didCompleteOnboarding, DemoMode.screen == nil || DemoMode.screen == "onboarding" {
                 showOnboarding = true
             }
+            if DemoMode.seedsHistory, history.viewRecords.isEmpty {
+                let old = Date().addingTimeInterval(-10 * 86_400)
+                for id in ["ni-mo-kakawarazu", "you-ni-naru", "okage-de", "te-shimau"] { history.recordViewed(id, now: old) }
+                for id in ["izen", "made-until", "sou-da-appearance"] { history.recordViewed(id) }
+            }
             if DemoMode.screen == "favorites", favorites.ids.isEmpty {
-                for id in ["te-shimau", "you-ni-naru", "ni-mo-kakawarazu", "okage-de", "rashii"].reversed() {
+                for id in ["te-shimau", "you-ni-naru", "ni-mo-kakawarazu", "okage-de", "rashii-typical"].reversed() {
                     favorites.toggle(id)
                 }
             }

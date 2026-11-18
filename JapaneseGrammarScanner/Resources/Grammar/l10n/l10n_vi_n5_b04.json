@@ -1,9 +1,8 @@
 [
   {
     "id": "koto-nominalizer",
-    "title": "〜こと (danh từ hóa)",
-    "meaning": "Gắn sau động từ (và một số từ khác) để biến cả cụm thành danh từ, nghĩa là “việc ~”.",
-    "connection": "Động từ thể từ điển／thể た／thể ない + こと",
+    "meaning": "Đặt sau động từ v.v. để biến cả cụm thành danh từ, nghĩa là “việc ...” (làm chủ ngữ, tân ngữ hoặc phần giải thích); khi đặt cuối câu thì dùng trong quy định, thông báo để nêu chỉ thị hay điều cấm phải tuân theo.",
+    "connection": "Động từ thể từ điển / thể た / thể ない + こと; quy định cuối câu: động từ thể từ điển / thể ない + こと.",
     "senses": [
       {
         "label": "Làm chủ ngữ",
@@ -33,13 +32,32 @@
           "Sở thích của tôi là chụp ảnh.",
           "Ước mơ của tôi là đi du lịch khắp thế giới."
         ]
+      },
+      {
+        "label": "Phải... (chỉ thị)",
+        "meaning": "Dùng trong văn bản như nội quy, lưu ý, yêu cầu bài tập để yêu cầu người đọc làm gì. Giọng ngắn gọn, mang tính mệnh lệnh, không kèm cảm xúc.",
+        "connection": "Động từ thể từ điển + こと。(ví dụ 「提出すること」, 「記入すること」)",
+        "examples": [
+          "Báo cáo phải nộp trước thứ Sáu.",
+          "Họ tên nhất định phải viết bằng bút bi."
+        ]
+      },
+      {
+        "label": "Cấm...",
+        "meaning": "「〜ないこと」 diễn tả sự cấm đoán. Hay gặp trên biển báo, nội quy trường học, quy định phòng thi.",
+        "connection": "Động từ thể ない + こと。(ví dụ 「走らないこと」)",
+        "examples": [
+          "Không được chạy ngoài hành lang.",
+          "Trong giờ thi không được dùng từ điển."
+        ]
       }
     ],
     "notes": [
       "Với các động từ tri giác như 「見る」, 「聞く」, 「見える」, 「聞こえる」, đối tượng chỉ được dùng 「の」: ✕「彼が歌うことを聞いた」 → ○「彼が歌うのを聞いた」.",
       "Khi cuối câu giải thích \"A là ~\" thì chỉ dùng được 「こと」: ✕「趣味は本を読むのです」 → ○「趣味は本を読むことです」. Nếu dùng 「のです」, câu sẽ mang giọng giải thích kiểu \"(thật ra là) đang đọc sách\".",
-      "Trước 「こと」 dùng thể thông thường, không dùng thể ます: ✕「泳ぎますことが好きです」 → ○「泳ぐことが好きです」.",
-      "\"Người + 「のことが好き」\" nghĩa là \"thích người đó (thích mọi thứ ở người đó)\", thường dùng khi tỏ tình nên dễ bị hiểu là thích theo nghĩa yêu đương. Nói 「〇〇さんのことが好きです」 với đồng nghiệp hay cấp trên rất dễ gây hiểu lầm."
+      "Chỉ dùng trong quy định, lưu ý, hướng dẫn bài tập dạng văn viết. Nói miệng với đồng nghiệp hay khách hàng 「明日までに提出すること」 nghe như ra lệnh, rất bất lịch sự; khi nói phải dùng 「明日までに提出してください」.",
+      "「〜ないこと」 là cấm đoán. Khi đọc thông báo đừng hiểu thành «không có ...»: 「試験中は話さないこと」 là «cấm nói chuyện trong lúc thi».",
+      "Cần phân biệt với 「こと」 danh từ hóa: 「趣味は走ることだ」 thì 「こと」 chỉ là «việc ...». Chỉ khi câu kết thúc bằng một mình 「こと」 để biểu thị yêu cầu mới là cách dùng này."
     ],
     "scenes": {
       "daily": [
@@ -52,6 +70,16 @@
           "title": "Than chuyện học",
           "description": "Than với bạn cùng lớp về cái khó của tiếng Nhật.",
           "example": "Học thuộc kanji vất vả thật nhỉ."
+        },
+        {
+          "title": "Đọc nội quy chung cư",
+          "description": "Khi chuyển nhà, đọc quy định đổ rác của chung cư.",
+          "example": "Rác phải đem ra trước 8 giờ sáng."
+        },
+        {
+          "title": "Yêu cầu bài tập ở trường",
+          "description": "Giáo viên ghi yêu cầu bài tập lên bảng.",
+          "example": "Bài tập phải làm xong trước buổi học tới."
         }
       ],
       "work": [
@@ -64,27 +92,37 @@
           "title": "Đào tạo nhân viên mới",
           "description": "Đàn anh giải thích điểm mấu chốt trong công việc cho nhân viên mới.",
           "example": "Điều quan trọng là báo cáo cho cấp trên mỗi ngày."
+        },
+        {
+          "title": "Nội quy công ty",
+          "description": "Mục lưu ý trong sổ tay nhân viên.",
+          "example": "Không được mang tài liệu mật của công ty ra ngoài."
+        },
+        {
+          "title": "Quy định phòng thi",
+          "description": "Lưu ý dành cho thí sinh thi chứng chỉ.",
+          "example": "Trong 30 phút đầu sau khi bắt đầu thi, không được rời phòng."
         }
       ]
     },
-    "etymology": "「こと」 viết bằng kanji là 「事」, nghĩa gốc là “sự việc”. Khi làm danh từ hình thức, nó mất nghĩa cụ thể, chỉ còn chức năng biến câu phía trước thành danh từ, nên thường viết bằng kana.",
-    "formation": "「こと」 vốn là danh từ nghĩa là \"việc, sự việc\" (「事」). Đặt động từ ở thể từ điển (hoặc các thể khác) phía trước để bổ nghĩa cho nó, ta được \"việc làm ~\", nhờ đó cả cụm trở thành một danh từ. Đã là danh từ thì có thể thêm 「が」, 「を」, 「は」 để làm chủ ngữ, tân ngữ, hoặc thêm 「です」 để làm vị ngữ. Ngoài ra, vì 「こと」 chỉ khái niệm trừu tượng là \"việc\" nên nó thiên về hành vi, thói quen, quy tắc mang tính trừu tượng, chứ không chỉ hành động cụ thể đang diễn ra trước mắt như 「の」. Đây cũng là lý do không dùng 「こと」 với động từ tri giác.",
+    "etymology": "「こと」 viết bằng chữ Hán là 「事」, nghĩa gốc là “sự việc, sự kiện”. Khi làm danh từ hình thức, nó mất nghĩa cụ thể và chỉ có tác dụng biến mệnh đề đứng trước thành danh từ, nên thường viết bằng kana. Khi đặt cuối câu, nó là kết quả của việc lược phần theo sau như 「〜ことになっている」「〜ことを求める」, trở thành chỉ thị, quy định trong văn viết.",
+    "formation": "「こと」 vốn là danh từ “sự việc, điều”. Đặt động từ thể từ điển v.v. phía trước làm định ngữ thì thành “việc làm ...”, cả cụm trở thành một danh từ, nên có thể thêm 「が」「を」「は」 làm chủ ngữ, tân ngữ, hoặc thêm 「です」 làm vị ngữ (「趣味は〜ことです」). Vì 「こと」 chỉ “sự việc” trừu tượng nên thiên về hành vi, thói quen, quy tắc trừu tượng, khác với 「の」 chỉ hành động cụ thể đang diễn ra trước mắt. Cùng lý lẽ đó, trong các điều khoản, từng yêu cầu được liệt kê thành “việc ...” và câu kết thúc ở 「こと」, trở thành chỉ thị ngắn gọn, khách quan: 「〜こと」 là việc phải làm, còn 「〜ないこと」 liệt kê “việc không làm” thành một mục, tức là điều cấm.",
     "similar": [
-      {
-        "title": "〜の (danh từ hóa)",
-        "explanation": "Nghĩa gần giống: 「の」 cũng biến hành động thành danh từ, mang tính khẩu ngữ hơn, thiên về hành động cụ thể đang diễn ra trước mắt; trước động từ tri giác (「見る・聞く」) chỉ dùng được 「の」. 「こと」 trừu tượng hơn, và trong các mẫu như 「〜ことです」 ở cuối câu hay 「〜ことができる」 thì chỉ dùng được 「こと」."
-      },
       {
         "title": "〜ということ (danh từ hóa)",
         "explanation": "Cùng nguồn gốc: thêm 「という」 trước 「こと」 để biến nội dung của cả một câu thành danh từ, thường dùng khi truyền đạt thông tin: 「明日休みだということを聞いた」. Động từ gắn trực tiếp với 「こと」 thì chỉ nói về bản thân hành động."
       },
       {
-        "title": "〜ことができる",
-        "explanation": "Cùng nguồn gốc: mẫu câu chỉ khả năng, tạo thành bằng cách thêm 「が」 + 「できる」 sau 「こと」 danh từ hóa: 「泳ぐことができる」. Bản thân 「こと」 chỉ có chức năng danh từ hóa, không mang nghĩa \"có thể\"."
+        "title": "〜てください",
+        "explanation": "「てください」 là lời nhờ vả lịch sự dạng nói. 「こと」 cuối câu là quy định dạng viết, không mang sắc thái lịch sự."
       },
       {
-        "title": "〜たことがある",
-        "explanation": "Cùng nguồn gốc: thể た + 「こと」 để danh từ hóa rồi thêm 「がある」, diễn tả kinh nghiệm \"đã từng ~\": 「富士山に登ったことがある」."
+        "title": "〜なさい",
+        "explanation": "「なさい」 là mệnh lệnh dạng nói, thường dùng khi cha mẹ, thầy cô nói với trẻ. 「こと」 thường thấy trong điều khoản dạng viết, cũng là chỉ thị từ trên xuống."
+      },
+      {
+        "title": "〜ことになっている",
+        "explanation": "Cùng nguồn gốc (đều tạo bởi danh từ hình thức 「こと」): 「ことになっている」 là giải thích «quy định là như vậy»; 「こと」 cuối câu là trực tiếp ban ra chính quy định đó."
       }
     ]
   },
@@ -174,7 +212,6 @@
   },
   {
     "id": "ni-iku-purpose",
-    "title": "〜に行く・〜に来る (mục đích)",
     "meaning": "Diễn tả mục đích của việc di chuyển: đi／đến／về (đâu đó) để làm gì.",
     "connection": "Động từ thể ます (bỏ ます)／danh từ chỉ hành động + に + 行く・来る・帰る",
     "senses": [
@@ -345,9 +382,10 @@
   },
   {
     "id": "ni-suru-decide",
-    "title": "〜にする (quyết định・lựa chọn)",
-    "meaning": "Diễn tả việc chọn một trong nhiều lựa chọn, hoặc quyết định một việc gì đó: “chọn ~”, “lấy ~”.",
-    "connection": "Danh từ + にする",
+    "meaning": "Biểu thị chọn một trong nhiều lựa chọn hoặc quyết định việc gì (“chọn…, định là…”), và cũng biểu thị cố ý làm cho sự vật trở thành một trạng thái nào đó (“làm cho… thành…”).",
+    "connection": "Danh từ ＋ にする (lựa chọn・quyết định); thân tính từ い ＋ くする; thân tính từ な／danh từ ＋ にする (làm thay đổi)",
+    "etymology": "「する」 nghĩa gốc là “làm”. 「Xにする」 vốn là “làm cho thành X”, khi dùng cho sự lựa chọn thì mở rộng thành “chốt lựa chọn là X”, tức “quyết định lấy X”. 「〜く」「〜に」 là liên dụng hình (dạng trạng từ) của tính từ; theo sau là 「する」 nghĩa là “làm cho thành dạng…”, cùng với 「なる」 tạo thành cặp “thay đổi có chủ ý / thay đổi tự nhiên”.",
+    "formation": "「に」 biểu thị kết quả của sự thay đổi hay kết cục, còn 「する」 là “làm, khiến”, nên 「Xにする」 nghĩa đen là “làm (sự việc) thành X”. Trước nhiều lựa chọn, “làm cho lựa chọn thành X” là “chốt là X, chọn X”; vì người nói chủ động “làm” nên nó thể hiện sự lựa chọn và quyết định của mình, trái lại 「Xになる」 là “tự nhiên trở thành X”, chỉ nói kết quả. Nếu X là liên dụng hình của tính từ (「〜く」「〜に」) thì “làm thành X” là cố ý đưa sự vật vào một trạng thái nào đó, đối tượng bị thay đổi dùng 「を」; 「静かにしてください」 nghĩa đen là “xin hãy làm (bản thân) ở trạng thái yên tĩnh”, nên cũng dùng để yêu cầu người khác giữ một trạng thái. Như vậy cùng một 「にする」 có thể biểu thị lựa chọn, quyết định hoặc làm thay đổi, tùy phía trước là lựa chọn danh từ hay trạng thái của tính từ. Trước 「に」 chỉ có thể là danh từ, nên khi quyết định làm một hành động phải danh từ hóa bằng 「こと」 trước, thành 「〜ことにする」.",
     "senses": [
       {
         "label": "Chọn・gọi món",
@@ -368,12 +406,33 @@
           "Quà sinh nhật tôi đã chọn đồng hồ.",
           "Điểm đến du lịch đã chốt là Okinawa."
         ]
+      },
+      {
+        "label": "Làm thay đổi (tính từ い)",
+        "meaning": "Chỉ việc chủ ý thay đổi tính chất hay trạng thái của sự vật: “làm cho ...”. Đối lập với 「〜くなる」 (thay đổi tự nhiên).",
+        "connection": "Gốc tính từ い + くする (明るくする・小さくする・短くする)",
+        "examples": [
+          "Tôi đã làm cho căn phòng sáng hơn.",
+          "Hãy vặn nhỏ âm thanh một chút.",
+          "Tôi muốn cắt tóc ngắn."
+        ]
+      },
+      {
+        "label": "Làm thay đổi (tính từ な)",
+        "meaning": "Chỉ việc làm cho sự vật thành trạng thái nào đó, hoặc yêu cầu người khác giữ trạng thái đó. 「静かにしてください」 là câu yêu cầu rất hay dùng.",
+        "connection": "Gốc tính từ な + にする (きれいにする・静かにする・大切にする)",
+        "examples": [
+          "Trong thư viện xin hãy giữ yên lặng.",
+          "Mọi người cùng dọn phòng cho sạch nào.",
+          "Hãy giữ gìn sức khỏe nhé."
+        ]
       }
     ],
     "notes": [
       "Khi quyết định làm một hành động, phải danh từ hóa động từ bằng 「こと」 trước: ✕「日本へ行くにする」 → ○「日本へ行くことにする」.",
       "Khi gọi món, 「コーヒーでいいです」 mang ý \"cà phê cũng được, tạm vậy\", nói với người mời hay chủ nhà sẽ thất lễ. Hãy nói 「コーヒーにします」 hoặc 「コーヒーがいいです」.",
-      "Khi báo thay đổi cho khách hàng, 「会議は月曜日にしました」 nghe như mình tự quyết một phía; thường nói 「月曜日になりました」 cho nhẹ nhàng hơn.",
+      "Thay đổi do con người dùng 「〜くする」 (đối tượng dùng 「を」), thay đổi tự nhiên dùng 「〜くなる」 (chủ ngữ dùng 「が」); chọn sai là nghĩa thay đổi: 「部屋を暖かくした」 (tôi làm cho phòng ấm lên) / 「部屋が暖かくなった」 (phòng đã ấm lên).",
+      "Tính từ đuôi な phải dùng 「に」, không dùng 「く」: ✕「静かくしてください」→ ○「静かにしてください」. 「きれい」「嫌い」 cũng là tính từ đuôi な: ✕「きれいくする」→ ○「きれいにする」.",
       "「〜にする／〜くする」 trong 「部屋を静かにする」, 「明るくする」 là \"làm cho trở nên\", không phải lựa chọn. Phân biệt bằng cách xem phía trước là danh từ (phương án lựa chọn) hay tính từ (trạng thái)."
     ],
     "scenes": {
@@ -389,9 +448,19 @@
           "example": "Gặp nhau ở cửa soát vé nhà ga nhé."
         },
         {
-          "title": "Chọn hàng",
-          "description": "So sánh trong cửa hàng xong rồi quyết định.",
-          "example": "Tôi lấy cái màu đỏ này."
+          "title": "Ở tiệm cắt tóc",
+          "description": "Nói với thợ kiểu tóc mình muốn.",
+          "example": "Hãy cắt mái ngắn đi một chút giúp tôi."
+        },
+        {
+          "title": "Xem TV ở nhà",
+          "description": "TV ồn quá, nhờ người nhà vặn nhỏ.",
+          "example": "Vặn nhỏ tiếng TV thêm chút nữa đi."
+        },
+        {
+          "title": "Giữa bạn bè",
+          "description": "Khuyên hai người bạn vừa cãi nhau làm lành.",
+          "example": "Đừng cãi nhau nữa, hòa thuận với nhau nhé."
         }
       ],
       "work": [
@@ -404,11 +473,19 @@
           "title": "Chọn phương án",
           "description": "Trong cuộc họp, nói ra phương án mình chọn.",
           "example": "Lần này tôi muốn chọn phương án B."
+        },
+        {
+          "title": "Sửa tài liệu",
+          "description": "Cấp trên yêu cầu sửa tài liệu cho dễ hiểu hơn.",
+          "example": "Hãy làm tài liệu này đơn giản hơn nữa."
+        },
+        {
+          "title": "Cải tiến sản phẩm",
+          "description": "Giải thích hướng cải tiến sản phẩm trong cuộc họp.",
+          "example": "Mẫu mới đã được làm nhẹ hơn trước."
         }
       ]
     },
-    "etymology": "「する」 nghĩa gốc là “làm”. 「Xにする」 vốn nghĩa là “làm cho thành X”; khi dùng để lựa chọn thì chuyển thành “đặt lựa chọn là X”, tức là “quyết định chọn X”.",
-    "formation": "「に」 chỉ kết quả của sự thay đổi hay kết luận, 「する」 là \"làm, khiến\", nên 「Xにする」 theo nghĩa đen là \"làm cho (sự việc) thành X\". Đứng trước nhiều phương án, \"làm cho lựa chọn thành X\" chính là \"quyết định là X, chọn X\". Vì người nói chủ động \"làm cho thành\" nên mẫu này chỉ lựa chọn, quyết định của bản thân; ngược lại, 「Xになる」 là \"tự nhiên thành X\", chỉ nói kết quả. Trước 「に」 chỉ được là danh từ, nên khi quyết định làm một hành động thì phải danh từ hóa bằng 「こと」 trước, thành 「〜ことにする」.",
     "similar": [
       {
         "title": "〜ことにする",
@@ -419,12 +496,12 @@
         "explanation": "Nghĩa gần giống: cả hai đều nói được kết quả của quyết định. 「〜にする」 là do mình quyết định; 「〜になる」 là kết quả tự nhiên hoặc do người khác quyết: 「会議は月曜日にしました」 (chúng tôi quyết) so với 「会議は月曜日になりました」 (đã được định là thứ Hai)."
       },
       {
-        "title": "〜くする・〜にする (làm cho thay đổi)",
-        "explanation": "Cùng nguồn gốc: cùng là 「にする」, khi đi với tính từ thì có nghĩa làm cho sự vật trở thành một trạng thái nào đó: 「静かにする」, 「大きくする」, không phải lựa chọn."
-      },
-      {
         "title": "〜をください",
         "explanation": "Nghĩa gần giống: đều dùng được khi gọi món. 「コーヒーをください」 là xin trực tiếp nhân viên; 「コーヒーにします」 là nói lựa chọn của mình, nhẹ nhàng hơn, và cũng dùng được khi bàn với người đi cùng."
+      },
+      {
+        "title": "〜ようにする",
+        "explanation": "Cùng nguồn gốc: gắn 「にする」 sau 「〜よう」, biểu thị cố gắng để một hành vi trở thành thói quen: 「毎日野菜を食べるようにしている」; còn mẫu này là trực tiếp thay đổi tính chất, trạng thái của sự vật."
       }
     ]
   },
@@ -593,7 +670,6 @@
   },
   {
     "id": "naide-without",
-    "title": "〜ないで (không ~ mà ~)",
     "meaning": "Diễn tả “không làm A mà làm B”: làm B trong trạng thái chưa làm A, hoặc không làm A mà làm B thay vào đó.",
     "connection": "Động từ thể ない + で",
     "senses": [
@@ -842,7 +918,6 @@
   },
   {
     "id": "mashou-ka-offer",
-    "title": "〜ましょうか (đề nghị・giúp đỡ)",
     "meaning": "Chủ động đề nghị làm gì đó cho người nghe, hoặc rủ cùng làm gì đó và hỏi ý kiến người nghe.",
     "connection": "Động từ thể ます (bỏ ます) + ましょうか",
     "senses": [
@@ -925,7 +1000,6 @@
   },
   {
     "id": "deshou-guess",
-    "title": "〜でしょう (suy đoán・xác nhận)",
     "meaning": "Suy đoán ở thể lịch sự: “chắc là ~”. Khi lên giọng ở cuối câu thì là xác nhận với người nghe: “~ đúng không?”.",
     "connection": "Động từ・tính từ đuôi い thể thông thường／tính từ đuôi な (bỏ な)／danh từ + でしょう",
     "senses": [
@@ -1096,8 +1170,10 @@
   },
   {
     "id": "n-desu-explanatory",
-    "meaning": "Dùng để giải thích nguyên nhân, hoàn cảnh, hoặc hỏi người nghe lý do. Mang sắc thái “giải thích” hoặc “quan tâm”.",
-    "connection": "Thể thông thường + んです／のです (danh từ・tính từ đuôi な: 〜なんです)",
+    "meaning": "Đưa nội dung phía trước ra như một “tình huống” để giải thích: nêu lý do, hỏi nguyên do, xác nhận hoặc nhận ra điều mới; 「〜んだ」 trong văn nói còn dùng để nhấn mạnh quyết tâm hoặc ra lệnh.",
+    "connection": "Thể thông thường + んです／のです (khẩu ngữ: んだ／のだ); danh từ・tính từ な: 〜なんです／なんだ; mệnh lệnh: động từ thể từ điển + んだ",
+    "etymology": "Gồm danh từ hình thức 「の」 + trợ động từ khẳng định 「だ」: trước tiên dùng 「の」 gói câu phía trước thành \"một sự việc\", rồi dùng 「だ」 khẳng định \"chính là như vậy\", nên mang sắc thái giải thích, nhấn mạnh. 「んだ」 là biến âm văn nói của 「のだ」.",
+    "formation": "Gồm danh từ hình thức 「の」 + trợ động từ khẳng định 「だ」. 「の」 gói câu phía trước lại thành \"một việc, một tình hình\", 「だ」 khẳng định \"chính là như vậy\". Vì vậy 「〜のだ」 không phải đơn thuần trình bày sự thật mà là \"đưa ra một tình hình để giải thích\": nói với người khác là giải thích lý do (thật ra là thế này), nói với bản thân là sự vỡ lẽ (hóa ra là thế). Dùng với hành động chưa xảy ra (「行くんだ」) thì là khẳng định \"đi, chính là như vậy\", từ đó sinh ra giọng quyết tâm hoặc mệnh lệnh. Trong khẩu ngữ 「の」 yếu đi thành 「ん」, thành 「んだ」, 「んです」.",
     "senses": [
       {
         "label": "Giải thích nguyên nhân・hoàn cảnh",
@@ -1127,13 +1203,40 @@
           "Ồ, thì ra anh Tanaka nấu ăn giỏi nhỉ.",
           "Ngày mai được nghỉ à? Tôi không biết đấy."
         ]
+      },
+      {
+        "label": "Vỡ lẽ・phát hiện",
+        "meaning": "Người nói chợt hiểu ra một tình huống. Tương đương \"hóa ra là...\". Hay đi với 「そうか」, 「なんだ」, dùng thể thường 「〜んだ」.",
+        "connection": "そうか／なんだ + thể thường + んだ",
+        "examples": [
+          "À đúng rồi, hôm nay là chủ nhật nên được nghỉ.",
+          "Gì chứ, hóa ra cậu biết từ trước rồi."
+        ]
+      },
+      {
+        "label": "Nhấn mạnh chủ trương・quyết tâm",
+        "meaning": "Mạnh mẽ bày tỏ chủ trương hoặc quyết tâm của mình. Tương đương \"nhất định phải..., đã bảo là...\". Văn viết dùng 「のだ／のである」.",
+        "connection": "Động từ thể từ điển + んだ／のだ; hay đi với 「絶対に」, 「どうしても」",
+        "examples": [
+          "Tôi nhất định sẽ trở thành bác sĩ.",
+          "Chỉ cần nỗ lực thì nhất định sẽ làm được."
+        ]
+      },
+      {
+        "label": "Ra lệnh・khuyên bảo",
+        "meaning": "Dùng 「〜んだ」 để ra lệnh hoặc khuyên bảo một cách mạnh mẽ, thường là người trên với người dưới, bố mẹ với con cái. Tương đương \"mau..., phải...\".",
+        "connection": "Động từ thể từ điển + んだ",
+        "examples": [
+          "Muộn rồi, mau đi ngủ đi.",
+          "Đừng khóc nữa, nói cho đàng hoàng."
+        ]
       }
     ],
     "notes": [
       "Khi chỉ đơn thuần nói một sự thật thì đừng thêm 「んです」: 「私は学生なんです」 nghe như đang thanh minh hoặc nhấn mạnh hoàn cảnh đặc biệt; khi tự giới thiệu chỉ cần nói 「学生です」.",
       "Dùng 「どうして〜んですか」 để truy hỏi hành động của người khác nghe như đang trách móc: 「どうして来なかったんですか」 nói với cấp trên rất thất lễ; có thể hỏi 「何かあったんですか」.",
-      "Khi đến muộn hay mắc lỗi mà mở lời bằng 「〜んです」 để giải thích lý do thì sẽ bị coi là đang bao biện. Ở công sở Nhật, thường phải xin lỗi trước 「申し訳ありません」, rồi mới giải thích ngắn gọn.",
-      "Sau danh từ và tính từ đuôi な phải thêm 「な」: ✕「学生んです」 → ○「学生なんです」."
+      "Sau danh từ và tính từ đuôi な phải thêm 「な」: ✕「学生んです」 → ○「学生なんです」.",
+      "「〜んですか」 sẽ truy hỏi nguyên nhân phía sau, dùng để hỏi chuyện riêng của người khác sẽ thất lễ: ✕「どうして結婚しないんですか」; 「〜んだ」 diễn tả mệnh lệnh (「早く寝るんだ」) giọng rất mạnh, chỉ dùng với trẻ con, người nhỏ tuổi hơn."
     ],
     "scenes": {
       "daily": [
@@ -1146,6 +1249,16 @@
           "title": "Quan tâm bạn bè",
           "description": "Thấy bạn không có tinh thần, hỏi han quan tâm.",
           "example": "Trông bạn không được khỏe nhỉ. Có chuyện gì à?"
+        },
+        {
+          "title": "Chợt hiểu ra",
+          "description": "Thấy cửa hàng đóng cửa và hiểu ra lý do.",
+          "example": "À, hóa ra hôm nay là ngày nghỉ cố định."
+        },
+        {
+          "title": "Gặp khi đọc tiểu thuyết",
+          "description": "Nhân vật chính trong tiểu thuyết hạ quyết tâm.",
+          "example": "Dù chỉ một mình, tôi cũng sẽ đi."
         }
       ],
       "work": [
@@ -1158,35 +1271,35 @@
           "title": "Hỏi đàn anh",
           "description": "Không biết để tài liệu ở đâu, hỏi đàn anh.",
           "example": "Tài liệu này em nên để ở đâu ạ?"
+        },
+        {
+          "title": "Gặp khi đọc bài bình luận",
+          "description": "Bài xã luận dùng 「のである」 để nhấn mạnh kết luận.",
+          "example": "Chính lúc này mới cần cải cách."
         }
       ]
     },
-    "etymology": "「の」 là danh từ hình thức, biến câu phía trước thành danh từ. 「〜のです」 vốn có nghĩa “là chuyện như thế này”, từ đó mang nghĩa giải thích. Trong khẩu ngữ, 「の」 biến âm thành 「ん」, trở thành 「〜んです」.",
-    "formation": "Gồm danh từ hình thức 「の」 + 「です」 chỉ khẳng định. 「の」 gói cả câu phía trước thành một \"sự việc\", nên 「〜のです」 theo nghĩa đen là \"(là) chuyện ~\", tức là bày cả sự việc ra như bối cảnh, nguồn cơn, vì thế tự nhiên mang chức năng \"giải thích\". Dùng trong câu hỏi thì thành \"là chuyện gì vậy?\", để hỏi lý do hoặc xác nhận tình hình mới. Trong khẩu ngữ 「の」 yếu đi thành 「ん」, thành 「〜んです」. Danh từ và tính từ đuôi な khi nối với 「の」 phải dùng liên thể hình 「な」, nên mới là 「学生なんです」, 「静かなんです」.",
     "similar": [
-      {
-        "title": "〜のだ・〜んです",
-        "explanation": "Cùng nguồn gốc: là cùng một cấu trúc 「の」 + khẳng định; 「〜のだ／〜んだ」 là thể thông thường, dùng giữa bạn bè, người nhà hoặc trong văn viết."
-      },
       {
         "title": "〜んですが (mở đầu)",
         "explanation": "Cùng nguồn gốc: thêm 「が」 sau 「〜んです」 để trình bày tình hình trước rồi mới đưa ra lời nhờ hoặc câu hỏi: 「道に迷ったんですが、駅はどこですか」."
       },
       {
-        "title": "〜から (nguyên nhân)",
-        "explanation": "Nghĩa gần giống: 「〜からです」 nói rõ nguyên nhân; 「〜んです」 là bày tình hình ra để người nghe hiểu, giọng nhẹ nhàng và khẩu ngữ hơn."
-      },
-      {
         "title": "〜わけだ",
         "explanation": "Nghĩa gần giống: cũng có giọng giải thích \"hóa ra là vậy\", nhưng 「〜わけだ」 thiên về rút ra kết luận đương nhiên từ sự thật: 「十年住んでいたから、日本語が上手なわけだ」."
+      },
+      {
+        "title": "〜のだから・〜んだから",
+        "explanation": "Cùng gốc: 「〜のだ」 + 「から」. Đưa ra tình hình mà đối phương cũng biết làm lý do, phía sau thường là yêu cầu hoặc phán đoán (「子どもなんだから、仕方ない」), giọng mạnh hơn 「から」."
       }
     ]
   },
   {
     "id": "to-iu-called",
-    "title": "〜という (tên là)",
-    "meaning": "Dùng để giới thiệu tên gọi: “… tên là ~”, “… gọi là ~”. Hay dùng cho người, vật, nơi chốn mà người nghe có thể chưa biết.",
-    "connection": "Danh từ (tên gọi) + という + danh từ",
+    "meaning": "Đặt sau tên gọi nghĩa là “tên là ~”, dùng để giới thiệu hoặc hỏi tên; 「NというN」 nhấn mạnh “tất cả các N”, và sau số lượng từ nhấn mạnh “đến tận ~”.",
+    "connection": "Danh từ (tên) ＋ という ＋ danh từ; 何という＋danh từ; danh từ ＋ という ＋ cùng danh từ đó; 何十／何百／何千／何万 ＋ という ＋ danh từ",
+    "etymology": "「という」 vốn là trợ từ trích dẫn 「と」 + 「言う」, dùng để định nghĩa hay gọi tên. 「NというN」 nghĩa đen là “N được gọi là N”, tức “hễ cái gì đáng gọi là N thì đều…”, từ đó sinh ra nghĩa nhấn mạnh “toàn bộ”; khi đi với từ chỉ số lượng thì mang cảm giác phóng đại “lên tới…”.",
+    "formation": "「という」 gồm 「と」 trích dẫn cộng 「言う」, nghĩa gốc là «được gọi là ...». 「家という家」 nghĩa đen là «những ngôi nhà được gọi là ‘nhà’», tức «tất cả những gì xứng đáng mang tên ‘nhà’»: dùng tên gọi để bao trọn từng thành viên của cả loại, nên có nghĩa «tất cả ...». Đứng sau từ chỉ số lượng như 「何万」, 「という」 nêu con số như một cách gọi «được cho là», mang sắc thái ngạc nhiên «nhiều đến thế». Cả hai cách dùng đều tận dụng chức năng gọi tên và trích dẫn của 「という」 để nhấn mạnh phạm vi hoặc số lượng.",
     "senses": [
       {
         "label": "Giới thiệu tên gọi",
@@ -1214,13 +1327,33 @@
         "examples": [
           "Trước ga mới mở một tiệm bánh mì tên là “Hana” đấy."
         ]
+      },
+      {
+        "label": "Tất cả mọi…",
+        "meaning": "Lặp lại cùng một danh từ, giữa chèn 「という」, nghĩa là “tất cả…, từng… một”, nhấn mạnh không có ngoại lệ. Phía sau hay đi với 「すべて」「みな」「どこも」. Thường dùng trong văn viết và khi miêu tả cảnh.",
+        "connection": "Danh từ + という + cùng danh từ đó (hay gặp: 家という家・窓という窓・店という店・人という人)",
+        "examples": [
+          "Trong cơn bão, nhà nào trong làng cũng bị thiệt hại.",
+          "Tôi mở hết tất cả cửa sổ để thay đổi không khí.",
+          "Từng khúc xương trên người đều đau nhức."
+        ]
+      },
+      {
+        "label": "Lên đến…",
+        "meaning": "Đứng sau từ chỉ số lượng như 「何百」「何千」「何万」「数千」, nhấn mạnh số lượng rất nhiều, tương đương “lên tới…, hàng nghìn hàng vạn…”. Mang giọng thán phục.",
+        "connection": "何十 / 何百 / 何千 / 何万 / 数万 v.v. + という + danh từ",
+        "examples": [
+          "Hàng vạn người đã tập trung tại hội trường.",
+          "Mỗi ngày tôi nhận được hàng trăm email."
+        ]
       }
     ],
     "notes": [
       "「〜という人」 hàm ý \"người mà tôi (hoặc bạn) không quen\"; nói về người mà người nghe biết hoặc về cấp trên mà thêm 「という」 thì nghe xa cách, thiếu tôn trọng: ✕「田中部長という人が来ました」 → ○「田中部長がいらっしゃいました」.",
       "Những thứ ai cũng biết thường không thêm 「という」: nói 「東京に住んでいます」, chứ không nói 「東京という町に住んでいます」, vì câu sau nghe như đang giới thiệu một nơi người nghe chưa từng biết.",
       "Khẩu ngữ 「っていう」 không dùng được trong dịp trang trọng hay văn bản: ✕「ABCっていう会社から電話がありました」 → ○「ABCという会社から…」.",
-      "Khi tự giới thiệu, 「王と申します」, 「王と言います」 là cách dùng trích dẫn của động từ 「言う」, phía sau không có danh từ, không thuộc mẫu câu này."
+      "「NというN」 bắt buộc phải lặp lại cùng một danh từ: ✕「家という建物」→ ○「家という家」.",
+      "Chú ý phân biệt với 「〜という」 chỉ tên gọi: 「田中という人」 là «một người tên là Tanaka», không phải «tất cả mọi người»."
     ],
     "scenes": {
       "daily": [
@@ -1233,6 +1366,16 @@
           "title": "Hỏi ở chợ",
           "description": "Thấy loại rau không biết, hỏi người bán tên của nó.",
           "example": "Cái này tiếng Nhật gọi là rau gì ạ?"
+        },
+        {
+          "title": "Khi đọc tiểu thuyết",
+          "description": "Tiểu thuyết miêu tả cảnh cả thị trấn như bừng tỉnh.",
+          "example": "Đêm đó, mọi cửa hàng trong thị trấn đều sáng đèn."
+        },
+        {
+          "title": "Đi xem concert",
+          "description": "Kể với bạn về cảnh đông nghịt người.",
+          "example": "Hàng vạn khán giả đã chen kín sân vận động mái vòm."
         }
       ],
       "work": [
@@ -1245,11 +1388,19 @@
           "title": "Chuyển lời điện thoại",
           "description": "Báo với cấp trên là có người đã gọi đến.",
           "example": "Lúc nãy có một vị tên là Suzuki gọi điện đến ạ."
+        },
+        {
+          "title": "Bản tin thời sự",
+          "description": "Đưa tin về mức độ nghiêm trọng của thiên tai.",
+          "example": "Vì động đất, mọi con đường đều bị chia cắt."
+        },
+        {
+          "title": "Phân tích thị trường",
+          "description": "Giải thích mức độ được ưa chuộng của một sản phẩm.",
+          "example": "Ngay ngày đầu mở bán, hàng nghìn đơn đặt hàng đã ùn ùn kéo đến."
         }
       ]
     },
-    "etymology": "Gồm trợ từ trích dẫn 「と」 + động từ 「いう（言う）」, nghĩa đen là “gọi là ~”. Từ nghĩa “nói là ~”, nó mờ nghĩa dần thành cách nối tên gọi với danh từ, nên thường viết bằng kana.",
-    "formation": "Gồm trợ từ trích dẫn 「と」 + động từ 「いう」 (「言う」). 「と」 khoanh cái tên phía trước lại thành \"nội dung được nói ra\", 「いう」 vốn nghĩa là \"nói\", nên 「Xという」 theo nghĩa đen là \"gọi là X, tên là X\", rồi làm định ngữ bổ nghĩa cho danh từ phía sau: \"〇〇 tên là X\". Vì nghĩa \"nói\" đã nhạt đi thành \"gọi là\", nên thường viết bằng kana là 「いう」. Bản thân cấu trúc này cho biết \"đây là một cái tên cần giới thiệu\", vì vậy chủ yếu dùng cho người, vật, nơi chốn mà người nghe không quen thuộc.",
     "similar": [
       {
         "title": "〜と言う (trích dẫn)",
@@ -1262,6 +1413,10 @@
       {
         "title": "〜ということ (danh từ hóa)",
         "explanation": "Cùng nguồn gốc: 「という」 nối với 「こと」 để biến nội dung của cả một câu thành danh từ; phía trước là một câu chứ không phải một cái tên: 「彼が結婚するということを聞いた」."
+      },
+      {
+        "title": "〜に至るまで",
+        "explanation": "Nghĩa gần nhau, đều nhấn mạnh phạm vi rộng, không có ngoại lệ. 「〜に至るまで」 nêu ra một đầu cực đoan (「子どもから老人に至るまで」); 「NというN」 lặp lại cùng danh từ để diễn tả sinh động «từng cái một»."
       },
       {
         "title": "〜って (trích dẫn・chủ đề)",

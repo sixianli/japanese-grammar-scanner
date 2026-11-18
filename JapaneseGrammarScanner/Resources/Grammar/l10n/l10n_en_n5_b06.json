@@ -93,7 +93,6 @@
   },
   {
     "id": "ni-kai-frequency",
-    "title": "〜に〜回 (frequency)",
     "meaning": "Says how many times something is done within a period of time: “... times a day / a week”.",
     "connection": "Time-period noun + に + number + 回／度",
     "senses": [
@@ -380,7 +379,6 @@
   },
   {
     "id": "kosoado-determiners",
-    "title": "〜この・その・あの・どの + noun",
     "meaning": "Words placed before a noun to show which one is meant: “this ...”, “that ...”, “that ... (over there)”, “which ...”.",
     "connection": "この／その／あの／どの + noun",
     "senses": [
@@ -572,9 +570,8 @@
   },
   {
     "id": "kara-from",
-    "title": "〜から (starting point)",
-    "meaning": "Follows a noun to show a starting point in time or place, or the source of an action or information: “from ...”.",
-    "connection": "Noun + から",
+    "meaning": "After a noun, marks the starting point in time or place, or the source of an action or information, or the place passed through (“from …”); after a clause, gives a reason that the speaker subjectively puts forward (“because …”).",
+    "connection": "Noun + から (starting point, source, route); verb / adjective (plain or polite) + から; noun / na-adjective + だから (reason)",
     "senses": [
       {
         "label": "Starting time",
@@ -611,13 +608,42 @@
           "A cat came in through the window.",
           "Please come in through this entrance."
         ]
+      },
+      {
+        "label": "Giving a reason",
+        "meaning": "Explains the basis for your judgment, decision, or request. The main clause can be a command, request, or intention. In this respect it is freer than 「ので」.",
+        "connection": "Verb / i-adjective (plain) + から; noun / na-adjective + だから",
+        "examples": [
+          "We're out of time, so please hurry.",
+          "I'm tired today, so I'm going to bed early.",
+          "It's raining, so I don't want to go out."
+        ]
+      },
+      {
+        "label": "Reason at the end",
+        "meaning": "「〜からだ／〜からです」 at the end of a sentence explains the reason afterward, often in the pattern 「〜のは〜からだ」. When answering 「どうして」, you can give just the reason.",
+        "connection": "Plain form + からだ／からです",
+        "examples": [
+          "The reason I was late is that the train stopped.",
+          "“Why were you off?” “Because I had a fever.”"
+        ]
+      },
+      {
+        "label": "Polite form + から",
+        "meaning": "Using polite 「〜ますから」 or 「〜ですから」 before it sounds more courteous. Common when explaining things to guests or elders.",
+        "connection": "Verb masu-form / です + から",
+        "examples": [
+          "Tomorrow is a day off, so please take it easy.",
+          "I'll be right back, so please wait here."
+        ]
       }
     ],
     "notes": [
       "Verb te-form + 「から」 means “after ...”, but plain form + 「から」 means “because” — completely different: 「食べてから行く」 = go after eating; 「食べるから行く」 = go because I'm going to eat.",
       "With some verbs, the place you leave can only take 「を」: ✕「大学から卒業する」→ ○「大学を卒業する」.",
       "For a range, pair 「から」 with 「まで」: ✕「九時から五時に働く」→ ○「九時から五時まで働く」.",
-      "In notices and announcements, the starting point is often written with 「より」: 「九時より開始」 means the same as 「九時から始まる」."
+      "「から」 carries the speaker's own assertion. Using it to explain lateness or time off to a superior or client sounds like you're insisting you're right or making excuses; use 「ので」 instead: ✕「電車が遅れたから、遅刻しました」 → ○「電車が遅れたので、遅刻してしまいました」.",
+      "After nouns and na-adjectives add 「だ」: ○「雨だから」, not ✕「雨から」. With 「ので」 it's 「雨なので」; don't mix the two up."
     ],
     "scenes": {
       "daily": [
@@ -635,6 +661,16 @@
           "title": "A gift",
           "description": "Telling a friend who gave you something.",
           "example": "This is a sweater I got from my grandmother."
+        },
+        {
+          "title": "Planning the weekend with family",
+          "description": "Giving a reason and making a suggestion.",
+          "example": "It's raining today, so let's watch a movie at home."
+        },
+        {
+          "title": "Warning a child",
+          "description": "Followed by a command, 「から」 sounds natural.",
+          "example": "It's dangerous, so don't touch it!"
         }
       ],
       "work": [
@@ -647,34 +683,48 @@
           "title": "Passing on a message",
           "description": "Reporting to your boss that a client called.",
           "example": "A call came in from Company A a little while ago."
+        },
+        {
+          "title": "Asking a coworker to get ready",
+          "description": "Explaining why and making a request to a peer or junior.",
+          "example": "The client will be here soon, so go get the meeting room ready."
+        },
+        {
+          "title": "A teacher's advice to students",
+          "description": "Giving a reason in polite form.",
+          "example": "There's a test tomorrow, so get to bed early, okay?"
         }
       ]
     },
-    "etymology": "「から」 is generally linked to old 「から（柄）」, which meant “by way of” or “cause”. In old Japanese, 「から」 mainly marked a place passed through. It later came to mark a starting point, and then “because”.",
-    "formation": "「から」 is a case particle for a starting point; after a noun it means “with this as the point of departure”. The starting point can be in space (「駅から」) or in time (「九時から」). Going further, something that comes from a person shows the source (「母から」), and coming in through an opening such as a window shows the route (「窓から」). All uses share the core idea “starting from ...”; 「から」 after a sentence meaning “because” is an extension too: “starting from this reason”.",
+    "etymology": "「から」 was originally a case particle for a starting point or a route (“from …”). It is generally thought to be related to the old word 「柄（から）」, meaning “by way of, nature, cause.” In Old Japanese it mainly marked the place passed through, then extended to the starting point, and from there to the conjunctive particle for reasons, which became common from the medieval period on.",
+    "formation": "The core meaning is “starting from ….” After a noun, the starting point can be a time (「九時から」), a place (「駅から」) or a source (「母から」); entering through an opening such as a window gives the place passed through (「窓から」). After a clause, treating one event as the starting point of another gives a reason: 「時間がないから急ぐ」 = starting from “there is no time,” I conclude “I'll hurry.” Since the speaker sets this starting point, it sounds subjective and can be followed directly by commands, requests or resolutions; this is also why it is less polite than 「ので」, which states the reason as an objective fact.",
     "similar": [
       {
         "title": "〜より (starting point / written)",
         "explanation": "「より」 also marks a starting point, but only in written language such as notices and letters: 「会議は十時より行います」. In everyday conversation, always use 「から」."
       },
       {
-        "title": "〜を (route / leaving)",
-        "explanation": "The 「を」 in 「家を出る」 focuses on leaving a place; the 「から」 in 「家から出る」 focuses on the point you come out from. Set expressions like 「大学を卒業する」 and 「電車を降りる」 use 「を」."
-      },
-      {
-        "title": "〜から (cause / reason)",
-        "explanation": "It is the same 「から」: after a noun it marks a starting point (「駅から」), after a sentence it gives a reason (「雨だから」「寒いから」). “Starting from a cause and arriving at a result” can be seen as an extension of the starting-point meaning."
-      },
-      {
         "title": "〜から〜まで",
         "explanation": "「から」 combined with 「まで」 marks the start and end of a range: 「九時から五時まで」「東京から大阪まで」."
+      },
+      {
+        "title": "〜ので",
+        "explanation": "Both express reasons. 「から」 is subjective and can be followed directly by commands or intentions; 「ので」 is objective and gentle, and is preferred for giving reasons in polite situations."
+      },
+      {
+        "title": "〜のだから・〜んだから",
+        "explanation": "An emphatic form of the same origin: it presents the reason as a fact both sides already know, \"since..., you should...\", often with a tone of blame or persuasion (「子どもじゃないんだから、自分でやりなさい」)."
+      },
+      {
+        "title": "〜からこそ",
+        "explanation": "Same origin: adding 「こそ」 stresses \"precisely because...\", highlighting that this is the real reason (「好きだからこそ厳しく言う」)."
       }
     ]
   },
   {
     "id": "ja-nakute",
-    "meaning": "Denies the first part and confirms the second: “not A, but B”. Used to correct or clarify.",
-    "connection": "Noun + じゃなくて／ではなくて／ではなく + noun (だ)",
+    "meaning": "Denies the first item and affirms the second: “not A but B”, used to correct a misunderstanding or state the real situation; 「じゃなくて」 is colloquial, 「ではなくて」 and 「ではなく」 are written.",
+    "connection": "Noun / stem of a な-adjective + じゃなくて / ではなくて / ではなく / でなく + noun (だ); plain-form verb / い-adjective + の (ん) + ではなく / じゃなくて",
     "senses": [
       {
         "label": "Not A but B (casual)",
@@ -703,13 +753,23 @@
           "Don't just memorize it. Understand it.",
           "I'm not angry, I'm worried about you."
         ]
+      },
+      {
+        "label": "Written contracted form (でなく)",
+        "meaning": "Verbs and adjectives use 「のではなく」. In writing you can drop 「は」 and say 「でなく」.",
+        "connection": "Plain form + のではなく; noun + でなく",
+        "examples": [
+          "Instead of running away, you should face the problem.",
+          "What matters is not the result but the process."
+        ]
       }
     ],
     "notes": [
       "The point is the second part, B: 「コーヒーじゃなくて、お茶」 = what I want is tea. Swap A and B and you say the exact opposite.",
       "「だけじゃなくて」 means “not only ... but also ...”. Leave out 「だけ」 and it becomes “not ... but ...”: 「英語だけじゃなくて中国語も話せる」 ≠ 「英語じゃなくて中国語を話せる」.",
       "After verbs and i-adjectives, add 「の／ん」: ✕「覚えるじゃなくて」→ ○「覚えるんじゃなくて」; ✕「高いじゃなくて」→ ○「高いんじゃなくて」.",
-      "Correcting a boss or client with a blunt 「〜じゃなくて」 sounds harsh, as if you were talking back. Say 「恐れ入りますが、〜ではなく〜です」 instead."
+      "Correcting a boss or client with a blunt 「〜じゃなくて」 sounds harsh, as if you were talking back. Say 「恐れ入りますが、〜ではなく〜です」 instead.",
+      "「ではなくても」 and 「でなくてもいい」 mean “even if it isn't ...”, which is not this grammar point."
     ],
     "scenes": {
       "daily": [
@@ -727,6 +787,11 @@
           "title": "The wrong time",
           "description": "A friend got the meeting time wrong, and you correct them.",
           "example": "It's not three, it's four."
+        },
+        {
+          "title": "Clearing up a misunderstanding",
+          "description": "Explaining the real situation to a friend.",
+          "example": "I'm not angry, I'm just a bit tired."
         }
       ],
       "work": [
@@ -739,16 +804,22 @@
           "title": "Explaining the approach",
           "description": "A manager tells the team what matters most.",
           "example": "What matters is quality, not quantity."
+        },
+        {
+          "title": "Speaking at a meeting",
+          "description": "Stressing the real goal.",
+          "example": "What we're aiming for is not higher sales, but higher customer satisfaction."
+        },
+        {
+          "title": "A report",
+          "description": "Explaining the cause of a problem.",
+          "example": "The cause lies not in individual error, but in a flaw in the system."
         }
       ]
     },
-    "etymology": "It comes from 「ではない」, the negative of 「だ」, turned into the te-form 「ではなくて」 to link two parts. In speech 「では」 contracts to 「じゃ」, and in writing the 「て」 is often dropped: 「ではなく」.",
-    "formation": "It is 「で」 (the continuative form of the copula 「だ」) + 「は」 (topic, contrast) + 「なく」 (the continuative form of 「ない」) + 「て」 (connector). 「ではない」 means “is not”; turned into the connecting form 「ではなくて」, the sentence doesn't end there but carries on, giving the structure “deny A, then give B”. 「は」 itself carries contrast, hinting “not A — something else”, so the correct B follows naturally. In speech 「では」 contracts to 「じゃ」; in writing 「て」 is often dropped, giving 「ではなく」.",
+    "etymology": "Made of the continuative 「で」 of the copula 「だ」, the topic/contrast particle 「は」 and the continuative 「なく」 of 「ない」 (+ 「て」), i.e. the pause form of 「ではない」. 「では」 contracts to 「じゃ」 in speech; in writing 「て」 is often dropped to give 「ではなく」, and in a still more formal style 「は」 is dropped too, giving 「でなく」.",
+    "formation": "Built from 「で」 (continuative of the copula 「だ」) + 「は」 (topic/contrast) + 「なく」 (continuative of 「ない」) + 「て」 (connective). 「Aではない」 means “it is not A”; replacing the final 「ない」 with the continuative 「なく（て）」 means the sentence does not end there but goes on, giving the structure “deny A first, then give B”. 「は」 carries contrast and hints “A is not it; something else is”, so the correct B naturally follows — this is where the “correction” meaning comes from. 「じゃ」 is the spoken contraction of 「では」; 「ではなく」 drops 「て」 and 「でなく」 drops 「は」 as well, becoming more formal each time, which explains the spoken/written split between the senses. With verbs and い-adjectives, 「の（ん）」 first turns them into a noun-like unit, which then fits the same “not A but B” frame (「覚えるのではなく、理解する」).",
     "similar": [
-      {
-        "title": "〜ではなく（て）・〜じゃなくて",
-        "explanation": "Practically the same pattern; that entry focuses on the written 「ではなく」. Formal writing and speeches mostly use 「AではなくB」, everyday conversation 「AじゃなくてB」."
-      },
       {
         "title": "〜じゃない・〜ではありません",
         "explanation": "Same origin: 「じゃない」 is the spoken form of 「ではない」. 「〜じゃない」 only says “it's not A” and ends the sentence; 「〜じゃなくて」 denies A and then goes on to give the correct B."
@@ -760,12 +831,15 @@
       {
         "title": "〜というより",
         "explanation": "「AというよりB」 means “B rather than A”: it doesn't fully deny A, it just says B fits better. 「AじゃなくてB」 clearly denies A."
+      },
+      {
+        "title": "〜代わりに",
+        "explanation": "「代わりに」 means using B “in place of” A, and A is not necessarily wrong (「肉の代わりに豆腐を使う」). 「ではなく」 corrects, so A itself is denied."
       }
     ]
   },
   {
     "id": "to-omou",
-    "title": "〜と思う (I think)",
     "meaning": "Expresses the speaker's thoughts, opinions or guesses: “I think ...”.",
     "connection": "Plain form + と思う (noun / na-adjective + だと思う)",
     "senses": [
@@ -859,7 +933,6 @@
   },
   {
     "id": "to-iu-quote",
-    "title": "〜と言う (quotation)",
     "meaning": "Reports what someone said, or gives a name: “say ...”, “be called ...”.",
     "connection": "「Quoted words」 / plain form + と言う",
     "senses": [
@@ -952,7 +1025,6 @@
   },
   {
     "id": "wa-yori-comparison",
-    "title": "〜は〜より〜 (comparison)",
     "meaning": "Uses B as a standard and says A is more so in some way: “A is more ... than B”.",
     "connection": "Noun A + は + noun B + より + adjective / verb",
     "senses": [
@@ -1045,9 +1117,8 @@
   },
   {
     "id": "naa-exclamation",
-    "title": "〜なあ・〜な (exclamation)",
-    "meaning": "Comes at the end of a sentence to show the speaker's feelings, emotion or wishes. It is usually said to oneself.",
-    "connection": "Plain form + なあ／な (noun / na-adjective + だなあ)",
+    "meaning": "A sentence-final 「な」 with two quite different uses: after a plain-form sentence (「なあ」 when lengthened) it expresses the speaker's exclamation, longing or reminiscence, mostly to oneself; after a dictionary-form verb it is a blunt prohibition, “don't ...”.",
+    "connection": "Plain form + なあ／な (noun・na-adjective + だなあ); verb dictionary form + な (prohibition)",
     "senses": [
       {
         "label": "Exclamation",
@@ -1076,13 +1147,42 @@
           "My school days were so much fun.",
           "That trip was great."
         ]
+      },
+      {
+        "label": "Strong prohibition",
+        "meaning": "Directly forbids someone from doing something. Rough and forceful; mostly used by men toward younger people or in emergencies.",
+        "connection": "Verb dictionary form + な (行くな, 触るな, するな, 来るな)",
+        "examples": [
+          "Don't touch it, it's dangerous!",
+          "No smoking here.",
+          "Don't ever come back!"
+        ]
+      },
+      {
+        "label": "Encouragement and comfort",
+        "meaning": "In phrases like 「心配するな」, 「負けるな」, 「泣くな」, it encourages or comforts. The tone is warm but firm.",
+        "connection": "心配するな, 負けるな, 泣くな, 気にするな, 諦めるな",
+        "examples": [
+          "Don't worry. It'll work out.",
+          "Don't give up! Keep going to the end!"
+        ]
+      },
+      {
+        "label": "Signs and quoting",
+        "meaning": "Used on signs and warnings (not aimed at anyone in particular), or as 「〜なと言われた」 to report someone's prohibition.",
+        "connection": "Dictionary form + な (signs); dictionary form + なと言う／なと言われた",
+        "examples": [
+          "Keep off the grass.",
+          "My doctor told me not to drink alcohol."
+        ]
       }
     ],
     "notes": [
       "「なあ」 and 「な」 are exclamations you make to yourself; saying them directly to a boss or guest sounds casual and rude: ✕「部長、これおいしいなあ」→ ○「おいしいですね」.",
       "Verb dictionary form + 「な」 is a prohibition (「行くな」 = Don't go!) and sounds very rough. For exclamations, verbs usually take 「〜たい」, the た-form or the ない-form: 「行きたいなあ」.",
       "Nouns and na-adjectives need 「だ」: ✕「きれいなあ」→ ○「きれいだなあ」.",
-      "Saying 「〜ほしいなあ」 or 「〜食べたいなあ」 in front of others is often taken as a hint that they should give it to you; in the wrong situation it comes across as cheeky."
+      "It is harsh and very rude toward superiors, elders, guests or strangers. The polite version is 「〜ないでください」, and 「〜ないで」 with people you know: ✕ (to a guest)「触るな」→ ○「触らないでください」.",
+      "A sentence-final 「な」 can also be an exclamation: 「よく食べるな」 means \"wow, you sure eat a lot\", not \"don't eat\". The prohibitive 「な」 is short and sharp; the exclamatory 「な」 can also follow adjectives and 「だ」, and is often stretched into 「なあ」."
     ],
     "scenes": {
       "daily": [
@@ -1092,14 +1192,24 @@
           "example": "Wow, Mt. Fuji is so beautiful."
         },
         {
-          "title": "Monday morning",
-          "description": "Getting up on Monday and not wanting to go to work.",
-          "example": "Ugh, I wish I could sleep more."
-        },
-        {
           "title": "Envying a friend",
           "description": "A friend says they're going on a trip, and you're jealous.",
           "example": "Hawaii? Lucky you!"
+        },
+        {
+          "title": "When a friend gets dumped",
+          "description": "Comforting a friend who is feeling down.",
+          "example": "Don't be so down."
+        },
+        {
+          "title": "Father to child",
+          "description": "A father firmly forbids his child from going near danger.",
+          "example": "Stay away from the river."
+        },
+        {
+          "title": "Warning signs",
+          "description": "Prohibition signs at parks or construction sites.",
+          "example": "Danger! Keep out."
         }
       ],
       "work": [
@@ -1109,14 +1219,19 @@
           "example": "What a busy day it was."
         },
         {
-          "title": "In a novel",
-          "description": "Characters' inner thoughts in novels often use 「なあ」.",
-          "example": "I wish I could go back to that town once more."
+          "title": "Safety rules",
+          "description": "A safety sign in a factory.",
+          "example": "Do not touch machines while they are running."
+        },
+        {
+          "title": "Passing on your boss's instructions",
+          "description": "Telling a coworker what the boss said not to do.",
+          "example": "The manager told me not to let these materials leave the office."
         }
       ]
     },
-    "etymology": "「な」 is an old sentence-ending particle for exclamation. 「なあ」 is 「な」 stretched out for stronger feeling. It is thought to belong to the same family as the old exclamation particles 「な」 and 「かな」.",
-    "formation": "It is a plain-form sentence plus the sentence-ending particle 「な」; 「なあ」 is 「な」 drawn out. 「な」 itself expresses exclamation, and lengthening it to 「なあ」 shows the feeling more openly. Because it is an exclamation about your own feelings and needs no reply, it is mostly used when talking to yourself. After 「〜たい」 it becomes an exclamation of desire (“I really want to ...”); after the past tense it becomes nostalgia (“those were good times”).",
+    "etymology": "The exclamatory 「な」 is an old sentence-final particle, and 「なあ」 is simply 「な」 lengthened for stronger feeling; it is generally seen as the same line as the classical particles 「な」 and 「かな」. The prohibitive 「な」 is also a classical sentence-final particle; classical Japanese often used the form 「な〜そ」 (な行きそ = don't go), which later shrank to the sentence-final 「〜な」.",
+    "formation": "Both are the sentence-final particle 「な」 added to the end of a sentence, but what precedes it differs. Added to a plain-form statement, 「な」 expresses the speaker's feeling; lengthened to 「なあ」 the feeling shows more. It needs no reply from the listener, so it is mostly used as a monologue; after 「〜たい」 it becomes a wish (“I really want to ...”) and after the past form a reminiscence (“those were the days”). Added directly to a dictionary-form verb, it says “no” to the whole action with no cushioning, so it sounds short and forceful: a prohibition. It has nothing to do with the negative 「ない」, and the verb stays affirmative, which is where learners go wrong. Both uses are speaker-centered and informal, so they are risky toward superiors.",
     "similar": [
       {
         "title": "〜ね",
@@ -1127,16 +1242,23 @@
         "explanation": "Same origin: 「かな」 combines the question particle 「か」 with the exclamatory 「な」 and expresses wondering or uncertainty: 「明日は晴れるかな」. 「なあ」 itself is an exclamation or a wish."
       },
       {
-        "title": "〜ものだ (general truth / deep feeling)",
-        "explanation": "「〜ものだ」 can also express deep feeling: 「時間がたつのは早いものだ」, a general exclamation like “that's just how it is”. 「なあ」 reacts directly to what's in front of you; the two are often combined as 「ものだなあ」."
+        "title": "〜ないでください",
+        "explanation": "Similar meaning: both mean \"don't ...\". 「〜ないでください」 is a polite request you can use with anyone; 「〜な」 is a rude, direct prohibition."
+      },
+      {
+        "title": "〜てはいけない",
+        "explanation": "Similar meaning: both express prohibition. 「〜てはいけない」 states a rule (\"you must not ...\") and is more objective; 「〜な」 is the speaker directly forbidding something, and is stronger."
+      },
+      {
+        "title": "〜てくれと言う・〜なと言う (reported commands)",
+        "explanation": "Similar meaning: 「〜なと言う」 simply puts the prohibitive 「な」 inside a quotation: 「医者に飲むなと言われた」 (the doctor told me not to drink). A more polite way to report it is 「飲まないように言われた」."
       }
     ]
   },
   {
     "id": "noun-modifying-clause",
-    "title": "〜 (verb plain form) + noun (relative clause)",
-    "meaning": "Put a verb in the plain form right before a noun to describe it. This works like a relative clause in English: “the book (that) I bought”.",
-    "connection": "Verb plain form (dictionary form, た-form, ない-form, ている-form) + noun",
+    "meaning": "Put a plain-form clause directly before a noun to describe it, like “the ... that ...”: verbs (dictionary, た, ない, ている forms), adjectives and noun phrases all work, with no 「の」 in between.",
+    "connection": "Plain-form clause (verb, adjective, noun + だった, etc.) + noun",
     "senses": [
       {
         "label": "Dictionary form + noun",
@@ -1180,15 +1302,27 @@
         "connection": "Noun + が + verb plain form + noun",
         "examples": [
           "The food my mother makes is delicious.",
-          "The town I live in is quiet."
+          "The town I live in is quiet.",
+          "The food my mother makes is the best."
+        ]
+      },
+      {
+        "label": "Adjective and noun clauses",
+        "meaning": "い-adjectives go directly before the noun; な-adjectives take 「な」. Noun predicates use 「の」 in the present and 「だった」 in the past.",
+        "connection": "い-adjective + noun／な-adjective な + noun／noun の・noun だった + noun",
+        "examples": [
+          "A girl with big eyes is laughing.",
+          "I listened to a song I loved as a child.",
+          "I want to live in a town with good transportation."
         ]
       }
     ],
     "notes": [
       "Learners often add an extra 「の」: ✕「昨日買ったの本」→ ○「昨日買った本」. The verb goes directly before the noun, with nothing in between.",
       "The subject inside the modifying part takes 「が」 or 「の」, not 「は」: ✕「私は買った本」→ ○「私が買った本」.",
-      "Verbs in the modifying part use the plain form, not the ます-form: ✕「昨日買いました本」→ ○「昨日買った本」.",
-      "For a current state, use 「ている」 or the た-form: 「眼鏡をかけている人」 = a person wearing glasses; 「眼鏡をかける人」 means “a person who (usually, or will) put on glasses” — a different meaning."
+      "Mixing up the dictionary form and the ta-form changes the meaning completely: 「日本へ行く人」 is “a person who is going to Japan”, 「日本へ行った人」 is “a person who has been to Japan”; 「結婚する人」 is “a person who is getting married”, 「結婚した人」 is “a married person”.",
+      "For a current state, use 「ている」 or the た-form: 「眼鏡をかけている人」 = a person wearing glasses; 「眼鏡をかける人」 means “a person who (usually, or will) put on glasses” — a different meaning.",
+      "Before a noun, na-adjectives take 「な」 and nouns take 「の」 — never 「だ」: ✕「静かだ町」→ ○「静かな町」; ✕「父が医者だ友だち」→ ○「父が医者の友だち」."
     ],
     "scenes": {
       "daily": [
@@ -1206,6 +1340,11 @@
           "title": "Recommending a book",
           "description": "Recommending a book you've read to a friend.",
           "example": "This is a book by my favorite author."
+        },
+        {
+          "title": "Recommending a restaurant",
+          "description": "Recommending the ramen shop in front of the station to a friend.",
+          "example": "The ramen at the shop in front of the station is really good."
         }
       ],
       "work": [
@@ -1218,20 +1357,17 @@
           "title": "Explaining the situation",
           "description": "Telling your boss about unfinished work.",
           "example": "There are three tasks that aren't finished yet."
+        },
+        {
+          "title": "Introducing a product",
+          "description": "Presenting a popular product to a client.",
+          "example": "This product is popular with young people."
         }
       ]
     },
-    "etymology": "Japanese verbs and adjectives have an “attributive form” that goes directly before a noun. In modern Japanese, a verb's attributive form is the same as its dictionary form, so the plain form can describe a noun directly.",
-    "formation": "In Japanese, modifiers always come before the noun they modify. In modern Japanese, the attributive form of a verb (the form used before nouns) is the same as the dictionary form, so you simply put a plain-form sentence in front of a noun, and the whole sentence modifies it like one big adjective. Tense and positive/negative are kept inside that sentence, so it can express “will do, did, doesn't do, is doing”. The subject of the modifying sentence switches to 「が／の」 because 「は」 would make it the topic of the whole larger sentence, pulling it out of the modifying clause.",
+    "etymology": "Japanese predicates (verbs and adjectives) have an “attributive form” (連体形) used to connect to a noun, hence the term 「連体修飾」, “attributive modification”. In modern Japanese the attributive form of verbs and い-adjectives is identical to the dictionary form, so it looks as if the plain form simply sits in front of the noun.",
+    "formation": "Japanese modifiers always come before the noun they describe, so a whole plain-form clause can be placed in front of a noun as is: 「昨日買った」 + 「本」 → 「昨日買った本」. Nothing like Chinese “的” is needed, so no 「の」 is added. The clause keeps its own tense and polarity, so the verb form alone distinguishes “will do (dictionary form), did (た-form), doesn't do (ない-form), is doing (ている-form)”; these are forms of one and the same structure, which is why they are one grammar point. Adjectives and noun phrases follow the same principle, except that 「だ」 of nouns and な-adjectives changes to the attributive 「な」 (usually 「の」 after a noun), and the past is 「だった」. Because the clause is just part of the noun phrase, it does not use 「です・ます」, and its subject takes 「が」 or 「の」 rather than 「は」, which marks the topic of the whole sentence.",
     "similar": [
-      {
-        "title": "〜(plain-form clause) + noun (noun modification)",
-        "explanation": "The general entry for the same structure: any plain-form sentence (including adjective and noun sentences) can go before a noun to modify it. This entry focuses on modifying with the various verb forms."
-      },
-      {
-        "title": "〜の (replacing が in a modifying clause)",
-        "explanation": "The subject marker 「が」 in the modifying part can be replaced with 「の」: 「母が作った料理」 = 「母の作った料理」. The meaning is the same; the latter is slightly more formal."
-      },
       {
         "title": "〜な + noun (na-adjective modification)",
         "explanation": "Also noun modification: na-adjectives need 「な」 before a noun (「静かな町」), while the plain form of a verb goes straight before the noun with nothing added."
@@ -1240,7 +1376,6 @@
   },
   {
     "id": "counters-josuushi",
-    "title": "〜 (number) + counter (〜本・〜人・〜枚など)",
     "meaning": "When counting in Japanese, you add a counter after the number that shows the type of thing, a bit like “two sheets of paper” or “three bottles of water” in English.",
     "connection": "Number + counter (〜つ・〜本・〜人・〜枚, etc.)",
     "senses": [
@@ -1349,7 +1484,6 @@
   },
   {
     "id": "shikashi-conjunction",
-    "title": "〜しかし (at the start: however)",
     "meaning": "Starts a sentence and shows that it goes against or contrasts with the one before: “but”, “however”. Mostly written.",
     "connection": "Sentence. しかし、sentence.",
     "senses": [

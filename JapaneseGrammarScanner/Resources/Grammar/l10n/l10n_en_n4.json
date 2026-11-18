@@ -691,8 +691,8 @@
   },
   {
     "id": "sou-da-appearance",
-    "meaning": "An impression based on how something looks (“looks ...”). With verbs, it means something is about to happen (“looks like it's going to ...”).",
-    "connection": "Verb masu-stem + そうだ; i-adjective minus い + そうだ (いい→よさそう, ない→なさそう); na-adjective stem + そうだ",
+    "meaning": "「そうだ」 has two unrelated uses depending on what precedes it: attached to a stem it gives an impression from appearance (“looks ...”, “is about to ...”); attached to a full plain-form sentence it passes on hearsay (“I hear that ...”).",
+    "connection": "Verb ます-stem／i-adjective minus い／na-adjective stem + そうだ (appearance); plain form of any word class + そうだ (hearsay; noun・na-adjective: 〜だそうだ)",
     "senses": [
       {
         "label": "Looks ...",
@@ -721,72 +721,7 @@
           "It doesn't look like this work will be done today.",
           "The rain doesn't look like it'll stop."
         ]
-      }
-    ],
-    "notes": [
-      "It connects differently from hearsay 「そうだ」, and the meaning changes completely: 「雨が降りそうだ」 = it looks like it's going to rain; 「雨が降るそうだ」 = I hear it's going to rain. 「高そうだ」 = looks expensive; 「高いそうだ」 = I hear it's expensive.",
-      "Can't attach directly to nouns: ✕「学生そうだ」→ ○「学生みたいだ」／「学生らしい」.",
-      "Not used for qualities obvious at a glance: ✕「この花はきれいそうだ」→ ○「きれいだ」. Use it only when an inner quality can't be seen (「おいしそう」, 「高そう」).",
-      "Irregular forms: いい→「よさそう」, ない→「なさそう」: ✕「いさそう」 ✕「なそう」."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "At a pastry shop",
-          "description": "A natural comment on the cakes in the window.",
-          "example": "Wow, that cake looks so good!"
-        },
-        {
-          "title": "Checking on a friend",
-          "description": "Asking when a friend looks worn out.",
-          "example": "You look sleepy. Were you up late last night?"
-        },
-        {
-          "title": "Looking at the sky before going out",
-          "description": "Seeing dark clouds and judging it will rain soon.",
-          "example": "It looks like rain, so let's bring an umbrella."
-        }
-      ],
-      "work": [
-        {
-          "title": "Reporting progress",
-          "description": "Estimating whether work will finish on time.",
-          "example": "At this rate, it looks like we'll be done by Friday."
-        },
-        {
-          "title": "Reacting to a proposal",
-          "description": "Giving a first impression of an idea in a meeting.",
-          "example": "This project sounds interesting."
-        }
-      ]
-    },
-    "etymology": "「そう」 comes from the kanji 「相」 (さう), originally meaning \"outward appearance, look\" (as in 人相 \"physiognomy\" and 手相 \"palm lines\"). From the medieval period onward 「〜さうなり」 was used as an auxiliary of appearance, which later became modern 〜そうだ. It has a different origin from the hearsay 〜そうだ, which is why the two attach differently.",
-    "formation": "「〜そうだ」 (appearance) = verb masu-stem / adjective stem + 「そう」 + 「だ」. This 「そう」 is generally thought to mean “look, appearance”. It attaches to tenseless stems and only describes how things look right now, so it doesn't attach to established facts or directly to nouns. With adjectives → “gives the appearance of ...” = looks ...; with verbs → “looks as if it's about to ...” = about to .... 「そう」 itself conjugates like a na-adjective, giving 「そうな + noun」 and 「そうに + verb」.",
-    "similar": [
-      {
-        "title": "〜ようだ・〜みたいだ",
-        "explanation": "Both mean “seems”. Appearance 「〜そうだ」 is a direct impression of what you see (「おいしそうだ」 = looks tasty); 「〜ようだ」 is a judgment combining various clues (「おいしいようだ」 = everyone is enjoying it, so it seems tasty), and it can also attach to nouns."
       },
-      {
-        "title": "〜らしい",
-        "explanation": "「〜らしい」 usually judges from outside information or rumors, keeping the speaker at a distance from the judgment; appearance 「〜そうだ」 is the speaker's direct impression from what they see."
-      },
-      {
-        "title": "〜ように見える",
-        "explanation": "「〜ように見える」 (N3) explicitly says “it looks like ...”, often suggesting it may not really be so (「若く見える」); appearance 「〜そうだ」 judges directly from how things look."
-      },
-      {
-        "title": "〜そうになる",
-        "explanation": "Same origin, both using the appearance 「そう」. 「〜そうになる」 (N3) means “almost ... (but it didn't happen)” (「転びそうになった」); 「〜そうだ」 only says “about to ...”."
-      }
-    ],
-    "title": "〜そうだ (looks like)"
-  },
-  {
-    "id": "sou-da-hearsay",
-    "meaning": "Passes on information heard from others or seen in the media: “I heard that ...”, “apparently ...”.",
-    "connection": "Plain form of any word + そうだ (noun / na-adjective: 〜だそうだ)",
-    "senses": [
       {
         "label": "I heard / apparently",
         "meaning": "Relays information from other people, newspapers, TV, and so on, as is. The speaker is just passing it on and takes no responsibility for it. The tone is neutral. Often paired with 「〜によると」 or 「〜の話では」.",
@@ -808,13 +743,24 @@
       }
     ],
     "notes": [
-      "It connects differently from appearance 「そうだ」, and the meaning changes completely: 「おいしいそうだ」 = I hear it's tasty; 「おいしそうだ」 = it looks tasty.",
+      "It connects differently from hearsay 「そうだ」, and the meaning changes completely: 「雨が降りそうだ」 = it looks like it's going to rain; 「雨が降るそうだ」 = I hear it's going to rain. 「高そうだ」 = looks expensive; 「高いそうだ」 = I hear it's expensive.",
+      "Not used for qualities obvious at a glance: ✕「この花はきれいそうだ」→ ○「きれいだ」. Use it only when an inner quality can't be seen (「おいしそう」, 「高そう」).",
+      "Irregular forms: いい→「よさそう」, ない→「なさそう」: ✕「いさそう」 ✕「なそう」.",
       "Nouns and na-adjectives take 「だ」: ✕「医者そうだ」→ ○「医者だそうだ」; ✕「元気そうだ」 (this means “looks well”) → ○「元気だそうだ」 (I hear they're well).",
-      "There are no past, negative, or 「そうな／そうに」 forms: ✕「雨が降るそうだった」→ ○「雨が降ったそうだ」; the negative goes before it: ○「来ないそうだ」.",
-      "When passing on information, it's best to state the source (「ニュースによると」／「田中さんの話では」). In business, a more formal option is 「〜とのことです」; saying 「〜って」 to a superior sounds casual."
+      "There are no past, negative, or 「そうな／そうに」 forms: ✕「雨が降るそうだった」→ ○「雨が降ったそうだ」; the negative goes before it: ○「来ないそうだ」."
     ],
     "scenes": {
       "daily": [
+        {
+          "title": "At a pastry shop",
+          "description": "A natural comment on the cakes in the window.",
+          "example": "Wow, that cake looks so good!"
+        },
+        {
+          "title": "Looking at the sky before going out",
+          "description": "Seeing dark clouds and judging it will rain soon.",
+          "example": "It looks like rain, so let's bring an umbrella."
+        },
         {
           "title": "Passing on the forecast",
           "description": "Telling family what you saw before heading out.",
@@ -833,6 +779,16 @@
       ],
       "work": [
         {
+          "title": "Reporting progress",
+          "description": "Estimating whether work will finish on time.",
+          "example": "At this rate, it looks like we'll be done by Friday."
+        },
+        {
+          "title": "Reacting to a proposal",
+          "description": "Giving a first impression of an idea in a meeting.",
+          "example": "This project sounds interesting."
+        },
+        {
           "title": "Relaying news from above",
           "description": "Passing on to coworkers what the department manager said.",
           "example": "According to the manager, the meeting starts at three."
@@ -844,107 +800,28 @@
         }
       ]
     },
-    "etymology": "The hearsay そうだ is generally thought to come from expressions like 「…と言う相（さう）だ」, meaning \"it is said to be the case that ...\"; from the Edo period onward it was used in the form 「〜さうだ」 to relay hearsay. Although it is written the same way as the appearance 〜そうだ, the two long ago split into separate auxiliaries, and they attach in completely different ways.",
-    "formation": "「〜そうだ」 (hearsay) = a complete plain-form sentence + 「そうだ」. What comes before is complete information with tense that could stand alone as a sentence, and 「そうだ」 works like a label saying “that's what I heard”. Since it's a complete sentence, noun sentences keep 「だ」 (「医者だそうだ」); and since 「そうだ」 is just a reporting label, it doesn't become past or negative itself — tense and negation are expressed inside the reported content.",
+    "etymology": "「そう」 comes from the character 「相」 (さう), originally “outward look, appearance” (as in 人相・手相); from the Middle Ages 「〜さうなり」 was used as an auxiliary for appearance. The hearsay 「そうだ」 is generally thought to come from phrases like 「…と言う相だ」 (“it is said to be so”), used for passing on rumors from the Edo period. The two are written the same but have long been separate auxiliaries with different connections.",
+    "formation": "The difference lies in what 「そうだ」 attaches to. In the appearance use, it attaches to a tense-less stem and describes only the look presented now, so it is not used for established facts or directly after a noun: after an adjective, “shows signs of being ...” = “looks ...”; after a verb, “shows signs of ...ing” = “is about to ...”; and since 「そう」 itself conjugates like a na-adjective, we get 「そうな＋noun」 and 「そうに＋verb」. In the hearsay use, a complete sentence with tense, able to stand alone, comes before it, and 「そうだ」 labels it “so I hear”. Because the preceding part is a full sentence, noun sentences keep 「だ」 (医者だそうだ), and since 「そうだ」 is just a label it takes no past or negative form of its own.",
     "similar": [
+      {
+        "title": "〜ようだ・〜みたいだ",
+        "explanation": "Both mean “seems”. Appearance 「〜そうだ」 is a direct impression of what you see (「おいしそうだ」 = looks tasty); 「〜ようだ」 is a judgment combining various clues (「おいしいようだ」 = everyone is enjoying it, so it seems tasty), and it can also attach to nouns."
+      },
+      {
+        "title": "〜ように見える",
+        "explanation": "「〜ように見える」 (N3) explicitly says “it looks like ...”, often suggesting it may not really be so (「若く見える」); appearance 「〜そうだ」 judges directly from how things look."
+      },
+      {
+        "title": "〜そうになる",
+        "explanation": "Same origin, both using the appearance 「そう」. 「〜そうになる」 (N3) means “almost ... (but it didn't happen)” (「転びそうになった」); 「〜そうだ」 only says “about to ...”."
+      },
       {
         "title": "〜とのことだ",
         "explanation": "「〜とのことだ」 (N2) also reports information, but it's more formal and written and often used in business (「部長は午後戻るとのことです」); hearsay 「〜そうだ」 has a wider range and is natural in everyday life too."
       },
       {
-        "title": "〜らしい",
-        "explanation": "「〜らしい」 can also express hearsay, but it mixes in the speaker's guesswork and the source is vague; 「〜そうだ」 is a more direct, faithful report."
-      },
-      {
         "title": "〜んだって",
         "explanation": "「〜んだって」 (N3) is casual reporting, common among friends (「明日休みなんだって」); 「〜そうだ／そうです」 is neutral and can be used with anyone."
-      },
-      {
-        "title": "〜と言っていた (reported speech)",
-        "explanation": "「〜と言っていた」 explicitly says who said it (「田中さんが来ると言っていた」); 「〜そうだ」 just means “I heard”, and the source can be left out."
-      }
-    ],
-    "title": "〜そうだ (hearsay)"
-  },
-  {
-    "id": "rashii",
-    "meaning": "A guess or hearsay based on what you've heard or seen (“seems ...”). After nouns, it can also mean “typical of ...”.",
-    "connection": "Verb / i-adjective plain form + らしい; na-adjective stem / noun + らしい (no 「だ」)",
-    "senses": [
-      {
-        "label": "Guess / hearsay",
-        "meaning": "A guess based on outside information, such as something you heard or signs you saw: “seems ...”, “I hear ...”. The speaker keeps some distance and doesn't take full responsibility.",
-        "connection": "Plain form + らしい (nouns and na-adjective stems attach directly); negative goes before it: 〜ないらしい",
-        "examples": [
-          "The road is wet. It seems it rained during the night.",
-          "I hear that shop is closing next month.",
-          "It seems he quit his job."
-        ]
-      },
-      {
-        "label": "Typical of ...",
-        "meaning": "As a suffix after a noun, it means having the typical qualities of that noun: “...-like”, “just like ...”. The negative 「〜らしくない」 means “not like ...”.",
-        "connection": "Noun + らしい (春らしい, 男らしい, 子どもらしい, 彼女らしい)",
-        "examples": [
-          "It's a warm, spring-like day today.",
-          "Saying something like that isn't like her."
-        ]
-      }
-    ],
-    "notes": [
-      "Put the negative before it: ✕「来るらしくない」→ ○「来ないらしい」. 「〜らしくない」 means “not like ...” (「彼らしくない」 = not like him), a completely different meaning.",
-      "Using 「〜らしいです」 in a business report sounds unverified and irresponsible; check first, then say 「〜とのことです」 or 「〜と聞いております」.",
-      "After nouns it has two meanings: 「あの人は先生らしい」 = that person seems to be a teacher (guess); 「先生らしい先生」 = a teacher who's every bit a teacher (typical). Context decides."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "Guessing from signs",
-          "description": "Seeing the wet ground and guessing it rained.",
-          "example": "The ground is wet. Looks like it rained."
-        },
-        {
-          "title": "Catching up on a friend's news",
-          "description": "Repeating something you heard, without being sure.",
-          "example": "I heard Sato-san has a girlfriend now."
-        },
-        {
-          "title": "Commenting on the weather",
-          "description": "Remarking on how seasonal the weather feels.",
-          "example": "It's real autumn weather today."
-        }
-      ],
-      "work": [
-        {
-          "title": "Sharing unconfirmed news",
-          "description": "Telling coworkers about something not yet official.",
-          "example": "Apparently we're switching to a new system next month."
-        },
-        {
-          "title": "Complimenting a coworker",
-          "description": "Praising someone's work as very much their style.",
-          "example": "So careful down to the last detail. That's Tanaka-san for you."
-        }
-      ]
-    },
-    "etymology": "There are several theories about the origin of らしい. It is generally thought to be related to the old suffix 「〜らし」, meaning \"appearance, being like\" (as in 「男らし」), and to have gradually developed its use as an auxiliary of inference from the medieval to the early modern period. Classical Japanese also had a separate conjectural auxiliary 「らし」 (expressing an inference based on evidence), but scholars disagree on whether there is a direct line of descent between the two.",
-    "formation": "「〜らしい」 is a suffix generally thought to mean “having the features of ..., fitting the image of ...”. After a sentence, it means “all the signs show the features of ‘...’” → “apparently, it seems”, with the judgment based on outside signs or things you've heard. After a noun, it means “having the features a ... should have” → “proper, typical”. It conjugates like an i-adjective, so you get 「らしかった」 and 「らしくない」; the negative goes inside the guessed content (「来ないらしい」), otherwise it turns into “not like ...”.",
-    "similar": [
-      {
-        "title": "〜ようだ・〜みたいだ",
-        "explanation": "「〜ようだ」 is based on the speaker's own observation or feeling (「熱があるようだ」 = I feel like I have a fever); 「〜らしい」 is based on outside information (「熱があるらしい」 = I hear he has a fever). Only 「ようだ」 can express simile: ✕「夢らしい話」→ ○「夢のような話」."
-      },
-      {
-        "title": "〜そうだ (hearsay)",
-        "explanation": "Both can express hearsay. 「〜そうだ」 reports faithfully with a clear source; 「〜らしい」 mixes in guesswork, so its reliability is vaguer."
-      },
-      {
-        "title": "〜らしい (typical)",
-        "explanation": "Same origin, both using 「らしい」. Noun + 「らしい」 means “having the typical features of ...” (「春らしい天気」, 「学生らしい服装」); this second meaning of the pattern has its own entry."
-      },
-      {
-        "title": "〜っぽい",
-        "explanation": "Both can attach to nouns to mean “like ...”. 「子どもらしい」 is “as a child should be”, usually positive; 「子どもっぽい」 (N3) is “childish (though not a child)”, often negative."
       }
     ]
   },
@@ -1133,8 +1010,7 @@
         "title": "〜なら",
         "explanation": "「〜なら」 picks up what the other person said and gives advice based on it (「京都に行くなら、新幹線が便利だ」); the time order of the two parts can even be reversed. 「〜ば」 requires the first part to hold before the second."
       }
-    ],
-    "title": "〜ば (conditional)"
+    ]
   },
   {
     "id": "tara",
@@ -1320,8 +1196,10 @@
   },
   {
     "id": "passive",
-    "meaning": "The passive voice: the subject receives someone else's action (“be ...ed”), or is troubled by someone's action. Also used for objective descriptions.",
-    "connection": "Godan: change the ending to the あ-row + れる (書かれる, 言われる); ichidan: drop る + られる (食べられる); する→される; 来る→来られる",
+    "meaning": "The auxiliary 「れる・られる」 has several functions in one form: passive (“be ~ed”, including adversity passive), potential (“can ~”), honorific (raising the other person's action), and the literary spontaneous use (“can't help ~”, 「〜と思われる」).",
+    "connection": "Godan: negative-stem + れる; ichidan: stem + られる; する→される; 来る→来られる (potential: godan e-row + る)",
+    "etymology": "The passive auxiliaries れる／られる come from Classical Japanese 「る／らる」. 「る・らる」 had four uses — spontaneous, potential, passive, and honorific — and their original core meaning is generally thought to have been \"spontaneous\" (something happening by itself), from which the other uses derived. This is the historical reason why the passive, potential, and honorific forms look the same in modern Japanese.",
+    "formation": "「〜れる・〜られる」 = verb nai-stem (irrealis form) + 「れる／られる」. It's generally thought to come from classical 「る・らる」, whose core meaning is “an action happens by itself, beyond the subject's control” (spontaneous). From “not by one's own will” came: receiving someone else's action (passive), being naturally able to do something (potential), and describing a superior's action as if it “just happened” to show respect (honorific). This is why the passive, potential, and honorific share one form; and the passive's sense that “the subject is affected and can't control it” also explains the complaining tone of the suffering passive.",
     "senses": [
       {
         "label": "Direct passive",
@@ -1359,13 +1237,53 @@
           "Japanese is studied all over the world.",
           "This painting was painted by Picasso."
         ]
+      },
+      {
+        "label": "Potential",
+        "meaning": "Expresses that someone is able to do something, or can do it under certain conditions (potential form). In speech, ichidan verbs and 「来る」 often drop 「ら」 (「見れる」「来れる」, ら-nuki), but formal writing should use 「〜られる」.",
+        "connection": "Godan verbs: final u-row → e-row + る (書く→書ける); ichidan verbs: 〜られる (casual 〜れる); 来る→来られる; する→できる",
+        "examples": [
+          "I can speak a little Japanese.",
+          "Is this water drinkable?",
+          "Can you come tomorrow?"
+        ]
+      },
+      {
+        "label": "Respecting someone's action",
+        "meaning": "When the subject is someone you should respect, put their action in this form to show respect. Slightly less respectful than 「お〜になる」. Very common in the news and at work.",
+        "connection": "行く→行かれる／帰る→帰られる／出席する→出席される／なる→なられる",
+        "examples": [
+          "The president is going to Osaka tomorrow.",
+          "The department manager will attend the afternoon meeting.",
+          "What brings you in today?"
+        ]
+      },
+      {
+        "label": "Naturally recalled",
+        "meaning": "Seeing something brings a memory or feeling to mind on its own. The subject is often the thing recalled, marked with 「が」. Common: 「思い出される」, 「感じられる」, 「偲ばれる」.",
+        "connection": "Noun + が + 思い出される／感じられる／偲ばれる",
+        "examples": [
+          "Whenever I see this photo, my childhood comes back to me.",
+          "In the chill of the wind, you can sense autumn coming.",
+          "I still regret the decision I made back then."
+        ]
+      },
+      {
+        "label": "Softened judgment",
+        "meaning": "「〜と思われる」 and 「〜と考えられる」 mean \"it would seem / it is thought that ...\", making a personal judgment sound objective and indirect. Common in news and academic papers.",
+        "connection": "Plain form + と思われる／と考えられる",
+        "examples": [
+          "It seems that problems still remain with this plan.",
+          "The cause of the accident is thought to be a brake failure."
+        ]
       }
     ],
     "notes": [
-      "In Japanese, “my thing was ...” usually takes the person as the subject: ✕「私の財布はすりに盗まれた」→ ○「（私は）すりに財布を盗まれた」.",
       "The suffering passive implies “it caused me trouble”: 「先生が来られた」 is honorific (the teacher came), but 「先生に来られた」 becomes “the teacher came (and it was a nuisance for me)”. Changing one particle makes it both rude and different in meaning.",
-      "Godan verbs change to the あ-row + れる: 「言う」→「言われる」 (✕言あれる); 「書く」→「書かれる」 (✕書きれる).",
-      "Using the suffering passive for things that didn't harm you sounds like complaining: 「隣の人にピアノを弾かれた」 implies the noise bothered you; to simply describe it, say 「隣の人がピアノを弾いた」."
+      "The standard potential of 「来る」 is 「来（こ）られる」, and of 「見る」 it is 「見られる」. ら-dropped forms like 「来れる」 and 「見れる」 count as errors in exams and formal writing.",
+      "It can only describe other people's actions, never your own: ✕「私は明日大阪へ行かれます」→ ○「私は明日大阪へ参ります」. Using it about yourself is elevating yourself, which is very rude.",
+      "It also looks the same as the passive: 「先生に叱られた」 is passive (I was scolded by the teacher), while 「先生が帰られた」 is honorific. When 「〜に」 marks who did the action, it's usually passive.",
+      "The spontaneous sense is limited to verbs of mind and feeling such as 「思う・感じる・偲ぶ・案じる・悔やむ・待つ・思い出す」. An ordinary action verb plus 「れる」can only be passive or honorific: 「本が読まれる」doesn't mean \"can't help reading.\""
     ],
     "scenes": {
       "daily": [
@@ -1375,9 +1293,19 @@
           "example": "Someone stepped on my foot on a packed train, and it hurt."
         },
         {
-          "title": "Getting praised",
-          "description": "Sharing good news with family at home.",
-          "example": "My teacher praised me today!"
+          "title": "Introducing yourself",
+          "description": "Talking about your skills.",
+          "example": "I can play the guitar a little."
+        },
+        {
+          "title": "At the doctor's",
+          "description": "A doctor asks a patient what the problem is.",
+          "example": "What brings you in today?"
+        },
+        {
+          "title": "Visiting your hometown",
+          "description": "Back home, old memories return.",
+          "example": "Walking down this road, my school days come back to me."
         },
         {
           "title": "Introducing a sightseeing spot",
@@ -1395,26 +1323,41 @@
           "title": "Explaining an assigned task",
           "description": "Telling a coworker the work came from the boss.",
           "example": "The department manager asked me to take on a new job."
+        },
+        {
+          "title": "Asking about a client contact",
+          "description": "Calling a client's office to ask when the person in charge will be back.",
+          "example": "Around what time will Mr. Yamada be back?"
+        },
+        {
+          "title": "Academic paper",
+          "description": "A paper states a conclusion cautiously.",
+          "example": "From the above results, it can be considered that the two are correlated."
         }
       ]
     },
-    "etymology": "The passive auxiliaries れる／られる come from Classical Japanese 「る／らる」. 「る・らる」 had four uses — spontaneous, potential, passive, and honorific — and their original core meaning is generally thought to have been \"spontaneous\" (something happening by itself), from which the other uses derived. This is the historical reason why the passive, potential, and honorific forms look the same in modern Japanese.",
-    "formation": "「〜れる・〜られる」 = verb nai-stem (irrealis form) + 「れる／られる」. It's generally thought to come from classical 「る・らる」, whose core meaning is “an action happens by itself, beyond the subject's control” (spontaneous). From “not by one's own will” came: receiving someone else's action (passive), being naturally able to do something (potential), and describing a superior's action as if it “just happened” to show respect (honorific). This is why the passive, potential, and honorific share one form; and the passive's sense that “the subject is affected and can't control it” also explains the complaining tone of the suffering passive.",
     "similar": [
       {
         "title": "〜させられる (causative-passive)",
         "explanation": "Same origin, formed from causative 「させる」 plus passive 「られる」. 「〜させられる」 means “be made to do ...” (「母に野菜を食べさせられた」), while the ordinary passive just means “have something done to you by someone”."
       },
       {
-        "title": "〜れる・〜られる (honorific)",
-        "explanation": "Same origin and same form. Honorific 「れる・られる」 elevates a superior's actions (「先生が来られた」), with no agent marked by 「に」; the passive says “what was done to whom, by whom” (「先生に叱られた」)."
+        "title": "〜ことができる",
+        "explanation": "Similar meaning: both express ability or possibility. The potential form is concise and common in speech; 「〜ことができる」 is more written and formal, and simpler to form (dictionary form ＋ことができる)."
       },
       {
-        "title": "〜られる・〜える (potential form)",
-        "explanation": "Same origin. For ichidan verbs and 「来る」, the potential and passive forms are identical: 「この魚は生で食べられる」 (can be eaten) vs. 「魚が猫に食べられた」 (was eaten). For godan verbs, the potential is 「書ける」 and the passive 「書かれる」."
+        "title": "お〜になる",
+        "explanation": "Near-synonym: both are honorific. 「お〜になる」 shows more respect and can't be confused with the passive or potential; 「〜れる・られる」 is simpler and slightly less respectful, common in news and inside companies."
+      },
+      {
+        "title": "いらっしゃる・おっしゃる (special honorific verbs)",
+        "explanation": "Near-synonym: verbs that have a dedicated honorific form (行く・来る・いる→いらっしゃる, 言う→おっしゃる, 食べる→召し上がる) should use it first. 「来られる」 and 「言われる」 are less polite and less clear than 「いらっしゃる」 and 「おっしゃる」."
+      },
+      {
+        "title": "〜と考えられる",
+        "explanation": "Same origin. 「〜と考えられる」is the spontaneous used as a fixed phrase for judgments, common in academic writing. This entry gives an overall explanation of the spontaneous use."
       }
-    ],
-    "title": "〜れる・〜られる (passive)"
+    ]
   },
   {
     "id": "causative",
@@ -1510,8 +1453,7 @@
         "title": "〜てもらう",
         "explanation": "Both mean “have someone do something”. The causative is a command or permission from above (「子どもに掃除させる」); 「〜てもらう」 is asking someone with gratitude (「子どもに掃除してもらう」). With equals and superiors, only the latter is acceptable."
       }
-    ],
-    "title": "〜せる・〜させる (causative)"
+    ]
   },
   {
     "id": "te-ageru",
@@ -1786,90 +1728,6 @@
     ]
   },
   {
-    "id": "noni",
-    "meaning": "Contrast: the result goes against expectations, with a tone of dissatisfaction, regret, or surprise (“even though ...”). At the end of a sentence, it expresses regret.",
-    "connection": "Verb / i-adjective plain form + のに; na-adjective / noun + なのに",
-    "senses": [
-      {
-        "label": "Even though ...",
-        "meaning": "The result is the opposite of what the first part leads you to expect. It carries dissatisfaction, regret, or blame. The second part is something that has happened or is certain.",
-        "connection": "Plain form + のに; noun / na-adjective + なのに (✕日曜日だのに)",
-        "examples": [
-          "We'd made plans, but he never showed up.",
-          "Even though it's Sunday, I have to go to the office.",
-          "It's already April, and it's still cold."
-        ]
-      },
-      {
-        "label": "Regret at the end",
-        "meaning": "At the end of a sentence, it expresses regret or frustration that things didn't go as hoped: “If only ...”, “I wish ...”. Often 「〜ばいいのに」 or 「〜ばよかったのに」.",
-        "connection": "〜ば + いいのに／よかったのに; plain form + のに (sentence-final)",
-        "examples": [
-          "You should have told me.",
-          "If only you lived a bit closer.",
-          "And I went to all the trouble of making it..."
-        ]
-      }
-    ],
-    "notes": [
-      "The second part can't be a command, request, or intention: ✕「雨なのに、出かけてください」→ ○「雨でも、出かけてください」.",
-      "「のに」 carries strong dissatisfaction; aimed at the listener, it becomes blame. Saying 「昨日メールを送ったのに」 to your boss means complaining that they didn't read it; to explain neutrally, say 「昨日メールを送ったんですが」.",
-      "Nouns and na-adjectives use 「なのに」: ✕「日曜日だのに」→ ○「日曜日なのに」."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "Upset with a friend",
-          "description": "Complaining when a friend didn't keep their word.",
-          "example": "I was waiting for you. Why didn't you come?"
-        },
-        {
-          "title": "Complaining about the weather",
-          "description": "When the weather doesn't match the season.",
-          "example": "It's already spring, and it's snowing."
-        },
-        {
-          "title": "Feeling sorry for someone",
-          "description": "When a friend missed out on something good.",
-          "example": "You should have come too."
-        }
-      ],
-      "work": [
-        {
-          "title": "Disappointed with a result",
-          "description": "Telling a coworker your efforts didn't pay off.",
-          "example": "We prepared so much, but we didn't win the contract."
-        },
-        {
-          "title": "Watching your tone at work",
-          "description": "「のに」 sounds accusing. When explaining to a boss or client, use 「〜が」 instead.",
-          "example": "I did get in touch, but I didn't receive a reply. (not ✕連絡したのに)"
-        }
-      ]
-    },
-    "etymology": "Made of the formal noun / nominalizing particle 「の」 + the case particle 「に」, originally meaning \"in the situation of ...\". From the early modern period onward it became fixed as a contrastive conjunctive particle expressing a result contrary to expectation and the speaker's dissatisfaction.",
-    "formation": "「〜のに」 = formal noun 「の」 + particle 「に」. 「の」 turns the preceding sentence into a noun, “this fact”, and 「に」 means “in the situation of ...”, so together it's “in a situation where it's clearly so (and yet ...)”. Because the first part is treated as an established fact set against the result, 「のに」 is used specifically for a gap between fact and outcome, which naturally brings out dissatisfaction or surprise; the second part is an unexpected result that has already happened, so it can't be a command or intention. Nouns and na-adjectives are nominalized with 「な + の」, giving 「なのに」.",
-    "similar": [
-      {
-        "title": "〜けど・〜けれども",
-        "explanation": "「〜けど」 is a neutral contrast that just says the two parts conflict, and the second part can be a request; 「〜のに」 carries strong dissatisfaction or surprise, and the second part can't be a request or intention."
-      },
-      {
-        "title": "〜くせに",
-        "explanation": "「〜くせに」 (N3) also means “even though ...”, but it's only used about people, with stronger blame or contempt than 「のに」 (「知っているくせに教えてくれない」)."
-      },
-      {
-        "title": "〜にもかかわらず",
-        "explanation": "「〜にもかかわらず」 (N2) is close to 「のに」 in meaning but is written and more objective, without strong personal feeling; common in news and articles."
-      },
-      {
-        "title": "〜のに (purpose)",
-        "explanation": "Same form and origin, also built from 「の + に」, but it expresses use or purpose (「これは野菜を切るのに便利だ」), usually followed by 「便利」, 「使う」, 「必要」, etc.; it has nothing to do with contrast."
-      }
-    ],
-    "title": "〜のに (contrast)"
-  },
-  {
     "id": "shi",
     "meaning": "Lists parallel facts or reasons (“... and ..., and ...”), or gives one or two reasons while implying there are more.",
     "connection": "Plain form + し (noun / na-adjective: 〜だし); also after polite forms: 〜ですし／〜ますし",
@@ -2032,10 +1890,6 @@
       {
         "title": "〜あまり（に）",
         "explanation": "「あまり（に）」 (N3), as an adverb, also means “too” (「あまりに高い」) and is often used together with 「すぎる」; 「〜すぎる」 attaches after words and is used more widely."
-      },
-      {
-        "title": "〜あまり",
-        "explanation": "「〜あまり」 (N2) means “so ... that ...” (「心配するあまり、眠れなかった」), stressing the result caused by excess; 「〜すぎる」 only says the degree goes beyond the limit."
       },
       {
         "title": "〜にすぎない",

@@ -18,7 +18,8 @@ struct FlowLayout: Layout {
         let lines = arrange(maxWidth: maxWidth, subviews: subviews, sizes: cache.sizes)
         let width = lines.map(\.width).max() ?? 0
         let height = lines.map(\.height).reduce(0, +) + CGFloat(max(lines.count - 1, 0)) * lineSpacing
-        return CGSize(width: proposal.width ?? width, height: height)
+        // 只占内容实际宽度（不把整行撑满），这样标题后面的等级标签能紧贴在文字右上角
+        return CGSize(width: min(width, maxWidth), height: height)
     }
 
     func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout Cache) {

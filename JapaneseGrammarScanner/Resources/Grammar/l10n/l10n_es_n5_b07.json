@@ -1,7 +1,6 @@
 [
   {
     "id": "soshite-conjunction",
-    "title": "〜そして (al inicio: y luego / además)",
     "meaning": "Une dos oraciones o dos elementos. Indica el orden de las acciones o añade algo a lo que se dijo antes.",
     "connection": "Oración. そして、oración / Sustantivo、そして sustantivo",
     "senses": [
@@ -94,7 +93,6 @@
   },
   {
     "id": "sorekara-conjunction",
-    "title": "〜それから (al inicio: después / además)",
     "meaning": "Indica orden en el tiempo («después de eso»). También sirve para añadir algo («además», «y también»).",
     "connection": "Oración. それから、oración / Sustantivo、それから sustantivo",
     "senses": [
@@ -185,24 +183,15 @@
   },
   {
     "id": "to-quotation",
-    "title": "〜と (cita: 〜と言う・〜と思う)",
-    "meaning": "La partícula de cita 「と」. Va después de lo que alguien dice o piensa, y luego viene un verbo como 「言う」, 「思う」 o 「聞く」.",
-    "connection": "「Cita directa」 / oración en forma simple + と + 言う・思う・聞く・書く, etc.",
+    "meaning": "La partícula 「と」 tiene varios usos: introduce lo que se dice o se piensa (〜と言う・〜と思う), une sustantivos con el sentido de “y”, marca al compañero de una acción conjunta o recíproca y expresa una condición del tipo “en cuanto / siempre que ...”.",
+    "connection": "「Palabras exactas」 / oración en forma simple (sustantivo / adjetivo na + だ) + と + 言う・思う・聞く; sustantivo + と + sustantivo / verbo; verbo en forma de diccionario / forma ない + と (condición)",
     "senses": [
       {
-        "label": "Cita directa",
-        "meaning": "Reproduce las palabras exactas de alguien dentro de 「」, como «decir: “...”». Se mantiene el estilo original (です・ます, etc.).",
-        "connection": "「Palabras exactas」 + と + 言う／言いました",
+        "label": "Cita (directa e indirecta)",
+        "meaning": "Reproduce lo que alguien dijo. En la cita directa se mantienen las palabras exactas entre 「」; en la indirecta el contenido pasa a una oración en forma simple, y tras sustantivos y adjetivos na suele añadirse 「だ」.",
+        "connection": "「Palabras exactas」 / oración en forma simple (sustantivo / adjetivo na + だ) + と + 言う／言っていた",
         "examples": [
           "El profesor dijo: «Mañana hay examen».",
-          "Le dije «gracias» a mi amigo."
-        ]
-      },
-      {
-        "label": "Cita indirecta",
-        "meaning": "Transmite lo dicho con tus propias palabras, en forma simple, como «decir que...». Tras sustantivos y adjetivos な se añade 「だ」.",
-        "connection": "Oración en forma simple (sustantivo / adjetivo な + だ) + と + 言う／言っていた",
-        "examples": [
           "Tanaka dijo que mañana no viene.",
           "Mi madre dice que le gusta esta tienda."
         ]
@@ -226,14 +215,63 @@
           "Escribí «gracias» en la carta.",
           "Él respondió: «Sí»."
         ]
+      },
+      {
+        "label": "Enumeración (y)",
+        "meaning": "Enumera sustantivos uno por uno: «A y B». 「と」 da una lista completa: son esos y no hay más. Solo une sustantivos, no verbos ni adjetivos.",
+        "connection": "Sustantivo + と + sustantivo (+ と + sustantivo)",
+        "examples": [
+          "Compré pan y leche.",
+          "Sobre el escritorio hay un libro y un bolígrafo.",
+          "Mi familia son mi padre, mi madre y mi hermana menor."
+        ]
+      },
+      {
+        "label": "Con quién se hace algo",
+        "meaning": "Indica con quién se hace algo: «con». También se dice mucho 「〜と一緒に」 («junto con»), que es más claro.",
+        "connection": "Persona + と (一緒に) + verbo",
+        "examples": [
+          "Ayer vi una película con un amigo.",
+          "Este fin de semana viajo con mi familia.",
+          "Fui de compras con mi madre."
+        ]
+      },
+      {
+        "label": "Compañero de una acción mutua",
+        "meaning": "Marca a la otra persona en acciones que necesitan dos partes: «casarse con», «pelearse con», «hablar con». Estos verbos no admiten 「一緒に」.",
+        "connection": "Persona + と + 結婚する／話す／会う／けんかする／相談する",
+        "examples": [
+          "El año que viene me caso con mi novia.",
+          "Ayer hablé con el profesor.",
+          "Me peleé con mi hermano menor."
+        ]
+      },
+      {
+        "label": "Resultado natural",
+        "meaning": "Si se cumple A, B ocurre siempre. Se usa para leyes naturales, manejo de aparatos, indicaciones de camino, etc. Equivale a “cuando ...”, “si ...”.",
+        "connection": "Forma de diccionario / forma ない del verbo + と (〜になると・〜を押すと・まっすぐ行くと)",
+        "examples": [
+          "Cuando llega la primavera, florecen los cerezos.",
+          "Si pulsas este botón, sale agua.",
+          "Mi padre enciende la tele nada más llegar a casa."
+        ]
+      },
+      {
+        "label": "Descubrimiento",
+        "meaning": "「〜と、〜た」 indica que, al hacer A, uno se encontró con B. La segunda parte va en pasado y suele ser algo inesperado.",
+        "connection": "Forma de diccionario del verbo + と、〜た (窓を開けると、〜ていた)",
+        "examples": [
+          "Al abrir la ventana, vi que estaba nevando.",
+          "Al volver a casa, me encontré con que había venido mi madre."
+        ]
       }
     ],
     "notes": [
       "En la cita indirecta hay que añadir 「だ」 después de sustantivos y adjetivos な: ✕「学生と思う」→ ○「学生だと思う」; ✕「静かと言った」→ ○「静かだと言った」.",
-      "「〜と思います」 solo expresa la opinión del propio hablante. ✕「田中さんは行くと思います」 se entiende como «creo que Tanaka irá». Para transmitir lo que piensa el propio Tanaka, di 「田中さんは行こうと思っています」 o 「田中さんは行くと言っていました」.",
       "El 「と」 de cita va detrás de una oración; el 「と」 de «con» va detrás de una persona o cosa. Confundirlos cambia el sentido por completo: 「友達と言いました」 es «lo dije junto con un amigo», mientras que 「友達だと言いました」 es «(él) dijo que era un amigo».",
-      "Al transmitir las palabras de tu propio jefe a alguien de fuera de la empresa, usa lenguaje humilde: ○「部長は明日伺うと申しておりました」. Elevar a tu propio jefe con 「おっしゃっていました」 resulta descortés en ese caso. Al transmitirlas a un compañero de la misma empresa, sí se usa 「おっしゃっていました」.",
-      "En el habla, 「と」 suele convertirse en 「って」 (「行くって言った」), pero ante superiores o clientes, o en documentos formales, 「って」 suena demasiado informal; usa 「と」."
+      "「と」 da una lista completa; para dar solo algunos ejemplos se usa 「や」: 「パンと牛乳を買った」 (compré solo estas dos cosas); 「パンや牛乳を買った」 (compré estas y otras cosas).",
+      "La otra persona en acciones recíprocas como 「結婚する」 o 「けんかする」 lleva 「と」, no 「を」, igual que «casarse con» en español: ✕「彼女を結婚します」→ ○「彼女と結婚します」.",
+      "La segunda oración no puede ser una intención, un deseo, una orden ni una petición: ✕「駅に着くと、電話してください」→ ○「駅に着いたら、電話してください」; ✕「お金があると、旅行したい」→ ○「お金があったら、旅行したい」."
     ],
     "scenes": {
       "daily": [
@@ -248,9 +286,19 @@
           "example": "Creo que la última escena estuvo bien."
         },
         {
-          "title": "Preguntar cómo se dice algo",
-          "description": "Preguntar cómo se llama algo en japonés.",
-          "example": "¿Cómo se dice esto en japonés?"
+          "title": "Charla del fin de semana",
+          "description": "Amigos que cuentan con quién salieron.",
+          "example": "El domingo fui de compras con mi hermana mayor."
+        },
+        {
+          "title": "En la tienda de conveniencia",
+          "description": "Decir al dependiente qué quieres.",
+          "example": "Un onigiri y un té, por favor."
+        },
+        {
+          "title": "Indicar el camino",
+          "description": "Un transeúnte explica a un turista cómo llegar.",
+          "example": "Si giras a la derecha en la segunda esquina, verás la estación."
         }
       ],
       "work": [
@@ -263,210 +311,46 @@
           "title": "Transmitir una llamada",
           "description": "Contarle a tu jefe lo que dijo un cliente por teléfono.",
           "example": "Llamó el señor Yamada para decir que llegará un poco tarde a la reunión."
+        },
+        {
+          "title": "Informar al jefe",
+          "description": "Explicar al jefe que lo consultaste con el cliente.",
+          "example": "Ayer lo consulté con el cliente."
+        },
+        {
+          "title": "Manual de instrucciones",
+          "description": "Un manual describe qué pasa al manejar un aparato.",
+          "example": "Al encender el aparato, se ilumina el piloto."
         }
       ]
     },
-    "etymology": "El 「と」 de cita tiene el mismo origen que la partícula 「と」 de «y / con». Desde la antigüedad introduce lo que se dice o piensa (como en el clásico 「〜と言ふ」 o 「〜と思ふ」). Es un uso con una historia muy larga en japonés.",
-    "formation": "La estructura es «contenido + と + un verbo como 言う・思う・聞く・書く». 「と」 funciona como unas comillas alrededor del contenido: marca «esto es lo que se dijo, se pensó o se escribió». Por eso delante de 「と」 puede ir una oración entera, incluso las palabras originales entre 「」. La acción real la decide el verbo que sigue: con 「言う」 es decir, con 「思う」 pensar, con 「聞く」 oír de alguien. 「と」 en sí no lleva tiempo verbal ni grado de cortesía; si se dijo o no, y a quién, lo indica el verbo siguiente (「言いました」「思っています」「申しました」). Y como 「と」 solo marca el contenido, en la cita indirecta este debe pasar a forma simple, y los sustantivos y adjetivos な necesitan 「だ」 para formar una oración completa.",
+    "etymology": "「と」 es una partícula casual que ya existe en el japonés antiguo. Su idea central es “formar un par con dos elementos”: empareja sustantivos (y, junto con), empareja un contenido con el acto de decir o pensar (cita) y más tarde pasó a ser una partícula conjuntiva que empareja dos oraciones (condición).",
+    "formation": "Todos los sentidos nacen de la misma idea: emparejar estrechamente lo que va antes de と con lo que va después. Sustantivo + と + sustantivo empareja dos cosas (“y”); persona + と + verbo empareja a esa persona como compañero de la acción (junto con, acciones recíprocas); contenido + と + 言う・思う empareja el contenido con el acto de decir o pensar, como poner comillas (cita); oración + と + oración empareja dos hechos de modo que B sigue automáticamente a A (condición). Para distinguirlos, fíjate en lo que rodea a 「と」: entre sustantivos suele ser “y”, tras una oración completa seguida de 言う・思う es cita, y ante otra oración que expresa un resultado natural es condición.",
     "similar": [
-      {
-        "title": "〜と言う (cita)",
-        "explanation": "Mismo origen: 「〜と言う」 es el 「と」 de cita + 「言う」 y se centra en citar lo que alguien dice. Esta entrada parte de la partícula 「と」 en sí, que también se combina con verbos como 「思う・聞く・書く・答える」."
-      },
-      {
-        "title": "〜と思う (creo que)",
-        "explanation": "Mismo origen: 「〜と思う」 es el 「と」 de cita + 「思う」 y expresa las ideas y opiniones del hablante. El 「と」 de esta entrada también puede introducir lo dicho, lo oído o lo escrito."
-      },
       {
         "title": "〜って (cita, tema)",
         "explanation": "Significado parecido: 「って」 es la forma coloquial del 「と」 de cita, muy común entre amigos (「明日休みだって」). En situaciones formales y por escrito se usa 「と」."
       },
       {
-        "title": "〜と言っていた (transmitir lo dicho)",
-        "explanation": "Significado parecido: 「〜と言っていた」 sirve específicamente para transmitir a otra persona lo que alguien dijo («dijo que…»). 「〜と言いました」 solo narra el acto de decir, así que para transmitir palabras ajenas 「言っていた」 suena más natural."
-      }
-    ]
-  },
-  {
-    "id": "verb-noun-modification",
-    "title": "〜 verbo + sustantivo (verbos que modifican sustantivos: oraciones de relativo)",
-    "meaning": "Se pone la forma simple del verbo justo delante del sustantivo para describirlo. Equivale a una oración de relativo («el libro que compré»), pero va antes del sustantivo y sin «que».",
-    "connection": "Forma simple del verbo (forma de diccionario / forma た / forma ている / forma ない) + sustantivo",
-    "senses": [
-      {
-        "label": "Forma de diccionario",
-        "meaning": "Describe un hábito, algo que se va a hacer o un hecho general, como «el ... que hace / va a hacer». El verbo se une directamente al sustantivo, sin 「の」 en medio.",
-        "connection": "Forma de diccionario + sustantivo (人・所・時・日, etc.)",
-        "examples": [
-          "Compré la leche que tomo todas las mañanas.",
-          "¿Quién es la persona que va a Japón?"
-        ]
+        "title": "〜や〜など",
+        "explanation": "Los dos enumeran con «y» y tienen un significado cercano: 「と」 da una lista completa (solo esto); 「や」 da una lista parcial (algunos ejemplos, hay más)."
       },
       {
-        "label": "Forma た",
-        "meaning": "Describe algo que ocurrió en el pasado o el estado que queda tras una acción, como «el ... que hizo».",
-        "connection": "Forma た + sustantivo",
-        "examples": [
-          "Este es el libro que compré ayer.",
-          "La persona que lleva lentes es el profesor."
-        ]
+        "title": "〜ば (hipótesis)",
+        "explanation": "Ambos son condicionales. 「ば」 se centra en la condición misma («con tal de que ..., ...»), y si las dos oraciones tienen el mismo sujeto, la segunda puede expresar intención o deseo (「時間があれば、行きたい」). 「と」 se centra en un resultado inevitable y su segunda oración no admite voluntad."
       },
       {
-        "label": "Forma ている",
-        "meaning": "Describe una acción en curso o un estado que continúa, como «el ... que está haciendo».",
-        "connection": "Forma ている + sustantivo",
-        "examples": [
-          "La persona que está leyendo el periódico allí es Tanaka.",
-          "La ciudad donde vivo es tranquila."
-        ]
+        "title": "〜たら",
+        "explanation": "「たら」 es el de uso más amplio, y la segunda oración puede ser una petición o una intención (「着いたら電話して」). 「と」 solo se usa para leyes naturales, manejo de máquinas, hábitos y «descubrimientos». En la conversación diaria, si dudas, 「たら」 es lo más seguro."
       },
       {
-        "label": "Forma ない",
-        "meaning": "Describe algo en negativo, como «el ... que no hace».",
-        "connection": "Forma ない + sustantivo",
-        "examples": [
-          "Busco en el diccionario las palabras que no entiendo.",
-          "Llame, por favor, a las personas que no vinieron."
-        ]
-      }
-    ],
-    "notes": [
-      "No pongas 「の」 entre el verbo y el sustantivo, aunque 「の」 te parezca equivalente a «de»: ✕「私が買ったの本」→ ○「私が買った本」 (el libro que compré). Es uno de los errores más frecuentes entre estudiantes.",
-      "Dentro de la oración que modifica a un sustantivo, el sujeto lleva 「が」 (o 「の」), no 「は」: ✕「私は作った料理を食べてください」 queda confuso, algo como «En cuanto a mí… por favor come la comida hecha» → ○「私が作った料理を食べてください」.",
-      "Para modificar un sustantivo se usa la forma simple, no la forma ます: ✕「昨日買いました本」→ ○「昨日買った本」. Aunque toda la oración sea cortés, 「です・ます」 solo aparece al final.",
-      "Confundir la forma de diccionario y la forma た cambia el sentido por completo: 「日本へ行く人」 es «una persona que va a ir a Japón», 「日本へ行った人」 es «una persona que ha estado en Japón»; 「結婚する人」 es «una persona que se va a casar», 「結婚した人」 es «una persona casada»."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "Buscar a alguien",
-          "description": "Describirle a un amigo a la persona que buscas entre la gente.",
-          "example": "La persona que lleva ropa roja allí es mi hermana menor."
-        },
-        {
-          "title": "Mostrar algo",
-          "description": "Enseñarle a un amigo un recuerdo que compraste en un viaje.",
-          "example": "Este es un recuerdo que compré en Kioto."
-        },
-        {
-          "title": "Buscar un sitio",
-          "description": "Hablar con un amigo sobre dónde comer.",
-          "example": "¿Conoces algún sitio donde se pueda comer barato y rico?"
-        }
-      ],
-      "work": [
-        {
-          "title": "Confirmar el material de una reunión",
-          "description": "Preguntar a un compañero dónde está el material para la reunión.",
-          "example": "¿Dónde está el material que vamos a usar en la reunión de mañana?"
-        },
-        {
-          "title": "Presentar al responsable",
-          "description": "Presentarte a un cliente como responsable de un proyecto.",
-          "example": "Soy Sato, el responsable de este proyecto."
-        }
-      ]
-    },
-    "etymology": "En el japonés clásico, los verbos tenían dos formas distintas: la forma conclusiva (shūshikei), para terminar la oración, y la forma atributiva (rentaikei), para describir sustantivos. En el japonés moderno se fusionaron, por eso la forma simple puede describir un sustantivo directamente.",
-    "formation": "En japonés, los modificadores siempre van delante del sustantivo al que modifican (primero el modificador, al final el núcleo). Es al revés que en español, donde la oración de relativo va detrás del sustantivo («el libro que compré»). Además, la forma simple del verbo japonés puede modificar directamente al sustantivo, sin ningún enlace como «que» y sin 「の」: por eso es 「買った本」. El verbo entra en la oración con su propia forma: la forma de diccionario indica algo habitual o que va a ocurrir; la forma た, algo ya ocurrido; la forma ている, algo en curso o que continúa; la forma ない, la negación. Así, «el libro que compraré / que compré / que estoy comprando / que no compré» se distinguen solo por la forma del verbo. El sujeto dentro de la oración lleva 「が」 y no 「は」, porque 「は」 marca el tema de toda la oración y no puede llegar al interior de una oración de relativo. El conjunto «oración + sustantivo» funciona como un solo sustantivo, así que puede ir seguido de 「は・を・に」 y demás partículas como siempre.",
-    "similar": [
-      {
-        "title": "〜(forma simple del verbo) + sustantivo (oración de relativo)",
-        "explanation": "Significado parecido: las dos tratan la misma clase de estructura. Aquella entrada parte de las reglas generales de la modificación del sustantivo; esta organiza las diferencias de significado según la forma del verbo (forma de diccionario, forma た, forma ている, forma ない)."
-      },
-      {
-        "title": "〜(oración en forma simple) + sustantivo (modificación del sustantivo)",
-        "explanation": "Significado parecido: aquella entrada amplía el alcance a cualquier oración en forma simple que modifica a un sustantivo (incluidas las oraciones con adjetivos y sustantivos), con formas como 「静かな」 o 「学生だった」. Esta entrada solo trata los verbos."
-      },
-      {
-        "title": "〜の (en lugar de が en una oración de relativo)",
-        "explanation": "Otra forma de decir lo mismo: el sujeto 「が」 de una oración de relativo puede cambiarse por 「の」: 「私が買った本」 = 「私の買った本」. Con 「の」 suena algo más escrito y suave."
-      }
-    ]
-  },
-  {
-    "id": "ga-no-swap",
-    "title": "〜の (en lugar de が en una oración de relativo)",
-    "meaning": "En una oración que describe a un sustantivo, la 「が」 que marca el sujeto puede cambiarse por 「の」. El significado no cambia.",
-    "connection": "Sustantivo + の + verbo o adjetivo en forma simple + sustantivo",
-    "senses": [
-      {
-        "label": "Con verbos",
-        "meaning": "「の」 marca el sujeto (quien hace la acción) de la oración. 「母の作った料理」＝「母が作った料理」. Suena algo más literario y suave.",
-        "connection": "Sustantivo + の + verbo en forma simple + sustantivo",
-        "examples": [
-          "La comida que hace mi madre está rica.",
-          "Esta es la ciudad donde nací.",
-          "Los días que llueve me quedo en casa."
-        ]
-      },
-      {
-        "label": "Con adjetivos",
-        "meaning": "Al describir a una persona o cosa, 「〜が + adjetivo + sustantivo」 también se dice a menudo 「〜の + adjetivo + sustantivo」. Muchas son ya expresiones fijas.",
-        "connection": "Sustantivo + の + adjetivo い / adjetivo な + sustantivo",
-        "examples": [
-          "La persona alta es mi hermano mayor.",
-          "¿Has visto a una chica de pelo largo?"
-        ]
-      }
-    ],
-    "notes": [
-      "「が」 solo puede cambiarse por 「の」 dentro de una oración que modifica a un sustantivo; el sujeto de la oración principal no: ✕「母の料理を作った」 pasa a significar «(alguien) preparó la comida de mamá» → ○「母が料理を作った」.",
-      "「私の好きな人」 significa «la persona que me gusta», no «la persona a la que le gusto». Lo segundo es 「私のことが好きな人」. Si confundes 「の」 y 「を」, se invierte por completo quién quiere a quién.",
-      "En 「田中さんの描いた絵」, 「の」 marca el sujeto (el cuadro que pintó Tanaka), no la posesión (un cuadro que tiene Tanaka). No lo traduzcas como «el cuadro de Tanaka» perdiendo la idea de quién lo pintó.",
-      "Si la oración incluye además un complemento con 「を」, normalmente 「が」 no puede cambiarse por 「の」: ✕「母の子どもにご飯を作った日」→ ○「母が子どもにご飯を作った日」."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "Presentar tu ciudad natal",
-          "description": "Hablarle a un amigo del lugar donde creciste.",
-          "example": "Esta es la ciudad donde crecí."
-        },
-        {
-          "title": "Describir a alguien",
-          "description": "Describirle a un amigo el aspecto de una persona.",
-          "example": "La niña de ojos grandes es mi hermana menor."
-        },
-        {
-          "title": "Leer novelas",
-          "description": "En novelas y letras de canciones es frecuente el estilo literario 「〜の + verbo + sustantivo」.",
-          "example": "Quiero ir a la ciudad donde vives."
-        }
-      ],
-      "work": [
-        {
-          "title": "Citar un documento",
-          "description": "Explicar quién escribió un documento.",
-          "example": "Este es el informe que escribió el jefe de departamento."
-        },
-        {
-          "title": "Presentar productos",
-          "description": "Presentar en una sesión informativa los productos que eligieron los clientes.",
-          "example": "Les presentamos los productos que eligieron nuestros clientes."
-        }
-      ]
-    },
-    "etymology": "En el japonés clásico, tanto 「の」 como 「が」 podían marcar el sujeto y también la posesión. En el japonés moderno, 「が」 marca sobre todo el sujeto, pero en las oraciones que describen sustantivos ha sobrevivido el antiguo uso de 「の」 como sujeto.",
-    "formation": "La función más básica de 「の」 es unir dos sustantivos (AのB). En «sustantivo + の + verbo/adjetivo + sustantivo», la parte «verbo + sustantivo» se trata como un gran sustantivo, de modo que el sustantivo de delante puede engancharse a ella con 「の」: 「母の｜作った料理」, literalmente «de mamá | comida preparada», se entiende como «la comida que preparó mamá». Por eso este 「の」 necesita un sustantivo detrás que lo «recoja»: solo aparece en oraciones que modifican a un sustantivo, nunca al final de la oración. En japonés clásico 「の」 podía marcar el sujeto en general; en japonés moderno ese uso solo sobrevive en las oraciones de relativo. Se suele considerar que, cuando la oración contiene además un complemento con 「を」, la estructura se complica y 「の」 no logra «saltar» hasta el sustantivo, así que se usa 「が」.",
-    "similar": [
-      {
-        "title": "〜が (sujeto)",
-        "explanation": "Significado parecido: las dos marcan el sujeto. 「が」 sirve en cualquier oración; 「の」 solo puede sustituir a 「が」 dentro de una oración que modifica a un sustantivo, y suena algo más escrito y suave."
-      },
-      {
-        "title": "〜の (posesión / modificación)",
-        "explanation": "Mismo origen: este 「の」 es el mismo 「の」 que une sustantivos. 「私の本」 indica posesión (mi libro); 「私の買った本」 indica el sujeto (el libro que compré). Fíjate en si justo después de 「の」 viene un sustantivo o un verbo/adjetivo."
-      },
-      {
-        "title": "〜 verbo + sustantivo (verbos que modifican sustantivos: oraciones de relativo)",
-        "explanation": "Misma estructura, mismo significado: el verbo que modifica a un sustantivo es el marco general, y el sujeto dentro de la oración suele llevar 「が」. Esta entrada trata la variante en la que el sujeto lleva 「の」; el significado no cambia."
+        "title": "〜なら",
+        "explanation": "「なら」 retoma el tema del interlocutor para dar un consejo (「京都へ行くなら、新幹線がいい」), sin orden temporal entre las oraciones. 「と」 indica que, en cuanto ocurre lo primero, lo segundo le sigue."
       }
     ]
   },
   {
     "id": "no-mae-position",
-    "title": "〜の前・〜の上・〜の中 (palabras de posición)",
     "meaning": "Con «sustantivo + の + palabra de posición» se indica dónde está algo: encima de la mesa, delante de la estación, dentro de la caja.",
     "connection": "Sustantivo + の + 前・上・中・下・横・隣, etc. + に／で／を",
     "senses": [
@@ -560,7 +444,6 @@
   },
   {
     "id": "particle-omission",
-    "title": "〜 omisión de partículas (lengua hablada)",
     "meaning": "En la conversación diaria se omiten a menudo partículas como 「は」, 「を」, 「が」 y 「へ・に」. Así el habla suena más informal y cercana.",
     "connection": "Sustantivo (sin は・を・が・へ) + predicado (sobre todo coloquial, en forma simple)",
     "senses": [

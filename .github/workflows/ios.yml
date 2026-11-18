@@ -107,6 +107,27 @@ jobs:
               i=$((i+1))
             done
           done
+          # 自查用截图（简体中文）：含汉字标题的注音与等级标签、合并后的语法点、搜索、深色模式、大字号
+          mkdir -p screenshots/qa
+          qa() { name=$1; shift
+            xcrun simctl terminate "$UDID" "$BID" 2>/dev/null || true
+            xcrun simctl launch "$UDID" "$BID" -AppleLanguages "(zh-Hans)" -demoUnlocked "$@"
+            sleep 8
+            xcrun simctl io "$UDID" screenshot "screenshots/qa/$name.png"
+          }
+          qa detail_izen -demoScreen detail -demoGrammar izen
+          qa detail_made -demoScreen detail -demoGrammar made-until
+          qa home_history -demoScreen home -demoHistory 1
+          qa search_areba -demoScreen library -demoSearch あれば
+          qa library_n3 -demoScreen library -demoSearch N3
+          xcrun simctl ui "$UDID" appearance dark
+          qa detail_oouseru_dark -demoScreen detail -demoGrammar oouseru
+          qa detail_izen_dark -demoScreen detail -demoGrammar izen
+          qa home_dark -demoScreen home -demoHistory 1
+          xcrun simctl ui "$UDID" appearance light
+          xcrun simctl ui "$UDID" content_size extra-extra-large
+          qa detail_oouseru_xxl -demoScreen detail -demoGrammar oouseru
+          xcrun simctl ui "$UDID" content_size large
           find screenshots -name "*.png" | sort
       - uses: actions/upload-artifact@v4
         with:

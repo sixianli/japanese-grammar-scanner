@@ -1,7 +1,6 @@
 [
   {
     "id": "to-iu-koto-nominalizer",
-    "title": "〜ということ (nominalizador)",
     "meaning": "Se añade 「ということ」 al final de una oración para convertirla entera en sustantivo: “el hecho de que...”.",
     "connection": "Oración en forma simple + ということ (tras sustantivos y adjetivos な, normalmente se añade 「だ」)",
     "senses": [
@@ -90,7 +89,6 @@
   },
   {
     "id": "wa-ga-wa-contrast",
-    "title": "〜は〜が、〜は〜 (contraste)",
     "meaning": "Con dos 「は」 se ponen dos cosas una al lado de otra para contrastarlas: “A es..., pero B es...”.",
     "connection": "Sustantivo A は + predicado + が (けど)、sustantivo B は + predicado",
     "senses": [
@@ -183,7 +181,6 @@
   },
   {
     "id": "gozaimasu-aru",
-    "title": "〜ございます (forma cortés de ある)",
     "meaning": "Forma muy cortés de 「あります」: “hay / tener”. La usan dependientes, recepcionistas y avisos por megafonía en situaciones formales.",
     "connection": "Sustantivo + が／は + ございます; adjetivo い con cambio fonético en う + ございます",
     "senses": [
@@ -268,98 +265,7 @@
     ]
   },
   {
-    "id": "rentai-shuushoku",
-    "title": "〜(oración en forma simple) + sustantivo (modificación del sustantivo)",
-    "meaning": "Una oración en forma simple se coloca justo delante de un sustantivo para describirlo. Equivale a una oración de relativo en español (“el libro que compré”).",
-    "connection": "Oración en forma simple (verbo, adjetivo, sustantivo + だった, etc.) + sustantivo",
-    "senses": [
-      {
-        "label": "Oraciones con verbo",
-        "meaning": "Las formas simples del verbo (forma de diccionario, forma た, forma ない, forma ている) van justo delante del sustantivo. A diferencia del español, la oración va antes del sustantivo y no lleva nada parecido a “que”, ni tampoco 「の」.",
-        "connection": "Verbo en forma simple + sustantivo (買った本／来ない人／住んでいる町)",
-        "examples": [
-          "El libro que compré ayer es muy interesante.",
-          "Quienes no vengan a la fiesta, por favor avísenme.",
-          "El pueblo donde vivo es tranquilo."
-        ]
-      },
-      {
-        "label": "Oraciones con adjetivo o sustantivo",
-        "meaning": "Los adjetivos い van directamente delante del sustantivo; los adjetivos な llevan 「な」. Con sustantivos se usa 「の」 en presente y 「だった」 en pasado.",
-        "connection": "Adjetivo い + sustantivo／adjetivo な な + sustantivo／sustantivo の・sustantivo だった + sustantivo",
-        "examples": [
-          "Una niña de ojos grandes está sonriendo.",
-          "Escuché una canción que me gustaba cuando era niño.",
-          "Quiero vivir en una ciudad con buen transporte."
-        ]
-      },
-      {
-        "label": "が→の dentro de la oración",
-        "meaning": "El 「が」 que marca el sujeto dentro de la oración modificadora puede cambiarse por 「の」. Solo es posible dentro de una oración que modifica a un sustantivo.",
-        "connection": "Sustantivo の + verbo + sustantivo (母の作った料理)",
-        "examples": [
-          "La comida que hace mi madre es la más rica.",
-          "Leí una novela que escribió un amigo."
-        ]
-      }
-    ],
-    "notes": [
-      "No pongas 「の」 entre la oración y el sustantivo (es un error frecuente por analogía con 「私の本」): ✕「昨日買ったの本」→ ○「昨日買った本」; ✕「大きいの家」→ ○「大きい家」.",
-      "En la oración de relativo no se suele usar 「です・ます」: ✕「昨日買いました本」→ ○「昨日買った本」.",
-      "El sujeto dentro de la oración de relativo lleva 「が」 o 「の」; con 「は」 cambia el significado. 「私が作ったケーキを食べた」 es «(alguien) se comió la tarta que hice yo»; si dices 「私は作ったケーキを食べた」, 「私」 pasa a ser el sujeto de la oración principal: «yo me comí la tarta que estaba hecha».",
-      "Ante un sustantivo, los adjetivos な llevan 「な」 y los sustantivos 「の」, nunca 「だ」: ✕「静かだ町」→ ○「静かな町」; ✕「父が医者だ友だち」→ ○「父が医者の友だち」."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "Presentar a un amigo",
-          "description": "Le presentas a tu familia a un amigo de la universidad.",
-          "example": "Este es un amigo que conocí en la universidad."
-        },
-        {
-          "title": "Buscar algo",
-          "description": "Buscas en casa el paraguas que compraste ayer y hablas solo.",
-          "example": "¿Dónde habré dejado el paraguas que compré ayer?"
-        },
-        {
-          "title": "Recomendar un restaurante",
-          "description": "Le recomiendas a un amigo el puesto de ramen frente a la estación.",
-          "example": "El ramen del local que está frente a la estación está muy rico."
-        }
-      ],
-      "work": [
-        {
-          "title": "Confirmar documentos por correo",
-          "description": "Le recuerdas a un cliente que revise los documentos que le enviaste.",
-          "example": "Le ruego que revise los documentos que le enviamos la semana pasada."
-        },
-        {
-          "title": "Presentar un producto",
-          "description": "Le presentas a un cliente un producto popular.",
-          "example": "Este es un producto muy popular entre los jóvenes."
-        }
-      ]
-    },
-    "etymology": "「連体修飾」 es un término de la gramática japonesa: 「連体」 significa “unido al sustantivo (体言)” y 「修飾」 significa “modificación”. En japonés el modificador siempre va primero, así que la oración modificadora siempre se coloca delante del sustantivo.",
-    "formation": "En japonés el modificador va delante de lo modificado, así que una oración en forma simple puede colocarse tal cual delante de un sustantivo para describirlo: 「昨日買った」 + 「本」 → 「昨日買った本」. Los verbos y adjetivos japoneses tienen una forma atributiva (rentaikei) que se une directamente al sustantivo, por lo que no hace falta ningún nexo como el «que» del español. En japonés moderno, la forma atributiva de verbos y adjetivos い es igual a la forma conclusiva, y por eso parece «oración simple + sustantivo». El 「だ」 de sustantivos y adjetivos な no puede unirse directamente a un sustantivo: se cambia por la forma atributiva 「な」 (tras sustantivos, normalmente 「の」), y en pasado se usa 「だった」. Como la oración de relativo es solo parte del sustantivo y no una oración independiente, no lleva 「です・ます」, y su sujeto no lleva 「は」, que marca el tema de toda la frase, sino 「が」 o 「の」.",
-    "similar": [
-      {
-        "title": "〜(forma simple del verbo) + sustantivo (oración de relativo)",
-        "explanation": "Significado parecido. En N5 se aprende sobre todo que la forma simple del verbo modifica al sustantivo (「読む本」); esta entrada lo amplía a oraciones con adjetivos y sustantivos, y a formas en pasado, negativas, etc."
-      },
-      {
-        "title": "〜 verbo + sustantivo (verbos que modifican sustantivos: oraciones de relativo)",
-        "explanation": "Significado parecido. Esa entrada se centra en las oraciones de relativo con verbo; esta profundiza en el tiempo, la marca del sujeto y cómo se unen adjetivos y sustantivos cuando una oración entera modifica a un sustantivo."
-      },
-      {
-        "title": "〜の (en lugar de が en una oración de relativo)",
-        "explanation": "Mismo origen. Esa entrada explica que dentro de una oración de relativo 「が」 puede cambiarse por 「の」 (「母の作った料理」), lo cual forma parte de esta entrada. Solo se puede cambiar en oraciones que modifican a un sustantivo; en una oración independiente, el sujeto con 「が」 no puede pasar a 「の」."
-      }
-    ]
-  },
-  {
     "id": "wo-shite-iru-appearance",
-    "title": "〜をしている (aspecto/rasgos)",
     "meaning": "「Modificador + sustantivo + をしている」 describe rasgos permanentes de personas o cosas, como el aspecto, la forma o el color.",
     "connection": "Adjetivo u otro modificador + 目・髪・顔・形・色, etc. + をしている",
     "senses": [
@@ -443,7 +349,6 @@
   },
   {
     "id": "ku-wa-nai",
-    "title": "〜くは (adjetivo + は, negación contrastiva)",
     "meaning": "Al añadir 「は」 a la forma く de un adjetivo い, la negación se suaviza o se añade un contraste: “no es que sea muy...”, “sí es..., pero...”.",
     "connection": "Raíz del adjetivo い + くは + ない／ありません／ある",
     "senses": [
@@ -712,7 +617,6 @@
   },
   {
     "id": "nai-wa-nai",
-    "title": "〜ない〜はない (doble negación)",
     "meaning": "Con la doble negación 「〜ない + sustantivo + はない」 se dice “no hay ... que no ...”, es decir, que todos lo hacen. Es más enfático que una afirmación.",
     "connection": "Verbo en forma ない + sustantivo + は (いない／ない)",
     "senses": [
@@ -1040,10 +944,19 @@
   },
   {
     "id": "rashii-typical",
-    "title": "〜らしい (típico, propio de)",
-    "meaning": "「らしい」 tras un sustantivo indica que algo tiene las cualidades típicas o propias de esa cosa: “muy de...”, “propio de...”.",
-    "connection": "Sustantivo + らしい (らしく／らしくない／らしさ)",
+    "meaning": "「らしい」 tiene dos usos: tras una oración expresa una conjetura o información de oídas basada en lo que se ha oído o visto (“parece que ..., dicen que ...”); tras un sustantivo significa tener las características típicas de algo (“propio de ..., como corresponde a ...”), con la negación 「らしくない」 y la forma nominal 「らしさ」.",
+    "connection": "Verbo / adjetivo い en forma simple + らしい; raíz de adjetivo な / sustantivo + らしい (sin 「だ」); sustantivo + らしい / らしく / らしくない / らしさ",
     "senses": [
+      {
+        "label": "Suposición / rumor",
+        "meaning": "Suposición basada en información externa (algo oído o una señal vista): 'parece que...', 'dicen que...'. El hablante guarda distancia con el contenido y no se responsabiliza del todo.",
+        "connection": "Forma llana + らしい (sustantivo y raíz de adjetivo-な directamente); la negación va antes: 〜ないらしい",
+        "examples": [
+          "La calle está mojada. Parece que llovió de madrugada.",
+          "Dicen que esa tienda cierra el mes que viene.",
+          "Parece que él dejó la empresa."
+        ]
+      },
       {
         "label": "Típico / propio de",
         "meaning": "Indica que algo reúne plenamente las cualidades que se esperan de ese sustantivo. Suele ser positivo. Ejemplos típicos: 「男らしい」「子どもらしい」「春らしい」.",
@@ -1076,11 +989,23 @@
     ],
     "notes": [
       "Tiene la misma forma que el 「らしい」 de suposición, y si lo interpretas mal cambia el significado: 「春らしい天気」 es «un tiempo muy primaveral», y 「明日は雨らしい」, «parece que mañana lloverá». 「彼は学生らしい」 admite ambas lecturas, así que depende del contexto.",
+      "La negación va delante: ✕「来るらしくない」→ ○「来ないらしい」. 「〜らしくない」 significa «no es propio de ...» (「彼らしくない」 = no es propio de él), un sentido totalmente distinto.",
+      "En un informe de trabajo, 「〜らしいです」 suena a información sin comprobar e irresponsable; compruébalo y di 「〜とのことです」 o 「〜と聞いております」.",
       "「らしい」 suele ser positivo, y 「っぽい」, a menudo negativo: decirle a un adulto 「子どもっぽい」 es «infantil»; 「子どもらしい」 elogia la inocencia de un niño y normalmente no se usa con adultos.",
       "「男らしく」 y 「女らしく」 pueden verse como estereotipos de género en el Japón actual; en el trabajo, decirle a alguien algo como 「女らしくしなさい」 puede considerarse acoso, así que úsalos con cuidado."
     ],
     "scenes": {
       "daily": [
+        {
+          "title": "Deducir por una señal",
+          "description": "Al ver el suelo mojado, suponer que llovió.",
+          "example": "El suelo está mojado. Parece que llovió."
+        },
+        {
+          "title": "Hablar de la vida de un amigo",
+          "description": "Contar algo que se oyó, sin mucha seguridad.",
+          "example": "Parece que Sato se echó novia."
+        },
         {
           "title": "Hablar del tiempo",
           "description": "Saludas a un vecino en un día templado.",
@@ -1099,6 +1024,11 @@
       ],
       "work": [
         {
+          "title": "Transmitir una noticia no confirmada",
+          "description": "Explicar a compañeros algo aún no oficial.",
+          "example": "Parece que a partir del mes que viene cambiamos de sistema."
+        },
+        {
           "title": "Ropa para la entrevista",
           "description": "Un centro o una empresa indica a los estudiantes cómo vestir.",
           "example": "Por favor, venga con ropa adecuada para un estudiante."
@@ -1110,13 +1040,9 @@
         }
       ]
     },
-    "etymology": "El sufijo 「らしい」 se une a sustantivos y forma adjetivos que significan “que tiene las cualidades propias de...”. Se suele considerar que el auxiliar de conjetura 「らしい」 nació de este sufijo. Tienen la misma forma, pero se usan de manera distinta.",
-    "formation": "Esta entrada = sustantivo + el sufijo 「らしい」, y el conjunto funciona como un adjetivo い. 「らしい」 significa «tener las cualidades que debe tener...»: 「春」 + 「らしい」 → «con los rasgos que debe tener la primavera» → 「春らしい天気」. Como se refiere a «cumplir el estándar típico de esa categoría», suele ser positivo; la forma negativa 「〜らしくない」 significa «no es como (esa persona o esa categoría) suele o debería ser». Como adjetivo い, puede convertirse en el adverbio 「らしく」 o en el sustantivo 「らしさ」, y se conjuga según las reglas de los adjetivos い.",
+    "etymology": "El sufijo 「らしい」 se une a sustantivos para formar adjetivos con el sentido de “que tiene las cualidades propias de ...”, y se relaciona con el antiguo sufijo 「〜らし」 que significa “aspecto, semejante” (p. ej. 「男らし」). Se cree que el 「らしい」 conjetural se desarrolló a partir de este sufijo, formando poco a poco su uso auxiliar entre las épocas medieval y moderna temprana; el japonés clásico tiene además un auxiliar conjetural 「らし」 distinto (inferencia fundada), pero los estudiosos discrepan sobre si hay una continuidad directa entre ambos.",
+    "formation": "「〜らしい」 es un sufijo que se entiende en general como “tener las características de ..., ajustarse a la imagen de ...”, y de ahí vienen ambos usos. Tras un sustantivo significa “tener las características propias de ese sustantivo” → “propio de, típico” (春らしい天気); como habla de cumplir el estándar típico de esa clase de cosas, suele ser positivo, y la negación 「〜らしくない」 significa “no ajustarse a la imagen habitual o debida de (esa persona o cosa)”. Tras una oración significa “todos los indicios muestran las características de ‘...’” → “parece que”, con el fundamento en indicios externos o en lo oído, y el hablante mantiene distancia respecto al contenido. Ambos usos tienen la misma forma y se distinguen por el contexto. Se conjuga como adjetivo い, por lo que existen 「らしかった」 y 「らしくない」, y puede pasar al adverbio 「らしく」 y al sustantivo 「らしさ」; en el uso conjetural, la negación va dentro del contenido conjeturado (来ないらしい), si no pasa a significar “no propio de ...”.",
     "similar": [
-      {
-        "title": "〜らしい",
-        "explanation": "Mismo origen. El 「らしい」 de suposición va tras una oración en forma simple y significa «parece que...» (「雨が降るらしい」); esta entrada va tras un sustantivo y significa «propio de...». Se suele considerar que el sentido de suposición surgió a partir de este sufijo."
-      },
       {
         "title": "〜っぽい",
         "explanation": "Significado parecido. 「っぽい」 significa «algo parecido a...» y suele ser negativo o informal (「子どもっぽい」 = infantil); 「らしい」 significa «un ejemplo típico de...» y suele ser positivo (「子どもらしい」 = inocente, encantador como un niño)."

@@ -1,7 +1,6 @@
 [
   {
     "id": "me-ordinal",
-    "title": "〜目 (ordinal)",
     "meaning": "Attached to a number + counter, it marks order: “the Nth” item, the Nth time, or the Nth day or year of a period.",
     "connection": "Number + counter + 目 (e.g. 二つ目・三番目・二回目・三年目)",
     "senses": [
@@ -86,9 +85,8 @@
   },
   {
     "id": "sa-nominal",
-    "title": "〜さ (adjective → noun)",
-    "meaning": "Attached to an adjective stem, it turns the adjective into a noun. It expresses a degree or measurement, or the quality itself, much like English “-ness”.",
-    "connection": "い-adjective stem / な-adjective stem + さ (いい → よさ)",
+    "meaning": "「さ」 has two uses: attached to an adjective stem it makes a noun for degree or quality itself (高さ, 優しさ, 便利さ); and as a casual colloquial particle it can end a sentence with an easy assertion (大丈夫さ), make a challenging question, sit mid-sentence to get attention (あのさ), or report hearsay (ってさ).",
+    "connection": "い-adjective / な-adjective stem + さ (nominalizing); noun, な-adjective stem, or plain form of verb / い-adjective + さ (sentence-final particle)",
     "senses": [
       {
         "label": "Measurement / degree",
@@ -119,13 +117,50 @@
           "When I got sick, I realized how important health is.",
           "You won't know how hard this job is until you try it."
         ]
+      },
+      {
+        "label": "Casual assertion",
+        "meaning": "States a conclusion lightly and offhandedly. The tone is relaxed, sometimes nonchalant or a little bit tough. Close to English “..., you know” or “sure”.",
+        "connection": "Noun・na-adjective stem + さ (no 「だ」); verb・i-adjective plain form + さ. Common: 「なんとかなるさ」, 「平気さ」",
+        "examples": [
+          "It's fine. Things will work out.",
+          "That kind of thing? It's easy."
+        ]
+      },
+      {
+        "label": "Challenging question",
+        "meaning": "Used with a question word to push back or demand an answer with irritation. The tone is fairly sharp, like “What's so...?” or “Why do I have to...?”.",
+        "connection": "Question word + ... + さ／のさ. Common: 「何さ」, 「どうしてなのさ」",
+        "examples": [
+          "What's so funny?",
+          "Why am I the only one getting scolded?"
+        ]
+      },
+      {
+        "label": "Mid-sentence filler",
+        "meaning": "Inserted at a pause in a sentence to get the listener's attention or set the rhythm, like “so...” or “like...”. It has no real meaning. Overusing it sounds childish or sloppy.",
+        "connection": "Phrase・clause + さ、. Common: 「あのさ、」, 「それでさ、」",
+        "examples": [
+          "Hey, can you listen to me for a sec?",
+          "So yesterday, I ran into my teacher at the station."
+        ]
+      },
+      {
+        "label": "Passing on hearsay",
+        "meaning": "「〜ってさ」 reports what someone else said, in a light tone. Like “I heard ...” or “they say ...”.",
+        "connection": "Plain form + ってさ",
+        "examples": [
+          "They say it's going to rain tomorrow.",
+          "I heard Tanaka is quitting the company."
+        ]
       }
     ],
     "notes": [
       "The noun form of 「いい」 is 「よさ」: ✕「いさ」→ ○「よさ」; likewise 「かっこいい」→「かっこよさ」.",
-      "When asking about a measurement, you normally use the “big” end of the scale: to ask about height or length, say 「高さはどのくらいですか」「長さは？」, not ✕「低さはどのくらい」. 「低さ」 and 「短さ」 are used only when you want to stress how low or short something is (「金利の低さ」).",
       "「〜み」 attaches to only a handful of adjectives, so don't extend it by analogy: ✕「長み」「優しみ」→ ○「長さ」「優しさ」. Words that take both have different meanings: 「重さ」 is weight, 「重み」 is a sense of weight or importance.",
-      "For 「静か」 the usual form is 「静けさ」: 「夜の静けさ」 sounds far more natural than 「静かさ」."
+      "After nouns and na-adjectives, attach 「さ」 directly with no 「だ」: ✕「学生ださ」→ ○「学生さ」.",
+      "The tone is casual and a bit nonchalant. Saying 「大丈夫さ」 or 「簡単さ」 to a boss, client or elder sounds dismissive and rude; in formal settings say 「大丈夫です」.",
+      "Dropping 「あのさ」 or 「それでさ」 into every sentence sounds childish and unsteady, especially in interviews and business talk. Use 「あの、」 or 「それで、」 instead."
     ],
     "scenes": {
       "daily": [
@@ -140,9 +175,19 @@
           "example": "Words can't describe the beauty of Mt. Fuji."
         },
         {
-          "title": "Weather small talk",
-          "description": "Chatting with a neighbor in winter.",
-          "example": "The cold this year is really something, isn't it?"
+          "title": "Cheering up a friend",
+          "description": "A friend failed an exam, and you encourage them lightly.",
+          "example": "Don't worry about it. There's always next time."
+        },
+        {
+          "title": "Starting a chat with a friend",
+          "description": "Opening a conversation with a close friend.",
+          "example": "Hey, are you free this weekend?"
+        },
+        {
+          "title": "Watching anime",
+          "description": "A male character speaks with confidence.",
+          "example": "Leave it to me. It's a piece of cake."
         }
       ],
       "work": [
@@ -155,10 +200,16 @@
           "title": "Reporting a problem",
           "description": "Explaining to your boss how serious a problem is.",
           "example": "Everyone on the team should understand how serious this problem is."
+        },
+        {
+          "title": "A senior comforting a junior",
+          "description": "After work, in private, a friendly senior colleague comforts a junior who made a mistake. Not a formal setting.",
+          "example": "Well, these things happen."
         }
       ]
     },
-    "etymology": "「さ」 is an old suffix that makes nouns from adjective stems; 「寒さ」 and 「長さ」 already appear in classical Japanese. In modern Japanese almost every い-adjective can take 「さ」, so it's very productive.",
+    "etymology": "The nominalizing 「さ」 is an old suffix attached to adjective stems to form nouns; 「寒さ」 and 「長さ」 already existed in Classical Japanese, and today almost every い-adjective can take it. The origin of the sentence-final 「さ」 is debated, but it is generally thought to have developed in the colloquial speech of Edo (Tokyo) in the early modern period, and it still has a casual, breezy tone.",
+    "formation": "The two 「さ」 have different origins, but both are about “lightly bringing something out”. Nominalizing 「さ」: an adjective stem expresses the quality itself (「高い」 → 「高」), and 「さ」 turns it into “the degree / the quality of being ...”. This first gives a “measure” sense: 「高さ」 = height, so you can ask 「高さはどのくらい」; abstracting “degree” further gives the quality itself: 「優しさ」 is the quality of kindness. A な-adjective stem is already noun-like, so adding 「さ」 likewise gives degree (「便利さ」). The sentence-final 「さ」 attaches straight to a sentence or clause, and after nouns and な-adjectives it replaces 「だ」 (「平気さ」). It “tosses the words lightly to the listener”, neither stressing information like 「よ」 nor seeking agreement like 「ね」, so the assertion loses the hardness of 「だ」 and becomes an offhand “you know / of course”. The same casual toss at the end of a question-word sentence becomes an impatient challenge (「何さ」); inserted between clauses it only gives a pause that draws attention (「あのさ」); and after the quotative 「って」 it tosses out something one has heard, reporting hearsay (「ってさ」).",
     "similar": [
       {
         "title": "〜み (adjective → noun)",
@@ -167,9 +218,20 @@
       {
         "title": "〜こと (nominalizer)",
         "explanation": "Close in meaning: both can turn an adjective into a noun-like element. 「〜こと」 nominalizes the whole fact “that something is ...”, while 「〜さ」 takes only the degree of the quality: 「彼が優しいことは知っている」 (I know that he's kind) vs. 「彼の優しさに感動した」 (I was moved by his kindness)."
+      },
+      {
+        "title": "〜よ",
+        "explanation": "Both are sentence-final and state your own judgment to the listener. 「よ」 is about clearly telling them new information; 「さ」 is more casual, with a relaxed “isn't it obvious?” feel, doesn't stress informing, and is even less suitable than 「よ」 with superiors."
+      },
+      {
+        "title": "〜ね",
+        "explanation": "「ね」 seeks the listener's agreement or confirmation; with 「さ」 the speaker states a conclusion offhandedly and doesn't ask for agreement. As a mid-sentence filler, 「あのね」 is softer than 「あのさ」 and is preferred by women and when talking to children."
+      },
+      {
+        "title": "〜ぞ・〜ぜ (sentence-ending particles)",
+        "explanation": "Both are casual, male-leaning sentence-final assertions. 「ぞ／ぜ」 sounds firm and forceful, with a warning or rallying feel; 「さ」 comes across as light, cool, even nonchalant (「平気さ」)."
       }
-    ],
-    "formation": "Drop the final 「い」 of an adjective and the remaining stem expresses the quality itself (「高い」→「高」). The suffix 「さ」 turns that quality into a noun meaning “the degree of ...” or “the quality of being ...”. Because it turns the adjective into a noun that can be measured, the first meaning is a scale: 「高さ」 = how high something is = height, which is why you can ask 「高さはどのくらい」. Abstract the “degree” a little further and you get the quality or trait itself: 「優しさ」 = kindness as a quality, something you can be moved by or understand. The stem of a な-adjective is already noun-like, and adding 「さ」 likewise gives the “degree” meaning, as in 「便利さ」「大切さ」. Since 「さ」 attaches to almost any adjective, it's extremely productive."
+    ]
   },
   {
     "id": "garu-third-person",
@@ -904,7 +966,6 @@
   },
   {
     "id": "ga-suru-sense",
-    "title": "〜がする (sensation)",
     "meaning": "Expresses a sound, smell or taste you perceive with your senses, or a physical or mental feeling.",
     "connection": "Nouns like 音／声／匂い／味／香り／気 + がする",
     "senses": [
@@ -991,88 +1052,6 @@
       }
     ],
     "formation": "At its most basic, 「する」 has a very broad meaning: besides “to do”, it can mean that some phenomenon appears or exists. In 「noun + が + する」, 「が」 marks the sensation itself (a sound, smell, taste or feeling) as the subject, and 「する」 says that it has arisen. So 「音がする」 literally means “a sound occurs”; the speaker merely perceives it passively, with no sense of “doing”. Replace the sensation with 「気」 (mind, feeling) and you get 「気がする」 = a feeling arises in your mind → “I have a feeling that ...”. Precisely because the subject is the sensation itself, a person can't go in the 「が」 slot, and it can't be changed to 「を」."
-  },
-  {
-    "id": "ku-suru-change",
-    "title": "〜くする・〜にする (making something change)",
-    "meaning": "Someone deliberately changes something into a certain state: “make ... (adjective)”.",
-    "connection": "い-adjective stem + くする; な-adjective stem / noun + にする",
-    "senses": [
-      {
-        "label": "い-adjectives",
-        "meaning": "Deliberately changing the quality or state of something: “make it ...”, “turn it ...”. It's the counterpart of 「〜くなる」 (a natural change).",
-        "connection": "い-adjective stem + くする (明るくする・小さくする・短くする)",
-        "examples": [
-          "I made the room brighter.",
-          "Please turn the volume down a little.",
-          "I want to cut my hair short."
-        ]
-      },
-      {
-        "label": "な-adjectives",
-        "meaning": "Making something a certain way, or asking someone to stay a certain way. 「静かにしてください」 is a very common request.",
-        "connection": "な-adjective stem + にする (きれいにする・静かにする・大切にする)",
-        "examples": [
-          "Please be quiet in the library.",
-          "Let's all clean up the room together.",
-          "Please take good care of yourself."
-        ]
-      }
-    ],
-    "notes": [
-      "A deliberate change uses 「〜くする」 (object with 「を」); a natural change uses 「〜くなる」 (subject with 「が」). Pick the wrong one and the meaning changes: 「部屋を暖かくした」 (I warmed up the room) vs. 「部屋が暖かくなった」 (the room got warm).",
-      "な-adjectives take 「に」, not 「く」: ✕「静かくしてください」→ ○「静かにしてください」. 「きれい」 and 「嫌い」 are な-adjectives too: ✕「きれいくする」→ ○「きれいにする」.",
-      "「いい」 becomes 「よく」: ✕「いくする」→ ○「よくする」; 「かっこいい」→「かっこよくする」.",
-      "「静かにしてください」 is blunt; to clients, superiors or strangers in public it sounds harsh. You can say 「お静かにお願いします」 instead.",
-      "「noun + にする」 can also mean “to decide on, choose”: 「コーヒーにします」 means “I'll have coffee”, not “turn something into coffee”."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "At the hair salon",
-          "description": "Telling the stylist what you want.",
-          "example": "Please cut my bangs a little shorter."
-        },
-        {
-          "title": "Watching TV at home",
-          "description": "The TV is too loud, so you ask your family to turn it down.",
-          "example": "Turn the TV down a bit more."
-        },
-        {
-          "title": "Between friends",
-          "description": "Two friends had a fight, and you ask them to make up.",
-          "example": "Don't fight. Be nice to each other, OK?"
-        }
-      ],
-      "work": [
-        {
-          "title": "Revising a document",
-          "description": "Your boss asks you to make a document easier to follow.",
-          "example": "Please make this document simpler."
-        },
-        {
-          "title": "Improving a product",
-          "description": "Explaining a product upgrade in a meeting.",
-          "example": "We made the new model lighter than before."
-        }
-      ]
-    },
-    "etymology": "「〜く」 and 「〜に」 are the adverb forms of adjectives. Followed by 「する」 (do, make), they mean “make it that way”. Paired with 「なる」, they form a natural change vs. deliberate change contrast.",
-    "similar": [
-      {
-        "title": "〜くなる・〜になる",
-        "explanation": "Same origin: it uses the same 「〜く／〜に」. 「〜くなる」 is a natural change, 「〜くする」 a deliberate one: 「朝になって部屋が明るくなった」 vs. 「電気をつけて部屋を明るくした」."
-      },
-      {
-        "title": "〜にする (decision / choice)",
-        "explanation": "Same origin: also 「noun + にする」. 「コーヒーにします」 means “to settle on ...”, while 「部屋を事務所にする」 means “to turn ... into ...”. Whether there's an object being changed, marked with 「〜を」, is the key difference."
-      },
-      {
-        "title": "〜ようにする",
-        "explanation": "Same origin: 「にする」 attached to 「〜よう」, meaning making an effort to turn a behavior into a habit: 「毎日野菜を食べるようにしている」. This pattern, by contrast, directly changes the nature or state of something."
-      }
-    ],
-    "formation": "The adverbial forms 「〜く」 (い-adjectives) and 「〜に」 (な-adjectives and nouns) mean “into the state of ...” and modify the verb that follows; 「する」 means a person deliberately “does, makes”. Together: “to make something into a certain state”, so the subject is the one acting, and the thing being changed takes 「を」. Swap 「する」 for 「なる」 and the same 「〜く／〜に」 now means “to naturally become ...”; the two form a symmetrical pair of deliberate change vs. natural change. The request 「静かにしてください」 literally means “please make (yourself) into a quiet state”, which is why it can also be used to ask someone to stay in a certain state."
   },
   {
     "id": "mama-unchanged",
@@ -1262,7 +1241,6 @@
   },
   {
     "id": "nakute-reason",
-    "title": "〜なくて (reason)",
     "meaning": "Uses the negative te-form to give a reason: “because ... not”, “because there's no ...”.",
     "connection": "Verb ない-form → 〜なくて; い-adjective → 〜くなくて; noun + が + なくて",
     "senses": [

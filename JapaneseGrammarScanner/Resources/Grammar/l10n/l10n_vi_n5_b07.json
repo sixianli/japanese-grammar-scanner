@@ -1,7 +1,6 @@
 [
   {
     "id": "soshite-conjunction",
-    "title": "〜そして (đầu câu: rồi・và còn)",
     "meaning": "Nối hai câu hoặc hai thành phần. Diễn tả thứ tự hành động, hoặc bổ sung thêm vào nội dung phía trước.",
     "connection": "Câu。そして、câu ／ Danh từ、そして danh từ",
     "senses": [
@@ -94,7 +93,6 @@
   },
   {
     "id": "sorekara-conjunction",
-    "title": "〜それから (đầu câu: sau đó・còn nữa)",
     "meaning": "Diễn tả thứ tự thời gian “sau đó”, và cũng dùng để bổ sung “còn nữa, ngoài ra”.",
     "connection": "Câu。それから、câu ／ Danh từ、それから danh từ",
     "senses": [
@@ -185,24 +183,15 @@
   },
   {
     "id": "to-quotation",
-    "title": "〜と (trích dẫn: 〜と言う・〜と思う)",
-    "meaning": "Trợ từ trích dẫn 「と」. Đặt sau nội dung lời nói hoặc suy nghĩ, rồi nối với các động từ như 「言う」「思う」「聞く」.",
-    "connection": "「Lời dẫn trực tiếp」 ／ câu thể thông thường ＋ と ＋ 言う・思う・聞く・書く v.v.",
+    "meaning": "Trợ từ 「と」 có nhiều cách dùng: trích dẫn điều được nói hay nghĩ (〜と言う・〜と思う), nối danh từ với nghĩa “và”, chỉ đối tượng cùng làm hoặc làm qua lại, và biểu thị điều kiện “hễ ... thì ...”.",
+    "connection": "「Lời nguyên văn」 / câu thể thường (danh từ / tính từ -na + だ) + と + 言う・思う・聞く; danh từ + と + danh từ / động từ; động từ thể từ điển / thể ない + と (điều kiện)",
     "senses": [
       {
-        "label": "Trích dẫn trực tiếp",
-        "meaning": "Dẫn nguyên văn lời người khác, đặt trong 「」, giống “nói: ‘…’”. Giữ nguyên văn phong gốc (です・ます v.v.).",
-        "connection": "「Lời nguyên văn」 ＋ と ＋ 言う／言いました",
+        "label": "Trích dẫn (trực tiếp và gián tiếp)",
+        "meaning": "Nêu lại lời người khác nói. Trích dẫn trực tiếp giữ nguyên lời trong 「」; trích dẫn gián tiếp chuyển nội dung thành câu thể thường, sau danh từ và tính từ -na thường thêm 「だ」.",
+        "connection": "「Lời nguyên văn」 / câu thể thường (danh từ / tính từ -na + だ) + と + 言う／言っていた",
         "examples": [
           "Thầy giáo nói: “Ngày mai có bài kiểm tra.”",
-          "Tôi đã nói “cảm ơn” với bạn."
-        ]
-      },
-      {
-        "label": "Trích dẫn gián tiếp",
-        "meaning": "Không dùng nguyên văn mà chuyển thành câu thể thông thường để thuật lại, giống “nói rằng…”. Sau danh từ và tính từ な thường thêm 「だ」.",
-        "connection": "Câu thể thông thường (danh từ・tính từ な＋だ) ＋ と ＋ 言う／言っていた",
-        "examples": [
           "Anh Tanaka nói rằng ngày mai anh ấy không đến.",
           "Mẹ tôi nói là bà thích cửa hàng này."
         ]
@@ -226,14 +215,63 @@
           "Tôi đã viết “cảm ơn” trong thư.",
           "Anh ấy trả lời: “Vâng.”"
         ]
+      },
+      {
+        "label": "Liệt kê (và)",
+        "meaning": "Liệt kê từng danh từ một: \"A và B\". 「と」 là liệt kê đầy đủ, chỉ có những thứ đó, không có gì khác. Chỉ nối được danh từ, không nối được động từ hay tính từ.",
+        "connection": "Danh từ + と + danh từ (+ と + danh từ)",
+        "examples": [
+          "Tôi đã mua bánh mì và sữa.",
+          "Trên bàn có sách và bút.",
+          "Gia đình tôi gồm bố, mẹ và em gái."
+        ]
+      },
+      {
+        "label": "Người cùng làm",
+        "meaning": "Chỉ cùng ai làm việc gì. Tương đương \"cùng với...\". Cũng hay nói 「〜と一緒に」, nghĩa rõ hơn.",
+        "connection": "Người + と (一緒に) + động từ",
+        "examples": [
+          "Hôm qua tôi đã xem phim với bạn.",
+          "Cuối tuần tôi đi du lịch cùng gia đình.",
+          "Tôi đã đi mua sắm với mẹ."
+        ]
+      },
+      {
+        "label": "Đối tượng của hành động qua lại",
+        "meaning": "Chỉ người kia trong hành động cần có hai bên tham gia. Tương đương \"(kết hôn／cãi nhau／bàn bạc) với...\". Các động từ này không thêm 「一緒に」 được.",
+        "connection": "Người + と + 結婚する／話す／会う／けんかする／相談する",
+        "examples": [
+          "Năm sau tôi sẽ kết hôn với bạn gái.",
+          "Hôm qua tôi đã nói chuyện với thầy giáo.",
+          "Tôi đã cãi nhau với em trai."
+        ]
+      },
+      {
+        "label": "Kết quả tất yếu",
+        "meaning": "Vế trước xảy ra thì vế sau chắc chắn xảy ra. Dùng cho quy luật tự nhiên, thao tác máy móc, chỉ đường... Tương đương \"hễ... là...\".",
+        "connection": "Động từ thể từ điển / thể ない + と (〜になると・〜を押すと・まっすぐ行くと)",
+        "examples": [
+          "Hễ đến mùa xuân là hoa anh đào nở.",
+          "Bấm nút này là nước chảy ra.",
+          "Bố tôi cứ về đến nhà là bật ti vi ngay."
+        ]
+      },
+      {
+        "label": "Phát hiện",
+        "meaning": "「〜と、〜た」 diễn tả sau khi làm việc trước thì phát hiện ra tình huống ở vế sau. Vế sau ở thể quá khứ, thường là sự việc bất ngờ.",
+        "connection": "Động từ thể từ điển + と、〜た (窓を開けると、〜ていた)",
+        "examples": [
+          "Mở cửa sổ ra thì thấy tuyết đang rơi.",
+          "Về đến nhà thì thấy mẹ đã đến."
+        ]
       }
     ],
     "notes": [
       "Khi trích dẫn gián tiếp, sau danh từ và tính từ đuôi な phải thêm 「だ」: ✕「学生と思う」→ ○「学生だと思う」; ✕「静かと言った」→ ○「静かだと言った」.",
-      "「〜と思います」 chỉ diễn tả suy nghĩ của chính người nói. ✕「田中さんは行くと思います」 sẽ được hiểu là “tôi nghĩ anh Tanaka sẽ đi”; muốn nói suy nghĩ của chính anh Tanaka thì dùng 「田中さんは行こうと思っています」 hoặc 「田中さんは行くと言っていました」.",
       "Trước 「と」 trích dẫn là một câu, trước 「と」 nghĩa là “với, cùng” là người hoặc vật; dùng nhầm thì nghĩa khác hẳn: 「友達と言いました」 là “đã nói cùng với bạn”, còn 「友達だと言いました」 mới là “(anh ấy) nói là bạn”.",
-      "Khi thuật lại lời của cấp trên công ty mình cho người ngoài công ty, phải dùng khiêm nhường ngữ: ○「部長は明日伺うと申しておりました」; dùng 「おっしゃっていました」 để đề cao cấp trên của chính mình trong trường hợp này là thất lễ. Khi thuật lại cho đồng nghiệp trong công ty thì dùng 「おっしゃっていました」.",
-      "Trong văn nói, 「と」 thường biến thành 「って」 (「行くって言った」), nhưng khi nói với cấp trên, khách hàng hoặc viết văn bản trang trọng mà dùng 「って」 sẽ có vẻ tùy tiện, nên dùng 「と」."
+      "「と」 là liệt kê toàn bộ; khi chỉ nêu vài ví dụ thì dùng 「や」: 「パンと牛乳を買った」 (chỉ mua hai thứ này); 「パンや牛乳を買った」 (còn mua thứ khác).",
+      "Đối tượng của hành động hai chiều như 「結婚する」, 「けんかする」 dùng 「と」, không dùng 「を」: ✕「彼女を結婚します」→ ○「彼女と結婚します」.",
+      "Vế sau không được là ý chí, mong muốn, mệnh lệnh, nhờ vả: ✕「駅に着くと、電話してください」→ ○「駅に着いたら、電話してください」; ✕「お金があると、旅行したい」→ ○「お金があったら、旅行したい」."
     ],
     "scenes": {
       "daily": [
@@ -248,9 +286,19 @@
           "example": "Mình thấy cảnh cuối hay."
         },
         {
-          "title": "Hỏi cách nói",
-          "description": "Hỏi một thứ gì đó tiếng Nhật gọi là gì.",
-          "example": "Cái này tiếng Nhật gọi là gì ạ?"
+          "title": "Chuyện cuối tuần",
+          "description": "Bạn bè kể cuối tuần đi chơi với ai.",
+          "example": "Chủ nhật tôi đã đi mua sắm với chị gái."
+        },
+        {
+          "title": "Ở cửa hàng tiện lợi",
+          "description": "Nói với nhân viên thứ mình muốn mua.",
+          "example": "Cho tôi cơm nắm và trà."
+        },
+        {
+          "title": "Chỉ đường",
+          "description": "Người qua đường chỉ đường cho khách du lịch.",
+          "example": "Đến góc phố thứ hai rẽ phải là sẽ thấy nhà ga."
         }
       ],
       "work": [
@@ -263,210 +311,46 @@
           "title": "Chuyển lời qua điện thoại",
           "description": "Báo lại với cấp trên lời khách hàng nói qua điện thoại.",
           "example": "Ông Yamada gọi điện báo là sẽ đến họp muộn một chút."
+        },
+        {
+          "title": "Báo cáo với cấp trên",
+          "description": "Báo cáo việc đã bàn bạc với khách hàng.",
+          "example": "Hôm qua em đã bàn bạc với khách hàng rồi ạ."
+        },
+        {
+          "title": "Sách hướng dẫn sử dụng",
+          "description": "Sách hướng dẫn mô tả kết quả của thao tác thiết bị.",
+          "example": "Khi bật nguồn, đèn sẽ sáng lên."
         }
       ]
     },
-    "etymology": "「と」 trích dẫn có cùng nguồn gốc với cách trợ từ 「と」 mang nghĩa “và, với”. Từ thời cổ đại nó đã được dùng để dẫn ra nội dung lời nói, suy nghĩ (như 「〜と言ふ」「〜と思ふ」), là một cách dùng có lịch sử rất lâu đời trong tiếng Nhật.",
-    "formation": "Cấu trúc là “nội dung + と + động từ như 言う・思う・聞く・書く”. 「と」 có tác dụng như đặt “dấu ngoặc kép” cho nội dung phía trước, cho biết “điều đã nói, đã nghĩ, đã viết chính là những điều này”; vì vậy trước 「と」 có thể là cả một câu, thậm chí là nguyên văn lời nói đặt trong 「」. Hành động thực sự của câu do động từ phía sau quyết định: đi với 「言う」 là nói, với 「思う」 là nghĩ, với 「聞く」 là nghe nói. Bản thân 「と」 không mang thì hay mức độ lịch sự; thông tin “đã nói chưa”, “nói với ai” đều do động từ phía sau đảm nhận (「言いました」「思っています」「申しました」). Cũng vì 「と」 chỉ đánh dấu nội dung nên khi trích dẫn gián tiếp, nội dung phải chuyển thành câu thể thường, danh từ và tính từ đuôi な phải thêm 「だ」 mới thành một câu hoàn chỉnh.",
+    "etymology": "「と」 là trợ từ cách đã có từ tiếng Nhật cổ. Ý cốt lõi là “ghép hai thứ thành một cặp”: ghép các danh từ (và, cùng với), ghép nội dung với hành động nói hay nghĩ (trích dẫn), về sau phát triển thành trợ từ nối ghép hai mệnh đề (điều kiện).",
+    "formation": "Mọi nghĩa đều xuất phát từ cùng một ý tưởng: ghép chặt phần trước と với phần sau. Danh từ + と + danh từ ghép hai thứ (“và”); người + と + động từ ghép người đó làm bạn đồng hành của hành động (cùng làm, hành động qua lại); nội dung + と + 言う・思う ghép nội dung với hành động nói hay nghĩ, như đặt dấu ngoặc kép (trích dẫn); mệnh đề + と + mệnh đề ghép hai sự việc để B tự động theo sau A (điều kiện). Để phân biệt, hãy nhìn xung quanh 「と」: giữa hai danh từ thường là “và”, sau một câu hoàn chỉnh rồi đến 言う・思う là trích dẫn, trước một mệnh đề nêu kết quả tất yếu là điều kiện.",
     "similar": [
-      {
-        "title": "〜と言う (trích dẫn)",
-        "explanation": "Cùng gốc: 「〜と言う」 là 「と」 trích dẫn + 「言う」, chuyên nói về việc trích dẫn lời nói; mục này xuất phát từ trợ từ 「と」, tổng hợp rằng nó còn đi được với các động từ như 「思う・聞く・書く・答える」."
-      },
-      {
-        "title": "〜と思う (tôi nghĩ là)",
-        "explanation": "Cùng gốc: 「〜と思う」 là 「と」 trích dẫn + 「思う」, chuyên diễn tả suy nghĩ, phán đoán của người nói; 「と」 trong mục này còn có thể dẫn ra lời đã nói, điều nghe được, nội dung đã viết."
-      },
       {
         "title": "〜って (trích dẫn・chủ đề)",
         "explanation": "Nghĩa gần giống: 「って」 là dạng khẩu ngữ của 「と」 trích dẫn, hay dùng giữa bạn bè (「明日休みだって」); trong tình huống trang trọng và văn viết thì dùng 「と」."
       },
       {
-        "title": "〜と言っていた (thuật lại lời nói)",
-        "explanation": "Nghĩa gần giống: 「〜と言っていた」 chuyên dùng để thuật lại cho người thứ ba lời người khác đã nói (“anh ấy bảo là…”); 「〜と言いました」 chỉ kể lại hành động “đã nói”, nên khi thuật lại thì 「言っていた」 tự nhiên hơn."
-      }
-    ]
-  },
-  {
-    "id": "verb-noun-modification",
-    "title": "〜động từ + danh từ (động từ bổ nghĩa cho danh từ・mệnh đề định ngữ)",
-    "meaning": "Đặt thể thông thường của động từ ngay trước danh từ để bổ nghĩa. Giống “quyển sách (mà) tôi đã mua” trong tiếng Việt, nhưng trật tự ngược lại: phần bổ nghĩa đứng trước danh từ.",
-    "connection": "Động từ thể thông thường (thể từ điển・thể た・thể ている・thể ない) ＋ danh từ",
-    "senses": [
-      {
-        "label": "Bổ nghĩa bằng thể từ điển",
-        "meaning": "Diễn tả thói quen, việc sắp làm hoặc sự việc mang tính chung, giống “… (sẽ) làm”. Động từ nối thẳng vào danh từ, ở giữa không thêm 「の」.",
-        "connection": "Động từ thể từ điển ＋ danh từ (人・所・時・日 v.v.)",
-        "examples": [
-          "Tôi đã mua sữa mà sáng nào tôi cũng uống.",
-          "Người sẽ đi Nhật là ai vậy?"
-        ]
+        "title": "〜や〜など",
+        "explanation": "Đều diễn tả liệt kê \"và\", nghĩa gần nhau: 「と」 là liệt kê toàn bộ (chỉ có những thứ này); 「や」 là liệt kê một phần (nêu vài ví dụ, còn thứ khác)."
       },
       {
-        "label": "Bổ nghĩa bằng thể た",
-        "meaning": "Diễn tả việc đã xảy ra trong quá khứ, hoặc trạng thái còn lại sau khi hành động kết thúc, giống “… đã làm”.",
-        "connection": "Động từ thể た ＋ danh từ",
-        "examples": [
-          "Đây là quyển sách tôi mua hôm qua.",
-          "Người đeo kính là thầy giáo."
-        ]
+        "title": "〜ば (giả định)",
+        "explanation": "Đều là điều kiện. 「ば」 đặt trọng tâm vào bản thân điều kiện (\"chỉ cần... thì...\"), khi hai vế cùng chủ ngữ thì vế sau cũng có thể là ý chí, mong muốn (「時間があれば、行きたい」); 「と」 đặt trọng tâm vào kết quả tất yếu, vế sau không được có ý chí."
       },
       {
-        "label": "Bổ nghĩa bằng thể ている",
-        "meaning": "Diễn tả hành động đang diễn ra hoặc trạng thái kéo dài, giống “… đang làm”.",
-        "connection": "Động từ thể ている ＋ danh từ",
-        "examples": [
-          "Người đang đọc báo ở đằng kia là anh Tanaka.",
-          "Thị trấn tôi đang sống rất yên tĩnh."
-        ]
+        "title": "〜たら",
+        "explanation": "「たら」 có phạm vi dùng rộng nhất, vế sau có thể là nhờ vả, ý chí (「着いたら電話して」); 「と」 chỉ dùng cho quy luật tự nhiên, thao tác máy móc, thói quen và \"phát hiện\". Trong hội thoại hằng ngày, khi không chắc thì dùng 「たら」 là an toàn nhất."
       },
       {
-        "label": "Bổ nghĩa bằng thể ない",
-        "meaning": "Diễn tả nội dung phủ định, giống “… không làm”, “… chưa làm”.",
-        "connection": "Động từ thể ない ＋ danh từ",
-        "examples": [
-          "Tôi tra từ điển những từ mình không hiểu.",
-          "Hãy gọi điện cho những người không đến."
-        ]
-      }
-    ],
-    "notes": [
-      "Không được chèn 「の」 giữa động từ và danh từ, dù 「の」 có vẻ giống “của”: ✕「私が買ったの本」→ ○「私が買った本」 (quyển sách tôi đã mua). Đây là một trong những lỗi người học hay mắc nhất.",
-      "Trong mệnh đề bổ nghĩa cho danh từ, chủ ngữ dùng 「が」 (hoặc 「の」), không dùng 「は」: ✕「私は作った料理を食べてください」 nghĩa sẽ rối thành kiểu “tôi thì… hãy ăn món đã nấu” → ○「私が作った料理を食べてください」.",
-      "Khi bổ nghĩa cho danh từ thường dùng thể thường, không dùng thể ます: ✕「昨日買いました本」→ ○「昨日買った本」. Dù cả câu ở thể lịch sự thì 「です・ます」 cũng chỉ dùng ở cuối câu.",
-      "Nhầm thể từ điển với thể た thì nghĩa sẽ khác hẳn: 「日本へ行く人」 là “người sắp đi Nhật”, 「日本へ行った人」 là “người đã từng đi Nhật”; 「結婚する人」 là “người sắp kết hôn”, 「結婚した人」 là “người đã kết hôn”."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "Tìm người",
-          "description": "Mô tả cho bạn người mình đang tìm giữa đám đông.",
-          "example": "Người đang mặc áo đỏ đằng kia là em gái tôi."
-        },
-        {
-          "title": "Giới thiệu đồ vật",
-          "description": "Cho bạn xem món quà mình mua khi đi du lịch.",
-          "example": "Đây là quà lưu niệm tôi mua ở Kyoto."
-        },
-        {
-          "title": "Tìm quán",
-          "description": "Bàn với bạn chỗ đi ăn.",
-          "example": "Bạn có biết quán nào ăn được đồ vừa rẻ vừa ngon không?"
-        }
-      ],
-      "work": [
-        {
-          "title": "Xác nhận tài liệu họp",
-          "description": "Hỏi đồng nghiệp tài liệu dùng cho cuộc họp ở đâu.",
-          "example": "Tài liệu dùng trong cuộc họp ngày mai ở đâu vậy?"
-        },
-        {
-          "title": "Giới thiệu người phụ trách",
-          "description": "Tự giới thiệu với khách hàng là người phụ trách dự án.",
-          "example": "Tôi là Sato, người đang phụ trách dự án này."
-        }
-      ]
-    },
-    "etymology": "Trong tiếng Nhật cổ, động từ có hai dạng riêng: thể kết thúc (shūshikei) để kết thúc câu và thể liên thể (rentaikei) chuyên dùng để bổ nghĩa cho danh từ. Trong tiếng Nhật hiện đại, hai dạng này đã hợp làm một, nên thể thông thường có thể trực tiếp bổ nghĩa cho danh từ.",
-    "formation": "Trong tiếng Nhật, thành phần bổ nghĩa luôn đứng trước danh từ được bổ nghĩa (bổ nghĩa trước, trung tâm sau), ngược với tiếng Việt, nơi định ngữ đứng sau danh từ (“quyển sách mà tôi đã mua”). Hơn nữa, thể thường của động từ tiếng Nhật có thể trực tiếp bổ nghĩa cho danh từ, ở giữa không cần từ nối như “mà” và cũng không cần 「の」, nên chỉ là 「買った本」. Động từ đi vào định ngữ với chính dạng của nó: thể từ điển chỉ thói quen hoặc việc sắp làm, thể た chỉ việc đã xảy ra, thể ている chỉ việc đang diễn ra hoặc trạng thái kéo dài, thể ない chỉ phủ định; vì vậy “sách sẽ mua / đã mua / đang mua / không mua” chỉ cần phân biệt bằng dạng động từ. Chủ ngữ trong mệnh đề dùng 「が」 chứ không dùng 「は」 vì 「は」 nêu chủ đề của cả câu, không với tới bên trong mệnh đề định ngữ. Cả cụm “mệnh đề + danh từ” trong câu tương đương một danh từ, phía sau vẫn gắn được các trợ từ 「は・を・に」 như bình thường.",
-    "similar": [
-      {
-        "title": "〜(động từ thể thường) + danh từ (mệnh đề định ngữ)",
-        "explanation": "Nghĩa gần giống: hai mục nói về cùng một loại cấu trúc. Mục kia bắt đầu từ quy tắc chung của “bổ nghĩa cho danh từ”; mục này sắp xếp sự khác nhau về nghĩa theo từng dạng của động từ (thể từ điển・thể た・thể ている・thể ない)."
-      },
-      {
-        "title": "〜(câu thể thường) + danh từ (bổ nghĩa danh từ)",
-        "explanation": "Nghĩa gần giống: mục kia mở rộng phạm vi sang cả câu thể thường (gồm câu tính từ, câu danh từ) bổ nghĩa cho danh từ, với các biến đổi như 「静かな」「学生だった」; mục này chỉ nói về động từ."
-      },
-      {
-        "title": "〜の (thay が trong mệnh đề định ngữ)",
-        "explanation": "Cách nói cùng nghĩa: chủ ngữ 「が」 trong mệnh đề định ngữ có thể đổi thành 「の」: 「私が買った本」＝「私の買った本」. Dùng 「の」 thì sắc thái hơi văn viết và mềm mại hơn."
-      }
-    ]
-  },
-  {
-    "id": "ga-no-swap",
-    "title": "〜の (thay が trong mệnh đề định ngữ)",
-    "meaning": "Trong mệnh đề bổ nghĩa cho danh từ, 「が」 chỉ chủ ngữ có thể đổi thành 「の」 mà nghĩa không đổi.",
-    "connection": "Danh từ ＋ の ＋ động từ・tính từ thể thông thường ＋ danh từ",
-    "senses": [
-      {
-        "label": "Mệnh đề động từ",
-        "meaning": "Chủ ngữ của mệnh đề (người thực hiện hành động) được đánh dấu bằng 「の」. 「母の作った料理」＝「母が作った料理」. Sắc thái hơi văn viết, mềm mại.",
-        "connection": "Danh từ ＋ の ＋ động từ thể thông thường ＋ danh từ",
-        "examples": [
-          "Món ăn mẹ nấu rất ngon.",
-          "Đây là thị trấn nơi tôi sinh ra.",
-          "Những ngày trời mưa tôi ở nhà."
-        ]
-      },
-      {
-        "label": "Mệnh đề tính từ",
-        "meaning": "Khi mô tả đặc điểm của người hoặc vật, 「〜が＋tính từ＋danh từ」 cũng thường được nói thành 「〜の＋tính từ＋danh từ」. Nhiều cách nói đã trở thành cố định.",
-        "connection": "Danh từ ＋ の ＋ tính từ い／tính từ な ＋ danh từ",
-        "examples": [
-          "Người cao là anh trai tôi.",
-          "Bạn có thấy một cô bé tóc dài không?"
-        ]
-      }
-    ],
-    "notes": [
-      "Chỉ trong mệnh đề bổ nghĩa cho danh từ mới đổi được 「が」 thành 「の」; chủ ngữ của chính câu thì không đổi được: ✕「母の料理を作った」 nghĩa sẽ thành “đã nấu món ăn của mẹ” → ○「母が料理を作った」.",
-      "「私の好きな人」 là “người tôi thích”, không phải “người thích tôi”; nghĩa sau phải nói 「私のことが好きな人」. Dùng nhầm 「の」 và 「を」 thì chiều của việc “thích” sẽ ngược hẳn.",
-      "「の」 trong 「田中さんの描いた絵」 chỉ chủ ngữ (bức tranh anh Tanaka vẽ), không chỉ sở hữu (bức tranh anh Tanaka có); khi dịch đừng dịch thành “tranh của anh Tanaka” mà mất đi ý “người vẽ”.",
-      "Nếu trong mệnh đề còn có tân ngữ với 「を」 thì thông thường không đổi 「が」 thành 「の」 được: ✕「母の子どもにご飯を作った日」→ ○「母が子どもにご飯を作った日」."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "Giới thiệu quê hương",
-          "description": "Giới thiệu với bạn nơi mình sinh ra và lớn lên.",
-          "example": "Đây là thị trấn nơi tôi lớn lên."
-        },
-        {
-          "title": "Mô tả ngoại hình",
-          "description": "Mô tả dáng vẻ của một người cho bạn nghe.",
-          "example": "Đứa bé mắt to là em gái tôi."
-        },
-        {
-          "title": "Đọc tiểu thuyết",
-          "description": "Trong tiểu thuyết, lời bài hát hay gặp cách nói văn viết 「〜の＋động từ＋danh từ」.",
-          "example": "Anh muốn đến thành phố nơi em sống."
-        }
-      ],
-      "work": [
-        {
-          "title": "Dẫn tài liệu",
-          "description": "Nói rõ tài liệu nào do ai viết.",
-          "example": "Đây là bản báo cáo do trưởng phòng viết."
-        },
-        {
-          "title": "Giới thiệu sản phẩm",
-          "description": "Giới thiệu tại buổi thuyết trình những sản phẩm khách hàng đã chọn.",
-          "example": "Xin giới thiệu những sản phẩm mà quý khách đã chọn."
-        }
-      ]
-    },
-    "etymology": "Trong tiếng Nhật cổ, cả 「の」 và 「が」 đều có thể chỉ chủ ngữ, và cũng đều có thể chỉ sở hữu. Trong tiếng Nhật hiện đại, 「が」 chủ yếu chỉ chủ ngữ, còn cách dùng 「の」 chỉ chủ ngữ ngày xưa vẫn được giữ lại trong mệnh đề bổ nghĩa cho danh từ.",
-    "formation": "Chức năng cơ bản nhất của 「の」 là nối hai danh từ (AのB). Trong “danh từ + の + động từ・tính từ + danh từ”, cả cụm “động từ + danh từ” phía sau được xem như một danh từ lớn, nên danh từ phía trước có thể dùng 「の」 để gắn vào: 「母の｜作った料理」, nghĩa đen là “của mẹ｜món đã nấu”, hiểu là “món mẹ nấu”. Vì vậy 「の」 này bắt buộc phải có danh từ phía sau “đỡ” lấy, chỉ xuất hiện trong mệnh đề bổ nghĩa cho danh từ, không dùng để kết thúc câu. Trong tiếng Nhật cổ, 「の」 vốn có thể chỉ chủ ngữ; trong tiếng Nhật hiện đại, cách dùng này chỉ còn lại trong mệnh đề định ngữ. Người ta thường cho rằng khi trong mệnh đề còn có tân ngữ 「を」, cấu trúc trở nên phức tạp, 「の」 khó “vượt qua” để nối tới danh từ, nên phải dùng 「が」.",
-    "similar": [
-      {
-        "title": "〜が (chủ ngữ)",
-        "explanation": "Nghĩa gần giống: cả hai đều chỉ chủ ngữ. 「が」 dùng được trong mọi câu; 「の」 chỉ thay được 「が」 trong mệnh đề bổ nghĩa cho danh từ, sắc thái hơi văn viết và mềm mại."
-      },
-      {
-        "title": "〜の (sở hữu・bổ nghĩa)",
-        "explanation": "Cùng gốc: 「の」 ở mục này chính là 「の」 nối danh từ. 「私の本」 chỉ sở hữu (sách của tôi); 「私の買った本」 chỉ chủ ngữ (sách tôi đã mua). Chỉ cần xem ngay sau 「の」 là danh từ hay động từ・tính từ là phân biệt được."
-      },
-      {
-        "title": "〜động từ + danh từ (động từ bổ nghĩa cho danh từ・mệnh đề định ngữ)",
-        "explanation": "Cấu trúc cùng nghĩa: động từ bổ nghĩa cho danh từ là khung chung, chủ ngữ trong mệnh đề thường dùng 「が」; mục này nói về cách đổi chủ ngữ sang 「の」, nghĩa không thay đổi."
+        "title": "〜なら",
+        "explanation": "「なら」 tiếp lời đề tài của đối phương rồi đưa ra lời khuyên (「京都へ行くなら、新幹線がいい」), hai vế không có trình tự thời gian; 「と」 chỉ việc vế trước vừa xảy ra thì vế sau xảy ra theo."
       }
     ]
   },
   {
     "id": "no-mae-position",
-    "title": "〜の前・〜の上・〜の中 (danh từ chỉ vị trí)",
     "meaning": "Dùng “danh từ ＋ の ＋ từ chỉ vị trí” để nói vị trí của sự vật, như “trên bàn”, “trước nhà ga”, “trong hộp”.",
     "connection": "Danh từ ＋ の ＋ 前・上・中・下・横・隣 v.v. ＋ に／で／を",
     "senses": [
@@ -560,7 +444,6 @@
   },
   {
     "id": "particle-omission",
-    "title": "〜lược bỏ trợ từ (văn nói)",
     "meaning": "Trong hội thoại hằng ngày, các trợ từ như 「は」「を」「が」「へ・に」 thường bị lược bỏ, làm câu nói thoải mái, thân mật hơn.",
     "connection": "Danh từ (lược bỏ は・を・が・へ) ＋ vị ngữ (chủ yếu văn nói, thể thông thường)",
     "senses": [

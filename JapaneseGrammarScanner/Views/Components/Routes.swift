@@ -39,16 +39,8 @@ extension View {
 }
 
 extension JLPTLevel {
-    /// 高亮颜色按 JLPT 等级区分。
-    var color: Color {
-        switch self {
-        case .n5: Color(red: 0.20, green: 0.70, blue: 0.40)
-        case .n4: Color(red: 0.15, green: 0.55, blue: 0.95)
-        case .n3: Color(red: 0.98, green: 0.60, blue: 0.10)
-        case .n2: Color(red: 0.65, green: 0.35, blue: 0.90)
-        case .n1: Color(red: 0.92, green: 0.25, blue: 0.30)
-        }
-    }
+    /// 统一使用主色（不再按等级区分五种颜色）。
+    var color: Color { Theme.accent }
 }
 
 /// 从本地记录加载图片后显示识别结果

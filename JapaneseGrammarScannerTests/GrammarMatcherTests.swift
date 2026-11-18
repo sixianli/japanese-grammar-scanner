@@ -211,10 +211,42 @@ final class ContentRulesTests: XCTestCase {
         }
     }
 
-    func testTitleParts() {
+    /// 同形语法已合并：旧 id 仍能找到合并后的语法点；标题不带中文说明，也不再有同名语法点。
+    func testMergedSameFormGrammar() {
         guard let p = library.point(id: "sou-da-hearsay") else { return XCTFail() }
-        XCTAssertEqual(p.titleNote, "（传闻）")
+        XCTAssertEqual(p.id, "sou-da-appearance")
         XCTAssertEqual(p.titleForm, "〜そうだ")
+        XCTAssertGreaterThanOrEqual(p.senses.count, 2)
+        let titles = library.points.map(\.title)
+        XCTAssertEqual(titles.count, Set(titles).count, "有重复的语法标题")
+        for t in titles {
+            XCTAssertNil(t.range(of: "（[^）ぁ-んァ-ヶ]*[一-龥][^）ぁ-んァ-ヶ]*）", options: .regularExpression), "标题带中文说明: \(t)")
+        }
+        // 「〜まで」：N5 和 N3 的义项都在，N3 列表里也能找到它
+        guard let made = library.point(id: "made-even") else { return XCTFail() }
+        XCTAssertEqual(made.level, .n5)
+        XCTAssertTrue(made.levels.contains(.n3))
+        XCTAssertTrue(library.points(for: .n3).contains(made))
+    }
+
+    /// 搜索按相关度：语法形式命中优先，例句里出现不算。
+    func testSearchRelevance() {
+        let areba = library.search("あれば")
+        XCTAssertEqual(areba.first?.id, "to-areba")
+        for unrelated in ["nari-nari", "nari-tomo", "ba-koso"] {
+            XCTAssertFalse(areba.contains { $0.id == unrelated }, "「あれば」不应搜到 \(unrelated)")
+        }
+        XCTAssertEqual(library.search("にもかかわらず").first?.id, "ni-mo-kakawarazu")
+        XCTAssertEqual(library.search("にも関わらず").first?.id, "ni-mo-kakawarazu")
+        XCTAssertEqual(library.search("ニモカカワラズ").first?.id, "ni-mo-kakawarazu")
+        XCTAssertFalse(library.search("尽管").isEmpty)
+        XCTAssertEqual(library.search("てしまう").first?.id, "te-shimau")
+    }
+
+    /// 「识别到 N 个语法点」与列表条目数一致：旧 id 换新、去重、只保留库里有的。
+    func testDisplayableIDs() {
+        let ids = library.displayableIDs(["te-shimau", "sou-da-hearsay", "sou-da-appearance", "no-such-id", "te-shimau"])
+        XCTAssertEqual(ids, ["te-shimau", "sou-da-appearance"])
     }
 }
 

@@ -1,9 +1,8 @@
 [
   {
     "id": "koto-nominalizer",
-    "title": "〜こと (nominalizador)",
-    "meaning": "Se pone después de un verbo (u otras palabras) y convierte toda la frase en un sustantivo: «el hecho de ~», «~ (infinitivo)».",
-    "connection": "Verbo en forma de diccionario／forma た／forma ない + こと",
+    "meaning": "Colocado tras un verbo u otra expresión, convierte toda la frase en un sustantivo con el sentido de “el hecho de ...” (como sujeto, objeto o explicación); al final de la oración se usa en reglamentos y avisos para dar una instrucción o prohibición que debe cumplirse.",
+    "connection": "Verbo en forma de diccionario / forma た / forma ない + こと; regla al final de la oración: verbo en forma de diccionario / forma ない + こと.",
     "senses": [
       {
         "label": "Como sujeto",
@@ -33,13 +32,32 @@
           "Mi pasatiempo es sacar fotos.",
           "Mi sueño es viajar por todo el mundo."
         ]
+      },
+      {
+        "label": "Se debe... (instrucción)",
+        "meaning": "Se usa en textos escritos como normas, avisos o instrucciones de tareas para exigir que se haga algo. Es breve, imperativo y sin emoción.",
+        "connection": "Forma de diccionario del verbo + こと。(p. ej. 「提出すること」, 「記入すること」)",
+        "examples": [
+          "El informe debe entregarse antes del viernes.",
+          "El nombre debe escribirse con bolígrafo."
+        ]
+      },
+      {
+        "label": "Prohibido...",
+        "meaning": "「〜ないこと」 expresa prohibición. Es frecuente en carteles, normas escolares e instrucciones de exámenes.",
+        "connection": "Forma ない del verbo + こと。(p. ej. 「走らないこと」)",
+        "examples": [
+          "Prohibido correr por los pasillos.",
+          "No se permite usar el diccionario durante el examen."
+        ]
       }
     ],
     "notes": [
       "Con verbos de percepción como 「見る」, 「聞く」, 「見える」 y 「聞こえる」, el complemento solo admite 「の」: ✕「彼が歌うことを聞いた」 → ○「彼が歌うのを聞いた」.",
       "Cuando la oración termina explicando «A es ~», solo vale 「こと」: ✕「趣味は本を読むのです」 → ○「趣味は本を読むことです」. Con 「のです」 la frase toma un tono de explicación, como «(es que) estoy leyendo un libro».",
-      "Delante de 「こと」 se usa la forma llana, no la forma ます: ✕「泳ぎますことが好きです」 → ○「泳ぐことが好きです」.",
-      "«Persona + 「のことが好き」» significa «me gusta esta persona (todo de ella)». Es típico de las declaraciones de amor y suele entenderse en sentido romántico, así que decirle 「〇〇さんのことが好きです」 a un compañero o a tu jefe puede dar lugar a malentendidos."
+      "Se usa solo en normas escritas, avisos e instrucciones de tareas. Dicho en voz alta a un compañero o cliente, 「明日までに提出すること」 suena a dar órdenes y es descortés; al hablar se dice 「明日までに提出してください」.",
+      "「〜ないこと」 es una prohibición. Al leer avisos, no lo entiendas como «no tener ...»: 「試験中は話さないこと」 significa «está prohibido hablar durante el examen».",
+      "Distínguelo del 「こと」 que nominaliza: en 「趣味は走ることだ」, 「こと」 solo significa «el hecho de ...». Este uso se da solo cuando la oración termina en 「こと」 sola para expresar un requisito."
     ],
     "scenes": {
       "daily": [
@@ -52,6 +70,16 @@
           "title": "Hablar de los estudios",
           "description": "Te quejas con un compañero de clase de lo difícil que es el japonés.",
           "example": "Memorizar kanji cuesta mucho, ¿verdad?"
+        },
+        {
+          "title": "Leer las normas del edificio",
+          "description": "Al mudarte, lees las normas de la basura del edificio.",
+          "example": "La basura debe sacarse antes de las 8 de la mañana."
+        },
+        {
+          "title": "Instrucciones de la tarea",
+          "description": "El profesor escribe en la pizarra las instrucciones de la tarea.",
+          "example": "La tarea debe hacerse antes de la próxima clase."
         }
       ],
       "work": [
@@ -64,27 +92,37 @@
           "title": "Formación de nuevos empleados",
           "description": "Un compañero veterano explica algo clave a los nuevos empleados.",
           "example": "Lo importante es informar al jefe todos los días."
+        },
+        {
+          "title": "Normas internas de la empresa",
+          "description": "Una advertencia del manual del empleado.",
+          "example": "Prohibido sacar de la oficina documentos confidenciales."
+        },
+        {
+          "title": "Instrucciones de examen",
+          "description": "Indicaciones para los candidatos de un examen de certificación.",
+          "example": "No se permite salir del aula durante los primeros 30 minutos del examen."
         }
       ]
     },
-    "etymology": "「こと」 se escribe 「事」 en kanji y su sentido original es «asunto, hecho». Como nominalizador pierde ese significado concreto y solo convierte la oración anterior en sustantivo; por eso suele escribirse en kana.",
-    "formation": "「こと」 era originalmente un sustantivo que significa «asunto, cosa» (「事」). Si se coloca delante un verbo en forma de diccionario (u otra forma) como modificador, se obtiene «el hecho de hacer ~», y toda la frase pasa a funcionar como sustantivo. Al ser un sustantivo, puede llevar 「が」, 「を」 o 「は」 y hacer de sujeto u objeto, o llevar 「です」 y formar el predicado. Además, como 「こと」 designa un «asunto» abstracto, se inclina hacia acciones abstractas, hábitos y normas, y no hacia la acción concreta que ocurre ante los ojos, que es lo que indica 「の」. Por eso mismo 「こと」 no se usa con verbos de percepción.",
+    "etymology": "「こと」 se escribe 「事」 en kanji y significa originalmente “asunto, suceso”. Como sustantivo formal pierde su sentido concreto y solo convierte en sustantivo la oración anterior, por lo que normalmente se escribe en kana. Al final de la oración surge de omitir lo que sigue, como 「〜ことになっている」 o 「〜ことを求める」, y se convierte en una instrucción o norma escrita.",
+    "formation": "「こと」 es originalmente el sustantivo “asunto, cosa”. Si se coloca delante una forma de diccionario como modificador se obtiene “el hecho de ...”, de modo que toda la frase se vuelve un sustantivo; puede llevar 「が」「を」「は」 como sujeto u objeto, o 「です」 como predicado (「趣味は〜ことです」). Como 「こと」 designa un “asunto” abstracto, tiende a acciones, hábitos y reglas abstractos, a diferencia de 「の」, que señala una acción concreta que ocurre ante uno. Por la misma lógica, los reglamentos enumeran cada requisito como “el asunto de ...” y terminan la oración en 「こと」, lo que da una instrucción concisa y objetiva: 「〜こと」 es lo que debe hacerse y 「〜ないこと」 enumera “no hacer” como un punto, es decir, una prohibición.",
     "similar": [
-      {
-        "title": "〜の (nominalizador)",
-        "explanation": "Significado parecido: 「の」 también convierte una acción en sustantivo. Es más coloquial y se inclina hacia acciones concretas que ocurren delante de uno; ante verbos de percepción (「見る・聞く」) solo vale 「の」. 「こと」 es más abstracto, y en estructuras como 「〜ことです」 al final de la oración o 「〜ことができる」 solo vale 「こと」."
-      },
       {
         "title": "〜ということ (nominalizador)",
         "explanation": "Mismo origen: se añade 「という」 delante de 「こと」 para convertir en sustantivo el contenido de toda una afirmación; se usa mucho para transmitir información: 「明日休みだということを聞いた」. Un verbo + 「こと」 se refiere solo a la acción en sí."
       },
       {
-        "title": "〜ことができる",
-        "explanation": "Mismo origen: estructura de capacidad formada al añadir 「が」 + 「できる」 tras el 「こと」 nominalizador: 「泳ぐことができる」. 「こと」 por sí solo únicamente nominaliza y no significa «poder»."
+        "title": "〜てください",
+        "explanation": "「てください」 es una petición cortés hablada. El 「こと」 final es una norma escrita y no lleva matiz de cortesía."
       },
       {
-        "title": "〜たことがある",
-        "explanation": "Mismo origen: forma た + 「こと」 forma un sustantivo, y al añadir 「がある」 expresa experiencia, «haber hecho ~ alguna vez»: 「富士山に登ったことがある」."
+        "title": "〜なさい",
+        "explanation": "「なさい」 es una orden hablada, sobre todo de padres o profesores a niños. 「こと」 aparece sobre todo en normas escritas; también es una instrucción de arriba abajo."
+      },
+      {
+        "title": "〜ことになっている",
+        "explanation": "Mismo origen (ambas se construyen con el sustantivo formal 「こと」): 「ことになっている」 explica que «la norma es así», mientras que el 「こと」 final dicta la norma misma."
       }
     ]
   },
@@ -174,7 +212,6 @@
   },
   {
     "id": "ni-iku-purpose",
-    "title": "〜に行く・〜に来る (finalidad)",
     "meaning": "Indica la finalidad de un desplazamiento: ir / venir / volver (a algún sitio) a hacer algo.",
     "connection": "Raíz de la forma ます／sustantivo de acción + に + 行く・来る・帰る",
     "senses": [
@@ -345,9 +382,10 @@
   },
   {
     "id": "ni-suru-decide",
-    "title": "〜にする (decisión / elección)",
-    "meaning": "Indica que se elige una opción entre varias o que se decide algo: «voy a pedir ~», «lo dejamos en ~».",
-    "connection": "Sustantivo + にする",
+    "meaning": "Expresa elegir una opción entre varias o decidir algo («me quedo con…», «lo dejamos en…»), y también hacer deliberadamente que algo pase a cierto estado («poner… de modo que…»).",
+    "connection": "Sustantivo + にする (elección / decisión); raíz de い-adjetivo + くする; raíz de な-adjetivo／sustantivo + にする (provocar un cambio)",
+    "etymology": "「する」 significa originalmente «hacer». 「Xにする」 es «hacer que sea X»; usado para elegir, se extiende a «fijar la elección en X», es decir, «decidirse por X». 「〜く」 y 「〜に」 son las formas continuativas (adverbiales) de los adjetivos; seguidas de 「する」 significan «dejarlo de modo que sea…», y forman con 「なる」 el par «cambio provocado / cambio natural».",
+    "formation": "「に」 marca el resultado de un cambio o desenlace y 「する」 es «hacer», así que 「Xにする」 significa literalmente «hacer (el asunto) X». Ante varias opciones, «hacer la elección X» es «decidirse por X, elegir X»; como el hablante lo «hace» activamente, expresa su propia elección y decisión, mientras que 「Xになる」 es «llegar a ser X por sí mismo» y solo indica el resultado. Si X es la forma continuativa de un adjetivo (「〜く」, 「〜に」), «hacerlo X» es llevar deliberadamente algo a cierto estado, y lo que cambia se marca con 「を」; 「静かにしてください」 significa literalmente «por favor, ponte en estado silencioso», por lo que también sirve para pedir a otros que mantengan un estado. Así, el mismo 「にする」 expresa elección y decisión o provocar un cambio, según lo que lo preceda: una opción nominal o un estado adjetival. Solo un sustantivo puede preceder a 「に」, por lo que para decidir una acción primero hay que nominalizarla con 「こと」: 「〜ことにする」.",
     "senses": [
       {
         "label": "Elegir / pedir",
@@ -368,12 +406,33 @@
           "Para el regalo de cumpleaños me decidí por un reloj.",
           "Elegimos Okinawa como destino del viaje."
         ]
+      },
+      {
+        "label": "Provocar un cambio (い-adjetivo)",
+        "meaning": "Cambiar a propósito la cualidad o el estado de algo: «poner más...», «hacer más...». Es el par de 「〜くなる」 (cambio natural).",
+        "connection": "Raíz de adjetivo-い + くする (明るくする・小さくする・短くする)",
+        "examples": [
+          "Iluminé más la habitación.",
+          "Baje un poco el volumen, por favor.",
+          "Quiero cortarme el pelo corto."
+        ]
+      },
+      {
+        "label": "Provocar un cambio (な-adjetivo)",
+        "meaning": "Dejar algo de cierta manera, o pedir a alguien que se mantenga así. 「静かにしてください」 es una petición muy común.",
+        "connection": "Raíz de adjetivo-な + にする (きれいにする・静かにする・大切にする)",
+        "examples": [
+          "En la biblioteca, guarden silencio, por favor.",
+          "Limpiemos la habitación entre todos.",
+          "Cuídese mucho."
+        ]
       }
     ],
     "notes": [
       "Para decidir hacer una acción, primero hay que nominalizar el verbo con 「こと」: ✕「日本へ行くにする」 → ○「日本へ行くことにする」.",
       "Al pedir, 「コーヒーでいいです」 suena a «me conformo con un café», algo descortés ante quien invita o ante el anfitrión. Di 「コーヒーにします」 o 「コーヒーがいいです」.",
-      "Al comunicar un cambio a un cliente, 「会議は月曜日にしました」 suena a decisión unilateral. Lo habitual es decir 「月曜日になりました」, que resulta más suave.",
+      "El cambio provocado por alguien usa 「〜くする」 (objeto con 「を」); el cambio natural usa 「〜くなる」 (sujeto con 「が」). Si eliges mal, cambia el sentido: 「部屋を暖かくした」 (caldeé la habitación) / 「部屋が暖かくなった」 (la habitación se caldeó).",
+      "Los adjetivos な llevan 「に」, no 「く」: ✕「静かくしてください」→ ○「静かにしてください」. 「きれい」 y 「嫌い」 también son adjetivos な: ✕「きれいくする」→ ○「きれいにする」.",
       "En 「部屋を静かにする」 o 「明るくする」, 「〜にする／〜くする」 significa «hacer que algo quede ~», no una elección. Se distinguen por lo que va delante: un sustantivo que es una opción o un adjetivo que describe un estado."
     ],
     "scenes": {
@@ -389,9 +448,19 @@
           "example": "Quedemos en los torniquetes de la estación."
         },
         {
-          "title": "Elegir un producto",
-          "description": "Te decides después de comparar en la tienda.",
-          "example": "Me llevo este rojo."
+          "title": "En la peluquería",
+          "description": "Le dices al peluquero qué corte quieres.",
+          "example": "Córteme el flequillo un poco más corto, por favor."
+        },
+        {
+          "title": "Viendo la tele en casa",
+          "description": "La tele está muy alta y le pides a alguien que la baje.",
+          "example": "Bájale un poco más el volumen a la tele."
+        },
+        {
+          "title": "Entre amigos",
+          "description": "Dos amigos se pelearon y les pides que hagan las paces.",
+          "example": "No se peleen y llévense bien, ¿sí?"
         }
       ],
       "work": [
@@ -404,11 +473,19 @@
           "title": "Elegir una propuesta",
           "description": "En una reunión dices qué propuesta eliges.",
           "example": "Esta vez me gustaría optar por la propuesta B."
+        },
+        {
+          "title": "Corregir un documento",
+          "description": "Tu jefe te pide que hagas un documento más fácil de entender.",
+          "example": "Haga este documento más sencillo, por favor."
+        },
+        {
+          "title": "Mejorar un producto",
+          "description": "Explicas en una reunión cómo se ha mejorado un producto.",
+          "example": "El nuevo modelo lo hicimos más ligero que el anterior."
         }
       ]
     },
-    "etymology": "「する」 significa básicamente «hacer». 「Xにする」 significa literalmente «convertir en X». Al elegir, pasó a significar «fijar la elección en X», es decir, «decidirse por X».",
-    "formation": "「に」 marca el resultado de un cambio o la conclusión alcanzada, y 「する」 significa «hacer», de modo que 「Xにする」 significa literalmente «hacer que (el asunto) quede en X». Ante varias opciones, «hacer que la elección quede en X» equivale a «decidirse por X, elegir X». Como es el hablante quien activamente «lo hace así», expresa una elección y decisión propias; en cambio, 「Xになる」 significa «llegar a ser X de forma natural» y solo informa del resultado. Delante de 「に」 solo puede ir un sustantivo, así que para decidir hacer una acción primero se nominaliza con 「こと」, lo que da 「〜ことにする」.",
     "similar": [
       {
         "title": "〜ことにする",
@@ -419,12 +496,12 @@
         "explanation": "Significado parecido: los dos pueden expresar el resultado de una decisión. 「〜にする」 es una decisión propia; 「〜になる」 es un resultado natural o decidido por otros: 「会議は月曜日にしました」 (lo decidimos nosotros) frente a 「会議は月曜日になりました」 (quedó fijado así)."
       },
       {
-        "title": "〜くする・〜にする (hacer cambiar)",
-        "explanation": "Mismo origen: el mismo 「にする」; tras un adjetivo significa hacer que algo adopte un estado, como 「静かにする」 o 「大きくする」. No es una elección."
-      },
-      {
         "title": "〜をください",
         "explanation": "Significado parecido: los dos sirven para pedir en un local. 「コーヒーをください」 pide algo directamente al personal; 「コーヒーにします」 expresa tu elección, suena más suave y también sirve al decidir entre amigos."
+      },
+      {
+        "title": "〜ようにする",
+        "explanation": "Mismo origen: 「にする」 detrás de 「〜よう」, que expresa esforzarse para que un comportamiento se vuelva costumbre: 「毎日野菜を食べるようにしている」. Esta estructura, en cambio, modifica directamente la naturaleza o el estado de algo."
       }
     ]
   },
@@ -593,7 +670,6 @@
   },
   {
     "id": "naide-without",
-    "title": "〜ないで (sin hacer)",
     "meaning": "«Hacer B sin hacer A»: hacer B sin haber hecho A, o hacer B en lugar de A.",
     "connection": "Verbo en forma ない + で",
     "senses": [
@@ -842,7 +918,6 @@
   },
   {
     "id": "mashou-ka-offer",
-    "title": "〜ましょうか (ofrecimiento / propuesta)",
     "meaning": "Sirve para ofrecerse a hacer algo por el oyente, o para proponer hacer algo juntos preguntando su opinión.",
     "connection": "Raíz de la forma ます (sin ます) + ましょうか",
     "senses": [
@@ -925,7 +1000,6 @@
   },
   {
     "id": "deshou-guess",
-    "title": "〜でしょう (suposición / confirmación)",
     "meaning": "Suposición cortés: «probablemente ~», «seguramente ~». Con entonación ascendente sirve para confirmar con el oyente: «~, ¿verdad?».",
     "connection": "Forma simple del verbo o del adjetivo い／raíz del adjetivo な／sustantivo + でしょう",
     "senses": [
@@ -1096,8 +1170,10 @@
   },
   {
     "id": "n-desu-explanatory",
-    "meaning": "Sirve para explicar una razón o una situación, o para preguntar por ella. Añade un matiz de explicación o de interés.",
-    "connection": "Forma simple + んです／のです (sustantivos y adjetivos な: 〜なんです)",
+    "meaning": "Presenta lo anterior como «la situación» para explicarla: dar una razón, preguntar el motivo, confirmar o darse cuenta de algo nuevo; el coloquial 「〜んだ」 también puede enfatizar una decisión o dar una orden.",
+    "connection": "Forma simple + んです／のです (coloquial: んだ／のだ); sustantivos y adjetivos な: 〜なんです／なんだ; órdenes: forma de diccionario del verbo + んだ",
+    "etymology": "Se forma con el sustantivo formal 「の」 + la cópula 「だ」: 「の」 empaqueta la oración anterior como «un asunto» y 「だ」 afirma «es eso», de ahí el tono de explicación y énfasis. 「んだ」 es la contracción hablada de 「のだ」. Recuerda al español «es que...».",
+    "formation": "Se forma con el sustantivo formal 「の」 + el auxiliar afirmativo 「だ」. 「の」 empaqueta la oración anterior como “un asunto, una situación”, y 「だ」 afirma “es así”. Por eso 「〜のだ」 no es una simple constatación, sino “presentar una situación como explicación”: dicho a otro, explica un motivo (en realidad, es que ...); dicho a uno mismo, es darse cuenta (así que era eso). Con una acción que aún no ha ocurrido (「行くんだ」), afirma “ir, eso es lo que hay”, y de ahí surge el tono de determinación u orden. En el habla, 「の」 se debilita a 「ん」 y da 「んだ」 y 「んです」.",
     "senses": [
       {
         "label": "Explicar una razón o situación",
@@ -1127,13 +1203,40 @@
           "Vaya, así que Tanaka cocina muy bien.",
           "¿Mañana es día festivo? No lo sabía."
         ]
+      },
+      {
+        "label": "Darse cuenta",
+        "meaning": "El hablante comprende de pronto una situación, como «ah, así que...». Suele ir con 「そうか」 o 「なんだ」, en la forma llana 「〜んだ」.",
+        "connection": "そうか／なんだ + forma llana + んだ",
+        "examples": [
+          "Claro, hoy es domingo, por eso está cerrado.",
+          "Vaya, así que ya lo sabías."
+        ]
+      },
+      {
+        "label": "Subrayar una postura o decisión",
+        "meaning": "Expresa con fuerza una opinión o una decisión, como «¡voy a...!» o «te digo que...». Por escrito se usa 「のだ／のである」.",
+        "connection": "Forma de diccionario + んだ／のだ; suele ir con 「絶対に」 o 「どうしても」",
+        "examples": [
+          "Voy a ser médico, sí o sí.",
+          "Si te esfuerzas, sin duda lo conseguirás."
+        ]
+      },
+      {
+        "label": "Ordenar / exhortar",
+        "meaning": "Con 「〜んだ」 se da una orden firme o se exhorta, normalmente de superior a inferior o de padres a hijos, como «¡a...!».",
+        "connection": "Forma de diccionario + んだ",
+        "examples": [
+          "Ya es tarde, así que a dormir.",
+          "No llores y cuéntamelo bien."
+        ]
       }
     ],
     "notes": [
       "No añadas 「んです」 cuando solo expones un hecho: 「私は学生なんです」 suena a excusa o a que subrayas una circunstancia especial. Para presentarte basta con 「学生です」.",
       "Usar 「どうして〜んですか」 para pedir explicaciones sobre lo que alguien hizo suena a reproche: 「どうして来なかったんですか」 es muy descortés con un jefe. Puedes decir 「何かあったんですか」.",
-      "Si llegas tarde o cometes un error y empiezas explicando el motivo con 「〜んです」, se verá como una excusa. En el trabajo en Japón lo habitual es disculparse primero, 「申し訳ありません」, y después explicar brevemente lo ocurrido.",
-      "Los sustantivos y adjetivos な necesitan 「な」: ✕「学生んです」 → ○「学生なんです」."
+      "Los sustantivos y adjetivos な necesitan 「な」: ✕「学生んです」 → ○「学生なんです」.",
+      "「〜んですか」 indaga en el motivo de fondo, así que usarlo para preguntar por la vida privada de alguien es descortés: ✕「どうして結婚しないんですか」. El 「〜んだ」 de orden (「早く寝るんだ」) es muy fuerte y solo se usa con niños o gente más joven."
     ],
     "scenes": {
       "daily": [
@@ -1146,6 +1249,16 @@
           "title": "Preocuparse por un amigo",
           "description": "Ves a un amigo decaído y le preguntas con interés.",
           "example": "Te veo sin ánimo. ¿Te pasó algo?"
+        },
+        {
+          "title": "Caer en la cuenta",
+          "description": "Ves una tienda cerrada y entiendes por qué.",
+          "example": "Ah, hoy es su día de descanso."
+        },
+        {
+          "title": "En una novela",
+          "description": "El protagonista de una novela toma una decisión.",
+          "example": "Iré, aunque sea solo."
         }
       ],
       "work": [
@@ -1158,35 +1271,35 @@
           "title": "Preguntar a un compañero veterano",
           "description": "No sabes dónde dejar unos documentos y le preguntas a un compañero veterano.",
           "example": "¿Dónde debería dejar estos documentos?"
+        },
+        {
+          "title": "Leyendo un editorial",
+          "description": "Un editorial subraya su conclusión con 「のである」.",
+          "example": "Es precisamente ahora cuando hace falta una reforma."
         }
       ]
     },
-    "etymology": "「の」 es un sustantivo formal que convierte en sustantivo la oración anterior. 「〜のです」 significaba originalmente «es el caso de que ~», y de ahí pasó a explicar. Al hablar, 「の」 cambió de sonido a 「ん」 y surgió 「〜んです」.",
-    "formation": "Se forma con el sustantivo formal 「の」 + el afirmativo 「です」. 「の」 empaqueta toda la oración anterior como un «asunto», de modo que 「〜のです」 significa literalmente «es que ~»: presenta todo el asunto como trasfondo o circunstancia, y por eso tiene de forma natural una función explicativa. En una pregunta significa «¿qué pasa?», para preguntar el motivo o comprobar una situación nueva. En el habla 「の」 se debilita a 「ん」 y da 「〜んです」. Los sustantivos y adjetivos な se unen a 「の」 con la forma atributiva 「な」, de ahí 「学生なんです」 y 「静かなんです」.",
     "similar": [
-      {
-        "title": "〜のだ・〜んです",
-        "explanation": "Mismo origen: la misma estructura 「の」 + afirmación. 「〜のだ／〜んだ」 es la forma llana, usada con amigos y familia o en la lengua escrita."
-      },
       {
         "title": "〜んですが (preámbulo)",
         "explanation": "Mismo origen: se añade 「が」 tras 「〜んです」 para explicar primero la situación y luego introducir una petición o pregunta: 「道に迷ったんですが、駅はどこですか」."
       },
       {
-        "title": "〜から (causa)",
-        "explanation": "Significado parecido: 「〜からです」 indica claramente la causa; 「〜んです」 expone la situación para que el otro la entienda, con un tono más suave y coloquial."
-      },
-      {
         "title": "〜わけだ",
         "explanation": "Significado parecido: también tiene un tono explicativo de «así que era eso», pero 「〜わけだ」 se centra en sacar una conclusión lógica a partir de los hechos: 「十年住んでいたから、日本語が上手なわけだ」."
+      },
+      {
+        "title": "〜のだから・〜んだから",
+        "explanation": "Mismo origen: 「〜のだ」 + 「から」. Presenta como motivo una situación que el oyente también conoce, y suele seguirle una exigencia o un juicio (「子どもなんだから、仕方ない」); suena más fuerte que 「から」."
       }
     ]
   },
   {
     "id": "to-iu-called",
-    "title": "〜という (llamado)",
-    "meaning": "Sirve para presentar un nombre: «un ~ llamado …». Se usa sobre todo con personas, cosas o lugares que el oyente quizá no conozca.",
-    "connection": "Sustantivo (nombre) + という + sustantivo",
+    "meaning": "Tras un nombre significa «llamado ~» y sirve para presentar o preguntar nombres; 「NというN」 enfatiza «todos y cada uno de los N», y tras una expresión de cantidad enfatiza «nada menos que ~».",
+    "connection": "Sustantivo (nombre) + という + sustantivo; 何という + sustantivo; sustantivo + という + el mismo sustantivo; 何十／何百／何千／何万 + という + sustantivo",
+    "etymology": "「という」 viene de la partícula de cita 「と」 + 「言う」 y se usa para definir o nombrar. 「NというN」 es literalmente “N llamado N”, es decir, “todo lo que merezca llamarse N”, y de ahí el sentido de “todos”. Con números, añade un toque exagerado de “nada menos que ...”.",
+    "formation": "「という」 se compone del 「と」 citativo más 「言う」 y significa originalmente «llamado ...». 「家という家」 es literalmente «las casas llamadas ‘casa’», es decir, «todo lo que merece el nombre de ‘casa’»: con el nombre se encierra a cada miembro de toda la categoría, y por eso significa «todas las ...». Detrás de una palabra de cantidad como 「何万」, 「という」 presenta la cifra como un número «así llamado», con un tono de asombro: «¡tantos!». Ambos usos aprovechan la función denominativa y citativa de 「という」 para enfatizar el alcance o la cantidad.",
     "senses": [
       {
         "label": "Presentar un nombre",
@@ -1214,13 +1327,33 @@
         "examples": [
           "Abrieron una panadería llamada «Hana» delante de la estación."
         ]
+      },
+      {
+        "label": "Todos y cada uno",
+        "meaning": "Se repite el mismo sustantivo con 「という」 en medio para decir “todos los ..., cada uno de los ...”, sin excepción. Suele ir seguido de 「すべて」, 「みな」 o 「どこも」. Se usa sobre todo por escrito y en descripciones.",
+        "connection": "Sustantivo + という + el mismo sustantivo (frecuentes: 家という家・窓という窓・店という店・人という人)",
+        "examples": [
+          "Con el tifón, todas y cada una de las casas del pueblo sufrieron daños.",
+          "Abrí todas las ventanas para ventilar.",
+          "Me duelen todos los huesos del cuerpo."
+        ]
+      },
+      {
+        "label": "Nada menos que ...",
+        "meaning": "Tras números como 「何百」, 「何千」, 「何万」 o 「数千」, recalca que la cifra es muy grande: “cientos de”, “decenas de miles de”. Tiene un tono de asombro.",
+        "connection": "何十 / 何百 / 何千 / 何万 / 数万 etc. + という + sustantivo",
+        "examples": [
+          "Se reunieron decenas de miles de personas en el recinto.",
+          "Cada día me llegan cientos de correos."
+        ]
       }
     ],
     "notes": [
       "「〜という人」 implica «alguien a quien yo (o tú) no conozco». Usar 「という」 con alguien a quien el interlocutor conoce, o con un superior, suena distante y poco respetuoso: ✕「田中部長という人が来ました」 → ○「田中部長がいらっしゃいました」.",
       "Con cosas que todo el mundo conoce no se suele usar 「という」: se dice 「東京に住んでいます」, no 「東京という町に住んでいます」, que suena a presentar un lugar del que el otro nunca ha oído hablar.",
       "El coloquial 「っていう」 no vale en situaciones formales ni en documentos: ✕「ABCっていう会社から電話がありました」 → ○「ABCという会社から…」.",
-      "En las presentaciones, 「王と申します」 y 「王と言います」 son el uso citativo del verbo 「言う」 sin un sustantivo detrás, así que no pertenecen a esta estructura."
+      "「NというN」 debe repetir el mismo sustantivo: ✕「家という建物」→ ○「家という家」.",
+      "No lo confundas con el 「〜という」 que indica un nombre: 「田中という人」 es «una persona llamada Tanaka», no «todas las personas»."
     ],
     "scenes": {
       "daily": [
@@ -1233,6 +1366,16 @@
           "title": "Preguntar en el mercado",
           "description": "Ves una verdura que no conoces y le preguntas el nombre al vendedor.",
           "example": "¿Cómo se llama esta verdura en japonés?"
+        },
+        {
+          "title": "En una novela",
+          "description": "Una novela describe cómo todo el pueblo cobra vida.",
+          "example": "Esa noche se encendieron las luces de todas las tiendas del pueblo."
+        },
+        {
+          "title": "En un concierto",
+          "description": "Le cuentas a un amigo lo lleno que estaba.",
+          "example": "Decenas de miles de espectadores abarrotaban el estadio."
         }
       ],
       "work": [
@@ -1245,11 +1388,19 @@
           "title": "Pasar un recado telefónico",
           "description": "Le dices a tu jefe que alguien llamó.",
           "example": "Hace un rato llamó una persona de apellido Suzuki."
+        },
+        {
+          "title": "Noticias",
+          "description": "Se informa de la gravedad de los daños.",
+          "example": "El terremoto cortó todas las carreteras."
+        },
+        {
+          "title": "Análisis de mercado",
+          "description": "Se explica lo popular que es un producto.",
+          "example": "El primer día de venta llegaron miles de pedidos."
         }
       ]
     },
-    "etymology": "Se forma con la partícula de cita 「と」 + el verbo 「いう（言う）」; literalmente, «que se dice ~». De «decir» se debilitó hasta convertirse en un nexo entre un nombre y un sustantivo, por eso suele escribirse en kana.",
-    "formation": "Se forma con la partícula de cita 「と」 + el verbo 「いう」 (「言う」). 「と」 encierra el nombre anterior como «lo que se dice», y 「いう」 significa en origen «decir», así que 「Xという」 significa literalmente «llamado X, que se llama X», y luego modifica al sustantivo que sigue: «un ~ llamado X». Como el sentido de «decir» se ha debilitado hasta «llamarse», normalmente se escribe en kana, 「いう」. La propia estructura indica «este es un nombre que hay que presentar», por eso se usa sobre todo con personas, cosas y lugares que el interlocutor no conoce bien.",
     "similar": [
       {
         "title": "〜と言う (cita)",
@@ -1262,6 +1413,10 @@
       {
         "title": "〜ということ (nominalizador)",
         "explanation": "Mismo origen: 「という」 + 「こと」 convierte en sustantivo el contenido de una oración entera; lo que va delante es una oración, no un nombre: 「彼が結婚するということを聞いた」."
+      },
+      {
+        "title": "〜に至るまで",
+        "explanation": "Significado cercano: ambas enfatizan un alcance amplio sin excepciones. 「〜に至るまで」 nombra un extremo del rango (「子どもから老人に至るまで」); 「NというN」 repite el mismo sustantivo para decir de forma gráfica «absolutamente todos»."
       },
       {
         "title": "〜って (cita, tema)",

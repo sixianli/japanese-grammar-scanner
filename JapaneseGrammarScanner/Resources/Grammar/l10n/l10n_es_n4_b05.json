@@ -1,7 +1,6 @@
 [
   {
     "id": "me-ordinal",
-    "title": "〜目 (ordinal)",
     "meaning": "Va después de «número + contador» e indica el orden: el elemento N.º, la vez N.º o el día o año N.º de un periodo. Equivale a los ordinales «segundo, tercero...».",
     "connection": "Número + contador + 目 (ej.: 二つ目・三番目・二回目・三年目)",
     "senses": [
@@ -86,9 +85,8 @@
   },
   {
     "id": "sa-nominal",
-    "title": "〜さ (sustantivo a partir de adjetivo)",
-    "meaning": "Se añade a la raíz de un adjetivo y lo convierte en sustantivo. Expresa una medida o grado, o la cualidad misma, como «-ura» o «-eza» en español (altura, belleza).",
-    "connection": "Raíz de adjetivo-い／adjetivo-な + さ (いい → よさ)",
+    "meaning": "「さ」 tiene dos usos: unido a la raíz de un adjetivo forma un sustantivo de grado o cualidad (高さ, 優しさ, 便利さ); y como partícula coloquial desenfadada puede cerrar una frase con una afirmación despreocupada (大丈夫さ), formar una pregunta de reproche, intercalarse para llamar la atención (あのさ) o transmitir lo que se ha oído (ってさ).",
+    "connection": "Raíz de adjetivo い / な + さ (nominalización); sustantivo, raíz de adjetivo な o forma simple de verbo / adjetivo い + さ (partícula final)",
     "senses": [
       {
         "label": "Medida / grado",
@@ -119,13 +117,50 @@
           "Al enfermarme, me di cuenta de lo importante que es la salud.",
           "Lo duro que es este trabajo no se entiende hasta que lo haces."
         ]
+      },
+      {
+        "label": "Afirmación despreocupada",
+        "meaning": "Saca una conclusión sin darle importancia. El tono es relajado, a veces indiferente o un poco fanfarrón. Equivale a «..., ya está» o «claro que sí».",
+        "connection": "Sustantivo・raíz de adjetivo-な + さ (sin 「だ」); forma simple de verbo・adjetivo-い + さ. Frecuentes: 「なんとかなるさ」, 「平気さ」",
+        "examples": [
+          "Tranquilo. Ya se arreglará.",
+          "¿Eso? Es facilísimo."
+        ]
+      },
+      {
+        "label": "Pregunta de reproche",
+        "meaning": "Con una palabra interrogativa, reclama o replica con molestia. El tono es bastante brusco, como «¿qué tiene de...?» o «¿por qué...?».",
+        "connection": "Palabra interrogativa + ... + さ／のさ. Frecuentes: 「何さ」, 「どうしてなのさ」",
+        "examples": [
+          "¿Qué es tan gracioso?",
+          "¿Por qué me regañan solo a mí?"
+        ]
+      },
+      {
+        "label": "Muletilla a mitad de frase",
+        "meaning": "Se inserta en una pausa para llamar la atención del oyente o marcar el ritmo, como «oye...» o «pues...». No tiene significado propio. Si se abusa, suena infantil o descuidado.",
+        "connection": "Frase・segmento + さ、. Frecuentes: 「あのさ、」, 「それでさ、」",
+        "examples": [
+          "Oye, ¿me escuchas un momento?",
+          "Pues ayer me encontré con mi profesor en la estación."
+        ]
+      },
+      {
+        "label": "Transmitir rumores",
+        "meaning": "「〜ってさ」 transmite lo que dijo otra persona, con tono ligero. Equivale a «dicen que...» o «he oído que...».",
+        "connection": "Forma simple + ってさ",
+        "examples": [
+          "Dicen que mañana va a llover.",
+          "He oído que Tanaka va a dejar la empresa."
+        ]
       }
     ],
     "notes": [
       "El sustantivo de 「いい」 es 「よさ」: ✕「いさ」→ ○「よさ」; igualmente 「かっこいい」→「かっこよさ」.",
-      "Para preguntar por una medida se usa normalmente el extremo “grande”: para la altura o la longitud se dice 「高さはどのくらいですか」「長さは？」, no ✕「低さはどのくらい」. 「低さ」 y 「短さ」 solo se usan para recalcar lo bajo o corto que es algo (「金利の低さ」).",
       "「〜み」 solo se une a unos pocos adjetivos, así que no lo generalices: ✕「長み」「優しみ」→ ○「長さ」「優しさ」. Las palabras que admiten ambos cambian de sentido: 「重さ」 es el peso, 「重み」 es la sensación de peso o importancia.",
-      "Con 「静か」 lo habitual es 「静けさ」: 「夜の静けさ」 suena mucho más natural que 「静かさ」."
+      "Tras sustantivos y adjetivos な, 「さ」 se une directamente, sin 「だ」: ✕「学生ださ」→ ○「学生さ」.",
+      "El tono es informal y algo despreocupado. Decir 「大丈夫さ」 o 「簡単さ」 a un jefe, cliente o mayor suena desdeñoso y descortés; en contextos formales se dice 「大丈夫です」.",
+      "Meter 「あのさ」 o 「それでさ」 a cada rato suena infantil y poco serio, sobre todo en entrevistas y conversaciones de negocios. Sustitúyelos por 「あの、」 o 「それで、」."
     ],
     "scenes": {
       "daily": [
@@ -140,9 +175,19 @@
           "example": "La belleza del monte Fuji no se puede describir con palabras."
         },
         {
-          "title": "Hablando del tiempo",
-          "description": "Charlas con un vecino en invierno.",
-          "example": "El frío de este año es especial, ¿verdad?"
+          "title": "Animar a un amigo",
+          "description": "Un amigo suspendió un examen y lo animas sin dramatizar.",
+          "example": "No te preocupes. Habrá otra oportunidad."
+        },
+        {
+          "title": "Empezar una charla con un amigo",
+          "description": "Para abrir la conversación con un buen amigo.",
+          "example": "Oye, ¿estás libre este fin de semana?"
+        },
+        {
+          "title": "Viendo anime",
+          "description": "Un personaje masculino habla con seguridad.",
+          "example": "Déjamelo a mí. Es pan comido."
         }
       ],
       "work": [
@@ -155,10 +200,16 @@
           "title": "Informar de un problema",
           "description": "Explicas a tu jefe lo grave que es un problema.",
           "example": "Todos deberíamos ser conscientes de la gravedad del problema."
+        },
+        {
+          "title": "Un veterano consuela a un novato",
+          "description": "Después del trabajo, en privado, un compañero veterano consuela a un novato que se equivocó. No es un contexto formal.",
+          "example": "Bueno, son cosas que pasan."
         }
       ]
     },
-    "etymology": "「さ」 es un antiguo sufijo que forma sustantivos a partir de raíces de adjetivos; 「寒さ」 y 「長さ」 ya existían en japonés clásico. Hoy casi cualquier adjetivo-い admite 「さ」, así que es muy productivo.",
+    "etymology": "El 「さ」 nominalizador es un sufijo antiguo que se une a la raíz del adjetivo para formar sustantivos; ya existían 「寒さ」 y 「長さ」 en japonés clásico, y hoy casi cualquier adjetivo い puede llevarlo. El origen del 「さ」 final de frase es discutido, pero se piensa que se desarrolló en el habla coloquial de Edo (Tokio) en la época moderna temprana, y conserva un tono informal y ligero.",
+    "formation": "Los dos 「さ」 tienen orígenes distintos, pero ambos giran en torno a “sacar algo con ligereza”. 「さ」 nominalizador: la raíz del adjetivo expresa la cualidad misma (「高い」 → 「高」), y 「さ」 la convierte en “el grado / la cualidad de ser ...”. Esto da primero un sentido de “medida”: 「高さ」 = altura, por eso se puede preguntar 「高さはどのくらい」; al abstraer el “grado” se obtiene la cualidad misma: 「優しさ」 es la cualidad de la amabilidad. La raíz de un adjetivo な ya es casi un sustantivo, así que con 「さ」 también da grado (「便利さ」). El 「さ」 final se pega directamente a una oración o cláusula y, tras sustantivo o adjetivo な, ocupa el lugar de 「だ」 (「平気さ」). “Lanza las palabras con ligereza al oyente”: ni insiste en informar como 「よ」 ni pide acuerdo como 「ね」, por lo que la afirmación pierde la dureza de 「だ」 y queda como un “pues claro / ya ves” despreocupado. El mismo gesto al final de una frase con palabra interrogativa se vuelve una réplica impaciente (「何さ」); intercalado entre cláusulas solo queda una pausa que llama la atención (「あのさ」); y tras la cita 「って」 suelta lo que se ha oído, indicando referencia de oídas (「ってさ」).",
     "similar": [
       {
         "title": "〜み (sustantivación de adjetivos)",
@@ -167,9 +218,20 @@
       {
         "title": "〜こと (nominalizador)",
         "explanation": "Significado cercano: ambos pueden convertir un adjetivo en un elemento nominal. 「〜こと」 nominaliza todo el hecho de “que algo sea ...”, mientras que 「〜さ」 toma solo el grado de la cualidad: 「彼が優しいことは知っている」 (sé que es amable) / 「彼の優しさに感動した」 (me conmovió su amabilidad)."
+      },
+      {
+        "title": "〜よ",
+        "explanation": "Ambas van al final de la oración y expresan tu propio juicio al oyente. 「よ」 se centra en comunicar con claridad una información nueva; 「さ」 es más informal, con un aire relajado de «¿no es obvio?», no insiste en informar y es aún menos adecuada que 「よ」 con superiores."
+      },
+      {
+        "title": "〜ね",
+        "explanation": "「ね」 busca la conformidad o confirmación del oyente; con 「さ」 el hablante enuncia su conclusión a la ligera, sin pedir acuerdo. Como muletilla a mitad de frase, 「あのね」 es más suave que 「あのさ」 y la usan más las mujeres y quien habla con niños."
+      },
+      {
+        "title": "〜ぞ・〜ぜ (partículas finales)",
+        "explanation": "Ambas son aseveraciones finales informales y de tono masculino. 「ぞ／ぜ」 suena firme y enérgica, con matiz de advertencia o arenga; 「さ」 resulta ligera, desenfadada e incluso despreocupada (「平気さ」)."
       }
-    ],
-    "formation": "Si a un adjetivo se le quita la terminación, la raíz expresa la cualidad en sí (「高い」→「高」). El sufijo 「さ」 convierte esa cualidad en sustantivo con el sentido de “el grado de ..., la cualidad de ...”. Como transforma el adjetivo en un sustantivo “medible”, el primer significado es el de escala: 「高さ」 = el grado de altura = la altura, y por eso se puede preguntar 「高さはどのくらい」. Si se abstrae aún más ese “grado”, se obtiene la cualidad o el rasgo en sí: 「優しさ」 = la amabilidad como virtud, algo que puede conmover o comprenderse. La raíz de los adjetivos な ya es de por sí nominal, y al añadir 「さ」 también adquiere el sentido de “grado”, como en 「便利さ」「大切さ」. Como 「さ」 se une a casi cualquier adjetivo, es muy productivo."
+    ]
   },
   {
     "id": "garu-third-person",
@@ -904,7 +966,6 @@
   },
   {
     "id": "ga-suru-sense",
-    "title": "〜がする (sensación)",
     "meaning": "Expresa un sonido, olor o sabor que se percibe con los sentidos, o una sensación física o mental.",
     "connection": "Sustantivos como 音／声／匂い／味／香り／気 + がする",
     "senses": [
@@ -991,88 +1052,6 @@
       }
     ],
     "formation": "En su sentido más básico, 「する」 es muy amplio: además de “hacer”, puede indicar que un fenómeno aparece o existe. En «sustantivo + が + する», 「が」 marca como sujeto la propia sensación (un sonido, un olor, un sabor, una sensación), y 「する」 indica que “se ha producido”. Así, 「音がする」 significa literalmente “se produce un sonido”: el hablante solo lo percibe de forma pasiva, sin ningún sentido de “hacer”. Si se sustituye la sensación por 「気」 (ánimo, sensación), se obtiene 「気がする」 = surge una sensación en la mente → “tengo la impresión de que ...”. Precisamente porque el sujeto es la sensación en sí, una persona no puede ocupar el lugar de 「が」, ni se puede cambiar a 「を」."
-  },
-  {
-    "id": "ku-suru-change",
-    "title": "〜くする・〜にする (hacer cambiar)",
-    "meaning": "Alguien cambia algo a propósito a cierto estado: «hacer (más)...», «volver...».",
-    "connection": "Raíz de adjetivo-い + くする; raíz de adjetivo-な／sustantivo + にする",
-    "senses": [
-      {
-        "label": "Adjetivos-い",
-        "meaning": "Cambiar a propósito la cualidad o el estado de algo: «poner más...», «hacer más...». Es el par de 「〜くなる」 (cambio natural).",
-        "connection": "Raíz de adjetivo-い + くする (明るくする・小さくする・短くする)",
-        "examples": [
-          "Iluminé más la habitación.",
-          "Baje un poco el volumen, por favor.",
-          "Quiero cortarme el pelo corto."
-        ]
-      },
-      {
-        "label": "Adjetivos-な",
-        "meaning": "Dejar algo de cierta manera, o pedir a alguien que se mantenga así. 「静かにしてください」 es una petición muy común.",
-        "connection": "Raíz de adjetivo-な + にする (きれいにする・静かにする・大切にする)",
-        "examples": [
-          "En la biblioteca, guarden silencio, por favor.",
-          "Limpiemos la habitación entre todos.",
-          "Cuídese mucho."
-        ]
-      }
-    ],
-    "notes": [
-      "El cambio provocado por alguien usa 「〜くする」 (objeto con 「を」); el cambio natural usa 「〜くなる」 (sujeto con 「が」). Si eliges mal, cambia el sentido: 「部屋を暖かくした」 (caldeé la habitación) / 「部屋が暖かくなった」 (la habitación se caldeó).",
-      "Los adjetivos な llevan 「に」, no 「く」: ✕「静かくしてください」→ ○「静かにしてください」. 「きれい」 y 「嫌い」 también son adjetivos な: ✕「きれいくする」→ ○「きれいにする」.",
-      "「いい」 pasa a 「よく」: ✕「いくする」→ ○「よくする」; 「かっこいい」→「かっこよくする」.",
-      "「静かにしてください」 es directo; con clientes, superiores o desconocidos en lugares públicos suena brusco. Se puede decir 「お静かにお願いします」.",
-      "«Sustantivo + にする» también puede significar “decidir, elegir”: 「コーヒーにします」 es “tomaré café”, no “convertir algo en café”."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "En la peluquería",
-          "description": "Le dices al peluquero qué corte quieres.",
-          "example": "Córteme el flequillo un poco más corto, por favor."
-        },
-        {
-          "title": "Viendo la tele en casa",
-          "description": "La tele está muy alta y le pides a alguien que la baje.",
-          "example": "Bájale un poco más el volumen a la tele."
-        },
-        {
-          "title": "Entre amigos",
-          "description": "Dos amigos se pelearon y les pides que hagan las paces.",
-          "example": "No se peleen y llévense bien, ¿sí?"
-        }
-      ],
-      "work": [
-        {
-          "title": "Corregir un documento",
-          "description": "Tu jefe te pide que hagas un documento más fácil de entender.",
-          "example": "Haga este documento más sencillo, por favor."
-        },
-        {
-          "title": "Mejorar un producto",
-          "description": "Explicas en una reunión cómo se ha mejorado un producto.",
-          "example": "El nuevo modelo lo hicimos más ligero que el anterior."
-        }
-      ]
-    },
-    "etymology": "「〜く」 y 「〜に」 son las formas adverbiales de los adjetivos. Seguidas de 「する」 (hacer), significan «dejar algo de esa manera». Junto con 「なる」 forman el par cambio natural / cambio intencional.",
-    "similar": [
-      {
-        "title": "〜くなる・〜になる",
-        "explanation": "Mismo origen: usan el mismo 「〜く／〜に」. 「〜くなる」 es un cambio natural, 「〜くする」 un cambio provocado: 「朝になって部屋が明るくなった」 / 「電気をつけて部屋を明るくした」."
-      },
-      {
-        "title": "〜にする (decisión / elección)",
-        "explanation": "Mismo origen: también es «sustantivo + にする». 「コーヒーにします」 significa “decidirse por ...”, mientras que 「部屋を事務所にする」 significa “convertir ... en ...”. La clave para distinguirlos es si hay un objeto que se transforma, marcado con 「〜を」."
-      },
-      {
-        "title": "〜ようにする",
-        "explanation": "Mismo origen: 「にする」 detrás de 「〜よう」, que expresa esforzarse para que un comportamiento se vuelva costumbre: 「毎日野菜を食べるようにしている」. Esta estructura, en cambio, modifica directamente la naturaleza o el estado de algo."
-      }
-    ],
-    "formation": "Las formas adverbiales 「〜く」 (adjetivos い) y 「〜に」 (adjetivos な y sustantivos) significan “de modo que quede ...” y modifican al verbo siguiente; 「する」 indica que una persona “hace” algo a propósito. Juntos: “hacer que algo quede en cierto estado”, de modo que el sujeto es quien actúa y lo que se cambia lleva 「を」. Si se sustituye 「する」 por 「なる」, el mismo 「〜く／〜に」 pasa a significar “volverse ... de forma natural”, y ambos forman la pareja simétrica de cambio provocado / cambio natural. La petición 「静かにしてください」 significa literalmente “póngase (usted mismo) en estado de silencio”, por eso también sirve para pedir a alguien que mantenga cierto estado."
   },
   {
     "id": "mama-unchanged",
@@ -1262,7 +1241,6 @@
   },
   {
     "id": "nakute-reason",
-    "title": "〜なくて (causa)",
     "meaning": "Usa la forma て negativa para expresar una causa: «como no...», «por no...».",
     "connection": "Forma ない del verbo → 〜なくて; adjetivo-い → 〜くなくて; sustantivo + が + なくて",
     "senses": [

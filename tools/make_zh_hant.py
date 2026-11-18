@@ -36,8 +36,6 @@ def main():
         out = []
         for p in base:
             item = {"id": p["id"]}
-            if re.search(r"[（(][^）)]*[\u4e00-\u9fff]", p["title"]):
-                item["title"] = conv(p["title"])
             out.append({
                 **item,
                 "meaning": conv(p["meaning"]),

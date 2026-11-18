@@ -15,6 +15,16 @@ cc = OpenCC("s2twp")
 
 # key(简体中文) : (en, ko, es, vi)
 S = {
+    "%lld 个没看过": ({"one": "%lld not viewed", "other": "%lld not viewed"}, "%lld개 안 봄", {"one": "%lld sin ver", "other": "%lld sin ver"}, "%lld mẫu chưa xem"),
+    "在例句中出现": ("Appears in examples", "예문에 나옴", "Aparece en ejemplos", "Xuất hiện trong ví dụ"),
+    "对准书页或选一张截图，句子里的语法会被标出来。": ("Point at a page or pick a screenshot, and the grammar in each sentence is marked.", "책 페이지를 비추거나 스크린샷을 고르면 문장 속 문법이 표시됩니다.", "Apunta a una página o elige una captura y se marcará la gramática de cada frase.", "Hướng vào trang sách hoặc chọn ảnh chụp màn hình, ngữ pháp trong câu sẽ được đánh dấu."),
+    "快要忘了": ("Fading from Memory", "곧 잊어버릴 문법", "A punto de olvidar", "Sắp quên"),
+    "搜索语法或意思": ("Search grammar or meaning", "문법 또는 의미 검색", "Busca gramática o significado", "Tìm ngữ pháp hoặc ý nghĩa"),
+    "来源与构成": ("Origin & Structure", "유래와 구성", "Origen y estructura", "Nguồn gốc và cấu tạo"),
+    "来源与构成、相近语法对比": ("Origin, structure and similar-grammar comparisons", "유래·구성과 비슷한 문법 비교", "Origen, estructura y comparación con gramática similar", "Nguồn gốc, cấu tạo và so sánh ngữ pháp tương tự"),
+    "相近语法": ("Similar Grammar", "비슷한 문법", "Gramática similar", "Ngữ pháp tương tự"),
+    "跳到用法": ("Jump to usage", "용법으로 이동", "Ir al uso", "Đến cách dùng"),
+    "这些语法你看过，按遗忘曲线快要忘了，再看一眼吧。": ("You've seen these before and, by the forgetting curve, they're about to slip away. Take another look.", "본 적 있는 문법이지만 망각 곡선상 곧 잊어버릴 때입니다. 한 번 더 보세요.", "Ya las viste, pero según la curva del olvido estás a punto de olvidarlas. Échales otro vistazo.", "Bạn đã xem những mẫu này, theo đường cong quên lãng thì sắp quên rồi. Xem lại một chút nhé."),
     "扫描": ("Scan", "스캔", "Escanear", "Quét"),
     "语法库": ("Grammar", "문법 사전", "Gramática", "Ngữ pháp"),
     "收藏": ("Favorites", "즐겨찾기", "Favoritos", "Yêu thích"),
@@ -238,6 +248,16 @@ S = {
 
 # 缅甸语（my，Myanmar Unicode）。缅甸语没有复数变化，统一用普通字符串。
 MY = {
+    "%lld 个没看过": "မကြည့်ရသေး %lld ခု",
+    "在例句中出现": "ဥပမာဝါကျများတွင် ပါဝင်သည်",
+    "对准书页或选一张截图，句子里的语法会被标出来。": "စာမျက်နှာကို ချိန်ပါ သို့မဟုတ် ဖန်သားပြင်ဓာတ်ပုံ ရွေးပါ၊ ဝါကျထဲရှိ သဒ္ဒါများကို အမှတ်အသားပြပေးမည်။",
+    "快要忘了": "မေ့တော့မည့် သဒ္ဒါ",
+    "搜索语法或意思": "သဒ္ဒါ သို့မဟုတ် အဓိပ္ပာယ် ရှာရန်",
+    "来源与构成": "မူလအစနှင့် ဖွဲ့စည်းပုံ",
+    "来源与构成、相近语法对比": "မူလအစ၊ ဖွဲ့စည်းပုံနှင့် ဆင်တူသဒ္ဒါ နှိုင်းယှဉ်ချက်",
+    "相近语法": "ဆင်တူသဒ္ဒါ",
+    "跳到用法": "အသုံးပြုပုံသို့ သွားရန်",
+    "这些语法你看过，按遗忘曲线快要忘了，再看一眼吧。": "ဤသဒ္ဒါများကို ကြည့်ဖူးပြီး မေ့လျော့မှုမျဉ်းအရ မေ့တော့မည်ဖြစ်၍ နောက်တစ်ကြိမ် ကြည့်လိုက်ပါ။",
     "扫描": "စကင်ဖတ်",
     "语法库": "သဒ္ဒါ",
     "收藏": "အကြိုက်ဆုံး",

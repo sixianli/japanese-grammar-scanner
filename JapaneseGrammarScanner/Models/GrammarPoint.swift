@@ -18,6 +18,8 @@ struct GrammarPoint: Codable, Identifiable, Hashable {
     /// 一个义项（用法）：意思讲解 + 接续讲解 + 最常见例句（≤3）。
     struct Sense: Codable, Hashable {
         var label: String
+        /// 该义项所属的 JLPT 等级（同形语法合并后，各义项等级可能不同；缺省 = 语法点等级）。
+        var level: JLPTLevel?
         var meaning: String
         var connection: String
         var examples: [Example]
@@ -93,24 +95,20 @@ struct GrammarPoint: Codable, Identifiable, Hashable {
         scannable = try c.decodeIfPresent(Bool.self, forKey: .scannable) ?? true
     }
 
-    /// 标题中的说明部分，如「〜そうだ（传闻）」的「（传闻）」；没有则为空。
-    var titleNote: String {
-        if let r = title.range(of: "（") ?? title.range(of: " (") { return String(title[r.lowerBound...]).trimmingCharacters(in: .whitespaces) }
-        return ""
-    }
-
     /// 标题中的日语形式（优先使用常见汉字写法）。
     var titleForm: String {
         if let k = kanji, !k.isEmpty { return k }
-        let note = titleNote
-        return note.isEmpty ? title : String(title.dropLast(note.count)).trimmingCharacters(in: .whitespaces)
+        return title
     }
 
-    /// 列表中显示的标题：常见写法 + 说明。
-    var displayTitle: String {
-        let note = titleNote
-        return note.isEmpty ? titleForm : titleForm + " " + note
-    }
+    /// 列表与导航栏中显示的标题。
+    var displayTitle: String { titleForm }
+
+    /// 义项的等级（未标注时为语法点等级）。
+    func level(of sense: Sense) -> JLPTLevel { sense.level ?? level }
+
+    /// 本语法点涉及的全部等级（合并后的语法点可能横跨多个等级），从低到高。
+    var levels: [JLPTLevel] { Array(Set([level] + senses.compactMap(\.level))).sorted() }
 
     /// 所有义项的例句。
     var allExamples: [Example] { senses.flatMap(\.examples) }

@@ -1,35 +1,24 @@
 import SwiftUI
 
+/// JLPT 等级标签：灰色描边小标签，只靠文字区分等级（不再用五种颜色）。
 struct LevelBadge: View {
     let level: JLPTLevel
+    var small = false
 
     var body: some View {
         Text(level.rawValue)
-            .font(.caption2.weight(.bold))
-            .foregroundStyle(.white)
-            .padding(.horizontal, 6)
-            .padding(.vertical, 2)
-            .background(level.color, in: Capsule())
+            .font(small ? .system(size: 9, weight: .semibold) : .caption2.weight(.semibold))
+            .monospacedDigit()
+            .foregroundStyle(.secondary)
+            .padding(.horizontal, small ? 4 : 5)
+            .padding(.vertical, small ? 0.5 : 1)
+            .overlay(Capsule().strokeBorder(Color.secondary.opacity(0.45), lineWidth: 0.75))
+            .fixedSize()
+            .accessibilityLabel(Text(verbatim: "JLPT \(level.rawValue)"))
     }
 }
 
-struct LevelLegend: View {
-    let levels: [JLPTLevel]
-
-    var body: some View {
-        HStack(spacing: 10) {
-            ForEach(levels) { level in
-                HStack(spacing: 4) {
-                    RoundedRectangle(cornerRadius: 2).fill(level.color.opacity(0.6)).frame(width: 12, height: 8)
-                    Text(level.rawValue).font(.caption2)
-                }
-            }
-        }
-        .foregroundStyle(.secondary)
-    }
-}
-
-/// 出题频率标签：常考 / 考过（少考不显示）；点击显示数据来源说明
+/// 出题频率标签：常考（主色浅底）/ 考过（灰）；少考不显示。点击显示数据来源说明。
 struct FrequencyBadge: View {
     let frequency: ExamFrequency
     var compact = false
@@ -40,10 +29,11 @@ struct FrequencyBadge: View {
             Button { showInfo = true } label: {
                 Text(label)
                     .font(compact ? .caption2.weight(.semibold) : .caption.weight(.semibold))
-                    .foregroundStyle(color)
+                    .foregroundStyle(frequency == .high ? Theme.accent : Color.secondary)
                     .padding(.horizontal, compact ? 6 : 8)
-                    .padding(.vertical, compact ? 2 : 3)
-                    .background(color.opacity(0.12), in: Capsule())
+                    .padding(.vertical, compact ? 1.5 : 3)
+                    .background(frequency == .high ? Theme.accentFill : Color(.tertiarySystemFill), in: Capsule())
+                    .fixedSize()
             }
             .buttonStyle(.plain)
             .alert("出题频率", isPresented: $showInfo) {
@@ -60,9 +50,5 @@ struct FrequencyBadge: View {
         case .medium: "考过"
         case .low: nil
         }
-    }
-
-    private var color: Color {
-        frequency == .high ? .red : .secondary
     }
 }

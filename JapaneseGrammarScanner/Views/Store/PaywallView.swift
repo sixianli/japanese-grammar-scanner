@@ -47,11 +47,7 @@ struct PaywallView: View {
                 .font(.system(size: 34, weight: .bold))
                 .foregroundStyle(.white)
                 .frame(width: 76, height: 76)
-                .background(
-                    LinearGradient(colors: [Color(red: 0.91, green: 0.28, blue: 0.33), Color(red: 0.59, green: 0.12, blue: 0.27)],
-                                   startPoint: .topLeading, endPoint: .bottomTrailing),
-                    in: RoundedRectangle(cornerRadius: 20, style: .continuous)
-                )
+                .background(Theme.accent, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
             Text("解锁完整讲解").font(.title.bold())
             Text("扫到不懂的语法，马上看懂。")
                 .font(.body)
@@ -62,12 +58,12 @@ struct PaywallView: View {
 
     private var features: some View {
         VStack(alignment: .leading, spacing: 14) {
-            FeatureRow(icon: "books.vertical.fill", tint: .blue, text: "全部 N5–N1 语法点的完整讲解")
-            FeatureRow(icon: "list.bullet.rectangle.portrait.fill", tint: .orange, text: "按义项分段的用法、接续与例句")
-            FeatureRow(icon: "person.2.wave.2.fill", tint: .green, text: "日常生活与职场的使用场景")
-            FeatureRow(icon: "scroll.fill", tint: .brown, text: "词源与相近语法对比")
-            FeatureRow(icon: "character.book.closed.fill", tint: .purple, text: "例句汉字全部标注假名")
-            FeatureRow(icon: "lock.shield.fill", tint: .gray, text: "完全离线，无广告，无追踪")
+            FeatureRow(icon: "books.vertical.fill", tint: Theme.accent, text: "全部 N5–N1 语法点的完整讲解")
+            FeatureRow(icon: "list.bullet.rectangle.portrait.fill", tint: Theme.accent, text: "按义项分段的用法、接续与例句")
+            FeatureRow(icon: "person.2.wave.2.fill", tint: Theme.accent, text: "日常生活与职场的使用场景")
+            FeatureRow(icon: "scroll.fill", tint: Theme.accent, text: "来源与构成、相近语法对比")
+            FeatureRow(icon: "character.book.closed.fill", tint: Theme.accent, text: "例句汉字全部标注假名")
+            FeatureRow(icon: "lock.shield.fill", tint: Theme.accent, text: "完全离线，无广告，无追踪")
         }
         .padding(18)
         .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 18))
@@ -83,7 +79,7 @@ struct PaywallView: View {
                 Image(systemName: "hourglass")
             }
             .font(.subheadline.weight(.semibold))
-            .foregroundStyle(.orange)
+            .foregroundStyle(Theme.accent)
         case .trialExpired:
             Label("免费试用已结束", systemImage: "hourglass.bottomhalf.filled")
                 .font(.subheadline.weight(.semibold))
@@ -107,7 +103,7 @@ struct PaywallView: View {
                     .padding(.vertical, 12)
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(Color(red: 0.86, green: 0.24, blue: 0.38))
+                .tint(Theme.accent)
             }
 
             if let lifetime = store.lifetimeProduct {
@@ -122,7 +118,7 @@ struct PaywallView: View {
                     .padding(.vertical, 12)
                 }
                 .buttonStyle(.bordered)
-                .tint(Color(red: 0.86, green: 0.24, blue: 0.38))
+                .tint(Theme.accent)
             } else {
                 ProgressView().padding()
             }
@@ -157,10 +153,9 @@ private struct FeatureRow: View {
     var body: some View {
         HStack(spacing: 12) {
             Image(systemName: icon)
-                .font(.system(size: 14, weight: .bold))
-                .foregroundStyle(.white)
-                .frame(width: 30, height: 30)
-                .background(tint, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                .font(.system(size: 17, weight: .medium))
+                .foregroundStyle(tint)
+                .frame(width: 28)
             Text(text).font(.body)
             Spacer(minLength: 0)
         }
@@ -178,7 +173,7 @@ struct LockedContentCard: View {
                 .font(.system(size: 22, weight: .bold))
                 .foregroundStyle(.white)
                 .frame(width: 48, height: 48)
-                .background(Color(red: 0.86, green: 0.24, blue: 0.38), in: Circle())
+                .background(Theme.accent, in: Circle())
             Text("解锁完整讲解").font(.title3.bold())
             Text("用法、例句、使用场景、词源、相近语法对比")
                 .font(.subheadline)
@@ -199,7 +194,7 @@ struct LockedContentCard: View {
                     .padding(.vertical, 6)
             }
             .buttonStyle(.borderedProminent)
-            .tint(Color(red: 0.86, green: 0.24, blue: 0.38))
+            .tint(Theme.accent)
         }
         .padding(22)
         .frame(maxWidth: .infinity)

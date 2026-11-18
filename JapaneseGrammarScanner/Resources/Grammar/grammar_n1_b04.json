@@ -495,7 +495,7 @@
         "explanation": "意思相近，都可表示“即使……，（至少）也……”。「優勝できないにしても、ベスト8には入りたい」也能说，但「にしても」只是一般的让步；「ないまでも」明确把前项当作够不着的高标准，后项是退而求其次的最低线。"
       },
       {
-        "id": "kurai-keishi",
+        "id": "kurai-approximately",
         "title": "〜くらい・〜ぐらい（轻视・最低限度）",
         "explanation": "意思相近，常一起使用。「〜ぐらい（は）」直接点出“至少这点事”这个最低限度（「電話ぐらいしてほしい」）；「〜ないまでも」先举出达不到的高标准，再引出最低限度：「毎日とは言わないまでも、電話ぐらいしてほしい」。"
       },
@@ -514,9 +514,8 @@
       "言うまでもなく、健康は大切だ。"
     ],
     "subsumes": [
-      "made-even",
       "made-until",
-      "demo-example"
+      "demo-but"
     ]
   },
   {
@@ -651,9 +650,9 @@
       "雨が降らないでほしい。"
     ],
     "subsumes": [
-      "temo-even-if",
+      "question-word-temo",
       "naide-without",
-      "demo-example"
+      "demo-but"
     ]
   },
   {
@@ -794,11 +793,6 @@
         "explanation": "同源语法，同是「ながら」。「〜ながら」接动词ます形，表示两个动作同时进行（「音楽を聞きながら勉強する」）；「〜ながらに」保留“保持原样”的古义，只用于「生まれ・涙・昔」等固定词。"
       },
       {
-        "id": "nagara-mo",
-        "title": "〜ながら（も）（逆接）",
-        "explanation": "同源语法。「〜ながら（も）」表示逆接“虽然……但是”（「狭いながらも楽しい我が家」）；「〜ながらに」表示保持某种状态，没有转折义。"
-      },
-      {
         "id": "mama-unchanged",
         "title": "〜まま",
         "explanation": "意思相近，都表示保持原样。「〜まま」可自由接动词た形、「名词＋の」（「靴のまま入る」）；「〜ながらに」只限固定搭配，更书面，常带怀念、赞赏色彩。"
@@ -816,7 +810,6 @@
     ],
     "subsumes": [
       "nagara",
-      "nagara-mo",
       "ni-suru-decide"
     ]
   },
@@ -954,9 +947,7 @@
       "鍵をなくしてしまった。"
     ],
     "subsumes": [
-      "te-wa-condition",
-      "te-wa-negative-condition",
-      "te-wa-repetition"
+      "te-wa-negative-condition"
     ]
   },
   {
@@ -1235,7 +1226,7 @@
   },
   {
     "id": "nari-immediately",
-    "title": "〜なり（一…就）",
+    "title": "〜なり",
     "reading": "なり",
     "level": "N1",
     "scannable": true,
@@ -1729,10 +1720,8 @@
       "駅で友達にあって話をした。"
     ],
     "subsumes": [
-      "te-wa-condition",
       "te-wa-negative-condition",
-      "te-wa-repetition",
-      "temo-even-if"
+      "question-word-temo"
     ]
   },
   {
@@ -1820,7 +1809,7 @@
         "explanation": "意思相近，都用来提起某人某事并作负面评价。「〜ときたら」直接提出话题抒发不满（「うちの夫ときたら」），口语色彩浓；「〜に至っては」是先整体叙述，再举出其中最极端的一例，更书面。"
       },
       {
-        "id": "made-even",
+        "id": "made-until",
         "title": "〜まで（甚至）",
         "explanation": "意思相近，都表示程度超出预想。「〜まで」直接接在名词后表示“连……都”（「子どもまで笑った」）；「〜に至っては」把最极端的例子单独提出来作话题，后句再说明有多严重。"
       },
@@ -1843,11 +1832,9 @@
     ],
     "subsumes": [
       "ni-itaru",
-      "te-wa-condition",
       "te-wa-negative-condition",
-      "te-wa-repetition",
-      "tte-quote",
-      "te-de-reason"
+      "tte-quote-topic",
+      "te-form-sequence"
     ]
   },
   {
@@ -1999,7 +1986,7 @@
       "町の至る所に花が咲いている。"
     ],
     "subsumes": [
-      "tte-quote"
+      "tte-quote-topic"
     ]
   }
 ]

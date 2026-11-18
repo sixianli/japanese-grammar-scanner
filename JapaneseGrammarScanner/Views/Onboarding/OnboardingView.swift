@@ -104,7 +104,8 @@ struct OnboardingView: View {
 }
 
 enum Brand {
-    static let red = Color(red: 0.84, green: 0.20, blue: 0.16)
+    /// 统一使用主色
+    static var red: Color { Theme.accent }
     static let paper = Color(red: 1.0, green: 0.988, blue: 0.96)
     static let marker = Color(red: 1.0, green: 0.80, blue: 0.27)
 }
@@ -173,7 +174,7 @@ private struct ViewfinderCorners: Shape {
 private struct TextLine: View {
     let text: String
     var highlight: String? = nil
-    var color: Color = .blue
+    var color: Color = Theme.accent
 
     var body: some View {
         HStack(spacing: 0) {
@@ -197,9 +198,9 @@ private struct BookPage: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             TextLine(text: "駅に着いたとき、", highlight: nil)
-            TextLine(text: "雨が降りそうだった。", highlight: "そうだ", color: .blue)
-            TextLine(text: "傘を買っておいた。", highlight: "ておい", color: .blue)
-            TextLine(text: "道に迷ってしまった。", highlight: "てしまっ", color: .blue)
+            TextLine(text: "雨が降りそうだった。", highlight: "そうだ", color: Theme.accent)
+            TextLine(text: "傘を買っておいた。", highlight: "ておい", color: Theme.accent)
+            TextLine(text: "道に迷ってしまった。", highlight: "てしまっ", color: Theme.accent)
         }
         .padding(22)
         .background(Brand.paper, in: RoundedRectangle(cornerRadius: 16))
@@ -247,17 +248,15 @@ private struct DetailIllustration: View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 8) {
                 Text(verbatim: "〜てしまう").font(.title2.bold())
-                Text(verbatim: "N4").font(.caption2.bold()).foregroundStyle(.white)
-                    .padding(.horizontal, 6).padding(.vertical, 2).background(Color.blue, in: Capsule())
+                LevelBadge(level: .n4)
             }
-            ForEach(Array([("lightbulb.max.fill", Color.orange), ("list.bullet.rectangle.portrait.fill", .blue),
-                           ("person.2.wave.2.fill", .green), ("scroll.fill", .brown), ("arrow.triangle.branch", .purple)].enumerated()),
+            ForEach(Array([("lightbulb.max.fill", Color.secondary), ("list.bullet.rectangle.portrait.fill", .secondary),
+                           ("person.2.wave.2.fill", .secondary), ("scroll.fill", .secondary), ("arrow.triangle.branch", .secondary)].enumerated()),
                     id: \.offset) { i, item in
                 HStack(spacing: 10) {
                     Image(systemName: item.0)
-                        .font(.system(size: 13, weight: .bold)).foregroundStyle(.white)
+                        .font(.system(size: 15, weight: .medium)).foregroundStyle(item.1)
                         .frame(width: 28, height: 28)
-                        .background(item.1, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
                     RoundedRectangle(cornerRadius: 4).fill(Color.secondary.opacity(0.22))
                         .frame(width: CGFloat([150, 180, 130, 165, 140][i]), height: 10)
                 }
@@ -272,13 +271,15 @@ private struct DetailIllustration: View {
 private struct LibraryIllustration: View {
     var body: some View {
         VStack(spacing: 10) {
-            ForEach(Array([("〜ようになる", Color.blue, true), ("〜にもかかわらず", Color.purple, true), ("〜おかげで", Color.orange, false), ("〜たい", Color.green, false)].enumerated()), id: \.offset) { _, row in
+            ForEach(Array([("〜ようになる", JLPTLevel.n4, true), ("〜にもかかわらず", .n3, true), ("〜おかげで", .n3, false), ("〜たい", .n5, false)].enumerated()), id: \.offset) { _, row in
                 HStack {
-                    RoundedRectangle(cornerRadius: 2).fill(row.1).frame(width: 4, height: 28)
-                    Text(verbatim: row.0).font(.headline)
+                    HStack(alignment: .top, spacing: 3) {
+                        Text(verbatim: row.0).font(.headline)
+                        LevelBadge(level: row.1, small: true)
+                    }
                     Spacer()
                     Image(systemName: row.2 ? "star.fill" : "star")
-                        .foregroundStyle(row.2 ? Color.yellow : Color.secondary)
+                        .foregroundStyle(row.2 ? Theme.accent : Color.secondary)
                 }
                 .padding(.horizontal, 14).padding(.vertical, 10)
                 .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 12))

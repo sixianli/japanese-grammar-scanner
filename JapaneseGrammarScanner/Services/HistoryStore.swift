@@ -144,6 +144,34 @@ final class HistoryStore: ObservableObject {
             .map { (id: $0.key, count: $0.value) }
     }
 
+    /// 同形语法合并后，把记录里的旧 id 换成新 id：同一语法点保留最近一次查看、较高的阶段。
+    func migrate(aliases: [String: String]) {
+        let needs = recentGrammarIDs.contains { aliases[$0] != nil }
+            || viewRecords.keys.contains { aliases[$0] != nil }
+            || scans.contains { $0.grammarIDs.contains { aliases[$0] != nil } }
+        guard needs else { return }
+        var seen = Set<String>()
+        recentGrammarIDs = recentGrammarIDs.map { aliases[$0] ?? $0 }.filter { seen.insert($0).inserted }
+        defaults.set(recentGrammarIDs, forKey: Self.viewedKey)
+        var merged: [String: ViewRecord] = [:]
+        for (oldID, r) in viewRecords {
+            let id = aliases[oldID] ?? oldID
+            if let existing = merged[id] {
+                merged[id] = ViewRecord(id: id, firstViewed: min(existing.firstViewed, r.firstViewed),
+                                        lastViewed: max(existing.lastViewed, r.lastViewed), stage: max(existing.stage, r.stage))
+            } else {
+                merged[id] = ViewRecord(id: id, firstViewed: r.firstViewed, lastViewed: r.lastViewed, stage: r.stage)
+            }
+        }
+        viewRecords = merged
+        saveRecords()
+        for i in scans.indices {
+            var s = Set<String>()
+            scans[i].grammarIDs = scans[i].grammarIDs.map { aliases[$0] ?? $0 }.filter { s.insert($0).inserted }
+        }
+        saveIndex()
+    }
+
     private func saveRecords() {
         if let data = try? JSONEncoder().encode(viewRecords) { defaults.set(data, forKey: Self.recordsKey) }
     }

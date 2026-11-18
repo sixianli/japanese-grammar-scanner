@@ -86,7 +86,7 @@ struct ScanHomeView: View {
     // MARK: - 顶部：实时识别到的语法点
 
     private var livePanel: some View {
-        let ids = camera.liveResult.orderedGrammarIDs
+        let ids = library.displayableIDs(camera.liveResult.orderedGrammarIDs)
         return VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Image(systemName: "text.viewfinder")
@@ -98,7 +98,7 @@ struct ScanHomeView: View {
                         .font(.caption.weight(.semibold))
                         .padding(.horizontal, 10)
                         .padding(.vertical, 5)
-                        .background(.white.opacity(0.2), in: Capsule())
+                        .glassBackground(in: Capsule(), interactive: true)
                 }
             }
             if !ids.isEmpty {
@@ -127,7 +127,7 @@ struct ScanHomeView: View {
         }
         .foregroundStyle(.white)
         .padding(12)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 14))
+        .glassBackground(in: RoundedRectangle(cornerRadius: 18, style: .continuous))
         .environment(\.colorScheme, .dark)
         .padding(.horizontal)
         .padding(.top, 8)
@@ -172,7 +172,7 @@ struct ScanHomeView: View {
             Image(systemName: name)
                 .font(.title2)
                 .frame(width: 52, height: 52)
-                .background(.black.opacity(0.45), in: Circle())
+                .glassBackground(in: Circle(), interactive: true)
             Text(label).font(.caption)
         }
         .foregroundStyle(.white)

@@ -89,8 +89,8 @@
   },
   {
     "id": "dake-only",
-    "meaning": "«Solo, solamente». Limita un rango o una cantidad. Puede ir con verbo afirmativo o negativo.",
-    "connection": "Sustantivo / cantidad / forma llana de verbos y adjetivos + だけ",
+    "meaning": "「だけ」 significa «solo, únicamente» y limita el alcance de una persona, cosa, cantidad o acción; también expresa llegar hasta el máximo posible o deseado (todo lo que se quiera, lo más posible, lo suficiente para..., cuanto más... más...).",
+    "connection": "Sustantivo / cuantificador / verbo o adjetivo en forma simple + だけ; verbo en forma たい / potencial + だけ; verbo en forma diccionario + だけの + sustantivo; できるだけ; verbo en forma ば + mismo verbo en forma diccionario + だけ",
     "senses": [
       {
         "label": "Solo, solamente",
@@ -120,12 +120,49 @@
           "Solo estoy mirando. No voy a comprar.",
           "Solo estoy un poco cansado."
         ]
+      },
+      {
+        "label": "Todo lo que quieras",
+        "meaning": "Se repite el mismo verbo: «hacer todo lo que uno quiera». Son frecuentes 「〜たいだけ〜」, 「好きなだけ」 y 「〜られるだけ〜」.",
+        "connection": "Verbo en forma たい／forma potencial + だけ + el mismo verbo; 好きなだけ",
+        "examples": [
+          "Coman todo lo que quieran.",
+          "Llévate todos los que quieras.",
+          "Me llevé a casa todo lo que pude cargar."
+        ]
+      },
+      {
+        "label": "Lo más... posible",
+        "meaning": "「できるだけ」 es una expresión fija que significa «lo más... posible» o «en la medida de lo posible». Se parece a 「なるべく」, pero es más enfática.",
+        "connection": "できるだけ + verbo／adjetivo",
+        "examples": [
+          "Por favor, ven lo antes posible.",
+          "Procuro comer toda la verdura que puedo."
+        ]
+      },
+      {
+        "label": "Suficiente para...",
+        "meaning": "「〜だけの + sustantivo」 significa «... suficiente para...». Se usa mucho en negativo: «no tener ... suficiente para...».",
+        "connection": "Verbo en forma de diccionario + だけの + sustantivo",
+        "examples": [
+          "No tengo dinero suficiente para comprar una casa.",
+          "Él tiene capacidad suficiente para convencer a la gente."
+        ]
+      },
+      {
+        "label": "Cuanto más..., más...",
+        "meaning": "「〜ば〜だけ」 indica que una cosa cambia en proporción a otra. Equivale a «cuanto más..., más...», y resalta que el esfuerzo tiene su recompensa.",
+        "connection": "Verbo en forma ば + el mismo verbo en forma de diccionario + だけ",
+        "examples": [
+          "Cuanto más practicas, mejor lo haces."
+        ]
       }
     ],
     "notes": [
       "Cuando 「だけ」 va con negación, lo negado es ese elemento en sí: 「肉だけ食べない」 = «la carne es lo único que no como». Para decir «solo como carne» hay que usar 「肉だけ食べる」 o 「肉しか食べない」; si los confundes, dices justo lo contrario.",
       "Decir 「これだけですか」 al recibir un regalo, una ayuda o un presupuesto suena a «¿solo esto?» y es muy descortés. Aunque solo quieras confirmar la cantidad, di 「こちらで全部でしょうか」.",
-      "「できるだけ」 significa «lo más posible» y 「好きなだけ」 «todo lo que quieras»; no significan «solo»: 「できるだけ早く来て」 = «ven lo antes que puedas», no «solo puedes venir pronto».",
+      "「〜だけの + sustantivo」 significa “suficiente para...”, no “solo...”: 「家を買うだけのお金はない」 = no tengo dinero suficiente para comprar una casa. Si lo entiendes como “solo el dinero para comprar una casa”, el sentido se invierte.",
+      "「できるだけ」 significa “al máximo posible”, y 「なるべく」, “en la medida de lo posible (si no se puede, no pasa nada)”. Cuando se exige darlo todo se usa 「できるだけ」, que suena más fuerte.",
       "「だけど」 y 「だけれど」 significan «pero», no «solo»: 「雨だけど行く」 = «llueve, pero voy», no «solo lluvia»."
     ],
     "scenes": {
@@ -141,9 +178,14 @@
           "example": "Solo un café, por favor."
         },
         {
-          "title": "Contar un secreto",
-          "description": "Quieres contarle un secreto solo a tu mejor amigo.",
-          "example": "Esto solo te lo digo a ti, ¿eh?"
+          "title": "Atender a invitados",
+          "description": "El anfitrión habla a sus invitados.",
+          "example": "No te preocupes, bebe todo lo que quieras."
+        },
+        {
+          "title": "Hablar de una compra",
+          "description": "Hablas del presupuesto con tu familia.",
+          "example": "Ahora mismo no nos podemos permitir comprar un auto."
         }
       ],
       "work": [
@@ -156,11 +198,21 @@
           "title": "Confirmar asistentes",
           "description": "Informas a tu jefe de quién asistirá a un evento.",
           "example": "Esta vez solo asistiremos el jefe de departamento y yo."
+        },
+        {
+          "title": "Responder a un cliente",
+          "description": "Prometes a un cliente una respuesta rápida.",
+          "example": "Le responderemos lo antes posible."
+        },
+        {
+          "title": "Explicar hasta dónde puedes ayudar",
+          "description": "Un jefe explica lo que está en su mano.",
+          "example": "Haré todo lo que esté en mi mano."
         }
       ]
     },
-    "etymology": "「だけ」 viene del sustantivo 「たけ」 (丈), «altura, longitud». Pasó a significar «toda la cantidad, el límite» y luego, ya sonorizado como 「だけ」, «limitado a esto».",
-    "formation": "「だけ」 viene del sustantivo 「丈（たけ）」, que significaba «estatura, medida, la cantidad completa». Detrás de un sustantivo o de una cantidad indica «la cantidad llega hasta aquí y no más», de ahí «solo, nada más». Como marca el límite superior de un rango y no contiene negación en sí, puede ir seguido tanto de afirmación como de negación, y su tono es bastante objetivo. Ese mismo sentido de «cantidad completa» evolucionó también en otra dirección: 「できるだけ」 (toda la cantidad que puedes → lo más posible) y 「好きなだけ」 (toda la cantidad que quieras → cuanto quieras).",
+    "etymology": "「だけ」 procede del sustantivo 「たけ」 (丈), cuyo sentido original era «altura, longitud»; pasó a significar «la cantidad total, el límite» y después se sonorizó en 「だけ」, con el valor de «limitado a esto». También conservó el uso de «hasta el punto de...».",
+    "formation": "「だけ」 procede del sustantivo 「丈（たけ）」, cuyo sentido original es «altura, medida, la cantidad total». Tras un sustantivo o cuantificador significa «la cantidad llega hasta aquí», de ahí «solo, únicamente». Como habla del límite superior de un ámbito, no contiene negación por sí mismo, así que puede ir con predicados afirmativos o negativos y su tono es bastante objetivo. La misma idea de «cantidad, grado» se desarrolló en otra dirección en los demás sentidos: 「食べたいだけ」 = «la cantidad que se quiere comer» → todo lo que se quiera; 「できるだけ」 = «el grado que se puede alcanzar» → lo más posible; 「〜だけの＋sustantivo」 = «que alcanza el grado de...» → suficiente para...; 「〜ば〜だけ」 empareja dos cantidades → cuanto más se hace, más se obtiene. Es decir, «limitación» es «hasta aquí» y «extensión» es «hasta este grado»; ambas nacen del núcleo «cantidad».",
     "similar": [
       {
         "title": "〜しか〜ない",
@@ -175,15 +227,19 @@
         "explanation": "Mismo origen: 「だけ」 + 「で」 significa «con solo ..., ya ...» y subraya que eso basta para producir el resultado, como en 「見るだけで楽しい」. En esta entrada 「だけ」 solo limita el alcance."
       },
       {
-        "title": "〜だけ (límite)",
-        "explanation": "Mismo origen: el 「だけ」 de 「できるだけ」, 「好きなだけ」 y 「やれるだけやる」 significa «hasta el máximo de ...». Conserva el sentido original de 「だけ」, «la cantidad completa», y no significa «solo»."
+        "title": "〜限り",
+        "explanation": "「できる限り」 y 「できるだけ」 significan lo mismo: “en la medida de lo posible”. 「できる限り」 es más solemne y escrito, frecuente en situaciones formales."
+      },
+      {
+        "title": "〜ば〜ほど",
+        "explanation": "「〜ば〜ほど」 expresa un cambio proporcional general (“cuanto más..., más...”); 「〜ば〜だけ」 subraya más que “se obtiene tanto como se pone”, y tiene un uso más restringido."
       }
     ]
   },
   {
     "id": "kurai-approximately",
-    "meaning": "Detrás de una cantidad o duración significa «unos, más o menos, aproximadamente». 「どのくらい」 pregunta «cuánto».",
-    "connection": "Cantidad + くらい／ぐらい; どの／どれ + くらい",
+    "meaning": "Tras una cantidad o una duración significa «aproximadamente» (「どのくらい」 pregunta «cuánto»); tras un verbo, un adjetivo o un sustantivo pone un ejemplo extremo para indicar grado, o cita algo trivial para expresar desprecio o un mínimo exigible: «al menos esto».",
+    "connection": "Cantidad・duración + くらい／ぐらい; どの／どれ + くらい; verbo・adjetivo en forma simple + くらい; sustantivo + くらい（は）／くらいで",
     "senses": [
       {
         "label": "Aproximadamente (cantidad)",
@@ -212,12 +268,44 @@
           "¿Cuánto se tarda hasta el aeropuerto?",
           "¿Cuánto tiempo llevas estudiando japonés?"
         ]
+      },
+      {
+        "label": "Grado",
+        "meaning": "Usa un ejemplo exagerado para mostrar cuánto: «tanto que...», «hasta el punto de...». 「くらい」 y 「ぐらい」 significan lo mismo.",
+        "connection": "Verbo en forma de diccionario / forma ない, adjetivo い + くらい (「泣きたいくらい」, 「歩けないくらい」)",
+        "examples": [
+          "Estaba tan feliz que me daban ganas de llorar.",
+          "Me dolían tanto los pies que casi no podía caminar.",
+          "Me reí tanto que me dolió la barriga."
+        ]
+      },
+      {
+        "label": "Lo mínimo",
+        "meaning": "Menciona lo más fácil y básico: «por lo menos podrías...». Suele sonar despectivo o de reproche, y va con 「〜なさい」 o 「できる」.",
+        "connection": "Sustantivo / verbo en forma de diccionario + くらい (は)",
+        "examples": [
+          "Por lo menos limpia tu propia habitación.",
+          "Aunque estés ocupado, por lo menos puedes llamar, ¿no?",
+          "Por favor, escriba al menos su nombre."
+        ]
+      },
+      {
+        "label": "Restar importancia: solo...",
+        "meaning": "El hablante considera que el asunto es menor y no merece atención. Equivale a «solo», «una simple...». Suele llevar 「で」: 「〜くらいで」, «solo por algo así». Normalmente tiene un tono de crítica o fastidio.",
+        "connection": "Sustantivo / forma た del verbo + くらいで・ぐらいで (a menudo con 「そんな」「ちょっと」「一度」)",
+        "examples": [
+          "No te rindas solo porque fallaste una vez.",
+          "No puedo faltar al trabajo por un simple resfriado.",
+          "Algo así, hazlo tú mismo."
+        ]
       }
     ],
     "notes": [
       "Para un momento concreto se usa 「ごろ」 y para una duración 「くらい」: 「三時ごろ」 = hacia las tres, 「三時間くらい」 = unas tres horas. ✕「三時間ごろ」.",
       "「くらい」 va detrás del número, no delante: ✕「くらい十人来た」→ ○「十人くらい来た」. Delante de un sustantivo se dice 「十人くらいの学生」.",
-      "Dar una hora o un importe a un cliente o a un superior con 「〜くらい」 suena informal e incluso poco serio. En el trabajo di 「十分ほどお待ちください」, 「約五万円です」 o 「三日程度かかります」."
+      "El 「くらい」 de “como mínimo” tiene un tono de menosprecio o reproche. Decirle a un superior o cliente 「電話くらいしてください」 o 「これくらい分かりますよ」 suena a sermón o a réplica insolente, y es muy descortés.",
+      "Detrás de una cantidad significa «aproximadamente», no «solo»: 「10分くらい待った」 es «esperé unos diez minutos», no «esperé apenas diez minutos».",
+      "「くらいなら」 significa «antes que ...» y es un sentido completamente distinto: 「謝るくらいなら最初からするな」 (si vas a pedir perdón después, mejor no lo hagas desde el principio)."
     ],
     "scenes": {
       "daily": [
@@ -232,9 +320,19 @@
           "example": "Corro unos treinta minutos todas las mañanas."
         },
         {
-          "title": "Hablar de precios",
-          "description": "Un amigo pregunta cuánto costó algo y no lo recuerdas bien.",
-          "example": "Creo que fueron unos veinte mil yenes."
+          "title": "Expresar emoción",
+          "description": "Le cuentas a un amigo cómo te sentiste al recibir un regalo.",
+          "example": "Estaba tan contento que no me lo podía creer."
+        },
+        {
+          "title": "Una madre a su hijo",
+          "description": "La madre le pide al niño que al menos se ocupe de lo suyo.",
+          "example": "Por lo menos haz la tarea tú solo."
+        },
+        {
+          "title": "Consolar a un amigo tras una ruptura",
+          "description": "Animar a un amigo a no hundirse por un tropiezo.",
+          "example": "No te deprimas solo porque te dejaron una vez."
         }
       ],
       "work": [
@@ -247,27 +345,41 @@
           "title": "Informar de asistentes",
           "description": "Informas a tu jefe de cuántas personas vinieron aproximadamente.",
           "example": "A la sesión informativa asistieron unas cincuenta personas."
+        },
+        {
+          "title": "Recordar algo a un compañero",
+          "description": "Un compañero veterano le recuerda a otro los modales básicos.",
+          "example": "Si vas a llegar tarde, por lo menos avisa."
+        },
+        {
+          "title": "Un jefe anima a su equipo",
+          "description": "Le dice que no se desanime por un pequeño error.",
+          "example": "No hace falta desanimarse por un error tan pequeño."
         }
       ]
     },
-    "etymology": "「くらい」 viene del sustantivo 「位（くらい）」, «rango, categoría». Pasó a significar «grado, medida» y luego se usó como partícula de cantidad aproximada. 「ぐらい」 es su forma sonorizada, que se extendió en el habla desde el período Edo.",
-    "formation": "「くらい」 viene del sustantivo 「位（くらい）」, que significaba «rango, posición». Detrás de un número indica «en el rango donde está este valor»: no un punto exacto, sino «alrededor de este nivel», de ahí «aproximadamente». Como mide cantidades, se usa con cosas que se pueden contar o medir, como cantidades y duraciones; una hora del reloj no es una cantidad sino un punto, así que normalmente lleva 「ごろ」. 「どの＋くらい」 es literalmente «¿en qué rango?», por eso pregunta «¿cuánto? / ¿cuánto tiempo?». 「ぐらい」 es la forma sonorizada y significa lo mismo.",
+    "etymology": "「くらい」 procede del sustantivo 「位（くらい）」, que originalmente significaba «rango, categoría» y pasó a «grado, cantidad» y luego a partícula para cantidades aproximadas. 「ぐらい」 es su forma sonorizada, con el mismo significado y totalmente intercambiable.",
+    "formation": "「くらい」 era originalmente el sustantivo 「位（くらい）」, «rango, posición en una escala». 「Xくらい」 significa «el nivel donde está X», usando X como vara para medir el grado. Tras una cantidad no señala un punto exacto sino «alrededor de ese nivel», de ahí «aproximadamente»; como mide cantidades, se une a cifras y duraciones, mientras que las horas del reloj usan 「ごろ」. 「どのくらい」 es «¿en qué nivel?», y sirve para preguntar cuánto o cuánto tiempo. Si la vara es un hecho extremo (「泣きたいくらい」), indica un grado asombroso; si es el acto más fácil y elemental (「電話くらい」), indica «al menos esto se espera», y el trasfondo «ni siquiera llegaste a una vara tan baja» le da un tono despectivo y reprobatorio. Con 「で」 resulta 「〜くらいで」, «solo por algo tan pequeño...»; con 「は」, 「〜くらいは」, «lo demás aparte, al menos este mínimo». Así, «aproximadamente», «grado», «mínimo» y «desprecio» son usos distintos de la misma vara.",
     "similar": [
       {
         "title": "〜ごろ",
         "explanation": "「ごろ」 va detrás de un momento (「七時ごろ」) e indica en torno a esa hora; 「くらい」 va detrás de una cantidad o una duración (「七時間くらい」). En la lengua hablada se oye 「七時くらい」, pero la forma correcta es 「七時ごろ」."
       },
       {
-        "title": "〜ばかり (aproximadamente)",
-        "explanation": "Detrás de un número, 「ばかり」 también significa «unos, más o menos», como en 「十日ばかり休んだ」, pero es más literario y algo anticuado. En el día a día se usa 「くらい」; en contextos formales, 「ほど」 o 「程度」."
+        "title": "〜ほど (grado)",
+        "explanation": "Significado parecido: para expresar grado suelen ser intercambiables (「泣きたいくらい／ほどうれしい」); 「ほど」 transmite más intensidad y es más formal. Para “como mínimo” o con menosprecio, solo sirve 「くらい」."
       },
       {
-        "title": "〜くらい・〜ぐらい (grado)",
-        "explanation": "Mismo origen: detrás de sustantivos y verbos significa «hasta el punto de ...», como en 「泣きたいくらい痛い」 (duele tanto que dan ganas de llorar). Esta entrada solo va con números e indica un valor aproximado."
+        "title": "〜くらいなら",
+        "explanation": "Mismo origen: 「くらい」 + 「なら」 toma lo anterior como “algo de ese grado” para comparar, y significa “antes que..., mejor...” (「謝るくらいなら最初からやるな」)."
       },
       {
-        "title": "〜くらい・〜ぐらい (menosprecio / mínimo)",
-        "explanation": "Mismo origen: 「挨拶くらいしなさい」 (al menos saluda), 「それくらい自分でやって」 (algo tan simple hazlo tú) expresan «un simple ..., como mínimo». Tampoco se refiere a una cantidad aproximada."
+        "title": "〜なんか・〜など (menosprecio)",
+        "explanation": "Ambos pueden expresar menosprecio. 「なんか」 desprecia el objeto mismo (「勉強なんか嫌いだ」) y hiere si se dirige a una persona; 「くらい」 minimiza la magnitud del asunto, con el foco en «ni siquiera algo tan pequeño ...»."
+      },
+      {
+        "title": "〜さえ",
+        "explanation": "「さえ」 significa «incluso, hasta», y cita un ejemplo extremo para expresar sorpresa o disgusto (「挨拶さえしない」: ni siquiera saluda). 「くらい」 significa «al menos esto» y se usa a menudo para exigir un mínimo (「挨拶ぐらいしなさい」)."
       }
     ]
   },
@@ -357,7 +469,7 @@
   {
     "id": "juu-chuu-throughout",
     "meaning": "Leído 「じゅう」 significa «durante todo..., por todo...» o «dentro de (un plazo)». Leído 「ちゅう」 significa «en pleno..., estar haciendo...».",
-    "connection": "Sustantivo + 中 (じゅう／ちゅう)",
+    "connection": "Sustantivo + 中 (ちゅう: 会議中・今週中 / じゅう: 一日中・世界中)",
     "senses": [
       {
         "label": "Todo (tiempo o espacio)",
@@ -375,7 +487,8 @@
         "connection": "今日中・今週中・今月中・午前中 + に",
         "examples": [
           "Entregue este informe antes de que acabe el día, por favor.",
-          "Le respondo antes de que termine la semana."
+          "Le respondo antes de que termine la semana.",
+          "Mientras no estaba, llegó un paquete."
         ]
       },
       {
@@ -385,12 +498,13 @@
         "examples": [
           "El jefe de departamento está ahora en una reunión.",
           "No usen el móvil durante la clase, por favor.",
-          "Esta tienda abre las 24 horas."
+          "Esta calle está en obras y no se puede pasar."
         ]
       }
     ],
     "notes": [
-      "Un cartel de tienda con 「準備中」 significa «preparando, todavía cerrado»; el que significa «abierto» es 「営業中」. 「休憩中」 y 「会議中」 también quieren decir «ahora no es buen momento», así que no los tomes como una invitación a entrar.",
+      "El sentido de “todo el ámbito” se lee obligatoriamente 「じゅう」: ✕「いちにちちゅう」「せかいちゅう」→○「いちにちじゅう」「せかいじゅう」. Si lo lees mal, el oyente entenderá “en proceso de”.",
+      "「午前中」 se lee 「ごぜんちゅう」 y significa “en algún momento de la mañana”, no “toda la mañana”. Para decir “toda la mañana” usa 「午前中ずっと」.",
       "「〜中（ちゅう）」 solo va detrás de sustantivos, no directamente de verbos: ✕「食べる中」→ ○「食事中」 o 「食べている」.",
       "「〜中（じゅう）」 y 「〜の中（なか）」 no significan lo mismo: 「家中（いえじゅう）探した」 = busqué por toda la casa; 「家の中で探した」 = busqué dentro de la casa.",
       "Cuando tu jefe dice 「今日中に」, es un plazo: «antes de que acabe hoy (normalmente antes de salir del trabajo)», no «en algún momento de hoy». Dejarlo para el día siguiente se considera faltar a tu palabra."
@@ -411,6 +525,11 @@
           "title": "Buscar algo",
           "description": "No encuentras las llaves y has buscado por toda la casa.",
           "example": "He buscado por toda la casa, pero no aparecen las llaves."
+        },
+        {
+          "title": "Contestar el teléfono",
+          "description": "Un familiar dice que la persona no puede ponerse.",
+          "example": "Lo siento, mi hermano se está bañando ahora."
         }
       ],
       "work": [
@@ -423,16 +542,17 @@
           "title": "Indicar un plazo",
           "description": "Te comprometes a terminar algo dentro de un plazo.",
           "example": "Le enviaremos el presupuesto antes de que termine la semana."
+        },
+        {
+          "title": "Fijar un plazo",
+          "description": "Prometes terminar algo dentro de un plazo.",
+          "example": "Le enviaré el presupuesto a lo largo del día de mañana."
         }
       ]
     },
-    "etymology": "「中」 es un préstamo del chino. La lectura 「ちゅう」 conserva el sentido de «medio, dentro de», que se amplió a «en curso». 「じゅう」 es una variante sonorizada que significa «por todo el ámbito».",
+    "etymology": "「中」 es una palabra de origen chino. 「ちゅう」 es la lectura on y conserva el sentido chino de “dentro de, en medio de”. 「じゅう」 es una versión sonora de esa lectura, y en japonés desarrolló el sentido propio de “por todo el ámbito”.",
     "formation": "「中」 significa originalmente «centro, interior». Con la lectura 「ちゅう」 conserva la idea de «estar dentro de ...»: detrás de sustantivos de acción como 「会議」 o 「授業」 significa «dentro de una reunión» → en curso. Con la lectura 「じゅう」 se fija en «cada punto dentro de este ámbito», así que 「一日中」 = cada momento del día → todo el día, y 「世界中」 = cada rincón del mundo → en todo el mundo. 「今日中に」 es «dentro del ámbito de hoy» → antes de que acabe hoy. La misma idea de «interior» se divide en dos lecturas y dos usos según se mire como «estar dentro» o «llenarlo todo».",
     "similar": [
-      {
-        "title": "〜中（ちゅう／じゅう）",
-        "explanation": "El mismo sufijo repasado a un nivel superior: en N3 aparecen más combinaciones como 「工事中」, 「話し中」, 「世界中」 y 「町中」. El significado es el mismo que en esta entrada, así que conviene repasarlos juntos."
-      },
       {
         "title": "〜最中に",
         "explanation": "「最中」 también se forma con 「中」 y significa «en pleno ...»; suele ir seguido de algo inesperado: 「会議の最中に電話が鳴った」. 「〜中」 solo describe que se está en un estado; 「最中に」 subraya «justo en ese momento»."
@@ -875,7 +995,6 @@
   },
   {
     "id": "mou-ta-already",
-    "title": "〜もう〜た (ya)",
     "meaning": "El adverbio 「もう」 con el pasado 「〜た／〜ました」 significa «ya»: una acción está terminada o un estado ha cambiado.",
     "connection": "もう + verbo en forma た／〜ました",
     "senses": [
@@ -964,7 +1083,6 @@
   },
   {
     "id": "question-word-ka",
-    "title": "〜palabra interrogativa + か (indefinido)",
     "meaning": "Una palabra interrogativa + 「か」 expresa algo indeterminado: «algo, alguien, algún sitio, algún día».",
     "connection": "Palabra interrogativa (何・誰・どこ・いつ・どれ, etc.) + か",
     "senses": [
@@ -1052,7 +1170,6 @@
   },
   {
     "id": "question-word-mo-nai",
-    "title": "〜palabra interrogativa + も〜ない (negación total)",
     "meaning": "Una palabra interrogativa + 「も」 con negación expresa una negación total: «nada, nadie, ningún sitio».",
     "connection": "Palabra interrogativa (+ partícula) + も + forma negativa de verbo / adjetivo",
     "senses": [

@@ -1,7 +1,7 @@
 import PhotosUI
 import SwiftUI
 
-/// 首页：扫描入口、今日语法、最近扫描、最近查看。打开 App 先来到这里，相机只在用户点击扫描后才启动。
+/// 首页：扫描入口、继续上次、快要忘了、最近查看（新用户：今日语法、从 N5 开始）。打开 App 先来到这里，相机只在用户点击扫描后才启动。
 struct HomeView: View {
     /// 切换到「扫描」标签页（打开相机）。
     let openCamera: () -> Void
@@ -13,35 +13,31 @@ struct HomeView: View {
     @State private var path: [Route] = []
     @State private var showPaywall = false
     @State private var photoItem: PhotosPickerItem?
-    @State private var confirmClear: ClearTarget?
-
-    enum ClearTarget: Identifiable {
-        case scans, viewed
-        var id: Int { self == .scans ? 0 : 1 }
-    }
 
     var body: some View {
         NavigationStack(path: $path) {
             ScrollView {
-                VStack(alignment: .leading, spacing: 26) {
-                    scanCard
+                VStack(alignment: .leading, spacing: 32) {
+                    scanEntry
                     if entitlements.showsTrialEndingReminder { trialReminder }
                     if isNewUser {
                         // 新用户：入门引导
+                        if let today = todayGrammar { todaySection(today) }
                         starterSection
-                        if let today = todayGrammar { todayCard(today) }
                     } else {
-                        if let last = history.scans.first { continueCard(last) }
-                        reviewSection
-                        frequentSection
-                        progressSection
+                        if let last = history.scans.first { continueSection(last) }
+                        forgettingSection
                         recentViewedSection
                     }
                 }
-                .padding()
+                .padding(.horizontal, Theme.margin)
+                .padding(.top, 12)
+                .padding(.bottom, 32)
             }
             .background(Color(.systemGroupedBackground))
+            // 底部标签栏已标明「首页」，这里不再显示大标题，把空间留给内容
             .navigationTitle("首页")
+            .toolbar(.hidden, for: .navigationBar)
             .withAppRoutes()
             .sheet(isPresented: $showPaywall) { PaywallView() }
             .onChange(of: photoItem) { _, item in
@@ -53,11 +49,58 @@ struct HomeView: View {
                     }
                 }
             }
-            .confirmationDialog("确定要清除吗？", isPresented: Binding(get: { confirmClear != nil }, set: { if !$0 { confirmClear = nil } }), titleVisibility: .visible, presenting: confirmClear) { target in
-                Button("清除", role: .destructive) {
-                    if target == .scans { history.clearScans() } else { history.clearViewed() }
-                }
+        }
+    }
+
+    // MARK: 扫描入口
+
+    /// 首页唯一的主操作：一个醒目的主按钮（相机扫描）+ 两个次要按钮（相册、示例）。
+    private var scanEntry: some View {
+        VStack(alignment: .leading, spacing: 18) {
+            VStack(alignment: .leading, spacing: 6) {
+                Text("扫描日文，找出语法")
+                    .font(.largeTitle.bold())
+                    .fixedSize(horizontal: false, vertical: true)
+                Text("对准书页或选一张截图，句子里的语法会被标出来。")
+                    .font(.body)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
             }
+            .padding(.top, 24)
+
+            Button(action: openCamera) {
+                Label("相机扫描", systemImage: "camera.viewfinder")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 10)
+            }
+            .prominentGlassButton()
+            .controlSize(.large)
+            .buttonBorderShape(.capsule)
+
+            HStack(spacing: 12) {
+                PhotosPicker(selection: $photoItem, matching: .images) {
+                    Label("从相册识别", systemImage: "photo.on.rectangle")
+                        .font(.subheadline.weight(.semibold))
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 6)
+                }
+                .secondaryGlassButton()
+                .buttonBorderShape(.capsule)
+                Button {
+                    if let image = UIImage(named: "SamplePage") {
+                        path.append(.scan(ScanImage(image: image.normalizedForOCR(), isSample: true)))
+                    }
+                } label: {
+                    Label("试试示例", systemImage: "book.pages")
+                        .font(.subheadline.weight(.semibold))
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 6)
+                }
+                .secondaryGlassButton()
+                .buttonBorderShape(.capsule)
+            }
+            .controlSize(.large)
         }
     }
 
@@ -67,10 +110,9 @@ struct HomeView: View {
         Button { showPaywall = true } label: {
             HStack(spacing: 12) {
                 Image(systemName: "hourglass")
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundStyle(.orange)
-                    .frame(width: 34, height: 34)
-                    .background(Color.orange.opacity(0.14), in: Circle())
+                    .font(.system(size: 17, weight: .medium))
+                    .foregroundStyle(Theme.accent)
+                    .frame(width: 28)
                 VStack(alignment: .leading, spacing: 2) {
                     if let days = entitlements.trialDaysLeft() {
                         Text("免费试用还剩 \(days) 天").font(.subheadline.weight(.semibold))
@@ -87,61 +129,12 @@ struct HomeView: View {
                 Image(systemName: "chevron.right").font(.footnote.weight(.semibold)).foregroundStyle(.tertiary)
             }
             .padding(14)
-            .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 16))
+            .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
         }
         .buttonStyle(.plain)
     }
 
-    // MARK: 扫描入口
-
-    private var scanCard: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            VStack(alignment: .leading, spacing: 6) {
-                Text("扫描日文，找出语法").font(.title2.bold()).foregroundStyle(.white)
-                Text("对准书页或选择截图，所有语法点都会被高亮出来。")
-                    .font(.subheadline)
-                    .foregroundStyle(.white.opacity(0.9))
-            }
-            Button(action: openCamera) {
-                Label("相机扫描", systemImage: "camera.viewfinder")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 12)
-                    .background(.white, in: RoundedRectangle(cornerRadius: 14))
-                    .foregroundStyle(Brand.red)
-            }
-            HStack(spacing: 12) {
-                PhotosPicker(selection: $photoItem, matching: .images) {
-                    Label("从相册识别", systemImage: "photo.on.rectangle")
-                        .font(.subheadline.weight(.semibold))
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 10)
-                        .background(.white.opacity(0.2), in: RoundedRectangle(cornerRadius: 12))
-                        .foregroundStyle(.white)
-                }
-                Button {
-                    if let image = UIImage(named: "SamplePage") {
-                        path.append(.scan(ScanImage(image: image.normalizedForOCR(), isSample: true)))
-                    }
-                } label: {
-                    Label("试试示例", systemImage: "book.pages")
-                        .font(.subheadline.weight(.semibold))
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 10)
-                        .background(.white.opacity(0.2), in: RoundedRectangle(cornerRadius: 12))
-                        .foregroundStyle(.white)
-                }
-            }
-        }
-        .padding(18)
-        .background(
-            LinearGradient(colors: [Color(red: 0.93, green: 0.36, blue: 0.33), Color(red: 0.72, green: 0.16, blue: 0.24)],
-                           startPoint: .topLeading, endPoint: .bottomTrailing),
-            in: RoundedRectangle(cornerRadius: 22, style: .continuous)
-        )
-    }
-
-    // MARK: 今日语法
+    // MARK: 今日语法（新用户）
 
     /// 按日期固定选出一个可扫描的语法点，每天不同。
     private var todayGrammar: GrammarPoint? {
@@ -151,54 +144,29 @@ struct HomeView: View {
         return candidates[(day &* 7919) % candidates.count]
     }
 
-    private func todayCard(_ p: GrammarPoint) -> some View {
-        VStack(alignment: .leading, spacing: 10) {
-            SectionHeader(icon: "sun.max.fill", title: "今日语法", tint: .orange)
-            NavigationLink(value: Route.grammar(p.id)) {
-                HStack(alignment: .top, spacing: 12) {
-                    VStack(alignment: .leading, spacing: 6) {
-                        HStack(alignment: .top, spacing: 6) {
-                            Text(p.displayTitle).font(.title3.bold())
-                            LevelBadge(level: p.level)
-                        }
-                        Text(p.meaning).font(.subheadline).foregroundStyle(.secondary).lineLimit(2)
-                    }
-                    Spacer(minLength: 0)
-                    Image(systemName: "chevron.right").foregroundStyle(.tertiary)
-                }
-                .padding(14)
-                .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 16))
-            }
-            .buttonStyle(.plain)
+    private func todaySection(_ p: GrammarPoint) -> some View {
+        HomeSection(title: "今日语法") {
+            CompactGrammarList(points: [p], showsMeaning: true)
         }
     }
 
     private var isNewUser: Bool { history.scans.isEmpty && history.viewRecords.isEmpty }
 
-    // MARK: 新用户入门
-
     private var starterSection: some View {
-        let starters = library.points(for: .n5).filter(\.scannable).prefix(4)
-        return VStack(alignment: .leading, spacing: 10) {
-            SectionHeader(icon: "flag.fill", title: "从 N5 开始", tint: .green)
-            GrammarList(points: Array(starters))
+        let starters = library.points(for: .n5).filter(\.scannable).prefix(3)
+        return HomeSection(title: "从 N5 开始") {
+            CompactGrammarList(points: Array(starters))
         }
     }
 
     // MARK: 继续上次
 
-    private func continueCard(_ record: HistoryStore.ScanRecord) -> some View {
-        let unseen = record.grammarIDs.filter { !history.learnedIDs.contains($0) }.count
-        return VStack(alignment: .leading, spacing: 10) {
-            HStack {
-                SectionHeader(icon: "arrow.uturn.backward.circle.fill", title: "继续上次", tint: .blue)
-                Spacer()
-                if history.scans.count > 1 {
-                    NavigationLink { AllScansView() } label: {
-                        Text("全部扫描记录").font(.subheadline)
-                    }
-                }
-            }
+    private func continueSection(_ record: HistoryStore.ScanRecord) -> some View {
+        let ids = library.displayableIDs(record.grammarIDs)
+        let unseen = ids.filter { !history.learnedIDs.contains($0) }.count
+        return HomeSection(title: "继续上次", trailing: history.scans.count > 1 ? AnyView(
+            NavigationLink { AllScansView() } label: { SeeAllLabel() }
+        ) : nil) {
             NavigationLink(value: Route.scanRecord(record.id)) {
                 HStack(spacing: 14) {
                     Group {
@@ -208,119 +176,54 @@ struct HomeView: View {
                             Color(.tertiarySystemFill)
                         }
                     }
-                    .frame(width: 64, height: 80)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text("识别到 \(record.grammarIDs.count) 个语法点").font(.headline)
-                        if unseen > 0 {
-                            Text("还有 \(unseen) 个没看过").font(.subheadline).foregroundStyle(Brand.red)
-                        } else {
-                            Text("全部看过了").font(.subheadline).foregroundStyle(.green)
+                    .frame(width: 44, height: 56)
+                    .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("识别到 \(ids.count) 个语法点").font(.body.weight(.semibold)).foregroundStyle(Color.primary)
+                        HStack(spacing: 0) {
+                            if unseen > 0 {
+                                Text("\(unseen) 个没看过")
+                            } else {
+                                Text("全部看过了")
+                            }
+                            Text(verbatim: " · ")
+                            Text(record.date, format: .relative(presentation: .named))
                         }
-                        Text(record.date, format: .relative(presentation: .named))
-                            .font(.caption).foregroundStyle(.secondary)
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
                     }
                     Spacer(minLength: 0)
-                    Image(systemName: "chevron.right").foregroundStyle(.tertiary)
+                    Image(systemName: "chevron.right").font(.footnote.weight(.semibold)).foregroundStyle(.tertiary)
                 }
-                .padding(12)
-                .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 16))
+                .padding(.horizontal, 14)
+                .padding(.vertical, 10)
+                .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
         }
     }
 
-    // MARK: 今日复习
+    // MARK: 快要忘了（按遗忘曲线，没有内容时整块隐藏）
 
-    private var reviewSection: some View {
+    private var forgettingItems: [GrammarPoint] {
         // 重要性：在你扫描的材料里出现越多、或已收藏的语法，同样快忘时更优先
-        let due = history.dueForReview { id in
+        history.dueForReview(limit: 20) { id in
             1 + 0.25 * Double(min(history.scanCount(of: id), 8)) + (favorites.isFavorite(id) ? 0.5 : 0)
         }
-        let items = due.compactMap { item in library.point(id: item.id).map { ($0, item.retention) } }
-        return VStack(alignment: .leading, spacing: 10) {
-            SectionHeader(icon: "brain.head.profile", title: "今日复习", tint: .orange)
-            if items.isEmpty {
-                EmptyHint(text: "今天没有需要复习的语法。看过的语法会按遗忘曲线，在快要忘记时提醒你复习。")
-            } else {
-                Text("按遗忘曲线排序：最快要忘记的排在最前面。点开回顾一遍即完成复习。")
-                    .font(.footnote).foregroundStyle(.secondary)
-                VStack(spacing: 0) {
-                    ForEach(items, id: \.0.id) { p, retention in
-                        NavigationLink(value: Route.grammar(p.id)) {
-                            HStack(alignment: .top) {
-                                GrammarRow(point: p)
-                                RetentionBadge(retention: retention).padding(.top, 4)
-                            }
-                            .contentShape(Rectangle())
-                        }
-                        .buttonStyle(.plain)
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 6)
-                        if p.id != items.last?.0.id { Divider().padding(.leading, 28) }
-                    }
-                }
-                .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 16))
-            }
-        }
+        .compactMap { library.point(id: $0.id) }
     }
-
-    // MARK: 常见但还没学
 
     @ViewBuilder
-    private var frequentSection: some View {
-        let items = history.frequentUnlearned().compactMap { item in library.point(id: item.id).map { ($0, item.count) } }
+    private var forgettingSection: some View {
+        let items = forgettingItems
         if !items.isEmpty {
-            VStack(alignment: .leading, spacing: 10) {
-                SectionHeader(icon: "sparkle.magnifyingglass", title: "常出现但还没学", tint: .pink)
-                Text("你扫描的材料里经常出现、但还没看过讲解的语法。")
-                    .font(.footnote).foregroundStyle(.secondary)
-                VStack(spacing: 0) {
-                    ForEach(items, id: \.0.id) { p, count in
-                        NavigationLink(value: Route.grammar(p.id)) {
-                            HStack(alignment: .top) {
-                                GrammarRow(point: p)
-                                Text("\(count) 次扫描").font(.caption).foregroundStyle(.secondary).padding(.top, 4)
-                            }
-                            .contentShape(Rectangle())
-                        }
-                        .buttonStyle(.plain)
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 6)
-                        if p.id != items.last?.0.id { Divider().padding(.leading, 28) }
-                    }
-                }
-                .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 16))
+            HomeSection(title: "快要忘了", subtitle: "这些语法你看过，按遗忘曲线快要忘了，再看一眼吧。",
+                        trailing: items.count > 3 ? AnyView(
+                            NavigationLink { GrammarListPage(title: "快要忘了", points: items) } label: { SeeAllLabel() }
+                        ) : nil) {
+                CompactGrammarList(points: Array(items.prefix(3)))
             }
-        }
-    }
-
-    // MARK: 学习进度
-
-    private var progressSection: some View {
-        let learned = history.learnedIDs
-        let levels = JLPTLevel.allCases.filter { !library.points(for: $0).isEmpty }
-        return VStack(alignment: .leading, spacing: 10) {
-            SectionHeader(icon: "chart.bar.fill", title: "学习进度", tint: .teal)
-            VStack(spacing: 12) {
-                ForEach(levels) { level in
-                    let all = library.points(for: level)
-                    let done = all.filter { learned.contains($0.id) }.count
-                    HStack(spacing: 10) {
-                        LevelBadge(level: level).frame(width: 34, alignment: .leading)
-                        ProgressView(value: Double(done), total: Double(max(all.count, 1)))
-                            .tint(level.color)
-                        Text(verbatim: "\(done)/\(all.count)")
-                            .font(.caption.monospacedDigit())
-                            .foregroundStyle(.secondary)
-                            .frame(width: 64, alignment: .trailing)
-                    }
-                }
-                Text("看过讲解的语法计为“已学”。").font(.caption2).foregroundStyle(.secondary)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .padding(14)
-            .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 16))
         }
     }
 
@@ -328,51 +231,122 @@ struct HomeView: View {
 
     @ViewBuilder
     private var recentViewedSection: some View {
-        let points = history.recentGrammarIDs.prefix(5).compactMap { library.point(id: $0) }
+        let points = history.recentGrammarIDs.compactMap { library.point(id: $0) }
         if !points.isEmpty {
-            VStack(alignment: .leading, spacing: 10) {
-                HStack {
-                    SectionHeader(icon: "eye.fill", title: "最近查看", tint: .purple)
-                    Spacer()
-                    Button("清除") { confirmClear = .viewed }.font(.subheadline)
-                }
-                GrammarList(points: points)
+            HomeSection(title: "最近查看", trailing: points.count > 3 ? AnyView(
+                NavigationLink { RecentViewedPage() } label: { SeeAllLabel() }
+            ) : nil) {
+                CompactGrammarList(points: Array(points.prefix(3)))
             }
         }
     }
 }
 
-/// 记忆保持率标签：越低越红
-private struct RetentionBadge: View {
-    let retention: Double
+// MARK: - 首页组件
+
+/// 首页的一个模块：标题（+ 可选说明、右侧「全部」）+ 内容。
+private struct HomeSection<Content: View>: View {
+    let title: LocalizedStringKey
+    var subtitle: LocalizedStringKey? = nil
+    var trailing: AnyView? = nil
+    @ViewBuilder let content: Content
 
     var body: some View {
-        let pct = Int((retention * 100).rounded())
-        let color: Color = retention < 0.5 ? .red : (retention < 0.75 ? .orange : .yellow)
-        VStack(spacing: 2) {
-            Text("记忆约 \(pct)%").font(.caption2.weight(.semibold)).foregroundStyle(color)
-            ProgressView(value: retention).tint(color).frame(width: 52)
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(alignment: .firstTextBaseline) {
+                Text(title).font(.title3.bold()).accessibilityAddTraits(.isHeader)
+                Spacer()
+                if let trailing { trailing }
+            }
+            if let subtitle {
+                Text(subtitle).font(.footnote).foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            content
         }
-        .accessibilityElement(children: .combine)
     }
 }
 
-private struct GrammarList: View {
+private struct SeeAllLabel: View {
+    var body: some View {
+        HStack(spacing: 2) {
+            Text("全部")
+            Image(systemName: "chevron.right").font(.footnote.weight(.semibold))
+        }
+        .font(.subheadline)
+        .foregroundStyle(Theme.accent)
+    }
+}
+
+/// 紧凑的语法列表：每条一行（语法 + 右上角等级），可选显示一行意思。
+struct CompactGrammarList: View {
     let points: [GrammarPoint]
+    var showsMeaning = false
 
     var body: some View {
         VStack(spacing: 0) {
-            ForEach(points) { p in
+            ForEach(Array(points.enumerated()), id: \.element.id) { i, p in
                 NavigationLink(value: Route.grammar(p.id)) {
-                    GrammarRow(point: p).contentShape(Rectangle())
+                    HStack(spacing: 8) {
+                        VStack(alignment: .leading, spacing: 3) {
+                            HStack(alignment: .top, spacing: 3) {
+                                Text(p.displayTitle).font(.body.weight(.medium)).foregroundStyle(Color.primary).lineLimit(1)
+                                LevelBadge(level: p.level, small: true)
+                            }
+                            if showsMeaning {
+                                Text(p.meaning).font(.subheadline).foregroundStyle(.secondary).lineLimit(2)
+                            }
+                        }
+                        Spacer(minLength: 0)
+                        Image(systemName: "chevron.right").font(.footnote.weight(.semibold)).foregroundStyle(.tertiary)
+                    }
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 12)
+                    .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 6)
-                if p.id != points.last?.id { Divider().padding(.leading, 28) }
+                if i < points.count - 1 { Divider().padding(.leading, 16) }
             }
         }
-        .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 16))
+        .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+    }
+}
+
+/// 完整列表页（「全部」）。
+private struct GrammarListPage: View {
+    let title: LocalizedStringKey
+    let points: [GrammarPoint]
+
+    var body: some View {
+        List(points) { p in
+            NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p) }
+        }
+        .navigationTitle(title)
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+/// 最近查看的完整列表，可清除。
+private struct RecentViewedPage: View {
+    @EnvironmentObject private var library: GrammarLibrary
+    @EnvironmentObject private var history: HistoryStore
+    @State private var confirm = false
+
+    var body: some View {
+        let points = history.recentGrammarIDs.compactMap { library.point(id: $0) }
+        List(points) { p in
+            NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p) }
+        }
+        .navigationTitle("最近查看")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button("清除") { confirm = true }.disabled(points.isEmpty)
+            }
+        }
+        .confirmationDialog("确定要清除吗？", isPresented: $confirm, titleVisibility: .visible) {
+            Button("清除", role: .destructive) { history.clearViewed() }
+        }
     }
 }
 
@@ -405,37 +379,8 @@ private struct AllScansView: View {
     }
 }
 
-private struct SectionHeader: View {
-    let icon: String
-    let title: LocalizedStringKey
-    let tint: Color
-
-    var body: some View {
-        HStack(spacing: 8) {
-            Image(systemName: icon)
-                .font(.system(size: 13, weight: .bold))
-                .foregroundStyle(.white)
-                .frame(width: 26, height: 26)
-                .background(tint, in: RoundedRectangle(cornerRadius: 7, style: .continuous))
-            Text(title).font(.title3.bold())
-        }
-    }
-}
-
-private struct EmptyHint: View {
-    let text: LocalizedStringKey
-
-    var body: some View {
-        Text(text)
-            .font(.subheadline)
-            .foregroundStyle(.secondary)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(14)
-            .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 14))
-    }
-}
-
 private struct ScanThumb: View {
+    @EnvironmentObject private var library: GrammarLibrary
     let record: HistoryStore.ScanRecord
     let image: UIImage?
 
@@ -451,12 +396,12 @@ private struct ScanThumb: View {
             .frame(width: 120, height: 150)
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .overlay(alignment: .topTrailing) {
-                Text(verbatim: "\(record.grammarIDs.count)")
+                Text(verbatim: "\(library.displayableIDs(record.grammarIDs).count)")
                     .font(.caption2.bold())
                     .foregroundStyle(.white)
                     .padding(.horizontal, 7)
                     .padding(.vertical, 3)
-                    .background(Brand.red, in: Capsule())
+                    .background(Theme.accent, in: Capsule())
                     .padding(6)
             }
             Text(record.date, format: .relative(presentation: .named))
