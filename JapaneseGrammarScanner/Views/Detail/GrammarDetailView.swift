@@ -7,6 +7,9 @@ struct GrammarDetailView: View {
     @EnvironmentObject private var favorites: FavoritesStore
     @EnvironmentObject private var entitlements: EntitlementStore
     @EnvironmentObject private var history: HistoryStore
+    /// 大标题滚出屏幕的进度 0~1，用于把标题平滑过渡到顶部导航栏
+    @State private var titleProgress: CGFloat = 0
+    @State private var headerBaseline: CGFloat?
 
     var body: some View {
         if let point = library.point(id: grammarID) {
@@ -23,6 +26,13 @@ struct GrammarDetailView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 18) {
                     header(p)
+                        .opacity(1 - Double(titleProgress) * 0.9)
+                        .scaleEffect(1 - 0.08 * titleProgress, anchor: .bottomLeading)
+                        .background(
+                            GeometryReader { g in
+                                Color.clear.preference(key: HeaderFrameKey.self, value: g.frame(in: .named("detailScroll")))
+                            }
+                        )
 
                     // 意思：概述 + 各义项（点击跳到对应用法）
                     SectionCard(icon: "lightbulb.max.fill", title: "意思", tint: .orange) {
@@ -133,11 +143,29 @@ struct GrammarDetailView: View {
                 }
                 .padding()
             }
+            .coordinateSpace(name: "detailScroll")
+            .onPreferenceChange(HeaderFrameKey.self) { frame in
+                // 以初始位置为基准，标题向上移出自身高度的过程中，进度从 0 平滑变到 1
+                if headerBaseline == nil { headerBaseline = frame.minY }
+                let moved = (headerBaseline ?? frame.minY) - frame.minY
+                let p = min(1, max(0, moved / max(frame.height, 1)))
+                if abs(p - titleProgress) > 0.005 { titleProgress = p }
+            }
         }
         .background(Color(.systemGroupedBackground))
         .navigationTitle(p.displayTitle)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
+            ToolbarItem(placement: .principal) {
+                HStack(spacing: 6) {
+                    Text(verbatim: p.titleForm).font(.headline)
+                    LevelBadge(level: p.level)
+                }
+                .opacity(Double(titleProgress))
+                .offset(y: (1 - titleProgress) * 10)
+                .animation(.easeOut(duration: 0.15), value: titleProgress)
+                .accessibilityHidden(titleProgress < 0.5)
+            }
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
                     favorites.toggle(p.id)
@@ -371,4 +399,9 @@ private struct SceneGroup: View {
             }
         }
     }
+}
+
+private struct HeaderFrameKey: PreferenceKey {
+    static var defaultValue: CGRect = .zero
+    static func reduce(value: inout CGRect, nextValue: () -> CGRect) { value = nextValue() }
 }
