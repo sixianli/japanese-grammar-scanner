@@ -275,6 +275,13 @@ def main() -> int:
         print("没有找到语法资源文件")
         return 1
     errors, points = validate_base(files)
+    freq_path = os.path.join(GRAMMAR_DIR, "frequency.json")
+    if os.path.exists(freq_path):
+        with open(freq_path, encoding="utf-8") as f:
+            freq = json.load(f)
+        for gid in points:
+            if freq.get(gid) not in ("high", "medium", "low"):
+                errors.append(f"frequency.json: 缺少 {gid} 的出题频率")
     if "--base-only" not in sys.argv:
         errors += validate_l10n(files)
     if "--only" in sys.argv:
