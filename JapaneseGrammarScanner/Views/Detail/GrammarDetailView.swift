@@ -6,10 +6,12 @@ struct GrammarDetailView: View {
     @EnvironmentObject private var library: GrammarLibrary
     @EnvironmentObject private var favorites: FavoritesStore
     @EnvironmentObject private var entitlements: EntitlementStore
+    @EnvironmentObject private var history: HistoryStore
 
     var body: some View {
         if let point = library.point(id: grammarID) {
             content(point)
+                .onAppear { history.recordViewed(point.id) }
         } else {
             ContentUnavailableView("找不到该语法点", systemImage: "questionmark.folder")
         }

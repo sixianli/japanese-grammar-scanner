@@ -99,7 +99,7 @@ jobs:
           for lang in en ko es vi zh-Hans zh-Hant; do
             mkdir -p "screenshots/$lang"
             i=1
-            for screen in onboarding result detail scan library favorites; do
+            for screen in onboarding home result detail scan library favorites; do
               xcrun simctl terminate "$UDID" "$BID" 2>/dev/null || true
               xcrun simctl launch "$UDID" "$BID" -AppleLanguages "($lang)" -demoUnlocked -demoScreen "$screen"
               sleep 8

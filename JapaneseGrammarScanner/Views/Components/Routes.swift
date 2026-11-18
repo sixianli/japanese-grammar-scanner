@@ -11,6 +11,10 @@ enum Route: Hashable {
 struct ScanImage: Hashable, Identifiable {
     let id = UUID()
     let image: UIImage
+    /// 从「最近扫描」打开时对应的记录（不再重复保存）
+    var historyID: UUID? = nil
+    /// 内置示例书页（不保存到最近扫描）
+    var isSample = false
 
     static func == (lhs: ScanImage, rhs: ScanImage) -> Bool { lhs.id == rhs.id }
     func hash(into hasher: inout Hasher) { hasher.combine(id) }

@@ -5,6 +5,8 @@ struct ScanResultView: View {
     let scanImage: ScanImage
 
     @EnvironmentObject private var library: GrammarLibrary
+    @EnvironmentObject private var history: HistoryStore
+    @State private var recordID: UUID?
     @State private var phase: Phase = .loading
     @State private var tappedCluster: HighlightCluster?
     @State private var selectedClusterID: Int?
@@ -185,6 +187,7 @@ struct ScanResultView: View {
                             textWasEdited = true
                             selectedClusterID = nil
                             phase = .done(result)
+                            if let recordID { history.updateScan(recordID, grammarIDs: result.orderedGrammarIDs) }
                             isEditing = false
                         }
                     }
@@ -210,7 +213,13 @@ struct ScanResultView: View {
             }
         }.value
         switch outcome {
-        case .success(let r): phase = .done(r)
+        case .success(let r):
+            phase = .done(r)
+            if let existing = scanImage.historyID {
+                recordID = existing
+            } else if !scanImage.isSample, !r.text.isEmpty, DemoMode.screen == nil {
+                recordID = history.recordScan(image: scanImage.image, grammarIDs: r.orderedGrammarIDs)
+            }
         case .failure(let e): phase = .failed(e.localizedDescription)
         }
     }

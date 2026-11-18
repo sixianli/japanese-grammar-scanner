@@ -190,7 +190,7 @@ struct ScanHomeView: View {
 
     private func openSample() {
         if let image = UIImage(named: "SamplePage") {
-            path.append(.scan(ScanImage(image: image.normalizedForOCR())))
+            path.append(.scan(ScanImage(image: image.normalizedForOCR(), isSample: true)))
         }
     }
 

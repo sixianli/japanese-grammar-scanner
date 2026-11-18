@@ -5,6 +5,7 @@ struct JapaneseGrammarScannerApp: App {
     @StateObject private var library = GrammarLibrary.shared
     @StateObject private var favorites = FavoritesStore()
     @StateObject private var entitlements = EntitlementStore()
+    @StateObject private var history = HistoryStore()
 
     var body: some Scene {
         WindowGroup {
@@ -12,6 +13,7 @@ struct JapaneseGrammarScannerApp: App {
                 .environmentObject(library)
                 .environmentObject(favorites)
                 .environmentObject(entitlements)
+                .environmentObject(history)
         }
     }
 }
@@ -24,8 +26,10 @@ extension Notification.Name {
 struct RootTabView: View {
     @State private var tab: Int = {
         switch DemoMode.screen {
-        case "library": 1
-        case "favorites": 2
+        case "home": 0
+        case "scan", "result", "detail": 1
+        case "library": 2
+        case "favorites": 3
         default: 0
         }
     }()
@@ -39,15 +43,19 @@ struct RootTabView: View {
 
     var body: some View {
         TabView(selection: $tab) {
+            HomeView(openCamera: { tab = 1 })
+                .tabItem { Label("首页", systemImage: "house") }
+                .tag(0)
+            // 相机只在用户切换到「扫描」时才启动
             ScanHomeView()
                 .tabItem { Label("扫描", systemImage: "text.viewfinder") }
-                .tag(0)
+                .tag(1)
             LibraryView()
                 .tabItem { Label("语法库", systemImage: "books.vertical") }
-                .tag(1)
+                .tag(2)
             FavoritesView()
                 .tabItem { Label("收藏", systemImage: "star") }
-                .tag(2)
+                .tag(3)
         }
         .sheet(isPresented: $showWelcomePaywall, onDismiss: {
             if openSampleAfterPaywall {
@@ -90,7 +98,7 @@ struct RootTabView: View {
     }
 
     private func openSample() {
-        tab = 0
+        tab = 1
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             NotificationCenter.default.post(name: .openSamplePage, object: nil)
         }

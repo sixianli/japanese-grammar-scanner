@@ -19,4 +19,4 @@
 
 ---
 
-**English summary**: This app does not collect, store remotely, or share any personal data. Camera frames and photos you pick are processed entirely on-device with Apple's Vision framework and are never saved or uploaded. Favorites are stored locally on your device only. The app contains no ads, analytics, or third-party SDKs and works fully offline.
+**English summary**: This app does not collect, store remotely, or share any personal data. Camera frames and photos you pick are processed entirely on-device with Apple's Vision framework and are never uploaded; scans you capture are kept only on your device under "Recent Scans" and can be cleared at any time. Favorites are stored locally on your device only. The app contains no ads, analytics, or third-party SDKs and works fully offline.
