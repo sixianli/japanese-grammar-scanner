@@ -77,7 +77,7 @@ struct RootTabView: View {
             if !didCompleteOnboarding, DemoMode.screen == nil || DemoMode.screen == "onboarding" {
                 showOnboarding = true
             }
-            if DemoMode.seedsHistory, history.viewRecords.isEmpty {
+            if DemoMode.seedsHistory {
                 let old = Date().addingTimeInterval(-10 * 86_400)
                 for id in ["ni-mo-kakawarazu", "you-ni-naru", "okage-de", "te-shimau"] { history.recordViewed(id, now: old) }
                 for id in ["izen", "made-until", "sou-da-appearance"] { history.recordViewed(id) }

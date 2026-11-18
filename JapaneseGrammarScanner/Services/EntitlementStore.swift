@@ -71,6 +71,12 @@ final class EntitlementStore: ObservableObject {
         }
     }
 
+    /// 仅用于测试与预览：直接设为已解锁，不连接 StoreKit。
+    init(unlockedForTesting: Bool) {
+        access = unlockedForTesting ? .unlocked : .notStarted
+        isLoaded = true
+    }
+
     deinit { updatesTask?.cancel() }
 
     private func applyTestFlightFallbackIfNeeded() async {

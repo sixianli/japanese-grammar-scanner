@@ -117,6 +117,8 @@ jobs:
           }
           qa detail_izen -demoScreen detail -demoGrammar izen
           qa detail_made -demoScreen detail -demoGrammar made-until
+          sleep 6; xcrun simctl io "$UDID" screenshot "screenshots/qa/detail_made_later.png"
+          xcrun simctl spawn "$UDID" log show --last 40s --style compact --predicate 'process == "JapaneseGrammarScanner"' > screenshots/qa/detail_made.log 2>&1 || true
           qa home_history -demoScreen home -demoHistory 1
           qa search_areba -demoScreen library -demoSearch あれば
           qa library_n3 -demoScreen library -demoSearch N3
@@ -128,6 +130,8 @@ jobs:
           xcrun simctl ui "$UDID" content_size extra-extra-large
           qa detail_oouseru_xxl -demoScreen detail -demoGrammar oouseru
           xcrun simctl ui "$UDID" content_size large
+          mkdir -p screenshots/qa/crash
+          cp ~/Library/Logs/DiagnosticReports/JapaneseGrammarScanner* screenshots/qa/crash/ 2>/dev/null || true
           find screenshots -name "*.png" | sort
       - uses: actions/upload-artifact@v4
         with:

@@ -1,3 +1,4 @@
+import SwiftUI
 import XCTest
 @testable import JapaneseGrammarScanner
 
@@ -280,5 +281,36 @@ final class HistoryStoreTests: XCTestCase {
         XCTAssertLessThan(due[0].retention, due[1].retention)
         XCTAssertEqual(HistoryStore.retention(.init(id: "x", firstViewed: t0, lastViewed: t0, stage: 0), now: t0.addingTimeInterval(86_400)), 0.9, accuracy: 1e-9)
         store.clearViewed()
+    }
+}
+
+
+/// 渲染每个语法点的详情页，确保没有任何一页会卡死或崩溃。
+@MainActor
+final class DetailRenderTests: XCTestCase {
+    func testEveryDetailPageRenders() {
+        let library = GrammarLibrary(language: .zhHans)
+        let suite = "DetailRenderTests"
+        let defaults = UserDefaults(suiteName: suite)!
+        defaults.removePersistentDomain(forName: suite)
+        let favorites = FavoritesStore(defaults: defaults)
+        let history = HistoryStore(defaults: defaults)
+        let entitlements = EntitlementStore(unlockedForTesting: true)
+        let priority = ["made-until", "izen", "oouseru", "to-quotation", "ni-destination-target", "you-na-example"]
+        let ids = priority + library.points.map(\.id).filter { !priority.contains($0) }
+        for id in ids {
+            let view = GrammarDetailView(grammarID: id)
+                .environmentObject(library)
+                .environmentObject(favorites)
+                .environmentObject(entitlements)
+                .environmentObject(history)
+                .frame(width: 430)
+            let renderer = ImageRenderer(content: view)
+            renderer.proposedSize = ProposedViewSize(width: 430, height: 3000)
+            let start = Date()
+            XCTAssertNotNil(renderer.uiImage, "\(id) 详情页渲染失败")
+            let elapsed = Date().timeIntervalSince(start)
+            XCTAssertLessThan(elapsed, 3, "\(id) 详情页渲染过慢: \(elapsed)s")
+        }
     }
 }
