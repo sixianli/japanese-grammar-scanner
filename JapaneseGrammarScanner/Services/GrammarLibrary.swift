@@ -52,7 +52,13 @@ final class GrammarLibrary: ObservableObject {
         guard !q.isEmpty else { return points }
         let normalizedQ = q.replacingOccurrences(of: "〜", with: "").replacingOccurrences(of: "~", with: "")
         return points.filter { p in
-            let fields = [p.title, p.displayTitle, p.kanji ?? "", p.reading ?? "", p.meaning] + p.aliases + p.allExamples.map(\.ja) + p.allExamples.map(\.translation) + p.senses.map(\.label)
+            var fields: [String] = [p.title, p.displayTitle, p.kanji ?? "", p.reading ?? "", p.meaning]
+            fields.append(contentsOf: p.aliases)
+            fields.append(contentsOf: p.senses.map(\.label))
+            for example in p.allExamples {
+                fields.append(example.ja)
+                fields.append(example.translation)
+            }
             return fields.contains { $0.localizedCaseInsensitiveContains(normalizedQ) }
                 || p.level.rawValue.caseInsensitiveCompare(q) == .orderedSame
         }
