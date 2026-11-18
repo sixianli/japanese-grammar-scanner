@@ -16,7 +16,7 @@ struct GrammarRow: View {
                     Text(point.displayTitle).font(.headline)
                     LevelBadge(level: point.level)
                     if let occurrences, occurrences > 1 {
-                        Text("出现 \(occurrences) 次").font(.caption).foregroundStyle(.secondary)
+                        Text(verbatim: "×\(occurrences)").font(.caption).foregroundStyle(.secondary)
                     }
                 }
                 Text(point.meaning)

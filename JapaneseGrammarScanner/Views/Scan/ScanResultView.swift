@@ -130,8 +130,6 @@ struct ScanResultView: View {
                 HStack {
                     (ids.isEmpty ? Text("没有识别到收录的语法点") : Text("识别到 \(ids.count) 个语法点"))
                         .font(.title3.bold())
-                    Spacer()
-                    LevelLegend(levels: Array(Set(ids.compactMap { library.point(id: $0)?.level })).sorted())
                 }
                 if !ids.isEmpty {
                     Text("点击高亮或下方列表查看讲解；点击图片可放大查看原文。")
