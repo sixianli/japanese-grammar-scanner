@@ -29,44 +29,40 @@ struct LevelLegend: View {
     }
 }
 
-/// 出题频率标签；点击显示数据来源说明
+/// 出题频率标签：常考 / 考过（少考不显示）；点击显示数据来源说明
 struct FrequencyBadge: View {
     let frequency: ExamFrequency
+    var compact = false
     @State private var showInfo = false
 
     var body: some View {
-        Button { showInfo = true } label: {
-            HStack(spacing: 3) {
-                if frequency == .high { Image(systemName: "flame.fill") }
+        if let label {
+            Button { showInfo = true } label: {
                 Text(label)
+                    .font(compact ? .caption2.weight(.semibold) : .caption.weight(.semibold))
+                    .foregroundStyle(color)
+                    .padding(.horizontal, compact ? 6 : 8)
+                    .padding(.vertical, compact ? 2 : 3)
+                    .background(color.opacity(0.12), in: Capsule())
             }
-            .font(.caption.weight(.semibold))
-            .foregroundStyle(color)
-            .padding(.horizontal, 8)
-            .padding(.vertical, 3)
-            .background(color.opacity(0.12), in: Capsule())
-        }
-        .buttonStyle(.plain)
-        .alert("出题频率", isPresented: $showInfo) {
-            Button("好") {}
-        } message: {
-            Text("根据公开的考试复原资料与教材整理，仅供参考。")
+            .buttonStyle(.plain)
+            .alert("出题频率", isPresented: $showInfo) {
+                Button("好") {}
+            } message: {
+                Text("根据公开的考试复原资料与教材整理，仅供参考。")
+            }
         }
     }
 
-    private var label: LocalizedStringKey {
+    private var label: LocalizedStringKey? {
         switch frequency {
         case .high: "常考"
-        case .medium: "偶尔考"
-        case .low: "少考"
+        case .medium: "考过"
+        case .low: nil
         }
     }
 
     private var color: Color {
-        switch frequency {
-        case .high: .red
-        case .medium: .orange
-        case .low: .gray
-        }
+        frequency == .high ? .red : .secondary
     }
 }
