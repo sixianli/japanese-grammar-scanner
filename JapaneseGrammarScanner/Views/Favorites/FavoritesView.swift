@@ -35,6 +35,7 @@ struct FavoritesView: View {
                 }
             }
             .navigationTitle(Text("收藏") + Text(verbatim: favorites.ids.isEmpty ? "" : " (\(favorites.ids.count))"))
+            .navigationBarTitleDisplayMode(.inline)
             .withAppRoutes()
         }
     }
