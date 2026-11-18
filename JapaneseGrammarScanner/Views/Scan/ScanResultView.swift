@@ -12,6 +12,7 @@ struct ScanResultView: View {
     @State private var isEditing = false
     @State private var draftText = ""
     @State private var textWasEdited = false
+    @State private var showZoom = false
 
     enum Phase {
         case loading
@@ -88,8 +89,32 @@ struct ScanResultView: View {
                 }
             }
             .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(alignment: .bottomTrailing) {
+                Image(systemName: "arrow.up.left.and.arrow.down.right")
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(.white)
+                    .padding(8)
+                    .background(.black.opacity(0.5), in: Circle())
+                    .padding(8)
+                    .allowsHitTesting(false)
+            }
+            .contentShape(Rectangle())
+            .onTapGesture { showZoom = true }
             .frame(maxWidth: .infinity)
             .frame(maxHeight: 460)
+            .fullScreenCover(isPresented: $showZoom) {
+                if case .done(let result) = phase {
+                    ZoomableScanView(image: scanImage.image, result: textWasEdited ? .empty : result, library: library) { cluster in
+                        showZoom = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                            selectedClusterID = cluster.id
+                            tappedCluster = cluster
+                        }
+                    }
+                } else {
+                    ZoomableScanView(image: scanImage.image, result: .empty, library: library) { _ in }
+                }
+            }
     }
 
     // MARK: - 结果
@@ -109,7 +134,7 @@ struct ScanResultView: View {
                     LevelLegend(levels: Array(Set(ids.compactMap { library.point(id: $0)?.level })).sorted())
                 }
                 if !ids.isEmpty {
-                    Text("点击图片或文本中的高亮，或下方列表，查看详细讲解。")
+                    Text("点击高亮或下方列表查看讲解；点击图片可放大查看原文。")
                         .font(.footnote).foregroundStyle(.secondary)
                 }
                 VStack(spacing: 0) {

@@ -12,11 +12,11 @@ struct GrammarRow: View {
                 .fill(point.level.color)
                 .frame(width: 4)
             VStack(alignment: .leading, spacing: 4) {
-                HStack(spacing: 6) {
-                    Text(point.title).font(.headline)
+                HStack(alignment: .top, spacing: 6) {
+                    Text(point.displayTitle).font(.headline)
                     LevelBadge(level: point.level)
                     if let occurrences, occurrences > 1 {
-                        Text(verbatim: "×\(occurrences)").font(.caption).foregroundStyle(.secondary)
+                        Text("出现 \(occurrences) 次").font(.caption).foregroundStyle(.secondary)
                     }
                 }
                 Text(point.meaning)

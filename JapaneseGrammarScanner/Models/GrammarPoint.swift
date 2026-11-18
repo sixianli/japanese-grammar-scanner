@@ -54,14 +54,20 @@ struct GrammarPoint: Codable, Identifiable, Hashable {
     var notes: [String]
     var scenes: Scenes
     var etymology: String
+    /// 组词逻辑：由哪些部分构成、为什么这样组合、如何体现在意思和用法上。
+    var formation: String
     var similar: [Similar]
+    /// 常见的汉字写法（如「〜挙げ句」）。考试/工作/日常中常以汉字书写时提供，用于标题显示与搜索。
+    let kanji: String?
+    /// 其它常见写法（用于搜索）。
+    let aliases: [String]
     let patterns: [String]
     let subsumes: [String]?
     /// 是否在扫描时高亮。最基础的助词等（は・が・を…）设为 false：收录在语法库，但不在扫描结果中高亮。
     let scannable: Bool
 
     enum CodingKeys: String, CodingKey {
-        case id, title, reading, level, meaning, connection, senses, notes, scenes, etymology, similar, patterns, subsumes, scannable
+        case id, title, reading, level, meaning, connection, senses, notes, scenes, etymology, formation, similar, patterns, subsumes, scannable, kanji, aliases
     }
 
     init(from decoder: Decoder) throws {
@@ -76,10 +82,32 @@ struct GrammarPoint: Codable, Identifiable, Hashable {
         notes = try c.decodeIfPresent([String].self, forKey: .notes) ?? []
         scenes = try c.decode(Scenes.self, forKey: .scenes)
         etymology = try c.decode(String.self, forKey: .etymology)
+        formation = try c.decodeIfPresent(String.self, forKey: .formation) ?? ""
         similar = try c.decode([Similar].self, forKey: .similar)
+        kanji = try c.decodeIfPresent(String.self, forKey: .kanji)
+        aliases = try c.decodeIfPresent([String].self, forKey: .aliases) ?? []
         patterns = try c.decode([String].self, forKey: .patterns)
         subsumes = try c.decodeIfPresent([String].self, forKey: .subsumes)
         scannable = try c.decodeIfPresent(Bool.self, forKey: .scannable) ?? true
+    }
+
+    /// 标题中的说明部分，如「〜そうだ（传闻）」的「（传闻）」；没有则为空。
+    var titleNote: String {
+        if let r = title.range(of: "（") ?? title.range(of: " (") { return String(title[r.lowerBound...]).trimmingCharacters(in: .whitespaces) }
+        return ""
+    }
+
+    /// 标题中的日语形式（优先使用常见汉字写法）。
+    var titleForm: String {
+        if let k = kanji, !k.isEmpty { return k }
+        let note = titleNote
+        return note.isEmpty ? title : String(title.dropLast(note.count)).trimmingCharacters(in: .whitespaces)
+    }
+
+    /// 列表中显示的标题：常见写法 + 说明。
+    var displayTitle: String {
+        let note = titleNote
+        return note.isEmpty ? titleForm : titleForm + " " + note
     }
 
     /// 所有义项的例句。
@@ -94,6 +122,7 @@ struct GrammarPoint: Codable, Identifiable, Hashable {
         meaning = l.meaning
         connection = l.connection
         etymology = l.etymology
+        if let f = l.formation, !f.isEmpty { formation = f }
         if l.senses.count == senses.count {
             for i in senses.indices {
                 let ls = l.senses[i]
@@ -159,6 +188,7 @@ struct GrammarLocalization: Decodable {
     let notes: [String]?
     let scenes: ScenesText
     let etymology: String
+    let formation: String?
     let similar: [SimilarText]
 }
 

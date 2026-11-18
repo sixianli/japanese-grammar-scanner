@@ -110,7 +110,7 @@ struct ScanHomeView: View {
                                     path.append(.grammar(id))
                                 } label: {
                                     HStack(spacing: 4) {
-                                        Text(p.title)
+                                        Text(p.displayTitle)
                                         Text(p.level.rawValue).font(.caption2.bold())
                                     }
                                     .font(.subheadline)

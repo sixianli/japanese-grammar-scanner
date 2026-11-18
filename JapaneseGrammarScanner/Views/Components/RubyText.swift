@@ -95,7 +95,8 @@ private enum AtomBuilder {
 struct RubyText: View {
     struct Style {
         var font: Font = .body
-        var rubyFont: Font = .system(size: 9)
+        /// 假名字号（pt）
+        var rubySize: CGFloat = 8
         var color: Color = .primary
         var highlightColor: Color = .accentColor
         var lineSpacing: CGFloat = 6
@@ -173,21 +174,32 @@ struct RubyText: View {
         .accessibilityLabel(plain)
     }
 
+    /// 一个排版单元：正文 + 正上方居中的假名。
+    /// 假名作为 overlay 绘制，不改变正文宽度（不会把字与字之间撑开）；
+    /// 宽度限制为正文宽度略加一点，过长时自动缩小，保证落在对应汉字的正上方。
     private func atomView(_ atom: Atom) -> some View {
-        VStack(spacing: 0) {
-            Text(atom.ruby ?? " ")
-                .font(style.rubyFont)
-                .foregroundStyle(atom.ruby == nil ? .clear : style.color.opacity(0.75))
-                .lineLimit(1)
-                .fixedSize()
-            Text(atom.text)
-                .font(style.font)
-                .fontWeight(atom.highlighted ? .bold : style.weight)
-                .foregroundStyle(atom.highlighted ? style.highlightColor : style.color)
-                .lineLimit(1)
-                .fixedSize()
-                .background(atom.highlighted ? style.highlightColor.opacity(0.15) : Color.clear)
-        }
+        let rubyLine = style.rubySize * 1.25
+        return Text(atom.text)
+            .font(style.font)
+            .fontWeight(atom.highlighted ? .bold : style.weight)
+            .foregroundStyle(atom.highlighted ? style.highlightColor : style.color)
+            .lineLimit(1)
+            .fixedSize()
+            .background(atom.highlighted ? style.highlightColor.opacity(0.15) : Color.clear)
+            .overlay(alignment: .top) {
+                if let ruby = atom.ruby {
+                    Text(ruby)
+                        .font(.system(size: style.rubySize, weight: .regular))
+                        .foregroundStyle(style.color.opacity(0.7))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal, -3)
+                        .frame(height: rubyLine)
+                        .alignmentGuide(.top) { d in d[.bottom] }
+                }
+            }
+            .padding(.top, rubyLine)
     }
 
     /// 把高亮范围（UTF-16）映射到片段上；必要时拆分无注音片段，使高亮边界精确。

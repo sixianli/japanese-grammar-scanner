@@ -180,3 +180,39 @@ final class EntitlementTests: XCTestCase {
         XCTAssertEqual(S.access(purchases: [S.ProductID.lifetime: start], now: start), .unlocked)
     }
 }
+
+final class ContentRulesTests: XCTestCase {
+    let library = GrammarLibrary(language: .zhHans)
+
+    /// 相近语法必须都能跳转到语法库中的语法点，且不能指向自己。
+    func testEverySimilarIsLinkable() {
+        for p in library.points {
+            for s in p.similar {
+                let target = s.id.flatMap { library.point(id: $0) }
+                XCTAssertNotNil(target, "\(p.id) 的相近语法「\(s.title)」无法跳转")
+                XCTAssertNotEqual(target?.id, p.id, "\(p.id) 的相近语法指向了自己")
+            }
+        }
+    }
+
+    func testFormationAndNotesPresent() {
+        for p in library.points {
+            XCTAssertFalse(p.formation.isEmpty, "\(p.id) 缺少组词逻辑")
+            XCTAssertFalse(p.notes.isEmpty, "\(p.id) 缺少注意")
+        }
+    }
+
+    /// 汉字写法可以搜索到。
+    func testKanjiFormIsSearchable() {
+        for p in library.points {
+            guard let k = p.kanji else { continue }
+            XCTAssertTrue(library.search(k).contains(p), "用「\(k)」搜不到 \(p.id)")
+        }
+    }
+
+    func testTitleParts() {
+        guard let p = library.point(id: "sou-da-hearsay") else { return XCTFail() }
+        XCTAssertEqual(p.titleNote, "（传闻）")
+        XCTAssertEqual(p.titleForm, "〜そうだ")
+    }
+}

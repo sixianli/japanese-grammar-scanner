@@ -17,84 +17,111 @@ struct GrammarDetailView: View {
 
     private func content(_ p: GrammarPoint) -> some View {
         let regexes = p.patterns.compactMap { try? NSRegularExpression(pattern: $0) }
-        return ScrollView {
-            VStack(alignment: .leading, spacing: 18) {
-                header(p)
+        return ScrollViewReader { proxy in
+            ScrollView {
+                VStack(alignment: .leading, spacing: 18) {
+                    header(p)
 
-                // 意思
-                SectionCard(icon: "lightbulb.max.fill", title: "意思", tint: .orange) {
-                    VStack(alignment: .leading, spacing: 12) {
-                        RubyText(explanation: p.meaning, style: .init(font: .body))
-                        if p.senses.count > 1 {
-                            VStack(alignment: .leading, spacing: 8) {
+                    // 意思：概述 + 各义项（点击跳到对应用法）
+                    SectionCard(icon: "lightbulb.max.fill", title: "意思", tint: .orange) {
+                        VStack(alignment: .leading, spacing: 12) {
+                            RubyText(explanation: p.meaning, style: .init(font: .body))
+                            if p.senses.count > 1 {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    ForEach(Array(p.senses.enumerated()), id: \.offset) { i, sense in
+                                        Button {
+                                            guard entitlements.hasFullAccess else { return }
+                                            withAnimation(.easeInOut) { proxy.scrollTo("sense-\(i)", anchor: .top) }
+                                        } label: {
+                                            HStack(spacing: 10) {
+                                                NumberBadge(number: i + 1, tint: .orange)
+                                                Text(sense.label).font(.body.weight(.semibold)).foregroundStyle(Color.primary)
+                                                Spacer(minLength: 0)
+                                                if entitlements.hasFullAccess {
+                                                    Image(systemName: "arrow.down.circle")
+                                                        .font(.subheadline)
+                                                        .foregroundStyle(Color.orange)
+                                                }
+                                            }
+                                            .padding(.vertical, 6)
+                                            .contentShape(Rectangle())
+                                        }
+                                        .buttonStyle(.plain)
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    if !entitlements.hasFullAccess {
+                        LockedContentCard()
+                    } else {
+                        // 用法：每个义项一张卡片（意思讲解 / 接续 / 例句）
+                        SectionCard(icon: "list.bullet.rectangle.portrait.fill", title: "用法", tint: .blue) {
+                            VStack(alignment: .leading, spacing: 14) {
+                                Pill(icon: "link", label: "接续", tint: .blue) {
+                                    RubyText(explanation: p.connection, style: .init(font: .callout, weight: .medium))
+                                }
                                 ForEach(Array(p.senses.enumerated()), id: \.offset) { i, sense in
-                                    HStack(alignment: .firstTextBaseline, spacing: 10) {
-                                        NumberBadge(number: i + 1, tint: .orange)
-                                        Text(sense.label).font(.body.weight(.semibold))
-                                    }
+                                    SenseCard(index: i + 1, sense: sense, regexes: regexes, tint: p.level.color)
+                                        .id("sense-\(i)")
                                 }
                             }
                         }
-                    }
-                }
 
-                if !entitlements.hasFullAccess {
-                    LockedContentCard()
-                } else {
-                // 用法：每个义项一张卡片（意思讲解 / 接续 / 例句）
-                SectionCard(icon: "list.bullet.rectangle.portrait.fill", title: "用法", tint: .blue) {
-                    VStack(alignment: .leading, spacing: 14) {
-                        Pill(icon: "link", label: "接续", tint: .blue) {
-                            RubyText(explanation: p.connection, style: .init(font: .callout, weight: .medium))
-                        }
-                        ForEach(Array(p.senses.enumerated()), id: \.offset) { i, sense in
-                            SenseCard(index: i + 1, sense: sense, regexes: regexes, tint: p.level.color)
-                        }
+                        // 注意：易忽略、易混淆、易出错、失礼与禁忌
                         if !p.notes.isEmpty {
-                            VStack(alignment: .leading, spacing: 10) {
-                                SubHeader(icon: "exclamationmark.triangle.fill", label: "注意", tint: .orange)
-                                ForEach(Array(p.notes.enumerated()), id: \.offset) { _, note in
-                                    HStack(alignment: .firstTextBaseline, spacing: 8) {
-                                        Circle().fill(Color.orange).frame(width: 6, height: 6).offset(y: -3)
-                                        RubyText(explanation: note, style: .init(font: .callout))
+                            SectionCard(icon: "exclamationmark.triangle.fill", title: "注意", tint: .red) {
+                                VStack(alignment: .leading, spacing: 12) {
+                                    ForEach(Array(p.notes.enumerated()), id: \.offset) { _, note in
+                                        HStack(alignment: .top, spacing: 10) {
+                                            Image(systemName: "exclamationmark.circle.fill")
+                                                .font(.subheadline)
+                                                .foregroundStyle(Color.red.opacity(0.85))
+                                                .padding(.top, 3)
+                                            RubyText(explanation: note, style: .init(font: .callout))
+                                        }
                                     }
                                 }
                             }
-                            .padding(14)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .background(Color.orange.opacity(0.08), in: RoundedRectangle(cornerRadius: 12))
+                        }
+
+                        // 使用场景：日常生活 / 职场
+                        SectionCard(icon: "person.2.wave.2.fill", title: "使用场景", tint: .green) {
+                            VStack(alignment: .leading, spacing: 18) {
+                                SceneGroup(icon: "house.fill", label: "日常生活", tint: .teal, scenes: p.scenes.daily, regexes: regexes)
+                                SceneGroup(icon: "briefcase.fill", label: "职场", tint: .indigo, scenes: p.scenes.work, regexes: regexes)
+                            }
+                        }
+
+                        // 词源
+                        SectionCard(icon: "scroll.fill", title: "词源", tint: .brown) {
+                            RubyText(explanation: p.etymology, style: .init(font: .body, lineSpacing: 8))
+                        }
+
+                        // 组词逻辑
+                        if !p.formation.isEmpty {
+                            SectionCard(icon: "puzzlepiece.extension.fill", title: "组词逻辑", tint: .cyan) {
+                                RubyText(explanation: p.formation, style: .init(font: .body, lineSpacing: 8))
+                            }
+                        }
+
+                        // 相近语法
+                        SectionCard(icon: "arrow.triangle.branch", title: "相似・相近语法", tint: .purple) {
+                            VStack(alignment: .leading, spacing: 16) {
+                                ForEach(Array(p.similar.enumerated()), id: \.offset) { index, s in
+                                    similarItem(s)
+                                    if index < p.similar.count - 1 { Divider() }
+                                }
+                            }
                         }
                     }
                 }
-
-                // 使用场景：日常生活 / 职场
-                SectionCard(icon: "person.2.wave.2.fill", title: "使用场景", tint: .green) {
-                    VStack(alignment: .leading, spacing: 18) {
-                        SceneGroup(icon: "house.fill", label: "日常生活", tint: .teal, scenes: p.scenes.daily, regexes: regexes)
-                        SceneGroup(icon: "briefcase.fill", label: "职场", tint: .indigo, scenes: p.scenes.work, regexes: regexes)
-                    }
-                }
-
-                // 词源
-                SectionCard(icon: "scroll.fill", title: "词源", tint: .brown) {
-                    RubyText(explanation: p.etymology, style: .init(font: .body, lineSpacing: 8))
-                }
-
-                // 相近语法
-                SectionCard(icon: "arrow.triangle.branch", title: "相似・相近语法", tint: .purple) {
-                    VStack(alignment: .leading, spacing: 16) {
-                        ForEach(Array(p.similar.enumerated()), id: \.offset) { index, s in
-                            similarItem(s)
-                            if index < p.similar.count - 1 { Divider() }
-                        }
-                    }
-                }
-                }
+                .padding()
             }
-            .padding()
         }
         .background(Color(.systemGroupedBackground))
-        .navigationTitle(p.title)
+        .navigationTitle(p.displayTitle)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -109,14 +136,17 @@ struct GrammarDetailView: View {
         }
     }
 
+    /// 标题：有汉字时在汉字上方注假名（不再单独显示读音行）；等级标签统一放在标题右上角。
     private func header(_ p: GrammarPoint) -> some View {
-        VStack(alignment: .leading, spacing: 6) {
-            HStack(alignment: .firstTextBaseline, spacing: 10) {
-                Text(p.title).font(.largeTitle.bold())
+        VStack(alignment: .leading, spacing: 4) {
+            HStack(alignment: .top, spacing: 8) {
+                RubyText(japanese: p.titleForm, style: .init(font: .largeTitle.bold(), rubySize: 12, lineSpacing: 2))
                 LevelBadge(level: p.level)
+                    .padding(.top, FuriganaStore.shared.hasRuby(p.titleForm) ? 18 : 2)
+                Spacer(minLength: 0)
             }
-            if let reading = p.reading, !reading.isEmpty, reading != p.title {
-                Text(reading).font(.subheadline).foregroundStyle(.secondary)
+            if !p.titleNote.isEmpty {
+                Text(verbatim: p.titleNote).font(.subheadline).foregroundStyle(.secondary)
             }
         }
         .padding(.horizontal, 4)
@@ -124,11 +154,12 @@ struct GrammarDetailView: View {
 
     @ViewBuilder
     private func similarItem(_ s: GrammarPoint.Similar) -> some View {
+        let target = s.id.flatMap { library.point(id: $0) } ?? library.point(matchingTitle: s.title)
         VStack(alignment: .leading, spacing: 8) {
-            if let id = s.id, let target = library.point(id: id) {
-                NavigationLink(value: Route.grammar(id)) {
-                    HStack(spacing: 6) {
-                        Text(s.title).font(.headline)
+            if let target {
+                NavigationLink(value: Route.grammar(target.id)) {
+                    HStack(alignment: .top, spacing: 6) {
+                        Text(target.titleForm).font(.headline)
                         LevelBadge(level: target.level)
                         Spacer()
                         Text("查看讲解").font(.caption)
@@ -172,11 +203,6 @@ private struct SectionCard<Content: View>: View {
         }
         .padding(16)
         .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-        .overlay(alignment: .leading) {
-            UnevenRoundedRectangle(topLeadingRadius: 18, bottomLeadingRadius: 18)
-                .fill(tint)
-                .frame(width: 4)
-        }
     }
 }
 
@@ -274,7 +300,7 @@ private struct ExampleView: View {
                 RubyText(
                     japanese: example.ja,
                     highlights: highlightRanges,
-                    style: .init(font: .title3, rubyFont: .system(size: 10), highlightColor: tint, lineSpacing: 2)
+                    style: .init(font: .title3, rubySize: 9, highlightColor: tint, lineSpacing: 2)
                 )
                 Text(example.translation)
                     .font(.subheadline)

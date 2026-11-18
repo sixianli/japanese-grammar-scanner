@@ -26,6 +26,20 @@ final class GrammarLibrary: ObservableObject {
 
     func point(id: String) -> GrammarPoint? { byID[id] }
 
+    /// 按标题（含汉字写法、别名）查找，用于相近语法缺少 id 时的兜底跳转。
+    func point(matchingTitle title: String) -> GrammarPoint? {
+        func norm(_ s: String) -> String {
+            var t = s
+            if let r = t.range(of: "（") ?? t.range(of: " (") { t = String(t[..<r.lowerBound]) }
+            return t.replacingOccurrences(of: "〜", with: "").replacingOccurrences(of: "～", with: "").trimmingCharacters(in: .whitespaces)
+        }
+        let key = norm(title)
+        guard !key.isEmpty else { return nil }
+        return points.first { p in
+            ([p.title, p.kanji ?? ""] + p.aliases).contains { norm($0) == key }
+        }
+    }
+
     func points(for level: JLPTLevel) -> [GrammarPoint] {
         points.filter { $0.level == level }
     }
@@ -36,7 +50,7 @@ final class GrammarLibrary: ObservableObject {
         guard !q.isEmpty else { return points }
         let normalizedQ = q.replacingOccurrences(of: "〜", with: "").replacingOccurrences(of: "~", with: "")
         return points.filter { p in
-            let fields = [p.title, p.reading ?? "", p.meaning] + p.allExamples.map(\.ja) + p.allExamples.map(\.translation) + p.senses.map(\.label)
+            let fields = [p.title, p.displayTitle, p.kanji ?? "", p.reading ?? "", p.meaning] + p.aliases + p.allExamples.map(\.ja) + p.allExamples.map(\.translation) + p.senses.map(\.label)
             return fields.contains { $0.localizedCaseInsensitiveContains(normalizedQ) }
                 || p.level.rawValue.caseInsensitiveCompare(q) == .orderedSame
         }

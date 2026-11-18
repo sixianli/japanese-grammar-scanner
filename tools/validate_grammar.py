@@ -23,7 +23,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GRAMMAR_DIR = os.path.join(ROOT, "JapaneseGrammarScanner", "Resources", "Grammar")
 
 LEVELS = {"N5", "N4", "N3", "N2", "N1"}
-REQUIRED_STR = ["id", "title", "level", "meaning", "connection", "etymology"]
+REQUIRED_STR = ["id", "title", "level", "meaning", "connection", "etymology", "formation"]
 REMOVED_FIELDS = ["usage", "scenarios", "examples"]
 FORBIDDEN_REGEX = [r"\(\?P", r"\\A", r"\\Z", r"\(\?#"]
 L10N_LANGS = ["en", "ko", "es", "vi", "zh-Hant"]
@@ -100,8 +100,15 @@ def check_point(gp, where, errors):
             errors.append(f"{w}: examples 需要 1~3 个 {{ja, zh}}")
 
     notes = gp.get("notes", [])
-    if not isinstance(notes, list) or len(notes) > 6 or not all(is_str(n) for n in notes):
-        errors.append(f"{where}: notes 应为 0~6 条字符串")
+    if not isinstance(notes, list) or not (1 <= len(notes) <= 5) or not all(is_str(n) for n in notes):
+        errors.append(f"{where}: notes 应为 1~5 条字符串")
+
+    kanji = gp.get("kanji")
+    if kanji is not None and not (is_str(kanji) and re.search(r"[\u3400-\u9fff々]", kanji)):
+        errors.append(f"{where}: kanji 若提供，必须是含汉字的写法")
+    aliases = gp.get("aliases", [])
+    if not isinstance(aliases, list) or not all(is_str(a) for a in aliases):
+        errors.append(f"{where}: aliases 必须是字符串数组")
 
     scenes = gp.get("scenes")
     if not isinstance(scenes, dict):
@@ -162,8 +169,12 @@ def validate_base(files):
             errors.append(f"{where}: scannable 必须是 true/false")
         for s in gp.get("similar") or []:
             sid = s.get("id") if isinstance(s, dict) else None
-            if sid and sid not in known:
+            if not sid:
+                errors.append(f"{where}: similar「{s.get('title') if isinstance(s, dict) else s}」缺少 id（相近语法必须是语法库中已收录的语法点）")
+            elif sid not in points:
                 errors.append(f"{where}: similar 引用了不存在的 id {sid}")
+            elif sid == gid:
+                errors.append(f"{where}: similar 不能引用自己")
         for sid in gp.get("subsumes") or []:
             if sid not in known:
                 errors.append(f"{where}: subsumes 引用了不存在的 id {sid}")
@@ -217,7 +228,7 @@ def validate_l10n(base_files):
             for b, t in zip(base, tr):
                 w = f"{name}:{b['id']}"
                 texts = []
-                for k in ["meaning", "connection", "etymology"]:
+                for k in ["meaning", "connection", "etymology", "formation"]:
                     if not is_str(t.get(k)):
                         errors.append(f"{w}: 缺少 {k}")
                     texts.append(t.get(k, ""))
