@@ -39,6 +39,8 @@ S = {
     "免费试用中，还剩 %lld 天": ({"one": "Free trial: %lld day left", "other": "Free trial: %lld days left"}, "무료 체험 중 · %lld일 남음", {"one": "Prueba gratis: queda %lld día", "other": "Prueba gratis: quedan %lld días"}, "Đang dùng thử miễn phí, còn %lld ngày"),
     "免费试用已结束": ("Free trial has ended", "무료 체험이 끝났습니다", "La prueba gratis ha terminado", "Thời gian dùng thử đã kết thúc"),
     "开始 %lld 天免费试用": ("Start %lld-Day Free Trial", "%lld일 무료 체험 시작", "Empezar prueba gratis de %lld días", "Bắt đầu dùng thử miễn phí %lld ngày"),
+    "编辑": ("Edit", "편집", "Editar", "Sửa"),
+    "完成": ("Done", "완료", "Listo", "Xong"),
     "免费开始使用": ("Start Free", "무료로 시작하기", "Empezar gratis", "Bắt đầu miễn phí"),
     "前 %lld 天免费使用全部功能。之后可一次性 %@ 永久解锁完整讲解，不订阅、不自动扣费。": (
         "All features free for the first %lld days. After that, unlock full explanations forever with a one-time %@ purchase. No subscription, no automatic charges.",
@@ -260,6 +262,8 @@ MY = {
     "免费试用中，还剩 %lld 天": "အခမဲ့ အစမ်းသုံးကာလ - %lld ရက် ကျန်သေးသည်",
     "免费试用已结束": "အခမဲ့ အစမ်းသုံးကာလ ပြီးဆုံးပါပြီ",
     "开始 %lld 天免费试用": "%lld ရက် အခမဲ့ အစမ်းသုံးမှု စတင်ရန်",
+    "编辑": "ပြင်ဆင်ရန်",
+    "完成": "ပြီးပါပြီ",
     "免费开始使用": "အခမဲ့ စတင်ရန်",
     "前 %lld 天免费使用全部功能。之后可一次性 %@ 永久解锁完整讲解，不订阅、不自动扣费。": "ပထမ %lld ရက်အတွင်း လုပ်ဆောင်ချက်အားလုံးကို အခမဲ့ သုံးနိုင်ပါသည်။ ထို့နောက် %@ ဖြင့် တစ်ကြိမ်တည်း ဝယ်ယူ၍ ရှင်းလင်းချက် အပြည့်အစုံကို အမြဲတမ်း ဖွင့်နိုင်ပါသည်။ လစဉ်ကြေး မရှိ၊ အလိုအလျောက် ငွေဖြတ်ခြင်း မရှိပါ။",
     "前 %lld 天免费使用全部功能。之后可一次性购买永久解锁完整讲解，不订阅、不自动扣费。": "ပထမ %lld ရက်အတွင်း လုပ်ဆောင်ချက်အားလုံးကို အခမဲ့ သုံးနိုင်ပါသည်။ ထို့နောက် တစ်ကြိမ်တည်း ဝယ်ယူ၍ ရှင်းလင်းချက် အပြည့်အစုံကို အမြဲတမ်း ဖွင့်နိုင်ပါသည်။ လစဉ်ကြေး မရှိ၊ အလိုအလျောက် ငွေဖြတ်ခြင်း မရှိပါ။",

@@ -4,6 +4,8 @@ import SwiftUI
 struct FavoritesView: View {
     @EnvironmentObject private var library: GrammarLibrary
     @EnvironmentObject private var favorites: FavoritesStore
+    /// 自己管理编辑状态：系统 EditButton 在 iOS 不支持的界面语言（如缅甸语）下只会显示英文。
+    @State private var editMode: EditMode = .inactive
 
     var body: some View {
         NavigationStack {
@@ -24,7 +26,12 @@ struct FavoritesView: View {
                         .onDelete { favorites.remove(atOffsets: $0) }
                         .onMove { favorites.move(fromOffsets: $0, toOffset: $1) }
                     }
-                    .toolbar { EditButton() }
+                    .environment(\.editMode, $editMode)
+                    .toolbar {
+                        Button(editMode.isEditing ? "完成" : "编辑") {
+                            withAnimation { editMode = editMode.isEditing ? .inactive : .active }
+                        }
+                    }
                 }
             }
             .navigationTitle(Text("收藏") + Text(verbatim: favorites.ids.isEmpty ? "" : " (\(favorites.ids.count))"))
