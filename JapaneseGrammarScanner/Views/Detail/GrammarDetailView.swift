@@ -26,9 +26,10 @@ struct GrammarDetailView: View {
                     SectionCard(icon: "lightbulb.max.fill", title: "意思", tint: .orange) {
                         VStack(alignment: .leading, spacing: 12) {
                             RubyText(explanation: p.meaning, style: .init(font: .body))
-                            if p.senses.count > 1 {
-                                VStack(alignment: .leading, spacing: 4) {
-                                    ForEach(Array(p.senses.enumerated()), id: \.offset) { i, sense in
+                            // 每个义项：编号 + 标题（点击跳到对应用法）+ 该义项的接续（多种接续分行列出）
+                            VStack(alignment: .leading, spacing: 10) {
+                                ForEach(Array(p.senses.enumerated()), id: \.offset) { i, sense in
+                                    VStack(alignment: .leading, spacing: 6) {
                                         Button {
                                             guard entitlements.hasFullAccess else { return }
                                             withAnimation(.easeInOut) { proxy.scrollTo("sense-\(i)", anchor: .top) }
@@ -43,10 +44,24 @@ struct GrammarDetailView: View {
                                                         .foregroundStyle(Color.orange)
                                                 }
                                             }
-                                            .padding(.vertical, 6)
                                             .contentShape(Rectangle())
                                         }
                                         .buttonStyle(.plain)
+
+                                        VStack(alignment: .leading, spacing: 4) {
+                                            ForEach(Array(Self.connectionLines(sense.connection).enumerated()), id: \.offset) { _, line in
+                                                HStack(alignment: .top, spacing: 6) {
+                                                    Image(systemName: "link")
+                                                        .font(.caption.weight(.bold))
+                                                        .foregroundStyle(Color.blue)
+                                                        .padding(.top, 4)
+                                                    RubyText(explanation: line, style: .init(font: .callout, weight: .medium))
+                                                }
+                                            }
+                                        }
+                                        .padding(10)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .background(Color.blue.opacity(0.07), in: RoundedRectangle(cornerRadius: 10))
                                     }
                                 }
                             }
@@ -59,9 +74,6 @@ struct GrammarDetailView: View {
                         // 用法：每个义项一张卡片（意思讲解 / 接续 / 例句）
                         SectionCard(icon: "list.bullet.rectangle.portrait.fill", title: "用法", tint: .blue) {
                             VStack(alignment: .leading, spacing: 14) {
-                                Pill(icon: "link", label: "接续", tint: .blue) {
-                                    RubyText(explanation: p.connection, style: .init(font: .callout, weight: .medium))
-                                }
                                 ForEach(Array(p.senses.enumerated()), id: \.offset) { i, sense in
                                     SenseCard(index: i + 1, sense: sense, regexes: regexes, tint: p.level.color)
                                         .id("sense-\(i)")
@@ -134,6 +146,14 @@ struct GrammarDetailView: View {
                 .accessibilityLabel(favorites.isFavorite(p.id) ? Text("取消收藏") : Text("收藏"))
             }
         }
+    }
+
+    /// 一个义项可能有多种接续方式（用「；」分隔），拆成多行显示。
+    static func connectionLines(_ s: String) -> [String] {
+        let parts = s.split(whereSeparator: { $0 == "；" || $0 == ";" })
+            .map { $0.trimmingCharacters(in: .whitespaces) }
+            .filter { !$0.isEmpty }
+        return parts.isEmpty ? [s] : parts
     }
 
     /// 标题：有汉字时在汉字上方注假名（不再单独显示读音行）；等级标签统一放在标题右上角。
