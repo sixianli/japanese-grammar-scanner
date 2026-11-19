@@ -118,7 +118,7 @@ struct LanguagePickerView: View {
 /// 让 App 内的所有文字（SwiftUI 的 Text、导航标题、按钮等）都从所选语言里取。
 /// 只改环境的 locale 不够：运行中切换语言时，SwiftUI 对普通文字仍按启动时的语言查找。
 /// 新版 Xcode 把 String Catalog 编译成整包的语言表，单靠「xx.lproj 子包」只能查到带复数规则的那部分文字，
-/// 所以两条查找路径都接管，并直接告诉系统要哪种语言。
+/// 所以查找时直接告诉系统要哪种语言（按语言查整包的语言表），查不到再退回 xx.lproj 子包。
 private var languageBundleKey: UInt8 = 0
 private var languageCodeKey: UInt8 = 0
 
@@ -129,14 +129,6 @@ private final class LanguageOverrideBundle: Bundle, @unchecked Sendable {
     override func localizedString(forKey key: String, value: String?, table tableName: String?) -> String {
         guard let code = objc_getAssociatedObject(self, &languageCodeKey) as? String, !Self.resolving.isSet else {
             return super.localizedString(forKey: key, value: value, table: tableName)
-        }
-        return Self.resolving.with { resolve(key: key, value: value, table: tableName, code: code) }
-    }
-
-    @available(iOS 18.0, *)
-    override func localizedString(forKey key: String, value: String?, table tableName: String?, localizations: [Locale.Language]) -> String {
-        guard let code = objc_getAssociatedObject(self, &languageCodeKey) as? String, !Self.resolving.isSet else {
-            return super.localizedString(forKey: key, value: value, table: tableName, localizations: localizations)
         }
         return Self.resolving.with { resolve(key: key, value: value, table: tableName, code: code) }
     }
@@ -178,5 +170,11 @@ extension Bundle {
             .flatMap { Bundle(path: $0) }
         objc_setAssociatedObject(Bundle.main, &languageBundleKey, bundle, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         objc_setAssociatedObject(Bundle.main, &languageCodeKey, code, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        // 同时记为这个 App 的首选语言：下次启动时系统直接按它加载，所有文字（包括系统控件）都是所选语言
+        if let code {
+            UserDefaults.standard.set([code], forKey: "AppleLanguages")
+        } else {
+            UserDefaults.standard.removeObject(forKey: "AppleLanguages")
+        }
     }
 }
