@@ -5,7 +5,7 @@ import XCTest
 /// 弯曲书页：整行四边形很高，文字只占其中一条带子，框要收紧到那条带子上
 final class TextBandTests: XCTestCase {
     /// 400×200 的白图，在 y = 60（原点左上）画一行 20 个 14px 的黑块当作字
-    private func page(glyphY: CGFloat) -> CGImage {
+    private func page(glyphY: CGFloat, underlineY: CGFloat? = nil) -> CGImage {
         let w = 400, h = 200
         let ctx = CGContext(data: nil, width: w, height: h, bitsPerComponent: 8, bytesPerRow: w,
                             space: CGColorSpaceCreateDeviceGray(), bitmapInfo: CGImageAlphaInfo.none.rawValue)!
@@ -15,6 +15,10 @@ final class TextBandTests: XCTestCase {
         for i in 0..<20 {
             let x = 20 + CGFloat(i) * 18 + 2
             ctx.fill(CGRect(x: x, y: CGFloat(h) - glyphY - 7, width: 14, height: 14))
+        }
+        if let underlineY {
+            // 字下面一条 3px 粗、贯穿整行的横线（框线或手画的下划线）
+            ctx.fill(CGRect(x: 15, y: CGFloat(h) - underlineY - 1.5, width: 370, height: 3))
         }
         return ctx.makeImage()!
     }
@@ -37,6 +41,16 @@ final class TextBandTests: XCTestCase {
             XCTAssertEqual(band.center(at: t), 0.25, accuracy: 0.06)
         }
         XCTAssertEqual(band.glyph, 18.0 / 80.0, accuracy: 0.03)
+    }
+
+    /// 字下面紧贴一条横线时，文字带不应被横线拉下去
+    func testUnderlineDoesNotPullTheBandDown() {
+        var lines = [tallLine()]
+        TextBandFinder.refine(&lines, image: page(glyphY: 60, underlineY: 71))
+        let band = try! XCTUnwrap(lines[0].band)
+        for t in [0.1, 0.5, 0.9] as [CGFloat] {
+            XCTAssertEqual(band.center(at: t), 0.25, accuracy: 0.04)
+        }
     }
 
     func testBoxIsTightenedToTheBand() {

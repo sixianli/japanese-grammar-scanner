@@ -160,7 +160,7 @@ enum StripLocator {
                     return [box.topLeft, box.topRight, box.bottomRight, box.bottomLeft]
                 })
         }
-        TextBandFinder.refine(&recognized, image: crop)
+        TextBandFinder.refine(&recognized, image: crop, ruleMinLength: W * 0.05)
 
         // 区域坐标（原点左下）→ 整图坐标（原点左下）
         let x0 = pixel.minX / W, sx = pixel.width / W
@@ -187,7 +187,10 @@ enum StripLocator {
 
     struct Candidate {
         let quad: [CGPoint]
+        /// 前后文一致的字数，减去 key 里读错的字数 × 2
         let context: Int
+        /// 前后文一致的字数
+        let matched: Int
         let distance: CGFloat
         let margin: CGFloat
         let looseness: CGFloat
@@ -199,7 +202,7 @@ enum StripLocator {
         guard n > 0, range.location >= 0, range.location + n <= text.count else { return nil }
         let key = Array(text[range.location..<(range.location + n)])
         let allowedMisses = n >= 4 ? 1 : 0
-        var best: (score: (Int, CGFloat, CGFloat), candidate: Candidate)?
+        var all: [Candidate] = []
         for line in pool {
             let t = line.utf16
             guard t.count >= n else { continue }
@@ -235,13 +238,22 @@ enum StripLocator {
                 let distance = hypot((c.x - prior.x) * size.width, (c.y - prior.y) * size.height) / glyph
                 guard distance <= maxDistance else { continue }
                 let margin = min(minX - line.x0, line.x1 - maxX) / gx
-                let candidate = Candidate(quad: quad, context: context - 2 * misses, distance: distance, margin: margin,
-                                          looseness: line.looseness)
-                let score = (candidate.context, -distance, margin)
-                if best == nil || score > best!.score { best = (score, candidate) }
+                all.append(Candidate(quad: quad, context: context - 2 * misses, matched: context, distance: distance,
+                                     margin: margin, looseness: line.looseness))
             }
         }
-        return best?.candidate
+        // 前后文差不多一样好的几处（练习题的选项、反复出现的句子），取离原来的框最近的一处
+        guard let top = all.map(\.context).max() else { return nil }
+        let strong = all.filter { $0.context >= top - 2 }
+        guard let best = strong.min(by: { a, b in
+            let da = (a.distance * 10).rounded(), db = (b.distance * 10).rounded()
+            if da != db { return da < db }
+            if a.context != b.context { return a.context > b.context }
+            return a.margin > b.margin
+        }) else { return nil }
+        // 有好几处候选、前后文又对得不多时，挪开超过 0.8 个字高就不可信，保持原来的框
+        if best.distance > 0.8, best.matched < 4, all.count >= 2 { return nil }
+        return best
     }
 
     // MARK: - 小工具

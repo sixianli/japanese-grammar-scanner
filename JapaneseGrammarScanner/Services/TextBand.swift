@@ -46,8 +46,8 @@ struct TextBand {
 
 enum TextBandFinder {
     /// 为每一行计算文字带（不需要收紧的行为 nil）。坐标都是 Vision 归一化坐标（原点左下）。
-    static func refine(_ lines: inout [RecognizedLine], image: CGImage) {
-        guard !lines.isEmpty, let page = GrayPage(image: image, maxSide: 1600) else { return }
+    static func refine(_ lines: inout [RecognizedLine], image: CGImage, ruleMinLength: CGFloat? = nil) {
+        guard !lines.isEmpty, let page = GrayPage(image: image, maxSide: 1600, ruleMinLength: ruleMinLength) else { return }
         // 先算最不含糊（四边形高度 / 字高 最小）的行
         let order = lines.indices.sorted { ambiguity(lines[$0], page) < ambiguity(lines[$1], page) }
         for i in order {
@@ -180,7 +180,9 @@ final class GrayPage {
     private let data: UnsafeMutablePointer<UInt8>
     private let background: UInt8
 
-    init?(image: CGImage, maxSide: Int) {
+    /// ruleMinLength：多长（原图像素）的横线算框线 / 下划线；默认原图宽度的 5%。
+    /// 只识别一块竖条或小块时，传整页宽度的 5%，避免把几个字连成的一小段当成横线
+    init?(image: CGImage, maxSide: Int, ruleMinLength: CGFloat? = nil) {
         let scale = min(1, CGFloat(maxSide) / CGFloat(max(image.width, image.height)))
         let w = max(1, Int(CGFloat(image.width) * scale))
         let h = max(1, Int(CGFloat(image.height) * scale))
@@ -204,6 +206,44 @@ final class GrayPage {
         context = ctx
         data = ptr
         background = UInt8(value)
+        removeHorizontalRules(minRun: max(20, Int((ruleMinLength ?? CGFloat(image.width) * 0.05) * scale)))
+    }
+
+    /// 抹掉长的横线（印刷的框线、手画的下划线）。
+    /// 横线紧贴在一行字下面时，找文字带会把横线也算进墨迹，文字带（和高亮框）就往下偏半行。
+    /// 判断：上下 ±2 像素内都有深色、连续不断超过页宽 5% 的一段。正文的字与字之间有空隙，不会连成这么长。
+    private func removeHorizontalRules(minRun: Int) {
+        let w = width, h = height
+        guard w > 40, h > 8 else { return }
+        let threshold = Int(background) - 45
+        guard threshold > 0 else { return }
+        var dark = [UInt8](repeating: 0, count: w * h)
+        for i in 0..<(w * h) where Int(data[i]) < threshold { dark[i] = 1 }
+        // count[x]：第 y-2…y+2 行里第 x 列的深色像素数（逐行滑动更新）
+        var count = [Int](repeating: 0, count: w)
+        for yy in 0..<5 { for x in 0..<w { count[x] += Int(dark[yy * w + x]) } }
+        for y in 2..<(h - 2) {
+            if y > 2 {
+                let out = (y - 3) * w, inn = (y + 2) * w
+                for x in 0..<w { count[x] += Int(dark[inn + x]) - Int(dark[out + x]) }
+            }
+            var x = 0
+            while x < w {
+                guard count[x] > 0 else { x += 1; continue }
+                var end = x
+                while end < w, count[end] > 0 { end += 1 }
+                if end - x >= minRun {
+                    for xx in x..<end {
+                        for yy in (y - 2)...(y + 2) where dark[yy * w + xx] == 1 {
+                            data[yy * w + xx] = background
+                            dark[yy * w + xx] = 0
+                            count[xx] -= 1
+                        }
+                    }
+                }
+                x = end
+            }
+        }
     }
 
     /// Vision 归一化坐标（原点左下） → 像素坐标（原点左上）
