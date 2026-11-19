@@ -21,8 +21,8 @@ enum ScanAnalyzer {
 
     /// 一行中某段文字的框。
     /// 优先采用 Vision 给出的逐字框（斜拍、弯曲的照片上它最贴合文字）；
-    /// 但部分设备上 Vision 的逐字框会整体偏移，所以先检查它是否「落在这一行里」：
-    /// 竖直方向中心要在行框内、水平方向不能超出行框、宽度与按字数估算的宽度相差不大。不合理时改用按字数估算的框。
+    /// 但部分设备上 Vision 的逐字框会偏移或变形，所以先检查是否合理：中心离所在行不超过一个字、
+    /// （横排时）长度与按字数估算的相差不超过 0.4～2.5 倍。不合理时改用按字数估算的框。
     static func substringBox(line: RecognizedLine, local: NSRange) -> CGRect {
         let estimate = estimatedBox(line: line, local: local)
         guard let vision = line.boxForRange(local), plausible(vision, in: line.boundingBox, estimate: estimate) else { return estimate }
@@ -32,20 +32,18 @@ enum ScanAnalyzer {
     static func plausible(_ r: CGRect, in line: CGRect, estimate: CGRect) -> Bool {
         guard r.width > 0, r.height > 0 else { return false }
         let isVertical = line.height > line.width * 1.5
-        // 一个字大约多宽（横排看高度，竖排看宽度）
+        // 一个字大约多宽（横排看行高，竖排看行宽）
         let glyph = isVertical ? line.width : min(line.height, max(estimate.width, 1e-6))
-        let tol = glyph * 0.6
-        // 中心必须在行框里
+        let tol = glyph
+        // 位置偏了：框的中心离这一行超过一个字
         guard r.midX >= line.minX - tol, r.midX <= line.maxX + tol,
               r.midY >= line.minY - tol, r.midY <= line.maxY + tol else { return false }
-        // 不能明显超出行框
-        guard r.minX >= line.minX - tol, r.maxX <= line.maxX + tol,
-              r.minY >= line.minY - tol, r.maxY <= line.maxY + tol else { return false }
-        // 长度与按字数估算的差不多（0.5～2 倍）
-        let (a, b) = isVertical ? (r.height, estimate.height) : (r.width, estimate.width)
-        guard b > 0, a / b > 0.5, a / b < 2 else { return false }
-        // 横排：框的高度不应超过行高的 1.3 倍（斜拍时行框本身就高，所以只限制不能比行框还高）
-        if !isVertical, r.height > line.height * 1.3 { return false }
+        // 横排：长度与按字数估算的相差过大（例如给成了整行，或只剩一条细线）
+        // 竖排的行在照片里多半是 Vision 把几行的开头误连成一列，此时按字数的估算反而不可靠，不做长度比较
+        if !isVertical, estimate.width > 0 {
+            let ratio = r.width / estimate.width
+            guard ratio > 0.4, ratio < 2.5 else { return false }
+        }
         return true
     }
 
