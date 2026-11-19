@@ -188,6 +188,11 @@ def validate_base(files):
         for sid in gp.get("subsumes") or []:
             if sid not in known:
                 errors.append(f"{where}: subsumes 引用了不存在的 id {sid}")
+            elif sid == gid:
+                errors.append(f"{where}: subsumes 不能包含自己")
+            elif sid in points and gid in (points[sid][1].get("subsumes") or []):
+                # 互相包含：两个语法点在同一处会把对方都隐藏掉，结果两个都不显示
+                errors.append(f"{where}: 与 {sid} 互相 subsumes，同一处两个都会被隐藏")
         compiled = []
         for p in gp.get("patterns") or []:
             for bad in FORBIDDEN_REGEX:
