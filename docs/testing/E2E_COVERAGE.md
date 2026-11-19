@@ -29,6 +29,8 @@
 | 扫描 | 扫描标签 → 相册 → 选照片 → 识别结果 | `ScanResultTests.testScanTabPhotoPicker` |
 | 识别结果 | 点高亮框 → 讲解（多个语法点时先选择） | `ScanResultTests.testHighlightBoxOpensGrammarOrChooser` |
 | 识别结果 | 列表中每个语法点 → 讲解 → 返回 | `ScanResultTests.testResultRowsAllOpenDetail` |
+| 识别结果 | 进入讲解后顶部显示「你扫到的：…」，对应用法高亮，点横幅跳到该用法；从搜索进入不显示 | `ScanResultTests.testScannedMatchBannerOnDetail` / `testNoScannedBannerFromSearch` |
+| 识别结果 | 一个框里有多个语法点时，选项附上各自命中的原文 | `ScanResultTests.testChooserOptionsShowMatchedText` |
 | 识别结果 | 放大按钮 → 全屏 → 双击放大 / 还原 → 关闭 | `ScanResultTests.testZoomButtonDoubleTapAndClose` |
 | 识别结果 | 双指放大进入全屏 → 双指缩小退出 | `ScanResultTests.testPinchOpensZoomAndPinchInCloses` |
 | 识别结果 | 全屏时向下滑退出 | `ScanResultTests.testSwipeDownClosesZoom` |
@@ -48,12 +50,15 @@
 | 搜索 | 点搜索标签自动获得焦点；从讲解页切走再回来，回到搜索页并获得焦点 | `EndToEndTests.testSearchTabFocusesFieldEveryTime` |
 | 搜索 | 未输入时显示最近查看 → 打开 | `SearchTests.testRecentViewsShownWhenEmpty` |
 | 搜索 | 无结果；只在例句中出现；按中文意思搜索 | `SearchTests.testNoResults` / `testFoundOnlyInExamples` / `testChineseMeaningSearch` |
+| 搜索 | 输入后点空白处收起键盘、文字保留；拖动结果列表收起键盘 | `SearchTests.testTapOutsideDismissesKeyboard` |
 | 设置 | 打开 / 关闭设置面板 | `SettingsTests.*` |
 | 设置 | 外观：逐个点所有主题色和背景色 | `SettingsTests.testAppearanceAllSwatches` |
 | 设置 | 语言：逐个切换 8 种语言，界面立即变化 | `SettingsTests.testEveryLanguage` / `EndToEndTests.testSettingsSheetAndLanguageSwitch` |
 | 设置 | 切换到英文后讲解内容也变成英文 | `SettingsTests.testLanguageAppliesToContent` |
 | 设置 | 三种反馈 → 填写 → 发送 → 弹出分享面板 | `SettingsTests.testFeedbackAllKindsSendOpensShareSheet` |
 | 设置 | 反馈添加截图 → 删除截图 | `SettingsTests.testFeedbackAddScreenshot` |
+| 设置 | 反馈输入后点键盘上方「完成」收起键盘 | `SettingsTests.testFeedbackKeyboardDone` |
+| 设置 | 匿名使用统计开关：默认打开，关闭后保存 | `SettingsTests.testUsageStatsToggle` |
 | 设置 | 使用引导 → 跳过 → 开始使用 | `SettingsTests.testOnboardingFromSettings` |
 | 设置 | 隐私政策、使用条款、开源许可、版本 | `SettingsTests.testAboutPages` |
 

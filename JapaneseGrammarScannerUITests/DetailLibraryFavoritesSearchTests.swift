@@ -167,4 +167,22 @@ final class SearchTests: E2ETestCase {
         field.typeText("尽管")
         wait(id("search.result"), "按中文意思搜索应有结果")
     }
+
+    /// 输入后点键盘以外的空白处，键盘收起，输入的文字保留（无结果和有结果两种页面）
+    func testTapOutsideDismissesKeyboard() {
+        tab("搜索").tap()
+        wait(field, "搜索框")
+        XCTAssertTrue(waitForFocus(field), "进入搜索页应弹出键盘")
+        field.typeText("sstv")
+        app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.45)).tap()
+        waitGone(app.keyboards.firstMatch, "无结果时点空白处应收起键盘")
+        XCTAssertEqual(field.value as? String, "sstv", "收起键盘后输入的文字应保留")
+
+        field.tap()
+        XCTAssertTrue(waitForFocus(field), "再点搜索框应重新弹出键盘")
+        field.typeText(XCUIKeyboardKey.delete.rawValue + XCUIKeyboardKey.delete.rawValue + XCUIKeyboardKey.delete.rawValue + XCUIKeyboardKey.delete.rawValue + "尽管")
+        wait(id("search.result"), "应有结果")
+        app.swipeUp()
+        waitGone(app.keyboards.firstMatch, "拖动结果列表应收起键盘")
+    }
 }

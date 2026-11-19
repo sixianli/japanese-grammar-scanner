@@ -175,3 +175,31 @@ extension View {
         self.scrollContentBackground(.hidden).background(Theme.background)
     }
 }
+
+// MARK: - 收起键盘
+
+extension UIApplication {
+    static func dismissKeyboard() {
+        shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+
+extension View {
+    /// 列表 + 搜索框：拖动列表或点键盘以外的地方就收起键盘（输入的文字保留）
+    func dismissesKeyboardOnTapAndScroll() -> some View {
+        scrollDismissesKeyboard(.immediately)
+            .simultaneousGesture(TapGesture().onEnded { UIApplication.dismissKeyboard() })
+    }
+
+    /// 多行输入：键盘上方加「完成」，下拉表单也能收起（点输入框内部仍是继续编辑）
+    func keyboardDoneButton() -> some View {
+        scrollDismissesKeyboard(.interactively)
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("完成") { UIApplication.dismissKeyboard() }
+                        .accessibilityIdentifier("keyboard.done")
+                }
+            }
+    }
+}

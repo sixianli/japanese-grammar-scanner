@@ -221,6 +221,7 @@ struct ScanResultView: View {
                 .accessibilityIdentifier("result.editor")
                 .font(.title3)
                 .padding()
+                .keyboardDoneButton()
                 .navigationTitle("修正识别文本")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {

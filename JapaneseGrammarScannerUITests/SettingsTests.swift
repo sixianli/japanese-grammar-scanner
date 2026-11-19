@@ -148,4 +148,21 @@ final class SettingsTests: E2ETestCase {
         XCTAssertEqual(id("settings.usageStats").value as? String, "1")
         closeSettings()
     }
+
+    /// 反馈描述输入后，点键盘上方的「完成」收起键盘，文字保留
+    func testFeedbackKeyboardDone() {
+        openSettings()
+        button(startingWith: "体验与建议").tap()
+        wait(navBar("反馈"), "应打开反馈页")
+        let editor = app.textViews.firstMatch
+        editor.tap()
+        XCTAssertTrue(app.keyboards.firstMatch.waitForExistence(timeout: 5), "点输入框应弹出键盘")
+        editor.typeText("键盘测试")
+        id("keyboard.done").tap()
+        waitGone(app.keyboards.firstMatch, "点「完成」应收起键盘")
+        XCTAssertTrue((editor.value as? String ?? "").contains("键盘测试"), "收起键盘后文字应保留")
+        navBar("反馈").buttons["取消"].tap()
+        waitGone(navBar("反馈"), "取消后关闭反馈页")
+        closeSettings()
+    }
 }

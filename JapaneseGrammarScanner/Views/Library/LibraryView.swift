@@ -37,6 +37,7 @@ struct LibraryView: View {
                 }
             }
             .themedList()
+            .dismissesKeyboardOnTapAndScroll()
             .searchable(text: $query, prompt: "搜索语法或意思")
             .navigationTitle("语法库")
             .navigationBarTitleDisplayMode(.inline)

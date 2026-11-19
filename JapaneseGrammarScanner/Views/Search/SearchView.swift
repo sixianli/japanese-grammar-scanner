@@ -42,6 +42,8 @@ struct SearchView: View {
                                            description: Text("输入语法、读音或意思，例如「ようになる」「にもかかわらず」「尽管」。"))
                 }
             }
+            // 输入后点键盘以外的地方（空白处、提示文字）或拖动列表，都收起键盘；搜索框里的文字保留
+            .dismissesKeyboardOnTapAndScroll()
             // 搜索框始终显示在顶部，不会因为列表滚动而收起
             .searchable(text: $query, isPresented: $isPresented,
                         placement: .navigationBarDrawer(displayMode: .always), prompt: "搜索语法或意思")

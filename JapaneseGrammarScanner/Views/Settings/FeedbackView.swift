@@ -115,6 +115,7 @@ struct FeedbackView: View {
                 .listRowBackground(Theme.card)
             }
             .themedList()
+            .keyboardDoneButton()
             .navigationTitle("反馈")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
