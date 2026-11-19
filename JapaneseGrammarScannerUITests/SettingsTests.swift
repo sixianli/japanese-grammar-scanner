@@ -130,4 +130,22 @@ final class SettingsTests: E2ETestCase {
         wait(text(containing: "版本"), "设置应显示版本")
         closeSettings()
     }
+
+    /// 匿名使用统计开关：默认打开，关掉后重新打开设置仍是关闭
+    func testUsageStatsToggle() {
+        openSettings()
+        let toggle = id("settings.usageStats")
+        scrollTo(toggle)
+        wait(toggle, "设置里应有匿名使用统计开关")
+        XCTAssertEqual(toggle.value as? String, "1", "默认应打开")
+        toggle.switches.firstMatch.exists ? toggle.switches.firstMatch.tap() : toggle.tap()
+        XCTAssertEqual(toggle.value as? String, "0")
+        closeSettings()
+        openSettings()
+        scrollTo(id("settings.usageStats"))
+        XCTAssertEqual(id("settings.usageStats").value as? String, "0", "关闭状态应保存下来")
+        id("settings.usageStats").tap()
+        XCTAssertEqual(id("settings.usageStats").value as? String, "1")
+        closeSettings()
+    }
 }

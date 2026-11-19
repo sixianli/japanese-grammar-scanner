@@ -92,4 +92,65 @@ final class ScanResultTests: E2ETestCase {
             wait(navBar("识别结果"), "返回识别结果")
         }
     }
+
+    /// 从识别结果进入讲解：顶部显示「你扫到的：…」，对应的用法高亮，点一下跳到该用法
+    func testScannedMatchBannerOnDetail() {
+        openSampleFromHome()
+        let rows = ids("result.grammarRow")
+        wait(rows.firstMatch, "应列出语法点")
+        var found = false
+        for i in 0..<min(rows.count, 6) {
+            let row = rows.element(boundBy: i)
+            scrollTo(row)
+            row.tap()
+            wait(detailScreen, "应进入讲解页")
+            let banner = id("detail.scannedMatch")
+            XCTAssertTrue(banner.waitForExistence(timeout: 5), "从识别结果进入的讲解页应显示扫到的原文")
+            XCTAssertTrue(text(containing: "你扫到的").exists, "横幅应写明「你扫到的」")
+            if id("detail.senseRow.matched").exists {
+                found = true
+                banner.tap()
+                XCTAssertTrue(id("detail.senseRow.matched").waitForExistence(timeout: 3))
+            }
+            back()
+            wait(navBar("识别结果"), "返回识别结果")
+            if found { break }
+        }
+        XCTAssertTrue(found, "示例书页里至少有一个多用法语法点应定位到具体用法")
+    }
+
+    /// 从搜索进入的讲解页不显示「你扫到的」
+    func testNoScannedBannerFromSearch() {
+        openDetailBySearch("ようになる")
+        XCTAssertFalse(id("detail.scannedMatch").waitForExistence(timeout: 2))
+    }
+
+    /// 一个框里有多个语法点时，选项后面附上各自命中的原文
+    func testChooserOptionsShowMatchedText() {
+        openSampleFromHome()
+        let boxes = ids("highlight.box")
+        wait(boxes.firstMatch, "示例书页上应有高亮框")
+        let options = app.buttons.matching(NSPredicate(format: "label CONTAINS '(N'"))
+        var sawChooser = false
+        for i in 0..<min(boxes.count, 40) {
+            let box = boxes.element(boundBy: i)
+            guard box.isHittable else { continue }
+            box.tap()
+            if options.firstMatch.waitForExistence(timeout: 2) {
+                sawChooser = true
+                for j in 0..<options.count {
+                    XCTAssertTrue(options.element(boundBy: j).label.contains("「"), "选项应附上命中的原文：\(options.element(boundBy: j).label)")
+                }
+                app.buttons["取消"].firstMatch.tap()
+                break
+            }
+            if detailScreen.waitForExistence(timeout: 2) {
+                back()
+                waitForScanResult()
+            }
+        }
+        if !sawChooser {
+            print("示例书页上没有多语法点的框，跳过选项检查")
+        }
+    }
 }

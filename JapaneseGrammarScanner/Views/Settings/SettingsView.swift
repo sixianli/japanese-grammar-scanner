@@ -40,6 +40,7 @@ struct SettingsView: View {
     @EnvironmentObject private var languages: LanguageStore
     @State private var showPaywall = false
     @State private var feedbackKind: FeedbackView.Kind?
+    @ObservedObject private var usage = UsageStats.shared
 
     var body: some View {
         List {
@@ -86,6 +87,17 @@ struct SettingsView: View {
                 Text("反馈")
             } footer: {
                 Text("遇到 bug、讲解有误或有任何建议，都可以附上截图告诉我们。")
+            }
+            .listRowBackground(Theme.card)
+            Section {
+                Toggle(isOn: $usage.isEnabled) {
+                    Label("匿名使用统计", systemImage: "chart.bar")
+                }
+                .accessibilityIdentifier("settings.usageStats")
+            } header: {
+                Text("隐私")
+            } footer: {
+                Text("帮助我们了解有多少人在用、来自哪些地区、哪些语法最常被查，以便改进。不包含任何能识别你或你设备的信息。")
             }
             .listRowBackground(Theme.card)
             Section("帮助") {
@@ -139,9 +151,10 @@ struct SettingsView: View {
 struct PrivacyPolicyView: View {
     var body: some View {
         LegalPage(title: "隐私政策", updated: "2026-11-19", paragraphs: [
-            ("一句话说明", "本 App 不需要注册账号，不包含广告、统计分析或任何第三方 SDK。文字识别全部在你的设备上完成。"),
+            ("一句话说明", "本 App 不需要注册账号，不包含广告或任何第三方 SDK。文字识别全部在你的设备上完成。匿名使用统计可以在设置中随时关闭。"),
             ("相机与照片", "相机画面和你从相册选择的图片，只在你的设备上由 Apple Vision 识别文字，不会上传。拍照或从相册识别的图片保存在本机的「最近扫描」中，方便回看，可以随时删除。"),
             ("收藏与浏览记录", "收藏、浏览记录和设置只保存在本机，删除 App 即一并删除。"),
+            ("匿名使用统计", "为了解有多少人在用、来自哪些国家或地区、在什么时段使用、哪些语法点最常被查，App 每天会匿名上报一条使用汇总：当天打开次数、按小时的使用分布、查看过的语法点及其等级、App Store 所在的国家或地区、界面语言和 App 版本。不包含姓名、账号、设备编号或任何能识别你的信息，通过 Apple 的 iCloud（CloudKit）保存，只用于改进 App。可以随时在「设置 → 匿名使用统计」中关闭。"),
             ("反馈", "只有当你在反馈页主动点击「发送」时，你填写的描述、附上的截图，以及 App 版本、系统版本、设备型号和界面语言，才会通过 Apple 的 iCloud（CloudKit）发送给开发者。这些信息只用于排查问题和改进 App，不会用于其他用途，也不会提供给任何第三方。"),
             ("联系我们", "对本隐私政策有任何疑问，可以在「设置 → 反馈」中告诉我们。"),
         ])

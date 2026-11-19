@@ -22,7 +22,10 @@ struct GrammarDetailView: View {
     var body: some View {
         if let point = library.point(id: grammarID) {
             content(point)
-                .onAppear { history.recordViewed(point.id) }
+                .onAppear {
+                    history.recordViewed(point.id)
+                    UsageStats.shared.grammarViewed(point.id, level: point.level)
+                }
         } else {
             ContentUnavailableView("找不到该语法点", systemImage: "questionmark.folder")
         }

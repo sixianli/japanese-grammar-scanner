@@ -113,14 +113,15 @@ final class GrammarMatcher {
         }
     }
 
-    /// 一个命中实际要框出来的片段。短的整段框；长的（超过 6 个字）只框开头和结尾的假名部分。
+    /// 一个命中实际要框出来的片段。短的整段框；长的（超过 6 个字）只框开头和结尾的平假名部分。
     static func displaySegments(for range: NSRange, in text: NSString) -> [NSRange] {
         guard range.length > 6, text.length >= NSMaxRange(range) else { return [range] }
-        func isKana(_ c: unichar) -> Bool { (0x3041...0x3096).contains(c) || (0x30A1...0x30FA).contains(c) || c == 0x30FC }
+        // 语法的关键部分几乎都是平假名（や、など、は、が……），遇到汉字、片假名（名词）就停
+        func isHiragana(_ c: unichar) -> Bool { (0x3041...0x3096).contains(c) || c == 0x30FC }
         var head = 0
-        while head < min(3, range.length), isKana(text.character(at: range.location + head)) { head += 1 }
+        while head < min(3, range.length), isHiragana(text.character(at: range.location + head)) { head += 1 }
         var tail = 0
-        while tail < min(4, range.length), isKana(text.character(at: NSMaxRange(range) - 1 - tail)) { tail += 1 }
+        while tail < min(4, range.length), isHiragana(text.character(at: NSMaxRange(range) - 1 - tail)) { tail += 1 }
         head = max(head, 1)
         tail = max(tail, 1)
         guard head + tail < range.length - 1 else { return [range] }

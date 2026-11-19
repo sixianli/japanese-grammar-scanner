@@ -59,6 +59,7 @@ struct RootTabView: View {
     @EnvironmentObject private var history: HistoryStore
     @EnvironmentObject private var library: GrammarLibrary
     @AppStorage("didCompleteOnboarding") private var didCompleteOnboarding = false
+    @Environment(\.scenePhase) private var scenePhase
     /// 启动时的一次性处理（迁移、演示/测试数据、引导）只做一次；切换语言重建界面时不重复
     private static var didLaunchSetup = false
     @State private var showOnboarding = false
@@ -120,6 +121,14 @@ struct RootTabView: View {
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: .showOnboarding)) { _ in showOnboarding = true }
+        // 匿名使用统计：进入前台记一次使用，进入后台时上报
+        .onChange(of: scenePhase, initial: true) { _, phase in
+            switch phase {
+            case .active: UsageStats.shared.appBecameActive()
+            case .background: UsageStats.shared.appMovedToBackground()
+            default: break
+            }
+        }
         .onAppear {
             if LanguageStore.reopenLanguagePage {
                 // 刚切换完语言：界面已重建，重新打开设置的语言页
@@ -156,6 +165,7 @@ struct RootTabView: View {
         appearance.accent = .matcha
         appearance.light = AppearanceStore.LightBackground.allCases[0]
         appearance.dark = AppearanceStore.DarkBackground.allCases[0]
+        UsageStats.shared.isEnabled = true
         if DemoMode.e2eFresh {
             didCompleteOnboarding = false
             return
