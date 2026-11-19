@@ -75,8 +75,8 @@ class Matcher:
 
 # ---------- 行的后处理方案 ----------
 
-def assemble(lines):
-    """与 TextRecognizer.assemble 相同：行直接相连，上一行以句末标点结尾时换行。"""
+def assemble_v1(lines):
+    """build 10 及以前：行直接相连，上一行以句末标点结尾时换行。"""
     text = ""
     for ln in lines:
         t = ln["text"].strip()
@@ -85,6 +85,70 @@ def assemble(lines):
         if text and text[-1] in SENTENCE_END:
             text += "\n"
         text += t
+    return text
+
+
+LETTER = re.compile(r"[^\W\d_]")
+KANA_ONLY = re.compile(r"[ぁ-ゖァ-ヺー]")
+SEPARATORS = set("（）()／/｜|：:")
+
+
+def is_foreign(s):
+    """与 JapaneseText.isForeign 相同：没有假名和汉字，或 4 字以上却几乎没有假名。"""
+    letters = LETTER.findall(s)
+    if not letters:
+        return False
+    kana = sum(1 for c in letters if KANA_ONLY.match(c))
+    ja = sum(1 for c in letters if KANA_ONLY.match(c) or KANJI.match(c))
+    if ja == 0:
+        return True
+    return len(letters) >= 4 and kana / len(letters) < 0.05
+
+
+def mask_foreign_segments(line):
+    out, seg = [], []
+
+    def flush():
+        t = "".join(seg)
+        out.append("　" * (len(t.encode("utf-16-le")) // 2) if is_foreign(t) else t)
+        seg.clear()
+    for ch in line:
+        if ch in SEPARATORS:
+            flush()
+            out.append(ch)
+        else:
+            seg.append(ch)
+    flush()
+    return "".join(out)
+
+
+def is_continuation(p, n):
+    """与 TextRecognizer.isContinuation 相同。box: [minX, minY, w, h]，原点左下。"""
+    px, py, pw, ph = p
+    x, y, w, h = n
+    lh = max(min(ph, h), 1e-6)
+    gap = (py - (y + h)) / lh
+    if not (-3.5 <= gap <= 1.2):
+        return False
+    if px + pw < (x + w) - 1.5 * lh:
+        return False
+    return x <= px + 2.5 * lh
+
+
+def assemble(lines):
+    """与 TextRecognizer.assemble 相同（build 11 起）：段落内折行相连、其余换行；排除外文行，行内外文片段替换为空白。"""
+    text, prev = "", None
+    for ln in lines:
+        t = ln["text"].strip()
+        if not t or is_foreign(t):
+            continue
+        t = mask_foreign_segments(t)
+        if prev is not None:
+            last = text.rstrip("　")[-1:]
+            if last in SENTENCE_END or not is_continuation(prev, ln["box"]):
+                text += "\n"
+        text += t
+        prev = ln["box"]
     return text
 
 

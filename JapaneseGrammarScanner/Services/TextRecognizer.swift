@@ -22,29 +22,37 @@ enum TextRecognizer {
         return assemble(observations)
     }
 
-    /// 把 Vision 返回的各行拼成一段文本。
-    /// 日文没有空格，书本排版的换行是任意的，所以行与行直接相连；只有上一行以句末标点结尾时才插入换行。
-    /// 这样跨行的语法（例如行尾“〜てし”、下一行“まった”）也能被识别出来。
+    /// 把 Vision 的各行拼成一段文字，用于语法匹配：
+    /// - 同一段落里因为排版折行的句子接起来；标题、列表项、不同段落之间换行，语法规则不会跨行误匹配
+    ///   （例如标题「〜とは限らない」和下一行「意味）〜が…」被连成「は限らない意味）〜が」而命中「〜は〜が〜」）；
+    /// - 几乎没有假名的行（中文、英文、越南文、韩文释义）不参与匹配；行内的外文片段用空白替换（保持位置不变，框不会错位）。
+    /// 规则在 95 张实拍照片上评测过，见 docs/ocr-eval/runs/。
     static func assemble(_ observations: [VNRecognizedTextObservation]) -> (text: String, lines: [RecognizedLine]) {
         var text = ""
         var lines: [RecognizedLine] = []
+        var previous: CGRect?
         let sentenceEnders: Set<Character> = ["。", "！", "？", "!", "?", "」", "』", "…"]
 
         for obs in observations {
             guard let candidate = obs.topCandidates(1).first else { continue }
-            let lineText = candidate.string.trimmingCharacters(in: .whitespaces)
-            guard !lineText.isEmpty else { continue }
+            let trimmed = candidate.string.trimmingCharacters(in: .whitespaces)
+            guard !trimmed.isEmpty, !JapaneseText.isForeign(trimmed) else { continue }
+            let lineText = JapaneseText.maskForeignSegments(trimmed)
 
-            if let last = text.last, sentenceEnders.contains(last) {
-                text += "\n"
+            if let prev = previous {
+                let last = text.trimmingCharacters(in: CharacterSet(charactersIn: "　")).last
+                let continues = !(last.map(sentenceEnders.contains) ?? false)
+                    && isContinuation(previous: prev, next: obs.boundingBox)
+                if !continues { text += "\n" }
             }
             let start = (text as NSString).length
             text += lineText
             let range = NSRange(location: start, length: (lineText as NSString).length)
+            previous = obs.boundingBox
 
             // trim 之后需要重新在原始字符串中定位
             let original = candidate.string
-            let offsetInOriginal = (original as NSString).range(of: lineText).location
+            let offsetInOriginal = (original as NSString).range(of: trimmed).location
 
             lines.append(RecognizedLine(
                 rangeInText: range,
@@ -59,6 +67,64 @@ enum TextRecognizer {
             ))
         }
         return (text, lines)
+    }
+
+    /// 下一行是不是上一行的折行续写（Vision 归一化坐标，原点在左下角）：
+    /// 两行上下相邻（斜拍时行框会互相重叠，允许重叠）、上一行基本写满（右端不比下一行短太多）、下一行没有明显缩进。
+    static func isContinuation(previous p: CGRect, next n: CGRect) -> Bool {
+        let lineHeight = max(min(p.height, n.height), 1e-6)
+        let gap = (p.minY - n.maxY) / lineHeight
+        guard gap >= -3.5, gap <= 1.2 else { return false }
+        guard p.maxX >= n.maxX - 1.5 * lineHeight else { return false }
+        return n.minX <= p.minX + 2.5 * lineHeight
+    }
+}
+
+/// 判断文字是不是日文（用于排除教材里的中文、英文等释义）
+enum JapaneseText {
+    static func isKana(_ u: Unicode.Scalar) -> Bool {
+        (0x3041...0x3096).contains(u.value) || (0x30A1...0x30FA).contains(u.value) || u.value == 0x30FC
+    }
+
+    static func isKanji(_ u: Unicode.Scalar) -> Bool {
+        (0x3400...0x9FFF).contains(u.value) || u == "々" || u == "〆"
+    }
+
+    /// 非日文：没有任何假名和汉字（英文、韩文、越南文等），或者 4 个字以上却几乎没有假名（中文）
+    static func isForeign<S: StringProtocol>(_ s: S) -> Bool {
+        let letters = s.unicodeScalars.filter { CharacterSet.letters.contains($0) }
+        guard !letters.isEmpty else { return false }
+        let kana = letters.filter(isKana).count
+        let japanese = letters.filter { isKana($0) || isKanji($0) }.count
+        if japanese == 0 { return true }
+        return letters.count >= 4 && Double(kana) / Double(letters.count) < 0.05
+    }
+
+    private static let separators: Set<Character> = ["（", "）", "(", ")", "／", "/", "｜", "|", "：", ":"]
+
+    /// 行内的外文片段（如「夜市：night market／夜市／야시장」里的英文、韩文）换成等长的全角空格，
+    /// 保证每个字在整行里的位置不变（高亮框按位置定位）
+    static func maskForeignSegments(_ line: String) -> String {
+        var out = ""
+        var segment = ""
+        func flush() {
+            if isForeign(segment) {
+                out += String(repeating: "　", count: (segment as NSString).length)
+            } else {
+                out += segment
+            }
+            segment = ""
+        }
+        for ch in line {
+            if separators.contains(ch) {
+                flush()
+                out.append(ch)
+            } else {
+                segment.append(ch)
+            }
+        }
+        flush()
+        return out
     }
 }
 
