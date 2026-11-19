@@ -21,7 +21,45 @@ struct JapaneseGrammarScannerApp: App {
                 .environmentObject(favorites)
                 .environmentObject(entitlements)
                 .environmentObject(history)
+                // 端对端测试用：显示各种查找翻译的方式实际得到的结果，排查 App 内切换语言
+                .overlay(alignment: .bottomLeading) {
+                    if DemoMode.e2e { LanguageDiagnostics(code: languages.language.rawValue) }
+                }
         }
+    }
+}
+
+/// 端对端测试用的语言诊断信息（不可见，只给 UI 测试读取）
+private struct LanguageDiagnostics: View {
+    let code: String
+
+    var body: some View {
+        let key = "语言"
+        let lproj = Bundle.main.path(forResource: code, ofType: "lproj")
+        let sub = lproj.flatMap { Bundle(path: $0) }
+        let files = lproj.flatMap { try? FileManager.default.contentsOfDirectory(atPath: $0) } ?? []
+        let rootTables = (try? FileManager.default.contentsOfDirectory(atPath: Bundle.main.bundlePath))?
+            .filter { $0.hasSuffix(".lproj") || $0.contains("loctable") || $0.hasSuffix(".strings") } ?? []
+        let info = [
+            "code=\(code)",
+            "class=\(String(describing: type(of: Bundle.main)))",
+            "main=\(Bundle.main.localizedString(forKey: key, value: "∅", table: nil))",
+            "sub=\(sub?.localizedString(forKey: key, value: "∅", table: nil) ?? "nolproj")",
+            "files=\(files.joined(separator: "+"))",
+            "root=\(rootTables.joined(separator: "+"))",
+            "pref=\(Bundle.main.preferredLocalizations.joined(separator: "+"))",
+            "locs=\(Bundle.main.localizations.joined(separator: "+"))",
+        ].joined(separator: " | ")
+        VStack(spacing: 0) {
+            Text(verbatim: info)
+                .accessibilityIdentifier("lang.debug")
+            Text("语言")
+                .accessibilityIdentifier("lang.debug.text")
+        }
+        .font(.system(size: 2))
+        .opacity(0.02)
+        .allowsHitTesting(false)
+        .frame(width: 2, height: 2)
     }
 }
 

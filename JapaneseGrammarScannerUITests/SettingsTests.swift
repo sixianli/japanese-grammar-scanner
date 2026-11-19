@@ -175,4 +175,22 @@ final class SettingsTests: E2ETestCase {
         waitGone(navBar("反馈"), "取消后关闭反馈页")
         closeSettings()
     }
+
+    /// 诊断：切换到英文前后，各种查找翻译的方式实际得到什么（只打印，不判失败）
+    func testLanguageDiagnostics() {
+        func dump(_ tag: String) {
+            let info = id("lang.debug")
+            let text = id("lang.debug.text")
+            print("LANGDIAG \(tag): \(info.exists ? info.label : "-") || Text=\(text.exists ? text.label : "-") || settingsBar=\(navBar("设置").exists)/\(navBar("Settings").exists) langBar=\(navBar("语言").exists)/\(navBar("Language").exists)")
+        }
+        dump("before")
+        openSettings()
+        button(startingWith: "语言").tap()
+        wait(navBar("语言"), "应进入语言页")
+        app.buttons.matching(NSPredicate(format: "label CONTAINS 'English'")).firstMatch.tap()
+        for t in [1, 2, 4] {
+            sleep(UInt32(t))
+            dump("after+\(t)")
+        }
+    }
 }
