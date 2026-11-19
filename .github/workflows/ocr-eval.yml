@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
     inputs:
       configs:
-        description: "要评测的方案（逗号分隔）：base, jaOnly, corrected"
+        description: "要评测的方案（逗号分隔）：base（与 App 相同）, first（只跑第一步，不分条重新定位）, lc, strips3, strips5"
         required: false
-        default: "base,corrected"
+        default: "base"
   push:
     branches: ["claude/**"]
     paths:
@@ -16,6 +16,8 @@ on:
       - "JapaneseGrammarScanner/Services/TextRecognizer.swift"
       - "JapaneseGrammarScanner/Services/DocumentCorrector.swift"
       - "JapaneseGrammarScanner/Services/ScanAnalyzer.swift"
+      - "JapaneseGrammarScanner/Services/StripLocator.swift"
+      - "JapaneseGrammarScanner/Services/TextBand.swift"
       - ".github/workflows/ocr-eval.yml"
 
 jobs:
@@ -39,7 +41,7 @@ jobs:
         env:
           TEST_RUNNER_OCR_SAMPLES: ${{ github.workspace }}/tests/ocr/samples
           TEST_RUNNER_OCR_OUT: ${{ github.workspace }}/ocr-out
-          TEST_RUNNER_OCR_CONFIGS: ${{ inputs.configs || 'base,tiled' }}
+          TEST_RUNNER_OCR_CONFIGS: ${{ inputs.configs || 'base' }}
         run: |
           set -o pipefail
           xcodebuild test \

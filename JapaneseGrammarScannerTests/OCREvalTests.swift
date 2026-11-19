@@ -82,29 +82,24 @@ final class OCREvalTests: XCTestCase {
                         }
                     }
                 }
-                // 每个高亮框来自哪一行的哪一段（与 ScanAnalyzer.analyze 的循环顺序一致）
-                var sources: [[Int]] = []
-                for cluster in result.clusters {
-                    for segment in cluster.ranges {
-                        for (i, line) in assembled.lines.enumerated() {
-                            let overlap = NSIntersectionRange(segment, line.rangeInText)
-                            guard overlap.length > 0 else { continue }
-                            sources.append([i, overlap.location - line.rangeInText.location, overlap.length])
-                        }
-                    }
-                }
                 let assembledLines: [[String: Any]] = assembled.lines.map { l in
                     var d: [String: Any] = ["text": l.text, "range": [l.rangeInText.location, l.rangeInText.length],
                                             "quad": l.quad.flatMap { [Double($0.x), Double(1 - $0.y)] }]
                     if let b = l.band { d["band"] = ["glyph": Double(b.glyph), "ts": b.ts.map(Double.init), "centers": b.centers.map(Double.init)] }
                     return d
                 }
-                let boxes: [[String: Any]] = result.boxes.enumerated().map { k, box in
+                let firstSeconds = Date().timeIntervalSince(start)
+                // 与 App 一致：第二步切竖条重新定位高亮框（config "first" 只跑第一步做对比）
+                let final = config == "first" ? result : StripLocator.refine(result, lines: assembled.lines, image: input)
+                func dumpBoxes(_ list: [HighlightBox]) -> [[String: Any]] { list.map { box in
                     let ids = result.clusters.first { $0.id == box.clusterID }?.grammarIDs ?? []
-                    return ["grammar": ids, "cluster": box.clusterID, "source": k < sources.count ? sources[k] : [],
+                    return ["grammar": ids, "cluster": box.clusterID,
+                            "source": box.source.map { [$0.line, $0.range.location, $0.range.length] } ?? [],
                             "rect": [box.rect.minX, box.rect.minY, box.rect.width, box.rect.height].map { Double($0) },
                             "quad": box.quad.flatMap { [Double($0.x), Double($0.y)] }]
-                }
+                } }
+                let boxes = dumpBoxes(final.boxes)
+                let firstBoxes = dumpBoxes(result.boxes)
                 // 高亮块：包含的语法点、每个语法点命中的原文、实际框出的片段
                 let clusters: [[String: Any]] = result.clusters.map { c in
                     ["id": c.id, "grammar": c.grammarIDs, "matched": c.matchedTexts,
@@ -113,6 +108,8 @@ final class OCREvalTests: XCTestCase {
                 var entry: [String: Any] = [
                     "boxStats": ["exact": exact, "estimated": estimated, "rejected": rejected],
                     "boxes": boxes,
+                    "firstBoxes": firstBoxes,
+                    "firstSeconds": firstSeconds,
                     "assembled": assembledLines,
                     "pageIsCurved": result.pageIsCurved,
                     "clusters": clusters,

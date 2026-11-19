@@ -61,9 +61,12 @@ struct HighlightBox: Identifiable, Hashable {
     let rect: CGRect
     /// 贴着文字的四边形（左上、右上、右下、左下；归一化、原点左上）。斜拍时跟文字一起倾斜，不会比文字高出一截。
     let quad: [CGPoint]
+    /// 这个框框的是哪一行（RecognizedLine 的下标）里的哪一段文字（行内 UTF-16 范围）；拍照识别后用分条识别重新定位时用
+    var source: (line: Int, range: NSRange)? = nil
 
-    init(id: UUID = UUID(), clusterID: Int, rect: CGRect, quad: [CGPoint]? = nil) {
+    init(id: UUID = UUID(), clusterID: Int, rect: CGRect, quad: [CGPoint]? = nil, source: (line: Int, range: NSRange)? = nil) {
         self.id = id
+        self.source = source
         self.clusterID = clusterID
         self.rect = rect
         self.quad = quad ?? [CGPoint(x: rect.minX, y: rect.minY), CGPoint(x: rect.maxX, y: rect.minY),
@@ -84,7 +87,7 @@ struct ScanResult {
     let text: String
     let matches: [GrammarMatch]
     let clusters: [HighlightCluster]
-    let boxes: [HighlightBox]
+    var boxes: [HighlightBox]
     /// 书页弯曲得很厉害（个别高亮可能落到相邻的行），见 ScanAnalyzer.pageIsCurved
     var pageIsCurved = false
 

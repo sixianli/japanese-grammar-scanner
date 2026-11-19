@@ -262,19 +262,19 @@ struct ScanResultView: View {
         guard case .loading = phase else { return }
         let image = scanImage.image
         let matcher = library.matcher
-        let outcome: Result<ScanResult, Error> = await Task.detached(priority: .userInitiated) { () -> Result<ScanResult, Error> in
+        let outcome: Result<(ScanResult, [RecognizedLine]), Error> = await Task.detached(priority: .userInitiated) { () -> Result<(ScanResult, [RecognizedLine]), Error> in
             guard let cg = image.cgImage else {
                 return .failure(NSError(domain: "Scan", code: 1, userInfo: [NSLocalizedDescriptionKey: tr("无法读取图片")]))
             }
             do {
                 let ocr = try TextRecognizer.recognize(cgImage: cg, orientation: .init(image.imageOrientation))
-                return .success(ScanAnalyzer.analyze(text: ocr.text, lines: ocr.lines, matcher: matcher))
+                return .success((ScanAnalyzer.analyze(text: ocr.text, lines: ocr.lines, matcher: matcher), ocr.lines))
             } catch {
                 return .failure(error)
             }
         }.value
         switch outcome {
-        case .success(let r):
+        case .success(let (r, lines)):
             phase = .done(r)
             if let cg = image.cgImage {
                 ink = await Task.detached(priority: .userInitiated) { InkMask.make(from: cg) }.value
@@ -290,6 +290,12 @@ struct ScanResultView: View {
                 history.updateScan(existing, grammarIDs: ids)
             } else if !scanImage.isSample, !r.text.isEmpty, DemoMode.screen == nil {
                 recordID = history.recordScan(image: scanImage.image, grammarIDs: ids)
+            }
+            // 第二步：切竖条重新识别，把高亮框挪到更准的位置（弯曲、斜拍的书页上尤其明显）。
+            // 先显示第一步的结果，不让用户干等；语法点列表不变，只是框的位置更准
+            if image.imageOrientation == .up, let cg = image.cgImage {
+                let refined = await Task.detached(priority: .userInitiated) { StripLocator.refine(r, lines: lines, image: cg) }.value
+                if case .done = phase { phase = .done(refined) }
             }
         case .failure(let e): phase = .failed(e.localizedDescription)
         }

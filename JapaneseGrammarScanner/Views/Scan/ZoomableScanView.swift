@@ -423,7 +423,7 @@ private struct ScanZoomContent: View, Equatable {
 
     static func == (a: Self, b: Self) -> Bool {
         a.image === b.image && a.ink === b.ink && a.selectedClusterID == b.selectedClusterID
-            && a.settledScale == b.settledScale && a.result.boxes.count == b.result.boxes.count
+            && a.settledScale == b.settledScale && a.result.boxes == b.result.boxes
             && a.result.text == b.result.text
     }
 

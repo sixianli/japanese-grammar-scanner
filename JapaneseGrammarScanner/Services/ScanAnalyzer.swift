@@ -10,12 +10,12 @@ enum ScanAnalyzer {
         var boxes: [HighlightBox] = []
         for cluster in clusters {
             for segment in cluster.ranges {
-                for line in lines {
+                for (index, line) in lines.enumerated() {
                     let overlap = NSIntersectionRange(segment, line.rangeInText)
                     guard overlap.length > 0 else { continue }
                     let local = NSRange(location: overlap.location - line.rangeInText.location, length: overlap.length)
                     let quad = flip(substringQuad(line: line, local: local))
-                    boxes.append(HighlightBox(clusterID: cluster.id, rect: bounds(of: quad), quad: quad))
+                    boxes.append(HighlightBox(clusterID: cluster.id, rect: bounds(of: quad), quad: quad, source: (index, local)))
                 }
             }
         }
@@ -158,7 +158,7 @@ enum ScanAnalyzer {
     }
 
     /// Vision 坐标（左下原点） → 左上原点；角点顺序保持左上、右上、右下、左下
-    private static func flip(_ q: [CGPoint]) -> [CGPoint] {
+    static func flip(_ q: [CGPoint]) -> [CGPoint] {
         q.map { CGPoint(x: $0.x, y: 1 - $0.y) }
     }
 
