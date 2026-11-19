@@ -34,7 +34,7 @@ struct HomeView: View {
                     Button {
                         NotificationCenter.default.post(name: .showFeedback, object: nil)
                     } label: {
-                        Label("遇到问题或有建议？反馈给我们", systemImage: "envelope")
+                        Label(tr("遇到问题或有建议？反馈给我们"), systemImage: "envelope")
                             .font(.footnote)
                             .foregroundStyle(.secondary)
                             .frame(maxWidth: .infinity)
@@ -48,7 +48,7 @@ struct HomeView: View {
             }
             .background(Theme.background)
             // 底部标签栏已标明「首页」，这里不再显示大标题，把空间留给内容
-            .navigationTitle("首页")
+            .navigationTitle(tr("首页"))
             // 用 inline 标题再隐藏导航栏：避免下拉时系统为大标题预留空间而让页面突然跳动
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(.hidden, for: .navigationBar)
@@ -86,7 +86,7 @@ struct HomeView: View {
                     .glassBackground(in: Circle(), interactive: true)
             }
             .buttonStyle(.plain)
-            .accessibilityLabel(Text("设置"))
+            .accessibilityLabel(Text(localized: "设置"))
             .accessibilityIdentifier("home.settings")
         }
         .padding(.top, 8)
@@ -98,7 +98,7 @@ struct HomeView: View {
         } label: {
             HStack(spacing: 8) {
                 Image(systemName: "magnifyingglass").foregroundStyle(.secondary)
-                Text("搜索语法或意思").foregroundStyle(.secondary)
+                Text(localized: "搜索语法或意思").foregroundStyle(.secondary)
                 Spacer(minLength: 0)
             }
             .font(.body)
@@ -108,7 +108,7 @@ struct HomeView: View {
             .glassBackground(in: Capsule(), interactive: true)
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(Text("搜索语法或意思"))
+        .accessibilityLabel(Text(localized: "搜索语法或意思"))
         .accessibilityIdentifier("home.search")
     }
 
@@ -118,10 +118,10 @@ struct HomeView: View {
     private var scanEntry: some View {
         VStack(alignment: .leading, spacing: 18) {
             VStack(alignment: .leading, spacing: 6) {
-                Text("扫描日文，找出语法")
+                Text(localized: "扫描日文，找出语法")
                     .font(.largeTitle.bold())
                     .fixedSize(horizontal: false, vertical: true)
-                Text("对准书页或选一张截图，句子里的语法会被标出来。")
+                Text(localized: "对准书页或选一张截图，句子里的语法会被标出来。")
                     .font(.body)
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
@@ -129,7 +129,7 @@ struct HomeView: View {
             .padding(.top, 4)
 
             Button(action: openCamera) {
-                Label("相机扫描", systemImage: "camera.viewfinder")
+                Label(tr("相机扫描"), systemImage: "camera.viewfinder")
                     .font(.headline)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 10)
@@ -141,7 +141,7 @@ struct HomeView: View {
 
             HStack(spacing: 12) {
                 PhotosPicker(selection: $photoItem, matching: .images) {
-                    Label("从相册识别", systemImage: "photo.on.rectangle")
+                    Label(tr("从相册识别"), systemImage: "photo.on.rectangle")
                         .font(.subheadline.weight(.semibold))
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 6)
@@ -154,7 +154,7 @@ struct HomeView: View {
                         path.append(.scan(ScanImage(image: image.normalizedForOCR(), isSample: true)))
                     }
                 } label: {
-                    Label("试试示例", systemImage: "book.pages")
+                    Label(tr("试试示例"), systemImage: "book.pages")
                         .font(.subheadline.weight(.semibold))
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 6)
@@ -178,14 +178,14 @@ struct HomeView: View {
                     .frame(width: 28)
                 VStack(alignment: .leading, spacing: 2) {
                     if let days = entitlements.trialDaysLeft() {
-                        Text("免费试用还剩 \(days) 天").font(.subheadline.weight(.semibold))
+                        Text(localized: "免费试用还剩 \(days) 天").font(.subheadline.weight(.semibold))
                     } else {
-                        Text("免费试用已结束").font(.subheadline.weight(.semibold))
+                        Text(localized: "免费试用已结束").font(.subheadline.weight(.semibold))
                     }
                     if let price = entitlements.lifetimeProduct?.displayPrice {
-                        Text("一次性 \(price) 永久解锁，不订阅").font(.caption).foregroundStyle(.secondary)
+                        Text(localized: "一次性 \(price) 永久解锁，不订阅").font(.caption).foregroundStyle(.secondary)
                     } else {
-                        Text("一次性购买永久解锁，不订阅").font(.caption).foregroundStyle(.secondary)
+                        Text(localized: "一次性购买永久解锁，不订阅").font(.caption).foregroundStyle(.secondary)
                     }
                 }
                 Spacer(minLength: 0)
@@ -243,12 +243,12 @@ struct HomeView: View {
                     .frame(width: 44, height: 56)
                     .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                     VStack(alignment: .leading, spacing: 3) {
-                        Text("识别到 \(ids.count) 个语法点").font(.body.weight(.semibold)).foregroundStyle(Color.primary)
+                        Text(localized: "识别到 \(ids.count) 个语法点").font(.body.weight(.semibold)).foregroundStyle(Color.primary)
                         HStack(spacing: 0) {
                             if unseen > 0 {
-                                Text("\(unseen) 个没看过")
+                                Text(localized: "\(unseen) 个没看过")
                             } else {
-                                Text("全部看过了")
+                                Text(localized: "全部看过了")
                             }
                             Text(verbatim: " · ")
                             Text(record.date, format: .relative(presentation: .named))
@@ -321,12 +321,12 @@ private struct HomeSection<Content: View>: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .firstTextBaseline) {
-                Text(title).font(.title3.bold()).accessibilityAddTraits(.isHeader)
+                Text(localized: title).font(.title3.bold()).accessibilityAddTraits(.isHeader)
                 Spacer()
                 if let trailing { trailing }
             }
             if let subtitle {
-                Text(subtitle).font(.footnote).foregroundStyle(.secondary)
+                Text(localized: subtitle).font(.footnote).foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
             content
@@ -337,7 +337,7 @@ private struct HomeSection<Content: View>: View {
 private struct SeeAllLabel: View {
     var body: some View {
         HStack(spacing: 2) {
-            Text("全部")
+            Text(localized: "全部")
             Image(systemName: "chevron.right").font(.footnote.weight(.semibold))
         }
         .font(.subheadline)
@@ -392,7 +392,7 @@ struct GrammarListPage: View {
             NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p) }
                 .accessibilityIdentifier("grammarRow")
         }
-        .navigationTitle(title)
+        .navigationTitle(title.localized)
         .navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -409,15 +409,15 @@ struct RecentViewedPage: View {
             NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p) }
                 .accessibilityIdentifier("grammarRow")
         }
-        .navigationTitle("最近查看")
+        .navigationTitle(tr("最近查看"))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button("清除") { confirm = true }.disabled(points.isEmpty)
+                Button(tr("清除")) { confirm = true }.disabled(points.isEmpty)
             }
         }
-        .confirmationDialog("确定要清除吗？", isPresented: $confirm, titleVisibility: .visible) {
-            Button("清除", role: .destructive) { history.clearViewed() }
+        .confirmationDialog(tr("确定要清除吗？"), isPresented: $confirm, titleVisibility: .visible) {
+            Button(tr("清除"), role: .destructive) { history.clearViewed() }
         }
     }
 }
@@ -440,14 +440,14 @@ struct AllScansView: View {
             }
             .padding()
         }
-        .navigationTitle("全部扫描记录")
+        .navigationTitle(tr("全部扫描记录"))
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button("清除") { confirm = true }.disabled(history.scans.isEmpty)
+                Button(tr("清除")) { confirm = true }.disabled(history.scans.isEmpty)
             }
         }
-        .confirmationDialog("确定要清除吗？", isPresented: $confirm, titleVisibility: .visible) {
-            Button("清除", role: .destructive) { history.clearScans() }
+        .confirmationDialog(tr("确定要清除吗？"), isPresented: $confirm, titleVisibility: .visible) {
+            Button(tr("清除"), role: .destructive) { history.clearScans() }
         }
     }
 }

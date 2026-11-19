@@ -35,12 +35,12 @@ struct ScanResultView: View {
                 case .loading:
                     HStack(spacing: 12) {
                         ProgressView()
-                        Text("正在识别文字和语法点…")
+                        Text(localized: "正在识别文字和语法点…")
                     }
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 40)
                 case .failed(let message):
-                    ContentUnavailableView("识别失败", systemImage: "exclamationmark.triangle", description: Text(message))
+                    ContentUnavailableView(tr("识别失败"), systemImage: "exclamationmark.triangle", description: Text(message))
                 case .done(let result):
                     resultSections(result)
                 }
@@ -62,7 +62,7 @@ struct ScanResultView: View {
         .toolbar(zoom.isOpen ? .hidden : .automatic, for: .navigationBar, .tabBar)
         .statusBarHidden(zoom.isOpen)
         .onAppear { zoom.imageSize = scanImage.image.size }
-        .navigationTitle("识别结果")
+        .navigationTitle(tr("识别结果"))
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(item: $pushedGrammarID) { id in
             GrammarDetailView(grammarID: id)
@@ -111,7 +111,7 @@ struct ScanResultView: View {
                         .padding(8)
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel(Text("放大查看"))
+                .accessibilityLabel(Text(localized: "放大查看"))
                 .accessibilityIdentifier("result.zoomButton")
             }
             .contentShape(Rectangle())
@@ -166,16 +166,16 @@ struct ScanResultView: View {
     private func resultSections(_ result: ScanResult) -> some View {
         let ids = library.displayableIDs(result.orderedGrammarIDs)
         if result.text.isEmpty {
-            ContentUnavailableView("没有识别到日文", systemImage: "text.magnifyingglass",
-                                   description: Text("请让文字清晰、光线充足，尽量正对书页拍摄。"))
+            ContentUnavailableView(tr("没有识别到日文"), systemImage: "text.magnifyingglass",
+                                   description: Text(localized: "请让文字清晰、光线充足，尽量正对书页拍摄。"))
         } else {
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
-                    (ids.isEmpty ? Text("没有识别到收录的语法点") : Text("识别到 \(ids.count) 个语法点"))
+                    (ids.isEmpty ? Text(localized: "没有识别到收录的语法点") : Text(localized: "识别到 \(ids.count) 个语法点"))
                         .font(.title3.bold())
                 }
                 if !ids.isEmpty {
-                    Text("点击高亮或下方列表查看讲解；双指可直接放大图片。")
+                    Text(localized: "点击高亮或下方列表查看讲解；双指可直接放大图片。")
                         .font(.footnote).foregroundStyle(.secondary)
                 }
                 VStack(spacing: 0) {
@@ -202,8 +202,8 @@ struct ScanResultView: View {
                 isEditing = true
             } label: {
                 HStack(spacing: 4) {
-                    Text("有语法没识别出来？")
-                    Text("手动修正文字").foregroundStyle(Theme.accentText)
+                    Text(localized: "有语法没识别出来？")
+                    Text(localized: "手动修正文字").foregroundStyle(Theme.accentText)
                 }
                 .font(.footnote)
                 .foregroundStyle(.secondary)
@@ -213,7 +213,7 @@ struct ScanResultView: View {
             .buttonStyle(.plain)
             .accessibilityIdentifier("result.editText")
             if textWasEdited {
-                Text("文本已手动修改，图片上的高亮已隐藏。").font(.footnote).foregroundStyle(.secondary)
+                Text(localized: "文本已手动修改，图片上的高亮已隐藏。").font(.footnote).foregroundStyle(.secondary)
                     .frame(maxWidth: .infinity)
             }
         }
@@ -226,14 +226,14 @@ struct ScanResultView: View {
                 .font(.title3)
                 .padding()
                 .keyboardDoneButton()
-                .navigationTitle("修正识别文本")
+                .navigationTitle(tr("修正识别文本"))
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
-                        Button("取消") { isEditing = false }
+                        Button(tr("取消")) { isEditing = false }
                     }
                     ToolbarItem(placement: .confirmationAction) {
-                        Button("重新识别") {
+                        Button(tr("重新识别")) {
                             let result = ScanAnalyzer.analyze(text: draftText, lines: [], matcher: library.matcher)
                             textWasEdited = true
                             selectedClusterID = nil
@@ -254,7 +254,7 @@ struct ScanResultView: View {
         let matcher = library.matcher
         let outcome: Result<ScanResult, Error> = await Task.detached(priority: .userInitiated) { () -> Result<ScanResult, Error> in
             guard let cg = image.cgImage else {
-                return .failure(NSError(domain: "Scan", code: 1, userInfo: [NSLocalizedDescriptionKey: String(localized: "无法读取图片")]))
+                return .failure(NSError(domain: "Scan", code: 1, userInfo: [NSLocalizedDescriptionKey: tr("无法读取图片")]))
             }
             do {
                 let ocr = try TextRecognizer.recognize(cgImage: cg, orientation: .init(image.imageOrientation))

@@ -79,12 +79,12 @@ struct ScanHomeView: View {
     private func messageView(icon: String, text: LocalizedStringKey, showSettings: Bool) -> some View {
         VStack(spacing: 16) {
             Image(systemName: icon).font(.system(size: 44))
-            Text(text).multilineTextAlignment(.center)
+            Text(localized: text).multilineTextAlignment(.center)
             if showSettings, let url = URL(string: UIApplication.openSettingsURLString) {
-                Button("打开设置") { UIApplication.shared.open(url) }
+                Button(tr("打开设置")) { UIApplication.shared.open(url) }
                     .buttonStyle(.borderedProminent)
             }
-            Button("试试示例书页", action: openSample)
+            Button(tr("试试示例书页"), action: openSample)
                 .accessibilityIdentifier("scan.trySample")
                 .buttonStyle(.bordered)
                 .tint(.white)
@@ -100,11 +100,11 @@ struct ScanHomeView: View {
         return VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Image(systemName: "text.viewfinder")
-                (ids.isEmpty ? Text("将相机对准书本上的日文") : Text("识别到 \(ids.count) 个语法点，点击高亮或下方标签查看"))
+                (ids.isEmpty ? Text(localized: "将相机对准书本上的日文") : Text(localized: "识别到 \(ids.count) 个语法点，点击高亮或下方标签查看"))
                     .font(.subheadline.weight(.medium))
                 Spacer()
                 if ids.isEmpty {
-                    Button("试试示例", action: openSample)
+                    Button(tr("试试示例"), action: openSample)
                         .accessibilityIdentifier("scan.trySample")
                         .font(.caption.weight(.semibold))
                         .padding(.horizontal, 10)
@@ -166,7 +166,7 @@ struct ScanHomeView: View {
             }
             .disabled(camera.status != .running)
             .opacity(camera.status == .running ? 1 : 0.4)
-            .accessibilityLabel("定格并精细识别")
+            .accessibilityLabel(tr("定格并精细识别"))
             .accessibilityIdentifier("scan.shutter")
             Spacer()
             Button {
@@ -186,7 +186,7 @@ struct ScanHomeView: View {
                 .font(.title2)
                 .frame(width: 52, height: 52)
                 .glassBackground(in: Circle(), interactive: true)
-            Text(label).font(.caption)
+            Text(localized: label).font(.caption)
         }
         .foregroundStyle(.white)
     }

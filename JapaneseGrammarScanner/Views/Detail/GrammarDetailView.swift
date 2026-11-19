@@ -27,7 +27,7 @@ struct GrammarDetailView: View {
                     UsageStats.shared.grammarViewed(point.id, level: point.level)
                 }
         } else {
-            ContentUnavailableView("找不到该语法点", systemImage: "questionmark.folder")
+            ContentUnavailableView(tr("找不到该语法点"), systemImage: "questionmark.folder")
         }
     }
 
@@ -129,8 +129,8 @@ struct GrammarDetailView: View {
                     NotificationCenter.default.post(name: .showFeedback, object: "grammar: \(p.id) \(p.titleForm)")
                 } label: {
                     HStack(spacing: 4) {
-                        Text("讲解有误或看不懂？")
-                        Text("告诉我们").foregroundStyle(Theme.accentText)
+                        Text(localized: "讲解有误或看不懂？")
+                        Text(localized: "告诉我们").foregroundStyle(Theme.accentText)
                     }
                     .font(.footnote)
                     .foregroundStyle(.secondary)
@@ -199,7 +199,7 @@ struct GrammarDetailView: View {
                     Image(systemName: favorites.isFavorite(p.id) ? "star.fill" : "star")
                         .foregroundStyle(Theme.accent)
                 }
-                .accessibilityLabel(favorites.isFavorite(p.id) ? Text("取消收藏") : Text("收藏"))
+                .accessibilityLabel(favorites.isFavorite(p.id) ? Text(localized: "取消收藏") : Text(localized: "收藏"))
                 .accessibilityIdentifier("detail.favorite")
             }
         }
@@ -366,7 +366,7 @@ private struct SenseOutline: View {
                 .buttonStyle(RowPressStyle())
                 .accessibilityIdentifier(i == highlighted ? "detail.senseRow.matched" : "detail.senseRow")
                 .disabled(!tappable)
-                .accessibilityHint(tappable ? Text("跳到用法") : Text(verbatim: ""))
+                .accessibilityHint(tappable ? Text(localized: "跳到用法") : Text(verbatim: ""))
                 Divider().padding(.leading, 34)
             }
         }
@@ -393,7 +393,7 @@ private struct SenseBlock: View {
             RubyText(explanation: sense.meaning, style: .init(font: .body, lineSpacing: 7))
 
             VStack(alignment: .leading, spacing: 6) {
-                Text("接续").font(.footnote.weight(.semibold)).foregroundStyle(.secondary)
+                Text(localized: "接续").font(.footnote.weight(.semibold)).foregroundStyle(.secondary)
                 VStack(alignment: .leading, spacing: 4) {
                     ForEach(Array(GrammarDetailView.connectionLines(sense.connection).enumerated()), id: \.offset) { _, line in
                         RubyText(explanation: line, style: .init(font: .callout, lineSpacing: 4, weight: .medium))
@@ -458,7 +458,7 @@ private struct SceneGroup: View {
                     .foregroundStyle(Theme.accentText)
                     .frame(width: 30, height: 30)
                     .background(Theme.accentFill, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
-                Text(label).font(.title3.weight(.semibold)).foregroundStyle(Color.primary)
+                Text(localized: label).font(.title3.weight(.semibold)).foregroundStyle(Color.primary)
             }
             ForEach(Array(scenes.enumerated()), id: \.offset) { _, scene in
                 VStack(alignment: .leading, spacing: 6) {
@@ -496,7 +496,7 @@ private struct NoteView: View {
                                 .foregroundStyle(correct ? Color.green : Color.red)
                                 .frame(height: lineHeight)
                                 .padding(.top, rubyLine)
-                                .accessibilityLabel(correct ? Text("正确") : Text("错误"))
+                                .accessibilityLabel(correct ? Text(localized: "正确") : Text(localized: "错误"))
                             RubyText(japanese: sentence, style: .init(font: .body, rubySize: 9, lineSpacing: 4))
                         }
                         .padding(.leading, 2)
@@ -563,7 +563,7 @@ private struct DocSectionTitle: View {
 
     var body: some View {
         Label {
-            Text(title).font(.title2.bold())
+            Text(localized: title).font(.title2.bold())
         } icon: {
             Image(systemName: icon)
                 .font(.system(size: 19, weight: .regular))
@@ -744,9 +744,9 @@ private struct ScannedMatchBanner: View {
             HStack(alignment: .firstTextBaseline, spacing: 8) {
                 Image(systemName: "text.viewfinder").foregroundStyle(Theme.accentText)
                 VStack(alignment: .leading, spacing: 3) {
-                    (Text("你扫到的：") + Text(verbatim: "「\(shown)」")).font(.subheadline.weight(.semibold))
+                    (Text(localized: "你扫到的：") + Text(verbatim: "「\(shown)」")).font(.subheadline.weight(.semibold))
                     if let senseIndex, let senseLabel {
-                        (Text("对应 用法 ") + Text(verbatim: "\(senseIndex + 1)　\(senseLabel)"))
+                        (Text(localized: "对应 用法 ") + Text(verbatim: "\(senseIndex + 1)　\(senseLabel)"))
                             .font(.footnote).foregroundStyle(.secondary)
                     }
                 }

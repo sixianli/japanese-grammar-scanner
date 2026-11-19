@@ -14,7 +14,7 @@ struct OnboardingView: View {
                 Spacer()
                 if page < pageCount - 1 {
                     // 跳到最后一页（那里写明了试用时长与到期后的价格）
-                    Button("跳过") { withAnimation { page = pageCount - 1 } }
+                    Button(tr("跳过")) { withAnimation { page = pageCount - 1 } }
                         .font(.subheadline.weight(.medium))
                         .padding(.horizontal, 20)
                         .padding(.top, 8)
@@ -60,7 +60,7 @@ struct OnboardingView: View {
                     Button {
                         withAnimation { page += 1 }
                     } label: {
-                        Text("下一步").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 6)
+                        Text(localized: "下一步").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 6)
                     }
                     .buttonStyle(.borderedProminent)
                 } else {
@@ -68,12 +68,12 @@ struct OnboardingView: View {
                         onFinish(false)
                     } label: {
                         Group {
-                            if Features.paymentsEnabled { Text("免费开始使用") } else { Text("开始使用") }
+                            if Features.paymentsEnabled { Text(localized: "免费开始使用") } else { Text(localized: "开始使用") }
                         }
                         .font(.headline).frame(maxWidth: .infinity).padding(.vertical, 6)
                     }
                     .buttonStyle(.borderedProminent)
-                    Button("先用示例书页试试") { onFinish(true) }
+                    Button(tr("先用示例书页试试")) { onFinish(true) }
                         .font(.subheadline.weight(.medium))
                         .padding(.top, 2)
                     if Features.paymentsEnabled { trialNote }
@@ -94,9 +94,9 @@ struct OnboardingView: View {
             if store.access == .unlocked {
                 EmptyView()
             } else if let price = store.lifetimeProduct?.displayPrice {
-                Text("前 \(EntitlementStore.trialDays) 天免费使用全部功能。之后可一次性 \(price) 永久解锁完整讲解，不订阅、不自动扣费。")
+                Text(localized: "前 \(EntitlementStore.trialDays) 天免费使用全部功能。之后可一次性 \(price) 永久解锁完整讲解，不订阅、不自动扣费。")
             } else {
-                Text("前 \(EntitlementStore.trialDays) 天免费使用全部功能。之后可一次性购买永久解锁完整讲解，不订阅、不自动扣费。")
+                Text(localized: "前 \(EntitlementStore.trialDays) 天免费使用全部功能。之后可一次性购买永久解锁完整讲解，不订阅、不自动扣费。")
             }
         }
         .font(.caption)
@@ -126,10 +126,10 @@ private struct OnboardingPage<Illustration: View>: View {
                 .frame(height: 300)
                 .accessibilityHidden(true)
             VStack(spacing: 14) {
-                Text(title)
+                Text(localized: title)
                     .font(.title2.bold())
                     .multilineTextAlignment(.center)
-                Text(message)
+                Text(localized: message)
                     .font(.body)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)

@@ -53,8 +53,8 @@ struct FeedbackView: View {
         NavigationStack {
             Form {
                 Section {
-                    Picker("类型", selection: $kind) {
-                        ForEach(Kind.allCases) { Text($0.title).tag($0) }
+                    Picker(tr("类型"), selection: $kind) {
+                        ForEach(Kind.allCases) { Text(localized: $0.title).tag($0) }
                     }
                     .pickerStyle(.menu)
                 }
@@ -66,7 +66,7 @@ struct FeedbackView: View {
                         .frame(minHeight: 140)
                         .overlay(alignment: .topLeading) {
                             if message.isEmpty {
-                                Text("请描述遇到的问题：在哪个页面、做了什么、看到了什么。")
+                                Text(localized: "请描述遇到的问题：在哪个页面、做了什么、看到了什么。")
                                     .foregroundStyle(.tertiary)
                                     .padding(.top, 8)
                                     .padding(.leading, 5)
@@ -74,7 +74,7 @@ struct FeedbackView: View {
                             }
                         }
                 } header: {
-                    Text("描述")
+                    Text(localized: "描述")
                 }
                 .listRowBackground(Theme.card)
 
@@ -97,7 +97,7 @@ struct FeedbackView: View {
                                                     .foregroundStyle(.white, .black.opacity(0.6))
                                             }
                                             .padding(4)
-                                            .accessibilityLabel(Text("删除截图"))
+                                            .accessibilityLabel(Text(localized: "删除截图"))
                                         }
                                 }
                             }
@@ -105,26 +105,26 @@ struct FeedbackView: View {
                         }
                     }
                     PhotosPicker(selection: $photoItems, maxSelectionCount: 4, matching: .images) {
-                        Label(images.isEmpty ? "添加截图" : "重新选择截图", systemImage: "photo.on.rectangle")
+                        Label(tr(images.isEmpty ? "添加截图" : "重新选择截图"), systemImage: "photo.on.rectangle")
                     }
                 } header: {
-                    Text("截图（可选，最多 4 张）")
+                    Text(localized: "截图（可选，最多 4 张）")
                 } footer: {
-                    Text("会自动附上 App 版本、系统版本、设备型号和语言，方便定位问题。不会附带其他个人信息。")
+                    Text(localized: "会自动附上 App 版本、系统版本、设备型号和语言，方便定位问题。不会附带其他个人信息。")
                 }
                 .listRowBackground(Theme.card)
             }
             .themedList()
             .keyboardDoneButton()
-            .navigationTitle("反馈")
+            .navigationTitle(tr("反馈"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) { Button("取消") { dismiss() } }
+                ToolbarItem(placement: .cancellationAction) { Button(tr("取消")) { dismiss() } }
                 ToolbarItem(placement: .confirmationAction) {
                     if isSending {
                         ProgressView()
                     } else {
-                        Button("发送") { send() }
+                        Button(tr("发送")) { send() }
                             .disabled(!canSend)
                     }
                 }
@@ -149,17 +149,17 @@ struct FeedbackView: View {
                 .ignoresSafeArea()
             }
             .disabled(isSending)
-            .alert("已收到，谢谢你的反馈", isPresented: $showSent) {
-                Button("好") { dismiss() }
+            .alert(tr("已收到，谢谢你的反馈"), isPresented: $showSent) {
+                Button(tr("好")) { dismiss() }
             } message: {
-                Text("我们会尽快查看并改进。")
+                Text(localized: "我们会尽快查看并改进。")
             }
-            .alert("没能直接发送", isPresented: Binding(get: { sendError != nil }, set: { if !$0 { sendError = nil } })) {
+            .alert(tr("没能直接发送"), isPresented: Binding(get: { sendError != nil }, set: { if !$0 { sendError = nil } })) {
                 if AppLinks.feedbackEmail != nil, MFMailComposeViewController.canSendMail() {
-                    Button("用邮件发送") { showMail = true }
+                    Button(tr("用邮件发送")) { showMail = true }
                 }
-                Button("用其他方式发送") { SharePresenter.present([fullText] + images) }
-                Button("取消", role: .cancel) {}
+                Button(tr("用其他方式发送")) { SharePresenter.present([fullText] + images) }
+                Button(tr("取消"), role: .cancel) {}
             } message: {
                 Text(sendError ?? "")
             }

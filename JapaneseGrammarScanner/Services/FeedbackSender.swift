@@ -28,8 +28,8 @@ enum FeedbackSender {
 
         var errorDescription: String? {
             switch self {
-            case .notConfigured: String(localized: "暂时无法在 App 内提交反馈")
-            case .noAccount: String(localized: "这台设备没有登录 iCloud，无法在 App 内直接提交")
+            case .notConfigured: tr("暂时无法在 App 内提交反馈")
+            case .noAccount: tr("这台设备没有登录 iCloud，无法在 App 内直接提交")
             case .failed(let message): message
             }
         }

@@ -23,14 +23,14 @@ struct PaywallView: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button { dismiss() } label: { Image(systemName: "xmark") }
-                        .accessibilityLabel(Text("关闭"))
+                        .accessibilityLabel(Text(localized: "关闭"))
                 }
             }
             .alert(
-                "购买失败",
+                tr("购买失败"),
                 isPresented: Binding(get: { store.lastError != nil }, set: { if !$0 { store.lastError = nil } })
             ) {
-                Button("好") { store.lastError = nil }
+                Button(tr("好")) { store.lastError = nil }
             } message: {
                 Text(store.lastError ?? "")
             }
@@ -48,8 +48,8 @@ struct PaywallView: View {
                 .foregroundStyle(.white)
                 .frame(width: 76, height: 76)
                 .background(Theme.accent, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
-            Text("解锁完整讲解").font(.title.bold())
-            Text("扫到不懂的语法，马上看懂。")
+            Text(localized: "解锁完整讲解").font(.title.bold())
+            Text(localized: "扫到不懂的语法，马上看懂。")
                 .font(.body)
                 .foregroundStyle(.secondary)
         }
@@ -74,14 +74,14 @@ struct PaywallView: View {
         switch store.access {
         case .trial:
             Label {
-                Text("免费试用中，还剩 \(store.trialDaysLeft() ?? 0) 天")
+                Text(localized: "免费试用中，还剩 \(store.trialDaysLeft() ?? 0) 天")
             } icon: {
                 Image(systemName: "hourglass")
             }
             .font(.subheadline.weight(.semibold))
             .foregroundStyle(Theme.accentText)
         case .trialExpired:
-            Label("免费试用已结束", systemImage: "hourglass.bottomhalf.filled")
+            Label(tr("免费试用已结束"), systemImage: "hourglass.bottomhalf.filled")
                 .font(.subheadline.weight(.semibold))
                 .foregroundStyle(.secondary)
         default:
@@ -96,8 +96,8 @@ struct PaywallView: View {
                     Task { await store.purchase(trial) }
                 } label: {
                     VStack(spacing: 2) {
-                        Text("开始 \(EntitlementStore.trialDays) 天免费试用").font(.headline)
-                        Text("免费 · 到期后不会自动扣费").font(.caption)
+                        Text(localized: "开始 \(EntitlementStore.trialDays) 天免费试用").font(.headline)
+                        Text(localized: "免费 · 到期后不会自动扣费").font(.caption)
                     }
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 12)
@@ -111,8 +111,8 @@ struct PaywallView: View {
                     Task { await store.purchase(lifetime) }
                 } label: {
                     VStack(spacing: 2) {
-                        Text("一次性购买 \(lifetime.displayPrice)").font(.headline)
-                        Text("永久解锁 · 无需订阅").font(.caption)
+                        Text(localized: "一次性购买 \(lifetime.displayPrice)").font(.headline)
+                        Text(localized: "永久解锁 · 无需订阅").font(.caption)
                     }
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 12)
@@ -123,7 +123,7 @@ struct PaywallView: View {
                 ProgressView().padding()
             }
 
-            Button("恢复购买") { Task { await store.restore() } }
+            Button(tr("恢复购买")) { Task { await store.restore() } }
                 .font(.subheadline)
         }
         .disabled(store.isPurchasing)
@@ -132,13 +132,13 @@ struct PaywallView: View {
 
     private var footer: some View {
         VStack(spacing: 8) {
-            Text("免费试用期为 \(EntitlementStore.trialDays) 天，期间可使用全部内容。试用结束后不会自动收费；如需继续查看完整讲解，可一次性购买永久解锁。扫描识别与语法高亮始终免费。")
+            Text(localized: "免费试用期为 \(EntitlementStore.trialDays) 天，期间可使用全部内容。试用结束后不会自动收费；如需继续查看完整讲解，可一次性购买永久解锁。扫描识别与语法高亮始终免费。")
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
             HStack(spacing: 16) {
-                Link("隐私政策", destination: AppLinks.privacy)
-                Link("使用条款", destination: AppLinks.terms)
+                Link(tr("隐私政策"), destination: AppLinks.privacy)
+                Link(tr("使用条款"), destination: AppLinks.terms)
             }
             .font(.caption)
         }
@@ -156,7 +156,7 @@ private struct FeatureRow: View {
                 .font(.system(size: 17, weight: .medium))
                 .foregroundStyle(tint)
                 .frame(width: 28)
-            Text(text).font(.body)
+            Text(localized: text).font(.body)
             Spacer(minLength: 0)
         }
     }
@@ -174,8 +174,8 @@ struct LockedContentCard: View {
                 .foregroundStyle(.white)
                 .frame(width: 48, height: 48)
                 .background(Theme.accent, in: Circle())
-            Text("解锁完整讲解").font(.title3.bold())
-            Text("用法、例句、使用场景、词源、相近语法对比")
+            Text(localized: "解锁完整讲解").font(.title3.bold())
+            Text(localized: "用法、例句、使用场景、词源、相近语法对比")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
@@ -184,9 +184,9 @@ struct LockedContentCard: View {
             } label: {
                 Group {
                     if store.access == .notStarted {
-                        Text("开始 \(EntitlementStore.trialDays) 天免费试用")
+                        Text(localized: "开始 \(EntitlementStore.trialDays) 天免费试用")
                     } else {
-                        Text("查看解锁方式")
+                        Text(localized: "查看解锁方式")
                     }
                 }
                     .font(.headline)

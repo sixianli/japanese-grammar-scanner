@@ -17,8 +17,8 @@ struct LibraryView: View {
         NavigationStack(path: $path) {
             List {
                 Section {
-                    Picker("等级", selection: $levelFilter) {
-                        Text("全部").tag(JLPTLevel?.none)
+                    Picker(tr("等级"), selection: $levelFilter) {
+                        Text(localized: "全部").tag(JLPTLevel?.none)
                         ForEach(availableLevels) { Text($0.rawValue).tag(JLPTLevel?.some($0)) }
                     }
                     .pickerStyle(.segmented)
@@ -38,8 +38,8 @@ struct LibraryView: View {
             }
             .themedList()
             .dismissesKeyboardOnTapAndScroll()
-            .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: "搜索语法或意思")
-            .navigationTitle("语法库")
+            .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: tr("搜索语法或意思"))
+            .navigationTitle(tr("语法库"))
             .navigationBarTitleDisplayMode(.inline)
             .withAppRoutes()
         }
@@ -89,7 +89,7 @@ struct LibraryView: View {
                         .listRowBackground(Theme.card)
                 }
             } header: {
-                Text("在例句中出现")
+                Text(localized: "在例句中出现")
             }
         }
     }

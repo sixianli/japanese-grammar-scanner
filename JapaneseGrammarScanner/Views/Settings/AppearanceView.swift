@@ -9,25 +9,25 @@ struct AppearanceView: View {
                     swatches(AppearanceStore.AccentOption.allCases, selected: appearance.accent,
                              color: { Theme.color($0.hex.0) }, name: { $0.name }) { appearance.accent = $0 }
                 } header: {
-                    Text("主题色")
+                    Text(localized: "主题色")
                 }
                 Section {
                     swatches(AppearanceStore.LightBackground.allCases, selected: appearance.light,
                              color: { Theme.color($0.hex.0) }, name: { $0.name }) { appearance.light = $0 }
                 } header: {
-                    Text("浅色模式背景")
+                    Text(localized: "浅色模式背景")
                 }
                 Section {
                     swatches(AppearanceStore.DarkBackground.allCases, selected: appearance.dark,
                              color: { Theme.color($0.hex.0) }, name: { $0.name }) { appearance.dark = $0 }
                 } header: {
-                    Text("深色模式背景")
+                    Text(localized: "深色模式背景")
                 } footer: {
-                    Text("浅色、深色背景分别生效，随系统的深浅模式自动切换。")
+                    Text(localized: "浅色、深色背景分别生效，随系统的深浅模式自动切换。")
                 }
             }
             .themedList()
-            .navigationTitle("外观")
+            .navigationTitle(tr("外观"))
             .navigationBarTitleDisplayMode(.inline)
     }
 
@@ -51,7 +51,7 @@ struct AppearanceView: View {
                                     Image(systemName: "checkmark").font(.caption.bold()).foregroundStyle(.secondary)
                                 }
                             }
-                        Text(name(item)).font(.caption).foregroundStyle(Color.primary)
+                        Text(localized: name(item)).font(.caption).foregroundStyle(Color.primary)
                     }
                     .padding(.vertical, 4)
                 }

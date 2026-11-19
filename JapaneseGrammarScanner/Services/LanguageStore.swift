@@ -91,7 +91,7 @@ struct LanguagePickerView: View {
                     } label: {
                         HStack {
                             if lang == .system {
-                                Text("跟随系统")
+                                Text(localized: "跟随系统")
                             } else {
                                 Text(verbatim: lang.nativeName)
                             }
@@ -105,12 +105,12 @@ struct LanguagePickerView: View {
                     .buttonStyle(.plain)
                 }
             } footer: {
-                Text("界面文字和语法讲解会一起切换。")
+                Text(localized: "界面文字和语法讲解会一起切换。")
             }
             .listRowBackground(Theme.card)
         }
         .themedList()
-        .navigationTitle("语言")
+        .navigationTitle(tr("语言"))
         .navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -175,6 +175,47 @@ extension Bundle {
             UserDefaults.standard.set([code], forKey: "AppleLanguages")
         } else {
             UserDefaults.standard.removeObject(forKey: "AppleLanguages")
+        }
+    }
+}
+
+// MARK: - 按 App 内所选语言取界面文字
+
+/// 取界面文字的翻译（按 App 内选择的语言）。
+///
+/// SwiftUI 的 Text(localized: "…") 对不带参数的普通文字，用的是 App 启动时的语言，并且会缓存，
+/// App 内切换语言后不会更新（端对端测试诊断：Bundle.main 已返回英文，Text 仍显示中文）。
+/// 所以普通文字统一经过这里，用 Bundle.main（已按所选语言接管）查找。带参数的文字（"识别到 \(n) 个语法点"）
+/// SwiftUI 会按环境里的 locale 查找，切换语言时能正常更新，保持原样。
+func tr(_ key: String) -> String {
+    Bundle.main.localizedString(forKey: key, value: nil, table: nil)
+}
+
+extension LocalizedStringKey {
+    /// 不带参数时的原始 key（带参数的返回 nil，交给 SwiftUI 自己处理）
+    var plainKey: String? {
+        let mirror = Mirror(reflecting: self)
+        guard let key = mirror.children.first(where: { $0.label == "key" })?.value as? String else { return nil }
+        if let args = mirror.children.first(where: { $0.label == "arguments" })?.value,
+           Mirror(reflecting: args).children.count > 0 {
+            return nil
+        }
+        return key
+    }
+
+    /// 按所选语言翻译后的文字（带参数的退回 key 本身，调用方应避免对带参数的 key 使用）
+    var localized: String {
+        tr(plainKey ?? (Mirror(reflecting: self).children.first { $0.label == "key" }?.value as? String ?? ""))
+    }
+}
+
+extension Text {
+    /// 按 App 内所选语言显示：普通文字走 tr()，带参数的文字交给 SwiftUI（会按环境 locale 正确切换）
+    init(localized key: LocalizedStringKey) {
+        if let plain = key.plainKey {
+            self.init(verbatim: tr(plain))
+        } else {
+            self.init(key)
         }
     }
 }

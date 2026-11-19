@@ -56,9 +56,9 @@ struct FavoritesView: View {
             Group {
                 if favorites.ids.isEmpty {
                     ContentUnavailableView(
-                        "还没有收藏",
+                        tr("还没有收藏"),
                         systemImage: "star",
-                        description: Text("在语法讲解页或列表中点击 ☆ 即可收藏。")
+                        description: Text(localized: "在语法讲解页或列表中点击 ☆ 即可收藏。")
                     )
                 } else {
                     let ids = sortedIDs
@@ -79,20 +79,20 @@ struct FavoritesView: View {
                     .toolbar {
                         ToolbarItem(placement: .topBarTrailing) {
                             Menu {
-                                Picker("排序", selection: $sortRaw) {
+                                Picker(tr("排序"), selection: $sortRaw) {
                                     ForEach(SortOrder.allCases) { order in
-                                        Label(order.title, systemImage: order.icon).tag(order.rawValue)
+                                        Label(order.title.localized, systemImage: order.icon).tag(order.rawValue)
                                     }
                                 }
                             } label: {
-                                Label("排序", systemImage: "arrow.up.arrow.down")
+                                Label(tr("排序"), systemImage: "arrow.up.arrow.down")
                             }
                         }
                     }
                 }
             }
             .background(Theme.background)
-            .navigationTitle(Text("收藏") + Text(verbatim: favorites.ids.isEmpty ? "" : " (\(favorites.ids.count))"))
+            .navigationTitle(Text(localized: "收藏") + Text(verbatim: favorites.ids.isEmpty ? "" : " (\(favorites.ids.count))"))
             .navigationBarTitleDisplayMode(.inline)
             .withAppRoutes()
         }

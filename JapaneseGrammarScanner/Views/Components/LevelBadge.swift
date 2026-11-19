@@ -27,7 +27,7 @@ struct FrequencyBadge: View {
     var body: some View {
         if let label {
             Button { showInfo = true } label: {
-                Text(label)
+                Text(localized: label)
                     .font(compact ? .caption2.weight(.semibold) : .caption.weight(.semibold))
                     .foregroundStyle(frequency == .high ? Theme.accentText : Color.secondary)
                     .padding(.horizontal, compact ? 6 : 8)
@@ -36,10 +36,10 @@ struct FrequencyBadge: View {
                     .fixedSize()
             }
             .buttonStyle(.plain)
-            .alert("出题频率", isPresented: $showInfo) {
-                Button("好") {}
+            .alert(tr("出题频率"), isPresented: $showInfo) {
+                Button(tr("好")) {}
             } message: {
-                Text("根据公开的考试复原资料与教材整理，仅供参考。")
+                Text(localized: "根据公开的考试复原资料与教材整理，仅供参考。")
             }
         }
     }

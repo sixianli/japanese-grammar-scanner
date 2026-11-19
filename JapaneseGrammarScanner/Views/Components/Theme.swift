@@ -203,7 +203,7 @@ extension View {
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
                     Spacer()
-                    Button("完成") { UIApplication.dismissKeyboard() }
+                    Button(tr("完成")) { UIApplication.dismissKeyboard() }
                         .accessibilityIdentifier("keyboard.done")
                 }
             }

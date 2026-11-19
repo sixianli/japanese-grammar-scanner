@@ -53,7 +53,7 @@ private struct LanguageDiagnostics: View {
         VStack(spacing: 0) {
             Text(verbatim: info)
                 .accessibilityIdentifier("lang.debug")
-            Text("语言")
+            Text(localized: "语言")
                 .accessibilityIdentifier("lang.debug.text")
         }
         .font(.system(size: 2))
@@ -226,25 +226,25 @@ struct RootTabView: View {
         if #available(iOS 18.0, *) {
             // iOS 18+：搜索作为独立的搜索标签（iOS 26 中显示在标签栏右侧）
             TabView(selection: selection) {
-                Tab("首页", systemImage: "house", value: AppTab.home) { HomeView(openCamera: { tab = AppTab.scan }) }
+                Tab(tr("首页"), systemImage: "house", value: AppTab.home) { HomeView(openCamera: { tab = AppTab.scan }) }
                 // 相机只在用户切换到「扫描」时才启动
-                Tab("扫描", systemImage: "text.viewfinder", value: AppTab.scan) { ScanHomeView() }
-                Tab("语法库", systemImage: "books.vertical", value: AppTab.library) { LibraryView() }
-                Tab("收藏", systemImage: "star", value: AppTab.favorites) { FavoritesView() }
-                Tab("搜索", systemImage: "magnifyingglass", value: AppTab.search, role: .search) { SearchView() }
+                Tab(tr("扫描"), systemImage: "text.viewfinder", value: AppTab.scan) { ScanHomeView() }
+                Tab(tr("语法库"), systemImage: "books.vertical", value: AppTab.library) { LibraryView() }
+                Tab(tr("收藏"), systemImage: "star", value: AppTab.favorites) { FavoritesView() }
+                Tab(tr("搜索"), systemImage: "magnifyingglass", value: AppTab.search, role: .search) { SearchView() }
             }
         } else {
             TabView(selection: selection) {
                 HomeView(openCamera: { tab = AppTab.scan })
-                    .tabItem { Label("首页", systemImage: "house") }.tag(AppTab.home)
+                    .tabItem { Label(tr("首页"), systemImage: "house") }.tag(AppTab.home)
                 ScanHomeView()
-                    .tabItem { Label("扫描", systemImage: "text.viewfinder") }.tag(AppTab.scan)
+                    .tabItem { Label(tr("扫描"), systemImage: "text.viewfinder") }.tag(AppTab.scan)
                 LibraryView()
-                    .tabItem { Label("语法库", systemImage: "books.vertical") }.tag(AppTab.library)
+                    .tabItem { Label(tr("语法库"), systemImage: "books.vertical") }.tag(AppTab.library)
                 FavoritesView()
-                    .tabItem { Label("收藏", systemImage: "star") }.tag(AppTab.favorites)
+                    .tabItem { Label(tr("收藏"), systemImage: "star") }.tag(AppTab.favorites)
                 SearchView()
-                    .tabItem { Label("搜索", systemImage: "magnifyingglass") }.tag(AppTab.search)
+                    .tabItem { Label(tr("搜索"), systemImage: "magnifyingglass") }.tag(AppTab.search)
             }
         }
     }

@@ -386,7 +386,7 @@ struct ScanZoomStage: View {
                         .frame(width: 40, height: 40)
                         .background(.black.opacity(0.5), in: Circle())
                 }
-                .accessibilityLabel(Text("关闭"))
+                .accessibilityLabel(Text(localized: "关闭"))
                 .accessibilityIdentifier("zoom.close")
                 .padding()
                 .padding(.top, 44)
@@ -395,7 +395,7 @@ struct ScanZoomStage: View {
         }
         .overlay(alignment: .bottom) {
             if model.isOpen {
-                Text("双指缩放查看原文，点击高亮查看讲解")
+                Text(localized: "双指缩放查看原文，点击高亮查看讲解")
                     .font(.footnote)
                     .foregroundStyle(.white)
                     .padding(.horizontal, 14)

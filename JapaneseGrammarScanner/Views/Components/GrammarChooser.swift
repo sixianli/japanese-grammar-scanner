@@ -9,7 +9,7 @@ struct GrammarChooserModifier: ViewModifier {
 
     func body(content: Content) -> some View {
         content.confirmationDialog(
-            "这里有多个语法点，请选择",
+            tr("这里有多个语法点，请选择"),
             isPresented: Binding(
                 get: { (cluster?.grammarIDs.count ?? 0) > 1 },
                 set: { if !$0 { cluster = nil } }
@@ -25,7 +25,7 @@ struct GrammarChooserModifier: ViewModifier {
                     }
                 }
             }
-            Button("取消", role: .cancel) { cluster = nil }
+            Button(tr("取消"), role: .cancel) { cluster = nil }
         }
         .onChange(of: cluster) { _, newValue in
             if let c = newValue, c.grammarIDs.count == 1 {

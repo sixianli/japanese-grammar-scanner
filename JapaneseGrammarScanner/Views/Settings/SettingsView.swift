@@ -12,7 +12,7 @@ struct SettingsSheet: View {
             SettingsView(close: { dismiss() })
                 .onAppear { LanguageStore.reopenLanguagePage = false }
                 .toolbar {
-                    ToolbarItem(placement: .confirmationAction) { Button("完成") { dismiss() } }
+                    ToolbarItem(placement: .confirmationAction) { Button(tr("完成")) { dismiss() } }
                 }
                 .navigationDestination(for: SettingsPage.self) { page in
                     switch page {
@@ -44,29 +44,29 @@ struct SettingsView: View {
     var body: some View {
         List {
             if Features.paymentsEnabled {
-            Section("购买") {
+            Section(tr("购买")) {
                 HStack {
-                    Text("状态")
+                    Text(localized: "状态")
                     Spacer()
                     statusText.foregroundStyle(.secondary)
                 }
                 if store.access != .unlocked {
-                    Button("解锁完整讲解") { showPaywall = true }
+                    Button(tr("解锁完整讲解")) { showPaywall = true }
                 }
-                Button("恢复购买") { Task { await store.restore() } }
+                Button(tr("恢复购买")) { Task { await store.restore() } }
                     .disabled(store.isPurchasing)
             }
             }
-            Section("通用") {
+            Section(tr("通用")) {
                 NavigationLink(value: SettingsPage.appearance) {
-                    Label("主题色与背景色", systemImage: "paintpalette")
+                    Label(tr("主题色与背景色"), systemImage: "paintpalette")
                 }
                 NavigationLink(value: SettingsPage.language) {
                     HStack {
-                        Label("语言", systemImage: "globe")
+                        Label(tr("语言"), systemImage: "globe")
                         Spacer()
                         if languages.language == .system {
-                            Text("跟随系统").foregroundStyle(.secondary)
+                            Text(localized: "跟随系统").foregroundStyle(.secondary)
                         } else {
                             Text(verbatim: languages.language.nativeName).foregroundStyle(.secondary)
                         }
@@ -79,28 +79,28 @@ struct SettingsView: View {
                     Button {
                         feedbackKind = kind
                     } label: {
-                        Label(kind.title, systemImage: kind.icon)
+                        Label(kind.title.localized, systemImage: kind.icon)
                     }
                 }
             } header: {
-                Text("反馈")
+                Text(localized: "反馈")
             } footer: {
-                Text("遇到 bug、讲解有误或有任何建议，都可以附上截图告诉我们。")
+                Text(localized: "遇到 bug、讲解有误或有任何建议，都可以附上截图告诉我们。")
             }
             .listRowBackground(Theme.card)
             Section {
                 Toggle(isOn: $usage.isEnabled) {
-                    Label("匿名使用统计", systemImage: "chart.bar")
+                    Label(tr("匿名使用统计"), systemImage: "chart.bar")
                 }
                 .accessibilityIdentifier("settings.usageStats")
             } header: {
-                Text("隐私")
+                Text(localized: "隐私")
             } footer: {
-                Text("帮助我们了解有多少人在用、来自哪些地区、哪些语法最常被查，以便改进。不包含任何能识别你或你设备的信息。")
+                Text(localized: "帮助我们了解有多少人在用、来自哪些地区、哪些语法最常被查，以便改进。不包含任何能识别你或你设备的信息。")
             }
             .listRowBackground(Theme.card)
-            Section("帮助") {
-                Button("使用引导") {
+            Section(tr("帮助")) {
+                Button(tr("使用引导")) {
                     // 引导页是全屏的，先关掉设置面板再打开
                     close()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
@@ -109,12 +109,12 @@ struct SettingsView: View {
                 }
             }
             .listRowBackground(Theme.card)
-            Section("关于") {
-                NavigationLink("隐私政策", value: SettingsPage.privacy)
-                NavigationLink("使用条款", value: SettingsPage.terms)
-                NavigationLink("开源许可", value: SettingsPage.licenses)
+            Section(tr("关于")) {
+                NavigationLink(tr("隐私政策"), value: SettingsPage.privacy)
+                NavigationLink(tr("使用条款"), value: SettingsPage.terms)
+                NavigationLink(tr("开源许可"), value: SettingsPage.licenses)
                 HStack {
-                    Text("版本")
+                    Text(localized: "版本")
                     Spacer()
                     Text(verbatim: appVersion).foregroundStyle(.secondary)
                 }
@@ -122,7 +122,7 @@ struct SettingsView: View {
             .listRowBackground(Theme.card)
         }
         .themedList()
-        .navigationTitle("设置")
+        .navigationTitle(tr("设置"))
         .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $showPaywall) { PaywallView() }
         .sheet(item: $feedbackKind) { kind in
@@ -138,10 +138,10 @@ struct SettingsView: View {
 
     private var statusText: Text {
         switch store.access {
-        case .unlocked: Text("已永久解锁")
-        case .trial: Text("免费试用中，还剩 \(store.trialDaysLeft() ?? 0) 天")
-        case .trialExpired: Text("免费试用已结束")
-        case .notStarted: Text("未开始试用")
+        case .unlocked: Text(localized: "已永久解锁")
+        case .trial: Text(localized: "免费试用中，还剩 \(store.trialDaysLeft() ?? 0) 天")
+        case .trialExpired: Text(localized: "免费试用已结束")
+        case .notStarted: Text(localized: "未开始试用")
         }
     }
 }
@@ -179,18 +179,18 @@ private struct LegalPage: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                Text("最后更新：\(updated)")
+                Text(localized: "最后更新：\(updated)")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
                 ForEach(Array(paragraphs.enumerated()), id: \.offset) { _, item in
                     VStack(alignment: .leading, spacing: 6) {
-                        Text(item.0).font(.headline)
-                        Text(item.1).font(.body).lineSpacing(4)
+                        Text(localized: item.0).font(.headline)
+                        Text(localized: item.1).font(.body).lineSpacing(4)
                     }
                 }
                 if let link {
                     Link(destination: link.1) {
-                        Label(link.0, systemImage: "arrow.up.right.square")
+                        Label(link.0.localized, systemImage: "arrow.up.right.square")
                     }
                 }
             }
@@ -198,7 +198,7 @@ private struct LegalPage: View {
             .padding(Theme.margin)
         }
         .background(Theme.background)
-        .navigationTitle(title)
+        .navigationTitle(title.localized)
         .navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -223,14 +223,14 @@ struct LicensesView: View {
     var body: some View {
         List {
             Section {
-                Text("本 App 的语法讲解为原创内容。文字识别使用 Apple Vision 框架在设备上完成。以下第三方开源组件仅在构建阶段用于生成 App 内的静态数据或图片：")
+                Text(localized: "本 App 的语法讲解为原创内容。文字识别使用 Apple Vision 框架在设备上完成。以下第三方开源组件仅在构建阶段用于生成 App 内的静态数据或图片：")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }
             ForEach(items) { item in
                 VStack(alignment: .leading, spacing: 4) {
                     Text(verbatim: item.name).font(.headline)
-                    Text(item.usage).font(.subheadline)
+                    Text(localized: item.usage).font(.subheadline)
                     Text(verbatim: item.license).font(.caption).foregroundStyle(.secondary)
                     if let url = URL(string: item.url) {
                         Link(destination: url) { Text(verbatim: item.url).font(.caption) }
@@ -244,6 +244,6 @@ struct LicensesView: View {
                     .foregroundStyle(.secondary)
             }
         }
-        .navigationTitle("开源许可")
+        .navigationTitle(tr("开源许可"))
     }
 }
