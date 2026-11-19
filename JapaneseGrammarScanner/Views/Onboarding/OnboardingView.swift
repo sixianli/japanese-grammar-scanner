@@ -84,7 +84,8 @@ struct OnboardingView: View {
             .padding(.bottom, 24)
             .frame(height: 150, alignment: .top)
         }
-        .background(Color(.systemBackground))
+        .background(Theme.background)
+        .tint(Theme.accent)
     }
 
     /// 审核要求（Guideline 3.1.1）：试用开始前写明时长、到期后需要付费的内容与价格。
