@@ -24,8 +24,6 @@ struct FavoritesView: View {
     @EnvironmentObject private var library: GrammarLibrary
     @EnvironmentObject private var favorites: FavoritesStore
     @EnvironmentObject private var history: HistoryStore
-    /// 自己管理编辑状态：系统 EditButton 在 iOS 不支持的界面语言（如缅甸语）下只会显示英文。
-    @State private var editMode: EditMode = .inactive
     @AppStorage("favorites.sort") private var sortRaw = SortOrder.recent.rawValue
     @State private var path: [Route] = []
 
@@ -53,10 +51,6 @@ struct FavoritesView: View {
         }
     }
 
-    private func moveRecent(from source: IndexSet, to destination: Int) {
-        favorites.move(fromOffsets: source, toOffset: destination)
-    }
-
     var body: some View {
         NavigationStack(path: $path) {
             Group {
@@ -75,16 +69,14 @@ struct FavoritesView: View {
                                     .listRowBackground(Theme.card)
                             }
                         }
+                        // 取消收藏：点星号，或向左轻扫（系统标准操作）。不再单独提供「编辑」按钮。
                         .onDelete { offsets in
                             for id in offsets.map({ ids[$0] }) { favorites.toggle(id) }
                         }
-                        // 手动调整顺序只在「最近收藏」排序下有意义
-                        .onMove(perform: sort == .recent ? moveRecent : nil)
                     }
                     .themedList()
-                    .environment(\.editMode, $editMode)
                     .toolbar {
-                        ToolbarItem(placement: .topBarLeading) {
+                        ToolbarItem(placement: .topBarTrailing) {
                             Menu {
                                 Picker("排序", selection: $sortRaw) {
                                     ForEach(SortOrder.allCases) { order in
@@ -93,11 +85,6 @@ struct FavoritesView: View {
                                 }
                             } label: {
                                 Label("排序", systemImage: "arrow.up.arrow.down")
-                            }
-                        }
-                        ToolbarItem(placement: .topBarTrailing) {
-                            Button(editMode.isEditing ? "完成" : "编辑") {
-                                withAnimation { editMode = editMode.isEditing ? .inactive : .active }
                             }
                         }
                     }
