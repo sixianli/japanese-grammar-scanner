@@ -1,0 +1,1198 @@
+{
+ "te-iru": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "tte-quote-topic": {
+  "judgments": [
+   false,
+   true,
+   false,
+   true,
+   false
+  ],
+  "problem": "大量误匹配う/つ/る动词的促音て形（揃って、行って、思って），这些是动词连用形て，不是引用/话题的「って」。",
+  "fix": "排除前接动词词干（汉字+假名的促音便）的情况；要求前接名词、句子普通形结尾（だ/んだ/た/い）或引号「」；后接いる/いた/、+动词时排除。"
+ },
+ "ku-naru-ni-naru": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ga-aru-iru": {
+  "judgments": [
+   true,
+   false,
+   true,
+   true,
+   true
+  ],
+  "problem": "匹配到惯用语「しょうがない」（没办法），不是存在/拥有的がある。",
+  "fix": "排除「しょうがない」「仕方がない」等固定说法。"
+ },
+ "kosoado-konna": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "to-omou": {
+  "judgments": [
+   false,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "匹配到「〜と思ったら」（刚……就……）这一独立句型，不是表达看法的と思う。",
+  "fix": "排除「と思ったら」「かと思うと」，交给专门的句型规则。"
+ },
+ "ni-tsuite": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "te-kudasai": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "de-aru": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "causative": {
+  "judgments": [
+   true,
+   false,
+   true,
+   true,
+   false
+  ],
+  "problem": "匹配到已词汇化的动词：「知らせる」（通知）、「張りめぐらせる」（巡らす的变体），学习者应查单词而非使役。",
+  "fix": "排除词汇化动词列表：知らせる、巡らせる/めぐらせる、済ませる、任せる等。"
+ },
+ "ba-conditional": {
+  "judgments": [
+   true,
+   false,
+   true,
+   true,
+   true
+  ],
+  "problem": "匹配到固定表达「によれば」（据……说），属于传闻出处，不是条件ば。",
+  "fix": "排除前接「によ」的「れば」，归入によると/によれば规则。"
+ },
+ "te-iku": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "tame-ni": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "demo-but": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "mi-nominal": {
+  "judgments": [
+   true,
+   true,
+   false,
+   false,
+   true
+  ],
+  "problem": "匹配到「お楽しみください」，这里是动词「楽しむ」的连用形构成的尊敬请求「お〜ください」，不是名词化接尾词み。",
+  "fix": "排除「お〜みください／お〜みいただく」结构（前接お、后接ください）。"
+ },
+ "kenjougo-special-verbs": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "to-shite": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "mono-wo": {
+  "judgments": [
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  "problem": "全部是考试指令「最もよいものを（選びなさい）」，名词「もの」+宾格「を」，不是表惋惜/逆接的「ものを」。",
+  "fix": "排除前接「よい／近い」且后接「、1・2・3」「選び」「一つ」的情况；要求「ものを」位于句末或后接「、」并且前项为过去式/〜ば〜た 等反事实语境。"
+ },
+ "komu-compound": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "sa-nominal": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "hou-ga-ii": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "noni-usage": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "to-iu-koto-nominalizer": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "shi": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ni-iku-purpose": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ya-nado": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "kara-to-itte": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "toka-listing": {
+  "judgments": [
+   false,
+   true,
+   false,
+   false,
+   false
+  ],
+  "problem": "大多数是「こと＋から」被切成「こ【とか】ら」，并非列举的とか。",
+  "fix": "排除前接「こ」且后接「ら」的情况（即ことから）；更一般地要求とか后不接ら。"
+ },
+ "giving-receiving-verbs": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "shikashi-conjunction": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "you-na-example": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "au-mutual": {
+  "judgments": [
+   true,
+   true,
+   false,
+   true,
+   false
+  ],
+  "problem": "匹配到「だけあって」中的动词「ある」的て形「あって」，与互相的〜合う无关。",
+  "fix": "要求前接动词ます形词干，且只匹配汉字「合」或在词干后的「あう/あい」；排除「だけあって」「であって」等。"
+ },
+ "ga-hoshii": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "te-kara": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "sonkeigo-special-verbs": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ka-suffix": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "wake-da": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "nara": {
+  "judgments": [
+   false,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "匹配到连词「なぜなら」（因为），不是条件/话题的なら。",
+  "fix": "排除前接「なぜ」的「なら」。"
+ },
+ "kedo-keredomo": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "you-to-omou": {
+  "judgments": [
+   false,
+   true,
+   false,
+   true,
+   true
+  ],
+  "problem": "匹配到「だろうと思う」（推测：我想大概……吧），这里的う是だろう的一部分，不是意志形。",
+  "fix": "排除前接「だろ」「でしょ」的「うと思」。"
+ },
+ "kana-wonder": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "mieru-kikoeru": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "buri": {
+  "judgments": [
+   false,
+   true,
+   false,
+   false,
+   false
+  ],
+  "problem": "大部分匹配是副词「たっぷり」（充足），不是「〜っぷり」（……的样子）。",
+  "fix": "排除「たっぷり」；「っぷり」要求前接动词连用形（食べ／飲み等）。"
+ },
+ "no-wa-emphasis": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   false
+  ],
+  "problem": "匹配到「〜というのは」（所谓……是），属于下定义/解释词语的句型，不是强调句「〜のは〜だ」。",
+  "fix": "排除前接「という」「って」的「のは」。"
+ },
+ "ni-ki-ga-tsuku": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   false
+  ],
+  "problem": "「すぐに気が付いて」中的に属于副词「すぐに」，不是表示对象的に，讲解「に气がつく」会误导。",
+  "fix": "排除前接「すぐ」「急」「ふ」等副词构成的「〜に」，或要求に前是名词/こと/の。"
+ },
+ "ka-dou-ka": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "naosu-redo": {
+  "judgments": [
+   false,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "匹配到独立动词「直す」（修改、改正），不是复合动词后项「〜直す」（重新……）。",
+  "fix": "要求前接动词ます形词干（假名/汉字紧接），排除前面是助词、副词或句首的情况。"
+ },
+ "no-dakara": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "koto-da-advice": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "zurai": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "juu-chuu-throughout": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "tsumari": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "hodo-degree": {
+  "judgments": [
+   true,
+   true,
+   true,
+   false,
+   true
+  ],
+  "problem": "匹配到比例用法「〜ほど（越……越……）」（近くに来るほど、不快感が増す），不在本条的程度义项中。",
+  "fix": "后接「、」且后句含「増す／なる／〜く」等变化表达时归入「〜ば〜ほど／〜ほど（比例）」规则，或为该义项单独建条。"
+ },
+ "nai-invitation": {
+  "judgments": [
+   true,
+   true,
+   true,
+   false,
+   false
+  ],
+  "problem": "匹配到普通否定疑问「知らない？」（你知道吗？）和请求「〜てもらえない？」，不是邀请/提议。",
+  "fix": "限定为意志动词否定形+？，排除「知らない」「わからない」等认知动词，以及「〜てもらえない？／くれない？」请求形式（交给请求句型）。"
+ },
+ "no-hitotsu-da": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "sugiru": {
+  "judgments": [
+   true,
+   false,
+   true,
+   true,
+   false
+  ],
+  "problem": "匹配到独立动词「過ぎる」（时间流逝）和词汇化的「通り過ぎる」（经过），不是“过度”。",
+  "fix": "要求前接动词连用形或形容词词干；排除「時間が／ばかり 過ぎる」等前接名词/助词的情况，以及「通り過ぎる」。"
+ },
+ "kara-shite": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "mono-reason": {
+  "judgments": [
+   true,
+   false,
+   false,
+   true,
+   true
+  ],
+  "problem": "匹配到普通名词「もの」（ほしいもの、使われるもの），不是句末表理由的「もの／もん」。",
+  "fix": "要求句末（后接。」！或终助词）且前接「んだ／だ／い形容词／动词普通形」；排除后接「」」「は」「を」等助词的もの。"
+ },
+ "kaneru": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "kekka": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "to-shite-mo": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ni-yoru-to": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "hajimeru-start": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "kanarazushimo-nai": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ni-hanshite": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "tsumori": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "zu-ni-wa-irarenai": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "no-dewa-nai-darou-ka": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "zuni-without": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "houdai": {
+  "judgments": [
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "nakute-mo-ii": {
+  "judgments": [
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "kke": {
+  "judgments": [
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ppoi": {
+  "judgments": [
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "masu-you-ni": {
+  "judgments": [
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "mae-ni": {
+  "judgments": [
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "bakari-de": {
+  "judgments": [
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "nai-dewa-irarenai": {
+  "judgments": [
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "masenka": {
+  "judgments": [
+   false,
+   true,
+   true
+  ],
+  "problem": "匹配到「なりませんか」等普通否定疑问（もらわなければなりませんか＝必须……吗），不是劝诱。",
+  "fix": "要求前接意志动词连用形；排除「なりませんか」「いけませんか」「わかりませんか」等。"
+ },
+ "to-iu-koto-da": {
+  "judgments": [
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "nikui": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ta-bakari": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "shidai-as-soon-as": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "yori-hou-ga": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ku-ni-mieru": {
+  "judgments": [
+   false,
+   false
+  ],
+  "problem": "匹配到「目に見える」「かすかに見える」，这里的に是对象/副词语尾，见える是“能看见”，不是“看起来像……”。",
+  "fix": "排除前接「目」和副词「かすかに／はっきり」等；要求に前是な形容词词干或名词且语义为评价（或改为只匹配「〜そうに／〜く見える」+主语外观）。"
+ },
+ "ni-kotaete": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "doushi": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "mattaku-nai": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "te-kudasaru": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "nomi-only": {
+  "judgments": [
+   false,
+   true
+  ],
+  "problem": "匹配到「他のみんな」中的「の＋みんな」，不是限定的「のみ」。",
+  "fix": "排除后接「ん」的「のみ」（のみんな），或要求のみ后接助词/だ/、/。。"
+ },
+ "zutsu-each": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ni-kurabete": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "naide-oku": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "dokoro-ka": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "you-to-shinai": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "to-naru-to": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "wo-tooshite": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ikura-temo": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "sue-ni": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ni-itaru": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ni-tsuki": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "tai-mono-da": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "toka-hearsay": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "tokoro-datta": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "tsumori-datta": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "nai-to-ikenai": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "sono-tame": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ku-wa-nai": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "wo-moto-ni": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "to-wa-ie": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "sou-ni-naru": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "koto-wa-nai": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "muke": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "to-itta": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "tokoroga-conjunction": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "omoi-wo-suru": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "mo-ba-mo": {
+  "judgments": [
+   false
+  ],
+  "problem": "第一个「も」其实是副词「いつも」的一部分，句中只有一个条件ば，没有「AもBばCも」结构；且匹配跨度过长（跨越逗号）。",
+  "fix": "排除「いつも／でも／とも／も」作为词的一部分（前接いつ・で・と等）；要求两个も都直接接名词，且不跨越「、」。"
+ },
+ "ni-atte": {
+  "judgments": [
+   false
+  ],
+  "problem": "「確実にあって」是副词「確実に」+动词「ある」的て形（存在），不是书面语「〜にあって」（处于……状况下）。",
+  "fix": "要求「にあって」前是名词（时代、立场、状况等），排除前接副词化的「〜に」（確実に、常に、まさに等）。"
+ },
+ "te-touzen-da": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "keikou-ga-aru": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ni-chigainai": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "wo-towazu": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "hazu-ga-nai": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "atari-per": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "wo-kikkake-ni": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "ni-sakidatte": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "nai-kana": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "nai-koto-ni-wa": {
+  "judgments": [
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ }
+}
