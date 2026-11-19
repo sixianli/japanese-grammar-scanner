@@ -39,9 +39,15 @@ final class SettingsTests: E2ETestCase {
             ("English", "Language"), ("한국어", "언어"), ("Español", "Idioma"), ("Tiếng Việt", "Ngôn ngữ"),
             ("မြန်မာဘာသာ", "ဘာသာစကား"), ("繁體中文", "語言"), ("简体中文", "语言"),
         ]
+        // 页面标题和页脚（普通文字）都要换成所选语言
+        let footers = ["English": "switch together", "한국어": "함께 바뀝니다", "Español": "cambian juntos", "Tiếng Việt": "cùng lúc",
+                       "မြန်မာဘာသာ": "ပူးတွဲ", "繁體中文": "一起切換", "简体中文": "一起切换"]
         for (name, title) in expected {
             button(startingWith: name).tap()
             wait(navBar(title), "切换到 \(name) 后页面标题应变成「\(title)」")
+            if let f = footers[name], !f.isEmpty {
+                wait(text(containing: f), "切换到 \(name) 后页面上的普通文字也应换成该语言")
+            }
         }
         button(startingWith: "跟随系统").tap()
         back()
@@ -108,15 +114,19 @@ final class SettingsTests: E2ETestCase {
 
     func testAboutPages() {
         openSettings()
+        scrollTo(app.buttons["开源许可"].firstMatch)
         button(startingWith: "隐私政策").tap()
         wait(text(containing: "一句话说明"), "隐私政策页应显示内容")
         back()
+        scrollTo(app.buttons["开源许可"].firstMatch)
         button(startingWith: "使用条款").tap()
         wait(app.links.firstMatch, "使用条款页应有 Apple 许可协议链接")
         back()
+        scrollTo(app.buttons["开源许可"].firstMatch)
         button(startingWith: "开源许可").tap()
         wait(text(containing: "SudachiPy"), "开源许可页应显示内容")
         back()
+        scrollTo(text(containing: "版本"))
         wait(text(containing: "版本"), "设置应显示版本")
         closeSettings()
     }

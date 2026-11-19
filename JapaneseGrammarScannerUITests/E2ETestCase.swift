@@ -34,8 +34,8 @@ class E2ETestCase: XCTestCase {
     func tab(_ title: String) -> XCUIElement {
         let icon = ["首页": "house", "扫描": "text.viewfinder", "语法库": "books.vertical", "收藏": "star", "搜索": "magnifyingglass",
                     "Home": "house", "Scan": "text.viewfinder", "Grammar": "books.vertical", "Favorites": "star", "Search": "magnifyingglass"][title] ?? ""
-        return app.buttons.matching(NSPredicate(format: "label == %@ AND identifier == ''", title))
-            .containing(NSPredicate(format: "identifier BEGINSWITH %@", icon)).firstMatch
+        // 标签按钮的 identifier 就是标签图标名（如 books.vertical），页面里同名按钮（如「收藏」）的 identifier 不同
+        return app.buttons.matching(NSPredicate(format: "label == %@ AND identifier BEGINSWITH %@", title, icon)).firstMatch
     }
 
     /// 讲解页（右上角的收藏按钮只在讲解页出现）
@@ -120,6 +120,10 @@ class E2ETestCase: XCTestCase {
 
     /// 从系统照片选择器里选第一张（CI 会先用 simctl addmedia 放入示例照片）
     func pickFirstPhoto(file: StaticString = #filePath, line: UInt = #line) {
+        // 首次打开照片选择器时上方有一条隐私说明，先关掉
+        if app.buttons["进一步了解…"].waitForExistence(timeout: 3) {
+            app.buttons.matching(NSPredicate(format: "label == '关闭'")).firstMatch.tap()
+        }
         let image = app.images.matching(identifier: "PXGGridLayout-Info").firstMatch
         XCTAssertTrue(image.waitForExistence(timeout: 20), "照片选择器里没有照片", file: file, line: line)
         image.tap()

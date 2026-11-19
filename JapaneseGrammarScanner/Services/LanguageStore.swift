@@ -1,3 +1,4 @@
+import ObjectiveC
 import SwiftUI
 
 /// App 内界面与讲解内容使用的语言。可以在「设置 → 语言」里单独选择，不依赖手机系统语言
@@ -50,6 +51,7 @@ final class LanguageStore: ObservableObject {
         // 端到端测试每次从「跟随系统」开始
         if DemoMode.e2e { UserDefaults.standard.removeObject(forKey: AppLanguage.storageKey) }
         language = AppLanguage.selected
+        Bundle.setAppLanguage(language == .system ? nil : language.rawValue)
         library = GrammarLibrary.shared
     }
 
@@ -61,6 +63,7 @@ final class LanguageStore: ObservableObject {
         guard newValue != language else { return }
         UserDefaults.standard.set(newValue.rawValue, forKey: AppLanguage.storageKey)
         Self.reopenLanguagePage = true
+        Bundle.setAppLanguage(newValue == .system ? nil : newValue.rawValue)
         language = newValue
         let content = ContentLanguage.from(identifier: AppLanguage.effectiveIdentifier)
         guard content != library.language else { return }
@@ -108,5 +111,31 @@ struct LanguagePickerView: View {
         .themedList()
         .navigationTitle("语言")
         .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+/// 让 App 内的所有文字（SwiftUI 的 Text、导航标题、按钮等）都从所选语言的语言包（xx.lproj）里取。
+/// 只改环境的 locale 不够：运行中切换语言时，SwiftUI 对普通文字仍按启动时的语言查找。
+private var languageBundleKey: UInt8 = 0
+
+private final class LanguageOverrideBundle: Bundle, @unchecked Sendable {
+    override func localizedString(forKey key: String, value: String?, table tableName: String?) -> String {
+        if let bundle = objc_getAssociatedObject(self, &languageBundleKey) as? Bundle {
+            return bundle.localizedString(forKey: key, value: value, table: tableName)
+        }
+        return super.localizedString(forKey: key, value: value, table: tableName)
+    }
+}
+
+extension Bundle {
+    /// 设置 App 内的界面语言；nil 表示跟随系统
+    static func setAppLanguage(_ code: String?) {
+        if !(Bundle.main is LanguageOverrideBundle) {
+            object_setClass(Bundle.main, LanguageOverrideBundle.self)
+        }
+        let bundle = code
+            .flatMap { Bundle.main.path(forResource: $0, ofType: "lproj") }
+            .flatMap { Bundle(path: $0) }
+        objc_setAssociatedObject(Bundle.main, &languageBundleKey, bundle, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
 }
