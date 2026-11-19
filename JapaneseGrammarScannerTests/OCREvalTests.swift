@@ -46,14 +46,20 @@ final class OCREvalTests: XCTestCase {
                 }
                 let assembled = TextRecognizer.assemble(observations)
                 let result = ScanAnalyzer.analyze(text: assembled.text, lines: assembled.lines, matcher: matcher)
-                // 高亮框：Vision 能给出逐字位置的算「精确」，拿不到时按字数比例估算的算「估算」
-                var exact = 0, estimated = 0
+                // 高亮框：采用 Vision 逐字位置的算「精确」；Vision 拿不到的算「估算」；拿到但和等宽估算明显不一致而被弃用的算「弃用」
+                var exact = 0, estimated = 0, rejected = 0
                 for cluster in result.clusters {
                     for line in assembled.lines {
                         let overlap = NSIntersectionRange(cluster.range, line.rangeInText)
                         guard overlap.length > 0 else { continue }
                         let local = NSRange(location: overlap.location - line.rangeInText.location, length: overlap.length)
-                        if line.boxForRange(local) != nil { exact += 1 } else { estimated += 1 }
+                        if line.boxForRange(local) == nil {
+                            estimated += 1
+                        } else if ScanAnalyzer.substringBox(line: line, local: local) == ScanAnalyzer.estimatedBox(line: line, local: local) {
+                            rejected += 1
+                        } else {
+                            exact += 1
+                        }
                     }
                 }
                 let boxes: [[String: Any]] = result.boxes.map { box in
@@ -61,7 +67,7 @@ final class OCREvalTests: XCTestCase {
                     return ["grammar": ids, "rect": [box.rect.minX, box.rect.minY, box.rect.width, box.rect.height].map { Double($0) }]
                 }
                 var entry: [String: Any] = [
-                    "boxStats": ["exact": exact, "estimated": estimated],
+                    "boxStats": ["exact": exact, "estimated": estimated, "rejected": rejected],
                     "boxes": boxes,
                     "lines": lines,
                     "text": assembled.text,

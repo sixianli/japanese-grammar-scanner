@@ -186,8 +186,10 @@ def summarize(rows):
     boxes = [r for r in rows if r.get("boxes") is not None]
     if boxes:
         exact = sum(r["boxes"]["exact"] for r in boxes)
-        total = sum(r["boxes"]["exact"] + r["boxes"]["estimated"] for r in boxes)
+        rejected = sum(r["boxes"].get("rejected", 0) for r in boxes)
+        total = sum(r["boxes"]["exact"] + r["boxes"]["estimated"] + r["boxes"].get("rejected", 0) for r in boxes)
         out["boxExactRate"] = exact / max(total, 1)
+        out["boxRejectedRate"] = rejected / max(total, 1)
     secs = [r["seconds"] for r in rows if r.get("seconds") is not None]
     if secs:
         out["secondsPerImage"] = statistics.mean(secs)
