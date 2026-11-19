@@ -86,6 +86,7 @@ struct HomeView: View {
             }
             .buttonStyle(.plain)
             .accessibilityLabel(Text("设置"))
+            .accessibilityIdentifier("home.settings")
         }
         .padding(.top, 8)
     }
@@ -107,6 +108,7 @@ struct HomeView: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel(Text("搜索语法或意思"))
+        .accessibilityIdentifier("home.search")
     }
 
     // MARK: 扫描入口
@@ -222,7 +224,8 @@ struct HomeView: View {
         let ids = library.displayableIDs(record.grammarIDs)
         let unseen = ids.filter { !history.learnedIDs.contains($0) }.count
         return HomeSection(title: "继续上次", trailing: history.scans.count > 1 ? AnyView(
-            NavigationLink { AllScansView() } label: { SeeAllLabel() }
+            NavigationLink(value: Route.allScans) { SeeAllLabel() }
+                .accessibilityIdentifier("seeAll.scans")
         ) : nil) {
             NavigationLink(value: Route.scanRecord(record.id)) {
                 HStack(spacing: 14) {
@@ -258,6 +261,7 @@ struct HomeView: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
+            .accessibilityIdentifier("home.continueScan")
         }
     }
 
@@ -277,7 +281,8 @@ struct HomeView: View {
         if !items.isEmpty {
             HomeSection(title: "快要忘了", subtitle: "这些语法你看过，按遗忘曲线快要忘了，再看一眼吧。",
                         trailing: items.count > 3 ? AnyView(
-                            NavigationLink { GrammarListPage(title: "快要忘了", points: items) } label: { SeeAllLabel() }
+                            NavigationLink(value: Route.forgettingList(items.map(\.id))) { SeeAllLabel() }
+                                .accessibilityIdentifier("seeAll.forgetting")
                         ) : nil) {
                 CompactGrammarList(points: Array(items.prefix(3)))
             }
@@ -291,7 +296,8 @@ struct HomeView: View {
         let points = history.recentGrammarIDs.compactMap { library.point(id: $0) }
         if !points.isEmpty {
             HomeSection(title: "最近查看", trailing: points.count > 3 ? AnyView(
-                NavigationLink { RecentViewedPage() } label: { SeeAllLabel() }
+                NavigationLink(value: Route.recentViewed) { SeeAllLabel() }
+                .accessibilityIdentifier("seeAll.recent")
             ) : nil) {
                 CompactGrammarList(points: Array(points.prefix(3)))
             }
@@ -362,6 +368,7 @@ struct CompactGrammarList: View {
                     .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
+                .accessibilityIdentifier("grammarRow")
                 if i < points.count - 1 { Divider().padding(.leading, 16) }
             }
         }
@@ -370,13 +377,16 @@ struct CompactGrammarList: View {
 }
 
 /// 完整列表页（「全部」）。
-private struct GrammarListPage: View {
+struct GrammarListPage: View {
+    @EnvironmentObject private var library: GrammarLibrary
     let title: LocalizedStringKey
-    let points: [GrammarPoint]
+    let ids: [String]
 
     var body: some View {
+        let points = ids.compactMap { library.point(id: $0) }
         List(points) { p in
             NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p) }
+                .accessibilityIdentifier("grammarRow")
         }
         .navigationTitle(title)
         .navigationBarTitleDisplayMode(.inline)
@@ -384,7 +394,7 @@ private struct GrammarListPage: View {
 }
 
 /// 最近查看的完整列表，可清除。
-private struct RecentViewedPage: View {
+struct RecentViewedPage: View {
     @EnvironmentObject private var library: GrammarLibrary
     @EnvironmentObject private var history: HistoryStore
     @State private var confirm = false
@@ -393,6 +403,7 @@ private struct RecentViewedPage: View {
         let points = history.recentGrammarIDs.compactMap { library.point(id: $0) }
         List(points) { p in
             NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p) }
+                .accessibilityIdentifier("grammarRow")
         }
         .navigationTitle("最近查看")
         .navigationBarTitleDisplayMode(.inline)
@@ -408,7 +419,7 @@ private struct RecentViewedPage: View {
 }
 
 /// 全部扫描记录
-private struct AllScansView: View {
+struct AllScansView: View {
     @EnvironmentObject private var history: HistoryStore
     @State private var confirm = false
 
@@ -420,6 +431,7 @@ private struct AllScansView: View {
                         ScanThumb(record: record, image: history.thumbnail(for: record))
                     }
                     .buttonStyle(.plain)
+                    .accessibilityIdentifier("scanRecord")
                 }
             }
             .padding()

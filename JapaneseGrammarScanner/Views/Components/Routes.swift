@@ -7,6 +7,12 @@ enum Route: Hashable {
     case scan(ScanImage)
     /// 打开「最近扫描」中保存的一次扫描
     case scanRecord(UUID)
+    /// 首页各模块的「查看全部」页。
+    /// 注意：同一个导航栈里只能用「按值跳转」（NavigationLink(value:)）。如果用 NavigationLink { 页面 } 推入一页、
+    /// 再在那一页里按值跳转，SwiftUI 会把导航栈弄乱（例如在「全部扫描记录」里一直原地打转）。
+    case allScans
+    case recentViewed
+    case forgettingList([String])
 }
 
 /// 要做识别的一张图片（来自相机定格或相册）。
@@ -47,6 +53,12 @@ extension View {
                 ScanResultView(scanImage: scanImage)
             case .scanRecord(let id):
                 SavedScanView(recordID: id)
+            case .allScans:
+                AllScansView()
+            case .recentViewed:
+                RecentViewedPage()
+            case .forgettingList(let ids):
+                GrammarListPage(title: "快要忘了", ids: ids)
             }
         }
     }

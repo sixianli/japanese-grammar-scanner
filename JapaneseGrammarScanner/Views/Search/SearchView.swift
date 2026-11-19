@@ -80,6 +80,7 @@ struct SearchView: View {
     private func row(_ p: GrammarPoint) -> some View {
         NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p) }
             .listRowBackground(Theme.card)
+            .accessibilityIdentifier("search.result")
     }
 }
 

@@ -66,6 +66,7 @@ struct FavoritesView: View {
                         ForEach(ids, id: \.self) { id in
                             if let p = library.point(id: id) {
                                 NavigationLink(value: Route.grammar(id)) { GrammarRow(point: p) }
+                                    .accessibilityIdentifier("favorites.row")
                                     .listRowBackground(Theme.card)
                             }
                         }

@@ -85,6 +85,7 @@ struct ScanHomeView: View {
                     .buttonStyle(.borderedProminent)
             }
             Button("试试示例书页", action: openSample)
+                .accessibilityIdentifier("scan.trySample")
                 .buttonStyle(.bordered)
                 .tint(.white)
         }
@@ -104,6 +105,7 @@ struct ScanHomeView: View {
                 Spacer()
                 if ids.isEmpty {
                     Button("试试示例", action: openSample)
+                        .accessibilityIdentifier("scan.trySample")
                         .font(.caption.weight(.semibold))
                         .padding(.horizontal, 10)
                         .padding(.vertical, 5)

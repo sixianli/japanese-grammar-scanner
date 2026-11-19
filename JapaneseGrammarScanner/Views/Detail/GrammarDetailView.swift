@@ -20,6 +20,7 @@ struct GrammarDetailView: View {
     var body: some View {
         if let point = library.point(id: grammarID) {
             content(point)
+                .accessibilityIdentifier("screen.grammarDetail")
                 .onAppear { history.recordViewed(point.id) }
         } else {
             ContentUnavailableView("找不到该语法点", systemImage: "questionmark.folder")
@@ -183,6 +184,7 @@ struct GrammarDetailView: View {
                         .foregroundStyle(Theme.accent)
                 }
                 .accessibilityLabel(favorites.isFavorite(p.id) ? Text("取消收藏") : Text("收藏"))
+                .accessibilityIdentifier("detail.favorite")
             }
         }
     }
@@ -244,6 +246,7 @@ struct GrammarDetailView: View {
         if let target {
             NavigationLink(value: Route.grammar(target.id)) { row }
                 .buttonStyle(RowPressStyle())
+                .accessibilityIdentifier("detail.similar")
         } else {
             row
         }

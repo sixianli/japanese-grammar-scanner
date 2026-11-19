@@ -61,6 +61,7 @@ struct ScanResultView: View {
         .statusBarHidden(zoom.isOpen)
         .onAppear { zoom.imageSize = scanImage.image.size }
         .navigationTitle("识别结果")
+        .accessibilityIdentifier("screen.scanResult")
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(item: $pushedGrammarID) { id in
             GrammarDetailView(grammarID: id)
@@ -109,6 +110,10 @@ struct ScanResultView: View {
             }
             .contentShape(Rectangle())
             .onTapGesture { zoom.open() }
+            .accessibilityElement(children: .ignore)
+            .accessibilityAddTraits(.isButton)
+            .accessibilityLabel(Text("放大查看"))
+            .accessibilityIdentifier("result.image")
             .frame(maxWidth: .infinity)
             .frame(maxHeight: 460)
             // 记录图片在屏幕上的位置：放大从这里开始，缩小回到这里（不触发重绘）
@@ -176,6 +181,7 @@ struct ScanResultView: View {
                                     .contentShape(Rectangle())
                             }
                             .buttonStyle(.plain)
+                            .accessibilityIdentifier("result.grammarRow")
                             .padding(.horizontal, 12)
                             .padding(.vertical, 6)
                             Divider().padding(.leading, 28)

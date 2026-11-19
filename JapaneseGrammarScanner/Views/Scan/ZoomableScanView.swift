@@ -385,6 +385,7 @@ struct ScanZoomStage: View {
                         .background(.black.opacity(0.5), in: Circle())
                 }
                 .accessibilityLabel(Text("关闭"))
+                .accessibilityIdentifier("zoom.close")
                 .padding()
                 .padding(.top, 44)
                 .transition(.opacity)

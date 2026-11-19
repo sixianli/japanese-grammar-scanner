@@ -57,6 +57,7 @@ struct LibraryView: View {
             Section {
                 ForEach(items) { p in
                     NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p, shownLevel: level) }
+                        .accessibilityIdentifier("library.row")
                         .listRowBackground(Theme.card)
                 }
             } header: {
@@ -73,6 +74,7 @@ struct LibraryView: View {
             Section {
                 ForEach(main) { p in
                     NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p, shownLevel: levelFilter) }
+                        .accessibilityIdentifier("library.row")
                         .listRowBackground(Theme.card)
                 }
             }
@@ -82,6 +84,7 @@ struct LibraryView: View {
             Section {
                 ForEach(inExamples) { p in
                     NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p, shownLevel: levelFilter) }
+                        .accessibilityIdentifier("library.row")
                         .listRowBackground(Theme.card)
                 }
             } header: {

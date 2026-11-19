@@ -14,6 +14,8 @@ enum DemoMode {
     static var scrollAnchor: String? { value(for: "-demoScroll") }
     /// 预置浏览记录（让首页出现「快要忘了」「最近查看」）
     static var seedsHistory: Bool { value(for: "-demoHistory") != nil }
+    /// 端到端（UI）测试：清空并放入固定数据
+    static var e2e: Bool { ProcessInfo.processInfo.arguments.contains("-e2e") }
     /// 识别结果页截图时自动打开全屏放大查看
     static var opensZoom: Bool { value(for: "-demoZoom") != nil }
     /// 截图时指定 App 内语言（覆盖「设置 → 语言」）

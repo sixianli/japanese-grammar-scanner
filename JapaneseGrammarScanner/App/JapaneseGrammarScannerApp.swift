@@ -119,6 +119,7 @@ struct RootTabView: View {
         .onAppear {
             favorites.migrate(aliases: library.aliases)
             history.migrate(aliases: library.aliases)
+            if DemoMode.e2e { seedForEndToEndTests() }
             if !didCompleteOnboarding, DemoMode.screen == nil || DemoMode.screen == "onboarding" {
                 showOnboarding = true
             }
@@ -134,6 +135,22 @@ struct RootTabView: View {
                 }
             }
         }
+    }
+
+    /// 端到端测试（UI 测试启动参数 -e2e）：清空本地数据，放入固定的扫描记录、浏览记录，跳过引导。
+    private func seedForEndToEndTests() {
+        didCompleteOnboarding = true
+        history.clearScans()
+        history.clearViewed()
+        for id in favorites.ids { favorites.toggle(id) }
+        if let image = UIImage(named: "SamplePage")?.normalizedForOCR() {
+            for _ in 0..<4 {
+                _ = history.recordScan(image: image, grammarIDs: ["te-shimau", "you-ni-naru", "ni-mo-kakawarazu"])
+            }
+        }
+        let old = Date().addingTimeInterval(-10 * 86_400)
+        for id in ["ni-mo-kakawarazu", "you-ni-naru", "okage-de", "te-shimau", "rashii-typical"] { history.recordViewed(id, now: old) }
+        for id in ["izen", "made-until", "sou-da-appearance", "nagara", "dake-ni"] { history.recordViewed(id) }
     }
 
     @ViewBuilder
