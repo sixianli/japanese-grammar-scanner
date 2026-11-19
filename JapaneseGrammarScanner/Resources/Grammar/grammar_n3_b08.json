@@ -267,7 +267,8 @@
       "今にも雨が降りそうだ。"
     ],
     "subsumes": [
-      "sou-da-appearance"
+      "sou-da-appearance",
+      "ku-naru-ni-naru"
     ]
   },
   {
@@ -418,7 +419,8 @@
       "彼はどうしても謝ろうとしない。"
     ],
     "subsumes": [
-      "volitional-form"
+      "volitional-form",
+      "to-quotation"
     ]
   },
   {
@@ -549,7 +551,8 @@
       "毎日運動しようと思う。"
     ],
     "subsumes": [
-      "volitional-form"
+      "volitional-form",
+      "to-quotation"
     ]
   },
   {
@@ -690,7 +693,9 @@
       "明日は早く起きようと思う。",
       "雨が降りそうもない。"
     ],
-    "subsumes": []
+    "subsumes": [
+      "ga-aru-iru"
+    ]
   },
   {
     "id": "beki-da",
@@ -979,7 +984,9 @@
       "約束は守るべきだ。",
       "やるべきことが多い。"
     ],
-    "subsumes": []
+    "subsumes": [
+      "ja-nai"
+    ]
   },
   {
     "id": "koto-da-advice",
@@ -1902,11 +1909,12 @@
       }
     ],
     "patterns": [
-      "(?<=[うくすつぬむるぐぶいただな])(?:こと|事)から(?!始|はじ|手を|取り|とり|やり|少し|順|話)"
+      "(?<=[うくすつぬむるぐぶいただな])(?:こと|事)から(?!始|はじ|変え|かえ|手を|取り|とり|やり|少し|順|話)"
     ],
     "negativeExamples": [
       "できることから始めよう。",
-      "身近なことから少しずつ変えていく。"
+      "身近なことから少しずつ変えていく。",
+      "小さなことから変える。"
     ],
     "subsumes": [
       "koto-nominalizer"

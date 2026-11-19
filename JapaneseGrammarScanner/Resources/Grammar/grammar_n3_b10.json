@@ -132,7 +132,9 @@
       "雨が降っている場合は中止です。",
       "困っている場合には連絡してください。"
     ],
-    "subsumes": []
+    "subsumes": [
+      "te-iru"
+    ]
   },
   {
     "id": "bakari-de",
@@ -261,7 +263,9 @@
       "肉ばかりでなく、野菜も食べなさい。",
       "最近は雨ばかりですね。"
     ],
-    "subsumes": []
+    "subsumes": [
+      "bakari-only"
+    ]
   },
   {
     "id": "te-goran",
@@ -1396,7 +1400,9 @@
     "negativeExamples": [
       "もし雨が降ったら、中止します。"
     ],
-    "subsumes": []
+    "subsumes": [
+      "tara"
+    ]
   },
   {
     "id": "no-de-wa-nai-ka",
@@ -1547,7 +1553,11 @@
       "それは私のではない。",
       "このかばんは私のじゃないよ。"
     ],
-    "subsumes": []
+    "subsumes": [
+      "ja-nai",
+      "n-desu-explanatory",
+      "ka-to-omou"
+    ]
   },
   {
     "id": "nai-kana",
@@ -1826,7 +1836,8 @@
       "〜から見ても"
     ],
     "subsumes": [
-      "kara-from"
+      "kara-from",
+      "to-quotation"
     ],
     "negativeExamples": [
       "窓から見える山がきれいだ。",
