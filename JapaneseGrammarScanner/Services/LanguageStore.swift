@@ -50,8 +50,9 @@ final class LanguageStore: ObservableObject {
     init() {
         // 端到端测试每次从「跟随系统」开始
         if DemoMode.e2e { UserDefaults.standard.removeObject(forKey: AppLanguage.storageKey) }
-        language = AppLanguage.selected
-        Bundle.setAppLanguage(language == .system ? nil : language.rawValue)
+        let selected = AppLanguage.selected
+        Bundle.setAppLanguage(selected == .system ? nil : selected.rawValue)
+        language = selected
         library = GrammarLibrary.shared
     }
 
