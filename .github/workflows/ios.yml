@@ -103,10 +103,23 @@ jobs:
           if [ -n "$E2E_ONLY" ]; then
             ONLY=$(echo "$E2E_ONLY" | tr ',' '\n' | sed 's#^ *#-only-testing:JapaneseGrammarScannerUITests/#' | tr '\n' ' ')
           fi
-          xcodebuild test \
+          UDID="${{ steps.sim.outputs.udid }}"
+          xcodebuild build-for-testing \
             -project JapaneseGrammarScanner.xcodeproj \
             -scheme JapaneseGrammarScanner \
-            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -destination "id=$UDID" -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO | tail -3
+          # 预热：刚启动的模拟器第一次打开 App 很慢，第一个用例偶尔「启动 App 超时」。先装好、打开一次再关掉
+          APP=$(ls -d build/Build/Products/Debug-iphonesimulator/JapaneseGrammarScanner.app)
+          BID=$(/usr/libexec/PlistBuddy -c "Print CFBundleIdentifier" "$APP/Info.plist")
+          xcrun simctl install "$UDID" "$APP"
+          xcrun simctl launch "$UDID" "$BID" -e2e -demoUnlocked || true
+          sleep 10
+          xcrun simctl terminate "$UDID" "$BID" || true
+          xcodebuild test-without-building \
+            -project JapaneseGrammarScanner.xcodeproj \
+            -scheme JapaneseGrammarScanner \
+            -destination "id=$UDID" -derivedDataPath build \
             $ONLY \
             -resultBundlePath e2e.xcresult \
             CODE_SIGNING_ALLOWED=NO \
