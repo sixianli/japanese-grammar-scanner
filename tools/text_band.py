@@ -21,6 +21,30 @@ def bilinear(gray, xs, ys):
     return (gray[y0, x0] * (1 - fx) * (1 - fy) + gray[y0, x0 + 1] * fx * (1 - fy) +
             gray[y0 + 1, x0] * (1 - fx) * fy + gray[y0 + 1, x0 + 1] * fx * fy)
 
+PUNCT = set("、。，．・「」『』（）()〔〕［］【】…‥：；！？!?,.　 ")
+def char_weight(c):
+    o = ord(c)
+    if c in PUNCT: return 0.1
+    if c in "ーっゃゅょぁぃぅぇぉッャュョァィゥェォ": return 0.35
+    if 0x3040 <= o <= 0x309F: return 0.55
+    if 0x30A0 <= o <= 0x30FF: return 0.5
+    if 0x4E00 <= o <= 0x9FFF or c == "々": return 1.0
+    return 0.45
+
+def expected_profile(text, N):
+    ws = [0.5 if (ord(c) < 0x100 or 0xFF61 <= ord(c) <= 0xFF9F) else 1.0 for c in text]
+    tot = sum(ws) or 1
+    edges = np.cumsum([0] + ws) / tot
+    out = np.zeros(N)
+    for j in range(N):
+        t = (j + .5) / N
+        i = min(len(text) - 1, max(0, int(np.searchsorted(edges, t, side="right") - 1)))
+        out[j] = char_weight(text[i])
+    return out
+
+ALIGN = os.environ.get("ALIGN", "1") == "1"
+ALIGN_MARGIN = float(os.environ.get("ALIGN_MARGIN", "0.15"))
+
 def line_band(gray, q, text):
     """返回 (h 像素字高, 列中心 t 数组, 每列文字带中心 f∈[0,1]) 或 None（不需要收紧）"""
     TL, TR, BR, BL = q
@@ -50,21 +74,44 @@ def line_band(gray, q, text):
     cs = np.concatenate([np.zeros((N, 1)), np.cumsum(dark, 1)], 1)
     win = cs[:, hr:] - cs[:, :-hr]  # (N, M-hr+1)
     K = win.shape[1]
-    d = max(1, int(math.ceil(DFRAC * hr)))
-    # 平滑约束：每移动一行扣 LAM × (一列典型墨迹量 / 字高行数)，真正的文字行是平滑弧线，不会忽上忽下
-    unit = float(np.median(win.max(axis=1))) / hr if LAM > 0 else 0.0
-    score = win[0].copy(); back = np.zeros((N, K), int)
-    for j in range(1, N):
-        new = np.full(K, -1e18); arg = np.zeros(K, int)
-        for k in range(K):
-            lo, hi = max(0, k - d), min(K, k + d + 1)
-            cand = score[lo:hi] - LAM * unit * np.abs(np.arange(lo, hi) - k)
-            i = int(np.argmax(cand)); new[k] = cand[i] + win[j, k]; arg[k] = lo + i
-        score = new; back[j] = arg
-    k = int(np.argmax(score)); path = [k]
-    for j in range(N - 1, 0, -1):
-        k = back[j, k]; path.append(k)
-    path = np.array(path[::-1], float)
+    def best_path(w):
+        d = max(1, int(math.ceil(DFRAC * hr)))
+        unit = float(np.median(np.clip(w, 0, None).max(axis=1))) / hr if LAM > 0 else 0.0
+        score = w[0].copy(); back = np.zeros((N, K), int)
+        for j in range(1, N):
+            new = np.full(K, -1e18); arg = np.zeros(K, int)
+            for k in range(K):
+                lo, hi = max(0, k - d), min(K, k + d + 1)
+                cand = score[lo:hi] - LAM * unit * np.abs(np.arange(lo, hi) - k)
+                i = int(np.argmax(cand)); new[k] = cand[i] + w[j, k]; arg[k] = lo + i
+            score = new; back[j] = arg
+        k = int(np.argmax(score)); pth = [k]
+        for j in range(N - 1, 0, -1):
+            k = back[j, k]; pth.append(k)
+        return pth[::-1]
+    path = best_path(win)
+    if ALIGN:
+        # 用这一行的文字内容核对：标点几乎没有墨迹、汉字墨迹多。行四边形里夹着别的行时，
+        # 选「墨迹起伏和文字最吻合」的那条路径（换行必须明显更吻合才换）
+        expect = expected_profile(text, N)
+        def fit(pth):
+            prof = np.array([win[j, pth[j]] for j in range(N)])
+            if prof.std() < 1e-6 or expect.std() < 1e-6: return -1.0
+            return float(np.corrcoef(prof, expect)[0, 1])
+        best, best_fit = path, fit(path)
+        w2 = win.copy()
+        for _ in range(2):
+            for j in range(N):
+                lo, hi = max(0, path[j] - hr), min(K, path[j] + hr + 1)
+                w2[j, lo:hi] = -1e9
+            if (w2.max(axis=1) < -1e8).any(): break
+            alt = best_path(w2)
+            if any(w2[j, alt[j]] < -1e8 for j in range(N)): break
+            fa = fit(alt)
+            if fa > best_fit + ALIGN_MARGIN: best, best_fit = alt, fa
+            path = alt
+        path = best
+    path = np.array(path, float)
     raw = (path + hr / 2) / M
     f = raw
     # 平滑

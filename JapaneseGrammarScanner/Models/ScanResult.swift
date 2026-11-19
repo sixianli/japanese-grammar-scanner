@@ -85,6 +85,8 @@ struct ScanResult {
     let matches: [GrammarMatch]
     let clusters: [HighlightCluster]
     let boxes: [HighlightBox]
+    /// 书页弯曲得很厉害（个别高亮可能落到相邻的行），见 ScanAnalyzer.pageIsCurved
+    var pageIsCurved = false
 
     static let empty = ScanResult(text: "", matches: [], clusters: [], boxes: [])
 

@@ -34,4 +34,21 @@ final class ScanAnalyzerQuadTests: XCTestCase {
                                   boxForRange: { _ in nil }, quad: quad, quadForRange: { _ in nil })
         XCTAssertNil(ScanAnalyzer.fittedToLine(quad, line: line))
     }
+
+    /// 超过五分之一的正文行「一个行框里夹着两三行字」时，判断为书页弯曲较大
+    func testCurvedPageDetection() {
+        func line(curved: Bool) -> RecognizedLine {
+            var l = RecognizedLine(rangeInText: NSRange(location: 0, length: 10), text: "あいうえおかきくけこ",
+                                   boundingBox: CGRect(x: 0.1, y: 0.5, width: 0.8, height: 0.05),
+                                   boxForRange: { _ in nil })
+            if curved {
+                l.band = TextBand(glyph: 0.3, ts: [0.25, 0.75], centers: [0.5, 0.5], raw: [0.5, 0.5])
+            }
+            return l
+        }
+        let flat = (0..<10).map { _ in line(curved: false) }
+        XCTAssertFalse(ScanAnalyzer.pageIsCurved(flat))
+        XCTAssertFalse(ScanAnalyzer.pageIsCurved(flat.prefix(9) + [line(curved: true)]), "十行里一行弯不算")
+        XCTAssertTrue(ScanAnalyzer.pageIsCurved(flat.prefix(7) + (0..<3).map { _ in line(curved: true) }))
+    }
 }

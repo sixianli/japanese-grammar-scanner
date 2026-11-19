@@ -89,6 +89,7 @@ final class OCREvalTests: XCTestCase {
                 var entry: [String: Any] = [
                     "boxStats": ["exact": exact, "estimated": estimated, "rejected": rejected],
                     "boxes": boxes,
+                    "pageIsCurved": result.pageIsCurved,
                     "clusters": clusters,
                     "lines": lines,
                     "text": assembled.text,

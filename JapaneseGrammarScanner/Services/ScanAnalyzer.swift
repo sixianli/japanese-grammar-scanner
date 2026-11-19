@@ -19,7 +19,9 @@ enum ScanAnalyzer {
                 }
             }
         }
-        return ScanResult(text: text, matches: matches, clusters: clusters, boxes: boxes)
+        var result = ScanResult(text: text, matches: matches, clusters: clusters, boxes: boxes)
+        result.pageIsCurved = pageIsCurved(lines)
+        return result
     }
 
     /// 一行中某段文字的框。
@@ -60,6 +62,20 @@ enum ScanAnalyzer {
             quad = fittedToLine(vision, line: line) ?? vision
         }
         return bandFitted(quad, line: line) ?? quad
+    }
+
+    /// 书页弯曲得很厉害：超过五分之一的正文行，Vision 的行四边形高于字高 2.8 倍（一个行框里夹着两三行字）。
+    /// 这种页面上个别高亮可能落到相邻的行，结果页提示用户压平书页再拍（95 张实拍照片里约 11 张，错行高亮的六成在这些照片上）。
+    static func pageIsCurved(_ lines: [RecognizedLine]) -> Bool {
+        var eligible = 0, curved = 0
+        for line in lines {
+            let ns = line.text as NSString
+            guard weightedLength(ns, NSRange(location: 0, length: ns.length)) >= 8,
+                  line.boundingBox.width > line.boundingBox.height * 1.5 else { continue }
+            eligible += 1
+            if let band = line.band, band.glyph > 0, 1 / band.glyph > 2.8 { curved += 1 }
+        }
+        return eligible >= 5 && CGFloat(curved) >= CGFloat(eligible) * 0.2
     }
 
     /// 起止位置不变，高度收紧到这一行在弯曲书页上真正的文字带（约 1.2 倍字高）。

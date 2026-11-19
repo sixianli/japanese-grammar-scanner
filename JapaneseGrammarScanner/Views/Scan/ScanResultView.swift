@@ -178,6 +178,16 @@ struct ScanResultView: View {
                     Text(localized: "点击高亮或下方列表查看讲解；双指可直接放大图片。")
                         .font(.footnote).foregroundStyle(.secondary)
                 }
+                if result.pageIsCurved && !textWasEdited {
+                    Label {
+                        Text(localized: "书页弯曲较大，个别高亮可能落在相邻的行。把书页压平、正对拍摄，效果更好。")
+                    } icon: {
+                        Image(systemName: "book.pages")
+                    }
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .accessibilityIdentifier("result.curvedHint")
+                }
                 VStack(spacing: 0) {
                     ForEach(ids, id: \.self) { id in
                         if let p = library.point(id: id) {
