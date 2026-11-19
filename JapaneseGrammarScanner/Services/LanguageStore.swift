@@ -135,7 +135,7 @@ private final class LanguageOverrideBundle: Bundle, @unchecked Sendable {
 
     private func resolve(key: String, value: String?, table: String?, code: String) -> String {
         // 1. 按指定语言查整包的语言表
-        if #available(iOS 18.0, *) {
+        if #available(iOS 18.4, *) {
             let viaLanguage = super.localizedString(forKey: key, value: "\u{1}", table: table,
                                                     localizations: [Locale.Language(identifier: code)])
             if viaLanguage != "\u{1}" { return viaLanguage }
