@@ -85,8 +85,11 @@ final class SettingsTests: E2ETestCase {
             app.swipeDown(velocity: .fast)
             let close = app.buttons.matching(NSPredicate(format: "label == '关闭' OR label == 'Close'")).firstMatch
             if share.exists && close.exists { close.tap() }
-            navBar("反馈").buttons["取消"].tap()
-            waitGone(navBar("反馈"), "取消后关闭反馈页")
+            // 下滑关分享面板时，反馈页有时也一起关了
+            if navBar("反馈").exists {
+                navBar("反馈").buttons["取消"].tap()
+                waitGone(navBar("反馈"), "取消后关闭反馈页")
+            }
             closeSettings()
         }
     }
@@ -98,12 +101,20 @@ final class SettingsTests: E2ETestCase {
         button(startingWith: "添加截图").tap()
         pickFirstPhoto()
         // 多选的照片选择器要再点确认（iOS 26 是右侧的 ✓ 按钮，旧系统是「添加」）
-        let confirm = app.buttons.matching(NSPredicate(format: "label IN {'添加', 'Add', '完成', 'Done', '确定', 'OK', '选取', 'Choose'} OR identifier IN {'Done', 'Add', 'DoneButton'}")).firstMatch
-        if confirm.waitForExistence(timeout: 5) {
-            confirm.tap()
-        } else {
-            // 调试：记下照片选择器上所有按钮，方便下次对上确认按钮的名字
-            print("PICKER BUTTONS:", app.buttons.allElementsBoundByIndex.prefix(40).map { "\($0.identifier)|\($0.label)" })
+        // 多选的照片选择器要再点确认（iOS 26 是右上角的 ✓）。同名的「完成」按钮设置页里也有（被盖住），只点看得见的那个
+        let candidates = app.buttons.matching(NSPredicate(format: "label IN {'添加', 'Add', '完成', 'Done', '确定', 'OK', '选取', 'Choose'} OR identifier IN {'Done', 'Add', 'DoneButton'}"))
+        let deadline = Date().addingTimeInterval(8)
+        var tapped = false
+        while !tapped && Date() < deadline {
+            if let b = candidates.allElementsBoundByIndex.last(where: { $0.exists && $0.isHittable }) {
+                b.tap()
+                tapped = true
+            } else {
+                Thread.sleep(forTimeInterval: 0.5)
+            }
+        }
+        if !tapped {
+            print("PICKER BUTTONS:", app.buttons.allElementsBoundByIndex.prefix(40).map { "\($0.identifier)|\($0.label)|\($0.isHittable)" })
         }
         wait(app.buttons["删除截图"], "选好的截图应显示在反馈页", timeout: 15)
         app.buttons["删除截图"].tap()

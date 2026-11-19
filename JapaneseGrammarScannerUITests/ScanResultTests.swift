@@ -111,8 +111,9 @@ final class ScanResultTests: E2ETestCase {
                 XCTAssertTrue(text(containing: "你扫到的").exists, "横幅应写明「你扫到的」")
                 if id("detail.senseRow.matched").exists {
                     found = true
+                    // 点横幅跳到该用法的详细讲解（大纲里的那一行会滚出屏幕）
                     banner.tap()
-                    XCTAssertTrue(id("detail.senseRow.matched").waitForExistence(timeout: 3))
+                    XCTAssertTrue(detailScreen.waitForExistence(timeout: 3), "跳转后仍在讲解页")
                 }
             }
             back()
