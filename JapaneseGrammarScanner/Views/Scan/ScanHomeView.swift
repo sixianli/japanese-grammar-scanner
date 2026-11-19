@@ -64,6 +64,9 @@ struct ScanHomeView: View {
                         library: library
                     ) { tappedCluster = $0 }
                 }
+                // 新画面到达前不显示（避免旧画面一闪），到达后快速淡入
+                .opacity(camera.hasLiveFrame ? 1 : 0)
+                .animation(.easeOut(duration: 0.2), value: camera.hasLiveFrame)
         case .denied:
             messageView(icon: "camera.fill", text: "没有相机权限。\n请在「设置」中允许访问相机，或从相册选择图片。", showSettings: true)
         case .unavailable:
