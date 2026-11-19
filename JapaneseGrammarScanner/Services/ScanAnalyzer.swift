@@ -20,23 +20,33 @@ enum ScanAnalyzer {
     }
 
     /// 一行中某段文字的框。
-    /// 印刷的日文是等宽排版（全角字等宽、半角字约一半宽），按字在行中的位置估算的框很可靠；
-    /// Vision 给出的逐字框在部分设备上会偏移，所以只在它和估算结果一致时才采用，并且高度始终取整行的高度，
-    /// 保证框不会上下漂移到别的行。
+    /// 优先采用 Vision 给出的逐字框（斜拍、弯曲的照片上它最贴合文字）；
+    /// 但部分设备上 Vision 的逐字框会整体偏移，所以先检查它是否「落在这一行里」：
+    /// 竖直方向中心要在行框内、水平方向不能超出行框、宽度与按字数估算的宽度相差不大。不合理时改用按字数估算的框。
     static func substringBox(line: RecognizedLine, local: NSRange) -> CGRect {
         let estimate = estimatedBox(line: line, local: local)
-        guard let vision = line.boxForRange(local) else { return estimate }
-        let box = line.boundingBox
-        let isVertical = box.height > box.width * 1.5
-        let ns = line.text as NSString
-        let unit = (isVertical ? box.height : box.width) / max(weightedLength(ns, NSRange(location: 0, length: ns.length)), 1)
-        if isVertical {
-            guard abs(vision.maxY - estimate.maxY) < unit * 0.6, abs(vision.height - estimate.height) < unit * 0.8 else { return estimate }
-            return CGRect(x: box.minX, y: vision.minY, width: box.width, height: vision.height)
-        } else {
-            guard abs(vision.minX - estimate.minX) < unit * 0.6, abs(vision.width - estimate.width) < unit * 0.8 else { return estimate }
-            return CGRect(x: vision.minX, y: box.minY, width: vision.width, height: box.height)
-        }
+        guard let vision = line.boxForRange(local), plausible(vision, in: line.boundingBox, estimate: estimate) else { return estimate }
+        return vision
+    }
+
+    static func plausible(_ r: CGRect, in line: CGRect, estimate: CGRect) -> Bool {
+        guard r.width > 0, r.height > 0 else { return false }
+        let isVertical = line.height > line.width * 1.5
+        // 一个字大约多宽（横排看高度，竖排看宽度）
+        let glyph = isVertical ? line.width : min(line.height, max(estimate.width, 1e-6))
+        let tol = glyph * 0.6
+        // 中心必须在行框里
+        guard r.midX >= line.minX - tol, r.midX <= line.maxX + tol,
+              r.midY >= line.minY - tol, r.midY <= line.maxY + tol else { return false }
+        // 不能明显超出行框
+        guard r.minX >= line.minX - tol, r.maxX <= line.maxX + tol,
+              r.minY >= line.minY - tol, r.maxY <= line.maxY + tol else { return false }
+        // 长度与按字数估算的差不多（0.5～2 倍）
+        let (a, b) = isVertical ? (r.height, estimate.height) : (r.width, estimate.width)
+        guard b > 0, a / b > 0.5, a / b < 2 else { return false }
+        // 横排：框的高度不应超过行高的 1.3 倍（斜拍时行框本身就高，所以只限制不能比行框还高）
+        if !isVertical, r.height > line.height * 1.3 { return false }
+        return true
     }
 
     /// 按字符宽度（全角 1、半角 0.5）在整行框里估算一段文字的位置。
