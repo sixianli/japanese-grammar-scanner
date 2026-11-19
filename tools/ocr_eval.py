@@ -163,7 +163,13 @@ def text_metrics(ocr, gt):
             elif not JA.match(c) and not re.match(r"[0-9０-９、。「」（）・：…！？ー〜]", c):
                 foreign_ins += 1
     n = max(len(b), 1)
-    return {"charAccuracy": max(0.0, 1 - cer), "kanaInsertRate": kana_ins / n, "foreignInsertRate": foreign_ins / n}
+    # 与顺序无关的字符召回/精确率：多段排版时 OCR 读出的行顺序可能与人工转写不同，编辑距离会被顺序差异放大，
+    # 这两个指标只看「字有没有认对」，用来区分「认错字」和「顺序不同」。
+    from collections import Counter
+    ca, cb = Counter(a), Counter(b)
+    common = sum((ca & cb).values())
+    return {"charAccuracy": max(0.0, 1 - cer), "charRecall": common / max(len(a), 1), "charPrecision": common / n,
+            "kanaInsertRate": kana_ins / n, "foreignInsertRate": foreign_ins / n}
 
 
 def summarize(rows):
@@ -175,6 +181,8 @@ def summarize(rows):
     out = {
         "images": len(rows),
         "charAccuracy": statistics.mean(r["charAccuracy"] for r in rows),
+        "charRecall": statistics.mean(r["charRecall"] for r in rows),
+        "charPrecision": statistics.mean(r["charPrecision"] for r in rows),
         "kanaInsertRate": statistics.mean(r["kanaInsertRate"] for r in rows),
         "foreignInsertRate": statistics.mean(r["foreignInsertRate"] for r in rows),
         "grammarRecall": rec_,
@@ -245,10 +253,10 @@ def main():
             if sub:
                 by_tag[k][t] = summarize(sub)
 
-    lines = ["| 方案 | 图片 | 字符准确率 | 假名插入率 | 噪声插入率 | 语法召回率 | 语法精确率 | F1 | 整页全对率 | 精确定位率 | 平均耗时 |",
-             "|---|---|---|---|---|---|---|---|---|---|---|"]
+    lines = ["| 方案 | 图片 | 字符准确率 | 字召回 | 字精确 | 假名插入率 | 噪声插入率 | 语法召回率 | 语法精确率 | F1 | 整页全对率 | 精确定位率 | 平均耗时 |",
+             "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for k, o in overall.items():
-        lines.append(f"| {k} | {o['images']} | {pct(o['charAccuracy'])} | {pct(o['kanaInsertRate'])} | {pct(o['foreignInsertRate'])} | "
+        lines.append(f"| {k} | {o['images']} | {pct(o['charAccuracy'])} | {pct(o['charRecall'])} | {pct(o['charPrecision'])} | {pct(o['kanaInsertRate'])} | {pct(o['foreignInsertRate'])} | "
                      f"{pct(o['grammarRecall'])} | {pct(o['grammarPrecision'])} | {pct(o['grammarF1'])} | {pct(o['pageExact'])} | "
                      f"{pct(o['boxExactRate']) if 'boxExactRate' in o else '—'} | "
                      f"{('%.2fs' % o['secondsPerImage']) if 'secondsPerImage' in o else '—'} |")
