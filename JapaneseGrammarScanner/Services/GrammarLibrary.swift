@@ -2,7 +2,8 @@ import Foundation
 
 /// 从 App Bundle 加载全部语法静态资源。
 final class GrammarLibrary: ObservableObject {
-    static let shared = GrammarLibrary()
+    /// 当前语言的语法库；在「设置 → 语言」切换后由 LanguageStore 替换
+    static var shared = GrammarLibrary()
 
     let points: [GrammarPoint]
     private let byID: [String: GrammarPoint]

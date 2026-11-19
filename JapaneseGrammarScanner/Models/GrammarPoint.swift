@@ -219,10 +219,9 @@ enum JLPTLevel: String, Codable, CaseIterable, Comparable, Identifiable {
 enum ContentLanguage: String, CaseIterable {
     case zhHans = "zh-Hans", zhHant = "zh-Hant", en, ko, es, vi, my
 
-    /// 根据 App 当前生效的本地化语言（跟随系统，可在 设置 → App → 语言 中单独修改）决定。
+    /// 根据 App 内选择的语言决定；选「跟随系统」时用系统为本 App 选定的本地化语言。
     static var current: ContentLanguage {
-        let preferred = Bundle.main.preferredLocalizations.first ?? Locale.preferredLanguages.first ?? "en"
-        return from(identifier: preferred)
+        from(identifier: AppLanguage.effectiveIdentifier)
     }
 
     static func from(identifier: String) -> ContentLanguage {

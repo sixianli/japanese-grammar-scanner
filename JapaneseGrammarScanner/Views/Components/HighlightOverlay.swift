@@ -26,8 +26,8 @@ struct HighlightOverlay: View {
     let fit: ImageFit
     let library: GrammarLibrary
     var selectedClusterID: Int? = nil
-    /// 线宽：放大查看时用更细的线
-    var lineWidth: CGFloat = 1.2
+    /// 线宽：放大查看时按放大倍数变细，保持屏幕上看起来一样粗
+    var lineWidth: CGFloat = 2
     var showsCountBadge = true
     let onTap: (HighlightCluster) -> Void
 
@@ -37,7 +37,8 @@ struct HighlightOverlay: View {
             let clustersByID = Dictionary(uniqueKeysWithValues: result.clusters.map { ($0.id, $0) })
             ForEach(result.boxes) { box in
                 if let cluster = clustersByID[box.clusterID] {
-                    // 识别框略向内收，避免相邻框互相重叠；细虚线 + 极淡底色，不遮挡原文
+                    // 照片上的框：主题色（深一档）实线 + 外圈白边 + 淡填充。
+                    // 颜色不随深浅色模式变化——照片里的纸面总是浅色的，书页偏灰、有阴影时也要看得清
                     let rect = CGRect(
                         x: display.minX + box.rect.minX * display.width,
                         y: display.minY + box.rect.minY * display.height,
@@ -46,20 +47,29 @@ struct HighlightOverlay: View {
                     ).insetBy(dx: 0.5, dy: 0.5)
                     let color = clusterColor(cluster)
                     let selected = cluster.id == selectedClusterID
-                    RoundedRectangle(cornerRadius: 2)
-                        .fill(color.opacity(selected ? 0.28 : 0.10))
+                    let width = selected ? lineWidth * 1.5 : lineWidth
+                    let corner = min(4, rect.height / 4)
+                    RoundedRectangle(cornerRadius: corner, style: .continuous)
+                        .fill(color.opacity(selected ? 0.30 : 0.14))
+                        // 外圈白边：在任何底色上把框「托」出来
                         .overlay(
-                            RoundedRectangle(cornerRadius: 2)
-                                .stroke(color, style: StrokeStyle(lineWidth: selected ? 2 : lineWidth, dash: selected ? [] : [3, 2]))
+                            RoundedRectangle(cornerRadius: corner + width, style: .continuous)
+                                .stroke(Color.white.opacity(0.9), lineWidth: width)
+                                .padding(-width)
+                        )
+                        .overlay(
+                            RoundedRectangle(cornerRadius: corner, style: .continuous)
+                                .stroke(color, lineWidth: width)
                         )
                         .overlay(alignment: .topTrailing) {
                             if cluster.grammarIDs.count > 1 && showsCountBadge {
                                 Text(verbatim: "\(cluster.grammarIDs.count)")
-                                    .font(.system(size: 8, weight: .bold))
+                                    .font(.system(size: 9, weight: .bold))
                                     .foregroundStyle(.white)
-                                    .frame(width: 12, height: 12)
+                                    .frame(width: 15, height: 15)
                                     .background(color, in: Circle())
-                                    .offset(x: 5, y: -5)
+                                    .overlay(Circle().stroke(.white, lineWidth: 1.2))
+                                    .offset(x: 7, y: -7)
                             }
                         }
                         .frame(width: max(rect.width, 4), height: max(rect.height, 4))
@@ -75,8 +85,7 @@ struct HighlightOverlay: View {
     }
 
     private func clusterColor(_ cluster: HighlightCluster) -> Color {
-        // 一个高亮块包含多个语法点时，用其中最难的等级上色
-        let levels = cluster.grammarIDs.compactMap { library.point(id: $0)?.level }
-        return (levels.max() ?? .n5).color
+        // 统一用主题色的深色版本（不随深浅色模式变化）
+        Theme.photoHighlight
     }
 }

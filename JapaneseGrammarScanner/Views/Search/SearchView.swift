@@ -54,17 +54,23 @@ struct SearchView: View {
         // 切到「搜索」标签就是要搜索：直接激活搜索框、弹出键盘
         .onAppear { focusField(delay: 0.1) }
         .onReceive(NotificationCenter.default.publisher(for: .focusSearch)) { _ in
-            focusField(delay: 0.35)
+            returnToSearch(delay: 0.35)
         }
         .onReceive(NotificationCenter.default.publisher(for: .popToRoot)) { note in
-            if note.object as? Int == AppTab.search {
-                path = []
-                focusField(delay: 0.1)
-            }
+            if note.object as? Int == AppTab.search { returnToSearch(delay: 0.15) }
         }
     }
 
+    /// 回到搜索页本身（之前点进去的详情页一并退出），等返回动画结束后激活搜索框
+    private func returnToSearch(delay: Double) {
+        let wasDeep = !path.isEmpty
+        path = []
+        focusField(delay: wasDeep ? max(delay, 0.5) : delay)
+    }
+
+    /// 先复位再设置：焦点状态已经是「激活」时再设一次不会生效（键盘被收起后就弹不出来）
     private func focusField(delay: Double) {
+        fieldFocused = false
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             isPresented = true
             fieldFocused = true

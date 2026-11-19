@@ -2,7 +2,7 @@ import SwiftUI
 
 @main
 struct JapaneseGrammarScannerApp: App {
-    @StateObject private var library = GrammarLibrary.shared
+    @StateObject private var languages = LanguageStore()
     @StateObject private var favorites = FavoritesStore()
     @StateObject private var entitlements = EntitlementStore()
     @StateObject private var history = HistoryStore()
@@ -12,7 +12,10 @@ struct JapaneseGrammarScannerApp: App {
         WindowGroup {
             RootTabView()
                 .environmentObject(appearance)
-                .environmentObject(library)
+                .environmentObject(languages)
+                .environmentObject(languages.library)
+                // App 内选择了语言时，界面文字按该语言查找翻译（不依赖系统语言）
+                .environment(\.locale, languages.language.locale ?? .autoupdatingCurrent)
                 .environmentObject(favorites)
                 .environmentObject(entitlements)
                 .environmentObject(history)
@@ -27,8 +30,8 @@ extension Notification.Name {
     static let popToRoot = Notification.Name("popToRoot")
     /// 打开搜索并聚焦输入框
     static let focusSearch = Notification.Name("focusSearch")
-    /// 打开外观设置
-    static let showAppearance = Notification.Name("showAppearance")
+    /// 打开设置（从底部弹出的整页面板，不挂在任何标签下）
+    static let showSettings = Notification.Name("showSettings")
     /// 打开反馈（object 可为上下文字符串，如语法点 id）
     static let showFeedback = Notification.Name("showFeedback")
 }
@@ -57,7 +60,7 @@ struct RootTabView: View {
     @State private var showOnboarding = false
 
     @EnvironmentObject private var appearance: AppearanceStore
-    @State private var showAppearance = false
+    @State private var showSettings = false
     @State private var feedbackContext: FeedbackContext?
 
     struct FeedbackContext: Identifiable {
@@ -67,9 +70,12 @@ struct RootTabView: View {
     }
 
     /// 再次点击当前标签时回到该标签的首页（iOS 标准行为）。
+    /// 「搜索」标签例外：任何时候点它都是要搜索，一律回到搜索页并激活搜索框。
     private var selection: Binding<Int> {
         Binding(get: { tab }, set: { newValue in
-            if newValue == tab { NotificationCenter.default.post(name: .popToRoot, object: newValue) }
+            if newValue == tab || newValue == AppTab.search {
+                NotificationCenter.default.post(name: .popToRoot, object: newValue)
+            }
             tab = newValue
         })
     }
@@ -79,10 +85,10 @@ struct RootTabView: View {
             // 外观（主题色、背景色）变化时整体刷新配色
             .id(appearance.key)
             .tint(Theme.accent)
-            .sheet(isPresented: $showAppearance) {
-                AppearanceView().environmentObject(appearance).tint(Theme.accent)
+            .sheet(isPresented: $showSettings) {
+                SettingsSheet().tint(Theme.accent)
             }
-            .onReceive(NotificationCenter.default.publisher(for: .showAppearance)) { _ in showAppearance = true }
+            .onReceive(NotificationCenter.default.publisher(for: .showSettings)) { _ in showSettings = true }
             .sheet(item: $feedbackContext) { ctx in
                 FeedbackView(context: ctx.text, initialKind: ctx.kind).tint(Theme.accent)
             }

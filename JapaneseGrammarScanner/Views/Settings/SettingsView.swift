@@ -1,9 +1,26 @@
 import SwiftUI
 
-/// 设置：外观、反馈、帮助、关于（收费开启时还有购买）。
+/// 设置面板：从底部弹出的整页面板（不挂在任何标签下），内部可以推入外观、语言、隐私政策等页面。
+struct SettingsSheet: View {
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            SettingsView(close: { dismiss() })
+                .toolbar {
+                    ToolbarItem(placement: .confirmationAction) { Button("完成") { dismiss() } }
+                }
+        }
+    }
+}
+
+/// 设置：外观、语言、反馈、帮助、关于（收费开启时还有购买）。
 struct SettingsView: View {
+    var close: () -> Void = {}
     @EnvironmentObject private var store: EntitlementStore
+    @EnvironmentObject private var languages: LanguageStore
     @State private var showPaywall = false
+    @State private var feedbackKind: FeedbackView.Kind?
 
     var body: some View {
         List {
@@ -21,18 +38,27 @@ struct SettingsView: View {
                     .disabled(store.isPurchasing)
             }
             }
-            Section("外观") {
-                Button {
-                    NotificationCenter.default.post(name: .showAppearance, object: nil)
-                } label: {
+            Section("通用") {
+                NavigationLink { AppearanceView() } label: {
                     Label("主题色与背景色", systemImage: "paintpalette")
+                }
+                NavigationLink { LanguagePickerView() } label: {
+                    HStack {
+                        Label("语言", systemImage: "globe")
+                        Spacer()
+                        if languages.language == .system {
+                            Text("跟随系统").foregroundStyle(.secondary)
+                        } else {
+                            Text(verbatim: languages.language.nativeName).foregroundStyle(.secondary)
+                        }
+                    }
                 }
             }
             .listRowBackground(Theme.card)
             Section {
                 ForEach(FeedbackView.Kind.allCases) { kind in
                     Button {
-                        NotificationCenter.default.post(name: .showFeedback, object: kind)
+                        feedbackKind = kind
                     } label: {
                         Label(kind.title, systemImage: kind.icon)
                     }
@@ -45,25 +71,39 @@ struct SettingsView: View {
             .listRowBackground(Theme.card)
             Section("帮助") {
                 Button("使用引导") {
-                    NotificationCenter.default.post(name: .showOnboarding, object: nil)
+                    // 引导页是全屏的，先关掉设置面板再打开
+                    close()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+                        NotificationCenter.default.post(name: .showOnboarding, object: nil)
+                    }
                 }
             }
+            .listRowBackground(Theme.card)
             Section("关于") {
-                Link("隐私政策", destination: AppLinks.privacy)
-                Link("使用条款", destination: AppLinks.terms)
-                Link("支持与反馈", destination: AppLinks.support)
+                NavigationLink("隐私政策") { PrivacyPolicyView() }
+                NavigationLink("使用条款") { TermsView() }
                 NavigationLink("开源许可") { LicensesView() }
                 HStack {
                     Text("版本")
                     Spacer()
-                    Text(verbatim: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "")
-                        .foregroundStyle(.secondary)
+                    Text(verbatim: appVersion).foregroundStyle(.secondary)
                 }
             }
+            .listRowBackground(Theme.card)
         }
         .themedList()
         .navigationTitle("设置")
+        .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $showPaywall) { PaywallView() }
+        .sheet(item: $feedbackKind) { kind in
+            FeedbackView(initialKind: kind).tint(Theme.accent)
+        }
+    }
+
+    private var appVersion: String {
+        let v = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+        let b = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
+        return b.isEmpty ? v : "\(v) (\(b))"
     }
 
     private var statusText: Text {
@@ -73,6 +113,62 @@ struct SettingsView: View {
         case .trialExpired: Text("免费试用已结束")
         case .notStarted: Text("未开始试用")
         }
+    }
+}
+
+/// 隐私政策（随 App 打包，离线可看，跟随所选语言）
+struct PrivacyPolicyView: View {
+    var body: some View {
+        LegalPage(title: "隐私政策", updated: "2026-11-19", paragraphs: [
+            ("一句话说明", "本 App 不需要注册账号，不包含广告、统计分析或任何第三方 SDK。文字识别全部在你的设备上完成。"),
+            ("相机与照片", "相机画面和你从相册选择的图片，只在你的设备上由 Apple Vision 识别文字，不会上传。拍照或从相册识别的图片保存在本机的「最近扫描」中，方便回看，可以随时删除。"),
+            ("收藏与浏览记录", "收藏、浏览记录和设置只保存在本机，删除 App 即一并删除。"),
+            ("反馈", "只有当你在反馈页主动点击「发送」时，你填写的描述、附上的截图，以及 App 版本、系统版本、设备型号和界面语言，才会通过 Apple 的 iCloud（CloudKit）发送给开发者。这些信息只用于排查问题和改进 App，不会用于其他用途，也不会提供给任何第三方。"),
+            ("联系我们", "对本隐私政策有任何疑问，可以在「设置 → 反馈」中告诉我们。"),
+        ])
+    }
+}
+
+/// 使用条款
+struct TermsView: View {
+    var body: some View {
+        LegalPage(title: "使用条款", updated: "2026-11-19", paragraphs: [
+            ("许可协议", "本 App 的使用适用 Apple 标准最终用户许可协议（EULA）。"),
+            ("内容说明", "App 内的语法讲解为原创内容，仅供学习参考；文字识别结果可能有误，请以原文为准。"),
+        ], link: ("查看 Apple 标准最终用户许可协议", AppLinks.terms))
+    }
+}
+
+private struct LegalPage: View {
+    let title: LocalizedStringKey
+    let updated: String
+    let paragraphs: [(LocalizedStringKey, LocalizedStringKey)]
+    var link: (LocalizedStringKey, URL)? = nil
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                Text("最后更新：\(updated)")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                ForEach(Array(paragraphs.enumerated()), id: \.offset) { _, item in
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text(item.0).font(.headline)
+                        Text(item.1).font(.body).lineSpacing(4)
+                    }
+                }
+                if let link {
+                    Link(destination: link.1) {
+                        Label(link.0, systemImage: "arrow.up.right.square")
+                    }
+                }
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(Theme.margin)
+        }
+        .background(Theme.background)
+        .navigationTitle(title)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

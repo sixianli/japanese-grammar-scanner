@@ -101,6 +101,8 @@ enum Theme {
     /// 主题色（按钮、选中状态、底色）。
     static var accent: Color { dynamic(store.accent.hex.0, store.accent.hex.2) }
     /// 用在文字上的主题色（加深一档，保证对比度）：例句里的目标语法、链接。
+    /// 照片 / 取景画面上高亮框的颜色：主题色深一档，固定不随深浅色模式变化（照片里的纸面总是浅色）
+    static var photoHighlight: Color { Color(uiColor: color(store.accent.hex.1)) }
     static var accentText: Color { dynamic(store.accent.hex.1, store.accent.hex.3) }
     /// 主题色浅底：目标语法底色、「常考」标签底色。
     static var accentFill: Color { accent.opacity(0.18) }

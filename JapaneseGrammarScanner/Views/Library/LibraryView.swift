@@ -40,12 +40,6 @@ struct LibraryView: View {
             .searchable(text: $query, prompt: "搜索语法或意思")
             .navigationTitle("语法库")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    NavigationLink { SettingsView() } label: { Image(systemName: "gearshape") }
-                        .accessibilityLabel(Text("设置"))
-                }
-            }
             .withAppRoutes()
         }
         .environment(\.pushRoute, { path.append($0) })

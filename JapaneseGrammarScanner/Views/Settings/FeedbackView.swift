@@ -4,7 +4,8 @@ import SwiftUI
 import UIKit
 
 /// 用户反馈：文字描述 + 截图（最多 4 张），自动附上版本、系统、语言等信息。
-/// 设置了反馈邮箱且本机可发邮件时，直接打开写邮件界面；否则通过系统分享面板发送（邮件、微信等）。
+/// 点「发送」后在后台提交到 iCloud（CloudKit），由云端自动转发到开发者邮箱，用户无需再做任何操作。
+/// App 内提交不可用（没登录 iCloud 等）时，再退回写邮件 / 系统分享面板，并明确告诉用户。
 struct FeedbackView: View {
     enum Kind: String, CaseIterable, Identifiable {
         case content, bug, suggestion
@@ -42,7 +43,9 @@ struct FeedbackView: View {
     @State private var photoItems: [PhotosPickerItem] = []
     @State private var images: [UIImage] = []
     @State private var showMail = false
-    @State private var showShare = false
+    @State private var isSending = false
+    @State private var showSent = false
+    @State private var sendError: String?
 
     private var canSend: Bool { !message.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || !images.isEmpty }
 
@@ -107,7 +110,7 @@ struct FeedbackView: View {
                 } header: {
                     Text("截图（可选，最多 4 张）")
                 } footer: {
-                    Text("会自动附上 App 版本、系统版本和语言，方便定位问题。不会附带其他个人信息。")
+                    Text("会自动附上 App 版本、系统版本、设备型号和语言，方便定位问题。不会附带其他个人信息。")
                 }
                 .listRowBackground(Theme.card)
             }
@@ -117,14 +120,12 @@ struct FeedbackView: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("取消") { dismiss() } }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("发送") {
-                        if AppLinks.feedbackEmail != nil, MFMailComposeViewController.canSendMail() {
-                            showMail = true
-                        } else {
-                            showShare = true
-                        }
+                    if isSending {
+                        ProgressView()
+                    } else {
+                        Button("发送") { send() }
+                            .disabled(!canSend)
                     }
-                    .disabled(!canSend)
                 }
             }
             .onChange(of: photoItems) { _, items in
@@ -146,8 +147,53 @@ struct FeedbackView: View {
                 }
                 .ignoresSafeArea()
             }
-            .sheet(isPresented: $showShare) {
-                ShareSheet(items: [fullText] + images)
+            .disabled(isSending)
+            .alert("已收到，谢谢你的反馈", isPresented: $showSent) {
+                Button("好") { dismiss() }
+            } message: {
+                Text("我们会尽快查看并改进。")
+            }
+            .alert("没能直接发送", isPresented: Binding(get: { sendError != nil }, set: { if !$0 { sendError = nil } })) {
+                if AppLinks.feedbackEmail != nil, MFMailComposeViewController.canSendMail() {
+                    Button("用邮件发送") { showMail = true }
+                }
+                Button("用其他方式发送") { SharePresenter.present([fullText] + images) }
+                Button("取消", role: .cancel) {}
+            } message: {
+                Text(sendError ?? "")
+            }
+        }
+    }
+
+    private func send() {
+        guard FeedbackSender.isAvailable else {
+            // App 内提交还没开通：有邮箱就写邮件，否则直接用分享面板
+            if AppLinks.feedbackEmail != nil, MFMailComposeViewController.canSendMail() {
+                showMail = true
+            } else {
+                SharePresenter.present([fullText] + images)
+            }
+            return
+        }
+        isSending = true
+        let payload = FeedbackSender.Payload(
+            kind: kind.subjectTag,
+            message: message.trimmingCharacters(in: .whitespacesAndNewlines),
+            context: context,
+            appVersion: appVersion,
+            osVersion: UIDevice.current.systemVersion,
+            device: deviceModel,
+            language: AppLanguage.effectiveIdentifier,
+            images: images
+        )
+        Task {
+            do {
+                try await FeedbackSender.send(payload)
+                isSending = false
+                showSent = true
+            } catch {
+                isSending = false
+                sendError = error.localizedDescription
             }
         }
     }
@@ -169,7 +215,7 @@ struct FeedbackView: View {
         if let context { lines.append("Context: \(context)") }
         lines.append("App: \(appVersion)")
         lines.append("iOS: \(UIDevice.current.systemVersion) · \(deviceModel)")
-        lines.append("Language: \(Bundle.main.preferredLocalizations.first ?? "?")")
+        lines.append("Language: \(AppLanguage.effectiveIdentifier)")
         return lines.joined(separator: "\n")
     }
 
@@ -215,15 +261,4 @@ private struct MailComposer: UIViewControllerRepresentable {
             onFinish(result == .sent)
         }
     }
-}
-
-/// 系统分享面板（没有设置反馈邮箱或本机未配置邮件时使用）
-private struct ShareSheet: UIViewControllerRepresentable {
-    let items: [Any]
-
-    func makeUIViewController(context: Context) -> UIActivityViewController {
-        UIActivityViewController(activityItems: items, applicationActivities: nil)
-    }
-
-    func updateUIViewController(_ vc: UIActivityViewController, context: Context) {}
 }

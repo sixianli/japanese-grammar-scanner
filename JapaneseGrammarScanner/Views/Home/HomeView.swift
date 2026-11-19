@@ -75,7 +75,9 @@ struct HomeView: View {
         HStack(spacing: 10) {
             searchField
             // 设置入口：外观（主题色、背景色）、反馈等
-            NavigationLink { SettingsView() } label: {
+            Button {
+                NotificationCenter.default.post(name: .showSettings, object: nil)
+            } label: {
                 Image(systemName: "gearshape")
                     .font(.system(size: 18, weight: .regular))
                     .foregroundStyle(Color.primary)

@@ -1,12 +1,9 @@
 import SwiftUI
 
-/// 外观：主题色、浅色模式背景、深色模式背景。只提供对眼睛友好、温和的颜色。
+/// 外观：主题色、浅色模式背景、深色模式背景。只提供对眼睛友好、温和的颜色。（在设置面板中推入显示）
 struct AppearanceView: View {
     @EnvironmentObject private var appearance: AppearanceStore
-    @Environment(\.dismiss) private var dismiss
-
     var body: some View {
-        NavigationStack {
             List {
                 Section {
                     swatches(AppearanceStore.AccentOption.allCases, selected: appearance.accent,
@@ -32,10 +29,6 @@ struct AppearanceView: View {
             .themedList()
             .navigationTitle("外观")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) { Button("完成") { dismiss() } }
-            }
-        }
     }
 
     private func swatches<T: Identifiable & Equatable>(_ items: [T], selected: T, color: @escaping (T) -> UIColor,

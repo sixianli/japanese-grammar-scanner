@@ -16,6 +16,8 @@ enum DemoMode {
     static var seedsHistory: Bool { value(for: "-demoHistory") != nil }
     /// 识别结果页截图时自动打开全屏放大查看
     static var opensZoom: Bool { value(for: "-demoZoom") != nil }
+    /// 截图时指定 App 内语言（覆盖「设置 → 语言」）
+    static var appLanguage: String? { value(for: "-demoAppLanguage") }
 
     private static func value(for key: String) -> String? {
         let args = ProcessInfo.processInfo.arguments

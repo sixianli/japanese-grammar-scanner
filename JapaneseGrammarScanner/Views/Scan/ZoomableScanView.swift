@@ -433,7 +433,7 @@ private struct ScanZoomContent: View, Equatable {
                     fit: .fit,
                     library: library,
                     selectedClusterID: selectedClusterID,
-                    lineWidth: 1.2 / max(settledScale, 1),
+                    lineWidth: 2 / max(settledScale, 1),
                     showsCountBadge: settledScale < 2.5
                 ) { onSelect($0) }
             }
