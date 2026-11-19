@@ -129,6 +129,9 @@ jobs:
           qa detail_scenes -demoScreen detail -demoGrammar nagara -demoScroll section-scenes
           qa detail_similar -demoScreen detail -demoGrammar dake-ni -demoScroll section-similar
           qa result_zoom -demoScreen result -demoZoom 1
+          qa settings_en -demoScreen settings -demoAppLanguage en
+          qa settings_my -demoScreen settings -demoAppLanguage my
+          qa library_en -demoScreen library -demoSearch N3 -demoAppLanguage en
           xcrun simctl ui "$UDID" appearance dark
           qa detail_oouseru_dark -demoScreen detail -demoGrammar oouseru
           qa detail_izen_dark -demoScreen detail -demoGrammar izen

@@ -127,6 +127,7 @@ struct RootTabView: View {
                 for id in ["ni-mo-kakawarazu", "you-ni-naru", "okage-de", "te-shimau"] { history.recordViewed(id, now: old) }
                 for id in ["izen", "made-until", "sou-da-appearance"] { history.recordViewed(id) }
             }
+            if DemoMode.screen == "settings" { showSettings = true }
             if DemoMode.screen == "favorites", favorites.ids.isEmpty {
                 for id in ["te-shimau", "you-ni-naru", "ni-mo-kakawarazu", "okage-de", "rashii-typical"].reversed() {
                     favorites.toggle(id)
