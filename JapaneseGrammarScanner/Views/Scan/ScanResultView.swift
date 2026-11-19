@@ -15,11 +15,8 @@ struct ScanResultView: View {
     @State private var isEditing = false
     @State private var draftText = ""
     @State private var textWasEdited = false
-    /// 全屏查看：是否显示、展开进度（0 = 原位置，1 = 铺满全屏）、是否已完全展开可交互
-    @State private var zoomPresented = false
-    @State private var zoomProgress: CGFloat = 0
-    @State private var zoomSettled = false
-    @State private var imageFrame: CGRect = .zero
+    /// 放大查看（手势中的缩放、位置都在这个模型里，结果页本身不随手势重绘）
+    @State private var zoom = ScanZoomModel()
 
     enum Phase {
         case loading
@@ -49,9 +46,20 @@ struct ScanResultView: View {
             .padding()
         }
         .background(Theme.background)
+        // 记录全屏覆盖层的位置（放大的终点）
+        .overlay {
+            GeometryReader { g in
+                Color.clear
+                    .onAppear { zoom.container = g.frame(in: .global) }
+                    .onChange(of: g.frame(in: .global)) { _, f in zoom.container = f }
+            }
+            .ignoresSafeArea()
+            .allowsHitTesting(false)
+        }
         .overlay { zoomStage }
-        .toolbar(zoomPresented ? .hidden : .automatic, for: .navigationBar, .tabBar)
-        .statusBarHidden(zoomSettled)
+        .toolbar(zoom.isOpen ? .hidden : .automatic, for: .navigationBar, .tabBar)
+        .statusBarHidden(zoom.isOpen)
+        .onAppear { zoom.imageSize = scanImage.image.size }
         .navigationTitle("识别结果")
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(item: $pushedGrammarID) { id in
@@ -100,100 +108,45 @@ struct ScanResultView: View {
                     .allowsHitTesting(false)
             }
             .contentShape(Rectangle())
-            .onTapGesture { openZoom() }
+            .onTapGesture { zoom.open() }
             .frame(maxWidth: .infinity)
             .frame(maxHeight: 460)
-            // 记录图片在屏幕上的位置：放大从这里开始，缩小回到这里
+            // 记录图片在屏幕上的位置：放大从这里开始，缩小回到这里（不触发重绘）
             .background(GeometryReader { g in
                 Color.clear
-                    .onAppear { imageFrame = g.frame(in: .global) }
-                    .onChange(of: g.frame(in: .global)) { _, f in imageFrame = f }
+                    .onAppear { zoom.sourceFrame = g.frame(in: .global) }
+                    .onChange(of: g.frame(in: .global)) { _, f in zoom.sourceFrame = f }
             })
-            // 放大时原位置的图片隐藏，由覆盖全屏的那一份接管
-            .opacity(zoomPresented ? 0.001 : 1)
-            // 直接在结果页双指放大：图片从原位置跟着手指渐进放大，直到铺满全屏
-            .gesture(
-                MagnifyGesture()
-                    .onChanged { value in
-                        if !zoomPresented { zoomPresented = true; zoomSettled = false }
-                        zoomProgress = min(1, max(0, (value.magnification - 1) / 1.2))
-                    }
-                    .onEnded { value in
-                        if (value.magnification - 1) / 1.2 > 0.2 {
-                            openZoom()
-                        } else {
-                            closeZoom()
-                        }
-                    }
+            // 放大时原位置的图片隐藏，由覆盖层接管
+            .opacity(zoom.presented ? 0.001 : 1)
+            // 直接在结果页双指放大：以两指中点为中心、按手指分开的比例实时放大，松手后铺满全屏
+            .scanPinch(
+                began: { zoom.pinchBegan(at: $0) },
+                changed: { zoom.pinchChanged(ratio: $0, at: $1) },
+                rebase: { zoom.rebaseRatio($0, at: $1) },
+                ended: { zoom.pinchEnded(onClosed: {}) }
             )
     }
 
-    /// 放大到全屏（跟手动画的终点）
-    private func openZoom() {
-        zoomPresented = true
-        withAnimation(.spring(response: 0.38, dampingFraction: 0.86)) {
-            zoomProgress = 1
-        } completion: {
-            zoomSettled = true
-        }
-    }
-
-    /// 从全屏缩回原位置
-    private func closeZoom(then action: (() -> Void)? = nil) {
-        zoomSettled = false
-        withAnimation(.spring(response: 0.34, dampingFraction: 0.9)) {
-            zoomProgress = 0
-        } completion: {
-            zoomPresented = false
-            action?()
-        }
-    }
-
-    /// 全屏查看层：未完全展开时，图片在「原位置 ↔ 全屏」之间按进度插值（跟手）；展开后可缩放、拖动、点高亮。
+    /// 放大查看覆盖层
     @ViewBuilder
     private var zoomStage: some View {
-        if zoomPresented {
+        if zoom.presented {
             let result: ScanResult = {
                 if case .done(let r) = phase, !textWasEdited { return r }
                 return .empty
             }()
-            GeometryReader { geo in
-                let origin = geo.frame(in: .global).origin
-                let source = imageFrame.offsetBy(dx: -origin.x, dy: -origin.y)
-                let target = ImageFit.fit.displayedRect(imageSize: scanImage.image.size, in: geo.size)
-                let fitSource = ImageFit.fit.displayedRect(imageSize: scanImage.image.size, in: source.size)
-                    .offsetBy(dx: source.minX, dy: source.minY)
-                let t = zoomProgress
-                let frame = CGRect(
-                    x: fitSource.minX + (target.minX - fitSource.minX) * t,
-                    y: fitSource.minY + (target.minY - fitSource.minY) * t,
-                    width: fitSource.width + (target.width - fitSource.width) * t,
-                    height: fitSource.height + (target.height - fitSource.height) * t
-                )
-                ZStack(alignment: .topLeading) {
-                    Color.black.opacity(Double(t)).ignoresSafeArea()
-                    if zoomSettled {
-                        ZoomableScanView(image: scanImage.image, result: result, library: library,
-                                         onClose: { closeZoom() }) { cluster in
-                            closeZoom {
-                                selectedClusterID = cluster.id
-                                tappedCluster = cluster
-                            }
-                        }
-                    } else {
-                        Image(uiImage: scanImage.image)
-                            .resizable()
-                            .overlay {
-                                HighlightOverlay(result: result, imageSize: scanImage.image.size, fit: .fit,
-                                                 library: library, selectedClusterID: selectedClusterID) { _ in }
-                            }
-                            .clipShape(RoundedRectangle(cornerRadius: 12 * (1 - t)))
-                            .frame(width: frame.width, height: frame.height)
-                            .offset(x: frame.minX, y: frame.minY)
-                    }
-                }
+            ScanZoomStage(
+                model: zoom,
+                image: scanImage.image,
+                result: result,
+                library: library,
+                selectedClusterID: selectedClusterID,
+                onClosed: {}
+            ) { cluster in
+                selectedClusterID = cluster.id
+                tappedCluster = cluster
             }
-            .ignoresSafeArea()
         }
     }
 
@@ -299,6 +252,10 @@ struct ScanResultView: View {
         switch outcome {
         case .success(let r):
             phase = .done(r)
+            if DemoMode.opensZoom {
+                try? await Task.sleep(for: .milliseconds(600))
+                zoom.open()
+            }
             let ids = library.displayableIDs(r.orderedGrammarIDs)
             if let existing = scanImage.historyID {
                 recordID = existing

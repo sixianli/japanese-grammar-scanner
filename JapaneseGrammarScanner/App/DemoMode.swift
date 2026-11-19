@@ -14,6 +14,8 @@ enum DemoMode {
     static var scrollAnchor: String? { value(for: "-demoScroll") }
     /// 预置浏览记录（让首页出现「快要忘了」「最近查看」）
     static var seedsHistory: Bool { value(for: "-demoHistory") != nil }
+    /// 识别结果页截图时自动打开全屏放大查看
+    static var opensZoom: Bool { value(for: "-demoZoom") != nil }
 
     private static func value(for key: String) -> String? {
         let args = ProcessInfo.processInfo.arguments
