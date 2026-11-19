@@ -17,6 +17,8 @@ struct ScanResultView: View {
     @State private var textWasEdited = false
     /// 放大查看（手势中的缩放、位置都在这个模型里，结果页本身不随手势重绘）
     @State private var zoom = ScanZoomModel()
+    /// 照片里笔画的分布（荧光笔样式把语法所在的字染成主题色时用）
+    @State private var ink: CGImage?
 
     enum Phase {
         case loading
@@ -90,7 +92,8 @@ struct ScanResultView: View {
                         imageSize: scanImage.image.size,
                         fit: .fit,
                         library: library,
-                        selectedClusterID: selectedClusterID
+                        selectedClusterID: selectedClusterID,
+                        style: .marker(ink: ink)
                     ) { cluster in
                         selectedClusterID = cluster.id
                         tappedCluster = cluster
@@ -148,6 +151,7 @@ struct ScanResultView: View {
                 result: result,
                 library: library,
                 selectedClusterID: selectedClusterID,
+                ink: ink,
                 onClosed: {}
             ) { cluster in
                 selectedClusterID = cluster.id
@@ -262,6 +266,9 @@ struct ScanResultView: View {
         switch outcome {
         case .success(let r):
             phase = .done(r)
+            if let cg = image.cgImage {
+                ink = await Task.detached(priority: .userInitiated) { InkMask.make(from: cg) }.value
+            }
             if DemoMode.opensZoom {
                 try? await Task.sleep(for: .milliseconds(600))
                 zoom.open()

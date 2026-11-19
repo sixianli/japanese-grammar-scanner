@@ -103,6 +103,13 @@ enum Theme {
     /// 用在文字上的主题色（加深一档，保证对比度）：例句里的目标语法、链接。
     /// 照片 / 取景画面上高亮框的颜色：主题色深一档，固定不随深浅色模式变化（照片里的纸面总是浅色）
     static var photoHighlight: Color { Color(uiColor: color(store.accent.hex.1)) }
+    /// 深一档的照片高亮色：相邻的两段语法交替使用，好分清
+    static var photoHighlightDeep: Color {
+        var h: CGFloat = 0, s: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+        let c = color(store.accent.hex.1)
+        guard c.getHue(&h, saturation: &s, brightness: &b, alpha: &a) else { return photoHighlight }
+        return Color(uiColor: UIColor(hue: h, saturation: min(s * 1.1, 1), brightness: b * 0.62, alpha: a))
+    }
     static var accentText: Color { dynamic(store.accent.hex.1, store.accent.hex.3) }
     /// 主题色浅底：目标语法底色、「常考」标签底色。
     static var accentFill: Color { accent.opacity(0.18) }
