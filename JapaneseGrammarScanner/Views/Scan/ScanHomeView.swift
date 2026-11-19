@@ -24,8 +24,8 @@ struct ScanHomeView: View {
             }
             .toolbar(.hidden, for: .navigationBar)
             .withAppRoutes()
-            .grammarChooser(cluster: $tappedCluster, library: library) { id in
-                path.append(.grammar(id))
+            .grammarChooser(cluster: $tappedCluster, library: library) { id, matched in
+                path.append(.grammarMatch(id, matched ?? ""))
             }
         }
         .environment(\.pushRoute, { path.append($0) })

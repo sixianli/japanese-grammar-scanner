@@ -12,6 +12,7 @@ final class LiveResultStabilizer {
         let id: UUID
         var grammarIDs: [String]
         var rect: CGRect
+        var quad: [CGPoint]
         var hits: Int
         var misses: Int
         var shown: Bool
@@ -53,13 +54,14 @@ final class LiveResultStabilizer {
                     || abs(t.rect.width - box.rect.width) > Self.jitter
                     || abs(t.rect.height - box.rect.height) > Self.jitter {
                     t.rect = box.rect
+                    t.quad = box.quad
                 }
                 t.hits += 1
                 t.misses = 0
                 if t.hits >= Self.hitsToShow { t.shown = true }
                 tracks[best.index] = t
             } else {
-                tracks.append(Track(id: UUID(), grammarIDs: ids, rect: box.rect, hits: 1, misses: 0, shown: false))
+                tracks.append(Track(id: UUID(), grammarIDs: ids, rect: box.rect, quad: box.quad, hits: 1, misses: 0, shown: false))
                 matched.insert(tracks.count - 1)
             }
         }
@@ -85,7 +87,7 @@ final class LiveResultStabilizer {
         var boxes: [HighlightBox] = []
         for (i, t) in shown.enumerated() {
             clusters.append(HighlightCluster(id: i, range: NSRange(location: 0, length: 0), grammarIDs: t.grammarIDs))
-            boxes.append(HighlightBox(id: t.id, clusterID: i, rect: t.rect))
+            boxes.append(HighlightBox(id: t.id, clusterID: i, rect: t.rect, quad: t.quad))
         }
         let matches = order.enumerated().map { GrammarMatch(grammarID: $1, range: NSRange(location: $0, length: 1)) }
         return ScanResult(text: frame.text, matches: matches, clusters: clusters, boxes: boxes)

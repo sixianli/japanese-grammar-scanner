@@ -15,6 +15,8 @@ cc = OpenCC("s2twp")
 
 # key(简体中文) : (en, ko, es, vi)
 S = {
+    "你扫到的：": ("You scanned: ", "스캔한 문장: ", "Escaneaste: ", "Bạn đã quét: "),
+    "对应 用法 ": ("Matches usage ", "해당 용법 ", "Corresponde al uso ", "Ứng với cách dùng "),
     "%lld 个没看过": ({"one": "%lld not viewed", "other": "%lld not viewed"}, "%lld개 안 봄", {"one": "%lld sin ver", "other": "%lld sin ver"}, "%lld mẫu chưa xem"),
     "在例句中出现": ("Appears in examples", "예문에 나옴", "Aparece en ejemplos", "Xuất hiện trong ví dụ"),
     "对准书页或选一张截图，句子里的语法会被标出来。": ("Point at a page or pick a screenshot, and the grammar in each sentence is marked.", "책 페이지를 비추거나 스크린샷을 고르면 문장 속 문법이 표시됩니다.", "Apunta a una página o elige una captura y se marcará la gramática de cada frase.", "Hướng vào trang sách hoặc chọn ảnh chụp màn hình, ngữ pháp trong câu sẽ được đánh dấu."),
@@ -326,6 +328,8 @@ S = {
 
 # 缅甸语（my，Myanmar Unicode）。缅甸语没有复数变化，统一用普通字符串。
 MY = {
+    "你扫到的：": "စကင်ဖတ်ထားသည်- ",
+    "对应 用法 ": "သက်ဆိုင်သော အသုံး ",
     "%lld 个没看过": "မကြည့်ရသေး %lld ခု",
     "在例句中出现": "ဥပမာဝါကျများတွင် ပါဝင်သည်",
     "对准书页或选一张截图，句子里的语法会被标出来。": "စာမျက်နှာကို ချိန်ပါ သို့မဟုတ် ဖန်သားပြင်ဓာတ်ပုံ ရွေးပါ၊ ဝါကျထဲရှိ သဒ္ဒါများကို အမှတ်အသားပြပေးမည်။",

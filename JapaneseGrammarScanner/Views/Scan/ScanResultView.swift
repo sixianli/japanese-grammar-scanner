@@ -65,8 +65,8 @@ struct ScanResultView: View {
         .navigationDestination(item: $pushedGrammarID) { id in
             GrammarDetailView(grammarID: id)
         }
-        .grammarChooser(cluster: $tappedCluster, library: library) { id in
-            if let pushRoute { pushRoute(.grammar(id)) } else { pushedGrammarID = id }
+        .grammarChooser(cluster: $tappedCluster, library: library) { id, matched in
+            if let pushRoute { pushRoute(.grammarMatch(id, matched ?? "")) } else { pushedGrammarID = id }
         }
         .sheet(isPresented: $isEditing) { editSheet }
         .task { await analyze() }
@@ -177,7 +177,7 @@ struct ScanResultView: View {
                 VStack(spacing: 0) {
                     ForEach(ids, id: \.self) { id in
                         if let p = library.point(id: id) {
-                            NavigationLink(value: Route.grammar(id)) {
+                            NavigationLink(value: Route.grammarMatch(id, result.matchedText(for: id) ?? "")) {
                                 GrammarRow(point: p, occurrences: result.matches.filter { $0.grammarID == id }.count)
                                     .contentShape(Rectangle())
                             }

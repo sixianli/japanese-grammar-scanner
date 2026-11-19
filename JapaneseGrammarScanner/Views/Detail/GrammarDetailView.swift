@@ -4,6 +4,8 @@ import SwiftUI
 /// 颜色只用在重点上：例句里的目标语法（主色）；其余为黑白灰。
 struct GrammarDetailView: View {
     let grammarID: String
+    /// 从扫描结果打开时，原文里命中的文字（用于显示「你扫到的」并找出对应的用法）
+    var matchedText: String? = nil
     @EnvironmentObject private var library: GrammarLibrary
     @EnvironmentObject private var favorites: FavoritesStore
     @EnvironmentObject private var entitlements: EntitlementStore
@@ -42,12 +44,23 @@ struct GrammarDetailView: View {
                             })
                     }
 
+                    // 从扫描结果进来：先告诉用户扫到的原文对应这里的哪个用法
+                    let focus = matchedText.flatMap { Self.bestSense(for: $0, in: p) }
+                    if let matchedText {
+                        ScannedMatchBanner(matched: matchedText, senseIndex: focus,
+                                           senseLabel: focus.map { p.senses[$0].label }) {
+                            if let focus { withAnimation(.easeInOut) { proxy.scrollTo("sense-\(focus)", anchor: .top) } }
+                        }
+                        .padding(.top, 14)
+                    }
+
                     // 概述
                     RubyText(explanation: p.meaning, style: .init(font: .body, lineSpacing: 7))
                         .padding(.top, 14)
 
                     // 义项目录：整行可点，跳到下方对应用法
-                    SenseOutline(point: p, showsLevels: showsSenseLevels, tappable: entitlements.hasFullAccess) { i in
+                    SenseOutline(point: p, showsLevels: showsSenseLevels, tappable: entitlements.hasFullAccess,
+                                 highlighted: focus) { i in
                         withAnimation(.easeInOut) { proxy.scrollTo("sense-\(i)", anchor: .top) }
                     }
                     .padding(.top, 18)
@@ -312,6 +325,7 @@ private struct SenseOutline: View {
     let point: GrammarPoint
     let showsLevels: Bool
     let tappable: Bool
+    var highlighted: Int? = nil
     let onSelect: (Int) -> Void
 
     var body: some View {
@@ -341,10 +355,13 @@ private struct SenseOutline: View {
                         }
                     }
                     .padding(.vertical, 12)
+                    .padding(.horizontal, i == highlighted ? 10 : 0)
+                    .background(i == highlighted ? Theme.accentFill : .clear,
+                                in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                     .contentShape(Rectangle())
                 }
                 .buttonStyle(RowPressStyle())
-                .accessibilityIdentifier("detail.senseRow")
+                .accessibilityIdentifier(i == highlighted ? "detail.senseRow.matched" : "detail.senseRow")
                 .disabled(!tappable)
                 .accessibilityHint(tappable ? Text("跳到用法") : Text(verbatim: ""))
                 Divider().padding(.leading, 34)
@@ -674,4 +691,73 @@ private struct LegacyNavTitle<Content: View>: View {
 private struct HeaderFrameKey: PreferenceKey {
     static var defaultValue: CGRect = .zero
     static func reduce(value: inout CGRect, nextValue: () -> CGRect) { value = nextValue() }
+}
+
+extension GrammarDetailView {
+    /// 扫描到的原文最接近哪一个用法：比较原文与各用法的接续说明、例句的最长公共片段（平假名、片假名视为相同）。
+    /// 只有一个用法、或无法区分时返回 nil。
+    static func bestSense(for matched: String, in p: GrammarPoint) -> Int? {
+        guard p.senses.count > 1 else { return nil }
+        func norm(_ s: String) -> [Character] {
+            let t = s.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: " ", with: "")
+            return Array(t.applyingTransform(.hiraganaToKatakana, reverse: true) ?? t)
+        }
+        func lcs(_ a: [Character], _ b: [Character]) -> Int {
+            guard !a.isEmpty, !b.isEmpty else { return 0 }
+            var prev = [Int](repeating: 0, count: b.count + 1), best = 0
+            for i in 1...a.count {
+                var cur = [Int](repeating: 0, count: b.count + 1)
+                for j in 1...b.count where a[i - 1] == b[j - 1] {
+                    cur[j] = prev[j - 1] + 1
+                    best = max(best, cur[j])
+                }
+                prev = cur
+            }
+            return best
+        }
+        let m = norm(matched)
+        let scores = p.senses.map { sense -> Int in
+            ([sense.connection, sense.label] + sense.examples.map(\.ja)).map { lcs(m, norm($0)) }.max() ?? 0
+        }
+        guard let best = scores.max(), best >= 2, scores.filter({ $0 == best }).count == 1 else { return nil }
+        return scores.firstIndex(of: best)
+    }
+}
+
+/// 讲解页顶部：你扫到的原文，以及它对应的用法
+private struct ScannedMatchBanner: View {
+    let matched: String
+    let senseIndex: Int?
+    let senseLabel: String?
+    let onJump: () -> Void
+
+    private var shown: String {
+        let t = matched.replacingOccurrences(of: "\n", with: "")
+        return t.count > 16 ? String(t.prefix(7)) + "…" + String(t.suffix(7)) : t
+    }
+
+    var body: some View {
+        Button(action: onJump) {
+            HStack(alignment: .firstTextBaseline, spacing: 8) {
+                Image(systemName: "text.viewfinder").foregroundStyle(Theme.accentText)
+                VStack(alignment: .leading, spacing: 3) {
+                    (Text("你扫到的：") + Text(verbatim: "「\(shown)」")).font(.subheadline.weight(.semibold))
+                    if let senseIndex, let senseLabel {
+                        (Text("对应 用法 ") + Text(verbatim: "\(senseIndex + 1)　\(senseLabel)"))
+                            .font(.footnote).foregroundStyle(.secondary)
+                    }
+                }
+                Spacer(minLength: 0)
+                if senseIndex != nil {
+                    Image(systemName: "chevron.down").font(.footnote.weight(.semibold)).foregroundStyle(.tertiary)
+                }
+            }
+            .padding(12)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Theme.accentFill, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+        }
+        .buttonStyle(.plain)
+        .disabled(senseIndex == nil)
+        .accessibilityIdentifier("detail.scannedMatch")
+    }
 }

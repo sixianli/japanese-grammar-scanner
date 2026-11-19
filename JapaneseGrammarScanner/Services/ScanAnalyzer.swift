@@ -5,15 +5,18 @@ import Foundation
 enum ScanAnalyzer {
     static func analyze(text: String, lines: [RecognizedLine], matcher: GrammarMatcher) -> ScanResult {
         let matches = matcher.matches(in: text)
-        let clusters = GrammarMatcher.clusters(from: matches)
+        let clusters = GrammarMatcher.clusters(from: matches, text: text)
 
         var boxes: [HighlightBox] = []
         for cluster in clusters {
-            for line in lines {
-                let overlap = NSIntersectionRange(cluster.range, line.rangeInText)
-                guard overlap.length > 0 else { continue }
-                let local = NSRange(location: overlap.location - line.rangeInText.location, length: overlap.length)
-                boxes.append(HighlightBox(clusterID: cluster.id, rect: flip(substringBox(line: line, local: local))))
+            for segment in cluster.ranges {
+                for line in lines {
+                    let overlap = NSIntersectionRange(segment, line.rangeInText)
+                    guard overlap.length > 0 else { continue }
+                    let local = NSRange(location: overlap.location - line.rangeInText.location, length: overlap.length)
+                    let quad = flip(substringQuad(line: line, local: local))
+                    boxes.append(HighlightBox(clusterID: cluster.id, rect: bounds(of: quad), quad: quad))
+                }
             }
         }
         return ScanResult(text: text, matches: matches, clusters: clusters, boxes: boxes)
@@ -45,6 +48,49 @@ enum ScanAnalyzer {
             guard ratio > 0.4, ratio < 2.5 else { return false }
         }
         return true
+    }
+
+    /// 一段文字贴着文字方向的四边形（Vision 坐标）。优先用 Vision 的逐字四边形，不合理时按字数沿整行四边形插值。
+    /// 斜拍、弯曲的页面上，四边形跟文字一起倾斜；外接矩形会比文字高出一截，并压到上下行。
+    static func substringQuad(line: RecognizedLine, local: NSRange) -> [CGPoint] {
+        let estimate = estimatedQuad(line: line, local: local)
+        if let vision = line.quadForRange(local), vision.count == 4,
+           plausible(bounds(of: vision), in: line.boundingBox, estimate: bounds(of: estimate)) {
+            return vision
+        }
+        return estimate
+    }
+
+    /// 按字数在整行四边形里插值（行没有四边形时用整行矩形）
+    static func estimatedQuad(line: RecognizedLine, local: NSRange) -> [CGPoint] {
+        let box = line.boundingBox
+        let q = line.quad.count == 4 ? line.quad
+            : [CGPoint(x: box.minX, y: box.maxY), CGPoint(x: box.maxX, y: box.maxY),
+               CGPoint(x: box.maxX, y: box.minY), CGPoint(x: box.minX, y: box.minY)]
+        let ns = line.text as NSString
+        let total = max(weightedLength(ns, NSRange(location: 0, length: ns.length)), 1)
+        let t0 = weightedLength(ns, NSRange(location: 0, length: local.location)) / total
+        let t1 = t0 + weightedLength(ns, local) / total
+        func lerp(_ a: CGPoint, _ b: CGPoint, _ t: CGFloat) -> CGPoint {
+            CGPoint(x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t)
+        }
+        let isVertical = box.height > box.width * 1.5
+        if isVertical {
+            // 竖排：从上往下读，沿左右两条边插值
+            return [lerp(q[0], q[3], t0), lerp(q[1], q[2], t0), lerp(q[1], q[2], t1), lerp(q[0], q[3], t1)]
+        }
+        return [lerp(q[0], q[1], t0), lerp(q[0], q[1], t1), lerp(q[3], q[2], t1), lerp(q[3], q[2], t0)]
+    }
+
+    static func bounds(of quad: [CGPoint]) -> CGRect {
+        let xs = quad.map(\.x), ys = quad.map(\.y)
+        guard let x0 = xs.min(), let x1 = xs.max(), let y0 = ys.min(), let y1 = ys.max() else { return .zero }
+        return CGRect(x: x0, y: y0, width: x1 - x0, height: y1 - y0)
+    }
+
+    /// Vision 坐标（左下原点） → 左上原点；角点顺序保持左上、右上、右下、左下
+    private static func flip(_ q: [CGPoint]) -> [CGPoint] {
+        q.map { CGPoint(x: $0.x, y: 1 - $0.y) }
     }
 
     /// 按字符宽度（全角 1、半角 0.5）在整行框里估算一段文字的位置。

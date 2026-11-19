@@ -81,6 +81,31 @@ final class GrammarMatcherTests: XCTestCase {
         XCTAssertEqual(clusters[0].grammarIDs, ["a", "b"])
         XCTAssertEqual(clusters[1].grammarIDs, ["c"])
     }
+
+    /// 长跨度的语法（や……など）只框「や」「など」，中间的别的语法不会被合并进来
+    func testLongSpanMatchesOnlyBoxKeyParts() {
+        let text = "写真が撮れる店やアニメに出てきた料理が食べられる店などができた"
+        let ns = text as NSString
+        let yaNado = GrammarMatch(grammarID: "ya-nado", range: NSRange(location: ns.range(of: "や").location,
+                                                                         length: NSMaxRange(ns.range(of: "など")) - ns.range(of: "や").location))
+        let teKuru = GrammarMatch(grammarID: "te-kuru", range: ns.range(of: "てき"))
+        let rareru = GrammarMatch(grammarID: "rareru", range: ns.range(of: "られる"))
+        let clusters = GrammarMatcher.clusters(from: [yaNado, teKuru, rareru], text: text)
+        XCTAssertEqual(clusters.count, 3, "や…など 不应把中间的 てくる、られる 合并成一个框")
+        let ya = clusters.first { $0.grammarIDs == ["ya-nado"] }
+        XCTAssertEqual(ya?.ranges.map { ns.substring(with: $0) }, ["や", "など"])
+        XCTAssertEqual(ya?.matchedTexts["ya-nado"]?.hasPrefix("や"), true)
+    }
+
+    /// 从扫描进入讲解时，「がきっかけで」应对应「〜をきっかけに」的用法②
+    func testBestSenseForScannedText() {
+        guard let p = GrammarLibrary.shared.point(id: "wo-kikkake-ni") ?? GrammarLibrary.shared.points.first(where: { $0.title.contains("きっかけ") }) else {
+            return XCTFail("找不到「〜をきっかけに」")
+        }
+        let i = GrammarDetailView.bestSense(for: "がきっかけで", in: p)
+        XCTAssertNotNil(i)
+        if let i { XCTAssertTrue(p.senses[i].connection.contains("がきっかけ"), "应定位到「がきっかけで」那个用法") }
+    }
 }
 
 final class ScanAnalyzerTests: XCTestCase {

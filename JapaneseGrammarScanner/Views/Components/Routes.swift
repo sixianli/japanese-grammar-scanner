@@ -4,6 +4,8 @@ import UIKit
 /// 导航目的地。
 enum Route: Hashable {
     case grammar(String)
+    /// 从扫描结果打开讲解：附带原文里命中的文字，讲解页据此显示「你扫到的」并定位到对应的用法
+    case grammarMatch(String, String)
     case scan(ScanImage)
     /// 打开「最近扫描」中保存的一次扫描
     case scanRecord(UUID)
@@ -49,6 +51,8 @@ extension View {
             switch route {
             case .grammar(let id):
                 GrammarDetailView(grammarID: id)
+            case .grammarMatch(let id, let matched):
+                GrammarDetailView(grammarID: id, matchedText: matched.isEmpty ? nil : matched)
             case .scan(let scanImage):
                 ScanResultView(scanImage: scanImage)
             case .scanRecord(let id):

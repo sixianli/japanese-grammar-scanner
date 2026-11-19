@@ -65,6 +65,13 @@ enum TextRecognizer {
                     guard let r = Range(shifted, in: original),
                           let box = try? candidate.boundingBox(for: r) else { return nil }
                     return box.boundingBox
+                },
+                quad: [obs.topLeft, obs.topRight, obs.bottomRight, obs.bottomLeft],
+                quadForRange: { local in
+                    let shifted = NSRange(location: local.location + offsetInOriginal, length: local.length)
+                    guard let r = Range(shifted, in: original),
+                          let box = try? candidate.boundingBox(for: r) else { return nil }
+                    return [box.topLeft, box.topRight, box.bottomRight, box.bottomLeft]
                 }
             ))
         }

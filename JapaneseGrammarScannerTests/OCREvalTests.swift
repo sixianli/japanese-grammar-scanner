@@ -74,11 +74,19 @@ final class OCREvalTests: XCTestCase {
                 }
                 let boxes: [[String: Any]] = result.boxes.map { box in
                     let ids = result.clusters.first { $0.id == box.clusterID }?.grammarIDs ?? []
-                    return ["grammar": ids, "rect": [box.rect.minX, box.rect.minY, box.rect.width, box.rect.height].map { Double($0) }]
+                    return ["grammar": ids, "cluster": box.clusterID,
+                            "rect": [box.rect.minX, box.rect.minY, box.rect.width, box.rect.height].map { Double($0) },
+                            "quad": box.quad.flatMap { [Double($0.x), Double($0.y)] }]
+                }
+                // 高亮块：包含的语法点、每个语法点命中的原文、实际框出的片段
+                let clusters: [[String: Any]] = result.clusters.map { c in
+                    ["id": c.id, "grammar": c.grammarIDs, "matched": c.matchedTexts,
+                     "segments": c.ranges.map { (assembled.text as NSString).substring(with: $0) }]
                 }
                 var entry: [String: Any] = [
                     "boxStats": ["exact": exact, "estimated": estimated, "rejected": rejected],
                     "boxes": boxes,
+                    "clusters": clusters,
                     "lines": lines,
                     "text": assembled.text,
                     "grammar": result.orderedGrammarIDs,
