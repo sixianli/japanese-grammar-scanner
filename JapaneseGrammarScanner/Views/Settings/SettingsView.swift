@@ -7,6 +7,7 @@ struct SettingsView: View {
 
     var body: some View {
         List {
+            if Features.paymentsEnabled {
             Section("购买") {
                 HStack {
                     Text("状态")
@@ -18,6 +19,16 @@ struct SettingsView: View {
                 }
                 Button("恢复购买") { Task { await store.restore() } }
                     .disabled(store.isPurchasing)
+            }
+            }
+            Section {
+                Button {
+                    NotificationCenter.default.post(name: .showFeedback, object: nil)
+                } label: {
+                    Label("反馈问题或建议", systemImage: "envelope")
+                }
+            } footer: {
+                Text("遇到 bug、讲解有误或有任何建议，都可以附上截图告诉我们。")
             }
             Section("外观") {
                 Button {

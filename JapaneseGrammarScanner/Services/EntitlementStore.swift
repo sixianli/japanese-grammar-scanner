@@ -42,7 +42,7 @@ final class EntitlementStore: ObservableObject {
     @Published private(set) var testFlightFallbackUnlock = false
 
     var hasFullAccess: Bool {
-        if testFlightFallbackUnlock { return true }
+        if !Features.paymentsEnabled || testFlightFallbackUnlock { return true }
         switch access {
         case .unlocked, .trial: return true
         case .trialExpired, .notStarted: return false
@@ -53,7 +53,7 @@ final class EntitlementStore: ObservableObject {
     var lifetimeProduct: Product? { products[ProductID.lifetime] }
 
     init() {
-        if ProcessInfo.processInfo.arguments.contains("-demoUnlocked") {
+        if !Features.paymentsEnabled || ProcessInfo.processInfo.arguments.contains("-demoUnlocked") {
             access = .unlocked
             isLoaded = true
             return
@@ -149,7 +149,7 @@ final class EntitlementStore: ObservableObject {
 
     /// 试用快结束（最后 2 天）或已结束，首页给一次温和提醒。
     var showsTrialEndingReminder: Bool {
-        if testFlightFallbackUnlock { return false }
+        if !Features.paymentsEnabled || testFlightFallbackUnlock { return false }
         switch access {
         case .trial: return (trialDaysLeft() ?? 99) <= 2
         case .trialExpired: return true
@@ -159,7 +159,7 @@ final class EntitlementStore: ObservableObject {
 
     /// 新手引导结束时开始试用（价格 0 的内购；用户已在引导最后一页看到试用时长与到期后的价格）。
     func startTrialIfNeeded() async {
-        guard access == .notStarted, !testFlightFallbackUnlock else { return }
+        guard Features.paymentsEnabled, access == .notStarted, !testFlightFallbackUnlock else { return }
         if products.isEmpty { await loadProducts() }
         guard let trial = trialProduct else { return }
         await purchase(trial)

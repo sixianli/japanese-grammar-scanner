@@ -29,6 +29,8 @@ extension Notification.Name {
     static let focusSearch = Notification.Name("focusSearch")
     /// 打开外观设置
     static let showAppearance = Notification.Name("showAppearance")
+    /// 打开反馈（object 可为上下文字符串，如语法点 id）
+    static let showFeedback = Notification.Name("showFeedback")
 }
 
 /// 底部标签序号
@@ -56,6 +58,12 @@ struct RootTabView: View {
 
     @EnvironmentObject private var appearance: AppearanceStore
     @State private var showAppearance = false
+    @State private var feedbackContext: FeedbackContext?
+
+    struct FeedbackContext: Identifiable {
+        let id = UUID()
+        let text: String?
+    }
 
     /// 再次点击当前标签时回到该标签的首页（iOS 标准行为）。
     private var selection: Binding<Int> {
@@ -74,6 +82,12 @@ struct RootTabView: View {
                 AppearanceView().environmentObject(appearance).tint(Theme.accent)
             }
             .onReceive(NotificationCenter.default.publisher(for: .showAppearance)) { _ in showAppearance = true }
+            .sheet(item: $feedbackContext) { ctx in
+                FeedbackView(context: ctx.text).tint(Theme.accent)
+            }
+            .onReceive(NotificationCenter.default.publisher(for: .showFeedback)) { note in
+                feedbackContext = FeedbackContext(text: note.object as? String)
+            }
             .onReceive(NotificationCenter.default.publisher(for: .focusSearch)) { _ in tab = AppTab.search }
         .fullScreenCover(isPresented: $showOnboarding) {
             OnboardingView { wantsSample in

@@ -30,6 +30,16 @@ struct HomeView: View {
                         forgettingSection
                         recentViewedSection
                     }
+                    // 反馈入口
+                    Button {
+                        NotificationCenter.default.post(name: .showFeedback, object: nil)
+                    } label: {
+                        Label("遇到问题或有建议？反馈给我们", systemImage: "envelope")
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.plain)
                 }
                 .padding(.horizontal, Theme.margin)
                 .padding(.top, 12)

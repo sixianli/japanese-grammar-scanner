@@ -67,13 +67,16 @@ struct OnboardingView: View {
                     Button {
                         onFinish(false)
                     } label: {
-                        Text("免费开始使用").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 6)
+                        Group {
+                            if Features.paymentsEnabled { Text("免费开始使用") } else { Text("开始使用") }
+                        }
+                        .font(.headline).frame(maxWidth: .infinity).padding(.vertical, 6)
                     }
                     .buttonStyle(.borderedProminent)
                     Button("先用示例书页试试") { onFinish(true) }
                         .font(.subheadline.weight(.medium))
                         .padding(.top, 2)
-                    trialNote
+                    if Features.paymentsEnabled { trialNote }
                 }
             }
             .tint(Brand.red)

@@ -109,7 +109,22 @@ struct GrammarDetailView: View {
                 }
                 .padding(.horizontal, Theme.margin)
                 .padding(.top, 8)
-                .padding(.bottom, 40)
+                .padding(.bottom, 16)
+
+                // 讲解有误时的反馈入口
+                Button {
+                    NotificationCenter.default.post(name: .showFeedback, object: "grammar: \(p.id) \(p.titleForm)")
+                } label: {
+                    HStack(spacing: 4) {
+                        Text("讲解有误或看不懂？")
+                        Text("告诉我们").foregroundStyle(Theme.accentText)
+                    }
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity)
+                    .padding(.bottom, 40)
+                }
+                .buttonStyle(.plain)
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             .coordinateSpace(name: "detailScroll")
@@ -192,7 +207,10 @@ struct GrammarDetailView: View {
     /// 标题跟着手指上移，同时缩小并移到导航栏正中；滑回顶部时还原成大标题。
     @ViewBuilder
     private func flyingTitle(_ p: GrammarPoint) -> some View {
-        if let base = titleBaseline {
+        if let measured = titleBaseline {
+            // 起点固定为页面未滚动时标题的位置（内容顶部 + 上边距），不依赖第一次测到的位置，
+            // 这样即使页面一打开就被滚动，标题的起点和终点也都正确
+            let base = CGRect(x: measured.minX, y: contentTop + 8, width: titleFrame.width, height: titleFrame.height)
             GeometryReader { geo in
                 let origin = geo.frame(in: .global).origin
                 let screenWidth = geo.size.width
