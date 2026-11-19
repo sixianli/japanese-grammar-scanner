@@ -86,5 +86,9 @@ GitHub 仓库 → Settings → Secrets and variables → Actions → **Variables
 - 定时转发任务只在默认分支（main）上自动运行。代码合并到 main 之前，可以在 Actions → **Feedback Forward** → Run workflow 手动运行。
 - 反馈也一直保存在 CloudKit Console → Records → Public Database → `Feedback` 里，邮件漏看了可以回去查。
 - 用户需要登录 iCloud 才能在 App 内提交；没登录时 App 会提示，并提供「用其他方式发送」。
-- 隐私：只有用户主动点「发送」时才会上传上述信息，App 内的隐私政策已写明。上架时 App Store 隐私标签需要声明收集
-  「用户内容 → 客户支持」，与身份不关联、不用于追踪。
+- **匿名使用统计**也走同一个 CloudKit 容器（记录类型 `UsageDay`，已包含在第 2 步导入的数据结构里），不需要额外配置。
+  配好第 3、4 步后，每周一早上会收到一封「使用统计周报」（用户数、日活 / 周活 / 月活、国家 / 地区、使用时段、
+  查得最多的语法点、N5–N1 分布）；也可以在 Actions → **Usage Report** → Run workflow 随时手动生成。
+  如果在加入 `UsageDay` 之前已经导入过数据结构，需要重新运行一次 Actions → **CloudKit Schema**，再 Deploy Schema Changes。
+- 隐私：只有用户主动点「发送」时才会上传上述信息，App 内的隐私政策已写明。上架时 App Store 隐私标签的填法见
+  `docs/appstore/metadata.md` →「App 隐私」。
