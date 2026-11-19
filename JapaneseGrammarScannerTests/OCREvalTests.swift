@@ -32,6 +32,16 @@ final class OCREvalTests: XCTestCase {
                     input = corrected
                     corners = quad.map { [Double($0.x), Double($0.y)] }
                 }
+                if config == "tiled" {
+                    // 分块识别试验：整页 + 2×2 重叠分块，合并去重后输出各行（只评测文字与语法，不出框）
+                    let merged = try Self.tiledLines(input)
+                    record[config] = [
+                        "lines": merged.map { ["text": $0.text, "confidence": $0.confidence,
+                                               "box": [$0.box.minX, $0.box.minY, $0.box.width, $0.box.height].map { Double($0) }] },
+                        "seconds": Date().timeIntervalSince(start),
+                    ] as [String: Any]
+                    continue
+                }
                 let request = VNRecognizeTextRequest()
                 request.recognitionLevel = .accurate
                 request.recognitionLanguages = config == "jaOnly" ? ["ja-JP"] : ["ja-JP", "en-US"]
@@ -81,5 +91,73 @@ final class OCREvalTests: XCTestCase {
             let name = (file as NSString).deletingPathExtension + ".json"
             try data.write(to: URL(fileURLWithPath: (outDir as NSString).appendingPathComponent(name)))
         }
+    }
+
+    struct Line { var text: String; var confidence: Float; var box: CGRect }
+
+    /// 整页识别一次，再把图片切成 2×2 有重叠的块分别识别；块里识别出、整页漏掉的行补进来。
+    /// 坐标统一换算到整张图的 Vision 归一化坐标（原点左下）。
+    static func tiledLines(_ image: CGImage) throws -> [Line] {
+        func recognize(_ img: CGImage) throws -> [Line] {
+            let request = VNRecognizeTextRequest()
+            request.recognitionLevel = .accurate
+            request.recognitionLanguages = ["ja-JP", "en-US"]
+            request.usesLanguageCorrection = true
+            try VNImageRequestHandler(cgImage: img, options: [:]).perform([request])
+            return (request.results ?? []).compactMap { obs in
+                guard let c = obs.topCandidates(1).first else { return nil }
+                return Line(text: c.string, confidence: c.confidence, box: obs.boundingBox)
+            }
+        }
+        var lines = try recognize(image)
+        let W = CGFloat(image.width), H = CGFloat(image.height)
+        let overlap: CGFloat = 0.12
+        for row in 0..<2 {
+            for col in 0..<2 {
+                // 像素坐标（原点左上）
+                let x0 = max(0, CGFloat(col) * 0.5 - overlap / 2) * W
+                let x1 = min(1, CGFloat(col) * 0.5 + 0.5 + overlap / 2) * W
+                let y0 = max(0, CGFloat(row) * 0.5 - overlap / 2) * H
+                let y1 = min(1, CGFloat(row) * 0.5 + 0.5 + overlap / 2) * H
+                let rect = CGRect(x: x0, y: y0, width: x1 - x0, height: y1 - y0).integral
+                guard let tile = image.cropping(to: rect) else { continue }
+                for var l in try recognize(tile) {
+                    // 块内归一化（原点左下）→ 整图归一化（原点左下）
+                    let bx = (rect.minX + l.box.minX * rect.width) / W
+                    let byTop = rect.minY + (1 - l.box.maxY) * rect.height // 像素，原点左上
+                    let bh = l.box.height * rect.height / H
+                    l.box = CGRect(x: bx, y: 1 - byTop / H - bh, width: l.box.width * rect.width / W, height: bh)
+                    // 和已有的行明显重叠就视为同一行：保留字数多的
+                    if let i = lines.firstIndex(where: { overlapRatio($0.box, l.box) > 0.3 }) {
+                        if l.text.count > lines[i].text.count + 1, !touchesTileEdge(l.box, rect, W, H) { lines[i] = l }
+                    } else if !touchesTileEdge(l.box, rect, W, H) {
+                        lines.append(l)
+                    }
+                }
+            }
+        }
+        // 按从上到下、从左到右排序（Vision 的整页顺序在合并后不再适用）
+        return lines.sorted { a, b in
+            let h = min(a.box.height, b.box.height)
+            if abs(a.box.midY - b.box.midY) > h * 0.6 { return a.box.midY > b.box.midY }
+            return a.box.minX < b.box.minX
+        }
+    }
+
+    /// 被块的边界截断的行不可信（字被切掉一半）
+    static func touchesTileEdge(_ box: CGRect, _ tile: CGRect, _ W: CGFloat, _ H: CGFloat) -> Bool {
+        let e: CGFloat = 4
+        let px = box.minX * W, px2 = box.maxX * W
+        let pyTop = (1 - box.maxY) * H, pyBottom = (1 - box.minY) * H
+        return (px - tile.minX < e && tile.minX > 0) || (tile.maxX - px2 < e && tile.maxX < W)
+            || (pyTop - tile.minY < e && tile.minY > 0) || (tile.maxY - pyBottom < e && tile.maxY < H)
+    }
+
+    /// 交集占较小框的比例
+    static func overlapRatio(_ a: CGRect, _ b: CGRect) -> CGFloat {
+        let i = a.intersection(b)
+        guard !i.isNull else { return 0 }
+        let smaller = min(a.width * a.height, b.width * b.height)
+        return smaller > 0 ? (i.width * i.height) / smaller : 0
     }
 }
