@@ -45,7 +45,7 @@ final class OCREvalTests: XCTestCase {
                 let request = VNRecognizeTextRequest()
                 request.recognitionLevel = .accurate
                 request.recognitionLanguages = config == "jaOnly" ? ["ja-JP"] : ["ja-JP", "en-US"]
-                request.usesLanguageCorrection = true
+                request.usesLanguageCorrection = config != "nolc"  // nolc：关闭语言纠错，检查单段框位置是否因纠错改写文字而错位
                 try VNImageRequestHandler(cgImage: input, options: [:]).perform([request])
                 let observations = request.results ?? []
                 let lines: [[String: Any]] = observations.compactMap { obs in
