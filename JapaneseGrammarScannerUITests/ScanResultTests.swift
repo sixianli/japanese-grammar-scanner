@@ -99,7 +99,7 @@ final class ScanResultTests: E2ETestCase {
         let rows = ids("result.grammarRow")
         wait(rows.firstMatch, "应列出语法点")
         var found = false
-        for i in 0..<min(rows.count, 6) {
+        for i in 0..<rows.count {
             let row = rows.element(boundBy: i)
             scrollTo(row)
             row.tap()
@@ -141,7 +141,9 @@ final class ScanResultTests: E2ETestCase {
                 for j in 0..<options.count {
                     XCTAssertTrue(options.element(boundBy: j).label.contains("「"), "选项应附上命中的原文：\(options.element(boundBy: j).label)")
                 }
-                app.buttons["取消"].firstMatch.tap()
+                // iOS 26 的选择框没有「取消」按钮，点框外关闭
+                let cancel = app.buttons["取消"].firstMatch
+                if cancel.exists { cancel.tap() } else { app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.06)).tap() }
                 break
             }
             if detailScreen.waitForExistence(timeout: 2) {

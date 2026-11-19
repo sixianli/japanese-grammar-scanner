@@ -61,7 +61,7 @@ tools/
 
 ## 多语言
 
-- 界面文字：`JapaneseGrammarScanner/Localizable.xcstrings`、`InfoPlist.xcstrings`（由 `tools/make_strings.py` 生成）。
+- 界面文字：`JapaneseGrammarScanner/xx.lproj/Localizable.strings(dict)`、`InfoPlist.xcstrings`（由 `tools/make_strings.py` 生成，不要手改）。
 - 语法讲解：基础文件 `grammar_*.json` 含日语例句、识别规则与简体中文讲解；`Resources/Grammar/l10n/l10n_<语言>_<等级>.json` 为其它语言的讲解，App 启动时按语言覆盖。
 - 繁体中文由 `tools/make_zh_hant.py`（OpenCC，台湾用语）从简体生成，日语片段保持不变；带中文说明的标题由 `tools/l10n_titles.py` 写入。
 - `tools/validate_grammar.py` 会检查每种语言的条目、顺序、数组长度，以及译文是否残留中文。

@@ -4,14 +4,13 @@ import SwiftUI
 struct SettingsSheet: View {
     @Environment(\.dismiss) private var dismiss
     /// 切换语言后重建界面时，直接回到语言页
-    @State private var path: [SettingsPage] = {
-        defer { LanguageStore.reopenLanguagePage = false }
-        return LanguageStore.reopenLanguagePage ? [.language] : []
-    }()
+    /// 注意不要在这里清掉标记：切换语言时旧的面板也会被重新创建一次，在这里清掉会让新面板打不开语言页
+    @State private var path: [SettingsPage] = LanguageStore.reopenLanguagePage ? [.language] : []
 
     var body: some View {
         NavigationStack(path: $path) {
             SettingsView(close: { dismiss() })
+                .onAppear { LanguageStore.reopenLanguagePage = false }
                 .toolbar {
                     ToolbarItem(placement: .confirmationAction) { Button("完成") { dismiss() } }
                 }

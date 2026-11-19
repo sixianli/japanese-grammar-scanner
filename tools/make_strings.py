@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""生成界面文字的 String Catalog（Localizable.xcstrings / InfoPlist.xcstrings）。
+"""生成界面文字的多语言文件。
+- 界面文字：每种语言一个 xx.lproj/Localizable.strings（带复数的写进 Localizable.stringsdict）。
+  不用 String Catalog（.xcstrings）：新版 Xcode 把它编译成整包的语言表，App 内切换语言时
+  SwiftUI 按所选语言去 xx.lproj 里找普通文字会找不到，只有带复数的文字能切换。
+- InfoPlist.xcstrings（App 名称、相机权限说明）：由系统读取，仍用 String Catalog。
 源语言为简体中文（代码中的字符串即 key）；繁体中文由 OpenCC 自动转换。
 用法: python3 tools/make_strings.py
 """
@@ -616,17 +620,51 @@ def check_my():
         assert re.findall(r"%(?:\d+\$)?(?:lld|@|%)", k) == re.findall(r"%(?:\d+\$)?(?:lld|@|%)", v), f"MY[{k!r}] 格式符不一致"
 
 
+def esc(v):
+    return v.replace("\\", "\\\\").replace('"', '\\"').replace("\n", "\\n")
+
+
+def write_lproj(lang, entries):
+    d = os.path.join(APP, f"{lang}.lproj")
+    os.makedirs(d, exist_ok=True)
+    plain = {k: v for k, v in entries.items() if isinstance(v, str)}
+    plural = {k: v for k, v in entries.items() if isinstance(v, dict)}
+    with open(os.path.join(d, "Localizable.strings"), "w", encoding="utf-8") as f:
+        f.write("/* 由 tools/make_strings.py 生成，请勿手改 */\n")
+        for k in sorted(plain):
+            f.write(f'"{esc(k)}" = "{esc(plain[k])}";\n')
+    path = os.path.join(d, "Localizable.stringsdict")
+    if not plural:
+        if os.path.exists(path):
+            os.remove(path)
+        return
+    import plistlib
+    out = {}
+    for k, forms in plural.items():
+        spec = re.search(r"%(?:\d+\$)?(lld|ld|d|@)", k).group(1)
+        rule = {"NSStringFormatSpecTypeKey": "NSStringPluralRuleType", "NSStringFormatValueTypeKey": spec}
+        rule.update(forms)
+        if "other" not in rule:
+            rule["other"] = list(forms.values())[-1]
+        out[k] = {"NSStringLocalizedFormatKey": "%#@n@", "n": rule}
+    with open(path, "wb") as f:
+        plistlib.dump(out, f)
+
+
 def main():
     check_my()
-    strings = {}
+    per_lang = {lang: {} for lang in LANGS + ["my", "zh-Hans", "zh-Hant"]}
     for key, vals in S.items():
-        l = {lang: loc(v) for lang, v in zip(LANGS, vals)}
-        l["my"] = unit(MY[key])
-        l["zh-Hans"] = unit(key)
-        l["zh-Hant"] = unit(cc.convert(key))
-        strings[key] = {"extractionState": "manual", "localizations": l}
-    with open(os.path.join(APP, "Localizable.xcstrings"), "w", encoding="utf-8") as f:
-        json.dump(catalog(strings), f, ensure_ascii=False, indent=2, sort_keys=True)
+        for lang, v in zip(LANGS, vals):
+            per_lang[lang][key] = v
+        per_lang["my"][key] = MY[key]
+        per_lang["zh-Hans"][key] = key
+        per_lang["zh-Hant"][key] = cc.convert(key)
+    for lang, entries in per_lang.items():
+        write_lproj(lang, entries)
+    old_catalog = os.path.join(APP, "Localizable.xcstrings")
+    if os.path.exists(old_catalog):
+        os.remove(old_catalog)
 
     info = {}
     for key, (zh, vals) in INFO.items():
@@ -637,7 +675,7 @@ def main():
         info[key] = {"extractionState": "manual", "localizations": l}
     with open(os.path.join(APP, "InfoPlist.xcstrings"), "w", encoding="utf-8") as f:
         json.dump(catalog(info), f, ensure_ascii=False, indent=2, sort_keys=True)
-    print(f"Localizable: {len(strings)} keys, InfoPlist: {len(info)} keys")
+    print(f"Localizable: {len(S)} keys × {len(per_lang)} languages, InfoPlist: {len(info)} keys")
 
 
 if __name__ == "__main__":

@@ -130,6 +130,7 @@ struct RootTabView: View {
             }
         }
         .onAppear {
+            KeyboardDismisser.shared.install()
             if LanguageStore.reopenLanguagePage {
                 // 刚切换完语言：界面已重建，旧的设置面板正在收起；等它收完再重新打开到语言页，
                 // 否则新的面板会因为「上一个还在动画中」被系统忽略

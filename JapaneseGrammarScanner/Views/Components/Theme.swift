@@ -192,10 +192,9 @@ extension UIApplication {
 }
 
 extension View {
-    /// 列表 + 搜索框：拖动列表或点键盘以外的地方就收起键盘（输入的文字保留）
+    /// 列表 + 搜索框：拖动列表就收起键盘（点空白处收键盘由 KeyboardDismisser 在窗口上统一处理）
     func dismissesKeyboardOnTapAndScroll() -> some View {
         scrollDismissesKeyboard(.immediately)
-            .simultaneousGesture(TapGesture().onEnded { UIApplication.dismissKeyboard() })
     }
 
     /// 多行输入：键盘上方加「完成」，下拉表单也能收起（点输入框内部仍是继续编辑）
@@ -208,5 +207,46 @@ extension View {
                         .accessibilityIdentifier("keyboard.done")
                 }
             }
+    }
+}
+
+/// 全局「点键盘以外的地方收起键盘」：在窗口上挂一个不拦截触摸的点击手势。
+/// 不能用 SwiftUI 的 onTapGesture / simultaneousGesture 挂在列表上——那样会吃掉列表行的点击（点搜索结果进不去讲解页）。
+/// 点在输入框（搜索框、反馈描述）里的不处理，正常编辑。
+final class KeyboardDismisser: NSObject, UIGestureRecognizerDelegate {
+    static let shared = KeyboardDismisser()
+    private var installed = Set<ObjectIdentifier>()
+
+    @MainActor
+    func install() {
+        for scene in UIApplication.shared.connectedScenes {
+            guard let windowScene = scene as? UIWindowScene else { continue }
+            for window in windowScene.windows where !installed.contains(ObjectIdentifier(window)) {
+                let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
+                tap.cancelsTouchesInView = false
+                tap.delaysTouchesBegan = false
+                tap.delaysTouchesEnded = false
+                tap.delegate = self
+                window.addGestureRecognizer(tap)
+                installed.insert(ObjectIdentifier(window))
+            }
+        }
+    }
+
+    @objc private func tapped() {
+        UIApplication.dismissKeyboard()
+    }
+
+    func gestureRecognizer(_ g: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        var view = touch.view
+        while let v = view {
+            if v is UITextField || v is UITextView || v is UISearchBar { return false }
+            view = v.superview
+        }
+        return true
+    }
+
+    func gestureRecognizer(_ g: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith other: UIGestureRecognizer) -> Bool {
+        true
     }
 }

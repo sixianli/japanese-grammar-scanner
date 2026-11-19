@@ -83,7 +83,9 @@ final class SettingsTests: E2ETestCase {
             let share = app.descendants(matching: .any)["ActivityListView"]
             wait(share, "点发送后应弹出分享面板（或提交成功提示）", timeout: 10)
             app.swipeDown(velocity: .fast)
-            if share.exists { app.buttons.matching(NSPredicate(format: "label == '关闭' OR label == 'Close'")).firstMatch.tap() }
+            let close = app.buttons.matching(NSPredicate(format: "label == '关闭' OR label == 'Close'")).firstMatch
+            if share.exists && close.exists { close.tap() }
+            waitGone(share, "分享面板应能关闭")
             navBar("反馈").buttons["取消"].tap()
             waitGone(navBar("反馈"), "取消后关闭反馈页")
             closeSettings()
@@ -97,8 +99,13 @@ final class SettingsTests: E2ETestCase {
         button(startingWith: "添加截图").tap()
         pickFirstPhoto()
         // 多选的照片选择器要再点确认（iOS 26 是右侧的 ✓ 按钮，旧系统是「添加」）
-        let confirm = app.buttons.matching(NSPredicate(format: "label IN {'添加', 'Add', '完成', 'Done'} OR identifier IN {'Done', 'Add'}")).firstMatch
-        if confirm.waitForExistence(timeout: 5) { confirm.tap() }
+        let confirm = app.buttons.matching(NSPredicate(format: "label IN {'添加', 'Add', '完成', 'Done', '确定', 'OK', '选取', 'Choose'} OR identifier IN {'Done', 'Add', 'DoneButton'}")).firstMatch
+        if confirm.waitForExistence(timeout: 5) {
+            confirm.tap()
+        } else {
+            // 调试：记下照片选择器上所有按钮，方便下次对上确认按钮的名字
+            print("PICKER BUTTONS:", app.buttons.allElementsBoundByIndex.prefix(40).map { "\($0.identifier)|\($0.label)" })
+        }
         wait(app.buttons["删除截图"], "选好的截图应显示在反馈页", timeout: 15)
         app.buttons["删除截图"].tap()
         navBar("反馈").buttons["取消"].tap()
@@ -106,6 +113,7 @@ final class SettingsTests: E2ETestCase {
 
     func testOnboardingFromSettings() {
         openSettings()
+        scrollTo(app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", "使用引导")).firstMatch)
         button(startingWith: "使用引导").tap()
         wait(app.buttons["跳过"], "应打开使用引导", timeout: 10)
         app.buttons["跳过"].tap()
@@ -145,8 +153,9 @@ final class SettingsTests: E2ETestCase {
         openSettings()
         scrollTo(id("settings.usageStats"))
         XCTAssertEqual(id("settings.usageStats").value as? String, "0", "关闭状态应保存下来")
-        id("settings.usageStats").tap()
-        XCTAssertEqual(id("settings.usageStats").value as? String, "1")
+        let again = id("settings.usageStats")
+        again.switches.firstMatch.exists ? again.switches.firstMatch.tap() : again.tap()
+        XCTAssertEqual(again.value as? String, "1")
         closeSettings()
     }
 
