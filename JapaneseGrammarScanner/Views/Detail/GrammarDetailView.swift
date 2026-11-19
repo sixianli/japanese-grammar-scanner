@@ -146,7 +146,18 @@ struct GrammarDetailView: View {
         .background(Theme.background)
         .overlay(alignment: .topLeading) {
             if usesFlyingTitle {
-                FlyingTitle(scroll: scroll, topPadding: 8) { titleRow(p) }
+                FlyingTitle(scroll: scroll, topPadding: 8) {
+                    titleRow(p)
+                } compact: {
+                    // 导航栏里的标题：单行、标准导航栏字号，长标题自动略缩小；等级标签用正常大小
+                    HStack(alignment: .top, spacing: 4) {
+                        Text(verbatim: p.titleForm)
+                            .font(.headline)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.75)
+                        LevelBadge(level: p.level)
+                    }
+                }
             }
         }
         .navigationTitle(p.displayTitle)
@@ -157,9 +168,9 @@ struct GrammarDetailView: View {
                     Color.clear.frame(width: 1, height: 1).accessibilityHidden(true)
                 } else {
                     LegacyNavTitle(scroll: scroll) {
-                        HStack(alignment: .top, spacing: 3) {
-                            Text(verbatim: p.titleForm).font(.headline)
-                            LevelBadge(level: p.level, small: true)
+                        HStack(alignment: .top, spacing: 4) {
+                            Text(verbatim: p.titleForm).font(.headline).lineLimit(1).minimumScaleFactor(0.75)
+                            LevelBadge(level: p.level)
                         }
                     }
                 }
@@ -581,11 +592,13 @@ extension View {
 
 /// 大标题浮层：跟着滚动上移，同时缩小并移到导航栏正中；下拉回顶部时还原成大标题。
 /// 位置完全由滚动偏移计算（不依赖上一帧测量到的位置），所以惯性滚动时不会闪烁或滞后。
-private struct FlyingTitle<Title: View>: View {
+private struct FlyingTitle<Title: View, Compact: View>: View {
     let scroll: DetailScrollModel
     /// 标题在内容中的上边距（与页面内容的 top padding 一致）
     let topPadding: CGFloat
     @ViewBuilder let title: Title
+    /// 到达导航栏后显示的单行标题（大标题缩小后字太小、换行的长标题放不下，所以最后交叉淡入这个）
+    @ViewBuilder let compact: Compact
 
     var body: some View {
         let size = scroll.titleSize
@@ -611,10 +624,17 @@ private struct FlyingTitle<Title: View>: View {
                     .frame(width: width, height: 120)
                     .offset(y: -120)
                     .opacity(Double(min(1, progress * 1.4)))
+                    let swap = Double(min(1, max(0, (progress - 0.72) / 0.28)))
                     title
                         .frame(width: size.width, height: size.height, alignment: .topLeading)
                         .scaleEffect(scale, anchor: .topLeading)
                         .offset(x: x, y: y)
+                        .opacity(1 - swap)
+                    compact
+                        .frame(maxWidth: width - 150)
+                        .frame(width: width, height: 44)
+                        .offset(y: barCenterY - 22 + (1 - swap) * 6)
+                        .opacity(swap)
                 }
             }
         }
