@@ -135,12 +135,29 @@ def is_continuation(p, n):
     return x <= px + 2.5 * lh
 
 
+def median_body_height(lines):
+    hs = sorted(ln["box"][3] for ln in lines if len(JA.findall(ln["text"])) >= 4)
+    return hs[len(hs) // 2] if hs else None
+
+
+def is_cut_off_neighbor(box, body):
+    """与 TextRecognizer.isCutOffNeighbor 相同：贴边被截断且字号明显不同于正文的行（邻页入镜）。"""
+    x, y, w, h = box
+    e = 0.005
+    touches = x < e or x + w > 1 - e or y < e or y + h > 1 - e
+    if not touches or not body:
+        return False
+    return h > body * 1.3 or h < body * 0.5
+
+
 def assemble(lines):
-    """与 TextRecognizer.assemble 相同（build 11 起）：段落内折行相连、其余换行；排除外文行，行内外文片段替换为空白。"""
+    """与 TextRecognizer.assemble 相同（build 11 起）：段落内折行相连、其余换行；排除外文行和邻页入镜的行，
+    行内外文片段替换为空白。"""
     text, prev = "", None
+    body = median_body_height(lines)
     for ln in lines:
         t = ln["text"].strip()
-        if not t or is_foreign(t):
+        if not t or is_foreign(t) or is_cut_off_neighbor(ln["box"], body):
             continue
         t = mask_foreign_segments(t)
         if prev is not None:

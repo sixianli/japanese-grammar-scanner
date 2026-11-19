@@ -31,4 +31,13 @@ final class TextAssemblyTests: XCTestCase {
         // 隔得很远 → 不相连
         XCTAssertFalse(TextRecognizer.isContinuation(previous: p, next: CGRect(x: 0.1, y: 0.40, width: 0.8, height: 0.03)))
     }
+
+    func testCutOffNeighborLine() {
+        // 贴着左边缘、字比正文大很多：邻页入镜
+        XCTAssertTrue(TextRecognizer.isCutOffNeighbor(CGRect(x: 0, y: 0.9, width: 0.1, height: 0.06), bodyHeight: 0.025))
+        // 贴边但字号与正文相同：正文被截断的一行，保留
+        XCTAssertFalse(TextRecognizer.isCutOffNeighbor(CGRect(x: 0, y: 0.5, width: 0.6, height: 0.026), bodyHeight: 0.025))
+        // 不贴边：保留
+        XCTAssertFalse(TextRecognizer.isCutOffNeighbor(CGRect(x: 0.2, y: 0.5, width: 0.3, height: 0.06), bodyHeight: 0.025))
+    }
 }

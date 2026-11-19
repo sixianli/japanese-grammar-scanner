@@ -32,11 +32,13 @@ enum TextRecognizer {
         var lines: [RecognizedLine] = []
         var previous: CGRect?
         let sentenceEnders: Set<Character> = ["。", "！", "？", "!", "?", "」", "』", "…"]
+        let bodyHeight = medianBodyLineHeight(observations)
 
         for obs in observations {
             guard let candidate = obs.topCandidates(1).first else { continue }
             let trimmed = candidate.string.trimmingCharacters(in: .whitespaces)
             guard !trimmed.isEmpty, !JapaneseText.isForeign(trimmed) else { continue }
+            guard !isCutOffNeighbor(obs.boundingBox, bodyHeight: bodyHeight) else { continue }
             let lineText = JapaneseText.maskForeignSegments(trimmed)
 
             if let prev = previous {
@@ -67,6 +69,25 @@ enum TextRecognizer {
             ))
         }
         return (text, lines)
+    }
+
+    /// 正文行的典型行高（至少 4 个日文字的行的中位数）
+    static func medianBodyLineHeight(_ observations: [VNRecognizedTextObservation]) -> CGFloat? {
+        let heights = observations.compactMap { obs -> CGFloat? in
+            guard let s = obs.topCandidates(1).first?.string else { return nil }
+            let ja = s.unicodeScalars.filter { JapaneseText.isKana($0) || JapaneseText.isKanji($0) }.count
+            return ja >= 4 ? obs.boundingBox.height : nil
+        }.sorted()
+        guard !heights.isEmpty else { return nil }
+        return heights[heights.count / 2]
+    }
+
+    /// 邻页入镜：贴着照片边缘被截断、字号又明显和正文不同的行（多半是旁边另一页或另一本书），不参与识别
+    static func isCutOffNeighbor(_ box: CGRect, bodyHeight: CGFloat?) -> Bool {
+        let edge: CGFloat = 0.005
+        let touches = box.minX < edge || box.maxX > 1 - edge || box.minY < edge || box.maxY > 1 - edge
+        guard touches, let body = bodyHeight, body > 0 else { return false }
+        return box.height > body * 1.3 || box.height < body * 0.5
     }
 
     /// 下一行是不是上一行的折行续写（Vision 归一化坐标，原点在左下角）：

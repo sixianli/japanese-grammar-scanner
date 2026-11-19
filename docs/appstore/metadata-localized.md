@@ -7,10 +7,10 @@
 
 ## English (U.S.) — 建议设为主要语言
 
-- **Name**: Grammar Scan: Japanese
-- **Subtitle**: Snap a page, learn the grammar
+- **Name**: Japanese Grammar Lookup
+- **Subtitle**: JLPT N5-N1 grammar by photo
 - **Promotional Text**: Point your camera at any Japanese book and every grammar point lights up. Tap to see meaning, usage, when to use it, origin and similar grammar. 100% offline.
-- **Keywords**: japanese,grammar,jlpt,n5,n4,n3,n2,learn japanese,nihongo,scanner,ocr,camera,study,reading,textbook
+- **Keywords**: nihongo,bunpo,learn,study,reading,textbook,camera,scanner,ocr,n5,n4,n3,n2,n1,exam,dictionary
 - **Description**:
 
 Reading Japanese and stuck on the grammar? Point your camera at the page and Grammar Scan highlights every grammar point it finds.
@@ -44,10 +44,10 @@ Explanations available in English, 한국어, Español, Tiếng Việt, 简体�
 
 ## 한국어
 
-- **이름**: 문법 스캔 - 일본어 문법 카메라
-- **부제**: 책을 찍으면 일본어 문법이 보인다
+- **이름**: 일본어 문법 사전
+- **부제**: 일본어 공부 JLPT N1-N5 문법 사진 인식
 - **프로모션 텍스트**: 카메라를 일본어 책에 대면 문법이 바로 하이라이트됩니다. 누르면 의미, 용법, 사용 장면, 어원, 비슷한 문법 비교까지. 완전 오프라인.
-- **키워드**: 일본어,문법,JLPT,일본어공부,N5,N4,N3,N2,JPT,카메라,스캔,독해,일본어문법,교재
+- **키워드**: 문법,일본어공부,JPT,독해,교재,카메라,스캔,N5,N4,N3,N2,N1,시험,사전,일본어문법
 - **설명**:
 
 일본어 책을 읽다가 문법이 막히셨나요? 카메라를 페이지에 대기만 하세요.
@@ -73,10 +73,10 @@ Explanations available in English, 한국어, Español, Tiếng Việt, 简体�
 
 ## Español
 
-- **Nombre**: Gramática JP: escáner
-- **Subtítulo**: Fotografía y entiende el japonés
+- **Nombre**: Gramática japonesa: consulta
+- **Subtítulo**: Japonés JLPT N1-N5 con fotos
 - **Texto promocional**: Apunta la cámara a un libro en japonés y cada punto gramatical se resalta. Toca para ver significado, uso, contexto, origen y gramática similar. Sin conexión.
-- **Palabras clave**: japonés,gramática,jlpt,n5,n4,n3,n2,aprender japonés,nihongo,escáner,cámara,ocr,estudio,lectura
+- **Palabras clave**: japonés,gramática,nihongo,estudio,lectura,libro,cámara,escáner,ocr,n5,n4,n3,n2,n1,examen,diccionario
 - **Descripción**:
 
 ¿Lees en japonés y te atascas con la gramática? Apunta la cámara a la página y la app resaltará todos los puntos gramaticales.
@@ -102,10 +102,10 @@ PRIVADO Y SIN CONEXIÓN
 
 ## Tiếng Việt
 
-- **Tên**: Ngữ Pháp JP - Quét sách
-- **Phụ đề**: Chụp trang sách, hiểu ngữ pháp
+- **Tên**: Tra Ngữ Pháp Tiếng Nhật
+- **Phụ đề**: Tiếng Nhật JLPT N1-N5 qua ảnh
 - **Văn bản quảng cáo**: Hướng camera vào sách tiếng Nhật, mọi mẫu ngữ pháp được tô sáng ngay. Nhấn để xem ý nghĩa, cách dùng, tình huống, nguồn gốc và ngữ pháp tương tự. Hoàn toàn ngoại tuyến.
-- **Từ khóa**: tiếng nhật,ngữ pháp,jlpt,n5,n4,n3,n2,học tiếng nhật,quét,camera,ocr,đọc hiểu,giáo trình
+- **Từ khóa**: ngữ pháp,học tiếng nhật,nihongo,đọc hiểu,giáo trình,camera,quét,ocr,n5,n4,n3,n2,n1,thi,từ điển
 - **Mô tả**:
 
 Đọc sách tiếng Nhật mà vướng ngữ pháp? Chỉ cần hướng camera vào trang sách.
@@ -137,10 +137,10 @@ PRIVADO Y SIN CONEXIÓN
 
 ## 繁體中文
 
-- **名稱**：語法掃描 - 日語語法拍照辨識
-- **副標題**：拍下書本，秒懂日語語法
+- **名稱**：日語文法速查
+- **副標題**：學日文 JLPT N1-N5 文法拍照辨識
 - **宣傳文字**：把相機對準日語書，文中的語法點立刻反白標示！點一下就能看到意思、用法、使用場景、詞源和相近語法比較。完全離線。
-- **關鍵字**：日語,日文,語法,文法,JLPT,日檢,N1,N2,N3,N4,N5,拍照,掃描,OCR,學日文
+- **關鍵字**：日語,日檢,語法,能力考,日本語,五十音,掃描,OCR,讀書,考試,自學,備考,字典,入門
 - **描述**：
 
 讀日文書時遇到看不懂的語法？打開「語法掃描」，對準書頁即可。
