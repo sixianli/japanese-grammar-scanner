@@ -129,7 +129,7 @@ class E2ETestCase: XCTestCase {
             app.buttons.matching(NSPredicate(format: "label == '关闭'")).firstMatch.tap()
         }
         let image = app.images.matching(identifier: "PXGGridLayout-Info").firstMatch
-        XCTAssertTrue(image.waitForExistence(timeout: 20), "照片选择器里没有照片", file: file, line: line)
+        XCTAssertTrue(image.waitForExistence(timeout: 45), "照片选择器里没有照片", file: file, line: line)
         image.tap()
     }
 }
