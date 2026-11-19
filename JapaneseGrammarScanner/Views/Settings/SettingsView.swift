@@ -12,7 +12,7 @@ struct SettingsSheet: View {
             SettingsView(close: { dismiss() })
                 .onAppear { LanguageStore.reopenLanguagePage = false }
                 .toolbar {
-                    ToolbarItem(placement: .confirmationAction) { Button(tr("完成")) { dismiss() } }
+                    ToolbarItem(placement: .confirmationAction) { Button(tr("完成")) { dismiss() }.accessibilityIdentifier("settings.done") }
                 }
                 .navigationDestination(for: SettingsPage.self) { page in
                     switch page {

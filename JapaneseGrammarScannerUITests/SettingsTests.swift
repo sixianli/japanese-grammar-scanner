@@ -82,9 +82,12 @@ final class SettingsTests: E2ETestCase {
             // App 内提交未开通时，弹出系统分享面板
             let share = app.descendants(matching: .any)["ActivityListView"]
             wait(share, "点发送后应弹出分享面板（或提交成功提示）", timeout: 10)
-            app.swipeDown(velocity: .fast)
-            let close = app.buttons.matching(NSPredicate(format: "label == '关闭' OR label == 'Close'")).firstMatch
-            if share.exists && close.exists { close.tap() }
+            // iOS 26 的分享面板有时下滑一次关不掉：最多试三次，有「关闭」按钮就点它
+            for _ in 0..<3 where share.exists {
+                let close = app.buttons.matching(NSPredicate(format: "label == '关闭' OR label == 'Close'")).firstMatch
+                if close.exists && close.isHittable { close.tap() } else { app.swipeDown(velocity: .fast) }
+                _ = XCTWaiter().wait(for: [expectation(for: NSPredicate(format: "exists == false"), evaluatedWith: share)], timeout: 3)
+            }
             // 下滑关分享面板时，反馈页有时也一起关了
             if navBar("反馈").exists {
                 navBar("反馈").buttons["取消"].tap()
@@ -100,21 +103,13 @@ final class SettingsTests: E2ETestCase {
         wait(navBar("反馈"), "反馈页")
         button(startingWith: "添加截图").tap()
         pickFirstPhoto()
-        // 多选的照片选择器要再点确认（iOS 26 是右侧的 ✓ 按钮，旧系统是「添加」）
-        // 多选的照片选择器要再点确认（iOS 26 是右上角的 ✓）。同名的「完成」按钮设置页里也有（被盖住），只点看得见的那个
-        let candidates = app.buttons.matching(NSPredicate(format: "label IN {'添加', 'Add', '完成', 'Done', '确定', 'OK', '选取', 'Choose'} OR identifier IN {'Done', 'Add', 'DoneButton'}"))
-        let deadline = Date().addingTimeInterval(8)
-        var tapped = false
-        while !tapped && Date() < deadline {
-            if let b = candidates.allElementsBoundByIndex.last(where: { $0.exists && $0.isHittable }) {
-                b.tap()
-                tapped = true
-            } else {
-                Thread.sleep(forTimeInterval: 0.5)
-            }
-        }
-        if !tapped {
-            print("PICKER BUTTONS:", app.buttons.allElementsBoundByIndex.prefix(40).map { "\($0.identifier)|\($0.label)|\($0.isHittable)" })
+        // 多选的照片选择器要再点确认（iOS 26 是右上角的 ✓，名字也叫「完成」）。
+        // 设置页（被盖住）和键盘上的「完成」有自己的标识，排除掉，剩下的就是照片选择器的
+        let confirm = app.buttons.matching(NSPredicate(format: "(label IN {'添加', 'Add', '完成', 'Done', '确定', 'OK'}) AND NOT (identifier IN {'settings.done', 'keyboard.done'})")).firstMatch
+        if confirm.waitForExistence(timeout: 8) {
+            confirm.tap()
+        } else {
+            print("PICKER BUTTONS:", app.buttons.allElementsBoundByIndex.prefix(40).map { "\($0.identifier)|\($0.label)" })
         }
         wait(app.buttons["删除截图"], "选好的截图应显示在反馈页", timeout: 15)
         app.buttons["删除截图"].tap()
