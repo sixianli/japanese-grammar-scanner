@@ -276,9 +276,6 @@ struct ScanResultView: View {
         switch outcome {
         case .success(let (r, lines)):
             phase = .done(r)
-            if let cg = image.cgImage {
-                ink = await Task.detached(priority: .userInitiated) { InkMask.make(from: cg) }.value
-            }
             if DemoMode.opensZoom {
                 try? await Task.sleep(for: .milliseconds(600))
                 zoom.open()

@@ -23,7 +23,7 @@ enum ImageFit {
 enum HighlightStyle {
     /// 线框（相机实时取景：画面每秒变化，字变色会闪，线框最清楚）
     case boxes
-    /// 荧光笔：语法所在的字染成主题色，底下垫一层淡色；相邻的两段深浅交替、中间留缝（识别结果页）
+    /// 荧光笔：语法所在的位置垫一层淡色（原字不变色）；相邻的两段深浅交替、中间留缝（识别结果页）
     case marker(ink: CGImage?)
 }
 
@@ -135,7 +135,7 @@ struct QuadShape: InsettableShape {
     }
 }
 
-/// 荧光笔样式：字变主题色 + 淡色底；相邻的两段深浅交替，两段之间留一道细缝
+/// 荧光笔样式：淡色底（正片叠底，字保持原色）；相邻的两段深浅交替，两段之间留一道细缝
 private struct MarkerHighlight: View {
     let result: ScanResult
     let imageSize: CGSize
@@ -156,30 +156,16 @@ private struct MarkerHighlight: View {
                 return MarkerPiece(box: box, points: MarkerShading.shortened(pts), shade: shades[box.clusterID] ?? 0)
             }
             ZStack(alignment: .topLeading) {
-                // 1. 淡色荧光笔底（选中的那段更深）
+                // 1. 淡色荧光笔底（选中的那段更深）。用「正片叠底」混合：像真的荧光笔一样只给纸面上色，
+                //    原来的黑字保持黑色、清晰可读（Build 14 把字也染成主题色，绿字压在绿底上看不清）
                 ForEach(quads) { item in
                     let selected = item.box.clusterID == selectedClusterID
                     QuadShape(points: item.points)
                         .fill(MarkerShading.tint(item.shade, selected: selected))
                 }
-                // 2. 把这些位置上的笔画染成主题色（两种深浅各一层）
-                if let ink {
-                    ForEach(0..<2, id: \.self) { shade in
-                        MarkerShading.textColor(shade)
-                            .mask {
-                                Image(decorative: ink, scale: 1)
-                                    .resizable()
-                                    .frame(width: display.width, height: display.height)
-                                    .position(x: display.midX, y: display.midY)
-                                    .luminanceToAlpha()
-                            }
-                            .mask {
-                                MultiQuadShape(quads: quads.filter { $0.shade == shade }.map(\.points))
-                            }
-                    }
-                    .allowsHitTesting(false)
-                }
-                // 3. 点击区域（每个片段一个，稍微放大一点好点中）
+                .blendMode(.multiply)
+                .allowsHitTesting(false)
+                // 2. 点击区域（每个片段一个，稍微放大一点好点中）
                 ForEach(quads) { item in
                     if let cluster = clustersByID[item.box.clusterID] {
                         let full = item.box.quad.map { CGPoint(x: display.minX + $0.x * display.width, y: display.minY + $0.y * display.height) }
@@ -280,8 +266,8 @@ enum MarkerShading {
     }
 
     static func tint(_ shade: Int, selected: Bool) -> Color {
-        let base = shade == 0 ? 0.20 : 0.34
-        return Theme.photoHighlight.opacity(selected ? base + 0.22 : base)
+        let base = shade == 0 ? 0.16 : 0.26
+        return Theme.photoHighlight.opacity(selected ? base + 0.14 : base)
     }
 }
 
