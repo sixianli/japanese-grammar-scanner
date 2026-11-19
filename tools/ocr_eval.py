@@ -144,7 +144,8 @@ def variant_lines(lines, variant):
 # ---------- 评测 ----------
 
 def norm(s):
-    return re.sub(r"\s", "", s)
+    """比较前去掉空白和转写约定不统一的符号（动词分类 Ⅰ/Ⅱ、★☆、□、＊、〓）。"""
+    return re.sub(r"[\sⅠⅡⅢ★☆□■＊*〓]", "", s)
 
 
 def text_metrics(ocr, gt):
