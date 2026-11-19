@@ -139,10 +139,17 @@ struct RootTabView: View {
 
     /// 端到端测试（UI 测试启动参数 -e2e）：清空本地数据，放入固定的扫描记录、浏览记录，跳过引导。
     private func seedForEndToEndTests() {
-        didCompleteOnboarding = true
         history.clearScans()
         history.clearViewed()
         for id in favorites.ids { favorites.toggle(id) }
+        appearance.accent = .matcha
+        appearance.light = AppearanceStore.LightBackground.allCases[0]
+        appearance.dark = AppearanceStore.DarkBackground.allCases[0]
+        if DemoMode.e2eFresh {
+            didCompleteOnboarding = false
+            return
+        }
+        didCompleteOnboarding = true
         if let image = UIImage(named: "SamplePage")?.normalizedForOCR() {
             for _ in 0..<4 {
                 _ = history.recordScan(image: image, grammarIDs: ["te-shimau", "you-ni-naru", "ni-mo-kakawarazu"])

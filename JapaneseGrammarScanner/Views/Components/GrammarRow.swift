@@ -43,6 +43,7 @@ struct GrammarRow: View {
             }
             .buttonStyle(.borderless)
             .accessibilityLabel(favorites.isFavorite(point.id) ? Text("取消收藏") : Text("收藏"))
+            .accessibilityIdentifier("row.star")
         }
         .padding(.vertical, 4)
     }

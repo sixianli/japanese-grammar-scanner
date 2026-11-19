@@ -47,6 +47,8 @@ final class LanguageStore: ObservableObject {
     @Published private(set) var library: GrammarLibrary
 
     init() {
+        // 端到端测试每次从「跟随系统」开始
+        if DemoMode.e2e { UserDefaults.standard.removeObject(forKey: AppLanguage.storageKey) }
         language = AppLanguage.selected
         library = GrammarLibrary.shared
     }

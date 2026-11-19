@@ -68,7 +68,7 @@ jobs:
   # 端到端测试：在模拟器上像用户一样点击、跳转、返回（JapaneseGrammarScannerUITests）
   e2e:
     runs-on: xcode-27
-    timeout-minutes: 45
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - name: Pick simulator
@@ -82,6 +82,11 @@ jobs:
           c.sort(key=lambda t:(t[0], t[1]['name'].endswith('Pro Max')))
           print(c[-1][1]['udid'])")
           echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+      - name: Put sample photos into the simulator's photo library
+        run: |
+          xcrun simctl boot "${{ steps.sim.outputs.udid }}" || true
+          xcrun simctl bootstatus "${{ steps.sim.outputs.udid }}" -b
+          xcrun simctl addmedia "${{ steps.sim.outputs.udid }}" tests/ocr/samples/IMG_8936.jpg tests/ocr/samples/IMG_8939.jpg
       - name: End-to-end tests
         run: |
           set -o pipefail

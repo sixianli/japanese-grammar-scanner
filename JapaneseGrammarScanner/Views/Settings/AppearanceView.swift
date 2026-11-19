@@ -57,6 +57,7 @@ struct AppearanceView: View {
                 }
                 .buttonStyle(.plain)
                 .accessibilityAddTraits(item == selected ? .isSelected : [])
+                .accessibilityIdentifier("swatch")
             }
         }
         .padding(.vertical, 6)

@@ -2,62 +2,8 @@ import XCTest
 
 /// 端到端测试：在模拟器上像用户一样点击、跳转、返回，覆盖 App 的主要使用路径。
 /// 每次提交都在 CI（iOS Build & Test → e2e）里运行。启动参数 -e2e 会清空本地数据并放入固定的扫描记录和浏览记录。
-final class EndToEndTests: XCTestCase {
-    private var app: XCUIApplication!
-
-    override func setUp() {
-        continueAfterFailure = false
-        app = XCUIApplication()
-        app.launchArguments = ["-e2e", "-demoUnlocked", "-AppleLanguages", "(zh-Hans)", "-AppleLocale", "zh_CN"]
-        app.launch()
-        XCTAssertTrue(id("home.search").waitForExistence(timeout: 20), "启动后应停在首页")
-    }
-
-    // MARK: - 工具
-
-    private func id(_ identifier: String) -> XCUIElement {
-        app.descendants(matching: .any).matching(identifier: identifier).firstMatch
-    }
-
-    private func ids(_ identifier: String) -> XCUIElementQuery {
-        app.descendants(matching: .any).matching(identifier: identifier)
-    }
-
-    private func button(startingWith label: String) -> XCUIElement {
-        let b = app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", label)).firstMatch
-        XCTAssertTrue(b.waitForExistence(timeout: 5), "找不到按钮「\(label)」")
-        return b
-    }
-
-    private func tab(_ title: String) -> XCUIElement {
-        app.tabBars.buttons[title].firstMatch
-    }
-
-    private func wait(_ element: XCUIElement, _ message: String, timeout: TimeInterval = 15,
-                      file: StaticString = #filePath, line: UInt = #line) {
-        XCTAssertTrue(element.waitForExistence(timeout: timeout), message, file: file, line: line)
-    }
-
-    private func back(file: StaticString = #filePath, line: UInt = #line) {
-        let button = app.navigationBars.buttons.element(boundBy: 0)
-        XCTAssertTrue(button.waitForExistence(timeout: 5), "找不到返回按钮", file: file, line: line)
-        button.tap()
-    }
-
-    /// 识别结果页出现，并且识别完成（列表里出现语法点）
-    private func waitForScanResult(file: StaticString = #filePath, line: UInt = #line) {
-        wait(app.navigationBars["识别结果"], "应进入识别结果页", file: file, line: line)
-        wait(id("result.grammarRow"), "识别结果页应列出语法点", timeout: 40, file: file, line: line)
-    }
-
-    private func scrollTo(_ element: XCUIElement, maxSwipes: Int = 12) {
-        var n = 0
-        while !element.isHittable && n < maxSwipes {
-            app.swipeUp()
-            n += 1
-        }
-    }
-
+/// 主要导航路径（首页各入口、扫描记录、标签切换、搜索焦点、设置语言）
+final class EndToEndTests: E2ETestCase {
     // MARK: - 首页
 
     /// build 12 的 bug：在「全部扫描记录」点一条记录，没有进入识别结果，而是在列表里原地打转
@@ -131,8 +77,8 @@ final class EndToEndTests: XCTestCase {
         waitForScanResult()
 
         // 放大查看：点图片进入全屏，点关闭回来
-        id("result.image").tap()
-        wait(id("zoom.close"), "点图片应进入全屏查看")
+        id("result.zoomButton").tap()
+        wait(id("zoom.close"), "点放大按钮应进入全屏查看")
         id("zoom.close").tap()
         XCTAssertTrue(app.navigationBars["识别结果"].waitForExistence(timeout: 5), "关闭全屏后应回到识别结果")
 
@@ -175,14 +121,6 @@ final class EndToEndTests: XCTestCase {
         XCTAssertTrue(waitForFocus(field), "搜索框应获得输入焦点")
     }
 
-    private func waitForFocus(_ element: XCUIElement, timeout: TimeInterval = 5) -> Bool {
-        let deadline = Date().addingTimeInterval(timeout)
-        while Date() < deadline {
-            if (element.value(forKey: "hasKeyboardFocus") as? Bool) == true { return true }
-            RunLoop.current.run(until: Date().addingTimeInterval(0.2))
-        }
-        return false
-    }
 
     // MARK: - 语法库
 

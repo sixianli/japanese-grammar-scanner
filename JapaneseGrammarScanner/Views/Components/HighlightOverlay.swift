@@ -79,6 +79,7 @@ struct HighlightOverlay: View {
                         .accessibilityElement()
                         .accessibilityLabel(cluster.grammarIDs.compactMap { library.point(id: $0)?.displayTitle }.joined(separator: "、"))
                         .accessibilityAddTraits(.isButton)
+                        .accessibilityIdentifier("highlight.box")
                 }
             }
         }

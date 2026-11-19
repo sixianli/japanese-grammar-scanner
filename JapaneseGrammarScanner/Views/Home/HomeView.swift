@@ -38,6 +38,7 @@ struct HomeView: View {
                             .font(.footnote)
                             .foregroundStyle(.secondary)
                             .frame(maxWidth: .infinity)
+                            .accessibilityIdentifier("home.feedback")
                     }
                     .buttonStyle(.plain)
                 }
@@ -136,6 +137,7 @@ struct HomeView: View {
             .prominentGlassButton()
             .controlSize(.large)
             .buttonBorderShape(.capsule)
+            .accessibilityIdentifier("home.camera")
 
             HStack(spacing: 12) {
                 PhotosPicker(selection: $photoItem, matching: .images) {
@@ -146,6 +148,7 @@ struct HomeView: View {
                 }
                 .secondaryGlassButton()
                 .buttonBorderShape(.capsule)
+                .accessibilityIdentifier("home.photos")
                 Button {
                     if let image = UIImage(named: "SamplePage") {
                         path.append(.scan(ScanImage(image: image.normalizedForOCR(), isSample: true)))
@@ -158,6 +161,7 @@ struct HomeView: View {
                 }
                 .secondaryGlassButton()
                 .buttonBorderShape(.capsule)
+                .accessibilityIdentifier("home.sample")
             }
             .controlSize(.large)
         }

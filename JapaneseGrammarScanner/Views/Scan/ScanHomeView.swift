@@ -152,6 +152,7 @@ struct ScanHomeView: View {
             PhotosPicker(selection: $photoItem, matching: .images) {
                 controlIcon(isLoadingPhoto ? "hourglass" : "photo.on.rectangle", label: "相册")
             }
+            .accessibilityIdentifier("scan.photos")
             Spacer()
             Button {
                 if let image = camera.captureStill() {
@@ -166,6 +167,7 @@ struct ScanHomeView: View {
             .disabled(camera.status != .running)
             .opacity(camera.status == .running ? 1 : 0.4)
             .accessibilityLabel("定格并精细识别")
+            .accessibilityIdentifier("scan.shutter")
             Spacer()
             Button {
                 camera.torchOn.toggle()

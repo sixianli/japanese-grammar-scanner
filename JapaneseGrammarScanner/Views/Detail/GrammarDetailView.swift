@@ -123,6 +123,7 @@ struct GrammarDetailView: View {
                     .padding(.bottom, 40)
                 }
                 .buttonStyle(.plain)
+                .accessibilityIdentifier("detail.feedback")
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             .coordinateSpace(name: "detailScroll")
@@ -344,6 +345,7 @@ private struct SenseOutline: View {
                     .contentShape(Rectangle())
                 }
                 .buttonStyle(RowPressStyle())
+                .accessibilityIdentifier("detail.senseRow")
                 .disabled(!tappable)
                 .accessibilityHint(tappable ? Text("跳到用法") : Text(verbatim: ""))
                 Divider().padding(.leading, 34)

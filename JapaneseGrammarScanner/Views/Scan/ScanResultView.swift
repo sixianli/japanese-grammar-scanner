@@ -100,19 +100,21 @@ struct ScanResultView: View {
             }
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .overlay(alignment: .bottomTrailing) {
-                Image(systemName: "arrow.up.left.and.arrow.down.right")
-                    .font(.caption.weight(.bold))
-                    .foregroundStyle(.white)
-                    .padding(8)
-                    .background(.black.opacity(0.5), in: Circle())
-                    .padding(8)
-                    .allowsHitTesting(false)
+                Button { zoom.open() } label: {
+                    Image(systemName: "arrow.up.left.and.arrow.down.right")
+                        .font(.caption.weight(.bold))
+                        .foregroundStyle(.white)
+                        .padding(8)
+                        .background(.black.opacity(0.5), in: Circle())
+                        .padding(8)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(Text("放大查看"))
+                .accessibilityIdentifier("result.zoomButton")
             }
             .contentShape(Rectangle())
             .onTapGesture { zoom.open() }
-            .accessibilityElement(children: .ignore)
-            .accessibilityAddTraits(.isButton)
-            .accessibilityLabel(Text("放大查看"))
+            .accessibilityElement(children: .contain)
             .accessibilityIdentifier("result.image")
             .frame(maxWidth: .infinity)
             .frame(maxHeight: 460)
@@ -206,6 +208,7 @@ struct ScanResultView: View {
                 .padding(.vertical, 8)
             }
             .buttonStyle(.plain)
+            .accessibilityIdentifier("result.editText")
             if textWasEdited {
                 Text("文本已手动修改，图片上的高亮已隐藏。").font(.footnote).foregroundStyle(.secondary)
                     .frame(maxWidth: .infinity)
@@ -216,6 +219,7 @@ struct ScanResultView: View {
     private var editSheet: some View {
         NavigationStack {
             TextEditor(text: $draftText)
+                .accessibilityIdentifier("result.editor")
                 .font(.title3)
                 .padding()
                 .navigationTitle("修正识别文本")
