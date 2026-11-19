@@ -39,7 +39,7 @@ jobs:
         env:
           TEST_RUNNER_OCR_SAMPLES: ${{ github.workspace }}/tests/ocr/samples
           TEST_RUNNER_OCR_OUT: ${{ github.workspace }}/ocr-out
-          TEST_RUNNER_OCR_CONFIGS: ${{ inputs.configs || 'base,corrected' }}
+          TEST_RUNNER_OCR_CONFIGS: ${{ inputs.configs || 'base,tiled' }}
         run: |
           set -o pipefail
           xcodebuild test \
