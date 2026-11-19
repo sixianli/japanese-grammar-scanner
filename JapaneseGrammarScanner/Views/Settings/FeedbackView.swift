@@ -7,13 +7,20 @@ import UIKit
 /// 设置了反馈邮箱且本机可发邮件时，直接打开写邮件界面；否则通过系统分享面板发送（邮件、微信等）。
 struct FeedbackView: View {
     enum Kind: String, CaseIterable, Identifiable {
-        case bug, content, suggestion
+        case content, bug, suggestion
         var id: String { rawValue }
         var title: LocalizedStringKey {
             switch self {
-            case .bug: "功能问题 / bug"
-            case .content: "讲解内容有误"
-            case .suggestion: "建议"
+            case .content: "内容：讲解有误或看不懂"
+            case .bug: "功能：bug 或用不了"
+            case .suggestion: "体验与建议"
+            }
+        }
+        var icon: String {
+            switch self {
+            case .content: "text.book.closed"
+            case .bug: "ladybug"
+            case .suggestion: "lightbulb"
             }
         }
         var subjectTag: String {
@@ -27,6 +34,7 @@ struct FeedbackView: View {
 
     /// 从某个语法点打开时附带的上下文（如语法点 id）
     var context: String? = nil
+    var initialKind: Kind = .bug
 
     @Environment(\.dismiss) private var dismiss
     @State private var kind: Kind = .bug
@@ -47,6 +55,7 @@ struct FeedbackView: View {
                     }
                     .pickerStyle(.menu)
                 }
+                .onAppear { kind = initialKind }
                 .listRowBackground(Theme.card)
 
                 Section {

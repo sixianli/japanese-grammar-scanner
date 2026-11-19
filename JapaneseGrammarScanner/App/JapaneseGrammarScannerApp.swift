@@ -63,6 +63,7 @@ struct RootTabView: View {
     struct FeedbackContext: Identifiable {
         let id = UUID()
         let text: String?
+        var kind: FeedbackView.Kind = .bug
     }
 
     /// 再次点击当前标签时回到该标签的首页（iOS 标准行为）。
@@ -83,10 +84,15 @@ struct RootTabView: View {
             }
             .onReceive(NotificationCenter.default.publisher(for: .showAppearance)) { _ in showAppearance = true }
             .sheet(item: $feedbackContext) { ctx in
-                FeedbackView(context: ctx.text).tint(Theme.accent)
+                FeedbackView(context: ctx.text, initialKind: ctx.kind).tint(Theme.accent)
             }
             .onReceive(NotificationCenter.default.publisher(for: .showFeedback)) { note in
-                feedbackContext = FeedbackContext(text: note.object as? String)
+                if let kind = note.object as? FeedbackView.Kind {
+                    feedbackContext = FeedbackContext(text: nil, kind: kind)
+                } else {
+                    let text = note.object as? String
+                    feedbackContext = FeedbackContext(text: text, kind: text?.hasPrefix("grammar:") == true ? .content : .bug)
+                }
             }
             .onReceive(NotificationCenter.default.publisher(for: .focusSearch)) { _ in tab = AppTab.search }
         .fullScreenCover(isPresented: $showOnboarding) {

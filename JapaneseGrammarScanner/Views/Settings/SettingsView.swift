@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// 设置：购买状态、恢复购买、隐私政策、开源许可。
+/// 设置：外观、反馈、帮助、关于（收费开启时还有购买）。
 struct SettingsView: View {
     @EnvironmentObject private var store: EntitlementStore
     @State private var showPaywall = false
@@ -21,21 +21,26 @@ struct SettingsView: View {
                     .disabled(store.isPurchasing)
             }
             }
-            Section {
-                Button {
-                    NotificationCenter.default.post(name: .showFeedback, object: nil)
-                } label: {
-                    Label("反馈问题或建议", systemImage: "envelope")
-                }
-            } footer: {
-                Text("遇到 bug、讲解有误或有任何建议，都可以附上截图告诉我们。")
-            }
             Section("外观") {
                 Button {
                     NotificationCenter.default.post(name: .showAppearance, object: nil)
                 } label: {
                     Label("主题色与背景色", systemImage: "paintpalette")
                 }
+            }
+            .listRowBackground(Theme.card)
+            Section {
+                ForEach(FeedbackView.Kind.allCases) { kind in
+                    Button {
+                        NotificationCenter.default.post(name: .showFeedback, object: kind)
+                    } label: {
+                        Label(kind.title, systemImage: kind.icon)
+                    }
+                }
+            } header: {
+                Text("反馈")
+            } footer: {
+                Text("遇到 bug、讲解有误或有任何建议，都可以附上截图告诉我们。")
             }
             .listRowBackground(Theme.card)
             Section("帮助") {

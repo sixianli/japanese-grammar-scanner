@@ -48,6 +48,8 @@ struct HomeView: View {
             .background(Theme.background)
             // 底部标签栏已标明「首页」，这里不再显示大标题，把空间留给内容
             .navigationTitle("首页")
+            // 用 inline 标题再隐藏导航栏：避免下拉时系统为大标题预留空间而让页面突然跳动
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar(.hidden, for: .navigationBar)
             .withAppRoutes()
             .sheet(isPresented: $showPaywall) { PaywallView() }
@@ -70,6 +72,23 @@ struct HomeView: View {
     // MARK: 搜索入口（点一下进入搜索标签并直接开始输入）
 
     private var searchEntry: some View {
+        HStack(spacing: 10) {
+            searchField
+            // 设置入口：外观（主题色、背景色）、反馈等
+            NavigationLink { SettingsView() } label: {
+                Image(systemName: "gearshape")
+                    .font(.system(size: 18, weight: .regular))
+                    .foregroundStyle(Color.primary)
+                    .frame(width: 46, height: 46)
+                    .glassBackground(in: Circle(), interactive: true)
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel(Text("设置"))
+        }
+        .padding(.top, 8)
+    }
+
+    private var searchField: some View {
         Button {
             NotificationCenter.default.post(name: .focusSearch, object: nil)
         } label: {
@@ -85,7 +104,6 @@ struct HomeView: View {
             .glassBackground(in: Capsule(), interactive: true)
         }
         .buttonStyle(.plain)
-        .padding(.top, 8)
         .accessibilityLabel(Text("搜索语法或意思"))
     }
 

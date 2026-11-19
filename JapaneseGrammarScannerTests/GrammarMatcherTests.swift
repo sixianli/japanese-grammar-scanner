@@ -241,6 +241,10 @@ final class ContentRulesTests: XCTestCase {
         XCTAssertEqual(library.search("にも関わらず").first?.id, "ni-mo-kakawarazu")
         XCTAssertEqual(library.search("ニモカカワラズ").first?.id, "ni-mo-kakawarazu")
         XCTAssertFalse(library.search("尽管").isEmpty)
+        // 按意思搜索：近义说法也能找到；讲解正文里顺带出现的不算
+        let notSo = library.search("不那么").map(\.id)
+        XCTAssertEqual(notSo.first, "amari-nai")
+        XCTAssertFalse(notSo.contains("kamoshirenai"), "「不那么」不应搜到〜かもしれない")
         XCTAssertEqual(library.search("てしまう").first?.id, "te-shimau")
     }
 

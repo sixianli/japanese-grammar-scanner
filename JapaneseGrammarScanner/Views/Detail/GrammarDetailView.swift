@@ -224,6 +224,15 @@ struct GrammarDetailView: View {
                 let y = max(titleFrame.minY, targetY)
                 // 横向位置用本页坐标计算（页面推入动画期间屏幕坐标的 x 会变化）
                 let x = Theme.margin + ((screenWidth - base.width * endScale) / 2 - Theme.margin) * progress
+                // 标题进入导航栏时，顶部出现几乎不透明的毛玻璃底，避免标题和下面的正文叠在一起
+                ZStack(alignment: .bottom) {
+                    Rectangle().fill(.regularMaterial)
+                    Rectangle().fill(Theme.background.opacity(0.72))
+                    Rectangle().fill(Color.primary.opacity(0.08)).frame(height: 0.5)
+                }
+                .frame(width: screenWidth, height: max(contentTop, 1))
+                .offset(y: -origin.y)
+                .opacity(Double(min(1, progress * 1.4)))
                 titleRow(p)
                     .frame(width: base.width, alignment: .leading)
                     .scaleEffect(scale, anchor: .topLeading)
@@ -498,19 +507,20 @@ private struct NoteView: View {
                         RubyText(explanation: t, style: .init(font: i == 0 ? .body : .callout,
                                                               color: i == 0 ? .primary : .secondary, lineSpacing: 6))
                     case .example(let correct, let sentence):
+                        // 图标与句子的正文行对齐（有注音时，正文在注音行下方）
+                        let rubyLine = FuriganaStore.shared.hasRuby(sentence)
+                            ? ceil(UIFontMetrics(forTextStyle: .body).scaledValue(for: 9) * 1.3) : 0
+                        let lineHeight = UIFont.preferredFont(forTextStyle: .body).lineHeight
                         HStack(alignment: .top, spacing: 8) {
                             Image(systemName: correct ? "checkmark.circle.fill" : "xmark.circle.fill")
                                 .font(.system(size: 16))
                                 .foregroundStyle(correct ? Color.green : Color.red)
-                                .padding(.top, 15)
+                                .frame(height: lineHeight)
+                                .padding(.top, rubyLine)
                                 .accessibilityLabel(correct ? Text("正确") : Text("错误"))
                             RubyText(japanese: sentence, style: .init(font: .body, rubySize: 9, lineSpacing: 4))
                         }
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 6)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .background((correct ? Color.green : Color.red).opacity(0.07),
-                                    in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                        .padding(.leading, 2)
                     }
                 }
             }

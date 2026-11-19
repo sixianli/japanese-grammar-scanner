@@ -5,6 +5,8 @@ struct ZoomableScanView: View {
     let image: UIImage
     let result: ScanResult
     let library: GrammarLibrary
+    /// 由外部处理关闭（例如缩回原位置的动画）；为 nil 时用系统 dismiss
+    var onClose: (() -> Void)? = nil
     let onSelect: (HighlightCluster) -> Void
 
     @Environment(\.dismiss) private var dismiss
@@ -39,7 +41,12 @@ struct ZoomableScanView: View {
                         SimultaneousGesture(
                             MagnifyGesture()
                                 .onChanged { value in scale = min(8, max(1, lastScale * value.magnification)) }
-                                .onEnded { _ in
+                                .onEnded { value in
+                                    // 在原大小时继续双指缩小：退出全屏
+                                    if lastScale <= 1.01, value.magnification < 0.8 {
+                                        close()
+                                        return
+                                    }
                                     lastScale = scale
                                     if scale <= 1.01 { withAnimation { reset() } }
                                 },
@@ -60,7 +67,7 @@ struct ZoomableScanView: View {
             }
             .ignoresSafeArea()
 
-            Button { dismiss() } label: {
+            Button { close() } label: {
                 Image(systemName: "xmark")
                     .font(.headline)
                     .foregroundStyle(.white)
@@ -69,6 +76,7 @@ struct ZoomableScanView: View {
             }
             .accessibilityLabel(Text("关闭"))
             .padding()
+            .padding(.top, 44)
 
             VStack {
                 Spacer()
@@ -83,6 +91,10 @@ struct ZoomableScanView: View {
             .frame(maxWidth: .infinity)
             .allowsHitTesting(false)
         }
+    }
+
+    private func close() {
+        if let onClose { onClose() } else { dismiss() }
     }
 
     private func reset() {
