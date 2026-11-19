@@ -6,7 +6,8 @@
   1. 指标（--report 前缀.json / .md）
      - 框数、每张平均框数
      - 框重叠率：与「另一个高亮块」的框有明显重叠（交集 > 较小框面积 15%）的框占比
-     - 过高框比例：框的高度 > 本页框高中位数 × 1.6 的框占比（斜拍时外接矩形会比字高出一截）
+     - 过高框比例：框的高度 > 所在行字高 × 1.4 的框占比（盖到上下行）；
+       旧版导出没有行四边形时，改用「> 本页框高中位数 × 1.6」
      - 多语法块比例：一个框里包含 2 个及以上语法点的高亮块占比
      - 长跨度块比例：命中原文超过 12 个字的语法点占比（容易框得太大）
   2. 人工核对用的标注图（--sheets 目录）：照片上画出所有框并编号，旁边列出每个编号对应的语法点和命中的原文。
@@ -75,6 +76,23 @@ def analyze(path, config):
         polys.append((b, pts, poly))
     heights = [edge_height(p) for _, p, _ in polys]
     med = statistics.median(heights) if heights else 0
+    # 每一行的四边形（新版导出才有），用来按「所在行的字高」判断框是否过高
+    line_polys = []
+    for ln in d.get("lines", []):
+        q = ln.get("quad")
+        if q and len(q) == 8:
+            pts = [(q[i] * W, q[i + 1] * H) for i in range(0, 8, 2)]
+            lp = Polygon(pts)
+            line_polys.append((lp if lp.is_valid else lp.buffer(0), edge_height(pts)))
+
+    def line_height_at(poly):
+        c = poly.centroid
+        best = None
+        for lp, h in line_polys:
+            if lp.contains(c) or lp.distance(c) < h * 0.3:
+                if best is None or h < best:
+                    best = h
+        return best
     overlap = tall = 0
     for i, (b, pts, poly) in enumerate(polys):
         for j, (b2, _, poly2) in enumerate(polys):
@@ -84,7 +102,11 @@ def analyze(path, config):
             if inter > 0.15 * min(poly.area, poly2.area):
                 overlap += 1
                 break
-        if med and edge_height(pts) > 1.6 * med:
+        lh = line_height_at(poly) if line_polys else None
+        if lh:
+            if edge_height(pts) > 1.4 * lh:
+                tall += 1
+        elif med and edge_height(pts) > 1.6 * med:
             tall += 1
     if not clusters:  # 旧版导出：按框推断高亮块
         clusters = {ckey(b): {"grammar": b.get("grammar", [])} for b in boxes}
