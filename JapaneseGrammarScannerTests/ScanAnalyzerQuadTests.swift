@@ -48,7 +48,7 @@ final class ScanAnalyzerQuadTests: XCTestCase {
         }
         let flat = (0..<10).map { _ in line(curved: false) }
         XCTAssertFalse(ScanAnalyzer.pageIsCurved(flat))
-        XCTAssertFalse(ScanAnalyzer.pageIsCurved(flat.prefix(9) + [line(curved: true)]), "十行里一行弯不算")
-        XCTAssertTrue(ScanAnalyzer.pageIsCurved(flat.prefix(7) + (0..<3).map { _ in line(curved: true) }))
+        XCTAssertFalse(ScanAnalyzer.pageIsCurved(Array(flat.prefix(9)) + [line(curved: true)]), "十行里一行弯不算")
+        XCTAssertTrue(ScanAnalyzer.pageIsCurved(Array(flat.prefix(7)) + (0..<3).map { _ in line(curved: true) }))
     }
 }
