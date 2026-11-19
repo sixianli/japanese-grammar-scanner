@@ -19,7 +19,12 @@ enum TextRecognizer {
         let handler = VNImageRequestHandler(cgImage: cgImage, orientation: orientation, options: [:])
         try handler.perform([request])
         let observations = request.results ?? []
-        return assemble(observations)
+        var result = assemble(observations)
+        // 精细识别（拍照定格、相册）时，在弯曲的书页上找出每行真正的文字带，让高亮框贴着字
+        if !fast, orientation == .up {
+            TextBandFinder.refine(&result.lines, image: cgImage)
+        }
+        return result
     }
 
     /// 把 Vision 的各行拼成一段文字，用于语法匹配：

@@ -54,11 +54,41 @@ enum ScanAnalyzer {
     /// 斜拍、弯曲的页面上，四边形跟文字一起倾斜；外接矩形会比文字高出一截，并压到上下行。
     static func substringQuad(line: RecognizedLine, local: NSRange) -> [CGPoint] {
         let estimate = estimatedQuad(line: line, local: local)
-        guard let vision = line.quadForRange(local), vision.count == 4,
-              plausible(bounds(of: vision), in: line.boundingBox, estimate: bounds(of: estimate)) else {
-            return estimate
+        var quad = estimate
+        if let vision = line.quadForRange(local), vision.count == 4,
+           plausible(bounds(of: vision), in: line.boundingBox, estimate: bounds(of: estimate)) {
+            quad = fittedToLine(vision, line: line) ?? vision
         }
-        return fittedToLine(vision, line: line) ?? vision
+        return bandFitted(quad, line: line) ?? quad
+    }
+
+    /// 起止位置不变，高度收紧到这一行在弯曲书页上真正的文字带（约 1.2 倍字高）。
+    /// 文字带在这一段突然跳动（可能跳到了别的行）时不收紧。
+    static func bandFitted(_ quad: [CGPoint], line: RecognizedLine) -> [CGPoint]? {
+        guard let band = line.band, line.quad.count == 4, quad.count == 4,
+              let params = lineParams(quad, line: line) else { return nil }
+        let (t0, t1) = params
+        guard band.isSteady(from: t0, to: t1) else { return nil }
+        let q = line.quad
+        let half = 0.62 * band.glyph
+        func corner(_ t: CGFloat, _ side: CGFloat) -> CGPoint {
+            let top = TextBandFinder.lerp(q[0], q[1], t), bottom = TextBandFinder.lerp(q[3], q[2], t)
+            return TextBandFinder.lerp(top, bottom, band.center(at: t) + side * half)
+        }
+        return [corner(t0, -1), corner(t1, -1), corner(t1, 1), corner(t0, 1)]
+    }
+
+    /// 一个子串四边形在整行方向上的起止位置（0～1）
+    static func lineParams(_ quad: [CGPoint], line: RecognizedLine) -> (CGFloat, CGFloat)? {
+        let q = line.quad
+        guard q.count == 4, quad.count == 4 else { return nil }
+        let m0 = TextBandFinder.mid(q[0], q[3]), m1 = TextBandFinder.mid(q[1], q[2])
+        let dx = m1.x - m0.x, dy = m1.y - m0.y
+        let len2 = dx * dx + dy * dy
+        guard len2 > 0 else { return nil }
+        func param(_ p: CGPoint) -> CGFloat { min(max(((p.x - m0.x) * dx + (p.y - m0.y) * dy) / len2, 0), 1) }
+        let t0 = param(TextBandFinder.mid(quad[0], quad[3])), t1 = param(TextBandFinder.mid(quad[1], quad[2]))
+        return t1 - t0 > 0.001 ? (t0, t1) : nil
     }
 
     /// Vision 给的单段框左右位置准，但斜拍时高度常常是字高的两倍多（盖到上下行、和别的框重叠）。

@@ -56,7 +56,8 @@ final class OCREvalTests: XCTestCase {
                     return ["text": c.string, "confidence": c.confidence,
                             "box": [b.minX, b.minY, b.width, b.height].map { Double($0) }, "quad": quad]
                 }
-                let assembled = TextRecognizer.assemble(observations)
+                var assembled = TextRecognizer.assemble(observations)
+                TextBandFinder.refine(&assembled.lines, image: input)
                 let result = ScanAnalyzer.analyze(text: assembled.text, lines: assembled.lines, matcher: matcher)
                 // 高亮框：采用 Vision 逐字位置的算「精确」；Vision 拿不到的算「估算」；拿到但和等宽估算明显不一致而被弃用的算「弃用」
                 var exact = 0, estimated = 0, rejected = 0

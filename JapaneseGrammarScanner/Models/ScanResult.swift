@@ -48,6 +48,8 @@ struct RecognizedLine {
     var quad: [CGPoint] = []
     /// 子串的四个角（同上），跟着文字倾斜
     var quadForRange: (NSRange) -> [CGPoint]? = { _ in nil }
+    /// 弯曲书页上这一行真正的文字带（见 TextBand）；nil 表示整行四边形已经贴字
+    var band: TextBand? = nil
 }
 
 /// 图片 / 相机帧上需要绘制的高亮框。
