@@ -13,7 +13,11 @@ enum TextRecognizer {
         let request = VNRecognizeTextRequest()
         request.recognitionLevel = .accurate // 日文只在 accurate 模式下支持
         request.recognitionLanguages = ["ja-JP", "en-US"]
-        request.usesLanguageCorrection = !fast
+        // 不用 Vision 的语言纠错：纠错会改写识别出的文字（例如把「温泉」改成一个字），
+        // 但每个字的位置仍按改写前算，改写处之后的高亮会整体往右错一个字。
+        // 在 95 张实拍照片上：关掉后约 20% 错位的高亮回到正确位置，语法召回率只低 0.9 个百分点，识别还更快
+        // （docs/ocr-eval/runs/2026-11-19_textband-nolc.md）。
+        request.usesLanguageCorrection = false
         request.minimumTextHeight = fast ? 0.02 : 0
 
         let handler = VNImageRequestHandler(cgImage: cgImage, orientation: orientation, options: [:])
