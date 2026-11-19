@@ -103,8 +103,12 @@ struct RubyText: View {
         var weight: Font.Weight = .regular
     }
 
+    private static let quoteRegex = try! NSRegularExpression(pattern: "「([^」]+)」|『([^』]+)』")
+
     private let plain: String
     private let segments: [RubySegment]
+    /// 排版分组在初始化时算好，重绘时不再重复计算
+    private let groups: [[Atom]]
     private let hasRuby: Bool
     private var style: Style
 
@@ -117,6 +121,7 @@ struct RubyText: View {
         let segs = FuriganaStore.shared.segments(for: japanese)
         segments = RubyText.applyHighlights(segs.map { RubySegment(text: $0.base, ruby: $0.ruby) }, highlights: highlights)
         hasRuby = segs.contains { $0.ruby != nil }
+        groups = AtomBuilder.groups(AtomBuilder.atoms(from: segments))
     }
 
     /// 讲解文字（任意语言），其中「」『』里的日语会自动注音。
@@ -126,8 +131,7 @@ struct RubyText: View {
         var segs: [RubySegment] = []
         let ns = explanation as NSString
         var cursor = 0
-        let regex = try! NSRegularExpression(pattern: "「([^」]+)」|『([^』]+)』")
-        for m in regex.matches(in: explanation, range: NSRange(location: 0, length: ns.length)) {
+        for m in RubyText.quoteRegex.matches(in: explanation, range: NSRange(location: 0, length: ns.length)) {
             let innerRange = m.range(at: 1).location != NSNotFound ? m.range(at: 1) : m.range(at: 2)
             if innerRange.location > cursor {
                 segs.append(RubySegment(text: ns.substring(with: NSRange(location: cursor, length: innerRange.location - cursor))))
@@ -139,6 +143,7 @@ struct RubyText: View {
         if cursor < ns.length { segs.append(RubySegment(text: ns.substring(from: cursor))) }
         segments = segs
         hasRuby = segs.contains { $0.ruby != nil }
+        groups = AtomBuilder.groups(AtomBuilder.atoms(from: segs))
     }
 
     var body: some View {
@@ -155,7 +160,6 @@ struct RubyText: View {
     }
 
     private var flow: some View {
-        let groups = AtomBuilder.groups(AtomBuilder.atoms(from: segments))
         // 注音行本身已经占了一定高度，这里把行距收紧，避免段落显得松散
         return FlowLayout(lineSpacing: max(2, style.lineSpacing - 4)) {
             ForEach(Array(groups.enumerated()), id: \.offset) { _, group in
