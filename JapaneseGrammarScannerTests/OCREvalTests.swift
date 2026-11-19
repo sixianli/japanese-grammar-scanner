@@ -51,8 +51,10 @@ final class OCREvalTests: XCTestCase {
                 let lines: [[String: Any]] = observations.compactMap { obs in
                     guard let c = obs.topCandidates(1).first else { return nil }
                     let b = obs.boundingBox
+                    // quad：Vision 给出的整行四边形（左上原点，左上、右上、右下、左下），用来检查框的高度是否贴字
+                    let quad = [obs.topLeft, obs.topRight, obs.bottomRight, obs.bottomLeft].flatMap { [Double($0.x), Double(1 - $0.y)] }
                     return ["text": c.string, "confidence": c.confidence,
-                            "box": [b.minX, b.minY, b.width, b.height].map { Double($0) }]
+                            "box": [b.minX, b.minY, b.width, b.height].map { Double($0) }, "quad": quad]
                 }
                 let assembled = TextRecognizer.assemble(observations)
                 let result = ScanAnalyzer.analyze(text: assembled.text, lines: assembled.lines, matcher: matcher)

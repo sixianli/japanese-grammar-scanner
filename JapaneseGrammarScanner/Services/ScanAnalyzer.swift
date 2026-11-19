@@ -54,11 +54,34 @@ enum ScanAnalyzer {
     /// 斜拍、弯曲的页面上，四边形跟文字一起倾斜；外接矩形会比文字高出一截，并压到上下行。
     static func substringQuad(line: RecognizedLine, local: NSRange) -> [CGPoint] {
         let estimate = estimatedQuad(line: line, local: local)
-        if let vision = line.quadForRange(local), vision.count == 4,
-           plausible(bounds(of: vision), in: line.boundingBox, estimate: bounds(of: estimate)) {
-            return vision
+        guard let vision = line.quadForRange(local), vision.count == 4,
+              plausible(bounds(of: vision), in: line.boundingBox, estimate: bounds(of: estimate)) else {
+            return estimate
         }
-        return estimate
+        return fittedToLine(vision, line: line) ?? vision
+    }
+
+    /// Vision 给的单段框左右位置准，但斜拍时高度常常是字高的两倍多（盖到上下行、和别的框重叠）。
+    /// 所以只取它在行方向上的起止位置，高度和倾斜沿用整行四边形（整行四边形贴着字）。
+    static func fittedToLine(_ vision: [CGPoint], line: RecognizedLine) -> [CGPoint]? {
+        let q = line.quad
+        let box = line.boundingBox
+        guard q.count == 4, box.height <= box.width * 1.5 else { return nil }  // 竖排保持原样
+        func mid(_ a: CGPoint, _ b: CGPoint) -> CGPoint { CGPoint(x: (a.x + b.x) / 2, y: (a.y + b.y) / 2) }
+        func lerp(_ a: CGPoint, _ b: CGPoint, _ t: CGFloat) -> CGPoint {
+            CGPoint(x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t)
+        }
+        let m0 = mid(q[0], q[3]), m1 = mid(q[1], q[2])
+        let dx = m1.x - m0.x, dy = m1.y - m0.y
+        let len2 = dx * dx + dy * dy
+        guard len2 > 0 else { return nil }
+        func param(_ p: CGPoint) -> CGFloat {
+            min(max(((p.x - m0.x) * dx + (p.y - m0.y) * dy) / len2, 0), 1)
+        }
+        let t0 = param(mid(vision[0], vision[3]))
+        let t1 = param(mid(vision[1], vision[2]))
+        guard t1 - t0 > 0.001 else { return nil }
+        return [lerp(q[0], q[1], t0), lerp(q[0], q[1], t1), lerp(q[3], q[2], t1), lerp(q[3], q[2], t0)]
     }
 
     /// 按字数在整行四边形里插值（行没有四边形时用整行矩形）
