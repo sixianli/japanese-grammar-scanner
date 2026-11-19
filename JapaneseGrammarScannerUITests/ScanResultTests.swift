@@ -8,7 +8,7 @@ final class ScanResultTests: E2ETestCase {
         wait(box, "示例书页上应有高亮框")
         box.tap()
         // 一个框里有多个语法点时先弹出选择
-        let detail = id("screen.grammarDetail")
+        let detail = detailScreen
         if !detail.waitForExistence(timeout: 4) {
             let options = app.buttons.matching(NSPredicate(format: "label CONTAINS '(N'"))
             XCTAssertTrue(options.firstMatch.waitForExistence(timeout: 5), "点高亮框应打开讲解或弹出语法点选择")
@@ -87,7 +87,7 @@ final class ScanResultTests: E2ETestCase {
             let row = rows.element(boundBy: i)
             scrollTo(row)
             row.tap()
-            wait(id("screen.grammarDetail"), "识别结果第 \(i + 1) 个语法点应能打开")
+            wait(detailScreen, "识别结果第 \(i + 1) 个语法点应能打开")
             back()
             wait(navBar("识别结果"), "返回识别结果")
         }

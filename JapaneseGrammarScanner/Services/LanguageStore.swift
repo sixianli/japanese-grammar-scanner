@@ -53,9 +53,14 @@ final class LanguageStore: ObservableObject {
         library = GrammarLibrary.shared
     }
 
+    /// 切换语言后整个界面会按新语言重建（导航标题、标签栏等系统控件只有重建才会换语言），
+    /// 重建后自动重新打开设置并停在语言页，用户看到的就是「原地换了语言」
+    static var reopenLanguagePage = false
+
     func select(_ newValue: AppLanguage) {
         guard newValue != language else { return }
         UserDefaults.standard.set(newValue.rawValue, forKey: AppLanguage.storageKey)
+        Self.reopenLanguagePage = true
         language = newValue
         let content = ContentLanguage.from(identifier: AppLanguage.effectiveIdentifier)
         guard content != library.language else { return }

@@ -75,7 +75,7 @@ final class FreshInstallTests: E2ETestCase {
         // 新用户首页：入门语法列表
         scrollTo(id("grammarRow"))
         id("grammarRow").tap()
-        wait(id("screen.grammarDetail"), "新用户首页的语法点应能打开讲解")
+        wait(detailScreen, "新用户首页的语法点应能打开讲解")
     }
 
     func testOnboardingSkipThenTrySample() {

@@ -61,7 +61,6 @@ struct ScanResultView: View {
         .statusBarHidden(zoom.isOpen)
         .onAppear { zoom.imageSize = scanImage.image.size }
         .navigationTitle("识别结果")
-        .accessibilityIdentifier("screen.scanResult")
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(item: $pushedGrammarID) { id in
             GrammarDetailView(grammarID: id)

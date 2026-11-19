@@ -30,9 +30,16 @@ class E2ETestCase: XCTestCase {
         app.descendants(matching: .any).matching(identifier: identifier)
     }
 
+    /// 底部标签。iOS 26 起标签栏不一定是 TabBar 类型，按「标签名 + 标签图标」找按钮，避免和页面里同名按钮（如「收藏」）混淆。
     func tab(_ title: String) -> XCUIElement {
-        app.tabBars.buttons[title].firstMatch
+        let icon = ["首页": "house", "扫描": "text.viewfinder", "语法库": "books.vertical", "收藏": "star", "搜索": "magnifyingglass",
+                    "Home": "house", "Scan": "text.viewfinder", "Grammar": "books.vertical", "Favorites": "star", "Search": "magnifyingglass"][title] ?? ""
+        return app.buttons.matching(NSPredicate(format: "label == %@ AND identifier == ''", title))
+            .containing(NSPredicate(format: "identifier BEGINSWITH %@", icon)).firstMatch
     }
+
+    /// 讲解页（右上角的收藏按钮只在讲解页出现）
+    var detailScreen: XCUIElement { id("detail.favorite") }
 
     func button(startingWith label: String, file: StaticString = #filePath, line: UInt = #line) -> XCUIElement {
         let b = app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", label)).firstMatch
@@ -60,9 +67,14 @@ class E2ETestCase: XCTestCase {
     }
 
     func back(file: StaticString = #filePath, line: UInt = #line) {
-        let button = app.navigationBars.buttons.element(boundBy: 0)
-        XCTAssertTrue(button.waitForExistence(timeout: 5), "找不到返回按钮", file: file, line: line)
-        button.tap()
+        let button = app.buttons["BackButton"].firstMatch
+        if button.waitForExistence(timeout: 5) {
+            button.tap()
+            return
+        }
+        let fallback = app.navigationBars.buttons.element(boundBy: 0)
+        XCTAssertTrue(fallback.waitForExistence(timeout: 3), "找不到返回按钮", file: file, line: line)
+        fallback.tap()
     }
 
     func scrollTo(_ element: XCUIElement, maxSwipes: Int = 15) {
@@ -73,13 +85,9 @@ class E2ETestCase: XCTestCase {
         }
     }
 
-    func waitForFocus(_ element: XCUIElement, timeout: TimeInterval = 6) -> Bool {
-        let deadline = Date().addingTimeInterval(timeout)
-        while Date() < deadline {
-            if (element.value(forKey: "hasKeyboardFocus") as? Bool) == true { return true }
-            RunLoop.current.run(until: Date().addingTimeInterval(0.2))
-        }
-        return false
+    /// 输入框获得焦点：弹出键盘（CI 关闭了模拟器的硬件键盘，所以获得焦点时一定会出现软键盘）
+    func waitForFocus(_ element: XCUIElement, timeout: TimeInterval = 8) -> Bool {
+        app.keyboards.firstMatch.waitForExistence(timeout: timeout)
     }
 
     /// 识别结果页出现，并且识别完成（列表里出现语法点）
@@ -107,18 +115,13 @@ class E2ETestCase: XCTestCase {
         field.typeText(query)
         wait(id("search.result"), "搜索「\(query)」应有结果")
         id("search.result").tap()
-        wait(id("screen.grammarDetail"), "点搜索结果应进入讲解页")
+        wait(detailScreen, "点搜索结果应进入讲解页")
     }
 
     /// 从系统照片选择器里选第一张（CI 会先用 simctl addmedia 放入示例照片）
     func pickFirstPhoto(file: StaticString = #filePath, line: UInt = #line) {
-        let image = app.scrollViews.otherElements.images.firstMatch
-        if image.waitForExistence(timeout: 15) {
-            image.tap()
-        } else {
-            let cell = app.cells.firstMatch
-            XCTAssertTrue(cell.waitForExistence(timeout: 10), "照片选择器里没有照片", file: file, line: line)
-            cell.tap()
-        }
+        let image = app.images.matching(identifier: "PXGGridLayout-Info").firstMatch
+        XCTAssertTrue(image.waitForExistence(timeout: 20), "照片选择器里没有照片", file: file, line: line)
+        image.tap()
     }
 }

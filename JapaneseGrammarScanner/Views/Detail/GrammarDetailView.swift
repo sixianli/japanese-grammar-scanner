@@ -20,7 +20,6 @@ struct GrammarDetailView: View {
     var body: some View {
         if let point = library.point(id: grammarID) {
             content(point)
-                .accessibilityIdentifier("screen.grammarDetail")
                 .onAppear { history.recordViewed(point.id) }
         } else {
             ContentUnavailableView("找不到该语法点", systemImage: "questionmark.folder")

@@ -3,15 +3,34 @@ import SwiftUI
 /// 设置面板：从底部弹出的整页面板（不挂在任何标签下），内部可以推入外观、语言、隐私政策等页面。
 struct SettingsSheet: View {
     @Environment(\.dismiss) private var dismiss
+    /// 切换语言后重建界面时，直接回到语言页
+    @State private var path: [SettingsPage] = {
+        defer { LanguageStore.reopenLanguagePage = false }
+        return LanguageStore.reopenLanguagePage ? [.language] : []
+    }()
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             SettingsView(close: { dismiss() })
                 .toolbar {
                     ToolbarItem(placement: .confirmationAction) { Button("完成") { dismiss() } }
                 }
+                .navigationDestination(for: SettingsPage.self) { page in
+                    switch page {
+                    case .appearance: AppearanceView()
+                    case .language: LanguagePickerView()
+                    case .privacy: PrivacyPolicyView()
+                    case .terms: TermsView()
+                    case .licenses: LicensesView()
+                    }
+                }
         }
     }
+}
+
+/// 设置里的子页面（同一导航栈内统一用按值跳转）
+enum SettingsPage: Hashable {
+    case appearance, language, privacy, terms, licenses
 }
 
 /// 设置：外观、语言、反馈、帮助、关于（收费开启时还有购买）。
@@ -39,10 +58,10 @@ struct SettingsView: View {
             }
             }
             Section("通用") {
-                NavigationLink { AppearanceView() } label: {
+                NavigationLink(value: SettingsPage.appearance) {
                     Label("主题色与背景色", systemImage: "paintpalette")
                 }
-                NavigationLink { LanguagePickerView() } label: {
+                NavigationLink(value: SettingsPage.language) {
                     HStack {
                         Label("语言", systemImage: "globe")
                         Spacer()
@@ -80,9 +99,9 @@ struct SettingsView: View {
             }
             .listRowBackground(Theme.card)
             Section("关于") {
-                NavigationLink("隐私政策") { PrivacyPolicyView() }
-                NavigationLink("使用条款") { TermsView() }
-                NavigationLink("开源许可") { LicensesView() }
+                NavigationLink("隐私政策", value: SettingsPage.privacy)
+                NavigationLink("使用条款", value: SettingsPage.terms)
+                NavigationLink("开源许可", value: SettingsPage.licenses)
                 HStack {
                     Text("版本")
                     Spacer()

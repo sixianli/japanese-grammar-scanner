@@ -54,11 +54,11 @@ final class SettingsTests: E2ETestCase {
         button(startingWith: "English").tap()
         wait(navBar("Language"), "英文")
         back()
-        navBar("Settings").buttons.element(boundBy: 0).tap()
+        navBar("Settings").buttons["Done"].tap()
         tab("Grammar").tap()
         wait(id("library.row"), "语法库")
         id("library.row").tap()
-        wait(id("screen.grammarDetail"), "讲解页")
+        wait(detailScreen, "讲解页")
         XCTAssertTrue(app.staticTexts.matching(NSPredicate(format: "label CONTAINS[c] 'the'")).firstMatch.waitForExistence(timeout: 8),
                       "切换到英文后讲解内容也应是英文")
     }

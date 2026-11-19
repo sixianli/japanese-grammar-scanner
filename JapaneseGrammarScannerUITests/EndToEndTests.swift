@@ -29,7 +29,7 @@ final class EndToEndTests: E2ETestCase {
         id("home.continueScan").tap()
         waitForScanResult()
         id("result.grammarRow").tap()
-        wait(id("screen.grammarDetail"), "点识别结果里的语法点应进入讲解页")
+        wait(detailScreen, "点识别结果里的语法点应进入讲解页")
         tab("首页").tap()
         wait(id("home.search"), "再次点「首页」应回到首页顶部")
     }
@@ -39,7 +39,7 @@ final class EndToEndTests: E2ETestCase {
         id("seeAll.recent").tap()
         wait(app.navigationBars["最近查看"], "应进入最近查看")
         id("grammarRow").tap()
-        wait(id("screen.grammarDetail"), "最近查看里点语法点应进入讲解页")
+        wait(detailScreen, "最近查看里点语法点应进入讲解页")
         back()
         wait(app.navigationBars["最近查看"], "返回应回到最近查看")
         back()
@@ -51,7 +51,7 @@ final class EndToEndTests: E2ETestCase {
             forgetting.tap()
             wait(app.navigationBars["快要忘了"], "应进入快要忘了")
             id("grammarRow").tap()
-            wait(id("screen.grammarDetail"), "快要忘了里点语法点应进入讲解页")
+            wait(detailScreen, "快要忘了里点语法点应进入讲解页")
             back()
             wait(app.navigationBars["快要忘了"], "返回应回到快要忘了")
         }
@@ -60,12 +60,12 @@ final class EndToEndTests: E2ETestCase {
     func testHomeGrammarRowOpensDetailAndFavorite() {
         scrollTo(id("grammarRow"))
         id("grammarRow").tap()
-        wait(id("screen.grammarDetail"), "首页列表点语法点应进入讲解页")
+        wait(detailScreen, "首页列表点语法点应进入讲解页")
         id("detail.favorite").tap()
         tab("收藏").tap()
         wait(id("favorites.row"), "收藏后应出现在收藏页")
         id("favorites.row").tap()
-        wait(id("screen.grammarDetail"), "收藏页点语法点应进入讲解页")
+        wait(detailScreen, "收藏页点语法点应进入讲解页")
     }
 
     // MARK: - 扫描
@@ -83,13 +83,13 @@ final class EndToEndTests: E2ETestCase {
         XCTAssertTrue(app.navigationBars["识别结果"].waitForExistence(timeout: 5), "关闭全屏后应回到识别结果")
 
         id("result.grammarRow").tap()
-        wait(id("screen.grammarDetail"), "应进入讲解页")
+        wait(detailScreen, "应进入讲解页")
 
         // 切到别的标签再切回来，各标签停在各自的位置
         tab("首页").tap()
         wait(id("home.search"), "切到首页标签应显示首页")
         tab("扫描").tap()
-        wait(id("screen.grammarDetail"), "切回扫描标签应仍停在讲解页")
+        wait(detailScreen, "切回扫描标签应仍停在讲解页")
         tab("扫描").tap()
         wait(id("scan.trySample"), "再点一次扫描标签应回到扫描首页")
     }
@@ -104,14 +104,14 @@ final class EndToEndTests: E2ETestCase {
         field.typeText("ように")
         wait(id("search.result"), "输入后应有搜索结果")
         id("search.result").tap()
-        wait(id("screen.grammarDetail"), "点搜索结果应进入讲解页")
+        wait(detailScreen, "点搜索结果应进入讲解页")
 
         // 从详情页切走，再点搜索标签：应回到搜索框并获得焦点
         tab("收藏").tap()
         tab("搜索").tap()
         XCTAssertTrue(field.waitForExistence(timeout: 5), "回到搜索标签应显示搜索框")
         XCTAssertTrue(waitForFocus(field), "回到搜索标签后搜索框应获得输入焦点")
-        XCTAssertFalse(id("screen.grammarDetail").exists, "回到搜索标签不应停在之前的讲解页")
+        XCTAssertFalse(detailScreen.exists, "回到搜索标签不应停在之前的讲解页")
     }
 
     func testHomeSearchEntryOpensSearchTab() {
@@ -128,7 +128,7 @@ final class EndToEndTests: E2ETestCase {
         tab("语法库").tap()
         wait(id("library.row"), "语法库应列出语法点")
         id("library.row").tap()
-        wait(id("screen.grammarDetail"), "语法库点语法点应进入讲解页")
+        wait(detailScreen, "语法库点语法点应进入讲解页")
         back()
         wait(id("library.row"), "返回应回到语法库")
     }

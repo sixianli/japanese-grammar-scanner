@@ -7,7 +7,7 @@ final class DetailTests: E2ETestCase {
         let rows = ids("detail.senseRow")
         wait(rows.firstMatch, "讲解页应列出义项")
         rows.element(boundBy: min(1, rows.count - 1)).tap()
-        XCTAssertTrue(id("screen.grammarDetail").exists, "点义项应在本页内跳转，不离开讲解页")
+        XCTAssertTrue(detailScreen.exists, "点义项应在本页内跳转，不离开讲解页")
     }
 
     func testSimilarGrammarPushesAndBackReturns() {
@@ -16,9 +16,9 @@ final class DetailTests: E2ETestCase {
         scrollTo(similar, maxSwipes: 25)
         XCTAssertTrue(similar.exists, "讲解页应有相近语法")
         similar.tap()
-        wait(id("screen.grammarDetail"), "点相近语法应打开另一个讲解页")
+        wait(detailScreen, "点相近语法应打开另一个讲解页")
         back()
-        wait(id("screen.grammarDetail"), "返回应回到原来的讲解页")
+        wait(detailScreen, "返回应回到原来的讲解页")
         back()
         XCTAssertTrue(app.searchFields.firstMatch.waitForExistence(timeout: 8), "再返回应回到搜索页")
     }
@@ -31,7 +31,7 @@ final class DetailTests: E2ETestCase {
         wait(navBar("反馈"), "讲解页底部的反馈入口应打开反馈页")
         navBar("反馈").buttons["取消"].tap()
         waitGone(navBar("反馈"), "取消后关闭")
-        XCTAssertTrue(id("screen.grammarDetail").exists, "关闭反馈后仍在讲解页")
+        XCTAssertTrue(detailScreen.exists, "关闭反馈后仍在讲解页")
     }
 
     func testFavoriteFromDetailAndUnfavoriteFromList() {
@@ -64,7 +64,7 @@ final class LibraryTests: E2ETestCase {
         field.typeText("にもかかわらず")
         wait(id("library.row"), "应有搜索结果")
         id("library.row").tap()
-        wait(id("screen.grammarDetail"), "搜索结果应能打开讲解")
+        wait(detailScreen, "搜索结果应能打开讲解")
     }
 
     func testLibrarySearchNoResults() {
@@ -80,11 +80,11 @@ final class LibraryTests: E2ETestCase {
         tab("语法库").tap()
         wait(id("library.row"), "语法库列表")
         id("library.row").tap()
-        wait(id("screen.grammarDetail"), "讲解页")
+        wait(detailScreen, "讲解页")
         tab("首页").tap()
         wait(id("home.search"), "首页")
         tab("语法库").tap()
-        wait(id("screen.grammarDetail"), "切回语法库应仍停在讲解页")
+        wait(detailScreen, "切回语法库应仍停在讲解页")
         tab("语法库").tap()
         wait(id("library.row"), "再点一次语法库应回到列表")
     }
@@ -124,7 +124,7 @@ final class FavoritesTests: E2ETestCase {
     func testOpenDetailAndRetapTab() {
         favoriteThreeFromLibrary()
         id("favorites.row").tap()
-        wait(id("screen.grammarDetail"), "收藏页应能打开讲解")
+        wait(detailScreen, "收藏页应能打开讲解")
         tab("收藏").tap()
         wait(id("favorites.row"), "再点收藏标签应回到列表")
     }
@@ -139,7 +139,7 @@ final class SearchTests: E2ETestCase {
         wait(field, "搜索框")
         wait(id("search.result"), "没输入时应显示最近查看")
         id("search.result").tap()
-        wait(id("screen.grammarDetail"), "最近查看应能打开讲解")
+        wait(detailScreen, "最近查看应能打开讲解")
     }
 
     func testNoResults() {
@@ -157,7 +157,7 @@ final class SearchTests: E2ETestCase {
         field.typeText("観光客")
         wait(text(containing: "在例句中出现"), "只在例句里出现的词应显示「在例句中出现」")
         id("search.result").tap()
-        wait(id("screen.grammarDetail"), "应能打开讲解")
+        wait(detailScreen, "应能打开讲解")
     }
 
     func testChineseMeaningSearch() {

@@ -84,6 +84,8 @@ jobs:
           echo "udid=$UDID" >> "$GITHUB_OUTPUT"
       - name: Put sample photos into the simulator's photo library
         run: |
+          # 关闭「连接硬件键盘」，输入框获得焦点时会弹出软键盘（测试用它判断焦点）
+          defaults write com.apple.iphonesimulator ConnectHardwareKeyboard -bool false
           xcrun simctl boot "${{ steps.sim.outputs.udid }}" || true
           xcrun simctl bootstatus "${{ steps.sim.outputs.udid }}" -b
           xcrun simctl addmedia "${{ steps.sim.outputs.udid }}" tests/ocr/samples/IMG_8936.jpg tests/ocr/samples/IMG_8939.jpg

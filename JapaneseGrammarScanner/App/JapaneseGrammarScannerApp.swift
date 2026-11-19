@@ -11,6 +11,8 @@ struct JapaneseGrammarScannerApp: App {
     var body: some Scene {
         WindowGroup {
             RootTabView()
+                // 切换语言时整体重建，系统控件（导航标题、标签栏、搜索框）也随之换语言
+                .id(languages.language)
                 .environmentObject(appearance)
                 .environmentObject(languages)
                 .environmentObject(languages.library)
@@ -57,6 +59,8 @@ struct RootTabView: View {
     @EnvironmentObject private var history: HistoryStore
     @EnvironmentObject private var library: GrammarLibrary
     @AppStorage("didCompleteOnboarding") private var didCompleteOnboarding = false
+    /// 启动时的一次性处理（迁移、演示/测试数据、引导）只做一次；切换语言重建界面时不重复
+    private static var didLaunchSetup = false
     @State private var showOnboarding = false
 
     @EnvironmentObject private var appearance: AppearanceStore
@@ -117,6 +121,13 @@ struct RootTabView: View {
         }
         .onReceive(NotificationCenter.default.publisher(for: .showOnboarding)) { _ in showOnboarding = true }
         .onAppear {
+            if LanguageStore.reopenLanguagePage {
+                // 刚切换完语言：界面已重建，重新打开设置的语言页
+                DispatchQueue.main.async { showSettings = true }
+                return
+            }
+            guard !Self.didLaunchSetup else { return }
+            Self.didLaunchSetup = true
             favorites.migrate(aliases: library.aliases)
             history.migrate(aliases: library.aliases)
             if DemoMode.e2e { seedForEndToEndTests() }
