@@ -265,6 +265,8 @@ final class HistoryStoreTests: XCTestCase {
         XCTAssertTrue(store.dueForReview(now: t0.addingTimeInterval(2 * 86_400)).isEmpty, "复习后进入 3 天间隔")
         XCTAssertEqual(store.dueForReview(now: t0.addingTimeInterval(5 * 86_400)).map(\.id), ["te-shimau"])
         XCTAssertTrue(store.learnedIDs.contains("te-shimau"))
+        XCTAssertEqual(store.viewCount(of: "te-shimau"), 2)
+        XCTAssertEqual(store.viewCount(of: "never-seen"), 0)
         store.clearViewed()
     }
 
@@ -316,5 +318,20 @@ final class DetailRenderTests: XCTestCase {
             let elapsed = Date().timeIntervalSince(start)
             XCTAssertLessThan(elapsed, 3, "\(id) 详情页渲染过慢: \(elapsed)s")
         }
+    }
+}
+
+
+final class NoteParserTests: XCTestCase {
+    func testSplitsWrongAndRightSentences() {
+        let items = NoteParser.parse("修饰名词必须加「の」：×「日本について本」→ ○「日本についての本」（或「日本に関する本」）。")
+        XCTAssertEqual(items.first, .text("修饰名词必须加「の」"))
+        XCTAssertTrue(items.contains(.example(correct: false, sentence: "日本について本")))
+        XCTAssertTrue(items.contains(.example(correct: true, sentence: "日本についての本")))
+        XCTAssertEqual(items.last, .text("或「日本に関する本」"))
+    }
+
+    func testPlainNoteUnchanged() {
+        XCTAssertEqual(NoteParser.parse("没有例句的说明。"), [.text("没有例句的说明。")])
     }
 }

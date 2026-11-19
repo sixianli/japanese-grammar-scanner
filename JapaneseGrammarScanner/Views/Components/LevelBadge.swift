@@ -1,18 +1,18 @@
 import SwiftUI
 
-/// JLPT 等级标签：灰色描边小标签，只靠文字区分等级（不再用五种颜色）。
+/// JLPT 等级标签：淡彩色小标签（N5 绿、N4 蓝、N3 黄、N2 橙、N1 红），一眼区分等级。
 struct LevelBadge: View {
     let level: JLPTLevel
     var small = false
 
     var body: some View {
         Text(level.rawValue)
-            .font(small ? .system(size: 9, weight: .semibold) : .caption2.weight(.semibold))
+            .font(small ? .system(size: 9, weight: .bold) : .caption2.weight(.bold))
             .monospacedDigit()
-            .foregroundStyle(.secondary)
+            .foregroundStyle(level.badgeColor)
             .padding(.horizontal, small ? 4 : 5)
             .padding(.vertical, small ? 0.5 : 1)
-            .overlay(Capsule().strokeBorder(Color.secondary.opacity(0.45), lineWidth: 0.75))
+            .background(level.badgeColor.opacity(0.14), in: Capsule())
             .fixedSize()
             .accessibilityLabel(Text(verbatim: "JLPT \(level.rawValue)"))
     }
@@ -29,10 +29,10 @@ struct FrequencyBadge: View {
             Button { showInfo = true } label: {
                 Text(label)
                     .font(compact ? .caption2.weight(.semibold) : .caption.weight(.semibold))
-                    .foregroundStyle(frequency == .high ? Theme.accent : Color.secondary)
+                    .foregroundStyle(frequency == .high ? Theme.accentText : Color.secondary)
                     .padding(.horizontal, compact ? 6 : 8)
                     .padding(.vertical, compact ? 1.5 : 3)
-                    .background(frequency == .high ? Theme.accentFill : Color(.tertiarySystemFill), in: Capsule())
+                    .background(frequency == .high ? Theme.accentFill : Theme.fill, in: Capsule())
                     .fixedSize()
             }
             .buttonStyle(.plain)

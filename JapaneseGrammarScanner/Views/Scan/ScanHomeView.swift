@@ -28,6 +28,7 @@ struct ScanHomeView: View {
                 path.append(.grammar(id))
             }
         }
+        .environment(\.pushRoute, { path.append($0) })
         .onAppear {
             applyDemoMode()
             updateCameraState()
@@ -35,6 +36,9 @@ struct ScanHomeView: View {
         .onDisappear { camera.stop() }
         .onChange(of: path) { _, _ in updateCameraState() }
         .onChange(of: scenePhase) { _, _ in updateCameraState() }
+        .onReceive(NotificationCenter.default.publisher(for: .popToRoot)) { note in
+            if note.object as? Int == AppTab.scan { path = [] }
+        }
         .onReceive(NotificationCenter.default.publisher(for: .openSamplePage)) { _ in
             path = []
             openSample()

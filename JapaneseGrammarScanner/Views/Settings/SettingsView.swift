@@ -19,6 +19,14 @@ struct SettingsView: View {
                 Button("恢复购买") { Task { await store.restore() } }
                     .disabled(store.isPurchasing)
             }
+            Section("外观") {
+                Button {
+                    NotificationCenter.default.post(name: .showAppearance, object: nil)
+                } label: {
+                    Label("主题色与背景色", systemImage: "paintpalette")
+                }
+            }
+            .listRowBackground(Theme.card)
             Section("帮助") {
                 Button("使用引导") {
                     NotificationCenter.default.post(name: .showOnboarding, object: nil)
@@ -37,6 +45,7 @@ struct SettingsView: View {
                 }
             }
         }
+        .themedList()
         .navigationTitle("设置")
         .sheet(isPresented: $showPaywall) { PaywallView() }
     }

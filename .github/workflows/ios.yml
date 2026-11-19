@@ -122,6 +122,12 @@ jobs:
           qa home_history -demoScreen home -demoHistory 1
           qa search_areba -demoScreen library -demoSearch あれば
           qa library_n3 -demoScreen library -demoSearch N3
+          qa search_tab -demoScreen search -demoSearch ように
+          qa favorites_sorted -demoScreen favorites
+          qa detail_title_bar -demoScreen detail -demoGrammar izen -demoScroll sense-0
+          qa detail_notes -demoScreen detail -demoGrammar ni-tsuite -demoScroll section-notes
+          qa detail_scenes -demoScreen detail -demoGrammar nagara -demoScroll section-scenes
+          qa detail_similar -demoScreen detail -demoGrammar dake-ni -demoScroll section-similar
           xcrun simctl ui "$UDID" appearance dark
           qa detail_oouseru_dark -demoScreen detail -demoGrammar oouseru
           qa detail_izen_dark -demoScreen detail -demoGrammar izen

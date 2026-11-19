@@ -17,6 +17,8 @@ final class HistoryStore: ObservableObject {
         var lastViewed: Date
         /// 复习阶段：0,1,2…，对应间隔 1/3/7/14/30 天
         var stage: Int
+        /// 查看次数（旧版本没有记录，视为 1）
+        var viewCount: Int? = nil
     }
 
     /// 间隔复习的间隔（天）
@@ -66,9 +68,10 @@ final class HistoryStore: ObservableObject {
             // 到了复习时间再次查看 → 进入下一个复习阶段
             if Self.isDue(r, now: now) { r.stage = min(r.stage + 1, Self.reviewIntervals.count) }
             r.lastViewed = now
+            r.viewCount = (r.viewCount ?? 1) + 1
             viewRecords[id] = r
         } else {
-            viewRecords[id] = ViewRecord(id: id, firstViewed: now, lastViewed: now, stage: 0)
+            viewRecords[id] = ViewRecord(id: id, firstViewed: now, lastViewed: now, stage: 0, viewCount: 1)
         }
         saveRecords()
         recentGrammarIDs.removeAll { $0 == id }
@@ -125,6 +128,17 @@ final class HistoryStore: ObservableObject {
             .map { $0.0 }
     }
 
+    /// 查看次数（没看过为 0）
+    func viewCount(of id: String) -> Int {
+        guard let r = viewRecords[id] else { return 0 }
+        return r.viewCount ?? 1
+    }
+
+    /// 估计的当前记忆保持率；没看过返回 nil
+    func retention(of id: String, now: Date = Date()) -> Double? {
+        viewRecords[id].map { Self.retention($0, now: now) }
+    }
+
     /// 某个语法点出现在多少次扫描中
     func scanCount(of id: String) -> Int {
         scans.reduce(0) { $0 + ($1.grammarIDs.contains(id) ? 1 : 0) }
@@ -158,9 +172,10 @@ final class HistoryStore: ObservableObject {
             let id = aliases[oldID] ?? oldID
             if let existing = merged[id] {
                 merged[id] = ViewRecord(id: id, firstViewed: min(existing.firstViewed, r.firstViewed),
-                                        lastViewed: max(existing.lastViewed, r.lastViewed), stage: max(existing.stage, r.stage))
+                                        lastViewed: max(existing.lastViewed, r.lastViewed), stage: max(existing.stage, r.stage),
+                                        viewCount: (existing.viewCount ?? 1) + (r.viewCount ?? 1))
             } else {
-                merged[id] = ViewRecord(id: id, firstViewed: r.firstViewed, lastViewed: r.lastViewed, stage: r.stage)
+                merged[id] = ViewRecord(id: id, firstViewed: r.firstViewed, lastViewed: r.lastViewed, stage: r.stage, viewCount: r.viewCount)
             }
         }
         viewRecords = merged

@@ -18,6 +18,7 @@ struct HomeView: View {
         NavigationStack(path: $path) {
             ScrollView {
                 VStack(alignment: .leading, spacing: 32) {
+                    searchEntry
                     scanEntry
                     if entitlements.showsTrialEndingReminder { trialReminder }
                     if isNewUser {
@@ -34,12 +35,15 @@ struct HomeView: View {
                 .padding(.top, 12)
                 .padding(.bottom, 32)
             }
-            .background(Color(.systemGroupedBackground))
+            .background(Theme.background)
             // 底部标签栏已标明「首页」，这里不再显示大标题，把空间留给内容
             .navigationTitle("首页")
             .toolbar(.hidden, for: .navigationBar)
             .withAppRoutes()
             .sheet(isPresented: $showPaywall) { PaywallView() }
+            .onReceive(NotificationCenter.default.publisher(for: .popToRoot)) { note in
+                if note.object as? Int == AppTab.home { path = [] }
+            }
             .onChange(of: photoItem) { _, item in
                 guard let item else { return }
                 Task {
@@ -50,6 +54,29 @@ struct HomeView: View {
                 }
             }
         }
+        .environment(\.pushRoute, { path.append($0) })
+    }
+
+    // MARK: 搜索入口（点一下进入搜索标签并直接开始输入）
+
+    private var searchEntry: some View {
+        Button {
+            NotificationCenter.default.post(name: .focusSearch, object: nil)
+        } label: {
+            HStack(spacing: 8) {
+                Image(systemName: "magnifyingglass").foregroundStyle(.secondary)
+                Text("搜索语法或意思").foregroundStyle(.secondary)
+                Spacer(minLength: 0)
+            }
+            .font(.body)
+            .padding(.horizontal, 16)
+            .frame(height: 46)
+            .contentShape(Capsule())
+            .glassBackground(in: Capsule(), interactive: true)
+        }
+        .buttonStyle(.plain)
+        .padding(.top, 8)
+        .accessibilityLabel(Text("搜索语法或意思"))
     }
 
     // MARK: 扫描入口
@@ -66,7 +93,7 @@ struct HomeView: View {
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(.top, 24)
+            .padding(.top, 4)
 
             Button(action: openCamera) {
                 Label("相机扫描", systemImage: "camera.viewfinder")
@@ -129,7 +156,7 @@ struct HomeView: View {
                 Image(systemName: "chevron.right").font(.footnote.weight(.semibold)).foregroundStyle(.tertiary)
             }
             .padding(14)
-            .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .background(Theme.card, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
         }
         .buttonStyle(.plain)
     }
@@ -173,7 +200,7 @@ struct HomeView: View {
                         if let thumb = history.thumbnail(for: record) {
                             Image(uiImage: thumb).resizable().scaledToFill()
                         } else {
-                            Color(.tertiarySystemFill)
+                            Theme.fill
                         }
                     }
                     .frame(width: 44, height: 56)
@@ -197,7 +224,7 @@ struct HomeView: View {
                 }
                 .padding(.horizontal, 14)
                 .padding(.vertical, 10)
-                .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                .background(Theme.card, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
@@ -274,7 +301,7 @@ private struct SeeAllLabel: View {
             Image(systemName: "chevron.right").font(.footnote.weight(.semibold))
         }
         .font(.subheadline)
-        .foregroundStyle(Theme.accent)
+        .foregroundStyle(Theme.accentText)
     }
 }
 
@@ -308,7 +335,7 @@ struct CompactGrammarList: View {
                 if i < points.count - 1 { Divider().padding(.leading, 16) }
             }
         }
-        .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .background(Theme.card, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 }
 
@@ -390,7 +417,7 @@ private struct ScanThumb: View {
                 if let image {
                     Image(uiImage: image).resizable().scaledToFill()
                 } else {
-                    Color(.tertiarySystemFill)
+                    Theme.fill
                 }
             }
             .frame(width: 120, height: 150)

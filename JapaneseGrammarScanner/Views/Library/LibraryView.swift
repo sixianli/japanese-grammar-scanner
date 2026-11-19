@@ -5,6 +5,7 @@ struct LibraryView: View {
     @EnvironmentObject private var library: GrammarLibrary
     @State private var query = DemoMode.screen == "library" ? (DemoMode.search ?? "") : ""
     @State private var levelFilter: JLPTLevel?
+    @State private var path: [Route] = []
 
     private var availableLevels: [JLPTLevel] {
         JLPTLevel.allCases.filter { !library.points(for: $0).isEmpty }
@@ -13,7 +14,7 @@ struct LibraryView: View {
     private var isSearching: Bool { !query.trimmingCharacters(in: .whitespaces).isEmpty }
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             List {
                 Section {
                     Picker("等级", selection: $levelFilter) {
@@ -35,6 +36,7 @@ struct LibraryView: View {
                     ContentUnavailableView.search(text: query)
                 }
             }
+            .themedList()
             .searchable(text: $query, prompt: "搜索语法或意思")
             .navigationTitle("语法库")
             .navigationBarTitleDisplayMode(.inline)
@@ -45,6 +47,10 @@ struct LibraryView: View {
                 }
             }
             .withAppRoutes()
+        }
+        .environment(\.pushRoute, { path.append($0) })
+        .onReceive(NotificationCenter.default.publisher(for: .popToRoot)) { note in
+            if note.object as? Int == AppTab.library { path = [] }
         }
     }
 
@@ -57,6 +63,7 @@ struct LibraryView: View {
             Section {
                 ForEach(items) { p in
                     NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p, shownLevel: level) }
+                        .listRowBackground(Theme.card)
                 }
             } header: {
                 Text(verbatim: "\(level.rawValue) (\(items.count))")
@@ -72,6 +79,7 @@ struct LibraryView: View {
             Section {
                 ForEach(main) { p in
                     NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p, shownLevel: levelFilter) }
+                        .listRowBackground(Theme.card)
                 }
             }
         }
@@ -80,6 +88,7 @@ struct LibraryView: View {
             Section {
                 ForEach(inExamples) { p in
                     NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p, shownLevel: levelFilter) }
+                        .listRowBackground(Theme.card)
                 }
             } header: {
                 Text("在例句中出现")

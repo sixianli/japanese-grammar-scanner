@@ -10,6 +10,8 @@ enum DemoMode {
     static var grammarID: String { value(for: "-demoGrammar") ?? "te-shimau" }
     /// 语法库截图时预先填入的搜索词
     static var search: String? { value(for: "-demoSearch") }
+    /// 详情页截图时滚动到的位置（如 sense-0、section-notes）
+    static var scrollAnchor: String? { value(for: "-demoScroll") }
     /// 预置浏览记录（让首页出现「快要忘了」「最近查看」）
     static var seedsHistory: Bool { value(for: "-demoHistory") != nil }
 

@@ -6,10 +6,12 @@ struct JapaneseGrammarScannerApp: App {
     @StateObject private var favorites = FavoritesStore()
     @StateObject private var entitlements = EntitlementStore()
     @StateObject private var history = HistoryStore()
+    @StateObject private var appearance = AppearanceStore.shared
 
     var body: some Scene {
         WindowGroup {
             RootTabView()
+                .environmentObject(appearance)
                 .environmentObject(library)
                 .environmentObject(favorites)
                 .environmentObject(entitlements)
@@ -21,6 +23,17 @@ struct JapaneseGrammarScannerApp: App {
 extension Notification.Name {
     static let openSamplePage = Notification.Name("openSamplePage")
     static let showOnboarding = Notification.Name("showOnboarding")
+    /// 再次点击当前标签：回到该标签的首页（object = 标签序号）
+    static let popToRoot = Notification.Name("popToRoot")
+    /// 打开搜索并聚焦输入框
+    static let focusSearch = Notification.Name("focusSearch")
+    /// 打开外观设置
+    static let showAppearance = Notification.Name("showAppearance")
+}
+
+/// 底部标签序号
+enum AppTab {
+    static let home = 0, scan = 1, library = 2, favorites = 3, search = 4
 }
 
 struct RootTabView: View {
@@ -30,6 +43,7 @@ struct RootTabView: View {
         case "scan", "result", "detail": 1
         case "library": 2
         case "favorites": 3
+        case "search": 4
         default: 0
         }
     }()
@@ -40,22 +54,27 @@ struct RootTabView: View {
     @AppStorage("didCompleteOnboarding") private var didCompleteOnboarding = false
     @State private var showOnboarding = false
 
+    @EnvironmentObject private var appearance: AppearanceStore
+    @State private var showAppearance = false
+
+    /// 再次点击当前标签时回到该标签的首页（iOS 标准行为）。
+    private var selection: Binding<Int> {
+        Binding(get: { tab }, set: { newValue in
+            if newValue == tab { NotificationCenter.default.post(name: .popToRoot, object: newValue) }
+            tab = newValue
+        })
+    }
+
     var body: some View {
-        TabView(selection: $tab) {
-            HomeView(openCamera: { tab = 1 })
-                .tabItem { Label("首页", systemImage: "house") }
-                .tag(0)
-            // 相机只在用户切换到「扫描」时才启动
-            ScanHomeView()
-                .tabItem { Label("扫描", systemImage: "text.viewfinder") }
-                .tag(1)
-            LibraryView()
-                .tabItem { Label("语法库", systemImage: "books.vertical") }
-                .tag(2)
-            FavoritesView()
-                .tabItem { Label("收藏", systemImage: "star") }
-                .tag(3)
-        }
+        tabs
+            // 外观（主题色、背景色）变化时整体刷新配色
+            .id(appearance.key)
+            .tint(Theme.accent)
+            .sheet(isPresented: $showAppearance) {
+                AppearanceView().environmentObject(appearance).tint(Theme.accent)
+            }
+            .onReceive(NotificationCenter.default.publisher(for: .showAppearance)) { _ in showAppearance = true }
+            .onReceive(NotificationCenter.default.publisher(for: .focusSearch)) { _ in tab = AppTab.search }
         .fullScreenCover(isPresented: $showOnboarding) {
             OnboardingView { wantsSample in
                 didCompleteOnboarding = true
@@ -86,6 +105,34 @@ struct RootTabView: View {
                 for id in ["te-shimau", "you-ni-naru", "ni-mo-kakawarazu", "okage-de", "rashii-typical"].reversed() {
                     favorites.toggle(id)
                 }
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var tabs: some View {
+        if #available(iOS 18.0, *) {
+            // iOS 18+：搜索作为独立的搜索标签（iOS 26 中显示在标签栏右侧）
+            TabView(selection: selection) {
+                Tab("首页", systemImage: "house", value: AppTab.home) { HomeView(openCamera: { tab = AppTab.scan }) }
+                // 相机只在用户切换到「扫描」时才启动
+                Tab("扫描", systemImage: "text.viewfinder", value: AppTab.scan) { ScanHomeView() }
+                Tab("语法库", systemImage: "books.vertical", value: AppTab.library) { LibraryView() }
+                Tab("收藏", systemImage: "star", value: AppTab.favorites) { FavoritesView() }
+                Tab("搜索", systemImage: "magnifyingglass", value: AppTab.search, role: .search) { SearchView() }
+            }
+        } else {
+            TabView(selection: selection) {
+                HomeView(openCamera: { tab = AppTab.scan })
+                    .tabItem { Label("首页", systemImage: "house") }.tag(AppTab.home)
+                ScanHomeView()
+                    .tabItem { Label("扫描", systemImage: "text.viewfinder") }.tag(AppTab.scan)
+                LibraryView()
+                    .tabItem { Label("语法库", systemImage: "books.vertical") }.tag(AppTab.library)
+                FavoritesView()
+                    .tabItem { Label("收藏", systemImage: "star") }.tag(AppTab.favorites)
+                SearchView()
+                    .tabItem { Label("搜索", systemImage: "magnifyingglass") }.tag(AppTab.search)
             }
         }
     }

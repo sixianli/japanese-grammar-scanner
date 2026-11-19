@@ -174,7 +174,7 @@ private struct ViewfinderCorners: Shape {
 private struct TextLine: View {
     let text: String
     var highlight: String? = nil
-    var color: Color = Theme.accent
+    var color: Color = Theme.accentText
 
     var body: some View {
         HStack(spacing: 0) {
@@ -198,9 +198,9 @@ private struct BookPage: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             TextLine(text: "駅に着いたとき、", highlight: nil)
-            TextLine(text: "雨が降りそうだった。", highlight: "そうだ", color: Theme.accent)
-            TextLine(text: "傘を買っておいた。", highlight: "ておい", color: Theme.accent)
-            TextLine(text: "道に迷ってしまった。", highlight: "てしまっ", color: Theme.accent)
+            TextLine(text: "雨が降りそうだった。", highlight: "そうだ", color: Theme.accentText)
+            TextLine(text: "傘を買っておいた。", highlight: "ておい", color: Theme.accentText)
+            TextLine(text: "道に迷ってしまった。", highlight: "てしまっ", color: Theme.accentText)
         }
         .padding(22)
         .background(Brand.paper, in: RoundedRectangle(cornerRadius: 16))

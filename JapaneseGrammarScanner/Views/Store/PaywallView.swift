@@ -79,7 +79,7 @@ struct PaywallView: View {
                 Image(systemName: "hourglass")
             }
             .font(.subheadline.weight(.semibold))
-            .foregroundStyle(Theme.accent)
+            .foregroundStyle(Theme.accentText)
         case .trialExpired:
             Label("免费试用已结束", systemImage: "hourglass.bottomhalf.filled")
                 .font(.subheadline.weight(.semibold))

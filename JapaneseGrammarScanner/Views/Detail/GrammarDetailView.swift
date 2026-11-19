@@ -8,9 +8,20 @@ struct GrammarDetailView: View {
     @EnvironmentObject private var favorites: FavoritesStore
     @EnvironmentObject private var entitlements: EntitlementStore
     @EnvironmentObject private var history: HistoryStore
-    /// 大标题滚出屏幕的进度 0~1，用于把标题平滑过渡到顶部导航栏
+    /// 大标题滚出屏幕的进度 0~1（旧系统用于把标题淡入顶部导航栏）
     @State private var titleProgress: CGFloat = 0
     @State private var headerBaseline: CGFloat?
+    /// 标题行当前位置与初始位置（屏幕坐标），用于让标题跟着手指移动、缩小到顶部导航栏正中
+    @State private var titleFrame: CGRect = .zero
+    @State private var titleBaseline: CGRect?
+    /// 内容区顶部（导航栏下沿）在屏幕上的位置
+    @State private var contentTop: CGFloat = 0
+
+    /// iOS 26+ 导航栏透明（Liquid Glass），标题可以直接“飞”进导航栏；更早的系统用淡入方式。
+    private var usesFlyingTitle: Bool {
+        if #available(iOS 26.0, *) { return true }
+        return false
+    }
 
     var body: some View {
         if let point = library.point(id: grammarID) {
@@ -27,8 +38,8 @@ struct GrammarDetailView: View {
         return ScrollViewReader { proxy in
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
-                    header(p)
-                        .opacity(1 - Double(titleProgress) * 0.9)
+                    header(p, titleHidden: usesFlyingTitle && titleBaseline != nil)
+                        .opacity(usesFlyingTitle ? 1 : 1 - Double(titleProgress) * 0.9)
                         .background(
                             GeometryReader { g in
                                 Color.clear.preference(key: HeaderFrameKey.self, value: g.frame(in: .named("detailScroll")))
@@ -48,7 +59,7 @@ struct GrammarDetailView: View {
                     if !entitlements.hasFullAccess {
                         LockedContentCard().padding(.top, 28)
                     } else {
-                        DocSection("用法") {
+                        DocSection("用法", icon: "text.book.closed") {
                             VStack(alignment: .leading, spacing: 34) {
                                 ForEach(Array(p.senses.enumerated()), id: \.offset) { i, sense in
                                     SenseBlock(index: i + 1, sense: sense,
@@ -60,35 +71,32 @@ struct GrammarDetailView: View {
                         }
 
                         if !p.notes.isEmpty {
-                            DocSection("注意") {
+                            DocSection("注意", icon: "exclamationmark.triangle", anchor: "section-notes") {
                                 VStack(alignment: .leading, spacing: 12) {
                                     ForEach(Array(p.notes.enumerated()), id: \.offset) { _, note in
-                                        HStack(alignment: .firstTextBaseline, spacing: 10) {
-                                            Text(verbatim: "•").font(.body.weight(.bold)).foregroundStyle(.secondary)
-                                            RubyText(explanation: note, style: .init(font: .body, lineSpacing: 6))
-                                        }
+                                        NoteView(note: note)
                                     }
                                 }
                             }
                         }
 
-                        DocSection("使用场景") {
-                            VStack(alignment: .leading, spacing: 26) {
-                                SceneGroup(label: "日常生活", scenes: p.scenes.daily, regexes: regexes)
-                                SceneGroup(label: "职场", scenes: p.scenes.work, regexes: regexes)
+                        DocSection("使用场景", icon: "person.2", anchor: "section-scenes") {
+                            VStack(alignment: .leading, spacing: 30) {
+                                SceneGroup(label: "日常生活", icon: "house", scenes: p.scenes.daily, regexes: regexes)
+                                SceneGroup(label: "职场", icon: "briefcase", scenes: p.scenes.work, regexes: regexes)
                             }
                         }
 
                         // 词源与组词逻辑内容高度重合，合并为一节；组词逻辑更完整，优先使用
                         let origin = p.formation.isEmpty ? p.etymology : p.formation
                         if !origin.isEmpty {
-                            DocSection("来源与构成") {
+                            DocSection("来源与构成", icon: "puzzlepiece.extension") {
                                 RubyText(explanation: origin, style: .init(font: .body, lineSpacing: 7))
                             }
                         }
 
                         if !p.similar.isEmpty {
-                            DocSection("相近语法") {
+                            DocSection("相近语法", icon: "arrow.triangle.branch", anchor: "section-similar") {
                                 VStack(alignment: .leading, spacing: 0) {
                                     ForEach(Array(p.similar.enumerated()), id: \.offset) { index, s in
                                         similarItem(s)
@@ -105,6 +113,12 @@ struct GrammarDetailView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             .coordinateSpace(name: "detailScroll")
+            .onAppear {
+                // CI 截图：滚动到指定位置
+                if let anchor = DemoMode.scrollAnchor {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { proxy.scrollTo(anchor, anchor: .top) }
+                }
+            }
             .onPreferenceChange(HeaderFrameKey.self) { frame in
                 // 以初始位置为基准，标题向上移出自身高度的过程中，进度从 0 平滑变到 1
                 if headerBaseline == nil { headerBaseline = frame.minY }
@@ -113,19 +127,36 @@ struct GrammarDetailView: View {
                 if abs(progress - titleProgress) > 0.005 { titleProgress = progress }
             }
         }
-        .background(Color(.systemBackground))
+        .background(Theme.background)
+        .background(GeometryReader { g in
+            Color.clear
+                .onAppear { contentTop = g.frame(in: .global).minY }
+                .onChange(of: g.frame(in: .global).minY) { _, v in contentTop = v }
+        })
+        .overlay(alignment: .topLeading) {
+            if usesFlyingTitle { flyingTitle(p) }
+        }
+        .onPreferenceChange(TitleFrameKey.self) { frame in
+            guard frame != .zero else { return }
+            if titleBaseline == nil { titleBaseline = frame }
+            titleFrame = frame
+        }
         .navigationTitle(p.displayTitle)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
-                HStack(alignment: .top, spacing: 3) {
-                    Text(verbatim: p.titleForm).font(.headline)
-                    LevelBadge(level: p.level, small: true)
+                if usesFlyingTitle {
+                    Color.clear.frame(width: 1, height: 1).accessibilityHidden(true)
+                } else {
+                    HStack(alignment: .top, spacing: 3) {
+                        Text(verbatim: p.titleForm).font(.headline)
+                        LevelBadge(level: p.level, small: true)
+                    }
+                    .opacity(Double(titleProgress))
+                    .offset(y: (1 - titleProgress) * 10)
+                    .animation(.easeOut(duration: 0.15), value: titleProgress)
+                    .accessibilityHidden(titleProgress < 0.5)
                 }
-                .opacity(Double(titleProgress))
-                .offset(y: (1 - titleProgress) * 10)
-                .animation(.easeOut(duration: 0.15), value: titleProgress)
-                .accessibilityHidden(titleProgress < 0.5)
             }
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
@@ -147,16 +178,51 @@ struct GrammarDetailView: View {
         return parts.isEmpty ? [s] : parts
     }
 
-    /// 标题：汉字上方注假名；等级标签紧贴标题文字的右上角（上标位置）。
-    private func header(_ p: GrammarPoint) -> some View {
+    /// 标题行：汉字上方注假名；等级标签紧贴标题文字的右上角（上标位置）。
+    private func titleRow(_ p: GrammarPoint) -> some View {
         let rubyOffset = FuriganaStore.shared.hasRuby(p.titleForm)
             ? ceil(UIFontMetrics(forTextStyle: .body).scaledValue(for: 12) * 1.3) : 0
-        return VStack(alignment: .leading, spacing: 8) {
-            HStack(alignment: .top, spacing: 4) {
-                RubyText(japanese: p.titleForm, style: .init(font: .largeTitle.bold(), rubySize: 12, lineSpacing: 2))
-                LevelBadge(level: p.level)
-                    .padding(.top, rubyOffset + 4)
+        return HStack(alignment: .top, spacing: 4) {
+            RubyText(japanese: p.titleForm, style: .init(font: .largeTitle.bold(), rubySize: 12, lineSpacing: 2))
+            LevelBadge(level: p.level)
+                .padding(.top, rubyOffset + 4)
+        }
+    }
+
+    /// 标题跟着手指上移，同时缩小并移到导航栏正中；滑回顶部时还原成大标题。
+    @ViewBuilder
+    private func flyingTitle(_ p: GrammarPoint) -> some View {
+        if let base = titleBaseline {
+            GeometryReader { geo in
+                let origin = geo.frame(in: .global).origin
+                let screenWidth = geo.size.width
+                let barCenterY = contentTop - 22
+                // 最终大小：能放进导航栏（返回键与收藏键之间）
+                let endScale = min(0.55, 34 / max(base.height, 1), (screenWidth - 150) / max(base.width, 1))
+                let targetY = barCenterY - base.height * endScale / 2
+                let travel = max(base.minY - targetY, 1)
+                let progress = min(1, max(0, (base.minY - titleFrame.minY) / travel))
+                let scale = 1 - (1 - endScale) * progress
+                let y = max(titleFrame.minY, targetY)
+                // 横向位置用本页坐标计算（页面推入动画期间屏幕坐标的 x 会变化）
+                let x = Theme.margin + ((screenWidth - base.width * endScale) / 2 - Theme.margin) * progress
+                titleRow(p)
+                    .frame(width: base.width, alignment: .leading)
+                    .scaleEffect(scale, anchor: .topLeading)
+                    .offset(x: x, y: y - origin.y)
             }
+            .allowsHitTesting(false)
+            .accessibilityHidden(true)
+        }
+    }
+
+    private func header(_ p: GrammarPoint, titleHidden: Bool) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            titleRow(p)
+                .opacity(titleHidden ? 0 : 1)
+                .background(GeometryReader { g in
+                    Color.clear.preference(key: TitleFrameKey.self, value: g.frame(in: .global))
+                })
             if let f = p.frequency, f != .low {
                 FrequencyBadge(frequency: f)
             }
@@ -195,25 +261,37 @@ struct GrammarDetailView: View {
 
 // MARK: - 组件
 
-/// 讲义中的一节：标题 + 内容，节与节之间只用留白分隔，不分卡片。
+/// 讲义中的一节：线条图标 + 标题 + 内容，节与节之间只用留白分隔，不分卡片。
 private struct DocSection<Content: View>: View {
     let title: LocalizedStringKey
+    let icon: String
+    var anchor: String? = nil
     @ViewBuilder let content: Content
 
-    init(_ title: LocalizedStringKey, @ViewBuilder content: () -> Content) {
+    init(_ title: LocalizedStringKey, icon: String, anchor: String? = nil, @ViewBuilder content: () -> Content) {
         self.title = title
+        self.icon = icon
+        self.anchor = anchor
         self.content = content()
     }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
-            Text(title)
-                .font(.title2.bold())
-                .accessibilityAddTraits(.isHeader)
+            Label {
+                Text(title).font(.title2.bold())
+            } icon: {
+                Image(systemName: icon)
+                    .font(.system(size: 19, weight: .regular))
+                    .foregroundStyle(Theme.accent)
+                    .frame(width: 26)
+            }
+            .labelStyle(.titleAndIcon)
+            .accessibilityAddTraits(.isHeader)
             content
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.top, 40)
+        .id(anchor ?? "")
     }
 }
 
@@ -318,7 +396,7 @@ private struct SenseBlock: View {
                 .padding(.horizontal, 12)
                 .padding(.vertical, 10)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                .background(Theme.fill, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
             }
 
             VStack(alignment: .leading, spacing: 16) {
@@ -343,7 +421,7 @@ private struct ExampleView: View {
                 RubyText(
                     japanese: example.ja,
                     highlights: highlightRanges,
-                    style: .init(font: .title3, rubySize: 10, highlightColor: Theme.accent, lineSpacing: 6)
+                    style: .init(font: .title3, rubySize: 10, highlightColor: Theme.accentText, lineSpacing: 6)
                 )
                 Text(example.translation)
                     .font(.subheadline)
@@ -359,15 +437,23 @@ private struct ExampleView: View {
     }
 }
 
-/// 一组场景（日常生活 / 职场）。
+/// 一组场景（日常生活 / 职场）：分类名用正文色 + 线条图标，醒目但不抢例句。
 private struct SceneGroup: View {
     let label: LocalizedStringKey
+    let icon: String
     let scenes: [GrammarPoint.Scene]
     let regexes: [NSRegularExpression]
 
     var body: some View {
         VStack(alignment: .leading, spacing: 18) {
-            Text(label).font(.headline).foregroundStyle(.secondary)
+            HStack(spacing: 8) {
+                Image(systemName: icon)
+                    .font(.system(size: 15, weight: .medium))
+                    .foregroundStyle(Theme.accentText)
+                    .frame(width: 30, height: 30)
+                    .background(Theme.accentFill, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                Text(label).font(.title3.weight(.semibold)).foregroundStyle(Color.primary)
+            }
             ForEach(Array(scenes.enumerated()), id: \.offset) { _, scene in
                 VStack(alignment: .leading, spacing: 6) {
                     Text(scene.title).font(.body.weight(.semibold))
@@ -377,6 +463,92 @@ private struct SceneGroup: View {
                 }
             }
         }
+    }
+}
+
+/// 「注意」中的一条：讲解文字 + 单独成行的 ✕ 错误句 / ○ 正确句（红叉、绿勾），按原文顺序排列。
+private struct NoteView: View {
+    let note: String
+
+    var body: some View {
+        HStack(alignment: .firstTextBaseline, spacing: 10) {
+            Text(verbatim: "•").font(.body.weight(.bold)).foregroundStyle(.secondary)
+            VStack(alignment: .leading, spacing: 8) {
+                ForEach(Array(NoteParser.parse(note).enumerated()), id: \.offset) { i, item in
+                    switch item {
+                    case .text(let t):
+                        RubyText(explanation: t, style: .init(font: i == 0 ? .body : .callout,
+                                                              color: i == 0 ? .primary : .secondary, lineSpacing: 6))
+                    case .example(let correct, let sentence):
+                        HStack(alignment: .top, spacing: 8) {
+                            Image(systemName: correct ? "checkmark.circle.fill" : "xmark.circle.fill")
+                                .font(.system(size: 16))
+                                .foregroundStyle(correct ? Color.green : Color.red)
+                                .padding(.top, 15)
+                                .accessibilityLabel(correct ? Text("正确") : Text("错误"))
+                            RubyText(japanese: sentence, style: .init(font: .body, rubySize: 9, lineSpacing: 4))
+                        }
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 6)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background((correct ? Color.green : Color.red).opacity(0.07),
+                                    in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                    }
+                }
+            }
+        }
+    }
+}
+
+/// 从注意事项文字中拆出「✕「…」」「○「…」」例句，按原文顺序返回文字与例句。
+enum NoteParser {
+    enum Item: Equatable {
+        case text(String)
+        case example(correct: Bool, sentence: String)
+    }
+
+    private static let regex = try! NSRegularExpression(pattern: "([×✕✗Ｘ])\\s*「([^」]+)」|([○〇◯])\\s*「([^」]+)」")
+    private static let junk = CharacterSet(charactersIn: " 　→⇒➡，,、。.；;：:（）()").union(.whitespacesAndNewlines)
+
+    static func parse(_ note: String) -> [Item] {
+        let ns = note as NSString
+        let matches = regex.matches(in: note, range: NSRange(location: 0, length: ns.length))
+        guard !matches.isEmpty else { return [.text(note)] }
+        var items: [Item] = []
+        var cursor = 0
+        func addText(_ raw: String) {
+            let t = clean(raw, isFirst: items.isEmpty)
+            if !t.isEmpty { items.append(.text(t)) }
+        }
+        for m in matches {
+            if m.range.location > cursor {
+                addText(ns.substring(with: NSRange(location: cursor, length: m.range.location - cursor)))
+            }
+            if m.range(at: 2).location != NSNotFound {
+                items.append(.example(correct: false, sentence: ns.substring(with: m.range(at: 2))))
+            } else {
+                items.append(.example(correct: true, sentence: ns.substring(with: m.range(at: 4))))
+            }
+            cursor = NSMaxRange(m.range)
+        }
+        if cursor < ns.length { addText(ns.substring(from: cursor)) }
+        return items
+    }
+
+    private static func clean(_ s: String, isFirst: Bool) -> String {
+        let t = isFirst
+            ? s.trimmingCharacters(in: .whitespaces).trimmingCharacters(in: CharacterSet(charactersIn: "：:，,、→ "))
+            : s.trimmingCharacters(in: junk)
+        // 只剩箭头、标点、括号时视为空
+        return t.unicodeScalars.allSatisfy { junk.contains($0) } ? "" : t
+    }
+}
+
+private struct TitleFrameKey: PreferenceKey {
+    static var defaultValue: CGRect = .zero
+    static func reduce(value: inout CGRect, nextValue: () -> CGRect) {
+        let next = nextValue()
+        if next != .zero { value = next }
     }
 }
 

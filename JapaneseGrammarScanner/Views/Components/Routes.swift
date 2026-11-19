@@ -22,6 +22,20 @@ struct ScanImage: Hashable, Identifiable {
     func hash(into hasher: inout Hasher) { hasher.combine(id) }
 }
 
+/// 把一个页面压入当前标签的导航栈（由各标签的 NavigationStack 提供）。
+/// 识别结果页点高亮后用它打开讲解，保证与「相近语法」等普通跳转使用同一套导航，
+/// 不会出现新页面被旧页面盖住、看起来“跳回原来那个语法点”的问题。
+private struct PushRouteKey: EnvironmentKey {
+    static let defaultValue: ((Route) -> Void)? = nil
+}
+
+extension EnvironmentValues {
+    var pushRoute: ((Route) -> Void)? {
+        get { self[PushRouteKey.self] }
+        set { self[PushRouteKey.self] = newValue }
+    }
+}
+
 extension View {
     /// 统一注册所有导航目的地。
     func withAppRoutes() -> some View {
@@ -40,7 +54,7 @@ extension View {
 
 extension JLPTLevel {
     /// 统一使用主色（不再按等级区分五种颜色）。
-    var color: Color { Theme.accent }
+    var color: Color { Theme.accentText }
 }
 
 /// 从本地记录加载图片后显示识别结果

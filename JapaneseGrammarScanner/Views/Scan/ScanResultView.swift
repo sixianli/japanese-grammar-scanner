@@ -6,6 +6,7 @@ struct ScanResultView: View {
 
     @EnvironmentObject private var library: GrammarLibrary
     @EnvironmentObject private var history: HistoryStore
+    @Environment(\.pushRoute) private var pushRoute
     @State private var recordID: UUID?
     @State private var phase: Phase = .loading
     @State private var tappedCluster: HighlightCluster?
@@ -15,6 +16,9 @@ struct ScanResultView: View {
     @State private var draftText = ""
     @State private var textWasEdited = false
     @State private var showZoom = false
+    /// 在结果页上直接双指放大时的实时缩放（跟手），松手超过阈值就进入全屏查看
+    @State private var pinchScale: CGFloat = 1
+    @State private var pinchAnchor: UnitPoint = .center
 
     enum Phase {
         case loading
@@ -26,6 +30,7 @@ struct ScanResultView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 imageSection
+                    .zIndex(1)
                 switch phase {
                 case .loading:
                     HStack(spacing: 12) {
@@ -42,24 +47,14 @@ struct ScanResultView: View {
             }
             .padding()
         }
+        .background(Theme.background)
         .navigationTitle("识别结果")
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button("编辑文本") {
-                    if case .done(let result) = phase {
-                        draftText = result.text
-                        isEditing = true
-                    }
-                }
-                .disabled(!isDone)
-            }
-        }
         .navigationDestination(item: $pushedGrammarID) { id in
             GrammarDetailView(grammarID: id)
         }
         .grammarChooser(cluster: $tappedCluster, library: library) { id in
-            pushedGrammarID = id
+            if let pushRoute { pushRoute(.grammar(id)) } else { pushedGrammarID = id }
         }
         .sheet(isPresented: $isEditing) { editSheet }
         .task { await analyze() }
@@ -104,6 +99,26 @@ struct ScanResultView: View {
             .onTapGesture { showZoom = true }
             .frame(maxWidth: .infinity)
             .frame(maxHeight: 460)
+            // 直接在结果页双指放大：图片跟着手指渐进放大并盖住页面，松手后进入全屏查看
+            .scaleEffect(pinchScale, anchor: pinchAnchor)
+            .shadow(color: .black.opacity(pinchScale > 1.02 ? 0.25 : 0), radius: 20)
+            .gesture(
+                MagnifyGesture()
+                    .onChanged { value in
+                        if pinchScale == 1 { pinchAnchor = value.startAnchor }
+                        pinchScale = max(1, value.magnification)
+                    }
+                    .onEnded { value in
+                        if value.magnification > 1.2 {
+                            var t = Transaction()
+                            t.disablesAnimations = true
+                            withTransaction(t) { showZoom = true }
+                            pinchScale = 1
+                        } else {
+                            withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) { pinchScale = 1 }
+                        }
+                    }
+            )
             .fullScreenCover(isPresented: $showZoom) {
                 if case .done(let result) = phase {
                     ZoomableScanView(image: scanImage.image, result: textWasEdited ? .empty : result, library: library) { cluster in
@@ -134,7 +149,7 @@ struct ScanResultView: View {
                         .font(.title3.bold())
                 }
                 if !ids.isEmpty {
-                    Text("点击高亮或下方列表查看讲解；点击图片可放大查看原文。")
+                    Text("点击高亮或下方列表查看讲解；双指可直接放大图片。")
                         .font(.footnote).foregroundStyle(.secondary)
                 }
                 VStack(spacing: 0) {
@@ -151,21 +166,27 @@ struct ScanResultView: View {
                         }
                     }
                 }
-                .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 12))
+                .background(Theme.card, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
             }
 
-            VStack(alignment: .leading, spacing: 10) {
-                Text("识别文本").font(.title3.bold())
-                if textWasEdited {
-                    Text("文本已手动修改，图片上的高亮已隐藏。").font(.footnote).foregroundStyle(.secondary)
+            // 识别错字导致漏掉语法时的补救入口：平时不打扰
+            Button {
+                draftText = result.text
+                isEditing = true
+            } label: {
+                HStack(spacing: 4) {
+                    Text("有语法没识别出来？")
+                    Text("手动修正文字").foregroundStyle(Theme.accentText)
                 }
-                HighlightedText(result: result, library: library, selectedClusterID: selectedClusterID) { cluster in
-                    selectedClusterID = cluster.id
-                    tappedCluster = cluster
-                }
-                .padding(12)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 12))
+                .font(.footnote)
+                .foregroundStyle(.secondary)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 8)
+            }
+            .buttonStyle(.plain)
+            if textWasEdited {
+                Text("文本已手动修改，图片上的高亮已隐藏。").font(.footnote).foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity)
             }
         }
     }
