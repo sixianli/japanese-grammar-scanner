@@ -36,6 +36,8 @@ final class CameraController: NSObject, ObservableObject {
     private var awaitingFirstFrame = false
     private let bufferLock = NSLock()
     private let ciContext = CIContext()
+    /// 只在 analysisQueue 上使用
+    private let stabilizer = LiveResultStabilizer()
 
     init(matcher: GrammarMatcher) {
         self.matcher = matcher
@@ -151,6 +153,7 @@ extension CameraController: AVCaptureVideoDataOutputSampleBufferDelegate {
         awaitingFirstFrame = false
         bufferLock.unlock()
         if isFirstFrame {
+            stabilizer.reset()
             DispatchQueue.main.async {
                 self.liveResult = .empty // 丢掉停止前还在路上的旧识别结果
                 self.hasLiveFrame = true
@@ -170,7 +173,7 @@ extension CameraController: AVCaptureVideoDataOutputSampleBufferDelegate {
         let orientedSize = CGSize(width: height, height: width) // .right 旋转后宽高互换
 
         guard let ocr = try? TextRecognizer.recognize(pixelBuffer: buffer, orientation: frameOrientation) else { return }
-        let result = ScanAnalyzer.analyze(text: ocr.text, lines: ocr.lines, matcher: matcher)
+        let result = stabilizer.update(ScanAnalyzer.analyze(text: ocr.text, lines: ocr.lines, matcher: matcher))
         DispatchQueue.main.async {
             self.frameSize = orientedSize
             self.liveResult = result

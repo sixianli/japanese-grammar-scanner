@@ -63,6 +63,8 @@ struct ScanHomeView: View {
                         fit: .fill,
                         library: library
                     ) { tappedCluster = $0 }
+                    // 框跟随画面平滑移动、淡入淡出，而不是每次识别都整体闪一下
+                    .animation(.easeOut(duration: 0.3), value: camera.liveResult.boxes)
                 }
                 // 新画面到达前不显示（避免旧画面一闪），到达后快速淡入
                 .opacity(camera.hasLiveFrame ? 1 : 0)

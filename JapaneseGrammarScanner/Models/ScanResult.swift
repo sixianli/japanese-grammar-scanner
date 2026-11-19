@@ -28,10 +28,17 @@ struct RecognizedLine {
 
 /// 图片 / 相机帧上需要绘制的高亮框。
 struct HighlightBox: Identifiable, Hashable {
-    let id = UUID()
+    /// 相机实时取景时，同一个框在前后帧之间保持同一个 id（见 LiveResultStabilizer），位置变化时平滑移动而不是闪一下
+    let id: UUID
     let clusterID: Int
     /// 归一化坐标，原点在**左上角**（已从 Vision 坐标系翻转），方便 SwiftUI 绘制。
     let rect: CGRect
+
+    init(id: UUID = UUID(), clusterID: Int, rect: CGRect) {
+        self.id = id
+        self.clusterID = clusterID
+        self.rect = rect
+    }
 }
 
 /// 一次扫描（一张图片或一帧相机画面）的完整结果。
