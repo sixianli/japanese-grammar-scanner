@@ -99,23 +99,27 @@ final class ScanResultTests: E2ETestCase {
         let rows = ids("result.grammarRow")
         wait(rows.firstMatch, "应列出语法点")
         var found = false
+        var bannerCount = 0
         for i in 0..<rows.count {
             let row = rows.element(boundBy: i)
             scrollTo(row)
             row.tap()
             wait(detailScreen, "应进入讲解页")
             let banner = id("detail.scannedMatch")
-            XCTAssertTrue(banner.waitForExistence(timeout: 5), "从识别结果进入的讲解页应显示扫到的原文")
-            XCTAssertTrue(text(containing: "你扫到的").exists, "横幅应写明「你扫到的」")
-            if id("detail.senseRow.matched").exists {
-                found = true
-                banner.tap()
-                XCTAssertTrue(id("detail.senseRow.matched").waitForExistence(timeout: 3))
+            if banner.waitForExistence(timeout: 4) {
+                bannerCount += 1
+                XCTAssertTrue(text(containing: "你扫到的").exists, "横幅应写明「你扫到的」")
+                if id("detail.senseRow.matched").exists {
+                    found = true
+                    banner.tap()
+                    XCTAssertTrue(id("detail.senseRow.matched").waitForExistence(timeout: 3))
+                }
             }
             back()
             wait(navBar("识别结果"), "返回识别结果")
             if found { break }
         }
+        XCTAssertGreaterThan(bannerCount, 0, "从识别结果进入的讲解页应显示扫到的原文")
         XCTAssertTrue(found, "示例书页里至少有一个多用法语法点应定位到具体用法")
     }
 

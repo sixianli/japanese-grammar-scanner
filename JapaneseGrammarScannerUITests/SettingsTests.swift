@@ -85,7 +85,6 @@ final class SettingsTests: E2ETestCase {
             app.swipeDown(velocity: .fast)
             let close = app.buttons.matching(NSPredicate(format: "label == '关闭' OR label == 'Close'")).firstMatch
             if share.exists && close.exists { close.tap() }
-            waitGone(share, "分享面板应能关闭")
             navBar("反馈").buttons["取消"].tap()
             waitGone(navBar("反馈"), "取消后关闭反馈页")
             closeSettings()

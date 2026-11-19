@@ -180,9 +180,12 @@ final class SearchTests: E2ETestCase {
 
         field.tap()
         XCTAssertTrue(waitForFocus(field), "再点搜索框应重新弹出键盘")
-        field.typeText(XCUIKeyboardKey.delete.rawValue + XCUIKeyboardKey.delete.rawValue + XCUIKeyboardKey.delete.rawValue + XCUIKeyboardKey.delete.rawValue + "尽管")
+        // 有结果时：点结果以外的空白处也收起键盘，结果仍可点开
+        field.typeText(XCUIKeyboardKey.delete.rawValue + XCUIKeyboardKey.delete.rawValue + XCUIKeyboardKey.delete.rawValue + XCUIKeyboardKey.delete.rawValue + "ように")
         wait(id("search.result"), "应有结果")
-        app.swipeUp()
-        waitGone(app.keyboards.firstMatch, "拖动结果列表应收起键盘")
+        app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.03)).tap()
+        waitGone(app.keyboards.firstMatch, "点空白处应收起键盘")
+        id("search.result").tap()
+        wait(detailScreen, "收起键盘后结果仍能打开讲解")
     }
 }
