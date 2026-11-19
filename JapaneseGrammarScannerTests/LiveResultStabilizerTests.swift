@@ -19,6 +19,15 @@ final class LiveResultStabilizerTests: XCTestCase {
         XCTAssertTrue(s.update(frame([])).boxes.isEmpty, "连续 3 帧没识别到才消失")
     }
 
+    func testIntermittentDetectionStillShows() {
+        let s = LiveResultStabilizer()
+        let a = CGRect(x: 0.1, y: 0.1, width: 0.1, height: 0.03)
+        XCTAssertTrue(s.update(frame([("a", a)])).boxes.isEmpty)
+        XCTAssertTrue(s.update(frame([])).boxes.isEmpty)
+        XCTAssertEqual(s.update(frame([("a", a)])).boxes.count, 1, "时有时无（隔帧识别到）也稳定显示")
+        XCTAssertEqual(s.update(frame([])).boxes.count, 1)
+    }
+
     func testSameBoxKeepsIDAndIgnoresJitter() {
         let s = LiveResultStabilizer()
         let a = CGRect(x: 0.1, y: 0.1, width: 0.1, height: 0.03)

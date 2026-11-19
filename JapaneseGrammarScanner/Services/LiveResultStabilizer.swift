@@ -3,7 +3,8 @@ import Foundation
 
 /// 相机实时取景时让识别结果「稳住」：
 /// 每 0.6 秒识别一帧，单帧结果会因为手抖、对焦、光线而时有时无、位置来回跳。这里在帧与帧之间做跟踪：
-/// - 一个框要连续两帧都识别到才显示；显示后连续 3 帧（约 2 秒）没识别到才消失；
+/// - 一个框要在相邻的几帧里识别到两次才显示（只闪现一次的误识别不显示；时有时无的也能稳定显示）；
+///   显示后连续 3 帧（约 2 秒）没识别到才消失；
 /// - 前后帧的同一个框保持同一个 id，位置只有明显移动时才更新（交给界面做平滑移动），微小抖动忽略；
 /// - 顶部语法点标签按首次出现的顺序排列，新出现的排在后面，已有的不换位置。
 final class LiveResultStabilizer {
@@ -66,9 +67,9 @@ final class LiveResultStabilizer {
         // 本帧没识别到的框
         for i in tracks.indices where !matched.contains(i) {
             tracks[i].misses += 1
-            if !tracks[i].shown { tracks[i].hits = 0 }
         }
-        tracks.removeAll { $0.misses >= ($0.shown ? Self.missesToHide : 1) }
+        // 未显示的候选：连续 2 帧没再出现就丢弃；已显示的：连续 3 帧没出现才消失
+        tracks.removeAll { $0.misses >= ($0.shown ? Self.missesToHide : 2) }
 
         // 输出：只含已显示的框；语法点按首次出现的顺序
         let shown = tracks.filter(\.shown)
