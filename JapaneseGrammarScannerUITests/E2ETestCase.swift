@@ -111,7 +111,11 @@ class E2ETestCase: XCTestCase {
         tab("搜索").tap()
         let field = app.searchFields.firstMatch
         wait(field, "搜索页应有搜索框")
-        _ = waitForFocus(field)
+        // 自动聚焦另有专门的测试；这里只要能输入就行（冷启动后第一次偶尔慢），没弹出键盘就点一下搜索框
+        if !waitForFocus(field) {
+            field.tap()
+            _ = waitForFocus(field, timeout: 5)
+        }
         field.typeText(query)
         wait(id("search.result"), "搜索「\(query)」应有结果")
         id("search.result").tap()

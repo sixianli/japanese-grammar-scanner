@@ -96,8 +96,9 @@ final class SettingsTests: E2ETestCase {
         wait(navBar("反馈"), "反馈页")
         button(startingWith: "添加截图").tap()
         pickFirstPhoto()
-        let add = app.buttons.matching(NSPredicate(format: "label == '添加' OR label == 'Add'")).firstMatch
-        if add.waitForExistence(timeout: 5) { add.tap() }
+        // 多选的照片选择器要再点确认（iOS 26 是右侧的 ✓ 按钮，旧系统是「添加」）
+        let confirm = app.buttons.matching(NSPredicate(format: "label IN {'添加', 'Add', '完成', 'Done'} OR identifier IN {'Done', 'Add'}")).firstMatch
+        if confirm.waitForExistence(timeout: 5) { confirm.tap() }
         wait(app.buttons["删除截图"], "选好的截图应显示在反馈页", timeout: 15)
         app.buttons["删除截图"].tap()
         navBar("反馈").buttons["取消"].tap()

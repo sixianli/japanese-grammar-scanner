@@ -115,16 +115,55 @@ struct LanguagePickerView: View {
     }
 }
 
-/// 让 App 内的所有文字（SwiftUI 的 Text、导航标题、按钮等）都从所选语言的语言包（xx.lproj）里取。
+/// 让 App 内的所有文字（SwiftUI 的 Text、导航标题、按钮等）都从所选语言里取。
 /// 只改环境的 locale 不够：运行中切换语言时，SwiftUI 对普通文字仍按启动时的语言查找。
+/// 新版 Xcode 把 String Catalog 编译成整包的语言表，单靠「xx.lproj 子包」只能查到带复数规则的那部分文字，
+/// 所以两条查找路径都接管，并直接告诉系统要哪种语言。
 private var languageBundleKey: UInt8 = 0
+private var languageCodeKey: UInt8 = 0
 
 private final class LanguageOverrideBundle: Bundle, @unchecked Sendable {
+    /// 防止系统实现内部再调回来时无限递归
+    private static let resolving = ThreadLocalFlag()
+
     override func localizedString(forKey key: String, value: String?, table tableName: String?) -> String {
-        if let bundle = objc_getAssociatedObject(self, &languageBundleKey) as? Bundle {
-            return bundle.localizedString(forKey: key, value: value, table: tableName)
+        guard let code = objc_getAssociatedObject(self, &languageCodeKey) as? String, !Self.resolving.isSet else {
+            return super.localizedString(forKey: key, value: value, table: tableName)
         }
-        return super.localizedString(forKey: key, value: value, table: tableName)
+        return Self.resolving.with { resolve(key: key, value: value, table: tableName, code: code) }
+    }
+
+    @available(iOS 18.0, *)
+    override func localizedString(forKey key: String, value: String?, table tableName: String?, localizations: [Locale.Language]) -> String {
+        guard let code = objc_getAssociatedObject(self, &languageCodeKey) as? String, !Self.resolving.isSet else {
+            return super.localizedString(forKey: key, value: value, table: tableName, localizations: localizations)
+        }
+        return Self.resolving.with { resolve(key: key, value: value, table: tableName, code: code) }
+    }
+
+    private func resolve(key: String, value: String?, table: String?, code: String) -> String {
+        // 1. 按指定语言查整包的语言表
+        if #available(iOS 18.0, *) {
+            let viaLanguage = super.localizedString(forKey: key, value: "\u{1}", table: table,
+                                                    localizations: [Locale.Language(identifier: code)])
+            if viaLanguage != "\u{1}" { return viaLanguage }
+        }
+        // 2. 旧式的 xx.lproj 子包
+        if let bundle = objc_getAssociatedObject(self, &languageBundleKey) as? Bundle {
+            let viaLproj = bundle.localizedString(forKey: key, value: "\u{1}", table: table)
+            if viaLproj != "\u{1}" { return viaLproj }
+        }
+        return super.localizedString(forKey: key, value: value, table: table)
+    }
+}
+
+private final class ThreadLocalFlag: @unchecked Sendable {
+    private let key = "LanguageOverrideBundle.resolving"
+    var isSet: Bool { Thread.current.threadDictionary[key] != nil }
+    func with<T>(_ body: () -> T) -> T {
+        Thread.current.threadDictionary[key] = true
+        defer { Thread.current.threadDictionary.removeObject(forKey: key) }
+        return body()
     }
 }
 
@@ -138,5 +177,6 @@ extension Bundle {
             .flatMap { Bundle.main.path(forResource: $0, ofType: "lproj") }
             .flatMap { Bundle(path: $0) }
         objc_setAssociatedObject(Bundle.main, &languageBundleKey, bundle, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        objc_setAssociatedObject(Bundle.main, &languageCodeKey, code, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
 }
