@@ -304,6 +304,12 @@ final class DetailRenderTests: XCTestCase {
         let sampled = library.points.enumerated().filter { $0.offset % 40 == 0 }.map(\.element.id)
         var ids: [String] = []
         for id in priority + merged + sampled where !ids.contains(id) { ids.append(id) }
+        // 先渲染一次做预热（首次加载注音表、字体等一次性开销不计入单页耗时）
+        let warmup = ImageRenderer(content: GrammarDetailView(grammarID: ids[0])
+            .environmentObject(library).environmentObject(favorites)
+            .environmentObject(entitlements).environmentObject(history).frame(width: 430))
+        warmup.proposedSize = ProposedViewSize(width: 430, height: 3000)
+        _ = warmup.uiImage
         for id in ids {
             let view = GrammarDetailView(grammarID: id)
                 .environmentObject(library)
