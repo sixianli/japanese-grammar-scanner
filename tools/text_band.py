@@ -50,13 +50,16 @@ def line_band(gray, q, text):
     cs = np.concatenate([np.zeros((N, 1)), np.cumsum(dark, 1)], 1)
     win = cs[:, hr:] - cs[:, :-hr]  # (N, M-hr+1)
     K = win.shape[1]
-    d = max(1, int(math.ceil(0.4 * hr)))
+    d = max(1, int(math.ceil(DFRAC * hr)))
+    # 平滑约束：每移动一行扣 LAM × (一列典型墨迹量 / 字高行数)，真正的文字行是平滑弧线，不会忽上忽下
+    unit = float(np.median(win.max(axis=1))) / hr if LAM > 0 else 0.0
     score = win[0].copy(); back = np.zeros((N, K), int)
     for j in range(1, N):
         new = np.full(K, -1e18); arg = np.zeros(K, int)
         for k in range(K):
             lo, hi = max(0, k - d), min(K, k + d + 1)
-            i = lo + int(np.argmax(score[lo:hi])); new[k] = score[i] + win[j, k]; arg[k] = i
+            cand = score[lo:hi] - LAM * unit * np.abs(np.arange(lo, hi) - k)
+            i = int(np.argmax(cand)); new[k] = cand[i] + win[j, k]; arg[k] = lo + i
         score = new; back[j] = arg
     k = int(np.argmax(score)); path = [k]
     for j in range(N - 1, 0, -1):
@@ -70,6 +73,8 @@ def line_band(gray, q, text):
     return h, ts, f, Hq, raw
 
 JUMP = float(os.environ.get("JUMP", "0.5"))
+DFRAC = float(os.environ.get("DFRAC", "0.25"))
+LAM = float(os.environ.get("LAM", "1"))
 
 def refit(box_pts, q, band):
     h, ts, f, Hq, raw = band

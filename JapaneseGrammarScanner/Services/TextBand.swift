@@ -116,8 +116,14 @@ enum TextBandFinder {
             for i in 0..<k { win[j][i] = prefix[i + hr] - prefix[i] }
         }
 
-        // 动态规划：相邻两列的起点最多相差 0.4 个字高，找墨迹总量最大的连贯路径
-        let d = max(1, Int((0.4 * CGFloat(hr)).rounded(.up)))
+        // 动态规划：找墨迹总量最大、又平滑的连贯路径。
+        // 相邻两列的起点最多相差 0.25 个字高；每移动一行再扣一点分（一列典型墨迹量 / 字高行数）。
+        // 真正的文字行是平滑的弧线；不加这个约束时，在行距很密、倾斜的书页上路径会顺着墨迹滑到相邻的行。
+        // 参数在 95 张实拍照片上对比选定（tools/text_band.py 的 DFRAC / LAM）。
+        let d = max(1, Int((0.25 * CGFloat(hr)).rounded(.up)))
+        let columnPeaks = win.map { $0.max() ?? 0 }.sorted()
+        let unit = (columnPeaks.isEmpty ? 0 : columnPeaks[columnPeaks.count / 2]) / CGFloat(hr)
+        let movePenalty = 1.0 * unit
         var score = win[0]
         var back = [[Int]](repeating: [Int](repeating: 0, count: k), count: n)
         for j in 1..<n {
@@ -125,8 +131,12 @@ enum TextBandFinder {
             for i in 0..<k {
                 let lo = max(0, i - d), hi = min(k - 1, i + d)
                 var best = lo
-                for c in lo...hi where score[c] > score[best] { best = c }
-                next[i] = score[best] + win[j][i]
+                var bestScore = -CGFloat.greatestFiniteMagnitude
+                for c in lo...hi {
+                    let v = score[c] - movePenalty * CGFloat(abs(c - i))
+                    if v > bestScore { bestScore = v; best = c }
+                }
+                next[i] = bestScore + win[j][i]
                 back[j][i] = best
             }
             score = next

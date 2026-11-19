@@ -97,6 +97,23 @@ final class GrammarMatcherTests: XCTestCase {
         XCTAssertEqual(ya?.matchedTexts["ya-nado"]?.hasPrefix("や"), true)
     }
 
+    /// 9 个字以内整段框：「お詫び申し上げます」不应只框「お」和「げ」
+    func testMediumSpanIsBoxedWhole() {
+        let text = "心よりお詫び申し上げます。"
+        let ns = text as NSString
+        let r = ns.range(of: "お詫び申し上げます")
+        XCTAssertEqual(GrammarMatcher.displaySegments(for: r, in: ns), [r])
+    }
+
+    /// 长跨度时开头的平假名最多取 5 个：「なかなか」不应被截成「なかな」
+    func testLongSpanKeepsWholeLeadingKana() {
+        let text = "なかなか眠れなくて困っていない"
+        let ns = text as NSString
+        let r = NSRange(location: 0, length: ns.length)
+        let segs = GrammarMatcher.displaySegments(for: r, in: ns).map { ns.substring(with: $0) }
+        XCTAssertEqual(segs.first, "なかなか")
+    }
+
     /// 从扫描进入讲解时，「がきっかけで」应对应「〜をきっかけに」的用法②
     func testBestSenseForScannedText() {
         guard let p = GrammarLibrary.shared.point(id: "wo-kikkake-ni") ?? GrammarLibrary.shared.points.first(where: { $0.title.contains("きっかけ") }) else {
