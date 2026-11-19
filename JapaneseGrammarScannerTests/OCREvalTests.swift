@@ -32,6 +32,13 @@ final class OCREvalTests: XCTestCase {
                     input = corrected
                     corners = quad.map { [Double($0.x), Double($0.y)] }
                 }
+                if config.hasPrefix("strips") {
+                    // 分条识别试验：把图片切成有重叠的竖条分别识别，导出每条里每一行、每个字的四边形（整图归一化、原点左上）
+                    let n = Int(config.dropFirst("strips".count)) ?? 3
+                    record[config] = ["strips": try Self.stripDump(input, count: n),
+                                      "seconds": Date().timeIntervalSince(start)] as [String: Any]
+                    continue
+                }
                 if config == "tiled" {
                     // 分块识别试验：整页 + 2×2 重叠分块，合并去重后输出各行（只评测文字与语法，不出框）
                     let merged = try Self.tiledLines(input)
@@ -75,9 +82,26 @@ final class OCREvalTests: XCTestCase {
                         }
                     }
                 }
-                let boxes: [[String: Any]] = result.boxes.map { box in
+                // 每个高亮框来自哪一行的哪一段（与 ScanAnalyzer.analyze 的循环顺序一致）
+                var sources: [[Int]] = []
+                for cluster in result.clusters {
+                    for segment in cluster.ranges {
+                        for (i, line) in assembled.lines.enumerated() {
+                            let overlap = NSIntersectionRange(segment, line.rangeInText)
+                            guard overlap.length > 0 else { continue }
+                            sources.append([i, overlap.location - line.rangeInText.location, overlap.length])
+                        }
+                    }
+                }
+                let assembledLines: [[String: Any]] = assembled.lines.map { l in
+                    var d: [String: Any] = ["text": l.text, "range": [l.rangeInText.location, l.rangeInText.length],
+                                            "quad": l.quad.flatMap { [Double($0.x), Double(1 - $0.y)] }]
+                    if let b = l.band { d["band"] = ["glyph": Double(b.glyph), "ts": b.ts.map(Double.init), "centers": b.centers.map(Double.init)] }
+                    return d
+                }
+                let boxes: [[String: Any]] = result.boxes.enumerated().map { k, box in
                     let ids = result.clusters.first { $0.id == box.clusterID }?.grammarIDs ?? []
-                    return ["grammar": ids, "cluster": box.clusterID,
+                    return ["grammar": ids, "cluster": box.clusterID, "source": k < sources.count ? sources[k] : [],
                             "rect": [box.rect.minX, box.rect.minY, box.rect.width, box.rect.height].map { Double($0) },
                             "quad": box.quad.flatMap { [Double($0.x), Double($0.y)] }]
                 }
@@ -89,6 +113,7 @@ final class OCREvalTests: XCTestCase {
                 var entry: [String: Any] = [
                     "boxStats": ["exact": exact, "estimated": estimated, "rejected": rejected],
                     "boxes": boxes,
+                    "assembled": assembledLines,
                     "pageIsCurved": result.pageIsCurved,
                     "clusters": clusters,
                     "lines": lines,
@@ -106,6 +131,43 @@ final class OCREvalTests: XCTestCase {
     }
 
     struct Line { var text: String; var confidence: Float; var box: CGRect }
+
+    /// 竖条识别：count 条等宽、相邻重叠 1/3 条宽的竖条。每行导出文字、整行四边形、每个字的四边形（整图归一化，原点左上）。
+    static func stripDump(_ image: CGImage, count: Int) throws -> [[String: Any]] {
+        let W = CGFloat(image.width), H = CGFloat(image.height)
+        let width = 1 / (CGFloat(count) - CGFloat(count - 1) / 3)
+        let step = width * 2 / 3
+        var out: [[String: Any]] = []
+        for k in 0..<count {
+            let x0 = CGFloat(k) * step, x1 = min(1, x0 + width)
+            let rect = CGRect(x: x0 * W, y: 0, width: (x1 - x0) * W, height: H).integral
+            guard let strip = image.cropping(to: rect) else { continue }
+            let request = VNRecognizeTextRequest()
+            request.recognitionLevel = .accurate
+            request.recognitionLanguages = ["ja-JP", "en-US"]
+            request.usesLanguageCorrection = false
+            try VNImageRequestHandler(cgImage: strip, options: [:]).perform([request])
+            func map(_ p: CGPoint) -> [Double] {
+                [Double((rect.minX + p.x * rect.width) / W), Double(1 - p.y)]
+            }
+            func quad(_ o: VNRectangleObservation) -> [Double] {
+                [o.topLeft, o.topRight, o.bottomRight, o.bottomLeft].flatMap(map)
+            }
+            let lines: [[String: Any]] = (request.results ?? []).compactMap { obs in
+                guard let c = obs.topCandidates(1).first else { return nil }
+                var chars: [[Double]] = []
+                var idx = c.string.startIndex
+                while idx < c.string.endIndex {
+                    let next = c.string.index(after: idx)
+                    if let b = try? c.boundingBox(for: idx..<next) { chars.append(quad(b)) } else { chars.append([]) }
+                    idx = next
+                }
+                return ["text": c.string, "confidence": Double(c.confidence), "quad": quad(obs), "chars": chars]
+            }
+            out.append(["x0": Double(rect.minX / W), "x1": Double(rect.maxX / W), "lines": lines])
+        }
+        return out
+    }
 
     /// 整页识别一次，再把图片切成 2×2 有重叠的块分别识别；块里识别出、整页漏掉的行补进来。
     /// 坐标统一换算到整张图的 Vision 归一化坐标（原点左下）。
