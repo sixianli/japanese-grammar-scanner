@@ -36,50 +36,80 @@ enum StripLocator {
     /// 竖条里的这一行仍然比字高 2.2 倍还高：在框附近再切一小块重新识别
     static let looseLimit: CGFloat = 2.2
 
+    /// 竖条里那一行仍然很弯时，最多再切这么多小块重新识别（控制耗时）
+    static let maxLocalRegions = 24
+
     /// 重新定位 result 的高亮框。lines 是整页识别的行（与 result 一起由 ScanAnalyzer.analyze 得到）。
     static func refine(_ result: ScanResult, lines: [RecognizedLine], image: CGImage) -> ScanResult {
         guard !result.boxes.isEmpty else { return result }
         let size = CGSize(width: image.width, height: image.height)
-        var strips: [Line] = []
-        for k in 0..<stripCount {
-            let width = 3 / (2 * CGFloat(stripCount) + 1)   // 相邻两条重叠 1/3 条宽
+        let width = 3 / (2 * CGFloat(stripCount) + 1)   // 相邻两条重叠 1/3 条宽
+        let regions = (0..<stripCount).map { k -> CGRect in
             let x0 = CGFloat(k) * width * 2 / 3
-            strips += recognize(image, region: CGRect(x: x0, y: 0, width: min(width, 1 - x0), height: 1))
+            return CGRect(x: x0, y: 0, width: min(width, 1 - x0), height: 1)
         }
+        // 几条竖条同时识别
+        let strips = concurrentMap(regions) { recognize(image, region: $0) }.flatMap { $0 }
         guard !strips.isEmpty else { return result }
 
-        var local: [(region: CGRect, lines: [Line])] = []
-        var boxes: [HighlightBox] = []
-        for box in result.boxes {
-            guard let source = box.source, lines.indices.contains(source.line),
-                  isHorizontal(lines[source.line]) else {
-                boxes.append(box)
-                continue
-            }
+        // 第一轮：在竖条里找每个框的文字（太长、跨了竖条的拆成前后两半，两半都要找到）
+        struct Piece { let text: [UInt16]; let range: NSRange; var candidate: Candidate }
+        var found: [[Piece]?] = result.boxes.map { box in
+            guard let source = box.source, lines.indices.contains(source.line), isHorizontal(lines[source.line]) else { return nil }
             let text = Array(lines[source.line].text.utf16)
-            let prior = center(box.quad.map(flipPoint))
-            var quads: [[CGPoint]] = []
-            if let q = locate(text, source.range, prior: prior, in: strips, size: size, image: image, local: &local) {
-                quads = [q]
-            } else if source.range.length >= 4 {
-                // 太长、跨了竖条：拆成前后两半分别找（两半都要找到）
-                let half = source.range.length / 2
-                let parts = [NSRange(location: source.range.location, length: half),
-                             NSRange(location: source.range.location + half, length: source.range.length - half)]
-                let found = parts.compactMap { part -> [CGPoint]? in
-                    let f = (CGFloat(part.location - source.range.location) + CGFloat(part.length) / 2) / CGFloat(source.range.length)
-                    let q = box.quad.map(flipPoint)
-                    let top = TextBandFinder.lerp(q[0], q[1], f), bottom = TextBandFinder.lerp(q[3], q[2], f)
-                    return locate(text, part, prior: TextBandFinder.mid(top, bottom), in: strips, size: size, image: image, local: &local)
-                }
-                if found.count == 2 { quads = found }
+            let q = box.quad.map(flipPoint)
+            if let c = bestCandidate(text, source.range, prior: center(q), in: strips, size: size) {
+                return [Piece(text: text, range: source.range, candidate: c)]
             }
-            guard !quads.isEmpty else {
+            guard source.range.length >= 4 else { return nil }
+            let half = source.range.length / 2
+            let parts = [NSRange(location: source.range.location, length: half),
+                         NSRange(location: source.range.location + half, length: source.range.length - half)]
+            let pieces = parts.compactMap { part -> Piece? in
+                let f = (CGFloat(part.location - source.range.location) + CGFloat(part.length) / 2) / CGFloat(source.range.length)
+                let prior = TextBandFinder.mid(TextBandFinder.lerp(q[0], q[1], f), TextBandFinder.lerp(q[3], q[2], f))
+                return bestCandidate(text, part, prior: prior, in: strips, size: size).map { Piece(text: text, range: part, candidate: $0) }
+            }
+            return pieces.count == 2 ? pieces : nil
+        }
+
+        // 第二轮：竖条里那一行仍然很弯的，在附近切一小块重新识别（相邻的共用一块；各小块同时识别）
+        var local: [CGRect] = []
+        var wanted: [(box: Int, piece: Int, region: Int)] = []
+        for (b, pieces) in found.enumerated() {
+            for (k, piece) in (pieces ?? []).enumerated() where piece.candidate.looseness > looseLimit {
+                let c = center(piece.candidate.quad)
+                let glyph = glyphSize(piece.candidate.quad, size: size)
+                // 这段文字左右各留约 4.5 个字（够核对前后文），上下各 3 个字高
+                let halfWidth = (CGFloat(piece.range.length) + 9) / 2 * glyph / size.width
+                let halfHeight = 3 * glyph / size.height
+                if let r = local.firstIndex(where: { $0.insetBy(dx: halfWidth * 0.6, dy: halfHeight * 0.3).contains(c) }) {
+                    wanted.append((b, k, r))
+                } else if local.count < maxLocalRegions {
+                    local.append(CGRect(x: c.x - halfWidth, y: c.y - halfHeight, width: 2 * halfWidth, height: 2 * halfHeight)
+                        .intersection(CGRect(x: 0, y: 0, width: 1, height: 1)))
+                    wanted.append((b, k, local.count - 1))
+                }
+            }
+        }
+        let nearby = concurrentMap(local) { recognize(image, region: $0) }
+        for w in wanted {
+            guard let piece = found[w.box]?[w.piece] else { continue }
+            if let again = bestCandidate(piece.text, piece.range, prior: center(piece.candidate.quad), in: nearby[w.region],
+                                         size: size, maxDistance: 1.5),
+               again.looseness < piece.candidate.looseness {
+                found[w.box]?[w.piece].candidate = again
+            }
+        }
+
+        var boxes: [HighlightBox] = []
+        for (b, box) in result.boxes.enumerated() {
+            guard let pieces = found[b] else {
                 boxes.append(box)
                 continue
             }
-            for (i, q) in quads.enumerated() {
-                let flipped = ScanAnalyzer.flip(q)
+            for (i, piece) in pieces.enumerated() {
+                let flipped = ScanAnalyzer.flip(piece.candidate.quad)
                 boxes.append(HighlightBox(id: i == 0 ? box.id : UUID(), clusterID: box.clusterID,
                                           rect: ScanAnalyzer.bounds(of: flipped), quad: flipped, source: box.source))
             }
@@ -87,6 +117,18 @@ enum StripLocator {
         var refined = result
         refined.boxes = boxes
         return refined
+    }
+
+    /// 并发地对每个元素做 transform（Vision 识别可以在多个线程上同时进行）
+    static func concurrentMap<T>(_ items: [CGRect], _ transform: (CGRect) -> T) -> [T] {
+        let results = ConcurrentResults<T>(items.count)
+        DispatchQueue.concurrentPerform(iterations: items.count) { i in
+            let value = transform(items[i])
+            results.lock.lock()
+            results.values[i] = value
+            results.lock.unlock()
+        }
+        return results.values.compactMap { $0 }
     }
 
     // MARK: - 识别一块区域
@@ -149,34 +191,6 @@ enum StripLocator {
         let distance: CGFloat
         let margin: CGFloat
         let looseness: CGFloat
-    }
-
-    /// 在 pool 的各行里找 text[range] 这段文字，返回最可信的一处（整图坐标）。
-    /// 竖条里那一行仍然很弯（looseness 大）时，在找到的位置附近切一小块重新识别再找一次。
-    static func locate(_ text: [UInt16], _ range: NSRange, prior: CGPoint, in pool: [Line], size: CGSize,
-                       image: CGImage, local: inout [(region: CGRect, lines: [Line])]) -> [CGPoint]? {
-        guard let best = bestCandidate(text, range, prior: prior, in: pool, size: size) else { return nil }
-        guard best.looseness > looseLimit else { return best.quad }
-        // 小块：这段文字左右各留约 4.5 个字（够核对前后文），上下各 3 个字高
-        let glyph = glyphSize(best.quad, size: size)
-        let c = center(best.quad)
-        let halfWidth = (CGFloat(range.length) + 9) / 2 * glyph / size.width
-        let halfHeight = 3 * glyph / size.height
-        let region = CGRect(x: c.x - halfWidth, y: c.y - halfHeight, width: 2 * halfWidth, height: 2 * halfHeight)
-            .intersection(CGRect(x: 0, y: 0, width: 1, height: 1))
-        // 附近已经切过的小块能覆盖这段文字时直接用
-        let nearby: [Line]
-        if let cached = local.first(where: { $0.region.insetBy(dx: halfWidth * 0.6, dy: halfHeight * 0.3).contains(c) }) {
-            nearby = cached.lines
-        } else {
-            nearby = recognize(image, region: region)
-            local.append((region, nearby))
-        }
-        if let again = bestCandidate(text, range, prior: c, in: nearby, size: size, maxDistance: 1.5),
-           again.looseness < best.looseness {
-            return again.quad
-        }
-        return best.quad
     }
 
     static func bestCandidate(_ text: [UInt16], _ range: NSRange, prior: CGPoint, in pool: [Line], size: CGSize,
@@ -253,4 +267,11 @@ enum StripLocator {
     }
 
     static func flipPoint(_ p: CGPoint) -> CGPoint { CGPoint(x: p.x, y: 1 - p.y) }
+}
+
+/// concurrentMap 的结果收集（加锁写入）
+private final class ConcurrentResults<T>: @unchecked Sendable {
+    var values: [T?]
+    let lock = NSLock()
+    init(_ n: Int) { values = Array(repeating: nil, count: n) }
 }
