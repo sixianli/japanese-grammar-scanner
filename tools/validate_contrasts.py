@@ -12,6 +12,7 @@ contrasts_<语言>.json（翻译）：
   * 除繁体中文外，译文不残留中文专用字
 
 用法: python3 tools/validate_contrasts.py
+      python3 tools/validate_contrasts.py --base <某个批次文件.json>   只校验这一份基础文件（分批编写时用）
 """
 import glob
 import json
@@ -78,7 +79,8 @@ def main():
     for f in glob.glob(os.path.join(GRAMMAR_DIR, "grammar_*.json")):
         with open(f, encoding="utf-8") as fh:
             ids |= {p["id"] for p in json.load(fh)}
-    base_path = os.path.join(DIR, "contrasts.json")
+    only_base = "--base" in sys.argv
+    base_path = sys.argv[sys.argv.index("--base") + 1] if only_base else os.path.join(DIR, "contrasts.json")
     if not os.path.exists(base_path):
         print("没有 contrasts.json，跳过")
         return 0
@@ -119,7 +121,7 @@ def main():
                 if "wrong" in it and not it["wrong"].get("ja", "").strip():
                     errors.append(f"{where}: wrong.ja 为空")
 
-    for lang in LANGS:
+    for lang in ([] if only_base else LANGS):
         path = os.path.join(DIR, f"contrasts_{lang}.json")
         name = os.path.basename(path)
         if not os.path.exists(path):

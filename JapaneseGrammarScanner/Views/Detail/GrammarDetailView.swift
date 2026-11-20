@@ -118,10 +118,12 @@ struct GrammarDetailView: View {
                             }
                         }
 
-                        if let contrasts = library.contrasts(for: p.id), !contrasts.groups.isEmpty {
-                            // 新版：分三组 + 对比例句（样板阶段只有部分语法点有）
-                            DocSection("相近语法", icon: "arrow.triangle.branch", anchor: "section-similar") {
-                                ContrastSection(contrasts: contrasts, currentTitle: p.titleForm)
+                        if let contrasts = library.contrasts(for: p.id) {
+                            // 新版：分三组 + 对比例句。新版资料里没有合格内容（groups 为空）时整节不显示，不退回旧版列表
+                            if !contrasts.groups.isEmpty {
+                                DocSection("相近语法", icon: "arrow.triangle.branch", anchor: "section-similar") {
+                                    ContrastSection(contrasts: contrasts, currentTitle: p.titleForm)
+                                }
                             }
                         } else if !p.similar.isEmpty {
                             DocSection("相近语法", icon: "arrow.triangle.branch", anchor: "section-similar") {
