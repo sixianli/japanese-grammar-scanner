@@ -24,7 +24,7 @@ GitHub 上的定时任务每 15 分钟检查一次，把新反馈连同截图发
 
 1. 打开 <https://icloud.developer.apple.com>（CloudKit Console），登录同一个开发者账号
 2. 管理令牌（Management Token）**不在**容器的 Settings → Tokens & Keys 里（那里只有 API Tokens 和 Server-to-Server Keys，第 3 步才用）。
-   点 CloudKit Console **右上角的头像** → **Manage Tokens**（管理令牌）→ **＋** 新建一个，复制 token（只显示一次）
+   点 CloudKit Console **右上角的头像（你的名字）** → **Settings**（账号设置）→ 里面的 **Tokens**（Management Tokens）→ **＋** 新建一个，复制 token（只显示一次，有效期一年）
 3. GitHub 仓库 → Settings → Secrets and variables → Actions → **New repository secret**：
    名称 `CLOUDKIT_MANAGEMENT_TOKEN`，值粘贴上一步的 token
 4. 告诉我「token 填好了」，我来运行导入任务（也可以自己在 Actions → **CloudKit Schema** → Run workflow）
