@@ -17,6 +17,10 @@ final class ScanResultTests: E2ETestCase {
         }
         back()
         waitForScanResult()
+        // 返回后，刚才点的框显示为选中（实线），其余仍是普通虚线框
+        wait(id("highlight.box.selected"), "返回后刚才点的框应显示为选中")
+        XCTAssertEqual(ids("highlight.box.selected").count, 1, "只有一个框是选中状态")
+        XCTAssertTrue(id("highlight.box").exists, "其余框仍是普通状态")
     }
 
     func testZoomButtonDoubleTapAndClose() {
