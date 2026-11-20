@@ -1,0 +1,14 @@
+{
+  "_doc": "只在开发、测试、CI 中使用、成果不进 App 的第三方组件（不需要在「开源许可」里署名）。新用了第三方组件而这里和 Resources/Legal/third_party.json 都没写，CI 不通过。",
+  "python": {
+    "PIL": "Pillow：生成图标 / 示例书页时绘图（图片里用到的字体单独署名）、OCR 评测",
+    "numpy": "OCR 评测",
+    "shapely": "OCR 评测：多边形重叠计算",
+    "rapidfuzz": "OCR 评测：文字相似度",
+    "cryptography": "CI：App Store Connect / CloudKit 接口签名",
+    "jwt": "CI：App Store Connect 接口签名"
+  },
+  "font": {
+    "wqy-zenhei": "文泉驿正黑：扫描体验评测脚本里绘制测试图片（不进 App）"
+  }
+}

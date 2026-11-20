@@ -57,7 +57,7 @@
 ## URL
 
 - 支持网址（必填）：可使用 GitHub 仓库页或 Issues 页
-- 隐私政策网址（必填）：将 `docs/appstore/privacy-policy.md` 发布到可公开访问的网址（如 GitHub Pages，或仓库中该文件的链接）
+- 隐私政策网址（必填）：https://sixianli.github.io/japanese-grammar-scanner/#privacy（docs/index.html，由 App 内的隐私政策自动生成）
 
 ## App 隐私（App Store Connect → App 隐私）
 

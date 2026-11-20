@@ -28,6 +28,10 @@ on:
         type: boolean
         default: false
 
+permissions:
+  contents: read
+  checks: read
+
 jobs:
   upload:
     runs-on: xcode-27
@@ -49,8 +53,17 @@ jobs:
           for v in ASC_KEY_ID ASC_ISSUER_ID ASC_KEY_P8 TEAM_ID BUNDLE_ID; do
             if [ -z "${!v}" ]; then echo "::error::缺少配置 $v，请按 release.yml 顶部说明配置"; exit 1; fi
           done
+      - name: Require green CI for this commit
+        # 硬门槛（CLAUDE.md）：同一个提交的数据校验、单元测试、端到端测试没有全部跑完并通过，不能打包上传
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/require_ci_green.py "${{ github.repository }}" "${{ github.sha }}"
       - name: Validate data
-        run: python3 tools/validate_grammar.py
+        run: |
+          python3 tools/validate_grammar.py
+          python3 tools/validate_contrasts.py
+          python3 tools/validate_compliance.py
+          python3 tools/check_strings.py
       - name: Write API key
         env:
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}

@@ -1,0 +1,9 @@
+{
+  "_doc": "「开源许可」页面的内容（App 直接读取这里）。tools/validate_compliance.py 扫描项目里实际用到的第三方组件（Swift 包、构建工具的 Python 包、字体），每个都必须在这里（components：成果打包进 App，要署名）或在 tools/compliance/dev_only.json（只在开发 / 测试时用，不进 App）；这里列着、项目里已经不用的也会报错。",
+  "components": [
+    {"name": "SudachiPy / SudachiDict", "usage": "用于离线生成例句的假名注音数据", "license": "Apache License 2.0 · © Works Applications Co., Ltd.", "url": "https://github.com/WorksApplications/sudachi.rs", "detect": ["python:sudachipy"]},
+    {"name": "OpenCC", "usage": "用于把讲解转换为繁体中文", "license": "Apache License 2.0 · © Carbo Kuo and contributors", "url": "https://github.com/BYVoid/OpenCC", "detect": ["python:opencc"]},
+    {"name": "Noto Serif JP", "usage": "用于绘制 App 图标", "license": "SIL Open Font License 1.1 · © Google LLC / Adobe", "url": "https://fonts.google.com/noto/specimen/Noto+Serif+JP", "detect": ["font:NotoSerifJP"]},
+    {"name": "IPA Font", "usage": "用于绘制示例书页图片", "license": "IPA Font License Agreement v1.0 · © IPA", "url": "https://moji.or.jp/ipafont/", "detect": ["font:ipam", "font:ipag"]}
+  ]
+}

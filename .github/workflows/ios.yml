@@ -24,6 +24,8 @@ jobs:
         run: |
           python3 tools/validate_grammar.py
           python3 tools/validate_contrasts.py
+          python3 tools/validate_compliance.py
+          python3 tools/check_strings.py
 
   build-and-test:
     runs-on: xcode-27

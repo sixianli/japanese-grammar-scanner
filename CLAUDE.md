@@ -24,8 +24,20 @@
 1. 设置里的「使用指南」：新功能要有对应条目（分步骤图文说明）；改了操作方式的，相应步骤和配图要改；删掉的功能要从指南里删掉。
 2. 首次打开的引导：核心流程（扫描 → 看讲解 → 相近语法 → 复习）有变化时同步改；不能留过时的说法。
 3. 指南文字同样要翻译成全部界面语言。
-4. 测试兜底：主要功能清单里的每一项都必须有指南条目（单元测试）；新增的页面入口（Route、标签页、设置入口）要归到某个功能下，否则编译 / 测试不通过。
+4. 测试兜底：主要功能清单（`Models/AppFeature.swift`）里的每一项都必须有指南条目（单元测试 GuideAndLegalTests）；
+   新增的页面入口（Route、标签页、设置入口）要归到某个功能下，否则编译 / 测试不通过。
 5. 提交 / PR 说明里列出「使用引导改了什么」。
+
+## 隐私政策 / 使用条款 / 开源许可 / 界面翻译：硬门槛（必须遵守）
+
+和代码对不上 CI 就不通过（`validate-data` 任务），发版流程也会拦下：
+- 隐私政策（`Services/LegalContent.swift`）：`tools/validate_compliance.py` 扫描代码里的框架、权限、iCloud 上报字段、本机存储、网址，
+  对照 `tools/compliance/privacy_inventory.json`；多了、少了、政策没写到都报错。清单变了要同步改政策、`privacyUpdated` 和 `privacyInventoryHash`，
+  并运行 `python3 tools/validate_compliance.py --write-web` 重新生成网站上的政策（docs/index.html）。
+- 使用条款：试用天数、是否购买等事实直接取自代码设置，不手写。
+- 开源许可（`Resources/Legal/third_party.json`）：项目里用到的第三方组件（Swift 包、构建工具的 Python 包、字体）必须登记，
+  进 App 的写这里，只在开发时用的写 `tools/compliance/dev_only.json`；不用了也要删。
+- 界面文字：`tools/check_strings.py` 检查界面上的中文都在 `tools/make_strings.py` 里有全部语言的翻译。
 
 ## 内容质量原则
 
