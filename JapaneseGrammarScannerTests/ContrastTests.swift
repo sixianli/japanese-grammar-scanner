@@ -26,14 +26,14 @@ final class ContrastTests: XCTestCase {
         let none = lib.contrasts(for: "mou-ta-already")
         XCTAssertNotNil(none, "审过的语法点应有新版资料")
         XCTAssertEqual(none?.groups.isEmpty, true)
-        // 还没有新版资料的语法点（N4 以上，生成中）仍用旧版列表
-        XCTAssertNil(lib.contrasts(for: "te-shimau"))
+        // N4–N1 也已全部生成新版资料（以前这里断言 te-shimau 还没有）
+        XCTAssertNotNil(lib.contrasts(for: "te-shimau"))
     }
 
-    /// N5 已全部生成新版资料：每个 N5 语法点都有（可以为空），引用都存在，例句都标出了语法
-    func testEveryN5PointHasContrasts() {
+    /// N5–N1 全部生成了新版资料：每个语法点都有（可以为空），引用都存在，例句都标出了语法
+    func testEveryPointHasContrasts() {
         let lib = GrammarLibrary(language: .zhHans)
-        for p in lib.points where p.level == .n5 {
+        for p in lib.points {
             guard let c = lib.contrasts(for: p.id) else { XCTFail("\(p.id) 缺少新版相近语法资料"); continue }
             for g in c.groups {
                 XCTAssertFalse(g.items.isEmpty, "\(p.id)/\(g.kind) 不应有空组")
