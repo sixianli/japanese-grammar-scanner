@@ -20,6 +20,8 @@ enum DemoMode {
     static var e2eFresh: Bool { ProcessInfo.processInfo.arguments.contains("-e2eFresh") }
     /// 识别结果页截图时自动打开全屏放大查看
     static var opensZoom: Bool { value(for: "-demoZoom") != nil }
+    /// 详情页截图时把「相近语法」的每一条都展开
+    static var opensContrasts: Bool { value(for: "-demoContrastOpen") != nil }
     /// 截图时指定 App 内语言（覆盖「设置 → 语言」）
     static var appLanguage: String? { value(for: "-demoAppLanguage") }
 

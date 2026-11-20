@@ -5,6 +5,8 @@ struct RubySegment: Hashable {
     var text: String
     var ruby: String?
     var highlighted = false
+    /// 线索：下方画虚线（「相近语法」对比例句里，帮助分辨的那几个词）
+    var cue = false
 }
 
 /// 文本中的一个最小排版单元（不可再拆分换行）。
@@ -12,6 +14,7 @@ private struct Atom: Hashable {
     var text: String
     var ruby: String?
     var highlighted = false
+    var cue = false
     var isLineBreak = false
 }
 
@@ -35,13 +38,13 @@ private enum AtomBuilder {
         var out: [Atom] = []
         for seg in segments {
             if let ruby = seg.ruby {
-                out.append(Atom(text: seg.text, ruby: ruby, highlighted: seg.highlighted))
+                out.append(Atom(text: seg.text, ruby: ruby, highlighted: seg.highlighted, cue: seg.cue))
                 continue
             }
             var word = ""
             func flushWord() {
                 if !word.isEmpty {
-                    out.append(Atom(text: word, ruby: nil, highlighted: seg.highlighted))
+                    out.append(Atom(text: word, ruby: nil, highlighted: seg.highlighted, cue: seg.cue))
                     word = ""
                 }
             }
@@ -51,7 +54,7 @@ private enum AtomBuilder {
                     out.append(Atom(text: "", isLineBreak: true))
                 } else if isCJK(ch) || noLineStart.contains(ch) || noLineEnd.contains(ch) {
                     flushWord()
-                    out.append(Atom(text: String(ch), ruby: nil, highlighted: seg.highlighted))
+                    out.append(Atom(text: String(ch), ruby: nil, highlighted: seg.highlighted, cue: seg.cue))
                 } else if ch == " " {
                     word.append(ch)
                     flushWord()
@@ -124,6 +127,15 @@ struct RubyText: View {
         groups = AtomBuilder.groups(AtomBuilder.atoms(from: segments))
     }
 
+    /// 已经拆好的片段（自带注音、高亮、线索），例如「相近语法」的对比例句。
+    init(segments: [RubySegment], style: Style = Style()) {
+        plain = segments.map(\.text).joined()
+        self.style = style
+        self.segments = segments
+        hasRuby = segments.contains { $0.ruby != nil }
+        groups = AtomBuilder.groups(AtomBuilder.atoms(from: segments))
+    }
+
     /// 讲解文字（任意语言），其中「」『』里的日语会自动注音。
     init(explanation: String, style: Style = Style()) {
         plain = explanation
@@ -147,7 +159,7 @@ struct RubyText: View {
     }
 
     var body: some View {
-        if hasRuby || segments.contains(where: { $0.highlighted }) {
+        if hasRuby || segments.contains(where: { $0.highlighted || $0.cue }) {
             flow
         } else {
             Text(plain)
@@ -191,6 +203,15 @@ struct RubyText: View {
             .lineLimit(1)
             .fixedSize()
             .background(atom.highlighted ? style.highlightColor.opacity(0.14) : Color.clear)
+            .overlay(alignment: .bottom) {
+                if atom.cue {
+                    // 线索：正文下方一条虚线
+                    DashedLine()
+                        .stroke(Color.secondary, style: StrokeStyle(lineWidth: 1.2, dash: [2, 2.5]))
+                        .frame(height: 1.2)
+                        .offset(y: 2)
+                }
+            }
             .padding(.top, rubyLine)
             .overlay(alignment: .top) {
                 if let ruby = atom.ruby {
@@ -243,5 +264,15 @@ struct RubyText: View {
             if let bh = bufferHit, !buffer.isEmpty { out.append(RubySegment(text: buffer, ruby: nil, highlighted: bh)) }
         }
         return out
+    }
+}
+
+/// 水平虚线（线索标记用）。
+private struct DashedLine: Shape {
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        p.move(to: CGPoint(x: rect.minX, y: rect.midY))
+        p.addLine(to: CGPoint(x: rect.maxX, y: rect.midY))
+        return p
     }
 }

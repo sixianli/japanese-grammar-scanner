@@ -108,7 +108,12 @@ struct GrammarDetailView: View {
                             }
                         }
 
-                        if !p.similar.isEmpty {
+                        if let contrasts = library.contrasts(for: p.id), !contrasts.groups.isEmpty {
+                            // 新版：分三组 + 对比例句（样板阶段只有部分语法点有）
+                            DocSection("相近语法", icon: "arrow.triangle.branch", anchor: "section-similar") {
+                                ContrastSection(contrasts: contrasts, currentTitle: p.titleForm)
+                            }
+                        } else if !p.similar.isEmpty {
                             DocSection("相近语法", icon: "arrow.triangle.branch", anchor: "section-similar") {
                                 VStack(alignment: .leading, spacing: 0) {
                                     ForEach(Array(p.similar.enumerated()), id: \.offset) { index, s in

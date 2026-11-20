@@ -21,7 +21,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Validate grammar resources
-        run: python3 tools/validate_grammar.py
+        run: |
+          python3 tools/validate_grammar.py
+          python3 tools/validate_contrasts.py
 
   build-and-test:
     runs-on: xcode-27
@@ -200,6 +202,9 @@ jobs:
           qa search_tab -demoScreen search -demoSearch ように
           qa favorites_sorted -demoScreen favorites
           qa detail_title_bar -demoScreen detail -demoGrammar izen -demoScroll sense-0
+          qa contrast_collapsed -demoScreen detail -demoGrammar tokoro-da -demoScroll section-similar
+          qa contrast_open -demoScreen detail -demoGrammar tokoro-da -demoScroll section-similar -demoContrastOpen 1
+          qa contrast_open_en -demoScreen detail -demoGrammar you-ni-naru -demoScroll section-similar -demoContrastOpen 1 -demoAppLanguage en
           qa detail_notes -demoScreen detail -demoGrammar ni-tsuite -demoScroll section-notes
           qa detail_scenes -demoScreen detail -demoGrammar nagara -demoScroll section-scenes
           qa detail_similar -demoScreen detail -demoGrammar dake-ni -demoScroll section-similar

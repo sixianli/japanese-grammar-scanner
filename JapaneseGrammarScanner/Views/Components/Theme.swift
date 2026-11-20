@@ -111,6 +111,13 @@ enum Theme {
         return Color(uiColor: UIColor(hue: h, saturation: min(s * 1.1, 1), brightness: b * 0.62, alpha: a))
     }
     static var accentText: Color { dynamic(store.accent.hex.1, store.accent.hex.3) }
+    /// 「相近语法」对比例句里，另一个语法的颜色：与主题色明显不同（绿色系主题配赭橙，暖色系主题配靛蓝）。
+    static var contrastText: Color {
+        switch store.accent {
+        case .matcha, .celadon: dynamic(0xA8501F, 0xF0A57E)
+        case .kaki, .sakura, .orange: dynamic(0x3D5F99, 0x9DB8E8)
+        }
+    }
     /// 主题色浅底：目标语法底色、「常考」标签底色。
     static var accentFill: Color { accent.opacity(0.18) }
     /// 页面背景
