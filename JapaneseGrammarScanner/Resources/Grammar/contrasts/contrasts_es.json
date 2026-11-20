@@ -1,0 +1,819 @@
+{
+  "points": [
+    {
+      "id": "tokoro-da",
+      "groups": [
+        {
+          "kind": "root",
+          "note": "Todas vienen de ところ (所, «lugar»): sitúan un hecho en un «punto del tiempo»",
+          "items": [
+            {
+              "id": "ta-tokoro-de",
+              "diff": "たところだ va al final de la oración y significa «acabar de»; たところで va en medio y significa «aunque… (no sirve de nada)».",
+              "this": {
+                "tag": "Acabar de · final",
+                "tr": "El tren acaba de salir."
+              },
+              "that": {
+                "tag": "Aunque · en medio",
+                "tr": "Aunque corra ahora, ya no llego a tiempo."
+              },
+              "explain": "Fíjate en lo que sigue a ところ: si va 「だ」 y la oración termina → «acabar de»; si va 「で」 y sigue otra parte, casi siempre negativa o de «no sirve de nada» → «aunque…»."
+            },
+            {
+              "id": "ta-tokoro-result",
+              "diff": "たところだ dice que una acción «acaba de terminar»; たところ、 dice «lo hice y, como resultado, resultó que…».",
+              "this": {
+                "tag": "Acabar de · final",
+                "tr": "Acabo de enviarle un correo al profesor."
+              },
+              "that": {
+                "tag": "Lo hice → resultado",
+                "tr": "Le envié un correo al profesor y me respondió enseguida."
+              },
+              "explain": "Al final de la oración, 「たところだ」 solo marca un punto en el tiempo; en medio, 「たところ、」 siempre va seguido de un resultado (a menudo un descubrimiento inesperado) y toda la oración va en pasado. Si después de 「たところ、」 ocurre algo, es el uso de «resultado»."
+            },
+            {
+              "id": "tokoro-ni",
+              "diff": "ところだ solo dice en qué punto del tiempo estás; ところに／へ dice «justo en ese momento, llegó alguien o pasó algo».",
+              "this": {
+                "tag": "A punto de",
+                "tr": "Estoy a punto de salir."
+              },
+              "that": {
+                "tag": "Justo entonces → llega alguien",
+                "tr": "Justo cuando iba a salir, vino un amigo."
+              },
+              "explain": "Después de ところに／ところへ siempre aparece alguien o algo que «irrumpe» (友達が来た, 電話が鳴った) y que a menudo trastoca tus planes; ところだ solo describe tu propia situación y la oración termina ahí."
+            },
+            {
+              "id": "tokoro-datta",
+              "diff": "ところだ es un punto real en el tiempo; ところだった significa «por poco…», pero en realidad no pasó.",
+              "this": {
+                "tag": "A punto · real",
+                "tr": "Estoy a punto de llegar a la estación."
+              },
+              "that": {
+                "tag": "Por poco · no pasó",
+                "tr": "Por poco pierdo el tren."
+              },
+              "explain": "Busca palabras como 「もう少しで」「危うく」 y el pasado 「だった」: ところだった describe algo que estuvo a punto de pasar pero no pasó, a menudo con alivio o con un «¡qué susto!»; ところだ describe un punto real en el tiempo, ahora mismo."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "ところ ↔ どころ: solo se diferencian en el dakuten (la marca de sonorización)",
+          "items": [
+            {
+              "id": "dokoro-ka",
+              "diff": "ところ es «acabar de»; どころか es «lejos de…, al contrario / ni siquiera…».",
+              "this": {
+                "tag": "Recién terminado",
+                "tr": "Acabo de terminar los deberes."
+              },
+              "that": {
+                "tag": "Lejos de… al contrario",
+                "tr": "Lejos de terminar los deberes, ni siquiera los he empezado."
+              },
+              "explain": "Primero mira si hay dakuten: ど ≠ と. Luego mira la estructura: antes de どころか va una «expectativa» y después un hecho totalmente opuesto y aún más extremo, así que la oración siempre contrasta dos partes."
+            },
+            {
+              "id": "dokoro-dewa-nai",
+              "diff": "たところだ es «acabar de»; どころではない es «no estar en condiciones de… en absoluto».",
+              "this": {
+                "tag": "Recién terminado",
+                "tr": "Acabo de terminar el trabajo."
+              },
+              "that": {
+                "tag": "Ni pensarlo",
+                "tr": "Tengo tanto trabajo que un viaje está fuera de toda cuestión."
+              },
+              "explain": "どころではない suele ir tras un sustantivo (旅行, 勉強), termina en la negación 「ではない」 y a menudo va precedido de una causa (忙しくて); no tiene nada que ver con un punto en el tiempo. Si ves ど + negación al final, no es «acabar de»."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Ambas significan «acabar de»",
+          "items": [
+            {
+              "id": "ta-bakari",
+              "diff": "たところ es objetivamente «justo en este momento»; たばかり es subjetivamente «hace poco», y sirve incluso para algo de hace meses.",
+              "this": {
+                "tag": "Ahora mismo · objetivo",
+                "tr": "Acabo de llegar a Japón (justo ahora)."
+              },
+              "that": {
+                "tag": "Hace poco · subjetivo",
+                "tr": "Llegué a Japón apenas el mes pasado."
+              },
+              "wrong": {
+                "why": "Ha pasado un mes, así que no se puede usar たところ"
+              },
+              "explain": "Fíjate en la expresión de tiempo: 「今」: la acción terminó justo antes de hablar → たところ; 「先月」: objetivamente ya ha pasado un tiempo, pero el hablante siente que fue «hace nada» → solo sirve たばかり."
+            },
+            {
+              "id": "tate-fresh",
+              "diff": "たところだ va al final de la oración y marca un punto en el tiempo; たて modifica a un sustantivo y resalta «recién hecho, fresco».",
+              "this": {
+                "tag": "Final · momento",
+                "tr": "El pan acaba de salir del horno."
+              },
+              "that": {
+                "tag": "Modifica sustantivo · fresco",
+                "tr": "Compré pan recién horneado."
+              },
+              "explain": "たて se une a la raíz ます del verbo (焼き + たて) y se usa como un adjetivo: 「〜たての + sustantivo」. Solo funciona con unos pocos verbos (焼きたて, できたて, 生まれたて); para decir que algo acaba de pasar, usa たところだ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ta-bakari",
+      "groups": [
+        {
+          "kind": "root",
+          "note": "Ambas vienen de ばかり, cuyo sentido original es «solo esto, nada más»",
+          "items": [
+            {
+              "id": "bakari-only",
+              "diff": "forma た + ばかり significa «acabar de»; sustantivo + ばかり significa «puro…, solo…».",
+              "this": {
+                "tag": "Forma た → acabar de",
+                "tr": "Este ordenador lo acabo de comprar."
+              },
+              "that": {
+                "tag": "Sustantivo → solo",
+                "tr": "En esta tienda solo hay cosas caras."
+              },
+              "explain": "Es el mismo ばかり, que originalmente significa «solo esto». Mira lo que va delante: forma た (買った) → «solo ha pasado este poquito de tiempo» = acabar de; sustantivo (物) → «solo hay de este tipo» = puro, solo."
+            },
+            {
+              "id": "te-bakari-iru",
+              "diff": "たばかり significa «acabar de hacer»; てばかりいる significa «no hacer más que…, siempre…», a menudo con queja.",
+              "this": {
+                "tag": "Forma た → acabar de",
+                "tr": "Acabo de comer hace un rato."
+              },
+              "that": {
+                "tag": "Forma て → siempre",
+                "tr": "Mi hermano menor no hace más que jugar a videojuegos todos los días."
+              },
+              "explain": "Solo cambia た por て: た + ばかり habla de poco tiempo; て + ばかり + いる habla de repetir lo mismo una y otra vez, y el hablante suele estar molesto por ello. Si ves 「ている」, significa «siempre»."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "たばかりだ ↔ たばかりに: solo cambia el último carácter",
+          "items": [
+            {
+              "id": "bakari-ni",
+              "diff": "たばかりだ es «acabar de»; たばかりに es «solo por haber… (acabó mal)».",
+              "this": {
+                "tag": "Acabar de",
+                "tr": "Acabo de llegar a Japón."
+              },
+              "that": {
+                "tag": "Solo por → mal resultado",
+                "tr": "Solo por decir algo de más, hice que se enfadara."
+              },
+              "explain": "Las dos son 「た + ばかり」 y solo cambia el final: 「だ」 o 「に」. Después de たばかりに siempre viene otra parte con un mal resultado (〜てしまった), con el sentido de «fue solo por esa pequeñez que…», a menudo con arrepentimiento."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Ambas significan «acabar de»",
+          "items": [
+            {
+              "id": "tokoro-da",
+              "diff": "たばかり es subjetivamente «hace poco»; たところだ es objetivamente «justo en este momento».",
+              "this": {
+                "tag": "Hace poco · subjetivo",
+                "tr": "Llegué a Japón apenas el mes pasado."
+              },
+              "that": {
+                "tag": "Ahora mismo · objetivo",
+                "tr": "Acabo de llegar a Japón (justo ahora)."
+              },
+              "wrong": {
+                "why": "Ha pasado un mes, así que no se puede usar たところ"
+              },
+              "explain": "Fíjate en la expresión de tiempo: 「先月」: objetivamente ya ha pasado un tiempo, pero el hablante siente que fue «hace nada» → たばかり; 「今」: la acción terminó justo antes de hablar → sirven tanto たところ como たばかり, pero たところ subraya más «justo en este instante»."
+            },
+            {
+              "id": "tate-fresh",
+              "diff": "たばかり se une a cualquier verbo; たて solo a unos pocos verbos y resalta «recién hecho, fresco».",
+              "this": {
+                "tag": "Cualquier verbo",
+                "tr": "Perdí el paraguas que acababa de comprar ayer."
+              },
+              "that": {
+                "tag": "Pocos verbos · fresco",
+                "tr": "El pan recién horneado está muy rico."
+              },
+              "explain": "たて se une directamente a la raíz ます (焼き + たて) y solo se usa con unas pocas palabras en las que «lo que se hizo todavía está nuevo»: 焼きたて, できたて, 生まれたて, 塗りたて. En todos los demás casos se usa たばかり, por ejemplo 「昨日買ったばかりの傘」."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "you-ni-naru",
+      "groups": [
+        {
+          "kind": "root",
+          "note": "Todas vienen de よう (様): «cierto estado o manera»",
+          "items": [
+            {
+              "id": "you-ni-suru",
+              "diff": "ようになる es un cambio que se produce solo («llegar a…»); ようにする es algo que haces a propósito («procurar…»).",
+              "this": {
+                "tag": "Cambio natural",
+                "tr": "Desde que nació mi hijo, (sin darme cuenta) me he vuelto madrugador."
+              },
+              "that": {
+                "tag": "Esfuerzo propio",
+                "tr": "Por mi salud, procuro levantarme temprano."
+              },
+              "explain": "Mira la primera parte subrayada con línea de puntos: «desde que nació mi hijo» es una causa externa, y madrugar es el resultado de que cambiaron las circunstancias → ようになる; «por mi salud» es un objetivo propio, y madrugar es un hábito que mantienes conscientemente → ようにする. Truco: なる = volverse, する = hacer."
+            },
+            {
+              "id": "you-na-example",
+              "title": "〜ように (finalidad)",
+              "diff": "ようになった es un resultado ya alcanzado; ように es una meta aún no lograda por la que te estás esforzando.",
+              "this": {
+                "tag": "Resultado · logrado",
+                "tr": "Como practiqué todos los días, ahora puedo leer kanji."
+              },
+              "that": {
+                "tag": "Meta · aún no",
+                "tr": "Practico todos los días para poder leer kanji."
+              },
+              "explain": "Las dos oraciones hablan de lo mismo, solo que desde momentos distintos. Mira lo que sigue a ように: si la oración termina ahí → ya se ha logrado (ようになった); si continúa con «lo que haces para conseguirlo» → es una meta (ように)."
+            },
+            {
+              "id": "you-ni-natte-iru",
+              "diff": "ようになる es «una persona ha llegado a poder / a hacer…»; ようになっている es «una máquina o un sistema está diseñado para…».",
+              "this": {
+                "tag": "Cambio en una persona",
+                "tr": "Mi hijo ya sabe vestirse solo."
+              },
+              "that": {
+                "tag": "Diseño de una máquina",
+                "tr": "Esta puerta está hecha para abrirse sola cuando alguien se acerca."
+              },
+              "explain": "Mira el sujeto: una persona o un animal → cambio de capacidad o de hábito (ようになった); una máquina, un sistema o una norma → un mecanismo diseñado así desde el principio (ようになっている), a menudo junto con 「〜と」. No es un «cambio»."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Ambas expresan «cambio», pero se usan de forma distinta",
+          "items": [
+            {
+              "id": "ku-naru-ni-naru",
+              "diff": "Las dos significan «cambio»; la diferencia está en a qué se unen: los verbos llevan ようになる; los adjetivos y sustantivos, くなる／になる.",
+              "this": {
+                "tag": "Verbo → ようになる",
+                "tr": "Ya sé nadar."
+              },
+              "that": {
+                "tag": "Adjetivo → になる",
+                "tr": "He mejorado nadando."
+              },
+              "wrong": {
+                "why": "Un verbo no puede unirse directamente a になる"
+              },
+              "explain": "Primero mira qué palabra va antes de 「なる」: 泳げる es un verbo → ようになる; 上手 es un adjetivo-な → になる (con adjetivos-い como 寒い → 寒くなる; con sustantivos como 医者 → 医者になる). En español ambos se traducen como «volverse / llegar a…», así que es muy fácil escribir ✗泳げるになった."
+            },
+            {
+              "id": "te-kuru",
+              "diff": "ようになる mira el «punto final» del cambio (ya puedes); てくる mira el «proceso» (va cambiando poco a poco).",
+              "this": {
+                "tag": "Punto final · alcanzado",
+                "tr": "En tres meses llegué a entender japonés."
+              },
+              "that": {
+                "tag": "Proceso · sigue cambiando",
+                "tr": "Poco a poco he ido entendiendo japonés."
+              },
+              "explain": "Fíjate en las expresiones de tiempo: 「３か月で」 marca un punto final y describe el nuevo estado al que se llegó → ようになる; 「少しずつ」 describe el proceso del cambio, que sigue en marcha hasta ahora → se suele usar てくる."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "you-ni-suru",
+      "groups": [
+        {
+          "kind": "root",
+          "note": "Todas vienen de よう (様): «cierto estado o manera»",
+          "items": [
+            {
+              "id": "you-ni-naru",
+              "diff": "ようにする es algo que haces a propósito («procurar…»); ようになる es un cambio que se produce solo («llegar a…»).",
+              "this": {
+                "tag": "Esfuerzo propio",
+                "tr": "Por mi salud, procuro levantarme temprano."
+              },
+              "that": {
+                "tag": "Cambio natural",
+                "tr": "Desde que nació mi hijo, (sin darme cuenta) me he vuelto madrugador."
+              },
+              "explain": "Mira la primera parte subrayada con línea de puntos: «por mi salud» es un objetivo propio, y madrugar es un hábito que mantienes conscientemente → ようにする; «desde que nació mi hijo» es una causa externa, y madrugar es el resultado de que cambiaron las circunstancias → ようになる. Truco: する = hacer, なる = volverse."
+            },
+            {
+              "id": "you-ni-iu",
+              "diff": "ようにする es tu propio esfuerzo; ように言う es pedirle a otra persona que lo haga.",
+              "this": {
+                "tag": "Me lo propongo yo",
+                "tr": "Procuro comer verduras todos los días."
+              },
+              "that": {
+                "tag": "Me lo piden otros",
+                "tr": "El médico me dijo que comiera verduras todos los días."
+              },
+              "explain": "Mira quién plantea la petición: una meta que te pones tú mismo → ようにする; una petición del médico, el profesor o el jefe → ように言う／ように言われた, a menudo con 「〜に」 delante para indicar quién lo dice."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Ambas tienen que ver con «tener intención de / decidir hacer algo»",
+          "items": [
+            {
+              "id": "koto-ni-suru",
+              "diff": "ようにする es «procurar, esforzarse por», sin garantía de lograrlo siempre; ことにする es «decidir», una decisión tomada de una vez.",
+              "this": {
+                "tag": "Procurar · esfuerzo",
+                "tr": "Procuro no comer dulces."
+              },
+              "that": {
+                "tag": "Decidir · de una vez",
+                "tr": "He decidido dejar los dulces a partir de hoy."
+              },
+              "explain": "Fíjate en los adverbios: 「なるべく」「できるだけ」 suelen ir con ようにする e indican hacia dónde va el esfuerzo; 「今日から」 junto con 「ことにした」 indica una decisión tomada en un momento concreto."
+            },
+            {
+              "id": "tsumori",
+              "diff": "ようにしている es un esfuerzo que ya mantienes; つもりだ es un plan que tienes en mente y que aún no ha empezado.",
+              "this": {
+                "tag": "Ya lo hago",
+                "tr": "Procuro acostarme antes de las 11 todas las noches."
+              },
+              "that": {
+                "tag": "Plan en mente",
+                "tr": "Pienso empezar a acostarme temprano la semana que viene."
+              },
+              "explain": "Fíjate en el tiempo: ようにしている describe un hábito que ya haces y mantienes ahora; つもりだ describe un plan futuro, y todavía no se sabe si se cumplirá."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sou-da-appearance",
+      "groups": [
+        {
+          "kind": "root",
+          "note": "Ambas vienen del そう de apariencia: «el aspecto que tiene algo»",
+          "items": [
+            {
+              "id": "sou-ni-naru",
+              "diff": "そうだ es «parece que va a…»; そうになる es «por poco…», pero en realidad no pasó.",
+              "this": {
+                "tag": "Parece · suposición",
+                "tr": "El cielo está oscuro. Parece que va a llover."
+              },
+              "that": {
+                "tag": "Por poco · no pasó",
+                "tr": "Resbalé y casi me caigo."
+              },
+              "explain": "そうだ es un juicio a partir de lo que ves delante; そうになった es algo que «estuvo a punto de pasarte pero al final no pasó», y casi siempre va en pasado, 「なった」."
+            },
+            {
+              "id": "sou-mo-nai",
+              "diff": "そうだ es «parece que sí…»; そうもない es «no parece que vaya a…».",
+              "this": {
+                "tag": "Parece que sí",
+                "tr": "Parece que este trabajo estará terminado hoy."
+              },
+              "that": {
+                "tag": "Parece que no",
+                "tr": "No parece que este trabajo vaya a estar terminado hoy."
+              },
+              "explain": "Las dos oraciones solo se diferencian en el final: 「だ」 o 「もない」. La forma más natural de negar el そうだ de apariencia es poner la negación después de そう: 終わりそうもない／終わりそうにない, que significa «no hay ninguna señal de que vaya a…»."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Todas significan «parece que»",
+          "items": [
+            {
+              "id": "you-da",
+              "diff": "そうだ predice a partir del aspecto (aún no ha pasado); ようだ deduce a partir de indicios (probablemente ya pasó).",
+              "this": {
+                "tag": "Aspecto · aún no",
+                "tr": "El cielo está oscuro. Parece que va a llover."
+              },
+              "that": {
+                "tag": "Indicios · ya pasó",
+                "tr": "El camino está mojado. Parece que ha llovido."
+              },
+              "explain": "Mira la pista de la primera parte: ves el aspecto «el cielo está oscuro» y predices lo que viene → そうだ (con la raíz ます: 降り + そう); ves el resultado «el camino está mojado» y deduces lo que ya pasó → ようだ (con la forma llana: 降った + よう)."
+            },
+            {
+              "id": "rashii-typical",
+              "diff": "そうだ (apariencia) es lo que ves con tus propios ojos; らしい suele ser información oída o de segunda mano.",
+              "this": {
+                "tag": "Visto en persona",
+                "tr": "Este pastel tiene una pinta deliciosa."
+              },
+              "that": {
+                "tag": "De oídas",
+                "tr": "Según me contó un amigo, los pasteles de esa tienda están muy ricos."
+              },
+              "explain": "Mira de dónde sale la información: el pastel está delante de ti → おいしそう; solo te lo han contado y no lo has probado → おいしいらしい. Fíjate también en la conexión: そうだ se une a la raíz (おいし + そう) y らしい a la forma llana (おいしい + らしい)."
+            },
+            {
+              "id": "to-no-koto-da",
+              "diff": "El そうだ de «dicen que» es una transmisión general; とのことだ es más formal y se usa sobre todo para pasar un recado de alguien.",
+              "this": {
+                "tag": "Dicen que · general",
+                "tr": "Según las noticias, mañana va a nevar."
+              },
+              "that": {
+                "tag": "Recado · formal",
+                "tr": "Tengo un recado del jefe: la reunión empieza a las tres."
+              },
+              "explain": "Las dos pueden significar «he oído que», pero とのこと es habitual en el trabajo y en cartas, con el matiz de «te lo transmito de su parte». Ojo también: el そうだ de oídas se une a la forma llana (降る + そうだ); no lo confundas con el de apariencia, 降り + そうだ («parece que va a llover»)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "you-da",
+      "groups": [
+        {
+          "kind": "root",
+          "note": "Ambas vienen de よう (様): «cierto estado o manera»",
+          "items": [
+            {
+              "id": "you-ni-mieru",
+              "diff": "ようだ es un juicio basado en varios indicios; ように見える solo dice cómo «se ve por fuera», y puede no ser cierto.",
+              "this": {
+                "tag": "Juicio por indicios",
+                "tr": "La luz está apagada. Parece que no hay nadie en casa."
+              },
+              "that": {
+                "tag": "Solo apariencia",
+                "tr": "Parece enfadado, pero en realidad no lo está."
+              },
+              "explain": "ように見える solo describe cómo «se ve», y a menudo le sigue 「が、本当は……」 para desmentirlo; ようだ es el juicio del hablante tras reunir las pistas, y en el fondo se lo cree."
+            },
+            {
+              "id": "ka-no-you-da",
+              "diff": "ようだ (comparación) es una comparación normal; かのようだ es «como si…» sabiendo que no es así, con un contraste más fuerte.",
+              "this": {
+                "tag": "Comparación normal",
+                "tr": "Sus manos están frías como el hielo."
+              },
+              "that": {
+                "tag": "Sabiendo que no · contraste",
+                "tr": "Él sonríe como si no hubiera pasado nada."
+              },
+              "explain": "かのようだ va detrás de una oración que «en realidad no es cierta» (何もなかった) y resalta el contraste entre apariencia y realidad; el ようだ normal suele ir tras «sustantivo + の» y es una simple comparación."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Todas significan «parece que»",
+          "items": [
+            {
+              "id": "sou-da-appearance",
+              "diff": "ようだ deduce a partir de indicios (probablemente ya pasó); そうだ predice a partir del aspecto (aún no ha pasado).",
+              "this": {
+                "tag": "Indicios · ya pasó",
+                "tr": "El camino está mojado. Parece que ha llovido."
+              },
+              "that": {
+                "tag": "Aspecto · aún no",
+                "tr": "El cielo está oscuro. Parece que va a llover."
+              },
+              "explain": "Mira la pista de la primera parte: ves el resultado «el camino está mojado» y deduces lo que ya pasó → ようだ (con la forma llana: 降った + よう); ves el aspecto «el cielo está oscuro» y predices lo que viene → そうだ (con la raíz ます: 降り + そう)."
+            },
+            {
+              "id": "rashii-typical",
+              "diff": "ようだ es un juicio basado en pistas que percibes tú mismo; らしい suele basarse en lo que has oído, con un matiz de «según dicen».",
+              "this": {
+                "tag": "Juicio propio",
+                "tr": "Se oye ruido en la habitación de al lado. Parece que hay alguien."
+              },
+              "that": {
+                "tag": "De oídas",
+                "tr": "Según los rumores, esos dos se van a casar."
+              },
+              "explain": "Mira en qué se basa el juicio: pistas directas que has oído o visto tú → ようだ／みたいだ; información indirecta como rumores o lo que dicen otros → らしい. Con らしい, el hablante suena distante, como si no se hiciera responsable de lo que dice."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hazu-da",
+      "groups": [
+        {
+          "kind": "root",
+          "note": "Ambas vienen de はず (筈): «según la lógica»",
+          "items": [
+            {
+              "id": "hazu-ga-nai",
+              "diff": "はずだ es «lógicamente debería ser así»; はずがない es «lógicamente es imposible».",
+              "this": {
+                "tag": "Debería",
+                "tr": "Lleva diez años viviendo en Japón, así que debería saber hablar japonés."
+              },
+              "that": {
+                "tag": "Imposible",
+                "tr": "No lo ha estudiado ni una vez, así que es imposible que hable japonés."
+              },
+              "explain": "Mira la razón que da la primera parte: si apoya la conclusión → はずだ; si claramente no lleva a la conclusión → はずがない. Ojo: はずがない es un «imposible» muy fuerte, mucho más que 「話せないはずだ」 («no debería saber hablarlo»)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Ambas son «juzgar según la lógica»",
+          "items": [
+            {
+              "id": "wake-da",
+              "diff": "はずだ es una suposición lógica de antemano; わけだ es «con razón, así que era eso», dicho a posteriori.",
+              "this": {
+                "tag": "Suposición · sin confirmar",
+                "tr": "Envié el paquete ayer, así que debería llegar mañana."
+              },
+              "that": {
+                "tag": "¡Ah, claro! · resultado conocido",
+                "tr": "Ah, ¿lo enviaste ayer? Con razón ya ha llegado."
+              },
+              "explain": "はずだ se usa para suponer cuando aún no sabes el resultado; わけだ se usa cuando ya conoces el resultado y, al enterarte de la causa, piensas «ahora todo encaja». Suele ir precedido de 「それなら」「だから」「〜のか」."
+            },
+            {
+              "id": "ni-chigainai",
+              "diff": "はずだ tiene fundamentos objetivos (la lógica); に違いない es una convicción subjetiva fuerte (una corazonada).",
+              "this": {
+                "tag": "Con fundamento",
+                "tr": "Según la agenda, el jefe debería asistir a la reunión de las tres."
+              },
+              "that": {
+                "tag": "Corazonada",
+                "tr": "Viendo esa sonrisa, seguro que le ha pasado algo bueno."
+              },
+              "explain": "Detrás de はずだ se pueden señalar fundamentos concretos (una agenda, una norma, un cálculo); に違いない es una sensación fuerte del propio hablante, y el fundamento puede ser solo una impresión. Por eso はずだ es más habitual al hablar de trabajo o al escribir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wake-da",
+      "groups": [
+        {
+          "kind": "root",
+          "note": "Todas vienen de わけ (訳): «razón, lógica»",
+          "items": [
+            {
+              "id": "wake-ga-nai",
+              "diff": "わけだ es «con razón, es lógico»; わけがない es «es imposible».",
+              "this": {
+                "tag": "Tiene lógica",
+                "tr": "Practica todos los días; con razón lo hace tan bien."
+              },
+              "that": {
+                "tag": "Sin lógica → imposible",
+                "tr": "No ha practicado ni una vez; es imposible que lo haga bien."
+              },
+              "explain": "わけ = razón. わけだ: hay una razón, por eso «con razón»; わけがない: no hay ninguna razón, por eso «imposible». Mira la primera parte: se da una razón sólida → わけだ; la razón claramente no se sostiene → わけがない."
+            },
+            {
+              "id": "wake-dewa-nai",
+              "diff": "わけだ saca la conclusión lógica; わけではない es «no es que…», una negación parcial.",
+              "this": {
+                "tag": "Saca conclusión",
+                "tr": "Ah, ¿viviste allí tres años? Con razón sabes tanto de Japón."
+              },
+              "that": {
+                "tag": "Negación parcial",
+                "tr": "Viví en Japón, pero no es que lo conozca muy bien."
+              },
+              "explain": "わけではない corrige una deducción que parece «lógica»: haber vivido en Japón ≠ conocer bien Japón. Si ves antes 「けど」 o 「からといって」, lo que sigue suele ser わけではない."
+            },
+            {
+              "id": "wake-ni-wa-ikanai",
+              "diff": "わけだ dice «lógicamente es así»; わけにはいかない dice «no puedo hacerlo, por lógica o por responsabilidad».",
+              "this": {
+                "tag": "Explica el porqué",
+                "tr": "Ah, ¿mañana tiene examen? Por eso no sale a divertirse."
+              },
+              "that": {
+                "tag": "No puedo · deber",
+                "tr": "Mañana tengo examen, así que no puedo salir a divertirme."
+              },
+              "explain": "El sujeto de わけにはいかない suele ser el propio hablante, con el sentido de «me gustaría, pero por responsabilidad, por las normas o por compromiso, no puedo»; わけだ explica un hecho ya conocido y no tiene nada que ver con «poder o no poder»."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Ambas son «juzgar según la lógica»",
+          "items": [
+            {
+              "id": "hazu-da",
+              "diff": "わけだ es «con razón, así que era eso», dicho a posteriori; はずだ es una suposición lógica de antemano.",
+              "this": {
+                "tag": "¡Ah, claro! · resultado conocido",
+                "tr": "Ah, ¿lo enviaste ayer? Con razón ya ha llegado."
+              },
+              "that": {
+                "tag": "Suposición · sin confirmar",
+                "tr": "Envié el paquete ayer, así que debería llegar mañana."
+              },
+              "explain": "わけだ se usa cuando ya conoces el resultado y, al enterarte de la causa, piensas «ahora todo encaja»; suele ir precedido de 「それなら」「だから」「〜のか」. はずだ se usa para suponer cuando aún no sabes el resultado."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tame-ni",
+      "groups": [
+        {
+          "kind": "root",
+          "note": "Ambas vienen de ため (為): «finalidad, causa»",
+          "items": [
+            {
+              "id": "sono-tame",
+              "diff": "ために va dentro de la oración, justo después de la causa o la finalidad; そのため va al principio de la oración y remite a la anterior.",
+              "this": {
+                "tag": "En medio · una oración",
+                "tr": "Por la gran nevada, se pararon los trenes."
+              },
+              "that": {
+                "tag": "Al inicio · remite atrás",
+                "tr": "Anoche nevó mucho. Por eso se pararon los trenes."
+              },
+              "explain": "Mismo significado, distinta posición: ために va pegado a la causa y todo se dice en una oración; そのため es un conector independiente que necesita una oración antes, y 「その」 se refiere a lo que dice esa oración."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Todas significan «para» o «porque»",
+          "items": [
+            {
+              "id": "you-na-example",
+              "title": "〜ように (finalidad)",
+              "diff": "ために va tras acciones que puedes controlar; ように va tras estados, como la forma potencial o la negativa.",
+              "this": {
+                "tag": "Acción voluntaria",
+                "tr": "Estudio todos los días para aprobar el N1."
+              },
+              "that": {
+                "tag": "Potencial · estado",
+                "tr": "Estudio todos los días para poder hablar japonés."
+              },
+              "wrong": {
+                "why": "Tras la forma potencial hay que usar ように"
+              },
+              "explain": "Mira el verbo antes de ため／ように: 「合格する」 es una acción que decides hacer → ために; formas potenciales, negativas o cosas que ocurren solas, como 「話せる」「忘れない」「見える」 → ように."
+            },
+            {
+              "id": "kara-from",
+              "title": "〜から (causa)",
+              "diff": "ために (causa) es más escrito y va seguido de un resultado objetivo que ya ocurrió; から es más coloquial y puede ir seguido de invitaciones, peticiones u órdenes.",
+              "this": {
+                "tag": "Escrito · resultado objetivo",
+                "tr": "Debido a un accidente, los trenes llevan retraso."
+              },
+              "that": {
+                "tag": "Coloquial · admite invitación",
+                "tr": "No hay tiempo, vámonos rápido."
+              },
+              "wrong": {
+                "why": "El ために de causa no puede ir seguido de una invitación ni de una orden"
+              },
+              "explain": "Mira la segunda parte: si expone un resultado que ya ocurrió, como un aviso en la estación o una noticia → ために; si es una invitación o petición tuya, como 「〜よう」「〜てください」 → solo sirve から (o ので)."
+            },
+            {
+              "id": "ni-wa-purpose",
+              "title": "〜には (finalidad)",
+              "diff": "ために va seguido de «qué haces»; には va seguido de «qué hace falta, cuánto cuesta».",
+              "this": {
+                "tag": "Sigue una acción",
+                "tr": "Estoy ahorrando para comprarme una casa."
+              },
+              "that": {
+                "tag": "Sigue una necesidad",
+                "tr": "Para comprar una casa hace falta mucho dinero."
+              },
+              "explain": "Mira la segunda parte: una acción que tomas tú (貯金している) → ために; una necesidad o valoración como 「必要だ」「〜がかかる」「〜がいい」 → には."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "koto-ni-suru",
+      "groups": [
+        {
+          "kind": "root",
+          "note": "Todas vienen de こと (事): convierten un hecho en el contenido de una decisión",
+          "items": [
+            {
+              "id": "koto-ni-naru",
+              "diff": "ことにする es una decisión propia; ことになる la deciden otros o las circunstancias.",
+              "this": {
+                "tag": "Decisión propia",
+                "tr": "Después de pensarlo por mi cuenta, decidí dejar la empresa."
+              },
+              "that": {
+                "tag": "Decidido por otros",
+                "tr": "Por orden de la empresa, me trasladan a Osaka."
+              },
+              "explain": "Mira quién toma la decisión: 「自分で考えて」 → ことにした; 「会社の命令で」 → ことになった. Además, a veces los japoneses usan a propósito ことになった para hablar de sus propias decisiones, para sonar modestos y discretos."
+            },
+            {
+              "id": "koto-ni-shite-iru",
+              "diff": "ことにした es una decisión tomada en un momento; ことにしている es una norma personal que se mantiene en el tiempo.",
+              "this": {
+                "tag": "Recién decidido",
+                "tr": "He decidido salir a correr todas las mañanas a partir de hoy."
+              },
+              "that": {
+                "tag": "Hábito de años",
+                "tr": "Desde hace ya cinco años, tengo por norma correr todas las mañanas."
+              },
+              "explain": "Fíjate en las expresiones de tiempo: 「今日から」 marca el momento de la decisión → ことにした; 「もう５年」「いつも」 indican que se mantiene desde hace mucho → ことにしている."
+            },
+            {
+              "id": "koto-ni-natte-iru",
+              "diff": "ことにする es una decisión personal; ことになっている es una norma, un sistema o algo acordado de antemano.",
+              "this": {
+                "tag": "Decisión personal",
+                "tr": "He decidido no mirar el móvil por la noche."
+              },
+              "that": {
+                "tag": "Norma",
+                "tr": "En esta residencia no se puede salir después de las diez de la noche."
+              },
+              "explain": "Mira de dónde viene la decisión: si te la pones tú mismo → ことにする／ことにした; si son normas de una escuela, una empresa o una residencia, o algo que se acordó de antemano → ことになっている."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Ambas tienen que ver con «tener intención de / decidir hacer algo»",
+          "items": [
+            {
+              "id": "tsumori",
+              "diff": "ことにした es el momento en que te decides; つもりだ es un plan que tienes en mente.",
+              "this": {
+                "tag": "Me decidí",
+                "tr": "Dudé mucho, pero al final decidí irme a estudiar al extranjero."
+              },
+              "that": {
+                "tag": "Plan en mente",
+                "tr": "Pienso irme a estudiar al extranjero el año que viene."
+              },
+              "explain": "ことにした suele llevar la sensación de «por fin me decidí tras dudar» (迷ったけど, いろいろ考えて); つもりだ solo expresa una intención sin destacar el momento de decidir, y al final puede que no vayas."
+            },
+            {
+              "id": "ni-suru-decide",
+              "diff": "ことにする va tras un verbo; にする va tras un sustantivo, sobre todo para elegir una entre varias opciones.",
+              "this": {
+                "tag": "Verbo + ことにする",
+                "tr": "En las vacaciones de verano he decidido ir a Okinawa."
+              },
+              "that": {
+                "tag": "Sustantivo + にする · elegir",
+                "tr": "De beber, tomaré café."
+              },
+              "wrong": {
+                "why": "Detrás de un verbo hace falta 「こと」"
+              },
+              "explain": "Primero mira si delante va un verbo o un sustantivo: 行く (verbo) → ことにする; コーヒー (sustantivo) → にする. 「〜にします」 es lo más habitual al pedir comida o elegir algo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
