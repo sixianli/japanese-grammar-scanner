@@ -5,6 +5,11 @@ name: CloudKit Schema
 
 on:
   workflow_dispatch:
+  # 数据结构或这个任务改动时，在 PR 上自动导入开发环境（手动触发只在默认分支上可用）
+  pull_request:
+    paths:
+      - cloudkit/schema.ckdb
+      - .github/workflows/cloudkit-schema.yml
 
 jobs:
   import:
