@@ -14,8 +14,6 @@ struct GrammarDetailView: View {
     @EnvironmentObject private var history: HistoryStore
     /// 滚动相关的状态放在单独的对象里：只有标题浮层读取它，滚动时不会让整页内容重新排版（否则会卡顿、闪烁）。
     @State private var scroll = DetailScrollModel()
-    /// 底部是否显示复习自评条：进入页面时决定（从复习进来，或这个语法正好到期），自评后仍保留显示结果
-    @State private var reviewing = false
 
     /// iOS 26+ 导航栏透明（Liquid Glass），标题可以直接“飞”进导航栏；更早的系统用淡入方式。
     private var usesFlyingTitle: Bool {
@@ -26,13 +24,15 @@ struct GrammarDetailView: View {
     var body: some View {
         if let point = library.point(id: grammarID) {
             content(point)
+                // 复习自评条只在从首页「快要忘了」进来时出现；从语法库、搜索、扫描结果等打开都不出现。
+                // 复习时隐藏底部标签栏，自评条独占底部。
                 .safeAreaInset(edge: .bottom, spacing: 0) {
-                    if reviewing {
+                    if let reviewQueue {
                         ReviewBar(grammarID: point.id, queue: reviewQueue)
                     }
                 }
+                .toolbar(reviewQueue != nil ? .hidden : .automatic, for: .tabBar)
                 .onAppear {
-                    if reviewQueue != nil || history.isDue(point.id) { reviewing = true }
                     history.recordViewed(point.id)
                     UsageStats.shared.grammarViewed(point.id, level: point.level)
                 }
@@ -252,6 +252,13 @@ struct GrammarDetailView: View {
             if let f = p.frequency, f != .low {
                 FrequencyBadge(frequency: f)
             }
+        }
+        // 端到端测试用：页面最顶部的标记（label 是语法标题），用来确认打开的是哪个语法、页面是否在顶部
+        .overlay(alignment: .topLeading) {
+            Color.clear.frame(width: 2, height: 2)
+                .accessibilityElement()
+                .accessibilityLabel(Text(verbatim: p.titleForm))
+                .accessibilityIdentifier("detail.title")
         }
     }
 

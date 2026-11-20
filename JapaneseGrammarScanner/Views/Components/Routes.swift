@@ -73,7 +73,10 @@ extension View {
             case .recentViewed:
                 RecentViewedPage()
             case .review(let id, let queue):
+                // 「下一个」会原地替换这一页：按语法 id 区分页面身份，换成下一个时是全新的页面
+                // （从顶部开始、重新显示自评按钮），不会带着上一个语法的「已记录」和滚动位置
                 GrammarDetailView(grammarID: id, reviewQueue: queue)
+                    .id(id)
             }
         }
     }

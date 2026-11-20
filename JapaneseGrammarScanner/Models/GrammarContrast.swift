@@ -26,20 +26,42 @@ struct GrammarContrasts: Decodable {
     struct Item: Decodable {
         /// 对比对象的语法点 id
         let id: String
-        /// 显示用的标题（对比的是合并语法点中的某个用法时，如「〜ように（目的）」）；缺省用对方的标题
+        /// 显示用的标题（只对比对方的某一种形式 / 用法时，如「〜ように（目的）」）；缺省用对方的标题
         var title: String?
+        /// 只用本页的某一种形式 / 用法时，点明是哪一种
+        var thisTitle: String?
         /// 一句话的差别（收起时也显示）
         var diff: String
-        var current: Sentence
-        var other: Sentence
+        /// 本页语法的例句：通常 1 句；本页有几种用法不同的形式时，每种形式一句
+        var current: [Sentence]
+        /// 对方语法的例句（同上）
+        var other: [Sentence]
         var wrong: Wrong?
         /// 「怎么分辨」讲解
         var explain: String
 
         enum CodingKeys: String, CodingKey {
-            case id, title, diff, wrong, explain
+            case id, title, thisTitle, diff, wrong, explain
             case current = "this"
             case other = "that"
+        }
+
+        init(from decoder: Decoder) throws {
+            let c = try decoder.container(keyedBy: CodingKeys.self)
+            id = try c.decode(String.self, forKey: .id)
+            title = try c.decodeIfPresent(String.self, forKey: .title)
+            thisTitle = try c.decodeIfPresent(String.self, forKey: .thisTitle)
+            diff = try c.decode(String.self, forKey: .diff)
+            explain = try c.decode(String.self, forKey: .explain)
+            wrong = try c.decodeIfPresent(Wrong.self, forKey: .wrong)
+            current = try Self.sentences(c, .current)
+            other = try Self.sentences(c, .other)
+        }
+
+        /// 例句数组（也兼容旧格式的单个对象）
+        private static func sentences(_ c: KeyedDecodingContainer<CodingKeys>, _ key: CodingKeys) throws -> [Sentence] {
+            if let list = try? c.decode([Sentence].self, forKey: key) { return list }
+            return [try c.decode(Sentence.self, forKey: key)]
         }
     }
 
@@ -84,14 +106,22 @@ struct GrammarContrasts: Decodable {
                 let li = lg.items[i]
                 guard li.id == groups[g].items[i].id else { continue }
                 if let t = li.title { groups[g].items[i].title = t }
+                if let t = li.thisTitle { groups[g].items[i].thisTitle = t }
                 groups[g].items[i].diff = li.diff
                 groups[g].items[i].explain = li.explain
-                groups[g].items[i].current.tag = li.current.tag
-                groups[g].items[i].current.tr = li.current.tr
-                groups[g].items[i].other.tag = li.other.tag
-                groups[g].items[i].other.tr = li.other.tr
+                Self.apply(li.current, to: &groups[g].items[i].current)
+                Self.apply(li.other, to: &groups[g].items[i].other)
                 if let why = li.wrong?.why { groups[g].items[i].wrong?.why = why }
             }
+        }
+    }
+
+    /// 按位置覆盖例句的标签和翻译（句数不一致时保留简体中文）
+    private static func apply(_ l: [Sentence], to s: inout [Sentence]) {
+        guard l.count == s.count else { return }
+        for n in s.indices {
+            s[n].tag = l[n].tag
+            s[n].tr = l[n].tr
         }
     }
 

@@ -60,8 +60,8 @@ struct ContrastSection: View {
             if isOpen {
                 VStack(alignment: .leading, spacing: 16) {
                     Divider()
-                    sentence(item.current, label: Text(localized: "本页") + Text(verbatim: " · \(currentTitle)"), isCurrent: true)
-                    sentence(item.other, label: Text(verbatim: item.title ?? target?.titleForm ?? item.id), isCurrent: false)
+                    side(item.current, label: Text(localized: "本页") + Text(verbatim: " · \(item.thisTitle ?? currentTitle)"), isCurrent: true)
+                    side(item.other, label: Text(verbatim: item.title ?? target?.titleForm ?? item.id), isCurrent: false)
                     if let wrong = item.wrong { wrongLine(wrong) }
                     explainBox(item.explain)
                 }
@@ -120,13 +120,38 @@ struct ContrastSection: View {
         }
     }
 
-    private func sentence(_ s: GrammarContrasts.Sentence, label: Text, isCurrent: Bool) -> some View {
-        let color = isCurrent ? Theme.accentText : Theme.contrastText
-        return VStack(alignment: .leading, spacing: 4) {
-            HStack(spacing: 6) {
+    /// 一侧的例句：通常一句；这一侧有几种用法不同的形式时，名字只写一次，每种形式一句（标签写明是哪种形式）
+    @ViewBuilder
+    private func side(_ list: [GrammarContrasts.Sentence], label: Text, isCurrent: Bool) -> some View {
+        if list.count == 1, let s = list.first {
+            sentence(s, label: label, isCurrent: isCurrent)
+        } else {
+            VStack(alignment: .leading, spacing: 12) {
                 label
                     .font(.caption)
                     .foregroundStyle(.secondary)
+                ForEach(Array(list.enumerated()), id: \.offset) { _, s in
+                    sentence(s, label: nil, isCurrent: isCurrent)
+                }
+            }
+            .padding(.leading, 10)
+            .overlay(alignment: .leading) {
+                Rectangle().fill(Color.secondary.opacity(0.25)).frame(width: 2)
+            }
+            .accessibilityElement(children: .contain)
+            .accessibilityIdentifier("detail.contrast.forms")
+        }
+    }
+
+    private func sentence(_ s: GrammarContrasts.Sentence, label: Text?, isCurrent: Bool) -> some View {
+        let color = isCurrent ? Theme.accentText : Theme.contrastText
+        return VStack(alignment: .leading, spacing: 4) {
+            HStack(spacing: 6) {
+                if let label {
+                    label
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
                 Text(s.tag)
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(color)
@@ -142,6 +167,7 @@ struct ContrastSection: View {
                 .fixedSize(horizontal: false, vertical: true)
         }
         .accessibilityElement(children: .combine)
+        .accessibilityIdentifier("detail.contrast.sentence")
     }
 
     private func wrongLine(_ w: GrammarContrasts.Wrong) -> some View {

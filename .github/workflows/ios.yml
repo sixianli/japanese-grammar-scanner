@@ -202,7 +202,7 @@ jobs:
           qa search_tab -demoScreen search -demoSearch ように
           qa favorites_sorted -demoScreen favorites
           qa detail_title_bar -demoScreen detail -demoGrammar izen -demoScroll sense-0
-          qa review_bar -demoScreen detail -demoGrammar you-ni-naru -demoHistory 1
+          qa review_bar -demoScreen review -demoGrammar you-ni-naru
           qa contrast_collapsed -demoScreen detail -demoGrammar tokoro-da -demoScroll section-similar
           qa contrast_open -demoScreen detail -demoGrammar tokoro-da -demoScroll section-similar -demoContrastOpen 1
           qa contrast_open_en -demoScreen detail -demoGrammar you-ni-naru -demoScroll section-similar -demoContrastOpen 1 -demoAppLanguage en

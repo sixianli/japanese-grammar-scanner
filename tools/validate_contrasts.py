@@ -7,12 +7,16 @@ contrasts.json（简体中文基础文件）：
   * 例句写法正确：用 | 分段；「漢字:かな」注音只放在含汉字的片段上、读音只用假名；
     * 开头 = 语法本体（每句至少一处）；~ 开头 = 线索
   * 文字字段不为空
+  * this / that 是例句数组（兼容旧的单个对象）
+  * 多形式语法点（contrasts/forms.json 里 type=A）：没有用 title / thisTitle 点明只比哪一种时，
+    这一侧每种形式都要有一句例句（高亮部分里出现该形式的 key）
 contrasts_<语言>.json（翻译）：
   * 与基础文件结构一一对应（语法点、分组、条目的顺序和数量）；文字字段不为空
   * 除繁体中文外，译文不残留中文专用字
 
 用法: python3 tools/validate_contrasts.py
-      python3 tools/validate_contrasts.py --base <某个批次文件.json>   只校验这一份基础文件（分批编写时用）
+      python3 tools/validate_contrasts.py --base <某个批次文件.json> [--forms <forms.json>]
+          只校验这一份基础文件（分批编写时用）
 """
 import glob
 import json
@@ -61,16 +65,46 @@ def check_ja(ja, where, errors):
         errors.append(f"{where}: 例句里没有标出语法本体（* 开头的片段）")
 
 
+def sentences(item, key):
+    """this / that：例句数组（旧格式是单个对象）。"""
+    v = item.get(key)
+    if isinstance(v, dict):
+        return [v]
+    return v if isinstance(v, list) else []
+
+
 def text_fields(item):
     """一个条目里需要翻译的文字（与 App 的 apply 顺序一致）。"""
-    out = [("diff", item.get("diff")), ("explain", item.get("explain")),
-           ("this.tag", item["this"].get("tag")), ("this.tr", item["this"].get("tr")),
-           ("that.tag", item["that"].get("tag")), ("that.tr", item["that"].get("tr"))]
+    out = [("diff", item.get("diff")), ("explain", item.get("explain"))]
+    for key in ("this", "that"):
+        for n, s in enumerate(sentences(item, key)):
+            out += [(f"{key}[{n}].tag", s.get("tag")), (f"{key}[{n}].tr", s.get("tr"))]
     if "wrong" in item:
         out.append(("wrong.why", item["wrong"].get("why")))
     if "title" in item:
         out.append(("title", item.get("title")))
+    if "thisTitle" in item:
+        out.append(("thisTitle", item.get("thisTitle")))
     return out
+
+
+def highlighted(ja):
+    return "".join(seg[1:].split(":")[0] for seg in ja.split("|") if seg.startswith("*"))
+
+
+def check_forms(pid, sents, forms, where, errors):
+    """A 类多形式语法点：每种形式都要有一句例句（高亮里出现 key；一句只算它包含的最长 key）。"""
+    keys = sorted((f["key"] for f in forms), key=len, reverse=True)
+    covered = set()
+    for s in sents:
+        h = highlighted(s.get("ja", ""))
+        hit = next((k for k in keys if k in h), None)
+        if hit:
+            covered.add(hit)
+    missing = [k for k in keys if k not in covered]
+    if missing:
+        errors.append(f"{where}: {pid} 有几种用法不同的形式，缺少这些形式的例句：{'、'.join(missing)}"
+                      f"（只比其中一种时用 title / thisTitle 点明）")
 
 
 def main():
@@ -86,6 +120,11 @@ def main():
         return 0
     with open(base_path, encoding="utf-8") as fh:
         base = json.load(fh)["points"]
+    forms_path = sys.argv[sys.argv.index("--forms") + 1] if "--forms" in sys.argv else os.path.join(DIR, "forms.json")
+    forms = {}
+    if os.path.exists(forms_path):
+        with open(forms_path, encoding="utf-8") as fh:
+            forms = {k: v["forms"] for k, v in json.load(fh).items() if v.get("type") == "A" and v.get("forms")}
 
     seen_points = set()
     for p in base:
@@ -116,8 +155,16 @@ def main():
                 for name, val in text_fields(it):
                     if not isinstance(val, str) or not val.strip():
                         errors.append(f"{where}: {name} 为空")
-                check_ja(it["this"]["ja"], where + " (this)", errors)
-                check_ja(it["that"]["ja"], where + " (that)", errors)
+                for key in ("this", "that"):
+                    sents = sentences(it, key)
+                    if not sents:
+                        errors.append(f"{where}: 缺少 {key} 例句")
+                    for n, sent in enumerate(sents):
+                        check_ja(sent.get("ja", ""), f"{where} ({key}[{n}])", errors)
+                if pid in forms and "thisTitle" not in it:
+                    check_forms(pid, sentences(it, "this"), forms[pid], where + " (本页)", errors)
+                if it["id"] in forms and "title" not in it:
+                    check_forms(it["id"], sentences(it, "that"), forms[it["id"]], where + " (对方)", errors)
                 if "wrong" in it and not it["wrong"].get("ja", "").strip():
                     errors.append(f"{where}: wrong.ja 为空")
 
@@ -147,8 +194,10 @@ def main():
                     continue
                 for bi, li in zip(bg["items"], lg["items"]):
                     for key in ("this", "that"):
-                        if key not in li:
-                            li[key] = {}
+                        if len(sentences(li, key)) != len(sentences(bi, key)):
+                            errors.append(f"{name}: {bp['id']} → {bi['id']} {key} 例句数量与基础文件不一致")
+                    if "thisTitle" in bi and "thisTitle" not in li:
+                        errors.append(f"{name}: {bp['id']} → {bi['id']} 缺少 thisTitle")
                     if "wrong" in bi and "wrong" not in li:
                         errors.append(f"{name}: {bp['id']} → {bi['id']} 缺少 wrong.why")
                     if "title" in bi and "title" not in li:

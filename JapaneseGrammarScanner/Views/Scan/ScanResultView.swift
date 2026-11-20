@@ -60,7 +60,11 @@ struct ScanResultView: View {
         .overlay { zoomStage }
         .toolbar(zoom.isOpen ? .hidden : .automatic, for: .navigationBar, .tabBar)
         .statusBarHidden(zoom.isOpen)
-        .onAppear { zoom.imageSize = scanImage.image.size }
+        .onAppear {
+            zoom.imageSize = scanImage.image.size
+            // 点中框时底色加深只是按下那一下的反馈：从讲解页回来后恢复，所有框样式一致
+            selectedClusterID = nil
+        }
         .navigationTitle(tr("识别结果"))
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(item: $pushedGrammarID) { id in

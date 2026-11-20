@@ -19,9 +19,9 @@ enum ImageFit {
     }
 }
 
-/// 在图片 / 取景画面上绘制可点击的语法高亮：贴着文字的细虚线框，框内一层很淡的主题色，原文的字不变色。
-/// 相机实时取景、识别结果页、放大查看三处统一用这一种样式。
-/// - 点中的框：虚线变实线，底色略深（仍然很淡，保证看得清原文）。
+/// 在图片 / 取景画面上绘制可点击的语法框：贴着文字的淡橙色细实线框，框内一层极淡的橙色，原文的字不变色。
+/// 相机实时取景、识别结果页（拍照 / 相册）、放大查看三处统一用这一种样式，颜色固定不随主题。
+/// - 点中的那一下底色加深，回到结果页后恢复。
 /// - 一个框里有多个语法时不另外标数字，点开后在列表里选。
 /// - 相邻的两个框之间始终留一道细缝，四角圆一点，不会糊成一条粗线。
 struct HighlightOverlay: View {
@@ -48,14 +48,12 @@ struct HighlightOverlay: View {
                     let local = quads[i].map { CGPoint(x: $0.x - bounds.minX, y: $0.y - bounds.minY) }
                     let shape = QuadShape(points: local, cornerRadius: 3 * unit)
                     let selected = cluster.id == selectedClusterID
-                    let color = Theme.photoHighlight
+                    let style = HighlightStyle.of(selected: selected)
                     shape
-                        .fill(color.opacity(selected ? 0.16 : 0.07))
+                        .fill(Theme.scanHighlight.opacity(style.fillOpacity))
                         .overlay(
-                            shape.stroke(color.opacity(0.95),
-                                         style: StrokeStyle(lineWidth: selected ? lineWidth * 1.3 : lineWidth,
-                                                            lineCap: .round, lineJoin: .round,
-                                                            dash: selected ? [] : [4 * unit, 3 * unit]))
+                            shape.stroke(Theme.scanHighlight.opacity(style.strokeOpacity),
+                                         style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
                         )
                         .frame(width: max(bounds.width, 4), height: max(bounds.height, 4))
                         .contentShape(shape.inset(by: -4))
@@ -71,13 +69,26 @@ struct HighlightOverlay: View {
     }
 }
 
+/// 语法框的样式：所有框都是同一种淡橙色细实线 + 极淡底色（不再分虚线 / 实线）；
+/// 点中的那一下底色加深作为反馈，返回结果页后恢复。
+struct HighlightStyle: Equatable {
+    let fillOpacity: Double
+    let strokeOpacity: Double
+    /// 线型：始终是实线
+    let dashed: Bool
+
+    static func of(selected: Bool) -> HighlightStyle {
+        HighlightStyle(fillOpacity: selected ? 0.28 : 0.10, strokeOpacity: 0.8, dashed: false)
+    }
+}
+
 /// 高亮框的几何处理：四周略微放宽一点，相邻的框在交界处各自收回，中间留一道细缝。
 enum HighlightGeometry {
     /// - Parameters:
     ///   - quads: 每个框的四个角（视图坐标：左上、右上、右下、左下）
     ///   - unit: 缩放系数（放大查看时 < 1）
     static func layout(_ quads: [[CGPoint]], unit: CGFloat = 1) -> [[CGPoint]] {
-        let pad = 2 * unit          // 框比文字略大一点，虚线不压在笔画上
+        let pad = 2 * unit          // 框比文字略大一点，线不压在笔画上
         let gap = 3 * unit          // 相邻两个框之间的缝
         var out = quads.map { q -> [CGPoint] in
             guard q.count == 4 else { return q }

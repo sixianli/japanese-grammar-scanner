@@ -17,10 +17,10 @@ final class ScanResultTests: E2ETestCase {
         }
         back()
         waitForScanResult()
-        // 返回后，刚才点的框显示为选中（实线），其余仍是普通虚线框
-        wait(id("highlight.box.selected"), "返回后刚才点的框应显示为选中")
-        XCTAssertEqual(ids("highlight.box.selected").count, 1, "只有一个框是选中状态")
-        XCTAssertTrue(id("highlight.box").exists, "其余框仍是普通状态")
+        // 回归（Build 16）：返回后刚才点的框还停在「选中」样式，和其他框不一样，看起来像 bug。
+        // 现在所有框统一淡橙色实线；点中只在按下那一下加深，返回后全部恢复同一种样式
+        wait(id("highlight.box"), "返回后框仍在")
+        XCTAssertFalse(id("highlight.box.selected").waitForExistence(timeout: 2), "返回后不应留有选中样式的框")
     }
 
     func testZoomButtonDoubleTapAndClose() {

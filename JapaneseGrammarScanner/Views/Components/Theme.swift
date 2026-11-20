@@ -101,15 +101,10 @@ enum Theme {
     /// 主题色（按钮、选中状态、底色）。
     static var accent: Color { dynamic(store.accent.hex.0, store.accent.hex.2) }
     /// 用在文字上的主题色（加深一档，保证对比度）：例句里的目标语法、链接。
-    /// 照片 / 取景画面上高亮框的颜色：主题色深一档，固定不随深浅色模式变化（照片里的纸面总是浅色）
-    static var photoHighlight: Color { Color(uiColor: color(store.accent.hex.1)) }
-    /// 深一档的照片高亮色：相邻的两段语法交替使用，好分清
-    static var photoHighlightDeep: Color {
-        var h: CGFloat = 0, s: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
-        let c = color(store.accent.hex.1)
-        guard c.getHue(&h, saturation: &s, brightness: &b, alpha: &a) else { return photoHighlight }
-        return Color(uiColor: UIColor(hue: h, saturation: min(s * 1.1, 1), brightness: b * 0.62, alpha: a))
-    }
+    /// 照片 / 取景画面上语法框的颜色：固定的淡橙色，不随主题、不随深浅色模式变化
+    /// （照片里的纸面总是浅色，绿色等主题色在纸面上不显眼；取景、拍照后、相册图片三处统一）
+    static let scanHighlightHex: UInt32 = 0xF08A24
+    static var scanHighlight: Color { Color(uiColor: color(scanHighlightHex)) }
     static var accentText: Color { dynamic(store.accent.hex.1, store.accent.hex.3) }
     /// 「相近语法」对比例句里，另一个语法的颜色：与主题色明显不同（绿色系主题配赭橙，暖色系主题配靛蓝）。
     static var contrastText: Color {
