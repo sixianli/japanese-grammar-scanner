@@ -124,7 +124,8 @@ jobs:
             -resultBundlePath e2e.xcresult \
             CODE_SIGNING_ALLOWED=NO \
             | tee e2e.log | grep -E "error:|Test Case .* (passed|failed)|XCTAssert|Executed|\*\* (TEST|BUILD)" || true
-          grep -q "\*\* TEST SUCCEEDED \*\*" e2e.log
+          # test-without-building 成功时输出的是「** TEST EXECUTE SUCCEEDED **」
+          grep -qE "\*\* TEST (EXECUTE )?SUCCEEDED \*\*" e2e.log
       - name: Export failure screenshots
         if: failure()
         run: |
