@@ -211,6 +211,12 @@ def main():
         if f"python:{k}" not in used:
             errors.append(f"dev_only.json 里列着 {k}，项目里已经不用了，请删掉")
 
+    # 用户上传的数据（反馈、使用统计）只能由提交者本人和开发者读取，不能对所有人开放（公共数据库里 _world 可读 = 谁都能读）
+    schema = read(os.path.join(ROOT, "cloudkit", "schema.ckdb"))
+    for m in re.finditer(r"RECORD TYPE (\w+) \((.*?)\n    \);", schema, re.S):
+        if m.group(1) != "Users" and re.search(r'GRANT\s+(READ|WRITE|CREATE)[^\n]*TO\s+"_world"', m.group(2)):
+            errors.append(f"cloudkit/schema.ckdb：{m.group(1)} 对 _world（所有人）开放了权限，用户数据只能给提交者本人（_creator）")
+
     print(f"隐私政策：{len(sections)} 节，清单 {len(known)} 个框架、{sum(len(e['fields']) for e in known_records.values())} 个上报字段；"
           f"开源许可：{len(tp)} 个组件")
     if errors:

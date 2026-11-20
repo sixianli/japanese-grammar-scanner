@@ -16,8 +16,7 @@ DEFINE SCHEMA
         osVersion       STRING,
         screenshots     LIST<ASSET>,
         GRANT WRITE TO "_creator",
-        GRANT CREATE TO "_icloud",
-        GRANT READ TO "_world"
+        GRANT CREATE TO "_icloud"
     );
 
     RECORD TYPE UsageDay (
@@ -41,8 +40,7 @@ DEFINE SCHEMA
         sessions        INT64,
         week            STRING QUERYABLE,
         GRANT WRITE TO "_creator",
-        GRANT CREATE TO "_icloud",
-        GRANT READ TO "_world"
+        GRANT CREATE TO "_icloud"
     );
 
     RECORD TYPE Users (
