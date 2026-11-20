@@ -26,13 +26,31 @@ final class HomeTests: E2ETestCase {
     }
 
     /// 搜索框和设置按钮固定在顶部：往下滑到页面底部后仍然看得到、点得到
+    ///
+    /// 「可点」按真实的点击结果判断，不用 isHittable：搜索框是 safeAreaInset 放在滚动内容上面的，界面层级里它排在
+    /// ScrollView 前面，内容滑到它下面后 XCUITest 的命中判断认为它被内容挡住（CI 上画面里搜索框明明在最上层，
+    /// isHittable 却一直是 false）。这里直接点它在屏幕上的位置：真被内容盖住的话会点到内容上，打不开设置 / 搜索。
     func testSearchBarStaysPinnedWhenScrolling() {
+        let search = id("home.search"), settings = id("home.settings")
+        wait(search, "首页顶部应有搜索框")
+        let pinnedY = search.frame.minY
         scrollTo(id("home.feedback"))
         XCTAssertTrue(id("home.feedback").isHittable, "应已滑到页面底部")
-        XCTAssertTrue(id("home.search").isHittable, "滑到底部后搜索框仍应可见可点")
-        XCTAssertTrue(id("home.settings").isHittable, "滑到底部后设置按钮仍应可见可点")
-        id("home.search").tap()
-        wait(app.searchFields.firstMatch, "点固定在顶部的搜索框应进入搜索")
+        // 可见：没有跟着内容滚走，仍在原来的位置、完整地在屏幕里
+        let window = app.windows.firstMatch.frame
+        XCTAssertEqual(search.frame.minY, pinnedY, accuracy: 1, "滑到底部后搜索框应仍固定在顶部")
+        XCTAssertTrue(window.contains(search.frame), "滑到底部后搜索框仍应完整可见")
+        XCTAssertTrue(window.contains(settings.frame), "滑到底部后设置按钮仍应完整可见")
+        // 可点：点设置按钮所在位置应打开设置
+        settings.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
+        wait(id("settings.done"), "滑到底部后点顶部的设置按钮应打开设置")
+        id("settings.done").tap()
+        waitGone(id("settings.done"), "点「完成」应关闭设置")
+        let atBottom = expectation(for: NSPredicate(format: "isHittable == true"), evaluatedWith: id("home.feedback"))
+        XCTAssertEqual(XCTWaiter().wait(for: [atBottom], timeout: 5), .completed, "关闭设置后首页应仍停在底部")
+        // 可点：点搜索框所在位置应进入搜索
+        search.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
+        wait(app.searchFields.firstMatch, "滑到底部后点顶部的搜索框应进入搜索")
     }
 
     func testFeedbackLinkOpensFeedback() {

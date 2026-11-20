@@ -8,9 +8,19 @@ final class SettingsTests: E2ETestCase {
         wait(navBar("设置"), "应打开设置")
     }
 
-    private func closeSettings() {
-        navBar("设置").buttons["完成"].tap()
-        wait(id("home.search"), "关闭设置应回到首页")
+    /// 关闭设置面板。「完成」（settings.done）只在设置首页的导航栏上；停在二级页（隐私、使用指南、指南条目…）时
+    /// 那里只有返回按钮，先逐级返回到设置首页再点「完成」。
+    private func closeSettings(file: StaticString = #filePath, line: UInt = #line) {
+        let done = id("settings.done")
+        var levels = 0
+        while !done.waitForExistence(timeout: 2) && levels < 3 {
+            back(file: file, line: line)
+            levels += 1
+        }
+        wait(done, "返回到设置首页后应有「完成」", timeout: 5, file: file, line: line)
+        done.tap()
+        waitGone(done, "点「完成」应关闭设置面板", file: file, line: line)
+        wait(id("home.search"), "关闭设置应回到首页", file: file, line: line)
     }
 
     func testAppearanceAllSwatches() {
@@ -163,7 +173,10 @@ final class SettingsTests: E2ETestCase {
         scrollTo(id("settings.privacy"))
         id("settings.privacy").tap()
         wait(id("legal.summary"), "隐私页应显示隐私政策")
-        XCTAssertTrue(id("legal.camera").exists && id("legal.contact").exists)
+        XCTAssertTrue(id("legal.camera").exists, "隐私政策应有「相机与照片」")
+        // 「联系我们」是政策的最后一节，在屏幕下方；列表只把屏幕上的行放进界面层级，要滑到它出现
+        scrollTo(id("legal.contact"))
+        XCTAssertTrue(id("legal.contact").exists, "隐私政策最后应有「联系我们」")
         back()
         scrollTo(app.buttons["开源许可"].firstMatch)
         button(startingWith: "使用条款").tap()

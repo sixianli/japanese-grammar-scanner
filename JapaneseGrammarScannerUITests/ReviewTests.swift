@@ -113,10 +113,12 @@ final class ReviewTests: E2ETestCase {
         XCTAssertFalse(id("review.bar").waitForExistence(timeout: 3), "从语法库打开到期的语法不应出现复习栏")
         XCTAssertTrue(tab("语法库").isHittable, "不是复习时标签栏照常显示")
 
-        // 扫描结果（固定数据里的扫描记录含 te-shimau，已到期）
+        // 扫描结果（固定数据里的扫描记录含 te-shimau，已到期）。首页「继续上次」是最近一条扫描记录
+        // （scanRecord 只在「全部扫描记录」页里，首页没有）
         tab("首页").tap()
-        scrollTo(id("scanRecord"))
-        id("scanRecord").tap()
+        wait(id("home.search"), "点「首页」标签应回到首页")
+        scrollTo(id("home.continueScan"))
+        id("home.continueScan").tap()
         waitForScanResult()
         let row = ids("result.grammarRow").matching(NSPredicate(format: "label CONTAINS %@", "てしまう")).firstMatch
         scrollTo(row)

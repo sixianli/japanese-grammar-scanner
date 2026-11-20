@@ -34,8 +34,14 @@ class E2ETestCase: XCTestCase {
     func tab(_ title: String) -> XCUIElement {
         let icon = ["首页": "house", "扫描": "text.viewfinder", "语法库": "books.vertical", "收藏": "star", "搜索": "magnifyingglass",
                     "Home": "house", "Scan": "text.viewfinder", "Grammar": "books.vertical", "Favorites": "star", "Search": "magnifyingglass"][title] ?? ""
-        // 标签按钮的 identifier 就是标签图标名（如 books.vertical），页面里同名按钮（如「收藏」）的 identifier 不同
-        return app.buttons.matching(NSPredicate(format: "label == %@ AND identifier BEGINSWITH %@", title, icon)).firstMatch
+        // 标签按钮的 identifier 是系统按图标名自动给的（如 books.vertical），但刚启动时有时还是空的（CI 上「扫描」标签
+        // 三次重试都没有 identifier，No matches）。按钮里的图标（Image，identifier 如 text.viewfinder、选中时 house.fill）
+        // 一直都有，所以按「按钮名 == 标签名、按钮里有这个图标」找：按钮自己的 identifier 是图标名或还没给（空）都算。
+        // 页面里同名按钮（如讲解页的「收藏」detail.favorite）有自己的 identifier，排除在外。
+        return app.buttons
+            .matching(NSPredicate(format: "label == %@ AND (identifier BEGINSWITH %@ OR identifier == '')", title, icon))
+            .containing(NSPredicate(format: "identifier BEGINSWITH %@", icon))
+            .firstMatch
     }
 
     /// 讲解页（右上角的收藏按钮只在讲解页出现）
