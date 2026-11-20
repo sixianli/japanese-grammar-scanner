@@ -21,8 +21,28 @@ final class ContrastTests: XCTestCase {
                 }
             }
         }
-        // 没有新版资料的语法点仍用旧版列表
+        // 新版资料里审过、但没有合格对比的语法点：有资料、分组为空（讲解页整节不显示，不退回旧版列表）
+        let none = lib.contrasts(for: "mou-ta-already")
+        XCTAssertNotNil(none, "审过的语法点应有新版资料")
+        XCTAssertEqual(none?.groups.isEmpty, true)
+        // 还没有新版资料的语法点（N4 以上，生成中）仍用旧版列表
         XCTAssertNil(lib.contrasts(for: "te-shimau"))
+    }
+
+    /// N5 已全部生成新版资料：每个 N5 语法点都有（可以为空），引用都存在，例句都标出了语法
+    func testEveryN5PointHasContrasts() {
+        let lib = GrammarLibrary(language: .zhHans)
+        for p in lib.points where p.level == .n5 {
+            guard let c = lib.contrasts(for: p.id) else { XCTFail("\(p.id) 缺少新版相近语法资料"); continue }
+            for g in c.groups {
+                XCTAssertFalse(g.items.isEmpty, "\(p.id)/\(g.kind) 不应有空组")
+                for item in g.items {
+                    XCTAssertNotNil(lib.point(id: item.id), "\(p.id) → \(item.id) 不存在")
+                    XCTAssertTrue(item.current.segments.contains { $0.highlighted } && item.other.segments.contains { $0.highlighted },
+                                  "\(p.id) → \(item.id) 例句没有标出语法")
+                }
+            }
+        }
     }
 
     func testSegmentsParseRubyHighlightAndCue() {
