@@ -3,14 +3,13 @@ import SwiftUI
 /// 设置面板：从底部弹出的整页面板（不挂在任何标签下），内部可以推入外观、语言、隐私政策等页面。
 struct SettingsSheet: View {
     @Environment(\.dismiss) private var dismiss
-    /// 切换语言后重建界面时，直接回到语言页
-    /// 注意不要在这里清掉标记：切换语言时旧的面板也会被重新创建一次，在这里清掉会让新面板打不开语言页
-    @State private var path: [SettingsPage] = LanguageStore.reopenLanguagePage ? [.language] : []
+    /// 切换语言时面板不关闭、导航栈不变（停在语言页），只是文字当场换成新语言
+    @EnvironmentObject private var languages: LanguageStore
+    @State private var path: [SettingsPage] = []
 
     var body: some View {
         NavigationStack(path: $path) {
             SettingsView(close: { dismiss() })
-                .onAppear { LanguageStore.reopenLanguagePage = false }
                 .toolbar {
                     ToolbarItem(placement: .confirmationAction) { Button(tr("完成")) { dismiss() }.accessibilityIdentifier("settings.done") }
                 }

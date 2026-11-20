@@ -66,6 +66,17 @@ class E2ETestCase: XCTestCase {
         XCTAssertEqual(XCTWaiter().wait(for: [p], timeout: timeout), .completed, message, file: file, line: line)
     }
 
+    /// 在一段时间内持续检查元素一直存在（用来发现「先消失再出现」的跳动，例如面板被关掉又重新打开）
+    func assertStays(_ element: XCUIElement, for seconds: TimeInterval = 1.5, _ message: String,
+                     file: StaticString = #filePath, line: UInt = #line) {
+        let end = Date().addingTimeInterval(seconds)
+        while Date() < end {
+            XCTAssertTrue(element.exists, message, file: file, line: line)
+            if !element.exists { return }
+            Thread.sleep(forTimeInterval: 0.1)
+        }
+    }
+
     func back(file: StaticString = #filePath, line: UInt = #line) {
         let button = app.buttons["BackButton"].firstMatch
         if button.waitForExistence(timeout: 5) {

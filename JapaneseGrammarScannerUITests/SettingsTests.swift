@@ -43,7 +43,11 @@ final class SettingsTests: E2ETestCase {
         let footers = ["English": "switch together", "한국어": "함께 바뀝니다", "Español": "cambian juntos", "Tiếng Việt": "cùng lúc",
                        "မြန်မာဘာသာ": "ပူးတွဲ", "繁體中文": "一起切換", "简体中文": "一起切换"]
         for (name, title) in expected {
-            button(startingWith: name).tap()
+            let row = button(startingWith: name)
+            row.tap()
+            // 切换语言时不能关掉设置面板、跳回首页再弹回来：语言列表要一直在屏幕上
+            assertStays(app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", name)).firstMatch,
+                        "切换到 \(name) 时语言页不应消失（不应先跳回首页再弹回）")
             wait(navBar(title), "切换到 \(name) 后页面标题应变成「\(title)」")
             if let f = footers[name], !f.isEmpty {
                 wait(text(containing: f), "切换到 \(name) 后页面上的普通文字也应换成该语言")
@@ -60,7 +64,11 @@ final class SettingsTests: E2ETestCase {
         button(startingWith: "English").tap()
         wait(navBar("Language"), "英文")
         back()
+        // 返回设置页：设置页本身也已经是英文（就地刷新，不需要重新打开）
+        wait(navBar("Settings"), "返回后设置页标题应是英文")
         navBar("Settings").buttons["Done"].tap()
+        // 关掉设置后仍在首页（切换语言不改变当前标签）
+        wait(id("home.search"), "关闭设置后应仍在首页")
         tab("Grammar").tap()
         wait(id("library.row"), "语法库")
         id("library.row").tap()
