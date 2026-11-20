@@ -25,6 +25,16 @@ final class HomeTests: E2ETestCase {
         wait(id("home.search"), "返回应回到首页")
     }
 
+    /// 搜索框和设置按钮固定在顶部：往下滑到页面底部后仍然看得到、点得到
+    func testSearchBarStaysPinnedWhenScrolling() {
+        scrollTo(id("home.feedback"))
+        XCTAssertTrue(id("home.feedback").isHittable, "应已滑到页面底部")
+        XCTAssertTrue(id("home.search").isHittable, "滑到底部后搜索框仍应可见可点")
+        XCTAssertTrue(id("home.settings").isHittable, "滑到底部后设置按钮仍应可见可点")
+        id("home.search").tap()
+        wait(app.searchFields.firstMatch, "点固定在顶部的搜索框应进入搜索")
+    }
+
     func testFeedbackLinkOpensFeedback() {
         scrollTo(id("home.feedback"))
         id("home.feedback").tap()
