@@ -233,7 +233,8 @@ final class GrayPage {
                 x = end
             }
         }
-        let longStroke = Int32(max(minRun / 2, 12))
+        // 阈值要比一个字的宽度长（字的一横是一段十几到几十像素的连续深色），又要容得下略微倾斜的横线被拆成的几段
+        let longStroke = Int32(max(minRun * 3 / 4, 16))
         // count[x]：第 y-2…y+2 行里第 x 列的深色像素数（逐行滑动更新）
         var count = [Int](repeating: 0, count: w)
         for yy in 0..<5 { for x in 0..<w { count[x] += Int(dark[yy * w + x]) } }
