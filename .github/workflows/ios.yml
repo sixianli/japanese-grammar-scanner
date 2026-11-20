@@ -58,6 +58,20 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             | tee build.log | grep -E "error:|warning: .*JapaneseGrammarScanner|Test Case .* (passed|failed)|Executed|\*\* (TEST|BUILD)" || true
           grep -q "\*\* TEST SUCCEEDED \*\*" build.log
+      # 发 TestFlight 时打开了 CLOUD_FEEDBACK（App 内反馈 / 匿名统计走 iCloud），那部分代码只在这个编译条件下才编译。
+      # 这里按发版配置再编译一次，并跑「隐私政策 / 条款与这一版一致」的测试，免得发版时才发现编不过或政策对不上。
+      - name: Test with CLOUD_FEEDBACK (TestFlight configuration)
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project JapaneseGrammarScanner.xcodeproj \
+            -scheme JapaneseGrammarScanner \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -only-testing:JapaneseGrammarScannerTests/GuideAndLegalTests \
+            CODE_SIGNING_ALLOWED=NO \
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS=\$(inherited) CLOUD_FEEDBACK" \
+            | tee build-cloud.log | grep -E "error:|Test Case .* (passed|failed)|Executed|\*\* (TEST|BUILD)" || true
+          grep -q "\*\* TEST SUCCEEDED \*\*" build-cloud.log
       - name: Build for device (Release, unsigned)
         run: |
           set -o pipefail
