@@ -202,6 +202,8 @@ jobs:
           qa search_tab -demoScreen search -demoSearch ように
           qa favorites_sorted -demoScreen favorites
           qa detail_title_bar -demoScreen detail -demoGrammar izen -demoScroll sense-0
+          # 标题飞进导航栏途中（Build 16：有重影）：同一个语法滚到不同位置，每张图里标题都只有一个
+          for y in 20 45 70 100; do qa detail_title_fly_$y -demoScreen detail -demoGrammar you-ni-naru -demoScrollY $y; done
           qa review_bar -demoScreen review -demoGrammar you-ni-naru
           qa contrast_collapsed -demoScreen detail -demoGrammar tokoro-da -demoScroll section-similar
           qa contrast_open -demoScreen detail -demoGrammar tokoro-da -demoScroll section-similar -demoContrastOpen 1
@@ -216,6 +218,7 @@ jobs:
           xcrun simctl ui "$UDID" appearance dark
           qa detail_oouseru_dark -demoScreen detail -demoGrammar oouseru
           qa detail_izen_dark -demoScreen detail -demoGrammar izen
+          qa detail_title_fly_dark -demoScreen detail -demoGrammar you-ni-naru -demoScrollY 45
           qa home_dark -demoScreen home -demoHistory 1
           xcrun simctl ui "$UDID" appearance light
           xcrun simctl ui "$UDID" content_size extra-extra-large
