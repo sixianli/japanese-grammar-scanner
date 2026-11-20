@@ -52,11 +52,15 @@
               ],
               "that": [
                 {
-                  "tag": "Right then → someone came",
+                  "tag": "ところに · Right then → someone came",
                   "tr": "Just as I was about to go out, a friend came over."
+                },
+                {
+                  "tag": "ところへ · Right then → a call came",
+                  "tr": "Just as I was about to go out, I got a phone call."
                 }
               ],
-              "explain": "ところに／ところへ is always followed by someone or something that “bursts in” (友達が来た, 電話が鳴った), often disrupting your plans; ところだ only describes your own state, and the sentence ends there."
+              "explain": "ところに／ところへ is always followed by someone or something that “bursts in” (友達が来た, 電話がかかってきた), often disrupting your plans; ところだ only describes your own state, and the sentence ends there."
             },
             {
               "id": "tokoro-datta",
@@ -184,7 +188,7 @@
                   "tr": "This shop sells nothing but expensive things."
                 }
               ],
-              "explain": "It's the same ばかり, originally meaning “only this”. Look at what comes before it: a ta-form (買った) → “only this little time has passed” = just now; a noun (物) → “only this one kind” = nothing but."
+              "explain": "It's the same ばかり, originally meaning “only this”. Look at what comes before it: a ta-form (買った) → “only this little time has passed” = just now; a noun (物) → “only this one kind” = nothing but. In casual speech ばっかり works the same way."
             },
             {
               "id": "te-bakari-iru",
@@ -349,14 +353,18 @@
               ],
               "that": [
                 {
-                  "tag": "Adjective → になる",
+                  "tag": "になる · na-adjective",
                   "tr": "I've gotten good at swimming."
+                },
+                {
+                  "tag": "くなる · i-adjective",
+                  "tr": "Swimming has become fun."
                 }
               ],
               "wrong": {
                 "why": "A verb can't attach directly to になる"
               },
-              "explain": "First check what kind of word comes before 「なる」: 泳げる is a verb → ようになる; 上手 is a na-adjective → になる (i-adjectives: 寒い → 寒くなる; nouns: 医者 → 医者になる). In English both are just “become / get…”, so learners easily write ✗泳げるになった."
+              "explain": "First check what kind of word comes before 「なる」: 泳げる is a verb → ようになる; 上手 is a na-adjective → になる; 楽しい is an i-adjective → drop い and add くなる (nouns also take になる: 医者になる). In English all of these are just “become / get…”, so learners easily write ✗泳げるになった."
             },
             {
               "id": "te-kuru",
@@ -526,7 +534,7 @@
                   "tr": "The road is wet. It seems it has rained."
                 }
               ],
-              "explain": "Look at the clue in the first half: you see the state “the sky is dark” and predict what comes next → そうだ (attaches to the masu-stem: 降り + そう); you see the result “the road is wet” and infer what already happened → ようだ (attaches to the plain form: 降った + よう)."
+              "explain": "Look at the clue in the first half: you see the state “the sky is dark” and predict what comes next → そうだ (attaches to the masu-stem: 降り + そう); you see the result “the road is wet” and infer what already happened → ようだ (attaches to the plain form: 降った + よう). In casual speech ようだ becomes みたいだ (降ったみたいだ), used the same way."
             },
             {
               "id": "rashii-typical",
@@ -588,7 +596,7 @@
                   "tr": "He looks angry, but he actually isn't."
                 }
               ],
-              "explain": "ように見える only describes how something “looks”, and is often followed by 「が、本当は……」, which overturns it; ようだ is the speaker's judgment after putting the clues together, and they basically believe it."
+              "explain": "ように見える only describes how something “looks”, and is often followed by 「が、本当は……」, which overturns it; ようだ is the speaker's judgment after putting the clues together, and they basically believe it. In casual speech ようだ becomes みたいだ (留守みたいだ), used the same way."
             }
           ]
         },
@@ -1009,24 +1017,32 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from the i-adjective continuative form 「く」 — whose job is to “link to the next word”",
+          "note": "Both come from the adjective continuative form 「く／に」 — whose job is to “link to the next word”: くて＝く＋て, and で comes from the classical 「にて」＝に＋て",
           "items": [
             {
               "id": "adj-te-connect",
-              "diff": "く directly modifies the following action (how it's done); く＋て first finishes describing one quality, then moves on.",
+              "diff": "く／に directly modifies the following action (how it's done); くて／で first finishes describing one quality, then moves on.",
               "this": [
                 {
                   "tag": "く ＋ verb · how",
                   "tr": "At this shop you can buy vegetables cheaply."
+                },
+                {
+                  "tag": "に ＋ verb · how",
+                  "tr": "I clean the room until it's spotless."
                 }
               ],
               "that": [
                 {
                   "tag": "くて · next quality",
                   "tr": "The vegetables at this shop are cheap and fresh."
+                },
+                {
+                  "tag": "で · next quality",
+                  "tr": "This room is clean and bright."
                 }
               ],
-              "explain": "Both are the continuative form 「く」 — look at what follows: a verb right after it (買える) → describes how the action is done; an added 「て」 followed by another quality (新しい) → lists the qualities side by side."
+              "explain": "Look at what follows: a verb right after it (買える, 掃除する) → describes how the action is done; an added 「て」 followed by another quality (新しい, 明るい) → lists the qualities side by side. na-adjectives form the same pair: きれいに／きれいで — で is simply the classical 「にて」 contracted, exactly parallel to くて＝く＋て."
             }
           ]
         }
@@ -1037,27 +1053,35 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from the i-adjective continuative form 「く」 — whose job is to “link to the next word”",
+          "note": "Both come from the adjective continuative form 「く／に」 — whose job is to “link to the next word”: くて＝く＋て, and で comes from the classical 「にて」＝に＋て",
           "items": [
             {
               "id": "adj-adverbial",
-              "diff": "くて＝く＋て: finish one quality, then continue; く directly modifies the following verb.",
+              "diff": "くて／で: finish one quality, then continue; く／に directly modifies the following verb.",
               "this": [
                 {
-                  "tag": "Listing qualities",
+                  "tag": "くて · Listing qualities",
                   "tr": "This bread is cheap and tasty."
+                },
+                {
+                  "tag": "で · Listing qualities",
+                  "tr": "This town is quiet and clean."
                 }
               ],
               "that": [
                 {
-                  "tag": "Modifies action",
+                  "tag": "く · Modifies action",
                   "tr": "I get up early every morning."
+                },
+                {
+                  "tag": "に · Modifies action",
+                  "tr": "Please speak quietly in the library."
                 }
               ],
               "wrong": {
                 "why": "To modify the verb 「起きる」, use く"
               },
-              "explain": "Both are the continuative form 「く」 — look at what follows: an added 「て」 followed by another quality (おいしい) → lists them side by side; a verb right after it (起きる) → describes how the action is done."
+              "explain": "Look at what follows: an added 「て」 followed by another quality (おいしい, きれいだ) → lists them side by side; a verb right after it (起きる, 話す) → describes how the action is done. na-adjectives work the same way: 静かで lists (で comes from the classical 「にて」＝に＋て), 静かに modifies a verb, so ✗静かで話す is wrong too."
             }
           ]
         },
@@ -1092,11 +1116,15 @@
             },
             {
               "id": "shi",
-              "diff": "くて simply lists things flatly; し lists points one by one as reasons, implying “there's more”, and is often followed by a conclusion.",
+              "diff": "くて／で simply lists things flatly; し lists points one by one as reasons, implying “there's more”, and is often followed by a conclusion.",
               "this": [
                 {
-                  "tag": "Plain listing",
+                  "tag": "くて · Plain listing",
                   "tr": "This place is cheap and tasty."
+                },
+                {
+                  "tag": "で · Plain listing",
+                  "tr": "This place is quiet and clean."
                 }
               ],
               "that": [
@@ -1105,7 +1133,7 @@
                   "tr": "This place is cheap, and it's tasty, so I come here often."
                 }
               ],
-              "explain": "Look for a “so…” conclusion: if it only describes what something is like → くて; if several good points serve as reasons leading to a judgment like “so I come often” → し. They also attach differently: くて is a conjugated adjective, while し follows the plain form (安いし)."
+              "explain": "Look for a “so…” conclusion: if it only describes what something is like → くて／で; if several good points serve as reasons leading to a judgment like “so I come often” → し. They also attach differently: くて／で are conjugated adjective forms, while し follows the plain form (安いし, 静かだし)."
             }
           ]
         }
@@ -1120,7 +1148,7 @@
           "items": [
             {
               "id": "amari-ni",
-              "diff": "あまり＋negative means “not very…”; あまりに＋affirmative means “too…”.",
+              "diff": "あまり＋negative means “not very…”; あまりに／あまりの／〜のあまり all mean “too much…”, followed by the result it causes.",
               "this": [
                 {
                   "tag": "Not very · + negative",
@@ -1129,11 +1157,19 @@
               ],
               "that": [
                 {
-                  "tag": "Too · + affirmative",
+                  "tag": "あまりに · Too (+ affirmative)",
                   "tr": "These clothes are too expensive — I can't buy them."
+                },
+                {
+                  "tag": "あまりの · N so extreme that…",
+                  "tr": "The price was so high I was left speechless."
+                },
+                {
+                  "tag": "あまり · Out of too much…",
+                  "tr": "I was so nervous I couldn't say a thing."
                 }
               ],
-              "explain": "Check whether the adjective after it is negative or affirmative: 「高くない」 → あまり＝not very; 「高くて買えない」 → あまりに＝excessively, often followed by a “so there's nothing I can do” result."
+              "explain": "Check whether what follows is a negative or a result: 「高くない」 → あまり＝not very; a “too much, so…” result like 「買えない」 or 「何も言えなかった」 → あまりに (＋adjective), あまりの (＋noun), 〜のあまり (after a noun＋の or a verb). It's written the same 「あまり」, but before an adjective with a negative it means “not very”, while after 「緊張の」 it means “because of too much…”."
             }
           ]
         },
@@ -1205,7 +1241,7 @@
                   "tr": "It will probably rain tomorrow."
                 }
               ],
-              "explain": "Ask whether it's an established fact: something fixed on the calendar → です; things you can't be sure of yourself, like the weather or someone else's situation → でしょう, often used with 「たぶん」 or 「きっと」."
+              "explain": "Ask whether it's an established fact: something fixed on the calendar → です; things you can't be sure of yourself, like the weather or someone else's situation → でしょう, often used with 「たぶん」 or 「きっと」. The plain style works the same way: だ when certain, だろう when guessing."
             }
           ]
         }
@@ -1276,7 +1312,7 @@
                   "tr": "My little brother always eats nothing but meat."
                 }
               ],
-              "explain": "Look for a sense of repetition such as 「いつも」: simply saying the scope was narrow this one time → だけ; complaining that something is excessive or always that way → ばかり. English “only/just” can cover both, which is why they're easy to mix up."
+              "explain": "Look for a sense of repetition such as 「いつも」: simply saying the scope was narrow this one time → だけ; complaining that something is excessive or always that way → ばかり. English “only/just” can cover both, which is why they're easy to mix up. In casual speech ばっかり works the same way."
             }
           ]
         }
@@ -1352,7 +1388,7 @@
               "wrong": {
                 "why": "i-adjectives can't take 「でした」"
               },
-              "explain": "Check the type of adjective: 簡単, 静か and きれい are na-adjectives → でした; 難しい and 寒い are i-adjectives → かったです. Note that きれい ends in 「い」 but is a na-adjective: きれいでした."
+              "explain": "Check the type of adjective: 簡単, 静か and きれい are na-adjectives → でした; 難しい and 寒い are i-adjectives → かったです. Note that きれい ends in 「い」 but is a na-adjective: きれいでした. The plain style works the same way: 簡単だった／難しかった; the negatives also split into two sets: 簡単じゃなかった／難しくなかった."
             }
           ]
         }
@@ -1462,7 +1498,7 @@
               "wrong": {
                 "why": "でも can't attach directly to the end of a clause"
               },
-              "explain": "Look at the position: the previous sentence already ended with a full stop and a new sentence begins → でも; the contrast word sticks directly onto the end of the previous clause → けど."
+              "explain": "Look at the position: the previous sentence already ended with a full stop and a new sentence begins → でも; the contrast word sticks directly onto the end of the previous clause → けど. けれども works the same way, just a little more formal than けど."
             },
             {
               "id": "shikashi-conjunction",
@@ -1507,7 +1543,7 @@
                   "tr": "Tomorrow is Sunday."
                 }
               ],
-              "explain": "Ask whether it's an established fact: things you can't be sure of yourself, like the weather or someone else's situation → でしょう, often used with 「たぶん」 or 「きっと」; something fixed on the calendar → です."
+              "explain": "Ask whether it's an established fact: things you can't be sure of yourself, like the weather or someone else's situation → でしょう, often used with 「たぶん」 or 「きっと」; something fixed on the calendar → です. The plain style works the same way: だろう when guessing, だ when certain."
             }
           ]
         },
@@ -1562,20 +1598,28 @@
           "items": [
             {
               "id": "wa-ni-aru",
-              "diff": "(place)に N がある says “what is there”; N は (place)にある says “where N is”.",
+              "diff": "(place)に N がある／いる says “what is there”; N は (place)にある／いる says “where N is”.",
               "this": [
                 {
-                  "tag": "What's there",
+                  "tag": "がある · What's there",
                   "tr": "There's a book on the desk."
+                },
+                {
+                  "tag": "がいる · What's there",
+                  "tr": "There's a cat in the garden."
                 }
               ],
               "that": [
                 {
-                  "tag": "Where it is",
+                  "tag": "にある · Where it is",
                   "tr": "My book is on the desk."
+                },
+                {
+                  "tag": "にいる · Where it is",
+                  "tr": "Our cat is in the garden."
                 }
               ],
-              "explain": "Think about which question you're answering: “What's on the desk?” — the new information is the thing → place に＋N がある; “Where's my book?” — the book is a known topic and the new information is the location → N は＋place にある. For specific things like “my book” or 「田中さん」, は is usually used."
+              "explain": "Think about which question you're answering: “What's on the desk?” — the new information is the thing → place に＋N がある; “Where's my book?” — the book is a known topic and the new information is the location → N は＋place にある. For specific things like “my book” or 「田中さん」, は is usually used. People and animals take いる on the same principle: 庭に猫がいます／うちの猫は庭にいます."
             }
           ]
         }
@@ -1603,7 +1647,7 @@
                   "tr": "I want my dad to fix my bicycle."
                 }
               ],
-              "explain": "Look at what comes before 「ほしい」: noun＋が → wanting that thing; verb te-form → wanting someone else to do that action, with the doer marked by 「に」."
+              "explain": "Look at what comes before 「ほしい」: noun＋が → wanting that thing; verb te-form → wanting someone else to do that action, with the doer marked by 「に」. Saying てもらいたい works the same way (父に直してもらいたい)."
             }
           ]
         },
@@ -1695,7 +1739,7 @@
                   "tr": "Sorry, lend me a pen."
                 }
               ],
-              "explain": "Look at the listener and setting: strangers, guests, your boss, or in writing → が (usually after です／ます); chatting with friends → けど. Saying 「悪いが」 to a friend sounds stiff."
+              "explain": "Look at the listener and setting: strangers, guests, your boss, or in writing → が (usually after です／ます); chatting with friends → けど. Saying 「悪いが」 to a friend sounds stiff. けれども is the full form of けど, slightly more formal, and is used the same way."
             }
           ]
         }
@@ -1766,6 +1810,7 @@
           "items": [
             {
               "id": "koto-ga-dekiru",
+              "thisTitle": "〜ができる",
               "diff": "Nouns attach directly to 「ができる」; actions must be expressed as “verb dictionary form＋ことができる”.",
               "this": [
                 {
@@ -1838,7 +1883,7 @@
               "wrong": {
                 "why": "A length of time can't take ごろ"
               },
-              "explain": "Look at what comes before: a point in time like “what time / what date” → ごろ; a length or amount like “how many hours / days / items” → くらい. In speech 「３時ぐらい」 can also mean a point in time, but 「３時間ごろ」 is always wrong."
+              "explain": "Look at what comes before: a point in time like “what time / what date” → ごろ; a length or amount like “how many hours / days / items” → くらい (ぐらい works the same way). In speech 「３時ぐらい」 can also mean a point in time, but 「３時間ごろ」 is always wrong."
             }
           ]
         }
@@ -1963,7 +2008,7 @@
               "wrong": {
                 "why": "きれい is a na-adjective, so it's きれいじゃない"
               },
-              "explain": "First decide the type of adjective: i-adjectives like 広い or 高い → drop い and add くない; na-adjectives like きれい, 静か or 有名 (and nouns) → じゃない. きれい and 有名 end in an 「い」 sound but are both na-adjectives."
+              "explain": "First decide the type of adjective: i-adjectives like 広い or 高い → drop い and add くない; na-adjectives like きれい, 静か or 有名 (and nouns) → じゃない. きれい and 有名 end in an 「い」 sound but are both na-adjectives. The polite ではありません (じゃありません) works the same way."
             },
             {
               "id": "nai-form",
@@ -2014,7 +2059,7 @@
               "wrong": {
                 "why": "i-adjectives can't take 「でした」"
               },
-              "explain": "Look at how the adjective ends: i-adjectives like 寒い or 楽しい → change い to 「かった」, adding です for politeness; na-adjectives like 暇, きれい or 静か, and nouns → でした."
+              "explain": "Look at how the adjective ends: i-adjectives like 寒い or 楽しい → change い to 「かった」, adding です for politeness; na-adjectives like 暇, きれい or 静か, and nouns → でした. The plain style works the same way: 寒かった／暇だった; the negatives also split into two sets: 寒くなかった／暇じゃなかった."
             }
           ]
         }
@@ -2042,7 +2087,7 @@
                   "tr": "This isn't salt — it's sugar."
                 }
               ],
-              "explain": "Check whether the sentence continues after the negation: it ends there → じゃない; the correct answer follows right after (砂糖です) → じゃなくて, used to correct."
+              "explain": "Check whether the sentence continues after the negation: it ends there → じゃない; the correct answer follows right after (砂糖です) → じゃなくて, used to correct. In writing it's ではない／ではなく, used the same way."
             }
           ]
         },
@@ -2068,7 +2113,7 @@
               "wrong": {
                 "why": "The negative of an i-adjective is 「高くない（です）」"
               },
-              "explain": "First check the type of adjective: na-adjectives like 有名, 静か or きれい, and nouns → じゃない; i-adjectives like 高い or 安い → くない. 有名 and きれい end in an 「い」 sound but are na-adjectives."
+              "explain": "First check the type of adjective: na-adjectives like 有名, 静か or きれい, and nouns → じゃない; i-adjectives like 高い or 安い → くない. 有名 and きれい end in an 「い」 sound but are na-adjectives. The polite ではありません works the same way (有名ではありません)."
             }
           ]
         }
@@ -2096,7 +2141,7 @@
                   "tr": "That's not salt, you know."
                 }
               ],
-              "explain": "Check whether the sentence continues after the negation: the correct answer follows right after (砂糖です) → じゃなくて; it ends there → じゃない."
+              "explain": "Check whether the sentence continues after the negation: the correct answer follows right after (砂糖です) → じゃなくて; it ends there → じゃない. In writing it's ではない／ではなく, used the same way."
             }
           ]
         },
@@ -2119,7 +2164,7 @@
                   "tr": "He speaks not only English but also French."
                 }
               ],
-              "explain": "Look at the particle after B: 「を」 or 「です」 → ではなく, A is ruled out; 「も」 → だけでなく, A holds too, with B added. Just adding 「だけ」 changes the meaning completely."
+              "explain": "Look at the particle after B: 「を」 or 「です」 → ではなく, A is ruled out; 「も」 → だけでなく, A holds too, with B added. Just adding 「だけ」 changes the meaning completely. In speech it's じゃなくて, used the same way."
             }
           ]
         }
@@ -2143,8 +2188,12 @@
               ],
               "that": [
                 {
-                  "tag": "Verb → 間",
+                  "tag": "間に · After a verb",
                   "tr": "It rained while I was asleep."
+                },
+                {
+                  "tag": "間 · After a verb",
+                  "tr": "I read a book the whole time I was on the train."
                 }
               ],
               "wrong": {
@@ -2459,7 +2508,7 @@
               "wrong": {
                 "why": "この must be followed by a noun"
               },
-              "explain": "Look at what comes right after: a noun (本、人、店) → この; a particle 「は・が・を」 → これ. Tip: words ending in 「〜の」 act like adjectives such as “this…” — a noun must always follow."
+              "explain": "Look at what comes right after: a noun (本、人、店) → この; a particle 「は・が・を」 → これ. Tip: words ending in 「〜の」 act like adjectives such as “this…” — a noun must always follow. The same goes for その／それ, あの／あれ and どの／どれ."
             },
             {
               "id": "kosoado-places",
@@ -2476,7 +2525,7 @@
                   "tr": "The ramen here is delicious, you know."
                 }
               ],
-              "explain": "Check whether it's about a “thing” or a “place”: eating the noodles and saying “this bowl” → この; recommending to a friend “the ramen at this shop (this place)” → ここの. 「ここ」 is itself a place noun, so like any noun it needs 「の」 to modify another noun."
+              "explain": "Check whether it's about a “thing” or a “place”: eating the noodles and saying “this bowl” → この; recommending to a friend “the ramen at this shop (this place)” → ここの. 「ここ」 is itself a place noun, so like any noun it needs 「の」 to modify another noun. The same goes for その／そこの and あの／あそこの."
             },
             {
               "id": "kosoado-konna",
@@ -2493,7 +2542,7 @@
                   "tr": "I'd love to have a bag like this someday."
                 }
               ],
-              "explain": "You want exactly the one in front of you → この; you see someone's bag and want “one like it” → こんな. It's the difference between “this” and “this kind of / like this”."
+              "explain": "You want exactly the one in front of you → この; you see someone's bag and want “one like it” → こんな. It's the difference between “this” and “this kind of / like this”. The same goes for その／そんな, あの／あんな and どの／どんな."
             }
           ]
         }
@@ -2521,7 +2570,7 @@
                   "tr": "What is this?"
                 }
               ],
-              "explain": "Check whether it's a place or a thing: asking “what place is this?” → ここ＋どこ; asking “what thing is this?” → これ＋何. Something you're holding or pointing at can't be ここ."
+              "explain": "Check whether it's a place or a thing: asking “what place is this?” → ここ＋どこ; asking “what thing is this?” → これ＋何. Something you're holding or pointing at can't be ここ. The same goes for そこ／それ and あそこ／あれ."
             },
             {
               "id": "kosoado-determiners",
@@ -2538,7 +2587,7 @@
                   "tr": "This ramen is delicious, isn't it?"
                 }
               ],
-              "explain": "Recommending to a friend “the ramen at this shop (this place)” → ここの; eating the noodles and saying “this bowl” → この. 「ここ」 is a place noun and needs 「の」 to modify another noun; 「この」 already contains 「の」 and attaches directly to a noun."
+              "explain": "Recommending to a friend “the ramen at this shop (this place)” → ここの; eating the noodles and saying “this bowl” → この. 「ここ」 is a place noun and needs 「の」 to modify another noun; 「この」 already contains 「の」 and attaches directly to a noun. The same goes for その／そこの and あの／あそこの."
             }
           ]
         },
@@ -2548,6 +2597,7 @@
           "items": [
             {
               "id": "question-word-ka",
+              "thisTitle": "どこ (where)",
               "diff": "どこ asks “where”, and the answer is a place; どこか means “somewhere”, so you answer “yes / no” first.",
               "this": [
                 {
@@ -2592,7 +2642,7 @@
               "wrong": {
                 "why": "To modify a noun, use 「この」"
               },
-              "explain": "Look at what comes right after: a particle 「は・が・を」 → これ; a noun (本、人、店) → この. 「これ」 is a pronoun and can't sit directly in front of a noun."
+              "explain": "Look at what comes right after: a particle 「は・が・を」 → これ; a noun (本、人、店) → この. 「これ」 is a pronoun and can't sit directly in front of a noun. The same goes for その／それ, あの／あれ and どの／どれ."
             },
             {
               "id": "kosoado-places",
@@ -2609,7 +2659,7 @@
                   "tr": "Where is this (place)?"
                 }
               ],
-              "explain": "Check whether it's a thing or a place: the ending 「れ」 refers to things and pairs with 「何」; the ending 「こ」 refers to places and pairs with 「どこ」."
+              "explain": "Check whether it's a thing or a place: the ending 「れ」 refers to things and pairs with 「何」; the ending 「こ」 refers to places and pairs with 「どこ」. The same goes for そこ／それ and あそこ／あれ."
             }
           ]
         }
@@ -2740,8 +2790,12 @@
               "diff": "Adjectives and nouns use くなる／になる; verbs use ようになる.",
               "this": [
                 {
-                  "tag": "Adjective → になる",
+                  "tag": "になる · na-adjective",
                   "tr": "I got better at swimming."
+                },
+                {
+                  "tag": "くなる · i-adjective",
+                  "tr": "Swimming got more fun."
                 }
               ],
               "that": [
@@ -2753,7 +2807,7 @@
               "wrong": {
                 "why": "A verb can't attach directly to になる"
               },
-              "explain": "Look at the word before 「なる」: 上手 is a na-adjective → になる (寒い → 寒くなる, 医者 → 医者になる); 泳げる is a verb → add 「よう」 first to make ようになる. English uses “become / get…” for everything, so the most common mistake is ✗泳げるになった."
+              "explain": "Look at the word before 「なる」: 上手 is a na-adjective → になる; 楽しい is an i-adjective → くなる (nouns: 医者 → 医者になる); 泳げる is a verb → add 「よう」 first to make ようになる. English uses “become / get…” for everything, so the most common mistake is ✗泳げるになった."
             }
           ]
         }
@@ -3236,6 +3290,7 @@
           "items": [
             {
               "id": "masenka",
+              "thisTitle": "〜ません",
               "diff": "ません is a negative, “don't…”; adding 「か」 to make ませんか usually turns it into an invitation, “would you like to…?”.",
               "this": [
                 {
@@ -3259,6 +3314,7 @@
           "items": [
             {
               "id": "nai-form",
+              "thisTitle": "〜ません",
               "diff": "ません is the polite negative; ない is the plain negative, with the same meaning.",
               "this": [
                 {
@@ -3332,7 +3388,7 @@
                   "tr": "Excuse me, I'm lost — where is the station?"
                 }
               ],
-              "explain": "Check whether anything follows: the sentence ends with 「んです。」, explaining a reason → んです; 「んですが、」 followed by a request or question (駅はどこですか、〜てもいいですか) → it's a lead-in."
+              "explain": "Check whether anything follows: the sentence ends with 「んです。」, explaining a reason → んです; 「んですが、」 followed by a request or question (駅はどこですか、〜てもいいですか) → it's a lead-in. The written のです and the plain んだ work the same way."
             },
             {
               "id": "casual-question-no",
@@ -3349,7 +3405,7 @@
                   "tr": "Hey, what's wrong?"
                 }
               ],
-              "explain": "Both ask the reason after noticing how someone looks — look at who it's addressed to: teachers, bosses, people you don't know well → 〜んですか; friends, family → 「〜の？」 with rising intonation."
+              "explain": "Both ask the reason after noticing how someone looks — look at who it's addressed to: teachers, bosses, people you don't know well → 〜んですか; friends, family → 「〜の？」 with rising intonation. A more formal written version is のですか."
             }
           ]
         }
@@ -3444,6 +3500,7 @@
           "items": [
             {
               "id": "kana-wonder",
+              "thisTitle": "〜なあ (exclamation · wish)",
               "diff": "なあ expresses an exclamation or a wish; かな adds a questioning 「か」, wondering to yourself “I wonder if…?”.",
               "this": [
                 {
@@ -3467,6 +3524,7 @@
           "items": [
             {
               "id": "nai-form",
+              "thisTitle": "〜な (prohibition)",
               "diff": "dictionary form＋な is a prohibition, “don't…!”; nai-form＋ない is a negative, “not…”.",
               "this": [
                 {
@@ -3490,6 +3548,7 @@
           "items": [
             {
               "id": "ne-particle",
+              "thisTitle": "〜なあ (exclamation)",
               "diff": "なあ is mostly an exclamation to yourself; ね is said to the listener, seeking agreement.",
               "this": [
                 {
@@ -3507,6 +3566,7 @@
             },
             {
               "id": "naide-kudasai",
+              "thisTitle": "〜な (prohibition)",
               "diff": "dictionary form＋な is a rude, forceful prohibition; ないでください is a polite request.",
               "this": [
                 {
@@ -4273,6 +4333,7 @@
           "items": [
             {
               "id": "koto-ni-suru",
+              "thisTitle": "〜にする (choosing)",
               "diff": "にする follows a noun, mostly when choosing one option out of several; ことにする follows a verb.",
               "this": [
                 {
@@ -4296,20 +4357,29 @@
               "diff": "くする／にする is someone “making it” something; くなる／になる is it “becoming” something on its own.",
               "this": [
                 {
-                  "tag": "Someone changes it",
+                  "tag": "くする · Someone changes it",
                   "tr": "I turned down the TV volume."
+                },
+                {
+                  "tag": "にする · Someone changes it",
+                  "tr": "I cleaned up the room."
                 }
               ],
               "that": [
                 {
-                  "tag": "Changes by itself",
+                  "tag": "くなる · Changes by itself",
                   "tr": "The TV volume got quieter."
+                },
+                {
+                  "tag": "になる · Changes by itself",
+                  "tr": "The room got clean."
                 }
               ],
-              "explain": "Look at the particle: 「音を」 → someone adjusts it → くする; 「音が」 → it changed by itself, without saying who did it → くなる. The same goes for decisions: 「会議は月曜日にしました」 means we set it, while 「月曜日になりました」 only reports that it ended up being decided."
+              "explain": "Look at the particle: 「音を」「部屋を」 → someone acts to change it → くする／にする; 「音が」「部屋が」 → it changed by itself, without saying who did it → くなる／になる (i-adjectives take く; na-adjectives and nouns take に). The same goes for decisions: 「会議は月曜日にしました」 means we set it, while 「月曜日になりました」 only reports that it ended up being decided."
             },
             {
               "id": "wo-kudasai",
+              "thisTitle": "〜にする (choosing)",
               "diff": "にする states your own choice and can be used when deciding with friends; をください asks a staff member for something.",
               "this": [
                 {
@@ -4354,7 +4424,7 @@
               "wrong": {
                 "why": "A verb can't attach directly to 「が好き」 — add 「の」"
               },
-              "explain": "Look at what comes before 「が好き」: 音楽 is a noun → attaches directly; 聞く is a verb → first add 「の」 to turn it into a noun. Since English says “I like…” for both, the 「の」 is easy to leave out."
+              "explain": "Look at what comes before 「が好き」: 音楽 is a noun → attaches directly; 聞く is a verb → first add 「の」 to turn it into a noun. Since English says “I like…” for both, the 「の」 is easy to leave out. The same goes for 上手, 嫌い and 下手 (泳ぐのが上手)."
             }
           ]
         },
@@ -4395,6 +4465,7 @@
           "items": [
             {
               "id": "mae-ni",
+              "thisTitle": "〜の前 (position)",
               "diff": "の前 follows a place and means “in front of” in space; 前に follows an action or activity and means “before” in time.",
               "this": [
                 {
@@ -4422,6 +4493,7 @@
             {
               "id": "juu-chuu-throughout",
               "title": "〜中（じゅう）",
+              "thisTitle": "〜の中 (inside)",
               "diff": "の中（なか） is the “inside” of something; 「中」 attached directly to a noun is read じゅう and means “all through / the whole…”.",
               "this": [
                 {
@@ -4511,7 +4583,7 @@
               "wrong": {
                 "why": "Don't add 「の」 when a verb modifies a noun"
               },
-              "explain": "Look at what kind of word does the modifying: nouns like 私 or 日本 → add 「の」; verbs and i-adjectives like 買った, 行く, 高い → attach directly to the noun. Learners who think of の as “of / 's” often add an extra 「の」 after verbs too."
+              "explain": "Look at what kind of word does the modifying: nouns like 私 or 日本 → add 「の」; verbs and i-adjectives like 買った, 行く, 高い → attach directly to the noun. Learners who think of の as “of / 's” often add an extra 「の」 after verbs too. Negative and ている forms also attach directly when modifying a noun (行かない人, 寝ている猫)."
             },
             {
               "id": "na-adj-modify",
@@ -4597,7 +4669,7 @@
                   "tr": "Sorry, it's just that I have a headache."
                 }
               ],
-              "explain": "Look at whether the sentence is finished: ので is always followed by another clause (早く帰ります); んです ends the sentence, used to answer 「どうしたんですか」 or to explain your situation to someone."
+              "explain": "Look at whether the sentence is finished: ので is always followed by another clause (早く帰ります); んです ends the sentence, used to answer 「どうしたんですか」 or to explain your situation to someone. In writing it's のです and in plain style んだ, used the same way."
             }
           ]
         },
@@ -4676,7 +4748,7 @@
               "wrong": {
                 "why": "Don't add 「の」 when a verb modifies a noun"
               },
-              "explain": "Look at what kind of word does the modifying: verbs and i-adjectives like 買った, 読む, 高い → go straight before the noun; nouns like 私 or 日本 → add 「の」. Learners who think of の as a general linking word often write ✗買ったの本 or ✗高いの本."
+              "explain": "Look at what kind of word does the modifying: verbs and i-adjectives like 買った, 読む, 高い → go straight before the noun; nouns like 私 or 日本 → add 「の」. Learners who think of の as a general linking word often write ✗買ったの本 or ✗高いの本. Negative and ている forms also attach directly when modifying a noun (行かない人, 寝ている猫)."
             }
           ]
         }
@@ -4855,7 +4927,7 @@
                   "tr": "My brother eats nothing but meat."
                 }
               ],
-              "explain": "しか〜ない excludes everything else, stressing “only this”; ばかり says there's too much or too often of something, often with criticism, and is followed by an affirmative (食べている). Both can be translated “only eats meat”, but you can tell them apart by whether the sentence ends negative or affirmative."
+              "explain": "しか〜ない excludes everything else, stressing “only this”; ばかり says there's too much or too often of something, often with criticism, and is followed by an affirmative (食べている). Both can be translated “only eats meat”, but you can tell them apart by whether the sentence ends negative or affirmative. In casual speech ばっかり works the same way."
             }
           ]
         }
@@ -5299,7 +5371,7 @@
                   "tr": "I want my husband to come home early today."
                 }
               ],
-              "explain": "Look at who does the action: yourself → たい; wanting the listener or someone else to do it → “person に + te-form + ほしい” (夫に〜てほしい). Both may be “want” in English, but “want someone to…” needs てほしい."
+              "explain": "Look at who does the action: yourself → たい; wanting the listener or someone else to do it → “person に + te-form + ほしい” (夫に〜てほしい). Both may be “want” in English, but “want someone to…” needs てほしい. Saying てもらいたい works the same way (夫に早く帰ってもらいたい)."
             },
             {
               "id": "tsumori",
@@ -5377,6 +5449,7 @@
           "items": [
             {
               "id": "te-kara",
+              "thisTitle": "〜て (sequence of actions)",
               "diff": "て just links in order; てから stresses “finish A first, and only then do B”.",
               "this": [
                 {
@@ -5394,6 +5467,7 @@
             },
             {
               "id": "tari-tari",
+              "thisTitle": "〜て (sequence of actions)",
               "diff": "て links actions one by one in the order they actually happened; たり〜たり just gives a few examples, in no particular order.",
               "this": [
                 {
@@ -5411,11 +5485,15 @@
             },
             {
               "id": "node",
-              "diff": "て, when giving a reason, can only be followed by a feeling or an uncontrollable result; ので can be followed by a request or intention.",
+              "diff": "て／で, when giving a reason, can only be followed by a feeling or an uncontrollable result; ので can be followed by a request or intention.",
               "this": [
                 {
-                  "tag": "Followed by feeling",
+                  "tag": "て · Followed by feeling",
                   "tr": "I had no time, and I was in a bind."
+                },
+                {
+                  "tag": "で · Followed by natural result",
+                  "tr": "The train was late because of an accident."
                 }
               ],
               "that": [
@@ -5427,7 +5505,7 @@
               "wrong": {
                 "why": "A reason 「て」 can't be followed by a request"
               },
-              "explain": "Look at the second half: feelings or natural results like 「困った」「びっくりした」 → て works; requests or intentions like 「〜てください」「〜ましょう」 → use ので (or から)."
+              "explain": "Look at the second half: feelings or natural results like 「困った」「電車が遅れた」 → て works (after a noun it's で: 事故で); requests or intentions like 「〜てください」「〜ましょう」 → use ので (or から)."
             },
             {
               "id": "nagara",
@@ -6331,7 +6409,7 @@
                   "tr": "If you have a cold, why don't you take some medicine?"
                 }
               ],
-              "explain": "Look at what comes before 「どう」: noun + は (この薬は) → offering a thing for the listener to evaluate or accept; verb ta-form + ら (飲んだら) → urging the listener to take action, which can sound preachy to a superior."
+              "explain": "Look at what comes before 「どう」: noun + は (この薬は) → offering a thing for the listener to evaluate or accept; verb ta-form + ら (飲んだら) → urging the listener to take action, which can sound preachy to a superior. To guests or superiors, the more polite はいかがですか is used."
             }
           ]
         },
@@ -6354,7 +6432,7 @@
                   "tr": "Would you like to have a coffee together?"
                 }
               ],
-              "explain": "Look at what comes before: noun + は → just recommending something to the listener, not necessarily drinking it yourself; verb masu-stem + ませんか, often with 「一緒に」 → inviting the listener to do it with you."
+              "explain": "Look at what comes before: noun + は → just recommending something to the listener, not necessarily drinking it yourself; verb masu-stem + ませんか, often with 「一緒に」 → inviting the listener to do it with you. A more casual way to say it is はどうですか, used the same way."
             }
           ]
         }
@@ -6397,20 +6475,28 @@
           "items": [
             {
               "id": "ga-aru-iru",
-              "diff": "Nは〜にある answers “where is N?”; 〜にNがある answers “what is there?”.",
+              "diff": "Nは〜にある／いる answers “where is N?”; 〜にNがある／いる answers “what is there?”.",
               "this": [
                 {
-                  "tag": "Answers “where?”",
+                  "tag": "にある · Answers “where?”",
                   "tr": "The key is on the desk."
+                },
+                {
+                  "tag": "にいる · Answers “where?”",
+                  "tr": "Mr. Tanaka is in the meeting room."
                 }
               ],
               "that": [
                 {
-                  "tag": "Answers “what?”",
+                  "tag": "がある · Answers “what?”",
                   "tr": "There's a key on the desk."
+                },
+                {
+                  "tag": "がいる · Answers “who?”",
+                  "tr": "There's Mr. Tanaka in the meeting room."
                 }
               ],
-              "explain": "Look at which part is new information: asking where something already known (my key) is → 鍵は机の上にあります, with the question 「鍵はどこにありますか」; describing what's in a place → 机の上に鍵があります, with the question 「机の上に何がありますか」."
+              "explain": "Look at which part is new information: asking where something already known (my key) is → 鍵は机の上にあります, with the question 「鍵はどこにありますか」; describing what's in a place → 机の上に鍵があります, with the question 「机の上に何がありますか」. The same goes for people and animals with いる: the questions are 「田中さんはどこにいますか」 and 「会議室に誰がいますか」 respectively."
             }
           ]
         }
