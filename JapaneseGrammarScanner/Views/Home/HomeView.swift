@@ -18,7 +18,6 @@ struct HomeView: View {
         NavigationStack(path: $path) {
             ScrollView {
                 VStack(alignment: .leading, spacing: 32) {
-                    searchEntry
                     scanEntry
                     if entitlements.showsTrialEndingReminder { trialReminder }
                     if isNewUser {
@@ -45,6 +44,21 @@ struct HomeView: View {
                 .padding(.horizontal, Theme.margin)
                 .padding(.top, 12)
                 .padding(.bottom, 32)
+            }
+            // 搜索框 + 设置固定在顶部，页面往下滑也一直看得到；内容从它下面滑过
+            .safeAreaInset(edge: .top, spacing: 0) {
+                searchEntry
+                    .padding(.horizontal, Theme.margin)
+                    .padding(.bottom, 8)
+                    .background(alignment: .top) {
+                        // 顶部渐隐的背景色：滑上来的内容不会和按钮的字叠在一起看不清
+                        LinearGradient(stops: [.init(color: Theme.background, location: 0),
+                                               .init(color: Theme.background, location: 0.7),
+                                               .init(color: Theme.background.opacity(0), location: 1)],
+                                       startPoint: .top, endPoint: .bottom)
+                            .ignoresSafeArea(edges: .top)
+                            .allowsHitTesting(false)
+                    }
             }
             .background(Theme.background)
             // 底部标签栏已标明「首页」，这里不再显示大标题，把空间留给内容
