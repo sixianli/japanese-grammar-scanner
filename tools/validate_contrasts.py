@@ -138,6 +138,10 @@ def main():
                 continue
             for bg, lg in zip(bp["groups"], lp["groups"]):
                 texts = [("note", lg.get("note"))]
+                if lg.get("kind") != bg["kind"]:
+                    errors.append(f"{name}: {bp['id']} 分组顺序与基础文件不一致（{lg.get('kind')} ≠ {bg['kind']}）")
+                if [i.get("id") for i in lg["items"]] != [i["id"] for i in bg["items"]]:
+                    errors.append(f"{name}: {bp['id']}/{bg['kind']} 条目的对比对象与基础文件不一致")
                 if len(bg["items"]) != len(lg["items"]):
                     errors.append(f"{name}: {bp['id']}/{bg['kind']} 条目数量不一致")
                     continue
