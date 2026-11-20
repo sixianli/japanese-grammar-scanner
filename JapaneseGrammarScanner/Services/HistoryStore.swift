@@ -10,19 +10,23 @@ final class HistoryStore: ObservableObject {
         let imageFile: String
     }
 
-    /// 一个语法点的学习记录（用于“最近查看”“今日复习”“学习进度”）。
+    /// 一个语法点的学习记录（用于“最近查看”“快要忘了”“学习进度”）。
     struct ViewRecord: Codable, Hashable {
         let id: String
         var firstViewed: Date
         var lastViewed: Date
-        /// 复习阶段：0,1,2…，对应间隔 1/3/7/14/30 天
+        /// 旧版复习阶段（0,1,2…，对应间隔 1/3/7/14/30 天）。只用于把旧记录换算成 FSRS 的初始状态
         var stage: Int
         /// 查看次数（旧版本没有记录，视为 1）
         var viewCount: Int? = nil
+        /// FSRS 记忆状态（旧版本没有，按 stage 换算）
+        var memory: FSRS.Memory? = nil
+        /// 上一次复习（第一次看、或自评）的时间：遗忘曲线从这里开始算。只是打开看看、没有自评，不会重新计时
+        var lastReview: Date? = nil
     }
 
-    /// 间隔复习的间隔（天）
-    static let reviewIntervals: [Double] = [1, 3, 7, 14, 30]
+    /// 旧版的复习间隔（天）：旧记录按所处阶段换算 FSRS 的记忆稳定度
+    nonisolated static let legacyIntervals: [Double] = [1, 3, 7, 14, 30, 60]
 
     private static let viewedKey = "recentGrammarIDs"
     private static let recordsKey = "grammarViewRecords"
@@ -65,13 +69,14 @@ final class HistoryStore: ObservableObject {
 
     func recordViewed(_ id: String, now: Date = Date()) {
         if var r = viewRecords[id] {
-            // 到了复习时间再次查看 → 进入下一个复习阶段
-            if Self.isDue(r, now: now) { r.stage = min(r.stage + 1, Self.reviewIntervals.count) }
+            // 只是打开看看：不改变记忆状态（要靠「快要忘了」里的自评来更新）
             r.lastViewed = now
             r.viewCount = (r.viewCount ?? 1) + 1
             viewRecords[id] = r
         } else {
-            viewRecords[id] = ViewRecord(id: id, firstViewed: now, lastViewed: now, stage: 0, viewCount: 1)
+            // 第一次看：只是读过、没有测过记没记住，按「有点模糊」作为初始状态（约 1 天后第一次复习）
+            viewRecords[id] = ViewRecord(id: id, firstViewed: now, lastViewed: now, stage: 0, viewCount: 1,
+                                         memory: FSRS.initial(.hard), lastReview: now)
         }
         saveRecords()
         recentGrammarIDs.removeAll { $0 == id }
@@ -87,25 +92,48 @@ final class HistoryStore: ObservableObject {
         defaults.removeObject(forKey: Self.recordsKey)
     }
 
-    /// 复习阈值：估计的记忆保持率降到 90% 以下就该复习
-    nonisolated static let reviewThreshold = 0.9
+    /// 复习阈值：估计的记住率降到 90% 以下就该复习
+    nonisolated static let reviewThreshold = FSRS.targetRetention
 
-    /// 记忆稳定度 S（天）：使间隔天数恰好对应保持率降到 90%，即 R(interval) = 0.9
-    nonisolated static func stability(stage: Int) -> Double {
-        let interval = reviewIntervals[min(stage, reviewIntervals.count - 1)]
-        return interval / -log(reviewThreshold)
+    /// 记忆状态：新记录直接用保存的 FSRS 状态；旧记录按旧阶段换算（旧阶段的间隔正好是记住率降到 90% 的天数，即 FSRS 的稳定度）
+    nonisolated static func memory(_ r: ViewRecord) -> FSRS.Memory {
+        if let m = r.memory { return m }
+        return FSRS.Memory(stability: legacyIntervals[min(max(r.stage, 0), legacyIntervals.count - 1)], difficulty: 5)
     }
 
-    /// 艾宾浩斯遗忘曲线估算的当前记忆保持率 R = e^(-t/S)
+    nonisolated static func lastReview(_ r: ViewRecord) -> Date { r.lastReview ?? r.lastViewed }
+
+    /// FSRS 遗忘曲线估算的当前记住率（按真实经过的时间）
     nonisolated static func retention(_ r: ViewRecord, now: Date) -> Double {
-        let days = max(0, now.timeIntervalSince(r.lastViewed) / 86_400)
-        return exp(-days / stability(stage: r.stage))
+        let days = max(0, now.timeIntervalSince(lastReview(r)) / 86_400)
+        return FSRS.retrievability(elapsedDays: days, stability: memory(r).stability)
     }
 
-    /// 是否到了复习时间（已完成全部阶段的不再提醒）
+    /// 是否到了复习时间
     nonisolated static func isDue(_ r: ViewRecord, now: Date) -> Bool {
-        guard r.stage < reviewIntervals.count else { return false }
-        return retention(r, now: now) <= reviewThreshold + 1e-9
+        retention(r, now: now) <= reviewThreshold + 1e-9
+    }
+
+    /// 某个语法点现在是否该复习（没看过的不算）
+    func isDue(_ id: String, now: Date = Date()) -> Bool {
+        viewRecords[id].map { Self.isDue($0, now: now) } ?? false
+    }
+
+    /// 复习时的自评：按 FSRS 更新记忆状态，下次复习时间随之改变
+    func rate(_ id: String, _ grade: FSRS.Grade, now: Date = Date()) {
+        guard var r = viewRecords[id] else { return }
+        let days = max(0, now.timeIntervalSince(Self.lastReview(r)) / 86_400)
+        r.memory = FSRS.review(Self.memory(r), elapsedDays: days, grade: grade)
+        r.lastReview = now
+        r.lastViewed = now
+        viewRecords[id] = r
+        saveRecords()
+    }
+
+    /// 下一次该复习的时间
+    func nextReview(of id: String) -> Date? {
+        guard let r = viewRecords[id] else { return nil }
+        return Self.lastReview(r).addingTimeInterval(FSRS.interval(stability: Self.memory(r).stability) * 86_400)
     }
 
     struct ReviewItem: Hashable {
@@ -171,11 +199,14 @@ final class HistoryStore: ObservableObject {
         for (oldID, r) in viewRecords {
             let id = aliases[oldID] ?? oldID
             if let existing = merged[id] {
+                let newer = Self.lastReview(r) > Self.lastReview(existing) ? r : existing
                 merged[id] = ViewRecord(id: id, firstViewed: min(existing.firstViewed, r.firstViewed),
                                         lastViewed: max(existing.lastViewed, r.lastViewed), stage: max(existing.stage, r.stage),
-                                        viewCount: (existing.viewCount ?? 1) + (r.viewCount ?? 1))
+                                        viewCount: (existing.viewCount ?? 1) + (r.viewCount ?? 1),
+                                        memory: newer.memory, lastReview: newer.lastReview)
             } else {
-                merged[id] = ViewRecord(id: id, firstViewed: r.firstViewed, lastViewed: r.lastViewed, stage: r.stage, viewCount: r.viewCount)
+                merged[id] = ViewRecord(id: id, firstViewed: r.firstViewed, lastViewed: r.lastViewed, stage: r.stage, viewCount: r.viewCount,
+                                        memory: r.memory, lastReview: r.lastReview)
             }
         }
         viewRecords = merged

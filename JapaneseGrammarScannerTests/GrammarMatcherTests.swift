@@ -299,36 +299,107 @@ final class ContentRulesTests: XCTestCase {
 
 @MainActor
 final class HistoryStoreTests: XCTestCase {
-    func testSpacedReview() {
-        let defaults = UserDefaults(suiteName: "HistoryStoreTests")!
-        defaults.removePersistentDomain(forName: "HistoryStoreTests")
-        let store = HistoryStore(defaults: defaults)
+    private func freshStore(_ name: String) -> HistoryStore {
+        let defaults = UserDefaults(suiteName: name)!
+        defaults.removePersistentDomain(forName: name)
+        return HistoryStore(defaults: defaults)
+    }
+
+    /// 第一次看过约 1.2 天后到期（按真实时间，不按日历天）；只是再打开看看不会重新计时，自评才会
+    func testSpacedReviewUsesRealTimeAndSelfRating() {
+        let store = freshStore("HistoryStoreTests")
         let t0 = Date(timeIntervalSince1970: 1_800_000_000)
+        let day = 86_400.0
         store.recordViewed("te-shimau", now: t0)
         XCTAssertTrue(store.dueForReview(now: t0.addingTimeInterval(3600)).isEmpty, "刚看过不需要复习")
-        XCTAssertEqual(store.dueForReview(now: t0.addingTimeInterval(86_400 + 1)).map(\.id), ["te-shimau"], "1 天后需要复习")
-        store.recordViewed("te-shimau", now: t0.addingTimeInterval(86_400 + 1))
-        XCTAssertTrue(store.dueForReview(now: t0.addingTimeInterval(2 * 86_400)).isEmpty, "复习后进入 3 天间隔")
-        XCTAssertEqual(store.dueForReview(now: t0.addingTimeInterval(5 * 86_400)).map(\.id), ["te-shimau"])
+        XCTAssertTrue(store.dueForReview(now: t0.addingTimeInterval(1.1 * day)).isEmpty, "按真实时间：1.1 天还没到期")
+        XCTAssertEqual(store.dueForReview(now: t0.addingTimeInterval(1.3 * day)).map(\.id), ["te-shimau"], "约 1.2 天后到期")
+        // 到期后只是打开看看：仍然到期
+        store.recordViewed("te-shimau", now: t0.addingTimeInterval(1.3 * day))
+        XCTAssertTrue(store.isDue("te-shimau", now: t0.addingTimeInterval(1.31 * day)), "没有自评，不应重新计时")
+        // 自评「记得」：间隔变长
+        store.rate("te-shimau", .good, now: t0.addingTimeInterval(1.3 * day))
+        XCTAssertFalse(store.isDue("te-shimau", now: t0.addingTimeInterval(3 * day)))
+        let next = store.nextReview(of: "te-shimau")!
+        XCTAssertGreaterThan(next.timeIntervalSince(t0.addingTimeInterval(1.3 * day)), 3 * day, "记得 → 下次复习在 3 天以后")
+        XCTAssertTrue(store.isDue("te-shimau", now: next.addingTimeInterval(60)))
         XCTAssertTrue(store.learnedIDs.contains("te-shimau"))
         XCTAssertEqual(store.viewCount(of: "te-shimau"), 2)
         XCTAssertEqual(store.viewCount(of: "never-seen"), 0)
         store.clearViewed()
     }
 
-    /// 遗忘越多（保持率越低）的排在越前面
+    /// 忘了 → 很快再复习；有点模糊 → 间隔比记得短
+    func testGradesChangeInterval() {
+        let t0 = Date(timeIntervalSince1970: 1_800_000_000)
+        let due = t0.addingTimeInterval(2 * 86_400)
+        var intervals: [FSRS.Grade: TimeInterval] = [:]
+        for g in FSRS.Grade.allCases {
+            let store = freshStore("HistoryStoreTestsGrade\(g.rawValue)")
+            store.recordViewed("tai", now: t0)
+            store.rate("tai", g, now: due)
+            intervals[g] = store.nextReview(of: "tai")!.timeIntervalSince(due)
+            store.clearViewed()
+        }
+        XCTAssertLessThan(intervals[.again]!, intervals[.hard]!)
+        XCTAssertLessThan(intervals[.hard]!, intervals[.good]!)
+        XCTAssertLessThan(intervals[.again]!, 86_400, "忘了 → 一天之内再复习")
+    }
+
+    /// 遗忘越多（记住率越低）的排在越前面
     func testReviewPrioritizesLowestRetention() {
-        let defaults = UserDefaults(suiteName: "HistoryStoreTests2")!
-        defaults.removePersistentDomain(forName: "HistoryStoreTests2")
-        let store = HistoryStore(defaults: defaults)
+        let store = freshStore("HistoryStoreTests2")
         let t0 = Date(timeIntervalSince1970: 1_800_000_000)
         store.recordViewed("tai", now: t0)                              // 看过 10 天
         store.recordViewed("nagara", now: t0.addingTimeInterval(8 * 86_400)) // 看过 2 天
         let due = store.dueForReview(now: t0.addingTimeInterval(10 * 86_400))
         XCTAssertEqual(due.map(\.id), ["tai", "nagara"])
         XCTAssertLessThan(due[0].retention, due[1].retention)
-        XCTAssertEqual(HistoryStore.retention(.init(id: "x", firstViewed: t0, lastViewed: t0, stage: 0), now: t0.addingTimeInterval(86_400)), 0.9, accuracy: 1e-9)
         store.clearViewed()
+    }
+
+    /// 旧版本的记录（只有复习阶段）换算成 FSRS：阶段对应的间隔天数就是记住率降到 90% 的时间
+    func testLegacyRecordsMigrate() {
+        let t0 = Date(timeIntervalSince1970: 1_800_000_000)
+        let legacy = HistoryStore.ViewRecord(id: "x", firstViewed: t0, lastViewed: t0, stage: 2)   // 旧版 7 天间隔
+        XCTAssertEqual(HistoryStore.retention(legacy, now: t0.addingTimeInterval(7 * 86_400)), 0.9, accuracy: 1e-9)
+        XCTAssertFalse(HistoryStore.isDue(legacy, now: t0.addingTimeInterval(6 * 86_400)))
+        XCTAssertTrue(HistoryStore.isDue(legacy, now: t0.addingTimeInterval(7.01 * 86_400)))
+    }
+}
+
+/// FSRS 算法本身
+final class FSRSTests: XCTestCase {
+    func testRetrievabilityAtStabilityIsTarget() {
+        for s in [0.5, 1, 3.7, 20, 180] {
+            XCTAssertEqual(FSRS.retrievability(elapsedDays: s, stability: s), 0.9, accuracy: 1e-9)
+            XCTAssertEqual(FSRS.interval(stability: s), s, accuracy: 1e-9)
+        }
+        XCTAssertEqual(FSRS.retrievability(elapsedDays: 0, stability: 2), 1)
+    }
+
+    func testReviewOrdering() {
+        let m = FSRS.initial(.good)
+        let again = FSRS.review(m, elapsedDays: m.stability, grade: .again)
+        let hard = FSRS.review(m, elapsedDays: m.stability, grade: .hard)
+        let good = FSRS.review(m, elapsedDays: m.stability, grade: .good)
+        XCTAssertLessThan(again.stability, m.stability, "忘了 → 稳定度下降")
+        XCTAssertGreaterThan(hard.stability, m.stability)
+        XCTAssertGreaterThan(good.stability, hard.stability)
+        XCTAssertGreaterThan(again.difficulty, m.difficulty, "忘了 → 变难")
+        XCTAssertLessThanOrEqual(good.difficulty, m.difficulty + 1e-9)
+        for x in [again, hard, good] { XCTAssert((1...10).contains(x.difficulty)) }
+    }
+
+    func testRepeatedGoodGrowsInterval() {
+        var m = FSRS.initial(.hard)
+        var last = m.stability
+        for _ in 0..<5 {
+            m = FSRS.review(m, elapsedDays: m.stability, grade: .good)
+            XCTAssertGreaterThan(m.stability, last)
+            last = m.stability
+        }
+        XCTAssertGreaterThan(last, 30, "连续 5 次记得后，间隔应超过一个月")
     }
 }
 

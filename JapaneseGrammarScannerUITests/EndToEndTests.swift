@@ -34,7 +34,7 @@ final class EndToEndTests: E2ETestCase {
         wait(id("home.search"), "再次点「首页」应回到首页顶部")
     }
 
-    func testSeeAllRecentAndForgetting() {
+    func testSeeAllRecent() {
         scrollTo(id("seeAll.recent"))
         id("seeAll.recent").tap()
         wait(app.navigationBars["最近查看"], "应进入最近查看")
@@ -44,17 +44,6 @@ final class EndToEndTests: E2ETestCase {
         wait(app.navigationBars["最近查看"], "返回应回到最近查看")
         back()
         wait(id("home.search"), "应回到首页")
-
-        let forgetting = id("seeAll.forgetting")
-        if forgetting.waitForExistence(timeout: 3) {
-            scrollTo(forgetting)
-            forgetting.tap()
-            wait(app.navigationBars["快要忘了"], "应进入快要忘了")
-            id("grammarRow").tap()
-            wait(detailScreen, "快要忘了里点语法点应进入讲解页")
-            back()
-            wait(app.navigationBars["快要忘了"], "返回应回到快要忘了")
-        }
     }
 
     func testHomeGrammarRowOpensDetailAndFavorite() {

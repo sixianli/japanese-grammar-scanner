@@ -6,12 +6,16 @@ struct GrammarDetailView: View {
     let grammarID: String
     /// 从扫描结果打开时，原文里命中的文字（用于显示「你扫到的」并找出对应的用法）
     var matchedText: String? = nil
+    /// 从首页「快要忘了」进来复习时，之后还要复习的语法（nil = 不是从复习进来的）
+    var reviewQueue: [String]? = nil
     @EnvironmentObject private var library: GrammarLibrary
     @EnvironmentObject private var favorites: FavoritesStore
     @EnvironmentObject private var entitlements: EntitlementStore
     @EnvironmentObject private var history: HistoryStore
     /// 滚动相关的状态放在单独的对象里：只有标题浮层读取它，滚动时不会让整页内容重新排版（否则会卡顿、闪烁）。
     @State private var scroll = DetailScrollModel()
+    /// 底部是否显示复习自评条：进入页面时决定（从复习进来，或这个语法正好到期），自评后仍保留显示结果
+    @State private var reviewing = false
 
     /// iOS 26+ 导航栏透明（Liquid Glass），标题可以直接“飞”进导航栏；更早的系统用淡入方式。
     private var usesFlyingTitle: Bool {
@@ -22,7 +26,13 @@ struct GrammarDetailView: View {
     var body: some View {
         if let point = library.point(id: grammarID) {
             content(point)
+                .safeAreaInset(edge: .bottom, spacing: 0) {
+                    if reviewing {
+                        ReviewBar(grammarID: point.id, queue: reviewQueue)
+                    }
+                }
                 .onAppear {
+                    if reviewQueue != nil || history.isDue(point.id) { reviewing = true }
                     history.recordViewed(point.id)
                     UsageStats.shared.grammarViewed(point.id, level: point.level)
                 }

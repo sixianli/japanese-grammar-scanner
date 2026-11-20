@@ -19,6 +19,8 @@ struct HomeView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 32) {
                     scanEntry
+                    // 有要复习的语法时，紧跟在扫描按钮下面，是首页最醒目的一块；没有就整块不显示
+                    reviewCard
                     if entitlements.showsTrialEndingReminder { trialReminder }
                     if isNewUser {
                         // 新用户：入门引导
@@ -26,7 +28,6 @@ struct HomeView: View {
                         starterSection
                     } else {
                         if let last = history.scans.first { continueSection(last) }
-                        forgettingSection
                         recentViewedSection
                     }
                     // 反馈入口
@@ -82,6 +83,9 @@ struct HomeView: View {
             }
         }
         .environment(\.pushRoute, { path.append($0) })
+        .environment(\.replaceRoute, { route in
+            if path.isEmpty { path.append(route) } else { path[path.count - 1] = route }
+        })
     }
 
     // MARK: 搜索入口（点一下进入搜索标签并直接开始输入）
@@ -283,27 +287,21 @@ struct HomeView: View {
         }
     }
 
-    // MARK: 快要忘了（按遗忘曲线，没有内容时整块隐藏）
+    // MARK: 快要忘了（FSRS，没有到期的语法时整块隐藏）
 
-    private var forgettingItems: [GrammarPoint] {
+    private var dueItems: [GrammarPoint] {
         // 重要性：在你扫描的材料里出现越多、或已收藏的语法，同样快忘时更优先
-        history.dueForReview(limit: 20) { id in
+        history.dueForReview(limit: 50) { id in
             1 + 0.25 * Double(min(history.scanCount(of: id), 8)) + (favorites.isFavorite(id) ? 0.5 : 0)
         }
         .compactMap { library.point(id: $0.id) }
     }
 
     @ViewBuilder
-    private var forgettingSection: some View {
-        let items = forgettingItems
+    private var reviewCard: some View {
+        let items = dueItems
         if !items.isEmpty {
-            HomeSection(title: "快要忘了", subtitle: "这些语法你看过，按遗忘曲线快要忘了，再看一眼吧。",
-                        trailing: items.count > 3 ? AnyView(
-                            NavigationLink(value: Route.forgettingList(items.map(\.id))) { SeeAllLabel() }
-                                .accessibilityIdentifier("seeAll.forgetting")
-                        ) : nil) {
-                CompactGrammarList(points: Array(items.prefix(3)))
-            }
+            ReviewCard(items: items, lastReview: { id in history.viewRecords[id].map(HistoryStore.lastReview) })
         }
     }
 
@@ -497,5 +495,96 @@ private struct ScanThumb: View {
                 .lineLimit(1)
                 .frame(width: 120, alignment: .leading)
         }
+    }
+}
+
+/// 首页「快要忘了」卡片：浅主题色底的大卡片，标题直接写数量，列出最该复习的 3 个，下面一个「开始复习」。
+/// 点某一条或「开始复习」都进入复习：依次复习，讲解页底部自评后可以直接「下一个」。
+struct ReviewCard: View {
+    let items: [GrammarPoint]
+    let lastReview: (String) -> Date?
+
+    private var ids: [String] { items.map(\.id) }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 10) {
+                Image(systemName: "clock.arrow.circlepath")
+                    .font(.system(size: 18, weight: .semibold))
+                    .foregroundStyle(.white)
+                    .frame(width: 38, height: 38)
+                    .background(Theme.accentText, in: RoundedRectangle(cornerRadius: 11, style: .continuous))
+                VStack(alignment: .leading, spacing: 1) {
+                    Text(localized: "有 \(items.count) 个快要忘了")
+                        .font(.title3.weight(.heavy))
+                        .foregroundStyle(Theme.accentText)
+                        .accessibilityAddTraits(.isHeader)
+                    Text(localized: "趁还记得，花 1 分钟复习一下")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+            }
+
+            VStack(spacing: 0) {
+                ForEach(Array(items.prefix(3).enumerated()), id: \.element.id) { i, p in
+                    NavigationLink(value: Route.review(p.id, ids.filter { $0 != p.id })) {
+                        HStack(spacing: 8) {
+                            VStack(alignment: .leading, spacing: 3) {
+                                HStack(alignment: .top, spacing: 3) {
+                                    Text(p.displayTitle).font(.body.weight(.semibold)).foregroundStyle(Color.primary).lineLimit(1)
+                                    LevelBadge(level: p.level, small: true)
+                                }
+                                Text(p.meaning).font(.footnote).foregroundStyle(.secondary).lineLimit(1)
+                            }
+                            Spacer(minLength: 4)
+                            if let date = lastReview(p.id) {
+                                Text(verbatim: Self.relative(date))
+                                    .font(.caption)
+                                    .foregroundStyle(.tertiary)
+                                    .lineLimit(1)
+                                    .fixedSize()
+                            }
+                            Image(systemName: "chevron.right").font(.footnote.weight(.semibold)).foregroundStyle(.tertiary)
+                        }
+                        .padding(.horizontal, 14)
+                        .padding(.vertical, 11)
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityIdentifier("home.review.row")
+                    if i < min(items.count, 3) - 1 { Divider().padding(.leading, 14) }
+                }
+            }
+            .background(Theme.card, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+
+            NavigationLink(value: Route.review(ids[0], Array(ids.dropFirst()))) {
+                HStack(spacing: 6) {
+                    Text(localized: "开始复习")
+                    Image(systemName: "chevron.right").font(.footnote.weight(.bold))
+                }
+                .font(.body.weight(.bold))
+                .foregroundStyle(.white)
+                .frame(maxWidth: .infinity, minHeight: 48)
+                .background(Theme.accentText, in: Capsule())
+                .contentShape(Capsule())
+            }
+            .buttonStyle(.plain)
+            .accessibilityIdentifier("home.review.start")
+        }
+        .padding(16)
+        .background(Theme.accentFill, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).strokeBorder(Theme.accent.opacity(0.3), lineWidth: 1))
+        .shadow(color: Theme.accent.opacity(0.15), radius: 10, y: 4)
+        .accessibilityElement(children: .contain)
+        .accessibilityIdentifier("home.review")
+    }
+
+    /// 「4 天前」「昨天」这类相对时间（按 App 内所选语言）
+    static func relative(_ date: Date, now: Date = Date()) -> String {
+        let f = RelativeDateTimeFormatter()
+        f.locale = AppLanguage.selected.locale ?? .current
+        f.dateTimeStyle = .named
+        f.unitsStyle = .short
+        return f.localizedString(for: date, relativeTo: now)
     }
 }

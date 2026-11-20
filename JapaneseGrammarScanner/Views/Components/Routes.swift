@@ -14,7 +14,8 @@ enum Route: Hashable {
     /// 再在那一页里按值跳转，SwiftUI 会把导航栈弄乱（例如在「全部扫描记录」里一直原地打转）。
     case allScans
     case recentViewed
-    case forgettingList([String])
+    /// 复习「快要忘了」：当前要复习的语法 + 之后还要复习的（按顺序）
+    case review(String, [String])
 }
 
 /// 要做识别的一张图片（来自相机定格或相册）。
@@ -37,10 +38,20 @@ private struct PushRouteKey: EnvironmentKey {
     static let defaultValue: ((Route) -> Void)? = nil
 }
 
+/// 用新页面替换当前最上面的一页（复习时「下一个」：不在导航栈里越压越深）
+private struct ReplaceRouteKey: EnvironmentKey {
+    static let defaultValue: ((Route) -> Void)? = nil
+}
+
 extension EnvironmentValues {
     var pushRoute: ((Route) -> Void)? {
         get { self[PushRouteKey.self] }
         set { self[PushRouteKey.self] = newValue }
+    }
+
+    var replaceRoute: ((Route) -> Void)? {
+        get { self[ReplaceRouteKey.self] }
+        set { self[ReplaceRouteKey.self] = newValue }
     }
 }
 
@@ -61,8 +72,8 @@ extension View {
                 AllScansView()
             case .recentViewed:
                 RecentViewedPage()
-            case .forgettingList(let ids):
-                GrammarListPage(title: "快要忘了", ids: ids)
+            case .review(let id, let queue):
+                GrammarDetailView(grammarID: id, reviewQueue: queue)
             }
         }
     }
