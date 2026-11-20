@@ -135,6 +135,15 @@ jobs:
           xcrun simctl launch "$UDID" "$BID" -e2e -demoUnlocked || true
           sleep 30
           xcrun simctl terminate "$UDID" "$BID" || true
+          # 再预热一次测试框架：模拟器刚起来的头几分钟很不稳定（第一个用例出现过「启动超时」「测试进程崩溃后被跳过」
+          # 「界面查询 30 秒超时」），先跑一个很短的用例（结果不计），让模拟器、测试进程、无障碍服务都热起来
+          xcodebuild test-without-building \
+            -project JapaneseGrammarScanner.xcodeproj \
+            -scheme JapaneseGrammarScanner \
+            -destination "id=$UDID" -derivedDataPath build \
+            -only-testing:JapaneseGrammarScannerUITests/SearchTests/testNoResults \
+            CODE_SIGNING_ALLOWED=NO > warmup.log 2>&1 || true
+          grep -E "Test Case .* (passed|failed)" warmup.log || true
           xcodebuild test-without-building \
             -project JapaneseGrammarScanner.xcodeproj \
             -scheme JapaneseGrammarScanner \
@@ -145,6 +154,8 @@ jobs:
             | tee e2e.log | grep -E "error:|Test Case .* (passed|failed)|XCTAssert|Executed|\*\* (TEST|BUILD)" || true
           # test-without-building 成功时输出的是「** TEST EXECUTE SUCCEEDED **」
           grep -qE "\*\* TEST (EXECUTE )?SUCCEEDED \*\*" e2e.log
+          # 测试进程崩溃重启时，正在跑的用例会被直接跳过、也不算失败；跑全部时核对每个用例都真的通过了
+          if [ -z "$E2E_ONLY" ]; then python3 tools/check_e2e_ran_all.py e2e.log; fi
       - name: Export failure screenshots
         if: failure()
         run: |
