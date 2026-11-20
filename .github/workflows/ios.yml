@@ -91,7 +91,8 @@ jobs:
   # 端到端测试：在模拟器上像用户一样点击、跳转、返回（JapaneseGrammarScannerUITests）
   e2e:
     runs-on: xcode-27
-    timeout-minutes: 90
+    # 64 个用例约 80 分钟（加上准备模拟器约 90 分钟），90 分钟的上限会在中途被取消
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
       - name: Pick simulator
@@ -132,7 +133,7 @@ jobs:
           BID=$(/usr/libexec/PlistBuddy -c "Print CFBundleIdentifier" "$APP/Info.plist")
           xcrun simctl install "$UDID" "$APP"
           xcrun simctl launch "$UDID" "$BID" -e2e -demoUnlocked || true
-          sleep 10
+          sleep 30
           xcrun simctl terminate "$UDID" "$BID" || true
           xcodebuild test-without-building \
             -project JapaneseGrammarScanner.xcodeproj \
