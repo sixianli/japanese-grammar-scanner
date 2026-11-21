@@ -204,14 +204,8 @@ struct GrammarDetailView: View {
                 }
             }
             ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    favorites.toggle(p.id)
-                } label: {
-                    Image(systemName: favorites.isFavorite(p.id) ? "star.fill" : "star")
-                        .foregroundStyle(Theme.accent)
-                }
-                .accessibilityLabel(favorites.isFavorite(p.id) ? Text(localized: "取消收藏") : Text(localized: "收藏"))
-                .accessibilityIdentifier("detail.favorite")
+                FavoriteSakuraButton(id: p.id, size: 22)
+                    .accessibilityIdentifier("detail.favorite")
             }
         }
     }
@@ -670,25 +664,18 @@ private struct DetailTitleBar: View {
                     // 安全区顶部包含状态栏和系统导航栏；标题区从系统导航栏那一行开始，和返回、收藏按钮同一行起
                     Color.clear.frame(height: max(0, safeTop - TitleBarLayout.navBarHeight))
                     ZStack {
-                        VStack(spacing: 2) {
-                            Text(verbatim: title)
-                                .font(.headline)
-                                .multilineTextAlignment(.center)
-                                .lineLimit(2)
-                                .accessibilityIdentifier("detail.barTitle")
-                            LevelText(level: level, small: true)
-                                .accessibilityIdentifier("detail.barLevel")
+                        // 量高度用的一份（不显示、读屏读不到）：标题一行还是两行，决定标题栏多高
+                        titleBlock(withIDs: false)
+                            .hidden()
+                            .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { h in
+                                let bar = TitleBarLayout.barContentHeight(titleBlockHeight: h)
+                                if abs(bar - contentHeight) > 0.5 { contentHeight = bar }
+                            }
+                        // 显示的一份：完全藏起来时干脆不放（页面上已有大标题，否则读屏会读两遍）
+                        if offset < contentHeight {
+                            titleBlock(withIDs: true)
+                                .offset(y: offset)
                         }
-                        .padding(.horizontal, TitleBarLayout.sideInset)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { h in
-                            let bar = TitleBarLayout.barContentHeight(titleBlockHeight: h)
-                            if abs(bar - contentHeight) > 0.5 { contentHeight = bar }
-                        }
-                        .offset(y: offset)
-                        .opacity(offset >= contentHeight ? 0 : 1)
-                        // 完全藏起来时也不让读屏读到（页面上已有大标题，否则会读两遍）
-                        .accessibilityHidden(offset >= contentHeight)
                     }
                     .frame(maxWidth: .infinity)
                     .frame(height: contentHeight)
@@ -707,6 +694,23 @@ private struct DetailTitleBar: View {
             .ignoresSafeArea(edges: .top)
         }
         .allowsHitTesting(false)
+    }
+}
+
+extension DetailTitleBar {
+    @ViewBuilder
+    func titleBlock(withIDs: Bool) -> some View {
+        VStack(spacing: 2) {
+            Text(verbatim: title)
+                .font(.headline)
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .accessibilityIdentifier(withIDs ? "detail.barTitle" : "")
+            LevelText(level: level, small: true)
+                .accessibilityIdentifier(withIDs ? "detail.barLevel" : "")
+        }
+        .padding(.horizontal, TitleBarLayout.sideInset)
+        .fixedSize(horizontal: false, vertical: true)
     }
 }
 
