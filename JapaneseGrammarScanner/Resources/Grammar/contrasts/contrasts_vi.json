@@ -6557,24 +6557,25 @@
           "items": [
             {
               "id": "causative-passive",
-              "diff": "させる lấy người bắt làm làm chủ ngữ; させられる lấy người bị ép làm làm chủ ngữ, mang ý không muốn.",
+              "diff": "させる lấy người bắt người khác làm làm chủ ngữ; させられる lấy người bị bắt làm làm chủ ngữ, mang sắc thái không muốn.",
               "this": [
                 {
-                  "tag": "Chủ ngữ · bắt người khác làm",
+                  "tag": "Chủ ngữ · người bắt làm",
                   "tr": "Mẹ bắt tôi ăn rau."
                 }
               ],
               "that": [
                 {
-                  "tag": "Chủ ngữ · bị ép làm",
-                  "tr": "Tôi bị mẹ ép ăn rau."
+                  "tag": "Chủ ngữ · người bị bắt làm",
+                  "tr": "Tôi bị mẹ bắt ăn rau."
                 }
               ],
-              "explain": "Cùng một sự việc, nhìn chủ ngữ: 「母は〜させた」 đứng về phía người ra lệnh; 「私は母に〜させられた」 đứng về phía người bị ép, có thêm 「られ」, mang ý bất mãn “thật ra tôi không muốn”. Động từ nhóm 1 dùng せる (行かせる), động từ nhóm 2 dùng させる, cách dùng như nhau."
+              "explain": "Cùng nói một sự việc, hãy nhìn chủ ngữ: 「母は私に〜させた」 đứng về phía người ra lệnh; 「私は母に〜させられた」 đứng về phía người bị ép, có thêm 「られ」, mang sự bất mãn “thật ra tôi không muốn”. Động từ nhóm godan dùng せる (行かせる), động từ nhóm ichidan dùng させる, cách dùng như nhau."
             },
             {
               "id": "sasete-kudasai",
-              "diff": "Thể sai khiến đứng một mình là “bắt/cho người khác làm”; phía sau gắn てください／てもらう／ていただく thì thành “xin cho tôi làm”.",
+              "title": "〜させてください (xin hãy để tôi làm)",
+              "diff": "Thể sai khiến dùng riêng là “bắt người khác làm”; đổi người được sai thành 「私に」 rồi thêm 「ください」 thì thành xin đối phương cho phép mình làm.",
               "this": [
                 {
                   "tag": "Bắt người khác làm",
@@ -6583,42 +6584,35 @@
               ],
               "that": [
                 {
-                  "tag": "せてください · xin cho tôi làm",
-                  "tr": "Tài liệu đó xin hãy để tôi làm."
-                },
-                {
-                  "tag": "せてもらう · được cho phép làm",
-                  "tr": "Tôi xin phép và đã được cho về sớm."
-                },
-                {
-                  "tag": "せていただく · khiêm tốn làm",
-                  "tr": "Hôm nay tôi xin phép được làm người dẫn chương trình."
+                  "tag": "Xin cho tôi làm",
+                  "tr": "Trưởng phòng, tài liệu đó xin hãy để tôi làm."
                 }
               ],
-              "explain": "Xem phía sau có gắn động từ cho nhận không: chỉ có thể sai khiến → người trên bảo người dưới “bắt người khác làm”; gắn thêm てください／てもらう／ていただく → người làm việc trở thành “tôi”, là nhờ hoặc cảm ơn đối phương cho phép mình làm."
+              "explain": "Nghĩa gốc của thể sai khiến là “bắt (người khác) làm”: 「部下に作らせた」 là trưởng phòng bắt cấp dưới làm. Đổi người được sai thành chính mình, 「私に」, rồi thêm 「ください」 để nhờ, sẽ thành “xin hãy để tôi làm” — xin đối phương cho phép mình làm. Hãy xem trước 「に」 là ai và sau có 「ください」 không: 「部下に〜せた」 → bắt người khác làm; 「私に〜せてください」 → xin cho mình làm."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều chỉ “để người khác làm”",
+          "note": "Đều diễn tả “bảo người khác làm”",
           "items": [
             {
-              "id": "te-morau",
-              "diff": "Thể sai khiến là người trên “bảo người khác làm”; てもらう là nhờ người khác giúp, trong lòng biết ơn.",
+              "id": "you-ni-iu",
+              "title": "〜ように言う (bảo ai đó làm)",
+              "diff": "Thể sai khiến là đã trực tiếp bắt người đó làm; ように言う chỉ thuật lại chỉ thị “bảo nó làm”, làm hay chưa thì không chắc.",
               "this": [
                 {
-                  "tag": "Với người dưới · bảo làm",
-                  "tr": "Tôi bảo em trai khiêng hành lý."
+                  "tag": "Đã bắt làm · việc xong",
+                  "tr": "Mẹ bắt em trai dọn phòng."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nhờ giúp · biết ơn",
-                  "tr": "Đàn anh đã giúp tôi khiêng hành lý."
+                  "tag": "Chỉ bảo làm · chưa chắc đã làm",
+                  "tr": "Mẹ bảo em trai dọn phòng, nhưng nó vẫn chưa dọn."
                 }
               ],
-              "explain": "Nhìn đối tượng là ai: em trai, con cái, cấp dưới… những người có thể “sai bảo” → thể sai khiến; đàn anh, bạn bè, người lớn tuổi → てもらう. Dùng thể sai khiến với người trên (先輩に運ばせた) sẽ rất thất lễ."
+              "explain": "Hãy xem có nói đến kết quả không: 「弟に片付けさせた」 là đã bắt em trai làm, việc đã xong; 「弟に片付けるように言った」 chỉ nói ra chỉ thị “bảo nó làm”, làm hay chưa thì không chắc, nên phía sau có thể nối 「まだ片付けていない」, còn dùng させた thì không nối được. ように言う là thuật lại chỉ thị, giọng cũng gián tiếp hơn thể sai khiến."
             }
           ]
         }
@@ -6629,41 +6623,48 @@
       "groups": [
         {
           "kind": "root",
-          "note": "させられる ＝ sai khiến 「させる」 ＋ bị động 「られる」, tách ra chính là hai phần này",
+          "note": "Đều bắt nguồn từ thể sai khiến 「させる」 — nghĩa gốc là “bắt (người khác) làm”",
           "items": [
             {
               "id": "causative",
-              "diff": "させられる lấy người bị ép làm làm chủ ngữ; させる lấy người bắt làm làm chủ ngữ.",
+              "diff": "させられる lấy người bị bắt làm làm chủ ngữ; させる lấy người bắt người khác làm làm chủ ngữ.",
               "this": [
                 {
-                  "tag": "Chủ ngữ · bị ép làm",
-                  "tr": "Tôi bị mẹ ép ăn rau."
+                  "tag": "Chủ ngữ · người bị bắt làm",
+                  "tr": "Tôi bị mẹ bắt ăn rau."
                 }
               ],
               "that": [
                 {
-                  "tag": "Chủ ngữ · bắt người khác làm",
+                  "tag": "Chủ ngữ · người bắt làm",
                   "tr": "Mẹ bắt tôi ăn rau."
                 }
               ],
-              "explain": "Nhìn chủ ngữ: 「私は母に」 đứng về phía người bị ép → させられた, mang ý bất mãn “thật ra tôi không muốn”; 「母は私に」 đứng về phía người ra lệnh → させた. Bỏ 「られ」 đi là trở về thể sai khiến thông thường (động từ nhóm 1 là せる, như 行かせる)."
-            },
+              "explain": "Nghĩa gốc của thể sai khiến 「させる」 là “bắt (người khác) làm”. Đứng về phía người ra lệnh, 「母は私に」 → させた: mẹ bắt tôi ăn. Chuyển câu này sang bị động, lấy người bị sai làm chủ ngữ, 「私は母に」 → させられた: “bị người ta bắt làm”, tức là bị ép làm, nên mang sự bất mãn “thật ra tôi không muốn”. Nhìn chủ ngữ, rồi xem có 「られ」 không: có → bị ép làm; không → bắt người khác làm."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Đều diễn tả “bị buộc phải làm”",
+          "items": [
             {
-              "id": "passive",
-              "diff": "させられる là chính mình bị ép làm; られる là người khác làm gì đó và mình chịu ảnh hưởng.",
+              "id": "wo-yogi-naku-sareru",
+              "title": "〜を余儀なくされる (buộc phải…)",
+              "diff": "させられる thường là bị người khác ép, dùng trong văn nói, có sự bất mãn; を余儀なくされる là bị hoàn cảnh buộc phải làm, văn viết, khách quan.",
               "this": [
                 {
-                  "tag": "Người ăn là tôi · bị ép",
-                  "tr": "Tôi bị mẹ ép ăn món rau mình ghét."
+                  "tag": "Bị người ép · bất mãn",
+                  "tr": "Tôi bị trưởng phòng bắt sửa kế hoạch."
                 }
               ],
               "that": [
                 {
-                  "tag": "Người ăn là mẹ · tôi chịu thiệt",
-                  "tr": "Bánh kem của tôi bị mẹ ăn mất."
+                  "tag": "Bị hoàn cảnh ép · văn viết",
+                  "tr": "Do mưa lớn, kế hoạch buộc phải thay đổi."
                 }
               ],
-              "explain": "Nhìn xem rốt cuộc ai ăn: 「嫌いな野菜」 là tôi bị ép ăn → させられた; 「私のケーキ」 là mẹ ăn mất, tôi chỉ là người chịu thiệt → られた (động từ nhóm 1 là れる, như 読まれる). させられる chính là られる có thêm 「させ」 của thể sai khiến ở phía trước."
+              "explain": "Hãy xem cái gì ép bạn: một người cụ thể như 「部長に」 → させられた, văn nói, mang sự bất mãn “tôi không muốn”; hoàn cảnh không thể cưỡng lại như 「大雨で」 — thiên tai, tai nạn, tình hình kinh tế → を余儀なくされた, văn viết, khách quan, thường gặp trong tin tức, báo cáo."
             }
           ]
         }
@@ -6678,57 +6679,56 @@
           "items": [
             {
               "id": "zenzen-nai",
-              "diff": "ちっとも chỉ đi với phủ định, thường mang ý bất mãn; 全然 trong văn nói còn đi được với khẳng định.",
+              "title": "ぜんぜん〜ない (hoàn toàn không)",
+              "diff": "Nghĩa như nhau; ちっとも đậm cảm xúc hơn, hay dùng để than phiền; 全然 là cách nói thông dụng nhất trong văn nói, giọng bình thản hơn.",
               "this": [
                 {
-                  "tag": "Không chút nào · bất mãn",
+                  "tag": "Chẳng chút nào · than phiền",
                   "tr": "Nói bao nhiêu lần rồi mà con trai tôi chẳng chịu học chút nào."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khẩu ngữ · đi với khẳng định",
-                  "tr": "Đừng lo, hoàn toàn không sao đâu."
+                  "tag": "Hoàn toàn không · giọng bình thản",
+                  "tr": "Nói bao nhiêu lần rồi mà con trai tôi hoàn toàn không học."
                 }
               ],
-              "wrong": {
-                "why": "Sau ちっとも nhất định phải là phủ định"
-              },
-              "explain": "ちっとも chỉ dùng được với phủ định, thường dùng để than phiền (ちっとも勉強しない、ちっとも来ない); 全然 trong văn nói còn đi được với khẳng định (全然大丈夫), nhưng ở hoàn cảnh trang trọng thì nên tránh."
+              "explain": "Cả hai câu đều tự nhiên, phủ định triệt để như nhau. Khác ở sắc thái: ちっとも mang sự bất mãn, sốt ruột của người nói, như đang than “sao cứ mãi không…”; 全然 là cách nói thông dụng nhất hằng ngày, có thể dùng để than phiền, cũng có thể nói bình thản “hoàn toàn không”. Muốn nhấn mạnh sự bất mãn → ちっとも; chỉ trình bày tình hình → 全然."
             },
             {
               "id": "sukoshimo-nai",
-              "diff": "Nghĩa như nhau; ちっとも chỉ dùng trong văn nói, thường mang ý than phiền; 少しも giọng trung tính, viết văn cũng dùng được.",
+              "diff": "Mức độ phủ định như nhau; ちっとも là văn nói, hay mang ý than phiền; 少しも có giọng trung tính, viết văn cũng dùng được.",
               "this": [
                 {
-                  "tag": "Khẩu ngữ · than phiền",
-                  "tr": "Đợi mãi rồi mà xe buýt chẳng thấy đến gì cả."
+                  "tag": "Văn nói · than phiền",
+                  "tr": "Uống thuốc rồi mà sốt chẳng hạ chút nào cả."
                 }
               ],
               "that": [
                 {
-                  "tag": "Trung tính · văn viết cũng được",
-                  "tr": "Mười năm mới gặp lại, anh ấy chẳng thay đổi chút nào."
+                  "tag": "Trung tính · viết cũng được",
+                  "tr": "Tôi đã uống thuốc nhưng sốt không hạ chút nào."
                 }
               ],
-              "explain": "「ちっと」 là cách nói cũ của 「ちょっと」, ちっとも và 少しも đều là “dù chỉ một chút cũng (không)…”, cấu trúc giống nhau. Khác nhau ở hoàn cảnh: than phiền, nói chuyện phiếm → ちっとも; văn bản, trình bày tương đối trang trọng → 少しも."
+              "explain": "Cả hai đều là “một chút cũng không có”, mức độ phủ định như nhau. Chọn theo hoàn cảnh: nói với người khác bằng giọng than phiền → ちっとも; kể trung tính như viết nhật ký, báo cáo → 少しも; ちっとも thường không dùng trong văn viết."
             },
             {
               "id": "mattaku-nai",
-              "diff": "ちっとも mang cảm xúc cá nhân, chỉ dùng trong văn nói; まったく giọng khách quan, hoàn cảnh trang trọng cũng dùng được.",
+              "title": "まったく〜ない (hoàn toàn không…)",
+              "diff": "ちっとも mang cảm xúc cá nhân, chỉ dùng trong văn nói; まったく có giọng khách quan, dùng được cả ở nơi trang trọng.",
               "this": [
                 {
-                  "tag": "Khẩu ngữ · có cảm xúc",
-                  "tr": "Chuyện anh ta kể chẳng thú vị chút nào."
+                  "tag": "Văn nói · càu nhàu",
+                  "tr": "Cái máy này chẳng chạy chút nào cả."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khách quan · trang trọng",
-                  "tr": "Kết quả kiểm tra hoàn toàn không có vấn đề gì."
+                  "tag": "Trang trọng · báo cáo cấp trên",
+                  "tr": "Thưa trưởng phòng, cái máy này hoàn toàn không chạy."
                 }
               ],
-              "explain": "Xem ai nói trong hoàn cảnh nào: bác sĩ, công ty, tin tức nói “hoàn toàn không” → まったく (全く); bạn bè cằn nhằn với nhau → ちっとも. Nói với cấp trên, khách hàng mà dùng ちっとも sẽ quá suồng sã."
+              "explain": "Hãy xem nói với ai và cuối câu dùng gì: bạn bè càu nhàu với nhau, cuối câu là thể thông thường như 「〜ないよ」 → ちっとも rất tự nhiên; báo cáo với cấp trên như 「部長」 hay khách hàng, cuối câu là 「〜ません」, hoặc viết vào báo cáo → dùng まったく, ちっとも quá suồng sã. まったく dùng được cả trong văn nói lẫn văn viết."
             }
           ]
         }
@@ -6739,32 +6739,38 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「だけ（丈）」 — chỉ “giới hạn, chỉ có chừng này”",
+          "note": "Đều bắt nguồn từ 「だけ（丈）」 — nghĩa gốc là chiều dài, chiều cao, mở rộng thành “giới hạn đến mức này”",
           "items": [
             {
               "id": "dake-only",
-              "diff": "だけで nói “chỉ riêng như vậy thôi đã…”; だけ chỉ giới hạn phạm vi.",
+              "diff": "だけ chỉ giới hạn phạm vi “chỉ…”; thêm 「で」 và phía sau nối kết quả thì thành “chỉ cần… là đã…”.",
               "this": [
                 {
-                  "tag": "Chỉ riêng… đã…",
-                  "tr": "Chỉ cần ngắm thôi cũng thấy vui."
+                  "tag": "Chỉ cần… là đã…",
+                  "tr": "Chỉ cần ngắm thôi là đã vui rồi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Chỉ là · không làm gì khác",
-                  "tr": "Tôi không mua đâu, chỉ xem thôi."
+                  "tag": "Chỉ · không làm gì khác",
+                  "tr": "Tôi không mua đâu. Chỉ xem thôi."
                 }
               ],
-              "explain": "Nhìn phía sau: sau 「だけで」 là một kết quả (楽しい、疲れる、分かる) → chỉ riêng điều này đã đủ tạo ra kết quả đó; câu kết thúc ở 「だけです」, hoặc nói rõ “không làm gì khác” → chỉ là."
-            },
+              "explain": "「だけ」 bắt nguồn từ 「丈（たけ）」, nghĩa gốc là chiều dài, chiều cao, mở rộng thành “đến giới hạn này”, nên だけ diễn tả “chỉ có thế, không có gì khác”. Dùng だけ một mình thì nghĩa dừng ở giới hạn: 「見るだけです」 là chỉ xem, không làm gì khác (買いません). Thêm 「で」 biểu thị phương tiện, điều kiện, thành “chỉ dựa vào điều này”, phía sau nối thêm một kết quả: 「見るだけで楽しい」 — chỉ cần ngắm là đã vui. Hãy xem phía sau: nối kết quả (楽しい) → だけで; nói rõ không làm gì khác (買いません) → だけ."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "だけで ↔ だけでなく — chỉ khác một chữ 「なく」",
+          "items": [
             {
               "id": "dake-de-naku",
-              "diff": "だけで là “chỉ riêng… đã…”; だけでなく là “không chỉ… mà còn…”.",
+              "diff": "だけで là “chỉ cần… là đã…”; だけでなく là “không chỉ… mà còn…”.",
               "this": [
                 {
-                  "tag": "Chỉ riêng cái này → kết quả",
-                  "tr": "Chỉ ăn bánh mì thôi mà đã no rồi."
+                  "tag": "Chỉ nhờ cái này → kết quả",
+                  "tr": "Chỉ ăn bánh mì thôi là đã no rồi."
                 }
               ],
               "that": [
@@ -6773,7 +6779,7 @@
                   "tr": "Không chỉ ăn bánh mì mà còn ăn cả salad."
                 }
               ],
-              "explain": "Chỉ khác một chữ 「なく」: sau だけで là kết quả do riêng thứ này mang lại (お腹がいっぱい); sau だけでなく bổ sung thêm một thứ khác, thường có 「〜も」. Đọc thấy 「だけで」 thì phải nhìn kỹ phía sau có 「なく」 hay không."
+              "explain": "Chỉ khác một chữ 「なく」: sau だけで là kết quả do riêng thứ này mang lại (お腹がいっぱいになった); だけでなく là “không chỉ thứ này”, phía sau bổ sung thêm thứ khác, thường đi với 「〜も」 (サラダも). Khi đọc 「だけで」 hãy xem kỹ phía sau có 「なく」 không: một bên là “chỉ cần… là đã…”, một bên là “không chỉ… mà còn…”."
             }
           ]
         },
@@ -6807,24 +6813,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả sự suy đoán, phán đoán của người nói",
+          "note": "Đều diễn tả phỏng đoán “chắc là… nhỉ”",
           "items": [
             {
               "id": "to-omou",
-              "diff": "と思う có thể dùng để nói ý kiến của mình; だろうと思う chỉ dùng để suy đoán những việc không chắc chắn.",
+              "title": "〜と思う (phỏng đoán)",
+              "diff": "Đều là phỏng đoán; と思う nói tương đối dứt khoát; だろうと思う thêm sự dè dặt “chắc là”, uyển chuyển hơn.",
               "this": [
                 {
-                  "tag": "Suy đoán · không chắc",
-                  "tr": "Tôi nghĩ ngày mai có lẽ sẽ mưa."
+                  "tag": "Chừa đường lui · uyển chuyển",
+                  "tr": "Tôi nghĩ chắc là anh ấy đã về đến nhà rồi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Ý kiến · quan điểm",
-                  "tr": "Tôi cho rằng phương án này hay."
+                  "tag": "Tương đối dứt khoát",
+                  "tr": "Tôi nghĩ anh ấy đã về đến nhà rồi."
                 }
               ],
-              "explain": "Xem đang nói về điều gì: ý kiến, quan điểm của bản thân (この案がいい) → と思う; những việc không chắc như thời tiết, người khác có đến hay không → だろうと思う, thường đi cùng 「たぶん」, 「きっと」."
+              "explain": "Cả hai câu đều phỏng đoán điều chưa chắc chắn và có thể thay cho nhau. と思う nói thẳng phỏng đoán ra, nghe tương đối dứt khoát; chèn 「だろう」 vào giữa thành だろうと思う thì thêm một lớp dè dặt “chắc là”, không nói chắc, uyển chuyển hơn. Muốn nói dứt khoát → と思う; muốn chừa đường lui cho mình → だろうと思う."
             },
             {
               "id": "deshou-guess",
@@ -6845,23 +6852,6 @@
                 "why": "Sau でしょう không thể nối thêm 「と思う」"
               },
               "explain": "でしょう là thể lịch sự của 「だろう」, nói thẳng ra sự suy đoán giống như dự báo thời tiết; khi muốn thêm 「と思います」 thì phía trước bắt buộc dùng thể thường 「だろう」, không được nói ✗でしょうと思います."
-            },
-            {
-              "id": "kamoshirenai",
-              "diff": "だろうと思う là “có lẽ sẽ”, khá chắc chắn; かもしれない là “không chừng”, chỉ là có khả năng.",
-              "this": [
-                {
-                  "tag": "Có lẽ · khá chắc",
-                  "tr": "Mưa to thế này, trận đấu có lẽ sẽ bị hủy."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Không chừng · chỉ là có thể",
-                  "tr": "Mưa to thế này, không chừng trận đấu sẽ bị hủy."
-                }
-              ],
-              "explain": "Xem phó từ phía trước: 「たぶん」, 「きっと」 → người nói thấy phần nhiều là như vậy → だろうと思う; 「もしかしたら」, 「ひょっとすると」 → chỉ là có khả năng đó → かもしれない."
             }
           ]
         }
@@ -6876,23 +6866,23 @@
           "items": [
             {
               "id": "hajimeru-start",
-              "diff": "出す là bắt đầu đột ngột, ngoài ý muốn; 始める là bắt đầu bình thường, cũng dùng được cho việc mình định làm.",
+              "diff": "出す là bắt đầu đột ngột, không kìm được; 始める là bắt đầu thông thường, dùng được cả cho việc mình định làm.",
               "this": [
                 {
-                  "tag": "Đột ngột · không kiềm được",
-                  "tr": "Em bé đột nhiên òa khóc."
+                  "tag": "Đột ngột · không kìm được",
+                  "tr": "Đột nhiên em bé òa khóc."
                 }
               ],
               "that": [
                 {
-                  "tag": "Bắt đầu bình thường · rủ được",
+                  "tag": "Bắt đầu thông thường · rủ được",
                   "tr": "Mọi người đến đủ rồi, mình bắt đầu ăn thôi."
                 }
               ],
               "wrong": {
-                "why": "出す diễn tả sự bắt đầu đột ngột, không dùng được trong lời rủ rê kiểu 「〜ましょう」"
+                "why": "出す diễn tả bắt đầu đột ngột, không dùng được trong lời rủ như 「〜ましょう」"
               },
-              "explain": "Xem có 「急に」, 「突然」 không, hoặc có phải việc mình định làm không: xảy ra đột ngột, không kiềm được (泣き出す、降り出す、笑い出す) → 出す; việc mình đã lên kế hoạch, rủ người khác cùng làm (〜ましょう、〜たい、〜つもり) → chỉ dùng được 始める."
+              "explain": "Hãy xem có 「急に」 「突然」 không, hoặc có phải việc mình định làm không: xảy ra đột ngột, không kìm được (泣き出す、降り出す、笑い出す) → 出す; việc mình đã định, hoặc rủ người khác cùng làm (みんな揃ったので〜ましょう、〜たい、〜つもり) → chỉ dùng 始める."
             }
           ]
         }
@@ -6908,11 +6898,11 @@
             {
               "id": "gozaimasu-aru",
               "thisTitle": "〜でございます",
-              "diff": "でございます tương đương 「です」 (là); に＋ございます tương đương 「にあります」 (ở).",
+              "diff": "でございます tương đương 「です」 (là); に＋ございます tương đương 「にあります」 (ở, có).",
               "this": [
                 {
                   "tag": "＝です · là",
-                  "tr": "Đây chính là quầy lễ tân."
+                  "tr": "Đây là quầy lễ tân."
                 }
               ],
               "that": [
@@ -6921,49 +6911,62 @@
                   "tr": "Quầy lễ tân ở tầng một."
                 }
               ],
-              "explain": "Xem phía trước ございます: 「で」 → でございます＝です, nói “là…”; 「に」 hoặc 「が」 → ございます＝あります, nói “ở, có”. Cả hai đều là cách nói trang trọng dùng với khách."
+              "explain": "「ござる」 bắt nguồn từ 「御座ある」, nghĩa gốc là bậc quý nhân “ở (đâu đó)”, về sau thành cách nói trang trọng của 「ある」, nên ございます dùng một mình ＝ あります, nói “ở, có”: 「一階にございます」. Mặt khác, giống như 「である」 là 「で＋ある」 diễn tả “là”, 「で＋ござる」 cũng diễn tả “là”, do đó でございます ＝ です. Hãy xem trước ございます: 「で」 → là; 「に」 hoặc 「が」 → ở, có."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều là cách nói lịch sự của cùng một nghĩa, chỉ khác mức độ trang trọng",
+          "sense": 1,
+          "note": "Đều diễn tả phán đoán “là”",
           "items": [
             {
               "id": "da-desu",
+              "title": "〜です (phán đoán danh từ)",
               "thisTitle": "〜でございます",
-              "diff": "でございます là cách nói trang trọng hơn của 「です」, thường dùng khi nhân viên cửa hàng, khách sạn, loa phát thanh nói với khách.",
+              "diff": "でございます là cách nói trang trọng hơn của 「です」, chủ yếu dùng khi nhân viên cửa hàng, khách sạn, thông báo nói với khách.",
               "this": [
                 {
                   "tag": "Rất trang trọng · với khách",
-                  "tr": "Đây chính là phòng họp."
+                  "tr": "Phòng của quý khách ở tầng năm ạ."
                 }
               ],
               "that": [
                 {
                   "tag": "Lịch sự thông thường",
-                  "tr": "Đây là phòng họp."
+                  "tr": "Phòng ở tầng năm."
                 }
               ],
-              "explain": "Nghĩa hoàn toàn giống nhau, xem hoàn cảnh: nhân viên cửa hàng, khách sạn, loa phát thanh nói với khách → でございます; bình thường nói với cấp trên, đồng nghiệp thì です là đủ, quá trang trọng lại thành xa cách. Thể thông thường nói 「だ」, nghĩa cũng như vậy."
-            },
+              "explain": "Nghĩa hoàn toàn như nhau, hãy xem hoàn cảnh: khách sạn, cửa hàng, thông báo khi đối diện khách → でございます; bình thường nói với cấp trên, đồng nghiệp thì です là đủ, quá trang trọng lại thành xa cách."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều diễn tả “đang (làm)”",
+          "items": [
             {
               "id": "te-iru",
+              "title": "〜ている (đang diễn ra)",
               "thisTitle": "〜ております",
-              "diff": "ております là cách nói trang trọng của ています, dùng để nói về bản thân hoặc phía mình, không dùng để nói về khách hay cấp trên.",
+              "diff": "ております là cách nói khiêm nhường của ています, chỉ dùng cho phía mình, không dùng cho khách hay cấp trên.",
               "this": [
                 {
-                  "tag": "Nói về mình · trang trọng",
-                  "tr": "Tôi đang học kinh tế ở trường đại học."
+                  "tag": "Phía mình · trang trọng",
+                  "tr": "Hiện giờ người phụ trách đang kiểm tra ạ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Lịch sự thông thường · ai cũng dùng được",
-                  "tr": "Anh Tanaka đang học kinh tế ở trường đại học."
+                  "tag": "Lịch sự thông thường",
+                  "tr": "Bây giờ người phụ trách đang kiểm tra."
                 }
               ],
-              "explain": "Xem chủ ngữ là ai: khi phỏng vấn, viết email công việc nói về bản thân (私、弊社) → ております; nói về người khác thì dùng ています là được, tuyệt đối không dùng ております cho hành động của khách hay cấp trên, phải dùng tôn kính ngữ (お待ちです、〜ていらっしゃいます)."
+              "wrong": {
+                "why": "ております chỉ dùng cho phía mình; hỏi khách phải dùng kính ngữ 「何をなさっていますか」"
+              },
+              "explain": "Hai câu nghĩa như nhau, đều là “đang kiểm tra”. ております nói hành động của phía mình (tôi, người công ty mình) một cách trang trọng hơn, dùng khi nói với khách, trong email công việc; ています là lịch sự thông thường, hành động của ai cũng nói được. Khi chủ ngữ là khách hay cấp trên thì tuyệt đối không dùng ております, phải dùng kính ngữ (〜ていらっしゃいます)."
             }
           ]
         }
@@ -6991,25 +6994,25 @@
                   "tr": "Trời đang mưa. Nhưng trận đấu vẫn diễn ra."
                 }
               ],
-              "explain": "Đều mang nghĩa “cho dù như vậy thì cũng…”. Xem vị trí của でも: đặt sau danh từ, đi thành cặp → dù A hay B; đặt ở đầu câu, nối tiếp câu trước → nhưng."
+              "explain": "Cả hai đều mang ý “dù vậy cũng…”. Hãy xem vị trí của でも: đặt sau danh từ (雨でも雪でも), hai cái đi thành cặp → dù A hay B; đặt ở đầu câu, nối tiếp câu trước (雨が降っている。でも、……) → nhưng."
             },
             {
               "id": "question-word-temo",
-              "title": "〜でも（何でも・誰でも）",
-              "diff": "AでもBでも là nêu cụ thể vài lựa chọn; 何でも dùng một từ để hỏi để bao quát tất cả.",
+              "title": "〜でも (何でも・誰でも)",
+              "diff": "AでもBでも là nêu cụ thể vài lựa chọn; 何でも dùng một từ để hỏi bao quát tất cả.",
               "this": [
                 {
                   "tag": "Nêu ví dụ cụ thể",
-                  "tr": "Thịt hay cá cũng được, mời chọn món bạn thích."
+                  "tr": "Thịt hay cá cũng được, xin mời chọn món quý khách thích."
                 }
               ],
               "that": [
                 {
                   "tag": "Từ để hỏi · tất cả",
-                  "tr": "Gì cũng được, mời lấy thứ bạn thích."
+                  "tr": "Gì cũng được, xin mời lấy thứ bạn thích."
                 }
               ],
-              "explain": "Hai cách này thường được nói liền nhau: 「肉でも魚でも、何でも食べます」. Phía trước là danh từ cụ thể, hai cái đặt song song → AでもBでも; phía trước là từ để hỏi như 何、誰、どこ → “tất cả đều…”."
+              "explain": "Nghĩa gốc của 「で＋も」 là “dù là… cũng”. Đi sau hai danh từ cụ thể, “dù là thịt cũng, dù là cá cũng” → cả hai đều được, thành AでもBでも “dù A hay B”; đi sau từ để hỏi, “dù là gì cũng” → là gì cũng được, thành 何でも “cái gì cũng”. Hãy xem trước でも: hai danh từ cụ thể đứng cạnh nhau (肉、魚) → AでもBでも; từ để hỏi như 何、誰、どこ → “tất cả đều…”."
             }
           ]
         },
@@ -7043,11 +7046,11 @@
       "groups": [
         {
           "kind": "look",
-          "note": "が見られる ↔ とみられる, chỉ khác nhau một trợ từ phía trước",
+          "note": "が見られる ↔ と見られる — chỉ khác trợ từ phía trước: 「が」 hay 「と」",
           "items": [
             {
               "id": "to-mirareru",
-              "diff": "が見られる là “quan sát thấy một hiện tượng”; とみられる là “theo phỏng đoán, được cho là”.",
+              "diff": "が見られる là “quan sát thấy một hiện tượng”; とみられる là “được cho là, theo phỏng đoán”.",
               "this": [
                 {
                   "tag": "Quan sát thấy hiện tượng",
@@ -7057,10 +7060,10 @@
               "that": [
                 {
                   "tag": "Theo phỏng đoán",
-                  "tr": "Nguyên nhân vụ tai nạn được cho là do chạy xe quá tốc độ."
+                  "tr": "Nguyên nhân vụ tai nạn được cho là do chạy quá tốc độ."
                 }
               ],
-              "explain": "Cả hai đều hay gặp trong tin tức. Xem trợ từ trước 見られる／みられる: trước 「が」 là hiện tượng nhìn thấy được (増加、変化) → quan sát thấy; trước 「と」 là một nhận định (原因は〜) → theo phỏng đoán, được cho là, nói về việc chưa hoàn toàn chắc chắn."
+              "explain": "Trên tin tức cả hai đều hay gặp, 「とみられる」 cũng thường viết là 「と見られる」. Hãy xem trợ từ trước 見られる: trước 「が」 là hiện tượng nhìn thấy (増加、変化) → quan sát thấy; trước 「と」 là một nhận định (事故の原因は〜) → được cho là, theo phỏng đoán, nói về điều chưa hoàn toàn xác định."
             }
           ]
         },
@@ -7071,20 +7074,20 @@
             {
               "id": "mieru-kikoeru",
               "title": "〜が見える",
-              "diff": "が見られる thường dùng trong văn viết, nói về hiện tượng xuất hiện qua điều tra, quan sát; が見える là cảnh vật trước mắt tự nhiên lọt vào tầm nhìn.",
+              "diff": "が見られる là giới thiệu ở nơi nào đó, lúc nào đó có dịp nhìn thấy; が見える là ngay trước mắt, tự nhiên lọt vào tầm nhìn.",
               "this": [
                 {
-                  "tag": "Văn viết · hiện tượng",
-                  "tr": "Kết quả điều tra cho thấy đã có thay đổi lớn."
+                  "tag": "Giới thiệu · có dịp thấy",
+                  "tr": "Ở bờ biển này, cứ đến mùa hè là có thể thấy rùa biển."
                 }
               ],
               "that": [
                 {
-                  "tag": "Trước mắt · cảnh vật",
-                  "tr": "Từ cửa sổ có thể nhìn thấy núi Phú Sĩ."
+                  "tag": "Trước mắt · lọt vào tầm nhìn",
+                  "tr": "Kia kìa, thấy một con rùa biển đó!"
                 }
               ],
-              "explain": "Xem thứ “nhìn thấy” là gì: hiện tượng trừu tượng như thay đổi, xu hướng, cải thiện, xuất hiện trong báo cáo, tin tức → が見られる; cảnh vật cụ thể như núi, biển, ánh đèn → が見える."
+              "explain": "Cả hai đều là “nhìn thấy được”. Hãy xem đó là kiểu nhìn thấy nào: giới thiệu đến nơi nào, mùa nào là có thể thấy (夏になると、この海岸では) → が見られる, giống sách hướng dẫn du lịch; ngay lúc này ở trước mắt, tự nhiên lọt vào tầm nhìn (あそこに) → が見える."
             }
           ]
         }
@@ -7094,66 +7097,51 @@
       "id": "ga-suru-sense",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều là 「〜がする」 — diễn tả một cảm giác nào đó tự nhiên “xuất hiện”",
+          "kind": "meaning",
+          "sense": 1,
+          "note": "Đều diễn tả “nghe thấy âm thanh”",
           "items": [
             {
-              "id": "you-na-ki-ga-suru",
-              "diff": "音・匂い＋がする là giác quan cảm nhận được; ような気がする là trong lòng mơ hồ cảm thấy.",
+              "id": "mieru-kikoeru",
+              "title": "〜が聞こえる",
+              "diff": "音がする đứng về phía âm thanh, nói “có tiếng phát ra”; 音が聞こえる đứng về phía con người, nói “tai nghe được”.",
               "this": [
                 {
-                  "tag": "Giác quan · nghe thấy",
-                  "tr": "Từ phòng bên cạnh vọng ra tiếng động lạ."
+                  "tag": "Có tiếng phát ra",
+                  "tr": "Từ tivi phát ra tiếng lạ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Trong lòng · mơ hồ cảm thấy",
-                  "tr": "Không hiểu sao tôi cứ thấy hình như đã gặp người đó ở đâu rồi."
+                  "tag": "Người nghe · nghe được hay không",
+                  "tr": "Ông tôi bị nặng tai nên không nghe thấy tiếng tivi."
                 }
               ],
-              "explain": "Xem phía trước がする: 音、匂い、味、寒気 → cảm giác do giác quan cơ thể nhận được; 「気」 → cảm giác trong lòng, thêm 「〜ような」 phía trước là “không hiểu sao cứ thấy hình như…”, nói về việc không chắc chắn."
+              "explain": "Cả hai đều có thể nói nghe thấy âm thanh: 「テレビから変な音がする」 cũng có thể nói là 「変な音が聞こえる」, nghĩa không đổi. Khác ở chỗ đứng về phía nào: 音がする đứng về phía âm thanh, nói “có tiếng phát ra”; 聞こえる đứng về phía người nghe, nói “tai có nghe được không”. Vì vậy khi nói về điều kiện của người nghe như thính lực, khoảng cách (祖父は耳が遠くて) thì chỉ dùng được 聞こえる; nói 「音がしない」 thì thành tivi hoàn toàn không có tiếng."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “cảm thấy, thấy”",
+          "sense": 3,
+          "note": "Đều diễn tả “cảm thấy, nghĩ”",
           "items": [
             {
-              "id": "mieru-kikoeru",
-              "title": "〜が聞こえる",
-              "diff": "音がする nói “có tiếng động”; 音が聞こえる nói “tai nghe thấy được”.",
-              "this": [
-                {
-                  "tag": "Có tiếng động",
-                  "tr": "Bên ngoài có tiếng động lạ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Có nghe thấy hay không",
-                  "tr": "Ông tôi bị nặng tai, không nghe thấy tiếng tivi."
-                }
-              ],
-              "explain": "音がする đứng về phía âm thanh, nói “có tiếng phát ra”; 聞こえる đứng về phía con người, nói “có nghe được hay không”, nên khi nói về thính lực, khoảng cách (耳が遠い、声が小さい) thì dùng 聞こえる. Ngoài ra, với việc nhìn thì không có cách nói 「〜がする」, phải nói 「〜が見える」."
-            },
-            {
               "id": "to-omou",
-              "diff": "気がする chỉ dựa vào cảm giác, không nói ra được căn cứ; と思う là phán đoán của bản thân, có thể nói ra lý do.",
+              "diff": "気がする chỉ là cảm giác, không nói ra được căn cứ; と思う là nhận định của bản thân, có thể nêu lý do.",
               "this": [
                 {
-                  "tag": "Dựa vào cảm giác",
-                  "tr": "Không hiểu sao tôi cứ thấy ngày mai sẽ mưa."
+                  "tag": "Theo cảm giác",
+                  "tr": "Không hiểu sao tôi cứ có cảm giác mai trời sẽ mưa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Phán đoán có căn cứ",
-                  "tr": "Trời nhiều mây, nên tôi nghĩ ngày mai sẽ mưa."
+                  "tag": "Nhận định có căn cứ",
+                  "tr": "Mây nhiều thế này, tôi nghĩ mai trời sẽ mưa."
                 }
               ],
-              "explain": "Xem manh mối phía trước: 「なんとなく」 — không nói ra được lý do, chỉ là một cảm giác → 気がする; 「雲が多いから」 — có lý do làm chỗ dựa → と思う."
+              "explain": "Hãy xem manh mối phía trước: 「なんとなく」 — không nói được lý do, chỉ là cảm giác → 気がする; 「雲が多いから」 — có lý do chống đỡ → と思う."
             }
           ]
         }

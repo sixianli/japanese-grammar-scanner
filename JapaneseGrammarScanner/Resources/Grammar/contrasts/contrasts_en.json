@@ -6570,55 +6570,49 @@
                   "tr": "I was made to eat vegetables by my mother."
                 }
               ],
-              "explain": "Both describe the same event — look at the subject: 「母は〜させた」 takes the side of the person giving the order; 「私は母に〜させられた」 takes the side of the person forced, adding 「られ」 and a grumble of “I didn't really want to”. Godan verbs use せる (行かせる), ichidan verbs use させる; the usage is the same."
+              "explain": "Both describe the same event — look at the subject: 「母は私に〜させた」 takes the side of the person giving the order; 「私は母に〜させられた」 takes the side of the person forced, adding 「られ」 and a grumble of “I didn't really want to”. Godan verbs use せる (行かせる), ichidan verbs use させる; the usage is the same."
             },
             {
               "id": "sasete-kudasai",
-              "diff": "The causative form on its own is “make someone else do it”; followed by てください／てもらう／ていただく it becomes “please let me do it”.",
+              "title": "〜させてください (please let me do)",
+              "diff": "The causative on its own means “make someone else do it”; change the person made to act to 「私に」 and add 「ください」, and you are asking the other person to let you do it.",
               "this": [
                 {
-                  "tag": "Make someone do",
+                  "tag": "Make someone else do",
                   "tr": "The department manager had his subordinate prepare the documents."
                 }
               ],
               "that": [
                 {
-                  "tag": "せてください · please let me",
-                  "tr": "Please let me prepare those documents."
-                },
-                {
-                  "tag": "せてもらう · was allowed to",
-                  "tr": "I asked, and was allowed to go home early."
-                },
-                {
-                  "tag": "せていただく · humbly do",
-                  "tr": "Today I will be serving as your host."
+                  "tag": "Please let me do",
+                  "tr": "Manager, please let me prepare those documents."
                 }
               ],
-              "explain": "Check whether a giving/receiving verb follows: the causative form alone → a superior “making someone else do it”; followed by てください／てもらう／ていただく → the person doing it becomes “me”, asking for or thanking the other person for permission to do it."
+              "explain": "The basic meaning of the causative is “make (someone else) do”: 「部下に作らせた」 means the manager had a subordinate do it. Replace the person made to act with yourself, 「私に」, and add the request 「ください」, and it becomes “please let me do it” — asking the other person for permission to do it yourself. Look at who comes before 「に」 and whether 「ください」 follows: 「部下に〜せた」 → making someone else do it; 「私に〜せてください」 → asking to be allowed to do it yourself."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both mean “have someone else do it”",
+          "note": "Both mean “tell someone else to do it”",
           "items": [
             {
-              "id": "te-morau",
-              "diff": "The causative is a superior “telling someone to do it”; てもらう is asking someone for help, with gratitude.",
+              "id": "you-ni-iu",
+              "title": "〜ように言う (tell someone to do)",
+              "diff": "The causative means you actually had the person do it; ように言う only reports the instruction “told him to do it” — whether it got done is unclear.",
               "this": [
                 {
-                  "tag": "To a junior · tell to do",
-                  "tr": "I had my little brother carry the luggage."
+                  "tag": "Had him do it · done",
+                  "tr": "My mother had my little brother tidy his room."
                 }
               ],
               "that": [
                 {
-                  "tag": "Asking for help · grateful",
-                  "tr": "My senpai carried the luggage for me."
+                  "tag": "Only told him · maybe not done",
+                  "tr": "My mother told my little brother to tidy his room, but he still hasn't."
                 }
               ],
-              "explain": "Look at who it is: people you can “direct”, like a younger brother, a child or a subordinate → causative; a senpai, friend or elder → てもらう. Using the causative for an elder (先輩に運ばせた) sounds very rude."
+              "explain": "Ask whether the result matters: 「弟に片付けさせた」 means she had him do it and it got done; 「弟に片付けるように言った」 only states the instruction “told him to do it”, so whether he did is open — that is why 「まだ片付けていない」 can follow it, while it cannot follow させた. ように言う reports an instruction and also sounds more indirect than the causative."
             }
           ]
         }
@@ -6629,7 +6623,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "させられる ＝ causative 「させる」 ＋ passive 「られる」 — split it and you get these two",
+          "note": "Both come from the causative 「させる」 — basic meaning “make / let (someone else) do”",
           "items": [
             {
               "id": "causative",
@@ -6646,24 +6640,31 @@
                   "tr": "My mother made me eat vegetables."
                 }
               ],
-              "explain": "Look at the subject: 「私は母に」 takes the side of the person forced → させられた, with a grumble of “I didn't really want to”; 「母は私に」 takes the side of the person giving the order → させた. Remove 「られ」 and you're back to the ordinary causative (for godan verbs it's せる, as in 行かせる)."
-            },
+              "explain": "The basic meaning of the causative 「させる」 is “make (someone else) do”. From the side of the person giving the order, 「母は私に」 → させた: my mother made me eat. Turn that sentence into the passive and make the person being ordered the subject, 「私は母に」 → させられた: “was made to do it” — that is, forced — which is why it carries the grumble “I didn't really want to”. Look at the subject, then check for 「られ」: present → forced to do it; absent → making someone else do it."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Both mean “be forced to do”",
+          "items": [
             {
-              "id": "passive",
-              "diff": "させられる is me being forced to do something; られる is someone else doing something that affects me.",
+              "id": "wo-yogi-naku-sareru",
+              "title": "〜を余儀なくされる (be forced to…)",
+              "diff": "させられる is usually being pushed by a person, conversational, with resentment; を余儀なくされる is being forced by circumstances to have no choice, formal and objective.",
               "this": [
                 {
-                  "tag": "I eat · forced",
-                  "tr": "I was made to eat vegetables I hate by my mother."
+                  "tag": "Pushed by a person · resentful",
+                  "tr": "I was made to change the plan by the department manager."
                 }
               ],
               "that": [
                 {
-                  "tag": "Mom eats · I suffer",
-                  "tr": "My mother ate my cake (on me)."
+                  "tag": "Forced by circumstances · formal",
+                  "tr": "Due to heavy rain, the plan was forced to change."
                 }
               ],
-              "explain": "Look at who's actually eating: 「嫌いな野菜」 is me being forced to eat → させられた; 「私のケーキ」 was eaten by my mother, and I'm just the one who suffers → られた (for godan verbs it's れる, as in 読まれる). させられる is simply られる with the causative 「させ」 added in front."
+              "explain": "Look at what is forcing you: a specific person, like 「部長に」 → させられた, conversational, with the resentment of “I didn't want to”; circumstances you cannot resist, like 「大雨で」 — natural disasters, accidents, economic conditions → を余儀なくされた, formal and objective, common in news and reports."
             }
           ]
         }
@@ -6678,57 +6679,56 @@
           "items": [
             {
               "id": "zenzen-nai",
-              "diff": "ちっとも only goes with negatives and often carries dissatisfaction; 全然 can also go with affirmatives in casual speech.",
+              "title": "ぜんぜん〜ない (not at all)",
+              "diff": "Same meaning; ちっとも carries stronger feeling and is often used to complain; 全然 is the most common everyday way to say it, with a flatter tone.",
               "this": [
                 {
-                  "tag": "Not at all · dissatisfied",
-                  "tr": "No matter how many times I tell him, my son doesn't study at all."
+                  "tag": "Not at all · complaining",
+                  "tr": "No matter how many times I tell him, my son doesn't study one bit."
                 }
               ],
               "that": [
                 {
-                  "tag": "Spoken · with affirmative",
-                  "tr": "Don't worry. I'm totally fine."
+                  "tag": "Not at all · neutral tone",
+                  "tr": "No matter how many times I tell him, my son doesn't study at all."
                 }
               ],
-              "wrong": {
-                "why": "ちっとも must always be followed by a negative"
-              },
-              "explain": "ちっとも can only be used with negatives and is often used to complain (ちっとも勉強しない, ちっとも来ない); 全然 can also take affirmatives in casual speech (全然大丈夫), but it's best avoided in formal settings."
+              "explain": "Both sentences are natural and equally strong negations. The difference is nuance: ちっとも carries the speaker's frustration or impatience, like grumbling “why won't he ever…”; 全然 is the most common everyday expression and can be used to complain or just to state flatly “not at all”. To stress your annoyance → ちっとも; just describing the situation → 全然."
             },
             {
               "id": "sukoshimo-nai",
-              "diff": "Same meaning; ちっとも is only used in speech and often sounds like a complaint; 少しも is neutral and can be used in writing.",
+              "diff": "The negation is equally strong; ちっとも is conversational and often complaining; 少しも is neutral and can be used in writing too.",
               "this": [
                 {
-                  "tag": "Spoken · complaining",
-                  "tr": "I've been waiting, but the bus just isn't coming at all."
+                  "tag": "Conversational · complaining",
+                  "tr": "I took the medicine, but my fever isn't going down one bit!"
                 }
               ],
               "that": [
                 {
                   "tag": "Neutral · fine in writing",
-                  "tr": "I met him for the first time in ten years, and he hadn't changed a bit."
+                  "tr": "I took the medicine, but the fever did not go down in the least."
                 }
               ],
-              "explain": "「ちっと」 is an old form of 「ちょっと」, so ちっとも and 少しも both mean “not even a little bit” and have the same structure. The difference is the setting: complaining, chatting → ちっとも; writing, more formal narration → 少しも."
+              "explain": "Both mean “not even a little”, with the same strength. Choose by situation: talking to someone in a complaining tone → ちっとも; neutral narration such as a diary or report → 少しも. ちっとも is generally not used in writing."
             },
             {
               "id": "mattaku-nai",
-              "diff": "ちっとも carries personal feeling and is only used in speech; まったく sounds objective and can be used in formal settings.",
+              "title": "まったく〜ない (not at all…)",
+              "diff": "ちっとも carries personal feeling and is only conversational; まったく sounds objective and works in formal situations too.",
               "this": [
                 {
-                  "tag": "Spoken · emotional",
-                  "tr": "His stories aren't interesting at all."
+                  "tag": "Conversational · grumbling",
+                  "tr": "This machine won't work one bit!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Objective · formal",
-                  "tr": "The test results show no problems whatsoever."
+                  "tag": "Formal · reporting to a superior",
+                  "tr": "Manager, this machine does not work at all."
                 }
               ],
-              "explain": "Look at who's speaking and where: a doctor, company or the news saying “none at all” → まったく (全く); grumbling among friends → ちっとも. Using ちっとも with a superior or a customer sounds too casual."
+              "explain": "Look at who you are talking to and how the sentence ends: grumbling among friends, ending in a plain form like 「〜ないよ」 → ちっとも is natural; reporting to a superior like 「部長」 or a customer, ending in 「〜ません」, or writing a report → use まったく; ちっとも is too casual. まったく works in both speech and writing."
             }
           ]
         }
@@ -6739,14 +6739,14 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「だけ（丈）」 — meaning “a limit, only this much”",
+          "note": "Both come from 「だけ（丈）」 — originally “length, height”, extended to “a limit, up to this point”",
           "items": [
             {
               "id": "dake-only",
-              "diff": "だけで says “just this alone is enough to…”; だけ simply limits the scope.",
+              "diff": "だけ simply limits the scope, “only…”; add 「で」 and follow it with a result, and it means “just… alone is enough to…”.",
               "this": [
                 {
-                  "tag": "Just this alone…",
+                  "tag": "Just… alone is enough",
                   "tr": "Just looking at it is fun."
                 }
               ],
@@ -6756,11 +6756,17 @@
                   "tr": "I'm not buying. I'm just looking."
                 }
               ],
-              "explain": "Look at what follows: 「だけで」 followed by a result (楽しい, 疲れる, 分かる) → this alone is enough to bring about that result; the sentence ends with 「だけです」, or explains “didn't do anything else” → just."
-            },
+              "explain": "「だけ」 comes from 「丈（たけ）」, originally “length, height”, extended to “up to this limit”, so だけ means “only this, nothing more”. On its own, だけ stops at limiting: 「見るだけです」 means just looking and doing nothing else (買いません). Add 「で」, which marks means or condition, and it becomes “with only this”, followed by a result: 「見るだけで楽しい」 — just looking is fun. Look at what follows: a result (楽しい) → だけで; explaining that you did nothing else (買いません) → だけ."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "だけで ↔ だけでなく — the only difference is 「なく」",
+          "items": [
             {
               "id": "dake-de-naku",
-              "diff": "だけで is “just this alone…”; だけでなく is “not only… but also…”.",
+              "diff": "だけで is “just… alone is enough to…”; だけでなく is “not only… but also…”.",
               "this": [
                 {
                   "tag": "This alone → result",
@@ -6773,7 +6779,7 @@
                   "tr": "I ate not only bread but salad too."
                 }
               ],
-              "explain": "The only difference is 「なく」: だけで is followed by the result brought about by this one thing (お腹がいっぱい); だけでなく adds another item after it, often with 「〜も」. When you read 「だけで」, check carefully whether 「なく」 follows."
+              "explain": "The only difference is 「なく」: だけで is followed by the result that this one thing alone brings about (お腹がいっぱいになった); だけでなく means “not just this one thing” and adds another item after it, often with 「〜も」 (サラダも). When you read 「だけで」, check carefully whether 「なく」 follows: one means “just… alone is enough to…”, the other “not only… but also…”."
             }
           ]
         },
@@ -6807,24 +6813,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "All express the speaker's guess or judgment",
+          "note": "Both express a guess, “probably…”",
           "items": [
             {
               "id": "to-omou",
-              "diff": "と思う can state your own opinion; だろうと思う is only for guessing about things you can't be sure of.",
+              "title": "〜と思う (guess)",
+              "diff": "Both are guesses; と思う sounds more straightforward; だろうと思う adds the hedge “probably”, so it is softer.",
               "this": [
                 {
-                  "tag": "Guess · uncertain",
-                  "tr": "I think it'll probably rain tomorrow."
+                  "tag": "Leaves room · softer",
+                  "tr": "I think he has probably got home by now."
                 }
               ],
               "that": [
                 {
-                  "tag": "Opinion · claim",
-                  "tr": "I think this plan is good."
+                  "tag": "More straightforward",
+                  "tr": "I think he has got home by now."
                 }
               ],
-              "explain": "Look at what's being said: your own opinion or position (この案がいい) → と思う; things you can't be sure of, like the weather or whether someone will come → だろうと思う, often together with 「たぶん」「きっと」."
+              "explain": "Both sentences guess about something uncertain and are interchangeable. と思う states the guess directly and sounds more straightforward; inserting 「だろう」 to make だろうと思う adds a layer of “probably” — you don't commit fully, so it sounds softer. To say it plainly → と思う; to leave yourself some room → だろうと思う."
             },
             {
               "id": "deshou-guess",
@@ -6845,23 +6852,6 @@
                 "why": "でしょう can't be followed by 「と思う」"
               },
               "explain": "でしょう is the polite form of 「だろう」 and states a guess directly, like a weather forecast; when you add 「と思います」, the part before it must be the plain form 「だろう」 — you can't say ✗でしょうと思います."
-            },
-            {
-              "id": "kamoshirenai",
-              "diff": "だろうと思う means “probably”, with fairly high confidence; かもしれない means “maybe”, only a possibility.",
-              "this": [
-                {
-                  "tag": "Probably · confident",
-                  "tr": "With rain this heavy, I think the game will probably be canceled."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Maybe · just possible",
-                  "tr": "With rain this heavy, the game might be canceled."
-                }
-              ],
-              "explain": "Look at the adverb before it: 「たぶん」「きっと」 → the speaker thinks it's likely → だろうと思う; 「もしかしたら」「ひょっとすると」 → it's merely possible → かもしれない."
             }
           ]
         }
@@ -6876,11 +6866,11 @@
           "items": [
             {
               "id": "hajimeru-start",
-              "diff": "出す is starting suddenly, involuntarily; 始める is an ordinary start and can also be used for things you intend to do.",
+              "diff": "出す is starting suddenly, beyond control; 始める is an ordinary start and can also be used for things you intend to do.",
               "this": [
                 {
-                  "tag": "Sudden · uncontrollable",
-                  "tr": "The baby suddenly burst out crying."
+                  "tag": "Suddenly · can't help it",
+                  "tr": "Suddenly, the baby burst out crying."
                 }
               ],
               "that": [
@@ -6890,9 +6880,9 @@
                 }
               ],
               "wrong": {
-                "why": "出す means a sudden start and can't be used in an invitation like 「〜ましょう」"
+                "why": "出す means starting suddenly, so it cannot be used in an invitation like 「〜ましょう」"
               },
-              "explain": "Check for 「急に」「突然」, or whether it's something you plan to do: something that happens suddenly and can't be helped (泣き出す、降り出す、笑い出す) → 出す; something you planned, or inviting others to do together (〜ましょう、〜たい、〜つもり) → only 始める."
+              "explain": "Check for 「急に」 or 「突然」, or whether it is something you intend to do: it happens suddenly and can't be controlled (泣き出す, 降り出す, 笑い出す) → 出す; something you planned or are inviting others to do together (みんな揃ったので〜ましょう, 〜たい, 〜つもり) → only 始める."
             }
           ]
         }
@@ -6908,62 +6898,75 @@
             {
               "id": "gozaimasu-aru",
               "thisTitle": "〜でございます",
-              "diff": "でございます equals 「です」 (“is”); に + ございます equals 「にあります」 (“is located at”).",
+              "diff": "でございます equals 「です」 (is); に + ございます equals 「にあります」 (is located).",
               "this": [
                 {
-                  "tag": "＝です · is",
+                  "tag": "= です · is",
                   "tr": "This is the reception desk."
                 }
               ],
               "that": [
                 {
-                  "tag": "＝あります · is at",
+                  "tag": "= あります · is located",
                   "tr": "The reception desk is on the first floor."
                 }
               ],
-              "explain": "Look at what comes before ございます: 「で」 → でございます＝です, meaning “is…”; 「に」 or 「が」 → ございます＝あります, meaning “is located / there is”. Both are formal expressions used toward customers."
+              "explain": "「ござる」 comes from 「御座ある」, originally meaning a noble person “is (somewhere)”; it later became the formal way to say 「ある」, so ございます alone = あります, meaning “is located, there is”: 「一階にございます」. On the other hand, just as 「である」 is 「で＋ある」 meaning “is”, 「で＋ござる」 also means “is”, so でございます = です. Look at what comes before ございます: 「で」 → is; 「に」 or 「が」 → is located, there is."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Polite ways of saying the same thing, at different levels of formality",
+          "sense": 1,
+          "note": "Both express the judgment “is”",
           "items": [
             {
               "id": "da-desu",
+              "title": "〜です (noun judgment)",
               "thisTitle": "〜でございます",
-              "diff": "でございます is a more formal way of saying 「です」, mostly used by shop staff, hotels and announcements when addressing customers.",
+              "diff": "でございます is a more formal way of saying 「です」, used mostly by shop staff, hotels and announcements when addressing customers.",
               "this": [
                 {
                   "tag": "Very formal · to customers",
-                  "tr": "This is the meeting room."
+                  "tr": "Your room is on the fifth floor."
                 }
               ],
               "that": [
                 {
                   "tag": "Ordinary polite",
-                  "tr": "This is the meeting room."
+                  "tr": "The room is on the fifth floor."
                 }
               ],
-              "explain": "The meaning is exactly the same; it depends on the setting: shop staff, hotels and announcements addressing customers → でございます; with your boss or coworkers in daily life, です is enough — being too formal sounds distant. The plain version is 「だ」, with the same meaning."
-            },
+              "explain": "The meaning is exactly the same; it depends on the setting: speaking to customers at a hotel, in a shop or over an announcement → でございます; with your boss or colleagues in everyday situations, です is enough — being overly formal actually sounds distant."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “is (doing) right now”",
+          "items": [
             {
               "id": "te-iru",
+              "title": "〜ている (in progress)",
               "thisTitle": "〜ております",
-              "diff": "ております is a formal version of ています, used about yourself or your own side — never about customers or superiors.",
+              "diff": "ております is the humble form of ています, used only for your own side, never for customers or superiors.",
               "this": [
                 {
-                  "tag": "About myself · formal",
-                  "tr": "I study economics at university."
+                  "tag": "Your own side · formal",
+                  "tr": "The person in charge is checking it right now."
                 }
               ],
               "that": [
                 {
-                  "tag": "Ordinary polite · anyone",
-                  "tr": "Tanaka studies economics at university."
+                  "tag": "Ordinary polite",
+                  "tr": "The person in charge is checking it now."
                 }
               ],
-              "explain": "Look at the subject: talking about yourself (私、弊社) in a job interview or business email → ております; for other people ています is fine, and you must never use ております for actions of customers or superiors — use honorific language instead (お待ちです、〜ていらっしゃいます)."
+              "wrong": {
+                "why": "ております only describes your own side; to ask a customer, use honorific language: 「何をなさっていますか」"
+              },
+              "explain": "Both sentences mean the same: “is checking it right now”. ております makes the actions of your own side (yourself, people at your company) sound more formal, and is used when speaking to customers or in business emails; ています is ordinary politeness and works for anyone's actions. When the subject is a customer or a superior, never use ております — use honorific language (〜ていらっしゃいます)."
             }
           ]
         }
@@ -6978,25 +6981,25 @@
           "items": [
             {
               "id": "demo-but",
-              "diff": "でも〜でも appearing as a pair after nouns means “whether A or B”; でも at the start of a sentence means “but”.",
+              "diff": "でも〜でも appearing in pairs after nouns means “whether A or B”; でも at the start of a sentence means “but”.",
               "this": [
                 {
                   "tag": "Whether A or B",
-                  "tr": "Rain or snow, the game will go ahead."
+                  "tr": "Rain or snow, the match will go ahead."
                 }
               ],
               "that": [
                 {
                   "tag": "Sentence start · but",
-                  "tr": "It's raining. But the game will go ahead."
+                  "tr": "It's raining. But the match will go ahead."
                 }
               ],
-              "explain": "Both carry the idea “even so…”. Look at where でも sits: after nouns, appearing as a pair → whether A or B; at the start of a sentence, following on from the previous one → but."
+              "explain": "Both carry the sense “even so…”. Look at where でも is: after nouns (雨でも雪でも), appearing as a pair → whether A or B; at the start of a sentence, following on from the previous one (雨が降っている。でも、……) → but."
             },
             {
               "id": "question-word-temo",
-              "title": "〜でも（何でも・誰でも）",
-              "diff": "AでもBでも names specific options; 何でも sums up everything with a single question word.",
+              "title": "〜でも (何でも・誰でも)",
+              "diff": "AでもBでも lists specific options; 何でも uses one question word to cover everything.",
               "this": [
                 {
                   "tag": "Specific examples",
@@ -7009,7 +7012,7 @@
                   "tr": "Anything is fine — please take whatever you like."
                 }
               ],
-              "explain": "The two are often said together: 「肉でも魚でも、何でも食べます」. Two specific nouns side by side → AでもBでも; a question word like 何、誰、どこ before it → “all of them…”."
+              "explain": "The basic meaning of 「で＋も」 is “even if it is…”. After two specific nouns, “even if it's meat, even if it's fish” → both are fine, giving AでもBでも “whether A or B”; after a question word, “even if it's what” → whatever it is, it's fine, giving 何でも “anything”. Look at what comes before でも: two specific nouns side by side (肉, 魚) → AでもBでも; a question word like 何, 誰, どこ → “all of them…”."
             }
           ]
         },
@@ -7043,15 +7046,15 @@
       "groups": [
         {
           "kind": "look",
-          "note": "が見られる ↔ とみられる — only the particle in front differs",
+          "note": "が見られる ↔ と見られる — only the particle before it differs: 「が」 or 「と」",
           "items": [
             {
               "id": "to-mirareru",
-              "diff": "が見られる means “a phenomenon is observed”; とみられる means “it is presumed / believed”.",
+              "diff": "が見られる means “a phenomenon can be observed”; とみられる means “it is presumed / believed that”.",
               "this": [
                 {
                   "tag": "Phenomenon observed",
-                  "tr": "In this town, a population increase can be seen."
+                  "tr": "In this town, a growth in population can be seen."
                 }
               ],
               "that": [
@@ -7060,7 +7063,7 @@
                   "tr": "The cause of the accident is believed to be excessive speed."
                 }
               ],
-              "explain": "Both are common in the news. Look at the particle before 見られる／みられる: 「が」 is preceded by the phenomenon seen (増加、変化) → observed; 「と」 is preceded by a judgment (原因は〜) → presumed, believed — about something not yet fully confirmed."
+              "explain": "Both are common in the news, and 「とみられる」 is also often written 「と見られる」. Look at the particle before 見られる: 「が」 follows a phenomenon that is seen (増加, 変化) → observed; 「と」 follows a judgment (事故の原因は〜) → presumed, believed — talking about something not yet fully confirmed."
             }
           ]
         },
@@ -7071,20 +7074,20 @@
             {
               "id": "mieru-kikoeru",
               "title": "〜が見える",
-              "diff": "が見られる is mostly written and talks about phenomena emerging from surveys or observation; が見える is scenery right in front of you naturally coming into view.",
+              "diff": "が見られる introduces something you have a chance to see at a certain place or time; が見える is something naturally coming into view right in front of you.",
               "this": [
                 {
-                  "tag": "Written · phenomenon",
-                  "tr": "The survey showed a major change."
+                  "tag": "Introducing · chance to see",
+                  "tr": "On this beach, you can see sea turtles once summer comes."
                 }
               ],
               "that": [
                 {
-                  "tag": "In front of you · scenery",
-                  "tr": "You can see Mt. Fuji from the window."
+                  "tag": "Right now · comes into view",
+                  "tr": "Look, I can see a sea turtle over there!"
                 }
               ],
-              "explain": "Look at what is “seen”: abstract phenomena like changes, trends or improvements, in reports and news → が見られる; concrete scenery like mountains, the sea or lights → が見える."
+              "explain": "Both mean “can be seen”. Ask what kind of seeing it is: introducing what you can see if you go to a certain place or season (夏になると, この海岸では) → が見られる, like a travel guide; right in front of you now, naturally coming into view (あそこに) → が見える."
             }
           ]
         }
@@ -7094,66 +7097,51 @@
       "id": "ga-suru-sense",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both are 「〜がする」 — a sensation naturally “arises”",
+          "kind": "meaning",
+          "sense": 1,
+          "note": "Both mean “hear a sound”",
           "items": [
             {
-              "id": "you-na-ki-ga-suru",
-              "diff": "音・匂い + がする is something sensed physically; ような気がする is a vague feeling in your mind.",
+              "id": "mieru-kikoeru",
+              "title": "〜が聞こえる",
+              "diff": "音がする stands on the side of the sound: “a sound is coming out”; 音が聞こえる stands on the side of the person: “the ears can hear it”.",
               "this": [
                 {
-                  "tag": "Senses · heard",
-                  "tr": "There's a strange sound coming from the next room."
+                  "tag": "A sound comes out",
+                  "tr": "A strange noise is coming from the TV."
                 }
               ],
               "that": [
                 {
-                  "tag": "Mind · vague feeling",
-                  "tr": "I feel like I've met that person somewhere."
+                  "tag": "The listener · can hear or not",
+                  "tr": "My grandfather is hard of hearing and can't hear the TV."
                 }
               ],
-              "explain": "Look at what comes before がする: 音、匂い、味、寒気 → sensed by the body; 「気」 → a feeling in your mind, and adding 「〜ような」 before it gives “somehow I feel that…”, about something you're not sure of."
+              "explain": "Both can describe hearing a sound: 「テレビから変な音がする」 can also be said as 「変な音が聞こえる」 with no change in meaning. The difference is whose side you take: 音がする stands on the side of the sound, “a sound is coming out”; 聞こえる stands on the side of the listener, “whether the ears can hear it”. So when talking about the listener's conditions such as hearing or distance (祖父は耳が遠くて), only 聞こえる works; saying 「音がしない」 would mean the TV makes no sound at all."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "All mean “to sense, to feel”",
+          "sense": 3,
+          "note": "Both mean “feel / think”",
           "items": [
             {
-              "id": "mieru-kikoeru",
-              "title": "〜が聞こえる",
-              "diff": "音がする says “there is a sound”; 音が聞こえる says “the ears can hear it”.",
-              "this": [
-                {
-                  "tag": "There's a sound",
-                  "tr": "There's a strange sound outside."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Can or can't hear",
-                  "tr": "My grandfather is hard of hearing and can't hear the TV."
-                }
-              ],
-              "explain": "音がする takes the sound's side: “a sound is coming out”; 聞こえる takes the person's side: “whether they can hear it”, so for hearing ability or distance (耳が遠い、声が小さい) use 聞こえる. Also, there's no 「〜がする」 for seeing things — say 「〜が見える」."
-            },
-            {
               "id": "to-omou",
-              "diff": "気がする is just a feeling with no reason you can name; と思う is your own judgment, and you can give a reason.",
+              "diff": "気がする is just a feeling with no reason you can name; と思う is your own judgment and you can give a reason.",
               "this": [
                 {
                   "tag": "Just a feeling",
-                  "tr": "Somehow I feel it's going to rain tomorrow."
+                  "tr": "Somehow I have a feeling it'll rain tomorrow."
                 }
               ],
               "that": [
                 {
-                  "tag": "Judgment with grounds",
-                  "tr": "There are lots of clouds, so I think it'll rain tomorrow."
+                  "tag": "Judgment with a reason",
+                  "tr": "There are a lot of clouds, so I think it'll rain tomorrow."
                 }
               ],
-              "explain": "Look at the clue before it: 「なんとなく」 — no reason, just a feeling → 気がする; 「雲が多いから」 — backed up by a reason → と思う."
+              "explain": "Look at the clue before it: 「なんとなく」 — no reason you can name, just a feeling → 気がする; 「雲が多いから」 — backed by a reason → と思う."
             }
           ]
         }
