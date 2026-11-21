@@ -44,6 +44,26 @@ Build 17 包含的内容（详见 PR #6 描述）：Build 16 的全部反馈修�
 
 改的时候要补的测试：长/短标题在导航栏里的字号下限、行数、等级标签位置固定；导航栏底色在标题进入后不透明（单元测试测 `FlyingTitleLayout`；e2e 至少滚动后检查标题元素可见、不被遮挡）。如果改了用户看得到的操作或界面，按 CLAUDE.md 同步更新使用指南。
 
+### 反馈 2：CloudKit 后台下载反馈截图报错（2026-11-21）
+
+现象：Build 17（1.3 (17)，iPhone15,2，iOS 27.2.1）在 App 里提交「体验与建议」反馈，CloudKit Console → Production → Public Database → Feedback 能看到记录，`screenshots`（Asset 列表）显示 `Binary file (922.05KB)`，但点下载按钮打开的 `cvws.icloud-content.com/...` 页面只返回 `Internal Server Error`。
+
+已排查：
+- 上传这一侧看不出问题。`JapaneseGrammarScanner/Services/FeedbackSender.swift` 先把 JPEG 写到临时目录，再 `await container.publicCloudDatabase.save(record)`，临时文件在 `defer` 里删除，也就是保存完成之后才删。CloudKit 先传完附件才保存记录，记录里能看到 922KB 的大小，说明附件已经存进服务器。
+- 时间上吻合的改动：提交 `697c727` 把 `cloudkit/schema.ckdb` 里 Feedback、UsageDay 的 `GRANT READ TO "_world"` 去掉了（只给提交者本人读写）。之前的 CloudKit 反馈验证都发生在这次收紧之前。
+- Apple 开发者论坛没有找到「控制台下载附件报 Internal Server Error」的确定答案，所以还不能断定是控制台自身的故障。
+
+推测（未核实）：控制台以开发者身份能列出记录字段，但下载附件时文件服务器按「当前查看的 iCloud 账号对这条记录有没有读取权限」放行；开发者账号不是这条记录的创建者，又没有 `_world` 读取权限，于是下载失败（服务器给的是 500 而不是 403）。如果成立，影响是：开发者看不到任何用户反馈里的截图，只能看到文字。
+
+验证办法（用户在控制台操作，约 2 分钟）：
+1. 在 Records 页左下角点「Act As iCloud Account...」，登录提交这条反馈时 iPhone 上用的 Apple ID（也就是记录的创建者），再查询 Feedback、下载截图。能下载 → 推测成立；仍然报错 → 不是权限问题，改为提交 Apple Feedback（附上记录名和时间）。
+2. 也可以在 Development 环境用开发版提交一条带截图的反馈，对照下载结果。
+
+修法候选（等反馈批次结束、用户确认后再做，属于「隐私与合规」大改动，需先出方案）：
+- 推荐：在 schema 里新建一个自定义角色（例如「反馈查看者」），只给它 Feedback 的读取权限，把开发者自己的 iCloud 用户记录加入这个角色；之后在控制台用「Act As iCloud Account」以开发者账号查看所有反馈截图。不对 `_world` 开放，符合现在的隐私设定。需要核实 `.ckdb` 语法里自定义角色的写法和 `cktool` 是否支持导入。
+- 不推荐：恢复 `GRANT READ TO "_world"`（任何装了 App 的人都能读到别人的反馈和截图，`tools/validate_compliance.py` 会拦）；启用服务器密钥转发（用户已拒绝）。
+- 门槛：`tools/validate_compliance.py` 加一条规则，要求 Feedback 有且只有这个自定义角色和 `_creator` 能读。控制台下载本身无法在 CI 里自动测，手动验收写进 `docs/feedback/SETUP.md`。
+
 ---
 
 ## 3. 待用户确认 / 后续
