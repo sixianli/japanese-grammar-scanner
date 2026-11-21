@@ -687,6 +687,8 @@ private struct DetailTitleBar: View {
                         }
                         .offset(y: offset)
                         .opacity(offset >= contentHeight ? 0 : 1)
+                        // 完全藏起来时也不让读屏读到（页面上已有大标题，否则会读两遍）
+                        .accessibilityHidden(offset >= contentHeight)
                     }
                     .frame(maxWidth: .infinity)
                     .frame(height: contentHeight)
