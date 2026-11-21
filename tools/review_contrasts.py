@@ -17,7 +17,9 @@ CONTRASTS = os.path.join(GRAMMAR_DIR, "contrasts", "contrasts.json")
 STANDARD = os.path.join(ROOT, "docs", "content", "contrasts-standard.md")
 RECORDS = os.path.join(ROOT, "tools", "contrast_reviews.json")
 CALIBRATION = os.path.join(ROOT, "tools", "contrast_review_calibration.json")
-API_URL = os.environ.get("OPENCODE_URL", "https://opencode.ai/zen/v1/chat/completions")
+API_URL = os.environ.get("OPENCODE_URL", "https://opencode.ai/zen/go/v1/chat/completions")
+SESSION_ID = "contrast-review-" + hashlib.sha256(str(time.time()).encode()).hexdigest()[:16]
+USER_AGENT = "jgs-contrast-review/1.0"
 MODEL = "deepseek-v4.1-flash"
 PRICE_PER_MTOK = {"input": 0.3, "cached": 0.006, "output": 1.2}
 KIND_HEADINGS = {"root": "## 同一个词变来的", "look": "## 长得像的", "meaning": "## 意思差不多的"}
@@ -29,6 +31,13 @@ SYSTEM = """你是日语语法学习 App 的内容审核员。App 的「相近�
 - look：形状是否只差很小的地方；意思是否明显不同；学习者是否真会看错。
 - meaning：组说明是不是一个具体的共同意思；这个意思是否是双方各自详情页里的正式义项；替换测试能否成立；差别是不是同一个意思里的差别，而不是两个不同的意思；是否属于「不收」里列的情况（只是中文译法一样、同类意思程度不同、意思相反）。写了 sense 时，只看本页那个义项。
 - 所有组：组里这一条是否兑现组说明的卖点；对方详情页是否真的讲这个用法；两句例句是不是最小对比，讲解是否说清「看哪里就能分辨」；日语是否自然，注音是否正确，中文翻译是否准确。
+
+下面这些不是 fail 的理由，不要写进 problems：
+- 组说明的格式、虚线线索词有没有在讲解里点名、sense 有没有写、例句是否重复：这些由机器检查。只有一组「意思差不多的」时不写 sense 是对的。
+- 多义语法点只拿其中一个义项来比，这很正常，不算混义。只有组说明、一句话区别或讲解本身把两个不同的意思拼在一起，才算混义。
+- 两句例句的句子框架不同：标准说的是「尽量」最小对比。只要两句各自能看出差别，讲解给出了能照着做的分辨方法，就合格。
+- 组说明说得出一个共同意思（如「都表示原因」「都表示「必须」」）就够具体；不合格的是「和时间有关」「和否定呼应」这类大类。
+- 替换测试：同一类句子两边都能自然地说，换了以后基本意思不变、只是语感或评价不同，就成立；不要求完全同义，也不要求每个例句都能互换。
 
 只输出一个 JSON 对象，不要输出别的文字：
 {"verdict": "pass" 或 "fail", "problems": [{"rule": "违反的标准条目，简短", "detail": "具体哪里不对"}], "fix": "不通过时，建议怎么改（改写、换对比对象、移出这一组、移到待用清单），通过时为空字符串"}
@@ -169,6 +178,8 @@ def call_model(payload, timeout=180, retries=4):
     req = urllib.request.Request(API_URL, data=body, headers={
         "Content-Type": "application/json",
         "Authorization": "Bearer " + os.environ.get("OPENCODE_API_KEY", "proxy-injected"),
+        "User-Agent": USER_AGENT,
+        "x-opencode-session": SESSION_ID,
     })
     for attempt in range(retries):
         try:
@@ -188,11 +199,17 @@ def call_model(payload, timeout=180, retries=4):
 
 
 def usage_cost(usage):
+    if "list_cost" in (usage.get("opencode") or {}):
+        return usage["opencode"]["list_cost"]
     prompt = usage.get("prompt_tokens", 0)
     cached = (usage.get("prompt_tokens_details") or {}).get("cached_tokens", 0) or usage.get("prompt_cache_hit_tokens", 0)
     out = usage.get("completion_tokens", 0)
     return ((prompt - cached) * PRICE_PER_MTOK["input"] + cached * PRICE_PER_MTOK["cached"]
             + out * PRICE_PER_MTOK["output"]) / 1e6
+
+
+def allowance_used(usage):
+    return (usage.get("opencode") or {}).get("allowance", 0.0)
 
 
 def run_many(jobs, workers):
@@ -233,20 +250,22 @@ def calibrate(workers, total_items):
         cases = json.load(fh)["cases"]
     jobs = [(c["key"], c["payload"]) for c in cases]
     results = run_many(jobs, workers)
-    right, cost = 0, 0.0
+    right, cost, allowance = 0, 0.0, 0.0
     for c in cases:
         if c["key"] not in results:
             print(f"✗ {c['key']}: 没有结果")
             continue
         verdict, usage = results[c["key"]]
         cost += usage_cost(usage)
+        allowance += allowance_used(usage)
         ok = verdict.get("verdict") == c["expected"]
         right += ok
         print(f"{'✓' if ok else '✗'} {c['key']}: 应为 {c['expected']}，模型 {verdict.get('verdict')}｜{reason_text(verdict)[:160]}")
     n = len(results)
-    print(f"\n准确率 {right}/{len(cases)}；本次花费约 ${cost:.4f}")
+    print(f"\n准确率 {right}/{len(cases)}；按量计价约 ${cost:.4f}，用掉 Go 额度 ${allowance:.4f}")
     if n:
-        print(f"按每条平均 ${cost / n:.5f} 估算，全量 {total_items} 条约 ${cost / n * total_items:.2f}")
+        print(f"按每条平均估算，全量 {total_items} 条：按量计价约 ${cost / n * total_items:.2f}，"
+              f"Go 额度约 ${allowance / n * total_items:.2f}")
     return right == len(cases)
 
 
@@ -282,14 +301,15 @@ def main():
             jobs = jobs[:args.limit]
         print(f"待审 {len(jobs)} 条", file=sys.stderr)
         payloads = dict(jobs)
-        cost = 0.0
+        cost, allowance = 0.0, 0.0
         for key, (verdict, usage) in run_many(jobs, args.workers).items():
             cost += usage_cost(usage)
+            allowance += allowance_used(usage)
             records[key] = {"hash": content_hash(payloads[key]), "verdict": verdict.get("verdict"),
                             "reason": reason_text(verdict), "fix": verdict.get("fix", "")}
         save_records(records)
         fails = sum(1 for r in records.values() if r["verdict"] != "pass")
-        print(f"花费约 ${cost:.3f}；记录 {len(records)} 条，其中不通过 {fails} 条")
+        print(f"按量计价约 ${cost:.3f}，用掉 Go 额度 ${allowance:.3f}；记录 {len(records)} 条，其中不通过 {fails} 条")
         return 0
     ap.print_help()
     return 2
