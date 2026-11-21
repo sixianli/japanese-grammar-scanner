@@ -34,6 +34,7 @@ PROTECT = re.compile(
     r"|(?:(?<![" + KANJI + r"])[" + KANJI + r"]{1,2})?[" + KANA + r"]+(?:[" + KANJI + r"]+[" + KANA + r"]+)*"
 )
 JA_WORDS_IN_TEXT = JA_WORDS
+KANJI_CHARS = "".join(chr(c) for c in range(0x3400, 0xA000)) + "々〆"
 
 
 def japanese_corpus():
@@ -68,7 +69,7 @@ def protected_spans(text):
         a, b = m.start(), m.end()
         run = m.group(0)
         if run[0] not in "「『〜～":
-            lead = len(run) - len(run.lstrip("".join(chr(c) for c in range(0x3400, 0xA000)) + "々〆"))
+            lead = len(run) - len(run.lstrip(KANJI_CHARS))
             if lead and run[:lead + 1] not in CORPUS:
                 a += lead
         spans.append((a, b))
