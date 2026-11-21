@@ -28,7 +28,8 @@ BASE = [{
 
 
 def passing_records(base):
-    return {key: {"hash": rc.content_hash(payload), "verdict": "pass", "reason": "ok"}
+    return {key: {"hash": rc.content_hash(payload), "verdict": "pass", "reason": "ok",
+                  "final": {"hash": rc.content_hash(payload), "verdict": "pass", "reason": "ok"}}
             for key, payload in rc.review_items(base, POINTS)}
 
 
@@ -68,15 +69,82 @@ class GateTests(unittest.TestCase):
 
         self.assertEqual(len(rc.gate_problems(BASE, points, records)), 1)
 
-    def test_failed_verdict_blocks_release(self):
+    def test_final_review_fail_blocks_release_even_if_first_pass_passed(self):
         records = passing_records(BASE)
         for r in records.values():
-            r["verdict"] = "fail"
+            r["final"]["verdict"] = "fail"
 
         problems = rc.gate_problems(BASE, POINTS, records)
 
         self.assertEqual(len(problems), 1)
         self.assertIn("不通过", problems[0])
+
+
+class FinalReviewTests(unittest.TestCase):
+    def test_first_pass_without_final_review_blocks_release(self):
+        records = passing_records(BASE)
+        for r in records.values():
+            del r["final"]
+
+        problems = rc.gate_problems(BASE, POINTS, records)
+
+        self.assertEqual(len(problems), 1)
+        self.assertIn("最终把关", problems[0])
+
+    def test_final_pass_overrides_a_first_pass_fail(self):
+        records = passing_records(BASE)
+        for r in records.values():
+            r["verdict"] = "fail"
+
+        self.assertEqual(rc.gate_problems(BASE, POINTS, records), [])
+
+    def test_final_review_of_older_content_is_not_accepted(self):
+        records = passing_records(BASE)
+        for r in records.values():
+            r["final"]["hash"] = "older-content"
+
+        self.assertEqual(len(rc.gate_problems(BASE, POINTS, records)), 1)
+
+
+
+class ApplyFinalTests(unittest.TestCase):
+    def test_final_verdict_is_recorded_against_the_reviewed_content(self):
+        records = passing_records(BASE)
+        for r in records.values():
+            del r["final"]
+
+        errors = rc.apply_final(BASE, POINTS, records, [
+            {"key": "node/meaning/kara-from", "verdict": "pass", "reason": "同一个「因为」"}])
+
+        self.assertEqual(errors, [])
+        self.assertEqual(rc.gate_problems(BASE, POINTS, records), [])
+
+    def test_final_verdict_for_content_changed_since_first_pass_is_refused(self):
+        records = passing_records(BASE)
+        edited = copy.deepcopy(BASE)
+        edited[0]["groups"][0]["items"][0]["diff"] = "改过的区别"
+
+        errors = rc.apply_final(edited, POINTS, records, [
+            {"key": "node/meaning/kara-from", "verdict": "pass", "reason": "ok"}])
+
+        self.assertEqual(len(errors), 1)
+        self.assertEqual(len(rc.gate_problems(edited, POINTS, records)), 1)
+
+    def test_final_verdict_for_unknown_item_is_refused(self):
+        records = passing_records(BASE)
+
+        errors = rc.apply_final(BASE, POINTS, records, [
+            {"key": "node/meaning/no-such-item", "verdict": "pass", "reason": "ok"}])
+
+        self.assertEqual(len(errors), 1)
+
+    def test_verdict_other_than_pass_or_fail_is_refused(self):
+        records = passing_records(BASE)
+
+        errors = rc.apply_final(BASE, POINTS, records, [
+            {"key": "node/meaning/kara-from", "verdict": "ok", "reason": "ok"}])
+
+        self.assertEqual(len(errors), 1)
 
 
 if __name__ == "__main__":

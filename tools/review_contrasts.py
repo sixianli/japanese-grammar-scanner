@@ -136,9 +136,29 @@ def gate_problems(base, points, records):
             problems.append(f"{key}: 没有模型审核记录")
         elif rec.get("hash") != content_hash(payload):
             problems.append(f"{key}: 内容或标准在审核后改过，需要重新审核")
-        elif rec.get("verdict") != "pass":
-            problems.append(f"{key}: 模型审核不通过：{rec.get('reason', '')}")
+        elif (rec.get("final") or {}).get("hash") != rec["hash"]:
+            problems.append(f"{key}: 还没有对当前内容做最终把关（初审结论：{rec.get('verdict')}）")
+        elif rec["final"].get("verdict") != "pass":
+            problems.append(f"{key}: 最终把关不通过：{rec['final'].get('reason', '')}")
     return problems
+
+
+def apply_final(base, points, records, entries):
+    current = {key: content_hash(payload) for key, payload in review_items(base, points)}
+    errors = []
+    for e in entries:
+        key, verdict = e.get("key"), e.get("verdict")
+        rec = records.get(key)
+        if key not in current:
+            errors.append(f"{key}: 现在的资料里没有这一条")
+        elif verdict not in ("pass", "fail"):
+            errors.append(f"{key}: 结论只能是 pass 或 fail：{verdict}")
+        elif rec is None or rec.get("hash") != current[key]:
+            errors.append(f"{key}: 初审之后内容改过，要先重新初审")
+        else:
+            rec["final"] = {"hash": rec["hash"], "verdict": verdict, "reason": e.get("reason", ""),
+                            "action": e.get("action", "")}
+    return errors
 
 
 def user_message(payload):
@@ -279,6 +299,9 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--only", default="", help="只审 key 以这些前缀开头的条目，逗号分隔")
     ap.add_argument("--workers", type=int, default=8)
+    ap.add_argument("--pending-final", action="store_true", help="列出初审过、还没最终把关的条目")
+    ap.add_argument("--verdict", default="", help="和 --pending-final 一起用：只列初审为 pass 或 fail 的")
+    ap.add_argument("--set-final", default="", help="把最终把关结论（JSON Lines 文件）写进审核记录")
     args = ap.parse_args()
 
     base, points = load_base(), load_points()
@@ -291,6 +314,30 @@ def main():
             return 1
         print("相近语法模型审核：全部通过 ✅")
         return 0
+    if args.pending_final:
+        records = load_records()
+        shown = 0
+        for key, payload in review_items(base, points):
+            rec = records.get(key)
+            if not rec or rec.get("hash") != content_hash(payload) or (rec.get("final") or {}).get("hash") == rec["hash"]:
+                continue
+            if args.verdict and rec.get("verdict") != args.verdict:
+                continue
+            print(f"### {key}\n{user_message(payload)}\n初审：{rec.get('verdict')}｜{rec.get('reason')}\n初审建议：{rec.get('fix', '')}\n")
+            shown += 1
+            if args.limit and shown >= args.limit:
+                break
+        return 0
+    if args.set_final:
+        records = load_records()
+        with open(args.set_final, encoding="utf-8") as fh:
+            entries = [json.loads(line) for line in fh if line.strip()]
+        errors = apply_final(base, points, records, entries)
+        save_records(records)
+        for e in errors:
+            print("  ! " + e)
+        print(f"写入最终结论 {len(entries) - len(errors)} 条，拒绝 {len(errors)} 条")
+        return 1 if errors else 0
     if args.calibrate:
         return 0 if calibrate(args.workers, len(review_items(base, points))) else 1
     if args.run:
