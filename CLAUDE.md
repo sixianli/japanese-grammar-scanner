@@ -17,6 +17,24 @@
 本地无法运行 Xcode 时，以 CI（`.github/workflows/ios.yml`：validate-data / build-and-test / e2e / screenshots）结果为准。
 **同一个提交的 e2e 没有全部跑完并通过，不能发版（打 Build）**；给用户发 Build 前要说明单元测试和 e2e 各自的结果。
 
+## 修测试、写界面断言、分支（必须遵守）
+
+1. **先只跑失败的用例，通过后再跑整套。** 整套 e2e 约 40–60 分钟，还要和其他分支抢最多 5 台 macOS 机器，不能拿它来试错：
+   - 修失败的 e2e（或修 e2e 发现的问题）时，提交信息带 `[skip ci]` 再推送，推送就不会触发整套；
+     GitHub 规定 push 和 pull_request 触发的工作流遇到这个标记就不运行（[文档](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/skipping-workflow-runs)）。
+   - 然后手动触发 `iOS Build & Test`（`ios.yml`），分支选当前分支，`e2e_only` 填失败的用例（`类名` 或 `类名/方法名`，逗号分隔）。
+     代理用 GitHub 工具 `actions_run_trigger`：`method: run_workflow`、`workflow_id: ios.yml`、`ref: <分支>`、`inputs: {"e2e_only": "..."}`。
+     这种运行只编译并跑选中的用例，跳过单元测试和截图，只占 1 台 macOS 机器。整套失败时，`e2e` 汇总任务的日志最后会打印要填的 `e2e_only` 值。
+   - 用例时好时坏时，同时填 `e2e_repeat`（例如 `5`），每个选中的用例连跑几遍，任何一遍失败都算失败。
+   - 用例名写错时，`e2e-plan` 任务在一分钟内报错，不会白跑一个「0 个用例、显示通过」的结果。
+   - 选中的用例都过了，再跑一次整套：手动触发时 `e2e_only` 留空，或正常推送一个不带 `[skip ci]` 的提交。上面「同一个提交整套通过才能发版」的规定不变，定向运行不算数。
+2. **界面断言以被测元素所在的容器为准，不以屏幕为准。** CI 用的模拟器尺寸会变（屏幕更宽、右侧多一列系统按钮），所以：
+   - 判断「居中」「在顶部」「被挡住」时，拿被测元素和它所在的容器比（给容器加 `accessibilityIdentifier`，例如讲解页标题栏 `detail.titleBar`），
+     不拿 `app.windows.firstMatch.frame`、导航栏或屏幕中线比，也不写死像素（例如 `maxY < 200`）。
+   - 不用 `app.coordinate(withNormalizedOffset:)` 去点「屏幕上大概是空白的地方」；要点就点一个有 id 的具体元素。
+3. **一个 Build 一个分支。** 下一个 Build 的改动从当前 Build 的分支另切新分支去做；当前 Build 发出去之前，不往它的分支上提交下一个 Build 的代码。
+   提交前用 `git diff --cached --stat` 核对，只包含这个 Build 的改动。
+
 ## 使用引导随功能同步更新（必须遵守）
 
 加新功能、改了用户看得到的操作方式或界面时，**使用引导要在同一个改动里一起更新**，不能只改代码：
