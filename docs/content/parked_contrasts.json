@@ -24605,6 +24605,342 @@
           "explain": "အကြောင်းရင်းက ဘာလဲ ကြည့်ပါ - အမှားလေး တစ်ခု၊ စကား တစ်ခွန်း (ちょっと油断した、一言多かった) → ばかりに၊ “ဒီလောက်လေးကြောင့်ပဲ” ကို အလေးပေးသည်။ စိတ်လှုပ်ရှား၊ စိုးရိမ်၊ ဝမ်းသာ ကဲ့သို့ ခံစားချက် “လွန်ကဲ” လျှင် (緊張のあまり、心配するあまり) → あまり။"
         }
       }
+    },
+    {
+      "point": "to-iu-ka-rather",
+      "kind": "meaning",
+      "reason": "意思差不多的第4条：というか 是改口（前后不同指），つまり 是换言（前后同指），差别只能写成「A 表示甲；B 表示乙」，替换测试不成立；look/root 也不符合。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "tsumari",
+          "diff": "というか 是觉得前面的说法不准、改口；つまり 是把前面的话换成意思相同、更简洁的说法。",
+          "this": [
+            {
+              "ja": "彼:かれ|は|まじめ|*というか|、|~頑固:がんこ|だ|。",
+              "tag": "改口 · 前后不同",
+              "tr": "他说是认真吧，其实是固执。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "彼:かれ|は|母:はは|の|兄:あに|、|*つまり|~私:わたし|~の|~おじ|だ|。",
+              "tag": "换说法 · 前后同指",
+              "tr": "他是我妈妈的哥哥，也就是我舅舅。"
+            }
+          ],
+          "explain": "看前后两部分是不是同一个意思：母の兄＝おじ，内容完全相同，只是说得更简洁 → つまり；まじめ ≠ 頑固，是觉得前一个词不贴切而换掉 → というか。"
+        },
+        "en": {
+          "id": "tsumari",
+          "diff": "というか corrects yourself because the first wording felt off; つまり restates the previous words more concisely with the same meaning.",
+          "this": [
+            {
+              "tag": "Correction · different meanings",
+              "tr": "He's serious… or rather, stubborn."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Restating · same referent",
+              "tr": "He's my mother's older brother — in other words, my uncle."
+            }
+          ],
+          "explain": "See whether the two parts mean the same thing: 母の兄 = おじ, exactly the same content, just said more concisely → つまり; まじめ ≠ 頑固, replacing the first word because it didn't fit → というか."
+        },
+        "ko": {
+          "id": "tsumari",
+          "diff": "というか는 앞의 표현이 정확하지 않다고 느껴 말을 바꾸는 것이다. つまり는 앞의 말을 같은 뜻의 더 간결한 표현으로 바꾸는 것이다.",
+          "this": [
+            {
+              "tag": "말 바꾸기 · 앞뒤가 다름",
+              "tr": "그는 성실하다고 할까, 고집이 세다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "바꿔 말하기 · 앞뒤가 같음",
+              "tr": "그는 우리 엄마의 오빠, 즉 내 외삼촌이다."
+            }
+          ],
+          "explain": "앞뒤 두 부분이 같은 뜻인지 보자. 母の兄＝おじ처럼 내용이 완전히 같고 더 간결하게 말할 뿐이면 → つまり. まじめ ≠ 頑固처럼 앞의 말이 딱 맞지 않다고 느껴 바꾸면 → というか."
+        },
+        "es": {
+          "id": "tsumari",
+          "diff": "というか corrige lo dicho porque no parece exacto; つまり reformula lo anterior con el mismo significado, de forma más concisa.",
+          "this": [
+            {
+              "tag": "Corrige · cosas distintas",
+              "tr": "Es serio, o más bien terco."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Reformula · lo mismo",
+              "tr": "Es el hermano mayor de mi madre, es decir, mi tío."
+            }
+          ],
+          "explain": "Mira si las dos partes significan lo mismo: 母の兄 = おじ, el contenido es idéntico, solo se dice más breve → つまり; まじめ ≠ 頑固, se cambia la primera palabra porque no parece acertada → というか."
+        },
+        "vi": {
+          "id": "tsumari",
+          "diff": "というか là thấy cách nói trước chưa chính xác nên sửa lời; つまり là đổi lời trước thành cách nói cùng nghĩa, ngắn gọn hơn.",
+          "this": [
+            {
+              "tag": "Sửa lời · trước sau khác nhau",
+              "tr": "Anh ấy nghiêm túc… hay nói đúng hơn là cố chấp."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Đổi cách nói · trước sau cùng chỉ một",
+              "tr": "Anh ấy là anh trai của mẹ tôi, tức là cậu tôi."
+            }
+          ],
+          "explain": "Xem hai phần trước sau có cùng một nghĩa không: 母の兄＝おじ, nội dung hoàn toàn giống nhau, chỉ là nói gọn hơn → つまり; まじめ ≠ 頑固, là thấy từ trước không sát nên đổi đi → というか."
+        },
+        "my": {
+          "id": "tsumari",
+          "diff": "というか သည် ရှေ့ပြောပုံ မတိကျဟု ထင်၍ ပြင်ပြောခြင်း ဖြစ်သည်။ つまり သည် ရှေ့စကားကို အဓိပ္ပာယ်တူ၊ ပိုတိုသော ပြောပုံသို့ ပြောင်းခြင်း ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "ပြင်ပြော · ရှေ့နောက်မတူ",
+              "tr": "သူက တည်ကြည်တယ်လို့ ဆိုရမလား၊ တကယ်တော့ ခေါင်းမာတာ။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ပြောပုံပြောင်း · ရှေ့နောက်တူ",
+              "tr": "သူက အမေ့ရဲ့ အစ်ကို၊ တစ်နည်းအားဖြင့် ကျွန်တော့် ဦးလေးပါ။"
+            }
+          ],
+          "explain": "ရှေ့နောက် အပိုင်းနှစ်ခု အဓိပ္ပာယ်တူသလား ကြည့်ပါ - 母の兄＝おじ ဖြစ်ပြီး အကြောင်းအရာ လုံးဝတူကာ ပိုတိုအောင် ပြောရုံဖြစ်လျှင် → つまり။ まじめ ≠ 頑固 ဖြစ်ပြီး ရှေ့စကားလုံး မသင့်တော်ဟု ထင်၍ လဲလိုက်လျှင် → というか။"
+        }
+      }
+    },
+    {
+      "point": "to-iu-yori",
+      "kind": "meaning",
+      "reason": "意思差不多的第3、4条：というより 不否定A，じゃなくて 否定A，替换后核心意思改变，差别只能写成「A 表示甲；B 表示乙」；look/root 也不符合。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ja-nakute",
+          "diff": "というより 不否定A，只说B更贴切；じゃなくて 完全否定A，“不是A而是B”。",
+          "this": [
+            {
+              "ja": "彼:かれ|は|先生:せんせい|*というより|、|友達:ともだち|の|ような|存在:そんざい|だ|。",
+              "tag": "A也不算错",
+              "tr": "与其说他是老师，不如说更像朋友。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "彼:かれ|は|先生:せんせい|*じゃなくて|、|事務:じむ|の|人:ひと|だ|よ|。",
+              "tag": "A是错的",
+              "tr": "他不是老师，是办公室的职员。"
+            }
+          ],
+          "explain": "看A是不是事实：他确实是老师，只是觉得“朋友”更能说明关系 → というより；A根本不对（他不是老师），要纠正误会 → じゃなくて（书面 ではなく）。"
+        },
+        "en": {
+          "id": "ja-nakute",
+          "diff": "というより doesn't reject A, just says B fits better; じゃなくて rejects A entirely: “not A but B”.",
+          "this": [
+            {
+              "tag": "A isn't wrong either",
+              "tr": "He's less a teacher than something like a friend."
+            }
+          ],
+          "that": [
+            {
+              "tag": "A is wrong",
+              "tr": "He's not a teacher, he's an office clerk."
+            }
+          ],
+          "explain": "See whether A is true: he really is a teacher, but “friend” describes the relationship better → というより; A is simply wrong (he's not a teacher) and you're correcting a misunderstanding → じゃなくて (ではなく in writing)."
+        },
+        "ko": {
+          "id": "ja-nakute",
+          "diff": "というより는 A를 부정하지 않고 B가 더 알맞다고만 말한다. じゃなくて는 A를 완전히 부정해 ‘A가 아니라 B’이다.",
+          "this": [
+            {
+              "tag": "A도 틀리진 않음",
+              "tr": "그는 선생님이라기보다 친구 같은 존재다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "A는 틀림",
+              "tr": "그는 선생님이 아니라 사무실 직원이다."
+            }
+          ],
+          "explain": "A가 사실인지 보자. 그는 정말 선생님이지만 ‘친구’가 관계를 더 잘 설명한다고 느끼면 → というより. A가 아예 틀렸고(선생님이 아님) 오해를 바로잡으려면 → じゃなくて(문어는 ではなく)."
+        },
+        "es": {
+          "id": "ja-nakute",
+          "diff": "というより no niega A, solo dice que B encaja mejor; じゃなくて niega A por completo: «no es A, sino B».",
+          "this": [
+            {
+              "tag": "A no es del todo falso",
+              "tr": "Más que un profesor, es como un amigo."
+            }
+          ],
+          "that": [
+            {
+              "tag": "A es falso",
+              "tr": "No es profesor, es un administrativo de la oficina."
+            }
+          ],
+          "explain": "Mira si A es un hecho: si de verdad es profesor, pero «amigo» describe mejor la relación → というより; si A no es cierto en absoluto (no es profesor) y hay que corregir un malentendido → じゃなくて (por escrito, ではなく)."
+        },
+        "vi": {
+          "id": "ja-nakute",
+          "diff": "というより không phủ định A, chỉ nói B sát hơn; じゃなくて phủ định hoàn toàn A, “không phải A mà là B”.",
+          "this": [
+            {
+              "tag": "A cũng không sai",
+              "tr": "Anh ấy là thầy giáo, nhưng đúng hơn thì giống một người bạn."
+            }
+          ],
+          "that": [
+            {
+              "tag": "A là sai",
+              "tr": "Anh ấy không phải giáo viên, mà là nhân viên văn phòng đấy."
+            }
+          ],
+          "explain": "Xem A có phải sự thật không: anh ấy đúng là giáo viên, chỉ là thấy “bạn bè” nói lên mối quan hệ rõ hơn → というより; A hoàn toàn sai (anh ấy không phải giáo viên), cần sửa hiểu lầm → じゃなくて (văn viết là ではなく)."
+        },
+        "my": {
+          "id": "ja-nakute",
+          "diff": "というより သည် A ကို မငြင်းဘဲ B က ပိုသင့်တော်ကြောင်းသာ ပြောသည်။ じゃなくて သည် A ကို လုံးဝငြင်းပြီး “A မဟုတ်ဘဲ B” ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "A လည်း မမှားပါ",
+              "tr": "သူက ဆရာဆိုတာထက် သူငယ်ချင်းလိုပါပဲ။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "A က မှားသည်",
+              "tr": "သူက ဆရာ မဟုတ်ဘူး၊ ရုံးဝန်ထမ်းပါ။"
+            }
+          ],
+          "explain": "A က အမှန်တကယ် ဟုတ်မဟုတ် ကြည့်ပါ - သူက တကယ်ပင် ဆရာဖြစ်သော်လည်း “သူငယ်ချင်း” က ဆက်ဆံရေးကို ပိုဖော်ပြနိုင်သည်ဟု ထင်လျှင် → というより။ A က လုံးဝ မမှန်ဘဲ (သူက ဆရာ မဟုတ်) အထင်လွဲမှုကို ပြင်ရလျှင် → じゃなくて (စာတွင် ではなく)။"
+        }
+      }
+    },
+    {
+      "point": "to-shite",
+      "kind": "meaning",
+      "reason": "意思差不多的第1、3、4条：として（以某身份做事）和 にとって（对某人来说的评价）是两个意思，替换测试不成立；look/root 也不符合。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ni-totte",
+          "diff": "として 是“以……的身份（去做）”；にとって 是“对……来说（怎么样）”，后面接评价。",
+          "this": [
+            {
+              "ja": "教師:きょうし|*として|、|生徒:せいと|を|~守:まも|~る|~責任:せきにん|~が|~ある|。",
+              "tag": "身份 · 该做的事",
+              "tr": "作为老师，有保护学生的责任。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "教師:きょうし|*にとって|、|生徒:せいと|の|笑顔:えがお|は|~一番:いちばん|~の|~喜:よろこ|~びだ|。",
+              "tag": "对…来说 · 评价",
+              "tr": "对老师来说，学生的笑脸是最大的快乐。"
+            }
+          ],
+          "explain": "看后半句：说这个身份该做什么、以这个资格做了什么（責任がある、参加する）→ として；评价某事对这个人来说重要、难、开心（大切だ、難しい、喜びだ）→ にとって。"
+        },
+        "en": {
+          "id": "ni-totte",
+          "diff": "として means “in the capacity of… (doing something)”; にとって means “for… (how it is)”, followed by an evaluation.",
+          "this": [
+            {
+              "tag": "Role · what to do",
+              "tr": "As a teacher, I have a responsibility to protect my students."
+            }
+          ],
+          "that": [
+            {
+              "tag": "For… · evaluation",
+              "tr": "For a teacher, students' smiles are the greatest joy."
+            }
+          ],
+          "explain": "Look at the second half: what someone in this role should do, or did in this capacity (責任がある、参加する) → として; evaluating how important, hard or pleasing something is for this person (大切だ、難しい、喜びだ) → にとって."
+        },
+        "ko": {
+          "id": "ni-totte",
+          "diff": "として는 ‘~의 신분으로 (~하다)’이고, にとって는 ‘~에게 있어 (어떠하다)’로 뒤에 평가가 온다.",
+          "this": [
+            {
+              "tag": "신분 · 해야 할 일",
+              "tr": "교사로서 학생을 지킬 책임이 있다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "~에게 있어 · 평가",
+              "tr": "교사에게 있어 학생들의 웃는 얼굴이 가장 큰 기쁨이다."
+            }
+          ],
+          "explain": "뒷부분을 보자. 그 신분으로서 해야 할 일, 그 자격으로 한 일(責任がある、参加する) → として. 어떤 일이 그 사람에게 중요하다, 어렵다, 기쁘다고 평가하면(大切だ、難しい、喜びだ) → にとって."
+        },
+        "es": {
+          "id": "ni-totte",
+          "diff": "として es «en calidad de… (hacer algo)»; にとって es «para…, (cómo es)», seguido de una valoración.",
+          "this": [
+            {
+              "tag": "Papel · lo que toca hacer",
+              "tr": "Como profesor, tengo la responsabilidad de proteger a mis alumnos."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Para… · valoración",
+              "tr": "Para un profesor, la sonrisa de sus alumnos es la mayor alegría."
+            }
+          ],
+          "explain": "Mira la segunda mitad: si se dice qué le toca hacer a ese papel o qué hizo en esa calidad (責任がある, 参加する) → として; si se valora lo importante, difícil o alegre que es algo para esa persona (大切だ, 難しい, 喜びだ) → にとって."
+        },
+        "vi": {
+          "id": "ni-totte",
+          "diff": "として là “với thân phận… (mà làm)”; にとって là “đối với… thì (thế nào)”, phía sau là đánh giá.",
+          "this": [
+            {
+              "tag": "Thân phận · việc nên làm",
+              "tr": "Là giáo viên, có trách nhiệm bảo vệ học sinh."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Đối với… · đánh giá",
+              "tr": "Đối với giáo viên, nụ cười của học sinh là niềm vui lớn nhất."
+            }
+          ],
+          "explain": "Xem nửa câu sau: nói thân phận này nên làm gì, đã làm gì với tư cách này (責任がある、参加する) → として; đánh giá việc gì đó đối với người này là quan trọng, khó, vui (大切だ、難しい、喜びだ) → にとって."
+        },
+        "my": {
+          "id": "ni-totte",
+          "diff": "として သည် “...၏ အဆင့်အတန်းဖြင့် (လုပ်သည်)” ဖြစ်သည်။ にとって သည် “...အတွက်ဆိုရင် (ဘယ်လိုလဲ)” ဖြစ်ပြီး နောက်တွင် အကဲဖြတ်ချက် တွဲသည်။",
+          "this": [
+            {
+              "tag": "ရာထူး · လုပ်သင့်သည့်အရာ",
+              "tr": "ဆရာတစ်ယောက်အနေနဲ့ ကျောင်းသားတွေကို ကာကွယ်ရမယ့် တာဝန်ရှိတယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "...အတွက်ဆိုရင် · အကဲဖြတ်",
+              "tr": "ဆရာတစ်ယောက်အတွက်တော့ ကျောင်းသားတွေရဲ့ အပြုံးက အကြီးမားဆုံး ပျော်ရွှင်မှုပဲ။"
+            }
+          ],
+          "explain": "နောက်ပိုင်းကို ကြည့်ပါ - ဤရာထူးဖြင့် ဘာလုပ်သင့်သလဲ၊ ဤအရည်အချင်းဖြင့် ဘာလုပ်ခဲ့သလဲ ပြောလျှင် (責任がある、参加する) → として။ တစ်ခုခုက ထိုသူအတွက် အရေးကြီး၊ ခက်ခဲ၊ ပျော်စရာကောင်းကြောင်း အကဲဖြတ်လျှင် (大切だ、難しい、喜びだ) → にとって။"
+        }
+      }
     }
   ]
 }
