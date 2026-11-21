@@ -24158,20 +24158,24 @@
             {
               "id": "noni-usage",
               "title": "〜のに (even though…)",
-              "diff": "わりに compares whether the “degree” matches; のに just says the result went against expectations, often with frustration.",
+              "diff": "わりに calmly judges that “for this degree, the result doesn't match”; のに simply says the result went against expectations, with frustration or regret, and what comes before doesn't have to be a degree.",
               "this": [
                 {
-                  "tag": "Degree doesn't match",
-                  "tr": "This place is pricey, but the food is just average."
+                  "tag": "Degree doesn't match · evaluation",
+                  "tr": "This restaurant is pricey, but the food is just average."
                 }
               ],
               "that": [
                 {
-                  "tag": "Expectation let down · frustrated",
-                  "tr": "We'd made plans, but he didn't come."
+                  "tag": "Expectation dashed · frustration",
+                  "tr": "This restaurant is so expensive, and yet the food is just average."
+                },
+                {
+                  "tag": "Plain fact · only のに",
+                  "tr": "Even though we'd agreed, he didn't come."
                 }
               ],
-              "explain": "Check whether the first part talks about a “degree”: things that can be higher or lower, more or less, like 高い、よく食べる、年齢 → わりに, meaning “given that degree, what follows doesn't match”; a simple fact like 約束した, with a result against expectations and frustration → のに."
+              "explain": "When the first part is a degree that can be higher or lower, like 「高い」 or 「よく食べる」, both work: わりに measures against that degree and calmly says it “doesn't match”; のに complains directly, “even though… still…”, with stronger frustration. When the first part is just something that happened, with no degree to it, like 「約束した」, only のに works."
             }
           ]
         }
@@ -24236,38 +24240,21 @@
           "note": "Both mean “naming A, but not only A”",
           "items": [
             {
-              "id": "wo-chuushin-ni",
-              "diff": "をはじめ names A first as a representative, with the focus on “and many more”; を中心に stresses that A is the core, the focus.",
-              "this": [
-                {
-                  "tag": "Representative · many more",
-                  "tr": "This game is popular with all generations, young people first and foremost."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Core · mainly",
-                  "tr": "This game is popular mainly among young people."
-                }
-              ],
-              "explain": "Check whether the scope is spread out afterwards: 「幅広い世代」「多くの」「〜など」 → をはじめ, and A is just the first example; no spreading, just saying it's mainly concentrated around A → を中心に."
-            },
-            {
               "id": "ya-nado",
-              "diff": "や〜など lists a few examples equally; をはじめ singles out the first item as the most important representative, in a formal tone.",
+              "diff": "をはじめ names just the single most representative item first and sounds formal; や〜など lists a few items side by side as equals and is common in everyday speech too.",
               "this": [
                 {
-                  "tag": "Highlights the top · formal",
-                  "tr": "Representatives from many countries, led by the prime minister, gathered at the venue."
+                  "tag": "One representative · formal",
+                  "tr": "This town has many old buildings, starting with its castle."
                 }
               ],
               "that": [
                 {
-                  "tag": "Equal listing",
-                  "tr": "I bought vegetables, fruit, and so on at the supermarket."
+                  "tag": "Several items · equal",
+                  "tr": "This town has many old buildings, such as a castle and temples."
                 }
               ],
-              "explain": "Check whether the first item is “the most important one”: the highest-ranking or most representative, like 首相、社長、東京 → をはじめ, common in news and speeches; just a few equal examples (野菜、果物) → や〜など."
+              "explain": "Both sentences give examples first and then say “and many more”. Look at how many items are named and whether one stands out: only one item, the most prominent and representative one (お城), with the range then widened by 「たくさん」「多くの」「全員」 → をはじめ, common in news and speeches; two or three items side by side (お城、お寺) with none more important → や〜など."
             }
           ]
         }
@@ -24278,24 +24265,24 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「込む／込める」 — “go inside, put in”",
+          "note": "Both come from 「込む」 — basic meaning “go inside”; 「込める」 is its transitive form, “put inside”",
           "items": [
             {
               "id": "komu-compound",
-              "diff": "を込めて means “putting” feelings into an action; 〜込む after a verb means a person or thing itself “goes inside, goes deep”.",
+              "diff": "を込めて means “putting” one's feelings into an action; 〜込む after a verb means a person or thing itself “goes inside, goes deep”.",
               "this": [
                 {
-                  "tag": "Noun＋を → put feelings in",
-                  "tr": "I wrote the letter full of gratitude."
+                  "tag": "Noun + を → put feelings in",
+                  "tr": "Full of gratitude, I gave my teacher a bouquet of flowers."
                 }
               ],
               "that": [
                 {
-                  "tag": "Verb＋込む → go in",
-                  "tr": "It started raining, so I dashed into a shop."
+                  "tag": "Verb + 込む → go in",
+                  "tr": "It started raining, so I ran into a shop."
                 }
               ],
-              "explain": "込める is the transitive partner of 込む: 込む＝go in oneself (駆け込む、考え込む), 込める＝put something in (弾を込める＝load a bullet). Look at what comes before: noun＋を (感謝を、心を) → pouring a feeling in; a verb's masu-stem (駆け)＋込む → the action goes inside or deep."
+              "explain": "The basic meaning of 「込む」 is “go inside”. After a verb, the action “goes inside”: 駆け込む = run in, 考え込む = think deeply. 「込める」 is the transitive verb from 込む, meaning “put something inside” (弾を込める = load a bullet); treat your feelings as something you put into an action, and you get 「心を込めて、感謝を込めて」 = do something full of …. Look at what comes before: noun + を → を込めて; verb ます形 (駆け) + 込む → go in, go deep."
             }
           ]
         }
@@ -24329,44 +24316,53 @@
         },
         {
           "kind": "meaning",
-          "note": "を通して has several jobs, each with a close equivalent: “through (a medium)” ≈ によって, “throughout a period” ≈ にわたって",
+          "sense": 1,
+          "note": "Both express “achieving a result through some channel”",
           "items": [
             {
               "id": "ni-yotte",
               "title": "〜によって (means)",
               "thisTitle": "〜を通して (through)",
-              "diff": "を通して means getting a result “step by step” via someone or something in between; によって is a means that works directly, more written.",
+              "diff": "を通して means getting a result gradually by way of an experience or a channel; によって is a method that directly produces the result, more formal, and often followed by a passive.",
               "this": [
                 {
-                  "tag": "Via an intermediary",
-                  "tr": "I got introduced to my current company through a senior colleague."
+                  "tag": "Experience · gain from it",
+                  "tr": "Through my homestay, I learned about everyday customs in Japan."
                 }
               ],
               "that": [
                 {
-                  "tag": "Direct means",
-                  "tr": "The data is processed automatically by machine."
+                  "tag": "Direct method · formal",
+                  "tr": "The new representative was chosen by vote."
                 }
               ],
-              "explain": "Look at the noun before it: a “medium you pass through”, like 先輩、ボランティア活動、テレビ → を通して; a means or method that acts directly, like 機械、法律、話し合い → によって, common in explanatory writing and often followed by the passive. を通じて works the same way."
-            },
+              "explain": "Both can be translated “through”, and sometimes they're interchangeable, as in 「インターネットを通じて／によって」. Look at the noun before and the result after: a process you go through or a channel of contact, like ホームステイ, 活動, 経験, from which you learn or come to understand something → を通して; a method that directly produces the result, like 投票, 機械, 法律, often in a passive sentence (選ばれた) → によって, more formal."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Both express “throughout a whole period of time”",
+          "items": [
             {
               "id": "ni-watatte",
-              "thisTitle": "〜を通して (throughout)",
-              "diff": "を通して (period) stresses that a state “stays the same” for the whole time; にわたって stresses how long or wide-ranging it is.",
+              "title": "〜にわたって (time span)",
+              "thisTitle": "〜を通して (whole period)",
+              "diff": "を通して means “from start to end of a whole period”, usually followed by an unchanging state; にわたって stresses how long it is, takes a specific length before it and an ongoing activity after it.",
               "this": [
                 {
-                  "tag": "Stays the same",
-                  "tr": "This island is warm all year round."
+                  "tag": "Whole period · state",
+                  "tr": "This lake's water stays cold all year round."
                 }
               ],
               "that": [
                 {
-                  "tag": "Long span",
-                  "tr": "The conference went on for a full three days."
+                  "tag": "Specific length · activity",
+                  "tr": "The construction went on for a full three years."
                 }
               ],
-              "explain": "Look at what follows: an unchanging state like 暖かい、人気がある → を通して (一年を通して is a set phrase); an activity like 行われる、続く、調査する, with a specific length or range before it (三日間、全国) → にわたって, stressing “that long, that wide”."
+              "explain": "Both mean “throughout a period of time”, and both 「生涯を通じて／生涯にわたって」 are possible. Look at what comes before and after: a whole stretch like 一年, 年間, 生涯 followed by a state that doesn't change (暖かい, 水温が低い) → を通して, meaning it's like that at every point from start to finish; a specific length like 三年 or 5時間 followed by an activity (続いた, 行われた) → にわたって, stressing “that long!”."
             }
           ]
         }
@@ -24435,23 +24431,6 @@
                 }
               ],
               "explain": "Both contain 「しよう」, but from different sources: the しよう in ようにも is the volitional form (wanting to contact), so the sentence first says you want to, then names the obstacle; the よう in ようがない means “method”, follows the masu-stem, and the sentence ends by simply saying “no way”. The meanings are close; ようにも stresses the frustration more."
-            },
-            {
-              "id": "wake-ni-wa-ikanai",
-              "diff": "ようがない means you'd like to but there's no way; わけにはいかない means you could but shouldn't.",
-              "this": [
-                {
-                  "tag": "No way to do it",
-                  "tr": "There's no last train and no taxis, so there's no way to get home."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Could · shouldn't",
-                  "tr": "I still have work left, so I can't go home."
-                }
-              ],
-              "explain": "Look at the reason: no train, no way to contact anyone → no means, so you can't go home even if you want to → ようがない (attaches to the masu-stem: 帰り); unfinished work, a responsibility → you could go home, you just shouldn't → わけにはいかない (attaches to the dictionary form: 帰る)."
             }
           ]
         }
@@ -24462,6 +24441,7 @@
       "groups": [
         {
           "kind": "meaning",
+          "sense": 1,
           "note": "Both express the speaker's judgment that “it seems…”",
           "items": [
             {
@@ -24482,23 +24462,6 @@
               "explain": "Check for a clue before it: a sign like 「道が濡れている」 → ようだ; 「なんとなく」「何だか」, a hunch you can't explain → ような気がする. ような is just the noun-modifying form of ようだ, and adding 「気がする（feel）」 makes it more subjective. In speech ようだ becomes みたいだ, used the same way."
             },
             {
-              "id": "to-omou",
-              "diff": "と思う states your opinion clearly; ような気がする presents it as a “feeling”, more softly.",
-              "this": [
-                {
-                  "tag": "Soft · leaves room",
-                  "tr": "Sir, I have a feeling this plan is a bit unrealistic."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Clear stance",
-                  "tr": "I think this plan is a bit unrealistic."
-                }
-              ],
-              "explain": "Look at who you're talking to and what you're saying: when objecting to a superior or pointing out someone else's problem, ような気がします softens it and avoids sounding absolute; when you want to state your view clearly → と思います."
-            },
-            {
               "id": "you-ni-mieru",
               "diff": "ように見える is how something “looks” from the outside; ような気がする is how you “feel” inside.",
               "this": [
@@ -24516,6 +24479,32 @@
               "explain": "Look at what the judgment is based on: what your eyes see (写真では、顔色が) → ように見える, usually about others; no concrete basis, just your own inner feeling → ような気がする."
             }
           ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both express “stating your own opinion”",
+          "items": [
+            {
+              "id": "to-omou",
+              "title": "〜と思う (giving an opinion)",
+              "thisTitle": "〜ような気がする (softening an opinion)",
+              "diff": "と思う states your view clearly; ような気がする presents your view as a “feeling”, not committing fully and leaving the listener some room.",
+              "this": [
+                {
+                  "tag": "Not sure · leaves room",
+                  "tr": "I somehow feel this explanation is a little hard to follow."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Sure · clear position",
+                  "tr": "To be frank, I think this explanation is hard to follow."
+                }
+              ],
+              "explain": "Both state your own opinion, and と思います is already polite enough to use with a boss. Look at how sure the speaker is: 「なんとなく」, no specific reason, or not wanting to commit → ような気がします; 「はっきり言って」, taking a clear position → と思います, and here ような気がします can't be used."
+            }
+          ]
         }
       ]
     },
@@ -24523,48 +24512,26 @@
       "id": "you-nara",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from 「よう（様）」＋a condition — “if it looks like…”",
-          "items": [
-            {
-              "id": "you-dewa",
-              "diff": "ようなら is followed by what to do about it; ようでは is followed by a negative judgment (“that won't do”).",
-              "this": [
-                {
-                  "tag": "→ Solution · advice",
-                  "tr": "If you're late every day, you'd better go to bed earlier."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "→ That won't do",
-                  "tr": "If you're late every day, you're not fit to be a working adult."
-                }
-              ],
-              "explain": "The first half can be exactly the same, so look at the second half: a solution or advice (〜たほうがいい、〜てください) → ようなら; criticism or a pessimistic verdict (失格だ、合格できない) → ようでは."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Both express a condition: “if…”",
           "items": [
             {
               "id": "tara",
-              "diff": "たら works for any condition; ようなら is only for uncertain situations that “might turn out that way, depending on how things go”.",
+              "title": "〜たら (hypothetical condition)",
+              "diff": "たら is a plain supposition, “if…”; ようなら carries a judgment of “it looks like…”, used for things you have to judge as the situation develops, and is usually followed by a countermeasure.",
               "this": [
                 {
-                  "tag": "Depends · uncertain",
+                  "tag": "Looks like it · act early",
                   "tr": "If it looks like the train's going to be late, give me a call."
                 }
               ],
               "that": [
                 {
-                  "tag": "Will definitely happen",
-                  "tr": "Give me a call when you get to the station."
+                  "tag": "Plain supposition",
+                  "tr": "If the train is late, give me a call."
                 }
               ],
-              "explain": "Check whether the first part will definitely happen: getting to the station certainly will → たら; being late, a fever not going down, rain getting heavier — things you only know as they unfold → ようなら, with the guess “if it looks like…”, usually followed by what to do."
+              "explain": "Both sentences work, and both mean “if it's late”. The よう in ようなら means “appearance”: if it looks like the train will be late (not certain yet), call ahead; it's typical for things you have to watch, like a fever not going down or rain getting heavier. たら just supposes “if it's late”, without that sense of watching. When the first part is something that will certainly happen (駅に着いたら), たら means “after…”, and it can't be replaced with ようなら."
             },
             {
               "id": "baai-wa",
@@ -24582,6 +24549,24 @@
                 }
               ],
               "explain": "Look at the setting: a condition written in advance in a notice or rule (雨天の場合は) → 場合は; talking it over with someone while watching the weather (〜ようなら〜にしよう) → ようなら."
+            },
+            {
+              "id": "you-dewa",
+              "title": "〜ようでは (worry, warning)",
+              "diff": "ようなら is a neutral supposition followed by a countermeasure or suggestion; ようでは carries the worry “this won't do”, and is followed by a bad outcome or criticism.",
+              "this": [
+                {
+                  "tag": "→ countermeasure · suggestion",
+                  "tr": "If sales keep failing to grow, let's rethink the plan."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "→ bad outcome · worry",
+                  "tr": "If sales keep failing to grow like this, the shop probably won't survive."
+                }
+              ],
+              "explain": "The first half can be exactly the same, so look at the second half: a countermeasure, suggestion, or request (見直しましょう, 〜てください) → ようなら; a prediction of a bad outcome or a negative judgment (ないだろう, 失格だ) → ようでは. 「では」 brings in the worry “this won't do”, so ようでは isn't followed by a request or your own intention."
             }
           ]
         }
@@ -24592,7 +24577,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「よう（様）」 — “a certain look or state”",
+          "note": "Both come from 「よう（様）」 — basic meaning “appearance, the way something looks”",
           "items": [
             {
               "id": "you-da",
@@ -24609,7 +24594,7 @@
                   "tr": "The lights are off. It seems nobody's home."
                 }
               ],
-              "explain": "ように見える only describes how something “looks”, and is often followed by 「が、本当は……」, which overturns it; ようだ is the speaker's judgment after putting the clues together, and they basically believe it. In speech ようだ becomes みたいだ (留守みたいだ), used the same way."
+              "explain": "The basic meaning of 「よう（様）」 is “appearance”. ように見える = it looks that way: it only describes the outside and is often followed by 「が、本当は……」 to overturn it; ようだ = the speaker takes what they see or hear as a clue and makes a judgment (電気が消えている → 留守のようだ), and basically believes it. In casual speech ようだ becomes みたいだ (留守みたいだ), used the same way."
             }
           ]
         },
@@ -24623,7 +24608,7 @@
               "this": [
                 {
                   "tag": "Clause → ように見える",
-                  "tr": "He looks tired."
+                  "tr": "My mother looks tired."
                 }
               ],
               "that": [
@@ -24683,29 +24668,6 @@
       "id": "you-to-shinai",
       "groups": [
         {
-          "kind": "look",
-          "note": "「しようとしない」↔「しようにも〜ない」: both are volitional form＋negative",
-          "items": [
-            {
-              "id": "you-ni-mo-nai",
-              "diff": "ようとしない means “won't do it”; ようにも〜ない means “wants to but can't” — completely different meanings.",
-              "this": [
-                {
-                  "tag": "Could · won't",
-                  "tr": "He has time, but he won't get in touch."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Want to · can't",
-                  "tr": "I'd like to get in touch, but I don't know the phone number."
-                }
-              ],
-              "explain": "Both are 「しよう＋…＋ない」, and at first glance both look like “not…”. Look at what follows しよう: とし＋ない negates the “will” → won't; にも is followed by an obstacle (電話番号が分からない) → you want to, there's just no way."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Both mean “having no will to do it”",
           "items": [
@@ -24730,20 +24692,20 @@
             {
               "id": "tsumori",
               "title": "〜つもりはない",
-              "diff": "つもりはない is the speaker declaring “I don't intend to”; ようとしない describes someone else who “won't”, with frustration.",
+              "diff": "つもりはない says there's no such plan in one's mind at all; ようとしない describes a visible attitude: others keep asking, the person just won't act, and the speaker is frustrated.",
               "this": [
                 {
-                  "tag": "Someone else · won't",
-                  "tr": "He won't admit his mistake."
+                  "tag": "Asked repeatedly · won't act",
+                  "tr": "No matter how many times I tell him, he just won't apologize."
                 }
               ],
               "that": [
                 {
-                  "tag": "Oneself · no intention",
-                  "tr": "I have no intention of quitting."
+                  "tag": "In the mind · no plan",
+                  "tr": "Apparently he has no intention of apologizing on his own."
                 }
               ],
-              "explain": "Look at the subject: 「私」 declaring their own intention → つもりはない; describing someone else's attitude while the speaker looks on in frustration → ようとしない. ようとしない isn't normally used for your own current intentions."
+              "explain": "Both mean “no will to do it”. Look at whether it's about the plan in someone's mind or the attitude in front of you: reporting what he thinks with 「らしい」「と言っている」, or talking about yourself (私は〜つもりはない) → つもりはない; 「何度言っても」, others keep asking and he just won't act, while the speaker watches impatiently → ようとしない, mostly said about other people."
             }
           ]
         }
@@ -24753,68 +24715,54 @@
       "id": "you-to-suru",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from volitional form＋「と」 — having it in mind “to do”",
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both express “just as one was about to…”",
           "items": [
             {
-              "id": "you-to-omou",
-              "diff": "ようと思う is a plan in your head, with no action yet; ようとする means you've started acting or are just about to.",
+              "id": "yasaki-ni",
+              "title": "〜矢先に (just as one was about to)",
+              "thisTitle": "〜(よ)うとする (just as one was about to)",
+              "diff": "ようとした時 is a neutral “just as I was about to…”, and anything can follow; ようとした矢先に is usually followed by something unexpected and unfortunate, with regret at “of all times”, and is somewhat formal.",
               "this": [
                 {
-                  "tag": "Action · about to",
-                  "tr": "Just as I was about to leave the house, the phone rang."
+                  "tag": "Neutral · anything can follow",
+                  "tr": "Just as I was about to leave the shop, the rain stopped."
                 }
               ],
               "that": [
                 {
-                  "tag": "In the mind · plan",
-                  "tr": "I'm thinking of leaving home early tomorrow."
+                  "tag": "Bad timing · of all times",
+                  "tr": "Just as I was about to leave the shop, it started to rain, of all times."
                 }
               ],
-              "explain": "Both are 「volitional form＋と」. と思う → still just a thought in your head; とする → put into action, you're already doing it or about to, so it often appears as 「〜とした時」「〜としたが」 followed by something else happening."
+              "explain": "Both mean “at the moment one was about to do something, something else happened”, and 矢先に is often preceded by 「ようとした」 too. Look at what happens next: something ordinary or welcome, like 「雨がやんだ」 → ようとした時; something unfortunate, like 「雨が降り出した」 → ようとした矢先に fits better, with regret at “of all times” (ようとした時 can also take bad news, it just sounds flat)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both mean “about to”",
+          "sense": 3,
+          "note": "Both express “about to happen”",
           "items": [
             {
-              "id": "tokoro-da",
-              "title": "〜ところだ (about to)",
-              "thisTitle": "〜ようとする (about to)",
-              "diff": "ところだ just objectively says “I'm at the point of doing it”; ようとした is often followed by an interruption, and is also often used to describe what others do.",
+              "id": "n-to-suru",
+              "title": "〜んとする (about to)",
+              "thisTitle": "〜(よ)うとする (about to)",
+              "diff": "Same meaning, “about to…”; ようとする is the modern form, んとする is classical, used only in solemn styles like novels, speeches, and headlines.",
               "this": [
                 {
-                  "tag": "About to · interrupted",
-                  "tr": "Just as I was about to go out, it started to rain."
+                  "tag": "Modern · general writing",
+                  "tr": "Cherry blossom season is about to end."
                 }
               ],
               "that": [
                 {
-                  "tag": "Point in time · objective",
-                  "tr": "I'm just about to head out."
+                  "tag": "Classical · solemn",
+                  "tr": "At this very moment, cherry blossom season is drawing to its close."
                 }
               ],
-              "explain": "ところだ tells the listener “what stage I'm at now”, and the sentence ends there; ようとした is often followed by 「時／ところ」 and then an unexpected interruption, and is also often used to narrate a third person “was about to…”."
-            },
-            {
-              "id": "sou-ni-naru",
-              "thisTitle": "〜ようとする (about to)",
-              "diff": "ようとする means you're “about to” do something on purpose; そうになる means you “almost” did something involuntarily.",
-              "this": [
-                {
-                  "tag": "On purpose · about to",
-                  "tr": "Just as I was about to get off the train, the doors closed."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Involuntary · almost",
-                  "tr": "The train stopped suddenly and I almost fell over."
-                }
-              ],
-              "explain": "Check whether it's something you wanted to do: getting off the train is something you intend → ようとする; falling over, bursting into tears, dozing off — unwanted, involuntary things → そうになる (usually in the past, 「なった」, meaning “almost”)."
+              "explain": "「ん」 is the old 「む」 meaning “will…”, equivalent to modern 「う／よう」, so the two sentences mean the same. Look at the style: ordinary narration and everyday writing → ようとしている (終わろうとしている); deliberately solemn novels or speeches, often with 「今まさに」 → んとしている (終わらんとしている). The forms differ too: んとする attaches to the ない形 (終わら, せ), ようとする to the volitional form."
             }
           ]
         }
