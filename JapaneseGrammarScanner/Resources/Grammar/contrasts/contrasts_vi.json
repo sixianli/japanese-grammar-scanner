@@ -3239,74 +3239,52 @@
       "id": "naide-without",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「ないで」 phủ định — “trong trạng thái không làm…”",
-          "items": [
-            {
-              "id": "naide-kudasai",
-              "diff": "ないで＋động từ khác là “không… mà (đã)…”; ないで＋ください là nhờ đối phương đừng làm.",
-              "this": [
-                {
-                  "tag": "Không… mà…",
-                  "tr": "Tôi đã ra ngoài mà không mang ô."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Xin đừng làm",
-                  "tr": "Xin đừng quên mang ô."
-                }
-              ],
-              "explain": "Nhìn phía sau 「ないで」: động từ khác (出かけた、寝た) → kể rằng đã làm B trong trạng thái không làm A; 「ください」 → nhờ đối phương đừng làm."
-            }
-          ]
-        },
-        {
           "kind": "look",
-          "note": "ないで ↔ なくて, đều là 「ない」 nối sang thể て, chỉ khác một hai chữ kana",
+          "note": "ないで ↔ なくて, chỉ khác 「いで」 và 「くて」",
           "items": [
             {
               "id": "nakute-reason",
-              "diff": "ないで diễn tả “không… mà (làm việc khác)”; なくて diễn tả nguyên nhân “vì không… nên…”.",
+              "diff": "ないで nghĩa là “không làm … mà (làm việc khác)”; なくて chỉ nguyên nhân “vì không … nên …”.",
               "this": [
                 {
-                  "tag": "Cách làm · thay thế",
+                  "tag": "Cách thức · thay thế",
                   "tr": "Tôi không đi xe buýt mà đi bộ."
                 }
               ],
               "that": [
                 {
                   "tag": "Nguyên nhân",
-                  "tr": "Xe buýt mãi không đến, khổ thật."
+                  "tr": "Xe buýt mãi không đến, khổ quá."
                 }
               ],
-              "explain": "Nhìn nửa sau: là một hành động khác mà mình làm tiếp (歩いて行った) → ないで; là kết quả hay cảm xúc do “không…” gây ra (困った、遅れた) → なくて."
+              "explain": "ないで là 「ない＋で」, なくて là 「ない」 đổi thành 「なく」 rồi thêm 「て」. Hãy nhìn vế sau: nếu là một hành động khác mà mình làm tiếp (歩いて行った) → ないで; nếu là kết quả hay cảm xúc do việc “không …” gây ra (困った, 遅れた) → なくて."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “không làm A (mà làm B)”",
+          "note": "Đều diễn tả “không làm … mà …”",
           "items": [
             {
               "id": "zuni-without",
-              "diff": "Nghĩa giống nhau: ないで dùng trong khẩu ngữ hằng ngày; ずに mang tính văn viết hơn, 「する」 phải đổi thành 「せずに」.",
+              "title": "〜ずに (không làm mà …)",
+              "diff": "Nghĩa giống nhau, đều là “không làm … mà …”: ないで dùng trong văn nói hằng ngày; ずに mang tính văn viết hơn, và 「する」 phải đổi thành 「せずに」.",
               "this": [
                 {
-                  "tag": "Khẩu ngữ",
-                  "tr": "Tôi đã đi thi mà không ôn bài."
+                  "tag": "Văn nói",
+                  "tr": "Tôi đi thi mà không ôn bài."
                 }
               ],
               "that": [
                 {
                   "tag": "Văn viết",
-                  "tr": "Tôi đã đi thi mà không ôn bài."
+                  "tr": "Tôi đi thi mà không ôn bài."
                 }
               ],
               "wrong": {
                 "why": "「する」 phải đổi thành 「せずに」"
               },
-              "explain": "Hai cách nghĩa như nhau, hãy xem văn phong và cách nối: khi nói thường dùng ないで (しないで); văn viết, hoàn cảnh trang trọng hay dùng ずに. ずに gắn vào chỗ bỏ 「ない」 của thể ない (言わ＋ずに), nhưng 「する」 là ngoại lệ, phải nói 「せずに」."
+              "explain": "Hai câu đều là “đi thi mà không ôn bài”, nghĩa như nhau, nên hãy xem văn phong và cách nối: khi nói chuyện thường dùng ないで (勉強しないで); trong văn bản, dịp trang trọng hay dùng ずに. ずに gắn vào chỗ bỏ 「ない」 của ない形 (言わ＋ずに), nhưng động từ する như 「勉強」 là ngoại lệ: phải nói 「勉強せずに」, không được nói 「勉強しずに」."
             }
           ]
         }
@@ -3316,65 +3294,42 @@
       "id": "nakereba-naranai",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ thể điều kiện của 「ない」 (なければ／なくては) — “nếu không… thì không được”",
+          "kind": "meaning",
+          "note": "Đều diễn tả “phải”",
           "items": [
             {
+              "id": "nai-to-ikenai",
+              "diff": "なければならない trang trọng hơn, hay dùng cho quy định và văn viết; ないといけない là văn nói, thường nói về việc cụ thể của bản thân.",
+              "this": [
+                {
+                  "tag": "Quy định · văn viết",
+                  "tr": "Ở Nhật, xe ô tô phải đi bên trái."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Hoàn cảnh cá nhân · văn nói",
+                  "tr": "Đã 10 giờ rồi. Tôi phải về thôi."
+                }
+              ],
+              "explain": "Hãy xem đang nói về điều gì: nghĩa vụ khách quan trong luật lệ, quy tắc, văn bản như 「日本では」 → なければならない; hoàn cảnh cụ thể của bản thân lúc này (もう10時だ) → ないといけない tự nhiên hơn. Nghĩa của hai cách như nhau, dùng thay cho nhau cũng không sai."
+            },
+            {
               "id": "nakucha-nakya",
-              "diff": "なければならない đầy đủ, trang trọng; なきゃ／なくちゃ là dạng rút gọn trong khẩu ngữ, nửa sau thường bị lược bỏ, chỉ nói với người thân quen.",
+              "diff": "なければならない là dạng đầy đủ, trang trọng; なきゃ là dạng rút gọn trong văn nói, lược bỏ nửa sau 「ならない」.",
               "this": [
                 {
                   "tag": "Đầy đủ · trang trọng",
-                  "tr": "Học sinh phải lên lớp."
+                  "tr": "Theo quy định, báo cáo phải nộp trước thứ Sáu."
                 }
               ],
               "that": [
                 {
                   "tag": "Rút gọn · tự nói một mình",
-                  "tr": "A, đã 8 giờ rồi, phải đi thôi."
+                  "tr": "Chết rồi, phải nộp báo cáo trước thứ Sáu."
                 }
               ],
-              "explain": "なきゃ＝なければ, なくちゃ＝なくては, phần 「ならない／いけない」 phía sau thường bị lược bỏ. Xem hoàn cảnh: quy định, văn bản, dịp trang trọng → なければならない; tự nói một mình, nói chuyện với bạn bè, người nhà → なきゃ・なくちゃ."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Đều diễn tả “phải, nên”",
-          "items": [
-            {
-              "id": "nai-to-ikenai",
-              "diff": "なければならない trang trọng hơn, hay dùng cho quy định và văn viết; ないといけない mang tính khẩu ngữ, hay nói về việc cụ thể của bản thân.",
-              "this": [
-                {
-                  "tag": "Quy định · văn viết",
-                  "tr": "Ở Nhật, xe phải chạy bên trái."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Việc cá nhân · khẩu ngữ",
-                  "tr": "Đã 10 giờ rồi, tôi phải về thôi."
-                }
-              ],
-              "explain": "Xem đang nói về điều gì: nghĩa vụ khách quan trong luật, quy tắc, văn bản → なければならない; tình hình cụ thể trước mắt của bản thân (もう10時だ) → ないといけない tự nhiên hơn. Hai cách có nghĩa giống nhau, dùng thay cho nhau cũng không tính là sai."
-            },
-            {
-              "id": "beki-da",
-              "diff": "なければならない là nghĩa vụ theo quy định, mang tính khách quan; べきだ là ý kiến cá nhân của người nói cho rằng “nên”.",
-              "this": [
-                {
-                  "tag": "Quy định · khách quan",
-                  "tr": "Ở Nhật, xe phải chạy bên trái."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Ý kiến cá nhân · chủ quan",
-                  "tr": "Tôi nghĩ người trẻ nên đọc sách nhiều hơn."
-                }
-              ],
-              "explain": "Xem đang nói về quy định hay quan điểm: luật, quy tắc, việc không làm thì không được → なければならない; chủ trương, lời khuyên của chính người nói, hay đi cùng 「と思う」 → べきだ. “Phải” trong tiếng Việt thường ứng với なければならない, còn “nên” thường ứng với べきだ."
+              "explain": "Hai câu nói cùng một việc: báo cáo phải nộp trước thứ Sáu. Hãy xem hoàn cảnh: nói về quy định như 「規則で」, viết vào văn bản, nói ở nơi trang trọng → dùng dạng đầy đủ なければならない; lẩm bẩm một mình (「やばい」), nói với bạn bè, người nhà → rút gọn thành なきゃ (＝なければ) hoặc なくちゃ (＝なくては), lược bỏ 「ならない」「いけない」 phía sau. Không dùng なきゃ khi nói với cấp trên hay khách hàng."
             }
           ]
         }
@@ -3389,21 +3344,21 @@
           "items": [
             {
               "id": "te-mo-ii",
-              "title": "〜てもいい（cho phép）",
-              "diff": "てもいい là “được phép làm”; なくてもいい là “không làm cũng được”, xem phía trước 「ても」 là khẳng định hay phủ định.",
+              "title": "〜てもいい (cho phép)",
+              "diff": "てもいい là “làm cũng được”; なくてもいい là “không làm cũng được”, hãy xem phía trước 「ても」 là khẳng định hay phủ định.",
               "this": [
                 {
                   "tag": "Không làm cũng được",
-                  "tr": "Nếu bị sốt thì ngày mai không đi học cũng được."
+                  "tr": "Nếu bị sốt thì mai không đi học cũng được."
                 }
               ],
               "that": [
                 {
-                  "tag": "Được phép làm",
-                  "tr": "Hạ sốt rồi nên ngày mai đi học được rồi."
+                  "tag": "Làm cũng được",
+                  "tr": "Hạ sốt rồi nên mai đi học được rồi."
                 }
               ],
-              "explain": "Nhìn phía trước 「ても」: 「行って」 là khẳng định → cho phép làm; 「行かなく」 là phủ định → không làm cũng được, không cần thiết. Khi hỏi 「〜なくてもいいですか」, trả lời 「はい」 nghĩa là thật sự không cần làm."
+              "explain": "Hãy nhìn phía trước 「ても」: 「行って」 là khẳng định → cho phép làm; 「行かなく」 là phủ định → không làm cũng được, không cần thiết. Khi hỏi 「〜なくてもいいですか」, trả lời 「はい」 nghĩa là thật sự không cần làm."
             }
           ]
         },
@@ -3413,25 +3368,25 @@
           "items": [
             {
               "id": "koto-wa-nai",
-              "diff": "なくてもいい nói một cách khách quan “không làm cũng được”; ことはない là khuyên đối phương “chẳng cần phải thế”, hay dùng để an ủi.",
+              "diff": "なくてもいい nói một cách khách quan “không làm cũng được”; ことはない là khuyên người nghe “không cần phải thế”, hay dùng để an ủi.",
               "this": [
                 {
-                  "tag": "Nói rõ là không cần",
+                  "tag": "Giải thích không cần",
                   "tr": "Mai được nghỉ nên không cần đến công ty."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khuyên nhủ đối phương",
-                  "tr": "Chẳng cần phải lo lắng đến thế đâu."
+                  "tag": "An ủi người nghe",
+                  "tr": "Không cần phải lo lắng đến thế đâu."
                 }
               ],
-              "explain": "ことはない gắn sau thể từ điển, hay đi cùng 「そんなに」「わざわざ」, khuyên đối phương đừng làm việc thừa; なくてもいい gắn sau thể phủ định, chỉ nói rõ là không cần thiết, cũng có thể dùng để hỏi 「〜なくてもいいですか」."
+              "explain": "ことはない đi sau 辞書形, thường đi cùng 「そんなに」「わざわざ」 để khuyên người nghe đừng làm việc thừa; なくてもいい đi sau dạng phủ định, chỉ giải thích là không cần thiết, và cũng dùng được để hỏi 「〜なくてもいいですか」."
             },
             {
               "id": "te-sumu",
               "title": "〜ずに済む",
-              "diff": "なくてもいい nói “không cần làm”; ずに済む là “lẽ ra phải làm, nhưng may mà rốt cuộc không phải làm”.",
+              "diff": "なくてもいい nói “không cần làm”; ずに済む là “lẽ ra phải làm, nhưng may là không phải làm nữa”.",
               "this": [
                 {
                   "tag": "Không cần",
@@ -3440,11 +3395,11 @@
               ],
               "that": [
                 {
-                  "tag": "May mà khỏi phải làm",
+                  "tag": "May mà khỏi phải",
                   "tr": "Bạn chở tôi bằng ô tô nên may mà không phải đi taxi."
                 }
               ],
-              "explain": "Xem thì và sắc thái: ずに済んだ thường ở thì quá khứ, nói “việc lẽ ra phải làm đã được miễn nhờ một tình huống nào đó”, kèm cảm giác may mắn; なくてもいい chỉ nói rõ hiện tại hoặc tương lai không cần thiết."
+              "explain": "Hãy xem thì và sắc thái: ずに済んだ thường ở thì quá khứ, nói “việc lẽ ra phải làm đã được miễn nhờ một hoàn cảnh nào đó”, mang cảm giác may mắn, nhẹ nhõm; なくてもいい chỉ giải thích là hiện tại hay sau này không cần thiết."
             }
           ]
         }
@@ -3455,42 +3410,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều đặt ở cuối câu, thêm sắc thái của người nói vào câu",
+          "note": "Đều diễn tả “xác nhận với người nghe”",
           "items": [
             {
               "id": "yo-particle",
-              "diff": "ね là việc đối phương cũng biết, tìm sự đồng cảm; よ là báo cho đối phương điều họ chưa biết.",
+              "title": "〜よね (xác nhận)",
+              "diff": "ね là đối chiếu lại điều cả hai đều biết; よね là nói ra phán đoán của mình trước rồi nhờ người nghe xác nhận.",
               "this": [
                 {
-                  "tag": "Tìm đồng cảm",
-                  "tr": "(Hai người đang cùng ăn) Bánh này ngon nhỉ."
+                  "tag": "Xác nhận · đối chiếu lại",
+                  "tr": "Vậy cuộc họp bắt đầu từ ba giờ nhé."
                 }
               ],
               "that": [
                 {
-                  "tag": "Báo cho đối phương",
-                  "tr": "Bánh này ngon lắm đấy, ăn thử đi."
+                  "tag": "Xác nhận · nói phán đoán trước",
+                  "tr": "Hình như cuộc họp bắt đầu từ ba giờ phải không?"
                 }
               ],
-              "explain": "Xem đối phương có biết không: hai người cùng đang ăn, đối phương cũng có cùng cảm nhận → ね; đối phương chưa ăn, bạn đang báo cho họ, giới thiệu cho họ → よ, phía sau hay có lời mời kiểu 「食べてみて」."
-            },
-            {
-              "id": "naa-exclamation",
-              "title": "〜なあ（cảm thán）",
-              "diff": "ね là nói cho đối phương nghe, tìm sự đồng cảm; なあ thường là lời cảm thán tự nói một mình.",
-              "this": [
-                {
-                  "tag": "Nói với người khác",
-                  "tr": "Anh Tanaka, hôm nay nóng quá nhỉ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tự nói một mình",
-                  "tr": "(Lẩm bẩm một mình) Haizz, hôm nay nóng quá."
-                }
-              ],
-              "explain": "Xem có người nghe hay không: gọi tên đối phương, dùng 「です」 nói với người khác → ね; lẩm bẩm một mình, cảm thán trong lòng → なあ, vì vậy 「なあ」 thường dùng thể thông thường, không đi với 「です」."
+              "explain": "Cả hai câu đều xác nhận với người nghe rằng “cuộc họp bắt đầu lúc ba giờ”. ね: chỉ đối chiếu lại điều cả hai đã biết, giống như vừa bàn xong rồi dùng 「じゃあ」 để chốt; よね: đưa ra phán đoán của mình trước (tôi nhớ là như vậy) rồi nhờ người nghe xác nhận, nên hay đi cùng 「確か」."
             }
           ]
         }
@@ -3501,15 +3439,15 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ trợ từ cách 「に」 — に trong thể ます＋に行く là đích của sự di chuyển; で vốn là 「にて」, “ở đó (làm…)”",
+          "note": "Đều bắt nguồn từ trợ từ cách 「に」 — nghĩa gốc là điểm mà hành động hướng tới và cuối cùng rơi vào",
           "items": [
             {
               "id": "ni-iku-purpose",
-              "diff": "Địa điểm＋に là “đi đâu”; thể ます＋に行く là “đi làm gì”.",
+              "diff": "Địa điểm + に行く: に chỉ nơi sẽ đến → đi đâu; ます形 + に行く: に chỉ hành động mà việc di chuyển nhắm tới → đi làm gì.",
               "this": [
                 {
                   "tag": "Địa điểm → đích đến",
-                  "tr": "Đi đến thư viện."
+                  "tr": "Đi thư viện."
                 }
               ],
               "that": [
@@ -3518,16 +3456,23 @@
                   "tr": "Đi mượn sách."
                 }
               ],
-              "explain": "Nhìn phía trước 「に」 là gì: 「図書館」 là địa điểm → nơi đến; 「借り」 là thể ます của động từ (hoặc danh từ chỉ hành động như 「買い物」) → mục đích của việc đi. Hai cái có thể đặt chung: 「図書館へ本を借りに行く」. に来る、に帰る cũng vậy (遊びに来る)."
-            },
+              "explain": "Nghĩa gốc của に là điểm mà hành động hướng tới và cuối cùng rơi vào. 「図書館に行く」: điểm đó là một nơi trong không gian, người di chuyển đến đó → đi đâu; 「本を借りに行く」: điểm đó đổi thành một hành động, người di chuyển để đạt tới việc “mượn sách” → đi làm gì. Vì vậy hãy nhìn phía trước 「に」: 「図書館」 là địa điểm → đích đến; 「本を借り」 là ます形 của động từ (hoặc danh từ chỉ hành động như 「買い物」) → mục đích. Hai cách có thể kết hợp: 「図書館へ本を借りに行く」."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "に ↔ で, chỉ khác một trợ từ, tiếng Việt đều nói là “ở …”",
+          "items": [
             {
               "id": "de-means",
-              "title": "〜で（nơi diễn ra hành động）",
-              "diff": "に là nơi người hoặc vật “ở”; で là nơi hành động “diễn ra”.",
+              "title": "〜で (nơi diễn ra hành động)",
+              "thisTitle": "〜に (nơi người hay vật tồn tại)",
+              "diff": "に là nơi người hay vật “ở”; で là nơi hành động “diễn ra”.",
               "this": [
                 {
                   "tag": "Nơi tồn tại",
-                  "tr": "Trong thư viện có rất nhiều sách."
+                  "tr": "Ở thư viện có rất nhiều sách."
                 }
               ],
               "that": [
@@ -3537,70 +3482,61 @@
                 }
               ],
               "wrong": {
-                "why": "Nơi diễn ra hành động phải dùng で"
+                "why": "Nơi thực hiện hành động phải dùng で"
               },
-              "explain": "Nhìn động từ cuối câu: 「ある」「いる」「住む」 chỉ sự tồn tại, lưu lại → に; hành động như 「読む」「食べる」「勉強する」 → で. Tiếng Việt đều nói “ở thư viện”, nên đây là chỗ dễ dùng sai nhất."
+              "explain": "Hãy nhìn động từ cuối câu: những từ chỉ sự tồn tại, lưu lại như 「ある」「いる」「住む」 → に; những hành động như 「読む」「食べる」「勉強する」 → で. Tiếng Việt đều nói “ở thư viện”, nên rất dễ dùng nhầm."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "に kiêm nhiều vai, mỗi vai có cách nói gần nghĩa: “nơi đến” ≈ へ, “mốc thời gian” ≈ までに, “đối phương của hành động” ≈ と",
+          "sense": 1,
+          "note": "Đều chỉ “đích đến” của sự di chuyển",
           "items": [
             {
               "id": "he-direction",
-              "diff": "Khi chỉ đích đến, に và へ phần lớn thay được cho nhau; に nhìn vào “điểm đến”, へ nhìn vào “hướng đi”, còn thời gian và người thì chỉ dùng được に.",
+              "title": "〜へ (hướng di chuyển)",
+              "thisTitle": "〜に (đích đến)",
+              "diff": "Khi nói đi đâu, に và へ phần lớn thay được cho nhau; に chú ý vào điểm đến, へ chú ý vào hướng đi.",
               "this": [
                 {
                   "tag": "Điểm đến",
-                  "tr": "Cuối cùng cũng đến ga rồi."
+                  "tr": "Cuối cùng cũng đến ga."
                 }
               ],
               "that": [
                 {
                   "tag": "Hướng đi",
-                  "tr": "Bây giờ đang trên đường tới ga."
+                  "tr": "Bây giờ đang đi về phía ga."
                 }
               ],
-              "wrong": {
-                "why": "Mốc thời gian chỉ dùng được に"
-              },
-              "explain": "Xem động từ: 「着く」「入る」 nhấn mạnh điểm đến nơi → hay dùng に; 「向かう」「出発する」 chỉ nói hướng về đâu → hay dùng へ; 「行く」「来る」 thì dùng cả hai đều được. Chỉ thời gian (７時に) và đối tượng của hành động (友達に) thì chỉ dùng được に."
-            },
-            {
-              "id": "made-ni-deadline",
-              "diff": "に là đúng vào thời điểm đó; までに là bất cứ lúc nào trước thời điểm đó.",
-              "this": [
-                {
-                  "tag": "Đúng thời điểm",
-                  "tr": "Ngày mai hãy đến lúc 9 giờ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Trước thời hạn",
-                  "tr": "Ngày mai hãy đến trước 9 giờ."
-                }
-              ],
-              "explain": "Chỉ khác chữ 「まで」: 「９時に」 là đúng thời điểm 9 giờ; 「９時までに」 là hạn chót, đến lúc 8 giờ hay 8 giờ rưỡi đều được, miễn là không muộn hơn 9 giờ."
-            },
+              "explain": "Hãy nhìn động từ: 「着く」「入る」 nhấn mạnh điểm đến → thường dùng に; 「向かう」「出発する」 chỉ nói hướng đi → thường dùng へ; với 「行く」「来る」「帰る」 dùng cái nào cũng được, nghĩa không đổi."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Đều chỉ “đối phương” của hành động",
+          "items": [
             {
               "id": "to-quotation",
-              "title": "〜と（đối phương cùng làm）",
-              "diff": "に là hành động hướng một chiều về phía đối phương; と là hai bên cùng làm.",
+              "title": "〜と (đối tượng của hành động qua lại)",
+              "thisTitle": "〜に (đối tượng của hành động)",
+              "diff": "に là tôi làm một chiều hướng về đối phương; と là hai người cùng làm, ngang hàng với nhau.",
               "this": [
                 {
-                  "tag": "Một chiều",
-                  "tr": "Tôi đã kể nỗi lo của mình cho mẹ."
+                  "tag": "Một chiều · đi xin ý kiến",
+                  "tr": "Ngày mai tôi sẽ đi hỏi ý kiến thầy."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hai bên cùng làm",
-                  "tr": "Lâu lắm rồi mới được thong thả trò chuyện với mẹ."
+                  "tag": "Hai chiều · cùng bàn bạc",
+                  "tr": "Ngày mai tôi sẽ bàn bạc cùng thầy."
                 }
               ],
-              "explain": "Xem ai làm với ai: 「母に話す」 là tôi kể chuyện cho mẹ, một người nói, một người nghe; 「母と話す」 là hai người trò chuyện với nhau. Với những hành động nhất định phải có hai người cùng làm như 「けんかする」「結婚する」, đối phương dùng と."
+              "explain": "Hai câu chỉ khác một trợ từ. 「先生に相談する」 là tôi một chiều đi tìm thầy, nhờ thầy cho ý kiến; 「先生と相談する」 là tôi và thầy cùng nhau bàn bạc, cùng quyết định. 「話す」 cũng vậy: 母に話す là nói cho mẹ nghe, 母と話す là trò chuyện với mẹ. 「結婚する」「けんかする」 bắt buộc hai người cùng làm nên chỉ dùng と; 「あげる」「教える」 chỉ đi một chiều về phía đối phương nên chỉ dùng に."
             }
           ]
         }
@@ -3611,12 +3547,12 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ trợ từ cách 「に」 — chỉ đích đến của sự di chuyển",
+          "note": "Đều bắt nguồn từ trợ từ cách 「に」 — nghĩa gốc là điểm mà hành động hướng tới và cuối cùng rơi vào",
           "items": [
             {
               "id": "ni-destination-target",
-              "title": "〜に（đích đến）",
-              "diff": "Thể ます＋に行く là “đi làm gì”; địa điểm＋に là “đi đâu”.",
+              "title": "〜に (đích đến)",
+              "diff": "ます形 + に行く: に chỉ hành động mà việc di chuyển nhắm tới → đi làm gì; địa điểm + に行く: に chỉ nơi sẽ đến → đi đâu.",
               "this": [
                 {
                   "tag": "Hành động → mục đích",
@@ -3626,55 +3562,37 @@
               "that": [
                 {
                   "tag": "Địa điểm → đích đến",
-                  "tr": "Đi đến thư viện."
+                  "tr": "Đi thư viện."
                 }
               ],
-              "explain": "Nhìn phía trước 「に」 là gì: 「借り」 là thể ます của động từ (hoặc danh từ chỉ hành động như 「買い物」「散歩」) → mục đích của việc đi; 「図書館」 là địa điểm → nơi đến. Hai cái có thể đặt chung: 「図書館へ本を借りに行く」. に来る、に帰る cũng vậy (遊びに来る)."
+              "explain": "Nghĩa gốc của に là điểm mà hành động hướng tới và cuối cùng rơi vào. 「図書館に行く」: điểm đó là một nơi trong không gian, người di chuyển đến đó → đi đâu; 「本を借りに行く」: điểm đó đổi thành một hành động, người di chuyển để đạt tới việc “mượn sách” → đi làm gì. Vì vậy hãy nhìn phía trước 「に」: 「本を借り」 là ます形 của động từ (hoặc danh từ chỉ hành động như 「買い物」「散歩」) → mục đích; 「図書館」 là địa điểm → đích đến. に来る, に帰る cũng vậy (遊びに来る)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều liên quan đến mục đích “đi làm việc gì đó”",
+          "note": "Đều diễn tả “để làm việc gì đó”",
           "items": [
             {
               "id": "tame-ni",
-              "diff": "Sau に行く chỉ có thể là “đi, đến, về”; sau ために thì hành động nào cũng được.",
+              "title": "〜ために (mục đích)",
+              "diff": "Khi phía sau là 「行く」 thì dùng cả hai được: 買いに行く là cách nói thông thường, 買うために行く trang trọng hơn và nhấn mạnh mục đích; phía sau không phải di chuyển thì chỉ dùng ために.",
               "this": [
                 {
-                  "tag": "Sau là di chuyển",
+                  "tag": "Cách nói thông thường",
                   "tr": "Đi trung tâm thương mại mua quần áo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sau là hành động bất kỳ",
-                  "tr": "Tôi đang làm thêm để mua quần áo."
+                  "tag": "Trang trọng · nhấn mạnh mục đích",
+                  "tr": "Đi trung tâm thương mại để mua quần áo."
                 }
               ],
               "wrong": {
-                "why": "「に」 chỉ mục đích chỉ đi với động từ di chuyển"
+                "why": "Sau 「に」 chỉ mục đích chỉ được dùng các động từ di chuyển như 「行く」「来る」「帰る」; ở đây phải dùng 「買うために」"
               },
-              "explain": "Xem động từ phía sau: động từ di chuyển như 「行く」「来る」「帰る」 → thể ます＋に; hành động không phải di chuyển như 「アルバイトする」「貯金する」 → thể từ điển＋ために."
-            },
-            {
-              "id": "te-kuru",
-              "title": "〜てくる（đi làm rồi quay lại）",
-              "thisTitle": "〜に行く",
-              "diff": "に行く nói mục đích của việc đi; てくる nói đi làm xong việc rồi còn quay lại đây.",
-              "this": [
-                {
-                  "tag": "Mục đích đi",
-                  "tr": "Tuần sau tôi đi Kyoto xem chùa."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Làm xong quay lại",
-                  "tr": "Mình ra cửa hàng tiện lợi mua chút đồ uống, về ngay nhé."
-                }
-              ],
-              "explain": "Xem người nói có quay lại đây không: 「ちょっと〜てくるね」 là làm xong rồi về → てくる; 「京都へ見に行く」 chỉ nói mục đích khi xuất phát → に行く. Trợ từ chỉ nơi chốn cũng khác: trước てくる hay dùng 「で」 (mua ở đâu), trước に行く dùng 「へ／に」 (đi đâu)."
+              "explain": "Hãy nhìn động từ phía sau: với các động từ di chuyển như 「行く」「来る」「帰る」 thì dùng cả hai đều được, nghĩa không đổi — ます形 + に行く là cách nói thông thường; 辞書形 + ために行く nghe trang trọng hơn, nhấn mạnh “chuyên vì việc này”. Với những hành động không phải di chuyển như 「アルバイトをする」「貯金する」 thì chỉ dùng ために."
             }
           ]
         }
@@ -3699,10 +3617,10 @@
               "that": [
                 {
                   "tag": "Cách mấy ngày",
-                  "tr": "Thuốc này uống cách một ngày một lần."
+                  "tr": "Thuốc này cách một ngày uống một lần."
                 }
               ],
-              "explain": "Hai câu nghĩa như nhau nhưng con số lại khác. おきに đếm số ngày bỏ trống ở giữa: １日おき＝cách một ngày＝hai ngày một lần, thấy おきに thì phải cộng thêm một vào con số mới ra “mấy ngày một lần”. Cách nói một ngày mấy lần như 「１日に３回」 thì chỉ dùng được に〜回."
+              "explain": "Hai câu cùng nghĩa nhưng con số lại khác. おきに đếm số ngày bỏ trống ở giữa: １日おき＝cách một ngày＝hai ngày một lần (２日に１回); thấy おきに thì phải cộng thêm một vào con số mới ra “mấy ngày một lần”. Cách nói một ngày mấy lần như 「１日に３回」 chỉ dùng được に〜回."
             }
           ]
         }
@@ -3712,72 +3630,29 @@
       "id": "ni-suru-decide",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Đều dùng để nói “chọn／lấy cái gì” hoặc “làm cho thành thế nào”: dùng khi gọi món, quyết định, thay đổi trạng thái",
+          "kind": "root",
+          "note": "Đều bắt nguồn từ 「にする」 — nghĩa gốc là “định … là …”",
           "items": [
             {
               "id": "koto-ni-suru",
-              "thisTitle": "〜にする（lựa chọn）",
-              "diff": "Trước にする là danh từ, hay dùng khi chọn một trong vài lựa chọn; trước ことにする là động từ.",
+              "thisTitle": "〜にする (quyết định)",
+              "diff": "Danh từ + にする là chọn một trong vài phương án; động từ + ことにする là quyết định sẽ làm một việc.",
               "this": [
                 {
-                  "tag": "Danh từ＋にする",
-                  "tr": "Đồ uống thì tôi chọn cà phê."
+                  "tag": "Danh từ + にする · chọn",
+                  "tr": "Chuyến du lịch hè đã chọn Okinawa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Động từ＋ことにする",
+                  "tag": "Động từ + ことにする · quyết định làm",
                   "tr": "Kỳ nghỉ hè tôi đã quyết định đi Okinawa."
                 }
               ],
               "wrong": {
-                "why": "Sau động từ phải thêm 「こと」"
+                "why": "Động từ phải thêm 「こと」 trước rồi mới nối với 「にする」"
               },
-              "explain": "Trước tiên xem phía trước là danh từ hay động từ: コーヒー (danh từ) → にする; 行く (động từ) → ことにする. Khi gọi món, chọn đồ thì hay dùng nhất là 「〜にします」."
-            },
-            {
-              "id": "ku-naru-ni-naru",
-              "diff": "くする／にする là có người “làm cho nó thành”; くなる／になる là nó tự “trở thành”.",
-              "this": [
-                {
-                  "tag": "くする · Người tác động",
-                  "tr": "Tôi đã vặn nhỏ tiếng tivi."
-                },
-                {
-                  "tag": "にする · Người tác động",
-                  "tr": "Tôi đã dọn phòng sạch sẽ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "くなる · Tự thay đổi",
-                  "tr": "Tiếng tivi đã nhỏ đi."
-                },
-                {
-                  "tag": "になる · Tự thay đổi",
-                  "tr": "Căn phòng đã trở nên sạch sẽ."
-                }
-              ],
-              "explain": "Xem trợ từ: 「音を」, 「部屋を」 → có người ra tay thay đổi → くする／にする; 「音が」, 「部屋が」 → tự thay đổi, không nói ai làm → くなる／になる (tính từ đuôi い dùng く, tính từ đuôi な và danh từ dùng に). Khi quyết định việc gì cũng vậy: 「会議は月曜日にしました」 là chúng tôi chọn, còn 「月曜日になりました」 chỉ nói kết quả đã được định."
-            },
-            {
-              "id": "wo-kudasai",
-              "thisTitle": "〜にする（lựa chọn）",
-              "diff": "にする là nói mình chọn cái nào, bạn bè bàn với nhau cũng dùng được; をください là xin nhân viên cửa hàng đưa đồ.",
-              "this": [
-                {
-                  "tag": "Nói lựa chọn của mình",
-                  "tr": "Mình lấy cà ri."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Xin nhân viên",
-                  "tr": "Xin lỗi, cho tôi món cà ri."
-                }
-              ],
-              "explain": "Xem nói với ai: cùng bạn xem thực đơn và nói mình chọn gì → にする (「何にする？」「カレーにする」); xin nhân viên đưa đồ → をください. Nói 「カレーにします」 với nhân viên cũng được, nhưng nói 「カレーをください」 với bạn thì thành “cậu đưa cà ri cho tớ”."
+              "explain": "Nghĩa gốc của にする là “định … là …”. 沖縄にした: định nơi du lịch là Okinawa → chọn một trong vài nơi; ことにする: trước tiên dùng 「こと」 biến 「行く」 thành một việc, rồi định việc đó là dự định của mình → quyết định làm …. Vì vậy hãy nhìn phía trước にする: danh từ (沖縄) → chọn; động từ + こと (行くこと) → quyết định làm. Động từ không thể nối thẳng với にする."
             }
           ]
         }
@@ -3787,54 +3662,26 @@
       "id": "no-ga-suki",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「〜が好き・〜が上手」 — đối tượng của 「好き」「上手」 được đánh dấu bằng 「が」, phía trước phải là danh từ, nên động từ phải thêm 「の」 trước",
-          "items": [
-            {
-              "id": "ga-suki-jouzu",
-              "diff": "Thích một thứ gì đó dùng 「danh từ＋が好き」; thích làm một việc gì đó phải thêm 「の」: 「động từ＋のが好き」.",
-              "this": [
-                {
-                  "tag": "Động từ＋のが",
-                  "tr": "Tôi thích nghe nhạc."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Danh từ＋が",
-                  "tr": "Tôi thích âm nhạc."
-                }
-              ],
-              "wrong": {
-                "why": "Động từ không gắn trực tiếp với 「が好き」 được, phải thêm 「の」"
-              },
-              "explain": "Nhìn phía trước 「が好き」: 音楽 là danh từ → gắn trực tiếp; 聞く là động từ → phải thêm 「の」 để biến thành danh từ. Tiếng Việt đều nói “thích…”, nên rất dễ quên 「の」. 上手、嫌い、下手 cũng vậy (泳ぐのが上手)."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Đều có thể biến động từ thành danh từ",
+          "note": "Đều diễn tả “thích làm …”",
           "items": [
             {
               "id": "koto-nominalizer",
-              "diff": "Khi nói thích, giỏi thì の và こと phần lớn đều được; khi giải thích nội dung ở cuối câu kiểu 「趣味は〜」 thì chỉ dùng được こと.",
+              "title": "〜こと (làm tân ngữ)",
+              "diff": "Nghĩa như nhau: のが好き là cách nói thường ngày; ことが好き hơi mang tính văn viết, trang trọng.",
               "this": [
                 {
-                  "tag": "Trước 好き · の",
-                  "tr": "Tôi thích đọc sách."
+                  "tag": "の · thường ngày",
+                  "tr": "Tôi thích nấu ăn vào cuối tuần."
                 }
               ],
               "that": [
                 {
-                  "tag": "Giải thích nội dung · こと",
-                  "tr": "Sở thích của tôi là đọc sách."
+                  "tag": "こと · hơi trang trọng",
+                  "tr": "Tôi thích nấu ăn vào cuối tuần."
                 }
               ],
-              "wrong": {
-                "why": "Khi giải thích nội dung bằng 「〜は〜ことです」 chỉ dùng được こと"
-              },
-              "explain": "Trước 「好き」「上手」 dùng の là tự nhiên nhất, đổi sang こと cũng được nhưng hơi thiên về văn viết; khi dùng 「〜は〜ことです」 để giải thích nội dung sở thích, ước mơ thì chỉ dùng được こと, đổi sang の sẽ thành 「のです」 giải thích tình huống, sai nghĩa."
+              "explain": "Hai câu đều là “thích nấu ăn vào cuối tuần”, dùng thay cho nhau nghĩa không đổi. Hãy xem hoàn cảnh: nói chuyện thường ngày, tán gẫu với bạn bè thì 「〜のが好き」 tự nhiên hơn; trong dịp trang trọng như bài viết, tự giới thiệu khi phỏng vấn thì hay nói 「〜ことが好き」. Phía trước 「嫌い」「得意」 cũng vậy."
             }
           ]
         }
@@ -3845,28 +3692,29 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ từ chỉ phương vị 「前（まえ）」 — nghĩa gốc là “phía trước” trong không gian, đi với hành động thì mượn sang nghĩa thời gian “trước khi”",
+          "note": "Đều bắt nguồn từ từ chỉ phương vị 「前（まえ）」 — nghĩa gốc là “phía trước” trong không gian, khi đi với hành động, sự việc thì mượn sang “trước khi” về thời gian",
           "items": [
             {
               "id": "mae-ni",
-              "thisTitle": "〜の前（vị trí）",
-              "diff": "の前 đi với địa điểm, là “phía trước” trong không gian; 前に đi với hành động hoặc hoạt động, là “trước khi” về thời gian.",
+              "title": "〜まえに (trước khi làm)",
+              "thisTitle": "〜の前 (vị trí)",
+              "diff": "Phía trước 「前」 là địa điểm, đồ vật → “phía trước” trong không gian; là hành động → “trước khi” về thời gian.",
               "this": [
                 {
                   "tag": "Địa điểm → phía trước",
-                  "tr": "Tôi đã đợi bạn trước cửa ga."
+                  "tr": "Tôi đã đợi bạn ở trước nhà ga."
                 }
               ],
               "that": [
                 {
                   "tag": "Hành động → trước khi",
-                  "tr": "Trước khi lên tàu điện, tôi đã mua vé."
+                  "tr": "Tôi đã mua vé trước khi lên tàu điện."
                 }
               ],
               "wrong": {
-                "why": "Động từ gắn trực tiếp với 「前に」, không thêm 「の」"
+                "why": "Động từ nối thẳng với 「前に」, không thêm 「の」"
               },
-              "explain": "Nhìn từ đứng trước 「前」: địa điểm, đồ vật như 駅、家 → vị trí không gian “phía trước…”; động từ như 乗る, hoặc danh từ chỉ hoạt động như 食事、授業 thêm 「の」 → thời gian “trước khi…”. Sau động từ không thêm 「の」."
+              "explain": "Nghĩa gốc của 「前（まえ）」 là phía mà con người quay mặt về, tức “phía trước” trong không gian: 駅の前＝trước nhà ga. Mượn hướng này sang thời gian thì cái đứng phía trước là việc xảy ra trước: 電車に乗る前に＝trước khi lên tàu điện. Vì vậy hãy nhìn phía trước 「前」 là gì: địa điểm, đồ vật như 駅, 家 → vị trí; hành động như 乗る (và cả sự việc như 「会議」「食事」) → thời gian. Động từ nối thẳng với 「前」, không thêm 「の」."
             }
           ]
         },
@@ -3877,12 +3725,12 @@
             {
               "id": "juu-chuu-throughout",
               "title": "〜中（じゅう）",
-              "thisTitle": "〜の中（bên trong）",
-              "diff": "の中（なか） là “bên trong” của một vật; 「中」 gắn liền sau danh từ đọc là じゅう, nghĩa thành “suốt cả…, khắp cả…”.",
+              "thisTitle": "〜の中 (bên trong)",
+              "diff": "の中（なか） là “bên trong” đồ vật; 「中」 gắn thẳng sau danh từ thì đọc là じゅう, nghĩa thành “suốt cả …, khắp cả …”.",
               "this": [
                 {
                   "tag": "Bên trong · なか",
-                  "tr": "Trong hộp có một con mèo."
+                  "tr": "Trong hộp có con mèo."
                 }
               ],
               "that": [
@@ -3891,7 +3739,7 @@
                   "tr": "Mưa suốt cả ngày."
                 }
               ],
-              "explain": "Xem trước 「中」 có 「の」 hay không: có 「の」 → đọc là なか, chỉ bên trong về không gian; gắn liền sau danh từ thời gian, địa điểm (一日中、世界中) → đọc là じゅう, nghĩa là “suốt cả, khắp cả”."
+              "explain": "Hãy xem trước 「中」 có 「の」 hay không: có 「の」 → đọc なか, chỉ bên trong không gian; gắn thẳng sau danh từ thời gian, địa điểm (一日中, 世界中) → đọc じゅう, nghĩa là “toàn bộ, suốt cả”."
             }
           ]
         }

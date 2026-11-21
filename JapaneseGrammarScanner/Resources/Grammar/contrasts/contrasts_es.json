@@ -3239,74 +3239,52 @@
       "id": "naide-without",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambas vienen de la negación 「ないで」: «en el estado de no hacer…»",
-          "items": [
-            {
-              "id": "naide-kudasai",
-              "diff": "ないで + otro verbo significa «sin hacer…, hice…»; ないで + ください pide al otro que no haga algo.",
-              "this": [
-                {
-                  "tag": "Sin… hice…",
-                  "tr": "Salí sin llevar paraguas."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Por favor, no…",
-                  "tr": "Por favor, no olvides el paraguas."
-                }
-              ],
-              "explain": "Fíjate en lo que sigue a 「ないで」: otro verbo (出かけた, 寝た) → cuentas que hiciste B sin haber hecho A; 「ください」 → pides al otro que no lo haga."
-            }
-          ]
-        },
-        {
           "kind": "look",
-          "note": "ないで ↔ なくて: las dos son 「ない」 unido a la forma て, y solo se diferencian en uno o dos kana",
+          "note": "ないで ↔ なくて: solo cambia 「いで」 por 「くて」",
           "items": [
             {
               "id": "nakute-reason",
-              "diff": "ないで significa «sin hacer… (hice otra cosa)»; なくて expresa causa: «como no…, …».",
+              "diff": "ないで significa «sin hacer… (y se hizo otra cosa)»; なくて expresa causa: «como no…, …».",
               "this": [
                 {
                   "tag": "Modo · en lugar de",
-                  "tr": "No tomé el autobús y fui andando."
+                  "tr": "No tomé el autobús; fui caminando."
                 }
               ],
               "that": [
                 {
                   "tag": "Causa",
-                  "tr": "El autobús no venía y no sabía qué hacer."
+                  "tr": "El autobús no llegaba y me vi en apuros."
                 }
               ],
-              "explain": "Fíjate en la segunda parte: si es otra acción que haces tú a continuación (歩いて行った) → ないで; si es la consecuencia o el sentimiento que provoca el «no…» (困った, 遅れた) → なくて."
+              "explain": "ないで es 「ない＋で」; なくて cambia 「ない」 a 「なく」 y añade 「て」. Mira la segunda parte: si es otra acción que uno hace a continuación (歩いて行った) → ないで; si es el resultado o el sentimiento que provoca el «no…» (困った, 遅れた) → なくて."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan «no hacer A (y hacer B)»",
+          "note": "Ambas significan «sin hacer…»",
           "items": [
             {
               "id": "zuni-without",
-              "diff": "Significan lo mismo: ないで es de la lengua hablada cotidiana; ずに es más escrito, y 「する」 pasa a 「せずに」.",
+              "title": "〜ずに (sin hacer)",
+              "diff": "Mismo significado, «sin hacer…»: ないで es de la conversación diaria; ずに es más escrito, y 「する」 pasa a 「せずに」.",
               "this": [
                 {
-                  "tag": "Coloquial",
-                  "tr": "Me presenté al examen sin haber estudiado."
+                  "tag": "Oral",
+                  "tr": "Hice el examen sin estudiar."
                 }
               ],
               "that": [
                 {
                   "tag": "Escrito",
-                  "tr": "Me presenté al examen sin haber estudiado."
+                  "tr": "Hice el examen sin estudiar."
                 }
               ],
               "wrong": {
                 "why": "「する」 debe convertirse en 「せずに」"
               },
-              "explain": "Las dos significan lo mismo; cambian el registro y la conjugación: al hablar se usa más ないで (しないで); en textos y situaciones formales, ずに. ずに sustituye a 「ない」 en la forma ない (言わ + ずに), pero 「する」 es la excepción: se dice 「せずに」."
+              "explain": "Las dos oraciones dicen «hice el examen sin estudiar»; la diferencia está en el registro y en la conjugación. Al hablar se usa más ないで (勉強しないで); en textos y situaciones formales es frecuente ずに. ずに va donde se quita 「ない」 en la ない形 (言わ＋ずに), pero los verbos con する como 「勉強」 son la excepción: se dice 「勉強せずに」, nunca 「勉強しずに」."
             }
           ]
         }
@@ -3316,65 +3294,42 @@
       "id": "nakereba-naranai",
       "groups": [
         {
-          "kind": "root",
-          "note": "Todas vienen de la forma condicional de 「ない」 (なければ／なくては): «si no…, no vale»",
-          "items": [
-            {
-              "id": "nakucha-nakya",
-              "diff": "なければならない es la forma completa y formal; なきゃ／なくちゃ son contracciones coloquiales que a menudo omiten la segunda parte, y solo se usan con gente de confianza.",
-              "this": [
-                {
-                  "tag": "Completa · formal",
-                  "tr": "Los estudiantes tienen que asistir a clase."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Contraída · para uno mismo",
-                  "tr": "Ah, ya son las ocho. Tengo que irme."
-                }
-              ],
-              "explain": "なきゃ = なければ, なくちゃ = なくては, y el 「ならない／いけない」 que sigue se omite a menudo. Fíjate en la situación: normas, textos, ocasiones formales → なければならない; hablando solo o con amigos y familia → なきゃ・なくちゃ."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Todas expresan «tener que, deber»",
+          "note": "Ambas significan «tener que, deber»",
           "items": [
             {
               "id": "nai-to-ikenai",
-              "diff": "なければならない es más formal y se usa en normas y textos escritos; ないといけない es coloquial y se usa sobre todo para asuntos concretos propios.",
+              "diff": "なければならない es más formal y se usa en normas y textos escritos; ないといけない es coloquial y suele hablar de la situación concreta de uno mismo.",
               "this": [
                 {
                   "tag": "Norma · escrito",
-                  "tr": "En Japón, los coches tienen que circular por la izquierda."
+                  "tr": "En Japón, los coches deben circular por la izquierda."
                 }
               ],
               "that": [
                 {
-                  "tag": "Situación personal · coloquial",
+                  "tag": "Situación personal · oral",
                   "tr": "Ya son las diez. Tengo que volver a casa."
                 }
               ],
-              "explain": "Fíjate en de qué se habla: de obligaciones objetivas en leyes, normas o textos → なければならない; de tu situación concreta del momento (もう10時だ) → ないといけない suena más natural. Significan lo mismo, así que intercambiarlas no es un error."
+              "explain": "Fíjate en de qué se habla: una obligación objetiva de leyes, normas o textos (「日本では」) → なければならない; la propia situación concreta del momento (もう10時だ) → ないといけない suena más natural. El significado es el mismo, así que intercambiarlas no es un error."
             },
             {
-              "id": "beki-da",
-              "diff": "なければならない es una norma, una obligación objetiva; べきだ es la opinión personal de quien habla: «se debería».",
+              "id": "nakucha-nakya",
+              "diff": "なければならない es la forma completa y formal; なきゃ es una contracción oral que omite la segunda mitad, 「ならない」.",
               "this": [
                 {
-                  "tag": "Norma · objetivo",
-                  "tr": "En Japón, los coches tienen que circular por la izquierda."
+                  "tag": "Completa · formal",
+                  "tr": "Según el reglamento, el informe debe entregarse antes del viernes."
                 }
               ],
               "that": [
                 {
-                  "tag": "Opinión · subjetivo",
-                  "tr": "Creo que los jóvenes deberían leer más libros."
+                  "tag": "Contraída · hablando solo",
+                  "tr": "Ay, tengo que entregar el informe antes del viernes."
                 }
               ],
-              "explain": "Fíjate en si se habla de una norma o de una opinión: leyes, reglas, cosas que no se pueden dejar de hacer → なければならない; la postura o el consejo propio de quien habla, a menudo con 「と思う」 → べきだ. «Tener que» suele corresponder a なければならない, y «debería» a べきだ."
+              "explain": "Las dos oraciones dicen lo mismo: el informe hay que entregarlo antes del viernes. Fíjate en la situación: al citar una norma (「規則で」), escribirlo en un documento o hablar en un contexto formal → la forma completa なければならない; al murmurar para uno mismo (「やばい」) o hablar con amigos y familia → se acorta a なきゃ (＝なければ) o なくちゃ (＝なくては) y se omite 「ならない」 o 「いけない」. Con jefes o clientes no se usa なきゃ."
             }
           ]
         }
@@ -3389,21 +3344,21 @@
           "items": [
             {
               "id": "te-mo-ii",
-              "title": "〜てもいい（permiso）",
-              "diff": "てもいい es «puedes hacerlo»; なくてもいい es «no hace falta hacerlo»: mira si delante de 「ても」 hay afirmación o negación.",
+              "title": "〜てもいい (permiso)",
+              "diff": "てもいい significa «se puede hacer»; なくてもいい, «no hace falta hacerlo»: mira si lo que va antes de 「ても」 es afirmativo o negativo.",
               "this": [
                 {
-                  "tag": "No hace falta hacerlo",
-                  "tr": "Si tienes fiebre, mañana no hace falta que vayas al colegio."
+                  "tag": "Puede no hacerse",
+                  "tr": "Si tienes fiebre, mañana no hace falta que vayas a la escuela."
                 }
               ],
               "that": [
                 {
-                  "tag": "Se puede hacer",
-                  "tr": "Como ya te ha bajado la fiebre, mañana puedes ir al colegio."
+                  "tag": "Puede hacerse",
+                  "tr": "Ya te bajó la fiebre, así que mañana puedes ir a la escuela."
                 }
               ],
-              "explain": "Mira lo que va delante de 「ても」: 「行って」 es afirmativo → permiso para hacerlo; 「行かなく」 es negativo → no hace falta, no es necesario. Si preguntas 「〜なくてもいいですか」 y te responden 「はい」, significa que de verdad no hace falta."
+              "explain": "Mira lo que va antes de 「ても」: 「行って」 es afirmativo → permiso para hacerlo; 「行かなく」 es negativo → no hacerlo también está bien, no es necesario. Si alguien pregunta 「〜なくてもいいですか」, responder 「はい」 significa que de verdad no hace falta hacerlo."
             }
           ]
         },
@@ -3413,20 +3368,20 @@
           "items": [
             {
               "id": "koto-wa-nai",
-              "diff": "なくてもいい dice de forma objetiva «no hace falta hacerlo»; ことはない aconseja al otro «no tienes por qué…», y se usa mucho para tranquilizar.",
+              "diff": "なくてもいい dice objetivamente «no hace falta»; ことはない le aconseja al otro «no hay por qué hacer eso», muchas veces para consolarlo.",
               "this": [
                 {
                   "tag": "Explicar que no hace falta",
-                  "tr": "Mañana es fiesta, así que no hace falta que vengas a la empresa."
+                  "tr": "Mañana es día libre, así que no hace falta que vengas a la oficina."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tranquilizar al otro",
-                  "tr": "No tienes por qué preocuparte tanto."
+                  "tag": "Consolar",
+                  "tr": "No hay por qué preocuparse tanto."
                 }
               ],
-              "explain": "ことはない va tras la forma de diccionario, suele ir con 「そんなに」 o 「わざわざ」 y aconseja al otro no hacer algo innecesario; なくてもいい va tras la forma negativa, solo explica que no es necesario y también sirve para preguntar 「〜なくてもいいですか」."
+              "explain": "ことはない va con el 辞書形 y suele aparecer con 「そんなに」 o 「わざわざ」 para aconsejar al otro que no haga algo innecesario; なくてもいい va con la forma negativa, solo explica que no es necesario y también sirve para preguntar 「〜なくてもいいですか」."
             },
             {
               "id": "te-sumu",
@@ -3435,16 +3390,16 @@
               "this": [
                 {
                   "tag": "No es necesario",
-                  "tr": "La estación está cerca, así que no hace falta coger un taxi."
+                  "tr": "La estación está cerca, así que no hace falta tomar un taxi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Por suerte me lo ahorré",
-                  "tr": "Un amigo me llevó en coche, así que por suerte no tuve que coger un taxi."
+                  "tag": "Por suerte, se evitó",
+                  "tr": "Un amigo me llevó en coche, así que por suerte no tuve que tomar un taxi."
                 }
               ],
-              "explain": "Fíjate en el tiempo verbal y en el tono: ずに済んだ suele ir en pasado y cuenta que «algo que había que hacer se evitó gracias a alguna circunstancia», con sensación de alivio; なくてもいい solo explica que ahora o en el futuro no es necesario."
+              "explain": "Fíjate en el tiempo verbal y el tono: ずに済んだ suele ir en pasado y expresa que algo que había que hacer se evitó gracias a alguna circunstancia, con sensación de alivio; なくてもいい solo explica que ahora o en el futuro no es necesario."
             }
           ]
         }
@@ -3455,42 +3410,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Todas van al final de la oración y añaden el tono de quien habla",
+          "note": "Ambas sirven para confirmar algo con el interlocutor",
           "items": [
             {
               "id": "yo-particle",
-              "diff": "ね: el otro también lo sabe y buscas su complicidad; よ: le cuentas algo que no sabe.",
+              "title": "〜よね (confirmación)",
+              "diff": "ね solo repasa algo que ambos ya saben; よね primero expresa la propia opinión y luego pide confirmación.",
               "this": [
                 {
-                  "tag": "Buscar complicidad",
-                  "tr": "(Comiendo los dos) Este pastel está buenísimo, ¿eh?"
+                  "tag": "Confirmar · repasar",
+                  "tr": "Entonces, la reunión empieza a las tres."
                 }
               ],
               "that": [
                 {
-                  "tag": "Informar al otro",
-                  "tr": "Este pastel está muy rico, ¿sabes? Pruébalo."
+                  "tag": "Confirmar · opinión primero",
+                  "tr": "Si no me equivoco, la reunión era a las tres, ¿no?"
                 }
               ],
-              "explain": "Fíjate en si el otro lo sabe: si estáis comiendo los dos y él piensa lo mismo → ね; si aún no lo ha probado y tú se lo cuentas o se lo recomiendas → よ, a menudo seguido de una invitación como 「食べてみて」."
-            },
-            {
-              "id": "naa-exclamation",
-              "title": "〜なあ（exclamación）",
-              "diff": "ね se dirige al oyente, buscando su acuerdo; なあ suele ser una exclamación para uno mismo.",
-              "this": [
-                {
-                  "tag": "Dirigido a alguien",
-                  "tr": "Sr. Tanaka, hoy hace mucho calor, ¿verdad?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Para uno mismo",
-                  "tr": "(Murmurando para sí) Ay, qué calor hace hoy…"
-                }
-              ],
-              "explain": "Mira si hay alguien a quien hablas: si llamas al otro por su nombre y le hablas con 「です」 → ね; si murmuras solo o es una exclamación interior → なあ. Por eso 「なあ」 suele ir con el estilo llano y no lleva 「です」."
+              "explain": "Las dos oraciones confirman con el otro que la reunión empieza a las tres. ね solo vuelve a repasar algo que ambos ya saben, como cerrar una conversación con 「じゃあ」; よね primero presenta el propio juicio («creo recordar que es así») y luego pide confirmación, por eso suele ir con 「確か」."
             }
           ]
         }
@@ -3501,11 +3439,11 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de la partícula de caso 「に」: marca el destino al que llega un movimiento",
+          "note": "Ambas vienen de la partícula de caso 「に」: su sentido original es el punto hacia el que se dirige una acción y donde termina",
           "items": [
             {
               "id": "ni-iku-purpose",
-              "diff": "Lugar + に es «adónde vas»; forma ます + に行く es «a qué vas».",
+              "diff": "Lugar + に行く: に marca el lugar al que se llega → adónde se va; ます形 + に行く: に marca la acción a la que apunta el desplazamiento → a qué se va.",
               "this": [
                 {
                   "tag": "Lugar → destino",
@@ -3515,18 +3453,25 @@
               "that": [
                 {
                   "tag": "Acción → propósito",
-                  "tr": "Voy a sacar libros prestados."
+                  "tr": "Voy a sacar un libro."
                 }
               ],
-              "explain": "Fíjate en lo que va delante de 「に」: 「図書館」 es un lugar → destino; 「借り」 es la forma ます de un verbo (o un sustantivo de acción como 「買い物」) → el propósito del viaje. Se pueden combinar: 「図書館へ本を借りに行く」."
-            },
+              "explain": "El sentido original de に es el punto hacia el que se dirige una acción y donde termina. 「図書館に行く」: ese punto es un lugar en el espacio, y uno se desplaza hasta allí → adónde se va. 「本を借りに行く」: el punto pasa a ser una acción, y uno se desplaza para llegar a «sacar un libro» → a qué se va. Así que mira lo que va antes de 「に」: 「図書館」 es un lugar → destino; 「本を借り」 es un verbo en ます形 (o un sustantivo de acción como 「買い物」) → propósito. Las dos pueden combinarse: 「図書館へ本を借りに行く」."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "に ↔ で: solo cambia una partícula, y las dos suelen traducirse como «en»",
+          "items": [
             {
               "id": "de-means",
-              "title": "〜で（lugar de la acción）",
-              "diff": "に es el lugar donde una persona o cosa «está»; で es el lugar donde «ocurre» una acción.",
+              "title": "〜で (lugar de la acción)",
+              "thisTitle": "〜に (donde está alguien o algo)",
+              "diff": "に es el lugar donde «está» una persona o cosa; で es el lugar donde «ocurre» una acción.",
               "this": [
                 {
-                  "tag": "Lugar donde se está",
+                  "tag": "Lugar de existencia",
                   "tr": "En la biblioteca hay muchos libros."
                 }
               ],
@@ -3537,70 +3482,61 @@
                 }
               ],
               "wrong": {
-                "why": "El lugar donde se hace una acción se marca con で"
+                "why": "El lugar donde se realiza una acción lleva で"
               },
-              "explain": "Mira el verbo final: existencia o permanencia, como 「ある」「いる」「住む」 → に; acciones como 「読む」「食べる」「勉強する」 → で. En español las dos son «en la biblioteca», y por eso es tan fácil confundirlas."
+              "explain": "Mira el verbo final: verbos de existencia o permanencia como 「ある」, 「いる」, 「住む」 → に; verbos de acción como 「読む」, 「食べる」, 「勉強する」 → で. En español ambos se dicen «en la biblioteca», por eso es tan fácil confundirlos."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Todas pueden marcar el lugar, el momento o el destinatario de una acción, y a menudo se traducen igual",
+          "sense": 1,
+          "note": "Ambas marcan el destino de un desplazamiento",
           "items": [
             {
               "id": "he-direction",
-              "diff": "Para el destino, に y へ casi siempre se pueden intercambiar: に se centra en el «punto de llegada» y へ en la «dirección». Con horas y personas solo vale に.",
+              "title": "〜へ (dirección del movimiento)",
+              "thisTitle": "〜に (destino)",
+              "diff": "Para decir adónde se va, に y へ casi siempre son intercambiables; に se fija en el punto de llegada, へ en la dirección hacia la que se va.",
               "this": [
                 {
                   "tag": "Punto de llegada",
-                  "tr": "Por fin he llegado a la estación."
+                  "tr": "Por fin llegué a la estación."
                 }
               ],
               "that": [
                 {
                   "tag": "Dirección",
-                  "tr": "Ahora voy camino de la estación."
+                  "tr": "Ahora voy camino a la estación."
                 }
               ],
-              "wrong": {
-                "why": "Para un momento concreto solo vale に"
-              },
-              "explain": "Fíjate en el verbo: 「着く」 o 「入る」 destacan el punto de llegada → suele ir に; 「向かう」 o 「出発する」 solo indican hacia dónde → suele ir へ; con 「行く」 y 「来る」 valen las dos. Para la hora (７時に) y el destinatario de la acción (友達に) solo vale に."
-            },
-            {
-              "id": "made-ni-deadline",
-              "diff": "に es justo en ese momento; までに es en cualquier momento antes de ese límite.",
-              "this": [
-                {
-                  "tag": "Ese momento",
-                  "tr": "Mañana ven a las nueve, por favor."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Antes del plazo",
-                  "tr": "Mañana ven antes de las nueve, por favor."
-                }
-              ],
-              "explain": "Solo cambia 「まで」: 「９時に」 es justo a las nueve; 「９時までに」 es un plazo: puedes venir a las ocho o a las ocho y media, siempre que no sea más tarde de las nueve."
-            },
+              "explain": "Mira el verbo: 「着く」 y 「入る」 destacan el punto de llegada → normalmente に; 「向かう」 y 「出発する」 solo indican hacia dónde se va → normalmente へ; con 「行く」, 「来る」, 「帰る」 sirven las dos sin cambio de significado."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Ambas marcan a la otra persona de una acción",
+          "items": [
             {
               "id": "to-quotation",
-              "title": "〜と（compañero de la acción）",
-              "diff": "に es una acción dirigida en un solo sentido hacia el otro; と es hacerla los dos juntos.",
+              "title": "〜と (compañero de una acción mutua)",
+              "thisTitle": "〜に (destinatario de la acción)",
+              "diff": "に es algo que yo hago hacia el otro de forma unilateral; と es algo que dos personas hacen juntas, en pie de igualdad.",
               "this": [
                 {
-                  "tag": "En un solo sentido",
-                  "tr": "Le conté mis preocupaciones a mi madre."
+                  "tag": "Unilateral · pedir consejo",
+                  "tr": "Mañana voy a consultar con el profesor."
                 }
               ],
               "that": [
                 {
-                  "tag": "Los dos juntos",
-                  "tr": "Hacía mucho que no lo hacía, y estuve charlando tranquilamente con mi madre."
+                  "tag": "Mutuo · decidir juntos",
+                  "tr": "Mañana lo hablaré con el profesor."
                 }
               ],
-              "explain": "Mira quién se dirige a quién: 「母に話す」 es contarle algo a mi madre: uno habla y el otro escucha; 「母と話す」 es que los dos conversan. Con acciones que necesitan forzosamente a dos personas, como 「けんかする」「結婚する」, el compañero va con と."
+              "explain": "Las dos oraciones solo se diferencian en una partícula. 「先生に相談する」 es que yo voy por mi cuenta a ver al profesor para pedirle su opinión; 「先生と相談する」 es que el profesor y yo lo hablamos y decidimos juntos. Con 「話す」 pasa lo mismo: 母に話す es contarle algo a mamá, 母と話す es charlar con mamá. 「結婚する」 y 「けんかする」 requieren a dos personas, así que solo van con と; 「あげる」 y 「教える」 van en una sola dirección hacia el otro, así que solo van con に."
             }
           ]
         }
@@ -3611,16 +3547,16 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de la partícula de caso 「に」: marca el destino al que llega un movimiento",
+          "note": "Ambas vienen de la partícula de caso 「に」: su sentido original es el punto hacia el que se dirige una acción y donde termina",
           "items": [
             {
               "id": "ni-destination-target",
-              "title": "〜に（destino）",
-              "diff": "Forma ます + に行く es «a qué vas»; lugar + に es «adónde vas».",
+              "title": "〜に (destino)",
+              "diff": "ます形 + に行く: に marca la acción a la que apunta el desplazamiento → a qué se va; lugar + に行く: に marca el lugar al que se llega → adónde se va.",
               "this": [
                 {
                   "tag": "Acción → propósito",
-                  "tr": "Voy a sacar libros prestados."
+                  "tr": "Voy a sacar un libro."
                 }
               ],
               "that": [
@@ -3629,52 +3565,34 @@
                   "tr": "Voy a la biblioteca."
                 }
               ],
-              "explain": "Fíjate en lo que va delante de 「に」: 「借り」 es la forma ます de un verbo (o un sustantivo de acción como 「買い物」「散歩」) → el propósito del viaje; 「図書館」 es un lugar → destino. Se pueden combinar: 「図書館へ本を借りに行く」. Con に来る y に帰る pasa lo mismo (遊びに来る)."
+              "explain": "El sentido original de に es el punto hacia el que se dirige una acción y donde termina. 「図書館に行く」: ese punto es un lugar en el espacio, y uno se desplaza hasta allí → adónde se va. 「本を借りに行く」: el punto pasa a ser una acción, y uno se desplaza para llegar a «sacar un libro» → a qué se va. Así que mira lo que va antes de 「に」: 「本を借り」 es un verbo en ます形 (o un sustantivo de acción como 「買い物」 o 「散歩」) → propósito; 「図書館」 es un lugar → destino. Con に来る y に帰る pasa lo mismo (遊びに来る)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Todas tienen que ver con el propósito de «ir a hacer algo»",
+          "note": "Ambas significan «para hacer algo»",
           "items": [
             {
               "id": "tame-ni",
-              "diff": "Detrás de に行く solo puede ir «ir, venir, volver»; detrás de ために puede ir cualquier acción.",
+              "title": "〜ために (propósito)",
+              "diff": "Si después va 「行く」, sirven las dos: 買いに行く es lo habitual y 買うために行く es más formal y destaca el propósito; si lo que sigue no es un desplazamiento, solo sirve ために.",
               "this": [
                 {
-                  "tag": "Seguido de movimiento",
+                  "tag": "Habitual",
                   "tr": "Voy a los grandes almacenes a comprar ropa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Seguido de cualquier acción",
-                  "tr": "Tengo un trabajo a tiempo parcial para comprarme ropa."
+                  "tag": "Formal · destaca el propósito",
+                  "tr": "Voy a los grandes almacenes con el fin de comprar ropa."
                 }
               ],
               "wrong": {
-                "why": "La 「に」 de propósito solo puede ir seguida de verbos de movimiento"
+                "why": "La 「に」 de propósito solo puede ir seguida de verbos de desplazamiento como 「行く」, 「来る」, 「帰る」; aquí hay que usar 「買うために」"
               },
-              "explain": "Fíjate en el verbo que sigue: movimientos como 「行く」, 「来る」, 「帰る」 → forma ます + に; acciones que no son movimiento, como 「アルバイトする」 o 「貯金する」 → forma de diccionario + ために."
-            },
-            {
-              "id": "te-kuru",
-              "title": "〜てくる（ir a hacer algo y volver）",
-              "thisTitle": "〜に行く",
-              "diff": "に行く dice el propósito de salir; てくる dice que, tras hacer la gestión, vuelves aquí.",
-              "this": [
-                {
-                  "tag": "Propósito de salir",
-                  "tr": "La semana que viene voy a Kioto a ver templos."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Hacerlo y volver",
-                  "tr": "Voy un momento al konbini a comprar algo de beber y vuelvo."
-                }
-              ],
-              "explain": "Mira si el hablante volverá aquí: 「ちょっと〜てくるね」 es hacerlo y volver enseguida → てくる; 「京都へ見に行く」 solo dice el propósito de la salida → に行く. La partícula de lugar también cambia: delante de てくる suele ir 「で」 (dónde lo compras), y delante de に行く va 「へ／に」 (adónde vas)."
+              "explain": "Mira el verbo que sigue: con desplazamientos como 「行く」, 「来る」, 「帰る」 sirven las dos y el significado no cambia: ます形 + に行く es la forma habitual; 辞書形 + ために行く suena más formal y resalta «expresamente para eso». Con acciones que no son desplazamientos, como 「アルバイトをする」 o 「貯金する」, solo sirve ために."
             }
           ]
         }
@@ -3689,20 +3607,20 @@
           "items": [
             {
               "id": "oki-ni",
-              "diff": "に〜回 dice cuántas veces se hace en un periodo; おきに dice cuánto se deja en medio: 「１日おき」 = 「２日に１回」.",
+              "diff": "に〜回 dice cuántas veces en un periodo; おきに dice cuánto se deja en medio: 「１日おき」 = 「２日に１回」.",
               "this": [
                 {
                   "tag": "Veces por periodo",
-                  "tr": "Esta medicina se toma una vez cada dos días."
+                  "tr": "Este medicamento se toma una vez cada dos días."
                 }
               ],
               "that": [
                 {
                   "tag": "Días de intervalo",
-                  "tr": "Esta medicina se toma en días alternos."
+                  "tr": "Este medicamento se toma en días alternos."
                 }
               ],
-              "explain": "Las dos oraciones significan lo mismo, pero el número es distinto. おきに cuenta los días que quedan en medio: １日おき = dejar un día = una vez cada dos días. Cuando veas おきに, súmale uno al número para saber «cada cuántos días». Para «tantas veces al día», como 「１日に３回」, solo vale に〜回."
+              "explain": "Las dos oraciones significan lo mismo, pero los números son distintos. おきに cuenta los días que quedan en medio: １日おき = saltando un día = una vez cada dos días (２日に１回). Al ver おきに, suma uno al número para saber «una vez cada cuántos días». Expresiones como 「１日に３回」 (veces al día) solo pueden usar に〜回."
             }
           ]
         }
@@ -3712,72 +3630,29 @@
       "id": "ni-suru-decide",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Todas sirven para decir «elijo / quiero tal cosa» o «dejarlo de tal manera»: al pedir, al decidir o al cambiar un estado",
+          "kind": "root",
+          "note": "Ambas vienen de 「にする」: sentido original «fijar como…»",
           "items": [
             {
               "id": "koto-ni-suru",
-              "thisTitle": "〜にする（elegir）",
-              "diff": "にする va tras un sustantivo y se usa sobre todo para elegir una entre varias opciones; ことにする va tras un verbo.",
+              "thisTitle": "〜にする (decidir)",
+              "diff": "Sustantivo + にする es elegir una entre varias opciones; verbo + ことにする es decidir hacer algo.",
               "this": [
                 {
-                  "tag": "Sustantivo + にする",
-                  "tr": "De bebida, tomaré un café."
+                  "tag": "Sustantivo + にする · elegir",
+                  "tr": "Para el viaje de verano, elegimos Okinawa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Verbo + ことにする",
-                  "tr": "He decidido ir a Okinawa en las vacaciones de verano."
+                  "tag": "Verbo + ことにする · decidir hacer",
+                  "tr": "Decidí ir a Okinawa en las vacaciones de verano."
                 }
               ],
               "wrong": {
-                "why": "Detrás de un verbo hay que añadir 「こと」"
+                "why": "El verbo necesita 「こと」 antes de poder ir con 「にする」"
               },
-              "explain": "Primero mira si lo de delante es un sustantivo o un verbo: コーヒー (sustantivo) → にする; 行く (verbo) → ことにする. Para pedir comida o elegir algo, lo más habitual es 「〜にします」."
-            },
-            {
-              "id": "ku-naru-ni-naru",
-              "diff": "くする／にする: alguien «lo deja así»; くなる／になる: «se vuelve así» por sí solo.",
-              "this": [
-                {
-                  "tag": "くする · Alguien lo cambia",
-                  "tr": "Bajé el volumen de la tele."
-                },
-                {
-                  "tag": "にする · Alguien lo cambia",
-                  "tr": "Dejé la habitación limpia."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "くなる · Cambia solo",
-                  "tr": "El volumen de la tele ha bajado."
-                },
-                {
-                  "tag": "になる · Cambia solo",
-                  "tr": "La habitación ha quedado limpia."
-                }
-              ],
-              "explain": "Fíjate en la partícula: 「音を」, 「部屋を」 → alguien lo cambia con sus manos → くする／にする; 「音が」, 「部屋が」 → cambió por sí solo, sin decir quién lo hizo → くなる／になる (los adjetivos-い usan く; los adjetivos-な y los sustantivos, に). Al decidir algo pasa lo mismo: 「会議は月曜日にしました」 es que lo decidimos nosotros; 「月曜日になりました」 solo dice el resultado que quedó decidido."
-            },
-            {
-              "id": "wo-kudasai",
-              "thisTitle": "〜にする（elegir）",
-              "diff": "にする dice cuál eliges tú, y vale también al hablarlo con amigos; をください es pedirle algo al dependiente.",
-              "this": [
-                {
-                  "tag": "Decir tu elección",
-                  "tr": "Yo quiero curry."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Pedir al dependiente",
-                  "tr": "Disculpe, un curry, por favor."
-                }
-              ],
-              "explain": "Fíjate en a quién hablas: mirando la carta con amigos y diciendo cuál eliges → にする (「何にする？」「カレーにする」); pidiendo algo al dependiente → をください. Al dependiente también se le puede decir 「カレーにします」, pero decirle a un amigo 「カレーをください」 sería «dame curry, por favor»."
+              "explain": "El sentido original de にする es «fijar como…». 沖縄にした: fijar Okinawa como destino del viaje → elegir uno entre varios lugares. ことにする: primero 「こと」 convierte 「行く」 en un asunto y luego ese asunto se fija como plan propio → decidir hacer algo. Así que mira lo que va antes de にする: un sustantivo (沖縄) → elegir; verbo + こと (行くこと) → decidir hacer. Un verbo no puede unirse directamente a にする."
             }
           ]
         }
@@ -3787,54 +3662,26 @@
       "id": "no-ga-suki",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambas vienen de 「〜が好き・〜が上手」: el objeto de 「好き」 y 「上手」 se marca con 「が」 y debe ser un sustantivo, así que al verbo hay que añadirle antes 「の」",
-          "items": [
-            {
-              "id": "ga-suki-jouzu",
-              "diff": "Para decir que te gusta una cosa: «sustantivo + が好き»; para decir que te gusta hacer algo, primero se añade 「の」: «verbo + のが好き».",
-              "this": [
-                {
-                  "tag": "Verbo + のが",
-                  "tr": "Me gusta escuchar música."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Sustantivo + が",
-                  "tr": "Me gusta la música."
-                }
-              ],
-              "wrong": {
-                "why": "Un verbo no puede ir directamente con 「が好き」: hay que añadir 「の」"
-              },
-              "explain": "Fíjate en lo que va delante de 「が好き」: 音楽 es un sustantivo → va directamente; 聞く es un verbo → primero hay que añadir 「の」 para convertirlo en sustantivo. En español ambos se dicen «me gusta…», por eso es tan fácil olvidar 「の」. Con 上手, 嫌い y 下手 pasa lo mismo (泳ぐのが上手)."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Ambas convierten un verbo en sustantivo",
+          "note": "Ambas significan «gustar hacer…»",
           "items": [
             {
               "id": "koto-nominalizer",
-              "diff": "Para decir que algo te gusta o se te da bien, の y こと casi siempre valen; para explicar un contenido al final de la oración, como 「趣味は〜」, solo vale こと.",
+              "title": "〜こと (como objeto)",
+              "diff": "Mismo significado: のが好き es lo cotidiano; ことが好き es algo más escrito y formal.",
               "this": [
                 {
-                  "tag": "Antes de 好き · の",
-                  "tr": "Me gusta leer libros."
+                  "tag": "の · cotidiano",
+                  "tr": "Me gusta cocinar los fines de semana."
                 }
               ],
               "that": [
                 {
-                  "tag": "Explicar el contenido · こと",
-                  "tr": "Mi afición es leer libros."
+                  "tag": "こと · algo formal",
+                  "tr": "Me gusta cocinar los fines de semana."
                 }
               ],
-              "wrong": {
-                "why": "Al explicar un contenido con 「〜は〜ことです」 solo vale こと"
-              },
-              "explain": "Delante de 「好き」 o 「上手」, の es lo más natural; こと también vale, pero suena más escrito. Al explicar el contenido de una afición o un sueño con 「〜は〜ことです」 solo vale こと: si lo cambias por の, se convierte en el 「のです」 que explica una situación, y el sentido no es el correcto."
+              "explain": "Las dos oraciones significan «me gusta cocinar los fines de semana», y cambiar una por otra no altera el sentido. Fíjate en la situación: al hablar normalmente o charlar con amigos, 「〜のが好き」 suena más natural; en situaciones formales como redacciones o al presentarse en una entrevista, se dice a menudo 「〜ことが好き」. Lo mismo vale delante de 「嫌い」 y 「得意」."
             }
           ]
         }
@@ -3845,28 +3692,29 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de la palabra de posición 「前（まえ）」: su sentido original es «delante» en el espacio, y con acciones se aplica al tiempo: «antes de»",
+          "note": "Ambas vienen de la palabra de posición 「前（まえ）」: su sentido original es «delante» en el espacio, y con acciones o sucesos pasa a significar «antes» en el tiempo",
           "items": [
             {
               "id": "mae-ni",
-              "thisTitle": "〜の前（posición）",
-              "diff": "の前 va con lugares y es «delante de» en el espacio; 前に va con acciones o actividades y es «antes de» en el tiempo.",
+              "title": "〜まえに (antes de una acción)",
+              "thisTitle": "〜の前 (posición)",
+              "diff": "Si antes de 「前」 hay un lugar o un objeto → «delante» en el espacio; si hay una acción → «antes» en el tiempo.",
               "this": [
                 {
                   "tag": "Lugar → delante",
-                  "tr": "Esperé a un amigo delante de la estación."
+                  "tr": "Esperé a mi amigo delante de la estación."
                 }
               ],
               "that": [
                 {
                   "tag": "Acción → antes",
-                  "tr": "Antes de subir al tren, compré el billete."
+                  "tr": "Compré el billete antes de subir al tren."
                 }
               ],
               "wrong": {
                 "why": "El verbo va directamente con 「前に」, sin 「の」"
               },
-              "explain": "Fíjate en la palabra de delante de 「前」: lugares u objetos como 駅 o 家 → posición en el espacio, «delante de…»; verbos como 乗る, o sustantivos de actividad como 食事 o 授業 más 「の」 → tiempo, «antes de…». Detrás de un verbo no se pone 「の」."
+              "explain": "El sentido original de 「前（まえ）」 es el lado hacia el que mira una persona, es decir, «delante» en el espacio: 駅の前 = delante de la estación. Si se lleva esa dirección al tiempo, lo que va delante es lo que ocurre primero: 電車に乗る前に = antes de subir al tren. Así que mira qué hay antes de 「前」: lugares u objetos como 駅 o 家 → posición; acciones como 乗る (y sucesos como 「会議」 o 「食事」) → tiempo. El verbo va directamente con 「前」, sin 「の」."
             }
           ]
         },
@@ -3877,8 +3725,8 @@
             {
               "id": "juu-chuu-throughout",
               "title": "〜中（じゅう）",
-              "thisTitle": "〜の中（dentro）",
-              "diff": "の中（なか） es el «interior» de algo; 「中」 pegado directamente a un sustantivo se lee じゅう y significa «todo el…».",
+              "thisTitle": "〜の中 (dentro)",
+              "diff": "の中（なか） es el «interior» de algo; 「中」 pegado directamente a un sustantivo se lee じゅう y pasa a significar «todo el…».",
               "this": [
                 {
                   "tag": "Dentro · なか",
@@ -3891,7 +3739,7 @@
                   "tr": "Estuvo lloviendo todo el día."
                 }
               ],
-              "explain": "Fíjate en si delante de 「中」 hay 「の」: con 「の」 → se lee なか e indica el interior en el espacio; pegado directamente a un sustantivo de tiempo o lugar (一日中, 世界中) → se lee じゅう y significa «todo, entero»."
+              "explain": "Mira si hay 「の」 antes de 「中」: con 「の」 → se lee なか y se refiere al interior de un espacio; pegado directamente a un sustantivo de tiempo o lugar (一日中, 世界中) → se lee じゅう y significa «todo, entero»."
             }
           ]
         }
