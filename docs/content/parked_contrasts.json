@@ -5026,6 +5026,964 @@
           "explain": "「が好き」ရှေ့ကို ကြည့်ပါ - 音楽 က နာမ် → တိုက်ရိုက် ဆက်သည်။ 聞く က ကြိယာ → 「の」အရင်ထည့်၍ နာမ်ဖြစ်အောင် လုပ်ရသည်။ မြန်မာလို “...ကို ကြိုက်တယ်”၊ “...ရတာ ကြိုက်တယ်” ဟု ပြောသော်လည်း ဂျပန်လိုတွင်「の」ကို မေ့တတ်ဆုံး ဖြစ်သည်။ 上手、嫌い、下手 လည်း ထိုနည်းတူပင် (泳ぐのが上手)။"
         }
       }
+    },
+    {
+      "point": "ta-koto-ga-aru",
+      "kind": "meaning",
+      "reason": "た（过去某次）和 たことがある（有过经历）是两个意思，替换测试不成立，中文都像「……过／了」只是译法碰巧接近（标准「意思差不多的」收录条件 3、4，不收：中文译法一样但意思不同）",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ta-form",
+          "diff": "た 说某个时间做了什么；たことがある 说人生中有没有过这种经历。",
+          "this": [
+            {
+              "ja": "~一度:いちど|、|富士山:ふじさん|に|登:のぼ|っ|*たことがある|。",
+              "tag": "人生经历",
+              "tr": "我爬过一次富士山。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~昨日:きのう|、|富士山:ふじさん|に|登:のぼ|っ|*た|。",
+              "tag": "某次的事",
+              "tr": "我昨天爬了富士山。"
+            }
+          ],
+          "wrong": {
+            "ja": "昨日、富士山に登ったことがある",
+            "why": "有具体时间时用「た」"
+          },
+          "explain": "看时间词：「昨日」「先週」这种具体时间 → 只说那件事，用 た；「一度」「今まで」「子どもの時」这种谈经历的词 → たことがある。"
+        },
+        "en": {
+          "id": "ta-form",
+          "diff": "た says what you did at a certain time; たことがある says whether you've ever had that experience in your life.",
+          "this": [
+            {
+              "tag": "Life experience",
+              "tr": "I've climbed Mt. Fuji once."
+            }
+          ],
+          "that": [
+            {
+              "tag": "A specific time",
+              "tr": "I climbed Mt. Fuji yesterday."
+            }
+          ],
+          "wrong": {
+            "why": "With a specific time, use 「た」"
+          },
+          "explain": "Look at the time words: a specific time like 「昨日」「先週」 → just reporting that event, use た; words about experience like 「一度」「今まで」「子どもの時」 → たことがある."
+        },
+        "ko": {
+          "id": "ta-form",
+          "diff": "た는 어느 때에 무엇을 했는지 말하고, たことがある는 살면서 그런 경험이 있는지 말한다.",
+          "this": [
+            {
+              "tag": "인생 경험",
+              "tr": "후지산에 한 번 올라간 적이 있다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "어느 한 번의 일",
+              "tr": "어제 후지산에 올라갔다."
+            }
+          ],
+          "wrong": {
+            "why": "구체적인 때가 있으면 「た」를 쓴다"
+          },
+          "explain": "시간을 나타내는 말을 보자. 「昨日」 「先週」처럼 구체적인 때 → 그 일만 말하므로 た, 「一度」 「今まで」 「子どもの時」처럼 경험을 말하는 표현 → たことがある."
+        },
+        "es": {
+          "id": "ta-form",
+          "diff": "た dice qué se hizo en un momento dado; たことがある dice si en tu vida has tenido esa experiencia.",
+          "this": [
+            {
+              "tag": "Experiencia de vida",
+              "tr": "He subido al monte Fuji una vez."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Una vez concreta",
+              "tr": "Ayer subí al monte Fuji."
+            }
+          ],
+          "wrong": {
+            "why": "Si hay un momento concreto, se usa 「た」"
+          },
+          "explain": "Fíjate en las palabras de tiempo: un momento concreto como 「昨日」 o 「先週」 → solo se cuenta ese hecho, con た; palabras que hablan de experiencia como 「一度」, 「今まで」 o 「子どもの時」 → たことがある."
+        },
+        "vi": {
+          "id": "ta-form",
+          "diff": "た nói vào một thời điểm nào đó đã làm gì; たことがある nói trong đời đã có trải nghiệm như vậy hay chưa.",
+          "this": [
+            {
+              "tag": "Trải nghiệm trong đời",
+              "tr": "Tôi đã từng leo núi Phú Sĩ một lần."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Việc của một lần",
+              "tr": "Hôm qua tôi đã leo núi Phú Sĩ."
+            }
+          ],
+          "wrong": {
+            "why": "Khi có thời gian cụ thể thì dùng 「た」"
+          },
+          "explain": "Xem từ chỉ thời gian: thời gian cụ thể như 「昨日」「先週」 → chỉ nói sự việc đó, dùng た; những từ nói về trải nghiệm như 「一度」「今まで」「子どもの時」 → たことがある."
+        },
+        "my": {
+          "id": "ta-form",
+          "diff": "た သည် အချိန်တစ်ခုတွင် ဘာလုပ်ခဲ့သလဲ ပြောသည်။ たことがある သည် ဘဝတွင် ဒီလို အတွေ့အကြုံ ရှိဖူးလား ပြောသည်။",
+          "this": [
+            {
+              "tag": "ဘဝ အတွေ့အကြုံ",
+              "tr": "ဖူဂျီတောင်ကို တစ်ခါ တက်ဖူးတယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "တစ်ကြိမ်ကိစ္စ",
+              "tr": "မနေ့က ဖူဂျီတောင် တက်ခဲ့တယ်။"
+            }
+          ],
+          "wrong": {
+            "why": "တိကျသော အချိန် ပါလျှင်「た」ကို သုံးသည်"
+          },
+          "explain": "အချိန်ပြစကားလုံးကို ကြည့်ပါ -「昨日」「先週」ကဲ့သို့ တိကျသော အချိန် → ထိုကိစ္စကိုသာ ပြော၍ た ကို သုံးသည်။「一度」「今まで」「子どもの時」ကဲ့သို့ အတွေ့အကြုံကို ပြောသော စကားလုံး → たことがある။"
+        }
+      }
+    },
+    {
+      "point": "tai",
+      "kind": "meaning",
+      "reason": "たい 是想做某个动作，がほしい 是想要某样东西，替换测试不成立，差别只能写成「A 想做、B 想要」，是两个意思（标准「意思差不多的」收录条件 3、4）",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ga-hoshii",
+          "diff": "たい 接动词，想做某个动作；ほしい 接名词，想要某样东西。",
+          "this": [
+            {
+              "ja": "新:あたら|しい|車:くるま|を|~買:か|~い|*たい|。",
+              "tag": "想做 · 动词",
+              "tr": "想买新车。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "新:あたら|しい|~車:くるま|*が|*ほしい|。",
+              "tag": "想要 · 名词",
+              "tr": "想要新车。"
+            }
+          ],
+          "wrong": {
+            "ja": "新しい車を買いほしい",
+            "why": "动词后面要用「たい」"
+          },
+          "explain": "看「想」后面跟的是什么：动作（買う）→ ます形＋たい；东西（車）→ がほしい。也要注意助词：ほしい 前面用「が」。"
+        },
+        "en": {
+          "id": "ga-hoshii",
+          "diff": "たい attaches to verbs — wanting to do an action; ほしい attaches to nouns — wanting a thing.",
+          "this": [
+            {
+              "tag": "Want to do · verb",
+              "tr": "I want to buy a new car."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Want · noun",
+              "tr": "I want a new car."
+            }
+          ],
+          "wrong": {
+            "why": "After a verb, use 「たい」"
+          },
+          "explain": "Look at what follows “want”: an action (買う) → masu-stem + たい; a thing (車) → がほしい. Watch the particle too: ほしい takes 「が」 before it."
+        },
+        "ko": {
+          "id": "ga-hoshii",
+          "diff": "たい는 동사에 붙어 어떤 동작을 하고 싶다는 것이고, ほしい는 명사에 붙어 어떤 물건을 갖고 싶다는 것이다.",
+          "this": [
+            {
+              "tag": "하고 싶다 · 동사",
+              "tr": "새 차를 사고 싶다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "갖고 싶다 · 명사",
+              "tr": "새 차를 갖고 싶다."
+            }
+          ],
+          "wrong": {
+            "why": "동사 뒤에는 「たい」를 쓴다"
+          },
+          "explain": "원하는 것이 무엇인지 보자. 동작(買う) → ます형＋たい, 물건(車) → がほしい. 조사에도 주의하자. ほしい 앞에는 「が」를 쓴다."
+        },
+        "es": {
+          "id": "ga-hoshii",
+          "diff": "たい va con verbos: querer hacer una acción; ほしい va con sustantivos: querer tener una cosa.",
+          "this": [
+            {
+              "tag": "Querer hacer · verbo",
+              "tr": "Quiero comprarme un coche nuevo."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Querer tener · sustantivo",
+              "tr": "Quiero un coche nuevo."
+            }
+          ],
+          "wrong": {
+            "why": "Detrás de un verbo hay que usar 「たい」"
+          },
+          "explain": "Fíjate en lo que sigue a «querer»: una acción (買う) → forma ます + たい; una cosa (車) → がほしい. Ojo también a la partícula: delante de ほしい va 「が」."
+        },
+        "vi": {
+          "id": "ga-hoshii",
+          "diff": "たい gắn với động từ, muốn làm một hành động; ほしい gắn với danh từ, muốn có một thứ gì đó.",
+          "this": [
+            {
+              "tag": "Muốn làm · động từ",
+              "tr": "Tôi muốn mua xe mới."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Muốn có · danh từ",
+              "tr": "Tôi muốn có xe mới."
+            }
+          ],
+          "wrong": {
+            "why": "Sau động từ phải dùng 「たい」"
+          },
+          "explain": "Xem sau “muốn” là cái gì: hành động (買う) → thể ます＋たい; đồ vật (車) → がほしい. Cũng chú ý trợ từ: trước ほしい dùng 「が」."
+        },
+        "my": {
+          "id": "ga-hoshii",
+          "diff": "たい ကို ကြိယာနှင့် ဆက်ပြီး လုပ်ဆောင်ချက်တစ်ခု လုပ်ချင်ခြင်း ဖြစ်သည်။ ほしい ကို နာမ်နှင့် ဆက်ပြီး ပစ္စည်းတစ်ခု လိုချင်ခြင်း ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "လုပ်ချင် · ကြိယာ",
+              "tr": "ကားအသစ် ဝယ်ချင်တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "လိုချင် · နာမ်",
+              "tr": "ကားအသစ် လိုချင်တယ်။"
+            }
+          ],
+          "wrong": {
+            "why": "ကြိယာ၏ နောက်တွင်「たい」ကို သုံးရမည်"
+          },
+          "explain": "“ချင်” ၏ အရာဝတ္ထုကို ကြည့်ပါ - လုပ်ဆောင်ချက် (買う) → ます形＋たい။ ပစ္စည်း (車) → がほしい။ ဝိဘတ်ကိုလည်း သတိပြုပါ - ほしい ရှေ့တွင်「が」ကို သုံးသည်။"
+        }
+      }
+    },
+    {
+      "point": "tai",
+      "kind": "meaning",
+      "reason": "たい 是自己想做，てほしい 是希望别人做，动作主体不同，替换后意思改变（标准「意思差不多的」收录条件 3、4；不收：中文译法一样但意思不同）",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "te-hoshii",
+          "diff": "たい 是自己想做；てほしい 是希望别人做。",
+          "this": [
+            {
+              "ja": "~今日:きょう|~は|早:はや|く|家:いえ|に|帰:かえ|り|*たい|。",
+              "tag": "自己做",
+              "tr": "今天我想早点回家。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~夫:おっと|~に|、|今日:きょう|は|早:はや|く|帰:かえ|っ|*てほしい|。",
+              "tag": "希望别人做",
+              "tr": "希望丈夫今天早点回家。"
+            }
+          ],
+          "explain": "看做动作的是谁：自己做 → たい；希望对方或别人去做，用「人に＋て形＋ほしい」（夫に〜てほしい）。中文都可能说「想」，但「想让某人……」要用 てほしい。说成 てもらいたい 也一样（夫に早く帰ってもらいたい）。"
+        },
+        "en": {
+          "id": "te-hoshii",
+          "diff": "たい is wanting to do something yourself; てほしい is wanting someone else to do it.",
+          "this": [
+            {
+              "tag": "Oneself",
+              "tr": "I want to go home early today."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Want someone to",
+              "tr": "I want my husband to come home early today."
+            }
+          ],
+          "explain": "Look at who does the action: yourself → たい; wanting the listener or someone else to do it → “person に + te-form + ほしい” (夫に〜てほしい). Both may be “want” in English, but “want someone to…” needs てほしい. Saying てもらいたい works the same way (夫に早く帰ってもらいたい)."
+        },
+        "ko": {
+          "id": "te-hoshii",
+          "diff": "たい는 자신이 하고 싶은 것이고, てほしい는 다른 사람이 해 주기를 바라는 것이다.",
+          "this": [
+            {
+              "tag": "자신이 함",
+              "tr": "오늘은 일찍 집에 가고 싶다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "남이 해 주길 바람",
+              "tr": "남편이 오늘은 일찍 들어왔으면 좋겠다."
+            }
+          ],
+          "explain": "동작을 하는 사람이 누구인지 보자. 자신이 함 → たい, 상대나 다른 사람이 해 주길 바람 → 「사람に＋て형＋ほしい」(夫に〜てほしい). ‘누가 ~해 줬으면 좋겠다’는 てほしい로 말한다. てもらいたい라고 해도 마찬가지다(夫に早く帰ってもらいたい)."
+        },
+        "es": {
+          "id": "te-hoshii",
+          "diff": "たい: quieres hacerlo tú; てほしい: quieres que lo haga otra persona.",
+          "this": [
+            {
+              "tag": "Lo hago yo",
+              "tr": "Hoy quiero volver pronto a casa."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Que lo haga otro",
+              "tr": "Quiero que mi marido vuelva pronto hoy."
+            }
+          ],
+          "explain": "Fíjate en quién hace la acción: tú mismo → たい; si quieres que lo haga el otro u otra persona, se usa «persona + に + forma て + ほしい» (夫に〜てほしい). En español también se distingue: «quiero…» frente a «quiero que alguien…» → てほしい. También se puede decir てもらいたい, con el mismo sentido (夫に早く帰ってもらいたい)."
+        },
+        "vi": {
+          "id": "te-hoshii",
+          "diff": "たい là bản thân muốn làm; てほしい là mong người khác làm.",
+          "this": [
+            {
+              "tag": "Bản thân làm",
+              "tr": "Hôm nay tôi muốn về nhà sớm."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Mong người khác làm",
+              "tr": "Tôi mong hôm nay chồng về nhà sớm."
+            }
+          ],
+          "explain": "Xem ai là người làm hành động: bản thân làm → たい; mong đối phương hoặc người khác làm thì dùng 「người＋に＋thể て＋ほしい」 (夫に〜てほしい). Tiếng Việt đều có thể nói “muốn”, nhưng “muốn ai đó làm…” thì phải dùng てほしい. Nói thành てもらいたい cũng vậy (夫に早く帰ってもらいたい)."
+        },
+        "my": {
+          "id": "te-hoshii",
+          "diff": "たい သည် ကိုယ်တိုင် လုပ်ချင်ခြင်း ဖြစ်သည်။ てほしい သည် အခြားသူ လုပ်စေချင်ခြင်း ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "ကိုယ်တိုင် လုပ်",
+              "tr": "ဒီနေ့ အိမ်ကို စောစော ပြန်ချင်တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "အခြားသူ လုပ်စေချင်",
+              "tr": "ယောက်ျားကို ဒီနေ့ စောစော ပြန်လာစေချင်တယ်။"
+            }
+          ],
+          "explain": "လုပ်ဆောင်သူ ဘယ်သူလဲ ကြည့်ပါ - ကိုယ်တိုင် လုပ်လျှင် → たい။ တစ်ဖက်လူ သို့မဟုတ် အခြားသူ လုပ်စေချင်လျှင်「လူ に＋て形＋ほしい」(夫に〜てほしい) ကို သုံးသည်။ မြန်မာလို “...ချင်” “...စေချင်” ကွာသလို “တစ်စုံတစ်ယောက်ကို ...စေချင်” ဆိုလျှင် てほしい ကို သုံးရမည်။ てもらいたい ဟု ပြောလည်း အတူတူပင် (夫に早く帰ってもらいたい)။"
+        }
+      }
+    },
+    {
+      "point": "tai",
+      "kind": "meaning",
+      "reason": "たい 是愿望，つもりだ 是计划，互换后核心意思改变，差别是两个意思（标准「意思差不多的」收录条件 2、3、4）",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "tsumori",
+          "diff": "たい 只是愿望，不一定实现；つもりだ 是已经打算好的计划。",
+          "this": [
+            {
+              "ja": "~いつか|、|日本:にほん|に|留学:りゅうがく|し|*たい|。",
+              "tag": "愿望",
+              "tr": "总有一天想去日本留学。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~来年:らいねん|~の|~春:はる|、|日本:にほん|に|留学:りゅうがく|する|*つもりだ|。",
+              "tag": "计划",
+              "tr": "我打算明年春天去日本留学。"
+            }
+          ],
+          "explain": "看时间说得多具体：「いつか」这种模糊的将来 → 只是愿望（たい）；「来年の春」这种已经定好的时间 → 已有计划（つもりだ）。接法也不同：たい 接ます形，つもり 接辞书形。"
+        },
+        "en": {
+          "id": "tsumori",
+          "diff": "たい is just a wish and may not come true; つもりだ is a plan already made.",
+          "this": [
+            {
+              "tag": "Wish",
+              "tr": "Someday I want to study abroad in Japan."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Plan",
+              "tr": "I plan to go study in Japan next spring."
+            }
+          ],
+          "explain": "Look at how specific the time is: a vague future like 「いつか」 → just a wish (たい); a set time like 「来年の春」 → an existing plan (つもりだ). They attach differently too: たい to the masu-stem, つもり to the dictionary form."
+        },
+        "ko": {
+          "id": "tsumori",
+          "diff": "たい는 바람일 뿐 꼭 실현되는 것은 아니고, つもりだ는 이미 마음먹은 계획이다.",
+          "this": [
+            {
+              "tag": "바람",
+              "tr": "언젠가 일본에 유학 가고 싶다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "계획",
+              "tr": "내년 봄에 일본에 유학 갈 생각이다."
+            }
+          ],
+          "explain": "때를 얼마나 구체적으로 말하는지 보자. 「いつか」 같은 막연한 미래 → 바람일 뿐(たい), 「来年の春」처럼 이미 정해진 때 → 계획이 있음(つもりだ). 접속도 다르다. たい는 ます형에, つもり는 사전형에 붙는다."
+        },
+        "es": {
+          "id": "tsumori",
+          "diff": "たい es solo un deseo, que puede no cumplirse; つもりだ es un plan ya decidido.",
+          "this": [
+            {
+              "tag": "Deseo",
+              "tr": "Algún día quiero ir a estudiar a Japón."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Plan",
+              "tr": "Pienso ir a estudiar a Japón la próxima primavera."
+            }
+          ],
+          "explain": "Fíjate en lo concreto que es el momento: un futuro vago como 「いつか」 → solo un deseo (たい); un momento ya fijado como 「来年の春」 → ya hay un plan (つもりだ). La conjugación también cambia: たい va con la forma ます y つもり con la forma de diccionario."
+        },
+        "vi": {
+          "id": "tsumori",
+          "diff": "たい chỉ là mong muốn, chưa chắc thực hiện; つもりだ là kế hoạch đã dự tính sẵn.",
+          "this": [
+            {
+              "tag": "Mong muốn",
+              "tr": "Một ngày nào đó tôi muốn đi du học Nhật Bản."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Kế hoạch",
+              "tr": "Tôi định mùa xuân năm sau đi du học Nhật Bản."
+            }
+          ],
+          "explain": "Xem thời gian được nói cụ thể đến mức nào: tương lai mơ hồ như 「いつか」 → chỉ là mong muốn (たい); thời gian đã định sẵn như 「来年の春」 → đã có kế hoạch (つもりだ). Cách nối cũng khác: たい gắn vào thể ます, つもり gắn vào thể từ điển."
+        },
+        "my": {
+          "id": "tsumori",
+          "diff": "たい သည် ဆန္ဒသာ ဖြစ်ပြီး အကောင်အထည် ပေါ်ချင်မှ ပေါ်မည်။ つもりだ သည် ကြိုတင် ဆုံးဖြတ်ထားပြီးသော အစီအစဉ် ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "ဆန္ဒ",
+              "tr": "တစ်နေ့နေ့ ဂျပန်မှာ ပညာသင်ချင်တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "အစီအစဉ်",
+              "tr": "နောက်နှစ် နွေဦးမှာ ဂျပန်ကို ပညာသင်သွားဖို့ ရည်ရွယ်ထားတယ်။"
+            }
+          ],
+          "explain": "အချိန်ကို ဘယ်လောက် တိကျစွာ ပြောသလဲ ကြည့်ပါ -「いつか」ကဲ့သို့ မရေရာသော အနာဂတ် → ဆန္ဒသာ (たい)။「来年の春」ကဲ့သို့ သတ်မှတ်ပြီးသော အချိန် → အစီအစဉ် ရှိပြီ (つもりだ)။ ဆက်ပုံလည်း မတူပါ - たい ကို ます形 နှင့်၊ つもり ကို 辞書形 နှင့် ဆက်သည်။"
+        }
+      }
+    },
+    {
+      "point": "tari-tari",
+      "kind": "meaning",
+      "reason": "たり〜たり 是举例、不分先后，て 是按实际顺序连接，互换后意思改变，是两个意思（标准「意思差不多的」收录条件 3、4）",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "te-form-sequence",
+          "title": "〜て（动作顺序）",
+          "diff": "たり〜たり 只是举几个例子，不分先后；て 按实际顺序一个个连起来。",
+          "this": [
+            {
+              "ja": "~日曜日:にちようび|~は|、|洗濯:せんたく|を|し|*たり|、|掃除:そうじ|を|し|*たり|*する|。",
+              "tag": "举例 · 不分先后",
+              "tr": "星期天会洗洗衣服、打扫打扫什么的。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~今朝:けさ|~は|、|洗濯:せんたく|を|し|*て|、|掃除:そうじ|を|した|。",
+              "tag": "实际顺序",
+              "tr": "今天早上洗了衣服，然后打扫了。"
+            }
+          ],
+          "explain": "看时间词：「日曜日は」说的是平时会做的事，只挑几样举例，还有别的 → たり〜たり；「今朝は」说的是实际做了的事，按先后连起来 → て。用 たり 时最后别忘了「する」。"
+        },
+        "en": {
+          "id": "te-form-sequence",
+          "title": "〜て (sequence of actions)",
+          "diff": "たり〜たり just gives a few examples, in no particular order; て links actions one by one in the order they happened.",
+          "this": [
+            {
+              "tag": "Examples · no order",
+              "tr": "On Sundays I do things like laundry and cleaning."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Actual order",
+              "tr": "This morning I did the laundry, and then cleaned."
+            }
+          ],
+          "explain": "Look at the time word: 「日曜日は」 talks about what you usually do, picking a few examples out of more → たり〜たり; 「今朝は」 talks about what you actually did, linked in order → て. With たり, don't forget 「する」 at the end."
+        },
+        "ko": {
+          "id": "te-form-sequence",
+          "title": "〜て（동작의 순서）",
+          "diff": "たり〜たり는 몇 가지 예를 들 뿐 순서는 따지지 않고, て는 실제 순서대로 하나씩 잇는다.",
+          "this": [
+            {
+              "tag": "예시 · 순서 없음",
+              "tr": "일요일에는 빨래를 하거나 청소를 하거나 한다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "실제 순서",
+              "tr": "오늘 아침에는 빨래를 하고 청소를 했다."
+            }
+          ],
+          "explain": "시간을 나타내는 말을 보자. 「日曜日は」는 평소에 하는 일 중 몇 가지만 골라 예로 든 것이고 다른 일도 있다 → たり〜たり. 「今朝は」는 실제로 한 일을 순서대로 이은 것 → て. たり를 쓸 때는 마지막에 「する」를 잊지 말자."
+        },
+        "es": {
+          "id": "te-form-sequence",
+          "title": "〜て（orden de acciones）",
+          "diff": "たり〜たり solo da algunos ejemplos, sin orden; て une las acciones una tras otra en el orden real.",
+          "this": [
+            {
+              "tag": "Ejemplos · sin orden",
+              "tr": "Los domingos hago cosas como lavar la ropa y limpiar."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Orden real",
+              "tr": "Esta mañana lavé la ropa y luego limpié."
+            }
+          ],
+          "explain": "Mira la expresión de tiempo: 「日曜日は」 habla de lo que sueles hacer; solo eliges algunas cosas como ejemplo, y hay más → たり〜たり; 「今朝は」 habla de lo que hiciste de verdad, en orden → て. Con たり, no olvides el 「する」 al final."
+        },
+        "vi": {
+          "id": "te-form-sequence",
+          "title": "〜て（trình tự hành động）",
+          "diff": "たり〜たり chỉ nêu vài ví dụ, không phân trước sau; て nối từng việc theo đúng thứ tự thực tế.",
+          "this": [
+            {
+              "tag": "Nêu ví dụ · không phân trước sau",
+              "tr": "Chủ nhật tôi hay giặt giũ, dọn dẹp các thứ."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Thứ tự thực tế",
+              "tr": "Sáng nay tôi giặt quần áo rồi dọn dẹp."
+            }
+          ],
+          "explain": "Xem từ chỉ thời gian: 「日曜日は」 nói những việc thường làm, chỉ chọn vài việc làm ví dụ, còn việc khác nữa → たり〜たり; 「今朝は」 nói những việc đã thực sự làm, nối theo thứ tự → て. Khi dùng たり, đừng quên 「する」 ở cuối."
+        },
+        "my": {
+          "id": "te-form-sequence",
+          "title": "〜て（လုပ်ဆောင်ချက် အစဉ်）",
+          "diff": "たり〜たり သည် ဥပမာအချို့ကိုသာ ထုတ်ပြပြီး အစဉ်လိုက် မဟုတ်ပါ။ て သည် အမှန်တကယ် အစဉ်အတိုင်း တစ်ခုပြီးတစ်ခု ဆက်သည်။",
+          "this": [
+            {
+              "tag": "ဥပမာ · အစဉ်မဲ့",
+              "tr": "တနင်္ဂနွေနေ့ဆို အဝတ်လျှော်တာ၊ အိမ်သန့်ရှင်းရေးလုပ်တာမျိုး လုပ်တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "အမှန်တကယ် အစဉ်",
+              "tr": "ဒီမနက် အဝတ်လျှော်ပြီး အိမ်သန့်ရှင်းရေး လုပ်ခဲ့တယ်။"
+            }
+          ],
+          "explain": "အချိန်ပြစကားကို ကြည့်ပါ - 「日曜日は」 သည် ပုံမှန် လုပ်လေ့ရှိသည့်အရာကို ပြောပြီး အချို့ကိုသာ ရွေးထုတ်ပြကာ အခြားအရာများလည်း ရှိသည် → たり〜たり။ 「今朝は」 သည် အမှန်တကယ် လုပ်ခဲ့သည့်အရာကို ပြောပြီး အစဉ်လိုက် ဆက်သည် → て။ たり ကို သုံးလျှင် နောက်ဆုံးတွင် 「する」 ထည့်ရန် မမေ့ပါနှင့်။"
+        }
+      }
+    },
+    {
+      "point": "tari-tari",
+      "kind": "meaning",
+      "reason": "たり〜たり 列举动作、や〜など 列举名词，不能在同一句里互换，差别是接续对象不同的两个用法（标准「意思差不多的」收录条件 3、4）",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ya-nado",
+          "diff": "たり〜たり 列举动作（动词）；や〜など 列举东西（名词）。",
+          "this": [
+            {
+              "ja": "~週末:しゅうまつ|~は|、|本:ほん|を|読:よ|ん|*だり|、|映画:えいが|を|見:み|*たり|*する|。",
+              "tag": "列举动作",
+              "tr": "周末会看看书、看看电影什么的。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~かばん|~に|~は|、|本:ほん|*や|ノート|*など|が|入:はい|っている|。",
+              "tag": "列举东西",
+              "tr": "包里装着书、本子什么的。"
+            }
+          ],
+          "explain": "看列举的是什么：看书、看电影这类动作 → たり〜たりする；书、本子这类东西 → や〜など。中文都说「……啦……什么的」，日语要分清是动词还是名词。"
+        },
+        "en": {
+          "id": "ya-nado",
+          "diff": "たり〜たり lists actions (verbs); や〜など lists things (nouns).",
+          "this": [
+            {
+              "tag": "Listing actions",
+              "tr": "On weekends I do things like reading and watching movies."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Listing things",
+              "tr": "My bag has books, notebooks and so on in it."
+            }
+          ],
+          "explain": "Look at what's being listed: actions like reading or watching movies → たり〜たりする; things like books or notebooks → や〜など. English uses “things like… and so on” for both, but Japanese makes you distinguish verbs from nouns."
+        },
+        "ko": {
+          "id": "ya-nado",
+          "diff": "たり〜たり는 동작(동사)을 나열하고, や〜など는 물건(명사)을 나열한다.",
+          "this": [
+            {
+              "tag": "동작 나열",
+              "tr": "주말에는 책을 읽거나 영화를 보거나 한다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "물건 나열",
+              "tr": "가방에는 책이랑 노트 같은 것이 들어 있다."
+            }
+          ],
+          "explain": "무엇을 나열하는지 보자. 책 읽기, 영화 보기 같은 동작 → たり〜たりする, 책, 노트 같은 물건 → や〜など. 한국어로는 ‘~거나’와 ‘~(이)랑 ~ 등’으로 나뉘듯, 일본어도 동사인지 명사인지 구별해야 한다."
+        },
+        "es": {
+          "id": "ya-nado",
+          "diff": "たり〜たり enumera acciones (verbos); や〜など enumera cosas (sustantivos).",
+          "this": [
+            {
+              "tag": "Enumerar acciones",
+              "tr": "Los fines de semana leo libros, veo películas y cosas así."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Enumerar cosas",
+              "tr": "En la bolsa llevo libros, cuadernos y cosas así."
+            }
+          ],
+          "explain": "Fíjate en lo que se enumera: acciones como leer o ver películas → たり〜たりする; cosas como libros o cuadernos → や〜など. En español ambas se dicen «…, … y cosas así», pero en japonés hay que distinguir si son verbos o sustantivos."
+        },
+        "vi": {
+          "id": "ya-nado",
+          "diff": "たり〜たり liệt kê hành động (động từ); や〜など liệt kê đồ vật (danh từ).",
+          "this": [
+            {
+              "tag": "Liệt kê hành động",
+              "tr": "Cuối tuần tôi hay đọc sách, xem phim các thứ."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Liệt kê đồ vật",
+              "tr": "Trong cặp có sách, vở các thứ."
+            }
+          ],
+          "explain": "Xem đang liệt kê cái gì: hành động như đọc sách, xem phim → たり〜たりする; đồ vật như sách, vở → や〜など. Tiếng Việt đều nói “…, … các thứ”, tiếng Nhật phải phân biệt là động từ hay danh từ."
+        },
+        "my": {
+          "id": "ya-nado",
+          "diff": "たり〜たり သည် လုပ်ဆောင်ချက် (ကြိယာ) များကို စာရင်းပြုသည်။ や〜など သည် ပစ္စည်း (နာမ်) များကို စာရင်းပြုသည်။",
+          "this": [
+            {
+              "tag": "လုပ်ဆောင်ချက် စာရင်း",
+              "tr": "စနေ တနင်္ဂနွေဆို စာအုပ်ဖတ်တာ၊ ရုပ်ရှင်ကြည့်တာ စသဖြင့် လုပ်တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ပစ္စည်း စာရင်း",
+              "tr": "အိတ်ထဲမှာ စာအုပ်၊ မှတ်စုစာအုပ် စသဖြင့် ပါတယ်။"
+            }
+          ],
+          "explain": "ဘာကို စာရင်းပြုနေသလဲ ကြည့်ပါ - စာဖတ်ခြင်း၊ ရုပ်ရှင်ကြည့်ခြင်း ကဲ့သို့ လုပ်ဆောင်ချက် → たり〜たりする။ စာအုပ်၊ မှတ်စုစာအုပ် ကဲ့သို့ ပစ္စည်း → や〜など။ မြန်မာလို နှစ်ခုစလုံး “...တို့ ...တို့ စသဖြင့်” ဟု ပြောနိုင်သော်လည်း ဂျပန်လိုတွင် ကြိယာလား နာမ်လား ခွဲခြားရမည်။"
+        }
+      }
+    },
+    {
+      "point": "te-form-sequence",
+      "kind": "meaning",
+      "reason": "て（按实际顺序）和 たり〜たり（举例、不分先后）是两个意思，替换测试不成立（标准「意思差不多的」收录条件 3、4）",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "tari-tari",
+          "thisTitle": "〜て（动作顺序）",
+          "diff": "て 按实际顺序一个个连起来；たり〜たり 只是举几个例子，不分先后。",
+          "this": [
+            {
+              "ja": "~今朝:けさ|~は|、|洗濯:せんたく|を|し|*て|、|掃除:そうじ|を|した|。",
+              "tag": "实际顺序",
+              "tr": "今天早上洗了衣服，然后打扫了。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~日曜日:にちようび|~は|、|洗濯:せんたく|を|し|*たり|、|掃除:そうじ|を|し|*たり|*する|。",
+              "tag": "举例 · 不分先后",
+              "tr": "星期天会洗洗衣服、打扫打扫什么的。"
+            }
+          ],
+          "explain": "看时间词：「今朝は」说的是实际做了的事，按先后连起来 → て；「日曜日は」说的是平时会做的事，只挑几样举例，还有别的 → たり〜たり。"
+        },
+        "en": {
+          "id": "tari-tari",
+          "thisTitle": "〜て (sequence of actions)",
+          "diff": "て links actions one by one in the order they actually happened; たり〜たり just gives a few examples, in no particular order.",
+          "this": [
+            {
+              "tag": "Actual order",
+              "tr": "This morning I did the laundry, then cleaned."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Examples · no order",
+              "tr": "On Sundays I do things like laundry and cleaning."
+            }
+          ],
+          "explain": "Look at the time words: 「今朝は」 talks about what you actually did, linked in order → て; 「日曜日は」 talks about what you usually do, picking a few examples among others → たり〜たり."
+        },
+        "ko": {
+          "id": "tari-tari",
+          "thisTitle": "〜て（동작 순서）",
+          "diff": "て는 실제 순서대로 하나씩 잇고, たり〜たり는 몇 가지 예를 들 뿐 순서는 따지지 않는다.",
+          "this": [
+            {
+              "tag": "실제 순서",
+              "tr": "오늘 아침에는 빨래를 하고 청소를 했다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "예시 · 순서 없음",
+              "tr": "일요일에는 빨래를 하거나 청소를 하거나 한다."
+            }
+          ],
+          "explain": "시간을 나타내는 말을 보자. 「今朝は」는 실제로 한 일을 순서대로 이은 것 → て, 「日曜日は」는 평소에 하는 일 중 몇 가지만 골라 예로 든 것이고 다른 일도 있다 → たり〜たり."
+        },
+        "es": {
+          "id": "tari-tari",
+          "thisTitle": "〜て（orden de acciones）",
+          "diff": "て une las acciones una a una en el orden real; たり〜たり solo da algunos ejemplos, sin orden.",
+          "this": [
+            {
+              "tag": "Orden real",
+              "tr": "Esta mañana lavé la ropa y luego limpié."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Ejemplos · sin orden",
+              "tr": "Los domingos hago cosas como lavar la ropa y limpiar."
+            }
+          ],
+          "explain": "Fíjate en las palabras de tiempo: 「今朝は」 habla de lo que hiciste de verdad, unido en orden → て; 「日曜日は」 habla de lo que sueles hacer, solo se citan algunos ejemplos y hay más cosas → たり〜たり."
+        },
+        "vi": {
+          "id": "tari-tari",
+          "thisTitle": "〜て（thứ tự hành động）",
+          "diff": "て nối từng việc theo đúng thứ tự thực tế; たり〜たり chỉ nêu vài ví dụ, không phân trước sau.",
+          "this": [
+            {
+              "tag": "Thứ tự thực tế",
+              "tr": "Sáng nay tôi giặt quần áo rồi dọn dẹp."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Nêu ví dụ · không phân trước sau",
+              "tr": "Chủ nhật tôi hay giặt giũ, dọn dẹp các thứ."
+            }
+          ],
+          "explain": "Xem từ chỉ thời gian: 「今朝は」 nói những việc đã thực sự làm, nối theo thứ tự → て; 「日曜日は」 nói những việc thường làm, chỉ chọn vài việc làm ví dụ, còn việc khác nữa → たり〜たり."
+        },
+        "my": {
+          "id": "tari-tari",
+          "thisTitle": "〜て（လုပ်ဆောင်ချက် အစီအစဉ်）",
+          "diff": "て သည် တကယ့် အစီအစဉ်အတိုင်း တစ်ခုချင်း ဆက်သည်။ たり〜たり သည် ဥပမာ အချို့ကိုသာ ထုတ်ပြပြီး အစီအစဉ် မခွဲပါ။",
+          "this": [
+            {
+              "tag": "တကယ့် အစီအစဉ်",
+              "tr": "ဒီမနက် အဝတ်လျှော်ပြီး အိမ်သန့်ရှင်းရေး လုပ်ခဲ့တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ဥပမာ · အစီအစဉ်မခွဲ",
+              "tr": "တနင်္ဂနွေနေ့ဆို အဝတ်လျှော်တာ၊ အိမ်သန့်ရှင်းရေးလုပ်တာ စသဖြင့် လုပ်တယ်။"
+            }
+          ],
+          "explain": "အချိန်ပြစကားလုံးကို ကြည့်ပါ -「今朝は」သည် တကယ် လုပ်ခဲ့သော ကိစ္စကို အစီအစဉ်အတိုင်း ဆက်ပြောသည် → て။「日曜日は」သည် ပုံမှန် လုပ်လေ့ရှိသော ကိစ္စကို ပြောပြီး အနည်းငယ်ကိုသာ ဥပမာ ထုတ်ပြကာ အခြားဟာလည်း ရှိသည် → たり〜たり။"
+        }
+      }
+    },
+    {
+      "point": "te-form-sequence",
+      "kind": "meaning",
+      "reason": "て 的附带状态（保持姿势）和 ながら 的同时进行两个动作是两个意思，替换后意思改变（标准「意思差不多的」收录条件 3、4）",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "nagara",
+          "title": "〜ながら（一边…一边）",
+          "thisTitle": "〜て（附带状态）",
+          "diff": "て 表示做后项时的姿势、方式；ながら 是同时做两件独立的事。",
+          "this": [
+            {
+              "ja": "~いす|~に|座:すわ|っ|*て|、|本:ほん|を|読:よ|む|。",
+              "tag": "姿势 · 状态",
+              "tr": "坐在椅子上看书。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~音楽:おんがく|~を|~聞:き|~き|*ながら|、|本:ほん|を|読:よ|む|。",
+              "tag": "同时两件事",
+              "tr": "一边听音乐一边看书。"
+            }
+          ],
+          "explain": "看前项是不是另一件「正在做」的事：「座る」是坐下后一直保持的姿势 → て（座って、立って、眼鏡をかけて）；「聞く」是和看书同时进行的另一个动作 → ながら。中文都可能说「……着」。"
+        },
+        "en": {
+          "id": "nagara",
+          "title": "〜ながら (while doing)",
+          "thisTitle": "〜て (accompanying state)",
+          "diff": "て shows the posture or manner in which you do the second action; ながら is doing two separate things at the same time.",
+          "this": [
+            {
+              "tag": "Posture · state",
+              "tr": "I sit in a chair and read a book."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Two things at once",
+              "tr": "I read a book while listening to music."
+            }
+          ],
+          "explain": "Check whether the first part is another thing you're “in the middle of doing”: 「座る」 is a posture you keep after sitting down → て (座って, 立って, 眼鏡をかけて); 「聞く」 is another action going on at the same time as reading → ながら. In English both can come out as “…ing”."
+        },
+        "ko": {
+          "id": "nagara",
+          "title": "〜ながら（~하면서）",
+          "thisTitle": "〜て（부대 상태）",
+          "diff": "て는 뒤 동작을 할 때의 자세나 방식을 나타내고, ながら는 서로 독립된 두 가지 일을 동시에 하는 것이다.",
+          "this": [
+            {
+              "tag": "자세 · 상태",
+              "tr": "의자에 앉아서 책을 읽는다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "두 가지를 동시에",
+              "tr": "음악을 들으면서 책을 읽는다."
+            }
+          ],
+          "explain": "앞의 것이 또 하나의 ‘하고 있는’ 일인지 보자. 「座る」는 앉은 뒤 계속 유지되는 자세 → て(座って、立って、眼鏡をかけて). 「聞く」는 책 읽기와 동시에 진행되는 다른 동작 → ながら. 한국어의 ‘앉아서’와 ‘들으면서’의 차이와 비슷하다."
+        },
+        "es": {
+          "id": "nagara",
+          "title": "〜ながら（mientras…）",
+          "thisTitle": "〜て（estado que acompaña）",
+          "diff": "て indica la postura o la manera en que haces lo segundo; ながら es hacer dos cosas independientes a la vez.",
+          "this": [
+            {
+              "tag": "Postura · estado",
+              "tr": "Leo un libro sentado en una silla."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Dos cosas a la vez",
+              "tr": "Leo un libro mientras escucho música."
+            }
+          ],
+          "explain": "Mira si lo primero es otra cosa que «se está haciendo»: 「座る」 es una postura que se mantiene tras sentarte → て (座って, 立って, 眼鏡をかけて); 「聞く」 es otra acción que ocurre a la vez que la lectura → ながら. En español ambas pueden traducirse con un gerundio o con «mientras»."
+        },
+        "vi": {
+          "id": "nagara",
+          "title": "〜ながら（vừa… vừa…）",
+          "thisTitle": "〜て（trạng thái kèm theo）",
+          "diff": "て diễn tả tư thế, cách thức khi làm việc phía sau; ながら là làm đồng thời hai việc độc lập.",
+          "this": [
+            {
+              "tag": "Tư thế · trạng thái",
+              "tr": "Ngồi trên ghế đọc sách."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Hai việc cùng lúc",
+              "tr": "Vừa nghe nhạc vừa đọc sách."
+            }
+          ],
+          "explain": "Xem vế trước có phải là một việc khác “đang làm” không: 「座る」 là tư thế giữ nguyên sau khi ngồi xuống → て (座って、立って、眼鏡をかけて); 「聞く」 là một hành động khác diễn ra cùng lúc với việc đọc sách → ながら. Tiếng Việt đều có thể nói “ngồi đọc”, “vừa nghe vừa đọc” rất gần nhau, cần chú ý."
+        },
+        "my": {
+          "id": "nagara",
+          "title": "〜ながら（...ရင်း ...）",
+          "thisTitle": "〜て（တွဲပါ အခြေအနေ）",
+          "diff": "て သည် နောက်လုပ်ဆောင်ချက်ကို လုပ်ရာတွင် ကိုယ်ဟန်အနေအထား၊ နည်းလမ်းကို ပြသည်။ ながら သည် သီးခြား ကိစ္စနှစ်ခုကို တစ်ပြိုင်နက် လုပ်ခြင်း ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "ကိုယ်ဟန် · အခြေအနေ",
+              "tr": "ကုလားထိုင်ပေါ် ထိုင်ပြီး စာအုပ်ဖတ်တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ကိစ္စနှစ်ခု တစ်ပြိုင်နက်",
+              "tr": "သီချင်းနားထောင်ရင်း စာအုပ်ဖတ်တယ်။"
+            }
+          ],
+          "explain": "ရှေ့လုပ်ဆောင်ချက်သည် “လုပ်နေဆဲ” အခြားကိစ္စတစ်ခု ဟုတ်၊ မဟုတ် ကြည့်ပါ - 「座る」 သည် ထိုင်ပြီးနောက် ဆက်ထိန်းထားသော ကိုယ်ဟန် → て (座って、立って、眼鏡をかけて)။ 「聞く」 သည် စာဖတ်ခြင်းနှင့် တစ်ပြိုင်နက် လုပ်နေသော အခြား လုပ်ဆောင်ချက် → ながら။ မြန်မာလို နှစ်ခုစလုံးကို “...ပြီး” ဟု ပြန်မိတတ်သဖြင့် သတိထားပါ။"
+        }
+      }
     }
   ]
 }

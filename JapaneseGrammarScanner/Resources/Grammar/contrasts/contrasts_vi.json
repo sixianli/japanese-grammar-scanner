@@ -4294,25 +4294,9 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều có thể nối hai sự việc trước và sau",
+          "sense": 1,
+          "note": "Đều có nghĩa “rồi, sau đó”",
           "items": [
-            {
-              "id": "sorekara-conjunction",
-              "diff": "そして bổ sung nhẹ nhàng hoặc kể bước tiếp theo, mang tính văn viết hơn một chút; それから hay dùng trong khẩu ngữ để thêm “còn một việc nữa”.",
-              "this": [
-                {
-                  "tag": "Miêu tả · hơn nữa",
-                  "tr": "Thị trấn này yên tĩnh, hơn nữa còn rất đẹp."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Thêm vào · còn nữa",
-                  "tr": "Cho tôi hai ly cà phê. À còn nữa, thêm một cái bánh ngọt."
-                }
-              ],
-              "explain": "Xem bối cảnh: miêu tả thêm một đặc điểm của cùng một thứ, hoặc kể bước tiếp theo của câu chuyện → そして; khi gọi món, dặn dò công việc mà chợt nhớ ra “còn một việc nữa” → それから. Khi diễn tả “từ đó trở đi” thì chỉ dùng được それから."
-            },
             {
               "id": "te-form-sequence",
               "title": "〜て（trình tự hành động）",
@@ -4332,38 +4316,72 @@
               "explain": "Hai câu nghĩa như nhau, hãy xem dấu chấm: nhiều hành động liên tiếp của cùng một người, nối bằng thể て trong một câu là tự nhiên nhất; trước そして phải ngắt bằng 「。」, hợp để nhấn mạnh “tiếp theo” trong bài viết. Nếu hành động nào cũng nối bằng 「〜た。そして、」 thì đọc lên sẽ rất cứng."
             },
             {
-              "id": "soreni-conjunction",
-              "diff": "そして là bổ sung nhẹ nhàng; それに là thêm một lý do nữa, mang tính khẩu ngữ hơn.",
+              "id": "sorekara-conjunction",
+              "title": "それから（sau đó）",
+              "diff": "Đều là “sau đó”: それから chú trọng thứ tự thời gian; そして trang trọng hơn một chút, hay gặp trong văn viết và khi kể chuyện.",
               "this": [
                 {
-                  "tag": "Bổ sung nhẹ nhàng",
-                  "tr": "Anh ấy hiền lành, hơn nữa lại thông minh."
+                  "tag": "Hơi trang trọng · nối sang việc tiếp theo",
+                  "tr": "Công việc đã xong. Rồi tôi ghé hiệu sách trước ga."
                 }
               ],
               "that": [
                 {
-                  "tag": "Thêm lý do",
-                  "tr": "Hôm nay tôi không đi đâu. Trời đang mưa, mà tôi cũng mệt nữa."
+                  "tag": "Chú trọng thứ tự thời gian",
+                  "tr": "Công việc đã xong. Sau đó tôi ghé hiệu sách trước ga."
                 }
               ],
-              "explain": "Xem có đang nói lý do không: chỉ giới thiệu đặc điểm của một người hay một vật → そして; thêm từng lý do để giải thích “vì sao”, hay đi cùng 「〜し」 → それに."
-            },
+              "explain": "Hai câu đều có nghĩa “sau đó”, đổi cho nhau thì nghĩa không đổi. それから chú trọng thời gian: làm xong việc trước “rồi sau đó” mới làm việc sau, nên trong hội thoại hằng ngày khi kể lịch trình một ngày hay các bước thì hay dùng nhất. そして chỉ nối sang việc tiếp theo, giọng trang trọng hơn それから một chút, hay gặp khi viết văn hoặc kể chuyện."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều có nghĩa “hơn nữa”",
+          "items": [
+            {
+              "id": "soreni-conjunction",
+              "title": "それに（thêm điều cùng loại）",
+              "diff": "Đều là “hơn nữa”: そして bình thản, trung tính; それに khẩu ngữ hơn, mang giọng “không chỉ thế, còn… nữa”.",
+              "this": [
+                {
+                  "tag": "Bổ sung bình thản",
+                  "tr": "Khách sạn này gần ga. Và phòng cũng rộng."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Khẩu ngữ · thêm một điểm nữa",
+                  "tr": "Khách sạn này gần ga, mà lại phòng cũng rộng nữa."
+                }
+              ],
+              "explain": "Hai câu đều nêu thêm một ưu điểm của khách sạn. そして chỉ bình thản nối sang đặc điểm tiếp theo, hay dùng trong văn giới thiệu, văn viết; それに là khẩu ngữ, mang giọng “không chỉ thế, còn có… nữa”, thường đi cùng 「し」 (近いし、それに)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Đều có nghĩa “thế là”",
+          "items": [
             {
               "id": "sorede-conjunction",
-              "diff": "そして chỉ diễn tả việc xảy ra tiếp theo; それで nói rõ phía trước là nguyên nhân, phía sau là kết quả.",
+              "title": "それで（vì thế, cho nên）",
+              "diff": "Đều là “thế là”: それで nói rõ điều phía trước là nguyên nhân; そして chỉ kể tiếp câu chuyện, chủ yếu dùng khi kể chuyện, viết văn.",
               "this": [
                 {
-                  "tag": "Xảy ra tiếp theo",
-                  "tr": "Tôi mở cửa, rồi bước vào trong."
+                  "tag": "Kể tiếp · câu chuyện",
+                  "tr": "Tối nào cô ấy cũng học đến khuya. Và cô ấy đã thi đỗ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Vì → nên",
-                  "tr": "Mưa to lên. Vì vậy trận đấu đã bị hủy."
+                  "tag": "Nói rõ nguyên nhân · khẩu ngữ",
+                  "tr": "Tối nào cô ấy cũng học đến khuya. Vì thế cô ấy đã thi đỗ."
                 }
               ],
-              "explain": "Xem trước sau có quan hệ nhân quả không: “mở cửa → bước vào” chỉ là thứ tự hành động → そして; “mưa to lên” là nguyên nhân của “trận đấu bị hủy” → それで. Bản thân そして không mang nghĩa “vì vậy”."
+              "explain": "Hai câu đều nói “học chăm chỉ → thi đỗ”. それで coi câu trước rõ ràng là nguyên nhân, trong hội thoại hay dùng khi giải thích cho người khác “vì thế mới thành ra thế này”; そして không nói rõ nhân quả, chỉ kể tiếp sự việc, để người nghe tự cảm nhận kết quả, hay dùng khi kể chuyện, viết văn."
             }
           ]
         }
@@ -4378,23 +4396,24 @@
           "items": [
             {
               "id": "te-kara",
-              "diff": "たあとで chỉ nói thứ tự thời gian; てから còn có thể diễn tả “kể từ khi…”.",
+              "title": "〜てから（làm A rồi mới B）",
+              "diff": "Đều là “sau khi”: たあとで chú trọng thời gian, chỉ nói B diễn ra sau A; てから chú trọng thứ tự, nhấn mạnh phải làm xong A rồi mới làm B.",
               "this": [
                 {
-                  "tag": "Thuần thứ tự",
-                  "tr": "Xem phim xong thì tôi đi ăn."
+                  "tag": "Chú trọng thời gian",
+                  "tr": "Sau khi tắm xong, tôi đọc sách một lúc."
                 }
               ],
               "that": [
                 {
-                  "tag": "Kể từ khi…",
-                  "tr": "Tôi đến Nhật đã được ba năm rồi."
+                  "tag": "Chú trọng thứ tự",
+                  "tr": "Tôi tắm trước, rồi mới đọc sách một lúc."
                 }
               ],
               "wrong": {
-                "why": "“Kể từ khi…” chỉ dùng được てから"
+                "why": "Trước あとで phải dùng thể た: 浴びた後で"
               },
-              "explain": "Xem nửa sau: nói đã trôi qua bao lâu (もう３年になる), từ lúc đó đến giờ luôn thế nào → chỉ dùng được てから. Nếu chỉ nói thứ tự của hai hành động thì cả hai đều dùng được: たあとで không quan tâm ở giữa cách bao lâu, てから nhấn mạnh hơn “làm xong A rồi mới làm B”."
+              "explain": "Hai câu đều nói được, đổi cho nhau thì nghĩa không đổi, chỉ khác trọng tâm. たあとで chú trọng thời gian: việc đọc sách diễn ra sau khi tắm, ở giữa cách bao lâu cũng được; てから chú trọng thứ tự: làm xong A trước thì B mới bắt đầu, nên khi nói về các bước, quy tắc (まず〜てから、必ず〜てから) thì dùng てから tự nhiên hơn. Cách nối cũng khác: thể た＋あとで, thể て＋から."
             }
           ]
         }
@@ -4414,19 +4433,19 @@
               "this": [
                 {
                   "tag": "Thông thường",
-                  "tr": "Hôm qua mình đi xem phim với bạn."
+                  "tr": "Chủ nhật mình đi xem phim với bạn."
                 }
               ],
               "that": [
                 {
                   "tag": "Lịch sự",
-                  "tr": "Thưa thầy, hôm qua em đã đi xem phim với bạn ạ."
+                  "tr": "Thưa thầy, chủ nhật em đã đi xem phim với bạn ạ."
                 }
               ],
               "wrong": {
                 "why": "Sau thể た của động từ không gắn trực tiếp 「です」 được, phải dùng 「ました」"
               },
-              "explain": "Xem nói với ai: bạn bè, người nhà, nhật ký → た; thầy cô, cấp trên, người không thân → ました. Muốn nói lịch sự thì phải đổi cả 「見た」 thành 「見ました」, không được thêm 「です」 phía sau."
+              "explain": "Xem nói với ai: bạn bè, gia đình, nhật ký → た; với 「先生」, cấp trên, người không thân → ました. Muốn chuyển sang lịch sự thì phải đổi cả 「見た」 thành 「見ました」, không được thêm 「です」 vào sau."
             }
           ]
         }
@@ -4436,51 +4455,50 @@
       "id": "ta-koto-ga-aru",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「こと＋がある」 — “có chuyện như thế”",
+          "kind": "look",
+          "note": "Thể た＋ことがある ↔ thể từ điển＋ことがある, chỉ khác phía trước là 「た」 hay 「る」",
           "items": [
             {
               "id": "koto-ga-aru-sometimes",
+              "title": "〜ることがある（đôi khi có lúc）",
               "diff": "Thể た＋ことがある là “đã từng…”; thể từ điển＋ことがある là “đôi khi có lúc…”.",
               "this": [
                 {
-                  "tag": "Trải nghiệm quá khứ",
+                  "tag": "Thể た → trải nghiệm trong quá khứ",
                   "tr": "Hồi nhỏ tôi đã từng đi học muộn."
                 }
               ],
               "that": [
                 {
-                  "tag": "Đôi khi có lúc",
-                  "tr": "Bây giờ thỉnh thoảng tôi vẫn có lúc đi làm muộn."
+                  "tag": "Thể từ điển → đôi khi",
+                  "tr": "Đến giờ thỉnh thoảng tôi vẫn có lúc đi làm muộn."
                 }
               ],
-              "explain": "Chỉ khác 「た」 và 「る」: thể た → trải nghiệm trong quá khứ, hay đi cùng 「子どもの時」「一度」; thể từ điển → việc hiện nay thỉnh thoảng xảy ra, hay đi cùng 「たまに」「時々」."
+              "explain": "Xem phía trước 「ことがある」: thể た (遅刻した) → trải nghiệm đã có trong quá khứ “đã từng…”, hay đi cùng 「子どもの時」「一度」; thể từ điển (遅刻する) → việc hiện tại thỉnh thoảng vẫn xảy ra “đôi khi có lúc…”, hay đi cùng 「たまに」「時々」. Mặt chữ chỉ khác 「た」 và 「る」, nhưng nghĩa hoàn toàn khác nhau."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều nói về việc trong quá khứ",
+          "note": "Đều diễn tả “đã từng có trải nghiệm nào đó”",
           "items": [
             {
-              "id": "ta-form",
-              "diff": "た nói vào một thời điểm nào đó đã làm gì; たことがある nói trong đời đã có trải nghiệm như vậy hay chưa.",
+              "id": "te-iru",
+              "title": "〜ている（trải nghiệm, thành tích）",
+              "diff": "Đều là “đã có trải nghiệm này”: たことがある là cách nói thông thường; ている trình bày việc đã qua như một dòng ghi chép, khách quan như sơ yếu lý lịch hay bản tin.",
               "this": [
                 {
-                  "tag": "Trải nghiệm trong đời",
-                  "tr": "Tôi đã từng leo núi Phú Sĩ một lần."
+                  "tag": "Nói trải nghiệm thông thường",
+                  "tr": "Vận động viên này đã từng vô địch giải thế giới."
                 }
               ],
               "that": [
                 {
-                  "tag": "Việc của một lần",
-                  "tr": "Hôm qua tôi đã leo núi Phú Sĩ."
+                  "tag": "Ghi chép · khách quan",
+                  "tr": "Vận động viên này đã vô địch giải thế giới năm 2018."
                 }
               ],
-              "wrong": {
-                "why": "Khi có thời gian cụ thể thì dùng 「た」"
-              },
-              "explain": "Xem từ chỉ thời gian: thời gian cụ thể như 「昨日」「先週」 → chỉ nói sự việc đó, dùng た; những từ nói về trải nghiệm như 「一度」「今まで」「子どもの時」 → たことがある."
+              "explain": "Hai câu đều nói anh ấy có trải nghiệm vô địch. たことがある là cách nói thông thường, trọng tâm là “đã từng hay chưa”, dùng khi trò chuyện hay nói về bản thân; ている trình bày việc đã qua như một dòng ghi chép, khách quan như sơ yếu lý lịch hay bản tin, thường đi kèm năm cụ thể (２０１８年に)."
             }
           ]
         }
@@ -4491,27 +4509,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả số nhiều “các…, những… này”",
+          "note": "Đều diễn tả số nhiều của người, “các…, những…”",
           "items": [
             {
               "id": "ra-plural",
-              "diff": "たち về nguyên tắc chỉ đi với người; ら còn đi được với những từ chỉ đồ vật như 「これ・それ」.",
+              "title": "〜ら（… và những người khác）",
+              "diff": "Đều là “các…”: たち là cách nói trung tính hằng ngày; ら hay gặp trong tin tức, văn bản hành chính, giọng khách quan, có khoảng cách.",
               "this": [
                 {
-                  "tag": "Đi với người",
-                  "tr": "Bọn trẻ đang chơi trong công viên."
+                  "tag": "Hằng ngày · trung tính",
+                  "tr": "Các vận động viên tươi cười vẫy tay."
                 }
               ],
               "that": [
                 {
-                  "tag": "Đi với đồ vật",
-                  "tr": "Xin hãy đọc những tài liệu này."
+                  "tag": "Tin tức · khách quan",
+                  "tr": "Các vận động viên tươi cười vẫy tay."
                 }
               ],
-              "wrong": {
-                "why": "「たち」 chỉ đi với người (hoặc con vật được coi như người)"
-              },
-              "explain": "Xem gắn vào cái gì: người (私、子ども、学生) → たち là thông dụng nhất; từ chỉ đồ vật như これ、それ → chỉ dùng được ら. ら gắn vào người (僕ら、彼ら) thì suồng sã hơn たち, dịp lịch sự thì dùng たち."
+              "explain": "Hai câu đều là “các vận động viên”. たち là cách nói bình thường nhất hằng ngày, nói chuyện hay viết thư đều dùng được; ら là cách nói khách quan trong tin tức, văn bản hành chính (選手ら、山田教授ら), có chút khoảng cách, nên không dùng trực tiếp trước mặt người trên hay người cần tôn trọng."
             }
           ]
         }
@@ -4522,7 +4538,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「たい」 — diễn tả trong lòng muốn làm",
+          "note": "Đều bắt nguồn từ 「たい」 — nghĩa gốc là chính người nói trong lòng muốn làm",
           "items": [
             {
               "id": "tagaru-want",
@@ -4539,67 +4555,31 @@
                   "tr": "Em trai tôi đang muốn mua trò chơi mới."
                 }
               ],
-              "explain": "Xem chủ ngữ: tôi (hoặc bạn trong câu hỏi) → たい; người thứ ba như em trai, bạn bè → không nhìn thấy được lòng người khác, chỉ có thể nói về biểu hiện bên ngoài → たがっている (hay dùng dạng ている)."
+              "explain": "たがる được tạo từ gốc 「た」 của たい thêm 「がる」; がる diễn tả cảm giác trong lòng biểu lộ ra bên ngoài (寒がる、ほしがる). Nghĩa gốc của たい là chính người nói trong lòng muốn làm, nên sau 「私は」 dùng たい; trong lòng người khác nghĩ gì thì không nhìn thấy, chỉ có thể nói dáng vẻ họ biểu hiện ra là muốn làm, vì vậy thêm がる, sau 「弟は」 dùng たがっている (thường dùng ở dạng ている)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “muốn”",
+          "note": "Đều có nghĩa “muốn làm”",
           "items": [
             {
-              "id": "ga-hoshii",
-              "diff": "たい gắn với động từ, muốn làm một hành động; ほしい gắn với danh từ, muốn có một thứ gì đó.",
+              "id": "tai-mono-da",
+              "title": "〜たいものだ（mong ước mãnh liệt）",
+              "diff": "Đều là “muốn làm”: たい là mong muốn thông thường, việc nhỏ trước mắt cũng nói được; たいものだ mang cảm xúc, thường chỉ ước nguyện lâu dài, khó thực hiện ngay.",
               "this": [
                 {
-                  "tag": "Muốn làm · động từ",
-                  "tr": "Tôi muốn mua xe mới."
+                  "tag": "Mong muốn thông thường",
+                  "tr": "Tôi muốn một lần đi du lịch vòng quanh thế giới."
                 }
               ],
               "that": [
                 {
-                  "tag": "Muốn có · danh từ",
-                  "tr": "Tôi muốn có xe mới."
+                  "tag": "Mang cảm xúc · ước nguyện lâu dài",
+                  "tr": "Ước gì một ngày nào đó mình được một lần đi vòng quanh thế giới."
                 }
               ],
-              "wrong": {
-                "why": "Sau động từ phải dùng 「たい」"
-              },
-              "explain": "Xem sau “muốn” là cái gì: hành động (買う) → thể ます＋たい; đồ vật (車) → がほしい. Cũng chú ý trợ từ: trước ほしい dùng 「が」."
-            },
-            {
-              "id": "te-hoshii",
-              "diff": "たい là bản thân muốn làm; てほしい là mong người khác làm.",
-              "this": [
-                {
-                  "tag": "Bản thân làm",
-                  "tr": "Hôm nay tôi muốn về nhà sớm."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Mong người khác làm",
-                  "tr": "Tôi mong hôm nay chồng về nhà sớm."
-                }
-              ],
-              "explain": "Xem ai là người làm hành động: bản thân làm → たい; mong đối phương hoặc người khác làm thì dùng 「người＋に＋thể て＋ほしい」 (夫に〜てほしい). Tiếng Việt đều có thể nói “muốn”, nhưng “muốn ai đó làm…” thì phải dùng てほしい. Nói thành てもらいたい cũng vậy (夫に早く帰ってもらいたい)."
-            },
-            {
-              "id": "tsumori",
-              "diff": "たい chỉ là mong muốn, chưa chắc thực hiện; つもりだ là kế hoạch đã dự tính sẵn.",
-              "this": [
-                {
-                  "tag": "Mong muốn",
-                  "tr": "Một ngày nào đó tôi muốn đi du học Nhật Bản."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Kế hoạch",
-                  "tr": "Tôi định mùa xuân năm sau đi du học Nhật Bản."
-                }
-              ],
-              "explain": "Xem thời gian được nói cụ thể đến mức nào: tương lai mơ hồ như 「いつか」 → chỉ là mong muốn (たい); thời gian đã định sẵn như 「来年の春」 → đã có kế hoạch (つもりだ). Cách nối cũng khác: たい gắn vào thể ます, つもり gắn vào thể từ điển."
+              "explain": "Hai câu đều nói “muốn đi vòng quanh thế giới”. たい là cách nói thông thường, mong muốn gì cũng dùng được, cả việc nhỏ trước mắt (水が飲みたい); たいものだ mang cảm xúc, như đang tự cảm thán, nói về ước nguyện lâu dài, khó thực hiện ngay, không dùng để trả lời câu hỏi trước mắt như 「何が食べたい？」."
             }
           ]
         }
@@ -4610,42 +4590,28 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều có thể liệt kê song song vài việc",
+          "note": "Đều diễn tả “nêu vài ví dụ, ngụ ý còn những việc khác”",
           "items": [
             {
-              "id": "te-form-sequence",
-              "title": "〜て（trình tự hành động）",
-              "diff": "たり〜たり chỉ nêu vài ví dụ, không phân trước sau; て nối từng việc theo đúng thứ tự thực tế.",
+              "id": "toka-listing",
+              "title": "〜とか〜とか（liệt kê hành động）",
+              "diff": "Đều là nêu ví dụ: たり〜たりする là cách nói chuẩn, động từ dùng thể た; とか〜とか khẩu ngữ, thoải mái hơn, động từ dùng luôn thể từ điển.",
               "this": [
                 {
-                  "tag": "Nêu ví dụ · không phân trước sau",
-                  "tr": "Chủ nhật tôi hay giặt giũ, dọn dẹp các thứ."
+                  "tag": "Chuẩn · thể た＋り",
+                  "tr": "Buổi tối tôi nghe nhạc, đọc sách các thứ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Thứ tự thực tế",
-                  "tr": "Sáng nay tôi giặt quần áo rồi dọn dẹp."
+                  "tag": "Khẩu ngữ · thể từ điển＋とか",
+                  "tr": "Buổi tối thì tôi nghe nhạc này, đọc sách này các kiểu."
                 }
               ],
-              "explain": "Xem từ chỉ thời gian: 「日曜日は」 nói những việc thường làm, chỉ chọn vài việc làm ví dụ, còn việc khác nữa → たり〜たり; 「今朝は」 nói những việc đã thực sự làm, nối theo thứ tự → て. Khi dùng たり, đừng quên 「する」 ở cuối."
-            },
-            {
-              "id": "ya-nado",
-              "diff": "たり〜たり liệt kê hành động (động từ); や〜など liệt kê đồ vật (danh từ).",
-              "this": [
-                {
-                  "tag": "Liệt kê hành động",
-                  "tr": "Cuối tuần tôi hay đọc sách, xem phim các thứ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Liệt kê đồ vật",
-                  "tr": "Trong cặp có sách, vở các thứ."
-                }
-              ],
-              "explain": "Xem đang liệt kê cái gì: hành động như đọc sách, xem phim → たり〜たりする; đồ vật như sách, vở → や〜など. Tiếng Việt đều nói “…, … các thứ”, tiếng Nhật phải phân biệt là động từ hay danh từ."
+              "wrong": {
+                "why": "たり phải gắn sau thể た của động từ: 聞いたり、読んだり"
+              },
+              "explain": "Hai câu đều nêu vài việc làm buổi tối, ngụ ý còn việc khác, đổi cho nhau thì nghĩa không đổi. たり〜たりする là cách nói chuẩn, động từ dùng thể た＋り (聞いたり、読んだり), viết văn hay dịp trang trọng đều dùng được; とか〜とか khẩu ngữ, thoải mái hơn, động từ dùng luôn thể từ điển (聞くとか、読むとか)."
             }
           ]
         }
@@ -4656,86 +4622,81 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều có thể nối hai hành động hoặc hai sự việc",
+          "sense": 1,
+          "note": "Đều diễn tả “làm… trước rồi…”",
           "items": [
             {
               "id": "te-kara",
-              "thisTitle": "〜て（thứ tự hành động）",
-              "diff": "て chỉ nối theo thứ tự; てから nhấn mạnh “làm xong A rồi mới làm B”.",
+              "title": "〜てから（làm A rồi mới B）",
+              "thisTitle": "〜て（trình tự hành động）",
+              "diff": "Đều là “rồi”: て chỉ nối các hành động theo thứ tự; てから nhấn mạnh phải làm xong A rồi mới làm B.",
               "this": [
                 {
                   "tag": "Kể lần lượt",
-                  "tr": "Hôm qua tôi về nhà, tắm rồi đi ngủ."
+                  "tr": "Tôi uống thuốc rồi đi ngủ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Xong A mới B",
-                  "tr": "Nhất định phải rửa tay rồi mới ăn nhé."
+                  "tag": "Xong A rồi mới B",
+                  "tr": "Tôi uống thuốc xong rồi mới đi ngủ."
                 }
               ],
-              "explain": "Xem câu đang nói gì: kể một loạt việc đã làm → て; nhấn mạnh thứ tự không được đảo, quy tắc hay các bước “A trước rồi mới B” → てから, hay đi cùng 「必ず」「まず」. Nghĩa “kể từ khi” như 「日本に来てから３年」 cũng chỉ dùng được てから."
-            },
-            {
-              "id": "tari-tari",
-              "thisTitle": "〜て（thứ tự hành động）",
-              "diff": "て nối từng việc theo đúng thứ tự thực tế; たり〜たり chỉ nêu vài ví dụ, không phân trước sau.",
-              "this": [
-                {
-                  "tag": "Thứ tự thực tế",
-                  "tr": "Sáng nay tôi giặt quần áo rồi dọn dẹp."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nêu ví dụ · không phân trước sau",
-                  "tr": "Chủ nhật tôi hay giặt giũ, dọn dẹp các thứ."
-                }
-              ],
-              "explain": "Xem từ chỉ thời gian: 「今朝は」 nói những việc đã thực sự làm, nối theo thứ tự → て; 「日曜日は」 nói những việc thường làm, chỉ chọn vài việc làm ví dụ, còn việc khác nữa → たり〜たり."
-            },
+              "explain": "Hai câu đều nói “uống thuốc → đi ngủ”, đổi cho nhau thì nghĩa không đổi. て chỉ nối các hành động theo thứ tự, có thể nối liền một mạch nhiều hành động (帰って、浴びて、寝た); てから nhấn mạnh “làm xong A trước, B phải đợi sau A”, khi nói quy tắc, các bước thường đi cùng 「まず」「必ず」, và thường chỉ nối hai hành động."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Đều diễn tả nguyên nhân “vì”",
+          "items": [
             {
               "id": "node",
-              "diff": "て／で khi chỉ nguyên nhân thì phía sau chỉ có thể là cảm xúc hoặc kết quả không kiểm soát được; sau ので có thể là lời nhờ, ý chí.",
+              "thisTitle": "〜て（nguyên nhân）",
+              "diff": "Đều là “vì”: sau て chỉ có thể là kết quả đã xảy ra hoặc cảm xúc; sau ので còn có thể là lời nhờ, dự định.",
               "this": [
                 {
-                  "tag": "て · Sau là cảm xúc",
-                  "tr": "Không có thời gian, khó xử thật."
-                },
-                {
-                  "tag": "で · Sau là kết quả tự nhiên",
-                  "tr": "Vì tai nạn nên tàu điện bị trễ."
+                  "tag": "Sau là kết quả",
+                  "tr": "Tôi bị sốt nên đã nghỉ học."
                 }
               ],
               "that": [
                 {
                   "tag": "Sau là lời nhờ",
-                  "tr": "Không còn thời gian, xin hãy nhanh lên."
+                  "tr": "Vì tôi bị sốt nên xin cho tôi được nghỉ."
                 }
               ],
               "wrong": {
-                "why": "「て」 chỉ nguyên nhân không đi với lời nhờ phía sau"
+                "why": "「て」 chỉ nguyên nhân không thể đi với lời nhờ phía sau"
               },
-              "explain": "Xem nửa sau: cảm xúc, kết quả tự nhiên như 「困った」「電車が遅れた」 → có thể dùng て (sau danh từ là で: 事故で); lời nhờ, ý chí như 「〜てください」「〜ましょう」 → phải dùng ので (hoặc から)."
-            },
+              "explain": "Xem nửa sau: kết quả đã xảy ra như 「学校を休んだ」, hoặc cảm xúc như 「困った」 → dùng て là được, đổi sang ので cũng được, chỉ là nghe giống đang giải thích lý do hơn; lời nhờ như 「休ませてください」, hoặc việc mình định làm → chỉ dùng được ので (hoặc から)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Đều diễn tả “làm việc gì đó trong một trạng thái”",
+          "items": [
             {
-              "id": "nagara",
-              "title": "〜ながら（vừa… vừa…）",
+              "id": "mama-unchanged",
+              "title": "〜まま（giữ nguyên trạng thái mà làm）",
               "thisTitle": "〜て（trạng thái kèm theo）",
-              "diff": "て diễn tả tư thế, cách thức khi làm việc phía sau; ながら là làm đồng thời hai việc độc lập.",
+              "diff": "Đều là “làm khi vẫn đang…”: て chỉ kể bình thường dáng vẻ lúc làm; たまま nhấn mạnh trạng thái lẽ ra phải đổi mà không đổi, mang sắc thái không ổn, bất ngờ.",
               "this": [
                 {
-                  "tag": "Tư thế · trạng thái",
-                  "tr": "Ngồi trên ghế đọc sách."
+                  "tag": "Kể bình thường",
+                  "tr": "Tôi mặc áo khoác đi vào phòng."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hai việc cùng lúc",
-                  "tr": "Vừa nghe nhạc vừa đọc sách."
+                  "tag": "Lẽ ra phải cởi mà không cởi",
+                  "tr": "Tôi chưa cởi áo khoác đã đi vào phòng."
                 }
               ],
-              "explain": "Xem vế trước có phải là một việc khác “đang làm” không: 「座る」 là tư thế giữ nguyên sau khi ngồi xuống → て (座って、立って、眼鏡をかけて); 「聞く」 là một hành động khác diễn ra cùng lúc với việc đọc sách → ながら. Tiếng Việt đều có thể nói “ngồi đọc”, “vừa nghe vừa đọc” rất gần nhau, cần chú ý."
+              "explain": "Hai câu đều là “mặc áo khoác vào phòng”. て chỉ kể bình thường dáng vẻ lúc vào phòng; たまま nhấn mạnh “lẽ ra phải cởi mà không cởi”, trạng thái trước đó vẫn giữ nguyên, mang sắc thái không ổn, bất ngờ, nên khi nhắc nhở, hối hận hay dùng たまま (電気をつけたまま寝てしまった)."
             }
           ]
         }
@@ -4750,7 +4711,7 @@
           "items": [
             {
               "id": "te-aru",
-              "diff": "ている (đi với tự động từ) chỉ miêu tả trạng thái; てある (đi với tha động từ) diễn tả có người cố ý làm, kết quả vẫn còn giữ nguyên.",
+              "diff": "Tự động từ như 開く＋ている chỉ nói trạng thái “đang mở”; tha động từ như 開ける＋てある diễn tả có người cố ý làm, kết quả vẫn còn giữ nguyên.",
               "this": [
                 {
                   "tag": "Chỉ nói trạng thái",
@@ -4766,48 +4727,57 @@
               "wrong": {
                 "why": "Sau 「窓が」 phải dùng 「開いている」 hoặc 「開けてある」"
               },
-              "explain": "Trước tiên xem động từ: 開く (tự động từ)＋ている → chỉ nói “đang mở”; 開ける (tha động từ)＋てある → có người mở vì một mục đích nào đó và để nguyên không đóng. Thấy mục đích kiểu 「〜のために」 thì phần lớn là てある."
+              "explain": "Trước hết xem động từ: 開く (tự động từ)＋ている → chỉ nói “đang mở”; 開ける (tha động từ)＋てある → có người mở vì một mục đích nào đó, rồi để nguyên không đóng. Thấy mục đích kiểu 「掃除のために」 thì phần lớn là てある. Cách phân biệt này chỉ dùng cho các cặp tự động từ và tha động từ như 開く／開ける; động từ hành động như 走る、泣く＋ている là “đang làm”."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều có thể diễn tả hành động đang diễn ra, hoặc một trạng thái đang kéo dài",
+          "sense": 1,
+          "note": "Đều có nghĩa “đang…”",
           "items": [
             {
               "id": "tokoro-da",
               "title": "〜ているところだ",
-              "diff": "ている còn có thể diễn tả thói quen; ているところだ chỉ nói “ngay lúc này đang”.",
+              "diff": "Đều là “đang”: ている là cách nói thông thường; ているところだ nhấn mạnh ngay lúc này đang ở giữa quá trình đó.",
               "this": [
                 {
-                  "tag": "Thói quen",
-                  "tr": "Bố tôi sáng nào cũng đọc báo."
+                  "tag": "Cách nói thông thường",
+                  "tr": "Bây giờ bố tôi đang đọc báo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Ngay lúc này đang",
-                  "tr": "Bố tôi bây giờ đang đọc báo."
+                  "tag": "Nhấn mạnh lúc này",
+                  "tr": "Bây giờ bố tôi đang đọc báo dở."
                 }
               ],
-              "explain": "Xem từ chỉ thời gian: 「毎朝」「いつも」 → thói quen, chỉ dùng được ている; 「今」「ちょうど」 → đang diễn ra ngay lúc này, dùng ているところだ rõ ràng hơn, hay dùng để trả lời 「今、何をしているの？」."
-            },
+              "explain": "Hai câu đều nói bố đang đọc báo. ている là cách nói thông thường; ているところだ nhấn mạnh “ngay lúc này đang ở giữa quá trình, chưa xong”, thường dùng để trả lời 「今、何をしているの？」, hoặc giải thích lúc này không rời tay ra được."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều diễn tả trạng thái “đang…, vẫn…”",
+          "items": [
             {
               "id": "mama-unchanged",
-              "diff": "ている miêu tả trạng thái ở cuối câu; たまま là giữ nguyên một trạng thái rồi làm việc khác.",
+              "title": "〜まま（trạng thái không đổi）",
+              "diff": "Đều là “vẫn đang…”: ている chỉ miêu tả trạng thái trước mắt; たままになっている nói trạng thái lẽ ra phải đổi mà vẫn để nguyên như thế.",
               "this": [
                 {
                   "tag": "Miêu tả trạng thái",
-                  "tr": "Anh ấy đang đi giày."
+                  "tr": "Đèn phòng họp đang bật."
                 }
               ],
               "that": [
                 {
-                  "tag": "Mang nguyên trạng thái làm việc",
-                  "tr": "Anh ấy cứ để nguyên giày mà đi vào phòng."
+                  "tag": "Lẽ ra phải đổi mà không đổi",
+                  "tr": "Đèn phòng họp vẫn bật nguyên như thế."
                 }
               ],
-              "explain": "Xem phía sau còn hành động không: bản thân trạng thái là điều muốn nói, câu kết thúc ở đó → ている; mang nguyên trạng thái đó để làm việc khác (入った、寝た), và thường hàm ý “lẽ ra không nên thế” → たまま. Tiếng Việt đều có thể nói “đi giày”."
+              "explain": "Hai câu đều là “đèn đang bật”. ている chỉ miêu tả trạng thái nhìn thấy trước mắt; たままになっている nói lẽ ra phải tắt đi, vậy mà không ai để ý, cứ để nguyên như thế, thường mang giọng không hài lòng hoặc nhắc nhở. Muốn nói “sao vẫn còn bật thế này” thì dùng まま."
             }
           ]
         }
@@ -4836,34 +4806,36 @@
                   "tr": "Bài tập làm xong rồi nên đi chơi được rồi."
                 }
               ],
-              "explain": "Chỉ khác một kana: し・て・から là thứ tự thời gian, phía sau là việc sẽ làm tiếp theo; し・た・から là nguyên nhân, phía sau là kết quả hay phán đoán rút ra từ đó (行ける、大丈夫だ)."
+              "explain": "Chỉ khác một kana: し・て・から là thứ tự thời gian, phía sau là việc sẽ làm tiếp theo (遊びに行く); し・た・から là nguyên nhân, phía trước hay có 「もう」, phía sau là kết quả hay nhận định rút ra từ đó (行ける、大丈夫だ)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "てから kiêm hai vai, mỗi vai có cách nói gần nghĩa: “làm… trước rồi mới…” ≈ たあとで・て, “kể từ khi…” ≈ てからというもの",
+          "sense": 1,
+          "note": "Đều diễn tả “làm… trước rồi…”",
           "items": [
             {
               "id": "ta-ato-de",
+              "title": "〜たあとで（sau khi làm）",
               "thisTitle": "〜てから（làm A rồi mới B）",
-              "diff": "たあとで chỉ nói B xảy ra sau A; てから còn có thể nói “kể từ khi…”, phía sau là thời gian đã trôi qua hoặc trạng thái kéo dài.",
+              "diff": "Đều là “sau khi”: てから chú trọng thứ tự, nhấn mạnh phải làm xong A rồi mới làm B; たあとで chú trọng thời gian, chỉ nói B diễn ra sau A.",
               "this": [
                 {
-                  "tag": "Kể từ · thời gian trôi qua",
-                  "tr": "Tôi bắt đầu học tiếng Nhật đã được nửa năm rồi."
+                  "tag": "Chú trọng thứ tự",
+                  "tr": "Tôi ăn tối trước, rồi mới làm bài tập."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sau khi · việc tiếp theo",
-                  "tr": "Tan học xong, tôi đã đi hỏi thầy."
+                  "tag": "Chú trọng thời gian",
+                  "tr": "Sau khi ăn tối xong, tôi làm bài tập."
                 }
               ],
               "wrong": {
-                "why": "“Kể từ khi… đã bao lâu” chỉ dùng được てから"
+                "why": "Trước あとで phải dùng thể た: 食べたあとで"
               },
-              "explain": "Xem nửa sau: thời gian hay trạng thái kéo dài liên tục từ lúc đó như 「もう半年になる」「ずっと〜」 → chỉ dùng được てから; chỉ nói việc tiếp theo xảy ra sau đó → たあとで、てから đều được. Chú ý cách nối: thể て＋から, thể た＋あとで."
+              "explain": "Hai câu đều nói được, đổi cho nhau thì nghĩa không đổi, chỉ khác trọng tâm. てから chú trọng thứ tự: làm xong A trước thì B mới bắt đầu, khi nói về các bước, quy tắc (まず〜てから、必ず〜てから) thì tự nhiên hơn; たあとで chú trọng thời gian: B diễn ra sau A, ở giữa cách bao lâu cũng được. Cách nối cũng khác: thể て＋から, thể た＋あとで."
             },
             {
               "id": "te-form-sequence",
@@ -4883,11 +4855,18 @@
                 }
               ],
               "explain": "Một loạt việc thường ngày làm theo thứ tự → dùng て nối liên tiếp từng việc; muốn nhấn mạnh “làm xong A trước, B phải đợi sau A”, hay đi cùng 「まず」 → dùng てから, và thường chỉ nối hai hành động."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều diễn tả “kể từ khi…”",
+          "items": [
             {
               "id": "te-kara-to-iu-mono",
               "thisTitle": "〜てから（kể từ khi…）",
-              "diff": "てから là “kể từ khi…” thông thường; てからというもの là văn viết, nhấn mạnh từ đó trở đi luôn có thay đổi lớn.",
+              "diff": "Đều là “kể từ khi…”: てから là cách nói thông thường; てからというもの là văn viết, nhấn mạnh từ đó trở đi luôn có thay đổi lớn.",
               "this": [
                 {
                   "tag": "Kể từ khi · thông thường",
@@ -4900,7 +4879,7 @@
                   "tr": "Từ khi con chào đời, ngày nào cũng bận tối mắt."
                 }
               ],
-              "explain": "Sau てからというもの là sự thay đổi rõ rệt “từ đó trở đi lúc nào cũng…”, mang cảm khái, thường dùng trong văn viết; chỉ nói đã trôi qua bao nhiêu thời gian (３年になる) thì dùng てから thông thường."
+              "explain": "Hai câu đều là “kể từ khi…”. Nếu chỉ nói từ lúc đó đến nay đã qua bao lâu (もう３年になる) thì dùng てから thông thường; sau てからというもの là sự thay đổi rõ rệt “từ đó trở đi luôn…” (毎日が本当に忙しい), mang cảm xúc, chủ yếu dùng trong văn viết."
             }
           ]
         }

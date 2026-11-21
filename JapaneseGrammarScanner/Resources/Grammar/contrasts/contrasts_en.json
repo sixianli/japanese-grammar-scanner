@@ -4294,25 +4294,9 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "All can link two events or facts",
+          "sense": 1,
+          "note": "Both mean “and then”",
           "items": [
-            {
-              "id": "sorekara-conjunction",
-              "diff": "そして smoothly adds or narrates the next step, and feels slightly more literary; それから is mostly spoken, adding “one more thing”.",
-              "this": [
-                {
-                  "tag": "Describing · and",
-                  "tr": "This town is quiet. And it's very beautiful."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Adding · also",
-                  "tr": "Two coffees, please. Oh, and one piece of cake too."
-                }
-              ],
-              "explain": "Look at the situation: describing another feature of the same thing, or the next step in a story → そして; ordering or giving instructions and remembering “one more thing” → それから. For “after that / since then”, only それから works."
-            },
             {
               "id": "te-form-sequence",
               "title": "〜て (sequence of actions)",
@@ -4332,38 +4316,72 @@
               "explain": "Both mean the same — look at the period: several actions done in a row by the same person are most naturally linked with the て-form in one sentence; そして needs a 「。」 before it, and suits writing when you want to stress “what comes next”. Linking every action with 「〜た。そして、」 reads very stiffly."
             },
             {
+              "id": "sorekara-conjunction",
+              "title": "それから (and then)",
+              "diff": "Both mean “and then”: それから focuses on the order in time; そして is slightly more formal and more common in writing and storytelling.",
+              "this": [
+                {
+                  "tag": "Slightly formal · links the next event",
+                  "tr": "Work was over. And then I stopped by the bookstore in front of the station."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Focus on time order",
+                  "tr": "Work was over. After that, I stopped by the bookstore in front of the station."
+                }
+              ],
+              "explain": "Both sentences mean “and then,” and swapping them doesn't change the meaning. それから focuses on time: you do the next thing “after” finishing the previous one, so it is the most common choice in everyday speech when describing your day or a series of steps. そして simply links the next event; it is a little more formal than それから and more common in writing and storytelling."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “and also”",
+          "items": [
+            {
               "id": "soreni-conjunction",
-              "diff": "そして adds smoothly; それに adds one more point to a reason, and is more conversational.",
+              "title": "それに (adding a similar point)",
+              "diff": "Both mean “and also”: そして is smooth and neutral; それに is more conversational, with a “not only that, but also…” feel of piling on.",
               "this": [
                 {
                   "tag": "Smooth addition",
-                  "tr": "He's kind. And he's smart, too."
+                  "tr": "This hotel is close to the station. And the rooms are spacious too."
                 }
               ],
               "that": [
                 {
-                  "tag": "One more reason",
-                  "tr": "I'm not going today. It's raining, and besides, I'm tired."
+                  "tag": "Conversational · piling on",
+                  "tr": "This hotel is close to the station, and on top of that, the rooms are spacious too."
                 }
               ],
-              "explain": "Look at whether reasons are being given: just introducing features of a person or thing → そして; piling up reasons one by one to explain “why”, often with 「〜し」 → それに."
-            },
+              "explain": "Both sentences add one more good point about the hotel. そして just smoothly links the next feature and is common in descriptions and written text; それに is conversational, with a “not only that, there's also…” tone of piling on, and is often used together with 「し」 (近いし、それに)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Both mean “and so”",
+          "items": [
             {
               "id": "sorede-conjunction",
-              "diff": "そして only means something happened next; それで clearly marks the first part as the cause and the second as the result.",
+              "title": "それで (therefore, so)",
+              "diff": "Both mean “and so”: それで states outright that what came before is the cause; そして just carries the story forward, mostly in storytelling and writing.",
               "this": [
                 {
-                  "tag": "Happened next",
-                  "tr": "I opened the door. Then I went inside."
+                  "tag": "Carrying on · story",
+                  "tr": "She studied until late every night. And then she passed the exam."
                 }
               ],
               "that": [
                 {
-                  "tag": "Because → so",
-                  "tr": "The rain got heavier. So the match was called off."
+                  "tag": "States the cause · spoken",
+                  "tr": "She studied until late every night. So she passed the exam."
                 }
               ],
-              "explain": "Look at whether there's cause and effect: “open the door → go in” is just the order of actions → そして; “the rain got heavier” is the cause of “the match was called off” → それで. そして itself doesn't carry the meaning of “so”."
+              "explain": "Both sentences say “studied hard → passed.” それで clearly treats the previous sentence as the cause and is common in speech when explaining to someone “that's why.” そして doesn't spell out cause and effect; it just carries the events forward and lets the listener sense the connection, which is common in storytelling and writing."
             }
           ]
         }
@@ -4378,23 +4396,24 @@
           "items": [
             {
               "id": "te-kara",
-              "diff": "たあとで only expresses time order; てから can also mean “ever since…”.",
+              "title": "〜てから (first A, then B)",
+              "diff": "Both mean “after”: たあとで focuses on time, simply saying B comes after A; てから focuses on order, stressing that A is finished first and only then B.",
               "this": [
                 {
-                  "tag": "Simple order",
-                  "tr": "After watching a movie, I had a meal."
+                  "tag": "Focus on time",
+                  "tr": "After taking a shower, I read a book for a while."
                 }
               ],
               "that": [
                 {
-                  "tag": "Ever since…",
-                  "tr": "It's already been three years since I came to Japan."
+                  "tag": "Focus on order",
+                  "tr": "I took a shower first, then read a book for a while."
                 }
               ],
               "wrong": {
-                "why": "“Ever since…” can only take てから"
+                "why": "あとで must follow the た-form: 浴びた後で"
               },
-              "explain": "Look at the second half: if it says how much time has passed (もう３年になる), or how things have been since then → only てから. If it just gives the order of two actions, both work: たあとで regardless of the gap in between, while てから stresses “finish A first, then do B”."
+              "explain": "Both sentences work, and swapping them doesn't change the meaning; only the focus differs. たあとで focuses on time: the reading happened after the shower, however long the gap. てから focuses on order: A is finished first and only then does B start, so when talking about steps or rules (まず〜てから、必ず〜てから), てから sounds more natural. They also attach differently: た-form＋あとで, て-form＋から."
             }
           ]
         }
@@ -4414,19 +4433,19 @@
               "this": [
                 {
                   "tag": "Plain",
-                  "tr": "Yesterday I saw a movie with a friend."
+                  "tr": "I saw a movie with a friend on Sunday."
                 }
               ],
               "that": [
                 {
                   "tag": "Polite",
-                  "tr": "Sensei, yesterday I saw a movie with a friend."
+                  "tr": "Sensei, I saw a movie with a friend on Sunday."
                 }
               ],
               "wrong": {
                 "why": "You can't add 「です」 directly after a verb's た-form; use 「ました」"
               },
-              "explain": "Look at who you're talking to: friends, family, a diary → た; teachers, bosses, people you don't know well → ました. To make it polite, replace the whole 「見た」 with 「見ました」 — you can't just add 「です」 after it."
+              "explain": "Look at who you are talking to: friends, family, a diary → た; a 「先生」, your boss, someone you don't know well → ました. To make it polite, change 「見た」 as a whole into 「見ました」; you can't just add 「です」 after it."
             }
           ]
         }
@@ -4436,51 +4455,50 @@
       "id": "ta-koto-ga-aru",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from 「こと + がある」 — “there is such a thing”",
+          "kind": "look",
+          "note": "た-form＋ことがある ↔ dictionary form＋ことがある — the only difference is whether 「た」 or 「る」 comes before",
           "items": [
             {
               "id": "koto-ga-aru-sometimes",
-              "diff": "ta-form + ことがある is “have done… before”; dictionary form + ことがある is “sometimes…”.",
+              "title": "〜ることがある (sometimes does)",
+              "diff": "た-form＋ことがある means “have done … before”; dictionary form＋ことがある means “sometimes does …”.",
               "this": [
                 {
-                  "tag": "Past experience",
-                  "tr": "When I was a kid, I was late for school once or twice."
+                  "tag": "た-form → past experience",
+                  "tr": "When I was a child, I was late for school once."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sometimes",
+                  "tag": "Dictionary form → sometimes",
                   "tr": "Even now, I'm occasionally late for work."
                 }
               ],
-              "explain": "The only difference is 「た」 vs. 「る」: ta-form → a past experience, often with 「子どもの時」「一度」; dictionary form → something that occasionally happens now, often with 「たまに」「時々」."
+              "explain": "Look at what comes before 「ことがある」: the た-form (遅刻した) → an experience from the past, “have done … before,” often with 「子どもの時」 or 「一度」; the dictionary form (遅刻する) → something that still happens now and then, “sometimes does …,” often with 「たまに」 or 「時々」. On the surface only 「た」 and 「る」 differ, but the meanings are completely different."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both talk about the past",
+          "note": "Both express “having had a certain experience”",
           "items": [
             {
-              "id": "ta-form",
-              "diff": "た says what you did at a certain time; たことがある says whether you've ever had that experience in your life.",
+              "id": "te-iru",
+              "title": "〜ている (experience, record)",
+              "diff": "Both mean “has had this experience”: たことがある is the everyday way to say it; ている presents the past event as a record, objectively, like a résumé or a news report.",
               "this": [
                 {
-                  "tag": "Life experience",
-                  "tr": "I've climbed Mt. Fuji once."
+                  "tag": "Everyday · experience",
+                  "tr": "This athlete has won a world championship before."
                 }
               ],
               "that": [
                 {
-                  "tag": "A specific time",
-                  "tr": "I climbed Mt. Fuji yesterday."
+                  "tag": "Record · objective",
+                  "tr": "This athlete won the world championship in 2018."
                 }
               ],
-              "wrong": {
-                "why": "With a specific time, use 「た」"
-              },
-              "explain": "Look at the time words: a specific time like 「昨日」「先週」 → just reporting that event, use た; words about experience like 「一度」「今まで」「子どもの時」 → たことがある."
+              "explain": "Both sentences say he has won before. たことがある is the everyday expression, focusing on “whether it has ever happened,” and is used in conversation and when talking about yourself. ている lays out the past event as an item on record, objective like a résumé or news report, and often comes with a specific year (２０１８年に)."
             }
           ]
         }
@@ -4491,27 +4509,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mark plurals, “… and others / these…”",
+          "note": "Both make a plural of people, “the …s”",
           "items": [
             {
               "id": "ra-plural",
-              "diff": "たち in principle only attaches to people; ら can also attach to words for things like 「これ・それ」.",
+              "title": "〜ら (… and others)",
+              "diff": "Both make a plural of people: たち is the everyday, neutral form; ら is mostly found in news and official documents, with an objective, distant tone.",
               "this": [
                 {
-                  "tag": "With people",
-                  "tr": "The children are playing in the park."
+                  "tag": "Everyday · neutral",
+                  "tr": "The athletes smiled and waved."
                 }
               ],
               "that": [
                 {
-                  "tag": "With things",
-                  "tr": "Please read these documents."
+                  "tag": "News · objective",
+                  "tr": "The athletes smiled and waved."
                 }
               ],
-              "wrong": {
-                "why": "「たち」 only attaches to people (or animals treated like people)"
-              },
-              "explain": "Look at what it attaches to: people (私, 子ども, 学生) → たち is the most common; words for things like これ, それ → only ら works. ら with people (僕ら, 彼ら) is more casual than たち; use たち in polite settings."
+              "explain": "Both sentences mean “the athletes.” たち is the most ordinary everyday form, fine in conversation and letters; ら is the objective form used in news and official documents (選手ら、山田教授ら). It feels a little distant, so it isn't used to someone's face for elders or people you should show respect to."
             }
           ]
         }
@@ -4522,7 +4538,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「たい」 — expressing an inner wish to do something",
+          "note": "Both come from 「たい」, which at its core expresses what the speaker personally wants to do",
           "items": [
             {
               "id": "tagaru-want",
@@ -4539,67 +4555,31 @@
                   "tr": "My little brother wants to buy a new game."
                 }
               ],
-              "explain": "Look at the subject: I (or “you” in a question) → たい; third parties like a brother or friend → you can't see inside their mind, only describe how they appear → たがっている (usually in the ている form)."
+              "explain": "たがる comes from the stem 「た」 of たい plus 「がる」; がる shows an inner feeling showing on the outside (寒がる、ほしがる). At its core, たい expresses what the speaker personally wants, so after 「私は」 you use たい. You can't see what is in someone else's mind; you can only describe how they appear to want something, so がる is added, and after 「弟は」 you use たがっている (usually in the ている form)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "All express “want”",
+          "note": "Both mean “want to do”",
           "items": [
             {
-              "id": "ga-hoshii",
-              "diff": "たい attaches to verbs — wanting to do an action; ほしい attaches to nouns — wanting a thing.",
+              "id": "tai-mono-da",
+              "title": "〜たいものだ (strong wish)",
+              "diff": "Both mean “want to”: たい is an ordinary wish, fine even for small things right in front of you; たいものだ carries deep feeling and usually refers to a long-term wish that can't easily come true right away.",
               "this": [
                 {
-                  "tag": "Want to do · verb",
-                  "tr": "I want to buy a new car."
+                  "tag": "Ordinary wish",
+                  "tr": "I want to travel around the world at least once."
                 }
               ],
               "that": [
                 {
-                  "tag": "Want · noun",
-                  "tr": "I want a new car."
+                  "tag": "Deep feeling · long-term wish",
+                  "tr": "I really hope I can travel around the world at least once someday."
                 }
               ],
-              "wrong": {
-                "why": "After a verb, use 「たい」"
-              },
-              "explain": "Look at what follows “want”: an action (買う) → masu-stem + たい; a thing (車) → がほしい. Watch the particle too: ほしい takes 「が」 before it."
-            },
-            {
-              "id": "te-hoshii",
-              "diff": "たい is wanting to do something yourself; てほしい is wanting someone else to do it.",
-              "this": [
-                {
-                  "tag": "Oneself",
-                  "tr": "I want to go home early today."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Want someone to",
-                  "tr": "I want my husband to come home early today."
-                }
-              ],
-              "explain": "Look at who does the action: yourself → たい; wanting the listener or someone else to do it → “person に + te-form + ほしい” (夫に〜てほしい). Both may be “want” in English, but “want someone to…” needs てほしい. Saying てもらいたい works the same way (夫に早く帰ってもらいたい)."
-            },
-            {
-              "id": "tsumori",
-              "diff": "たい is just a wish and may not come true; つもりだ is a plan already made.",
-              "this": [
-                {
-                  "tag": "Wish",
-                  "tr": "Someday I want to study abroad in Japan."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Plan",
-                  "tr": "I plan to go study in Japan next spring."
-                }
-              ],
-              "explain": "Look at how specific the time is: a vague future like 「いつか」 → just a wish (たい); a set time like 「来年の春」 → an existing plan (つもりだ). They attach differently too: たい to the masu-stem, つもり to the dictionary form."
+              "explain": "Both sentences say “I want to travel around the world.” たい is the general expression, usable for any wish, even small immediate ones (水が飲みたい). たいものだ carries emotion, like sighing to yourself, and refers to a long-term wish that can't easily come true right away; it isn't used to answer an immediate question like 「何が食べたい？」."
             }
           ]
         }
@@ -4610,42 +4590,28 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both can list several things side by side",
+          "note": "Both give a few examples and imply there are others",
           "items": [
             {
-              "id": "te-form-sequence",
-              "title": "〜て (sequence of actions)",
-              "diff": "たり〜たり just gives a few examples, in no particular order; て links actions one by one in the order they happened.",
+              "id": "toka-listing",
+              "title": "〜とか〜とか (listing actions)",
+              "diff": "Both give examples: たり〜たりする is the standard form, with verbs in the た-form; とか〜とか is more casual and conversational, with verbs simply in the dictionary form.",
               "this": [
                 {
-                  "tag": "Examples · no order",
-                  "tr": "On Sundays I do things like laundry and cleaning."
+                  "tag": "Standard · た-form＋り",
+                  "tr": "In the evenings I listen to music, read books, and so on."
                 }
               ],
               "that": [
                 {
-                  "tag": "Actual order",
-                  "tr": "This morning I did the laundry, and then cleaned."
+                  "tag": "Casual · dictionary form＋とか",
+                  "tr": "In the evenings I just listen to music, read books, stuff like that."
                 }
               ],
-              "explain": "Look at the time word: 「日曜日は」 talks about what you usually do, picking a few examples out of more → たり〜たり; 「今朝は」 talks about what you actually did, linked in order → て. With たり, don't forget 「する」 at the end."
-            },
-            {
-              "id": "ya-nado",
-              "diff": "たり〜たり lists actions (verbs); や〜など lists things (nouns).",
-              "this": [
-                {
-                  "tag": "Listing actions",
-                  "tr": "On weekends I do things like reading and watching movies."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Listing things",
-                  "tr": "My bag has books, notebooks and so on in it."
-                }
-              ],
-              "explain": "Look at what's being listed: actions like reading or watching movies → たり〜たりする; things like books or notebooks → や〜など. English uses “things like… and so on” for both, but Japanese makes you distinguish verbs from nouns."
+              "wrong": {
+                "why": "たり must attach to the verb's た-form: 聞いたり、読んだり"
+              },
+              "explain": "Both sentences list a few things done in the evening and imply there are others; swapping them doesn't change the meaning. たり〜たりする is the standard form, with the verb in the た-form＋り (聞いたり、読んだり), and works in writing and formal situations. とか〜とか is more conversational and casual, with the verb simply in the dictionary form (聞くとか、読むとか)."
             }
           ]
         }
@@ -4656,86 +4622,81 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "All can link two actions or two events",
+          "sense": 1,
+          "note": "Both mean “first…, then…”",
           "items": [
             {
               "id": "te-kara",
+              "title": "〜てから (first A, then B)",
               "thisTitle": "〜て (sequence of actions)",
-              "diff": "て just links in order; てから stresses “finish A first, and only then do B”.",
+              "diff": "Both mean “and then”: て just strings actions together in order; てから stresses that A is finished first and only then B.",
               "this": [
                 {
                   "tag": "Narrating in order",
-                  "tr": "Yesterday I got home, took a shower and went to bed."
+                  "tr": "I took some medicine and went to sleep."
                 }
               ],
               "that": [
                 {
                   "tag": "A first, then B",
-                  "tr": "Be sure to wash your hands before you eat."
+                  "tr": "I took some medicine first, and only then went to sleep."
                 }
               ],
-              "explain": "Look at what the sentence is doing: narrating a series of things you did → て; stressing that the order can't be reversed, a “first A, then B” rule or procedure → てから, often with 「必ず」「まず」. The “ever since” meaning, as in 「日本に来てから３年」, also only works with てから."
-            },
-            {
-              "id": "tari-tari",
-              "thisTitle": "〜て (sequence of actions)",
-              "diff": "て links actions one by one in the order they actually happened; たり〜たり just gives a few examples, in no particular order.",
-              "this": [
-                {
-                  "tag": "Actual order",
-                  "tr": "This morning I did the laundry, then cleaned."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Examples · no order",
-                  "tr": "On Sundays I do things like laundry and cleaning."
-                }
-              ],
-              "explain": "Look at the time words: 「今朝は」 talks about what you actually did, linked in order → て; 「日曜日は」 talks about what you usually do, picking a few examples among others → たり〜たり."
-            },
+              "explain": "Both sentences say “take medicine → sleep,” and swapping them doesn't change the meaning. て just strings actions together in order and can link several in one go (帰って、浴びて、寝た). てから stresses “finish A first; B waits until after A,” is often used with 「まず」 or 「必ず」 for rules and steps, and usually links only two actions."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Both express a reason, “because”",
+          "items": [
             {
               "id": "node",
-              "diff": "て／で, when giving a reason, can only be followed by a feeling or an uncontrollable result; ので can be followed by a request or intention.",
+              "thisTitle": "〜て (reason)",
+              "diff": "Both mean “because”: after て only a result that has already happened or a feeling can follow; after ので a request or a plan can follow as well.",
               "this": [
                 {
-                  "tag": "て · Followed by feeling",
-                  "tr": "I had no time, and I was in a bind."
-                },
-                {
-                  "tag": "で · Followed by natural result",
-                  "tr": "The train was late because of an accident."
+                  "tag": "Followed by a result",
+                  "tr": "I had a fever, so I stayed home from school."
                 }
               ],
               "that": [
                 {
-                  "tag": "Followed by request",
-                  "tr": "We're out of time, so please hurry."
+                  "tag": "Followed by a request",
+                  "tr": "I've come down with a fever, so please let me take the day off."
                 }
               ],
               "wrong": {
-                "why": "A reason 「て」 can't be followed by a request"
+                "why": "The 「て」 of reason can't be followed by a request"
               },
-              "explain": "Look at the second half: feelings or natural results like 「困った」「電車が遅れた」 → て works (after a noun it's で: 事故で); requests or intentions like 「〜てください」「〜ましょう」 → use ので (or から)."
-            },
+              "explain": "Look at the second half: a result that has already happened, like 「学校を休んだ」, or a feeling, like 「困った」 → て is fine; ので also works, it just sounds more like giving an explanation. A request like 「休ませてください」, or something you plan to do → only ので (or から)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Both mean doing something “while in a certain state”",
+          "items": [
             {
-              "id": "nagara",
-              "title": "〜ながら (while doing)",
+              "id": "mama-unchanged",
+              "title": "〜まま (keeping a state)",
               "thisTitle": "〜て (accompanying state)",
-              "diff": "て shows the posture or manner in which you do the second action; ながら is doing two separate things at the same time.",
+              "diff": "Both mean doing something “while in a state”: て just plainly describes how you did it; たまま stresses that a state that should have changed didn't, with a sense of something being off or unexpected.",
               "this": [
                 {
-                  "tag": "Posture · state",
-                  "tr": "I sit in a chair and read a book."
+                  "tag": "Plain description",
+                  "tr": "I went into the room wearing my coat."
                 }
               ],
               "that": [
                 {
-                  "tag": "Two things at once",
-                  "tr": "I read a book while listening to music."
+                  "tag": "Should have taken it off but didn't",
+                  "tr": "I went into the room without even taking my coat off."
                 }
               ],
-              "explain": "Check whether the first part is another thing you're “in the middle of doing”: 「座る」 is a posture you keep after sitting down → て (座って, 立って, 眼鏡をかけて); 「聞く」 is another action going on at the same time as reading → ながら. In English both can come out as “…ing”."
+              "explain": "Both sentences mean “went into the room wearing a coat.” て just plainly describes how you came in; たまま stresses “should have taken it off but didn't” — the earlier state stayed unchanged — with a sense of something being off or unexpected, so たまま is common in reminders and regrets (電気をつけたまま寝てしまった)."
             }
           ]
         }
@@ -4750,7 +4711,7 @@
           "items": [
             {
               "id": "te-aru",
-              "diff": "ている (with intransitive verbs) only describes a state; てある (with transitive verbs) means someone deliberately did it and the result remains.",
+              "diff": "An intransitive verb like 開く＋ている only says “it is open” as a state; a transitive verb like 開ける＋てある means someone did it on purpose and the result has remained.",
               "this": [
                 {
                   "tag": "Just the state",
@@ -4766,48 +4727,57 @@
               "wrong": {
                 "why": "After 「窓が」, use 「開いている」 or 「開けてある」"
               },
-              "explain": "First look at the verb: 開く (intransitive) + ている → just “is open”; 開ける (transitive) + てある → someone opened it for a purpose and left it open. If you see a purpose like 「〜のために」, it's most likely てある."
+              "explain": "First look at the verb: 開く (intransitive)＋ている → simply “is open”; 開ける (transitive)＋てある → someone opened it for some purpose and it has stayed open. If you see a purpose like 「掃除のために」, it is most likely てある. This test only applies to paired intransitive/transitive verbs like 開く／開ける; action verbs like 走る or 泣く＋ている mean “is doing.”"
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both can express an action in progress or a state that continues",
+          "sense": 1,
+          "note": "Both mean “be doing …”",
           "items": [
             {
               "id": "tokoro-da",
               "title": "〜ているところだ",
-              "diff": "ている can also express habits; ているところだ only means “right in the middle of it now”.",
+              "diff": "Both mean “be doing”: ている is the everyday way to say it; ているところだ stresses being in the middle of the process right now.",
               "this": [
                 {
-                  "tag": "Habit",
-                  "tr": "My dad reads the newspaper every morning."
+                  "tag": "Everyday expression",
+                  "tr": "My dad is reading the newspaper now."
                 }
               ],
               "that": [
                 {
-                  "tag": "Right now",
-                  "tr": "My dad is reading the newspaper right now."
+                  "tag": "Stresses this moment",
+                  "tr": "My dad is in the middle of reading the newspaper right now."
                 }
               ],
-              "explain": "Look at the time words: 「毎朝」「いつも」 → a habit, only ている works; 「今」「ちょうど」 → in progress at this moment, and ているところだ makes it clearer — often used to answer 「今、何をしているの？」."
-            },
+              "explain": "Both sentences say Dad is reading the paper. ている is the everyday expression; ているところだ stresses “right now, in the middle of the process, not finished yet,” and is often used to answer 「今、何をしているの？」 or to explain that you can't get away at the moment."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both express an ongoing state",
+          "items": [
             {
               "id": "mama-unchanged",
-              "diff": "ている describes a state at the end of a sentence; たまま means doing something else while keeping a certain state.",
+              "title": "〜まま (state unchanged)",
+              "diff": "Both express an ongoing state: ている just describes the state in front of you; たままになっている says a state that should have changed has stayed as it was, just left that way.",
               "this": [
                 {
-                  "tag": "Describing a state",
-                  "tr": "He has his shoes on."
+                  "tag": "Describes the state",
+                  "tr": "The lights in the meeting room are on."
                 }
               ],
               "that": [
                 {
-                  "tag": "Acting in that state",
-                  "tr": "He went into the room with his shoes still on."
+                  "tag": "Should have changed but didn't",
+                  "tr": "The lights in the meeting room have been left on."
                 }
               ],
-              "explain": "Look at whether another action follows: the state itself is the point and the sentence ends → ている; doing something else in that state (入った, 寝た), often implying “that shouldn't be done” → たまま. English may use “with… on” for both."
+              "explain": "Both sentences mean “the lights are on.” ている just describes the state you see; たままになっている says they should have been switched off, but nobody has dealt with them and they have been left that way, often with a tone of annoyance or a reminder. When you want to say “why are they still on?”, use まま."
             }
           ]
         }
@@ -4836,34 +4806,36 @@
                   "tr": "I've already done my homework, so I can go out to play."
                 }
               ],
-              "explain": "Just one kana apart: し・て・から is a time sequence, followed by what you'll do next; し・た・から is a reason, followed by the resulting outcome or judgment (行ける, 大丈夫だ)."
+              "explain": "Only one kana is different: し・て・から is time order, followed by what you will do next (遊びに行く); し・た・から is a reason, often preceded by 「もう」, and followed by the resulting outcome or judgment (行ける、大丈夫だ)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "てから has two jobs, each with a similar alternative: “first…, then…” ≈ たあとで・て; “ever since…” ≈ てからというもの",
+          "sense": 1,
+          "note": "Both mean “first…, then…”",
           "items": [
             {
               "id": "ta-ato-de",
+              "title": "〜たあとで (after an action)",
               "thisTitle": "〜てから (first A, then B)",
-              "diff": "たあとで only says B happens after A; てから can also mean “ever since…”, followed by time that has passed or an ongoing state.",
+              "diff": "Both mean “after”: てから focuses on order, stressing that A is finished first and only then B; たあとで focuses on time, simply saying B comes after A.",
               "this": [
                 {
-                  "tag": "Ever since · time passed",
-                  "tr": "It's already been six months since I started learning Japanese."
+                  "tag": "Focus on order",
+                  "tr": "I ate dinner first, then did my homework."
                 }
               ],
               "that": [
                 {
-                  "tag": "After · the next thing",
-                  "tr": "After class ended, I went to ask the teacher a question."
+                  "tag": "Focus on time",
+                  "tr": "After eating dinner, I did my homework."
                 }
               ],
               "wrong": {
-                "why": "“It's been … since …” can only use てから"
+                "why": "あとで must follow the た-form: 食べたあとで"
               },
-              "explain": "Look at the second half: time or a state that has continued since then, like 「もう半年になる」「ずっと〜」 → only てから; simply saying the next thing happened afterward → either たあとで or てから. Note how they attach: て-form＋から, た-form＋あとで."
+              "explain": "Both sentences work, and swapping them doesn't change the meaning; only the focus differs. てから focuses on order: A is finished first and only then does B start, which sounds more natural for steps and rules (まず〜てから、必ず〜てから). たあとで focuses on time: B happens after A, however long the gap. They also attach differently: て-form＋から, た-form＋あとで."
             },
             {
               "id": "te-form-sequence",
@@ -4883,11 +4855,18 @@
                 }
               ],
               "explain": "A series of everyday actions done in order → link them one after another with て; to stress “finish A first, B waits until after A”, often with 「まず」 → use てから, which usually links only two actions."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “ever since…”",
+          "items": [
             {
               "id": "te-kara-to-iu-mono",
               "thisTitle": "〜てから (ever since…)",
-              "diff": "てから is an ordinary “since…”; てからというもの is written language, stressing that things have changed greatly ever since.",
+              "diff": "Both mean “since…”: てから is the ordinary expression; てからというもの is written language, stressing a big change that has lasted ever since.",
               "this": [
                 {
                   "tag": "Since · ordinary",
@@ -4900,7 +4879,7 @@
                   "tr": "Ever since my child was born, every day has been incredibly busy."
                 }
               ],
-              "explain": "てからというもの is followed by a clear change that has continued “ever since then”, with a sense of emotion, and is mostly written; if you're just saying how much time has passed (３年になる), use ordinary てから."
+              "explain": "Both sentences mean “since….” If you are just saying how much time has passed since then (もう３年になる), use the ordinary てから. てからというもの is followed by a marked change that has continued “ever since” (毎日が本当に忙しい); it carries emotion and is mostly used in writing."
             }
           ]
         }
