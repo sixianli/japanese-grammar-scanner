@@ -17200,7 +17200,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from the hypothetical adverb 「もし」 — “if”",
+          "note": "Both come from 「もし」 — original meaning \"if\"",
           "items": [
             {
               "id": "moshimo-tara",
@@ -17217,30 +17217,31 @@
                   "tr": "If it does rain tomorrow, the match will be canceled."
                 }
               ],
-              "explain": "Look at how the sentence ends: もしかしたら pairs with sentence-final 「かもしれない」, so the whole sentence is an uncertain guess; もしも pairs with 「〜たら／〜ば」 and must be followed by a result, “in that case…”. Literally, もしかしたら is “if it so happens to be possible”, which is why it came to mean “maybe”."
+              "explain": "Both grew out of 「もし」 (\"if\"): もし + the uncertainty particle 「か」 → 「もしか」 (\"perhaps\"), plus 「したら」 (\"if that is so\") → もしかしたら. It is no longer a condition but an unsure guess, paired with 「かもしれない」 at the end of the sentence. もし + the emphatic 「も」 → もしも, a stronger \"if\" meaning \"if by any chance\". It is still a condition, so it takes 「〜たら／〜ば」 and a result (試合は中止だ). So look at how the sentence ends: if it ends in 「かもしれない」, it is もしかしたら; if a result follows, it is もしも."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both express a guess, with different levels of certainty",
+          "note": "Both mean \"it is possible that…\"",
           "items": [
             {
-              "id": "darou-guess",
-              "diff": "もしかしたら〜かもしれない is low-confidence (maybe); だろう is fairly confident (probably).",
+              "id": "kanousei-ga-aru",
+              "title": "〜可能性がある (there is a possibility)",
+              "diff": "もしかしたら〜かもしれない is the speaker's subjective, casual guess; 可能性がある points out the possibility objectively and formally.",
               "this": [
                 {
-                  "tag": "Maybe · low confidence",
-                  "tr": "He might not be coming."
+                  "tag": "Subjective · casual",
+                  "tr": "Hey, the roads might freeze tomorrow morning, you know."
                 }
               ],
               "that": [
                 {
-                  "tag": "Probably · fairly confident",
-                  "tr": "It's already eight, so he's probably not coming."
+                  "tag": "Objective · formal",
+                  "tr": "According to the Japan Meteorological Agency, the roads may freeze tomorrow morning."
                 }
               ],
-              "explain": "Look at the clues in the sentence: with grounds like 「もう８時だ」 plus 「たぶん」 → だろう, you think it's most likely so; with no grounds at all, just a possibility that occurred to you → もしかしたら〜かもしれない, a fifty-fifty chance or even lower."
+              "explain": "Both sentences describe the same possible event; look at who is speaking and where. A sudden thought of your own, chatting with someone you know (starting with 「ねえ」) → もしかしたら〜かもしれない, a subjective guess. Citing a source such as 「気象庁によると」 and stating it calmly in news, reports or notices → 可能性がある, objective and formal, with no personal feeling."
             }
           ]
         }
@@ -17251,7 +17252,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from the hypothetical adverb 「もし」 — “if”",
+          "note": "Both come from 「もし」 — original meaning \"if\"",
           "items": [
             {
               "id": "moshikashitara",
@@ -17268,7 +17269,7 @@
                   "tr": "It might rain tomorrow."
                 }
               ],
-              "explain": "Look at how the sentence ends: もしも pairs with 「〜たら／〜ば」 and is followed by “in that case…”; もしかしたら pairs with sentence-final 「かもしれない」, so the whole sentence is just a guess, not a conditional."
+              "explain": "Both grew out of 「もし」 (\"if\"): もし + the emphatic 「も」 → もしも, a stronger \"if\" meaning \"if by any chance\". It is still a condition, so it takes 「〜たら／〜ば」 and a result (試合は中止だ). もし + the uncertainty particle 「か」 → 「もしか」 (\"perhaps\"), plus 「したら」 (\"if that is so\") → もしかしたら. It is no longer a condition but an unsure guess, paired with 「かもしれない」 at the end of the sentence. So look at how the sentence ends: if a result follows, it is もしも; if it ends in 「かもしれない」, it is もしかしたら."
             }
           ]
         },
@@ -17278,23 +17279,24 @@
           "items": [
             {
               "id": "tara",
-              "diff": "たら works for any hypothesis; adding 「もしも」 limits it to an unlikely, unwelcome “if by any chance”.",
+              "title": "〜たら (hypothetical condition)",
+              "diff": "たら is a neutral \"if\"; adding 「もしも」 stresses \"if by any chance\", mostly for unlikely, unwanted events.",
               "this": [
                 {
-                  "tag": "If by chance · unlikely",
-                  "tr": "If a big earthquake ever struck, where should we flee to?"
+                  "tag": "Just in case · worry",
+                  "tr": "If a big earthquake ever hit, where should we run to?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Something sure to happen",
-                  "tr": "Let's head out once it's ten."
+                  "tag": "Neutral hypothesis",
+                  "tr": "If a big earthquake hit, where should we run to?"
                 }
               ],
               "wrong": {
-                "why": "Ten o'clock is sure to come, so you can't add もしも"
+                "why": "10 o'clock is certain to come; it is not a hypothesis, so もしも can't be added."
               },
-              "explain": "Ask whether the first event is certain to happen: ten o'clock will definitely come → you can only say 「10時になったら」 (＝when it comes, …); only for unlikely, unwelcome events (a big earthquake, an accident, illness) → use 「もしも〜たら」 to stress “if by any chance”."
+              "explain": "The two sentences differ only in the opening 「もしも」. たら alone is a neutral \"if…\", usable whether the chance is high or low (安かったら、雨だったら). Adding 「もしも」 stresses \"if by any chance\": it is about something unlikely and unwanted, with a tone of worry. Something certain to happen is not a hypothesis, so it can't take もしも."
             }
           ]
         }
@@ -17304,66 +17306,50 @@
       "id": "muke",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from 「向（む）く・向（む）ける」 — “to face, to turn toward”",
+          "kind": "look",
+          "note": "向け ↔ 向き: only one kana differs, け / き",
           "items": [
             {
               "id": "muki",
-              "diff": "向け means the maker “made it especially for…”; 向き means the thing itself “suits…”.",
+              "title": "〜向き (suitable for…)",
+              "diff": "向け is the maker's \"made specially for…\"; 向き is the thing itself being \"suitable for…\".",
               "this": [
                 {
-                  "tag": "Made for a target",
-                  "tr": "This magazine is made especially for young women."
+                  "tag": "Made for a target group",
+                  "tr": "This book was written for beginners."
                 }
               ],
               "that": [
                 {
-                  "tag": "Suitable in itself",
-                  "tr": "This dish is simple, so it's good for beginners."
+                  "tag": "Suitable by nature",
+                  "tr": "This book explains things carefully, so it's good for beginners."
                 }
               ],
-              "explain": "They come from two verbs: 向ける (turn something toward) → 向け, the maker “aims” the product at a group from the start, as in 「〜向けに作る」「〜向けの商品」; 向く (face toward) → 向き, simply evaluating whether the thing itself is suitable — it wasn't necessarily made for them — and you can also say 「不向き」."
-            },
-            {
-              "id": "ni-mukete",
-              "diff": "向け attaches directly to a noun, meaning “aimed at…”; に向けて has 「に」 and is followed by an action, meaning working toward a target or goal.",
-              "this": [
-                {
-                  "tag": "Noun＋向け · category",
-                  "tr": "Developing products for overseas markets."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "に向けて · toward a goal",
-                  "tr": "Training every day for the Olympics."
-                }
-              ],
-              "explain": "Check for 「に」: a noun plus 向け usually modifies a noun (〜向けの商品), stating who a product or program is for; 「〜に向けて」 is followed by an action (練習している, 話す), meaning preparing toward a goal, or addressing someone (国民に向けて話す)."
+              "explain": "Only one kana differs (け / き); look at whose point of view the sentence takes. 向け is about the maker's intention, \"made specially for…\", as in 「〜向けに書かれた」 or 「〜向けの商品」. 向き judges whether the thing itself is suitable, and the reason lies in its nature (説明が丁寧なので); it need not be made specially, and you can also say 「不向き」."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both can mean “for a certain group of people”",
+          "note": "Both mean \"aimed at…\"",
           "items": [
             {
-              "id": "tame-ni",
-              "title": "〜ために (for someone)",
-              "diff": "向け focuses on “who it's for to use or watch”; のために focuses on “who benefits”.",
+              "id": "ni-mukete",
+              "title": "〜に向けて (aimed at)",
+              "diff": "向け attaches directly to a noun like a category label and is common in everyday speech; に向けて／に向けた can follow a longer description, is more formal, and is used mostly for announcing or sending out information.",
               "this": [
                 {
-                  "tag": "Target audience",
-                  "tr": "We're holding an event for kids during summer vacation."
+                  "tag": "Noun + 向け · category label",
+                  "tr": "I bought a guidebook for beginners."
                 }
               ],
               "that": [
                 {
-                  "tag": "Beneficiary",
-                  "tr": "Collecting donations for sick children."
+                  "tag": "に向けて · formal",
+                  "tr": "The city produced a guidebook aimed at visitors from overseas."
                 }
               ],
-              "explain": "Ask whether that group are the “users”: kids come to take part, watch or use it → 向け, mostly used to categorize products, programs and events; kids don't necessarily take part, they just benefit → のために. Both 「子ども向けの本」 and 「子どものための本」 are fine, but 向け sounds more like a product category."
+              "explain": "Look at what comes before and the setting. A short noun (初心者、子供) takes 向け directly, like a category label stuck on a product, common in speech and ads. When a longer description comes before (海外からの観光客), or when an organization announces or sends out information, use 「〜に向けて／〜に向けた」, which is more formal and common in news and official documents."
             }
           ]
         }
@@ -17373,42 +17359,26 @@
       "id": "muki",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from the 「向（む）く」 family of verbs (向く・向ける・向かう) — “to face, to turn toward”",
+          "kind": "look",
+          "note": "向き ↔ 向け: only one kana differs, き / け",
           "items": [
             {
               "id": "muke",
-              "diff": "向き means the thing itself “suits…”; 向け means the maker “made it especially for…”.",
+              "title": "〜向け (aimed at…)",
+              "diff": "向き is the thing itself being \"suitable for…\"; 向け is the maker's \"made specially for…\".",
               "this": [
                 {
-                  "tag": "Suitable in itself",
-                  "tr": "This dish is simple, so it's good for beginners."
+                  "tag": "Suitable by nature",
+                  "tr": "This book explains things carefully, so it's good for beginners."
                 }
               ],
               "that": [
                 {
-                  "tag": "Made for a target",
-                  "tr": "This magazine is made especially for young women."
+                  "tag": "Made for a target group",
+                  "tr": "This book was written for beginners."
                 }
               ],
-              "explain": "They come from two verbs: 向く (face toward) → 向き, evaluating whether the thing itself is suitable — it wasn't necessarily made for them — and you can also say 「不向き」; 向ける (turn something toward) → 向け, the maker “aims” the product at a group from the start, as in 「〜向けに作る」."
-            },
-            {
-              "id": "ni-mukatte",
-              "diff": "向き is the fixed direction something faces; に向かって is an action directed toward somewhere.",
-              "this": [
-                {
-                  "tag": "Fixed direction",
-                  "tr": "South-facing rooms are bright."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Direction of an action",
-                  "tr": "I shouted at the top of my voice toward the sea."
-                }
-              ],
-              "explain": "Look at what follows: 「〜向きの＋noun」 modifies a house or window, saying which way it always faces; 「〜に向かって＋action」 says where an action is aimed (叫ぶ, 歩く) — it can also be at a person (先生に向かって)."
+              "explain": "Only one kana differs (き / け); look at whose point of view the sentence takes. 向き judges whether the thing itself is suitable, and the reason lies in its nature (説明が丁寧なので); it need not be made specially, and you can also say 「不向き」. 向け is about the maker's intention, \"made specially for…\", as in 「〜向けに書かれた」 or 「〜向けの商品」."
             }
           ]
         },
@@ -17458,7 +17428,7 @@
               "that": [
                 {
                   "tag": "Passing on a request",
-                  "tr": "Tanaka says to come in early tomorrow."
+                  "tr": "Tanaka says please come early tomorrow."
                 }
               ],
               "explain": "Look before 「って」: plain form＋んだ (休むんだ) → sharing news you heard; a request or command (来て, 来い, 来ないで) plus 「って」 → passing on what someone wants."
@@ -17479,7 +17449,7 @@
                   "tr": "According to the news, a new café is opening in front of the station."
                 }
               ],
-              "explain": "Look at the setting: starting with 「ねえ」, chatting with friends or family → んだって; to superiors or in writing, often with 「〜によると」 → そうだ／そうです. Hearsay そうだ attaches to the plain form (できる＋そうだ) — don't confuse it with 「できそうだ」, which describes appearance."
+              "explain": "Look at the setting: starting with 「ねえ」, chatting with friends or family → んだって. Speaking to a superior or writing, often with a source such as 「ニュースによると」 → そうだ／そうです. Hearsay そうだ attaches to the plain form (できる＋そうだ); don't confuse it with the appearance form 「できそうだ」."
             }
           ]
         }
@@ -17507,7 +17477,7 @@
                   "tr": "I wonder if the bus will come in five minutes."
                 }
               ],
-              "explain": "Check whether what comes before 「かな」 is affirmative or negative, and whether 「早く」 is there: 「来るかな」 is just wondering whether it will come; 「早く来ないかな」 literally looks like “I wonder if it won't come”, but actually means you're longing for it to come soon — often used with 「早く」「誰か」."
+              "explain": "Look at whether the verb before 「かな」 is affirmative or negative. The affirmative 「来るかな」 just wonders whether it will come. The negative 「来ないかな」 literally looks like \"I wonder if it won't come\", but actually means you're longing for it to come soon; it often goes with 「早く」 or 「誰か」."
             }
           ]
         },
@@ -17530,7 +17500,7 @@
                   "tr": "It'd be nice if the rain stopped by tomorrow."
                 }
               ],
-              "explain": "Look at the timing and tone: staring at what's in front of you, waiting impatiently, often with 「早く」 → ないかな; calmly hoping for the future → といいな (たらいいな works the same), and you can also say 「〜といいね」 to someone else."
+              "explain": "Look at the time frame and tone. Watching what's right in front of you and getting impatient, often with 「早く」 → ないかな. Calmly hoping about the future (明日までに) → といいな (たらいいな works the same); you can also say 「〜といいね」 to someone else."
             },
             {
               "id": "nai-mono-ka",
@@ -17547,7 +17517,7 @@
                   "tr": "Is there really no way this situation can be made better?"
                 }
               ],
-              "explain": "Both have the same structure: negative (〜ない)＋question, longing for something to “be able to…”. ないかな is everyday talking to yourself, usually about small matters; ないものか leans written, often goes with 「何とか」, and expresses a serious, urgent wish to find a way (ないものだろうか is softer)."
+              "explain": "Both have the same structure: negative (〜ない) + question, longing for something to \"be able to happen\". ないかな is everyday talking to yourself, often with 「早く」, usually about small matters. ないものか is more literary, often used with 「何とか」, and expresses a serious, urgent wish to find a way (ないものだろうか is softer)."
             }
           ]
         }
@@ -17558,7 +17528,7 @@
       "groups": [
         {
           "kind": "look",
-          "note": "These look a lot like 「〜ことはない」 and 「〜ない〜はない」: just one 「ない」 or one word in the middle differs, and the meaning is completely different",
+          "note": "〜ないことはない ↔ 〜ことはない／〜ないことには: only one 「ない」 or one 「に」 differs, but the meanings are completely different",
           "items": [
             {
               "id": "koto-wa-nai",
@@ -17578,44 +17548,45 @@
               "explain": "Look at what comes before 「ことはない」: nai-form (行かない) → the two negatives cancel out, “it's not that I won't…”, often followed by 「けど」; dictionary form (行く) → “there's no need to…”, often with 「わざわざ」「そんなに」「心配する」."
             },
             {
-              "id": "nai-wa-nai",
-              "diff": "ないことはない means “it's not that I don't…”, leaving room; ない人はいない means “there's no one who doesn't…” ＝ everyone.",
+              "id": "nai-koto-ni-wa",
+              "diff": "ないことはない means \"it's not that I don't…\"; ないことには means \"unless you first…, you can't…\".",
               "this": [
                 {
-                  "tag": "Not that I don't · reluctant",
-                  "tr": "This song… well, it's not that I don't know it…"
+                  "tag": "ことは · not that I don't…",
+                  "tr": "It's not that I don't read manuals, but I don't read them all the way through."
                 }
               ],
               "that": [
                 {
-                  "tag": "Everyone · strong",
-                  "tr": "There's no one who doesn't know this song."
+                  "tag": "ことには · unless first…, can't…",
+                  "tr": "Unless you read the manual first, you won't know how to use it."
                 }
               ],
-              "explain": "Look at what sits between the two negatives: 「こと」 → the conclusion is “it's not that I don't…”, often followed by 「けど」, sounding reluctant; a noun like 「人」「日」「もの」 → it denies “there are exceptions”, so the conclusion is “all…”, very strong."
+              "explain": "The only difference is whether 「に」 comes before 「は」. In 「ないことはない」 the two negatives cancel out, reluctantly admitting \"it's not that I don't…\", and 「けど」 often follows. 「ないことには」 is a condition, \"unless you first…\", and the second half is always negative (使い方がわからない)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both are indirect ways of saying “not entirely…”",
+          "note": "Both mean \"it's not that I can't / don't…\"",
           "items": [
             {
               "id": "wake-dewa-nai",
-              "diff": "ないことはない grudgingly admits “I can” from the direction of “can't”; わけではない corrects the other person's inference, “it's not that…”.",
+              "title": "〜わけではない (softened denial)",
+              "diff": "ないことはない reluctantly admits \"I can, sort of\", with reservations; ないわけではない corrects the listener's misunderstanding, and the real reason often follows.",
               "this": [
                 {
-                  "tag": "Grudging admission",
-                  "tr": "I'm not great with spicy food, but it's not that I can't eat it."
+                  "tag": "Reluctant admission · reservations",
+                  "tr": "Hmm… it's not that I can't eat spicy food, but…"
                 }
               ],
               "that": [
                 {
-                  "tag": "Correcting an inference",
-                  "tr": "It's not that I dislike spicy food — I'm just skipping it today."
+                  "tag": "Correcting a misunderstanding · giving the reason",
+                  "tr": "It's not that I can't eat spicy food. I'm just full today."
                 }
               ],
-              "explain": "Look at what comes first: nai-form (食べられない)＋ことはない → grudgingly admits it's possible, without much enthusiasm; plain form (嫌いな)＋わけではない → corrects “you think I…, but that's not it”, often followed by the real reason."
+              "explain": "Both sentences mean \"it's not that I can't eat it\"; look at what follows. Hesitating and trailing off with 「けど…」 (often starting with 「うーん」) → ないことはない: you can, but you're not keen. Giving the real reason right away (今日はお腹いっぱいなだけ) to correct the listener's assumption \"maybe you can't eat it\" → ないわけではない (casual: ないわけじゃない)."
             },
             {
               "id": "nai-mono-demo-nai",
@@ -17660,7 +17631,7 @@
                   "tr": "You can't go out and play until you've finished your homework."
                 }
               ],
-              "explain": "The two sentences differ only by 「て＋から」: てからでないと stresses that B comes only “after A is done”, focusing on order, usually followed by 「できない」「だめ」; ないと isn't about order — it just says that without the condition it's no good, and can also be followed by a bad result (遅れるよ)."
+              "explain": "The two sentences differ only by 「て＋から」. てからでないと stresses that B comes only \"after A is done\", focusing on order, and is usually followed by 「できない」 or 「だめ」. ないと says nothing about order; it only says that without meeting this condition, it's not possible."
             },
             {
               "id": "nai-koto-ni-wa",
@@ -17732,12 +17703,13 @@
       "id": "nanka",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from 「何（なに）」 — なんか ＝ 何か, なんて ＝ 何と, originally “…or something”",
+          "kind": "look",
+          "note": "なんか ↔ なんて: only the last kana differs, か / て",
           "items": [
             {
               "id": "nante",
-              "diff": "なんか attaches to nouns and can give a casual example or belittle; なんて can also attach to a whole sentence to express surprise or shock.",
+              "title": "〜なんて (surprise)",
+              "diff": "なんか follows a noun and gives a casual example; なんて follows a whole clause and expresses surprise: \"to think that…\".",
               "this": [
                 {
                   "tag": "After a noun · casual example",
@@ -17753,30 +17725,31 @@
               "wrong": {
                 "why": "To express surprise after a whole sentence, only なんて works"
               },
-              "explain": "Look at what comes before: a noun (温泉, 私) → なんか, a casual example or belittling; a whole sentence (結婚する) → なんて, surprise, “to think that…”. Both can belittle, but なんて sounds stronger."
+              "explain": "Only the last kana differs (か / て); look at what comes before. A noun (温泉) → なんか, casually giving an example: \"…or something\". A whole clause (あの二人が結婚する) → なんて, expressing surprise, \"to think that…\", often followed by 「信じられない」. When it follows a whole clause to express surprise, it can't be replaced with なんか."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both can give an example, “…and the like”",
+          "note": "Both mean casually giving an example: \"…or something\"",
           "items": [
             {
               "id": "ya-nado",
-              "diff": "なんか／など after a single person or thing often belittle or sound self-deprecating; や〜など just gives neutral examples.",
+              "title": "〜や〜など (gentle suggestion)",
+              "diff": "なんか is casual and mentions just one thing offhand; や〜など lists several things and sounds polite.",
               "this": [
                 {
-                  "tag": "Self-deprecating · belittling",
-                  "tr": "Someone like me could never do that."
+                  "tag": "Casual · just one item",
+                  "tr": "How about pudding or something for dessert?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Neutral examples",
-                  "tr": "I prepared tea, sweets and so on."
+                  "tag": "Polite · several items",
+                  "tr": "Would you like some pudding, cake or the like for dessert?"
                 }
               ],
-              "explain": "Look before など／なんか: a single person or thing, usually followed by something negative (無理だ, 嫌いだ) → belittling or self-deprecating, “the likes of…, not worth mentioning”; several items listed (お茶やお菓子) → just “and so on”. In formal settings, swapping なんか for など works the same (私などには無理です)."
+              "explain": "Look at how many things are mentioned and who you're talking to. Mentioning just one thing offhand (プリン) to a friend → なんか, casual. Listing two or three things (プリンやケーキ) and asking a guest politely, often with 「いかがですか」 → や〜など."
             },
             {
               "id": "demo-but",
