@@ -290,6 +290,9 @@ def main():
                 if "wrong" in it and not it["wrong"].get("ja", "").strip():
                     errors.append(f"{where}: wrong.ja 为空")
 
+    for pid in ([] if only_base else sorted(ids - seen_points)):
+        errors.append(f"contrasts.json: 语法点 {pid} 没有相近语法条目（没有合格对比时写 \"groups\": []）")
+
     groups_by_point = {p["id"]: p["groups"] for p in base}
     for pid, point in ([] if only_base else sorted(points.items())):
         seen = {}
@@ -336,6 +339,10 @@ def main():
                     if "title" in bi and "title" not in li:
                         errors.append(f"{name}: {bp['id']} → {bi['id']} 缺少 title")
                     texts += [(f"{bi['id']}.{n}", v) for n, v in text_fields(li)]
+                    cues = [w for key in ("this", "that") for sent in sentences(bi, key) for w in cue_words(sent.get("ja", ""))]
+                    missing = [w for w in dict.fromkeys(cues) if not cue_named(w, li.get("explain") or "")]
+                    if missing:
+                        errors.append(f"{name}: {bp['id']} → {bi['id']} 讲解没有写出虚线线索：{'、'.join(missing)}（日语原样保留）")
                 for n, v in texts:
                     where = f"{name}: {bp['id']} {n}"
                     if not isinstance(v, str) or not v.strip():

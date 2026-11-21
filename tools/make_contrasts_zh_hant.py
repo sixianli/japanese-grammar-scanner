@@ -21,16 +21,11 @@ cc = OpenCC("s2twp")
 
 KANA = "ぁ-ゟ゠-ヿー"
 KANJI = "㐀-鿿々〆"
-# 不能被转换的日语汉字词（讲解正文里有时不加引号、也不带假名出现）
 JA_WORDS = ["医者", "来週", "猫"]
-# OpenCC（台湾用语）对这几个词的转换在语法讲解里是错的
 FIX = {"錶面": "表面", "物件": "對象"}
-# 引号里有假名的才算日语（「刚刚」这类中文引语照常转换）
 PROTECT = re.compile(
     r"「[^」]*[" + KANA + r"][^」]*」|『[^』]*[" + KANA + r"][^』]*』"
     r"|[〜～][" + KANA + KANJI + r"]*"
-    # 含假名的日语片段：前面的汉字只在词首（前一个字不是汉字）、且最多两个字时算进来，如 医者になる、泳げる；
-    # 中间的汉字要后面还跟着假名才算（電話がかかってきた），这样「动词ます形」「な形容词」里的中文不会被当成日语
     r"|(?:(?<![" + KANJI + r"])[" + KANJI + r"]{1,2})?[" + KANA + r"]+(?:[" + KANJI + r"]+[" + KANA + r"]+)*"
 )
 JA_WORDS_IN_TEXT = JA_WORDS
@@ -38,7 +33,6 @@ KANJI_CHARS = "".join(chr(c) for c in range(0x3400, 0xA000)) + "々〆"
 
 
 def japanese_corpus():
-    """所有日语例句（相近语法例句 + 语法库例句）：用来判断假名前面的汉字是日语词的一部分，还是中文讲解里的词"""
     parts = []
     with open(os.path.join(DIR, "contrasts.json"), encoding="utf-8") as fh:
         for p in json.load(fh)["points"]:
@@ -59,8 +53,6 @@ CORPUS = None
 
 
 def protected_spans(text):
-    """日语片段的位置。假名前面的汉字：日语例句里确实出现过「这几个汉字＋这个假名」才算日语（医者に、来た），
-    否则当作中文讲解（动词ます形、读な、却是な），照常转换。"""
     global CORPUS
     if CORPUS is None:
         CORPUS = japanese_corpus()
@@ -76,22 +68,45 @@ def protected_spans(text):
     return spans
 
 
-def conv(text):
+def conv(text, words=()):
     if not isinstance(text, str):
         return text
+    spans = protected_spans(text) + [(m.start(), m.end()) for w in words for m in re.finditer(re.escape(w), text)]
+    merged = []
+    for a, b in sorted(spans):
+        if merged and a <= merged[-1][1]:
+            merged[-1] = (merged[-1][0], max(merged[-1][1], b))
+        else:
+            merged.append((a, b))
     out, last = [], 0
-    for a, b in protected_spans(text):
-        out.append(convert_plain(text[last:a]))
+    for a, b in merged:
+        out.append(convert_plain(text[last:a], words))
         out.append(text[a:b])
         last = b
-    out.append(convert_plain(text[last:]))
+    out.append(convert_plain(text[last:], words))
     return "".join(out)
 
 
-def convert_plain(s):
+def cue_words(it):
+    out = []
+    for k in ("this", "that"):
+        for s in sentences(it[k]):
+            cur = ""
+            for seg in (s.get("ja") or "").split("|"):
+                if seg.startswith("~"):
+                    cur += seg[1:].split(":", 1)[0]
+                elif cur:
+                    out.append(cur)
+                    cur = ""
+            if cur:
+                out.append(cur)
+    return tuple(dict.fromkeys(out))
+
+
+def convert_plain(s, words=()):
     if not s:
         return s
-    keep = re.compile("|".join(map(re.escape, JA_WORDS_IN_TEXT)))
+    keep = re.compile("|".join(map(re.escape, sorted(set(JA_WORDS_IN_TEXT) | set(words), key=len, reverse=True))))
     out, last = [], 0
     for m in keep.finditer(s):
         out.append(cc.convert(s[last:m.start()]))
@@ -118,7 +133,7 @@ def item(it):
         o[k] = [{"tag": conv(s["tag"]), "tr": conv(s["tr"])} for s in sentences(it[k])]
     if "wrong" in it:
         o["wrong"] = {"why": conv(it["wrong"]["why"])}
-    o["explain"] = conv(it["explain"])
+    o["explain"] = conv(it["explain"], cue_words(it))
     return o
 
 
@@ -132,7 +147,6 @@ def main():
     out = {"points": [{"id": p["id"], "groups": [{"kind": g["kind"], "note": conv(g["note"]),
                                                   "items": [item(i) for i in g["items"]]}
                                                  for g in p["groups"]]} for p in base["points"]]}
-    # 检查：日语片段原样保留
     errors = 0
     for bp, lp in zip(base["points"], out["points"]):
         for bg, lg in zip(bp["groups"], lp["groups"]):
