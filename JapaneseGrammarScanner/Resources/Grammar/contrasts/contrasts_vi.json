@@ -14826,12 +14826,12 @@
           "items": [
             {
               "id": "question-word-temo",
-              "title": "〜でも（Ngay cả）",
-              "diff": "Nghĩa giống nhau; だって là khẩu ngữ, giọng tùy tiện hơn, mạnh hơn; でも dùng được ở mọi hoàn cảnh.",
+              "title": "〜でも (ngay cả)",
+              "diff": "Nghĩa giống nhau; だって là văn nói, giọng thân mật và mạnh hơn; でも dùng được trong mọi hoàn cảnh.",
               "this": [
                 {
-                  "tag": "Khẩu ngữ · giọng mạnh",
-                  "tr": "Bài dễ thế này, đến học sinh tiểu học cũng giải được."
+                  "tag": "Văn nói · giọng mạnh",
+                  "tr": "Bài dễ thế này thì đến học sinh tiểu học cũng giải được."
                 }
               ],
               "that": [
@@ -14840,30 +14840,30 @@
                   "tr": "Bài này dễ nên ngay cả học sinh tiểu học cũng giải được."
                 }
               ],
-              "explain": "Nhìn văn phong: có 「よ」, nói với người quen, hơi mang ý phản bác → だって; thể lịch sự 「〜ます」, giải thích trang trọng → でも. Khi viết văn đừng dùng だって."
+              "explain": "Nhìn văn phong: có 「よ」, nói với người thân, hơi mang ý phản bác → だって; thể lịch sự 「〜ます」, giải thích trang trọng → でも. Khi viết văn thì không dùng だって."
             },
             {
               "id": "sae",
-              "title": "〜さえ（Ngay cả… cũng）",
-              "diff": "だって là khẩu ngữ, nhấn mạnh “cái này cũng không ngoại lệ”; さえ nêu ra việc tối thiểu, phía sau thường là phủ định.",
+              "title": "〜さえ (ngay cả… cũng)",
+              "diff": "だって là văn nói, nhấn mạnh “cái này cũng không ngoại lệ”; さえ nêu ra điều tối thiểu, phía sau thường là phủ định.",
               "this": [
                 {
-                  "tag": "Không ngoại lệ · khẩu ngữ",
-                  "tr": "Bài hát này đến ông nội cũng biết đấy."
+                  "tag": "Không ngoại lệ · văn nói",
+                  "tr": "Bài hát này đến bố tôi cũng biết."
                 }
               ],
               "that": [
                 {
-                  "tag": "Mức tối thiểu · phủ định",
+                  "tag": "Điều tối thiểu · phủ định",
                   "tr": "Bận đến mức không có cả thời gian uống nước."
                 }
               ],
-              "explain": "Nhìn nửa câu sau: さえ nêu việc tối thiểu, dễ nhất, phía sau thường là phủ định (時間がなかった、できない), trong văn viết cũng dùng được; だって là khẩu ngữ, thường dùng ở câu khẳng định, nhấn mạnh “người này cũng vậy, không ngoại lệ”."
+              "explain": "Nhìn vế sau: さえ nêu điều tối thiểu, dễ nhất, phía sau thường là phủ định (時間がなかった, できない), dùng được cả trong văn viết; だって là văn nói, chủ yếu dùng trong câu khẳng định, nhấn mạnh “người này cũng vậy, không ngoại lệ”."
             },
             {
               "id": "made-until",
-              "title": "〜まで（Thậm chí）",
-              "diff": "だって nhấn mạnh “cái này cũng không ngoại lệ”, hay dùng để phản bác; まで nhấn mạnh “đến cả cái này mà cũng…”, mang sự bất ngờ.",
+              "title": "〜まで (đến cả)",
+              "diff": "だって nhấn mạnh “cái này cũng không ngoại lệ”, hay dùng để phản bác; まで nhấn mạnh “đến cả cái này cũng…”, mang ý bất ngờ.",
               "this": [
                 {
                   "tag": "Không ngoại lệ · phản bác",
@@ -14872,11 +14872,11 @@
               ],
               "that": [
                 {
-                  "tag": "Bất ngờ · đến cả… cũng",
-                  "tr": "Đến cả thầy giáo thường ngày nghiêm khắc cũng bật cười."
+                  "tag": "Bất ngờ · đến cả…",
+                  "tr": "Đến cả thầy giáo vốn nghiêm khắc cũng bật cười."
                 }
               ],
-              "explain": "Nhìn cảm xúc người nói: まで là “đến cả cái này mà cũng…”, thường dùng kể việc đã xảy ra, gây bất ngờ (先生まで笑った); だって là “cái này cũng vậy, không ngoại lệ”, hay dùng để thuyết phục, phản bác đối phương (私だってできる)."
+              "explain": "Nhìn cảm nhận của người nói: まで là “đến cả cái này mà cũng…”, thường dùng để kể việc đã xảy ra khiến người ta bất ngờ (先生まで笑った); だって là “cái này cũng vậy, không ngoại lệ”, hay dùng để thuyết phục, phản bác người khác (私だってできる)."
             }
           ]
         }
@@ -14886,84 +14886,60 @@
       "id": "de-aru",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều thuộc họ 「で＋ある」 — ある rút gọn thành だ, đổi sang thể trang trọng là でございます, đổi sang tôn kính ngữ là でいらっしゃる",
+          "kind": "meaning",
+          "note": "Đều diễn tả “là…”",
           "items": [
             {
               "id": "da-desu",
-              "diff": "Nghĩa giống nhau, đều là khẳng định; である là văn viết, dùng trong luận văn, báo chí; だ là thể thường trong khẩu ngữ.",
+              "diff": "Đều khẳng định “là”; である là cách nói văn viết dùng trong bài viết, だ là thể thường khi nói.",
               "this": [
                 {
-                  "tag": "Văn viết · văn bản",
+                  "tag": "Văn viết · bài viết",
                   "tr": "Nhật Bản là một quốc đảo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khẩu ngữ · trò chuyện",
-                  "tr": "Hôm nay là chủ nhật đấy."
+                  "tag": "Văn nói · trò chuyện",
+                  "tr": "Nhật Bản là quốc đảo nhỉ."
                 }
               ],
-              "explain": "だ vốn được rút gọn từ である (である→であ→だ). Nhìn văn phong: luận văn, báo chí, văn thuyết minh → である, có vẻ khách quan, trang nghiêm; nói chuyện, viết nhật ký → だ (cách nói lịch sự là です). Trong văn thể である, sau câu động từ dùng 「のである」."
+              "explain": "だ là dạng rút gọn của である (である→であ→だ), nghĩa giống nhau, chỉ khác văn phong: viết khách quan trong luận văn, báo chí, văn thuyết minh → である, nghe trang trọng; khi trò chuyện, cuối câu còn có trợ từ như 「よね」 → だ."
             },
             {
               "id": "de-gozaimasu",
               "title": "〜でございます",
-              "diff": "である là khẳng định trung tính trong văn viết, không có ý kính trọng; でございます là cách nói trang trọng của です, dùng với khách.",
+              "diff": "Đều khẳng định “là”; である là cách nói văn viết trong bài viết, không mang kính ý; でございます là cách nói trang trọng của です khi trực tiếp nói với khách.",
               "this": [
                 {
-                  "tag": "Văn viết · không kính trọng",
+                  "tag": "Văn viết · bài viết",
                   "tr": "Mục đích của cuốn sách này là giải quyết vấn đề."
                 }
               ],
               "that": [
                 {
                   "tag": "Trang trọng · với khách",
-                  "tr": "Thưa quý khách, đây là sản phẩm mới của chúng tôi."
+                  "tr": "Thưa quý khách, đây là sản phẩm mới ạ."
                 }
               ],
-              "explain": "Cả hai đều là 「で＋ある」: である giữ nguyên, dùng trong văn bản; でございます đổi 「ある」 thành 「ござる」 trang trọng, dùng khi nói với khách. Nhìn hoàn cảnh: viết văn → である; nhân viên bán hàng, lễ tân nói với khách → でございます."
+              "explain": "Nghĩa giống nhau, xem là viết cho người đọc hay nói trực tiếp với người khác: viết sách, viết báo cáo → である, khách quan, không mang kính ý; nhân viên cửa hàng, lễ tân nói trực tiếp với 「お客様」 → でございます, nói です một cách rất trang trọng. Trong văn viết không dùng でございます, khi tiếp khách cũng không nói である."
             },
             {
               "id": "de-irassharu",
-              "diff": "である chỉ nói “là” theo lối văn viết; でいらっしゃる là nói người khác “là…” một cách tôn kính.",
+              "diff": "Đều khẳng định “là”; である là trần thuật khách quan trong văn viết, không mang kính ý; でいらっしゃる là nói một cách kính trọng rằng người khác “là…”.",
               "this": [
                 {
-                  "tag": "Văn viết · trung tính",
-                  "tr": "Ông ấy là một nhà văn nổi tiếng."
+                  "tag": "Văn viết · trần thuật khách quan",
+                  "tr": "Ông Suzuki là một nhà văn nổi tiếng."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tôn kính · đề cao đối phương",
+                  "tag": "Tôn kính · giới thiệu trực tiếp",
                   "tr": "Vị này là một nhà văn nổi tiếng."
                 }
               ],
-              "explain": "Đổi 「ある」 trong で＋ある thành tôn kính ngữ 「いらっしゃる」 là thành でいらっしゃる. Nhìn chủ ngữ: người cần kính trọng (こちらの方、先生、お客様) → でいらっしゃる; tường thuật khách quan trong văn bản → である."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Đều thêm cho câu sắc thái “giải thích, nhấn mạnh”",
-          "items": [
-            {
-              "id": "n-desu-explanatory",
-              "thisTitle": "〜のである",
-              "diff": "のである là cách nói văn viết của のだ, dùng trong văn bản; khi nói thì dùng んです／んだ.",
-              "this": [
-                {
-                  "tag": "Văn viết · kết luận",
-                  "tr": "Vì vậy, vấn đề này không thể giải quyết một cách đơn giản được."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Khẩu ngữ · giải thích tình hình",
-                  "tr": "Xin lỗi, tôi bị đau đầu."
-                }
-              ],
-              "explain": "Nhìn văn phong: trong luận văn, xã luận khi lập luận, đưa ra kết luận → のである; khi nói, giải thích tình hình, lý do của mình cho đối phương → んです (んだ). Cả hai đều mang sắc thái giải thích “thật ra là như thế này”."
+              "explain": "Nghĩa giống nhau, xem hoàn cảnh: viết khách quan về ai đó trong bài báo, luận văn (鈴木氏は……) → である, không mang kính ý; trực tiếp giới thiệu, nói về người cần tôn trọng (こちらの方は……) → でいらっしゃる, nâng cao đối phương."
             }
           ]
         }
@@ -14973,98 +14949,70 @@
       "id": "de-irassharu",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều thuộc họ 「で＋ある」 — ある đổi sang thể trang trọng là でございます, đổi sang tôn kính ngữ là でいらっしゃる",
-          "items": [
-            {
-              "id": "de-gozaimasu",
-              "title": "〜でございます",
-              "diff": "でいらっしゃる là tôn kính ngữ, chỉ dùng để nói về đối phương; でございます là thể trang trọng, dùng để nói về bản thân, phía mình và đồ vật.",
-              "this": [
-                {
-                  "tag": "Tôn kính · nói về đối phương",
-                  "tr": "Xin lỗi cho tôi hỏi, có phải ông Tanaka không ạ?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Trang trọng · nói về mình",
-                  "tr": "Vâng, tôi là Tanaka."
-                }
-              ],
-              "wrong": {
-                "why": "Không dùng tôn kính ngữ để đề cao bản thân"
-              },
-              "explain": "Nhìn chủ ngữ là ai: đối phương, người cần kính trọng (田中様、先生) → でいらっしゃる; bản thân, người trong công ty mình, sản phẩm → でございます. Cả hai đều là kính ngữ của 「です」, nhưng hướng ngược nhau, dùng nhầm sẽ rất thất lễ."
-            },
-            {
-              "id": "de-aru",
-              "diff": "でいらっしゃる là nói người khác “là…” một cách tôn kính; である chỉ nói “là” theo lối văn viết, không có ý kính trọng.",
-              "this": [
-                {
-                  "tag": "Tôn kính · đề cao đối phương",
-                  "tr": "Vị này là một nhà văn nổi tiếng."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Văn viết · trung tính",
-                  "tr": "Ông ấy là một nhà văn nổi tiếng."
-                }
-              ],
-              "explain": "Đổi 「ある」 trong である thành tôn kính ngữ 「いらっしゃる」 là thành でいらっしゃる. Nhìn chủ ngữ: giới thiệu, nói về người cần kính trọng trước mặt (こちらの方、先生) → でいらっしゃる; tường thuật khách quan trong văn bản → である."
-            }
-          ]
-        },
-        {
           "kind": "look",
           "note": "でいらっしゃる ↔ （に）いらっしゃる, đều có 「いらっしゃる」, chỉ khác một chữ 「で」",
           "items": [
             {
               "id": "sonkeigo-special-verbs",
-              "title": "いらっしゃる（Ở・đến・đi）",
-              "diff": "でいらっしゃる là “là…”; いらっしゃる đứng riêng là “ở, đến, đi”.",
+              "title": "いらっしゃる (ở・đến・đi)",
+              "diff": "でいらっしゃる là “là…”; いらっしゃる đứng một mình là “ở, đến, đi”.",
               "this": [
                 {
                   "tag": "Là · trạng thái",
-                  "tr": "Thầy rất khỏe mạnh."
+                  "tr": "Thầy rất khỏe mạnh ạ."
                 }
               ],
               "that": [
                 {
                   "tag": "Ở · nơi chốn",
-                  "tr": "Thầy bây giờ đang ở phòng nghiên cứu."
+                  "tr": "Bây giờ thầy đang ở phòng nghiên cứu."
                 }
               ],
-              "explain": "Nhìn trước いらっしゃる: 「で」 nối danh từ, tính từ đuôi な (お元気で、先生で) → cách nói tôn kính của “là…”; 「に」 nối nơi chốn (研究室に) hoặc dùng riêng (いらっしゃいませ) → ở, đến, đi."
+              "explain": "Nhìn phía trước いらっしゃる: 「で」 sau danh từ, tính từ đuôi な (お元気で, 先生で) → cách nói tôn kính của “là…”; 「に」 sau nơi chốn (研究室に) hoặc dùng một mình (いらっしゃいませ) → ở, đến, đi."
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "de-yuumei",
-      "groups": [
+        },
         {
           "kind": "meaning",
-          "note": "Đều đi với 「有名」, nói nổi tiếng về mặt nào",
+          "note": "Đều diễn tả “là…”",
           "items": [
             {
-              "id": "to-shite",
-              "diff": "Trước で有名 là lý do, đặc điểm làm nên tiếng tăm; trước として有名 là danh phận được biết đến.",
+              "id": "de-gozaimasu",
+              "title": "〜でございます",
+              "diff": "Đều có nghĩa “là”; でいらっしゃる là tôn kính ngữ, chỉ dùng khi nói về đối phương; でございます là cách nói lịch sự trang trọng, dùng khi nói về bản thân, phía mình và đồ vật.",
               "this": [
                 {
-                  "tag": "Lý do · đặc điểm",
-                  "tr": "Thị trấn này nổi tiếng nhờ suối nước nóng."
+                  "tag": "Tôn kính · nói về đối phương",
+                  "tr": "Xin lỗi, ông có phải là ông Yamamoto không ạ?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Danh phận · với tư cách",
-                  "tr": "Thị trấn này nổi tiếng là một khu suối nước nóng."
+                  "tag": "Trang trọng · nói về mình",
+                  "tr": "Vâng, tôi là Yamamoto ạ."
                 }
               ],
-              "explain": "Nhìn quan hệ giữa danh từ phía trước và chủ ngữ: 温泉 là thứ thị trấn có, là đặc điểm → で有名; 温泉地 chính là danh phận của thị trấn (thị trấn＝khu suối nước nóng) → として有名. Tương tự: 「小説で有名な人」「作家として有名な人」."
+              "wrong": {
+                "why": "Không thể dùng tôn kính ngữ để nâng cao bản thân"
+              },
+              "explain": "Nghĩa giống nhau, xem đang nói về ai và sau tên có 「様」 hay không: nói về đối phương, người cần tôn trọng (山本様, 先生) → でいらっしゃる, nâng cao đối phương; nói về bản thân, người trong công ty mình (山本, không có 様) hoặc hàng hóa → でございます, chỉ là nói です một cách trang trọng. Dùng ngược sẽ rất thất lễ."
+            },
+            {
+              "id": "de-aru",
+              "diff": "Đều có nghĩa “là”; でいらっしゃる là nói một cách kính trọng rằng người khác “là…”; である là trần thuật khách quan trong văn viết, không mang kính ý.",
+              "this": [
+                {
+                  "tag": "Tôn kính · giới thiệu trực tiếp",
+                  "tr": "Vị này là một nhà văn nổi tiếng."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Văn viết · trần thuật khách quan",
+                  "tr": "Ông Suzuki là một nhà văn nổi tiếng."
+                }
+              ],
+              "explain": "Nghĩa giống nhau, xem hoàn cảnh: trực tiếp giới thiệu, nói về người cần tôn trọng (こちらの方は……) → でいらっしゃる; viết khách quan về ai đó trong bài báo, luận văn (鈴木氏は……) → である, không mang kính ý."
             }
           ]
         }
@@ -15078,49 +15026,22 @@
           "note": "Đều diễn tả “dù… cũng”",
           "items": [
             {
-              "id": "tatoe-temo",
-              "diff": "どんなに là “dù mức độ cao đến đâu cũng”; たとえ là “dù cho là như vậy cũng”, phía trước không cần có mức độ.",
+              "id": "ikura-temo",
+              "title": "いくら〜ても",
+              "diff": "Nghĩa giống nhau, thường thay cho nhau được; どんなに nhấn vào “mức độ dù cao đến đâu”, hay đi với tính từ; いくら nhấn vào “số lần, số lượng dù nhiều đến đâu”, hay đi với động tác có thể lặp lại.",
               "this": [
                 {
                   "tag": "Mức độ dù cao đến đâu",
-                  "tr": "Dù bận đến đâu, ngày nào tôi cũng gọi điện."
+                  "tr": "Dù vất vả đến đâu, tôi cũng không từ bỏ ước mơ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Giả định · dù cho là",
-                  "tr": "Dù chỉ là đùa, cũng không được nói những lời như thế."
+                  "tag": "Số lần dù nhiều đến đâu",
+                  "tr": "Dù thất bại bao nhiêu lần, tôi cũng không từ bỏ ước mơ."
                 }
               ],
-              "explain": "Nhìn từ phía trước có nói được “… đến mức nào” không: 忙しい、寒い、頑張る có mức độ → どんなに; những thứ chỉ có “phải hay không” như 冗談、子ども、雨 → dùng たとえ để giả định là nó xảy ra. たとえ cũng có thể nối mức độ (たとえ忙しくても), nhưng sau どんなに nhất định phải có mức độ."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "doushi",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Đều gắn sau danh từ chỉ người, diễn tả “nhiều người”",
-          "items": [
-            {
-              "id": "tachi-plural",
-              "diff": "同士 nhấn mạnh “giữa những người cùng loại với nhau”; たち chỉ diễn tả số nhiều “các…”.",
-              "this": [
-                {
-                  "tag": "Giữa nhau",
-                  "tr": "Không có người lớn, bọn trẻ tự chơi với nhau."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Chỉ là số nhiều",
-                  "tr": "Bọn trẻ đang chơi ở công viên."
-                }
-              ],
-              "explain": "Nhìn phía sau: 同士 thường nối 「で」「の」, phía sau là sự tương tác, quan hệ giữa nhau (同士で遊ぶ、同士の付き合い), nhấn mạnh “đều là người cùng loại, không có ai khác”; たち chỉ nói số người nhiều hơn một. 「恋人同士」 là hai người là người yêu của nhau, 「恋人たち」 là nhiều cặp người yêu."
+              "explain": "Nhìn phía trước: tính từ, nói về mức độ (苦しくても, 忙しくても) → hay dùng どんなに, giọng đậm cảm xúc hơn; động tác có thể lặp đi lặp lại, nói về số lần hay số lượng (失敗しても, 言っても, 待っても) → hay dùng いくら."
             }
           ]
         }
@@ -15131,65 +15052,69 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「振る」 — nghĩa gốc là “vung, lắc”, mở rộng thành cử chỉ cơ thể, dáng vẻ bên ngoài",
+          "note": "Đều xuất phát từ 「振る」 — nghĩa gốc là “vung, vẫy”, danh từ 「振り」 mở rộng thành cử chỉ, dáng vẻ",
           "items": [
             {
               "id": "buri",
-              "title": "〜ぶり（Dáng vẻ）",
-              "diff": "ふりをする là cố ý giả vờ ra vẻ; ぶり là dáng vẻ thể hiện ra thực tế.",
+              "title": "〜ぶり (dáng vẻ, cách)",
+              "diff": "ふりをする là dáng vẻ cố tình giả ra; ぶり là dáng vẻ thể hiện thực tế.",
               "this": [
                 {
-                  "tag": "Vẻ giả vờ",
-                  "tr": "Anh ta giả vờ ra vẻ nghiêm túc, thật ra đang lười biếng."
+                  "tag": "Dáng vẻ giả ra",
+                  "tr": "Anh ta làm ra vẻ chăm chỉ, nhưng thực ra đang lười biếng."
                 }
               ],
               "that": [
                 {
-                  "tag": "Biểu hiện thật",
+                  "tag": "Biểu hiện thực tế",
                   "tr": "Cách làm việc của anh ấy rất nghiêm túc."
                 }
               ],
-              "explain": "Cả hai đều từ 「振り」 (cử chỉ, dáng vẻ). Nhìn phía sau có “thật ra…” hay không: sau ふりをする thường có 「本当は」「実は」 lật ngược lại; ぶり miêu tả biểu hiện thật, thường đi với đánh giá (真面目だ、見事だ)."
-            },
-            {
-              "id": "buru",
-              "diff": "ふりをする là giả vờ, dùng rộng, không hẳn mang nghĩa xấu; ぶる chỉ đi với một số ít từ, chỉ làm cao, làm bộ làm tịch, nghĩa xấu rõ.",
-              "this": [
-                {
-                  "tag": "Giả vờ · hành động",
-                  "tr": "Mẹ gọi nhưng tôi giả vờ ngủ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Làm ra vẻ · nghĩa xấu",
-                  "tr": "Anh ta hễ tí là làm ra vẻ đàn anh, nói năng ra vẻ ta đây."
-                }
-              ],
-              "explain": "Nhìn phía trước nối gì: động từ (寝た、知らない) và đủ loại danh từ, tính từ → ふりをする, giả làm một trạng thái nào đó; chỉ những từ chỉ thân phận, phẩm cách như 「先輩、大人、上品、偉」 → ぶる, nghĩa là làm cao, gần như luôn là chê."
+              "explain": "振る nghĩa gốc là vung tay chân, danh từ 「振り」 thành “cử chỉ, dáng vẻ”. Cố tình làm ra một dáng vẻ nào đó cho người khác thấy → ふりをする (dáng vẻ giả ra); khi gắn sau danh từ hoặc động từ, 振り biến âm thành ぶり, chỉ “dáng vẻ thực tế khi làm việc gì” → 〜ぶり. Vì vậy hãy nhìn phía sau: ふりをする hay bị 「本当は」, 「実は」 lật lại; ぶり miêu tả biểu hiện thật, thường đi kèm lời đánh giá (真面目だ, 見事だ)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “coi như, giả như” — thực tế không phải vậy",
+          "note": "Đều diễn tả “giả vờ…”",
           "items": [
             {
-              "id": "ta-tsumori",
-              "diff": "ふりをする là làm cho người khác xem; たつもり là trong lòng tự coi như đã….",
+              "id": "buru",
+              "diff": "Đều có nghĩa “giả vờ…”; ふりをする gắn được với mọi thứ, không hẳn mang nghĩa xấu; ぶる chỉ gắn với từ chỉ thân phận, phẩm cách, mang ý phê phán “làm ra vẻ ta đây”.",
               "this": [
                 {
-                  "tag": "Làm cho người khác xem",
-                  "tr": "Thật ra tôi biết, nhưng giả vờ như không biết."
+                  "tag": "Giả vờ · sau động từ",
+                  "tr": "Em trai tôi giả vờ ngủ, nhưng thực ra đang nghe chúng tôi nói chuyện."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tự coi như trong lòng",
-                  "tr": "Coi như mình đã đi du lịch rồi, tôi để dành số tiền đó."
+                  "tag": "Làm ra vẻ người lớn · phê phán",
+                  "tr": "Em trai tôi làm ra vẻ người lớn, uống cà phê đen."
                 }
               ],
-              "explain": "Nhìn đối tượng là ai: ふりをする là diễn cho người khác xem, để người khác tin (知らないふり、寝たふり); たつもり là trong lòng mình nghĩ hoặc coi như vậy (行ったつもりで貯金する、言ったつもりだった), không cần người khác nhìn thấy."
+              "wrong": {
+                "why": "ぶる không gắn với động từ, chỉ gắn với từ chỉ thân phận, phẩm cách như 「大人、学者、上品」"
+              },
+              "explain": "Nhìn phía trước: động từ, tính từ, các loại danh từ (寝た, 知らない, 大人の) → ふりをする, chỉ là giả vờ như thế; chỉ những từ chỉ thân phận, phẩm cách như 「大人、学者、上品、偉」 → ぶる, mang ý phê phán “làm ra vẻ ta đây”. 「大人のふりをする」 và 「大人ぶる」 đều nói được, cách sau mỉa mai hơn."
+            },
+            {
+              "id": "ka-no-you-da",
+              "title": "〜かのようだ (cứ như thể…)",
+              "diff": "Đều có nghĩa “giả vờ…”; ふりをする là văn nói, nói thẳng là “giả vờ”; かのように thiên về văn viết, miêu tả thái độ của người khác từ bên ngoài, thường mang ý phê phán.",
+              "this": [
+                {
+                  "tag": "Văn nói · nói thẳng là giả vờ",
+                  "tr": "Anh ta thực ra biết, vậy mà giả vờ như không biết gì."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Văn viết · miêu tả thái độ",
+                  "tr": "Anh ta cư xử cứ như thể không biết gì."
+                }
+              ],
+              "explain": "Nhìn động từ phía sau và văn phong: khi nói, nói thẳng là “giả vờ” → ふりをする (知らないふりをした); trong văn viết, miêu tả thái độ người khác thể hiện ra, phía sau hay có 「振る舞っている」, 「笑っていた」 → かのように, mang ý phê phán “rõ ràng không phải mà cứ như thể là”."
             }
           ]
         }
@@ -15200,89 +15125,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều có thể dịch là “kiểu…, theo lối…”",
+          "note": "Đều diễn tả “trông giống…”",
           "items": [
             {
-              "id": "teki-suffix",
-              "diff": "〜風 chú ý vẻ ngoài, phong cách; 〜的 chú ý tính chất, lối suy nghĩ bên trong.",
-              "this": [
-                {
-                  "tag": "Vẻ ngoài · phong cách",
-                  "tr": "Đã làm khu vườn theo phong cách Nhật."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Bên trong · tính chất",
-                  "tr": "Cách suy nghĩ của anh ấy rất Nhật."
-                }
-              ],
-              "explain": "Nhìn đang nói bề ngoài hay bên trong: kiểu dáng nhìn thấy được như vườn, món ăn, kiến trúc, nội thất → 〜風; tính chất bên trong như cách nghĩ, tính cách, thói quen → 〜的. 〜的 là tính từ đuôi な (「日本的な」), sau 〜風 nối 「の」「に」 (日本風の庭)."
-            },
-            {
               "id": "ppoi",
-              "diff": "〜風 miêu tả phong cách, vẻ ngoài một cách khách quan; 〜っぽい là khẩu ngữ, chủ quan nói “hơi giống”, thường mang đánh giá tiêu cực.",
+              "title": "〜っぽい (trông như, có vẻ)",
+              "diff": "Đều có nghĩa “trông giống…”; 〜風 miêu tả bề ngoài một cách khách quan, thiên về văn viết; 〜っぽい là văn nói, nói ấn tượng của bản thân, thường kèm đánh giá.",
               "this": [
                 {
-                  "tag": "Khách quan · nhìn vẻ ngoài",
+                  "tag": "Khách quan · miêu tả bề ngoài",
                   "tr": "Ở nhà ga, một người đàn ông trông như sinh viên hỏi đường tôi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Chủ quan · có ý chê",
-                  "tr": "Anh ta đã 30 tuổi rồi mà suy nghĩ vẫn trẻ con."
+                  "tag": "Văn nói · ấn tượng cá nhân",
+                  "tr": "Này, người kia trông giống sinh viên nhỉ."
                 }
               ],
-              "explain": "Nhìn thái độ người nói: chỉ miêu tả khách quan vẻ ngoài nhìn thấy (学生風の人、洋風の部屋) → 〜風; kèm đánh giá của mình, thấy “giống như…”, thường là chê (子どもっぽい、安っぽい) → 〜っぽい. 〜っぽい là tính từ, sau 〜風 nối 「の」."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "gata-type",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Đều gắn sau danh từ, diễn tả “kiểu…, loại…”",
-          "items": [
-            {
-              "id": "teki-suffix",
-              "diff": "〜型 là danh từ, xếp sự vật vào một loại nào đó; 〜的 là tính từ đuôi な, diễn tả “mang tính chất…”.",
-              "this": [
-                {
-                  "tag": "Loại · ＋の",
-                  "tr": "Đã chuyển sang lối sống kiểu dậy sớm."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tính chất · ＋な",
-                  "tr": "Đang sống một cuộc sống lành mạnh."
-                }
-              ],
-              "wrong": {
-                "why": "〜型 là danh từ, phía sau phải nối 「の」"
-              },
-              "explain": "Nhìn phía sau nối 「の」 hay 「な」: 〜型 là danh từ, xếp sự vật vào một loại (朝型、大型、最新型), sau nối 「の」; 〜的 là tính từ đuôi な, nói mang một tính chất nào đó (「健康的」「積極的」), sau nối 「な」."
-            },
-            {
-              "id": "fuu-style",
-              "diff": "〜型 là phân loại theo thói quen, quy cách, kiểu loại; 〜風 là phong cách, dáng vẻ trông giống như….",
-              "this": [
-                {
-                  "tag": "Loại · thói quen",
-                  "tr": "Tôi thuộc kiểu người dậy sớm, nên buổi tối ngủ sớm."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Trông giống như",
-                  "tr": "Có một người đàn ông trông như nhân viên văn phòng đang đứng."
-                }
-              ],
-              "explain": "Nhìn đang “phân loại” hay “miêu tả vẻ ngoài”: xếp người hay vật vào một loại theo thói quen, thể chất, quy cách (朝型、血液型、大型) → 〜型; nhìn bề ngoài giống một thân phận, một phong cách nào đó (サラリーマン風、和風) → 〜風, mang nghĩa “trông giống như”."
+              "explain": "「学生風」 và 「学生っぽい」 đều là “trông giống sinh viên”. Nhìn văn phong: trong lời kể, báo cáo, miêu tả khách quan bề ngoài người lạ → 〜風, phía sau có 「の」 (学生風の男の人); khi trò chuyện, nói cảm nhận của mình → 〜っぽい, là tính từ, thường kèm đánh giá (子どもっぽい, 安っぽい)."
             }
           ]
         }
@@ -15297,57 +15158,59 @@
           "items": [
             {
               "id": "nikui",
-              "diff": "がたい chỉ dùng cho việc khó chấp nhận về mặt tâm lý; にくい phạm vi rộng nhất, đồ vật khó dùng, hành động không dễ làm đều nói được.",
+              "diff": "がたい chỉ dùng khi khó chấp nhận về mặt tâm lý; にくい có phạm vi rộng nhất, đồ vật khó dùng hay động tác không dễ làm đều nói được.",
               "this": [
                 {
                   "tag": "Khó chấp nhận về tâm lý",
-                  "tr": "Thật khó tin là anh ấy lại nói dối."
+                  "tr": "Thật khó tin là anh ấy đã nói dối."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khó dùng về vật lý",
+                  "tag": "Khó dùng về mặt vật lý",
                   "tr": "Cây bút này khó viết."
                 }
               ],
               "wrong": {
-                "why": "Bất tiện về mặt vật lý thì không dùng がたい"
+                "why": "Sự bất tiện về mặt vật lý không dùng がたい"
               },
-              "explain": "Nhìn khó ở đâu: về tình cảm, lý lẽ khó chấp nhận (信じる、許す、理解する) → がたい, thiên về văn viết; đồ vật khó dùng, hành động không dễ làm (書きにくい、分かりにくい) → にくい."
+              "explain": "Nhìn xem khó ở đâu: khó chấp nhận về tình cảm, lý lẽ (信じる, 許す, 理解する) → がたい, thiên về văn viết; đồ vật khó dùng, động tác không dễ làm (書きにくい, 分かりにくい) → にくい."
             },
             {
               "id": "zurai",
-              "diff": "がたい là khó chấp nhận về tình lý, thiên về văn viết; づらい là người làm cảm thấy khó chịu về thể xác hoặc tâm lý, thiên về khẩu ngữ.",
+              "title": "〜づらい (khó, ngại)",
+              "diff": "Đều là trong lòng thấy “khó mà…”; がたい là đưa ra phán đoán về sự việc, thiên về văn viết; づらい là bản thân ngại, khó mở lời, thiên về văn nói.",
               "this": [
                 {
-                  "tag": "Khó chấp nhận về tình lý",
-                  "tr": "Hành vi tồi tệ như thế thật khó tha thứ."
+                  "tag": "Phán đoán · văn viết",
+                  "tr": "Quyết định lần này khó có thể nói là công bằng."
                 }
               ],
               "that": [
                 {
-                  "tag": "Bản thân thấy khó chịu",
-                  "tr": "Chuyện này hơi khó mở lời với thầy nhỉ."
+                  "tag": "Ngại · văn nói",
+                  "tr": "Chuyện này hơi khó nói với thầy nhỉ."
                 }
               ],
-              "explain": "Nhìn cảm nhận của chủ ngữ: づらい là bản thân người nói làm thấy không thoải mái, ngại (言いづらい、歩きづらい), hay dùng trong khẩu ngữ hằng ngày; がたい là đánh giá về một việc, về tình lý khó mà làm như vậy (許しがたい、理解しがたい), hay gặp trong văn bản."
+              "explain": "Nhìn xem “khó” ở đâu: phán đoán về một việc, về lý lẽ khó mà nói như vậy (公平とは言いがたい, 許しがたい) → がたい, hay gặp trong văn viết; e ngại đối phương, bản thân ngại mở lời (先生には言いづらい, 断りづらい) → づらい, hay dùng trong khẩu ngữ hằng ngày."
             },
             {
               "id": "kaneru",
-              "diff": "がたい là đánh giá một việc “khó mà…”; かねる là vì lập trường nên không tiện làm, hay dùng để từ chối lịch sự.",
+              "title": "〜かねる (khó lòng, không thể)",
+              "diff": "Đều diễn tả “khó mà…” về mặt tâm lý; がたい nhìn vào bản thân sự việc, ai nhìn cũng khó chấp nhận; かねる nhìn từ lập trường của chính người nói, nói một cách uyển chuyển là “tôi không thể…”.",
               "this": [
                 {
-                  "tag": "Đánh giá · khó chấp nhận",
-                  "tr": "Điều kiện đó khó mà chấp nhận được."
+                  "tag": "Bản thân sự việc · đánh giá",
+                  "tr": "Quyết định đó ai nhìn vào cũng khó mà hiểu nổi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Lập trường · từ chối lịch sự",
-                  "tr": "Thành thật xin lỗi, về việc đó chúng tôi không thể trả lời."
+                  "tag": "Lập trường bản thân · uyển chuyển",
+                  "tr": "Về phần tôi, tôi thật khó lòng hiểu được quyết định đó."
                 }
               ],
-              "explain": "Nhìn hoàn cảnh: trong kinh doanh từ chối thẳng đối phương (お答えしかねます、お引き受けしかねます) → かねる, nghĩa là “muốn làm nhưng ở lập trường của tôi thì không tiện”; bày tỏ quan điểm của mình về sự việc (受け入れがたい、信じがたい) → がたい."
+              "explain": "Xem là đang đánh giá sự việc hay bày tỏ thái độ của mình: nói bản thân sự việc khó chấp nhận, hay có cách nói như 「誰が見ても」 → がたい; bày tỏ thái độ một cách uyển chuyển từ lập trường của mình, hay kèm 「私としては」 và thể lịch sự → かねる, nghe lịch sự hơn nói thẳng 「理解できない」."
             }
           ]
         }
