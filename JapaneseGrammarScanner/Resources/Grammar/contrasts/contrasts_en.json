@@ -40908,29 +40908,27 @@
       "id": "nan-to-iu-exclamation",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from 「何と (なんと)」 — “how, what a…”",
+          "kind": "meaning",
+          "note": "Both mean “how…! / what a…!”",
           "items": [
             {
               "id": "nante",
-              "diff": "When exclaiming “how…!”, they mean the same; なんと／なんという lean formal, なんて is colloquial.",
+              "title": "〜なんて (colloquial form of 「何と」)",
+              "thisTitle": "なんと〜 (how…!)",
+              "diff": "As an exclamation “how…!” they mean the same; なんと leans formal, なんて is colloquial.",
               "this": [
                 {
-                  "tag": "なんと · how…!",
-                  "tr": "What a beautiful view!"
-                },
-                {
-                  "tag": "なんという · before a noun",
-                  "tr": "What a beautiful view!"
+                  "tag": "Formal · writing, speeches",
+                  "tr": "What a beautiful sunset!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Colloquial · exclamation",
-                  "tr": "What a pretty view!"
+                  "tag": "Colloquial · everyday talk",
+                  "tr": "What a beautiful sunset!"
                 }
               ],
-              "explain": "All developed from 「何と」: なんと pairs with a sentence-final 「だろう」 or 「ことか」, and なんという attaches directly to a noun; both are used in writing and speeches. In everyday speech, both become なんて (なんてきれいな景色, なんて人だ). なんと can also stand alone to mean “believe it or not” (なんと100万円！)."
+              "explain": "Both sentences mean the same exclamation “how…!”; look at the setting: なんと belongs to writing, speeches and literature, and the sentence usually ends with 「だろう」 or 「ことか」; in everyday speech people say なんて, and the sentence often ends with 「んだろう」 or 「の」 (なんて美しい夕日なんだろう)."
             }
           ]
         }
@@ -40958,7 +40956,7 @@
                   "tr": "Children aside, all adults please take part."
                 }
               ],
-              "explain": "Look at the second half: なら別だが first supposes an exception, then turns with 「が」 to criticize or stress the general case (大人がするのはおかしい); は別として is followed directly by the rest (大人は全員参加)."
+              "explain": "In both, 「別」 means “a separate matter”: なら別だが = “if it’s A, that’s a different story” → A is treated as an exception that would change the judgment, then 「が」 turns back to give the conclusion for the normal case (大人がそんなことをするのはおかしい); は別として = “treating A as a separate matter” → A is set aside for now, and what follows goes straight to the rest (大人は全員参加). So look at the second half: if it turns around and then passes judgment, it’s なら別だが; if it goes straight on to the rest, it’s は別として."
             }
           ]
         },
@@ -40966,23 +40964,6 @@
           "kind": "meaning",
           "note": "Both mean “it'd be different if it were A, but…”",
           "items": [
-            {
-              "id": "nara-tomokaku",
-              "diff": "Almost the same meaning; なら別だが can also be said on its own as 「それなら話は別だ」, meaning your stance changes once the condition changes.",
-              "this": [
-                {
-                  "tag": "Exception · common in speech",
-                  "tr": "If it's urgent, that's another matter, but please don't call in the middle of the night."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Leaving aside · most common",
-                  "tr": "If it's urgent, fine, but please don't call in the middle of the night."
-                }
-              ],
-              "explain": "The two sentences are interchangeable. The difference is in the literal meaning: 「別」 is “that's an exception, a different matter”, so only 別 works on its own in 「それなら話は別だ (well, that's a different story)」; ともかく means “leaving aside” and can't be used alone like that."
-            },
             {
               "id": "nara-mada-shimo",
               "diff": "なら別だが just names an exception; ならまだしも compares the degree of the two: the first is “still bearable”, the second “even worse”.",
@@ -41009,42 +40990,26 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both say “this really shows A's character”",
+          "note": "Both mean “only A can”",
           "items": [
             {
-              "id": "rashii-typical",
-              "title": "〜らしい (typical)",
-              "diff": "らしい says “very much like A, very typical”; ならでは says “only A has this”, stressing uniqueness, with higher praise.",
+              "id": "wo-oite",
+              "title": "〜をおいて (no one/nothing but…)",
+              "thisTitle": "〜ならでは (only… could)",
+              "diff": "ならでは praises a feature unique to A; をおいて stresses “there’s no choice other than A” and must be followed by a negative.",
               "this": [
                 {
-                  "tag": "Only found here",
-                  "tr": "This is a view you can only get in Kyoto, nowhere else."
+                  "tag": "Praising A’s distinctive quality",
+                  "tr": "Being able to create this flavor is something only a shop with a hundred-year history can do."
                 }
               ],
               "that": [
                 {
-                  "tag": "Very typical · very like",
-                  "tr": "With old temples lined up, it's a view that's so very Kyoto."
+                  "tag": "No other choice · followed by a negative",
+                  "tr": "No one but this hundred-year-old shop can create this flavor."
                 }
               ],
-              "explain": "Look at whether it's about “being like it” or “having it”: らしい matches the typical image of A (somewhere else might have something similar), as in 「春らしい天気」; ならでは stresses that other places or people don't have it, often comes with phrases like 「ほかでは見られない」, and is mostly used as praise."
-            },
-            {
-              "id": "dake-atte",
-              "diff": "ならではの means “… that only A has” and modifies a noun; だけあって means “as expected of A, so sure enough…”, expressing cause and effect.",
-              "this": [
-                {
-                  "tag": "Only A has · modifies noun",
-                  "tr": "It has a warmth that only a craftsman's handiwork can give."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "As expected of A · cause and effect",
-                  "tr": "As you'd expect from a craftsman, the finish is beautiful."
-                }
-              ],
-              "explain": "Look at the structure: ならではの is followed directly by a noun (温かみ, 味), saying that feature is found nowhere else; だけあって is followed by a clause, saying “because it's A, the result is good, just as you'd expect”, often used together with 「さすが」."
+              "explain": "Both sentences work and both mean “only A can do it”; look at what is being stressed: ならでは praises A’s own distinctive quality — it’s precisely because it’s A that this exists — and is also often used as 「Aならではの＋noun」; をおいて picks A out from all possible candidates and must be followed by 「ほかにない」 or 「ほかにいない」, meaning “there is nothing else but A”; it is often used to formally recommend someone or something."
             }
           ]
         }
@@ -41145,7 +41110,7 @@
       "groups": [
         {
           "kind": "look",
-          "note": "All are written 「なり」, but they attach differently and mean completely different things",
+          "note": "「なり」 ↔ 「たなり」, 「なりに」, 「AなりBなり」: they look almost the same but mean completely different things",
           "items": [
             {
               "id": "ta-nari-state",
@@ -41179,7 +41144,10 @@
                   "tr": "Children have their own ideas about things, in their own way."
                 }
               ],
-              "explain": "Look at what comes before なり: a verb in dictionary form (見る) → as soon as…, followed by an unexpected action right after; a noun for a person or thing (子ども, 私) + なりに → “in a way suited to its status or abilities”, admitting limits but saying it has its own way. なりの + noun is the same (私なりの考え)."
+              "explain": "Look at what comes before and after なり: a verb in dictionary form (見る) + なり, followed directly by the next action → “as soon as…”, an unexpected action right after; a noun for a person or thing (子ども, 私) + なりに, with an extra 「に」 → “in a way suited to its status or abilities”, admitting limits but saying it has its own way. なりの + noun is the same (私なりの考え).",
+              "wrong": {
+                "why": "“As soon as…” can only be 見るなり; you can’t add に after it"
+              }
             },
             {
               "id": "nari-nari",
@@ -41196,7 +41164,7 @@
                   "tr": "Please get in touch, whether by phone or by email."
                 }
               ],
-              "explain": "Both can be “verb dictionary form + なり”; look at how many times なり appears and what follows: once, followed by an unexpected action that has already happened (飛び出した) → as soon as…; in a pair as 「AなりBなり」, followed by a request or suggestion (〜してください, 〜たらどう) → naming options, pick any one."
+              "explain": "Both are 「verb dictionary form＋なり」 and written the same way, so look at how many times なり appears and what follows: if it appears only once and is followed by something that already happened unexpectedly (飛び出した) → “as soon as…”; if it comes as a pair 「AなりBなり」, often with 「して」, followed by a request or suggestion (してください) → it lists options, pick any one."
             }
           ]
         },
@@ -41237,27 +41205,6 @@
                 }
               ],
               "explain": "なり is followed by an action the same person actively does, and is mostly used to describe others (彼女は……泣き出した); たとたん is followed by an unexpected change, which can be a sensation in yourself (めまいがした) or something else, and is common in speech too. The forms differ too: なり follows the dictionary form, たとたん follows the た-form."
-            },
-            {
-              "id": "shidai-as-soon-as",
-              "title": "〜次第 (as soon as…, right away)",
-              "diff": "Both mean “as soon as…”, but なり only narrates things that have already happened; 次第 is followed by something you're going to do, or a request.",
-              "this": [
-                {
-                  "tag": "Already happened · unexpected action",
-                  "tr": "As soon as my father got home, he shut himself up in his room."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Going to do · intention",
-                  "tr": "I'll contact you as soon as I get to the station."
-                }
-              ],
-              "wrong": {
-                "why": "なり can't be followed by your own intention or a request"
-              },
-              "explain": "Look at the tense and intention in the second half: なり is followed by an unexpected action that has already happened (部屋にこもってしまった); 次第 is followed by what the speaker will do next or a request (連絡します, ご連絡ください), mostly in work settings. The forms differ too: なり follows the dictionary form, 次第 follows the ます-form stem (着き + 次第)."
             }
           ]
         }
@@ -41309,23 +41256,6 @@
                 }
               ],
               "explain": "Both can be “verb dictionary form + なり”; look at how many times なり appears and what follows: in a pair as 「AなりBなり」, followed by a request or suggestion (〜してください, 〜たらどう) → naming options, pick any one; once, followed by an unexpected action that has already happened (飛び出した) → as soon as…."
-            },
-            {
-              "id": "nari-ni",
-              "diff": "AなりBなり names options; noun + なりに means “in … own way”.",
-              "this": [
-                {
-                  "tag": "Either… or · pick one",
-                  "tr": "If there's something you don't understand, ask your teacher or a senior colleague."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "In one's own way",
-                  "tr": "I thought it over as hard as I could, in my own way."
-                }
-              ],
-              "explain": "「先輩なりに聞いて」 also contains 「なりに」, but here it's なり + に (the 「に」 of who you ask), meaning “ask someone like a senior colleague”; the なりに in 「私なりに」 is a single unit meaning “within my own abilities and circumstances”. Look at the context: AなりBなり in a pair, followed by a request or suggestion → pick one; attached only to a person like 「私」 or 「子ども」, followed by what they themselves do → in one's own way."
             }
           ]
         },
@@ -41359,7 +41289,7 @@
       "groups": [
         {
           "kind": "look",
-          "note": "All are written 「なり」, but they attach differently and mean completely different things",
+          "note": "なりに ↔ なり: just one 「に」 apart, and what comes before is also different",
           "items": [
             {
               "id": "nari-immediately",
@@ -41376,24 +41306,10 @@
                   "tr": "As soon as my mother saw my face, she burst into tears."
                 }
               ],
-              "explain": "Look at what comes before なり: a noun for a person or thing (子ども, 私) + なりに → “in a way suited to its status or abilities”, admitting limits but saying it has its own way; a verb in dictionary form (見る) → as soon as…, followed by an unexpected action right after. なりの + noun is the same (子どもなりの考え)."
-            },
-            {
-              "id": "nari-nari",
-              "diff": "Noun + なりに means “within its own abilities”; AなりBなり means “A or B, pick one”.",
-              "this": [
-                {
-                  "tag": "In one's own way",
-                  "tr": "I thought it over as hard as I could, in my own way."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Either… or · pick one",
-                  "tr": "If there's something you don't understand, ask your teacher or a senior colleague."
-                }
-              ],
-              "explain": "The なりに in 「私なりに」 is a single unit meaning “within my own abilities and circumstances”; 「先輩なりに聞いて」 also contains 「なりに」, but it's actually なり + に (the 「に」 of who you ask), meaning “ask someone like a senior colleague”. Look at the context: attached only to a person like 「私」 or 「子ども」, followed by what they themselves do → in one's own way; AなりBなり in a pair, followed by a request or suggestion → pick one."
+              "explain": "Look at what comes before and after なり: a noun for a person or thing (子ども, 私) + なりに, with an extra 「に」 → “in a way suited to its status or abilities”, admitting limits but saying it has its own way; a verb in dictionary form (見る) + なり, followed directly by the next action → “as soon as…”, an unexpected action right after. なりの + noun is the same (子どもなりの考え).",
+              "wrong": {
+                "why": "“As soon as…” can only be 見るなり; you can’t add に after it"
+              }
             }
           ]
         }
@@ -41450,25 +41366,35 @@
         },
         {
           "kind": "meaning",
-          "note": "なりとも has two jobs, each with a similar alternative: “even just a little” ≈ ないまでも; “anything at all” (何なりと) ≈ 何でも",
+          "sense": 1,
+          "note": "Both mean “even just this little”",
           "items": [
             {
-              "id": "nai-made-mo",
-              "diff": "なりとも only names the bare minimum; ないまでも first states a high standard that can't be reached, then falls back to “at least…”.",
+              "id": "kurai-approximately",
+              "title": "〜くらい (minimum)",
+              "thisTitle": "〜なりとも (even just a little)",
+              "diff": "Both mean “at least this much”; なりとも is formal and literary, mostly for one’s own wishes; くらい is colloquial and often used to demand something of, or scold, the other person.",
               "this": [
                 {
-                  "tag": "Only the bare minimum",
-                  "tr": "I'd be glad if I could be of even a little help."
+                  "tag": "Formal · one’s own wish",
+                  "tr": "I would like to offer my greetings, even if only a word."
                 }
               ],
               "that": [
                 {
-                  "tag": "High standard → fallback",
-                  "tr": "Maybe not the full amount, but I'd like you to pay back at least half."
+                  "tag": "Colloquial · demanding of the other person",
+                  "tr": "At least say hello!"
                 }
               ],
-              "explain": "Look at how many standards the sentence has: なりとも only attaches to words for tiny amounts like 「少し」 「多少」 「一目」, and is a formal written expression, equivalent to colloquial 「少しでも」; ないまでも has one standard on each side (全額 → 半分), “stepping back by comparison”."
-            },
+              "explain": "Both mean “at least this much”; look at who it’s said to and the tone: なりとも is a formal, literary expression, mostly used in speeches and letters, where the speaker says they want to manage “even just this little” themselves (申し上げたい); くらい is colloquial and often used to demand of, or scold, the other person: “surely you can at least do this”, usually followed by 「しなさい」 or 「できるでしょう」; なりとも is generally not used in this kind of situation."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “anything at all”",
+          "items": [
             {
               "id": "demo-but",
               "title": "何でも (anything)",
@@ -41486,7 +41412,7 @@
                   "tr": "If you're ever in trouble, just tell me — anything."
                 }
               ],
-              "explain": "The two sentences mean the same; look at the setting: hotels and shops speaking to customers use 「何なりと (お申し付けください)」; friends and family use 「何でも」. The なり in 何なりと is just the classical 「である」, playing the same role as the 「で」 in 何でも."
+              "explain": "The two sentences mean the same; look at the setting: hotels and shops speaking to customers use 「何なりと（お申し付けください）」, formal and polite; friends and family use 「何でも」."
             }
           ]
         }
@@ -41518,34 +41444,35 @@
                   "tr": "Without everyone's help, this success would not have been possible."
                 }
               ],
-              "explain": "「なし」 just means “without”. Look at the second half: followed by an action that's already been done (休んだ) → only なしに works, “did… without going through…”, often with blame; followed by a negative (できない, ありえない) → both なしでは and なくして work, saying the first part is indispensable; なくして is more formal, mostly used in speeches and writing. なしには is the same as なしでは."
+              "explain": "Both come from 「無し」 (there is none): 「なし＋に」 = “in a state where there is no…”, so it can be followed by an action that was already done, meaning “did… without (going through)…” (休んだ), often with a tone of blame; 「なく (the continuative form of なし)＋して」 = “taking the absence of… as the premise”, formal and literary, followed by a negative or “impossible” (ありえませんでした), saying the first part is indispensable. なしでは and なしには, when followed by a negative (できない), also say something is indispensable, just less formally."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both mean “without (doing)…, … / never…”",
+          "note": "Both mean “did… without…”",
           "items": [
             {
               "id": "koto-naku",
+              "title": "〜ことなく (without doing…)",
               "thisTitle": "〜なしに (did it without…)",
-              "diff": "Same meaning; なしに follows a noun (休みなしに), ことなく follows a verb in dictionary form (休むことなく) and is more literary.",
+              "diff": "Same meaning; なしに follows a noun (相談なしに), ことなく follows a verb in dictionary form (相談することなく) and is more literary.",
               "this": [
                 {
                   "tag": "Noun + なしに",
-                  "tr": "He kept working from morning till night without a break."
+                  "tr": "He quit his job without consulting his family."
                 }
               ],
               "that": [
                 {
                   "tag": "Verb + ことなく",
-                  "tr": "He kept working from morning till night without stopping to rest."
+                  "tr": "He left the company without consulting his family."
                 }
               ],
               "wrong": {
-                "why": "なしに can't come directly after a verb; you need to add 「こと」"
+                "why": "なしに can’t come directly after a verb; say することなく (or することなしに)"
               },
-              "explain": "The two sentences mean the same; look at the word before: a noun (休み, 連絡, 断り) → なしに; a verb (休む, 迷う) → ことなく (or ことなしに), more literary. Since English says “without…” for both, it's easy to write ✗休むなしに."
+              "explain": "The two sentences mean the same; look at the word before: a noun (相談, 連絡, 断り) → なしに, often with a tone of blame; a verb in dictionary form (相談する) → ことなく, more literary. Since English says “without…” for both, it’s easy to write ✗相談するなしに."
             }
           ]
         }
