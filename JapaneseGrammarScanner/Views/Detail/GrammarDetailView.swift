@@ -298,17 +298,17 @@ private struct DocSection<Content: View>: View {
     }
 }
 
-/// 义项序号：灰色描边圆圈。
+/// 义项序号：主题色粗体数字 + 主题色浅底实心圆（Build 17 反馈 6：原来的灰色细圈不够显眼）。
 private struct NumberBadge: View {
     let number: Int
 
     var body: some View {
         Text(verbatim: "\(number)")
-            .font(.caption.weight(.semibold))
+            .font(.footnote.weight(.bold))
             .monospacedDigit()
-            .foregroundStyle(.secondary)
-            .frame(width: 22, height: 22)
-            .overlay(Circle().strokeBorder(Color.secondary.opacity(0.5), lineWidth: 1))
+            .foregroundStyle(Theme.accentText)
+            .frame(width: 24, height: 24)
+            .background(Theme.accentFill, in: Circle())
     }
 }
 
