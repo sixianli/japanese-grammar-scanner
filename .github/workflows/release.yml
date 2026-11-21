@@ -1,15 +1,3 @@
-# 一键打包并上传到 App Store Connect（TestFlight → 提交审核）。
-#
-# 需要先在 GitHub 仓库 Settings → Secrets and variables → Actions 中配置：
-#   Secrets:
-#     ASC_KEY_ID          App Store Connect API Key 的 Key ID
-#     ASC_ISSUER_ID       App Store Connect API 的 Issuer ID
-#     ASC_KEY_P8          API Key 文件（AuthKey_XXXX.p8）的完整文本内容
-#   Variables:
-#     APPLE_TEAM_ID       Apple Developer Team ID（10 位）
-#     BUNDLE_ID           在 App Store Connect 中创建 App 时使用的 Bundle ID
-#     CLOUD_FEEDBACK      设为 true 后启用 App 内反馈提交（iCloud / CloudKit），见 docs/feedback/SETUP.md
-# API Key 需在 App Store Connect → 用户和访问 → 集成 → App Store Connect API 中创建，角色选 “App 管理”。
 name: Release to App Store Connect
 
 on:
@@ -54,14 +42,14 @@ jobs:
             if [ -z "${!v}" ]; then echo "::error::缺少配置 $v，请按 release.yml 顶部说明配置"; exit 1; fi
           done
       - name: Require green CI for this commit
-        # 硬门槛（CLAUDE.md）：同一个提交的数据校验、单元测试、端到端测试没有全部跑完并通过，不能打包上传
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 tools/require_ci_green.py "${{ github.repository }}" "${{ github.sha }}"
       - name: Validate data
         run: |
           python3 tools/validate_grammar.py
-          python3 tools/validate_contrasts.py
+          python3 tools/validate_contrasts.py --release
+          python3 tools/review_contrasts.py --check
           python3 tools/validate_compliance.py
           python3 tools/check_strings.py
       - name: Write API key
@@ -73,12 +61,10 @@ jobs:
           printf '%s' "$ASC_KEY_P8" > ~/.appstoreconnect/private_keys/AuthKey_${ASC_KEY_ID}.p8
       - name: Archive (unsigned; signed for App Store during export)
         env:
-          # 打开后编译 App 内反馈提交（CloudKit），并给 App 加上 iCloud 能力；配置方法见 docs/feedback/SETUP.md
           CLOUD_FEEDBACK: ${{ inputs.cloud_feedback && 'true' || vars.CLOUD_FEEDBACK }}
         run: |
           set -o pipefail
           if [ "$CLOUD_FEEDBACK" = "true" ]; then
-            # 带 iCloud 权限做临时签名，导出时由 App Store 签名保留这些权限
             SIGNING=(CODE_SIGN_ENTITLEMENTS=Config/CloudFeedback.entitlements
                      "SWIFT_ACTIVE_COMPILATION_CONDITIONS=\$(inherited) CLOUD_FEEDBACK"
                      CODE_SIGN_STYLE=Manual CODE_SIGN_IDENTITY=- AD_HOC_CODE_SIGNING_ALLOWED=YES

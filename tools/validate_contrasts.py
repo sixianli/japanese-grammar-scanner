@@ -358,6 +358,11 @@ def main():
                 errors.append(f"tools/contrast_debt.json 的 {kind} 里有 {len(stale)} 条已经改好（或已删除），"
                               f"请运行 --update-debt 把它们移出清单：{'、'.join(stale[:5])}")
             print(f"{label}的旧条目（待改）：{len(failing[kind] & debt[kind])} 条")
+        if "--release" in sys.argv:
+            left = {k: len(v) for k, v in failing.items() if v}
+            if left:
+                errors.append("发版前 tools/contrast_debt.json 必须清空，还有："
+                              + "、".join(f"{DEBT_KINDS[k]} {n} 条" for k, n in left.items()))
 
     n_items = sum(len(g["items"]) for p in base for g in p["groups"])
     print(f"相近语法对比：{len(base)} 个语法点，{n_items} 条对比")

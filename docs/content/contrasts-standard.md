@@ -111,3 +111,14 @@
 - 模型：opencode 上的 DeepSeek V4.1 Flash（`deepseek-v4.1-flash`），按这份标准的条目逐条判断，给出「通过」或「不通过」和理由。
 - 先用已知答案的对比测准确度（如 ている ↔ た 应判不通过，ので ↔ から 应判通过），准确度够了再全量审。
 - 全量审要花钱，运行前先报费用，Andy 同意后再跑。
+- 审核脚本是 `tools/review_contrasts.py`（调用模型逐条审核、把结果记下来的脚本）：
+  - `--calibrate` 用 `tools/contrast_review_calibration.json`（校准题：每条写明应判通过还是不通过）测准确度，并按实际用量估算全量费用；
+  - `--run` 只审没有有效记录的条目，结果写进 `tools/contrast_reviews.json`（审核记录）；`--only 前缀` 和 `--limit N` 用来分批；
+  - 每条记录带一个内容指纹（由组说明、这一条的全部内容、两边详情页的义项、这份标准和审核提示算出来的一串字符）。其中任何一样改了，记录就失效，要重新审。
+
+## 发版门槛
+
+发版工作流（`.github/workflows/release.yml`）在打包前运行下面两条，任何一条不通过就不能发版：
+
+- `python3 tools/validate_contrasts.py --release`：待修清单 `tools/contrast_debt.json` 必须是空的。
+- `python3 tools/review_contrasts.py --check`：每一条对比都要有和当前内容一致的「通过」记录。
