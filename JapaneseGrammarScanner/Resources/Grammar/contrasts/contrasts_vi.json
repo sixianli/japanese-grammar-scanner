@@ -34041,29 +34041,6 @@
       "id": "tokoro-wo-miru-to",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ danh từ hình thức 「ところ」 — chỉ “một điểm, một tình hình nào đó”",
-          "items": [
-            {
-              "id": "tokoro-kara",
-              "diff": "Sau ところを見ると nhất định là suy đoán; ところから phần nhiều nói về nguồn gốc tên gọi, phía sau có thể là sự thật xác định.",
-              "this": [
-                {
-                  "tag": "Suy đoán · らしい",
-                  "tr": "Thấy đèn vẫn còn sáng, có vẻ anh ấy vẫn chưa ngủ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nguồn gốc tên gọi · sự thật",
-                  "tr": "Vì có hình dạng giống ngôi sao nên được gọi là “cát sao”."
-                }
-              ],
-              "explain": "Xem cuối câu: suy đoán như 「らしい」「ようだ」「に違いない」, mà căn cứ là tình hình thấy trước mắt → ところを見ると; sự thật xác định như 「と呼ばれている」「と名付けられた」→ ところから."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Đều diễn tả “suy đoán dựa vào tình hình nhìn thấy”",
           "items": [
@@ -34099,7 +34076,28 @@
                   "tr": "Nhìn nét mặt ấy thì có vẻ anh ta thi không tốt."
                 }
               ],
-              "explain": "Trước hết xem phía trước là danh từ hay câu: danh từ như 表情、話し方、この点 ＋からすると (から見ると cũng vậy); một câu mô tả tình hình như 「電気が消えている」 ＋ところを見ると. からすると còn có thể biểu thị “đứng trên lập trường của…”, ところを見ると không có cách dùng này."
+              "explain": "Trước hết xem phía trước là danh từ hay câu: danh từ như 表情、話し方、この点 ＋からすると (から見ると cũng vậy); một câu mô tả tình hình như 「電気が消えている」 ＋ところを見ると. からすると còn có thể biểu thị “đứng trên lập trường của…”, ところを見ると không có cách dùng này.",
+              "wrong": {
+                "why": "ところを見ると không gắn trực tiếp sau danh từ; với danh từ phải dùng 「表情からすると」"
+              }
+            },
+            {
+              "id": "tokoro-kara",
+              "diff": "Sau ところを見ると là suy đoán tại chỗ của người nói; ところから thiên văn viết, sau nó là kết luận khách quan như 「と考えられる」.",
+              "this": [
+                {
+                  "tag": "Người nói suy đoán · khẩu ngữ cũng dùng",
+                  "tr": "Nhìn ở cửa ra vào không có giày thì có vẻ anh ấy vẫn chưa về."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Kết luận khách quan · văn viết",
+                  "tr": "Từ việc ở cửa ra vào không có giày, có thể nhận định rằng khi đó anh ấy vẫn chưa về."
+                }
+              ],
+              "explain": "Cả hai đều là “dựa vào tình hình nhìn thấy để suy ra”, hãy xem vế sau: suy đoán tại chỗ của người nói, cuối câu là 「らしい」「ようだ」「に違いない」 → ところを見ると, nói chuyện cũng hay dùng; kết luận khách quan trong báo cáo, bài suy luận, cuối câu là 「と考えられる」「と判断した」 → ところから. ところから còn dùng để nói nguồn gốc tên gọi (〜と呼ばれる), ところを見ると không có cách dùng này.",
+              "title": "〜ところから (căn cứ phán đoán)"
             }
           ]
         }
@@ -34108,30 +34106,6 @@
     {
       "id": "toshite-nai",
       "groups": [
-        {
-          "kind": "look",
-          "note": "Đều viết là 「として」, nhưng phía trước đổi thành 「一＋lượng từ」 và phía sau là phủ định thì nghĩa hoàn toàn khác",
-          "items": [
-            {
-              "id": "to-shite",
-              "title": "〜として（với tư cách）",
-              "diff": "一＋lượng từ＋として đi cùng phủ định, là “không một… nào”; danh từ＋として là “với tư cách là…”.",
-              "this": [
-                {
-                  "tag": "一＋lượng từ · phủ định hoàn toàn",
-                  "tr": "Trong cuộc họp không một ai phản đối."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Thân phận · với tư cách",
-                  "tr": "Tôi đến Nhật Bản với tư cách là du học sinh."
-                }
-              ],
-              "explain": "Xem phía trước 「として」 và cuối câu: 「一＋lượng từ」 như 一人、一つ、一日, cuối câu là phủ định → không có lấy một; danh từ chỉ thân phận như 留学生、教師 → với tư cách. Nghĩa gốc là “dù có tính là chỉ một cái thôi cũng không có”, nên sự phủ định mới mạnh như vậy."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Đều diễn tả phủ định hoàn toàn “không một… nào, không chút nào”",
@@ -34179,35 +34153,54 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “vừa… vừa” và “tuy… nhưng”",
+          "sense": 1,
+          "note": "Đều diễn tả “vừa… vừa…”",
           "items": [
             {
               "id": "nagara",
-              "diff": "Nghĩa tương ứng từng cặp: つつ＝ながら, つつも＝ながらも; つつ mang tính văn viết hơn.",
+              "diff": "Nghĩa giống nhau; ながら là khẩu ngữ hằng ngày, つつ là văn viết, trang nhã.",
               "this": [
                 {
-                  "tag": "つつ · đồng thời",
-                  "tr": "Vừa thưởng ngoạn phong cảnh, vừa thong thả bước đi."
-                },
-                {
-                  "tag": "つつも · biết rõ mà vẫn",
-                  "tr": "Biết rõ là có hại cho sức khỏe mà vẫn không bỏ được thuốc lá."
+                  "tag": "Văn viết · văn chương",
+                  "tr": "Vừa ngắm cảnh, tôi vừa thong thả bước đi."
                 }
               ],
               "that": [
                 {
-                  "tag": "ながら · đồng thời",
-                  "tr": "Vừa thưởng ngoạn phong cảnh, vừa thong thả bước đi."
-                },
-                {
-                  "tag": "ながらも · biết rõ mà vẫn",
-                  "tr": "Biết rõ là có hại cho sức khỏe mà vẫn không bỏ được thuốc lá."
+                  "tag": "Hằng ngày · khẩu ngữ",
+                  "tr": "Tôi vừa ngắm cảnh vừa đi chầm chậm."
                 }
               ],
+              "explain": "Hai câu nghĩa như nhau, hãy xem văn phong: nói chuyện hằng ngày dùng ながら; trong bài viết như du ký, thư từ, diễn văn thì dùng つつ trang nhã hơn. つつ chỉ gắn với ます形 của động từ, và chủ ngữ hai vế phải giống nhau.",
+              "title": "〜ながら (đồng thời)"
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều diễn tả “biết rõ là… mà vẫn…”",
+          "items": [
+            {
+              "id": "nagara",
+              "diff": "つつも＝ながらも, đều là “biết rõ… mà vẫn…”; つつも trang trọng, thiên văn viết hơn.",
+              "this": [
+                {
+                  "tag": "Văn viết",
+                  "tr": "Dù biết là không nên, tôi vẫn cứ lỡ thức khuya."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Nói và viết đều dùng",
+                  "tr": "Biết là không nên mà tôi vẫn cứ thức khuya."
+                }
+              ],
+              "explain": "Khi gắn với các động từ như 「知る」「思う」「分かる」 thì hai cách thay nhau được, つつも mang tính văn viết hơn. Nhưng つつも chỉ gắn với ます形 của động từ: cách dùng “tuy… nhưng” gắn với tính từ, danh từ như 「狭いながらも」「子どもながら」 thì không đổi thành つつも được.",
+              "title": "〜ながらも (biết mà vẫn)",
               "wrong": {
-                "why": "つつ chỉ gắn với động từ, tính từ phải dùng ながらも"
-              },
-              "explain": "Khi gắn với động từ thì hai cái có thể thay cho nhau, ながら là khẩu ngữ hằng ngày, つつ hay gặp trong bài viết, diễn thuyết. Nhưng つつ chỉ gắn được với thể ます của động từ: những cách dùng gắn với tính từ, danh từ như 「狭いながらも」「残念ながら」「子どもながら」 thì không thay bằng つつ được."
+                "why": "つつも chỉ gắn với động từ; với tính từ phải dùng ながらも"
+              }
             }
           ]
         }
@@ -34222,20 +34215,20 @@
           "items": [
             {
               "id": "te-iru",
-              "diff": "沈んでいる là “đã chìm xuống rồi”; 沈みつつある là “đang chìm dần xuống”.",
+              "diff": "増えている dùng được cả khi nói lẫn khi viết; 増えつつある là văn viết, nhấn mạnh thay đổi vẫn đang tiến dần từng chút.",
               "this": [
                 {
-                  "tag": "Đang trong quá trình · chưa xong",
-                  "tr": "Lúc này, mặt trời đang lặn dần xuống biển."
+                  "tag": "Văn viết · tin tức",
+                  "tr": "Số người nước ngoài sống ở thị trấn này đang tăng dần qua từng năm."
                 }
               ],
               "that": [
                 {
-                  "tag": "Trạng thái kết quả · đã xong",
-                  "tr": "Khi nhận ra thì mặt trời đã lặn xuống biển rồi."
+                  "tag": "Nói và viết đều dùng",
+                  "tr": "Số người nước ngoài sống ở thị trấn này đang tăng lên hằng năm."
                 }
               ],
-              "explain": "Xem động từ: với những thay đổi hoàn tất trong chốc lát như 沈む、消える、死ぬ, thêm ている là chỉ trạng thái kết quả “đã trở thành”; muốn nói “đang tiến tới kết quả đó” thì phải dùng つつある. つつある là văn viết, khẩu ngữ hay nói 「沈みかけている」."
+              "explain": "Với các động từ thay đổi từ từ như 「増える」「変わる」, cả hai đều nói được thay đổi đang diễn ra: hằng ngày nói 増えている là đủ; trong tin tức, báo cáo dùng 増えつつある để nhấn mạnh vẫn đang tiến dần từng chút, chưa tới điểm cuối. Nhưng với động từ thay đổi hoàn tất trong chốc lát như 沈む、消える, thêm ている lại là “đã… rồi”, nên muốn nói “đang…” thì chỉ dùng được つつある (沈みつつある)."
             },
             {
               "id": "te-kuru",
@@ -34256,20 +34249,23 @@
             },
             {
               "id": "ippou-da",
-              "diff": "つつある chỉ mô tả khách quan sự thay đổi đang diễn ra; 一方だ là “cứ thế… mãi”, phần nhiều dùng cho xu hướng không tốt.",
+              "diff": "つつある chỉ mô tả khách quan sự thay đổi đang diễn ra; 一方だ là “cứ thế… mãi”, mang lo lắng hoặc bất mãn.",
               "this": [
                 {
                   "tag": "Khách quan · đang thay đổi",
-                  "tr": "Kinh tế đang dần dần phục hồi."
+                  "tr": "Vật giá đang tăng lên."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cứ thế mãi · phần nhiều tiêu cực",
+                  "tag": "Không dừng lại · lo lắng",
                   "tr": "Vật giá cứ tăng lên mãi."
                 }
               ],
-              "explain": "Xem giọng điệu: 一方だ nhấn mạnh “chỉ theo một hướng, không dừng lại được”, mang sự lo lắng hoặc bất mãn (上がる一方、悪くなる一方); つつある chỉ bình thản nói sự thay đổi đang diễn ra, tốt hay xấu đều dùng được. Cách nối cũng khác: 一方だ gắn với thể từ điển, つつある gắn với thể ます."
+              "explain": "Hai cách nói cùng một việc: 上がりつつある chỉ bình thản nói là đang tăng, dùng được cho cả thay đổi tốt lẫn xấu; 上がる一方だ nhấn mạnh chỉ đi theo một hướng, không dừng lại, mang lo lắng hoặc bất mãn, phần nhiều dùng cho xu hướng xấu. Cách nối cũng khác: つつある gắn với ます形 (上がり), 一方だ gắn với 辞書形 (上がる).",
+              "wrong": {
+                "why": "一方だ gắn với 辞書形 của động từ: 上がる一方だ"
+              }
             }
           ]
         }
@@ -34280,41 +34276,41 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「上（うえ）」 — từ “phía trên” mở rộng thành “trên cơ sở…”",
+          "note": "Đều bắt nguồn từ danh từ 「上（うえ）」 — nghĩa gốc là “phía trên”, mở rộng thành “ở trên một việc nào đó”",
           "items": [
             {
               "id": "ue-wa",
               "diff": "た上で là “sau khi… rồi mới…”; た上は là “một khi đã… thì…”.",
               "this": [
                 {
-                  "tag": "Trước sau · rồi mới",
-                  "tr": "Tôi sẽ suy nghĩ kỹ rồi mới trả lời."
+                  "tag": "Trước sau · bước tiếp theo",
+                  "tr": "Sau khi quyết định nghỉ việc, tôi đã bàn với cấp trên."
                 }
               ],
               "that": [
                 {
                   "tag": "Một khi đã · quyết tâm",
-                  "tr": "Một khi đã nhận lời thì phải chịu trách nhiệm đến cùng."
+                  "tr": "Một khi đã quyết định nghỉ việc thì không thể quay đầu nữa."
                 }
               ],
-              "explain": "Chỉ khác で và は, xem nửa câu sau: bước tiếp theo sẽ làm (返事をします、決めます) → 上で; quyết tâm, trách nhiệm (最後まで〜、〜しかない) → 上は. 上は khá văn viết, trang trọng."
+              "explain": "Cả hai đều từ 「上」 = “ở trên”: 上で là đứng trên việc trước để làm việc tiếp theo → “sau khi… rồi mới…”; 上は là đứng trên việc trước như một sự thật đã rồi → “một khi đã… thì…”. Khi vế trước giống nhau, hãy xem vế sau: bước tiếp theo sẽ làm (上司に相談した) → 上で; điều buộc phải làm hay quyết tâm vì thế (できない、〜しかない) → 上は. 上は khá trang trọng, thiên văn viết."
             },
             {
               "id": "ue-ni-addition",
-              "diff": "上で là “sau khi…, trên cơ sở…”; 上に là “không chỉ… mà còn”.",
+              "diff": "上で là “sau khi…, trên cơ sở…”; 上に là “không những… mà còn…”.",
               "this": [
                 {
-                  "tag": "Trước sau · cơ sở",
-                  "tr": "Tôi sẽ bàn với gia đình rồi mới quyết định."
+                  "tag": "Trước sau · làm nền",
+                  "tr": "Sau khi thu thập tài liệu xong, tôi đã làm biểu đồ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cộng thêm · mà còn",
-                  "tr": "Quán này không chỉ rẻ mà còn ngon."
+                  "tag": "Cộng thêm · hơn nữa",
+                  "tr": "Anh ấy không những thu thập tài liệu mà còn làm giúp cả biểu đồ."
                 }
               ],
-              "explain": "Xem phía trước 「上」 và nửa câu sau: thể た của động từ, phía sau là hành động tiếp theo → 上で; tính từ hoặc từ chỉ trạng thái, phía sau thêm một đánh giá cùng chiều → 上に “mà còn”."
+              "explain": "Cả hai đều từ 「上」 = “ở trên”: 上で lấy việc trước làm nền rồi làm bước tiếp theo trên đó → “sau khi…, trên cơ sở…”; 上に là chồng thêm một lớp lên trên việc trước → “không những… mà còn…”. Khi vế trước giống nhau, hãy xem vế sau: bước tiếp theo sẽ làm → 上で; thêm một việc khác, hay đi với 「まで」「も」 → 上に."
             }
           ]
         },
@@ -34324,20 +34320,20 @@
           "items": [
             {
               "id": "te-kara",
-              "diff": "てから chỉ là thứ tự trước sau đơn thuần; た上で nhấn mạnh vế trước là tiền đề cần thiết của vế sau, giọng thận trọng, chính thức.",
+              "diff": "てから chỉ là thứ tự trước sau đơn thuần; た上で nhấn mạnh việc trước là tiền đề cần thiết cho việc sau, giọng thận trọng, trang trọng.",
               "this": [
                 {
-                  "tag": "Tiền đề cần thiết · chính thức",
-                  "tr": "Vui lòng kiểm tra kỹ nội dung rồi hãy ký tên."
+                  "tag": "Tiền đề cần thiết · trang trọng",
+                  "tr": "Xin vui lòng kiểm tra kỹ nội dung rồi hãy đăng ký."
                 }
               ],
               "that": [
                 {
                   "tag": "Thứ tự đơn thuần · hằng ngày",
-                  "tr": "Rửa tay xong rồi mới ăn cơm."
+                  "tr": "Kiểm tra kỹ nội dung trước rồi đăng ký nhé."
                 }
               ],
-              "explain": "Xem vế trước có phải là “sự chuẩn bị cho vế sau” không: việc làm trước để làm tốt bước tiếp theo như 確認、相談、検討 → た上で (danh từ cũng có thể nói 「確認の上で」), dùng nhiều trong công việc, thủ tục; thứ tự hằng ngày như rửa tay rồi ăn cơm → てから."
+              "explain": "Cả hai đều là “làm… trước rồi mới…”, hãy xem hoàn cảnh: trong thông báo, công việc, khi đề nghị đối phương làm thủ tục hay ra quyết định quan trọng (お申し込みください) → た上で, mang cảm giác thận trọng “phải làm xong bước này đã”; với danh từ cũng nói 「確認の上で」. Thứ tự trước sau thường ngày giữa bạn bè (申し込もうよ) → てから."
             }
           ]
         }
@@ -34348,41 +34344,41 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「上（うえ）」 — từ “phía trên” mở rộng thành “trên cơ sở…”",
+          "note": "Đều bắt nguồn từ danh từ 「上（うえ）」 — nghĩa gốc là “phía trên”, mở rộng thành “ở trên một việc nào đó”",
           "items": [
             {
               "id": "ue-de",
-              "diff": "上に là “không chỉ… mà còn”; 上で là “sau khi…, trên cơ sở…”.",
+              "diff": "上に là “không những… mà còn…”; 上で là “sau khi…, trên cơ sở…”.",
               "this": [
                 {
-                  "tag": "Cộng thêm · mà còn",
-                  "tr": "Quán này không chỉ rẻ mà còn ngon."
+                  "tag": "Cộng thêm · hơn nữa",
+                  "tr": "Anh ấy không những thu thập tài liệu mà còn làm giúp cả biểu đồ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Trước sau · cơ sở",
-                  "tr": "Tôi sẽ bàn với gia đình rồi mới quyết định."
+                  "tag": "Trước sau · làm nền",
+                  "tr": "Sau khi thu thập tài liệu xong, tôi đã làm biểu đồ."
                 }
               ],
-              "explain": "Xem phía trước 「上」 và nửa câu sau: tính từ hoặc từ chỉ trạng thái, phía sau thêm một đánh giá cùng chiều → 上に “mà còn”; thể た của động từ, phía sau là hành động tiếp theo → 上で."
+              "explain": "Cả hai đều từ 「上」 = “ở trên”: 上で lấy việc trước làm nền rồi làm bước tiếp theo trên đó → “sau khi…, trên cơ sở…”; 上に là chồng thêm một lớp lên trên việc trước → “không những… mà còn…”. Khi vế trước giống nhau, hãy xem vế sau: bước tiếp theo sẽ làm → 上で; thêm một việc khác, hay đi với 「まで」「も」 → 上に."
             },
             {
               "id": "ue-wa",
-              "diff": "上に là “mà còn”, thêm một việc nữa vào một việc; 上は là “một khi đã… thì…”.",
+              "diff": "上に là “hơn nữa”, thêm một việc lên trên việc khác; 上は là “một khi đã… thì…”.",
               "this": [
                 {
-                  "tag": "Họa vô đơn chí · lại còn",
-                  "tr": "Đã lạc đường, lại còn đổ mưa nữa."
+                  "tag": "Cộng thêm · hơn nữa",
+                  "tr": "Anh ấy không những nhận làm thêm giờ mà còn giúp cả việc của đàn em."
                 }
               ],
               "that": [
                 {
                   "tag": "Một khi đã · quyết tâm",
-                  "tr": "Một khi đã nhận lời thì phải chịu trách nhiệm đến cùng."
+                  "tr": "Một khi đã nhận làm thêm giờ thì chỉ còn cách làm xong trong hôm nay."
                 }
               ],
-              "explain": "Chỉ khác に và は, xem nửa câu sau: thêm một việc cùng chiều, hay đi với 「まで」「も」→ 上に; quyết tâm, trách nhiệm của người nói → 上は."
+              "explain": "Cả hai đều từ 「上」 = “ở trên”: 上に là chồng thêm một việc lên trên việc trước → “không những… mà còn…”; 上は là đứng trên việc trước như một sự thật đã rồi → “một khi đã… thì…”. Chỉ khác に và は, nên hãy xem vế sau: thêm một việc khác, hay đi với 「まで」「も」 → 上に; điều buộc phải làm hay quyết tâm vì thế (しかない、〜つもりだ) → 上は."
             },
             {
               "id": "sono-ue",
@@ -34399,7 +34395,7 @@
                   "tr": "Quán này rẻ. Hơn nữa còn ngon."
                 }
               ],
-              "explain": "Nghĩa như nhau, xem vị trí: 上に đi liền sau tính từ, động từ, nối hai việc thành một câu; その上 là liên từ độc lập, phía trước phải có một câu, 「その」 chỉ nội dung câu đó: 安い上においしい ＝ 安い。その上、おいしい."
+              "explain": "Cả hai đều từ 「上」 = “ở trên”, chồng thêm một việc lên trên việc khác → “hơn nữa”: 〜上に gắn ngay sau vế trước; その上 dùng 「その」 chỉ nội dung câu trước, “trên cái đó” lại thêm một việc. Nghĩa giống nhau, nên hãy xem vị trí: 上に đứng ngay sau tính từ, động từ, nói gọn trong một câu; その上 là liên từ độc lập, đứng đầu câu sau: 安い上においしい ＝ 安い。その上、おいしい。"
             }
           ]
         },
@@ -34453,7 +34449,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「上（うえ）」 — từ “phía trên” mở rộng thành “trên cơ sở…”",
+          "note": "Đều bắt nguồn từ danh từ 「上（うえ）」 — nghĩa gốc là “phía trên”, mở rộng thành “ở trên một việc nào đó”",
           "items": [
             {
               "id": "ue-de",
@@ -34461,33 +34457,33 @@
               "this": [
                 {
                   "tag": "Một khi đã · quyết tâm",
-                  "tr": "Một khi đã nhận lời thì phải chịu trách nhiệm đến cùng."
+                  "tr": "Một khi đã quyết định nghỉ việc thì không thể quay đầu nữa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Trước sau · rồi mới",
-                  "tr": "Tôi sẽ suy nghĩ kỹ rồi mới trả lời."
+                  "tag": "Trước sau · bước tiếp theo",
+                  "tr": "Sau khi quyết định nghỉ việc, tôi đã bàn với cấp trên."
                 }
               ],
-              "explain": "Chỉ khác は và で, xem nửa câu sau: quyết tâm, trách nhiệm (最後まで〜、〜しかない) → 上は; bước tiếp theo sẽ làm (返事をします、決めます) → 上で."
+              "explain": "Cả hai đều từ 「上」 = “ở trên”: 上は là đứng trên việc trước như một sự thật đã rồi → “một khi đã… thì…”; 上で là đứng trên việc trước để làm việc tiếp theo → “sau khi… rồi mới…”. Khi vế trước giống nhau, hãy xem vế sau: điều buộc phải làm hay quyết tâm vì thế (できない、〜しかない) → 上は; bước tiếp theo sẽ làm (上司に相談した) → 上で. 上は khá trang trọng, thiên văn viết."
             },
             {
               "id": "ue-ni-addition",
-              "diff": "上は là “một khi đã… thì…”; 上に là “mà còn”, thêm một việc nữa vào một việc.",
+              "diff": "上は là “một khi đã… thì…”; 上に là “hơn nữa”, thêm một việc lên trên việc khác.",
               "this": [
                 {
                   "tag": "Một khi đã · quyết tâm",
-                  "tr": "Một khi đã nhận lời thì phải chịu trách nhiệm đến cùng."
+                  "tr": "Một khi đã nhận làm thêm giờ thì chỉ còn cách làm xong trong hôm nay."
                 }
               ],
               "that": [
                 {
-                  "tag": "Họa vô đơn chí · lại còn",
-                  "tr": "Đã lạc đường, lại còn đổ mưa nữa."
+                  "tag": "Cộng thêm · hơn nữa",
+                  "tr": "Anh ấy không những nhận làm thêm giờ mà còn giúp cả việc của đàn em."
                 }
               ],
-              "explain": "Chỉ khác は và に, xem nửa câu sau: quyết tâm, trách nhiệm của người nói → 上は; thêm một việc cùng chiều, hay đi với 「まで」「も」→ 上に."
+              "explain": "Cả hai đều từ 「上」 = “ở trên”: 上は là đứng trên việc trước như một sự thật đã rồi → “một khi đã… thì…”; 上に là chồng thêm một việc lên trên việc trước → “không những… mà còn…”. Chỉ khác は và に, nên hãy xem vế sau: điều buộc phải làm hay quyết tâm vì thế (しかない、〜つもりだ) → 上は; thêm một việc khác, hay đi với 「まで」「も」 → 上に."
             }
           ]
         },
@@ -34561,44 +34557,53 @@
         },
         {
           "kind": "meaning",
-          "note": "Đều nói về “có thể hay không, có khả năng hay không”",
+          "sense": 1,
+          "note": "Đều diễn tả “có thể xảy ra”",
           "items": [
             {
               "id": "kanousei-ga-aru",
-              "diff": "Nghĩa như nhau, đều là “có khả năng”; 得る chỉ gắn với thể ます của động từ, văn viết, ngắn gọn hơn; 可能性がある gắn với thể nguyên dạng của động từ, còn có thể nói 「可能性が高い」.",
+              "diff": "Đều là “có thể xảy ra”; 得る gắn với ます形 của động từ, văn viết và gọn hơn; 可能性がある gắn với thể thường của động từ.",
               "this": [
                 {
-                  "tag": "Thể ます＋得る",
-                  "tr": "Động đất lớn có thể xảy ra bất cứ lúc nào."
+                  "tag": "ます形＋得る · văn viết",
+                  "tr": "Cứ thế này thì tai nạn tương tự có thể lại xảy ra."
                 }
               ],
               "that": [
                 {
-                  "tag": "Thể nguyên dạng＋可能性がある",
-                  "tr": "Có khả năng sẽ xảy ra động đất lớn trong thời gian tới."
+                  "tag": "Thể thường＋可能性がある",
+                  "tr": "Cứ thế này thì có khả năng tai nạn tương tự lại xảy ra."
                 }
               ],
+              "explain": "Nghĩa giống nhau, hãy xem dạng động từ trước 「得る」: trước 得る chỉ có thể là ます形 (起こり得る、あり得る), mang tính văn viết, gọn; trước 可能性がある là thể thường (起こる可能性がある), báo cáo, tin tức và khẩu ngữ đều hay dùng.",
               "wrong": {
-                "why": "得る phải gắn với thể ます: 起こり得る"
-              },
-              "explain": "Xem dạng động từ trước 「得る」: chỉ có thể là thể ます (起こり得る、あり得る); trước 可能性がある là thể nguyên dạng (起こる可能性). Muốn nói khả năng “cao / thấp” thì chỉ dùng được 可能性が高い／低い, 得る không có cách nói này."
-            },
+                "why": "得る phải gắn với ます形: 起こり得る"
+              }
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều diễn tả “không thể nào”",
+          "items": [
             {
-              "id": "kaneru",
-              "diff": "得ない là “không thể có” một cách khách quan; かねる là “khó mà…” từ lập trường của người nói, phần nhiều dùng để từ chối lịch sự.",
+              "id": "kkonai",
+              "diff": "得ない là văn viết, bình tĩnh nói “không thể” dựa trên lý lẽ; っこない là khẩu ngữ, người nói phủ định mạnh theo cảm nhận chủ quan.",
               "this": [
                 {
-                  "tag": "Khách quan không thể",
-                  "tr": "Lòng người là thứ người khác không thể hiểu được hoàn toàn."
+                  "tag": "Văn viết · theo lý lẽ",
+                  "tr": "Vì có thiết bị an toàn nên tai nạn như thế không thể xảy ra."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khó mà · từ chối khéo",
-                  "tr": "Rất xin lỗi, nhưng tôi khó mà tán thành ý kiến đó."
+                  "tag": "Khẩu ngữ · khẳng định chủ quan",
+                  "tr": "Yên tâm đi, tai nạn kiểu đó làm sao mà xảy ra được."
                 }
               ],
-              "explain": "Chủ ngữ của かねる là chính người nói, hay đi cùng 「申し訳ありませんが」, là không làm được vì lập trường, tâm trạng, phần nhiều là lời từ chối lịch sự; 得ない nói bản thân sự việc khách quan là không thể có, phía trước thường là 「あり」「理解し」「知り」."
+              "explain": "Cả hai đều là “không thể”, hãy xem văn phong và giọng điệu: trong bài viết, lời giải thích, bình tĩnh nói dựa trên lý lẽ → 得ない; khi nói chuyện, người nói phủ định mạnh theo cảm nhận của mình, cuối câu hay có 「よ」「さ」 → っこない. っこない hay gắn với 「できる」「わかる」「勝てる」 v.v.",
+              "title": "〜っこない (tuyệt đối không thể)"
             }
           ]
         }
@@ -34709,20 +34714,21 @@
             },
             {
               "id": "wa-betsu-to-shite",
-              "diff": "はさておき chỉ là tạm thời không bàn tới; は別として còn có thể biểu thị “ngoại trừ… (là ngoại lệ)”.",
+              "diff": "Nghĩa giống nhau, đều tạm gác A lại; はさておき thiên về “tạm để sang một bên, lát nữa nói”, は別として thiên về “coi là chuyện khác, không tính vào”.",
               "this": [
                 {
-                  "tag": "Gác lại → chuyển sang vấn đề chính",
-                  "tr": "Chuyện đó tạm gác lại, nói chuyện chuyến du lịch tuần sau đi."
+                  "tag": "Tạm gác · làm việc khác trước",
+                  "tr": "Kết quả thì khoan nói, trước hết cứ chạy hết chặng đã."
                 }
               ],
               "that": [
                 {
-                  "tag": "Ngoại lệ ít · còn lại đều",
-                  "tr": "Ngoại trừ một số người, hầu hết nhân viên đều tán thành."
+                  "tag": "Không tính · đánh giá B",
+                  "tr": "Kết quả thì không bàn, việc chạy được hết chặng đã là đáng khen rồi."
                 }
               ],
-              "explain": "Trước は別として thường là số ít ngoại lệ (一部の人、子ども), phía sau nói về tình hình của đa số còn lại (ほとんど、みんな); trước はさておき là một chủ đề, phía sau chuyển sang chủ đề khác, không phải là loại trừ ngoại lệ."
+              "explain": "Cả hai đều tạm gác A lại: はさておき có cảm giác “để sang một bên, lát nữa nói tiếp”, phía sau hay có 「まずは〜しよう」, chuyển sang làm hay bàn việc khác trước; は別として là “coi A là chuyện khác, không tính vào”, phía sau thường là đánh giá về B (立派だ、いい). Các cách nói cố định để quay lại chủ đề chính như 「冗談はさておき」「それはさておき」 dùng はさておき là tự nhiên nhất.",
+              "title": "〜は別として (tạm không bàn)"
             }
           ]
         }

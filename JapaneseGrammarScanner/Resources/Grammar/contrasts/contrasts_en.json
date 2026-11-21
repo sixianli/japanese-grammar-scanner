@@ -34041,29 +34041,6 @@
       "id": "tokoro-wo-miru-to",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from the formal noun 「ところ」 — meaning “a certain point, a certain situation”",
-          "items": [
-            {
-              "id": "tokoro-kara",
-              "diff": "ところを見ると is always followed by a guess; ところから is mostly about the origin of a name, and can be followed by an established fact.",
-              "this": [
-                {
-                  "tag": "Guess · らしい",
-                  "tr": "Since the light is still on, it seems he's still up."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Origin of a name · fact",
-                  "tr": "Because they're shaped like stars, they're called “star sand”."
-                }
-              ],
-              "explain": "Look at the sentence ending: a guess like 「らしい」「ようだ」「に違いない」, based on what you can see in front of you → ところを見ると; an established fact like 「と呼ばれている」「と名付けられた」 → ところから."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Both mean “guessing from what you see”",
           "items": [
@@ -34099,7 +34076,28 @@
                   "tr": "Judging from his expression, the exam didn't go well."
                 }
               ],
-              "explain": "First check whether a noun or a clause comes before: a noun like 表情、話し方、この点 ＋からすると (から見ると works too); a clause describing a situation, like 「電気が消えている」 ＋ところを見ると. からすると can also mean “from the standpoint of…”, which ところを見ると cannot."
+              "explain": "First check whether a noun or a clause comes before: a noun like 表情、話し方、この点 ＋からすると (から見ると works too); a clause describing a situation, like 「電気が消えている」 ＋ところを見ると. からすると can also mean “from the standpoint of…”, which ところを見ると cannot.",
+              "wrong": {
+                "why": "ところを見ると cannot attach directly to a noun; with a noun, use 「表情からすると」"
+              }
+            },
+            {
+              "id": "tokoro-kara",
+              "diff": "ところを見ると is followed by the speaker's on-the-spot guess; ところから is more formal and followed by an objective conclusion like 「と考えられる」.",
+              "this": [
+                {
+                  "tag": "Speaker's guess · also spoken",
+                  "tr": "Judging from there being no shoes in the entrance, it seems he isn't back yet."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Objective conclusion · written",
+                  "tr": "From the fact that there were no shoes in the entrance, it can be concluded that he had not yet come back."
+                }
+              ],
+              "explain": "Both mean “inferring from what you see”, so look at the second half: the speaker's own on-the-spot guess, ending in 「らしい」「ようだ」「に違いない」 → ところを見ると, common in conversation too; an objective conclusion in a report or a piece of reasoning, ending in 「と考えられる」「と判断した」 → ところから. ところから can also explain the origin of a name (〜と呼ばれる); ところを見ると cannot.",
+              "title": "〜ところから (basis for a judgment)"
             }
           ]
         }
@@ -34108,30 +34106,6 @@
     {
       "id": "toshite-nai",
       "groups": [
-        {
-          "kind": "look",
-          "note": "Both are written 「として」, but put “一 + counter” before it and a negative after, and the meaning is completely different",
-          "items": [
-            {
-              "id": "to-shite",
-              "title": "〜として (as)",
-              "diff": "一 + counter + として paired with a negative means “not a single one”; noun + として means “as…”.",
-              "this": [
-                {
-                  "tag": "一 + counter · total negation",
-                  "tr": "Not a single person objected at the meeting."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Role · as",
-                  "tr": "I came to Japan as an exchange student."
-                }
-              ],
-              "explain": "Look before 「として」 and at the sentence ending: “一 + counter” like 一人、一つ、一日, with a negative at the end → not a single one; a role noun like 留学生、教師 → as. The original sense is “even counting it as just one, there's none”, which is why the negation is so strong."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Both express total negation: “not a single one, not at all”",
@@ -34179,35 +34153,54 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean “while…” and “although…”",
+          "sense": 1,
+          "note": "Both mean “while (doing…)”",
           "items": [
             {
               "id": "nagara",
-              "diff": "The meanings match one to one: つつ ＝ ながら, つつも ＝ ながらも; つつ is more formal.",
+              "diff": "Same meaning; ながら is everyday speech, つつ is written and refined.",
               "this": [
                 {
-                  "tag": "つつ · at the same time",
-                  "tr": "I walked slowly, enjoying the scenery."
-                },
-                {
-                  "tag": "つつも · knowing, yet",
-                  "tr": "I know it's bad for my health, yet I can't quit smoking."
+                  "tag": "Written · prose",
+                  "tr": "Enjoying the scenery, I walked slowly."
                 }
               ],
               "that": [
                 {
-                  "tag": "ながら · at the same time",
-                  "tr": "I walked slowly, enjoying the scenery."
-                },
-                {
-                  "tag": "ながらも · knowing, yet",
-                  "tr": "I know it's bad for my health, yet I can't quit smoking."
+                  "tag": "Everyday · spoken",
+                  "tr": "I walked slowly while enjoying the scenery."
                 }
               ],
+              "explain": "The two sentences mean the same, so look at the style: in everyday speech and chat use ながら; in writing such as travel essays, letters or speeches, つつ sounds more refined. つつ attaches only to the ます形 of verbs, and both parts must have the same subject.",
+              "title": "〜ながら (doing at the same time)"
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “even though (I) know…, still…”",
+          "items": [
+            {
+              "id": "nagara",
+              "diff": "つつも = ながらも, both “knowing…, yet still…”; つつも is more formal.",
+              "this": [
+                {
+                  "tag": "Written",
+                  "tr": "Even though I know I shouldn't, I end up staying up late."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Both spoken and written",
+                  "tr": "Although I know I shouldn't, I end up staying up late."
+                }
+              ],
+              "explain": "With verbs like 「知る」「思う」「分かる」 the two are interchangeable, and つつも is more formal. But つつも attaches only to the ます形 of verbs: the “although…” use after adjectives and nouns, as in 「狭いながらも」「子どもながら」, cannot be replaced with つつも.",
+              "title": "〜ながらも (knowing, yet…)",
               "wrong": {
-                "why": "つつ only attaches to verbs; adjectives need ながらも"
-              },
-              "explain": "With verbs the two are interchangeable: ながら is everyday speech, つつ is mostly found in writing and speeches. But つつ only attaches to a verb's ます-stem: uses with adjectives and nouns like 「狭いながらも」「残念ながら」「子どもながら」 can't be replaced with つつ."
+                "why": "つつも attaches only to verbs; with an adjective use ながらも"
+              }
             }
           ]
         }
@@ -34222,20 +34215,20 @@
           "items": [
             {
               "id": "te-iru",
-              "diff": "沈んでいる means “has already sunk”; 沈みつつある means “is in the process of sinking”.",
+              "diff": "増えている is used in both speech and writing; 増えつつある is formal and stresses that the change is still advancing bit by bit.",
               "this": [
                 {
-                  "tag": "In progress · not yet complete",
-                  "tr": "Right now, the evening sun is sinking into the sea."
+                  "tag": "Formal · news",
+                  "tr": "The number of foreigners living in this town is increasing year by year."
                 }
               ],
               "that": [
                 {
-                  "tag": "Resulting state · already complete",
-                  "tr": "By the time I noticed, the sun had already sunk into the sea."
+                  "tag": "Spoken and written",
+                  "tr": "The number of foreigners living in this town is going up every year."
                 }
               ],
-              "explain": "Look at the verb: for instantaneous changes like 沈む、消える、死ぬ, adding ている shows the resulting state, “has already become…”; to say “is heading toward that result”, use つつある. つつある is written language; in speech people usually say 「沈みかけている」."
+              "explain": "With verbs of gradual change like 「増える」「変わる」, both can say a change is in progress: in daily life 増えている is enough; in news and reports 増えつつある stresses that it is still advancing bit by bit and has not reached its end. But with verbs of instant change like 沈む、消える, adding ている means “has already…”, so to say “is …ing” you can only use つつある (沈みつつある)."
             },
             {
               "id": "te-kuru",
@@ -34256,20 +34249,23 @@
             },
             {
               "id": "ippou-da",
-              "diff": "つつある just objectively describes a change in progress; 一方だ means “keeps on…ing”, mostly for negative trends.",
+              "diff": "つつある just objectively describes a change in progress; 一方だ means “keeps on …ing”, with worry or dissatisfaction.",
               "this": [
                 {
                   "tag": "Objective · changing",
-                  "tr": "The economy is recovering little by little."
+                  "tr": "Prices are rising."
                 }
               ],
               "that": [
                 {
-                  "tag": "Keeps on · mostly negative",
-                  "tr": "Prices just keep going up and up."
+                  "tag": "Unstoppable · worry",
+                  "tr": "Prices just keep on going up."
                 }
               ],
-              "explain": "Look at the tone: 一方だ stresses “only in one direction, unstoppable”, with worry or dissatisfaction (上がる一方、悪くなる一方); つつある just calmly says a change is happening, good or bad. They attach differently too: 一方だ takes the dictionary form, つつある takes the ます-stem."
+              "explain": "Two ways to say the same thing: 上がりつつある calmly says prices are rising and works for good or bad changes; 上がる一方だ stresses moving in only one direction without stopping, with worry or dissatisfaction, mostly for bad trends. They also attach differently: つつある takes the ます形 (上がり), 一方だ takes the 辞書形 (上がる).",
+              "wrong": {
+                "why": "一方だ attaches to the 辞書形 of a verb: 上がる一方だ"
+              }
             }
           ]
         }
@@ -34280,41 +34276,41 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「上（うえ）」 — from “on top” extended to “on the basis of…”",
+          "note": "Both come from the noun 「上（うえ）」 — originally “top, above”, extended to “on top of something (that has happened)”",
           "items": [
             {
               "id": "ue-wa",
-              "diff": "た上で means “after…, then…”; た上は means “now that…, (must)…”.",
+              "diff": "た上で means “after…, then…”; た上は means “now that…, (I must)…”.",
               "this": [
                 {
-                  "tag": "Sequence · then",
-                  "tr": "I'll give you my answer after thinking it over carefully."
+                  "tag": "Sequence · next step",
+                  "tr": "After deciding to quit the company, I talked it over with my boss."
                 }
               ],
               "that": [
                 {
                   "tag": "Now that · resolve",
-                  "tr": "Now that I've taken it on, I'll see it through to the end."
+                  "tr": "Now that I've decided to quit the company, there's no turning back."
                 }
               ],
-              "explain": "Only で vs は apart; look at the second half: the next step to take (返事をします、決めます) → 上で; resolve or responsibility (最後まで〜、〜しかない) → 上は. 上は is fairly formal."
+              "explain": "Both come from 「上」 = “on top of”: 上で means standing on the first action to do the next thing → “after…, then…”; 上は means standing on the first part as an established fact → “now that…, (I must)…”. When the first half is the same, look at the second half: the next step you go on to take (上司に相談した) → 上で; what you must do or resolve as a result (できない、〜しかない) → 上は. 上は is rather formal."
             },
             {
               "id": "ue-ni-addition",
-              "diff": "上で means “after, on the basis of…”; 上に means “not only…, but also”.",
+              "diff": "上で means “after…, on the basis of…”; 上に means “not only…, but also…”.",
               "this": [
                 {
                   "tag": "Sequence · basis",
-                  "tr": "I'll decide after talking it over with my family."
+                  "tr": "After gathering the materials, I made a chart."
                 }
               ],
               "that": [
                 {
-                  "tag": "Adding on · what's more",
-                  "tr": "This restaurant is not only cheap, but tasty too."
+                  "tag": "Adding on · and also",
+                  "tr": "Not only did he gather the materials, he even made the chart for me."
                 }
               ],
-              "explain": "Look before 「上」 and at the second half: a verb's た-form, followed by the next action → 上で; an adjective or a word describing a state, followed by another evaluation in the same direction → 上に, “what's more”."
+              "explain": "Both come from 「上」 = “on top of”: 上で uses the first action as a foundation and does the next step on top of it → “after…, on the basis of…”; 上に stacks another layer on top of the first → “not only…, but also…”. When the first half is the same, look at the second half: the next step you go on to take → 上で; another thing added on, often with 「まで」「も」 → 上に."
             }
           ]
         },
@@ -34324,20 +34320,20 @@
           "items": [
             {
               "id": "te-kara",
-              "diff": "てから is just a plain sequence; た上で stresses that the first part is a necessary prerequisite for the second, with a careful, formal tone.",
+              "diff": "てから is simply the order of events; た上で stresses that the first action is a necessary condition for the second, with a careful, formal tone.",
               "this": [
                 {
-                  "tag": "Necessary prerequisite · formal",
-                  "tr": "Please check the contents carefully before signing."
+                  "tag": "Necessary condition · formal",
+                  "tr": "Please check the contents carefully before applying."
                 }
               ],
               "that": [
                 {
-                  "tag": "Plain sequence · everyday",
-                  "tr": "I wash my hands and then eat."
+                  "tag": "Simple order · everyday",
+                  "tr": "Let's check the contents carefully first, then apply."
                 }
               ],
-              "explain": "Check whether the first part is “preparation for the second”: something done first to get the next step right, like 確認、相談、検討 → た上で (with nouns, 「確認の上で」), mostly in business and procedures; an everyday sequence like washing your hands before eating → てから."
+              "explain": "Both mean “do… first, then…”, so look at the situation: in notices or business, asking someone to go through a procedure or make an important decision (お申し込みください) → た上で, with a careful sense of “this step must be done first”; with a noun you can also say 「確認の上で」. Ordinary sequence between friends (申し込もうよ) → てから."
             }
           ]
         }
@@ -34348,41 +34344,41 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「上（うえ）」 — from “on top” extended to “on the basis of…”",
+          "note": "Both come from the noun 「上（うえ）」 — originally “top, above”, extended to “on top of something (that has happened)”",
           "items": [
             {
               "id": "ue-de",
-              "diff": "上に means “not only…, but also”; 上で means “after, on the basis of…”.",
+              "diff": "上に means “not only…, but also…”; 上で means “after…, on the basis of…”.",
               "this": [
                 {
-                  "tag": "Adding on · what's more",
-                  "tr": "This restaurant is not only cheap, but tasty too."
+                  "tag": "Adding on · and also",
+                  "tr": "Not only did he gather the materials, he even made the chart for me."
                 }
               ],
               "that": [
                 {
                   "tag": "Sequence · basis",
-                  "tr": "I'll decide after talking it over with my family."
+                  "tr": "After gathering the materials, I made a chart."
                 }
               ],
-              "explain": "Look before 「上」 and at the second half: an adjective or a word describing a state, followed by another evaluation in the same direction → 上に, “what's more”; a verb's た-form, followed by the next action → 上で."
+              "explain": "Both come from 「上」 = “on top of”: 上で uses the first action as a foundation and does the next step on top of it → “after…, on the basis of…”; 上に stacks another layer on top of the first → “not only…, but also…”. When the first half is the same, look at the second half: the next step you go on to take → 上で; another thing added on, often with 「まで」「も」 → 上に."
             },
             {
               "id": "ue-wa",
-              "diff": "上に means “what's more”, adding one thing on top of another; 上は means “now that…, (must)…”.",
+              "diff": "上に means “and also”, adding one thing on top of another; 上は means “now that…, (I must)…”.",
               "this": [
                 {
-                  "tag": "One bad thing after another · what's more",
-                  "tr": "I got lost, and on top of that it started to rain."
+                  "tag": "Adding on · and also",
+                  "tr": "Not only did he take on the overtime, he even helped with a junior colleague's work."
                 }
               ],
               "that": [
                 {
                   "tag": "Now that · resolve",
-                  "tr": "Now that I've taken it on, I'll see it through to the end."
+                  "tr": "Now that I've taken on the overtime, I have no choice but to finish it today."
                 }
               ],
-              "explain": "Only に vs は apart; look at the second half: adding another thing in the same direction, often with 「まで」「も」 → 上に; the speaker's resolve or responsibility → 上は."
+              "explain": "Both come from 「上」 = “on top of”: 上に stacks one more thing on top of the first → “not only…, but also…”; 上は stands on the first part as an established fact → “now that…, (I must)…”. Only に and は differ, so look at the second half: another thing added on, often with 「まで」「も」 → 上に; what you must do or resolve as a result (しかない、〜つもりだ) → 上は."
             },
             {
               "id": "sono-ue",
@@ -34399,7 +34395,7 @@
                   "tr": "This restaurant is cheap. What's more, it's tasty."
                 }
               ],
-              "explain": "Same meaning; look at the position: 上に comes right after an adjective or verb, joining the two things into one sentence; その上 is a standalone conjunction, with a sentence before it, and 「その」 refers to what that sentence said: 安い上においしい ＝ 安い。その上、おいしい。"
+              "explain": "Both come from 「上」 = “on top of”, piling one more thing on top of another → “and also”: 〜上に attaches directly after the first item; その上 uses 「その」 to point back to the previous sentence — “on top of that” — and adds one more thing. The meaning is the same, so look at the position: 上に comes right after an adjective or verb and finishes in one sentence; その上 is an independent conjunction at the start of the next sentence: 安い上においしい ＝ 安い。その上、おいしい。"
             }
           ]
         },
@@ -34453,41 +34449,41 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「上（うえ）」 — from “on top” extended to “on the basis of…”",
+          "note": "Both come from the noun 「上（うえ）」 — originally “top, above”, extended to “on top of something (that has happened)”",
           "items": [
             {
               "id": "ue-de",
-              "diff": "た上は means “now that…, (must)…”; た上で means “after…, then…”.",
+              "diff": "た上は means “now that…, (I must)…”; た上で means “after…, then…”.",
               "this": [
                 {
                   "tag": "Now that · resolve",
-                  "tr": "Now that I've taken it on, I'll see it through to the end."
+                  "tr": "Now that I've decided to quit the company, there's no turning back."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sequence · then",
-                  "tr": "I'll give you my answer after thinking it over carefully."
+                  "tag": "Sequence · next step",
+                  "tr": "After deciding to quit the company, I talked it over with my boss."
                 }
               ],
-              "explain": "Only は vs で apart; look at the second half: resolve or responsibility (最後まで〜、〜しかない) → 上は; the next step to take (返事をします、決めます) → 上で."
+              "explain": "Both come from 「上」 = “on top of”: 上は means standing on the first part as an established fact → “now that…, (I must)…”; 上で means standing on the first action to do the next thing → “after…, then…”. When the first half is the same, look at the second half: what you must do or resolve as a result (できない、〜しかない) → 上は; the next step you go on to take (上司に相談した) → 上で. 上は is rather formal."
             },
             {
               "id": "ue-ni-addition",
-              "diff": "上は means “now that…, (must)…”; 上に means “what's more”, adding one thing on top of another.",
+              "diff": "上は means “now that…, (I must)…”; 上に means “and also”, adding one thing on top of another.",
               "this": [
                 {
                   "tag": "Now that · resolve",
-                  "tr": "Now that I've taken it on, I'll see it through to the end."
+                  "tr": "Now that I've taken on the overtime, I have no choice but to finish it today."
                 }
               ],
               "that": [
                 {
-                  "tag": "One bad thing after another · what's more",
-                  "tr": "I got lost, and on top of that it started to rain."
+                  "tag": "Adding on · and also",
+                  "tr": "Not only did he take on the overtime, he even helped with a junior colleague's work."
                 }
               ],
-              "explain": "Only は vs に apart; look at the second half: the speaker's resolve or responsibility → 上は; adding another thing in the same direction, often with 「まで」「も」 → 上に."
+              "explain": "Both come from 「上」 = “on top of”: 上は stands on the first part as an established fact → “now that…, (I must)…”; 上に stacks one more thing on top of the first → “not only…, but also…”. Only は and に differ, so look at the second half: what you must do or resolve as a result (しかない、〜つもりだ) → 上は; another thing added on, often with 「まで」「も」 → 上に."
             }
           ]
         },
@@ -34561,44 +34557,53 @@
         },
         {
           "kind": "meaning",
-          "note": "Both are about “whether it's possible”",
+          "sense": 1,
+          "note": "Both mean “it is possible (that it happens)”",
           "items": [
             {
               "id": "kanousei-ga-aru",
-              "diff": "Both mean “it's possible”; 得る only attaches to a verb's ます-stem and is more formal and concise; 可能性がある attaches to the dictionary form, and you can also say 「可能性が高い」.",
+              "diff": "Both mean “it is possible”; 得る takes the ます形 of a verb and is more formal and concise; 可能性がある takes the plain form of a verb.",
               "this": [
                 {
-                  "tag": "ます-stem＋得る",
-                  "tr": "A major earthquake could happen at any time."
+                  "tag": "ます形 + 得る · formal",
+                  "tr": "If things go on like this, the same accident could happen again."
                 }
               ],
               "that": [
                 {
-                  "tag": "Dictionary form＋可能性がある",
-                  "tr": "There's a possibility of a major earthquake in the near future."
+                  "tag": "Plain form + 可能性がある",
+                  "tr": "If things go on like this, there is a possibility the same accident will happen again."
                 }
               ],
+              "explain": "Same meaning, so look at the verb form before 「得る」: 得る can only follow the ます形 (起こり得る、あり得る) and is formal and concise; 可能性がある follows the plain form (起こる可能性がある) and is common in reports, news and conversation.",
               "wrong": {
-                "why": "得る needs the ます-stem: 起こり得る"
-              },
-              "explain": "Look at the verb form before 「得る」: it can only be the ます-stem (起こり得る、あり得る); 可能性がある takes the dictionary form (起こる可能性). To say the possibility is “high/low”, you can only use 可能性が高い／低い — 得る has no such expression."
-            },
+                "why": "得る must follow the ます形: 起こり得る"
+              }
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “impossible”",
+          "items": [
             {
-              "id": "kaneru",
-              "diff": "得ない means objectively “impossible”; かねる means “find it hard to…” from the speaker's position, mostly used to decline politely.",
+              "id": "kkonai",
+              "diff": "得ない is formal and calmly says “impossible” based on reason; っこない is colloquial, the speaker's subjective, strong assertion.",
               "this": [
                 {
-                  "tag": "Objectively impossible",
-                  "tr": "A person's heart is something others can never fully understand."
+                  "tag": "Formal · by reason",
+                  "tr": "With the safety device in place, such an accident cannot happen."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hard from one's position · polite refusal",
-                  "tr": "I'm very sorry, but I'm unable to agree with that opinion."
+                  "tag": "Colloquial · subjective",
+                  "tr": "Don't worry, there's no way an accident like that will happen."
                 }
               ],
-              "explain": "The subject of かねる is the speaker, often appearing with 「申し訳ありませんが」: you can't do it because of your position or feelings, usually as a polite refusal; 得ない says the thing itself is objectively impossible, often preceded by 「あり」「理解し」「知り」."
+              "explain": "Both mean “impossible”, so look at the style and tone: calmly saying it in writing or an explanation, based on reason → 得ない; the speaker strongly denying it from their own feeling in conversation, often ending with 「よ」「さ」 → っこない. っこない often attaches to 「できる」「わかる」「勝てる」 and similar verbs.",
+              "title": "〜っこない (absolutely impossible)"
             }
           ]
         }
@@ -34709,20 +34714,21 @@
             },
             {
               "id": "wa-betsu-to-shite",
-              "diff": "はさておき just means not discussing it for now; は別として can also mean “except for… (as an exception)”.",
+              "diff": "Same meaning, both set A aside for now; はさておき leans toward “put it aside, come back to it later”, は別として toward “treat it as a separate matter, leave it out”.",
               "this": [
                 {
-                  "tag": "Set aside → switch to main topic",
-                  "tr": "Let's leave that for now and talk about next week's trip."
+                  "tag": "Put aside · do something first",
+                  "tr": "Never mind the result — let's just run all the way to the end first."
                 }
               ],
               "that": [
                 {
-                  "tag": "A few exceptions · all the rest",
-                  "tr": "Except for a few people, almost all the employees agreed."
+                  "tag": "Left out · judging B",
+                  "tr": "The result aside, finishing the whole race is really impressive."
                 }
               ],
-              "explain": "は別として is often preceded by a small exception (一部の人、子ども) and followed by what's true of the rest (ほとんど、みんな); はさておき is preceded by one topic and followed by a switch to another — it's not excluding exceptions."
+              "explain": "Both put A aside for now: はさておき feels like “set it aside and come back to it later” and is often followed by 「まずは〜しよう」, moving on to do or discuss something else first; は別として means “treat A as a separate matter, not counted”, and is usually followed by a judgment about B (立派だ、いい). Set phrases for getting back to the main topic, like 「冗談はさておき」「それはさておき」, sound most natural with はさておき.",
+              "title": "〜は別として (setting aside)"
             }
           ]
         }
