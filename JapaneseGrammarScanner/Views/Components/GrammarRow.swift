@@ -32,16 +32,9 @@ struct GrammarRow: View {
                     .lineLimit(2)
             }
             Spacer(minLength: 0)
-            Button {
-                favorites.toggle(point.id)
-            } label: {
-                Image(systemName: favorites.isFavorite(point.id) ? "star.fill" : "star")
-                    .foregroundStyle(favorites.isFavorite(point.id) ? Theme.accent : Color.secondary)
-                    .font(.body)
-            }
-            .buttonStyle(.borderless)
-            .accessibilityLabel(favorites.isFavorite(point.id) ? Text(localized: "取消收藏") : Text(localized: "收藏"))
-            .accessibilityIdentifier("row.star")
+            FavoriteSakuraButton(id: point.id, size: 19, outlineColor: .secondary)
+                .buttonStyle(.borderless)
+                .accessibilityIdentifier("row.star")
         }
         .padding(.vertical, 4)
     }

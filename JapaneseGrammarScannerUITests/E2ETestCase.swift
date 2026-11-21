@@ -32,8 +32,8 @@ class E2ETestCase: XCTestCase {
 
     /// 底部标签。iOS 26 起标签栏不一定是 TabBar 类型，按「标签名 + 标签图标」找按钮，避免和页面里同名按钮（如「收藏」）混淆。
     func tab(_ title: String) -> XCUIElement {
-        let icon = ["首页": "house", "扫描": "text.viewfinder", "语法库": "books.vertical", "收藏": "star", "搜索": "magnifyingglass",
-                    "Home": "house", "Scan": "text.viewfinder", "Grammar": "books.vertical", "Favorites": "star", "Search": "magnifyingglass"][title] ?? ""
+        let icon = ["首页": "house", "扫描": "text.viewfinder", "语法库": "books.vertical", "收藏": "Kinchaku", "搜索": "magnifyingglass",
+                    "Home": "house", "Scan": "text.viewfinder", "Grammar": "books.vertical", "Favorites": "Kinchaku", "Search": "magnifyingglass"][title] ?? ""
         // 标签按钮的 identifier 是系统按图标名自动给的（如 books.vertical），但刚启动时有时还是空的（CI 上「扫描」标签
         // 三次重试都没有 identifier，No matches）。按钮里的图标（Image，identifier 如 text.viewfinder、选中时 house.fill）
         // 一直都有，所以按「按钮名 == 标签名、按钮里有这个图标」找：按钮自己的 identifier 是图标名或还没给（空）都算。
