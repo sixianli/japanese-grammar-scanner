@@ -1,23 +1,4 @@
 #!/usr/bin/env python3
-"""校验「相近语法」新版对比资料 Resources/Grammar/contrasts/。
-
-contrasts.json（简体中文基础文件）：
-  * 语法点 id、对比对象 id 都存在于语法库；同一语法点下对比对象不重复
-  * 分组 kind 只能是 root / look / meaning，且按这个顺序出现、不重复、不为空
-  * 例句写法正确：用 | 分段；「漢字:かな」注音只放在含汉字的片段上、读音只用假名；
-    * 开头 = 语法本体（每句至少一处）；~ 开头 = 线索
-  * 文字字段不为空
-  * this / that 是例句数组（兼容旧的单个对象）
-  * 多形式语法点（contrasts/forms.json 里 type=A）：没有用 title / thisTitle 点明只比哪一种时，
-    这一侧每种形式都要有一句例句（高亮部分里出现该形式的 key）
-contrasts_<语言>.json（翻译）：
-  * 与基础文件结构一一对应（语法点、分组、条目的顺序和数量）；文字字段不为空
-  * 除繁体中文外，译文不残留中文专用字
-
-用法: python3 tools/validate_contrasts.py
-      python3 tools/validate_contrasts.py --base <某个批次文件.json> [--forms <forms.json>]
-          只校验这一份基础文件（分批编写时用）
-"""
 import glob
 import json
 import os
@@ -35,7 +16,6 @@ KANA = re.compile(r"^[ぁ-ゟ゠-ヿー]+$")
 
 
 def strip_quotes(text):
-    """去掉「」『』里的日语和以 〜 开头的语法形式（这些本来就允许出现汉字）。"""
     text = re.sub(r"「[^」]*」|『[^』]*』", "", text)
     return re.sub(r"[〜～✗][぀-ヿ㐀-鿿ー々]*", "", text)
 
@@ -65,8 +45,123 @@ def check_ja(ja, where, errors):
         errors.append(f"{where}: 例句里没有标出语法本体（* 开头的片段）")
 
 
+DEBT = os.path.join(ROOT, "tools", "contrast_debt.json")
+DEBT_KINDS = {
+    "cue": "虚线线索没有在「怎么分辨」里点名",
+    "note": "组说明不合格式",
+    "highlight": "例句高亮部分认不出是这个语法点",
+    "duplicate": "同一个详情页里例句重复",
+}
+VAGUE_MEANING_NOTE = re.compile(r"」或「|」／「|，或|有关|这类|之类|搭配|两种")
+PUNCT = re.compile(r"[\s。、，,.！!？?「」『』…—\-]")
+
+
+def note_problem(kind, note):
+    if kind == "meaning" and VAGUE_MEANING_NOTE.search(note):
+        return "「意思差不多的」说明只能写一个具体的共同意思，不能用「或」「／」把两个意思连在一起，也不能写「有关」「这类」这种笼统说法"
+    if kind == "look" and "↔" not in note and "「" not in note:
+        return "「长得像的」说明要写出长得像的写法：「A ↔ B」，写法完全一样时用「」写出这个写法"
+    if kind == "root" and "「" not in note:
+        return "「同一个词变来的」说明要用「」写出源头词"
+    return None
+
+
+def check_senses(pid, groups, sense_count, errors):
+    meaning = [g for g in groups if g["kind"] == "meaning"]
+    for g in groups:
+        if "sense" in g and g["kind"] != "meaning":
+            errors.append(f"contrasts.json: {pid}/{g['kind']} 只有「意思差不多的」组能写 sense")
+    if len(meaning) < 2 and all("sense" not in g for g in meaning):
+        return
+    senses = [g.get("sense") for g in meaning]
+    if any(not isinstance(n, int) or not 1 <= n <= sense_count for n in senses):
+        errors.append(f"contrasts.json: {pid} 有多组「意思差不多的」时，每组都要用 sense 写明对应本页第几个意思"
+                      f"（1–{sense_count}）：{senses}")
+    elif len(set(senses)) != len(senses):
+        errors.append(f"contrasts.json: {pid} 同一个意思只能有一组「意思差不多的」：{senses}")
+
+
+def group_key(pid, group):
+    return f"{pid}/{group['kind']}" + (f"{group['sense']}" if "sense" in group else "")
+
+
+def plain(ja):
+    return "".join((seg[1:] if seg[:1] in "*~" else seg).split(":", 1)[0] for seg in ja.split("|"))
+
+
+def highlight_spans(ja):
+    pos, spans = 0, []
+    for seg in ja.split("|"):
+        text = (seg[1:] if seg[:1] in "*~" else seg).split(":", 1)[0]
+        if seg.startswith("*"):
+            spans.append((pos, pos + len(text)))
+        pos += len(text)
+    return spans
+
+
+def recognized(patterns, ja):
+    text = plain(ja)
+    hits = [(m.start(), m.end()) for pat in patterns for m in re.finditer(pat, text) if m.end() > m.start()]
+    return any(max(a, c) < min(b, d) for a, b in highlight_spans(ja) for c, d in hits)
+
+
+def same_sentence_key(text):
+    return PUNCT.sub("", text)
+
+
+def page_sentences(point, groups):
+    out = []
+    for n, sense in enumerate(point.get("senses") or []):
+        out += [(f"义项{n + 1}", e["ja"]) for e in sense.get("examples") or []]
+    for scenes in (point.get("scenes") or {}).values():
+        out += [("场景", sc["example"]["ja"]) for sc in scenes]
+    for g in groups:
+        for it in g["items"]:
+            for key in ("this", "that"):
+                out += [(f"相近语法 {g['kind']}/{it['id']}", plain(s.get("ja", ""))) for s in sentences(it, key)]
+    return out
+
+
+def is_han(c):
+    return "\u4e00" <= c <= "\u9fff" or c == "々"
+
+
+def has_kana(text):
+    return any("\u3040" <= c <= "\u30ff" for c in text)
+
+
+def cue_words(ja):
+    out, cur = [], ""
+    for seg in ja.split("|"):
+        if not seg:
+            continue
+        body = seg[1:] if seg[0] in "*~" else seg
+        if seg[0] == "~":
+            cur += body.split(":", 1)[0]
+        elif cur:
+            out.append(cur)
+            cur = ""
+    if cur:
+        out.append(cur)
+    return out
+
+
+def cue_named(word, text):
+    start = 0
+    while True:
+        i = text.find(word, start)
+        if i < 0:
+            return False
+        if has_kana(word):
+            return True
+        before = text[i - 1] if i > 0 else ""
+        after = text[i + len(word)] if i + len(word) < len(text) else ""
+        if not (before and is_han(before)) and not (after and is_han(after)):
+            return True
+        start = i + 1
+
+
 def sentences(item, key):
-    """this / that：例句数组（旧格式是单个对象）。"""
     v = item.get(key)
     if isinstance(v, dict):
         return [v]
@@ -74,7 +169,6 @@ def sentences(item, key):
 
 
 def text_fields(item):
-    """一个条目里需要翻译的文字（与 App 的 apply 顺序一致）。"""
     out = [("diff", item.get("diff")), ("explain", item.get("explain"))]
     for key in ("this", "that"):
         for n, s in enumerate(sentences(item, key)):
@@ -93,7 +187,6 @@ def highlighted(ja):
 
 
 def check_forms(pid, sents, forms, where, errors):
-    """A 类多形式语法点：每种形式都要有一句例句（高亮里出现 key；一句只算它包含的最长 key）。"""
     keys = sorted((f["key"] for f in forms), key=len, reverse=True)
     covered = set()
     for s in sents:
@@ -109,10 +202,11 @@ def check_forms(pid, sents, forms, where, errors):
 
 def main():
     errors = []
-    ids = set()
+    points = {}
     for f in glob.glob(os.path.join(GRAMMAR_DIR, "grammar_*.json")):
         with open(f, encoding="utf-8") as fh:
-            ids |= {p["id"] for p in json.load(fh)}
+            points.update({p["id"]: p for p in json.load(fh)})
+    ids = set(points)
     only_base = "--base" in sys.argv
     base_path = sys.argv[sys.argv.index("--base") + 1] if only_base else os.path.join(DIR, "contrasts.json")
     if not os.path.exists(base_path):
@@ -126,6 +220,17 @@ def main():
         with open(forms_path, encoding="utf-8") as fh:
             forms = {k: v["forms"] for k, v in json.load(fh).items() if v.get("type") == "A" and v.get("forms")}
 
+    debt = {k: set() for k in DEBT_KINDS}
+    if not only_base and os.path.exists(DEBT):
+        with open(DEBT, encoding="utf-8") as fh:
+            debt.update({k: set(v) for k, v in json.load(fh).items() if k in DEBT_KINDS})
+    failing = {k: set() for k in DEBT_KINDS}
+
+    def report(kind, key, message):
+        failing[kind].add(key)
+        if key not in debt[kind]:
+            errors.append(message)
+
     seen_points = set()
     for p in base:
         pid = p["id"]
@@ -135,14 +240,20 @@ def main():
             errors.append(f"contrasts.json: 语法点 {pid} 重复")
         seen_points.add(pid)
         kinds = [g["kind"] for g in p["groups"]]
-        if any(k not in KINDS for k in kinds) or kinds != sorted(set(kinds), key=KINDS.index):
-            errors.append(f"contrasts.json: {pid} 的分组必须按 root/look/meaning 顺序且不重复：{kinds}")
+        if any(k not in KINDS for k in kinds) or kinds != sorted(kinds, key=KINDS.index) \
+                or kinds.count("root") > 1 or kinds.count("look") > 1:
+            errors.append(f"contrasts.json: {pid} 的分组必须按 root/look/meaning 顺序，root、look 各最多一组：{kinds}")
+        check_senses(pid, p["groups"], len(points[pid]["senses"]) if pid in points else 0, errors)
         targets = set()
         for g in p["groups"]:
             if not g["items"]:
                 errors.append(f"contrasts.json: {pid}/{g['kind']} 没有条目（没有就不要写这一组）")
             if not g.get("note", "").strip():
                 errors.append(f"contrasts.json: {pid}/{g['kind']} 缺少说明")
+            else:
+                problem = note_problem(g["kind"], g["note"])
+                if problem:
+                    report("note", group_key(pid, g), f"contrasts.json: {group_key(pid, g)} {problem}：{g['note']}")
             for it in g["items"]:
                 where = f"contrasts.json: {pid} → {it['id']}"
                 if it["id"] not in ids:
@@ -159,14 +270,39 @@ def main():
                     sents = sentences(it, key)
                     if not sents:
                         errors.append(f"{where}: 缺少 {key} 例句")
+                    owner = points.get(pid if key == "this" else it["id"])
                     for n, sent in enumerate(sents):
                         check_ja(sent.get("ja", ""), f"{where} ({key}[{n}])", errors)
+                        if owner and not recognized(owner["patterns"], sent.get("ja", "")):
+                            report("highlight", f"{pid}/{g['kind']}/{it['id']}/{key}{n}",
+                                   f"{where} ({key}[{n}]): 高亮部分没被 {owner['id']} 的识别规则认出"
+                                   f"「{plain(sent.get('ja', ''))}」")
                 if pid in forms and "thisTitle" not in it:
                     check_forms(pid, sentences(it, "this"), forms[pid], where + " (本页)", errors)
                 if it["id"] in forms and "title" not in it:
                     check_forms(it["id"], sentences(it, "that"), forms[it["id"]], where + " (对方)", errors)
+                unnamed = [w for key in ("this", "that") for sent in sentences(it, key)
+                           for w in cue_words(sent.get("ja", "")) if not cue_named(w, it.get("explain", ""))]
+                if unnamed:
+                    report("cue", f"{pid}/{g['kind']}/{it['id']}",
+                           f"{where}: 虚线线索没有在「怎么分辨」里点名：{'、'.join(dict.fromkeys(unnamed))}"
+                           f"（讲解里写出这个词，或者不标线索）")
                 if "wrong" in it and not it["wrong"].get("ja", "").strip():
                     errors.append(f"{where}: wrong.ja 为空")
+
+    for pid in ([] if only_base else sorted(ids - seen_points)):
+        errors.append(f"contrasts.json: 语法点 {pid} 没有相近语法条目（没有合格对比时写 \"groups\": []）")
+
+    groups_by_point = {p["id"]: p["groups"] for p in base}
+    for pid, point in ([] if only_base else sorted(points.items())):
+        seen = {}
+        for where, text in page_sentences(point, groups_by_point.get(pid, [])):
+            k = same_sentence_key(text)
+            if k in seen:
+                report("duplicate", f"{pid}/{k}",
+                       f"{pid} 详情页: 例句「{text}」重复出现（{seen[k]}、{where}），第二处要换一句")
+            else:
+                seen[k] = where
 
     for lang in ([] if only_base else LANGS):
         path = os.path.join(DIR, f"contrasts_{lang}.json")
@@ -203,6 +339,10 @@ def main():
                     if "title" in bi and "title" not in li:
                         errors.append(f"{name}: {bp['id']} → {bi['id']} 缺少 title")
                     texts += [(f"{bi['id']}.{n}", v) for n, v in text_fields(li)]
+                    cues = [w for key in ("this", "that") for sent in sentences(bi, key) for w in cue_words(sent.get("ja", ""))]
+                    missing = [w for w in dict.fromkeys(cues) if not cue_named(w, li.get("explain") or "")]
+                    if missing:
+                        errors.append(f"{name}: {bp['id']} → {bi['id']} 讲解没有写出虚线线索：{'、'.join(missing)}（日语原样保留）")
                 for n, v in texts:
                     where = f"{name}: {bp['id']} {n}"
                     if not isinstance(v, str) or not v.strip():
@@ -211,6 +351,25 @@ def main():
                         left = set(strip_quotes(v)) & CHINESE_ONLY
                         if left:
                             errors.append(f"{where} 残留中文：{''.join(sorted(left))}")
+
+    if not only_base:
+        if "--update-debt" in sys.argv:
+            with open(DEBT, "w", encoding="utf-8") as fh:
+                json.dump({k: sorted(v) for k, v in failing.items()}, fh, ensure_ascii=False, indent=2)
+                fh.write("\n")
+            debt = failing
+            print(f"已写入 {os.path.relpath(DEBT, ROOT)}")
+        for kind, label in DEBT_KINDS.items():
+            stale = sorted(debt[kind] - failing[kind])
+            if stale:
+                errors.append(f"tools/contrast_debt.json 的 {kind} 里有 {len(stale)} 条已经改好（或已删除），"
+                              f"请运行 --update-debt 把它们移出清单：{'、'.join(stale[:5])}")
+            print(f"{label}的旧条目（待改）：{len(failing[kind] & debt[kind])} 条")
+        if "--release" in sys.argv:
+            left = {k: len(v) for k, v in failing.items() if v}
+            if left:
+                errors.append("发版前 tools/contrast_debt.json 必须清空，还有："
+                              + "、".join(f"{DEBT_KINDS[k]} {n} 条" for k, n in left.items()))
 
     n_items = sum(len(g["items"]) for p in base for g in p["groups"])
     print(f"相近语法对比：{len(base)} 个语法点，{n_items} 条对比")

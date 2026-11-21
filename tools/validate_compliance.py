@@ -211,11 +211,19 @@ def main():
         if f"python:{k}" not in used:
             errors.append(f"dev_only.json 里列着 {k}，项目里已经不用了，请删掉")
 
-    # 用户上传的数据（反馈、使用统计）只能由提交者本人和开发者读取，不能对所有人开放（公共数据库里 _world 可读 = 谁都能读）
+    # 反馈、使用统计：开发者要在 CloudKit 后台直接读到文字和截图，所以必须对 _world 开放读取（用户 2026-11-21 决定）；
+    # 写入、创建永远不对 _world 开放
     schema = read(os.path.join(ROOT, "cloudkit", "schema.ckdb"))
-    for m in re.finditer(r"RECORD TYPE (\w+) \((.*?)\n    \);", schema, re.S):
-        if m.group(1) != "Users" and re.search(r'GRANT\s+(READ|WRITE|CREATE)[^\n]*TO\s+"_world"', m.group(2)):
-            errors.append(f"cloudkit/schema.ckdb：{m.group(1)} 对 _world（所有人）开放了权限，用户数据只能给提交者本人（_creator）")
+    record_types = {m.group(1): m.group(2) for m in re.finditer(r"RECORD TYPE (\w+) \((.*?)\n    \);", schema, re.S)}
+    for name, body in record_types.items():
+        if name != "Users" and re.search(r'GRANT\s+[^\n]*\b(WRITE|CREATE)\b[^\n]*TO\s+"_world"', body):
+            errors.append(f"cloudkit/schema.ckdb：{name} 对 _world（所有人）开放了写入或创建权限，只能给 _creator / _icloud")
+    for name in ("Feedback", "UsageDay"):
+        body = record_types.get(name)
+        if body is None:
+            errors.append(f"cloudkit/schema.ckdb：找不到记录类型 {name}")
+        elif not re.search(r'GRANT\s+[^\n]*\bREAD\b[^\n]*TO\s+"_world"', body):
+            errors.append(f"cloudkit/schema.ckdb：{name} 没有 GRANT READ TO \"_world\"，开发者在 CloudKit 后台会读不到内容和截图（下载报 Internal Server Error）")
 
     print(f"隐私政策：{len(sections)} 节，清单 {len(known)} 个框架、{sum(len(e['fields']) for e in known_records.values())} 个上报字段；"
           f"开源许可：{len(tp)} 个组件")

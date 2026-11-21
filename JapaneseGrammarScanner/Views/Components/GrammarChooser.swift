@@ -8,7 +8,9 @@ struct GrammarChooserModifier: ViewModifier {
     let onSelect: (String, String?) -> Void
 
     func body(content: Content) -> some View {
-        content.confirmationDialog(
+        content
+            .tint(Theme.accent)
+            .confirmationDialog(
             tr("这里有多个语法点，请选择"),
             isPresented: Binding(
                 get: { (cluster?.grammarIDs.count ?? 0) > 1 },
@@ -27,6 +29,8 @@ struct GrammarChooserModifier: ViewModifier {
             }
             Button(tr("取消"), role: .cancel) { cluster = nil }
         }
+        // 选项文字用主文字色（Build 17 反馈 7），页面本身仍用主题色
+        .tint(Color.primary)
         .onChange(of: cluster) { _, newValue in
             if let c = newValue, c.grammarIDs.count == 1 {
                 cluster = nil

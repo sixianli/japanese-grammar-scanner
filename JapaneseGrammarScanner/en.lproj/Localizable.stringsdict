@@ -18,6 +18,22 @@
 			<string>%lld not viewed</string>
 		</dict>
 	</dict>
+	<key>%lld 个语法可以复习了</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@n@</string>
+		<key>n</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld grammar point ready to review</string>
+			<key>other</key>
+			<string>%lld grammar points ready to review</string>
+		</dict>
+	</dict>
 	<key>%lld 次扫描</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>

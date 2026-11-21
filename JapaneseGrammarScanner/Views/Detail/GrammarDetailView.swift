@@ -1,7 +1,8 @@
 import SwiftUI
 
 /// 语法点详细讲解：一整页连续阅读的讲义（不分卡片），铺满屏幕宽度，只保留标准阅读边距。
-/// 颜色只用在重点上：例句里的目标语法（主色）；其余为黑白灰。
+/// 文字颜色规则（Build 17 反馈 8，见 CLAUDE.md「界面文字颜色」）：要读懂必须读的字用主文字色；
+/// 翻译、小节标签、出处小字用一种灰（.secondary）；主题色只给能点的东西和例句里的语法高亮；.tertiary 只用于箭头图标。
 struct GrammarDetailView: View {
     let grammarID: String
     /// 从扫描结果打开时，原文里命中的文字（用于显示「你扫到的」并找出对应的用法）
@@ -14,8 +15,8 @@ struct GrammarDetailView: View {
     @EnvironmentObject private var history: HistoryStore
     /// 滚动相关的状态放在单独的对象里：只有标题浮层读取它，滚动时不会让整页内容重新排版（否则会卡顿、闪烁）。
     @State private var scroll = DetailScrollModel()
-    /// iOS 26+：标题在没滚动时、在滚动视图里的位置（导航栏下沿 + 上边距）
-    @State private var titleRestY: CGFloat?
+    /// iOS 26+：自己画的标题栏在导航栏区域以下的高度（标题一行或两行 + 等级），页面标题要从它下面开始
+    @State private var barContentHeight: CGFloat = TitleBarLayout.navBarHeight
 
     /// iOS 26+ 导航栏透明（Liquid Glass），标题可以直接“飞”进导航栏；更早的系统用淡入方式。
     private var usesFlyingTitle: Bool {
@@ -49,12 +50,11 @@ struct GrammarDetailView: View {
         return ScrollViewReader { proxy in
             ScrollView {
                 if usesFlyingTitle {
-                    // 标题放在滚动内容里（不放进 LazyVStack，滚远了也不会被回收），随滚动在渲染阶段直接计算位置：
-                    // 上移、缩小、移到导航栏正中并停住。始终只有这一个标题，不再和另一个小标题交叉淡入（Build 16：有重影）。
-                    flyingHeader(p)
+                    // 页面大标题正常随内容滚走，滚到标题栏下面就被不透明的标题栏盖住；
+                    // 标题栏里的小标题按滚动距离一比一从下往上移到正中（Build 17 反馈 1）
+                    header(p)
                         .padding(.horizontal, Theme.margin)
-                        .padding(.top, FlyingTitleLayout.topPadding)
-                        .zIndex(1)
+                        .padding(.top, TitleBarLayout.headerTopPadding(barContentHeight: barContentHeight))
                 }
                 LazyVStack(alignment: .leading, spacing: 0) {
                     if !usesFlyingTitle {
@@ -166,6 +166,12 @@ struct GrammarDetailView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             .coordinateSpace(name: "detailScroll")
+            .modifier(ScrollOffsetTracker(scroll: scroll))
+            .overlay(alignment: .top) {
+                if usesFlyingTitle {
+                    DetailTitleBar(title: p.titleForm, level: p.level, scroll: scroll, contentHeight: $barContentHeight)
+                }
+            }
             .modifier(DemoScrollOffset())
             .onAppear {
                 // CI 截图：滚动到指定位置
@@ -190,22 +196,16 @@ struct GrammarDetailView: View {
                     Color.clear.frame(width: 1, height: 1).accessibilityHidden(true)
                 } else {
                     LegacyNavTitle(scroll: scroll) {
-                        HStack(alignment: .top, spacing: 4) {
-                            Text(verbatim: p.titleForm).font(.headline).lineLimit(1).minimumScaleFactor(0.75)
-                            LevelBadge(level: p.level)
+                        VStack(spacing: 2) {
+                            Text(verbatim: p.titleForm).font(.headline).lineLimit(2).multilineTextAlignment(.center)
+                            LevelText(level: p.level, small: true)
                         }
                     }
                 }
             }
             ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    favorites.toggle(p.id)
-                } label: {
-                    Image(systemName: favorites.isFavorite(p.id) ? "star.fill" : "star")
-                        .foregroundStyle(Theme.accent)
-                }
-                .accessibilityLabel(favorites.isFavorite(p.id) ? Text(localized: "取消收藏") : Text(localized: "收藏"))
-                .accessibilityIdentifier("detail.favorite")
+                FavoriteSakuraButton(id: p.id)
+                    .accessibilityIdentifier("detail.favorite")
             }
         }
     }
@@ -218,28 +218,16 @@ struct GrammarDetailView: View {
         return parts.isEmpty ? [s] : parts
     }
 
-    /// 标题行：汉字上方注假名；等级标签紧贴标题文字的右上角（上标位置）。
-    private func titleRow(_ p: GrammarPoint) -> some View {
-        let rubyOffset = FuriganaStore.shared.hasRuby(p.titleForm)
-            ? ceil(UIFontMetrics(forTextStyle: .body).scaledValue(for: 12) * 1.3) : 0
-        return HStack(alignment: .top, spacing: 4) {
-            RubyText(japanese: p.titleForm, style: .init(font: .largeTitle.bold(), rubySize: 12, lineSpacing: 2))
-            LevelBadge(level: p.level)
-                .padding(.top, rubyOffset + 4)
+    /// 页面顶部：标题居中（汉字上方注假名），下面一行居中放等级和「必考」。
+    private func header(_ p: GrammarPoint) -> some View {
+        VStack(alignment: .center, spacing: 10) {
+            RubyText(japanese: p.titleForm, style: .init(font: .largeTitle.bold(), rubySize: 12, lineSpacing: 2,
+                                                       alignment: .center))
+            DetailTags(level: p.level, mustKnow: p.frequency == .high)
         }
-    }
-
-    private func header(_ p: GrammarPoint, titleHidden: Bool = false) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
-            titleRow(p)
-                .opacity(titleHidden ? 0 : 1)
-                .accessibilityHidden(titleHidden)
-            if let f = p.frequency, f != .low {
-                FrequencyBadge(frequency: f)
-            }
-        }
+        .frame(maxWidth: .infinity)
         // 端到端测试用：页面最顶部的标记（label 是语法标题），用来确认打开的是哪个语法、页面是否在顶部
-        .overlay(alignment: .topLeading) {
+        .overlay(alignment: .top) {
             Color.clear.frame(width: 2, height: 2)
                 .accessibilityElement()
                 .accessibilityLabel(Text(verbatim: p.titleForm))
@@ -247,60 +235,13 @@ struct GrammarDetailView: View {
         }
     }
 
-    /// iOS 26+：会「飞」进导航栏的标题。页面里原位置的标题只占位（透明），可见的标题叠在上面，
-    /// 用 visualEffect 按自己在滚动视图里的位置逐帧变换（与滚动同一帧计算，跟手、不滞后）。
-    /// 导航栏的底色也一起画：标题进入导航栏时淡入，正文从下面滚过去时不会和标题叠在一起。
-    private func flyingHeader(_ p: GrammarPoint) -> some View {
-        header(p, titleHidden: true)
-            .overlay(alignment: .topLeading) {
-                ZStack(alignment: .topLeading) {
-                    if let restY = titleRestY {
-                        let barHeight = max(restY - FlyingTitleLayout.topPadding, 0)
-                        // 导航栏底色：铺满宽度，固定在屏幕顶部，随进度淡入
-                        ZStack(alignment: .bottom) {
-                            Rectangle().fill(.regularMaterial)
-                            Rectangle().fill(Theme.background.opacity(0.72))
-                            Rectangle().fill(Color.primary.opacity(0.08)).frame(height: 0.5)
-                        }
-                        .frame(height: barHeight)
-                        .padding(.horizontal, -Theme.margin)
-                        .visualEffect { content, proxy in
-                            let minY = proxy.frame(in: .scrollView(axis: .vertical)).minY
-                            let t = FlyingTitleLayout.barTransform(minY: minY, restY: restY)
-                            return content.offset(y: t.offsetY).opacity(t.opacity)
-                        }
-                        .allowsHitTesting(false)
-                        .accessibilityHidden(true)
-
-                        titleRow(p)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .visualEffect { content, proxy in
-                                let minY = proxy.frame(in: .scrollView(axis: .vertical)).minY
-                                let width = proxy.bounds(of: .scrollView(axis: .vertical))?.width ?? proxy.size.width + 2 * Theme.margin
-                                let t = FlyingTitleLayout.titleTransform(minY: minY, restY: restY, size: proxy.size,
-                                                                         width: width, margin: Theme.margin)
-                                return content
-                                    .scaleEffect(t.scale, anchor: .topLeading)
-                                    .offset(x: t.offsetX, y: t.offsetY)
-                            }
-                            .allowsHitTesting(false)
-                            .accessibilityHidden(true)
-                    }
-                }
-            }
-            // 记下标题在没滚动时的位置（只记一次；之后的位置变化全在 visualEffect 里算，不经过状态，不会慢一帧）
-            .onGeometryChange(for: CGFloat.self) { $0.frame(in: .scrollView(axis: .vertical)).minY } action: { y in
-                if titleRestY == nil, y > 0 { titleRestY = y }
-            }
-    }
-
     @ViewBuilder
     private func similarItem(_ s: GrammarPoint.Similar) -> some View {
         let target = s.id.flatMap { library.point(id: $0) } ?? library.point(matchingTitle: s.title)
         let row = VStack(alignment: .leading, spacing: 6) {
-            HStack(alignment: .top, spacing: 3) {
+            HStack(alignment: .center, spacing: 6) {
                 Text(target?.titleForm ?? s.title).font(.headline).foregroundStyle(Color.primary)
-                if let target { LevelBadge(level: target.level, small: true) }
+                if let target { LevelBadge(level: target.level) }
                 Spacer(minLength: 8)
                 if target != nil {
                     Image(systemName: "chevron.right")
@@ -309,7 +250,7 @@ struct GrammarDetailView: View {
                         .padding(.top, 3)
                 }
             }
-            RubyText(explanation: s.explanation, style: .init(font: .callout, color: .secondary, lineSpacing: 5))
+            RubyText(explanation: s.explanation, style: .init(font: .callout, lineSpacing: 5))
         }
         .padding(.vertical, 12)
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -352,17 +293,17 @@ private struct DocSection<Content: View>: View {
     }
 }
 
-/// 义项序号：灰色描边圆圈。
+/// 义项序号：主题色粗体数字 + 主题色浅底实心圆（Build 17 反馈 6：原来的灰色细圈不够显眼）。
 private struct NumberBadge: View {
     let number: Int
 
     var body: some View {
         Text(verbatim: "\(number)")
-            .font(.caption.weight(.semibold))
+            .font(.footnote.weight(.bold))
             .monospacedDigit()
-            .foregroundStyle(.secondary)
-            .frame(width: 22, height: 22)
-            .overlay(Circle().strokeBorder(Color.secondary.opacity(0.5), lineWidth: 1))
+            .foregroundStyle(Theme.accentText)
+            .frame(width: 24, height: 24)
+            .background(Theme.accentFill, in: Circle())
     }
 }
 
@@ -397,12 +338,12 @@ private struct SenseOutline: View {
                     HStack(alignment: .top, spacing: 12) {
                         NumberBadge(number: i + 1)
                         VStack(alignment: .leading, spacing: 4) {
-                            HStack(alignment: .top, spacing: 3) {
+                            HStack(alignment: .center, spacing: 6) {
                                 Text(sense.label).font(.body.weight(.semibold)).foregroundStyle(Color.primary)
-                                if showsLevels { LevelBadge(level: point.level(of: sense), small: true) }
+                                if showsLevels { LevelBadge(level: point.level(of: sense)) }
                             }
                             ForEach(Array(GrammarDetailView.connectionLines(sense.connection).enumerated()), id: \.offset) { _, line in
-                                RubyText(explanation: line, style: .init(font: .subheadline, color: .secondary, lineSpacing: 4))
+                                RubyText(explanation: line, style: .init(font: .subheadline, lineSpacing: 4))
                             }
                         }
                         Spacer(minLength: 8)
@@ -440,9 +381,9 @@ private struct SenseBlock: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(alignment: .center, spacing: 10) {
                 NumberBadge(number: index)
-                HStack(alignment: .top, spacing: 3) {
+                HStack(alignment: .center, spacing: 6) {
                     Text(sense.label).font(.title3.weight(.semibold))
-                    if let level { LevelBadge(level: level, small: true) }
+                    if let level { LevelBadge(level: level) }
                 }
             }
 
@@ -639,6 +580,8 @@ private struct DocSectionTitle: View {
 final class DetailScrollModel {
     /// 旧系统：大标题滚出的进度 0~1
     var progress: CGFloat = 0
+    /// iOS 26+：往上滚了多少（0 = 在顶部）
+    var offset: CGFloat = 0
     @ObservationIgnored var headerBaseline: CGFloat?
 }
 
@@ -668,43 +611,125 @@ private struct DemoScrollOffset: ViewModifier {
     }
 }
 
-/// 飞行标题的几何（纯计算，单元测试覆盖）：标题从原位置上移、缩小、横向移到正中，停在导航栏中线。
-/// 坐标都是滚动视图坐标（顶端 = 屏幕顶端，导航栏在 0…restY-topPadding 之间）。
-enum FlyingTitleLayout {
-    /// 标题在内容里的上边距
+/// iOS 26+ 标题栏的几何（纯计算，单元测试覆盖）。
+/// 页面大标题随内容滚动，滚到标题栏下沿就被不透明的标题栏盖住；此后每滚 1pt，标题栏里的小标题从下往上移 1pt，
+/// 移到标题栏正中后停住；往回滚时反过来。标题字号固定，不缩放。
+enum TitleBarLayout {
+    /// 系统导航栏高度（返回、收藏按钮所在的一行）
+    static let navBarHeight: CGFloat = 44
+    /// 页面标题和标题栏下沿之间的距离
     static let topPadding: CGFloat = 8
-    /// 导航栏高度（中线在导航栏下沿往上 22）
-    static let barHeight: CGFloat = 44
+    /// 标题栏里标题块上下的留白
+    static let barVerticalPadding: CGFloat = 6
+    /// 左右各留出一个按钮（44）加边距的宽度
+    static let sideInset: CGFloat = 68
 
-    struct TitleTransform: Equatable {
-        var offsetX: CGFloat
-        var offsetY: CGFloat
-        var scale: CGFloat
-        var progress: CGFloat
+    /// 标题栏（状态栏以下部分）的高度：至少一行导航栏高，标题两行时变高
+    static func barContentHeight(titleBlockHeight: CGFloat) -> CGFloat {
+        max(navBarHeight, titleBlockHeight + 2 * barVerticalPadding)
     }
 
-    /// 缩到导航栏里的比例：大约导航栏标题字号；太宽的标题再缩小，给左右按钮留位置
-    static func endScale(size: CGSize, width: CGFloat) -> CGFloat {
-        min(0.55, 34 / max(size.height, 1), (width - 150) / max(size.width, 1))
+    /// 页面标题的上边距：标题栏比系统导航栏高出的部分也要让出来，没滚动时页面标题不被盖住
+    static func headerTopPadding(barContentHeight: CGFloat) -> CGFloat {
+        max(0, barContentHeight - navBarHeight) + topPadding
     }
 
-    static func titleTransform(minY: CGFloat, restY: CGFloat, size: CGSize, width: CGFloat, margin: CGFloat) -> TitleTransform {
-        let endScale = endScale(size: size, width: width)
-        let barCenterY = restY - topPadding - barHeight / 2
-        let targetY = barCenterY - size.height * endScale / 2
-        let travel = max(restY - targetY, 1)
-        let progress = min(1, max(0, (restY - minY) / travel))
-        // 跟着内容走，到导航栏中线后停住（往回滚时跟着回来）
-        let offsetY = max(targetY - minY, 0)
-        let offsetX = ((width - size.width * endScale) / 2 - margin) * progress
-        let scale = 1 - (1 - endScale) * progress
-        return TitleTransform(offsetX: offsetX, offsetY: offsetY, scale: scale, progress: progress)
+    /// 标题栏里的小标题相对正中位置往下偏移多少（0 = 在正中；等于 travel = 完全藏在标题栏下沿以下）
+    static func titleOffset(scrolled: CGFloat, barContentHeight: CGFloat) -> CGFloat {
+        let travel = barContentHeight
+        return min(travel, max(0, travel - (scrolled - topPadding)))
     }
 
-    /// 导航栏底色：固定在屏幕顶端（抵消滚动），标题开始进入导航栏时淡入
-    static func barTransform(minY: CGFloat, restY: CGFloat) -> (offsetY: CGFloat, opacity: Double) {
-        let scrolled = restY - minY
-        return (offsetY: -minY, opacity: Double(min(1, max(0, scrolled / 40))))
+    /// 标题栏下沿分隔线的不透明度：页面标题碰到标题栏下沿时开始出现
+    static func dividerOpacity(scrolled: CGFloat) -> Double {
+        Double(min(1, max(0, scrolled / topPadding)))
+    }
+}
+
+/// iOS 26+：详情页顶部自己画的标题栏。毛玻璃但几乎不透明，铺到屏幕顶端；返回、收藏按钮由系统导航栏画在它上面。
+/// 标题居中、最多两行、字号不缩小，等级在标题正下方居中。
+private struct DetailTitleBar: View {
+    let title: String
+    let level: JLPTLevel
+    let scroll: DetailScrollModel
+    @Binding var contentHeight: CGFloat
+
+    var body: some View {
+        // 铺满整个滚动视图量出安全区高度（状态栏 + 系统导航栏），标题栏从屏幕顶端画起
+        GeometryReader { proxy in
+            let safeTop = proxy.safeAreaInsets.top
+            let offset = TitleBarLayout.titleOffset(scrolled: scroll.offset, barContentHeight: contentHeight)
+            VStack(spacing: 0) {
+                VStack(spacing: 0) {
+                    // 安全区顶部包含状态栏和系统导航栏；标题区从系统导航栏那一行开始，和返回、收藏按钮同一行起
+                    Color.clear.frame(height: max(0, safeTop - TitleBarLayout.navBarHeight))
+                    ZStack {
+                        // 量高度用的一份（不显示、读屏读不到）：标题一行还是两行，决定标题栏多高
+                        titleBlock(withIDs: false)
+                            .hidden()
+                            .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { h in
+                                let bar = TitleBarLayout.barContentHeight(titleBlockHeight: h)
+                                if abs(bar - contentHeight) > 0.5 { contentHeight = bar }
+                            }
+                        // 显示的一份：完全藏起来时干脆不放（页面上已有大标题，否则读屏会读两遍）
+                        if offset < contentHeight {
+                            titleBlock(withIDs: true)
+                                .offset(y: offset)
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: contentHeight)
+                    .clipped()
+                }
+                .background {
+                    ZStack(alignment: .bottom) {
+                        Rectangle().fill(.regularMaterial)
+                        Rectangle().fill(Theme.background.opacity(0.94))
+                        Rectangle().fill(Color.primary.opacity(0.12)).frame(height: 0.5)
+                            .opacity(TitleBarLayout.dividerOpacity(scrolled: scroll.offset))
+                    }
+                }
+                .accessibilityElement(children: .contain)
+                .accessibilityIdentifier("detail.titleBar")
+                Spacer(minLength: 0)
+            }
+            .ignoresSafeArea(edges: .top)
+        }
+        .allowsHitTesting(false)
+    }
+}
+
+extension DetailTitleBar {
+    @ViewBuilder
+    func titleBlock(withIDs: Bool) -> some View {
+        VStack(spacing: 2) {
+            Text(verbatim: title)
+                .font(.headline)
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .accessibilityIdentifier(withIDs ? "detail.barTitle" : "")
+            LevelText(level: level, small: true)
+                .accessibilityIdentifier(withIDs ? "detail.barLevel" : "")
+        }
+        .padding(.horizontal, TitleBarLayout.sideInset)
+        .fixedSize(horizontal: false, vertical: true)
+    }
+}
+
+/// 记录详情页往上滚了多少（iOS 18+ 才有滚动几何回调；更早的系统用旧的淡入方式，不需要）
+private struct ScrollOffsetTracker: ViewModifier {
+    let scroll: DetailScrollModel
+
+    func body(content: Content) -> some View {
+        if #available(iOS 18.0, *) {
+            content.onScrollGeometryChange(for: CGFloat.self) { g in
+                g.contentOffset.y + g.contentInsets.top
+            } action: { _, y in
+                if abs(y - scroll.offset) > 0.25 { scroll.offset = y }
+            }
+        } else {
+            content
+        }
     }
 }
 

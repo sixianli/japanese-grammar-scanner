@@ -60,6 +60,7 @@
 "准备好了" = "Todo listo";
 "出题频率" = "Frecuencia en el examen";
 "删除截图" = "Quitar captura";
+"到时间就复习" = "Repasa cuando toque";
 "前 %lld 天免费使用全部功能。之后可一次性 %@ 永久解锁完整讲解，不订阅、不自动扣费。" = "Todas las funciones gratis durante los primeros %lld días. Después, desbloquea las explicaciones completas para siempre con una compra única de %@. Sin suscripción ni cargos automáticos.";
 "前 %lld 天免费使用全部功能。之后可一次性购买永久解锁完整讲解，不订阅、不自动扣费。" = "Todas las funciones gratis durante los primeros %lld días. Después, desbloquea las explicaciones completas para siempre con una compra única. Sin suscripción ni cargos automáticos.";
 "功能问题 / bug" = "Error / problema";
@@ -92,6 +93,7 @@
 "在反馈页点「发送」后，会打开系统的邮件或分享面板，由你决定用哪个 App、发给谁；内容是你选择的反馈类型、填写的描述、附上的截图、所在的页面，以及 App 版本、系统版本、设备型号和界面语言。App 本身不会上传任何内容。" = "Al pulsar «Enviar» en la pantalla de comentarios, se abre el correo o el menú de compartir del sistema y tú decides con qué app y a quién enviarlo. El contenido es el tipo de comentario que elegiste, tu descripción, las capturas adjuntas, la pantalla en la que estabas y la versión de la app, la versión de iOS, el modelo del dispositivo y el idioma de la interfaz. La app no sube nada por sí misma.";
 "在底部选「忘了」「有点模糊」或「记得」，App 按你的记忆情况安排下次复习的时间。" = "Abajo, elige «Lo olvidé», «Un poco borroso» o «Lo recuerdo», y la app programa el próximo repaso según lo bien que lo recuerdes.";
 "在讲解页点星星收藏；「收藏」页可以排序，向左滑动可以取消收藏。" = "Toca la estrella en una explicación para guardarla. En «Favoritos» puedes ordenar la lista y deslizar a la izquierda para quitar un elemento.";
+"在语法讲解页或列表中点一下樱花，就能收进这里。" = "Toca la flor de cerezo en una página de gramática o en una lista para guardarla aquí.";
 "在语法讲解页或列表中点击 ☆ 即可收藏。" = "Toca ☆ en una explicación o en la lista para guardarla aquí.";
 "复习「快要忘了」" = "Repasar «A punto de olvidar»";
 "复习：看完了，你还记得这个语法吗？" = "Repaso: ¿todavía recuerdas esta gramática?";
@@ -104,6 +106,7 @@
 "定格并精细识别" = "Capturar y analizar";
 "对准书页或选一张截图，句子里的语法会被标出来。" = "Apunta a una página o elige una captura y se marcará la gramática de cada frase.";
 "对准书页或选择截图，所有语法点都会被高亮出来。" = "Apunta a una página o elige una captura: se resaltará cada punto gramatical.";
+"对准书页按快门，或从相册选一张截图。" = "Apunta a la página y pulsa el obturador, o elige una captura de Fotos.";
 "对准日文，语法一目了然" = "Apunta al japonés y verás la gramática";
 "对应 用法 " = "Corresponde al uso ";
 "对本隐私政策有任何疑问，可以在「设置 → 反馈」中告诉我们。" = "Si tienes alguna pregunta sobre esta política de privacidad, cuéntanosla en \"Ajustes → Comentarios\".";
@@ -115,12 +118,12 @@
 "帮助" = "Ayuda";
 "帮助我们了解有多少人在用、来自哪些地区、哪些语法最常被查，以便改进。不包含任何能识别你或你设备的信息。" = "Nos ayuda a saber cuántas personas usan la app, desde dónde y qué gramática se consulta más, para mejorarla. No contiene nada que te identifique a ti ni a tu dispositivo.";
 "常出现但还没学" = "Frecuente en tus lecturas";
-"常考" = "Muy frecuente";
 "建议" = "Sugerencia";
 "开始 %lld 天免费试用" = "Empezar prueba gratis de %lld días";
 "开始使用" = "Empezar";
 "开始复习" = "Empezar a repasar";
 "开源许可" = "Licencias de código abierto";
+"必考" = "Imprescindible";
 "忘了" = "Lo olvidé";
 "快要忘了" = "A punto de olvidar";
 "快要忘了就复习" = "Repasa antes de olvidar";
@@ -194,6 +197,7 @@
 "本 App 的使用适用 Apple 标准最终用户许可协议（EULA）。" = "El uso de esta app se rige por el Contrato de licencia estándar de Apple para el usuario final (EULA).";
 "本 App 的语法讲解为原创内容。文字识别使用 Apple Vision 框架在设备上完成。以下第三方开源组件仅在构建阶段用于生成 App 内的静态数据或图片：" = "Todas las explicaciones son contenido original. El reconocimiento de texto se realiza en el dispositivo con el framework Vision de Apple. Los siguientes componentes de código abierto solo se usaron al compilar, para generar datos estáticos o imágenes:";
 "本页" = "Esta página";
+"本页第 %lld 个意思：%@" = "Significado %lld de esta página: %@";
 "来源与构成" = "Origen y estructura";
 "来源与构成、相近语法对比" = "Origen, estructura y comparación con gramática similar";
 "查看 Apple 标准最终用户许可协议" = "Ver el EULA estándar de Apple";
@@ -203,6 +207,7 @@
 "核心功能" = "Funciones principales";
 "根据公开的考试复原资料与教材整理，仅供参考。" = "Recopilado de reconstrucciones públicas del examen y libros de texto. Solo como referencia.";
 "樱花粉" = "Sakura";
+"橙色框里就是语法，点一下打开讲解。" = "Cada recuadro naranja es un punto gramatical. Tócalo para abrir la explicación.";
 "橙黄" = "Ámbar";
 "正在识别文字和语法点…" = "Reconociendo texto y gramática…";
 "正确" = "Correcto";
@@ -210,6 +215,7 @@
 "每一项收起时就显示一句话的差别，扫一眼就知道区别在哪。" = "Aun plegado, cada elemento muestra la diferencia en una frase, así que la ves de un vistazo.";
 "每个语法点都有意思、用法、例句、使用场景、词源和相近语法对比。例句里的汉字都标注了假名。" = "Cada punto gramatical incluye significado, uso, ejemplos, situaciones reales, origen y gramática similar. Los kanji de los ejemplos llevan furigana.";
 "每个语法点都有意思、用法、例句和词源，例句里的汉字都标了假名。下方的「相近语法」分三组对比，展开就能看到例句里的差别。" = "Cada punto gramatical tiene significado, uso, ejemplos y origen, y todos los kanji de los ejemplos llevan furigana. Debajo, «Gramática similar» compara en tres grupos; despliega un elemento para ver la diferencia en los ejemplos.";
+"每种用法都有讲解、接续和带注音的例句。" = "Cada uso tiene explicación, forma de conexión y ejemplos con furigana.";
 "永久解锁 · 无需订阅" = "Desbloqueo para siempre · Sin suscripción";
 "没有相机权限。\n请在「设置」中允许访问相机，或从相册选择图片。" = "Sin acceso a la cámara.\nPermite el acceso en Ajustes o elige una foto.";
 "没有识别到收录的语法点" = "No se encontraron puntos gramaticales";
@@ -228,11 +234,13 @@
 "点「开始复习」，或者点其中某一个，进入讲解页复习。" = "Toca «Empezar a repasar» o cualquiera de ellos para repasarlo en su página de explicación.";
 "点「手动修正文字」改一下文字，再点「重新识别」。" = "Toca «Corregir el texto», corrígelo y luego toca «Analizar».";
 "点「看例句对比」，看两句只换了语法的例句和「怎么分辨」；对方有几种形式时，每种形式各有一句。" = "Toca «Comparar ejemplos» para ver dos frases que solo cambian en la gramática y «Cómo distinguirlos». Si la otra gramática tiene varias formas, hay una frase para cada forma.";
+"点「看例句对比」，看清和相近语法的差别。" = "Toca «Comparar ejemplos» para ver en qué se diferencia de gramática similar.";
 "点击图片或文本中的高亮，或下方列表，查看详细讲解。" = "Toca un resaltado en la imagen o el texto, o un elemento de la lista, para ver la explicación.";
 "点击高亮或下方列表查看讲解；双指可直接放大图片。" = "Toca un resaltado o un elemento para ver la explicación. Pellizca la foto para ampliarla.";
 "点击高亮或下方列表查看讲解；点击图片可放大查看原文。" = "Toca un resaltado o un elemento para ver la explicación. Toca la foto para ampliarla.";
 "点击高亮，查看讲解" = "Toca un resaltado para aprender";
 "点图上的橙色框，直接打开这个语法的讲解；同一处有几个语法时，会先让你选一个。" = "Toca un recuadro naranja de la imagen para abrir la explicación de esa gramática. Si en ese lugar hay varias, primero te pedirá que elijas una.";
+"点橙色框" = "Toca un recuadro naranja";
 "点橙色框、放大原文、修正识别文字" = "Toca los recuadros naranjas, amplía el texto y corrige el reconocimiento";
 "点橙色框看讲解" = "Toca un recuadro naranja para ver la explicación";
 "点橙色框，查看讲解" = "Toca un recuadro naranja para aprender";
@@ -264,6 +272,7 @@
 "看文中的语法列表" = "Consulta la lista de gramática del texto";
 "看语法讲解" = "Leer las explicaciones";
 "看过的语法快要忘记时，首页会出现「有 N 个快要忘了」；没有要复习的就不显示。" = "Cuando estás a punto de olvidar gramática que ya leíste, en Inicio aparece «N puntos se te están olvidando»; si no hay nada que repasar, no se muestra.";
+"看过的语法快要忘记时，首页会出现一行「N 个语法可以复习了」。点一下开始复习，看完选「忘了」「有点模糊」或「记得」，App 会按你的记忆安排下次复习。" = "Cuando estás a punto de olvidar gramática que ya leíste, Inicio muestra una línea: «N puntos listos para repasar». Tócala para empezar y, al terminar, elige «Lo olvidé», «Un poco borroso» o «Lo recuerdo»; la app programará el próximo repaso según tu memoria.";
 "看过的语法快要忘记时，首页会提醒你。点「开始复习」，看完选「忘了」「有点模糊」或「记得」，App 会按你的记忆安排下次复习。" = "Cuando estás a punto de olvidar gramática que ya leíste, Inicio te lo recuerda. Toca «Empezar a repasar» y, al terminar, elige «Lo olvidé», «Un poco borroso» o «Lo recuerdo»; la app programará el próximo repaso según tu memoria.";
 "看过的语法讲解会出现在这里。" = "Aquí aparecerán los puntos gramaticales que hayas leído.";
 "看过讲解的语法计为“已学”。" = "Un punto cuenta como aprendido cuando lees su explicación.";
@@ -278,7 +287,6 @@
 "继续上次" = "Continuar donde lo dejaste";
 "编辑" = "Editar";
 "编辑文本" = "Editar texto";
-"考过" = "Ha salido";
 "职场" = "En el trabajo";
 "联系我们" = "Contacto";
 "自评记得程度，按记忆规律提醒" = "Valora cuánto recuerdas; los recordatorios siguen la curva de la memoria";
@@ -336,4 +344,6 @@
 "隐私政策" = "Política de privacidad";
 "青磁绿" = "Celadón";
 "首页" = "Inicio";
+"首页出现「N 个语法可以复习了」时点一下，看完自评。" = "Cuando Inicio muestre «N puntos listos para repasar», tócalo y luego evalúate.";
 "首页出现「快要忘了」" = "«A punto de olvidar» en Inicio";
+"首页提醒时点「开始复习」，看完自评记得程度。" = "Cuando Inicio te avise, toca «Empezar a repasar» y luego indica cuánto recordabas.";

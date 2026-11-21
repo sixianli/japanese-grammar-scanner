@@ -55,11 +55,11 @@ struct FavoritesView: View {
         NavigationStack(path: $path) {
             Group {
                 if favorites.ids.isEmpty {
-                    ContentUnavailableView(
-                        tr("还没有收藏"),
-                        systemImage: "star",
-                        description: Text(localized: "在语法讲解页或列表中点击 ☆ 即可收藏。")
-                    )
+                    ContentUnavailableView {
+                        Label(tr("还没有收藏"), image: "Kinchaku")
+                    } description: {
+                        Text(localized: "在语法讲解页或列表中点一下樱花，就能收进这里。")
+                    }
                 } else {
                     let ids = sortedIDs
                     List {

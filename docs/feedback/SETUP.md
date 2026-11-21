@@ -82,8 +82,9 @@ GitHub 仓库 → Secrets 中新建：
 
 ## 数据权限
 
-`cloudkit/schema.ckdb` 里，`Feedback` 和 `UsageDay` 只允许已登录 iCloud 的用户创建、提交者本人读写，**不对所有人（`_world`）开放**。
-`tools/validate_compliance.py` 会检查这一点。改了数据结构后：PR 上会自动导入开发环境，再到 CloudKit Console → **Development** →
+`cloudkit/schema.ckdb` 里，`Feedback` 和 `UsageDay` 只允许已登录 iCloud 的用户创建、提交者本人修改；**读取对所有人（`_world`）开放**，这样开发者在 CloudKit Console 里能直接看到反馈文字、下载截图、读使用统计（不开放读取时，下载截图会报 Internal Server Error）。
+外人要读这些数据，需要开发者生成的 API 令牌，或者带本 App iCloud 权限的程序；令牌不要生成后外传。
+`tools/validate_compliance.py` 会检查：这两类记录必须对 `_world` 开放读取，任何记录都不能对 `_world` 开放写入或创建。改了数据结构后：PR 上会自动导入开发环境，再到 CloudKit Console → **Development** →
 左下角 **Deploy Schema Changes…** 发布到正式环境。
 
 ## 第 5 步：打开开关

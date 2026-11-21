@@ -8,7 +8,7 @@ from check_e2e_ran_all import declared
 
 SHARDS = [
     ["SettingsTests"],
-    ["ScanResultTests", "HomeTests"],
+    ["ScanResultTests", "HomeTests", "SakuraAnimationTests"],
     ["DetailTests", "ReviewTests"],
     ["EndToEndTests", "FavoritesTests", "SearchTests", "LibraryTests", "FreshInstallTests"],
 ]

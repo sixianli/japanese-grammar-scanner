@@ -19,27 +19,26 @@ final class GuideAndLegalTests: XCTestCase {
         return v != key
     }
 
-    func testEveryFeatureHasGuide() {
+    /// 使用指南只讲核心功能（Build 17 反馈 3）：每个核心功能一张卡片（标题 + 一句话），其它功能没有卡片
+    func testCoreFeaturesHaveGuideCards() {
+        XCTAssertEqual(AppFeature.core, [.scan, .scanResult, .detail, .contrast, .review])
         for f in AppFeature.allCases {
-            let g = f.guide
-            XCTAssertFalse(g.title.isEmpty, "\(f) 缺少指南标题")
-            XCTAssertFalse(g.summary.isEmpty, "\(f) 缺少一句话说明")
-            XCTAssertGreaterThanOrEqual(g.steps.count, 2, "\(f) 的使用指南至少两步")
-            for s in g.steps {
-                XCTAssertTrue(s.keys.allSatisfy { !$0.isEmpty }, "\(f) 有空的步骤")
-                XCTAssertNotNil(UIImage(systemName: s.symbol), "\(f) 的步骤图标 \(s.symbol) 不存在")
+            if AppFeature.core.contains(f) {
+                let c = f.card
+                XCTAssertNotNil(c, "核心功能 \(f) 缺少指南卡片")
+                XCTAssertFalse(c?.title.isEmpty ?? true, "\(f) 缺少卡片标题")
+                XCTAssertFalse(c?.line.isEmpty ?? true, "\(f) 缺少一句话说明")
+                XCTAssertLessThanOrEqual(c?.line.count ?? 0, 30, "\(f) 的说明要一句话说完")
+            } else {
+                XCTAssertNil(f.card, "非核心功能 \(f) 不放进使用指南")
             }
         }
-        // 核心功能都在，且排在前面
-        XCTAssertEqual(AppFeature.core, [.scan, .scanResult, .detail, .contrast, .review])
-        XCTAssertEqual(Set(AppFeature.core + AppFeature.more), Set(AppFeature.allCases))
     }
 
     func testGuideIsTranslatedIntoEveryLanguage() {
-        var keys: [String] = ["使用指南", "核心功能", "更多功能", "再看一遍入门引导"]
-        for f in AppFeature.allCases {
-            let g = f.guide
-            keys += [g.title, g.summary] + g.steps.flatMap(\.keys) + (g.tip.map { [$0] } ?? [])
+        var keys: [String] = ["使用指南"]
+        for f in AppFeature.core {
+            if let c = f.card { keys += [c.title, c.line] }
         }
         for lang in languages {
             let missing = keys.filter { !translated($0, lang) }
