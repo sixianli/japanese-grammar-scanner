@@ -78,6 +78,21 @@ Build 17 包含的内容（详见 PR #6 描述）：Build 16 的全部反馈修�
 - 倾向：页面里用 A（或 A + C 的等级方块），标题栏里用 C。最终由用户看设计图决定。
 - 改的时候所有用到 `LevelBadge` / `FrequencyBadge` 的地方（语法列表行、搜索、收藏等）一起统一，不要只改详情页。
 
+### 反馈 5：相近语法「意思差不多的」里混进了意思不同的语法（截图 `docs/handoff/b17_fb05_contrast_meaning.png`，2026-11-21）
+
+用户原话：这不是界面问题，是内容质量问题；「〜ている」和「〜た」真的是意思差不多吗？
+
+判断：用户说得对。`contrasts.json` 里 `te-iru` 的 meaning 组写着「都能表示『……着／……了』这类正在进行或状态持续、完成的意思」，收了 `ta-form`、`tokoro-da`、`mama-unchanged`。ている（现在的状态、正在进行）和 た（过去发生、完成）意思不同，只是中文都可能译成「了」，学习者容易用混（兄は結婚している／去年結婚した）。这违反 CLAUDE.md「meaning：意思或语法功能一样……意思相反的不收」。
+
+范围不只这一处：
+- 全部资料共 800 个 meaning 组、1597 项。按说明文字粗筛（说明里出现「都和……有关」「……或……」「这类」等笼统说法），命中 90 组、224 项，例如：`tame-ni` 组「都表示『为了』或『因为』」收了 `you-na-example`（像……）、`kara-from`；`bakari-only` 组「『只、光』或『大约』」收了 `kurai-approximately`；`de-yuumei` 收 `to-shite`；`wo-shite-iru-appearance` 收 `wa-ga-double-subject`；`mama-unchanged` 收 `te-iru`、`naide-without`。
+- 这个粗筛既会误报（例如 `zenzen-nai` / `mattaku-nai` 是真近义），也会漏掉说明写得很具体、但收的语法其实不同的组。准确范围要逐组人工复核。
+
+修法候选（待用户定）：
+1. 逐组复核全部 800 个 meaning 组：意思真一样的留下；不一样的，能归到 root / look 的就移过去，不能的删掉（宁缺毋滥）。改了简中原稿后 6 种语言同步改（`tools/validate_contrasts.py` 会检查对齐）。
+2. 像「ている／た」这种意思不同、但学习者确实常用混的对比，有教学价值。两个选择：(a) 按现有三组规则直接删掉；(b) 新增第四组「容易用混的」（要改 CLAUDE.md 的三组规则、App 里的组名和 6 种语言翻译、校验脚本）。需要用户决定。
+3. 门槛：`tools/validate_contrasts.py` 加规则，meaning 组说明里出现「有关」「……或……」「这类」这种笼统说法就报错，迫使说明写出唯一的共同意思。这只能挡住笼统的说明，挡不住「说明写得对、收错了语法」，所以复核本身仍要人工（或用模型辅助复核，会花钱，先报价问用户）。
+
 ### 反馈 2：CloudKit 后台下载反馈截图报错（2026-11-21）
 
 现象：Build 17（1.3 (17)，iPhone15,2，iOS 27.2.1）在 App 里提交「体验与建议」反馈，CloudKit Console → Production → Public Database → Feedback 能看到记录，`screenshots`（Asset 列表）显示 `Binary file (922.05KB)`，但点下载按钮打开的 `cvws.icloud-content.com/...` 页面只返回 `Internal Server Error`。
