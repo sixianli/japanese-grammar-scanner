@@ -1575,102 +1575,27 @@
       "id": "ja-nai",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「では＋ない」 (じゃ＝では) — “không phải…”",
-          "items": [
-            {
-              "id": "ja-nakute",
-              "diff": "じゃない ở cuối câu, chỉ nói “không phải A”; じゃなくて phủ định A xong còn nói ra B đúng.",
-              "this": [
-                {
-                  "tag": "Cuối câu · chỉ phủ định",
-                  "tr": "Đây không phải muối."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Giữa câu · không phải A mà là B",
-                  "tr": "Đây không phải muối, mà là đường."
-                }
-              ],
-              "explain": "Xem sau phủ định có nói tiếp không: câu kết thúc ở đó → じゃない; ngay sau đó đưa ra đáp án đúng (砂糖です) → じゃなくて, dùng để đính chính. Văn viết nói ではない／ではなく, cách dùng như nhau."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Đều có nghĩa “không…”",
+          "note": "Đều dùng để xác nhận “…, đúng không?”",
           "items": [
             {
-              "id": "i-adj-negative",
-              "diff": "Sau danh từ, tính từ đuôi な thì thêm 「じゃない」; tính từ đuôi い đổi 「い」 thành 「くない」.",
+              "id": "deshou-guess",
+              "title": "〜でしょう（xác nhận）",
+              "thisTitle": "〜じゃない（xác nhận）",
+              "diff": "じゃないですか đưa ra điều mà đối phương cũng biết làm tiền đề, thường để dẫn vào ý tiếp theo; でしょう？ là thật sự hỏi “đúng không?” và chờ đối phương trả lời.",
               "this": [
                 {
-                  "tag": "Tính từ đuôi な → じゃない",
-                  "tr": "Quán này không nổi tiếng lắm."
+                  "tag": "Nêu điều cả hai cùng biết → nói tiếp",
+                  "tr": "Gần ga có cửa hàng tiện lợi đấy thôi. Bạn hãy đợi ở đó nhé."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tính từ đuôi い → くない",
-                  "tr": "Quán này không đắt."
+                  "tag": "Xác nhận · chờ trả lời",
+                  "tr": "Gần ga có cửa hàng tiện lợi, đúng không?"
                 }
               ],
-              "wrong": {
-                "why": "Phủ định của tính từ đuôi い là 「高くない（です）」"
-              },
-              "explain": "Trước hết xem loại tính từ: tính từ đuôi な như 有名、静か、きれい và danh từ → じゃない; tính từ đuôi い như 高い、安い → くない. 有名、きれい có cách đọc kết thúc bằng 「い」 nhưng là tính từ đuôi な. Thể lịch sự ではありません cũng vậy (有名ではありません)."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ja-nakute",
-      "groups": [
-        {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「では＋ない」 (じゃ＝では) — “không phải…”",
-          "items": [
-            {
-              "id": "ja-nai",
-              "diff": "じゃなくて phủ định A xong còn nói ra B đúng; じゃない ở cuối câu, chỉ nói “không phải A”.",
-              "this": [
-                {
-                  "tag": "Không phải A mà là B",
-                  "tr": "Đây không phải muối, mà là đường."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Cuối câu · chỉ phủ định",
-                  "tr": "Cái đó không phải muối đâu."
-                }
-              ],
-              "explain": "Xem sau phủ định có nói tiếp không: ngay sau đó đưa ra đáp án đúng (砂糖です) → じゃなくて; câu kết thúc ở đó → じゃない. Văn viết nói ではない／ではなく, cách dùng như nhau."
-            }
-          ]
-        },
-        {
-          "kind": "look",
-          "note": "ではなく ↔ だけでなく, chỉ thêm 「だけ」",
-          "items": [
-            {
-              "id": "dake-de-naku",
-              "diff": "AではなくB: chỉ có B đúng; AだけでなくB: cả A và B đều đúng.",
-              "this": [
-                {
-                  "tag": "Chỉ có B",
-                  "tr": "Anh ấy nói tiếng Pháp chứ không phải tiếng Anh."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Cả A và B",
-                  "tr": "Anh ấy không chỉ nói tiếng Anh mà còn nói tiếng Pháp."
-                }
-              ],
-              "explain": "Xem trợ từ sau B: 「を」, 「です」 → ではなく, A bị phủ định; 「も」 → だけでなく, A cũng đúng, thêm cả B nữa. Chỉ thêm hai chữ 「だけ」 mà nghĩa khác hẳn. Văn nói nói じゃなくて, cách dùng như nhau."
+              "explain": "Xem có chờ đối phương trả lời hay không: chỉ nêu điều cả hai đều biết làm tiền đề rồi nói tiếp ngay (あそこで待っていてください) → じゃないですか, đối phương không cần trả lời; thật sự hỏi “đúng không?” và chờ đối phương nói 「うん」 → でしょう？. Dùng じゃないですか cho điều đối phương có thể không biết sẽ nghe như áp đặt."
             }
           ]
         }
@@ -1685,27 +1610,27 @@
           "items": [
             {
               "id": "aida-during",
-              "diff": "〜中 chỉ đi với danh từ; phía trước là động từ (〜ている) thì phải dùng 「間」.",
+              "diff": "〜中 chỉ đi sau danh từ; phía trước là động từ (〜ている) thì phải dùng 「間」.",
               "this": [
                 {
                   "tag": "Danh từ → 中",
-                  "tr": "Trong lúc họp, vui lòng tắt điện thoại."
+                  "tr": "Trong lúc họp xin hãy tắt điện thoại."
                 }
               ],
               "that": [
                 {
-                  "tag": "間に · Đi với động từ",
-                  "tr": "Trong lúc tôi ngủ thì trời đã mưa."
+                  "tag": "間に · sau động từ",
+                  "tr": "Trong lúc tôi ngủ thì trời mưa."
                 },
                 {
-                  "tag": "間 · Đi với động từ",
-                  "tr": "Trong lúc ngồi trên tàu điện, tôi đã đọc sách suốt."
+                  "tag": "間 · sau động từ",
+                  "tr": "Suốt lúc ngồi tàu điện tôi cứ đọc sách."
                 }
               ],
               "wrong": {
-                "why": "中 không đi với động từ, phải dùng 間"
+                "why": "中 không đi sau động từ được, phải dùng 間"
               },
-              "explain": "Xem phía trước là danh từ hay động từ: danh từ như 会議、授業、夏休み → 〜中 (会議中、夏休み中); động từ như 寝ている、日本にいる → 〜間／〜間に. Danh từ cũng nói được 「会議の間」, nhưng phải thêm 「の」."
+              "explain": "Xem phía trước là danh từ hay động từ: danh từ như 会議、授業、夏休み → 〜中 (会議中、夏休み中); động từ như 寝ている、日本にいる → 〜間／〜間に. Danh từ cũng có thể nói 「会議の間」, nhưng phải thêm 「の」."
             }
           ]
         }
@@ -1716,28 +1641,28 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều là cùng một chữ 「か」 — nghĩa cốt lõi là “không chắc chắn”",
+          "note": "Đều bắt nguồn từ trợ từ 「か」 — nghĩa gốc là đặt câu hỏi, đưa ra điều chưa chắc chắn",
           "items": [
             {
               "id": "question-word-ka",
-              "diff": "何を〜か hỏi cụ thể là gì; 何か〜か hỏi “có muốn… gì đó không”, trả lời bằng はい／いいえ.",
+              "diff": "何を〜か hỏi cụ thể là cái gì; 何か〜か hỏi “có muốn… gì đó không”, trả lời bằng はい／いいえ.",
               "this": [
                 {
                   "tag": "Hỏi nội dung cụ thể",
-                  "tr": "Bạn ăn gì? — Tôi ăn sushi."
+                  "tr": "Bạn ăn gì? — Sushi."
                 }
               ],
               "that": [
                 {
                   "tag": "Hỏi có hay không",
-                  "tr": "Bạn có ăn gì không? — Vâng, có."
+                  "tr": "Bạn có muốn ăn gì không? — Vâng, cho tôi xin."
                 }
               ],
-              "explain": "Xem sau từ để hỏi: đi với trợ từ như 「を」, 「が」 → thật sự đang hỏi “là gì”, phải trả lời nội dung cụ thể; đi thẳng với 「か」 → 「何か」 là “một thứ gì đó”, cả câu chỉ hỏi có hay không, nên trả lời 「はい／いいえ」."
+              "explain": "Nghĩa gốc của か là đặt câu hỏi, đưa ra điều chưa chắc chắn. Đặt ở cuối câu thì biến cả câu thành câu hỏi: trong 「何を食べますか」, 「何」 là chỗ trống để đối phương điền vào, nên trả lời bằng nội dung cụ thể (すし). Gắn thẳng sau từ để hỏi, 「何か」 vốn là “là gì nhỉ (không chắc)”, nên thành “một thứ gì đó” không xác định, câu chỉ còn hỏi “có ăn hay không”, vì vậy trước tiên trả lời 「はい／いいえ」. Xem phía sau từ để hỏi: có trợ từ như 「を」「が」 → hỏi là cái gì; nối thẳng 「か」 → hỏi có hay không."
             },
             {
               "id": "ka-dou-ka",
-              "diff": "Câu hỏi có từ để hỏi thì thêm thẳng 「か」; không có từ để hỏi, hỏi “có phải không” thì dùng 「かどうか」.",
+              "diff": "Câu hỏi có từ để hỏi thì thêm thẳng 「か」; không có từ để hỏi, hỏi “có… hay không” thì phải dùng 「かどうか」.",
               "this": [
                 {
                   "tag": "Có từ để hỏi → か",
@@ -1751,9 +1676,9 @@
                 }
               ],
               "wrong": {
-                "why": "Khi có từ để hỏi thì không thêm 「どうか」 nữa"
+                "why": "Khi đã có từ để hỏi thì không thêm 「どうか」 nữa"
               },
-              "explain": "Xem câu hỏi được lồng vào có từ để hỏi không: いつ、どこ、誰 → thêm thẳng か; không có từ để hỏi, chỉ hỏi “đến hay không, đúng hay không” → かどうか."
+              "explain": "Nghĩa gốc của か là đặt câu hỏi. Khi lồng một câu hỏi vào trong câu: câu hỏi có từ để hỏi (いつ、どこ、誰) thì chỗ chưa chắc đã được chỉ rõ, chỉ cần thêm か (いつ来るか); không có từ để hỏi thì đặt song song hai khả năng 「来るか」 và 「どうか (hay là thế nào)」, cố định thành かどうか, nghĩa là “có… hay không”. Vì vậy hãy xem câu hỏi được lồng vào có từ để hỏi không: có từ như いつ → か; không có, chỉ hỏi có đến hay không → かどうか."
             }
           ]
         },
@@ -1763,20 +1688,20 @@
           "items": [
             {
               "id": "ne-particle",
-              "diff": "そうですか là khi nghe tin mới: “ra là vậy”; そうですね là đồng ý với người kia: “đúng vậy”.",
+              "diff": "そうですか là khi nghe tin mới, “ra là vậy”; そうですね là đồng ý với đối phương, “đúng vậy nhỉ”.",
               "this": [
                 {
                   "tag": "Tin mới · ra là vậy",
-                  "tr": "Ngày mai được nghỉ đấy. — Vậy à (ra là thế)."
+                  "tr": "Ngày mai được nghỉ đấy. — Vậy à (ra là vậy)."
                 }
               ],
               "that": [
                 {
                   "tag": "Đồng ý · đúng vậy",
-                  "tr": "Hôm nay nóng thật nhỉ. — Đúng vậy."
+                  "tr": "Hôm nay nóng nhỉ. — Đúng vậy nhỉ."
                 }
               ],
-              "explain": "Xem người kia nói gì: tin mới mà mình vốn không biết (〜よ) → そうですか (đọc giọng xuống); điều cả hai cùng cảm nhận, người kia đang tìm sự đồng cảm (〜ね) → そうですね. Đáp 「そうですか」 khi người ta nói “hôm nay nóng quá nhỉ” sẽ nghe như đang nghi ngờ họ."
+              "explain": "Xem đối phương nói gì: tin mới mà mình vốn không biết (〜よ) → そうですか (đọc giọng xuống); điều cả hai cùng cảm thấy, đối phương đang tìm sự đồng cảm (〜ね) → そうですね. Đáp 「そうですか」 khi người ta nói “Hôm nay nóng quá nhỉ” thì nghe như đang nghi ngờ đối phương."
             }
           ]
         }
@@ -1814,23 +1739,23 @@
           "items": [
             {
               "id": "node",
-              "diff": "から chủ quan, khẩu ngữ, còn đặt được ở cuối câu thành 「〜からです」; ので khách quan, lịch sự, chỉ dùng ở giữa câu.",
+              "diff": "から mang tính chủ quan, khẩu ngữ, còn có thể đặt cuối câu thành 「〜からです」; ので khách quan, lịch sự, chỉ dùng giữa câu.",
               "this": [
                 {
                   "tag": "Cuối câu · nói lý do sau",
-                  "tr": "Tôi đến muộn là vì tàu điện bị dừng."
+                  "tr": "Tôi đến lớp muộn là vì xe buýt không đến."
                 }
               ],
               "that": [
                 {
                   "tag": "Giữa câu · giải thích lịch sự",
-                  "tr": "Vì tàu điện bị dừng nên tôi đã đến muộn."
+                  "tr": "Vì xe buýt không đến nên tôi đã đến lớp muộn."
                 }
               ],
               "wrong": {
-                "why": "ので không đặt ở cuối câu với 「です」 được"
+                "why": "ので không thể đặt cuối câu rồi nối 「です」"
               },
-              "explain": "Xem vị trí và hoàn cảnh: đặt ở cuối câu để trả lời “tại sao” → chỉ dùng được から (〜からです); ở giữa câu, giải thích lý do với thầy cô, cấp trên → ので nghe khách quan hơn, không giống bao biện; nói thoải mái với bạn bè, phía sau là mệnh lệnh hoặc lời mời → から tự nhiên hơn."
+              "explain": "Xem vị trí và hoàn cảnh: đặt cuối câu để trả lời “tại sao” → chỉ dùng から (〜からです); giữa câu, giải thích lý do với thầy cô, cấp trên → ので nghe khách quan hơn, không giống bào chữa; nói thoải mái với bạn bè, hoặc phía sau là mệnh lệnh, lời rủ → から tự nhiên hơn."
             }
           ]
         }
@@ -1841,27 +1766,27 @@
       "groups": [
         {
           "kind": "look",
-          "note": "まで ↔ までに, chỉ khác một chữ 「に」",
+          "note": "「まで」 trong から〜まで ↔ までに, chỉ khác một chữ 「に」",
           "items": [
             {
               "id": "made-ni-deadline",
-              "diff": "から〜まで nói làm liên tục trong một khoảng thời gian; までに nói hạn chót, làm xong trước lúc đó là được.",
+              "diff": "から〜まで nói làm liên tục trong một khoảng thời gian; までに nói hạn chót, chỉ cần làm xong trước lúc đó là được.",
               "this": [
                 {
-                  "tag": "Cả khoảng · liên tục",
-                  "tr": "Làm việc từ chín giờ đến năm giờ."
+                  "tag": "Cả khoảng thời gian · liên tục",
+                  "tr": "Tôi làm việc từ chín giờ đến năm giờ."
                 }
               ],
               "that": [
                 {
                   "tag": "Hạn chót · xong trước đó",
-                  "tr": "Về trước năm giờ."
+                  "tr": "Tôi sẽ về trước năm giờ."
                 }
               ],
               "wrong": {
-                "why": "Nộp bài tập là hành động hoàn thành một lần, phải dùng までに"
+                "why": "Nộp bài tập là hành động xong ngay một lần, phải dùng までに"
               },
-              "explain": "Xem động từ phía sau: hành động kéo dài liên tục như 働く、待つ、寝る → まで; hành động hoàn thành trong chốc lát như 帰る、出す、終わる → までに, nghĩa là “muộn nhất là trước lúc đó”."
+              "explain": "Xem động từ phía sau: hành động kéo dài liên tục như 働く、待つ、寝る → まで của から〜まで, nghĩa là làm liên tục đến lúc đó; hành động xong ngay một lần như 帰る、出す、終わる → までに, nghĩa là “muộn nhất là trước lúc đó”."
             }
           ]
         },
@@ -1871,7 +1796,7 @@
           "items": [
             {
               "id": "kara-ni-kakete",
-              "diff": "から〜まで có điểm đầu, điểm cuối rõ ràng; から〜にかけて chỉ nói phạm vi đại khái, hay dùng trong dự báo thời tiết, tin tức.",
+              "diff": "から〜まで có điểm đầu và điểm cuối rõ ràng; から〜にかけて chỉ nói phạm vi đại khái, hay dùng trong dự báo thời tiết, tin tức.",
               "this": [
                 {
                   "tag": "Đầu cuối rõ ràng",
@@ -1884,7 +1809,7 @@
                   "tr": "Từ tối nay đến ngày mai có lẽ sẽ có mưa."
                 }
               ],
-              "explain": "Xem có phải thời gian chính xác không: giờ học, giờ mở cửa… có đầu cuối rõ ràng → から〜まで; một khoảng thời gian, một vùng mơ hồ như “tối nay đến ngày mai” trong dự báo thời tiết → から〜にかけて."
+              "explain": "Xem có phải nói thời gian chính xác hay không: giờ học, giờ mở cửa… có điểm đầu cuối rõ ràng → から〜まで; một khoảng thời gian, một vùng mơ hồ như “tối nay đến ngày mai” trong dự báo thời tiết → から〜にかけて."
             }
           ]
         }
@@ -1928,20 +1853,20 @@
             {
               "id": "ga-subject",
               "title": "〜が（đối lập）",
-              "diff": "けど thiên về văn nói, dùng giữa bạn bè; が trang trọng hơn, dùng trong hoàn cảnh chính thức, văn viết và email.",
+              "diff": "けど thiên về khẩu ngữ, dùng giữa bạn bè; が thiên về trang trọng, dùng trong dịp chính thức, văn viết và email.",
               "this": [
                 {
-                  "tag": "Văn nói",
+                  "tag": "Khẩu ngữ",
                   "tr": "Quán này tuy đắt nhưng ngon cực luôn đấy."
                 }
               ],
               "that": [
                 {
                   "tag": "Trang trọng · văn viết",
-                  "tr": "Quán này tuy giá cao nhưng hương vị vô cùng tuyệt vời."
+                  "tr": "Quán này giá tuy cao nhưng hương vị vô cùng tuyệt vời."
                 }
               ],
-              "explain": "Nhìn giọng điệu cả câu: kiểu nói chuyện phiếm có 「よ」, lược trợ từ → けど; cách nói trang trọng 「です・ます」 kèm 「大変」, dùng trong báo cáo, email, diễn thuyết → が. Cũng có thể nói 「高いですけど」, nhưng văn bản trang trọng thường dùng が. けれども trang trọng hơn けど một chút, nhưng văn bản trang trọng vẫn hay dùng が hơn."
+              "explain": "Xem giọng điệu của cả câu: giọng nói chuyện có 「よ」, lược trợ từ → けど; cách nói trang trọng với 「です・ます」 và 「大変」, trong báo cáo, email, bài phát biểu → が. 「高いですけど」 cũng nói được, nhưng trong văn bản trang trọng thường dùng が. けれども trang trọng hơn けど một chút, nhưng trong văn bản trang trọng vẫn hay dùng が hơn."
             },
             {
               "id": "noni-usage",
@@ -1993,62 +1918,25 @@
       "id": "kosoado-determiners",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều biến đổi từ tiền tố 「こ・そ・あ・ど」 — tiền tố quyết định xa gần, phần đuôi quyết định loại",
+          "kind": "look",
+          "note": "この ↔ ここ, chỉ khác chữ kana cuối",
           "items": [
             {
-              "id": "kosoado-pronouns",
-              "diff": "この phía sau bắt buộc phải có danh từ; これ dùng độc lập, tự nó làm được chủ ngữ, tân ngữ.",
-              "this": [
-                {
-                  "tag": "＋danh từ",
-                  "tr": "Quyển sách này là của tôi."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Dùng độc lập",
-                  "tr": "Đây là sách của tôi."
-                }
-              ],
-              "wrong": {
-                "why": "Sau この bắt buộc phải có danh từ"
-              },
-              "explain": "Xem ngay phía sau là gì: danh từ (本、人、店) → この; trợ từ 「は・が・を」 → これ. Mẹo nhớ: 「〜の」 giống trợ từ の nối hai danh từ, nên phía sau nhất định phải có một danh từ. その／それ、あの／あれ、どの／どれ cũng tương tự."
-            },
-            {
               "id": "kosoado-places",
-              "diff": "この＋danh từ chỉ đúng cái trước mắt; ここ chỉ nơi này, khi bổ nghĩa cho danh từ phải nói 「ここの」.",
+              "diff": "この đi thẳng với danh từ, chỉ chính cái ở trước mắt; ここ là “chỗ này”, khi bổ nghĩa cho danh từ phải nói 「ここの」.",
               "this": [
                 {
-                  "tag": "Chỉ bát trước mắt",
-                  "tr": "Bát ramen này ngon thật nhỉ."
+                  "tag": "この＋danh từ · bát này",
+                  "tr": "Bát mì ramen này ngon thật."
                 }
               ],
               "that": [
                 {
-                  "tag": "Của nơi này",
-                  "tr": "Ramen của quán này ngon lắm đấy."
+                  "tag": "ここ＋の · của quán này",
+                  "tr": "Mì ramen ở quán này ngon lắm đấy."
                 }
               ],
-              "explain": "Xem đang nói về “đồ vật” hay “nơi chốn”: vừa ăn vừa nói “bát này” → この; giới thiệu với bạn “ramen của quán này (nơi này)” → ここの. 「ここ」 bản thân là danh từ chỉ địa điểm, khi bổ nghĩa cho danh từ khác thì cũng phải thêm 「の」 như danh từ thường. その／そこの、あの／あそこの cũng tương tự."
-            },
-            {
-              "id": "kosoado-konna",
-              "diff": "この chỉ đúng cái cụ thể đó; こんな chỉ “như thế này, loại này”, nói về chủng loại và tính chất.",
-              "this": [
-                {
-                  "tag": "Đúng cái này",
-                  "tr": "Xin lỗi, cho tôi cái túi này."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Loại như thế này",
-                  "tr": "Ước gì một ngày nào đó mình cũng có một cái túi như thế này."
-                }
-              ],
-              "explain": "Nói 「ください」 ở cửa hàng là muốn đúng cái trước mắt → この; với 「いつか」 (“một ngày nào đó”) là muốn một cái “tương tự như vậy”, không phải chính cái này → こんな. Giống sự khác nhau giữa “cái này” và “như thế này” trong tiếng Việt. その／そんな、あの／あんな、どの／どんな cũng tương tự."
+              "explain": "Chỉ khác chữ kana cuối: この vốn đã có 「の」, đi thẳng với danh từ, chỉ chính thứ ở trước mắt; ここ là nơi chốn “chỗ này”, khi bổ nghĩa cho danh từ thì cũng như danh từ thông thường, phải thêm 「の」. Vì vậy hãy xem trước 「の」 là 「こ」 hay 「ここ」: đang ăn và nói “bát này” → このラーメン; giới thiệu mì ramen “của quán này (chỗ này)” → ここのラーメン. その／そこの、あの／あそこの cũng vậy."
             }
           ]
         }
@@ -2058,48 +1946,8 @@
       "id": "kosoado-places",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều biến đổi từ tiền tố 「こ・そ・あ・ど」 — tiền tố quyết định xa gần, phần đuôi quyết định loại",
-          "items": [
-            {
-              "id": "kosoado-pronouns",
-              "diff": "ここ chỉ nơi chốn, khi hỏi dùng 「どこ」; これ chỉ đồ vật, khi hỏi dùng 「何」.",
-              "this": [
-                {
-                  "tag": "Nơi chốn",
-                  "tr": "Đây là đâu?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Đồ vật",
-                  "tr": "Đây là cái gì?"
-                }
-              ],
-              "explain": "Xem nói về nơi chốn hay đồ vật: hỏi “đây là nơi nào” → ここ＋どこ; hỏi “đây là thứ gì” → これ＋何. Thứ đang cầm trên tay, đang chỉ trước mắt thì không dùng ここ được. そこ／それ、あそこ／あれ cũng tương tự."
-            },
-            {
-              "id": "kosoado-determiners",
-              "diff": "ここの＋danh từ chỉ “của nơi này”; この＋danh từ chỉ đúng cái trước mắt.",
-              "this": [
-                {
-                  "tag": "Của nơi này",
-                  "tr": "Ramen của quán này ngon lắm đấy."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Chỉ bát trước mắt",
-                  "tr": "Bát ramen này ngon thật nhỉ."
-                }
-              ],
-              "explain": "Giới thiệu với bạn “ramen của quán này (nơi này)” → ここの; vừa ăn vừa nói “bát này” → この. 「ここ」 là danh từ chỉ địa điểm, bổ nghĩa cho danh từ khác thì phải thêm 「の」; 「この」 bản thân đã có 「の」, nối thẳng với danh từ. その／そこの、あの／あそこの cũng tương tự."
-            }
-          ]
-        },
-        {
           "kind": "look",
-          "note": "どこ ↔ どこか, chỉ khác một chữ 「か」",
+          "note": "Chỉ khác một chữ kana: どこ ↔ どこか, ここ ↔ これ, ここ ↔ この",
           "items": [
             {
               "id": "question-word-ka",
@@ -2118,6 +1966,40 @@
                 }
               ],
               "explain": "Chỉ khác một chữ 「か」 mà câu trả lời hoàn toàn khác: どこへ → “đi Kyoto”; どこかへ → “ừ, đi Kyoto” hoặc “không, chẳng đi đâu cả”. Nghe thấy 「どこか」 thì trước hết phải trả lời 「はい／いいえ」."
+            },
+            {
+              "id": "kosoado-pronouns",
+              "diff": "ここ chỉ nơi chốn, khi hỏi dùng 「どこ」; これ chỉ đồ vật, khi hỏi dùng 「何」.",
+              "this": [
+                {
+                  "tag": "Nơi chốn",
+                  "tr": "Đây là đâu?"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Đồ vật",
+                  "tr": "Đây là cái gì?"
+                }
+              ],
+              "explain": "Chỉ khác chữ kana cuối: ここ là nơi chốn “chỗ này”, これ là đồ vật “cái này”. Xem từ để hỏi trong câu: hỏi là nơi nào, dùng どこ → ここ; hỏi là vật gì, dùng 何 → これ. Đồ vật đang cầm trên tay hay đang chỉ trước mắt thì không dùng ここ được. そこ／それ、あそこ／あれ cũng vậy."
+            },
+            {
+              "id": "kosoado-determiners",
+              "diff": "ここの＋danh từ là “của chỗ này”; この＋danh từ chỉ chính cái ở trước mắt.",
+              "this": [
+                {
+                  "tag": "ここ＋の · của quán này",
+                  "tr": "Mì ramen ở quán này ngon lắm đấy."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "この＋danh từ · bát này",
+                  "tr": "Bát mì ramen này ngon thật."
+                }
+              ],
+              "explain": "Chỉ khác chữ kana cuối: ここ là nơi chốn “chỗ này”, khi bổ nghĩa cho danh từ phải thêm 「の」 thành ここの; この vốn đã có 「の」, đi thẳng với danh từ, chỉ chính thứ ở trước mắt. Vì vậy hãy xem trước 「の」 là 「ここ」 hay 「こ」: giới thiệu mì ramen “của quán này (chỗ này)” → ここのラーメン; đang ăn và nói “bát này” → このラーメン. その／そこの、あの／あそこの cũng vậy."
             }
           ]
         }

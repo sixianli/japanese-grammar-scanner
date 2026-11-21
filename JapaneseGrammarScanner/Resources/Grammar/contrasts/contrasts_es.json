@@ -1575,102 +1575,27 @@
       "id": "ja-nai",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambas vienen de 「では＋ない」 (じゃ＝では): «no es…»",
-          "items": [
-            {
-              "id": "ja-nakute",
-              "diff": "じゃない va al final y solo dice «no es A»; じゃなくて niega A y además dice cuál es el B correcto.",
-              "this": [
-                {
-                  "tag": "Final · solo niega",
-                  "tr": "Esto no es sal."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "En medio · no A sino B",
-                  "tr": "Esto no es sal, es azúcar."
-                }
-              ],
-              "explain": "Mira si después de la negación la oración continúa: si termina ahí → じゃない; si a continuación se da la respuesta correcta (砂糖です) → じゃなくて, que sirve para corregir. Por escrito se dice ではない／ではなく, con el mismo uso."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Todas expresan «no…»",
+          "note": "Ambas sirven para confirmar: «…, ¿verdad?»",
           "items": [
             {
-              "id": "i-adj-negative",
-              "diff": "Los sustantivos y adjetivos-な llevan 「じゃない」; los adjetivos-い cambian 「い」 por 「くない」.",
+              "id": "deshou-guess",
+              "title": "〜でしょう（confirmación）",
+              "thisTitle": "〜じゃない（confirmación）",
+              "diff": "じゃないですか presenta algo que el oyente también sabe como punto de partida, normalmente para introducir lo que viene después; でしょう？ pregunta de verdad «¿verdad?» y espera respuesta.",
               "this": [
                 {
-                  "tag": "Adjetivo-な → じゃない",
-                  "tr": "Esta tienda no es muy conocida."
+                  "tag": "Dato compartido → se sigue hablando",
+                  "tr": "¿Sabes la tienda de conveniencia que hay cerca de la estación? Espérame allí, por favor."
                 }
               ],
               "that": [
                 {
-                  "tag": "Adjetivo-い → くない",
-                  "tr": "Esta tienda no es cara."
+                  "tag": "Confirmación · espera respuesta",
+                  "tr": "Hay una tienda de conveniencia cerca de la estación, ¿verdad?"
                 }
               ],
-              "wrong": {
-                "why": "La negación de un adjetivo-い es 「高くない（です）」"
-              },
-              "explain": "Primero mira el tipo de adjetivo: adjetivos-な como 有名, 静か, きれい, y los sustantivos → じゃない; adjetivos-い como 高い o 安い → くない. 有名 y きれい terminan en el sonido 「い」, pero son adjetivos-な. La forma cortés ではありません funciona igual (有名ではありません)."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ja-nakute",
-      "groups": [
-        {
-          "kind": "root",
-          "note": "Ambas vienen de 「では＋ない」 (じゃ＝では): «no es…»",
-          "items": [
-            {
-              "id": "ja-nai",
-              "diff": "じゃなくて niega A y además dice cuál es el B correcto; じゃない va al final y solo dice «no es A».",
-              "this": [
-                {
-                  "tag": "No A sino B",
-                  "tr": "Esto no es sal, es azúcar."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Final · solo niega",
-                  "tr": "Eso no es sal, ¿eh?"
-                }
-              ],
-              "explain": "Mira si después de la negación la oración continúa: si a continuación se da la respuesta correcta (砂糖です) → じゃなくて; si termina ahí → じゃない. Por escrito se dice ではない／ではなく, con el mismo uso."
-            }
-          ]
-        },
-        {
-          "kind": "look",
-          "note": "ではなく ↔ だけでなく: solo se añade 「だけ」",
-          "items": [
-            {
-              "id": "dake-de-naku",
-              "diff": "AではなくB: solo vale B; AだけでなくB: valen A y B.",
-              "this": [
-                {
-                  "tag": "Solo B",
-                  "tr": "Él no habla inglés, sino francés."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "A y B",
-                  "tr": "Él no solo habla inglés, sino también francés."
-                }
-              ],
-              "explain": "Mira la partícula detrás de B: 「を」 o 「です」 → ではなく, A queda negado; 「も」 → だけでなく, A también vale y se le suma B. Solo se añade 「だけ」, pero el significado cambia por completo. En la lengua hablada se dice じゃなくて, con el mismo uso."
+              "explain": "Fíjate en si esperas respuesta: si solo mencionas algo que ambos sabéis como punto de partida y sigues hablando enseguida (あそこで待っていてください) → じゃないですか, y el oyente no tiene que contestar; si de verdad preguntas «¿verdad?» y esperas que diga 「うん」 → でしょう？. Usar じゃないですか con algo que el otro quizá no sepa suena impositivo."
             }
           ]
         }
@@ -1685,27 +1610,27 @@
           "items": [
             {
               "id": "aida-during",
-              "diff": "〜中 solo va con sustantivos; si delante hay un verbo (〜ている), hay que usar 「間」.",
+              "diff": "〜中 solo va detrás de sustantivos; si delante hay un verbo (〜ている), hay que usar 「間」.",
               "this": [
                 {
                   "tag": "Sustantivo → 中",
-                  "tr": "Durante la reunión, apaguen el móvil, por favor."
+                  "tr": "Apaga el móvil durante la reunión, por favor."
                 }
               ],
               "that": [
                 {
-                  "tag": "間に · Con verbo",
-                  "tr": "Mientras dormía, llovió."
+                  "tag": "間に · tras verbo",
+                  "tr": "Llovió mientras dormía."
                 },
                 {
-                  "tag": "間 · Con verbo",
-                  "tr": "Mientras iba en el tren, estuve leyendo todo el rato."
+                  "tag": "間 · tras verbo",
+                  "tr": "Estuve leyendo un libro todo el rato que fui en el tren."
                 }
               ],
               "wrong": {
-                "why": "中 no puede ir con un verbo; hay que usar 間"
+                "why": "中 no puede ir detrás de un verbo; hay que usar 間"
               },
-              "explain": "Mira si delante hay un sustantivo o un verbo: sustantivos como 会議, 授業, 夏休み → 〜中 (会議中, 夏休み中); verbos como 寝ている o 日本にいる → 〜間／〜間に. Con sustantivo también se puede decir 「会議の間」, pero hace falta 「の」."
+              "explain": "Mira si delante hay un sustantivo o un verbo: sustantivos como 会議、授業、夏休み → 〜中 (会議中、夏休み中); verbos como 寝ている、日本にいる → 〜間／〜間に. Con sustantivos también se puede decir 「会議の間」, pero hay que añadir 「の」."
             }
           ]
         }
@@ -1716,11 +1641,11 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Todas son la misma 「か」, cuyo núcleo es la «incertidumbre»",
+          "note": "Ambas vienen de la partícula 「か」: su sentido original es plantear una pregunta, presentar algo de lo que no se está seguro",
           "items": [
             {
               "id": "question-word-ka",
-              "diff": "何を〜か pregunta qué cosa concreta; 何か〜か pregunta «¿quieres algo…?» y se responde con はい／いいえ.",
+              "diff": "何を〜か pregunta qué cosa en concreto; 何か〜か pregunta «¿quieres… algo?» y se responde con はい／いいえ.",
               "this": [
                 {
                   "tag": "Pregunta el contenido",
@@ -1729,15 +1654,15 @@
               ],
               "that": [
                 {
-                  "tag": "Pregunta si quiere",
-                  "tr": "¿Vas a comer algo? — Sí, voy a comer."
+                  "tag": "Pregunta sí o no",
+                  "tr": "¿Quieres comer algo? — Sí, por favor."
                 }
               ],
-              "explain": "Mira lo que sigue al interrogativo: si lleva una partícula como 「を」 o 「が」 → de verdad pregunta «qué es» y se responde con el contenido concreto; si va pegado a 「か」 → 「何か」 es «algo», y la oración solo pregunta sí o no, así que se responde 「はい／いいえ」."
+              "explain": "El sentido original de か es plantear una pregunta, presentar algo de lo que no se está seguro. Al final de la oración convierte toda la frase en pregunta: en 「何を食べますか」, 「何」 es un hueco que el oyente debe rellenar, así que se responde con el contenido (すし). Pegado directamente a un interrogativo, 「何か」 significaba en origen «¿qué será? (no se sabe)», y pasa a ser un «algo» indeterminado; a la frase solo le queda preguntar «¿comes o no?», así que primero se responde 「はい／いいえ」. Mira qué va detrás del interrogativo: una partícula como 「を」 o 「が」 → pregunta qué; 「か」 directamente → pregunta si sí o no."
             },
             {
               "id": "ka-dou-ka",
-              "diff": "Una pregunta con interrogativo lleva directamente 「か」; sin interrogativo, para preguntar «si… o no», se usa 「かどうか」.",
+              "diff": "Una pregunta con interrogativo lleva 「か」 directamente; sin interrogativo, para preguntar «si… o no», se usa 「かどうか」.",
               "this": [
                 {
                   "tag": "Con interrogativo → か",
@@ -1746,14 +1671,14 @@
               ],
               "that": [
                 {
-                  "tag": "Sí o no → かどうか",
+                  "tag": "Si… o no → かどうか",
                   "tr": "No sé si viene mañana."
                 }
               ],
               "wrong": {
-                "why": "Con un interrogativo no se puede añadir además 「どうか」"
+                "why": "Con un interrogativo no se puede añadir 「どうか」"
               },
-              "explain": "Mira si la pregunta incrustada tiene un interrogativo: いつ, どこ, 誰 → か directamente; sin interrogativo, solo «si viene o no, si es correcto o no» → かどうか."
+              "explain": "El sentido original de か es plantear una pregunta. Al meter una pregunta dentro de una oración: si tiene un interrogativo (いつ、どこ、誰), la parte dudosa ya está señalada, así que basta con か (いつ来るか); si no lo tiene, se ponen lado a lado las dos posibilidades, 「来るか」 y 「どうか (o qué)」, y eso se fija como かどうか, «si… o no». Así que mira si la pregunta incrustada tiene interrogativo: con una palabra como いつ → か; sin él, preguntando solo si viene o no → かどうか."
             }
           ]
         },
@@ -1763,20 +1688,20 @@
           "items": [
             {
               "id": "ne-particle",
-              "diff": "そうですか responde a una noticia nueva: «ah, así que es eso»; そうですね muestra acuerdo: «sí, es verdad».",
+              "diff": "そうですか es «ah, ¿sí?» al oír una noticia nueva; そうですね es estar de acuerdo con el otro: «pues sí».",
               "this": [
                 {
-                  "tag": "Noticia nueva · ah, ya",
-                  "tr": "Mañana es festivo, ¿sabes? — Ah, ¿sí?"
+                  "tag": "Noticia nueva · ya veo",
+                  "tr": "Mañana es día libre, ¿sabes? — ¿Ah, sí? (Ya veo.)"
                 }
               ],
               "that": [
                 {
-                  "tag": "Acuerdo · es verdad",
-                  "tr": "Hoy hace mucho calor, ¿eh? — Sí, es verdad."
+                  "tag": "Acuerdo · pues sí",
+                  "tr": "Hoy hace calor, ¿verdad? — Pues sí."
                 }
               ],
-              "explain": "Mira lo que dice el otro: si es algo nuevo que no sabías (〜よ) → そうですか (con entonación descendente); si es algo que ambos perciben y el otro busca tu acuerdo (〜ね) → そうですね. Responder 「そうですか」 a «hoy hace mucho calor» suena como si dudaras de lo que dice."
+              "explain": "Mira lo que dice el otro: una noticia que no sabías (〜よ) → そうですか (con entonación descendente); algo que ambos notáis y en lo que el otro busca complicidad (〜ね) → そうですね. Responder 「そうですか」 a «hoy hace muchísimo calor» suena como si dudaras de lo que dice."
             }
           ]
         }
@@ -1804,7 +1729,7 @@
                   "tr": "Saldré después de comer."
                 }
               ],
-              "explain": "Solo cambian た y て: forma た＋から da la causa, y la segunda parte es el resultado (おなかがいっぱい); forma て＋から da el orden temporal, y la segunda parte es lo que se hace después (出かける)."
+              "explain": "Solo cambian た y て: forma た＋から da la causa, y la segunda parte es el resultado (おなかがいっぱい); forma て＋から da el orden temporal, y la segunda parte es lo que se hace a continuación (出かける)."
             }
           ]
         },
@@ -1814,23 +1739,23 @@
           "items": [
             {
               "id": "node",
-              "diff": "から es subjetivo y coloquial, y puede ir al final como 「〜からです」; ので es objetivo y cortés, y solo va en medio de la oración.",
+              "diff": "から es subjetivo y coloquial, y también puede cerrar la oración como 「〜からです」; ので es objetivo y cortés, y solo va en medio de la oración.",
               "this": [
                 {
-                  "tag": "Al final · explicar la causa",
-                  "tr": "Llegué tarde porque se paró el tren."
+                  "tag": "Final de oración · la razón, después",
+                  "tr": "Si llegué tarde a clase fue porque no vino el autobús."
                 }
               ],
               "that": [
                 {
                   "tag": "En medio · explicación cortés",
-                  "tr": "Como se paró el tren, llegué tarde."
+                  "tr": "Como no vino el autobús, llegué tarde a clase."
                 }
               ],
               "wrong": {
                 "why": "ので no puede ir al final seguido de 「です」"
               },
-              "explain": "Mira la posición y la situación: al final, respondiendo a «por qué» → solo から (〜からです); en medio de la oración, explicando el motivo a un profesor o un jefe → ので suena más objetivo y menos a excusa; hablando con amigos o si después va una orden o invitación → から es más natural."
+              "explain": "Fíjate en la posición y la situación: al final de la oración, respondiendo a «¿por qué?» → solo から (〜からです); en medio de la oración, explicando un motivo a un profesor o a un jefe → ので suena más objetivo y menos a excusa; hablando con amigos sin formalidades, o si después viene una orden o una invitación → から es más natural."
             }
           ]
         }
@@ -1841,11 +1766,11 @@
       "groups": [
         {
           "kind": "look",
-          "note": "まで ↔ までに: solo se añade 「に」",
+          "note": "El 「まで」 de から〜まで ↔ までに: solo cambia un 「に」",
           "items": [
             {
               "id": "made-ni-deadline",
-              "diff": "から〜まで dice que algo se hace sin parar durante un periodo; までに da una fecha límite: basta con acabar antes.",
+              "diff": "から〜まで indica que se hace algo sin parar durante un periodo; までに marca un plazo: basta con terminarlo antes de ese momento.",
               "this": [
                 {
                   "tag": "Todo el periodo · sin parar",
@@ -1854,14 +1779,14 @@
               ],
               "that": [
                 {
-                  "tag": "Límite · antes de",
-                  "tr": "Vuelvo antes de las cinco."
+                  "tag": "Plazo · terminado antes",
+                  "tr": "Volveré antes de las cinco."
                 }
               ],
               "wrong": {
-                "why": "Entregar los deberes es una acción puntual; hay que usar までに"
+                "why": "Entregar los deberes es una acción puntual, así que se usa までに"
               },
-              "explain": "Mira el verbo que sigue: acciones que duran, como 働く, 待つ, 寝る → まで; acciones que se completan de una vez, como 帰る, 出す, 終わる → までに, «como muy tarde antes de ese momento»."
+              "explain": "Mira el verbo que sigue: acciones que duran, como 働く、待つ、寝る → el まで de から〜まで, que indica que se sigue haciendo hasta ese momento; acciones que se completan de una vez, como 帰る、出す、終わる → までに, que significa «como muy tarde, antes de eso»."
             }
           ]
         },
@@ -1871,7 +1796,7 @@
           "items": [
             {
               "id": "kara-ni-kakete",
-              "diff": "から〜まで tiene un inicio y un final claros; から〜にかけて solo indica un intervalo aproximado y se usa mucho en el tiempo y las noticias.",
+              "diff": "から〜まで tiene un inicio y un final claros; から〜にかけて solo da un rango aproximado y es frecuente en el pronóstico del tiempo y las noticias.",
               "this": [
                 {
                   "tag": "Inicio y final claros",
@@ -1880,11 +1805,11 @@
               ],
               "that": [
                 {
-                  "tag": "Intervalo aproximado",
-                  "tr": "Entre esta noche y mañana probablemente lloverá."
+                  "tag": "Rango aproximado",
+                  "tr": "Es probable que llueva desde esta noche hasta mañana."
                 }
               ],
-              "explain": "Mira si se habla de un horario exacto: algo con inicio y final claros, como una clase o un horario comercial → から〜まで; un periodo o una zona difusos, como «de esta noche a mañana» en el parte meteorológico → から〜にかけて."
+              "explain": "Mira si hablas de un tiempo exacto: algo con inicio y final claros, como una clase o un horario comercial → から〜まで; un periodo o una zona imprecisos, como «de esta noche a mañana» en el pronóstico del tiempo → から〜にかけて."
             }
           ]
         }
@@ -1928,20 +1853,20 @@
             {
               "id": "ga-subject",
               "title": "〜が（contraste）",
-              "diff": "けど es más coloquial, para hablar entre amigos; が es más formal, para situaciones formales, textos y correos.",
+              "diff": "けど es más coloquial y se usa entre amigos; が es más formal y se usa en situaciones formales, textos escritos y correos.",
               "this": [
                 {
                   "tag": "Coloquial",
-                  "tr": "Este restaurante es caro, pero está buenísimo, ¿eh?"
+                  "tr": "Este sitio es caro, pero está buenísimo, ¿eh?"
                 }
               ],
               "that": [
                 {
                   "tag": "Formal · escrito",
-                  "tr": "Este restaurante tiene precios elevados, pero el sabor es excelente."
+                  "tr": "Los precios de este restaurante son elevados, pero la comida es excelente."
                 }
               ],
-              "explain": "Mira el tono de toda la frase: tono de charla, con 「よ」 y partículas omitidas → けど; expresiones formales como 「です・ます」 con 「大変」, en informes, correos o discursos → が. También se puede decir 「高いですけど」, pero en textos formales se suele usar が. けれども es algo más formal que けど, pero en textos formales sigue usándose más が."
+              "explain": "Fíjate en el tono de toda la frase: tono de charla, con 「よ」 y partículas omitidas → けど; lenguaje formal con 「です・ます」 y palabras como 「大変」, en informes, correos o discursos → が. También se puede decir 「高いですけど」, pero en textos formales se suele usar が. けれども es algo más formal que けど, pero en textos formales sigue predominando が."
             },
             {
               "id": "noni-usage",
@@ -1993,62 +1918,25 @@
       "id": "kosoado-determiners",
       "groups": [
         {
-          "kind": "root",
-          "note": "Todas vienen de los prefijos 「こ・そ・あ・ど」: el prefijo indica la distancia y la terminación, la categoría",
+          "kind": "look",
+          "note": "この ↔ ここ: solo cambia el último kana",
           "items": [
             {
-              "id": "kosoado-pronouns",
-              "diff": "この tiene que ir seguido de un sustantivo; これ se usa solo y puede ser sujeto u objeto por sí mismo.",
-              "this": [
-                {
-                  "tag": "＋sustantivo",
-                  "tr": "Este libro es mío."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Solo",
-                  "tr": "Esto es mi libro."
-                }
-              ],
-              "wrong": {
-                "why": "Detrás de この tiene que ir un sustantivo"
-              },
-              "explain": "Mira lo que va justo detrás: un sustantivo (本, 人, 店) → この; una partícula 「は・が・を」 → これ. Truco: 「〜の」 funciona como «de…», así que detrás siempre tiene que haber un sustantivo. Lo mismo vale para その／それ, あの／あれ, どの／どれ."
-            },
-            {
               "id": "kosoado-places",
-              "diff": "この＋sustantivo señala esta cosa que tengo delante; ここ señala este lugar, y para modificar un sustantivo hay que decir 「ここの」.",
+              "diff": "この va seguido directamente de un sustantivo y señala esa cosa concreta que tienes delante; ここ es «aquí», y para modificar un sustantivo se dice 「ここの」.",
               "this": [
                 {
-                  "tag": "Este plato concreto",
-                  "tr": "¡Qué rico está este ramen!"
+                  "tag": "この＋sustantivo · este plato",
+                  "tr": "Este ramen está buenísimo."
                 }
               ],
               "that": [
                 {
-                  "tag": "De este lugar",
-                  "tr": "El ramen de este sitio está muy rico, ¿sabes?"
+                  "tag": "ここ＋の · el de este local",
+                  "tr": "El ramen de aquí está muy bueno, ¿eh?"
                 }
               ],
-              "explain": "Mira si hablas de una «cosa» o de un «lugar»: comiendo los fideos y diciendo «este plato» → この; recomendando a un amigo «el ramen de este local (de este sitio)» → ここの. 「ここ」 es un sustantivo de lugar, así que para modificar otro sustantivo necesita 「の」, como cualquier sustantivo. Lo mismo vale para その／そこの, あの／あそこの."
-            },
-            {
-              "id": "kosoado-konna",
-              "diff": "この señala uno concreto; こんな significa «así, de este tipo» y habla de clase o naturaleza.",
-              "this": [
-                {
-                  "tag": "Este concreto",
-                  "tr": "Perdone, deme este bolso, por favor."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "De este tipo",
-                  "tr": "¡Ojalá algún día tenga un bolso así!"
-                }
-              ],
-              "explain": "Decir 「ください」 en una tienda es pedir justo el que tienes delante → この; con 「いつか」 («algún día») quieres «uno parecido», no ese mismo → こんな. Es la diferencia entre «este» y «así / como este». Lo mismo vale para その／そんな, あの／あんな, どの／どんな."
+              "explain": "Solo cambia el último kana: この ya lleva 「の」, así que va directamente con el sustantivo y señala la cosa que tienes delante; ここ es el lugar «aquí» y, como cualquier sustantivo, necesita otro 「の」 para modificar a un sustantivo. Así que mira si delante de 「の」 hay 「こ」 o 「ここ」: hablando de «este plato» mientras comes → このラーメン; recomendando el ramen «de este local (de este sitio)» → ここのラーメン. その／そこの y あの／あそこの funcionan igual."
             }
           ]
         }
@@ -2058,48 +1946,8 @@
       "id": "kosoado-places",
       "groups": [
         {
-          "kind": "root",
-          "note": "Todas vienen de los prefijos 「こ・そ・あ・ど」: el prefijo indica la distancia y la terminación, la categoría",
-          "items": [
-            {
-              "id": "kosoado-pronouns",
-              "diff": "ここ señala un lugar y se pregunta con 「どこ」; これ señala una cosa y se pregunta con 「何」.",
-              "this": [
-                {
-                  "tag": "Lugar",
-                  "tr": "¿Dónde estamos?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Cosa",
-                  "tr": "¿Qué es esto?"
-                }
-              ],
-              "explain": "Mira si hablas de un lugar o de una cosa: para preguntar «qué sitio es este» → ここ＋どこ; para preguntar «qué cosa es esta» → これ＋何. Algo que tienes en la mano o que señalas delante de ti no se puede llamar ここ. Lo mismo vale para そこ／それ, あそこ／あれ."
-            },
-            {
-              "id": "kosoado-determiners",
-              "diff": "ここの＋sustantivo significa «de este lugar»; この＋sustantivo señala esta cosa que tengo delante.",
-              "this": [
-                {
-                  "tag": "De este lugar",
-                  "tr": "El ramen de este sitio está muy rico, ¿sabes?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Este plato concreto",
-                  "tr": "¡Qué rico está este ramen!"
-                }
-              ],
-              "explain": "Recomendando a un amigo «el ramen de este local (de este sitio)» → ここの; comiendo los fideos y diciendo «este plato» → この. 「ここ」 es un sustantivo de lugar y necesita 「の」 para modificar otro sustantivo; 「この」 ya lleva 「の」 y va directamente con el sustantivo. Lo mismo vale para その／そこの, あの／あそこの."
-            }
-          ]
-        },
-        {
           "kind": "look",
-          "note": "どこ ↔ どこか: solo se añade 「か」",
+          "note": "Solo cambia un kana: どこ ↔ どこか, ここ ↔ これ, ここ ↔ この",
           "items": [
             {
               "id": "question-word-ka",
@@ -2118,6 +1966,40 @@
                 }
               ],
               "explain": "Solo cambia un 「か」, pero la respuesta es muy distinta: どこへ → «a Kioto»; どこかへ → «sí, a Kioto» o «no, a ningún sitio». Al oír 「どこか」, primero se responde 「はい／いいえ」."
+            },
+            {
+              "id": "kosoado-pronouns",
+              "diff": "ここ señala un lugar y se pregunta por él con 「どこ」; これ señala una cosa y se pregunta por ella con 「何」.",
+              "this": [
+                {
+                  "tag": "Lugar",
+                  "tr": "¿Qué lugar es este?"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Cosa",
+                  "tr": "¿Qué es esto?"
+                }
+              ],
+              "explain": "Solo cambia el último kana: ここ es el lugar «aquí» y これ es la cosa «esto». Mira el interrogativo de la pregunta: si preguntas qué lugar es, con どこ → ここ; si preguntas qué cosa es, con 何 → これ. Para algo que tienes en la mano o que señalas delante de ti no se puede usar ここ. そこ／それ y あそこ／あれ funcionan igual."
+            },
+            {
+              "id": "kosoado-determiners",
+              "diff": "ここの＋sustantivo significa «de este lugar»; この＋sustantivo señala esa cosa concreta que tienes delante.",
+              "this": [
+                {
+                  "tag": "ここ＋の · el de este local",
+                  "tr": "El ramen de aquí está muy bueno, ¿eh?"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "この＋sustantivo · este plato",
+                  "tr": "Este ramen está buenísimo."
+                }
+              ],
+              "explain": "Solo cambia el último kana: ここ es el lugar «aquí» y, para modificar un sustantivo, necesita otro 「の」 y queda ここの; この ya lleva 「の」, así que va directamente con el sustantivo y señala la cosa que tienes delante. Así que mira si delante de 「の」 hay 「ここ」 o 「こ」: recomendando el ramen «de este local (de este sitio)» → ここのラーメン; hablando de «este plato» mientras comes → このラーメン. その／そこの y あの／あそこの funcionan igual."
             }
           ]
         }

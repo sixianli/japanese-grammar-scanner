@@ -3327,6 +3327,716 @@
           "explain": "နာမဝိသေသန၏ အဆုံးကို ကြည့်ပါ - 寒い、楽しい စသည့် い-နာမဝိသေသန → い ကို 「かった」 ပြောင်းပြီး ယဉ်ကျေးလိုလျှင် です ထပ်ထည့်သည်။ 暇、きれい、静か စသည့် な-နာမဝိသေသနနှင့် နာမ် → でした။ ရိုးရိုးပုံစံတွင်လည်း ထိုနည်းတူ - 寒かった／暇だった။ ငြင်းဆိုလည်း နှစ်မျိုး ခွဲသည် - 寒くなかった／暇じゃなかった။"
         }
       }
+    },
+    {
+      "point": "ja-nai",
+      "kind": "root",
+      "reason": "じゃなくて 只是 じゃない 的て形，不是从一个源头词的本义发展出的两个用法；「では＋ない」也不是一个具体的词（标准「同一个词变来的」收录条件）。找不到合格的同源对象，root 组删除",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ja-nakute",
+          "diff": "じゃない 在句末，只说「不是A」；じゃなくて 否定A之后，还要说出正确的B。",
+          "this": [
+            {
+              "ja": "これは|塩:しお|*じゃない|。",
+              "tag": "句末 · 只否定",
+              "tr": "这不是盐。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "これは|塩:しお|*じゃなくて|、|~砂糖:さとう|~です|。",
+              "tag": "句中 · 不是A而是B",
+              "tr": "这不是盐，是糖。"
+            }
+          ],
+          "explain": "看否定之后有没有继续说：句子到此结束 → じゃない；后面紧接着给出正确答案（砂糖です）→ じゃなくて，用来纠正。书面说 ではない／ではなく，用法一样。"
+        },
+        "en": {
+          "id": "ja-nakute",
+          "diff": "じゃない ends the sentence and simply says “it's not A”; じゃなくて negates A and then goes on to give the correct B.",
+          "this": [
+            {
+              "tag": "End · just negates",
+              "tr": "This isn't salt."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Mid-sentence · not A but B",
+              "tr": "This isn't salt — it's sugar."
+            }
+          ],
+          "explain": "Check whether the sentence continues after the negation: it ends there → じゃない; the correct answer follows right after (砂糖です) → じゃなくて, used to correct. In writing it's ではない／ではなく, used the same way."
+        },
+        "ko": {
+          "id": "ja-nakute",
+          "diff": "じゃない는 문장 끝에서 ‘A가 아니다’라고만 말한다. じゃなくて는 A를 부정한 뒤 올바른 B를 이어서 말한다.",
+          "this": [
+            {
+              "tag": "문장 끝 · 부정만",
+              "tr": "이건 소금이 아니다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "문장 중간 · A가 아니라 B",
+              "tr": "이건 소금이 아니라 설탕이에요."
+            }
+          ],
+          "explain": "부정한 뒤에 말이 이어지는지 보자. 문장이 거기서 끝나면 → じゃない. 바로 뒤에 올바른 답(砂糖です)이 오면 → じゃなくて, 바로잡는 데 쓴다. 문어에서는 ではない／ではなく라고 하며, 용법은 같다."
+        },
+        "es": {
+          "id": "ja-nakute",
+          "diff": "じゃない va al final y solo dice «no es A»; じゃなくて niega A y además dice cuál es el B correcto.",
+          "this": [
+            {
+              "tag": "Final · solo niega",
+              "tr": "Esto no es sal."
+            }
+          ],
+          "that": [
+            {
+              "tag": "En medio · no A sino B",
+              "tr": "Esto no es sal, es azúcar."
+            }
+          ],
+          "explain": "Mira si después de la negación la oración continúa: si termina ahí → じゃない; si a continuación se da la respuesta correcta (砂糖です) → じゃなくて, que sirve para corregir. Por escrito se dice ではない／ではなく, con el mismo uso."
+        },
+        "vi": {
+          "id": "ja-nakute",
+          "diff": "じゃない ở cuối câu, chỉ nói “không phải A”; じゃなくて phủ định A xong còn nói ra B đúng.",
+          "this": [
+            {
+              "tag": "Cuối câu · chỉ phủ định",
+              "tr": "Đây không phải muối."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Giữa câu · không phải A mà là B",
+              "tr": "Đây không phải muối, mà là đường."
+            }
+          ],
+          "explain": "Xem sau phủ định có nói tiếp không: câu kết thúc ở đó → じゃない; ngay sau đó đưa ra đáp án đúng (砂糖です) → じゃなくて, dùng để đính chính. Văn viết nói ではない／ではなく, cách dùng như nhau."
+        },
+        "my": {
+          "id": "ja-nakute",
+          "diff": "じゃない သည် ဝါကျအဆုံးတွင် ရှိပြီး “A မဟုတ်ဘူး” ဟုသာ ပြောသည်။ じゃなくて သည် A ကို ငြင်းပြီးနောက် မှန်ကန်သော B ကိုပါ ပြောသည်။",
+          "this": [
+            {
+              "tag": "ဝါကျအဆုံး · ငြင်းရုံသာ",
+              "tr": "ဒါ ဆား မဟုတ်ဘူး။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ဝါကျအလယ် · A မဟုတ် B",
+              "tr": "ဒါ ဆား မဟုတ်ဘူး၊ သကြားပါ။"
+            }
+          ],
+          "explain": "ငြင်းပြီးနောက် ဆက်ပြောသေးလား ကြည့်ပါ - ဝါကျ ဒီမှာ ဆုံးလျှင် → じゃない။ နောက်တွင် မှန်ကန်သော အဖြေ (砂糖です) ချက်ချင်း လိုက်လျှင် → じゃなくて ဖြစ်ပြီး ပြင်ဆင်ပေးရန် သုံးသည်။ စာရေးဟန်တွင် ではない／ではなく ဟု ပြောပြီး သုံးပုံ အတူတူပင်။"
+        }
+      }
+    },
+    {
+      "point": "ja-nai",
+      "kind": "meaning",
+      "reason": "じゃない 接名词、な形容词，くない 接い形容词，两边互补，找不到两个都能用的句子，差别是活用规则不是同一个意思下的语感（标准「意思差不多的」收录条件 3、4）",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "i-adj-negative",
+          "diff": "名词、な形容词后面接「じゃない」；い形容词把「い」变成「くない」。",
+          "this": [
+            {
+              "ja": "この|店:みせ|は|~有名:ゆうめい|*じゃない|。",
+              "tag": "な形容词 → じゃない",
+              "tr": "这家店没什么名气。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "この|店:みせ|は|~高:たか|*くない|。",
+              "tag": "い形容词 → くない",
+              "tr": "这家店不贵。"
+            }
+          ],
+          "wrong": {
+            "ja": "この店は高いじゃありません",
+            "why": "い形容词的否定是「高くない（です）」"
+          },
+          "explain": "先看形容词的种类：有名、静か、きれい 等な形容词和名词 → じゃない；高い、安い 等い形容词 → くない。有名、きれい 读音以「い」结尾，却是な形容词。礼貌的 ではありません 也一样（有名ではありません）。"
+        },
+        "en": {
+          "id": "i-adj-negative",
+          "diff": "Nouns and na-adjectives take 「じゃない」; i-adjectives change 「い」 to 「くない」.",
+          "this": [
+            {
+              "tag": "na-adjective → じゃない",
+              "tr": "This restaurant isn't famous."
+            }
+          ],
+          "that": [
+            {
+              "tag": "i-adjective → くない",
+              "tr": "This restaurant isn't expensive."
+            }
+          ],
+          "wrong": {
+            "why": "The negative of an i-adjective is 「高くない（です）」"
+          },
+          "explain": "First check the type of adjective: na-adjectives like 有名, 静か or きれい, and nouns → じゃない; i-adjectives like 高い or 安い → くない. 有名 and きれい end in an 「い」 sound but are na-adjectives. The polite ではありません works the same way (有名ではありません)."
+        },
+        "ko": {
+          "id": "i-adj-negative",
+          "diff": "명사·な형용사 뒤에는 「じゃない」를 붙이고, い형용사는 「い」를 「くない」로 바꾼다.",
+          "this": [
+            {
+              "tag": "な형용사 → じゃない",
+              "tr": "이 가게는 유명하지 않다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "い형용사 → くない",
+              "tr": "이 가게는 비싸지 않다."
+            }
+          ],
+          "wrong": {
+            "why": "い형용사의 부정은 「高くない（です）」"
+          },
+          "explain": "먼저 형용사의 종류를 보자. 有名、静か、きれい 등 な형용사와 명사 → じゃない. 高い、安い 등 い형용사 → くない. 有名、きれい는 발음이 「い」로 끝나지만 な형용사다. 정중한 ではありません도 마찬가지다(有名ではありません)."
+        },
+        "es": {
+          "id": "i-adj-negative",
+          "diff": "Los sustantivos y adjetivos-な llevan 「じゃない」; los adjetivos-い cambian 「い」 por 「くない」.",
+          "this": [
+            {
+              "tag": "Adjetivo-な → じゃない",
+              "tr": "Esta tienda no es muy conocida."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Adjetivo-い → くない",
+              "tr": "Esta tienda no es cara."
+            }
+          ],
+          "wrong": {
+            "why": "La negación de un adjetivo-い es 「高くない（です）」"
+          },
+          "explain": "Primero mira el tipo de adjetivo: adjetivos-な como 有名, 静か, きれい, y los sustantivos → じゃない; adjetivos-い como 高い o 安い → くない. 有名 y きれい terminan en el sonido 「い」, pero son adjetivos-な. La forma cortés ではありません funciona igual (有名ではありません)."
+        },
+        "vi": {
+          "id": "i-adj-negative",
+          "diff": "Sau danh từ, tính từ đuôi な thì thêm 「じゃない」; tính từ đuôi い đổi 「い」 thành 「くない」.",
+          "this": [
+            {
+              "tag": "Tính từ đuôi な → じゃない",
+              "tr": "Quán này không nổi tiếng lắm."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Tính từ đuôi い → くない",
+              "tr": "Quán này không đắt."
+            }
+          ],
+          "wrong": {
+            "why": "Phủ định của tính từ đuôi い là 「高くない（です）」"
+          },
+          "explain": "Trước hết xem loại tính từ: tính từ đuôi な như 有名、静か、きれい và danh từ → じゃない; tính từ đuôi い như 高い、安い → くない. 有名、きれい có cách đọc kết thúc bằng 「い」 nhưng là tính từ đuôi な. Thể lịch sự ではありません cũng vậy (有名ではありません)."
+        },
+        "my": {
+          "id": "i-adj-negative",
+          "diff": "နာမ်၊ な-နာမဝိသေသန၏ နောက်တွင် 「じゃない」 ဆက်သည်။ い-နာမဝိသေသနတွင် 「い」 ကို 「くない」 ပြောင်းသည်။",
+          "this": [
+            {
+              "tag": "な-နာမဝိသေသန → じゃない",
+              "tr": "ဒီဆိုင်က သိပ်နာမည်မကြီးဘူး။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "い-နာမဝိသေသန → くない",
+              "tr": "ဒီဆိုင်က ဈေးမကြီးဘူး။"
+            }
+          ],
+          "wrong": {
+            "why": "い-နာမဝိသေသန၏ ငြင်းဆိုပုံစံမှာ 「高くない（です）」 ဖြစ်သည်"
+          },
+          "explain": "နာမဝိသေသန အမျိုးအစားကို အရင် ကြည့်ပါ - 有名、静か、きれい စသည့် な-နာမဝိသေသနနှင့် နာမ် → じゃない။ 高い、安い စသည့် い-နာမဝိသေသန → くない။ 有名、きれい သည် အသံထွက် 「い」 ဖြင့် ဆုံးသော်လည်း な-နာမဝိသေသန ဖြစ်သည်။ ယဉ်ကျေးပုံစံ ではありません လည်း ထိုနည်းတူပင် (有名ではありません)။"
+        }
+      }
+    },
+    {
+      "point": "ja-nakute",
+      "kind": "root",
+      "reason": "じゃなくて 只是 じゃない 的て形，不是从一个源头词的本义发展出的两个用法；「では＋ない」也不是一个具体的词（标准「同一个词变来的」收录条件）。找不到合格的同源对象，root 组删除",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ja-nai",
+          "diff": "じゃなくて 否定A之后还要说出正确的B；じゃない 在句末，只说「不是A」。",
+          "this": [
+            {
+              "ja": "これは|塩:しお|*じゃなくて|、|~砂糖:さとう|~です|。",
+              "tag": "不是A而是B",
+              "tr": "这不是盐，是糖。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "それは|塩:しお|*じゃない|よ|。",
+              "tag": "句末 · 只否定",
+              "tr": "那不是盐哦。"
+            }
+          ],
+          "explain": "看否定之后有没有继续说：后面紧接着给出正确答案（砂糖です）→ じゃなくて；句子到此结束 → じゃない。书面说 ではない／ではなく，用法一样。"
+        },
+        "en": {
+          "id": "ja-nai",
+          "diff": "じゃなくて negates A and then gives the correct B; じゃない ends the sentence and simply says “it's not A”.",
+          "this": [
+            {
+              "tag": "Not A but B",
+              "tr": "This isn't salt — it's sugar."
+            }
+          ],
+          "that": [
+            {
+              "tag": "End · just negates",
+              "tr": "That's not salt, you know."
+            }
+          ],
+          "explain": "Check whether the sentence continues after the negation: the correct answer follows right after (砂糖です) → じゃなくて; it ends there → じゃない. In writing it's ではない／ではなく, used the same way."
+        },
+        "ko": {
+          "id": "ja-nai",
+          "diff": "じゃなくて는 A를 부정한 뒤 올바른 B를 이어서 말한다. じゃない는 문장 끝에서 ‘A가 아니다’라고만 말한다.",
+          "this": [
+            {
+              "tag": "A가 아니라 B",
+              "tr": "이건 소금이 아니라 설탕이에요."
+            }
+          ],
+          "that": [
+            {
+              "tag": "문장 끝 · 부정만",
+              "tr": "그건 소금이 아니야."
+            }
+          ],
+          "explain": "부정한 뒤에 말이 이어지는지 보자. 바로 뒤에 올바른 답(砂糖です)이 오면 → じゃなくて. 문장이 거기서 끝나면 → じゃない. 문어에서는 ではない／ではなく라고 하며, 용법은 같다."
+        },
+        "es": {
+          "id": "ja-nai",
+          "diff": "じゃなくて niega A y además dice cuál es el B correcto; じゃない va al final y solo dice «no es A».",
+          "this": [
+            {
+              "tag": "No A sino B",
+              "tr": "Esto no es sal, es azúcar."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Final · solo niega",
+              "tr": "Eso no es sal, ¿eh?"
+            }
+          ],
+          "explain": "Mira si después de la negación la oración continúa: si a continuación se da la respuesta correcta (砂糖です) → じゃなくて; si termina ahí → じゃない. Por escrito se dice ではない／ではなく, con el mismo uso."
+        },
+        "vi": {
+          "id": "ja-nai",
+          "diff": "じゃなくて phủ định A xong còn nói ra B đúng; じゃない ở cuối câu, chỉ nói “không phải A”.",
+          "this": [
+            {
+              "tag": "Không phải A mà là B",
+              "tr": "Đây không phải muối, mà là đường."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Cuối câu · chỉ phủ định",
+              "tr": "Cái đó không phải muối đâu."
+            }
+          ],
+          "explain": "Xem sau phủ định có nói tiếp không: ngay sau đó đưa ra đáp án đúng (砂糖です) → じゃなくて; câu kết thúc ở đó → じゃない. Văn viết nói ではない／ではなく, cách dùng như nhau."
+        },
+        "my": {
+          "id": "ja-nai",
+          "diff": "じゃなくて သည် A ကို ငြင်းပြီးနောက် မှန်ကန်သော B ကိုပါ ပြောရသည်။ じゃない သည် ဝါကျအဆုံးတွင် ရှိပြီး “A မဟုတ်ဘူး” ဟုသာ ပြောသည်။",
+          "this": [
+            {
+              "tag": "A မဟုတ် B",
+              "tr": "ဒါ ဆား မဟုတ်ဘူး၊ သကြားပါ။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ဝါကျအဆုံး · ငြင်းရုံသာ",
+              "tr": "အဲဒါ ဆား မဟုတ်ဘူးနော်။"
+            }
+          ],
+          "explain": "ငြင်းပြီးနောက် ဆက်ပြောသေးလား ကြည့်ပါ - နောက်တွင် မှန်ကန်သော အဖြေ (砂糖です) ချက်ချင်း လိုက်လျှင် → じゃなくて။ ဝါကျ ဒီမှာ ဆုံးလျှင် → じゃない။ စာရေးဟန်တွင် ではない／ではなく ဟု ပြောပြီး သုံးပုံ အတူတူပင်။"
+        }
+      }
+    },
+    {
+      "point": "ja-nakute",
+      "kind": "look",
+      "reason": "ではなく 和 だけでなく 差一整个词「だけ」，一眼就能看出不同（标准「长得像的」不收：差了一整个词）；意思一个是「不是A而是B」、一个是「不仅A而且B」，也不能归「意思差不多的」",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "dake-de-naku",
+          "diff": "AではなくB 只有B成立；AだけでなくB 是A和B都成立。",
+          "this": [
+            {
+              "ja": "彼:かれ|は|英語:えいご|*ではなく|フランス|語:ご|~を|話:はな|す|。",
+              "tag": "只有B",
+              "tr": "他说的不是英语，是法语。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "彼:かれ|は|英語:えいご|*だけでなく|フランス|語:ご|~も|話:はな|す|。",
+              "tag": "A和B都",
+              "tr": "他不仅会说英语，还会说法语。"
+            }
+          ],
+          "explain": "看B后面的助词：「を」「です」→ ではなく，A被否定掉了；「も」→ だけでなく，A也成立，再加上B。只多了「だけ」两个字，意思完全不同。口语说 じゃなくて，用法一样。"
+        },
+        "en": {
+          "id": "dake-de-naku",
+          "diff": "AではなくB means only B holds; AだけでなくB means both A and B hold.",
+          "this": [
+            {
+              "tag": "Only B",
+              "tr": "He speaks not English but French."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Both A and B",
+              "tr": "He speaks not only English but also French."
+            }
+          ],
+          "explain": "Look at the particle after B: 「を」 or 「です」 → ではなく, A is ruled out; 「も」 → だけでなく, A holds too, with B added. Just adding 「だけ」 changes the meaning completely. In speech it's じゃなくて, used the same way."
+        },
+        "ko": {
+          "id": "dake-de-naku",
+          "diff": "AではなくB는 B만 성립하고, AだけでなくB는 A와 B 둘 다 성립한다.",
+          "this": [
+            {
+              "tag": "B만",
+              "tr": "그는 영어가 아니라 프랑스어를 한다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "A도 B도",
+              "tr": "그는 영어뿐만 아니라 프랑스어도 한다."
+            }
+          ],
+          "explain": "B 뒤의 조사를 보자. 「を」「です」 → ではなく, A는 부정된다. 「も」 → だけでなく, A도 성립하고 B가 더해진다. 「だけ」만 더 붙었을 뿐인데 뜻이 완전히 달라진다. 구어에서는 じゃなくて라고 하며, 용법은 같다."
+        },
+        "es": {
+          "id": "dake-de-naku",
+          "diff": "AではなくB: solo vale B; AだけでなくB: valen A y B.",
+          "this": [
+            {
+              "tag": "Solo B",
+              "tr": "Él no habla inglés, sino francés."
+            }
+          ],
+          "that": [
+            {
+              "tag": "A y B",
+              "tr": "Él no solo habla inglés, sino también francés."
+            }
+          ],
+          "explain": "Mira la partícula detrás de B: 「を」 o 「です」 → ではなく, A queda negado; 「も」 → だけでなく, A también vale y se le suma B. Solo se añade 「だけ」, pero el significado cambia por completo. En la lengua hablada se dice じゃなくて, con el mismo uso."
+        },
+        "vi": {
+          "id": "dake-de-naku",
+          "diff": "AではなくB: chỉ có B đúng; AだけでなくB: cả A và B đều đúng.",
+          "this": [
+            {
+              "tag": "Chỉ có B",
+              "tr": "Anh ấy nói tiếng Pháp chứ không phải tiếng Anh."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Cả A và B",
+              "tr": "Anh ấy không chỉ nói tiếng Anh mà còn nói tiếng Pháp."
+            }
+          ],
+          "explain": "Xem trợ từ sau B: 「を」, 「です」 → ではなく, A bị phủ định; 「も」 → だけでなく, A cũng đúng, thêm cả B nữa. Chỉ thêm hai chữ 「だけ」 mà nghĩa khác hẳn. Văn nói nói じゃなくて, cách dùng như nhau."
+        },
+        "my": {
+          "id": "dake-de-naku",
+          "diff": "AではなくB တွင် B တစ်ခုတည်းသာ မှန်သည်။ AだけでなくB တွင် A ရော B ပါ မှန်သည်။",
+          "this": [
+            {
+              "tag": "B တစ်ခုတည်း",
+              "tr": "သူ ပြောတာ အင်္ဂလိပ်စကား မဟုတ်ဘူး၊ ပြင်သစ်စကားပါ။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "A ရော B ပါ",
+              "tr": "သူက အင်္ဂလိပ်စကားသာမက ပြင်သစ်စကားလည်း ပြောတတ်တယ်။"
+            }
+          ],
+          "explain": "B ၏ နောက်က particle ကို ကြည့်ပါ - 「を」「です」 → ではなく ဖြစ်ပြီး A ကို ငြင်းပယ်လိုက်သည်။ 「も」 → だけでなく ဖြစ်ပြီး A လည်း မှန်သည့်အပြင် B ကို ထပ်ပေါင်းသည်။ 「だけ」 စာလုံးနှစ်လုံးသာ ပိုသော်လည်း အဓိပ္ပာယ် လုံးဝ မတူပါ။ ပြောစကားတွင် じゃなくて ဟု ပြောပြီး သုံးပုံ အတူတူပင်။"
+        }
+      }
+    },
+    {
+      "point": "kosoado-determiners",
+      "kind": "root",
+      "reason": "「こ・そ・あ・ど」只是指示词头，不是一个具体的词（标准「同一个词变来的」收录条件）；この 和 これ 都是“这”，差别只在后面接名词还是助词，意思相同，不能归「长得像的」（要求意思明显不同），两边又不能互换，也不能归「意思差不多的」",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "kosoado-pronouns",
+          "diff": "この 后面必须接名词；これ 单独使用，自己就能当主语、宾语。",
+          "this": [
+            {
+              "ja": "*この|~本:ほん|は|私:わたし|の|です|。",
+              "tag": "＋名词",
+              "tr": "这本书是我的。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "*これ|~は|私:わたし|の|本:ほん|です|。",
+              "tag": "单独使用",
+              "tr": "这是我的书。"
+            }
+          ],
+          "wrong": {
+            "ja": "このは私の本です",
+            "why": "この 后面必须接名词"
+          },
+          "explain": "看后面紧跟的是什么：名词（本、人、店）→ この；助词「は・が・を」→ これ。记法：「〜の」像“……的”，后面一定要有一个名词。その／それ、あの／あれ、どの／どれ 同理。"
+        },
+        "en": {
+          "id": "kosoado-pronouns",
+          "diff": "この must be followed by a noun; これ stands alone and can itself be the subject or object.",
+          "this": [
+            {
+              "tag": "＋ noun",
+              "tr": "This book is mine."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Stands alone",
+              "tr": "This is my book."
+            }
+          ],
+          "wrong": {
+            "why": "この must be followed by a noun"
+          },
+          "explain": "Look at what comes right after: a noun (本、人、店) → この; a particle 「は・が・を」 → これ. Tip: words ending in 「〜の」 act like adjectives such as “this…” — a noun must always follow. The same goes for その／それ, あの／あれ and どの／どれ."
+        },
+        "ko": {
+          "id": "kosoado-pronouns",
+          "diff": "この 뒤에는 반드시 명사가 온다. これ는 혼자 쓰여 그 자체로 주어나 목적어가 된다.",
+          "this": [
+            {
+              "tag": "＋명사",
+              "tr": "이 책은 제 것입니다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "혼자 씀",
+              "tr": "이것은 제 책입니다."
+            }
+          ],
+          "wrong": {
+            "why": "この 뒤에는 반드시 명사가 와야 한다"
+          },
+          "explain": "바로 뒤에 무엇이 오는지 보자. 명사(本、人、店) → この. 조사 「は・が・を」 → これ. 외우는 법: 「〜の」는 ‘~의’처럼 뒤에 반드시 명사가 있어야 한다. その／それ、あの／あれ、どの／どれ도 마찬가지다."
+        },
+        "es": {
+          "id": "kosoado-pronouns",
+          "diff": "この tiene que ir seguido de un sustantivo; これ se usa solo y puede ser sujeto u objeto por sí mismo.",
+          "this": [
+            {
+              "tag": "＋sustantivo",
+              "tr": "Este libro es mío."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Solo",
+              "tr": "Esto es mi libro."
+            }
+          ],
+          "wrong": {
+            "why": "Detrás de この tiene que ir un sustantivo"
+          },
+          "explain": "Mira lo que va justo detrás: un sustantivo (本, 人, 店) → この; una partícula 「は・が・を」 → これ. Truco: 「〜の」 funciona como «de…», así que detrás siempre tiene que haber un sustantivo. Lo mismo vale para その／それ, あの／あれ, どの／どれ."
+        },
+        "vi": {
+          "id": "kosoado-pronouns",
+          "diff": "この phía sau bắt buộc phải có danh từ; これ dùng độc lập, tự nó làm được chủ ngữ, tân ngữ.",
+          "this": [
+            {
+              "tag": "＋danh từ",
+              "tr": "Quyển sách này là của tôi."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Dùng độc lập",
+              "tr": "Đây là sách của tôi."
+            }
+          ],
+          "wrong": {
+            "why": "Sau この bắt buộc phải có danh từ"
+          },
+          "explain": "Xem ngay phía sau là gì: danh từ (本、人、店) → この; trợ từ 「は・が・を」 → これ. Mẹo nhớ: 「〜の」 giống trợ từ の nối hai danh từ, nên phía sau nhất định phải có một danh từ. その／それ、あの／あれ、どの／どれ cũng tương tự."
+        },
+        "my": {
+          "id": "kosoado-pronouns",
+          "diff": "この ၏ နောက်တွင် နာမ် မဖြစ်မနေ လိုက်ရမည်။ これ ကို သီးခြား သုံးပြီး သူ့ဘာသာ ကတ္တား၊ ကံ ဖြစ်နိုင်သည်။",
+          "this": [
+            {
+              "tag": "＋နာမ်",
+              "tr": "ဒီစာအုပ်က ကျွန်တော့်ဟာပါ။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "သီးခြား သုံး",
+              "tr": "ဒါက ကျွန်တော့် စာအုပ်ပါ။"
+            }
+          ],
+          "wrong": {
+            "why": "この ၏ နောက်တွင် နာမ် မဖြစ်မနေ လိုက်ရမည်"
+          },
+          "explain": "နောက်တွင် ချက်ချင်း ဘာလိုက်သလဲ ကြည့်ပါ - နာမ် (本、人、店) → この။ particle 「は・が・を」 → これ။ မှတ်နည်း - 「〜の」 သည် “...၏” နှင့် တူသဖြင့် နောက်တွင် နာမ်တစ်ခု အမြဲ ရှိရမည်။ その／それ、あの／あれ、どの／どれ လည်း ထိုနည်းတူပင်။"
+        }
+      }
+    },
+    {
+      "point": "kosoado-determiners",
+      "kind": "root",
+      "reason": "「こ・そ・あ・ど」只是指示词头，不是一个具体的词（标准「同一个词变来的」收录条件）；この 和 こんな 差「の」和「んな」，不止一个假名，不符合「长得像的」形状只差一个很小地方的条件；意思“这个”和“这样的”不同，也不能归「意思差不多的」",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "kosoado-konna",
+          "diff": "この 指特定的那一个；こんな 指“这样的、这种”，说的是种类和性质。",
+          "this": [
+            {
+              "ja": "すみません|、|*この|かばんを|~ください|。",
+              "tag": "特定这一个",
+              "tr": "不好意思，请给我这个包。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~いつか|*こんな|かばんが|ほしい|なあ|。",
+              "tag": "这一类",
+              "tr": "真想哪天也有一个这样的包啊。"
+            }
+          ],
+          "explain": "在店里说「ください」，要的就是眼前这一个 → この；看「いつか」：总有一天想要，说明要的是同一类、“和它差不多的” → こんな。相当于中文“这个”和“这样的”的区别。その／そんな、あの／あんな、どの／どんな 同理。"
+        },
+        "en": {
+          "id": "kosoado-konna",
+          "diff": "この points to a specific one; こんな means “like this, this kind of”, describing type and nature.",
+          "this": [
+            {
+              "tag": "This specific one",
+              "tr": "Excuse me, I'll take this bag."
+            }
+          ],
+          "that": [
+            {
+              "tag": "This kind",
+              "tr": "I'd love to have a bag like this someday."
+            }
+          ],
+          "explain": "Saying 「ください」 in a shop means you want exactly the one in front of you → この; with 「いつか」 (“someday”) you want “one like it”, not this very one → こんな. It's the difference between “this” and “this kind of / like this”. The same goes for その／そんな, あの／あんな and どの／どんな."
+        },
+        "ko": {
+          "id": "kosoado-konna",
+          "diff": "この는 특정한 그 하나를 가리키고, こんな는 ‘이런, 이러한’으로 종류와 성질을 말한다.",
+          "this": [
+            {
+              "tag": "특정한 이것",
+              "tr": "저기요, 이 가방 주세요."
+            }
+          ],
+          "that": [
+            {
+              "tag": "이런 종류",
+              "tr": "언젠가 이런 가방을 갖고 싶다."
+            }
+          ],
+          "explain": "가게에서 「ください」라고 하면 눈앞의 바로 그 하나를 원하는 것 → この. 「いつか」(언젠가) 갖고 싶다면 바로 그것이 아니라 ‘그것과 비슷한 것’ → こんな. 한국어의 ‘이’와 ‘이런’의 차이에 해당한다. その／そんな、あの／あんな、どの／どんな도 마찬가지다."
+        },
+        "es": {
+          "id": "kosoado-konna",
+          "diff": "この señala uno concreto; こんな significa «así, de este tipo» y habla de clase o naturaleza.",
+          "this": [
+            {
+              "tag": "Este concreto",
+              "tr": "Perdone, deme este bolso, por favor."
+            }
+          ],
+          "that": [
+            {
+              "tag": "De este tipo",
+              "tr": "¡Ojalá algún día tenga un bolso así!"
+            }
+          ],
+          "explain": "Decir 「ください」 en una tienda es pedir justo el que tienes delante → この; con 「いつか」 («algún día») quieres «uno parecido», no ese mismo → こんな. Es la diferencia entre «este» y «así / como este». Lo mismo vale para その／そんな, あの／あんな, どの／どんな."
+        },
+        "vi": {
+          "id": "kosoado-konna",
+          "diff": "この chỉ đúng cái cụ thể đó; こんな chỉ “như thế này, loại này”, nói về chủng loại và tính chất.",
+          "this": [
+            {
+              "tag": "Đúng cái này",
+              "tr": "Xin lỗi, cho tôi cái túi này."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Loại như thế này",
+              "tr": "Ước gì một ngày nào đó mình cũng có một cái túi như thế này."
+            }
+          ],
+          "explain": "Nói 「ください」 ở cửa hàng là muốn đúng cái trước mắt → この; với 「いつか」 (“một ngày nào đó”) là muốn một cái “tương tự như vậy”, không phải chính cái này → こんな. Giống sự khác nhau giữa “cái này” và “như thế này” trong tiếng Việt. その／そんな、あの／あんな、どの／どんな cũng tương tự."
+        },
+        "my": {
+          "id": "kosoado-konna",
+          "diff": "この သည် သတ်မှတ်ထားသော ထိုတစ်ခုကို ညွှန်သည်။ こんな သည် “ဒီလို၊ ဒီအမျိုးအစား” ဖြစ်ပြီး အမျိုးအစားနှင့် သဘောသဘာဝကို ပြောသည်။",
+          "this": [
+            {
+              "tag": "သတ်မှတ်ထားသော ဒီတစ်ခု",
+              "tr": "တဆိတ်လောက်ပါ၊ ဒီအိတ်ကို ပေးပါ။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ဒီအမျိုးအစား",
+              "tr": "တစ်နေ့နေ့ ဒီလို အိတ်မျိုး ရချင်လိုက်တာ။"
+            }
+          ],
+          "explain": "ဆိုင်တွင် 「ください」 ဟု ပြောလျှင် ရှေ့က ဒီတစ်ခုကိုပဲ လိုချင်သည် → この။ 「いつか」(တစ်နေ့နေ့) လိုချင်သည်ဆိုလျှင် ဒီတစ်ခု မဟုတ်ဘဲ “အဲဒါနဲ့ ဆင်တူတာ” → こんな။ မြန်မာလို “ဒီ...” နှင့် “ဒီလို...” ၏ ကွာခြားချက်နှင့် တူသည်။ その／そんな、あの／あんな、どの／どんな လည်း ထိုနည်းတူပင်။"
+        }
+      }
     }
   ]
 }
