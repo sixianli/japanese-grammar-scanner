@@ -37040,21 +37040,25 @@
               "explain": "Look at the word before: a noun or question word (子ども, 誰, 何) → であれ; an adjective or verb (忙しい, 行く) → にしろ / にせよ (after verbs, 「〜(よ)うと」 also works). であれ is very formal; にしろ is also used in speech. 「AであれBであれ」 listing two items is the same use."
             },
             {
-              "id": "to-iwazu",
-              "diff": "であれ〜であれ is a concession, “whether A or B, the conclusion is the same”; といわず〜といわず is a description, “A, B, everywhere”.",
+              "id": "ni-shiro-ni-shiro",
+              "thisTitle": "〜であれ〜であれ",
+              "diff": "Same meaning; であれ〜であれ attaches only to nouns and is very formal; にしろ〜にしろ can also follow verbs, as in 「するにしろしないにしろ」.",
               "this": [
                 {
-                  "tag": "Concession · followed by a claim",
-                  "tr": "Adults and children alike must follow the rules."
+                  "tag": "Noun · formal",
+                  "tr": "Whether it's beer or wine, people who are driving must not drink."
                 }
               ],
               "that": [
                 {
-                  "tag": "Describing a fact · everywhere",
-                  "tr": "I fell over, and now I'm covered in mud — hands, feet, everywhere."
+                  "tag": "Can also follow verbs",
+                  "tr": "Whether you attend or not, please reply by Friday."
                 }
               ],
-              "explain": "Look at the second half: a claim or rule (守らなければならない, 関係ない) → であれ〜であれ; describing a fact in front of you, stressing “all over, everywhere” (泥だらけ, 傷だらけ) → といわず〜といわず, usually listing parts of one whole (手, 足; 昼, 夜). 「たとえ〜であれ」 on its own is the same kind of concession."
+              "wrong": {
+                "why": "であれ cannot follow a verb; say 「参加するにしろしないにしろ」"
+              },
+              "explain": "Look at the two items being listed: with nouns (ビール, ワイン) both work, and であれ〜であれ is more formal; with verbs (参加する, しない) only にしろ〜にしろ works (にせよ〜にせよ and にしても〜にしても are also fine). Both mean \"whichever it is, the conclusion that follows stays the same.\""
             }
           ]
         }
@@ -37064,31 +37068,8 @@
       "id": "de-arou",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from 「である + う」 — であろう contracted into だろう, so they mean the same",
-          "items": [
-            {
-              "id": "darou-guess",
-              "diff": "Both express conjecture; であろう is the written language of academic papers and editorials, だろう is for speech and ordinary writing.",
-              "this": [
-                {
-                  "tag": "Written · solemn",
-                  "tr": "This problem will likely become increasingly serious in the future."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Casual · general",
-                  "tr": "This problem will probably get worse from here on."
-                }
-              ],
-              "explain": "だろう is generally thought to be a shortened であろう, so they mean the same. Look at the wording: formal words like 今後, ますます go with であろう; in speech, say だろう / でしょう. Also, であろう can directly modify a noun (今後起こるであろう問題), which だろう normally doesn't."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Both are conjecture in written language",
+          "note": "Both express a guess: \"probably…\"",
           "items": [
             {
               "id": "de-wa-nakarou-ka",
@@ -37106,6 +37087,24 @@
                 }
               ],
               "explain": "Look at the sentence ending: であろう is the author's direct judgment, “it is probably…”; ではなかろうか is the rhetorical “isn't it…?”, used to put forward your own view tactfully, reading as if asking the reader to agree. Both are only used in written language like papers and commentary."
+            },
+            {
+              "id": "darou-guess",
+              "title": "〜だろう (guess)",
+              "diff": "Both are guesses with the same meaning; であろう is the formal written style of papers, editorials and speeches, while だろう is used both in speech and ordinary writing.",
+              "this": [
+                {
+                  "tag": "Papers, editorials · formal",
+                  "tr": "This technology will probably transform the medicine of the future."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Spoken · can add ね",
+                  "tr": "This technology will probably transform the medicine of the future, don't you think?"
+                }
+              ],
+              "explain": "The meaning is the same; look at the style: formal texts such as papers, editorials and speeches → であろう; conversation and ordinary writing → だろう. When you add 「ね」 or 「な」 at the end to talk to someone, only だろう works (変えるだろうね); 「であろうね」 is not normally said."
             }
           ]
         }
@@ -37116,27 +37115,29 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both are a complete denial: “not at all…, not in the least…”",
+          "note": "Both mean \"not … at all\"",
           "items": [
             {
               "id": "mo-nan-tomo-nai",
-              "diff": "でもなんでもない follows nouns and な-adjectives and denies an identity or quality; くもなんともない follows い-adjectives and usually denies a sensation.",
+              "title": "〜もなんともない (feeling nothing at all)",
+              "thisTitle": "〜でもなんでもない (not … at all)",
+              "diff": "Both mean \"not … at all\"; でもなんでもない follows な-adjectives (and nouns), もなんともない follows the く form of い-adjectives.",
               "this": [
                 {
-                  "tag": "Noun · not at all",
-                  "tr": "That person is just a coworker — not a lover or anything of the sort."
+                  "tag": "な-adjective · not at all",
+                  "tr": "Him? I don't like him at all."
                 }
               ],
               "that": [
                 {
-                  "tag": "い-adjective · not in the least",
-                  "tr": "A cut like this doesn't hurt one bit."
+                  "tag": "い-adjective く form · not at all",
+                  "tr": "Him? I'm not scared of him at all."
                 }
               ],
               "wrong": {
-                "why": "い-adjectives take 「くもなんともない」"
+                "why": "An い-adjective must change to its く form: 「怖くもなんともない」"
               },
-              "explain": "First look at the word before: a noun or な-adjective (恋人, 好き, 簡単) → でもなんでもない; an い-adjective in its く-form (痛く, 怖く, 悲しく) → くもなんともない. Both are complete denials, “neither this nor anything else”, much stronger than just 「〜ではない」「〜くない」."
+              "explain": "Look at the adjective before it: な-adjectives such as 好き, 平気, 簡単 → 好きでもなんでもない; い-adjectives such as 怖い, 痛い change to the く form → 怖くもなんともない. Both are a \"not … at all\" said when putting on a brave face or rebutting someone, and are much stronger than 「〜ではない」 or 「〜くない」."
             }
           ]
         }
@@ -37147,7 +37148,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both are a strong assertion: “this is exactly…”",
+          "note": "Both mean \"this is exactly…\"",
           "items": [
             {
               "id": "ni-hoka-naranai",
@@ -37168,20 +37169,21 @@
             },
             {
               "id": "to-iu-mono-da",
-              "diff": "というものだ is a calm evaluation, “that's what… really is”, also used in speech; でなくてなんだろう is an impassioned rhetorical question.",
+              "title": "〜というものだ (essence / assertion)",
+              "diff": "でなくてなんだろう is an emotional rhetorical question; というものだ calmly says \"this is what … really is\" and is also used in speech.",
               "this": [
                 {
-                  "tag": "Rhetorical question · emotional",
-                  "tr": "Protecting your child at the risk of your own life — if this isn't love, what is?"
+                  "tag": "Rhetorical question · strong emotion",
+                  "tr": "Giving yourself without expecting anything back—if this isn't love, what is?"
                 }
               ],
               "that": [
                 {
                   "tag": "Calm · defining",
-                  "tr": "Helping each other in hard times — that's what true friendship is."
+                  "tr": "Not expecting anything in return—that is what true love is."
                 }
               ],
-              "explain": "Look at the tone: というものだ sounds like calmly defining or explaining something (〜のが本当の友情というものだ) and is also used in everyday speech; でなくてなんだろう is a rhetorical question when the writer's emotions run high, appearing almost only in literature and speeches."
+              "explain": "Look at the tone and sentence pattern: でなくてなんだろう is the rhetorical question \"if this isn't …, what is?\", full of emotion, found almost only in literature and speeches, often preceded by 「これが」; というものだ calmly defines or reasons (〜のが本当の愛というものだ) and is also used in everyday speech."
             }
           ]
         }
@@ -37212,29 +37214,6 @@
               "explain": "Both come from 「ではあるまい」 (probably isn't). Look at the last kana: 「し」 gives a reason — “it's not as if…, so…”, followed by criticism or advice, often 「じゃあるまいし」 in speech; 「か」 turns it into a question — “isn't it…?” = I suspect it is, mostly in writing."
             }
           ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Both first raise a situation that doesn't match reality, then criticize reality",
-          "items": [
-            {
-              "id": "nara-iza-shirazu",
-              "diff": "じゃあるまいし flatly denies, “you're not…”, in a blunt tone; ならいざ知らず first concedes, “if it were…, that would be understandable”.",
-              "this": [
-                {
-                  "tag": "Flat denial · casual",
-                  "tr": "You're not a child — don't cry over something like this."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Concede first · then criticize",
-                  "tr": "A child would be one thing, but a grown adult crying over something like this?"
-                }
-              ],
-              "explain": "Look at the sentence structure: じゃあるまいし is immediately followed by a command or criticism aimed at the listener (泣くな); ならいざ知らず must go on to name the actual subject (大人が……), meaning “that case would be understandable, but this one isn't”, in a more formal tone (はいざ知らず is the same)."
-            }
-          ]
         }
       ]
     },
@@ -37243,25 +37222,9 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both are conjecture in written language",
+          "sense": 1,
+          "note": "Both express a guess: \"it is probably…, I suspect\"",
           "items": [
-            {
-              "id": "no-dewa-nai-darou-ka",
-              "diff": "Exactly the same meaning (なかろう = ないだろう); ではなかろうか is stiffer and only used in writing.",
-              "this": [
-                {
-                  "tag": "Academic · stiff",
-                  "tr": "I suspect the cause of the declining birthrate lies in economic insecurity."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Both written and spoken",
-                  "tr": "I suspect the cause of the declining birthrate lies in economic insecurity."
-                }
-              ],
-              "explain": "なかろう is an old-fashioned form of ないだろう, so the two sentences mean the same; the only difference is the setting: very formal writing like academic papers and editorials uses ではなかろうか; speeches, remarks in meetings and ordinary writing mostly use ではないだろうか; everyday conversation says 「んじゃないかな」."
-            },
             {
               "id": "de-wa-arumai-ka",
               "diff": "Basically the same meaning; ではあるまいか is more elegant and classical, mostly seen in literature, often with a hint of worry.",
@@ -37281,10 +37244,11 @@
             },
             {
               "id": "de-arou",
-              "diff": "ではなかろうか uses the form of a rhetorical question to put a view tactfully; であろう states a guess directly.",
+              "title": "〜であろう (formal guess)",
+              "diff": "ではなかろうか makes a guess softly through a negative question; であろう states the guess directly and sounds more certain.",
               "this": [
                 {
-                  "tag": "Rhetorical question · tactful claim",
+                  "tag": "Negative question · soft guess",
                   "tr": "Might this method not, in fact, be the most effective?"
                 }
               ],
@@ -37294,7 +37258,32 @@
                   "tr": "This method is probably the most effective."
                 }
               ],
-              "explain": "Look at the sentence ending: ではなかろうか is the rhetorical “isn't it…?”, used to put forward your own view tactfully, reading as if asking the reader to agree; であろう is the author's direct judgment, “it is probably…”. Both are only used in written language like papers and commentary."
+              "explain": "Look at the end of the sentence: ではなかろうか guesses through the negative question \"isn't it…?\" and avoids committing itself; であろう is the writer's direct guess \"it is probably…\" and sounds more certain. Both are used only in formal writing such as papers and commentary."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both put forward an opinion indirectly: \"isn't it the case that…?\"",
+          "items": [
+            {
+              "id": "no-dewa-nai-darou-ka",
+              "title": "〜のではないだろうか (indirect opinion)",
+              "diff": "Same meaning (なかろう = ないだろう); ではなかろうか is stiffer and used only in writing; ではないだろうか is used in both writing and speeches, and can also become 「ではないでしょうか」.",
+              "this": [
+                {
+                  "tag": "Papers, editorials · stiff",
+                  "tr": "Isn't the problem in the education system itself?"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Speech · polite form",
+                  "tr": "Everyone, isn't the problem in the education system itself?"
+                }
+              ],
+              "explain": "The meaning is the same; the difference is the setting: ではなかろうか is very stiff, appears only in texts such as papers and editorials, and has no polite form; when addressing an audience (皆さん, …) use ではないだろうか or the polite 「ではないでしょうか」. In casual conversation people say 「んじゃないかな」."
             }
           ]
         }
@@ -37327,11 +37316,11 @@
             },
             {
               "id": "zu-ni-wa-sumanai",
-              "diff": "ではすまない follows a noun and means “… alone won't settle it”; ずにはすまない follows a verb's nai-form and means “you can't get away without …”.",
+              "diff": "では済まない is \"this alone won't settle it\" → worse consequences; ずには済まない is \"it won't be settled without doing this\" → you have to do it.",
               "this": [
                 {
                   "tag": "Noun · won't settle it",
-                  "tr": "I said something that can't be passed off as a joke."
+                  "tr": "I said something that can't be brushed off as just a joke."
                 }
               ],
               "that": [
@@ -37340,7 +37329,10 @@
                   "tr": "I caused trouble, so I can't get away without apologizing."
                 }
               ],
-              "explain": "Only one 「ず」 apart. Look at what comes before: a noun or 「〜だけ」 + では → that alone won't settle it, the matter is more serious; a verb's nai-form minus ない + ずには → you are morally obliged to do it (謝らずには済まない = I have to apologize; ないではすまない is the same). The passive 「では済まされない」 works the same way."
+              "wrong": {
+                "why": "ずには needs the ない form without ない before it: 謝らずには済まない"
+              },
+              "explain": "Both come from 「済む」 (\"a matter is settled\"). 「では済まない」 = it can't be settled with this (a noun, 〜だけ) → this alone won't end it, the consequences are more serious; 「ずには済まない」 = it can't be settled without doing this → by common decency you must do it (謝らずには済まない = not apologizing is unacceptable; ないでは済まない is the same). Look at what comes before: noun + では; verb ない form without ない + ずには."
             }
           ]
         }
@@ -37351,42 +37343,54 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean “two things are true at the same time”",
+          "sense": 1,
+          "note": "Both mean \"is both … and …\"",
           "items": [
             {
-              "id": "mo-ba-mo",
-              "diff": "でもあり〜でもある lists two identities or qualities side by side; も〜ば〜も lists two traits of the same person, and is more colloquial.",
+              "id": "ni-shite",
+              "title": "〜にして (being both)",
+              "thisTitle": "〜でもあり〜でもある (two roles at once)",
+              "diff": "Both mean \"is both … and …\"; にして is very formal with a literary flavor; でもあり〜でもある is used in both speech and writing.",
               "this": [
                 {
-                  "tag": "Two identities",
-                  "tr": "He is both a doctor and a writer."
+                  "tag": "Plain · spoken and written",
+                  "tr": "That person is both a painter and a poet."
                 }
               ],
               "that": [
                 {
-                  "tag": "Two traits",
-                  "tr": "He's smart, and he has a good personality too."
+                  "tag": "Formal · literary flavor",
+                  "tr": "That person is a painter and at the same time a poet."
                 }
               ],
-              "explain": "Look at what is being listed: identities or qualities expressed by nouns (医者, 作家) → でもあり〜でもある; two good or bad points described with adjectives or verbs (頭もよければ性格もいい) → も〜ば〜も, common in everyday speech."
+              "explain": "Look at the style: にして is a formal expression with a literary flavor, found mostly in profiles of people and commentary, and almost never used in speech; でもあり〜でもある works in both speech and writing and sounds plainer. Also, でもあり〜でもある can list two feelings side by side (嬉しくもあり〜), but にして cannot."
             },
             {
-              "id": "dake-de-naku",
-              "diff": "In でもあり〜でもある the two items are equal; だけでなく builds up, with the focus on the second item.",
+              "id": "to-douji-ni",
+              "title": "〜と同時に (being both at once)",
+              "thisTitle": "〜でもあり〜でもある (two roles at once)",
+              "diff": "Both mean \"is both … and …\"; であると同時に has an argumentative tone and stresses that one thing holds two positions at once; でもあり〜でもある has two symmetrical parts and sounds plainer.",
               "this": [
                 {
-                  "tag": "Equal listing",
-                  "tr": "He is both a doctor and a writer."
+                  "tag": "Symmetrical · plain",
+                  "tr": "This book is both a novel and a valuable historical source."
                 }
               ],
               "that": [
                 {
-                  "tag": "Building up · focus on the second",
-                  "tr": "He's not only a doctor — he's also famous as a writer."
+                  "tag": "Argumentative tone · formal",
+                  "tr": "This book is a novel and, at the same time, a valuable historical source."
                 }
               ],
-              "explain": "Look at how the two items are weighted: in でもあり〜でもある they are completely equal, neither more important; with だけでなく the first item is already known, and the second is the new information you want to stress, often followed by 「〜も」 or 「〜としても」."
-            },
+              "explain": "Look at the form after the first item: と同時に needs 「である」 before it (小説である と同時に) and has the argumentative tone of papers and speeches, stressing \"while being this, it is also that\"; でもあり〜でもある uses 「でも」 in both parts, so the form is symmetrical; it is common in both speech and writing and can also list two feelings."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both express mixed feelings: \"both … and …\"",
+          "items": [
             {
               "id": "yara-yara",
               "title": "〜やら〜やら (mixed emotions)",
@@ -37395,7 +37399,7 @@
               "this": [
                 {
                   "tag": "Calm · two feelings",
-                  "tr": "My daughter's getting married — I'm happy, and a little lonely too."
+                  "tr": "Living alone for the first time is both fun and unnerving."
                 }
               ],
               "that": [
@@ -37436,63 +37440,6 @@
                 "why": "とたん needs the ta-form before it: 出たとたん"
               },
               "explain": "First look at the connection: が早いか follows the dictionary form (帰る), たとたん follows the ta-form (出た). Then look at the second half: the subject's own next action, done immediately → が早いか; something unexpected and uncontrollable, like rain starting or a phone ringing → たとたん is more natural."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ga-nara",
-      "groups": [
-        {
-          "kind": "look",
-          "note": "AもAなら ↔ AもBなら — both are 「も〜なら、〜も」, with exactly the same frame",
-          "items": [
-            {
-              "id": "mo-ba-mo",
-              "thisTitle": "〜も〜なら〜も〜",
-              "diff": "AもAならBもB repeats the same noun and criticizes both sides as “equally bad”; AもXならBもY talks about different things — “both … and …”.",
-              "this": [
-                {
-                  "tag": "Same noun repeated · both bad",
-                  "tr": "The parents are hopeless, and the kids are no better."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Different things · both … and …",
-                  "tr": "She's good at singing, and a great cook too."
-                },
-                {
-                  "tag": "ba-form · both … and …",
-                  "tr": "He drinks, and he smokes too."
-                }
-              ],
-              "explain": "Both sentences are 「〜も〜なら、〜も〜」; look before なら: the same noun before and after 「も」 (親も親なら、子も子だ) → criticizing both sides as hopeless; different things and judgments before and after 「も」 (歌も上手なら、料理もうまい) → simply “both … and …”, and the verb ba-form (酒も飲めば、タバコも吸う) works the same way."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Both are used to scold people and voice discontent",
-          "items": [
-            {
-              "id": "to-kitara",
-              "thisTitle": "〜も〜なら〜も〜",
-              "diff": "ときたら singles out one person to complain about; AもAならBもB criticizes both sides together.",
-              "this": [
-                {
-                  "tag": "Criticizing both",
-                  "tr": "The husband is hopeless, and the wife is just as bad."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Just one person",
-                  "tr": "As for my husband, all he does every day is play video games."
-                }
-              ],
-              "explain": "Count the people being criticized: only one (うちの夫) → ときたら, followed by a complaint about them; two, each with the noun repeated (夫も夫なら、妻も妻だ) → AもAならBもB, meaning “neither of them is any better.”"
             }
           ]
         }

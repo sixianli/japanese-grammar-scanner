@@ -37040,21 +37040,25 @@
               "explain": "Nhìn từ phía trước: danh từ hoặc từ để hỏi (子ども、誰、何) → であれ; tính từ, động từ (忙しい、行く) → にしろ／にせよ (với động từ cũng có thể dùng 「〜(よ)うと」). であれ rất văn viết, にしろ dùng cả trong khẩu ngữ. Đặt song song hai vế 「AであれBであれ」 cũng là cùng cách dùng này."
             },
             {
-              "id": "to-iwazu",
-              "diff": "であれ〜であれ là nhượng bộ “dù là A hay B thì kết luận cũng như nhau”; といわず〜といわず là miêu tả “cả A lẫn B, chỗ nào cũng thế”.",
+              "id": "ni-shiro-ni-shiro",
+              "thisTitle": "〜であれ〜であれ",
+              "diff": "Nghĩa giống nhau; であれ〜であれ chỉ đi với danh từ, rất trang trọng; にしろ〜にしろ còn đi được với động từ, như 「するにしろしないにしろ」.",
               "this": [
                 {
-                  "tag": "Nhượng bộ · sau là chủ trương",
-                  "tr": "Dù là người lớn hay trẻ con đều phải tuân thủ quy tắc."
+                  "tag": "Danh từ · trang trọng",
+                  "tr": "Dù là bia hay rượu vang, người lái xe cũng không được uống."
                 }
               ],
               "that": [
                 {
-                  "tag": "Miêu tả sự thật · chỗ nào cũng",
-                  "tr": "Bị ngã một cú, cả tay lẫn chân dính đầy bùn."
+                  "tag": "Đi được với động từ",
+                  "tr": "Dù tham gia hay không, xin hãy trả lời trước thứ Sáu."
                 }
               ],
-              "explain": "Nhìn nửa câu sau: chủ trương, quy định (守らなければならない、関係ない) → であれ〜であれ; miêu tả sự thật trước mắt, nhấn mạnh “toàn bộ, khắp nơi” (泥だらけ、傷だらけ) → といわず〜といわず, thứ được liệt kê thường là các bộ phận của cùng một tổng thể (手、足; 昼、夜). 「たとえ〜であれ」 dùng một mình cũng là nhượng bộ như vậy."
+              "wrong": {
+                "why": "であれ không đi sau động từ; phải nói 「参加するにしろしないにしろ」"
+              },
+              "explain": "Xem hai vế được liệt kê: nếu là danh từ (ビール、ワイン) thì dùng được cả hai, であれ〜であれ trang trọng hơn; nếu là động từ (参加する、しない) thì chỉ dùng được にしろ〜にしろ (にせよ〜にせよ, にしても〜にしても cũng được). Cả hai đều có nghĩa “dù là cái nào thì kết luận phía sau vẫn như nhau”."
             }
           ]
         }
@@ -37064,31 +37068,8 @@
       "id": "de-arou",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「である＋う」 — であろう rút gọn thành だろう, nên nghĩa giống nhau",
-          "items": [
-            {
-              "id": "darou-guess",
-              "diff": "Nghĩa giống nhau, đều là suy đoán; であろう là văn viết của luận văn, xã luận, だろう dùng trong khẩu ngữ và văn bản thông thường.",
-              "this": [
-                {
-                  "tag": "Văn viết · trang trọng",
-                  "tr": "Vấn đề này từ nay về sau có lẽ sẽ ngày càng nghiêm trọng."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Khẩu ngữ · thông thường",
-                  "tr": "Vấn đề này sau này chắc sẽ nghiêm trọng hơn."
-                }
-              ],
-              "explain": "Người ta thường cho rằng だろう là dạng rút gọn của であろう, nên nghĩa giống nhau. Nhìn từ ngữ đi kèm: từ văn viết như 今後、ますます đi với であろう; khẩu ngữ thì nói だろう／でしょう. Ngoài ra であろう còn bổ nghĩa trực tiếp cho danh từ được (今後起こるであろう問題), だろう thường không dùng như vậy."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Đều là suy đoán trong văn viết",
+          "note": "Đều diễn tả phỏng đoán “có lẽ… / chắc là…”",
           "items": [
             {
               "id": "de-wa-nakarou-ka",
@@ -37106,6 +37087,24 @@
                 }
               ],
               "explain": "Nhìn cuối câu: であろう là phán đoán trực tiếp của tác giả “có lẽ là…”; ではなかろうか là câu hỏi tu từ “chẳng phải là… sao”, dùng để nhẹ nhàng đưa ra chủ trương của mình, đọc lên như đang tìm sự đồng tình của người đọc. Cả hai chỉ dùng trong văn viết như luận văn, bình luận."
+            },
+            {
+              "id": "darou-guess",
+              "title": "〜だろう (phỏng đoán)",
+              "diff": "Cùng nghĩa phỏng đoán; であろう là văn viết trang trọng của luận văn, xã luận, diễn văn, còn だろう dùng được cả trong văn nói lẫn văn viết thông thường.",
+              "this": [
+                {
+                  "tag": "Luận văn, xã luận · văn viết",
+                  "tr": "Công nghệ này có lẽ sẽ làm thay đổi lớn nền y tế tương lai."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Văn nói · thêm được ね",
+                  "tr": "Công nghệ này chắc sẽ làm thay đổi lớn nền y tế tương lai nhỉ."
+                }
+              ],
+              "explain": "Nghĩa giống nhau, hãy xem văn phong: văn bản trang trọng như luận văn, xã luận, diễn văn → であろう; trò chuyện và văn viết thông thường → だろう. Khi thêm 「ね」「な」 ở cuối câu để nói với người khác thì chỉ dùng được だろう (変えるだろうね), thường không nói 「であろうね」."
             }
           ]
         }
@@ -37116,27 +37115,29 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả phủ định hoàn toàn “hoàn toàn không…, chẳng… chút nào”",
+          "note": "Đều diễn tả “chẳng… chút nào”",
           "items": [
             {
               "id": "mo-nan-tomo-nai",
-              "diff": "でもなんでもない gắn với danh từ, tính từ đuôi な, phủ định thân phận, tính chất; くもなんともない gắn với tính từ đuôi い, phần nhiều phủ định cảm giác.",
+              "title": "〜もなんともない (chẳng cảm thấy gì)",
+              "thisTitle": "〜でもなんでもない (chẳng… chút nào)",
+              "diff": "Cùng nghĩa “chẳng… chút nào”; でもなんでもない đi sau tính từ đuôi な (và danh từ), もなんともない đi sau dạng く của tính từ đuôi い.",
               "this": [
                 {
-                  "tag": "Danh từ · hoàn toàn không phải",
-                  "tr": "Người đó chỉ là đồng nghiệp thôi. Hoàn toàn không phải người yêu gì cả."
+                  "tag": "Tính từ đuôi な · chẳng chút nào",
+                  "tr": "Người đó á, tôi chẳng thích chút nào."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tính từ đuôi い · chẳng chút nào",
-                  "tr": "Vết thương cỡ này chẳng đau chút nào."
+                  "tag": "Tính từ đuôi い dạng く · chẳng chút nào",
+                  "tr": "Người đó á, tôi chẳng sợ chút nào."
                 }
               ],
               "wrong": {
-                "why": "Tính từ đuôi い phải dùng 「くもなんともない」"
+                "why": "Tính từ đuôi い phải đổi sang dạng く: 「怖くもなんともない」"
               },
-              "explain": "Trước hết nhìn từ phía trước: danh từ, tính từ đuôi な (恋人、好き、簡単) → でもなんでもない; tính từ đuôi い đổi sang dạng く (痛く、怖く、悲しく) → くもなんともない. Cả hai đều là phủ định hoàn toàn kiểu “chẳng phải… mà cũng chẳng phải gì khác”, giọng điệu mạnh hơn nhiều so với chỉ nói 「〜ではない」「〜くない」."
+              "explain": "Xem tính từ phía trước: tính từ đuôi な như 好き、平気、簡単 → 好きでもなんでもない; tính từ đuôi い như 怖い、痛い đổi sang dạng く → 怖くもなんともない. Cả hai đều là “chẳng… chút nào” nói khi tỏ ra cứng cỏi hoặc phản bác người khác, giọng mạnh hơn nhiều so với 「〜ではない」「〜くない」."
             }
           ]
         }
@@ -37147,7 +37148,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả khẳng định mạnh “đây chính là…”",
+          "note": "Đều diễn tả “đây chính là…”",
           "items": [
             {
               "id": "ni-hoka-naranai",
@@ -37168,20 +37169,21 @@
             },
             {
               "id": "to-iu-mono-da",
-              "diff": "というものだ là đánh giá ôn hòa “thế này mới gọi là…”, khẩu ngữ cũng dùng; でなくてなんだろう là câu hỏi tu từ đầy kích động.",
+              "title": "〜というものだ (bản chất / khẳng định)",
+              "diff": "でなくてなんだろう là câu hỏi tu từ đầy cảm xúc; というものだ nói một cách bình thản “đó mới gọi là…”, dùng cả trong văn nói.",
               "this": [
                 {
-                  "tag": "Hỏi tu từ · cảm xúc mạnh",
-                  "tr": "Liều cả mạng sống để bảo vệ con — đây không phải là tình yêu thì là gì?"
+                  "tag": "Câu hỏi tu từ · cảm xúc mạnh",
+                  "tr": "Tận tụy mà không cầu đền đáp — đây không phải tình yêu thì là gì?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Ôn hòa · định nghĩa",
-                  "tr": "Giúp đỡ nhau lúc khó khăn, đó mới gọi là tình bạn thật sự."
+                  "tag": "Bình thản · định nghĩa",
+                  "tr": "Không cầu đền đáp, đó mới là tình yêu thật sự."
                 }
               ],
-              "explain": "Nhìn giọng điệu: というものだ giống như bình thản đưa ra định nghĩa, giảng giải đạo lý (〜のが本当の友情というものだ), nói chuyện hằng ngày cũng dùng; でなくてなんだろう là câu hỏi tu từ khi cảm xúc tác giả dâng cao, gần như chỉ xuất hiện trong tác phẩm văn học và diễn thuyết."
+              "explain": "Xem giọng điệu và mẫu câu: でなくてなんだろう là câu hỏi tu từ “đây không phải… thì là gì”, cảm xúc dâng trào, hầu như chỉ xuất hiện trong văn chương và diễn văn, phía trước thường là 「これが」; というものだ thì bình thản đưa ra định nghĩa, nói lẽ phải (〜のが本当の愛というものだ), dùng cả trong giao tiếp hằng ngày."
             }
           ]
         }
@@ -37212,29 +37214,6 @@
               "explain": "Cả hai đều bắt nguồn từ 「ではあるまい (có lẽ không phải)」. Nhìn chữ cuối cùng: 「し」 chỉ lý do — “có phải là… đâu, nên…”, phía sau là phê phán, khuyên nhủ, khẩu ngữ hay nói 「じゃあるまいし」; 「か」 biến thành nghi vấn — “chẳng phải là… sao” ＝ e là, thường gặp trong văn viết."
             }
           ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Đều nêu trước một tình huống không đúng với thực tế, rồi phê phán thực tế",
-          "items": [
-            {
-              "id": "nara-iza-shirazu",
-              "diff": "じゃあるまいし phủ định thẳng “bạn có phải là… đâu”, giọng gay gắt; ならいざ知らず lùi một bước trước “nếu là… thì còn có thể thông cảm”.",
-              "this": [
-                {
-                  "tag": "Phủ định thẳng · khẩu ngữ",
-                  "tr": "Có phải trẻ con đâu, đừng khóc vì chuyện cỏn con này."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Lùi một bước · rồi phê phán",
-                  "tr": "Trẻ con thì còn đỡ, đằng này người lớn mà lại khóc vì chuyện cỏn con này."
-                }
-              ],
-              "explain": "Nhìn cấu trúc câu: sau じゃあるまいし lập tức là mệnh lệnh hay phê phán đối với đối phương (泣くな); sau ならいざ知らず phải nói ra đối tượng thật (大人が……), cho biết “trường hợp kia thì có thể hiểu được, nhưng trường hợp này thì không được”, giọng điệu văn viết hơn (はいざ知らず cũng vậy)."
-            }
-          ]
         }
       ]
     },
@@ -37243,25 +37222,9 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều là suy đoán trong văn viết",
+          "sense": 1,
+          "note": "Đều diễn tả phỏng đoán “e rằng là…”",
           "items": [
-            {
-              "id": "no-dewa-nai-darou-ka",
-              "diff": "Nghĩa hoàn toàn giống nhau (なかろう＝ないだろう); ではなかろうか cứng hơn, chỉ dùng trong văn viết.",
-              "this": [
-                {
-                  "tag": "Luận văn · cứng",
-                  "tr": "Nguyên nhân của tình trạng ít con, phải chăng nằm ở sự bất an về kinh tế?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Dùng cả văn viết và văn nói",
-                  "tr": "Nguyên nhân của tình trạng ít con, phải chăng nằm ở sự bất an về kinh tế?"
-                }
-              ],
-              "explain": "なかろう là cách nói cổ của ないだろう, hai câu cùng nghĩa, khác nhau chỉ ở hoàn cảnh: văn bản rất cứng như luận văn, xã luận dùng ではなかろうか; diễn thuyết, phát biểu trong cuộc họp, văn bản thông thường thường dùng ではないだろうか; nói chuyện hằng ngày thì nói 「んじゃないかな」."
-            },
             {
               "id": "de-wa-arumai-ka",
               "diff": "Nghĩa về cơ bản giống nhau; ではあるまいか tao nhã, cổ điển hơn, thường gặp trong tác phẩm văn học, hay mang chút lo lắng.",
@@ -37281,10 +37244,11 @@
             },
             {
               "id": "de-arou",
-              "diff": "ではなかろうか dùng hình thức câu hỏi tu từ để nói ý kiến một cách nhẹ nhàng; であろう là đưa ra suy đoán trực tiếp.",
+              "title": "〜であろう (phỏng đoán văn viết)",
+              "diff": "ではなかろうか phỏng đoán uyển chuyển bằng câu hỏi phủ định; であろう đưa ra phỏng đoán trực tiếp, giọng chắc chắn hơn.",
               "this": [
                 {
-                  "tag": "Hỏi tu từ · chủ trương nhẹ nhàng",
+                  "tag": "Câu hỏi phủ định · phỏng đoán uyển chuyển",
                   "tr": "Phải chăng chính phương pháp này mới là hiệu quả nhất?"
                 }
               ],
@@ -37294,7 +37258,32 @@
                   "tr": "Phương pháp này có lẽ là hiệu quả nhất."
                 }
               ],
-              "explain": "Nhìn cuối câu: ではなかろうか là câu hỏi tu từ “chẳng phải là… sao”, dùng để nhẹ nhàng đưa ra chủ trương của mình, đọc lên như đang tìm sự đồng tình của người đọc; であろう là phán đoán trực tiếp của tác giả “có lẽ là…”. Cả hai chỉ dùng trong văn viết như luận văn, bình luận."
+              "explain": "Xem cuối câu: ではなかろうか phỏng đoán bằng câu hỏi phủ định “chẳng phải là… sao”, không nói chắc; であろう là phỏng đoán trực tiếp của tác giả “có lẽ là…”, giọng chắc chắn hơn. Cả hai chỉ dùng trong văn viết như luận văn, bình luận."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều đưa ra chủ kiến một cách uyển chuyển “chẳng phải là… sao”",
+          "items": [
+            {
+              "id": "no-dewa-nai-darou-ka",
+              "title": "〜のではないだろうか (chủ kiến uyển chuyển)",
+              "diff": "Nghĩa giống nhau (なかろう = ないだろう); ではなかろうか cứng hơn, chỉ dùng trong văn viết; ではないだろうか dùng được cả trong văn viết lẫn diễn văn, còn có thể nói thành 「ではないでしょうか」.",
+              "this": [
+                {
+                  "tag": "Luận văn, xã luận · cứng",
+                  "tr": "Chẳng phải vấn đề nằm ở chính chế độ giáo dục sao?"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Diễn văn · thể lịch sự",
+                  "tr": "Thưa quý vị, chẳng phải vấn đề nằm ở chính chế độ giáo dục sao?"
+                }
+              ],
+              "explain": "Nghĩa giống nhau, khác ở hoàn cảnh: ではなかろうか rất cứng, chỉ xuất hiện trong văn bản như luận văn, xã luận, và không có thể lịch sự; khi nói trước người nghe (皆さん、……) thì dùng ではないだろうか hoặc dạng lịch sự 「ではないでしょうか」. Trò chuyện hằng ngày thì nói 「んじゃないかな」."
             }
           ]
         }
@@ -37327,11 +37316,11 @@
             },
             {
               "id": "zu-ni-wa-sumanai",
-              "diff": "ではすまない đi sau danh từ, nghĩa là “chỉ bằng… thì không xong được”; ずにはすまない đi sau thể ない của động từ, nghĩa là “không… thì không được”.",
+              "diff": "では済まない là “chỉ thế này thì không xong” → hậu quả nghiêm trọng hơn; ずには済まない là “không làm việc này thì không xong” → buộc phải làm.",
               "this": [
                 {
                   "tag": "Danh từ · không xong được",
-                  "tr": "Tôi lỡ nói những điều mà bảo là đùa cũng không cho qua được."
+                  "tr": "Tôi đã lỡ nói một điều không thể coi là đùa cho xong."
                 }
               ],
               "that": [
@@ -37340,7 +37329,10 @@
                   "tr": "Đã làm phiền người ta thì không xin lỗi là không được."
                 }
               ],
-              "explain": "Chỉ khác nhau một chữ 「ず」. Nhìn phía trước: danh từ hoặc 「〜だけ」＋では → chỉ như thế thì không xong, sự việc nghiêm trọng hơn; thể ない của động từ bỏ ない＋ずには → về lẽ phải thì buộc phải làm (謝らずには済まない＝ buộc phải xin lỗi; ないではすまない cũng vậy). Dạng bị động 「では済まされない」 cũng giống thế."
+              "wrong": {
+                "why": "Trước ずには phải dùng thể ない bỏ ない: 謝らずには済まない"
+              },
+              "explain": "Cả hai đều từ 「済む」 (“sự việc được giải quyết xong”). 「では済まない」 = chỉ bằng cái này (danh từ, 〜だけ) thì không xong → chỉ… thì không giải quyết được, hậu quả nghiêm trọng hơn; 「ずには済まない」 = không làm việc này thì không xong → về lẽ phải buộc phải làm (謝らずには済まない = không xin lỗi thì không được, ないでは済まない cũng vậy). Xem phía trước: danh từ + では; động từ thể ない bỏ ない + ずには."
             }
           ]
         }
@@ -37351,42 +37343,54 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “hai mặt cùng đồng thời đúng”",
+          "sense": 1,
+          "note": "Đều diễn tả “vừa là… vừa là…”",
           "items": [
             {
-              "id": "mo-ba-mo",
-              "diff": "でもあり〜でもある liệt kê song song hai thân phận, tính chất; も〜ば〜も liệt kê hai mặt đặc điểm của cùng một người, thiên về văn nói.",
+              "id": "ni-shite",
+              "title": "〜にして (kiêm cả)",
+              "thisTitle": "〜でもあり〜でもある (kiêm hai thân phận)",
+              "diff": "Cùng nghĩa “vừa là… vừa là…”; にして rất trang trọng, mang màu sắc văn chương; でもあり〜でもある dùng được cả khi nói lẫn khi viết.",
               "this": [
                 {
-                  "tag": "Hai thân phận",
-                  "tr": "Anh ấy vừa là bác sĩ, vừa là nhà văn."
+                  "tag": "Bình dị · cả nói lẫn viết",
+                  "tr": "Người đó vừa là họa sĩ, vừa là nhà thơ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Đặc điểm hai mặt",
-                  "tr": "Anh ấy đầu óc đã giỏi, tính cách cũng tốt."
+                  "tag": "Văn viết · màu sắc văn chương",
+                  "tr": "Người đó là họa sĩ, đồng thời cũng là nhà thơ."
                 }
               ],
-              "explain": "Nhìn xem thứ được liệt kê là gì: thân phận, tính chất thể hiện bằng danh từ (医者、作家) → でもあり〜でもある; hai mặt ưu điểm hay khuyết điểm được miêu tả bằng tính từ, động từ (頭もよければ性格もいい) → も〜ば〜も, hay dùng trong hội thoại hằng ngày."
+              "explain": "Xem văn phong: にして là cách nói trang trọng, mang màu sắc văn chương, hay gặp khi giới thiệu nhân vật hoặc trong bình luận, hầu như không dùng khi nói; でもあり〜でもある dùng được cả khi nói lẫn viết, bình dị hơn. Ngoài ra でもあり〜でもある còn liệt kê được hai cảm xúc (嬉しくもあり〜), にして thì không."
             },
             {
-              "id": "dake-de-naku",
-              "diff": "でもあり〜でもある hai vế ngang hàng; だけでなく có tính tăng tiến, trọng tâm ở vế sau.",
+              "id": "to-douji-ni",
+              "title": "〜と同時に (đồng thời mang)",
+              "thisTitle": "〜でもあり〜でもある (kiêm hai thân phận)",
+              "diff": "Cùng nghĩa “vừa là… vừa là…”; であると同時に mang giọng lập luận, nhấn mạnh một thứ đồng thời mang hai vai trò; でもあり〜でもある hai vế cân đối, bình dị hơn.",
               "this": [
                 {
-                  "tag": "Liệt kê ngang hàng",
-                  "tr": "Anh ấy vừa là bác sĩ, vừa là nhà văn."
+                  "tag": "Hai vế cân đối · bình dị",
+                  "tr": "Cuốn sách này vừa là tiểu thuyết, vừa là tư liệu lịch sử quý giá."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tăng tiến · trọng tâm ở sau",
-                  "tr": "Anh ấy không chỉ là bác sĩ mà còn nổi tiếng với tư cách nhà văn."
+                  "tag": "Giọng lập luận · văn viết",
+                  "tr": "Cuốn sách này là tiểu thuyết, đồng thời cũng là tư liệu lịch sử quý giá."
                 }
               ],
-              "explain": "Nhìn mức độ nặng nhẹ của hai vế: でもあり〜でもある hai vế hoàn toàn bình đẳng, không vế nào quan trọng hơn; だけでなく thì vế trước là điều mọi người đã biết, vế sau mới là thông tin mới muốn nhấn mạnh, phía sau hay đi với 「〜も」, 「〜としても」."
-            },
+              "explain": "Xem hình thức sau vế thứ nhất: trước と同時に phải nói 「である」 (小説である と同時に), mang giọng lập luận trong luận văn, diễn văn, nhấn mạnh “là cái này đồng thời cũng là cái kia”; でもあり〜でもある dùng 「でも」 ở cả hai vế, hình thức cân đối, thường dùng cả khi nói lẫn viết, còn liệt kê được hai cảm xúc."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều diễn tả tâm trạng phức tạp “vừa… vừa…”",
+          "items": [
             {
               "id": "yara-yara",
               "title": "〜やら〜やら (cảm xúc đan xen)",
@@ -37395,7 +37399,7 @@
               "this": [
                 {
                   "tag": "Bình thản · hai tâm trạng",
-                  "tr": "Con gái lấy chồng, tôi vừa vui lại vừa có chút buồn trống trải."
+                  "tr": "Lần đầu sống một mình, vừa vui vừa thấy chơi vơi."
                 }
               ],
               "that": [
@@ -37436,63 +37440,6 @@
                 "why": "Trước とたん phải dùng thể た: 出たとたん"
               },
               "explain": "Trước tiên xem cách nối: が早いか đi sau thể từ điển (帰る), たとたん đi sau thể た (出た). Sau đó xem nửa câu sau: hành động tiếp theo mà chính chủ ngữ làm ngay → が早いか; những việc bất ngờ, không kiểm soát được như trời mưa, điện thoại reo → たとたん tự nhiên hơn."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ga-nara",
-      "groups": [
-        {
-          "kind": "look",
-          "note": "AもAなら ↔ AもBなら, đều là 「も〜なら、〜も」, khung câu y hệt nhau",
-          "items": [
-            {
-              "id": "mo-ba-mo",
-              "thisTitle": "〜も〜なら〜も〜",
-              "diff": "AもAならBもB lặp lại cùng một danh từ, phê phán cả hai bên “kẻ tám lạng người nửa cân”; AもXならBもY nói về những việc khác nhau, “vừa… lại vừa…”.",
-              "this": [
-                {
-                  "tag": "Lặp cùng danh từ · cả hai đều tệ",
-                  "tr": "Cha mẹ chẳng ra gì, con cái cũng chẳng hơn gì."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Việc khác nhau · vừa… vừa…",
-                  "tr": "Cô ấy vừa hát hay, lại vừa nấu ăn ngon."
-                },
-                {
-                  "tag": "Thể ば · vừa… vừa…",
-                  "tr": "Anh ta vừa uống rượu, lại vừa hút thuốc."
-                }
-              ],
-              "explain": "Cả hai câu đều là 「〜も〜なら、〜も〜」, hãy nhìn trước なら: trước và sau 「も」 là cùng một danh từ (親も親なら、子も子だ) → phê phán cả hai bên đều chẳng ra gì; trước và sau 「も」 là những sự vật và đánh giá khác nhau (歌も上手なら、料理もうまい) → chỉ là “vừa… lại vừa…”, đổi sang thể ば của động từ (酒も飲めば、タバコも吸う) cũng vậy."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Đều dùng để chê trách người khác, bày tỏ sự bất mãn",
-          "items": [
-            {
-              "id": "to-kitara",
-              "thisTitle": "〜も〜なら〜も〜",
-              "diff": "ときたら chỉ lôi ra một người để than phiền; AもAならBもB là phê phán cả hai bên.",
-              "this": [
-                {
-                  "tag": "Phê phán cả hai bên",
-                  "tr": "Chồng chẳng ra gì, vợ cũng kẻ tám lạng người nửa cân."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Chỉ nói một người",
-                  "tr": "Nói đến ông chồng nhà tôi ấy à, ngày nào cũng chỉ biết chơi game."
-                }
-              ],
-              "explain": "Đếm số người bị phê phán: chỉ có một người (うちの夫) → ときたら, phía sau là lời than phiền về người đó; có hai người, và mỗi người đều được lặp lại danh từ (夫も夫なら、妻も妻だ) → AもAならBもB, nghĩa là “cả hai đều chẳng hơn gì nhau”."
             }
           ]
         }
