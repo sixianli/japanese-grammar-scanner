@@ -26308,23 +26308,24 @@
           "items": [
             {
               "id": "ippou-de",
-              "diff": "反面 only covers two opposite sides of the same thing; 一方で can also contrast different people or things, or mean doing two things at once.",
+              "title": "〜一方で (contrasting two sides)",
+              "diff": "Both can describe two sides of the same thing; 反面 stresses a good-vs-bad opposition, while 一方で is neutral and can also contrast different people or things.",
               "this": [
                 {
-                  "tag": "Same thing · Two sides",
-                  "tr": "City life is convenient, but on the other hand rent is expensive."
+                  "tag": "Opposing sides · evaluative",
+                  "tr": "This medicine works well, but on the flip side its side effects are strong too."
                 }
               ],
               "that": [
                 {
-                  "tag": "Different subjects · Contrast",
-                  "tr": "My older brother works in the city, while my younger brother farms in the countryside."
+                  "tag": "Two sides side by side · neutral",
+                  "tr": "This medicine works well; on the other hand, its side effects are strong too."
                 }
               ],
               "wrong": {
-                "why": "反面 can only describe two sides of the same thing"
+                "why": "反面 only describes two sides of the same thing; to contrast different people, use 一方で"
               },
-              "explain": "Look at the subjects of the two clauses: the pros and cons of the same thing (都会) → both 反面 and 一方で work; two different people or things set side by side (兄／弟) → only 一方で. 一方で can also mean “working while raising kids”; 反面 has no such use."
+              "explain": "For the good and bad sides of the same medicine, both work. 反面 sets the two up as “front ↔ reverse”, so the good-vs-bad judgment is stronger; 一方で simply lays the two aspects side by side in a neutral tone. If the two halves are about different people or things (兄／弟), only 一方で works."
             },
             {
               "id": "kawari-ni",
@@ -26448,20 +26449,21 @@
           "items": [
             {
               "id": "ni-mo-mashite",
-              "diff": "以上に often pairs with 「予想」「思った」 to say something exceeded expectations; にもまして is more written and can also mean “more than anything”.",
+              "title": "〜にもまして (even more than)",
+              "diff": "Both mean “more … than …”; 以上に is neutral and general, にもまして is more formal and implies that the first was already very … to begin with.",
               "this": [
                 {
-                  "tag": "Beyond expectations",
-                  "tr": "The match was even more exciting than expected."
+                  "tag": "Neutral · general",
+                  "tr": "This winter we've had more snow than last year."
                 }
               ],
               "that": [
                 {
-                  "tag": "Question word → More than anything",
-                  "tr": "More than anything, my family's health matters most."
+                  "tag": "Formal · already …, now even more",
+                  "tr": "Last year already had plenty of snow, and this winter has even more."
                 }
               ],
-              "explain": "Look at what comes before: expectations like 「予想」「想像」「思った」 → 以上に, meaning beyond what was expected; question words like 「何」「誰」 → にもまして, meaning “more than anything / anyone”. After 「去年」「以前」 both work; にもまして is more written and implies “it was already very… to begin with”."
+              "explain": "Both sentences say “more snow than last year” and are interchangeable. 以上に simply takes last year as a baseline and goes above it; it works in speech and writing. にもまして is more formal and carries the sense “last year already had a lot, and this year is even more” — the baseline itself has to be notable. When you just want a plain comparison, use 以上に."
             },
             {
               "id": "wa-yori-comparison",
@@ -26469,16 +26471,16 @@
               "this": [
                 {
                   "tag": "Beyond expectations · Emphatic",
-                  "tr": "The exam was harder than I could have imagined."
+                  "tr": "Today's meeting ran far longer than expected."
                 }
               ],
               "that": [
                 {
                   "tag": "Plain comparison",
-                  "tr": "The exam was harder than I thought."
+                  "tr": "Today's meeting was longer than expected."
                 }
               ],
-              "explain": "Both sentences work — the tone differs: より just flatly says “harder than…”; 以上に treats 「思った」 as a line and stresses that reality “broke through it”, with more surprise. For everyday comparisons of two things (AはBより高い), use より; for “beyond expectations, more than in past years”, 以上に is more forceful."
+              "explain": "Both are fine; the difference is tone. より just plainly says “longer than …”; 以上に treats 「予想」 as a line and stresses that reality “broke through” it, so it sounds more surprised. For everyday comparisons of two things (AはBより高い), use より; for “beyond expectations” or “more than in other years”, 以上に is stronger."
             }
           ]
         }
@@ -26584,29 +26586,6 @@
       "id": "jou-standpoint",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from 「上」 — extended from “on top of…” to “in terms of…”",
-          "items": [
-            {
-              "id": "no-ue-dewa",
-              "diff": "〜上（じょう） just objectively sets the angle; 〜の上（うえ）では often hints “that's how it is on paper, but not necessarily in reality”.",
-              "this": [
-                {
-                  "tag": "Setting the angle · Objective",
-                  "tr": "Legally speaking, there's no problem."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "On paper · Not in reality",
-                  "tr": "According to the calendar it's already spring, but it's still cold."
-                }
-              ],
-              "explain": "Look at the reading and the second half: 「〜上（じょう）」 attaches directly to Sino-Japanese nouns (法律上、健康上、教育上) and just means “from this angle”; 「〜の上（うえ）では」 often follows 「暦」「数字」「計算」「書類」 and is usually followed by 「だが、実際は……」, hinting that paper and reality differ."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Both mean “from the standpoint of…”",
           "items": [
@@ -26629,6 +26608,24 @@
                 "why": "〜上 can't attach to people"
               },
               "explain": "Look at the word before: field nouns like 教育、健康、法律、仕事 → 〜上, written and concise; people or positions like 子ども、親、外国人 → から見ると／からすると."
+            },
+            {
+              "id": "no-ue-dewa",
+              "title": "〜の上では (as seen in terms of …)",
+              "diff": "Same meaning; 〜上（じょう） attaches directly to Sino-Japanese nouns and is concise and formal; 〜の上（うえ）では adds 「の」, sounds softer, and often hints “so on paper, but not necessarily in reality”.",
+              "this": [
+                {
+                  "tag": "Concise · formal",
+                  "tr": "By the calculations, we'll be in the black next year."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Softer · hints “only on paper”",
+                  "tr": "According to the calculations, we'll be in the black next year."
+                }
+              ],
+              "explain": "Both mean “from the standpoint of the calculations”. The difference is form and feel: 〜上（じょう） sticks straight onto a Sino-Japanese noun (計算上、法律上) and is concise and formal; 〜の上では has 「の」 in between, can also follow native words like 「暦」 or 「形」, sounds gentler, and often implies “that's only how it looks on paper”, so it is easily followed by 「が、実際は……」."
             }
           ]
         }
@@ -26690,24 +26687,25 @@
       "groups": [
         {
           "kind": "look",
-          "note": "〜か〜ないかのうちに ↔ 〜ないうちに, differing only in whether 「〜か」 comes first",
+          "note": "〜か〜ないうちに ↔ 〜ないうちに: same ending; the only difference is whether 「Vるか」 comes first",
           "items": [
             {
               "id": "uchi-ni",
-              "diff": "〜か〜ないかのうちに means “no sooner…than…”; 〜ないうちに means “while it's not yet… (hurry and…)”.",
+              "title": "〜ないうちに (before … happens)",
+              "diff": "〜か〜ないうちに means “no sooner … than …”; 〜ないうちに means “while it's not yet … (hurry and …)”.",
               "this": [
                 {
-                  "tag": "No sooner… than · Already happened",
-                  "tr": "The bell had barely rung when everyone rushed out of the classroom."
+                  "tag": "「Vるか」 in front · no sooner … than",
+                  "tr": "No sooner had I stepped into the room than the phone rang."
                 }
               ],
               "that": [
                 {
-                  "tag": "Before it… · While not yet",
-                  "tr": "Let's head home before it gets dark."
+                  "tag": "No 「Vるか」 in front · while not yet",
+                  "tr": "Let's bring the laundry in before it starts to rain."
                 }
               ],
-              "explain": "The key is 「か」: 「鳴るか鳴らないか」 uses the same verb in positive and negative back to back, meaning “the instant between ringing and not ringing”, followed by something that already happened; with just 「ならないうちに」 and no 「〜か」 before it, it means “before it becomes…”, often followed by something to do quickly, like 「〜よう」「〜なさい」. Even in the shortened form 「鳴るか鳴らないうちに」, first check whether the same verb is repeated."
+              "explain": "Both end in 「ないうちに」, so look further back. 「入るか入らないうちに」 starts with the affirmative 「入るか」: the same verb in affirmative and negative means “at the very moment of entering or not yet entering” → no sooner … than, and what follows has already happened (電話が鳴った). 「降らないうちに」 has no 「Vるか」 in front and means “while it hasn't … yet” → before … happens, and what follows is something to do quickly (取り込もう)."
             }
           ]
         },
@@ -26800,23 +26798,23 @@
             },
             {
               "id": "n-bakari",
-              "diff": "かのような means “looks as if…, but isn't really”; んばかりの means “on the verge of…”, extremely intense, nearly about to happen.",
+              "diff": "Both are exaggerated comparisons; んばかり only describes an action about to happen (ない形 + ん), is formal and mostly used in set phrases; かのような follows the plain form and can compare with any situation.",
               "this": [
                 {
-                  "tag": "Actually knows · Putting on an act",
-                  "tr": "She had a look as if she knew nothing (when she actually did)."
+                  "tag": "Plain form · compares anything",
+                  "tr": "The stadium was engulfed in cheers so loud it seemed it would split apart."
                 }
               ],
               "that": [
                 {
-                  "tag": "On the verge · Extreme",
-                  "tr": "She looked as if she was about to burst into tears."
+                  "tag": "ない形 + ん · about to happen",
+                  "tr": "The stadium was engulfed in cheers almost loud enough to split it apart."
                 }
               ],
               "wrong": {
-                "why": "んばかり must follow the ない-form (泣き出さ＋ん)"
+                "why": "んばかり only attaches to the ない形 for an action about to happen; it can't take something that already happened"
               },
-              "explain": "Look at the form before it and the clues: んばかり follows the ない-form (泣き出さ＋ん), often together with 「今にも」, about an action that's just about to happen; かのような follows the plain form, after a situation that isn't really true (何も知らない), the point being that “appearance and fact differ”. The same goes for んばかりに／んばかりだ."
+              "explain": "Both are exaggerated comparisons — the stadium didn't actually split — and they're interchangeable here. The difference is what comes before: んばかり takes the ない形 with 「ない」 replaced by 「ん」 (割れ + ん), can only compare to an action that is about to happen, and mostly appears in set phrases like 「割れんばかり」 or 「あふれんばかり」; it's more formal. かのような follows the plain form and can take any situation, including something already past (何もなかったかのような顔); in that case it can't be replaced by んばかり."
             },
             {
               "id": "furi-wo-suru",
@@ -26844,11 +26842,11 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「と言う」 — literally “even if you say so”, so both express concession",
+          "note": "Both come from 「言う」 — original meaning: “to say”",
           "items": [
             {
               "id": "kara-to-itte",
-              "diff": "かといって goes at the start of a sentence: “but the other way doesn't work either”; からといって follows a reason: “just because…, doesn't mean…”.",
+              "diff": "かといって starts its own sentence and says “that said, you can't … either”; からといって follows a reason and says “just because …, that doesn't mean …”.",
               "this": [
                 {
                   "tag": "Sentence-initial · Caught both ways",
@@ -26861,11 +26859,11 @@
                   "tr": "Just because work is hard doesn't mean you should quit right away."
                 }
               ],
-              "explain": "Look at what comes before 「といって」: starting a new sentence after a full stop (かといって) → you accept the situation, but the other road is blocked too, usually followed by 「〜わけにもいかない」「〜もない」; right after a reason (辛い＋からといって) → it rejects the idea “because of this reason, you should…”."
+              "explain": "Both grew out of 「と言って」 (“saying so”). からといって = saying “because …”: using just that one reason as grounds → just because …, that doesn't mean …; so it attaches right after the reason (辛い + からといって). かといって was originally 「そうかといって」: first agreeing with the previous sentence (“that's so”), but if you then said … → that said, the other path doesn't work either; so it starts its own sentence and is often followed by 「わけにもいかない」. Check what comes before 「といって」: a reason plus 「から」, or a lone 「か」 after a full stop."
             },
             {
               "id": "to-wa-ie",
-              "diff": "Both can start a sentence; after かといって comes “the other option doesn't work either”, after とはいえ comes “a reality that goes against expectations”.",
+              "diff": "Both introduce a concession through “saying”; after かといって comes “the other option won't work either”, after とはいえ comes “a reality contrary to expectations”.",
               "this": [
                 {
                   "tag": "The other road won't work either",
@@ -26878,11 +26876,11 @@
                   "tr": "It's already spring. Even so, mornings are still cold."
                 }
               ],
-              "explain": "Look at the second half: かといって is followed by “the other choice won't do either” (〜のももったいない、〜わけにもいかない), expressing a dilemma; とはいえ just states a fact contrary to expectations (まだ寒い), with no choice involved — it's rather written and can also follow a noun directly (春とはいえ)."
+              "explain": "Both come from 「言う」 (“to say”). とはいえ is 「とは言え」, equivalent to 「とは言うものの」 = “although one says …”: it admits the stated fact (もう春だ) and then points out that reality runs against expectations (まだ寒い). かといって was originally 「そうかといって」: agreeing with the previous sentence (“that's so”), but if you then went and did the other thing … → that path doesn't work either; so what follows rejects the alternative, like 「〜のももったいない」 or 「〜わけにもいかない」, expressing being caught between two bad options."
             },
             {
               "id": "to-ittemo",
-              "diff": "かといって expresses a dilemma; といっても means “although I say…, it's not really that…”, used to lower the listener's expectations.",
+              "diff": "Both introduce a concession through “saying”; かといって rejects the other option, leaving you stuck; といっても corrects what was just said: “though I say …, it's not really that much”.",
               "this": [
                 {
                   "tag": "Caught both ways",
@@ -26895,7 +26893,7 @@
                   "tr": "I can cook, but only simple things."
                 }
               ],
-              "explain": "Look at the second half: といっても is followed by a correction to what was just said (〜だけだ、〜くらいだ), toning it down; かといって is followed by another road that's also blocked (〜もない). Also, といっても attaches directly to a clause, while かといって usually starts its own sentence."
+              "explain": "Both come from 「言う」 (“to say”), but they concede different things. といっても = “even if I say …”: you state 「料理ができる」 and immediately scale that statement down (〜だけだ、〜くらいだ), lowering the listener's expectations. かといって was originally 「そうかといって」: agreeing with the previous sentence (“that's so”), but if you then took the other path … → that path is blocked too (〜もない), expressing being stuck between two options. Also, といっても attaches directly after a clause, while かといって usually starts its own sentence."
             }
           ]
         }

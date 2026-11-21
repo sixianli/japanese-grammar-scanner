@@ -26308,23 +26308,24 @@
           "items": [
             {
               "id": "ippou-de",
-              "diff": "反面 solo habla de dos caras opuestas de una misma cosa; 一方で también puede contrastar personas o cosas distintas, o indicar que se hacen dos cosas a la vez.",
+              "title": "〜一方で (contraste de dos aspectos)",
+              "diff": "Ambos sirven para dos caras de una misma cosa; 反面 resalta la oposición entre lo bueno y lo malo, mientras que 一方で es neutro y también puede contrastar personas o cosas distintas.",
               "this": [
                 {
-                  "tag": "Una misma cosa · dos caras",
-                  "tr": "Vivir en la ciudad es cómodo, pero por otro lado el alquiler es caro."
+                  "tag": "Caras opuestas · valorativo",
+                  "tr": "Este medicamento es muy eficaz, pero, en contrapartida, sus efectos secundarios también son fuertes."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sujetos distintos · contraste",
-                  "tr": "Mi hermano mayor trabaja en la ciudad, mientras que el menor se dedica a la agricultura en el pueblo."
+                  "tag": "Dos aspectos en paralelo · neutro",
+                  "tr": "Este medicamento es muy eficaz; por otro lado, sus efectos secundarios también son fuertes."
                 }
               ],
               "wrong": {
-                "why": "反面 solo puede hablar de las dos caras de una misma cosa"
+                "why": "反面 solo habla de dos caras de una misma cosa; para contrastar personas distintas se usa 一方で"
               },
-              "explain": "Fíjate en el sujeto de las dos partes: ventajas y desventajas de una misma cosa (都会) → valen 反面 y 一方で; dos personas o cosas distintas puestas en contraste (兄／弟) → solo 一方で. 一方で también puede decir «trabaja y, a la vez, cría a sus hijos»; 反面 no tiene ese uso."
+              "explain": "Para lo bueno y lo malo del mismo medicamento sirven los dos. 反面 presenta las dos caras como «anverso ↔ reverso», con una valoración bueno/malo más marcada; 一方で solo pone los dos aspectos uno al lado del otro, en tono neutro. Si las dos partes hablan de personas o cosas distintas (兄／弟), solo vale 一方で."
             },
             {
               "id": "kawari-ni",
@@ -26448,20 +26449,21 @@
           "items": [
             {
               "id": "ni-mo-mashite",
-              "diff": "以上に suele combinarse con 「予想」「思った」 y dice que algo supera lo previsto; にもまして es más escrito y también puede decir «más que nada».",
+              "title": "〜にもまして (aún más que)",
+              "diff": "Ambos expresan «más … que …»; 以上に es neutro y de uso general, にもまして es más formal e implica que lo primero ya era muy … de por sí.",
               "this": [
                 {
-                  "tag": "Supera lo previsto",
-                  "tr": "El partido fue aún más emocionante de lo previsto."
+                  "tag": "Neutro · uso general",
+                  "tr": "Este invierno ha nevado más que el año pasado."
                 }
               ],
               "that": [
                 {
-                  "tag": "Interrogativo → más que nada",
-                  "tr": "La salud de la familia es lo más importante, por encima de todo."
+                  "tag": "Formal · ya era…, ahora aún más",
+                  "tr": "El año pasado ya nevó bastante, y este invierno todavía más."
                 }
               ],
-              "explain": "Fíjate en lo que va delante: expectativas como 「予想」「想像」「思った」 → 以上に, para decir que se superó lo previsto; interrogativos como 「何」「誰」 → にもまして, «más que cualquier cosa». Si delante va 「去年」 o 「以前」, valen las dos; にもまして es más escrito e insinúa que «ya de por sí era muy…»."
+              "explain": "Las dos frases dicen «más nieve que el año pasado» y son intercambiables. 以上に solo toma el año pasado como referencia y lo supera; se usa tanto al hablar como por escrito. にもまして es más formal y transmite «el año pasado ya había mucha, y este año aún más»: la referencia misma tiene que ser destacable. Para una comparación sin más, usa 以上に."
             },
             {
               "id": "wa-yori-comparison",
@@ -26469,16 +26471,16 @@
               "this": [
                 {
                   "tag": "Supera lo previsto · énfasis",
-                  "tr": "El examen fue difícil más allá de lo imaginable."
+                  "tr": "La reunión de hoy fue mucho más larga de lo previsto."
                 }
               ],
               "that": [
                 {
                   "tag": "Comparación normal",
-                  "tr": "El examen fue más difícil de lo que pensaba."
+                  "tr": "La reunión de hoy fue más larga de lo previsto."
                 }
               ],
-              "explain": "Las dos oraciones son posibles; la diferencia está en el tono: より solo dice llanamente «más difícil que…»; 以上に toma 「思った」 como una línea y subraya que la realidad «la sobrepasó», con más sorpresa. Para comparar dos cosas en el día a día (AはBより高い) se usa より; para decir «superar lo previsto, superar otros años», 以上に tiene más fuerza."
+              "explain": "Ambas valen; cambia el tono. より solo dice, sin más, «más largo que…»; 以上に toma 「予想」 como una línea y subraya que la realidad «la sobrepasó», con más sorpresa. Para comparar dos cosas en el día a día (AはBより高い) se usa より; para «superar lo previsto» o «superar a otros años», 以上に resulta más enérgico."
             }
           ]
         }
@@ -26584,29 +26586,6 @@
       "id": "jou-standpoint",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambas vienen de 「上」: de «encima de…» se pasó a «en el aspecto de…»",
-          "items": [
-            {
-              "id": "no-ue-dewa",
-              "diff": "〜上（じょう） solo delimita objetivamente un punto de vista; 〜の上（うえ）では suele insinuar «sobre el papel es así, pero en realidad no necesariamente».",
-              "this": [
-                {
-                  "tag": "Punto de vista · objetivo",
-                  "tr": "Desde el punto de vista legal, no hay ningún problema."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Sobre el papel · en realidad no",
-                  "tr": "Según el calendario ya es primavera, pero todavía hace frío."
-                }
-              ],
-              "explain": "Fíjate en la lectura y en la segunda parte: 「〜上（じょう）」 va directamente tras un sustantivo de origen chino (法律上、健康上、教育上) y solo dice «visto desde este aspecto»; 「〜の上（うえ）では」 suele ir con 「暦」「数字」「計算」「書類」, y detrás suele venir 「だが、実際は……」, insinuando que el papel y la realidad no coinciden."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Ambas expresan «visto desde el aspecto de…»",
           "items": [
@@ -26629,6 +26608,24 @@
                 "why": "〜上 no puede ir tras una persona"
               },
               "explain": "Fíjate en la palabra que va delante: sustantivos de ámbito como 教育、健康、法律、仕事 → 〜上, escrito y conciso; personas o posturas como 子ども、親、外国人 → から見ると／からすると."
+            },
+            {
+              "id": "no-ue-dewa",
+              "title": "〜の上では (visto en términos de …)",
+              "diff": "Mismo significado; 〜上（じょう） va pegado a sustantivos sino-japoneses y es conciso y formal; 〜の上（うえ）では añade 「の」, suena más suave y a menudo insinúa «así es sobre el papel, pero no necesariamente en la realidad».",
+              "this": [
+                {
+                  "tag": "Conciso · formal",
+                  "tr": "Según los cálculos, el año que viene tendremos beneficios."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Suave · insinúa «solo sobre el papel»",
+                  "tr": "Si nos atenemos a los cálculos, el año que viene tendremos beneficios."
+                }
+              ],
+              "explain": "Las dos frases significan lo mismo: «desde el punto de vista de los cálculos». Cambian la forma y el matiz: 〜上（じょう） se pega directamente a un sustantivo sino-japonés (計算上、法律上) y es conciso y formal; 〜の上では lleva 「の」 en medio, también puede ir tras palabras nativas como 「暦」 o 「形」, suena más pausado y suele insinuar «solo es así sobre el papel», por lo que a menudo le sigue 「が、実際は……」."
             }
           ]
         }
@@ -26690,24 +26687,25 @@
       "groups": [
         {
           "kind": "look",
-          "note": "〜か〜ないかのうちに ↔ 〜ないうちに: solo se diferencian en si delante hay 「〜か」",
+          "note": "〜か〜ないうちに ↔ 〜ないうちに: el final es igual; solo cambia si delante va 「Vるか」",
           "items": [
             {
               "id": "uchi-ni",
-              "diff": "〜か〜ないかのうちに es «nada más…, ya…»; 〜ないうちに es «antes de que…, aprovechando que todavía no… (rápido)».",
+              "title": "〜ないうちに (antes de que …)",
+              "diff": "〜か〜ないうちに significa «nada más…»; 〜ないうちに significa «antes de que… (date prisa y…)».",
               "this": [
                 {
-                  "tag": "Nada más… · ya ocurrió",
-                  "tr": "Apenas sonó el timbre, todos salieron disparados del aula."
+                  "tag": "Con 「Vるか」 delante · nada más…",
+                  "tr": "Nada más entrar en la habitación, sonó el teléfono."
                 }
               ],
               "that": [
                 {
-                  "tag": "Antes de que…",
-                  "tr": "Volvamos a casa antes de que oscurezca."
+                  "tag": "Sin 「Vるか」 delante · antes de que…",
+                  "tr": "Recojamos la ropa tendida antes de que llueva."
                 }
               ],
-              "explain": "La clave está en 「か」: 「鳴るか鳴らないか」 une el mismo verbo en afirmativo y negativo, «el instante en que suena o no suena», y detrás va algo que ya ocurrió; en 「ならないうちに」 no hay 「〜か」 delante, y significa «antes de que llegue a…», con detrás algo que hay que hacer rápido, como 「〜よう」「〜なさい」. En la forma abreviada 「鳴るか鳴らないうちに」, mira también primero si se repite el mismo verbo."
+              "explain": "Las dos terminan en 「ないうちに」, así que hay que mirar más atrás. 「入るか入らないうちに」 empieza con la forma afirmativa 「入るか」: el mismo verbo en afirmativo y negativo indica «justo en el instante de entrar o no» → nada más…, y lo que sigue ya ocurrió (電話が鳴った). 「降らないうちに」 no lleva 「Vるか」 delante y significa «mientras todavía no…» → antes de que…, y lo que sigue es algo que conviene hacer rápido (取り込もう)."
             }
           ]
         },
@@ -26800,23 +26798,23 @@
             },
             {
               "id": "n-bakari",
-              "diff": "かのような es «parece que…, pero en realidad no»; んばかりの es «a punto de…», un grado extremo en que casi llega a ocurrir de verdad.",
+              "diff": "Ambas son comparaciones exageradas; んばかり solo describe una acción a punto de ocurrir (ない形 + ん), es formal y aparece sobre todo en expresiones fijas; かのような va tras la forma simple y puede comparar con cualquier situación.",
               "this": [
                 {
-                  "tag": "En realidad lo sabe · finge",
-                  "tr": "Ella ponía cara de no saber nada (aunque lo sabía)."
+                  "tag": "Forma simple · compara cualquier cosa",
+                  "tr": "El estadio quedó envuelto en una ovación tal que parecía que iba a partirse."
                 }
               ],
               "that": [
                 {
-                  "tag": "A punto de · grado extremo",
-                  "tr": "Ella tenía cara de estar a punto de echarse a llorar."
+                  "tag": "ない形 + ん · a punto de ocurrir",
+                  "tr": "El estadio quedó envuelto en una ovación que casi lo partía en dos."
                 }
               ],
               "wrong": {
-                "why": "んばかり va con la forma ない (泣き出さ + ん)"
+                "why": "んばかり solo va tras la ない形, para una acción a punto de ocurrir; no admite algo que ya pasó"
               },
-              "explain": "Fíjate en la forma que va delante y en las pistas: んばかり va tras la forma ない (泣き出さ + ん), suele ir con 「今にも」 y habla de una acción que está a punto de ocurrir; かのような va con la forma simple y delante tiene una situación que en realidad no es cierta (何も知らない); lo importante es que «la apariencia no coincide con la realidad». Lo mismo vale para んばかりに／んばかりだ."
+              "explain": "Las dos son comparaciones exageradas (el estadio no se partió de verdad) y aquí son intercambiables. Cambia lo que va delante: んばかり toma la ない形 cambiando 「ない」 por 「ん」 (割れ + ん), solo compara con una acción a punto de ocurrir y aparece sobre todo en expresiones fijas como 「割れんばかり」 o 「あふれんばかり」; es más formal. かのような va tras la forma simple y admite cualquier situación, incluso algo ya pasado (何もなかったかのような顔); en ese caso no se puede cambiar por んばかり."
             },
             {
               "id": "furi-wo-suru",
@@ -26844,11 +26842,11 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「と言う」: literalmente «aunque se diga eso», por eso las dos expresan concesión",
+          "note": "Todas vienen de 「言う」: su sentido original es «decir»",
           "items": [
             {
               "id": "kara-to-itte",
-              "diff": "かといって va al principio de la oración y dice «pero tampoco sirve lo contrario»; からといって va tras un motivo y dice «no por… hay que…».",
+              "diff": "かといって abre su propia oración y dice «aun así, tampoco se puede…»; からといって va tras una razón y dice «no por … hay que…».",
               "this": [
                 {
                   "tag": "Al inicio · entre dos males",
@@ -26861,11 +26859,11 @@
                   "tr": "No está bien dejar el trabajo enseguida solo porque sea duro."
                 }
               ],
-              "explain": "Fíjate en lo que va delante de 「といって」: si empieza una oración nueva tras un punto (かといって) → se admite la situación anterior, pero el otro camino tampoco sirve, y detrás suele ir 「〜わけにもいかない」「〜もない」; si va justo tras un motivo (辛い + からといって) → se niega la idea de que «por ese motivo habría que…»."
+              "explain": "Las dos salen de 「と言って」 («diciendo así»). からといって = decir «porque…»: alegar solo esa razón → no por … hay que…, por eso va pegada a la razón (辛い + からといって). かといって era originalmente 「そうかといって」: primero se acepta la frase anterior («así es»), pero si por eso se dijera… → aun así, el otro camino tampoco sirve; por eso abre su propia oración y suele ir seguida de 「わけにもいかない」. Fíjate en lo que va antes de 「といって」: una razón con 「から」, o un 「か」 suelto tras un punto."
             },
             {
               "id": "to-wa-ie",
-              "diff": "Las dos pueden ir al principio de la oración; tras かといって se dice que «la otra opción tampoco sirve», y tras とはいえ, «una realidad contraria a lo esperado».",
+              "diff": "Ambas introducen una concesión a partir de «decir»; tras かといって viene «la otra opción tampoco sirve», tras とはいえ viene «una realidad contraria a lo esperado».",
               "this": [
                 {
                   "tag": "El otro camino tampoco",
@@ -26878,11 +26876,11 @@
                   "tr": "Ya es primavera. Aun así, por las mañanas todavía hace frío."
                 }
               ],
-              "explain": "Fíjate en la segunda parte: tras かといって va «la otra opción tampoco sirve» (〜のももったいない、〜わけにもいかない), para expresar que se está entre dos males; tras とはいえ solo va un hecho contrario a lo esperado (まだ寒い), sin que haya opciones; es más bien escrito y también puede ir directamente tras un sustantivo (春とはいえ)."
+              "explain": "Las dos vienen de 「言う」 («decir»). とはいえ es 「とは言え」, equivalente a 「とは言うものの」 = «aunque se diga que…»: admite el hecho dicho (もう春だ) y luego señala que la realidad va contra lo esperado (まだ寒い). かといって era originalmente 「そうかといって」: se acepta la frase anterior («así es»), pero si por eso se hiciera lo contrario… → ese camino tampoco sirve; por eso le sigue algo que rechaza la otra opción, como 「〜のももったいない」 o 「〜わけにもいかない」, y expresa estar entre la espada y la pared."
             },
             {
               "id": "to-ittemo",
-              "diff": "かといって expresa «estar entre dos males»; といっても expresa «aunque se diga…, en realidad no es para tanto», para rebajar las expectativas del otro.",
+              "diff": "Ambas introducen una concesión a partir de «decir»; かといって rechaza la otra opción y deja un dilema; といっても corrige lo que se acaba de decir: «aunque lo digo, en realidad no es para tanto».",
               "this": [
                 {
                   "tag": "Entre dos males",
@@ -26895,7 +26893,7 @@
                   "tr": "Aunque sé cocinar, solo hago cosas sencillas."
                 }
               ],
-              "explain": "Fíjate en la segunda parte: tras といっても va una corrección de lo dicho antes (〜だけだ、〜くらいだ), que rebaja el grado; tras かといって va otro camino que tampoco funciona (〜もない). Además, といっても va directamente tras una oración, mientras que かといって suele empezar una oración nueva."
+              "explain": "Las dos vienen de 「言う」 («decir»), pero conceden cosas distintas. といっても = «aunque se diga que…»: primero se afirma 「料理ができる」 y enseguida se rebaja esa afirmación (〜だけだ、〜くらいだ) para bajar las expectativas del otro. かといって era originalmente 「そうかといって」: se acepta la frase anterior («así es»), pero si por eso se tomara el otro camino… → ese camino también está cerrado (〜もない), y expresa un dilema. Además, といっても va justo después de una oración, mientras que かといって suele abrir su propia oración."
             }
           ]
         }
