@@ -33540,7 +33540,7 @@
                   "tr": "No basta con tener dinero para ser feliz."
                 }
               ],
-              "explain": "Mira lo que va delante: delante de というものだ suele haber un sustantivo (幸せ, 人生, 友情), y el hablante afirma «esta es su verdadera esencia»; delante de というものではない casi siempre hay 「〜ばいい」 o 「〜さえ〜ば」, y sirve específicamente para negar la idea simplista de «basta con…»."
+              "explain": "Parte de というもの («eso que se llama...»). En afirmativo, 「それが幸せというものだ」 = «eso es lo que se llama felicidad» → afirma la esencia de algo. En negativo, 「お金さえあれば幸せになれるというものではない」 = «no existe la regla de 'basta con...'» → rechaza una idea simplista. Por eso no son simples opuestos. Mira lo que va delante: una condición del tipo «basta con...» como 「〜ばいい」 o 「〜さえあれば」 → というものではない; un sustantivo (幸せ, 人生) → というものだ."
             }
           ]
         },
@@ -33563,7 +33563,10 @@
                   "tr": "En toda esta semana apenas he dormido."
                 }
               ],
-              "explain": "Mira lo que va delante y la posición: delante de というもの hay un periodo de tiempo (この一週間, ここ数年), va en mitad de la frase y le sigue un estado que se ha mantenido; というものだ va al final, tras un sustantivo o una oración, y significa «eso es lo que se llama…»."
+              "explain": "Mira la posición y lo que va delante: というもの va tras un periodo de tiempo (この一週間, ここ数年), en medio de la oración, seguido de 「、」 y de un estado que se ha mantenido todo ese tiempo; というものだ va al final de la oración tras una palabra de valoración (無理, 迷惑) o un sustantivo, y significa «eso es lo que se llama...» / «eso ya es demasiado...».",
+              "wrong": {
+                "why": "El というもの de «durante todo este tiempo» va en medio de la oración y no admite 「だ」."
+              }
             }
           ]
         }
@@ -33591,13 +33594,13 @@
                   "tr": "Poder reír junto a la familia: eso es la felicidad."
                 }
               ],
-              "explain": "Mira lo que va delante: delante de というものではない casi siempre hay 「〜ばいい」 o 「〜さえ〜ば」, y sirve específicamente para negar la idea simplista de «basta con…»; delante de というものだ suele haber un sustantivo (幸せ, 人生), y el hablante afirma «esta es su verdadera esencia»."
+              "explain": "Parte de というもの («eso que se llama...»). En negativo, 「お金さえあれば幸せになれるというものではない」 = «no existe la regla de 'basta con...'» → rechaza una idea simplista. En afirmativo, 「それが幸せというものだ」 = «eso es lo que se llama felicidad» → afirma la esencia de algo. Por eso no son simples opuestos. Mira lo que va delante: una condición del tipo «basta con...» como 「〜ばいい」 o 「〜さえあれば」 → というものではない; un sustantivo (幸せ, 人生) → というものだ."
             }
           ]
         },
         {
           "kind": "look",
-          "note": "Ambas acaban en 「ものではない」; solo cambia si llevan 「という」 o no, y el significado es totalmente distinto",
+          "note": "Ambas terminan en 「ものではない」: というものではない ↔ ものではない; solo cambia si delante va 「という」",
           "items": [
             {
               "id": "mono-dewa-nai",
@@ -33606,56 +33609,56 @@
               "this": [
                 {
                   "tag": "No basta con…",
-                  "tr": "No basta con pedir perdón para que todo quede arreglado."
+                  "tr": "Con los niños no basta con elogiarlos."
                 }
               ],
               "that": [
                 {
                   "tag": "Consejo · no se debe",
-                  "tr": "No se debe hablar mal de los demás."
+                  "tr": "No se debe regañar a los niños delante de otras personas."
                 }
               ],
-              "explain": "Mira si hay 「という」 en medio y la forma de delante: ものではない va directamente tras la forma de diccionario y es un consejo de mayor a menor, «no debes hacerlo»; delante de というものではない suele haber 「〜ばいい」, y lo que se niega es una idea, no se prohíbe una acción."
+              "explain": "Mira lo que va delante de 「ものではない」: con 「という」 y una idea de «basta con...» como 「褒めればいい」 → rechaza esa idea, «no basta con...»; sin 「という」, directamente tras la forma de diccionario de un verbo (叱る) → consejo basado en el sentido común, «no se debe...», que prohíbe una acción concreta."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan negación parcial: «no es que…, no necesariamente»",
+          "note": "Ambas significan «no necesariamente...»",
           "items": [
             {
               "id": "to-wa-kagiranai",
-              "diff": "とは限らない señala objetivamente que «hay excepciones»; というものではない critica la idea de «basta con…».",
+              "diff": "Ambas significan «no necesariamente»; というものではない solo se usa para principios generales y suena a sermón; とは限らない también sirve para prever algo sobre personas o cosas concretas.",
               "this": [
                 {
-                  "tag": "Criticar una idea simplista",
-                  "tr": "No por ser más caro algo es mejor."
+                  "tag": "Principio general · tono de sermón",
+                  "tr": "No por ser más caro un medicamento funciona mejor."
                 }
               ],
               "that": [
                 {
-                  "tag": "Objetivo · hay excepciones",
-                  "tr": "Lo caro no es necesariamente bueno."
+                  "tag": "Persona concreta · puede haber excepciones",
+                  "tr": "No es seguro que este medicamento también te funcione a ti."
                 }
               ],
-              "explain": "Mira lo que va delante: tras expresiones de «basta con…», como 「〜ければいい」 o 「〜さえすれば」, va というものではない, con tono de sermón; tras 「必ずしも」 o 「〜からといって」 va とは限らない, que solo dice con calma «hay excepciones»."
+              "explain": "Mira si es un principio general o una persona o cosa concreta: con una afirmación general como 「高い薬ほどよく効く」 sirven las dos — というものではない suena a sermón y とは限らない es más neutro; para decir «no tiene por qué ser así» de una persona o cosa concreta (aquí 「あなた」), solo sirve とは限らない."
             },
             {
               "id": "wake-dewa-nai",
-              "diff": "わけではない corrige un malentendido sobre una situación concreta; というものではない niega un razonamiento simplista.",
+              "diff": "Ambas significan «no (todos)...»; というものではない solo se usa para principios generales y suena a sermón; わけではない también puede describir algo concreto que ocurrió.",
               "this": [
                 {
-                  "tag": "Negar un razonamiento simplista",
-                  "tr": "Estudiar no consiste en que cuantas más horas, mejor."
+                  "tag": "Principio general · tono de sermón",
+                  "tr": "No por ser japonés cualquiera sabe usar bien el keigo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Corregir un malentendido",
-                  "tr": "No es que no me guste estudiar; es que no tengo tiempo."
+                  "tag": "Hecho concreto · no todos",
+                  "tr": "En la reunión de ayer no todos estuvieron de acuerdo."
                 }
               ],
-              "explain": "Mira de qué se habla: si explicas tu caso o una situación concreta, «no es lo que crees», y añades el verdadero motivo (〜だけだ) → わけではない; si dices de una idea general «pensar así es un error» → というものではない."
+              "explain": "Mira si es un principio o un hecho concreto: con un principio general como 「日本人なら誰でも……」 sirven las dos, y というものではない suena a sermón; con un hecho concreto que ocurrió, como 「昨日の会議で」 (no todos estuvieron de acuerdo), solo sirve わけではない."
             }
           ]
         }
@@ -33665,13 +33668,14 @@
       "id": "to-iu-number-emphasis",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Ambas significan «todos, la totalidad»",
+          "kind": "root",
+          "note": "Ambas vienen de 「言う」: significado original «decir, llamar»",
           "items": [
             {
               "id": "to-iwazu",
+              "title": "〜といわず〜といわず (tanto A como B)",
               "thisTitle": "〜という〜 (todos los…)",
-              "diff": "AというA repite el mismo sustantivo y significa «todos los A»; AといわずBといわず da dos o tres ejemplos representativos y significa «por todas partes».",
+              "diff": "Ambas vienen de 「言う」: AというA = «todo lo que se puede llamar A» → todos los A; AといわずBといわず = «sin decir A, sin decir B» → sin distinguir, por todas partes.",
               "this": [
                 {
                   "tag": "Mismo sustantivo · todos",
@@ -33684,7 +33688,7 @@
                   "tr": "Tiene barro por todas partes, en la cara, en las manos…"
                 }
               ],
-              "explain": "Mira si se repite el sustantivo: el mismo sustantivo a ambos lados de 「という」 (窓という窓) → todos y cada uno de esa clase; dos sustantivos distintos, cada uno con 「といわず」 (顔といわず手といわず) → se dan unos ejemplos para decir «en cualquier parte». Las dos son expresiones escritas y literarias."
+              "explain": "Parte de 「言う」 (decir, llamar): AというA = «todo A que se llama A» → cada uno de esa categoría, sin excepción; AといわずBといわず = «sin pararse a decir A ni B», es decir, sin distinguir entre A y B → por todas partes. Mira los sustantivos: el mismo sustantivo repetido con 「という」 en medio (窓という窓) → todos los A; dos sustantivos distintos, cada uno con 「といわず」 (顔といわず手といわず) → unos ejemplos representativos, «por todas partes». Las dos son expresiones escritas y literarias."
             }
           ]
         }
@@ -33723,24 +33727,24 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「と＋なる」: «llegar a ser el caso de…»",
+          "note": "Ambas vienen de 「なる」: significado original «llegar a ser»; となると = «una vez que se convierte en...»; ともなると añade 「も」 = «cuando se llega incluso a...»",
           "items": [
             {
               "id": "tomo-naru-to",
-              "diff": "となると es «si de verdad llega a darse esta situación»; ともなると es «al llegar a una posición o etapa tan alta».",
+              "diff": "となると es «si de verdad se da esta situación», sobre algo concreto; ともなると lleva un 「も」 más, «al llegar incluso a esta posición o etapa», sobre una tendencia general.",
               "this": [
                 {
-                  "tag": "Situación concreta · si de verdad",
-                  "tr": "Si tengo que ingresar en el hospital a partir de mañana, tendré que pedir días en el trabajo."
+                  "tag": "Hecho concreto · si de verdad pasa",
+                  "tr": "Si él llega a ser presidente, seguramente también cambiará el ambiente de la empresa."
                 }
               ],
               "that": [
                 {
                   "tag": "Posición o etapa · al llegar a ese punto",
-                  "tr": "A la edad de un universitario, uno debería decidir por sí mismo sus cosas."
+                  "tr": "Cuando uno llega a presidente de una empresa, casi no tiene tiempo libre."
                 }
               ],
-              "explain": "Mira si tras 「と」 hay 「も」 y qué palabra va delante: posiciones, edades o épocas como 大学生, 社長 o 12月 + ともなると → «al llegar a esa etapa, naturalmente…», una tendencia general; hechos concretos como 入院 o 引っ越し + となると → «si de verdad es así», un juicio sobre lo inmediato. となれば・となったら se usan igual que となると."
+              "explain": "Ambas vienen de 「なる」 (llegar a ser): となると = «una vez que se da esta situación» → «si de verdad llega a pasar»; ともなると lleva en medio 「も」 («incluso») = «al llegar incluso a esta posición o etapa» → a ese nivel, naturalmente.... Mira lo que va delante: 「彼が社長となると」 habla de una persona o un hecho concreto que podría pasar de verdad → となると, juicio sobre la situación inmediata; solo el cargo 「社長」 en sí → ともなると, cómo suele ser ese cargo en general. となれば y となったら se usan igual que となると."
             }
           ]
         },
@@ -33779,20 +33783,20 @@
             {
               "id": "sou-da-appearance",
               "title": "〜そうだ (dicen que)",
-              "diff": "そうだ es la forma general de transmitir información; とのことだ es más formal y se usa sobre todo para transmitir un recado de alguien.",
+              "diff": "Ambas transmiten noticias oídas; とのことです es más formal y tiende a lo escrito, se usa a menudo con jefes o clientes; そうだ es la forma general y también se usa con naturalidad entre amigos.",
               "this": [
                 {
-                  "tag": "Transmitir un recado · formal",
-                  "tr": "El director me ha pedido que le comunique que la reunión empieza a las tres."
+                  "tag": "A un jefe · formal",
+                  "tr": "Jefe, según la aerolínea, el vuelo de mañana está cancelado."
                 }
               ],
               "that": [
                 {
-                  "tag": "Dicen que · general",
-                  "tr": "Según las noticias, mañana nevará."
+                  "tag": "A un amigo · general",
+                  "tr": "Oye, dicen que el vuelo de mañana está cancelado."
                 }
               ],
-              "explain": "Mira de dónde viene la información y a quién se dice: información general, como noticias o el parte meteorológico → そうだ; transmitir a alguien lo que dijo un jefe o un cliente, en el trabajo o en cartas → とのことです. とのことだ puede transmitir también peticiones u órdenes (「〜てほしいとのことです」), cosa que そうだ normalmente no hace."
+              "explain": "Mismo significado; mira a quién se habla y en qué situación: al pasar una noticia a un jefe o cliente (部長、……), o en correos y cartas → とのことです, formal; al decírselo de pasada a un amigo (ねえ、……) → そうだ; aquí とのことだ sonaría rígido. そうです también se puede usar con un jefe, solo que es menos formal que とのことです."
             },
             {
               "id": "n-datte",
@@ -33819,31 +33823,9 @@
       "id": "to-wa-definition",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambas vienen de la partícula de cita 「と」, que convierte lo anterior en tema",
-          "items": [
-            {
-              "id": "tte-quote-topic",
-              "diff": "とは es escrito y sirve para definir; って es su forma coloquial, para preguntar en la conversación diaria «¿qué es…?».",
-              "this": [
-                {
-                  "tag": "Escrito · definición",
-                  "tr": "«Shūkatsu» es la abreviatura de «actividades de búsqueda de empleo»."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Coloquial · pregunta",
-                  "tr": "Oye, ¿qué es eso de «shūkatsu»?"
-                }
-              ],
-              "explain": "Mira el estilo: si la frase termina en 「である」 o 「のことだ」 y aparece en diccionarios, manuales o trabajos académicos → とは; entre amigos, 「〜って何？」 o 「〜ってどういう意味？」 → って. って es, de hecho, la forma coloquial de と(は)."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Equivalen, respectivamente, al uso de 「とは」 para definir y al de sorpresa",
+          "note": "Ambas significan «lo que se llama...»",
+          "sense": 1,
           "items": [
             {
               "id": "to-iu-no-wa",
@@ -33861,25 +33843,51 @@
                   "tr": "Cuando antes dije «un momento», me refería a unos treinta minutos."
                 }
               ],
-              "explain": "Mira el estilo y el contexto: frases escritas y breves, como títulos de artículos académicos o definiciones de diccionario → とは; explicar una palabra en una conversación, o aclarar lo que uno mismo o el otro acaba de decir → というのは."
+              "explain": "Mira el estilo y lo que se explica: frases escritas y breves como el título de un artículo o una definición de diccionario (幸福とは何か) → とは; en una conversación, al explicar una palabra o algo que uno mismo o el otro acaba de decir (さっき言った「ちょっと」) → というのは resulta más natural."
             },
+            {
+              "id": "tte-quote-topic",
+              "title": "〜って (tema)",
+              "thisTitle": "〜とは (definición)",
+              "diff": "Ambas presentan una palabra para explicarla; とは es escrito y sirve para definir; って es coloquial y se usa en la conversación diaria para preguntar «¿qué es...?».",
+              "this": [
+                {
+                  "tag": "Escrito · definición",
+                  "tr": "«Shūkatsu» es la abreviatura de «actividades de búsqueda de empleo»."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Coloquial · pregunta",
+                  "tr": "Oye, ¿qué es eso de «shūkatsu»?"
+                }
+              ],
+              "explain": "Mismo significado; mira el estilo: termina en 「である」 o 「のことだ」 y aparece en diccionarios, libros de texto o artículos → とは; entre amigos (ねえ、……), preguntando de forma informal 「〜って何？」 o 「〜ってどういう意味？」 → って, la versión coloquial de とは y というのは."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Ambas significan «¡quién iba a pensar que...!»",
+          "sense": 2,
+          "items": [
             {
               "id": "nante",
               "thisTitle": "〜とは (sorpresa)",
               "diff": "Las dos significan «¡quién iba a decir que…!»; なんて es coloquial y a menudo lleva desdén; とは es más formal y tirando a escrito.",
               "this": [
                 {
-                  "tag": "Formal · sorpresa",
+                  "tag": "Formal · emoción",
                   "tr": "¡Quién iba a decir que el amigo al que no veía desde hacía diez años se había convertido en presidente de una empresa!"
                 }
               ],
               "that": [
                 {
                   "tag": "Coloquial · con desdén",
-                  "tr": "Es increíble que falles una pregunta tan fácil."
+                  "tr": "¡Y pensar que ese vago ha llegado a presidente de una empresa!"
                 }
               ],
-              "explain": "Mira el tono: entre amigos, con algo de desprecio o queja (こんな簡単な問題を) → なんて; para expresar por escrito o con formalidad sorpresa o emoción, a menudo acabando en 「〜とは。」 o 「〜とは思わなかった」 → とは."
+              "explain": "Las dos oraciones son intercambiables y ambas significan «¡quién iba a pensar que...!». Mira el tono: con algo de desprecio o desaprobación (あの怠け者が……) → なんて, coloquial; para expresar sorpresa y emoción de forma formal o escrita → とは, que suele terminar en 「〜とは。」 o 「〜とは思わなかった」."
             }
           ]
         }
@@ -33894,20 +33902,20 @@
           "items": [
             {
               "id": "to-wa-ie",
-              "diff": "Significan casi lo mismo; tras とはいえ puede venir un consejo o una orden, mientras que tras とはいうものの suele venir una realidad decepcionante.",
+              "diff": "Mismo significado; とはいえ puede ir seguido de una opinión o juicio como «se debería...», mientras que tras とはいうものの suele venir una realidad decepcionante.",
               "this": [
                 {
                   "tag": "Sigue la realidad",
-                  "tr": "Aunque sea primavera, todavía hace frío."
+                  "tr": "Aunque digo que estoy ocupado, casi no me he puesto en contacto con mis padres."
                 }
               ],
               "that": [
                 {
-                  "tag": "Puede seguir un consejo u orden",
-                  "tr": "Aunque sea primavera, por la noche refresca, así que llévate el abrigo."
+                  "tag": "Seguido de una opinión · べきだ",
+                  "tr": "Aunque estés ocupado, deberías ponerte en contacto con tus padres."
                 }
               ],
-              "explain": "Mira la segunda parte: si solo cuenta que «la realidad no es como se esperaba» → valen las dos; si le sigue un consejo u orden como 「〜なさい」 o 「〜ましょう」 → とはいえ es más natural. とはいえ también es más conciso y a menudo va solo al principio de la frase (とはいえ、……)."
+              "explain": "Mira la segunda parte: si solo describe el hecho de que «la realidad no es como se esperaba» → sirven las dos; si es una opinión o juicio del hablante (〜べきだ, 〜はずだ) → usa とはいえ; とはいうものの no suele ir seguido de este tipo de opinión."
             },
             {
               "id": "to-ittemo",
@@ -33958,24 +33966,24 @@
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan negación parcial: «no necesariamente, no es que…»",
+          "note": "Ambas significan «no necesariamente...»",
           "items": [
             {
               "id": "wake-dewa-nai",
-              "diff": "とは限らない señala que una idea general tiene excepciones; わけではない corrige un malentendido sobre una situación concreta.",
+              "diff": "Ambas significan «no todos...»; とは限らない se centra en que puede haber excepciones y el hablante tampoco está seguro; わけではない se centra en los hechos: el hablante sabe que no es así en todos los casos.",
               "this": [
                 {
-                  "tag": "Idea general con excepciones",
-                  "tr": "Que un restaurante sea caro no quiere decir que sea bueno."
+                  "tag": "Puede haber excepciones",
+                  "tr": "No necesariamente a todos los japoneses les gusta el natto."
                 }
               ],
               "that": [
                 {
-                  "tag": "Corregir un malentendido",
-                  "tr": "No es que no me guste este restaurante; es que hoy estoy lleno."
+                  "tag": "De hecho, no todos",
+                  "tr": "No es que a todos los japoneses les guste el natto. También hay a quien no le gusta nada."
                 }
               ],
-              "explain": "Mira de qué se habla: una opinión general como 「高い店はおいしい」 → とは限らない, «también hay excepciones»; si explicas tu caso o una situación concreta, «no es lo que crees», y añades el verdadero motivo (〜だけだ) → わけではない."
+              "explain": "Las dos pueden decir «no todos...». とは限らない habla de posibilidad: no se puede asegurar que siempre sea así, puede haber excepciones; se usa a menudo para advertir que no se dé nada por sentado. わけではない habla de hechos: el hablante sabe que en realidad no es así en todos los casos, y suele añadir el dato después, como en 「嫌いな人もいる」."
             },
             {
               "id": "to-iu-mono-dewa-nai",
@@ -34002,48 +34010,51 @@
       "id": "tokoro-kara",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambas vienen del sustantivo formal 「ところ」, que indica «cierto punto, cierta circunstancia»",
-          "items": [
-            {
-              "id": "tokoro-wo-miru-to",
-              "diff": "ところから suele explicar el origen de un nombre, y tras él puede ir un hecho seguro; tras ところを見ると siempre va una suposición.",
-              "this": [
-                {
-                  "tag": "Origen del nombre · hecho",
-                  "tr": "Como tiene forma de estrella, se le llama «arena de estrellas»."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Suposición · らしい",
-                  "tr": "Como la luz sigue encendida, parece que todavía está despierto."
-                }
-              ],
-              "explain": "Mira el final: un hecho seguro como 「と呼ばれている」 o 「と名付けられた」 → ところから; una suposición con 「らしい」, 「ようだ」 o 「に違いない」, basada en lo que se ve → ところを見ると."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Ambas expresan «base, motivo»: de ahí se saca un nombre o un juicio",
+          "note": "Ambas expresan «el origen de un nombre»",
+          "sense": 1,
           "items": [
             {
               "id": "koto-kara",
-              "diff": "Significan básicamente lo mismo; ことから es la más habitual; ところから es más escrita y se fija más en «cierta característica» de la cosa.",
+              "title": "〜ことから (origen de un nombre)",
+              "diff": "Mismo significado: las dos explican de dónde viene un nombre; ことから es la más común, ところから es más escrita y se fija en un rasgo concreto de la cosa misma.",
               "this": [
                 {
-                  "tag": "Característica → nombre · escrito",
+                  "tag": "Rasgo → nombre · escrito",
                   "tr": "Como desde ella se ve el monte Fuji, a esta cuesta se la llama «Fujimi-zaka»."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hecho → juicio · habitual",
-                  "tr": "Como las huellas dactilares coincidían, se supo que él era el culpable."
+                  "tag": "Nombre · lo más común",
+                  "tr": "Como desde ella se ve el monte Fuji, esta cuesta se llama «Fujimizaka»."
                 }
               ],
-              "explain": "En la mayoría de los casos son intercambiables; cuando leas ところから, entiéndelo como ことから. ことから es la de uso más amplio, frecuente tanto para juicios como para causas; ところから es más escrita y se usa sobre todo para explicar el origen de nombres de lugares o de cosas, fijándose en alguna característica."
+              "explain": "La misma oración admite las dos y el significado no cambia. ことから es la expresión más común, frecuente en textos explicativos y en las noticias; ところから es más escrita, se fija en un rasgo concreto de la cosa misma (que se ve el monte Fuji) y aparece mucho en textos que presentan nombres de lugares o de cosas. Cuando leas ところから, puedes entenderlo como ことから."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Ambas significan «a juzgar por...»",
+          "sense": 2,
+          "items": [
+            {
+              "id": "tokoro-wo-miru-to",
+              "diff": "Ambas toman como base un hecho que se tiene delante; tras ところから suele venir una conclusión firme y tiende a lo escrito; tras ところを見ると suele venir una suposición.",
+              "this": [
+                {
+                  "tag": "Base → conclusión · escrito",
+                  "tr": "Por el hecho de que la luz de la habitación estaba encendida, deduje que él seguía despierto."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Base → suposición",
+                  "tr": "Viendo que la luz de su habitación está encendida, parece que todavía está despierto."
+                }
+              ],
+              "explain": "Las dos toman como base un hecho que se tiene delante. Mira la segunda parte: si se expone una conclusión firme (と判断した, と分かった, と考えられる) en tono escrito → ところから; si sigue una suposición como 「らしい」, 「ようだ」 o 「に違いない」 → ところを見ると."
             }
           ]
         }
