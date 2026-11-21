@@ -12012,24 +12012,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Todas sirven para dar las gracias a quien ha hecho algo por uno",
+          "note": "Ambas agradecen a alguien lo que ha hecho por uno",
           "items": [
             {
               "id": "te-sumimasen",
-              "diff": "てくれてありがとう es un simple agradecimiento, más cercano; て（いただいて）すみません añade a la gratitud una disculpa del tipo «siento haberle causado molestias».",
+              "title": "〜てすみません（disculpa y agradecimiento）",
+              "diff": "てくださってありがとうございます es un simple agradecimiento; てくださってすみません añade a las gracias una disculpa del tipo «siento haberle causado molestias».",
               "this": [
                 {
-                  "tag": "Solo gratitud · cercano",
-                  "tr": "Gracias por venir desde tan lejos expresamente."
+                  "tag": "Solo agradecimiento",
+                  "tr": "Gracias por venir con esta lluvia."
                 }
               ],
               "that": [
                 {
-                  "tag": "Gratitud con disculpa · humilde",
-                  "tr": "Siento mucho que haya tenido que venir desde tan lejos expresamente."
+                  "tag": "Gracias con disculpa",
+                  "tr": "Siento que haya tenido que venir con esta lluvia."
                 }
               ],
-              "explain": "Fíjate en la relación y el tono: un amigo o un familiar te ha ayudado y solo sientes gratitud → てくれてありがとう; con un superior o alguien con quien no tienes mucha confianza, que ha dedicado su tiempo a propósito para ti → 〜ていただいてすみません, que primero reconoce «le he causado molestias» y es más humilde."
+              "explain": "Las dos frases son igual de corteses (ambas usan 「てくださって」); solo cambia el final: si solo quieres expresar gratitud → ありがとうございます; si además quieres decir «siento haberle causado molestias» → すみません, que suena más humilde. Cuando la otra persona se ha esforzado de más por ti (venir bajo la lluvia, desde lejos o pese a estar muy ocupada), se usan mucho las dos; cuando solo quieres expresar alegría y gratitud, usa ありがとうございます."
             }
           ]
         }
@@ -12040,76 +12041,92 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "てくる tiene varios usos, y cada uno se confunde con otra expresión: cambio (ようになる、始める), ir y volver (に行く), dirección hacia mí (てくれる)",
+          "sense": 2,
+          "note": "Ambas expresan «ir a hacer algo»",
+          "items": [
+            {
+              "id": "ni-iku-purpose",
+              "title": "〜に行く",
+              "diff": "てくる dice que vas a hacer algo y luego vuelves aquí; に行く solo dice a qué sales.",
+              "this": [
+                {
+                  "tag": "Vuelvo al terminar",
+                  "tr": "Voy a comprar algo de beber a la tienda. Vuelvo enseguida."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Propósito de salir",
+                  "tr": "Voy a la tienda a comprar algo de beber, ¿vienes conmigo?"
+                }
+              ],
+              "explain": "Las dos significan «ir a comprar»; fíjate en dónde está el foco: si sigue 「すぐ戻るから」, que subraya que volverás aquí al terminar → てくる; si sigue la pregunta 「一緒に行く」, el foco está en salir a hacerlo → に行く (igual con に来る)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Todas expresan «empieza a producirse un cambio»",
           "items": [
             {
               "id": "you-ni-naru",
-              "diff": "てくる mira el «proceso» del cambio (va cambiando poco a poco); ようになる mira el «punto final» del cambio (ahora ya se puede).",
+              "diff": "てくる mira el «proceso» del cambio (va cambiando poco a poco); ようになる mira el «punto final» (ahora ya se puede).",
               "this": [
                 {
-                  "tag": "Proceso · sigue cambiando",
+                  "tag": "Proceso · aún cambiando",
                   "tr": "Poco a poco he ido entendiendo el japonés."
                 }
               ],
               "that": [
                 {
-                  "tag": "Punto final · ya alcanzado",
+                  "tag": "Punto final · alcanzado",
                   "tr": "En tres meses llegué a entender el japonés."
                 }
               ],
-              "explain": "Mira la expresión de tiempo: 「少しずつ」 describe el proceso del cambio, que continúa hasta ahora → suele ir con てくる; 「３か月で」 marca un punto final y habla del nuevo estado una vez alcanzado → ようになる."
+              "explain": "Fíjate en la expresión temporal: 「少しずつ」 describe el proceso del cambio, que sigue en marcha hasta ahora → normalmente てくる; 「３か月で」 marca un punto final y habla del nuevo estado al que se ha llegado → ようになる."
             },
             {
               "id": "hajimeru-start",
-              "diff": "てくる transmite la sensación de que «el cambio llega hasta mí»; 始める solo señala objetivamente el inicio de la acción.",
+              "title": "〜始める（inicio de un cambio）",
+              "diff": "てくる transmite la sensación vivida de que «el cambio ha llegado hasta mí y lo noto»; 始める indica de forma objetiva cuándo empieza el cambio.",
               "this": [
                 {
-                  "tag": "Sensación cercana",
-                  "tr": "¡Ah, se ha puesto a llover!"
+                  "tag": "Ante tus ojos · vivido",
+                  "tr": "¡Anda, ha empezado a nevar!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Inicio objetivo",
-                  "tr": "Empezó a llover hacia las tres de la tarde."
+                  "tag": "Información ajena · inicio objetivo",
+                  "tr": "Según el pronóstico del tiempo, empezará a nevar al atardecer."
                 }
               ],
-              "explain": "Fíjate en la situación: ves cómo ocurre el cambio y lo dices sin pensar (あ、〜てきた) → てくる; explicas «desde qué hora», como en un registro o una noticia → 始める. Además, lo que uno empieza a hacer a propósito solo admite 始める (勉強し始めた), no てくる."
-            },
-            {
-              "id": "ni-iku-purpose",
-              "title": "〜に行く",
-              "diff": "てくる dice que vas a hacer algo y luego vuelves aquí; に行く solo dice el propósito de ir.",
-              "this": [
-                {
-                  "tag": "Hacerlo y volver",
-                  "tr": "Voy un momento a la tienda a comprar algo de beber y vuelvo."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Propósito de ir",
-                  "tr": "La semana que viene voy a Kioto a ver templos."
-                }
-              ],
-              "explain": "Fíjate en si el hablante va a volver aquí: 「ちょっと〜てくるね」 es ir, hacerlo y volver → てくる; 「京都へ見に行く」 solo dice el propósito de la salida → に行く (lo mismo con に来る). La partícula de lugar también cambia: delante de てくる suele ir 「で」 (dónde lo compras), y delante de に行く, 「へ／に」 (adónde vas)."
-            },
+              "explain": "Las dos pueden decir «empieza a nevar»; fíjate en si el hablante lo vive en primera persona: con 「あっ」, viendo llegar el cambio y diciéndolo sin pensar → てくる; con 「天気予報によると」, transmitiendo una información y diciendo de forma objetiva cuándo empieza el cambio → 始める."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 5,
+          "note": "Ambas expresan «alguien hace algo hacia mí»",
+          "items": [
             {
               "id": "te-kureru",
-              "diff": "てくる solo dice que la acción viene hacia mí, y suele ser neutro o de fastidio; てくれる lleva gratitud.",
+              "diff": "てくる solo dice que la acción de otro se dirige hacia mí, de forma neutra o con cierta molestia; てくれる expresa agradecimiento.",
               "this": [
                 {
-                  "tag": "Solo dirección · fastidio",
-                  "tr": "Un desconocido me llamó en plena noche."
+                  "tag": "Solo dirección · algo molesto",
+                  "tr": "Un amigo me llamó a las tres de la madrugada."
                 }
               ],
               "that": [
                 {
-                  "tag": "Gratitud",
-                  "tr": "Mi amigo, preocupado por mí, me llamó por teléfono."
+                  "tag": "Agradecido",
+                  "tr": "Mi amigo se preocupó y me llamó."
                 }
               ],
-              "explain": "Mira el sentimiento del hablante: solo se dice que la acción viene hacia mí, e incluso molesta (夜中に、知らない人が) → てくる; la acción del otro me beneficia y se lo agradezco → てくれる."
+              "explain": "Se puede decir 「友達が電話をかけてきた／くれた」 de las dos maneras; la diferencia está en lo que siente el hablante: como con 「夜中の三時に」, si resulta molesto o solo cuentas que la acción vino hacia ti → てくる; 「心配して」 indica que pensaba en ti y se lo agradeces → てくれる."
             }
           ]
         }
@@ -12120,24 +12137,25 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「見る」 («ver»): hacer algo y luego «ver» el resultado",
+          "note": "Ambas vienen de 「見る」, que significa «mirar»; de él deriva 「見せる」, «dejar ver, mostrar»",
           "items": [
             {
               "id": "te-miseru",
-              "diff": "てみる es intentar hacer algo uno mismo y ver qué pasa; てみせる es hacerlo para que otros lo vean, o la determinación de «lo conseguiré sin falta».",
+              "title": "〜てみせる（determinación・lo conseguiré）",
+              "diff": "てみる es intentar algo uno mismo para ver el resultado; てみせる es hacerlo para que otros lo vean, o decidir «lo conseguiré sin falta».",
               "this": [
                 {
-                  "tag": "Probar a ver",
-                  "tr": "No sé si podré, pero lo intentaré."
+                  "tag": "Intentarlo",
+                  "tr": "No sé si podré, pero lo voy a intentar."
                 }
               ],
               "that": [
                 {
-                  "tag": "Ya verás · determinación",
-                  "tr": "Lo conseguiré sin falta, ya verás."
+                  "tag": "Te lo demostraré · determinación",
+                  "tr": "Lo conseguiré, ya verás."
                 }
               ],
-              "explain": "みる es «ver», así que 「〜てみる」 es hacer algo y ver el resultado, a menudo precedido de 「できるか分からないけど」; みせる es «mostrar», así que 「〜てみせる」 es hacerlo para que otros lo vean, y suele ir con 「絶対に」「必ず」 para expresar determinación."
+              "explain": "「見る」 significa originalmente «mirar», y su derivado 「見せる」, «dejar ver, mostrar». てみる viene de 「見る」: hacer algo y luego mirar cómo sale → intentar, por eso suele ir precedido de 「できるか分からないけど」; てみせる viene de 「見せる」: hacerlo para que otros lo vean → demostrar → la determinación de «lo conseguiré y te lo demostraré», por eso suele ir con 「絶対に」 o 「必ず」."
             }
           ]
         }
@@ -12148,24 +12166,24 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「構う（かまう）」: «importar, hacer caso»",
+          "note": "Ambas vienen de 「構う（かまう）」, que significa «importar, hacer caso»",
           "items": [
             {
               "id": "mo-kamawazu",
-              "diff": "てもかまわない es «no me importa» = permiso; もかまわず es «sin importarle…», y describe a alguien a quien no le importa lo que debería importarle.",
+              "diff": "てもかまわない es «no me importa» = permiso; もかまわず es «sin importarle…», y describe a alguien que no hace caso de lo que debería importarle.",
               "this": [
                 {
-                  "tag": "Permiso · no me importa",
-                  "tr": "Aquí puedes llorar, no pasa nada."
+                  "tag": "Permiso · no importa",
+                  "tr": "No te está mirando nadie, así que puedes llorar."
                 }
               ],
               "that": [
                 {
                   "tag": "Sin importarle · descripción",
-                  "tr": "Ella rompió a llorar sin importarle las miradas de la gente."
+                  "tr": "Ella lloró sin importarle que la vieran."
                 }
               ],
-              "explain": "かまう = importar. Mira el contexto: verbo en forma て + もかまわない es el hablante diciendo «no me importa que lo hagas»; sustantivo (人目、雨) + もかまわず va seguido de la acción de otra persona y significa «sin importarle ni siquiera eso…», a menudo con sorpresa o crítica."
+              "explain": "かまう significa originalmente «importar, hacer caso». 「〜てもかまわない」 = aunque lo hagas, no me importa → se extiende al permiso «no pasa nada si…»; va detrás de la forma て de un verbo y es lo que el hablante le dice al otro. 「〜もかまわず」 = sin importarle ni siquiera… → se extiende a «sin hacer caso de…»; va detrás de un sustantivo (人目, 雨) y le sigue lo que alguien hace sin reparar en nada, a menudo con sorpresa o crítica. Mira lo que va antes de 「も」: forma て de un verbo → permiso; sustantivo → sin hacer caso."
             }
           ]
         },
@@ -12205,7 +12223,7 @@
                   "tr": "El formulario de solicitud puede rellenarse a lápiz."
                 }
               ],
-              "explain": "Significan lo mismo; mira la situación: preguntar a un dependiente o a un profesor 「〜てもかまいませんか」 ya es muy cortés; en las instrucciones oficiales de un formulario, un manual o un documento de empresa se usa la expresión más rígida 「〜ても差し支えありません」."
+              "explain": "Significan lo mismo; mira la situación: preguntar a un dependiente o a un profesor 「〜てもかまいませんか」 ya es muy cortés; en instrucciones oficiales escritas en un formulario, un manual o un documento de empresa, como esta que empieza por 「申込書は」, se usa a menudo la expresión más rígida 「〜ても差し支えありません」."
             }
           ]
         }
@@ -12216,7 +12234,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Todas sirven para pedir a otra persona que haga algo por mí",
+          "note": "Todas sirven para pedir a alguien que haga algo por uno",
           "items": [
             {
               "id": "te-itadakemasenka",
@@ -12233,41 +12251,43 @@
                   "tr": "Profesor, ¿podría usted revisarme este documento?"
                 }
               ],
-              "explain": "Mira a quién se lo dices: compañero, amigo, dependiente → てもらえませんか (てくれませんか también vale); profesor, superior, cliente → ていただけませんか. La estructura es idéntica: solo se cambia 「もらう」 por su forma humilde 「いただく」."
+              "explain": "Mira a quién se lo dices: un compañero como 「田中さん」, un amigo, un dependiente → てもらえませんか (てくれませんか también vale); 「先生」, un superior, un cliente → ていただけませんか. La estructura es idéntica: solo se cambia 「もらう」 por su forma humilde 「いただく」."
             },
             {
               "id": "te-kudasai",
-              "diff": "てもらえませんか deja la decisión al otro mediante una pregunta y es más suave; てください es una petición o indicación directa.",
+              "title": "〜てください（pedir ayuda）",
+              "diff": "てもらえませんか deja la decisión al otro mediante una pregunta y es más suave; てください formula la petición directamente y apenas deja margen para negarse.",
               "this": [
                 {
-                  "tag": "Pedir un favor · suave",
-                  "tr": "Perdone, ¿podría hacerme una foto?"
+                  "tag": "Preguntar si puede · suave",
+                  "tr": "Perdone, ¿podría decirme cómo llegar a la estación?"
                 }
               ],
               "that": [
-                {
-                  "tag": "Indicación",
-                  "tr": "Escriba aquí su nombre, por favor."
-                }
-              ],
-              "explain": "Fíjate en si pides un «favor extra»: pedir a un transeúnte que te haga una foto, algo a lo que no está obligado → てもらえませんか (てくれませんか también vale); indicaciones como las de una ventanilla o un profesor explicando un trámite → てください."
-            },
-            {
-              "id": "te-hoshii",
-              "diff": "てもらえませんか es hacerle una petición al otro; てほしい expresa tu propio deseo, y dicho cara a cara suena a exigencia.",
-              "this": [
                 {
                   "tag": "Petición directa",
-                  "tr": "Tanaka, ¿podrías ayudarme con este trabajo?"
+                  "tr": "Perdone, dígame cómo llegar a la estación, por favor."
+                }
+              ],
+              "explain": "Las dos piden ayuda a un desconocido y solo cambia el final: てください formula la petición directamente; es cortés, pero apenas deja margen para negarse; てもらえませんか pregunta «¿podría…?» y deja la decisión al otro, por eso es más suave. Cuando pides algo a lo que el otro no está obligado, てもらえませんか es más adecuado."
+            },
+            {
+              "id": "te-itadakeru-to-arigatai",
+              "title": "〜てもらえるとありがたい",
+              "diff": "てもらえませんか pregunta directamente si puede hacerlo; てもらえるとありがたい no pregunta, solo dice «te lo agradecería si pudieras», y es más suave.",
+              "this": [
+                {
+                  "tag": "Preguntar directamente",
+                  "tr": "¿Podrías organizarme estos materiales para mañana?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Expresar un deseo · para sí",
-                  "tr": "Ojalá Tanaka me ayudara con este trabajo."
+                  "tag": "Sin preguntar · más suave",
+                  "tr": "Si pudieras organizarme estos materiales para mañana, te lo agradecería mucho."
                 }
               ],
-              "explain": "Fíjate en si le hablas a la persona misma: llamarla 「田中さん、〜」 y pedirle ayuda → てもらえませんか (てくれませんか también vale); 「田中さんに〜てほしいな」 expresa tu deseo (lo mismo con 〜てもらいたい), y casi siempre se dice para uno mismo o a un tercero."
+              "explain": "Fíjate en si la frase termina en pregunta: 「〜てもらえませんか」 pregunta directamente si puede hacerlo, y el otro tiene que contestar sí o no; 「〜てもらえるとありがたいんですが」 no pregunta, solo dice «te lo agradecería si pudieras», y deja la decisión por completo en sus manos. Es más suave y va bien cuando el otro no tiene obligación o la petición es algo exigente."
             }
           ]
         }
@@ -12363,7 +12383,7 @@
                   "tr": "Le pedí al profesor que me corrigiera la redacción."
                 }
               ],
-              "explain": "La estructura y las partículas son idénticas (persona に + forma て); solo hay que ver quién ayuda: amigo, familiar, alguien más joven → てもらう; profesor, jefe, cliente → ていただく."
+              "explain": "La estructura y las partículas son idénticas (persona に + forma て); solo hay que ver quién ayuda: 「友達」, familiar, alguien más joven → てもらう; 「先生」, jefe, cliente → ていただく."
             }
           ]
         }
@@ -12374,7 +12394,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「置く（おく）」: «dejar ahí, dejar puesto»",
+          "note": "Ambas vienen de 「置く（おく）」, que significa «poner ahí, dejar puesto»",
           "items": [
             {
               "id": "naide-oku",
@@ -12391,47 +12411,57 @@
                   "tr": "Como es una sorpresa, de momento no le digo nada de la fiesta."
                 }
               ],
-              "explain": "Las dos son decisiones tomadas a propósito pensando en después: ておく es hacer algo por adelantado (avisar antes); ないでおく es no hacerlo a propósito por ahora (サプライズだから). Mira si delante de 「おく」 va la forma て o ないで."
+              "explain": "おく significa originalmente «poner ahí, dejar puesto». ておく = dejar ahí el resultado de una acción ya hecha, para más adelante → hacer algo de antemano (avisar primero al jefe); ないでおく = no hacer la acción y dejar las cosas como estaban → no hacerlo a propósito por ahora (サプライズだから, todavía no se lo cuento). Mira si delante de 「おく」 va la forma て o ないで."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Todas tienen que ver con «dejar algo en cierto estado»",
+          "sense": 1,
+          "note": "Ambas expresan «dejar algo preparado de antemano»",
           "items": [
             {
               "id": "te-aru",
-              "diff": "ておく habla de la acción de «hacerlo de antemano»; てある habla del estado que queda una vez preparado.",
+              "title": "〜てある（ya preparado）",
+              "diff": "ておいた habla de la acción de «quién lo dejó preparado»; てある habla del estado de estar ya listo, sin importar quién lo hizo.",
               "this": [
                 {
-                  "tag": "De antemano · acción",
-                  "tr": "Tendré fotocopiados los documentos de la reunión antes de mañana."
+                  "tag": "Decir que lo preparé yo",
+                  "tr": "El restaurante ya lo he reservado yo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Ya preparado · estado",
-                  "tr": "Los documentos de la reunión ya están fotocopiados."
+                  "tag": "Describir el estado actual",
+                  "tr": "El restaurante ya está reservado."
                 }
               ],
-              "explain": "Mira las expresiones de tiempo y las partículas: 「明日までに」 + ておきます habla de una acción que se hará de antemano, con el objeto marcado con 「を」; 「もう」 + てあります habla de un estado ya preparado ahora, y el objeto suele ir con 「は／が」. El orden habitual es: primero ておいた, y por eso ahora てある."
-            },
+              "explain": "Las dos significan «ya está reservado de antemano» y se pueden intercambiar sin cambiar el sentido; solo cambia el foco: ておいた habla de la acción de preparar y puede mencionar quién lo hizo (「私が」); てある habla del estado de estar listo ahora y normalmente no dice quién lo hizo."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Ambas expresan «dejar algo en cierto estado»",
+          "items": [
             {
-              "id": "mama-unchanged",
-              "diff": "El «mantener» de ておく es una decisión intencionada; まま solo dice que el estado no ha cambiado, a menudo con el matiz de «no debería ser así».",
+              "id": "ppanashi",
+              "title": "〜っぱなし（dejar sin atender）",
+              "diff": "ておく es mantenerlo así a propósito, sin crítica; っぱなし es dejar las cosas como están cuando habría que haberlas resuelto, con pesar o descontento.",
               "this": [
                 {
-                  "tag": "Mantener a propósito",
-                  "tr": "Quiero ventilar, así que deja la ventana abierta, por favor."
+                  "tag": "Mantenido a propósito",
+                  "tr": "Dejé la ventana abierta para ventilar."
                 }
               ],
               "that": [
                 {
-                  "tag": "Estado sin cambiar · no debería",
-                  "tr": "Anoche me quedé dormido con la ventana abierta."
+                  "tag": "Dejado sin más · pesar",
+                  "tr": "Sin darme cuenta, me dejé la ventana abierta."
                 }
               ],
-              "explain": "Fíjate en si hay un propósito: un motivo como 「空気を入れ替えたい」 + ておく → se mantiene así a propósito con un fin; 「〜たまま寝てしまった」 → simplemente no se hizo lo que había que hacer y el estado siguió igual; suele ir seguido de lamentos como てしまった."
+              "explain": "En las dos la ventana se queda abierta; fíjate en la actitud del hablante: 「換気のために」 indica que se dejó abierta a propósito, con un fin, sin crítica → ておく; 「うっかり」 indica que había que cerrarla pero se olvidó y se quedó así, con pesar o descontento → っぱなし."
             }
           ]
         }
@@ -12442,7 +12472,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Todas vienen de 「上げる（あげる）」: «alzar, ofrecer»; さしあげる = 差し + 上げる",
+          "note": "Todas vienen de 「上げる（あげる）」, que significa «alzar» y, por extensión, «dar, ofrecer»",
           "items": [
             {
               "id": "te-ageru",
@@ -12459,7 +12489,7 @@
                   "tr": "Le indiqué a un amigo el camino hasta la estación."
                 }
               ],
-              "explain": "Mira quién se beneficia: cliente, superior → てさしあげる; amigo, familiar → てあげる. Las dos tienen un matiz de «hacer un favor», así que al hablar cara a cara con un superior hay que cambiar a 「お〜します」 (駅までご案内します)."
+              "explain": "「上げる」 significa originalmente «alzar», y por extensión, hacer llegar algo hacia arriba, a otra persona, dárselo → あげる «dar»; ofrecer como favor lo que uno hace → てあげる «hacer algo por alguien». 「差し上げる」 es alzar algo con las dos manos para ofrecerlo → «ofrecer» con humildad a un superior → てさしあげる «hacer algo por un superior o un cliente». Así que mira quién se beneficia: 「お客様」, superior → てさしあげる; 「友達」, familiar → てあげる. Las dos tienen un matiz de «hacer un favor», así que al hablar cara a cara con un superior hay que cambiar a 「お〜します」 (駅までご案内します)."
             },
             {
               "id": "giving-receiving-honorific",
@@ -12477,7 +12507,7 @@
                   "tr": "Le di un mapa al cliente."
                 }
               ],
-              "explain": "Las dos oraciones solo se diferencian en 「書いて」: si delante de さしあげる va directamente «sustantivo + を» → ofrezco un objeto a un superior o cliente; si va un verbo en forma て → hice esa acción por él. Entre iguales se dice 「書いてあげた」「地図をあげた」."
+              "explain": "さしあげる = 差し + 上げる, que originalmente es alzar algo con las dos manos para «ofrecerlo». Si lo que ofreces es un objeto → «sustantivo + を» さしあげる; si es algo que haces por el otro → verbo en forma て + さしあげる. Las dos oraciones solo se diferencian en 「書いて」: 「お客様に地図をさしあげた」 es darle un mapa al cliente; con 「書いて」 pasa a ser dibujarle un mapa. Entre iguales se dice 「書いてあげた」「地図をあげた」."
             }
           ]
         },
@@ -12500,7 +12530,7 @@
                   "tr": "Jefe, permítame llevarle el equipaje."
                 }
               ],
-              "explain": "Fíjate en si se lo dices a la persona misma: al contar a un tercero lo que hiciste por un superior, puedes usar てさしあげた; al decirle cara a cara a un jefe o un cliente «yo le…», hay que usar お〜します (igual con ご〜します: ご案内します); decir 「持ってさしあげます」 suena a que le estás haciendo un favor."
+              "explain": "Fíjate en si se lo dices a la persona misma: al contar a un tercero lo que hiciste por un superior (部長の荷物を持ってさしあげた), puedes usar てさしあげた; al decirle cara a cara a 「部長」 o a un cliente «yo le…», hay que usar お〜します (igual con ご〜します: ご案内します); decir 「持ってさしあげます」 suena a que le estás haciendo un favor."
             }
           ]
         }
@@ -12511,11 +12541,11 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "てしまう tiene dos sentidos, cada uno con una expresión parecida: «terminar del todo» ≈ 終わる; «arrepentirse» ≈ ばよかった",
+          "note": "Ambas expresan «terminar de hacer»",
           "items": [
             {
               "id": "owaru-finish",
-              "diff": "てしまう resalta que algo «queda zanjado del todo» y a menudo lleva pesar; 終わる solo indica objetivamente que la acción terminó en el tiempo.",
+              "diff": "てしまう resalta que algo se hizo de un tirón y del todo, y el asunto queda zanjado; 終わる solo indica objetivamente que la acción terminó en el tiempo.",
               "this": [
                 {
                   "tag": "Zanjado de una vez",
@@ -12528,27 +12558,7 @@
                   "tr": "Por fin terminé de leer este libro."
                 }
               ],
-              "wrong": {
-                "why": "なくす ocurre de golpe y no admite 終わる; hay que decir なくしてしまった"
-              },
-              "explain": "Mira el verbo y el tono: si quieres decir «lo hice todo de golpe» o «el asunto ya está zanjado», o se trata de algo que ocurre de golpe como なくす o 忘れる → てしまう; con acciones que llevan un tiempo, como 読む o 書く, y solo para decir objetivamente «terminé de hacerlo» → raíz ます + 終わる."
-            },
-            {
-              "id": "ba-yokatta",
-              "diff": "てしまった cuenta que «ya hice algo que no debía»; ばよかった usa una hipótesis: «ojalá hubiera…».",
-              "this": [
-                {
-                  "tag": "Hecho · arrepentimiento",
-                  "tr": "Sin querer, le dije algo muy hiriente."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Ojalá no lo hubiera hecho",
-                  "tr": "Ojalá no le hubiera dicho eso."
-                }
-              ],
-              "explain": "Las dos suelen aparecer juntas: primero てしまった cuenta lo que pasó (つい言ってしまった) y luego ばよかった dice «ojalá no lo hubiera hecho». Mira la forma: verbo en forma て + しまった es un hecho; forma ば + よかった es una hipótesis que piensa en otra manera de actuar."
+              "explain": "Mira qué quiere resaltar el hablante: con 「一晩で」 y 「全部」, que subrayan que se hizo de un tirón y del todo, y el asunto ya está zanjado → てしまう; con 「やっと」, que solo cuenta que la acción de leer ha terminado → raíz ます + 終わる, sin carga emocional. Además, 終わる solo va con acciones que duran un tiempo, como leer, escribir o comer."
             }
           ]
         }
@@ -12559,24 +12569,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Todas sirven para dar las gracias a quien ha hecho algo por uno",
+          "note": "Ambas agradecen a alguien lo que ha hecho por uno",
           "items": [
             {
               "id": "te-kurete-arigatou",
-              "diff": "て（いただいて）すみません añade a la gratitud una disculpa del tipo «siento haberle causado molestias»; てくれてありがとう es un simple agradecimiento, más cercano.",
+              "thisTitle": "〜てすみません（disculpa y agradecimiento）",
+              "diff": "てくださってすみません añade a las gracias una disculpa del tipo «siento haberle causado molestias»; てくださってありがとうございます es un simple agradecimiento.",
               "this": [
                 {
-                  "tag": "Gratitud con disculpa · humilde",
-                  "tr": "Siento mucho que haya tenido que venir desde tan lejos expresamente."
+                  "tag": "Gracias con disculpa",
+                  "tr": "Siento que haya tenido que venir con esta lluvia."
                 }
               ],
               "that": [
                 {
-                  "tag": "Solo gratitud · cercano",
-                  "tr": "Gracias por venir desde tan lejos expresamente."
+                  "tag": "Solo agradecimiento",
+                  "tr": "Gracias por venir con esta lluvia."
                 }
               ],
-              "explain": "Fíjate en la relación y el tono: con un superior o alguien con quien no tienes mucha confianza, que ha dedicado su tiempo a propósito para ti → 〜ていただいてすみません, que primero reconoce «le he causado molestias» y es más humilde; un amigo o un familiar te ha ayudado y solo sientes gratitud → てくれてありがとう."
+              "explain": "Las dos frases son igual de corteses (ambas usan 「てくださって」); solo cambia el final: si además quieres decir «siento haberle causado molestias» → すみません, que suena más humilde; si solo quieres expresar gratitud → ありがとうございます. Cuando la otra persona se ha esforzado de más por ti (venir bajo la lluvia, desde lejos o pese a estar muy ocupada), se usan mucho las dos; cuando solo quieres expresar alegría y gratitud, usa ありがとうございます."
             }
           ]
         }
