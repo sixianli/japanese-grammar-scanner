@@ -13099,48 +13099,46 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Todas expresan «fácil de…, tener tendencia a…»",
+          "note": "Ambas expresan «es fácil que pase algo malo»",
           "items": [
             {
               "id": "gachi",
-              "diff": "やすい dice «fácil de hacer» o «que pasa con facilidad»; がち dice «soler (hacer algo malo)», y resalta que ocurre muchas veces.",
+              "title": "〜がち (a menudo…)",
+              "diff": "やすい se centra en condiciones o características que facilitan que pase algo malo, y el sujeto puede ser una cosa; がち se centra en que una persona realmente lo hace a menudo, y solo se usa para cosas malas.",
               "this": [
                 {
-                  "tag": "Fácil · positivo",
-                  "tr": "Este libro tiene la letra grande y se lee muy bien."
+                  "tag": "Por las condiciones · fácil que pase",
+                  "tr": "En invierno el aire está seco y es fácil que se irrite la garganta."
                 }
               ],
               "that": [
                 {
-                  "tag": "Pasa a menudo · negativo",
-                  "tr": "Cuando estoy muy ocupado, suelo saltarme el desayuno."
+                  "tag": "Pasa a menudo · mal hábito",
+                  "tr": "Los días libres suelo quedarme dormido sin querer."
                 }
               ],
-              "wrong": {
-                "why": "がち solo expresa una tendencia negativa frecuente; no puede significar «fácil de leer»"
-              },
-              "explain": "Mira si se habla de «facilidad» o de «frecuencia»: para valorar si algo es fácil de hacer (読みやすい、使いやすい) → solo やすい; si algo malo pasa a menudo (抜きがち、遅れがち) → がち. Además, がち puede ir directamente con sustantivos (病気がち), y やすい no."
+              "explain": "Las dos pueden decir que algo malo «tiende a pasar»: 「寒いと風邪をひきやすい」 y 「寒いと風邪をひきがちだ」 suenan naturales. La diferencia está en el enfoque: si una condición o característica hace que algo pase con facilidad (空気が乾燥して…), y el sujeto también puede ser una cosa → やすい; si una persona realmente lo hace a menudo, con un tono de queja de «otra vez lo mismo», muchas veces junto a 「つい」 o 「どうしても」 → がち. がち solo se usa para cosas malas."
             },
             {
               "id": "ppoi",
-              "title": "〜っぽい（tener tendencia a…）",
-              "diff": "やすい vale para cosas y personas; っぽい solo describe el carácter de una persona, «enseguida…», y es coloquial.",
+              "title": "〜っぽい (propenso a…)",
+              "diff": "Para decir que una persona «es propensa a…» sirven las dos; っぽい es más coloquial y suena a describir un defecto de carácter. Solo va con unos pocos verbos y el sujeto tiene que ser una persona.",
               "this": [
                 {
-                  "tag": "Cosas · se olvidan fácil",
-                  "tr": "Las palabras en katakana se olvidan con facilidad."
+                  "tag": "Una cosa como sujeto",
+                  "tr": "Estos zapatos tienen la suela fina y resbalan con facilidad."
                 }
               ],
               "that": [
                 {
-                  "tag": "Carácter de una persona",
-                  "tr": "Últimamente mi padre se ha vuelto muy olvidadizo."
+                  "tag": "Carácter de una persona · coloquial",
+                  "tr": "Con la edad, mi abuelo se ha vuelto muy irascible."
                 }
               ],
               "wrong": {
-                "why": "っぽい solo puede describir el carácter de una persona"
+                "why": "Con el sentido de «propenso a…», っぽい solo describe el carácter de una persona, no cosas"
               },
-              "explain": "Mira el sujeto: cosas o asuntos (カタカナの言葉、このコップ) → やすい (忘れやすい、割れやすい); el carácter o una manía de una persona (父、彼) → っぽい (忘れっぽい、怒りっぽい), y aquí también vale 忘れやすい. っぽい solo va con unos pocos verbos."
+              "explain": "Para decir que una persona «es propensa a…» sirven las dos: 「父は忘れやすい」 y 「父は忘れっぽい」 significan casi lo mismo, pero っぽい es más coloquial y suena a que hablas de un defecto o del carácter de esa persona. Con este sentido, っぽい solo va con unos pocos verbos como 忘れ、怒り、飽き, y el sujeto tiene que ser una persona (祖父); si el sujeto es una cosa (この靴), solo sirve やすい."
             }
           ]
         }
@@ -13151,61 +13149,46 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Todas tienen que ver con «lo que se va a hacer, planes»",
+          "note": "Ambas expresan «tener previsto hacer algo»",
           "items": [
             {
               "id": "tsumori",
-              "diff": "予定 es un horario ya programado; つもり es la intención personal de alguien.",
+              "title": "〜つもりだ (tener intención de)",
+              "diff": "Para tus propios planes sirven las dos; 予定 suena a informar de forma objetiva de una agenda ya fijada; つもり es lo que tienes pensado tú, con voluntad personal.",
               "this": [
                 {
-                  "tag": "Horario programado",
-                  "tr": "Está previsto que el avión llegue a las tres."
+                  "tag": "Ya fijado · objetivo",
+                  "tr": "Tengo previsto empezar un posgrado el año que viene."
                 }
               ],
               "that": [
                 {
-                  "tag": "Intención personal",
-                  "tr": "En las vacaciones de verano pienso volver a mi país."
+                  "tag": "Intención personal · subjetivo",
+                  "tr": "Tengo la intención de empezar un posgrado el año que viene."
                 }
               ],
               "wrong": {
-                "why": "Un avión no tiene «intenciones»; para horarios se usa 予定"
+                "why": "Un avión no tiene voluntad, así que no puede llevar つもり; para horarios se usa 予定"
               },
-              "explain": "Mira el sujeto: horarios ya programados como un vuelo, una reunión o un evento, o planes decididos por una empresa u otras personas → 予定; lo que una persona piensa hacer → つもり."
-            },
-            {
-              "id": "you-to-omou",
-              "diff": "予定だ es algo que ya está en la agenda; (よ)うと思う es lo que uno piensa hacer ahora mismo, y puede que se le acabe de ocurrir.",
-              "this": [
-                {
-                  "tag": "En la agenda",
-                  "tr": "El lunes que viene tengo previsto un viaje de trabajo a Osaka."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Idea del momento",
-                  "tr": "Hace buen tiempo, así que por la tarde creo que saldré a dar un paseo."
-                }
-              ],
-              "explain": "Fíjate en si hay una fecha y un plan concretos: algo ya apuntado en la agenda, como 「来週の月曜日に」 → 予定です; algo que se te ocurre al ver que hace buen tiempo y que aún no está decidido → (よ)うと思う."
+              "explain": "Al hablar de lo que vas a hacer, sirven las dos; cambia el matiz: 予定です suena a informar de una agenda ya organizada, objetiva y segura, y vale también para planes que ha decidido otra persona; つもりです expresa lo que tienes pensado tú, con tu voluntad y determinación. Lo que no tiene voluntad (飛行機、会議) solo puede llevar 予定."
             },
             {
               "id": "koto-ni-natte-iru",
-              "diff": "予定 es un horario puntual; ことになっている es una norma, o algo decidido de antemano por otros que hay que cumplir.",
+              "title": "〜ことになっている (algo ya acordado)",
+              "diff": "予定 solo informa de la agenda de forma objetiva, la haya fijado quien sea; ことになっている añade «lo ha decidido (un grupo u otra persona) y yo lo cumplo».",
               "this": [
                 {
-                  "tag": "Horario puntual",
-                  "tr": "Mañana está prevista una reunión a las diez."
+                  "tag": "Agenda · neutro",
+                  "tr": "La semana que viene tengo previsto ir a Kioto con un amigo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Norma",
-                  "tr": "En esta residencia, la puerta se cierra todas las noches a las diez."
+                  "tag": "Lo fijaron otros · lo cumplo",
+                  "tr": "La semana que viene me toca ir a Kioto para una formación de la empresa."
                 }
               ],
-              "explain": "Mira si es un plan puntual o una norma permanente: un horario concreto de mañana o de la semana que viene → 予定; las normas de una residencia o una empresa, acuerdos que hay que cumplir siempre (毎晩、いつも) → ことになっている. 予定 no sirve para expresar normas."
+              "explain": "Las dos frases hablan de planes ya decididos, y 「会社の研修で京都へ行く予定です」 también es natural. La diferencia está en el tono: 予定です solo informa de la agenda de forma objetiva, tanto si la fijaste tú (lo quedaste con un amigo) como si la fijó otro; ことになっています recalca que es algo establecido por la empresa, la escuela, etc., que tú cumples (会社の研修), y suena a «no lo he decidido yo»."
             }
           ]
         }
@@ -13216,34 +13199,34 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Todas vienen de 「よう（様）」: «cierto aspecto o manera»",
+          "note": "Todas vienen de 「よう（様）」, cuyo sentido original es «aspecto, estado»",
           "items": [
             {
               "id": "you-ni-naru",
-              "thisTitle": "〜ように（propósito）",
-              "diff": "ように es un objetivo aún no logrado por el que te estás esforzando; ようになった es el resultado ya logrado.",
+              "thisTitle": "〜ように (finalidad)",
+              "diff": "Las dos vienen de 「よう」 = aspecto, estado: ように + acción es actuar hacia un estado (aún no alcanzado); ようになった es haber llegado ya a ese estado.",
               "this": [
                 {
-                  "tag": "Objetivo · aún no logrado",
+                  "tag": "Meta · aún no alcanzada",
                   "tr": "Practico todos los días para poder leer kanji."
                 }
               ],
               "that": [
                 {
-                  "tag": "Resultado · ya logrado",
-                  "tr": "Como practiqué todos los días, ahora ya sé leer kanji."
+                  "tag": "Resultado · ya alcanzado",
+                  "tr": "Como practiqué todos los días, ya puedo leer kanji."
                 }
               ],
-              "explain": "Las dos oraciones hablan de lo mismo, solo que desde momentos distintos. Mira lo que sigue a ように: si sigue «lo que haces para ello» (毎日練習している) → es un objetivo; si sigue directamente 「なった」 y la oración termina → ya se ha convertido en realidad."
+              "explain": "En los dos casos 「よう」 significa «aspecto, estado». 「漢字が読めるように + hacer algo」 = actuar hacia el estado de «poder leer kanji» → para poder…; ese estado aún no se ha alcanzado, y después viene lo que haces para lograrlo (毎日練習している). 「読めるようになった」 = haber pasado al estado de «poder leer kanji» → ya puedo…, algo ya conseguido. Fíjate en lo que sigue a ように: una acción concreta → finalidad; 「なる／なった」 → cambio."
             },
             {
               "id": "you-ni-suru",
-              "thisTitle": "〜ように（propósito）",
-              "diff": "ように + acción concreta es «hacer algo para…»; ようにしている es «procurar hacerlo habitualmente».",
+              "thisTitle": "〜ように (finalidad)",
+              "diff": "Las dos vienen de 「よう」 = aspecto, estado: ように + acción concreta es hacer algo para llegar a un estado; ようにしている es mantenerse uno mismo en ese estado.",
               "this": [
                 {
                   "tag": "Para → acción concreta",
-                  "tr": "Para no resfriarme, llevo mascarilla."
+                  "tr": "Llevo mascarilla para no resfriarme."
                 }
               ],
               "that": [
@@ -13252,98 +13235,105 @@
                   "tr": "Procuro no resfriarme."
                 }
               ],
-              "explain": "Mira lo que sigue a ように: si sigue una acción concreta (マスクをしている) → propósito, «para…»; si sigue directamente 「している」 y termina → ようにしている, que habla de algo que procuras y en lo que te esfuerzas habitualmente."
+              "explain": "「よう」 significa originalmente «aspecto, estado». 「風邪をひかないように、マスクをしている」 = hacer una cosa concreta para llegar al estado de «no resfriarse» → finalidad, «para…»; 「風邪をひかないようにしている」 = esforzarse por mantenerse en el estado de «no resfriarse» → procurarlo en el día a día. Fíjate en lo que sigue a ように: si viene otra acción concreta (マスクをしている) → finalidad; si termina directamente con 「している」 → ようにしている."
             },
             {
               "id": "you-ni-iu",
-              "thisTitle": "〜ように（propósito）",
-              "diff": "ように + acción normal es hacer algo uno mismo con un propósito; ように言う es decirle a otro que lo haga.",
+              "thisTitle": "〜ように (finalidad)",
+              "diff": "Las dos vienen de 「よう」 = aspecto, estado: ように + algo que haces tú es actuar para llegar a un estado; ように言う es expresar con palabras «el estado en que quieres que esté el otro», o sea, pedirle a alguien que haga algo.",
               "this": [
                 {
-                  "tag": "Propósito → lo hago yo",
-                  "tr": "Para no olvidarlo, lo apunté en la agenda."
+                  "tag": "Finalidad → lo hago yo",
+                  "tr": "Lo apunté en la agenda para no olvidarlo."
                 }
               ],
               "that": [
                 {
                   "tag": "Petición de otro",
-                  "tr": "El profesor me insistió en que no lo olvidara."
+                  "tr": "El profesor me dijo que no lo olvidara."
                 }
               ],
-              "explain": "Mira el verbo que sigue a ように: acciones que haces tú con un fin, como メモする o 練習する → ように de propósito; verbos de habla como 言う、頼む、伝える → ように言う, que transmite lo que te pide otro, a menudo con 「〜に」 delante para indicar quién lo dijo."
+              "explain": "「よう」 significa originalmente «aspecto, estado». 「忘れないように、手帳にメモした」 = hacer tú algo para llegar al estado de «no olvidar» → finalidad; 「忘れないように言われた」 = otra persona expresó la petición «quiero que estés en el estado de no olvidar» → transmitir la petición de otro. Fíjate en el verbo que sigue a ように: algo que haces tú, como 手帳にメモした → finalidad; verbos de decir como 言う、頼む、伝える → ように言う, y el 「先生に」 de delante indica quién lo dijo."
             },
             {
               "id": "you-da",
-              "diff": "ような／ように／みたいな son formas modificadoras derivadas de ようだ y, en medio de la oración, suelen servir para comparar; ようだ／みたいだ al final de la oración, además de comparar, a menudo expresan una deducción («parece que…»).",
+              "title": "〜ようだ (deducción)",
+              "thisTitle": "〜ような・〜ように (comparación)",
+              "diff": "Las dos vienen de 「よう」 = aspecto: ような／ように dentro de la frase modifican lo que sigue y sirven sobre todo para comparar; ようだ al final de la frase suele expresar una deducción a partir de lo que se ve («parece que…»).",
               "this": [
                 {
-                  "tag": "ような · modifica sustantivo",
+                  "tag": "ような · modifica un sustantivo",
                   "tr": "Es una historia que parece un sueño."
                 },
                 {
-                  "tag": "ように · modifica predicado",
-                  "tr": "Fue un día tan divertido que parecía un sueño."
-                },
-                {
-                  "tag": "みたいな · coloquial",
-                  "tr": "Es una historia que parece un sueño, ¿eh?"
+                  "tag": "ように · modifica el predicado",
+                  "tr": "Fue un día tan divertido como un sueño."
                 }
               ],
               "that": [
                 {
-                  "tag": "Al final · deducción",
+                  "tag": "Final de frase · deducción",
                   "tr": "La luz está apagada. Parece que no hay nadie en casa."
                 }
               ],
-              "explain": "Mira la posición y si hay 「まるで」: si después sigue un sustantivo (話) o un adjetivo o verbo (楽しい), y delante suele ir 「まるで」 → comparación; si va al final y cierra la oración, con una pista observada delante (電気が消えている) → deducción del hablante, «parece que…». Con la forma coloquial みたいだ pasa lo mismo."
+              "explain": "En los dos casos 「よう」 significa «aspecto». 「夢のような話」「夢のように楽しい」 = con aspecto de sueño → comparación; detrás sigue un sustantivo o un predicado, y delante suele ir 「まるで」. Al final de la frase, 「留守のようだ」 = tiene aspecto de que no hay nadie → deducción del hablante, «parece que…», a partir de lo que ve (電気が消えている). Fíjate en la posición: dentro de la frase, modificando lo que sigue → comparación; al final de la frase, con una pista visible antes → deducción."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Todas expresan «como…» o «para…», y son fáciles de confundir",
+          "sense": 1,
+          "note": "Ambas expresan «como…»",
           "items": [
             {
               "id": "ka-no-you-da",
-              "thisTitle": "〜ように（comparación）",
-              "diff": "のように es una comparación normal; かのように es «como si…» sabiendo que no es así, con un contraste más fuerte.",
+              "title": "〜かのようだ (como si…)",
+              "thisTitle": "〜ように (comparación)",
+              "diff": "Las dos sirven para comparar; かのように recalca más «no lo es, pero parece que sí», con un tono más exagerado y más formal.",
               "this": [
                 {
                   "tag": "Comparación normal",
-                  "tr": "Está emocionado como un niño."
+                  "tr": "Todavía va a primaria, pero habla como un adulto."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sabiendo que no · contraste",
-                  "tr": "Sonríe como si no hubiera pasado nada."
+                  "tag": "Recalca que no lo es · formal",
+                  "tr": "Todavía va a primaria, pero habla como si fuera un adulto."
                 }
               ],
-              "explain": "Mira lo que va delante: «sustantivo + の» (子ども) → el ように normal, una simple comparación; una oración que en realidad no es cierta (何もなかった) + か → かのように, que resalta el contraste entre la apariencia y la realidad y es más bien escrito."
+              "explain": "Las dos frases hacen una comparación, «como…». かのように añade a のように la idea de «no lo es, pero parece que sí», recalcando el contraste con la realidad; el tono es más exagerado y más formal, y suele ir con まるで o あたかも. Para una comparación normal basta con のように. En cuanto a la unión, tras un sustantivo se dice directamente 「大人のように」, pero con かのように hay que decir 「大人であるかのように」."
             },
             {
-              "id": "rashii-typical",
-              "title": "〜らしい（típico）",
-              "thisTitle": "〜ような（comparación）",
-              "diff": "のような es «como…», pero no lo es; らしい es «tener el aire típico de…», y sí lo es, de forma muy típica.",
+              "id": "gotoki",
+              "title": "〜ごとく (comparación)",
+              "thisTitle": "〜ように (comparación)",
+              "diff": "Significan lo mismo; ごとく es una forma escrita heredada del japonés clásico, propia de novelas y textos; en el uso normal se dice のように.",
               "this": [
                 {
-                  "tag": "Comparar · no lo es",
-                  "tr": "Ella habla como un hombre."
+                  "tag": "Forma normal",
+                  "tr": "Se fue corriendo como el viento."
                 }
               ],
               "that": [
                 {
-                  "tag": "Típico · sí lo es",
-                  "tr": "Él es un hombre muy varonil."
+                  "tag": "Escrito · literario",
+                  "tr": "Partió raudo cual el viento."
                 }
               ],
-              "explain": "Fíjate en si el sujeto y el sustantivo de detrás son de la misma clase: 彼女 no es un hombre y se la compara con uno → 男のような; 彼 sí es un hombre, y muy típicamente masculino → 男らしい. Igualmente, 「春らしい天気」 es un tiempo muy típico de la primavera, en primavera; 「春のような天気」 suele ser un tiempo de otra estación que parece de primavera."
-            },
+              "explain": "Las dos frases significan lo mismo, una comparación «como…»; la diferencia es el registro: ごとく viene del japonés clásico, aparece sobre todo en novelas, ensayos y refranes, y casi no se usa al hablar; en la conversación y la escritura normales se usa のように. Para modificar un sustantivo se dice 「〜のような」 y 「〜のごとき」, respectivamente."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Ambas expresan «para…»",
+          "items": [
             {
               "id": "tame-ni",
-              "thisTitle": "〜ように（propósito）",
-              "diff": "Delante de ように van estados como la forma potencial o la negativa; delante de ために va una acción que uno controla.",
+              "thisTitle": "〜ように (finalidad)",
+              "diff": "Antes de ように van estados, como la forma potencial o la negativa; antes de ために van acciones que uno puede controlar.",
               "this": [
                 {
                   "tag": "Forma potencial · estado",
@@ -13357,30 +13347,9 @@
                 }
               ],
               "wrong": {
-                "why": "Detrás de la forma potencial hay que usar ように"
+                "why": "Después de la forma potencial hay que usar ように"
               },
-              "explain": "Mira el verbo que va delante de ように／ため: estados como la forma potencial, la negativa o algo que ocurre por sí solo, como 「話せる」「忘れない」「見える」 → ように; 「合格する」 es una acción que uno decide hacer → ために."
-            },
-            {
-              "id": "to-onaji-same",
-              "thisTitle": "〜ように（comparación）",
-              "diff": "のように es «como…, igual que…», y detrás puede ir un adjetivo o un verbo; と同じ dice que algo es realmente «lo mismo».",
-              "this": [
-                {
-                  "tag": "Igual que · como",
-                  "tr": "Mi hermana mayor es tan amable como mi madre."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Realmente lo mismo",
-                  "tr": "Mi hermana mayor se graduó en la misma universidad que mi madre."
-                }
-              ],
-              "wrong": {
-                "why": "同じ no puede modificar directamente a un adjetivo"
-              },
-              "explain": "Mira lo que sigue: para decir «igual de (amable, guapo) que…», con un adjetivo o un verbo detrás → のように; 「同じ」 va seguido de un sustantivo (大学、色) o de 「だ」 → las dos cosas son realmente iguales. En español ambas cosas pueden decirse con «igual que…», por eso es fácil escribir ✗母と同じ優しい."
+              "explain": "Fíjate en el verbo que va antes de ように／ため: formas potenciales, negativas y estados que se dan solos, como 「話せる」「忘れない」「見える」 → ように; 「合格する」, una acción que uno decide hacer → ために."
             }
           ]
         }
@@ -13391,29 +13360,29 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Todas vienen de 「よう（様）」: «cierto aspecto o manera»",
+          "note": "Todas vienen de 「よう（様）」, cuyo sentido original es «aspecto, estado»",
           "items": [
             {
               "id": "you-na-example",
-              "title": "〜ように（propósito）",
-              "diff": "ように言う es decirle a otro que lo haga; ように + acción normal es hacer algo uno mismo con un propósito.",
+              "title": "〜ように (finalidad)",
+              "diff": "Las dos vienen de 「よう」 = aspecto, estado: ように言う es expresar con palabras «el estado en que quieres que esté el otro», o sea, pedirle a alguien que haga algo; ように + algo que haces tú es actuar para llegar a un estado.",
               "this": [
                 {
                   "tag": "Petición de otro",
-                  "tr": "El profesor me insistió en que no lo olvidara."
+                  "tr": "El profesor me dijo que no lo olvidara."
                 }
               ],
               "that": [
                 {
-                  "tag": "Propósito → lo hago yo",
-                  "tr": "Para no olvidarlo, lo apunté en la agenda."
+                  "tag": "Finalidad → lo hago yo",
+                  "tr": "Lo apunté en la agenda para no olvidarlo."
                 }
               ],
-              "explain": "Mira el verbo que sigue a ように: verbos de habla como 言う、頼む、伝える → ように言う, que transmite lo que te pide otro, a menudo con 「〜に」 delante para indicar quién lo dijo; acciones que haces tú con un fin, como メモする o 練習する → ように de propósito."
+              "explain": "「よう」 significa originalmente «aspecto, estado». 「忘れないように言われた」 = otra persona expresó la petición «quiero que estés en el estado de no olvidar» → transmitir la petición de otro, y el 「先生に」 de delante indica quién lo dijo; 「忘れないように、手帳にメモした」 = hacer tú algo para llegar al estado de «no olvidar» → finalidad. Fíjate en el verbo que sigue a ように: verbos de decir como 言う、頼む、伝える → ように言う; algo que haces tú, como 手帳にメモした → ように de finalidad."
             },
             {
               "id": "you-ni-suru",
-              "diff": "ように言う es decirle a otro que lo haga; ようにする es esforzarse uno mismo en hacerlo.",
+              "diff": "Las dos vienen de 「よう」 = aspecto, estado: ように言う es otra persona expresando el estado que exige; ようにする es esforzarse uno mismo para que las cosas lleguen a ese estado.",
               "this": [
                 {
                   "tag": "Petición de otro",
@@ -13422,11 +13391,11 @@
               ],
               "that": [
                 {
-                  "tag": "Meta propia",
+                  "tag": "Norma propia",
                   "tr": "Procuro comer verdura todos los días."
                 }
               ],
-              "explain": "Mira quién plantea la petición: si la hace un médico, un profesor o un jefe → ように言う／ように言われた, a menudo con 「〜に」 delante para indicar quién habla; si es una meta que te pones tú mismo → ようにする."
+              "explain": "「よう」 significa originalmente «aspecto, estado». 「ように言う」 = decir con palabras «cómo debería ser el otro» → pedirle a alguien que haga algo; se suele decir 「〜ように言われた」, y el 「医者に」 de delante indica quién hizo la petición. 「ようにする」 = esforzarse uno mismo para que las cosas sean así → procurar hacerlo; 「ようにしている」 es un hábito que se mantiene. Fíjate en si lo que sigue es un verbo de decir (言われた) o 「する／している」."
             }
           ]
         },
@@ -13436,28 +13405,28 @@
           "items": [
             {
               "id": "te-kure-to-iu",
-              "diff": "ように言う solo transmite el contenido de la petición, de forma objetiva y suave; てくれと／なと言う conserva el tono de las palabras originales («hazlo…», «no hagas…»), y es más directo.",
+              "diff": "ように言う solo transmite el contenido de la petición, de forma objetiva y suave; てくれと／なと言う conserva el tono de las palabras originales («hazlo, por favor», «no lo hagas») y es más directo.",
               "this": [
                 {
-                  "tag": "Afirmativo · indirecto y suave",
+                  "tag": "Afirmativo · transmisión suave",
                   "tr": "El jefe me dijo que mañana viniera temprano."
                 },
                 {
-                  "tag": "Negativo · indirecto y suave",
+                  "tag": "Negativo · transmisión suave",
                   "tr": "El jefe me dijo que mañana no llegara tarde."
                 }
               ],
               "that": [
                 {
                   "tag": "くれと · tono de petición",
-                  "tr": "El jefe me dijo: «Mañana ven temprano»."
+                  "tr": "El jefe me dijo: «Ven temprano mañana»."
                 },
                 {
                   "tag": "なと · tono de prohibición",
-                  "tr": "El jefe me dijo: «Mañana no llegues tarde»."
+                  "tr": "El jefe me dijo: «No llegues tarde mañana»."
                 }
               ],
-              "explain": "Fíjate en si lo que va delante de 「と」 conserva el tono original: 「来てくれ」「遅れるな」 son las palabras textuales del otro → と言う; si el contenido se reformula como 「来るように」「遅れないように」 → es estilo indirecto, más habitual con jefes y en situaciones formales."
+              "explain": "Fíjate en si lo que va antes de 「と」 conserva el tono de las palabras originales: 「来てくれ」「遅れるな」 son lo que dijo la otra persona → と言う; si el contenido se cambia a 「来るように」「遅れないように」 → transmisión indirecta, más habitual al hablar de superiores y en situaciones formales."
             }
           ]
         }
@@ -13472,20 +13441,20 @@
           "items": [
             {
               "id": "volitional-form",
-              "diff": "〜(よ)うと思う es contarle a alguien lo que piensas hacer; la forma volitiva sola es decidirse en el momento o invitar al otro.",
+              "diff": "〜(よ)うと思う cuenta a otros tu plan; la forma volitiva sola es decidirse en el momento o invitar al otro.",
               "this": [
                 {
-                  "tag": "Contarlo a otro · intención",
-                  "tr": "En las vacaciones de verano pienso ir a Japón."
+                  "tag": "Contarlo a otros · plan",
+                  "tr": "Estas vacaciones de verano pienso ir a Japón."
                 }
               ],
               "that": [
                 {
-                  "tag": "Para sí · decisión",
-                  "tr": "¡Venga, en las vacaciones de verano me voy a Japón!"
+                  "tag": "Hablando solo · decisión",
+                  "tr": "¡Venga, estas vacaciones me voy a Japón!"
                 }
               ],
-              "explain": "Mira a quién se lo dices: si le cuentas a alguien lo que piensas hacer → 〜(よ)うと思います; si te animas a ti mismo (よし、〜しよう) o invitas al otro a hacerlo contigo → la forma volitiva sola. Si a otra persona solo le dices 「夏休みは日本に行こう」, sonará a que la invitas a ir contigo."
+              "explain": "El 「う／よう」 de las dos viene del 「む」 de voluntad del japonés clásico, cuyo sentido original es «voy a…». La forma volitiva sola (行こう) expresa directamente la voluntad de hacerlo → decidirse en ese momento (よし), y dicha a otra persona se convierte en una invitación, «vamos a…»; si se añade 「と思う」, esa voluntad se presenta como «esto es lo que tengo pensado» → explicar tu plan a otros. Por eso, para contar tus planes se dice 「行こうと思います」; si solo dices 「夏休みは日本に行こう」, suena a que invitas al otro a ir contigo."
             }
           ]
         },
@@ -13518,7 +13487,7 @@
           "items": [
             {
               "id": "tsumori",
-              "diff": "(よ)うと思う suele ser una idea que surge al hablar; つもりだ es un plan pensado desde hace tiempo y más firme.",
+              "diff": "(よ)うと思う suele ser una idea que se te acaba de ocurrir al hablar; つもりだ es un plan más firme, decidido hace tiempo.",
               "this": [
                 {
                   "tag": "Idea del momento",
@@ -13527,45 +13496,11 @@
               ],
               "that": [
                 {
-                  "tag": "Pensado desde antes",
-                  "tr": "Hace tiempo que pienso irme a estudiar al extranjero el año que viene."
+                  "tag": "Decidido hace tiempo",
+                  "tr": "Desde hace tiempo tengo la intención de irme a estudiar al extranjero el año que viene."
                 }
               ],
-              "explain": "Mira cuándo se tomó la decisión: se te ocurre al ver que llueve → (よ)うと思う; un plan decidido hace mucho y que ya estás preparando (前から) → つもりだ."
-            },
-            {
-              "id": "yotei-plan",
-              "diff": "(よ)うと思う es lo que uno piensa hacer ahora mismo, y puede que se le acabe de ocurrir; 予定だ es algo que ya está en la agenda.",
-              "this": [
-                {
-                  "tag": "Idea del momento",
-                  "tr": "Hace buen tiempo, así que por la tarde creo que saldré a dar un paseo."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "En la agenda",
-                  "tr": "El lunes que viene tengo previsto un viaje de trabajo a Osaka."
-                }
-              ],
-              "explain": "Fíjate en si hay una fecha y un plan concretos: algo que se te ocurre al ver que hace buen tiempo y que aún no está decidido → (よ)うと思う; algo ya apuntado en la agenda, como 「来週の月曜日に」 → 予定です."
-            },
-            {
-              "id": "koto-ni-suru",
-              "diff": "(よ)うと思う es solo una intención, que todavía puede cambiar; ことにした es una decisión tomada formalmente tras pensarlo.",
-              "this": [
-                {
-                  "tag": "Intención · sin decidir",
-                  "tr": "Estoy pensando en irme a estudiar al extranjero el año que viene."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Decisión · ya tomada",
-                  "tr": "Después de pensarlo mucho, he decidido irme a estudiar al extranjero."
-                }
-              ],
-              "explain": "Fíjate en si hay un momento de «decidirse»: después de 「いろいろ考えて」「迷ったけど」 se toma una decisión → ことにした; si solo expresas lo que piensas y aún lo estás considerando → (よ)うと思う, con un tono más suave."
+              "explain": "Fíjate en cuándo se tomó la decisión: se te ocurre en el momento al ver que llueve → (よ)うと思う; un plan decidido hace mucho y que ya estás preparando (前から) → つもりだ."
             }
           ]
         }
@@ -13581,24 +13516,24 @@
             {
               "id": "te-sumu",
               "title": "〜ずに済む",
-              "diff": "Detrás de ずに va «lo que se hace en su lugar»; ずに済む es «se resolvió sin tener que…», con alivio.",
+              "diff": "Las dos son 「ず＋に」 = «en el estado de no…»: si sigue lo que hiciste en su lugar → «sin…, (hice)…»; si sigue 「済む」 → se resolvió sin hacerlo, «no tuve que…», con alivio.",
               "this": [
                 {
                   "tag": "No hacerlo → hacer otra cosa",
-                  "tr": "Hoy no cogí un taxi y volví a casa andando."
+                  "tr": "Hoy no cogí un taxi; volví a casa andando."
                 }
               ],
               "that": [
                 {
-                  "tag": "No hace falta · alivio",
-                  "tr": "Como el tren seguía funcionando, no tuve que coger un taxi."
+                  "tag": "No hizo falta · alivio",
+                  "tr": "Como el tren funcionaba, no tuve que coger un taxi."
                 }
               ],
-              "explain": "Mira lo que sigue a ずに: si va otra acción (歩いて帰った) → «no hacer A sino B»; si va 「済む」 → algo que creías inevitable al final no hizo falta, a menudo con la sensación de «menos mal»."
+              "explain": "Los dos 「ずに」 son el negativo clásico 「ず」 + 「に」, que significa «en el estado de no…». Si sigue otra acción (歩いて帰った) → hiciste B sin hacer A → «sin…»; si sigue 「済む」 (el asunto queda resuelto) → el asunto se resolvió sin hacerlo → «no tuve que…». Creías que era inevitable, así que suele llevar un matiz de «por suerte», y delante a menudo va la causa (電車が動いていたので)."
             },
             {
               "id": "zu-ni-wa-irarenai",
-              "diff": "ずに es «sin hacer…»; ずにはいられない es «no puedo quedarme sin hacerlo» → «no puedo evitar hacerlo»: el sentido se invierte.",
+              "diff": "ずに es «sin hacer…»; ずにはいられない es «no poder quedarse sin hacerlo» → «no poder evitar hacerlo»: el sentido se invierte.",
               "this": [
                 {
                   "tag": "No lo hizo",
@@ -13608,10 +13543,10 @@
               "that": [
                 {
                   "tag": "No pudo evitarlo",
-                  "tr": "Era tan gracioso que no pude evitar echarme a reír."
+                  "tr": "Era tan gracioso que no pude evitar reírme."
                 }
               ],
-              "explain": "Fíjate en si detrás de ずに va 「はいられない」: si sigue una acción (話を聞いた) → no se hizo lo anterior; si sigue 「はいられない」 → «si no lo hago, no puedo estar tranquilo», es decir, no pude evitar hacerlo; delante suele ir una causa como 「あまりに〜て」."
+              "explain": "Mira si después de ずに viene 「はいられない」: si sigue una acción (話を聞いた) → no hiciste lo anterior; si sigue 「はいられない」 → «no puedo quedarme así sin hacerlo», es decir, no pudiste evitar hacerlo; delante suele ir una causa como 「あまりに〜て」."
             }
           ]
         },
@@ -13621,40 +13556,40 @@
           "items": [
             {
               "id": "naide-without",
-              "diff": "Significan lo mismo: ずに es más escrito, y 「する」 pasa a 「せずに」; ないで se usa en la lengua hablada cotidiana.",
+              "diff": "Significan lo mismo: ずに es más formal, y 「する」 pasa a 「せずに」; ないで se usa en el habla cotidiana.",
               "this": [
                 {
-                  "tag": "Escrito",
-                  "tr": "Me presenté al examen sin haber estudiado."
+                  "tag": "Formal",
+                  "tr": "Me presenté al examen sin estudiar."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hablado",
-                  "tr": "Me presenté al examen sin haber estudiado."
+                  "tag": "Coloquial",
+                  "tr": "Me presenté al examen sin estudiar."
                 }
               ],
               "wrong": {
                 "why": "「する」 tiene que pasar a 「せずに」"
               },
-              "explain": "Significan lo mismo; mira el registro y cómo se forman: en textos y situaciones formales se usa más ずに; al hablar, ないで (しないで). ずに va en el lugar del 「ない」 de la forma ない (言わ + ずに), pero 「する」 es una excepción y se dice 「せずに」. Además, solo ないで puede ir seguido de 「ください」."
+              "explain": "Las dos significan lo mismo; fíjate en el registro y en cómo se unen: en textos y situaciones formales es frecuente ずに; al hablar se usa más ないで (しないで). ずに se pone donde se quita 「ない」 de la forma ない (言わ + ずに), pero 「する」 es una excepción y se dice 「せずに」. Además, solo ないで puede ir seguido de 「ください」."
             },
             {
               "id": "koto-naku",
-              "diff": "ずに se usa para el cotidiano «sin…»; ことなく es más escrito y suele resaltar «ni una sola vez» durante mucho tiempo.",
+              "diff": "ずに se usa para el «sin…» cotidiano; ことなく es más formal y suele recalcar «ni una sola vez» durante mucho tiempo.",
               "this": [
                 {
-                  "tag": "Cosas cotidianas",
-                  "tr": "Fui al colegio sin desayunar."
+                  "tag": "Algo cotidiano",
+                  "tr": "Fui a la escuela sin desayunar."
                 }
               ],
               "that": [
                 {
-                  "tag": "Escrito · ni una vez",
-                  "tr": "Durante diez años trabajó sin descansar ni un solo día."
+                  "tag": "Formal · ni una vez",
+                  "tr": "Durante diez años seguí trabajando sin descansar ni un solo día."
                 }
               ],
-              "explain": "Mira la situación y el tono: no hacer algo en la vida diaria → ずに; en textos o discursos, para resaltar «ni una sola vez en mucho tiempo» (一日も、一度も) → ことなく. ことなく va detrás de la forma de diccionario (休む + ことなく), y ずに, de la forma ない (休ま + ずに)."
+              "explain": "Fíjate en la situación y el tono: no hacer algo en la vida diaria → ずに; en textos o discursos, recalcando «ni una sola vez en mucho tiempo» (一日も、一度も) → ことなく. ことなく va tras la forma de diccionario (休む + ことなく), y ずに tras la forma ない (休ま + ずに)."
             }
           ]
         }
@@ -13665,41 +13600,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Todas pueden traducirse por «cada…»",
+          "note": "Ambas expresan «cierta cantidad por cada unidad»",
           "items": [
             {
-              "id": "goto-ni",
-              "diff": "ずつ indica la cantidad que corresponde a cada vez o a cada persona; ごとに indica cada cuánto o en cada unidad ocurre algo.",
+              "id": "ni-tsuki",
+              "title": "〜につき (por cada…)",
+              "diff": "Las dos dicen «tanto por cada unidad»; ずつ indica que a cada uno le toca la misma cantidad y es habitual en el día a día; につき toma la unidad como base de cálculo, suena a norma o aviso y es más bien formal.",
               "this": [
                 {
-                  "tag": "Cantidad cada vez",
-                  "tr": "Tomo dos pastillas cada vez."
+                  "tag": "Misma cantidad para cada uno",
+                  "tr": "Daremos dos recuerdos a cada persona."
                 }
               ],
               "that": [
                 {
-                  "tag": "Intervalo",
-                  "tr": "Tomo la medicina cada seis horas."
+                  "tag": "Regla por unidad · formal",
+                  "tr": "Se entregarán dos recuerdos por persona."
                 }
               ],
-              "explain": "Mira qué indica el número de delante: una cantidad que se reparte o se gasta (２錠、一人３個) → ずつ; un intervalo de tiempo o una unidad (６時間、一駅) → ごとに. Se pueden usar juntas: 「６時間ごとに２錠ずつ飲む」."
-            },
-            {
-              "id": "atari-per",
-              "diff": "ずつ es la cantidad que realmente se reparte a cada persona; 当たり es un valor calculado por unidad, «por persona (en total)…».",
-              "this": [
-                {
-                  "tag": "Reparto real",
-                  "tr": "A los niños les repartí tres mandarinas a cada uno."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Valor calculado",
-                  "tr": "La cuota de la fiesta es de tres mil yenes por persona."
-                }
-              ],
-              "explain": "Mira qué hace la oración: acciones de repartir o dar una por una, como 配る o あげる → ずつ; cifras calculadas como importes, proporciones o estadísticas (会費、消費量) → 当たり, normalmente en la forma 「一人当たり + cantidad」."
+              "explain": "Las dos frases dicen «dos por persona». ずつ va detrás de la cantidad (二つずつ) e indica que a cada persona le toca la misma cantidad; es habitual también al hablar. につき va justo detrás de la palabra que sirve de unidad (お一人様につき) y la toma como base de cálculo; tiene tono de norma o aviso, es más bien formal y aparece mucho en tarifas y límites de compra (一人につき三千円、お一人様につき二点まで)."
             }
           ]
         }
@@ -13714,10 +13633,10 @@
           "items": [
             {
               "id": "te-ageru",
-              "diff": "Raíz ます + 上げる es «terminar, completar»; forma て + あげる es «hacer algo por otra persona».",
+              "diff": "Forma ます + 上げる es «terminar, completar»; forma て + あげる es «hacer algo por otro».",
               "this": [
                 {
-                  "tag": "Raíz ます → completar",
+                  "tag": "Forma ます → terminar",
                   "tr": "Terminé de escribir el informe en una sola noche."
                 }
               ],
@@ -13727,7 +13646,7 @@
                   "tr": "Escribí la carta en lugar de mi hermana pequeña."
                 }
               ],
-              "explain": "Mira lo que va delante de 「あげる」: si va pegada la raíz ます (書き), es un verbo compuesto y significa terminar algo laborioso; forma て (書いて) + あげる es un verbo de dar y recibir, y significa hacer algo por otra persona; en la oración suele haber 「〜のために」 o 「代わりに」. Las dos vienen de 「上げる」: empujar hacia arriba hasta la cima → completar; alzar algo para dárselo al otro → hacerlo por alguien."
+              "explain": "Fíjate en lo que va antes de 「あげる」: unido directamente a la forma ます (書き), es un verbo compuesto que indica que terminaste una tarea laboriosa; la forma て (書いて) + あげる es una expresión de dar: hacer algo por otra persona, y en la frase suele aparecer 「〜のために」 o 「代わりに」. Las dos vienen de 「上げる」: empujar algo hasta arriba → terminarlo; alzarlo hacia otra persona → hacerlo por ella."
             }
           ]
         },
@@ -13737,37 +13656,21 @@
           "items": [
             {
               "id": "owaru-finish",
-              "diff": "上げる resalta que, con esfuerzo, se ha completado una obra; 終わる solo dice objetivamente que la acción terminó.",
+              "title": "〜終わる (terminar de)",
+              "diff": "Las dos pueden decir «terminé de hacerlo»; 上げる lleva la satisfacción de «me costó, pero por fin lo he completado»; 終わる solo dice objetivamente que la acción acabó.",
               "this": [
                 {
-                  "tag": "Obra completada",
-                  "tr": "Tras tres meses de trabajo, por fin terminé la tesina de fin de carrera."
+                  "tag": "Completado · satisfacción",
+                  "tr": "El fin de semana por fin terminé de escribir mi trabajo de fin de grado."
                 }
               ],
               "that": [
                 {
-                  "tag": "Fin de la acción",
-                  "tr": "Por fin terminé de leer este libro."
+                  "tag": "Acción terminada · objetivo",
+                  "tr": "El fin de semana acabé de escribir mi trabajo de fin de grado."
                 }
               ],
-              "explain": "Fíjate en si la acción produce una «obra»: escribir una tesina, hacer una maqueta, criar a un hijo → 上げる, con la satisfacción de «¡por fin lo he conseguido!»; comer, leer o ver una película, donde solo termina la acción → 終わる. Ojo: 「読み上げる」 significa «leer en voz alta», no «terminar de leer»."
-            },
-            {
-              "id": "kiru-complete",
-              "diff": "上げる es completar una obra; 切る es gastarlo todo o llegar hasta el final, sin dejar nada.",
-              "this": [
-                {
-                  "tag": "Obra completada",
-                  "tr": "Tras un año de trabajo, terminé de tejer un jersey."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Gastarlo todo · sin dejar nada",
-                  "tr": "Tejiendo el jersey, gasté toda la lana."
-                }
-              ],
-              "explain": "Mira el objeto de la acción: algo que se produce (セーター、論文) → 上げる; algo que se consume (毛糸、お金、体力), o un proceso de principio a fin (走り切る) → 切る, a menudo junto con 「全部」 o 「最後まで」. La forma negativa 「〜切れない」 (食べ切れない) tiene el mismo sentido de «todo»."
+              "explain": "Las dos frases pueden decir «terminé de escribir»; cambia el matiz: 上げる lleva la sensación de logro de «le he dedicado esfuerzo y por fin lo he completado», y se usa sobre todo con acciones que producen un resultado, como escribir, hacer o criar; 終わる solo dice objetivamente que la acción ha terminado y vale para cualquier acción continuada, como comer o leer. Si quieres recalcar que completaste una obra → 上げる; si solo dices que has acabado → 終わる. Ojo: 「読み上げる」 significa «leer en voz alta»; «terminar de leer» es 「読み終わる」."
             }
           ]
         }
@@ -13814,20 +13717,20 @@
             {
               "id": "sugiru",
               "thisTitle": "〜あまりに (demasiado…)",
-              "diff": "Significan lo mismo; あまりに es más escrito, transmite la emoción de «realmente demasiado…» y suele introducir un resultado; すぎる es la forma más común en el día a día.",
+              "diff": "Significan lo mismo; あまりに es más bien formal, expresa con énfasis «realmente demasiado…» y suele introducir un resultado; すぎる es la forma más habitual en el día a día.",
               "this": [
                 {
-                  "tag": "あまりに · escrito · introduce resultado",
-                  "tr": "El examen de este año fue tan difícil que la mitad de los candidatos suspendió."
+                  "tag": "あまりに · formal · introduce un resultado",
+                  "tr": "El examen de este año fue tan difícil que suspendió la mitad de los candidatos."
                 }
               ],
               "that": [
                 {
                   "tag": "すぎる · coloquial",
-                  "tr": "Este problema es dificilísimo; no entiendo nada."
+                  "tr": "Esta pregunta es demasiado difícil, no entiendo nada."
                 }
               ],
-              "explain": "Mira el registro y la posición: あまりに es un adverbio que va delante del adjetivo, frecuente en textos y narraciones, y suele seguirle un resultado del tipo «por eso…» (不合格となった); すぎる se pega a la raíz (難しすぎる、食べすぎた) y es lo más usado al charlar o quejarse. También se combinan a menudo: あまりにも難しすぎる."
+              "explain": "Fíjate en el registro y la posición: あまりに es un adverbio que va delante del adjetivo, frecuente en textos y narraciones, y suele ir seguido de un resultado del tipo «por eso…» (不合格となった); すぎる se une a la raíz (難しすぎる、食べすぎた) y es lo más habitual al charlar o quejarse. También se usan juntas a menudo: あまりにも難しすぎる."
             }
           ]
         }
@@ -13841,30 +13744,13 @@
           "note": "Ambas significan «por cada…»",
           "items": [
             {
-              "id": "goto-ni",
-              "diff": "当たり calcula la «cantidad» que corresponde, de media, a cada unidad; ごとに habla de una «acción» que se repite a cada intervalo.",
-              "this": [
-                {
-                  "tag": "Cantidad por unidad",
-                  "tr": "Esta máquina puede fabricar 100 piezas por hora."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Acción repetida",
-                  "tr": "Esta máquina se detiene cada hora para una revisión."
-                }
-              ],
-              "explain": "Mira lo que sigue: una cantidad (100個、3000円、5キロ) → 当たり, para calcular proporciones o medias; una acción que se repite (点検する、休憩する、バスが来る) → ごとに."
-            },
-            {
               "id": "ni-tsuki",
               "title": "〜につき (por cada…)",
-              "diff": "当たり se usa sobre todo para medias obtenidas de estadísticas; につき se usa para establecer cuánto se cobra o se da por unidad, y es muy formal.",
+              "diff": "当たり se usa sobre todo para promedios calculados con estadísticas; につき se usa en normas sobre cuánto se cobra o se da por unidad, y es muy formal.",
               "this": [
                 {
-                  "tag": "Estadística · media",
-                  "tr": "El consumo de arroz por persona en Japón disminuye año tras año."
+                  "tag": "Estadística · promedio",
+                  "tr": "El consumo de arroz por habitante en Japón baja año tras año."
                 }
               ],
               "that": [
@@ -13873,24 +13759,7 @@
                   "tr": "La cuota de participación es de 1000 yenes por persona."
                 }
               ],
-              "explain": "Mira de dónde sale la cifra: datos que se obtienen promediando un total y sirven para comparar (消費量、収入、売り上げ) → 当たり; avisos o listas de precios que fijan cuánto se cobra o se reparte por unidad → につき."
-            },
-            {
-              "id": "zutsu-each",
-              "diff": "ずつ es la misma cantidad que se reparte de verdad a cada uno; 当たり es una proporción calculada por unidad.",
-              "this": [
-                {
-                  "tag": "Proporción calculada",
-                  "tr": "Hay 12 en total, así que salen 3 por persona."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Reparto real · cada uno",
-                  "tr": "Les repartí tres dulces a cada niño."
-                }
-              ],
-              "explain": "Mira el verbo que sigue: acciones de repartir de verdad como 配る、もらう、食べる → ずつ, pegado directamente a la cantidad repartida (３個ずつ); una media o proporción calculada → 当たり, precedido de la unidad («一人», «１時間») y seguido a menudo de 「〜になる」 o 「〜の + sustantivo」."
+              "explain": "Fíjate en de dónde sale el número: datos promediados a partir de un total y usados para comparar (消費量、収入、売り上げ) → 当たり; avisos y listas de precios que fijan cuánto se cobra o se da por unidad → につき."
             }
           ]
         }
