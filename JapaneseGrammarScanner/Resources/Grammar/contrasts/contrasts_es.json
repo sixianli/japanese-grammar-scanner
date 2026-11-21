@@ -49476,7 +49476,10 @@
                   "tr": "Los niños se comieron toda la tarta."
                 }
               ],
-              "explain": "Las dos vienen de 「尽く」 = agotar. 〜尽くす va tras un verbo y lleva la acción hasta no dejar nada (食べ尽くす, 言い尽くす); ずくめ va tras un sustantivo y dice que todo lo que te rodea es de la misma clase. Se distinguen mirando si delante hay un sustantivo o la forma ます de un verbo."
+              "explain": "Las dos vienen de 「尽く」 = agotar, llegar al final. Su verbo transitivo 「尽くす」 significa «llevar algo hasta el final»; tras la forma ます de un verbo, es hacer la acción hasta no dejar nada (食べ尽くす, 言い尽くす). ずくめ se escribe 「尽くめ」 y también viene de 「尽く」: de principio a fin todo está ocupado por lo mismo, sin nada más → «todo es…» (いいことずくめ, 黒ずくめ). Se distinguen mirando si delante hay un sustantivo o la forma ます de un verbo: ずくめ solo va tras sustantivos, y 尽くす solo tras la forma ます.",
+              "wrong": {
+                "why": "ずくめ solo va tras sustantivos y no puede ir tras la forma ます 「食べ」; para decir «comérselo todo» se usa 「食べ尽くす」."
+              }
             }
           ]
         },
@@ -49569,24 +49572,25 @@
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan «lleno de, todo es…»",
+          "note": "Ambas expresan «todo es…»",
           "items": [
             {
-              "id": "darake",
-              "diff": "づくし es estar lleno de cosas buenas; だらけ es estar lleno de cosas malas.",
+              "id": "bakari-only",
+              "title": "〜ばかり (solo, nada más que…)",
+              "diff": "づくし es una abundancia de cosas buenas de un mismo tipo, con sensación de satisfacción, y también se usa en menús y nombres de productos; ばかり es cotidiana, solo dice que casi todo es lo mismo, va con cualquier sustantivo y a menudo lleva queja.",
               "this": [
                 {
-                  "tag": "Cosas buenas · abundancia",
-                  "tr": "La cena de hoy fue todo un festín de buenos platos."
+                  "tag": "Cosas buenas a montones · satisfacción",
+                  "tr": "En casa de mi abuela, cada noche era un festín, y quedé de lo más satisfecho."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cosas malas · desagrado",
-                  "tr": "Como lo escribí con prisa, la redacción está llena de errores."
+                  "tag": "Cotidiano · a menudo queja",
+                  "tr": "En la residencia no ceno más que fideos instantáneos cada noche, y ya estoy harto."
                 }
               ],
-              "explain": "Mira si es algo deseado o no: cosas que alegran, como un festín, flores o buenas noticias → づくし; cosas que no se quieren, como errores, heridas o polvo → だらけ."
+              "explain": "Para decir «todo comida buena» sirven las dos: ご馳走づくし también puede ser ご馳走ばかり sin cambiar el sentido. づくし da la idea de cosas buenas de un mismo tipo servidas una tras otra, a menudo va seguido de palabras de satisfacción como 「大満足」, y también se usa en menús y nombres de productos (カニづくし); ばかり solo dice que en cantidad casi todo es lo mismo y va con cualquier sustantivo. Con algo corriente como 「カップ麺」 normalmente solo se dice ばかり, y suele ir seguido de quejas como 「うんざり」."
             }
           ]
         }
