@@ -9329,13 +9329,59 @@
                   "tr": "Como llovía, mi hermano menor no salió."
                 }
               ],
-              "explain": "Solo se diferencian en に y で, y la primera parte es idéntica (雨なのに／雨なので); mira la relación entre las dos partes: si el resultado va contra lo lógico (llueve y aun así sale) → のに; si el resultado es lo esperable (llueve y por eso no sale) → ので. Al leer, no pases por alto ese único kana."
+              "explain": "Solo se diferencian en に y で, y la primera parte es idéntica (雨なのに／雨なので); mira la relación entre la segunda parte y la primera: si el resultado va contra lo lógico (llueve y aun así 出かけた) → のに; si el resultado es lo esperable (llueve y por eso 出かけなかった) → ので. Al leer, no pases por alto ese único kana."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "La のに adversativa se parece a けど, くせに, にもかかわらず y ても; la のに de finalidad se parece a には y ために",
+          "sense": 2,
+          "note": "Ambas significan «para hacer…»",
+          "items": [
+            {
+              "id": "ni-wa-purpose",
+              "title": "〜には (lo que hace falta / cuesta)",
+              "thisTitle": "〜のに (para hacer… hace falta)",
+              "diff": "Las dos pueden decir cuánto cuesta hacer algo; tras のに suele venir un gasto o una necesidad, mientras que には es «para lograr…» y también puede ir seguida de una condición que hay que cumplir.",
+              "this": [
+                {
+                  "tag": "Hablar del gasto",
+                  "tr": "Sacarme el carné de conducir me costó 300 000 yenes."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Para lograrlo → hay que",
+                  "tr": "Para sacarse el carné de conducir, hay que ir a una autoescuela."
+                }
+              ],
+              "explain": "Se puede decir tanto 「免許を取るのに30万円かかる」 como 「免許を取るには30万円かかる」. La diferencia está en la segunda parte: si solo dices cuánto dinero o tiempo costó (かかった) → のに suena natural; si dices una condición o un consejo, «para lograrlo, hay que…» (通わなければならない, 〜たほうがいい) → usa には. Tras のに normalmente no van exigencias ni consejos de este tipo; si los pones, es fácil que se entienda como «aunque…»."
+            },
+            {
+              "id": "tame-ni",
+              "title": "〜ために (finalidad)",
+              "thisTitle": "〜のに (para hacer… hace falta)",
+              "diff": "Para decir qué hace falta para hacer algo sirven las dos, y のに es más frecuente; si lo que sigue es una acción que tú mismo realizas con ese fin, solo vale ために.",
+              "this": [
+                {
+                  "tag": "Seguida de una necesidad",
+                  "tr": "Para sacar el visado hicieron falta muchos documentos."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Seguida de una acción",
+                  "tr": "Fui a la embajada para sacar el visado."
+                }
+              ],
+              "explain": "Mira la segunda parte: si dice qué hace falta o cuánto cuesta hacerlo (必要だった, かかる) → のに; también se puede decir 「ビザを取るために書類が必要だった」, pero のに es más frecuente. Si la segunda parte es algo que hiciste tú mismo con ese fin (行った) → solo ために; のに no va seguida de una acción propia."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Ambas expresan contraste: «aunque…, aun así…»",
           "items": [
             {
               "id": "kedo-keredomo",
@@ -9365,16 +9411,16 @@
               "this": [
                 {
                   "tag": "Pena · sobre uno mismo",
-                  "tr": "Estudié con todas mis fuerzas y, aun así, suspendí el examen."
+                  "tr": "Entrené todos los días y, aun así, perdí el partido."
                 }
               ],
               "that": [
                 {
-                  "tag": "Reproche a otro",
-                  "tr": "Él no sabe nada y, sin embargo, siempre habla como si fuera un experto."
+                  "tag": "Reprochar a otro",
+                  "tr": "Él ni siquiera vino a entrenar y no para de quejarse."
                 }
               ],
-              "explain": "Mira de quién se habla y qué emoción lleva: te esforzaste y no hubo resultado, solo lamentas → のに; reprochar o menospreciar a alguien, «sin saber nada y encima…» → くせに, y las dos partes deben referirse a la misma persona. くせに es muy brusco: no lo uses con personas mayores o superiores."
+              "explain": "Mira de quién se habla y con qué sentimiento: tú mismo (私は) te esforzaste y no hubo resultado, y solo sientes pena → のに; reprochas o menosprecias a otro (彼は), «ni siquiera vino a entrenar y encima…» → くせに, y las dos partes deben referirse a la misma persona. のに también se puede usar sobre otros, pero no es tan brusco como くせに; no uses くせに hablando de tus superiores."
             },
             {
               "id": "ni-mo-kakawarazu",
@@ -9395,63 +9441,26 @@
               "explain": "Mira la situación: hablando entre amigos, con alegría o disgusto → のに; en discursos, noticias, informes y otras situaciones formales (本日, お越しいただきました) → にもかかわらず. Con sustantivos, のに necesita 「な」 (雨なのに), mientras que にもかかわらず va directamente (雨にもかかわらず)."
             },
             {
-              "id": "question-word-temo",
+              "id": "nagara",
+              "title": "〜ながら (aun sabiendo…)",
               "thisTitle": "〜のに (aunque…, sin embargo)",
-              "diff": "Lo que va delante de のに es un hecho ya ocurrido; ても suele llevar delante una suposición, «aunque (llegara a)…», que puede no haber pasado todavía.",
+              "diff": "のに es coloquial, expresa descontento y sus dos partes pueden referirse a personas distintas; ながら es más formal y las dos partes deben referirse a la misma persona.",
               "this": [
                 {
-                  "tag": "Hecho · aunque…, sin embargo",
-                  "tr": "Ayer llovió y, aun así, mi hermano mayor se fue a jugar al fútbol."
+                  "tag": "Personas distintas en cada parte",
+                  "tr": "Se lo pedí un montón de veces, pero él no me ayudó."
                 }
               ],
               "that": [
                 {
-                  "tag": "ても · hipótesis: aunque",
-                  "tr": "Mañana, aunque llueva, mi hermano mayor irá a jugar al fútbol."
-                },
-                {
-                  "tag": "でも · hipótesis: aunque sea",
-                  "tr": "Mañana, aunque sea un día de lluvia, mi hermano mayor irá a jugar al fútbol."
+                  "tag": "Misma persona · más formal",
+                  "tr": "Él sabía la respuesta y, aun así, no me la dijo."
                 }
               ],
-              "explain": "Mira las palabras de tiempo y la segunda parte: 「昨日」 habla de algo que ya pasó, y la segunda parte lleva un disgusto de «no me lo esperaba» → のに; 「明日」 plantea una hipótesis, «aunque así fuera, lo haría igual» → ても (con sustantivos y adjetivos な se usa でも: 雨でも)."
-            },
-            {
-              "id": "ni-wa-purpose",
-              "title": "〜には (finalidad)",
-              "thisTitle": "〜のに (uso)",
-              "diff": "のに explica de forma objetiva para qué sirve algo y suele ir seguida de 「使う・便利だ」; には lleva la condición de «para lograr…» y puede ir seguida de 「なければならない」.",
-              "this": [
-                {
-                  "tag": "Uso · sirve para…",
-                  "tr": "Estas tijeras se usan para cortar flores."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Para lograrlo → hay que",
-                  "tr": "Para aprobar el N2, tengo que estudiar más."
-                }
-              ],
-              "explain": "Mira la segunda parte: palabras como 「使う」「便利だ」「役に立つ」 que hablan del uso de algo → のに; condiciones que hay que cumplir para alcanzar una meta, como 「〜なければならない」 → には. 「〜のに、〜なければならない」 se entendería fácilmente como «aunque…, sin embargo», así que para hablar de condiciones se usa には."
-            },
-            {
-              "id": "tame-ni",
-              "thisTitle": "〜のに (uso)",
-              "diff": "のに solo va seguida de gasto, necesidad o uso; ために va seguida de la acción que se emprende para un fin.",
-              "this": [
-                {
-                  "tag": "Seguida de un gasto",
-                  "tr": "Estudiar en el extranjero cuesta mucho dinero."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Seguida de una acción",
-                  "tr": "Para estudiar en el extranjero, estoy ahorrando con un trabajo a tiempo parcial."
-                }
-              ],
-              "explain": "Mira la segunda parte: gasto, necesidad o uso, como 「かかる」「必要だ」「便利だ」「使う」 → のに; lo que uno mismo hace para conseguir un fin (アルバイトでためている) → ために. Detrás de のに no va una acción propia."
+              "wrong": {
+                "why": "ながら con el sentido de «aunque» exige que las dos partes se refieran a la misma persona"
+              },
+              "explain": "Comprueba si las dos partes hablan de la misma persona: 「私が頼んだ」 y 「彼は手伝ってくれなかった」 son dos personas → solo vale のに; si es una misma persona que hace algo «aun sabiendo…» (彼は知っていながら) → también vale ながら, más formal que のに. のに es más coloquial y expresa el descontento de forma más directa."
             }
           ]
         }
@@ -9462,7 +9471,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "お〜ください = 「お＋forma ます」＋「ください」: comparte 「ください」 con てください (くださる = dármelo a mí) y comparte 「お＋forma ます」 con お〜になる y お〜する (convierte la acción en lenguaje honorífico)",
+          "note": "Ambas vienen de 「くださる」, cuyo sentido original es «(alguien de rango superior) me da»",
           "items": [
             {
               "id": "te-kudasai",
@@ -9479,44 +9488,7 @@
                   "tr": "Espera un momento, por favor."
                 }
               ],
-              "explain": "Mira la construcción y la situación: お＋forma ます (待ち)＋ください, que suele aparecer con 「少々」 o 「恐れ入りますが」 en tiendas, avisos por megafonía y carteles; entre amigos o compañeros basta con 「待ってください」."
-            },
-            {
-              "id": "o-ni-naru",
-              "diff": "Las dos usan 「お＋forma ます」 para elevar al otro: お〜ください le pide que haga algo; お〜になる describe una acción que hace él.",
-              "this": [
-                {
-                  "tag": "Pedir al otro que lo haga",
-                  "tr": "Escriba aquí su nombre, por favor."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Describir la acción del otro",
-                  "tr": "El presidente está escribiendo una carta ahora."
-                }
-              ],
-              "explain": "Mira si la oración «pide» o «describe»: hablando a un cliente y terminando en ください → le pides que lo haga; con un sujeto como el presidente de la empresa o un cliente y terminando en になる → solo describes con respeto lo que está haciendo. El 「お＋forma ます」 del medio es la misma pieza."
-            },
-            {
-              "id": "o-suru-humble",
-              "diff": "お〜ください pide al otro que haga algo (respeto); お〜する es algo que haces tú por el otro (humildad).",
-              "this": [
-                {
-                  "tag": "Pedir al otro que lo haga",
-                  "tr": "Espere aquí un momento, por favor."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Lo hago yo · humildad",
-                  "tr": "Yo le espero aquí."
-                }
-              ],
-              "wrong": {
-                "why": "お〜する es lenguaje humilde y no sirve para pedir al otro que haga algo"
-              },
-              "explain": "Mira quién realiza la acción: espera el cliente → お待ちください; espero yo → お待ちします. Mezclar las dos en ✗お待ちしてください es muy común, pero equivale a pedirle algo al otro con lenguaje humilde, y es un honorífico incorrecto. Lo mismo con ご〜ください／ご〜する (ご利用ください／ご案内します)."
+              "explain": "El 「ください」 de las dos es el imperativo de くださる. くださる significa originalmente «(alguien de rango superior) me da»; detrás de una acción pasa a ser «hacer algo por mí»: forma て + ください = «hazlo por mí, por favor» → una petición normal (待ってください); お + raíz de la forma ます (お待ち) primero convierte la acción en una expresión respetuosa, y al añadir ください queda «tenga la bondad de…» → una petición más cortés, dirigida a clientes. Fíjate en la construcción y la situación: お + raíz de ます + ください suele aparecer junto a 「少々」 y 「恐れ入りますが」 en tiendas y avisos por megafonía; entre amigos o compañeros basta con 「待ってください」."
             }
           ]
         },
@@ -9543,20 +9515,21 @@
             },
             {
               "id": "o-negau",
-              "diff": "お〜ください es una petición honorífica normal; お〜願います es más solemne y rígida, frecuente en avisos por megafonía y carteles.",
+              "title": "お〜願います (se ruega…)",
+              "diff": "Significan lo mismo; お〜ください es la petición respetuosa habitual y suena natural cara a cara; お〜願います es más solemne y rígida, y se ve sobre todo en carteles y avisos por megafonía.",
               "this": [
                 {
-                  "tag": "Petición honorífica",
-                  "tr": "Es peligroso; esperen detrás de la línea amarilla, por favor."
+                  "tag": "Dicho cara a cara a clientes",
+                  "tr": "Pónganse en una sola fila aquí, por favor."
                 }
               ],
               "that": [
                 {
-                  "tag": "Más solemne · carteles y megafonía",
-                  "tr": "Al subir al tren, tengan cuidado con el escalón, por favor."
+                  "tag": "Carteles, megafonía · más solemne",
+                  "tr": "Se ruega formar una sola fila en este punto."
                 }
               ],
-              "explain": "Las dos se usan en estaciones y tiendas para pedir algo a los clientes. 「お／ご〜願います」 es más solemne y rígida, como un comunicado o un cartel; en la atención diaria, お〜ください ya es muy cortés."
+              "explain": "Las dos frases significan lo mismo, pedir a los clientes que hagan fila, y solo cambia el final. Un dependiente que habla directamente con los clientes → お並びください, cortés y suave; un cartel, un aviso grabado o una norma anunciada a mucha gente → お並び願います, más solemne y más parecido a dictar una norma. Si dudas, お〜ください nunca falla."
             }
           ]
         }
@@ -9566,8 +9539,8 @@
       "id": "o-ni-naru",
       "groups": [
         {
-          "kind": "root",
-          "note": "Todas vienen de 「お＋forma ます」: convertir la acción en un sustantivo con respeto",
+          "kind": "look",
+          "note": "お〜になる ↔ お〜する: solo cambia 「になる／する」",
           "items": [
             {
               "id": "o-suru-humble",
@@ -9584,41 +9557,10 @@
                   "tr": "Yo le llevo el paraguas."
                 }
               ],
-              "explain": "Mira quién realiza la acción: el profesor, un cliente, el otro → お〜になる lo eleva; yo o mi lado → お〜する me rebaja. Las dos son 「お＋forma ます」 y solo se diferencian en el になる／する del final; si las confundes, resultas descortés. Lo mismo con ご〜になる／ご〜する."
-            },
-            {
-              "id": "o-kudasai",
-              "diff": "Las dos usan 「お＋forma ます」 para elevar al otro: お〜になる describe una acción que hace él; お〜ください le pide que haga algo.",
-              "this": [
-                {
-                  "tag": "Describir la acción del otro",
-                  "tr": "El presidente está escribiendo una carta ahora."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Pedir al otro que lo haga",
-                  "tr": "Escriba aquí su nombre, por favor."
-                }
-              ],
-              "explain": "Mira si la oración «describe» o «pide»: con un sujeto como el presidente de la empresa o un cliente y terminando en になる → describes con respeto lo que hace; hablando a un cliente y terminando en ください → le pides que lo haga. El 「お＋forma ます」 del medio es la misma pieza."
-            },
-            {
-              "id": "o-desu-honorific",
-              "diff": "お〜になる describe una acción que hace el otro; お〜です es más breve y suele indicar el estado en que se encuentra el otro en este momento.",
-              "this": [
-                {
-                  "tag": "Acción",
-                  "tr": "El presidente se reunirá con un cliente a las tres."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Estado · ahora mismo",
-                  "tr": "El presidente le está esperando en la sala de visitas."
-                }
-              ],
-              "explain": "Mira si se habla de una acción o de un estado: va a hacer o hizo una acción → お〜になる; «ahora mismo está…», «se encuentra en…», equivalente a 「〜ている」 → お〜です, más breve que 「お待ちになっています」 y muy usado en la atención al público."
+              "wrong": {
+                "why": "お〜になる es lenguaje respetuoso que eleva al otro, así que no se usa para tus propias acciones; hay que decir 「お持ちします」"
+              },
+              "explain": "Las dos frases solo se diferencian en になる／する tras お持ち, pero la dirección del honorífico es justo la contraria. Mira quién hace la acción: el otro, por ejemplo un profesor o un cliente (先生は) → お〜になる, que lo eleva; yo o mi lado (私が) → お〜する, que me rebaja. Si las confundes, resultas descortés: decir お持ちになります de tu propia acción equivale a elevarte a ti mismo. ご〜になる／ご〜する funcionan igual."
             }
           ]
         },
@@ -9645,24 +9587,22 @@
               "explain": "Las dos frases significan lo mismo. Solo por la forma, 読まれる también podría ser pasiva, «ser leído», y hay que deducir por el sujeto que es de respeto; al hablar cara a cara con clientes o superiores, お〜になる es más claro y más cortés, mientras que en noticias y dentro de la empresa se usa mucho れる・られる."
             },
             {
-              "id": "sonkeigo-special-verbs",
-              "diff": "「お〜になる」 solo se usa con verbos que no tienen una forma respetuosa especial; los que la tienen, como 見る, 言う, 来る, usan ご覧になる, おっしゃる, いらっしゃる.",
+              "id": "o-desu-honorific",
+              "title": "〜お〜です (en curso / estado)",
+              "diff": "Significan lo mismo; お〜です es la forma corta de お〜になっている y es muy habitual al atender a visitas.",
               "this": [
                 {
-                  "tag": "Verbo normal",
-                  "tr": "Profesor, ¿ya ha leído este libro?"
+                  "tag": "Forma completa",
+                  "tr": "El presidente de la empresa está esperando en la sala de visitas."
                 }
               ],
               "that": [
                 {
-                  "tag": "Forma especial",
-                  "tr": "Profesor, ¿ya ha visto esta película?"
+                  "tag": "Corta · habitual en recepción",
+                  "tr": "El presidente de la empresa está esperando en la sala de visitas."
                 }
               ],
-              "wrong": {
-                "why": "見る tiene la forma respetuosa especial 「ご覧になる」"
-              },
-              "explain": "Piensa primero si el verbo tiene una forma respetuosa especial: 見る→ご覧になる, 言う→おっしゃる, 行く・来る・いる→いらっしゃる, 食べる→召し上がる; si la tiene, no se usa お〜になる (✗お見になる). 読む, 書く, 帰る y similares no la tienen → お読みになる."
+              "explain": "Las dos frases significan lo mismo: el presidente está ahora esperando en la sala de visitas. お〜です es la forma corta de お〜になっている, y es lo que más usan recepcionistas y secretarias para avisar a las visitas; para una acción concreta ya terminada (お読みになりました) o para pedir al otro que haga algo (お掛けになってください), se usa お〜になる."
             }
           ]
         }
@@ -9672,8 +9612,8 @@
       "id": "o-suru-humble",
       "groups": [
         {
-          "kind": "root",
-          "note": "Todas vienen de 「お＋forma ます」: convertir la acción en un sustantivo con respeto",
+          "kind": "look",
+          "note": "お〜する ↔ お〜になる: solo cambia 「する／になる」",
           "items": [
             {
               "id": "o-ni-naru",
@@ -9690,70 +9630,37 @@
                   "tr": "Profesor, ¿ha traído usted paraguas?"
                 }
               ],
-              "explain": "Mira quién realiza la acción: yo o mi lado → お〜する me rebaja; el profesor, un cliente, el otro → お〜になる lo eleva. Las dos son 「お＋forma ます」 y solo se diferencian en el する／になる del final; si las confundes, resultas descortés. Lo mismo con ご案内する／ご案内になる."
-            },
-            {
-              "id": "o-kudasai",
-              "diff": "お〜する es algo que haces tú por el otro (humildad); お〜ください pide al otro que haga algo (respeto).",
-              "this": [
-                {
-                  "tag": "Lo hago yo · humildad",
-                  "tr": "Yo le espero aquí."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Pedir al otro que lo haga",
-                  "tr": "Espere aquí un momento, por favor."
-                }
-              ],
               "wrong": {
-                "why": "お〜する es lenguaje humilde y no sirve para pedir al otro que haga algo"
+                "why": "お〜になる es lenguaje respetuoso que eleva al otro, así que no se usa para tus propias acciones; hay que decir 「お持ちします」"
               },
-              "explain": "Mira quién realiza la acción: espero yo → お待ちします; espera el cliente → お待ちください. Mezclar las dos en ✗お待ちしてください es muy común, pero equivale a pedirle algo al otro con lenguaje humilde, y es un honorífico incorrecto. Lo mismo con ご案内します／ご利用ください."
-            },
-            {
-              "id": "o-itadaku",
-              "diff": "お〜する es «yo lo hago por usted»; お〜いただく es «usted tiene la amabilidad de hacerlo por mí».",
-              "this": [
-                {
-                  "tag": "Lo hago yo por usted",
-                  "tr": "Yo les explicaré el nuevo plan."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Usted lo hace por mí",
-                  "tr": "El jefe de departamento nos explicó el nuevo plan."
-                }
-              ],
-              "explain": "Mira quién realiza la acción: quien explica soy yo → ご説明します; quien explica es el jefe de departamento o un cliente, y yo soy quien se beneficia → ご説明いただきました, muy usado para dar las gracias (ご協力いただき、ありがとうございます). Lo mismo con お送りします／お送りいただきました."
+              "explain": "Las dos frases solo se diferencian en する／になる tras お持ち, pero la dirección del honorífico es justo la contraria. Mira quién hace la acción: yo o mi lado (私が) → お〜する, que me rebaja; el otro, por ejemplo un profesor o un cliente (先生は) → お〜になる, que lo eleva. Si las confundes, resultas descortés: decir お持ちになります de tu propia acción equivale a elevarte a ti mismo. ご〜する／ご〜になる funcionan igual."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Todas son lenguaje humilde y rebajan las acciones del propio lado",
+          "note": "Ambas significan «(yo) le pregunto a usted»",
           "items": [
             {
               "id": "kenjougo-special-verbs",
-              "diff": "「お〜する」 solo se usa con verbos que no tienen una forma humilde especial; los que la tienen, como 見る, 言う, 行く, usan 拝見する, 申す, 伺う.",
+              "title": "伺う (forma humilde de 聞く)",
+              "diff": "Significan lo mismo; 伺う es el verbo humilde especial de 聞く y es más formal; お聞きする es una forma humilde construida con el patrón お〜する y suena algo más ligera.",
               "this": [
                 {
-                  "tag": "Verbo normal",
-                  "tr": "Mañana le envío los materiales."
+                  "tag": "お〜する · algo más ligero",
+                  "tr": "Profesor, sobre ese asunto, querría preguntarle un par de cosas."
                 }
               ],
               "that": [
                 {
-                  "tag": "Forma especial",
-                  "tr": "Mañana revisaré los materiales."
+                  "tag": "Verbo humilde especial · más formal",
+                  "tr": "Profesor, en relación con ese asunto, desearía consultarle algunas cuestiones."
                 }
               ],
               "wrong": {
-                "why": "見る tiene la forma humilde especial 「拝見する」"
+                "why": "見る no admite el patrón お〜する; hay que usar el verbo humilde especial 「拝見します」"
               },
-              "explain": "Piensa primero si el verbo tiene una forma humilde especial: 見る→拝見する, 言う→申す, 行く・聞く→伺う, いる→おる; si la tiene, no se usa お〜する (✗お見しする). 送る, 持つ, 待つ y similares no la tienen → お送りする, お持ちする."
+              "explain": "Las dos frases preguntan con humildad al profesor y significan lo mismo. 聞く tiene un verbo humilde especial, 伺う, que muestra más respeto y es el más usado en correos de trabajo y al hablar con clientes; お聞きする también es una forma humilde correcta, solo que algo más ligera. No todos los verbos admiten las dos: 送る y 持つ no tienen forma especial, así que solo se dice お送りする; 見る y 言う solo usan sus formas especiales 拝見する y 申す, nunca el patrón お〜する."
             }
           ]
         }
@@ -9782,23 +9689,6 @@
                 }
               ],
               "explain": "Mira cómo se cuenta el número: おき viene de 「置く」 (間を置く = dejar un intervalo) y cuenta los días «que se saltan» en medio, así que hay que sumar uno para saber «cada cuántos días» (1日おき = 2日ごとに). Con unidades continuas como 「分、メートル」 las dos son iguales: 「10分おき」 y 「10分ごとに」 significan cada 10 minutos."
-            },
-            {
-              "id": "ni-kai-frequency",
-              "diff": "おきに indica cuánto hueco queda en medio; に〜回 indica cuántas veces se hace en un periodo. 「１日おき」 = 「２日に１回」.",
-              "this": [
-                {
-                  "tag": "Días que se saltan",
-                  "tr": "Este medicamento se toma un día sí y otro no."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Veces cada tantos días",
-                  "tr": "Este medicamento se toma una vez cada dos días."
-                }
-              ],
-              "explain": "Las dos frases significan lo mismo, aunque los números sean distintos. おきに cuenta los días que se saltan en medio: １日おき = saltar un día = una vez cada dos días; al ver おきに, suma uno al número para saber «cada cuántos días». Para decir varias veces al día, como 「１日に３回」, solo sirve に〜回."
             }
           ]
         }
@@ -9813,37 +9703,42 @@
           "items": [
             {
               "id": "te-shimau",
-              "diff": "〜終わる solo dice de forma objetiva que se terminó; てしまう, además de terminar, a menudo lleva «sin querer, con pena».",
+              "title": "〜てしまう (acabar del todo)",
+              "diff": "〜終わる dice de forma objetiva que la acción llegó a su final; てしまう tiene el matiz de «quitarse algo de encima, dejarlo zanjado».",
               "this": [
                 {
-                  "tag": "Objetivo · terminar",
-                  "tr": "Por fin terminé de escribir el informe."
+                  "tag": "Objetivo · la acción llega a su fin",
+                  "tr": "Tardé dos horas, pero por fin terminé los deberes."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sin querer · pena",
-                  "tr": "Sin darme cuenta, me comí hasta el pastel de mi hermano menor."
+                  "tag": "Quitárselo de encima · zanjarlo",
+                  "tr": "Quitémonos primero de encima esos deberes tan pesados."
                 }
               ],
-              "explain": "Mira los adverbios y el tono: 「やっと」「もう」＋終わった → la acción terminó, sin carga emocional; 「うっかり」「つい」＋てしまった → hiciste algo que no debías y te arrepientes. てしまう también puede significar «terminarlo todo» (宿題を全部やってしまった), pero con el matiz de «quitármelo de encima de una vez»."
+              "explain": "Las dos pueden expresar «terminar». Si solo cuentas una acción de principio a fin (二時間かかって) → 終わる, con tono objetivo; si quieres quitarte algo de encima y zanjarlo, a menudo con 「面倒な」, 「先に」, 「全部」 o 「〜てしまおう」 → てしまう. てしまう también significa «hacer algo sin querer», pero ese es otro uso y no se compara aquí."
             },
             {
-              "id": "kiru-complete",
-              "diff": "使い終わる es «terminar de usar (y dejar de usarlo)»; 使い切る es «gastarlo todo, sin dejar nada».",
+              "id": "ageru-compound",
+              "title": "〜上げる (terminar / completar)",
+              "diff": "〜終わる solo dice que la acción terminó; 〜上げる subraya que, con esfuerzo, se produjo un resultado completo, con sensación de logro.",
               "this": [
                 {
-                  "tag": "Dejar de usar",
-                  "tr": "Cuando termines de usar el ordenador, apágalo, por favor."
+                  "tag": "Objetivo · la acción terminó",
+                  "tr": "Terminé de escribir la tesis."
                 }
               ],
               "that": [
                 {
-                  "tag": "Gastarlo todo · sin dejar nada",
-                  "tr": "Usé el champú hasta la última gota."
+                  "tag": "Obra acabada · sensación de logro",
+                  "tr": "Tras dedicarle un año entero, por fin completé la tesis."
                 }
               ],
-              "explain": "En español las dos podrían traducirse como «terminar de usar», pero no significan lo mismo; mira si queda algo: terminas de usar el ordenador y el ordenador sigue ahí → 使い終わる (fin de la acción); usas el champú hasta vaciar el bote → 使い切る (se agota la cantidad). 「最後まで」 y 「全部」 suelen aparecer con 切る."
+              "wrong": {
+                "why": "食べる no produce ninguna obra acabada, así que no admite 上げる; hay que decir 「食べ終わったら」"
+              },
+              "explain": "Para terminar una tesis valen las dos. 書き終わった solo dice que la acción de escribir llegó a su fin; 書き上げた subraya que, con esfuerzo (一年かけて), por fin se produjo una obra completa, con sensación de logro. 上げる solo se une a acciones que producen algo (書く, 作る, 育てる); para terminar de comer, de leer un libro o de usar algo, solo vale 終わる."
             },
             {
               "id": "nuku",
@@ -9889,7 +9784,7 @@
                   "tr": "Mi madre me obligó a comer verdura."
                 }
               ],
-              "explain": "Mira quién «come»: en la pasiva 食べられた quien come es el hermano menor y yo soy el perjudicado; en させられた quien come soy yo, y es mi madre quien me hizo (obligó a) comer. Con un 「させ」 de más, quien hace la acción pasa del otro a uno mismo. Los verbos godan usan れる (読まれる), igual."
+              "explain": "Mira quién come: en la pasiva 食べられた, quien come es mi hermano menor (弟に) y yo soy el perjudicado; en させられた, quien come soy yo, porque mi madre (母に) me hizo (obligó a) comer. Con el 「させ」 de más, quien hace la acción pasa de ser el otro a ser uno mismo. Los verbos godan usan れる (読まれる) del mismo modo."
             }
           ]
         },
@@ -9913,32 +9808,15 @@
                   "tr": "El profesor me hizo leer mi redacción."
                 }
               ],
-              "explain": "読まれた y 読ませた solo se diferencian en れ／せ. Mira quién realiza la acción: pasiva — quien lee es el profesor, el que va delante de 「に」, y yo soy a quien le leen; causativa — quien lee soy yo, el que va delante de 「に」, y es el profesor quien me hace leer. Si al leer confundes ese kana, el sentido se invierte por completo. Con los verbos ichidan es igual: 食べられる／食べさせる."
+              "explain": "読まれた y 読ませた solo se diferencian en れ／せ. Mira quién hace la acción: en la pasiva, el profesor que va delante de 「に」 es quien lee (先生に), y yo soy quien lo sufre; en la causativa, yo, delante de 「に」, soy quien lee (私に), porque el profesor me lo hizo leer. Si al leer confundes ese único kana, el sentido se invierte por completo. Con los verbos ichidan pasa igual: 食べられる／食べさせる."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "La pasiva y てもらう son «recibir la acción de otro»; la potencial se parece a ことができる; la de respeto se parece a お〜になる y a los verbos respetuosos especiales",
+          "sense": 5,
+          "note": "Ambas significan «poder»",
           "items": [
-            {
-              "id": "te-morau",
-              "thisTitle": "〜れる・〜られる (pasiva)",
-              "diff": "La pasiva suele ser un «me hicieron…» que no deseabas; てもらう es pedir ayuda a alguien y recibir un favor.",
-              "this": [
-                {
-                  "tag": "Sin querer · me hicieron",
-                  "tr": "Un desconocido me hizo una foto."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Beneficio · pedir ayuda",
-                  "tr": "Le pedí a un amigo que me hiciera una foto."
-                }
-              ],
-              "explain": "En las dos frases «el otro hace la acción y yo la recibo»; la diferencia está en el sentimiento: te hace una foto un desconocido, sin que quieras → pasiva 撮られた; se lo pides a un amigo y lo agradeces → 撮ってもらった. La pasiva japonesa de este tipo suele implicar un perjuicio; para expresar un beneficio hay que usar てもらう. Los verbos ichidan usan られる (見られた), igual."
-            },
             {
               "id": "koto-ga-dekiru",
               "thisTitle": "〜られる (potencial)",
@@ -9955,8 +9833,15 @@
                   "tr": "En esta biblioteca se pueden tomar prestados hasta cinco libros."
                 }
               ],
-              "explain": "Significan lo mismo; mira la situación y la partícula: charlando con amigos → la forma potencial es más natural, y el objeto suele pasar a 「が」 (本が借りられる); en avisos, explicaciones y situaciones formales → ことができます, y el objeto mantiene 「を」 (本を借りる). La forma potencial de los verbos godan es del tipo 読める, 書ける."
-            },
+              "explain": "Significan lo mismo; depende sobre todo de la situación: charlando con amigos (con 「よ」 al final) → la forma potencial 借りられる, corta y natural; carteles, explicaciones de normas y situaciones formales → ことができます, formal y escrita. Con la forma potencial, el complemento también se marca a menudo con 「が」 (本が借りられる), mientras que ante ことができる se mantiene 「を」. En los verbos godan, la forma potencial es del tipo 読める, 書ける."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 6,
+          "note": "Ambas elevan la acción del otro",
+          "items": [
             {
               "id": "o-ni-naru",
               "thisTitle": "〜れる・〜られる (respeto)",
@@ -9973,7 +9858,7 @@
                   "tr": "El presidente está leyendo el periódico."
                 }
               ],
-              "explain": "Las dos frases significan lo mismo. Solo por la forma, 読まれる también podría ser pasiva, «ser leído», y hay que deducir por el sujeto que es de respeto; en noticias y dentro de la empresa se usa mucho れる・られる (出席される, 来られる), mientras que al hablar cara a cara con clientes o superiores お〜になる es más claro y más cortés."
+              "explain": "Las dos frases significan lo mismo. Por su forma, 読まれる también podría ser la pasiva «ser leído», así que hay que fijarse en el sujeto (社長は) para saber que es respetuosa; en noticias y dentro de la empresa se usa mucho れる・られる (出席される, 来られる), y al hablar directamente con clientes o superiores, お〜になる es más clara y más cortés."
             },
             {
               "id": "sonkeigo-special-verbs",
@@ -9991,7 +9876,7 @@
                   "tr": "El presidente dijo eso."
                 }
               ],
-              "explain": "「言われました」 puede ser de respeto (el presidente lo dijo) o pasiva (alguien me lo dijo); hay que mirar si delante va 「が」 o 「に」; おっしゃる tiene un solo significado y además es más respetuoso. Lo mismo con 来られる→いらっしゃる y 食べられる→召し上がる. Al hablar con clientes o superiores, da preferencia a la forma especial."
+              "explain": "「言われました」 puede ser respetuoso (el presidente lo dijo) o pasivo (a alguien le dijeron algo); fíjate en si delante va 「が」 o 「に」 (社長が). おっしゃる tiene un solo significado y además es más respetuoso. 来られる → いらっしゃる y 食べられる → 召し上がる funcionan igual. Al hablar con clientes o superiores, usa preferentemente las formas especiales."
             }
           ]
         }
@@ -10001,12 +9886,13 @@
       "id": "question-word-temo",
       "groups": [
         {
-          "kind": "root",
-          "note": "Todas vienen de 「て／で＋も」: originalmente «aunque…, igualmente»",
+          "kind": "look",
+          "note": "«Sustantivo + でも» se escribe exactamente igual: «aunque sea» ↔ «… o algo»",
           "items": [
             {
               "id": "demo-but",
-              "thisTitle": "〜でも (aunque)",
+              "title": "〜でも (invitación o sugerencia suave)",
+              "thisTitle": "〜でも (aunque sea)",
               "diff": "La でも concesiva va seguida de «igualmente…»; la でも de ejemplo va seguida de una invitación o sugerencia.",
               "this": [
                 {
@@ -10020,54 +9906,14 @@
                   "tr": "Si estás libre, ¿nos tomamos un té o algo?"
                 }
               ],
-              "explain": "Mira la segunda parte: si dice algo que no se ve afectado y ocurre igualmente → aunque; si es una invitación o sugerencia como 「〜ませんか」「〜ましょう」 → da un ejemplo cualquiera para suavizar el tono."
-            },
-            {
-              "id": "te-mo-ii",
-              "thisTitle": "〜ても (aunque)",
-              "diff": "ても es «aunque…, igualmente»; ても＋いい es «aunque lo hagas, está bien» = poder, expresa permiso.",
-              "this": [
-                {
-                  "tag": "Aunque…, igualmente",
-                  "tr": "Aunque te comas este pastel, no vas a engordar."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Permiso · poder",
-                  "tr": "Puedes comerte este pastel, ¿eh?"
-                }
-              ],
-              "explain": "Mira qué va detrás de ても: si sigue un resultado de «igualmente / no afecta» (太らない) → aunque…; si va directamente 「いい」 (o 「かまわない」) → «aunque lo hagas, está bien», es decir, el permiso «puedes…». てもいい viene precisamente de ても."
+              "explain": "Las dos frases son «sustantivo + でも» y se escriben exactamente igual, así que mira la segunda parte: si es algo que ocurre igualmente, sin verse afectado (試合はあります) → concesiva «aunque sea…, igualmente»; si es una invitación o sugerencia como 「〜ませんか」 o 「〜ましょう」 (飲みませんか) → un ejemplo cualquiera, «… o algo», que suaviza el tono."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Todas expresan un contraste con lo esperado: «aunque…», «a pesar de que…»",
+          "note": "Ambas significan «aunque…, igualmente»",
           "items": [
-            {
-              "id": "noni-usage",
-              "title": "〜のに (aunque…, sin embargo)",
-              "diff": "ても suele plantear una hipótesis, «aunque (llegara a)…», que puede no haber pasado todavía; delante de のに va un hecho ya ocurrido, con disgusto.",
-              "this": [
-                {
-                  "tag": "ても · hipótesis: aunque",
-                  "tr": "Mañana, aunque llueva, mi hermano mayor irá a jugar al fútbol."
-                },
-                {
-                  "tag": "でも · hipótesis: aunque sea",
-                  "tr": "Mañana, aunque sea un día de lluvia, mi hermano mayor irá a jugar al fútbol."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Hecho · aunque…, sin embargo",
-                  "tr": "Ayer llovió y, aun así, mi hermano mayor se fue a jugar al fútbol."
-                }
-              ],
-              "explain": "Mira las palabras de tiempo y la segunda parte: 「明日」 plantea una hipótesis, «aunque así fuera, lo haría igual» → ても (con sustantivos y adjetivos な se usa でも: 雨でも); 「昨日」 habla de algo que ya pasó, y la segunda parte lleva un disgusto de «no me lo esperaba» → のに."
-            },
             {
               "id": "tatte",
               "diff": "Significan lo mismo; たって／だって es la versión coloquial más informal de ても／でも.",
@@ -10088,6 +9934,28 @@
                 }
               ],
               "explain": "Las dos frases significan lo mismo; mira el registro: entre amigos o en familia, hablando sin cuidado → たって (con sustantivos y adjetivos な se usa だって: 雨だって); al escribir o hablar con un superior → ても／でも. たって solo se usa en la lengua hablada."
+            },
+            {
+              "id": "tomo-even-if",
+              "title": "〜とも (adjetivo + とも)",
+              "thisTitle": "〜ても (adjetivos: aunque…)",
+              "diff": "Significan lo mismo; ても es la forma normal, usada tanto al hablar como al escribir; とも es una forma escrita con sabor clásico, propia sobre todo de discursos y textos.",
+              "this": [
+                {
+                  "tag": "Normal · oral",
+                  "tr": "Por muy duro que sea, voy a correr hasta el final."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Escrito · sabor clásico",
+                  "tr": "Por penoso que resulte, correré hasta el final."
+                }
+              ],
+              "wrong": {
+                "why": "とも no se une a la forma て de los verbos; hay que decir 「降っても」 o, en registro escrito, 「降ろうとも」"
+              },
+              "explain": "Significan lo mismo; mira el registro: en la conversación diaria (con 「よ」 al final) → 苦しくても; en discursos, textos, declaraciones de determinación y otros contextos escritos o solemnes → 苦しくとも, con sabor clásico. とも solo se une a la forma en 「く」 de los adjetivos y a la forma volitiva (言おうとも); tras la forma て de un verbo no se puede cambiar por とも."
             }
           ]
         }
@@ -10098,27 +9966,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas expresan plural: «…s, estos…»",
+          "note": "Ambas forman el plural de personas («nosotros», «ellos»)",
           "items": [
             {
               "id": "tachi-plural",
-              "diff": "ら también puede ir con palabras que señalan cosas, como 「これ・それ」; たち, en principio, solo va con personas.",
+              "thisTitle": "〜ら (plural de pronombres personales)",
+              "diff": "ら con pronombres personales (僕ら, 俺ら) es muy informal y no se usa con superiores; たち es neutro y sirve con cualquiera.",
               "this": [
                 {
-                  "tag": "Con cosas",
-                  "tr": "Lean estos materiales, por favor."
+                  "tag": "Entre amigos · informal",
+                  "tr": "Mañana también volvemos juntos a casa, ¿vale?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Con personas",
-                  "tr": "Los niños están jugando en el parque."
+                  "tag": "A un superior · neutro",
+                  "tr": "Profesor, ¿podemos volver con usted nosotros también?"
                 }
               ],
-              "wrong": {
-                "why": "「たち」 solo va con personas (o animales tratados como personas)"
-              },
-              "explain": "Mira a qué se une: palabras que señalan cosas como これ, それ → solo ら (これら, それら, más bien escrito); personas (私, 子ども, 学生) → たち es lo más normal. ら con personas (僕ら, お前ら) es más informal que たち, y en las noticias 「選手ら」 suena objetivo."
+              "explain": "Las dos significan «nosotros»; mira a quién le hablas: entre amigos, de forma relajada → 僕ら, 俺ら, más informales; a un profesor o a un superior (先生, …いいですか) → usa 僕たち o 私たち. たち es neutro y sirve en cualquier situación, así que, si dudas, usa たち."
             }
           ]
         }
@@ -10129,7 +9995,8 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "La らしい de suposición se parece a そうだ y ようだ (todas son «parece que»); la らしい de «propio de…» se parece a っぽい",
+          "sense": 1,
+          "note": "Ambas expresan suposición: «parece que…»",
           "items": [
             {
               "id": "sou-da-appearance",
@@ -10147,7 +10014,7 @@
                   "tr": "Este pastel tiene una pinta buenísima."
                 }
               ],
-              "explain": "Mira la fuente de la información: solo lo has oído y no lo has probado → おいしいらしい; el pastel está delante de ti → おいしそう. Ojo también con la conexión: らしい va con la forma simple (おいしい＋らしい), そうだ va con la raíz (おいし＋そう)."
+              "explain": "Mira de dónde viene la información: solo lo has oído de otros (友達の話では) y no lo has probado → おいしいらしい; el pastel está justo delante de ti → おいしそう. Fíjate también en la conexión: らしい va tras la forma llana (おいしい + らしい), y そうだ tras la raíz (おいし + そう)."
             },
             {
               "id": "you-da",
@@ -10165,8 +10032,15 @@
                   "tr": "Se oye ruido en la habitación de al lado; parece que hay alguien."
                 }
               ],
-              "explain": "Mira en qué se basa el juicio: información indirecta como rumores o lo que dicen otros → らしい, y el hablante parece distante y sin hacerse responsable; pistas directas que has oído o visto tú → ようだ／みたいだ."
-            },
+              "explain": "Mira en qué se basa el juicio: información indirecta como rumores (うわさでは) o lo que dicen otros → らしい, con la que el hablante suena distante, como si no se hiciera responsable; pistas directas que tú mismo has oído o visto (音がする) → ようだ／みたいだ."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Ambas significan «como…, parecido a…»",
+          "items": [
             {
               "id": "ppoi",
               "thisTitle": "〜らしい (típico)",
@@ -10183,7 +10057,7 @@
                   "tr": "Aunque ya es universitario, mi hermano mayor tiene una forma de pensar infantil."
                 }
               ],
-              "explain": "Mira si el sujeto es de verdad lo que dice el sustantivo: el hermano de cinco años ya es un niño y tiene todo el aire de un niño → 子どもらしい (inocente y adorable, positivo); un universitario ya no es un niño, pero se comporta como tal → 子どもっぽい (infantil, negativo). 「春らしい」 y 「男らしい」 también significan «muy propio de lo que debe ser…»."
+              "explain": "Fíjate en si el sujeto es realmente lo que dice el sustantivo: un hermano de cinco años (５歳の弟は) ya es un niño y además se comporta como tal → 子どもらしい (inocente y encantador, positivo); un universitario ya no es un niño (もう大学生なのに) y aun así parece uno → 子どもっぽい (infantil, negativo). 「春らしい」 y 「男らしい」 también significan «tal como debe ser…»."
             }
           ]
         }
