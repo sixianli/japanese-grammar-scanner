@@ -21,6 +21,7 @@ API_URL = os.environ.get("OPENCODE_URL", "https://opencode.ai/zen/go/v1/chat/com
 SESSION_ID = "contrast-review-" + hashlib.sha256(str(time.time()).encode()).hexdigest()[:16]
 USER_AGENT = "jgs-contrast-review/1.0"
 MODEL = "deepseek-v4.1-flash"
+REASONING_EFFORT = "high"
 PRICE_PER_MTOK = {"input": 0.3, "cached": 0.006, "output": 1.2}
 KIND_HEADINGS = {"root": "## 同一个词变来的", "look": "## 长得像的", "meaning": "## 意思差不多的"}
 
@@ -119,7 +120,7 @@ def review_items(base, points):
 
 def prompt_version():
     rules = "\n".join(standard_rules(k) for k in KIND_HEADINGS)
-    return hashlib.sha256((MODEL + SYSTEM + rules).encode("utf-8")).hexdigest()[:16]
+    return hashlib.sha256((MODEL + REASONING_EFFORT + SYSTEM + rules).encode("utf-8")).hexdigest()[:16]
 
 
 def content_hash(payload):
@@ -171,6 +172,7 @@ def call_model(payload, timeout=180, retries=4):
     body = json.dumps({
         "model": MODEL,
         "temperature": 0,
+        "reasoning_effort": REASONING_EFFORT,
         "response_format": {"type": "json_object"},
         "messages": [{"role": "system", "content": system_message(payload["kind"])},
                      {"role": "user", "content": user_message(payload)}],
@@ -192,7 +194,7 @@ def call_model(payload, timeout=180, retries=4):
             if e.code in (401, 403):
                 raise SystemExit(f"opencode 拒绝了请求（{e.code}）：{e.read()[:300]!r}")
             err = e
-        except (urllib.error.URLError, TimeoutError, KeyError, ValueError) as e:
+        except (urllib.error.URLError, OSError, KeyError, ValueError) as e:
             err = e
         time.sleep(2 ** attempt * 3)
     raise RuntimeError(f"模型调用失败：{err}")
