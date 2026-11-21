@@ -61,10 +61,14 @@ Build 17 包含的内容（详见 PR #6 描述）：Build 16 的全部反馈修�
 1. 在 Records 页左下角点「Act As iCloud Account...」，登录提交这条反馈时 iPhone 上用的 Apple ID（也就是记录的创建者），再查询 Feedback、下载截图。能下载 → 推测成立；仍然报错 → 不是权限问题，改为提交 Apple Feedback（附上记录名和时间）。
 2. 也可以在 Development 环境用开发版提交一条带截图的反馈，对照下载结果。
 
-修法候选（等反馈批次结束、用户确认后再做，属于「隐私与合规」大改动，需先出方案）：
-- 推荐：在 schema 里新建一个自定义角色（例如「反馈查看者」），只给它 Feedback 的读取权限，把开发者自己的 iCloud 用户记录加入这个角色；之后在控制台用「Act As iCloud Account」以开发者账号查看所有反馈截图。不对 `_world` 开放，符合现在的隐私设定。`.ckdb` 语法支持自定义角色（Apple 文档 Integrating a Text-Based Schema into Your Workflow 里的 create-role 规则）；把开发者的用户记录加进角色要在控制台里操作。先在 Development 验证能下载截图，再部署 Production。不涉及 App 代码，不需要新 Build。
-- 不推荐：恢复 `GRANT READ TO "_world"`（任何装了 App 的人都能读到别人的反馈和截图，`tools/validate_compliance.py` 会拦）；启用服务器密钥转发（用户已拒绝）。
-- 门槛：`tools/validate_compliance.py` 加一条规则，要求 Feedback 有且只有这个自定义角色和 `_creator` 能读。控制台下载本身无法在 CI 里自动测，手动验收写进 `docs/feedback/SETUP.md`。
+用户的决定（2026-11-21）：**Feedback 和 UsageDay 都恢复成所有人可读（`GRANT READ TO "_world"`）**，让开发者在 CloudKit 后台直接看到文字和截图、读到使用统计，不需要每次用「Act As iCloud Account」登录。用户已知道风险：越狱后往 App 里注入代码的人能读到全部反馈，用户表示不考虑这种情况。之前提过的「自定义开发者角色」方案，用户不想多做一步，**不采用，不要再提**。等用户说「反馈完了」再和其它反馈一起改。
+
+要一起改的地方：
+1. `cloudkit/schema.ckdb`：Feedback、UsageDay 各加回 `GRANT READ TO "_world"`（保留 `GRANT WRITE TO "_creator"`、`GRANT CREATE TO "_icloud"`）。写入权限仍然不对 `_world` 开放。
+2. `tools/validate_compliance.py` 约 214–218 行：现在的规则拦截对 `_world` 开放任何权限。改成只拦 `_world` 的 WRITE / CREATE，允许 READ；并要求 Feedback、UsageDay 必须有 `_world` READ（防止以后又被收紧、开发者再次看不到截图）。按 CLAUDE.md，旧规则对应的测试/断言一起改。
+3. `docs/feedback/SETUP.md` 第 85 行「不对所有人（`_world`）开放」的说明，以及本文 §5 同样的说法，改成新设定。
+4. 隐私政策（`LegalContent.swift` 的 feedback 段）写的是「发送给开发者……不会提供给任何第三方」，放开读取后仍成立，按用户意见可不改；改的时候再核对一次 `validate_compliance.py` 是否要求更新 `privacyUpdated` / `privacyInventoryHash`。
+5. 部署：schema 改动推上 PR 后由 `cloudkit-schema.yml` 自动导入 Development；先在 Development 用开发版提交一条带截图的反馈，确认后台（不用 Act As）能直接下载截图、能查询 UsageDay；然后在 CloudKit Console 把 schema 部署到 Production（不可撤销的生产变更，部署前问用户）。不涉及 App 代码，不需要新 Build。
 
 ---
 
