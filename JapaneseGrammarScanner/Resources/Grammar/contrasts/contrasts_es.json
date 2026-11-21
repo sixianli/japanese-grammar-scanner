@@ -558,20 +558,20 @@
             {
               "id": "you-ni-mieru",
               "title": "〜ように見える（suposición）",
-              "diff": "ようだ es una deducción que el hablante cree; ように見える solo dice que por fuera lo parece, y puede no ser verdad.",
+              "diff": "ようだ puede deducir a partir de todo tipo de indicios —sonidos, palabras, la situación—; ように見える se basa solo en lo que se ve por fuera.",
               "this": [
                 {
-                  "tag": "Juicio propio",
-                  "tr": "Parece que está enfadado."
+                  "tag": "Por la voz u otros indicios",
+                  "tr": "Por su voz al teléfono, parece que está enfadado."
                 }
               ],
               "that": [
                 {
-                  "tag": "Solo la apariencia",
-                  "tr": "Parece enfadado, pero en realidad no lo está."
+                  "tag": "Por el aspecto",
+                  "tr": "Al verle la cara, parece enfadado."
                 }
               ],
-              "explain": "Las dos oraciones deducen «parece que está enfadado» por su aspecto. Cuál elegir: ようだ es el juicio del propio hablante, que básicamente se lo cree; ように見える solo dice «por fuera parece así» y deja margen, por eso puede seguir 「が、本当は怒っていない」 para desmentirlo. Si se pone eso detrás de ようだ, la oración se contradice."
+              "explain": "Las dos frases deducen “parece que está enfadado”; la diferencia está en la base del juicio. ように見える se basa solo en el aspecto exterior, como la cara; ようだ puede basarse en cualquier indicio: la voz, lo que alguien dijo, la situación. Por eso, cuando la base no es algo que se ve, como 「声を聞くと」, solo sirve ようだ; cuando se basa en la cara o el aspecto, valen los dos, y ように見える resalta más “a la vista parece así”."
             }
           ]
         },
@@ -5582,33 +5582,9 @@
       "id": "ya-nado",
       "groups": [
         {
-          "kind": "look",
-          "note": "「本やノート」↔「本とノート」 solo cambian や／と: una deja entender que hay más; la otra, que eso es todo",
-          "items": [
-            {
-              "id": "to-quotation",
-              "title": "〜と (enumeración)",
-              "diff": "や〜など solo da algunos ejemplos y deja entender que hay más; と lo enumera todo.",
-              "this": [
-                {
-                  "tag": "Ejemplos · hay más",
-                  "tr": "En la mochila hay libros, cuadernos y otras cosas."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Lista completa",
-                  "tr": "En la mochila hay un libro y un cuaderno (solo eso)."
-                }
-              ],
-              "explain": "Las dos oraciones solo cambian や／と: 「本やノート」 (a menudo con など) elige unos pocos ejemplos representativos, y en la mochila hay más cosas; 「本とノート」 es la lista completa, y en la mochila solo hay esas dos."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
+          "note": "Ambos significan enumerar: “A, B…”",
           "sense": 1,
-          "note": "Las dos dan algunos ejemplos y dejan entender que hay más",
           "items": [
             {
               "id": "tari-tari",
@@ -5647,13 +5623,31 @@
                 }
               ],
               "explain": "Fíjate en el tono: en oraciones con です・ます y por escrito → や〜など; entre amigos, de forma informal → とか〜とか. Además, とか puede ir tras un verbo (掃除するとか), pero や no."
+            },
+            {
+              "id": "to-quotation",
+              "title": "〜と (enumeración)",
+              "diff": "Los dos unen cosas como “A y B”; や〜など solo nombra algunos ejemplos representativos e insinúa que hay más; と lo enumera todo: no hay nada más.",
+              "this": [
+                {
+                  "tag": "Solo ejemplos · hay más",
+                  "tr": "En la bolsa hay libros, cuadernos y otras cosas."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Lista completa · nada más",
+                  "tr": "En la bolsa hay un libro y un cuaderno (solo esas dos cosas)."
+                }
+              ],
+              "explain": "Cuándo elegir cada uno: si solo eliges algunos ejemplos representativos y en la bolsa en realidad hay más cosas → 「本やノートなど」; si en la bolsa solo están esas cosas y las nombras todas → 「本とノート」. Por や o と, quien escucha sabe si la lista está completa."
             }
           ]
         },
         {
           "kind": "meaning",
-          "sense": 3,
           "note": "Las dos dan algún ejemplo para hacer una propuesta",
+          "sense": 3,
           "items": [
             {
               "id": "nanka",
@@ -13128,20 +13122,20 @@
             {
               "id": "gachi",
               "title": "〜がち (a menudo…)",
-              "diff": "やすい se centra en condiciones o características que facilitan que pase algo malo, y el sujeto puede ser una cosa; がち se centra en que una persona realmente lo hace a menudo, y solo se usa para cosas malas.",
+              "diff": "やすい dice que algo ocurre con facilidad por ciertas condiciones o por su naturaleza; がち dice que de hecho ocurre a menudo, con un tono de reproche o fastidio: “otra vez lo mismo”.",
               "this": [
                 {
-                  "tag": "Por las condiciones · fácil que pase",
-                  "tr": "En invierno el aire está seco y es fácil que se irrite la garganta."
+                  "tag": "Por las condiciones · ocurre fácil",
+                  "tr": "Cuando uno está cansado, comete errores con facilidad."
                 }
               ],
               "that": [
                 {
-                  "tag": "Pasa a menudo · mal hábito",
-                  "tr": "Los días libres suelo quedarme dormido sin querer."
+                  "tag": "Ocurre a menudo · otra vez",
+                  "tr": "Cuando estoy cansado, sin darme cuenta suelo cometer errores."
                 }
               ],
-              "explain": "Las dos pueden decir que algo malo «tiende a pasar»: 「寒いと風邪をひきやすい」 y 「寒いと風邪をひきがちだ」 suenan naturales. La diferencia está en el enfoque: si una condición o característica hace que algo pase con facilidad (空気が乾燥して…), y el sujeto también puede ser una cosa → やすい; si una persona realmente lo hace a menudo, con un tono de queja de «otra vez lo mismo», muchas veces junto a 「つい」 o 「どうしても」 → がち. がち solo se usa para cosas malas."
+              "explain": "Los dos pueden decir que algo malo “ocurre fácilmente”, y a menudo se intercambian. Cuándo elegir cada uno: si solo dices que, por ciertas condiciones o por naturaleza, algo ocurre con facilidad —una tendencia— → やすい; si dices que de hecho pasa a menudo, con reproche o fastidio del tipo “otra vez lo mismo” → がち, a menudo con 「つい」 o 「どうしても」 en la frase. がち solo se usa para cosas malas."
             },
             {
               "id": "ppoi",
@@ -13283,31 +13277,27 @@
               "id": "you-da",
               "title": "〜ようだ (deducción)",
               "thisTitle": "〜ような・〜ように (comparación)",
-              "diff": "Las dos vienen de 「よう」 = aspecto: ような／ように dentro de la frase modifican lo que sigue y sirven sobre todo para comparar; ようだ al final de la frase suele expresar una deducción a partir de lo que se ve («parece que…»).",
+              "diff": "Ambos vienen de 「よう」 = aspecto: “parece A, pero no es A” → comparación; “tiene aspecto de A y puede que de verdad sea A” → deducción.",
               "this": [
                 {
-                  "tag": "ような · modifica un sustantivo",
-                  "tr": "Es una historia que parece un sueño."
-                },
-                {
-                  "tag": "ように · modifica el predicado",
-                  "tr": "Fue un día tan divertido como un sueño."
+                  "tag": "Comparación · se sabe que no es",
+                  "tr": "Es una historia como de sueño."
                 }
               ],
               "that": [
                 {
-                  "tag": "Final de frase · deducción",
-                  "tr": "La luz está apagada. Parece que no hay nadie en casa."
+                  "tag": "Deducción · por lo que se ve",
+                  "tr": "Las luces están apagadas. Parece que no hay nadie en casa."
                 }
               ],
-              "explain": "En los dos casos 「よう」 significa «aspecto». 「夢のような話」「夢のように楽しい」 = con aspecto de sueño → comparación; detrás sigue un sustantivo o un predicado, y delante suele ir 「まるで」. Al final de la frase, 「留守のようだ」 = tiene aspecto de que no hay nadie → deducción del hablante, «parece que…», a partir de lo que ve (電気が消えている). Fíjate en la posición: dentro de la frase, modificando lo que sigue → comparación; al final de la frase, con una pista visible antes → deducción."
+              "explain": "En los dos, 「よう」 significa “aspecto”. Siguiendo “parece A”, cuando sabes que no es A y solo usas A como comparación → comparación: 「夢のような話」 —la historia no es un sueño de verdad— y delante suele ir 「まるで」. Siguiendo “tiene aspecto de A”, cuando por lo que ves (電気が消えている) juzgas que puede que de verdad sea A → deducción: 「留守のようだ」. Fíjate en la base: 「まるで」 y saber que no es así → comparación; una situación observada y adivinar lo que pasa realmente → deducción. No te guíes solo por la posición: ようだ al final de la frase también puede ser una comparación (まるで夢のようだ)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "sense": 1,
           "note": "Ambas expresan «como…»",
+          "sense": 1,
           "items": [
             {
               "id": "ka-no-you-da",
@@ -13351,29 +13341,29 @@
         },
         {
           "kind": "meaning",
-          "sense": 4,
           "note": "Ambas expresan «para…»",
+          "sense": 4,
           "items": [
             {
               "id": "tame-ni",
               "thisTitle": "〜ように (finalidad)",
-              "diff": "Antes de ように van estados, como la forma potencial o la negativa; antes de ために van acciones que uno puede controlar.",
+              "diff": "ように va con verbos potenciales o cambios que no controlas (話せる, 見える, 上手になる); ために va con acciones que decides hacer tú mismo.",
               "this": [
                 {
-                  "tag": "Forma potencial · estado",
+                  "tag": "Verbo potencial",
                   "tr": "Estudio todos los días para poder hablar japonés."
                 }
               ],
               "that": [
                 {
                   "tag": "Acción voluntaria",
-                  "tr": "Estudio todos los días para aprobar el N1."
+                  "tr": "Estudio todos los días para ir a estudiar a Japón."
                 }
               ],
               "wrong": {
-                "why": "Después de la forma potencial hay que usar ように"
+                "why": "「話せる」 es un verbo potencial; para expresar finalidad con él se usa ように"
               },
-              "explain": "Fíjate en el verbo que va antes de ように／ため: formas potenciales, negativas y estados que se dan solos, como 「話せる」「忘れない」「見える」 → ように; 「合格する」, una acción que uno decide hacer → ために."
+              "explain": "Los dos significan “para…”. Fíjate en el verbo que va antes de ように／ため: verbos potenciales como 「話せる」「見える」, o cambios que no controlas como 「上手になる」 → ように; una acción que decides hacer tú mismo, como 「留学する」 → ために."
             }
           ]
         }
@@ -24535,20 +24525,23 @@
             },
             {
               "id": "sou-da-appearance",
-              "diff": "そうだ es la impresión directa a primera vista; ように見える suele llevar el matiz de «parece así, pero quizá no lo sea», y puede ir tras una oración entera.",
+              "diff": "そうだ se une a la raíz y es una impresión directa a simple vista; ように見える se une a la forma simple y subraya que así se ve por fuera, dejando margen en el juicio.",
               "this": [
                 {
-                  "tag": "Apariencia · quizá no",
-                  "tr": "Parece que no tiene ninguna preocupación, pero en realidad lo ha pasado muy mal."
+                  "tag": "Forma simple · así se ve",
+                  "tr": "Parece que no se encuentra bien."
                 }
               ],
               "that": [
                 {
-                  "tag": "Impresión directa",
-                  "tr": "Los niños juegan con cara de estar pasándolo muy bien."
+                  "tag": "Raíz · impresión directa",
+                  "tr": "Se le ve muy mal."
                 }
               ],
-              "explain": "そう va tras la raíz (楽し＋そう、おいし＋そう) y es la sensación directa al ver el aspecto en ese momento; ように見える va tras la forma llana y admite una oración completa con 「ない」「ている」「た」, etc., y a menudo va con 「が、実は……」 para decir «en apariencia…»."
+              "wrong": {
+                "why": "ように見える necesita la forma simple 「悪い」; no puede unirse solo a la raíz 「悪」 como hace そうだ"
+              },
+              "explain": "Las dos frases dicen “parece que se encuentra mal”. Primero mira cómo se unen: そうだ va con la raíz de adjetivos y verbos (悪＋そうだ, 元気＋そうだ); ように見える va con la forma simple (悪い＋ように見える) y también admite una oración completa con 「ている」「た」「ない」. En el matiz, そうだ es una impresión directa a simple vista; ように見える subraya “así se ve por fuera” y deja margen en el juicio del hablante."
             }
           ]
         }
@@ -24591,11 +24584,11 @@
               ],
               "that": [
                 {
-                  "tag": "En su mente · sin intención",
-                  "tr": "Por lo visto, no tiene ninguna intención de pedir perdón por iniciativa propia."
+                  "tag": "Lo declara él · sin intención",
+                  "tr": "Dice que no tiene ninguna intención de disculparse por su cuenta."
                 }
               ],
-              "explain": "Las dos significan «no tener voluntad de hacerlo». Fíjate en si se habla de la intención en la mente o de la actitud que se ve: contar lo que piensa alguien con 「らしい」「と言っている」, o hablar de uno mismo (私は〜つもりはない) → つもりはない; 「何度言っても」, los demás insisten y él simplemente no actúa, mientras quien habla se impacienta → ようとしない, casi siempre sobre otras personas."
+              "explain": "Los dos significan “no tener voluntad de hacerlo”. Fíjate en si se habla de la intención que alguien tiene en mente o de la actitud que se ve: cuando la propia persona declara su intención —contado con 「と言っている」, o hablando de uno mismo (私は〜つもりはない)— → つもりはない; con 「何度言っても」, los demás insisten una y otra vez y él simplemente no actúa, mientras el hablante lo observa impaciente y molesto → ようとしない, que se dice sobre todo de otras personas."
             }
           ]
         }
@@ -34782,7 +34775,7 @@
                   "tr": "Si fuera un niño, todavía; pero que un adulto llore por algo así…"
                 }
               ],
-              "explain": "Mira si delante hay 「は」 o 「なら」: は = A es un tema real que simplemente se deja para luego; なら = hipótesis, A no es la realidad (quien tenemos delante es un adulto, no un niño), y detrás suele venir una crítica o queja."
+              "explain": "El sentido original de 「ともかく」 es “sea como sea, dejarlo a un lado”. はともかく = dejar a un lado un tema real A que tienes delante (「味」) y pasar el foco a lo que sigue (「量が少なすぎる」); ならともかく = dejar a un lado una A hipotética —“si fuera A, podría pasarlo por alto”— para resaltar que la realidad no es A (quien está delante es un adulto, no un niño), por eso suele seguir una crítica o una queja. Mira qué va antes de ともかく: は → A es un tema real que solo se deja para después; なら → A es una hipótesis y la realidad no es A."
             }
           ]
         },
@@ -34792,20 +34785,20 @@
           "items": [
             {
               "id": "wa-sateoki",
-              "diff": "はともかく es «A aparte, ¿qué tal B?», con una valoración por contraste; はさておき aparca un tema para pasar a lo principal.",
+              "diff": "Ambos significan “dejar A a un lado”; はともかく es más coloquial y suele insinuar que A tiene algún problema en el que no se quiere entrar; はさておき es algo más formal y solo aparca A por ahora, sin juzgarlo.",
               "this": [
                 {
-                  "tag": "A aparte · valorar B",
-                  "tr": "El aspecto de este plato es lo de menos; de sabor está bueno."
+                  "tag": "Coloquial · insinúa que A falla",
+                  "tr": "Dejando aparte el presupuesto, el contenido del proyecto está bastante bien."
                 }
               ],
               "that": [
                 {
-                  "tag": "Aparcar → ir al grano",
-                  "tr": "Bromas aparte, vamos a entrar ya en materia."
+                  "tag": "Formal · solo se aparca",
+                  "tr": "Dejando de lado por ahora el tema del presupuesto, primero les explicaré el contenido del proyecto."
                 }
               ],
-              "explain": "Mira qué hace la segunda parte: si contrasta A con B y valora B (A no es gran cosa, B está bien) → はともかく; si pasa al tema que de verdad se quiere tratar (本題に入る) → はさておき; 「冗談はさておき」 y 「それはさておき」 son expresiones fijas."
+              "explain": "Muchas veces se pueden intercambiar: tanto 「予算はともかく、まず中身を見よう」 como 「予算はさておき、まず中身を見よう」 suenan naturales. Cuándo elegir cada uno: hablando de forma informal con amigos o compañeros, con la idea implícita de “A tiene algún problema, pero no entremos en eso”, y normalmente seguido de una valoración de B → はともかく; en situaciones formales como reuniones, presentaciones o discursos, cuando solo se aparca A para hablar primero de B, sin juzgar A → はさておき. 「冗談はさておき」 también es una expresión fija frecuente con esta forma."
             },
             {
               "id": "wa-betsu-to-shite",
@@ -35230,13 +35223,13 @@
               "that": [
                 {
                   "tag": "Caso especial · otro asunto",
-                  "tr": "Dejando aparte a los menores, repartimos el cuestionario a todos."
+                  "tr": "Dejando aparte a los menores, repartí el cuestionario a todos los demás."
                 }
               ],
               "wrong": {
                 "why": "は別として no puede modificar directamente a un sustantivo como 「を除く」 + sustantivo"
               },
-              "explain": "Las dos pueden significar «excepto…». を除いて saca una parte de forma objetiva; en avisos y normas se escribe a menudo 「を除き」, y puede ir justo delante de un sustantivo, como en 「を除く全員」; は別として tiene el tono de «esa parte es un caso especial, otro asunto», solo se intercala en la oración y no puede modificar directamente a un sustantivo. Fíjate en si le sigue directamente un sustantivo (〜を除く全員) para distinguirlas."
+              "explain": "Los dos pueden significar “excepto…”. を除いて separa una parte de forma objetiva; en avisos y normas se escribe a menudo 「を除き」, y puede ir directamente delante de un sustantivo: 「を除く全員」. En este uso de “excepto”, は別として tiene el matiz de “esa parte es un caso especial, otro asunto”; solo puede ir insertado en medio de la frase, así que después hace falta 「ほかの全員」, y no puede modificar directamente a un sustantivo. Fíjate en si le sigue inmediatamente un sustantivo (〜を除く全員) para distinguirlos."
             }
           ]
         }
@@ -35852,7 +35845,7 @@
                   "tr": "Yo, al llegar la noche, siempre cierro con llave (me esfuerzo en hacerlo)."
                 }
               ],
-              "explain": "Solo cambia なる por する: con ようになっている el sujeto es una máquina o un sistema y el verbo es intransitivo (このドアは, 自動で鍵がかかる): está diseñado así; con ようにしている el sujeto es una persona (私は) y el verbo es transitivo (鍵をかける), a menudo con 「必ず」 o 「なるべく」: uno lo mantiene a propósito."
+              "explain": "Solo cambia なって por して: con ようになっている el sujeto suele ser una máquina, un sistema o unas normas (このドアは), y significa que está configurado para funcionar así, a menudo con 「自動で」; con ようにしている el sujeto es una persona (私は), y significa que se esfuerza conscientemente por hacerlo siempre, a menudo con 「必ず」 o 「なるべく」. Mira si es 「なって」 o 「して」 y luego si el sujeto es una cosa o una persona."
             }
           ]
         },
@@ -36054,17 +36047,17 @@
               "diff": "Ambas son «quería pero no llegué a hacerlo»; ずじまい es irlo dejando hasta que al final nunca se hizo, 損ねる es perder una ocasión concreta.",
               "this": [
                 {
-                  "tag": "Al final nunca · lo fue dejando",
-                  "tr": "Al final, nunca llegué a ver esa película."
+                  "tag": "Nunca lo hizo · hasta el final",
+                  "tr": "Estaba tan ocupado que al final no vi esa película ni una sola vez."
                 }
               ],
               "that": [
                 {
-                  "tag": "Se pasó el momento · una ocasión",
-                  "tr": "Me quedé dormido y me perdí esa película."
+                  "tag": "Despiste · se perdió una vez",
+                  "tr": "Por un despiste me perdí la emisión de esa película."
                 }
               ],
-              "explain": "Las dos expresan pesar; la diferencia es el tiempo. ずじまい abarca un periodo en el que nunca llegaste a hacerlo, y al final (結局, とうとう) todo terminó así, sin más ocasiones. 損ねる habla de una sola ocasión perdida (寝坊して, うっかり). Con 「結局」 delante → ずじまい; con una causa puntual como 「寝坊して」 → 損ねる."
+              "explain": "Los dos expresan la pena de “quería hacerlo pero no pude”; la diferencia es el lapso de tiempo. ずじまい indica que durante todo un periodo nunca llegaste a hacerlo y al final todo terminó así; suele ir con 「一度も」 o 「とうとう」. 損ねる indica que perdiste una oportunidad concreta, se te pasó ese momento, a menudo por una causa puntual como 「うっかり」. Si ves 「一度も」 —no hacerlo en todo ese tiempo— → ずじまい; perder una ocasión por 「うっかり」 → 損ねる."
             }
           ]
         }

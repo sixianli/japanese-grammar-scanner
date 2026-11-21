@@ -558,20 +558,20 @@
             {
               "id": "you-ni-mieru",
               "title": "〜ように見える (suy đoán)",
-              "diff": "ようだ là suy đoán người nói tự tin là đúng; ように見える chỉ nói bề ngoài trông như vậy, chưa chắc là thật.",
+              "diff": "ようだ có thể suy đoán dựa trên đủ loại dấu hiệu như giọng nói, lời nói, tình hình; ように見える chỉ dựa vào vẻ bề ngoài mắt nhìn thấy.",
               "this": [
                 {
-                  "tag": "Phán đoán của mình",
-                  "tr": "Hình như anh ấy đang giận."
+                  "tag": "Dựa vào giọng nói, dấu hiệu",
+                  "tr": "Nghe giọng anh ấy qua điện thoại thì có vẻ anh ấy đang giận."
                 }
               ],
               "that": [
                 {
-                  "tag": "Chỉ là bề ngoài",
-                  "tr": "Anh ấy trông như đang giận, nhưng thật ra không hề giận."
+                  "tag": "Dựa vào vẻ ngoài",
+                  "tr": "Nhìn mặt thì anh ấy trông như đang giận."
                 }
               ],
-              "explain": "Cả hai câu đều dựa vào dáng vẻ mà suy đoán “hình như anh ấy đang giận”. Khi nào chọn cái nào: ようだ là phán đoán của chính người nói, về cơ bản họ tin như vậy; ように見える chỉ nói “bề ngoài trông như vậy”, phán đoán còn để ngỏ, nên phía sau có thể nối 「が、本当は怒っていない」 để phủ nhận nó; nối như vậy sau ようだ thì tự mâu thuẫn."
+              "explain": "Cả hai câu đều suy đoán “anh ấy có vẻ đang giận”, khác nhau ở căn cứ phán đoán. ように見える chỉ dựa vào vẻ bề ngoài, sắc mặt mắt nhìn thấy; ようだ có thể dựa vào giọng nói, lời nói, tình hình xung quanh và nhiều dấu hiệu khác. Vì vậy khi căn cứ không phải là thứ nhìn thấy, như 「声を聞くと」, chỉ dùng được ようだ; khi dựa vào sắc mặt, vẻ ngoài thì cả hai đều dùng được, ように見える nhấn mạnh hơn vào “trông có vẻ như vậy”."
             }
           ]
         },
@@ -5582,33 +5582,9 @@
       "id": "ya-nado",
       "groups": [
         {
-          "kind": "look",
-          "note": "「本やノート」↔「本とノート」 chỉ khác や／と: một câu là còn thứ khác, một câu là chỉ có vậy",
-          "items": [
-            {
-              "id": "to-quotation",
-              "title": "〜と (liệt kê song song)",
-              "diff": "や〜など chỉ nêu vài ví dụ, ngụ ý còn thứ khác; と liệt kê toàn bộ.",
-              "this": [
-                {
-                  "tag": "Ví dụ · còn thứ khác",
-                  "tr": "Trong cặp có sách, vở, v.v."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Liệt kê toàn bộ",
-                  "tr": "Trong cặp có sách và vở (chỉ hai thứ này)."
-                }
-              ],
-              "explain": "Hai câu chỉ khác や／と: 「本やノート」 (hay đi cùng など) chỉ chọn vài thứ tiêu biểu, trong cặp còn có đồ khác; 「本とノート」 liệt kê ra là toàn bộ, trong cặp chỉ có hai thứ này."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
+          "note": "Đều biểu thị liệt kê “A, B…”",
           "sense": 1,
-          "note": "Đều là “nêu vài ví dụ, ngụ ý còn thứ khác”",
           "items": [
             {
               "id": "tari-tari",
@@ -5647,13 +5623,31 @@
                 }
               ],
               "explain": "Nhìn giọng điệu: câu です・ます, trong bài viết → や〜など; bạn bè nói chuyện thoải mái → とか〜とか. Ngoài ra とか còn đi được với động từ (掃除するとか), や thì không."
+            },
+            {
+              "id": "to-quotation",
+              "title": "〜と (liệt kê song song)",
+              "diff": "Cả hai đều nối các thứ lại thành “A và B”; や〜など chỉ nêu vài thứ tiêu biểu, ngầm ý còn thứ khác; と liệt kê tất cả, chỉ có những thứ đó.",
+              "this": [
+                {
+                  "tag": "Chỉ nêu ví dụ · còn thứ khác",
+                  "tr": "Trong cặp có sách, vở, v.v."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Liệt kê đủ · chỉ có vậy",
+                  "tr": "Trong cặp có sách và vở (chỉ hai thứ này)."
+                }
+              ],
+              "explain": "Khi nào chọn cái nào: chỉ chọn vài thứ tiêu biểu để nói, trong cặp thật ra còn đồ khác → 「本やノートなど」; trong cặp chỉ có mấy thứ này và muốn nói đủ → 「本とノート」. Nghe や hay と là người nghe biết danh sách đã đầy đủ hay chưa."
             }
           ]
         },
         {
           "kind": "meaning",
-          "sense": 3,
           "note": "Đều là “nêu ví dụ để đề nghị”",
+          "sense": 3,
           "items": [
             {
               "id": "nanka",
@@ -13128,20 +13122,20 @@
             {
               "id": "gachi",
               "title": "〜がち (thường hay…)",
-              "diff": "やすい nhấn mạnh điều kiện, tính chất khiến chuyện không hay dễ xảy ra, chủ ngữ có thể là đồ vật; がち nhấn mạnh con người thực tế hay như vậy, chỉ dùng cho chuyện không hay.",
+              "diff": "やすい nói trong điều kiện nào đó hoặc do tính chất mà dễ xảy ra; がち nói thực tế thường xuyên như vậy, kèm cảm giác tự trách hoặc bực bội “lại thế nữa rồi”.",
               "this": [
                 {
                   "tag": "Do điều kiện · dễ xảy ra",
-                  "tr": "Mùa đông không khí khô nên dễ bị đau họng."
+                  "tr": "Hễ mệt là dễ mắc lỗi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Thực tế hay như vậy · thói quen xấu",
-                  "tr": "Ngày nghỉ tôi hay lỡ ngủ quên."
+                  "tag": "Thực tế hay xảy ra · lại thế",
+                  "tr": "Hễ mệt là tôi hay vô ý mắc lỗi."
                 }
               ],
-              "explain": "Cả hai đều nói được chuyện không hay “dễ xảy ra”, như 「寒いと風邪をひきやすい」「寒いと風邪をひきがちだ」 đều tự nhiên. Khác ở trọng tâm: nói điều kiện, tính chất nào đó khiến sự việc dễ xảy ra (空気が乾燥して…), chủ ngữ có thể là đồ vật → やすい; nói con người thực tế thường như vậy, mang sự bực bội “lại thế rồi”, hay đi cùng 「つい」「どうしても」 → がち. がち chỉ dùng cho chuyện không hay."
+              "explain": "Cả hai đều có thể nói chuyện không hay “dễ xảy ra”, thường thay cho nhau được. Khi nào chọn cái nào: chỉ nói trong điều kiện nào đó hoặc do tính chất mà dễ xảy ra, tức là một khuynh hướng → やすい; nói thực tế thường xuyên như vậy, kèm tự trách hoặc bực bội kiểu “lại thế nữa rồi” → がち, trong câu thường có 「つい」 「どうしても」. がち chỉ dùng cho chuyện không hay."
             },
             {
               "id": "ppoi",
@@ -13283,31 +13277,27 @@
               "id": "you-da",
               "title": "〜ようだ (suy đoán)",
               "thisTitle": "〜ような・〜ように (so sánh ví von)",
-              "diff": "Đều từ 「よう」＝dáng vẻ: ような／ように nằm giữa câu bổ nghĩa cho phía sau, thường dùng để ví von; ようだ ở cuối câu còn hay diễn tả suy đoán sau khi nhìn thấy tình hình (hình như…).",
+              "diff": "Cả hai đều từ 「よう」 = dáng vẻ mà ra: “giống dáng vẻ của A nhưng thật ra không phải A” → so sánh ví von; “trông có dáng vẻ là A, có thể thật sự là A” → suy đoán.",
               "this": [
                 {
-                  "tag": "ような · bổ nghĩa cho danh từ",
+                  "tag": "Ví von · biết là không phải",
                   "tr": "Đúng là chuyện như trong mơ."
-                },
-                {
-                  "tag": "ように · bổ nghĩa cho vị ngữ",
-                  "tr": "Đó là một ngày vui như trong mơ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cuối câu · suy đoán",
+                  "tag": "Suy đoán · dựa vào điều thấy",
                   "tr": "Đèn tắt rồi. Hình như không có ai ở nhà."
                 }
               ],
-              "explain": "「よう」 ở cả hai bên đều là “dáng vẻ”. 「夢のような話」「夢のように楽しい」＝dáng vẻ như giấc mơ → ví von, phía sau còn nối danh từ hoặc vị ngữ, phía trước hay có 「まるで」; cuối câu 「留守のようだ」＝trông có vẻ không có ai ở nhà → suy đoán “hình như…” của người nói dựa trên điều nhìn thấy (電気が消えている). Nhìn vị trí: ở giữa câu bổ nghĩa cho phía sau → ví von; đặt cuối câu, phía trước có manh mối nhìn thấy → suy đoán."
+              "explain": "Ở cả hai bên, 「よう」 đều là “dáng vẻ”. Đi theo hướng “giống dáng vẻ của A”, biết rõ không phải A mà chỉ mượn A để so sánh → ví von: 「夢のような話」, câu chuyện vốn không phải là mơ, phía trước thường có 「まるで」. Đi theo hướng “trông có dáng vẻ là A”, dựa vào tình hình nhìn thấy (電気が消えている) mà phán đoán thực tế có thể là A → suy đoán: 「留守のようだ」. Hãy xem căn cứ: có 「まるで」, biết rõ không phải → ví von; có tình hình quan sát được, đang đoán sự thật → suy đoán. Đừng chỉ nhìn vị trí: ようだ ở cuối câu cũng có thể là ví von (まるで夢のようだ)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "sense": 1,
           "note": "Đều diễn tả “giống như…”",
+          "sense": 1,
           "items": [
             {
               "id": "ka-no-you-da",
@@ -13351,29 +13341,29 @@
         },
         {
           "kind": "meaning",
-          "sense": 4,
           "note": "Đều diễn tả “để…”",
+          "sense": 4,
           "items": [
             {
               "id": "tame-ni",
               "thisTitle": "〜ように (mục đích)",
-              "diff": "ように đứng sau trạng thái như thể khả năng, thể phủ định…; ために đứng sau hành động mình kiểm soát được.",
+              "diff": "Trước ように là động từ khả năng hoặc sự thay đổi mình không tự điều khiển được (話せる、見える、上手になる); trước ために là hành động do mình tự quyết định làm.",
               "this": [
                 {
-                  "tag": "Thể khả năng · trạng thái",
-                  "tr": "Để nói được tiếng Nhật, ngày nào tôi cũng học."
+                  "tag": "Động từ khả năng",
+                  "tr": "Tôi học mỗi ngày để có thể nói được tiếng Nhật."
                 }
               ],
               "that": [
                 {
                   "tag": "Hành động có chủ ý",
-                  "tr": "Để đỗ N1, ngày nào tôi cũng học."
+                  "tr": "Tôi học mỗi ngày để đi du học Nhật Bản."
                 }
               ],
               "wrong": {
-                "why": "Sau thể khả năng phải dùng ように"
+                "why": "「話せる」 là động từ khả năng, muốn biểu thị mục đích phải dùng ように"
               },
-              "explain": "Nhìn động từ đứng trước ように／ため: thể khả năng, thể phủ định, trạng thái tự nhiên xảy ra như 「話せる」「忘れない」「見える」 → ように; 「合格する」 là hành động mình quyết định làm → ために."
+              "explain": "Cả hai đều là “để…”. Hãy xem động từ trước ように／ため: động từ khả năng như 「話せる」「見える」, hoặc sự thay đổi không tự điều khiển được như 「上手になる」 → ように; hành động do mình tự quyết định làm như 「留学する」 → ために."
             }
           ]
         }
@@ -24535,20 +24525,23 @@
             },
             {
               "id": "sou-da-appearance",
-              "diff": "そうだ là ấn tượng trực tiếp khi nhìn thoáng qua; ように見える thường mang ý “trông thì vậy, thực tế chưa chắc”, và gắn được với cả một câu.",
+              "diff": "そうだ gắn vào gốc từ, là ấn tượng trực tiếp khi vừa nhìn thấy; ように見える gắn vào thể thông thường, nhấn mạnh vẻ bề ngoài trông như vậy, phán đoán còn để ngỏ.",
               "this": [
                 {
-                  "tag": "Bề ngoài · Chưa chắc vậy",
-                  "tr": "Anh ấy trông như chẳng có phiền muộn gì, thật ra đã chịu không ít vất vả."
+                  "tag": "Thể thông thường · trông như vậy",
+                  "tr": "Anh ấy trông như không được khỏe."
                 }
               ],
               "that": [
                 {
-                  "tag": "Ấn tượng trực tiếp",
-                  "tr": "Bọn trẻ đang chơi có vẻ rất vui."
+                  "tag": "Gốc từ · ấn tượng trực tiếp",
+                  "tr": "Trông anh ấy có vẻ rất mệt trong người."
                 }
               ],
-              "explain": "そう gắn với gốc từ (楽し＋そう、おいし＋そう), là cảm nhận trực tiếp về dáng vẻ đang thấy; ように見える gắn với thể thường, có thể mang cả một câu hoàn chỉnh có 「ない」「ている」「た」, thường đi với 「が、実は……」 để nói “bề ngoài thì…”."
+              "wrong": {
+                "why": "ように見える phải gắn vào thể thông thường 「悪い」, không thể chỉ gắn vào gốc 「悪」 như そうだ"
+              },
+              "explain": "Cả hai câu đều nói “trông không được khỏe”. Trước hết xem cách nối: そうだ gắn vào gốc của tính từ, động từ (悪＋そうだ、元気＋そうだ); ように見える gắn vào thể thông thường (悪い＋ように見える), còn có thể nhận cả một câu hoàn chỉnh có 「ている」「た」「ない」. Về sắc thái, そうだ là ấn tượng trực tiếp khi vừa nhìn thấy; ように見える nhấn mạnh “bề ngoài trông như vậy”, phán đoán của người nói còn để ngỏ."
             }
           ]
         }
@@ -24591,11 +24584,11 @@
               ],
               "that": [
                 {
-                  "tag": "Trong lòng · không có ý định",
-                  "tr": "Nghe nói anh ta hoàn toàn không có ý định tự mình xin lỗi."
+                  "tag": "Tự nói ra · không định",
+                  "tr": "Anh ấy nói là không hề định tự mình xin lỗi."
                 }
               ],
-              "explain": "Cả hai đều là “không có ý muốn làm”. Xem đang nói về ý định trong lòng hay thái độ trước mắt: dùng 「らしい」「と言っている」 để thuật lại suy nghĩ của người đó, hoặc nói về bản thân (私は〜つもりはない) → つもりはない; 「何度言っても」, người khác yêu cầu mãi mà anh ta vẫn không làm, người nói sốt ruột, bất mãn → ようとしない, chủ yếu nói về người khác."
+              "explain": "Cả hai đều là “không có ý muốn làm”. Hãy xem đang nói về dự định trong lòng hay thái độ trước mắt: chính người đó nói rõ suy nghĩ của mình — thuật lại bằng 「と言っている」, hoặc nói về bản thân (私は〜つもりはない) → つもりはない; 「何度言っても」, người khác yêu cầu mãi mà anh ta vẫn không chịu làm, người nói đứng ngoài nhìn thấy sốt ruột, bất mãn → ようとしない, chủ yếu dùng để nói về người khác."
             }
           ]
         }
@@ -34782,7 +34775,7 @@
                   "tr": "Trẻ con thì còn đỡ, đằng này người lớn mà lại khóc vì chuyện cỏn con thế."
                 }
               ],
-              "explain": "Xem phía trước là 「は」 hay 「なら」: は ＝ A là chủ đề có thật, chỉ là tạm chưa bàn; なら ＝ giả định, A thực ra không phải là thực tế (trước mắt là người lớn, không phải trẻ con), phía sau thường là phê phán, bất mãn."
+              "explain": "Nghĩa gốc của 「ともかく」 là “dù thế nào thì cũng tạm gác lại”. はともかく = tạm gác chủ đề A có thật ngay trước mắt (「味」) và chuyển trọng tâm sang vế sau (「量が少なすぎる」); ならともかく = gác lại một A giả định — “nếu là A thì còn có thể bỏ qua” — để làm nổi bật rằng thực tế không phải A (trước mắt là người lớn, không phải trẻ con), vì vậy vế sau thường mang ý phê phán, bất mãn. Hãy xem trước ともかく là 「は」 hay 「なら」: は → A là chủ đề có thật, chỉ tạm chưa bàn; なら → A là giả định, thực tế không phải A."
             }
           ]
         },
@@ -34792,20 +34785,20 @@
           "items": [
             {
               "id": "wa-sateoki",
-              "diff": "はともかく là “A tạm chưa nói, B thì thế nào”, mang ý so sánh đánh giá; はさておき là gác chủ đề lại, chuyển vào vấn đề chính.",
+              "diff": "Cả hai đều là “tạm gác A sang một bên”; はともかく mang tính khẩu ngữ, thường ngầm ý bản thân A có vấn đề nhưng tạm không truy cứu; はさておき trang trọng hơn một chút, chỉ tạm gác A lại mà không đánh giá A.",
               "this": [
                 {
-                  "tag": "A tạm chưa nói · đánh giá B",
-                  "tr": "Món này hình thức thì chưa bàn, chứ vị thì ngon."
+                  "tag": "Khẩu ngữ · ngầm ý A có vấn đề",
+                  "tr": "Ngân sách thì chưa nói, chứ nội dung kế hoạch khá được đấy."
                 }
               ],
               "that": [
                 {
-                  "tag": "Gác lại → vào vấn đề chính",
-                  "tr": "Chuyện đùa tạm gác sang một bên, chúng ta vào vấn đề chính thôi."
+                  "tag": "Trang trọng · chỉ tạm gác lại",
+                  "tr": "Chuyện ngân sách xin tạm gác lại, trước hết tôi xin trình bày nội dung kế hoạch."
                 }
               ],
-              "explain": "Xem nửa câu sau đang làm gì: đem A so với B, đưa ra đánh giá về B (A không ra sao, B thì được) → はともかく; chuyển sang chủ đề thật sự muốn bàn (本題に入る) → はさておき, 「冗談はさておき」「それはさておき」 là cách nói cố định."
+              "explain": "Hai cách này thường thay cho nhau được: 「予算はともかく、まず中身を見よう」 và 「予算はさておき、まず中身を見よう」 đều tự nhiên. Khi nào chọn cái nào: nói chuyện thoải mái với bạn bè, đồng nghiệp, ngầm ý “bản thân A có chút vấn đề, nhưng tạm không truy cứu”, phía sau thường là lời đánh giá B → はともかく; trong những dịp trang trọng như cuộc họp, buổi thuyết trình, bài phát biểu, chỉ tạm gác A để nói B trước, không đánh giá A → はさておき. 「冗談はさておき」 cũng là cách nói cố định thường dùng của nó."
             },
             {
               "id": "wa-betsu-to-shite",
@@ -35230,13 +35223,13 @@
               "that": [
                 {
                   "tag": "Trường hợp đặc biệt · để riêng",
-                  "tr": "Người chưa thành niên thì để riêng, còn lại ai cũng được phát phiếu khảo sát."
+                  "tr": "Người chưa thành niên thì để riêng, tôi đã phát phiếu khảo sát cho tất cả những người còn lại."
                 }
               ],
               "wrong": {
                 "why": "は別として không bổ nghĩa trực tiếp cho danh từ như 「を除く」＋danh từ"
               },
-              "explain": "Cả hai đều nói được “ngoại trừ…”. を除いて là tách một phần ra một cách khách quan, trong thông báo, quy định hay viết 「を除き」, và có thể đặt ngay trước danh từ như 「を除く全員」; は別として mang giọng “phần đó là trường hợp đặc biệt, để riêng ra”, chỉ chèn vào giữa câu, không bổ nghĩa trực tiếp cho danh từ được. Xem ngay phía sau có danh từ hay không (〜を除く全員) là phân biệt được."
+              "explain": "Cả hai đều có thể nói “ngoại trừ…”. を除いて là tách một phần ra một cách khách quan; trong thông báo, quy định thường viết 「を除き」, và có thể đứng ngay trước danh từ như 「を除く全員」. Trong cách dùng “ngoại trừ” này, は別として mang sắc thái “phần đó là trường hợp đặc biệt, để riêng ra”; nó chỉ chen vào giữa câu, nên phía sau phải nói 「ほかの全員」, không thể bổ nghĩa trực tiếp cho danh từ. Xem ngay phía sau có danh từ hay không (〜を除く全員) là phân biệt được."
             }
           ]
         }
@@ -35852,7 +35845,7 @@
                   "tr": "Cứ đến tối là tôi nhất định khóa cửa (luôn duy trì như vậy)."
                 }
               ],
-              "explain": "Chỉ khác なる và する: ようになっている có chủ ngữ là máy móc, hệ thống, động từ là tự động từ (このドアは、自動で鍵がかかる), nghĩa là vốn được thiết kế như vậy; ようにしている có chủ ngữ là người (私は), động từ là tha động từ (鍵をかける), hay có 「必ず」「なるべく」, nghĩa là tự mình cố ý duy trì."
+              "explain": "Chỉ khác なって／して: ようになっている có chủ ngữ thường là máy móc, hệ thống, chế độ (このドアは), nói rằng vốn đã được thiết lập như vậy, hay đi với 「自動で」; ようにしている có chủ ngữ là người (私は), nói rằng bản thân có ý thức duy trì làm việc đó, hay đi với 「必ず」 「なるべく」. Xem là 「なって」 hay 「して」, rồi xem chủ ngữ là đồ vật hay con người là phân biệt được."
             }
           ]
         },
@@ -36054,17 +36047,17 @@
               "diff": "Đều là “muốn làm mà không làm được”; ずじまい là cứ lần lữa mãi rồi rốt cuộc không làm, 損ねる là lỡ mất một cơ hội nào đó.",
               "this": [
                 {
-                  "tag": "Rốt cuộc không · cứ để đó",
-                  "tr": "Rốt cuộc, bộ phim đó tôi vẫn chẳng xem được."
+                  "tag": "Mãi không làm · đến cùng",
+                  "tr": "Bận quá, rốt cuộc bộ phim đó tôi không xem được lần nào."
                 }
               ],
               "that": [
                 {
-                  "tag": "Lỡ thời điểm · một lần",
-                  "tr": "Tôi ngủ quên nên lỡ mất bộ phim đó."
+                  "tag": "Sơ ý · lỡ một lần",
+                  "tr": "Tôi sơ ý bỏ lỡ buổi chiếu bộ phim đó trên tivi."
                 }
               ],
-              "explain": "Cả hai đều mang tiếc nuối; khác nhau ở thời gian. ずじまい nói về cả một khoảng thời gian mà mình mãi không làm, đến cuối cùng (結局, とうとう) mọi chuyện kết thúc như thế, không còn cơ hội. 損ねる nói về một lần lỡ cơ hội (寝坊して, うっかり). Phía trước có 「結局」 → ずじまい; có nguyên nhân một lần như 「寝坊して」 → 損ねる."
+              "explain": "Cả hai đều mang nỗi tiếc “muốn làm mà không làm được”, khác nhau ở khoảng thời gian. ずじまい là suốt một khoảng thời gian không làm, cuối cùng mọi chuyện kết thúc như vậy, thường đi với 「一度も」 「とうとう」; 損ねる là để lỡ một cơ hội nào đó, bỏ qua thời điểm ấy, thường kèm nguyên nhân nhất thời như 「うっかり」. Thấy 「一度も」, tức là suốt cả quãng thời gian không làm → ずじまい; vì 「うっかり」 mà lỡ một lần → 損ねる."
             }
           ]
         }
