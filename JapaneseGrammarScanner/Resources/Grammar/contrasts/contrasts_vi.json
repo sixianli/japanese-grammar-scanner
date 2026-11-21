@@ -8146,82 +8146,64 @@
           "items": [
             {
               "id": "made-until",
-              "diff": "までに là hoàn thành một lần trước thời điểm đó; まで là kéo dài liên tục cho đến lúc đó.",
+              "diff": "まで là hành động kéo dài liên tục đến mốc đó; までに là hoàn thành một lần trước mốc đó.",
               "this": [
                 {
-                  "tag": "Hoàn thành trước…",
-                  "tr": "Tôi sẽ về trước năm giờ."
+                  "tag": "hoàn thành trước…",
+                  "tr": "Tôi sẽ về trước 5 giờ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Kéo dài đến",
-                  "tr": "Tôi sẽ đợi đến năm giờ."
+                  "tag": "kéo dài đến…",
+                  "tr": "Tôi sẽ đợi đến 5 giờ."
                 }
               ],
               "wrong": {
-                "why": "「出す」 là hành động diễn ra một lần, phải dùng までに"
+                "why": "「出す」 là hành động xảy ra một lần, nên phải dùng までに."
               },
-              "explain": "Xem động từ phía sau: hành động hoàn thành ngay một lúc như 帰る、出す、着く → までに; hành động có thể kéo dài như 待つ、働く、勉強する → まで."
+              "explain": "Nghĩa gốc của 「まで」 là “đến một mốc nào đó”. Dùng まで một mình thì hành động kéo dài liên tục đến mốc đó: hành động có thể kéo dài như 待っています → まで (đợi đến 5 giờ). Thêm 「に」 chỉ thời điểm vào sau mốc thì mốc đó trở thành một thời điểm, và hành động phải hoàn thành trước khi thời điểm đó đến: hành động xong ngay trong một lần như 帰ります、出す → までに (về trước 5 giờ). Vì vậy hãy xem động từ phía sau là hành động kéo dài hay hoàn thành trong một lần."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều xác định thời gian cho hành động: vào đúng lúc đó, hoặc trước lúc đó",
+          "note": "Đều mang nghĩa “trước khi…”",
           "items": [
             {
               "id": "mae-ni",
-              "diff": "までに vạch ra một hạn chót; 前に chỉ nói việc nào trước, việc nào sau.",
+              "diff": "までに vạch ra hạn chót, xong lúc nào trước đó cũng được; 前に chỉ nói việc nào trước, việc nào sau.",
               "this": [
                 {
-                  "tag": "Hạn chót",
-                  "tr": "Trước khi đi ngủ phải làm xong bài tập."
+                  "tag": "hạn chót",
+                  "tr": "Phải làm xong bài tập trước giờ đi ngủ (muộn nhất là lúc đó)."
                 }
               ],
               "that": [
                 {
-                  "tag": "Trình tự trước sau",
-                  "tr": "Trước khi đi ngủ phải đánh răng."
+                  "tag": "thứ tự trước sau",
+                  "tr": "Làm xong bài tập rồi hẵng đi ngủ."
                 }
               ],
-              "explain": "Cả hai câu phía trước đều là 「寝る」, khác nhau ở phía sau: までに là thời hạn, bài tập chỉ cần làm xong vào bất cứ lúc nào trước khi ngủ là được; 前に chỉ nói trình tự — đánh răng trước, rồi đi ngủ."
+              "explain": "Cả hai câu đều đúng, chỉ khác まで và 前. までに coi 「寝る」 là hạn chót: muộn nhất là trước khi ngủ phải xong, làm lúc nào trong khoảng đó cũng được, giống như đặt thời hạn; 前に chỉ nói thứ tự: làm bài tập trước, rồi mới ngủ. Chỉ nói trình tự làm việc (như đánh răng trước khi ngủ) thì dùng 前に; nói thời hạn nộp đồ, hoàn thành nhiệm vụ thì dùng までに."
             },
             {
               "id": "uchi-ni",
               "title": "〜ないうちに",
-              "diff": "までに lấy một thời điểm rõ ràng làm hạn; ないうちに là “nhân lúc tình hình chưa thay đổi, mau…”.",
+              "diff": "までに coi sự việc đó là hạn chót; ないうちに là “nhân lúc chưa… thì tranh thủ”, mang cảm giác gấp gáp.",
               "this": [
                 {
-                  "tag": "Thời hạn rõ ràng",
-                  "tr": "Về trước sáu giờ thôi."
+                  "tag": "hạn chót",
+                  "tr": "Về trước khi trời tối nhé."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nhân lúc chưa thay đổi",
-                  "tr": "Về nhân lúc trời chưa tối thôi."
+                  "tag": "nhân lúc chưa · gấp",
+                  "tr": "Tranh thủ về khi trời còn chưa tối nhé."
                 }
               ],
-              "explain": "Xem phía trước là gì: giờ giấc, ngày tháng → までに; trạng thái sắp thay đổi như 「暗くならない」, 「雨が降らない」, 「冷めない」 → ないうちに, mang cảm giác cấp bách “phải tranh thủ, không thì muộn mất”."
-            },
-            {
-              "id": "ni-destination-target",
-              "title": "〜に（thời điểm）",
-              "diff": "までに là bất cứ lúc nào trước thời điểm đó; に là đúng vào thời điểm đó.",
-              "this": [
-                {
-                  "tag": "Trước thời hạn",
-                  "tr": "Ngày mai vui lòng đến trước chín giờ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Đúng lúc đó",
-                  "tr": "Ngày mai vui lòng đến lúc chín giờ."
-                }
-              ],
-              "explain": "Chỉ khác 「まで」: 「９時までに」 là thời hạn, đến lúc tám giờ, tám rưỡi đều được, miễn là không muộn hơn chín giờ; 「９時に」 là đúng lúc chín giờ."
+              "explain": "Cả hai câu đều là “về trước khi trời tối”. までに đi với thể khẳng định (暗くなる), coi lúc trời tối là hạn chót, chỉ cần không muộn hơn lúc đó là được, giọng điệu bình thản; ないうちに đi với thể phủ định (暗くならない), nghĩa là “nhân lúc bây giờ còn chưa…”, mang cảm giác gấp gáp “không đi ngay thì muộn mất”. Những việc có thời hạn rõ ràng như nộp đồ, làm thủ tục thì thường nói までに."
             }
           ]
         }
@@ -8237,77 +8219,69 @@
             {
               "id": "mama-ni-follow",
               "title": "〜られるままに",
-              "diff": "たまま là giữ nguyên một trạng thái rồi làm việc khác; 言われるままに là “người khác nói sao làm vậy”, mặc cho người ta sắp đặt.",
+              "diff": "たまま là giữ nguyên một trạng thái mà làm việc khác; 言われるままに là “người ta bảo sao làm vậy”, để mặc người khác điều khiển.",
               "this": [
                 {
-                  "tag": "Giữ nguyên trạng thái",
-                  "tr": "Tôi để nguyên cửa sổ mở rồi đi ra ngoài mất."
+                  "tag": "giữ nguyên trạng thái",
+                  "tr": "Tôi để nguyên cửa sổ mở mà ra ngoài mất rồi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Mặc cho người ta sắp đặt",
-                  "tr": "Nhân viên nói gì tôi nghe nấy, kết quả mua phải bộ quần áo đắt tiền."
+                  "tag": "để người khác điều khiển",
+                  "tr": "Nhân viên cửa hàng bảo gì tôi nghe nấy, kết quả là mua phải bộ quần áo đắt tiền."
                 }
               ],
-              "explain": "「まま」 nghĩa gốc là “giữ nguyên như cũ”. Xem phía trước: thể た (開けた) → trạng thái sau hành động được giữ nguyên; những từ như 「言われる」, 「思う」, 「気の向く」＋ままに → làm y theo lời người khác hoặc tâm trạng của mình."
+              "explain": "Nghĩa gốc của 「まま」 là “giữ nguyên như cũ”. Hãy nhìn phía trước: た形 (開けた) → trạng thái sau hành động được giữ nguyên; các từ như 「言われる」「思う」「気の向く」 + ままに → làm đúng theo lời người khác hoặc theo cảm hứng của mình."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều liên quan đến việc “giữ nguyên một trạng thái”",
+          "sense": 1,
+          "note": "Đều mang nghĩa “để nguyên ở một trạng thái rồi mặc kệ”",
           "items": [
             {
               "id": "ppanashi",
-              "diff": "たまま có thể chỉ miêu tả khách quan; っぱなし nhấn mạnh “để mặc đó”, thường kèm bất mãn.",
+              "diff": "たまま có thể chỉ mô tả khách quan; っぱなし nhấn mạnh “để đó mặc kệ”, thường kèm sự bực bội.",
               "this": [
                 {
-                  "tag": "Làm việc khi vẫn giữ trạng thái",
-                  "tr": "Mệt quá, tôi để nguyên đèn rồi ngủ thiếp đi."
+                  "tag": "làm việc khi đang ở trạng thái",
+                  "tr": "Mệt quá nên tôi để nguyên đèn mà ngủ mất."
                 }
               ],
               "that": [
                 {
-                  "tag": "Để mặc đó · bất mãn",
-                  "tr": "Lại để đèn sáng không tắt nữa rồi! Tắt cho đàng hoàng đi chứ."
+                  "tag": "bỏ mặc · bực bội",
+                  "tr": "Lại bật đèn rồi để đó! Tắt đi cho đàng hoàng chứ."
                 }
               ],
-              "explain": "Sau たまま thường có một hành động khác (寝てしまった), chỉ nói “trong trạng thái nào”; bản thân っぱなし là tiêu điểm của lời phê bình, thường nói 「〜っぱなしにする」, mang sự bất mãn vì “đáng lẽ phải thu dọn mà không làm” (また、ちゃんと)."
-            },
+              "explain": "Sau たまま thường là một hành động khác (寝てしまった), chỉ nói “trong trạng thái nào”; còn っぱなし bản thân nó là trọng tâm của lời phê bình, hay nói 「〜っぱなしにする」, mang sự bực bội vì “lẽ ra phải làm cho xong mà không làm” (また、ちゃんと)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều mang nghĩa “từ đó đến giờ không có gì thay đổi”",
+          "items": [
             {
-              "id": "naide-without",
-              "diff": "Hai cách nói cho cùng một việc: たまま nói “giữ nguyên trạng thái gì”, ないで nói “không làm gì”.",
+              "id": "kiri-only",
+              "title": "〜たきり",
+              "diff": "たまま chỉ nói trạng thái đó vẫn kéo dài; たきり nhấn mạnh “sau lần đó thì bặt tin”, phía sau thường là phủ định, mang sự lo lắng.",
               "this": [
                 {
-                  "tag": "Giữ nguyên trạng thái",
-                  "tr": "Tôi vẫn đi giày mà bước vào phòng."
+                  "tag": "trạng thái kéo dài",
+                  "tr": "Bố tôi ra ngoài từ sáng, đến giờ vẫn chưa về."
                 }
               ],
               "that": [
                 {
-                  "tag": "Không làm việc gì đó",
-                  "tr": "Tôi không cởi giày mà bước vào phòng."
+                  "tag": "bặt tin từ đó · lo lắng",
+                  "tr": "Bố tôi ra ngoài từ sáng rồi bặt tin luôn."
                 }
               ],
-              "explain": "Hai câu nghĩa như nhau, xem động từ: 履いた (đi giày)＋まま → giữ trạng thái “đang đi giày”; 脱が (cởi)＋ないで → không làm hành động “cởi”."
-            },
-            {
-              "id": "te-iru",
-              "diff": "たまま là giữ nguyên một trạng thái rồi làm việc khác; ている miêu tả trạng thái ở cuối câu.",
-              "this": [
-                {
-                  "tag": "Làm việc khi vẫn giữ trạng thái",
-                  "tr": "Tôi vẫn đeo kính mà ngủ thiếp đi."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Miêu tả trạng thái",
-                  "tr": "Anh ấy đang đeo kính."
-                }
-              ],
-              "explain": "Xem phía sau còn hành động nào không: giữ trạng thái đó rồi làm việc khác (寝てしまった), thường có ý “lẽ ra không nên như vậy” → たまま; bản thân trạng thái là điều muốn nói, câu kết thúc ở đó → ている. Tiếng Việt đều nói là “đeo”."
+              "explain": "Cả hai câu đều là “ra ngoài rồi từ đó không có gì thay đổi”. たまま chú ý vào việc trạng thái “đã ra ngoài” vẫn kéo dài, phía sau không nhất thiết là phủ định; たきり chú ý vào việc “sau lần đó thì bặt tin”, phía sau hầu như luôn là phủ định (連絡もない), mang giọng bất ngờ, lo lắng."
             }
           ]
         }
@@ -8318,58 +8292,26 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều đi cùng phủ định, nói việc gì đó “ít xảy ra”",
+          "note": "Đều mang nghĩa “hiếm có”",
           "items": [
             {
-              "id": "amari-nai",
-              "diff": "めったに chỉ nói về số lần, và rất ít, gần với “hiếm hoi lắm mới có một lần”; あまり vừa nói được số lần vừa nói được mức độ, tần suất cũng không thấp đến vậy.",
+              "id": "gatai",
+              "title": "得がたい（khó có được）",
+              "thisTitle": "めったにない＋danh từ",
+              "diff": "めったにない chú ý vào “hiếm khi gặp”, dùng được cả văn nói lẫn văn viết; 得がたい là văn viết, mang đánh giá “khó có được, rất quý”.",
               "this": [
                 {
-                  "tag": "Số lần · rất ít",
-                  "tr": "Tôi hiếm khi đi rạp chiếu phim."
+                  "tag": "hiếm có · dùng cả khi nói",
+                  "tr": "Du học đúng là một trải nghiệm hiếm có đấy."
                 }
               ],
               "that": [
                 {
-                  "tag": "Không thường lắm",
-                  "tr": "Tôi không hay đi rạp chiếu phim lắm."
+                  "tag": "quý giá · văn viết",
+                  "tr": "Ba năm du học đã trở thành một trải nghiệm quý giá khó có được."
                 }
               ],
-              "explain": "Khi nói về số lần thì cả hai đều dùng được, めったに ít hơn (một năm một hai lần). Khi nói mức độ của tính từ (甘くない、高くない) thì chỉ dùng được あまり: 「このりんごはあまり甘くない」, lúc này không thể thay bằng めったに."
-            },
-            {
-              "id": "zenzen-nai",
-              "diff": "めったに〜ない là “hiếm khi”, thỉnh thoảng vẫn có; 全然〜ない là “hoàn toàn không, chưa bao giờ”.",
-              "this": [
-                {
-                  "tag": "Hiếm khi · thỉnh thoảng có",
-                  "tr": "Anh trai tôi hiếm khi uống rượu, chỉ uống một chút vào dịp Tết."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Hoàn toàn không",
-                  "tr": "Em trai tôi hoàn toàn không uống rượu."
-                }
-              ],
-              "explain": "Xem có “ngoại lệ thỉnh thoảng” không: phía sau có thể nối “chỉ có dịp Tết mới…” → めったに; không có lấy một lần → 全然 (まったく)."
-            },
-            {
-              "id": "nakanaka-nai",
-              "diff": "めったに〜ない nói số lần ít trong thường ngày; なかなか〜ない nói việc mình mong đợi mãi không thành.",
-              "this": [
-                {
-                  "tag": "Thường ngày · số lần ít",
-                  "tr": "Ngôi làng này hiếm khi có xe buýt đến."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Trước mắt · mãi không đến",
-                  "tr": "Đã đợi những hai mươi phút rồi mà xe buýt mãi vẫn không đến."
-                }
-              ],
-              "explain": "Xem đang nói về “tần suất thường ngày” hay “sự chờ đợi trước mắt”: một ngày hai chuyến, một tháng một lần → めったに; đang chờ, mong đợi mãi không thành (待っているのに) → なかなか, mang tâm trạng sốt ruột."
+              "explain": "Cả hai câu đều nói về “trải nghiệm hiếm có”. めったにない chú ý vào việc chuyện như vậy rất ít khi gặp, dùng được cả khi nói chuyện (だったよ) lẫn khi viết; 得がたい là văn viết, chú ý vào việc khó có được, rất quý, mang đánh giá tích cực rõ ràng, thường gặp trong văn bản, bài phát biểu (となった)."
             }
           ]
         }
@@ -8384,10 +8326,10 @@
           "items": [
             {
               "id": "ku-ni-mieru",
-              "diff": "Danh từ＋が見える là “nhìn thấy được”; tính từ く／danh từ に＋見える là “trông có vẻ…”.",
+              "diff": "Danh từ + が見える là “nhìn thấy được”; tính từ く / danh từ に + 見える là “trông có vẻ…”.",
               "this": [
                 {
-                  "tag": "Nhìn thấy được",
+                  "tag": "nhìn thấy được",
                   "tr": "Từ cửa sổ có thể nhìn thấy biển."
                 }
               ],
@@ -8401,24 +8343,24 @@
                   "tr": "Anh ấy lúc nào trông cũng khỏe khoắn."
                 }
               ],
-              "explain": "Xem phía trước 「見える」: 「danh từ＋が」 → vật đó lọt vào tầm nhìn (nhìn thấy được); dạng く của tính từ hoặc 「danh từ・tính từ đuôi な＋に」 → ấn tượng tạo ra cho người khác (trông có vẻ). 聞こえる cũng vậy: 「声が聞こえる」 là nghe thấy được, 「変に聞こえる」 là nghe có vẻ lạ."
+              "explain": "Nghĩa gốc của 「見える」 là “không cần chủ động nhìn mà tự nhiên lọt vào mắt”. Thứ lọt vào mắt là chính sự vật → nhìn thấy được: danh từ + が見える (海が見える); thứ lọt vào mắt là dáng vẻ của sự vật → trông có vẻ: thể く của tính từ hoặc “danh từ / tính từ な + に” + 見える (広く見える、元気に見える). Vì vậy hãy xem trước 「見える」 là 「が」 hay 「く／に」. 聞こえる cũng vậy: 「声が聞こえる」 là nghe thấy tiếng, 「変に聞こえる」 là nghe có vẻ lạ."
             },
             {
               "id": "to-mieru",
-              "diff": "が見える là mắt thật sự nhìn thấy; とみえる là dựa vào dấu hiệu nhìn thấy mà suy ra “xem ra…”.",
+              "diff": "が見える là mắt thực sự nhìn thấy; とみえる là suy đoán “có vẻ…” dựa vào dấu hiệu nhìn thấy.",
               "this": [
                 {
-                  "tag": "Mắt nhìn thấy",
-                  "tr": "Đã nửa đêm rồi mà vẫn thấy ánh đèn ở phòng bên cạnh."
+                  "tag": "mắt nhìn thấy",
+                  "tr": "Đã nửa đêm rồi mà vẫn thấy ánh đèn phòng bên cạnh."
                 }
               ],
               "that": [
                 {
-                  "tag": "Suy luận · xem ra",
-                  "tr": "Đèn phòng bên cạnh vẫn còn sáng. Xem ra người ta vẫn còn thức."
+                  "tag": "suy đoán · có vẻ",
+                  "tr": "Phòng bên cạnh vẫn sáng đèn. Có vẻ người ta vẫn còn thức."
                 }
               ],
-              "explain": "が見える nói về chính thứ nhìn thấy trước mắt (明かり); trước とみえる là một câu hoàn chỉnh (まだ起きている), là kết luận suy ra từ dấu hiệu nhìn thấy, thiên về văn viết, văn nói thường dùng 「〜みたいだ」."
+              "explain": "が見える nói về chính sự vật nhìn thấy trước mắt (明かり); trước とみえる là một câu hoàn chỉnh (まだ起きている), là kết luận rút ra từ dấu hiệu nhìn thấy, thiên về văn viết, khi nói thường dùng 「〜みたいだ」."
             }
           ]
         },
@@ -8428,24 +8370,21 @@
           "items": [
             {
               "id": "ga-mirareru",
-              "diff": "見える là cảnh vật trước mắt tự nhiên lọt vào tầm nhìn; が見られる là phải có điều kiện, có cơ hội mới xem được, trong văn viết còn diễn tả “quan sát thấy (một hiện tượng)”.",
+              "title": "〜が見られる（có thể ngắm）",
+              "diff": "見える là cảnh vật tự lọt vào mắt; が見られる là ở một nơi, một mùa nào đó có dịp được ngắm, thường dùng khi giới thiệu.",
               "this": [
                 {
-                  "tag": "Tự nhiên lọt vào tầm nhìn",
-                  "tr": "Những ngày trời quang, từ đây có thể nhìn thấy núi Phú Sĩ."
+                  "tag": "ngay trước mắt · tự nhìn thấy",
+                  "tr": "Oa, từ sân thượng nhìn thấy núi Phú Sĩ này!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Có cơ hội để xem",
-                  "tr": "Ở rạp chiếu phim này có thể xem phim cũ."
-                },
-                {
-                  "tag": "Văn viết · quan sát thấy hiện tượng",
-                  "tr": "Ở khu vực này có thể thấy hiện tượng dân số giảm."
+                  "tag": "giới thiệu · có dịp ngắm",
+                  "tr": "Ở đài quan sát này, cứ đến mùa đông là có thể ngắm núi Phú Sĩ."
                 }
               ],
-              "explain": "Xem thứ “thấy” là gì: cảnh vật tự nhiên lọt vào mắt như núi, biển, sao → 見える; thứ phải tìm cơ hội, đến nơi nào đó mới xem được như phim, triển lãm → が見られる; hiện tượng trừu tượng như 「減少」, 「変化」, 「傾向」, giọng văn báo cáo, tin tức → cũng dùng が見られる. 聞こえる／聞ける cũng vậy: 「波の音が聞こえる」 là nghe thấy được, 「ここで昔の歌が聞ける」 là có cơ hội để nghe."
+              "explain": "Cả hai câu đều là “có thể nhìn thấy núi Phú Sĩ”. Nói về thứ đang nhìn thấy trước mắt, hoặc từ đây vốn đã nhìn thấy được (わあ、屋上から) → 見える, cảnh vật tự lọt vào mắt, dùng nhiều nhất trong văn nói; giới thiệu đến một nơi nào đó, vào một mùa nào đó thì có dịp ngắm gì (この展望台では、冬になると) → が見られる, giống giọng văn sách hướng dẫn du lịch."
             }
           ]
         }
@@ -8460,44 +8399,20 @@
           "items": [
             {
               "id": "n-desu-explanatory",
-              "diff": "んですが là nói tình hình trước, sau đó mới đưa ra lời nhờ hoặc câu hỏi; んです chỉ giải thích tình hình, câu kết thúc ở đó.",
+              "diff": "んですが là nói tình hình trước, sau đó mới đưa ra lời nhờ vả hay câu hỏi; んです chỉ giải thích tình hình, câu kết thúc tại đó.",
               "this": [
                 {
-                  "tag": "Rào đón → hỏi",
+                  "tag": "dẫn dắt → hỏi",
                   "tr": "Xin lỗi, tôi bị lạc đường, cho hỏi nhà ga ở đâu ạ?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Giải thích lý do",
-                  "tr": "Xin lỗi vì đến muộn. Tàu điện bị dừng ạ."
+                  "tag": "giải thích lý do",
+                  "tr": "Xin lỗi tôi đến muộn. Tại tôi bị lạc đường."
                 }
               ],
-              "explain": "Xem phía sau còn nói gì không: sau 「んですが、」 là lời nhờ, câu hỏi (駅はどこですか、〜てもいいですか) → là lời rào đón; câu kết thúc ở 「んです。」, đang giải thích lý do → んです."
-            }
-          ]
-        },
-        {
-          "kind": "look",
-          "note": "けど trong 「んですけど」 ↔ けど chuyển ý, cách viết giống hệt nhau",
-          "items": [
-            {
-              "id": "kedo-keredomo",
-              "title": "〜けど（chuyển ý）",
-              "diff": "けど trong 「んですけど」 không mang nghĩa chuyển ý, chỉ dẫn ra lời nhờ phía sau; けど thông thường diễn tả “tuy… nhưng”.",
-              "this": [
-                {
-                  "tag": "Rào đón · không chuyển ý",
-                  "tr": "Xin lỗi, tôi muốn mượn quyển sách này, có được không ạ?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Chuyển ý · trước sau trái ngược",
-                  "tr": "Quyển sách này hay, nhưng hơi khó."
-                }
-              ],
-              "explain": "Xem trước và sau けど có “trái ngược” nhau không: 面白い↔難しい một tốt một xấu → chuyển ý; phía trước là tình hình của mình (借りたい), phía sau là lời nhờ, câu hỏi, hoặc bỏ lửng không nói → chỉ là rào đón, đừng dịch thành “nhưng”. Khi phía trước có 「んです」, hầu như đều là rào đón."
+              "explain": "Nghĩa gốc của 「んです」 là bày tình hình ra và giải thích. Nói đến 「んです。」 rồi dừng, người nghe chỉ nhận được một lời giải thích (vì sao đến muộn) → んです; thêm 「が」 vào sau, để lại khoảng trống “chưa nói hết”, thế là tự nhiên dẫn sang lời nhờ vả hay câu hỏi (駅はどこですか) → んですが. Cả hai câu đều là 「道に迷った」, hãy nhìn phía sau 「んです」: có 「が、」 rồi tiếp lời nhờ vả, câu hỏi → dẫn dắt; câu kết thúc ở 「んです。」 → giải thích lý do."
             }
           ]
         }
@@ -8513,20 +8428,20 @@
             {
               "id": "nai-form",
               "title": "〜ない（phủ định）",
-              "diff": "「〜ない？」 lên giọng ở cuối câu là lời rủ; 「〜ない。」 nói ngang giọng là phủ định.",
+              "diff": "「〜ない？」 lên giọng ở cuối câu là lời rủ; 「〜ない。」 nói đều giọng là phủ định.",
               "this": [
                 {
-                  "tag": "Lời rủ · lên giọng",
+                  "tag": "rủ rê · lên giọng",
                   "tr": "Mai đi xem phim cùng nhau không?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Phủ định · xuống giọng",
-                  "tr": "Ngày mai tôi không xem phim. Tôi sẽ học ở nhà."
+                  "tag": "phủ định · xuống giọng",
+                  "tr": "Mai tôi không xem phim. Tôi ở nhà học bài."
                 }
               ],
-              "explain": "Viết ra chỉ khác một dấu hỏi, nói ra chỉ khác ngữ điệu. Xem có 「一緒に」, 「ねえ」 và dấu hỏi không: đang rủ đối phương → 〜ない？ (lên giọng); đang nói mình không làm → 〜ない。 (xuống giọng). Khi đọc tin nhắn trò chuyện càng phải nhìn rõ dấu hỏi."
+              "explain": "Viết ra thì chỉ khác một dấu hỏi, nói ra thì chỉ khác ngữ điệu. Hãy xem có 「一緒に」「ねえ」 và dấu hỏi không: đang rủ người khác → 〜ない？ (lên giọng); đang nói mình không làm → 〜ない。 (xuống giọng). Khi đọc tin nhắn, càng phải để ý dấu hỏi."
             }
           ]
         },
@@ -8553,20 +8468,20 @@
             },
             {
               "id": "volitional-form",
-              "diff": "「行かない？」 hỏi trước xem đối phương có muốn không, khá khéo léo; 「行こう」 kêu gọi thẳng, mặc định đối phương sẽ đồng ý.",
+              "diff": "「行かない？」 hỏi xem người kia có muốn không trước, khá nhẹ nhàng; 「行こう」 rủ thẳng, mặc định người kia sẽ đồng ý.",
               "this": [
                 {
-                  "tag": "Hỏi ý kiến",
+                  "tag": "hỏi ý kiến",
                   "tr": "Này, cuối tuần đi biển không?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Kêu gọi thẳng",
+                  "tag": "rủ thẳng",
                   "tr": "Được, cuối tuần đi biển thôi!"
                 }
               ],
-              "explain": "Xem đã bàn bạc xong chưa: chưa biết đối phương có muốn đi không, thăm dò trước → 〜ない？; đối phương chắc chắn muốn, hoặc đã hẹn xong rồi, quyết định dứt khoát (よし、じゃあ) → 〜(よ)う. Khi được hỏi 「行かない？」, người ta cũng hay trả lời 「うん、行こう！」."
+              "explain": "Hãy xem đã bàn bạc xong chưa: còn chưa biết người kia có muốn đi không, thăm dò trước → 〜ない？; người kia chắc chắn muốn, hoặc đã hẹn xong rồi, quyết định dứt khoát (よし、じゃあ) → 〜(よ)う. Khi được hỏi 「行かない？」, người ta cũng hay đáp lại bằng 「うん、行こう！」."
             }
           ]
         }
@@ -8575,29 +8490,6 @@
     {
       "id": "nai-wa-nai",
       "groups": [
-        {
-          "kind": "look",
-          "note": "Đều là phủ định kép kiểu 「〜ない…はない」, trông rất giống nhau",
-          "items": [
-            {
-              "id": "nai-koto-wa-nai",
-              "diff": "ない人はいない là “không ai là không…” ＝ tất cả đều; ないことはない là “cũng không phải là không…”, chừa lại khoảng trống.",
-              "this": [
-                {
-                  "tag": "Tất cả đều · giọng mạnh",
-                  "tr": "Không ai là không biết bài hát này."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Cũng không phải không · miễn cưỡng",
-                  "tr": "Bài này thì… cũng không phải là không hát được…"
-                }
-              ],
-              "explain": "Xem giữa hai phủ định kẹp cái gì: danh từ như 「人」, 「日」, 「もの」 → phủ định việc “có ngoại lệ”, kết luận là “tất cả đều…”, giọng rất mạnh; 「こと」 → phủ định việc “không làm được”, kết luận là “cũng không phải là không thể”, phía sau thường có 「けど」, giọng miễn cưỡng."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Đều diễn tả “tất cả, không có ngoại lệ”",
@@ -8633,43 +8525,20 @@
           "items": [
             {
               "id": "te-oku",
-              "diff": "ないでおく là cố ý tạm không làm vì sau này; ておく là làm sẵn trước cho sau này.",
+              "diff": "ないでおく là cố ý chưa làm để dành cho sau này; ておく là làm sẵn trước cho sau này.",
               "this": [
                 {
-                  "tag": "Cố ý tạm không làm",
-                  "tr": "Lát nữa mới uống, nên bia cứ để đó chưa mở."
+                  "tag": "cố ý chưa làm",
+                  "tr": "Lát nữa mới uống nên tôi chưa khui bia."
                 }
               ],
               "that": [
                 {
-                  "tag": "Làm sẵn trước",
-                  "tr": "Lát nữa sẽ uống, nên cho bia vào ướp lạnh trước."
+                  "tag": "làm sẵn trước",
+                  "tr": "Lát nữa sẽ uống nên tôi ướp lạnh bia sẵn."
                 }
               ],
-              "explain": "Lý do của hai câu giống nhau (後で飲むから), đều là nghĩ cho sau này. Xem phía trước 「おく」: thể ない＋で → cố ý tạm không làm, để đồ vật giữ nguyên như cũ; thể て → làm trước."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Đều có thể diễn tả việc để sự vật giữ nguyên như cũ",
-          "items": [
-            {
-              "id": "mama-unchanged",
-              "diff": "ないでおく là cố ý không làm; たまま chỉ nói trạng thái vẫn được giữ nguyên, thường dùng trong trường hợp sơ ý.",
-              "this": [
-                {
-                  "tag": "Cố ý · không làm",
-                  "tr": "Vì trời không lạnh nên tôi đã không đóng cửa sổ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Sơ ý · giữ nguyên trạng thái",
-                  "tr": "Tôi sơ ý để nguyên cửa sổ mở rồi đi ra ngoài mất."
-                }
-              ],
-              "explain": "Xem có cố ý không: có lý do, có ý thức chọn không làm (寒くないので) → ないでおく; 「うっかり」, 「〜てしまった」, không để ý nên cứ giữ nguyên như vậy → たまま. Ngoài ra ないでおく chú ý đến “không làm hành động nào” (閉めない), たまま chú ý đến “giữ nguyên trạng thái nào” (開けた)."
+              "explain": "Nghĩa gốc của 「おく」 là “đặt xuống, để lại đó”, mở rộng thành “sắp xếp sẵn cho sau này”. ておく: làm một hành động rồi để nguyên kết quả → làm sẵn trước (冷やしておく); ないでおく: không làm hành động đó, để nguyên như cũ → cố ý chưa làm (開けないでおく). Lý do của hai câu giống nhau (後で飲むから), đều là nghĩ cho sau này. Hãy nhìn trước 「おく」: ない形 + で → cố ý chưa làm; て形 → làm sẵn trước."
             }
           ]
         }
@@ -8680,58 +8549,50 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều đi cùng phủ định, nói việc gì đó “ít xảy ra, mãi không xảy ra”",
+          "sense": 1,
+          "note": "Đều mang nghĩa “việc mong đợi vẫn chưa xảy ra”",
           "items": [
             {
               "id": "mada-te-inai",
-              "diff": "なかなか〜ない là “mãi không…”, mang tâm trạng sốt ruột vì chờ đợi; まだ〜ていない chỉ nói khách quan “vẫn chưa”.",
+              "diff": "なかなか〜ない là “mãi mà không…”, mang tâm trạng sốt ruột vì chờ đợi; まだ〜ていない chỉ khách quan nói “vẫn chưa”.",
               "this": [
                 {
-                  "tag": "Mãi không · sốt ruột",
-                  "tr": "Đã đợi những ba mươi phút rồi mà xe buýt mãi vẫn không đến."
+                  "tag": "mãi không · sốt ruột",
+                  "tr": "Đã đợi những ba mươi phút rồi mà xe buýt mãi không đến."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khách quan · vẫn chưa",
-                  "tr": "Xe buýt vẫn chưa đến."
+                  "tag": "khách quan · vẫn chưa",
+                  "tr": "Xe buýt vẫn chưa đến. Chắc khoảng năm phút nữa sẽ đến."
                 }
               ],
-              "explain": "Xem có tâm trạng “sốt ruột vì chờ” không: đã đợi rất lâu, mong đợi mãi không thành (30分も待っているのに) → なかなか来ない; chỉ báo cáo tình hình hiện tại → まだ来ていない. Ngoài ra sau なかなか dùng 「ない」 thông thường, không dùng 「ていない」."
-            },
+              "explain": "Cả hai câu đều là “xe buýt vẫn chưa đến”. Hãy xem có tâm trạng sốt ruột vì chờ đợi không: đã đợi lâu, mong mãi mà không được (30分も待っているのに) → なかなか来ない; chỉ báo cáo tình hình hiện tại một cách khách quan, không kèm cảm xúc (あと５分で来るはずだ) → まだ来ていない."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều mang nghĩa “mãi mà không… được”",
+          "items": [
             {
-              "id": "metta-ni-nai",
-              "diff": "なかなか〜ない nói việc mình mong đợi mãi không thành; めったに〜ない nói số lần ít trong thường ngày.",
+              "id": "question-word-temo",
+              "title": "どうしても〜ない",
+              "diff": "なかなか〜ない là “không dễ, vẫn chưa làm được”, vẫn đang cố gắng; どうしても〜ない là “làm cách nào cũng không được”, giọng điệu mạnh hơn.",
               "this": [
                 {
-                  "tag": "Trước mắt · mãi không đến",
-                  "tr": "Đã đợi những hai mươi phút rồi mà xe buýt mãi vẫn không đến."
+                  "tag": "không dễ · vẫn đang cố",
+                  "tr": "Từ này mãi mà không nhớ được nhỉ. Luyện thêm chút nữa vậy."
                 }
               ],
               "that": [
                 {
-                  "tag": "Thường ngày · số lần ít",
-                  "tr": "Ngôi làng này hiếm khi có xe buýt đến."
+                  "tag": "cách nào cũng không được · muốn bỏ cuộc",
+                  "tr": "Từ này kiểu gì cũng không nhớ nổi. Thôi, bỏ cuộc vậy."
                 }
               ],
-              "explain": "Xem đang nói về “sự chờ đợi trước mắt” hay “tần suất thường ngày”: đang chờ, mong đợi mãi không thành (待っているのに) → なかなか; một ngày hai chuyến, một tháng một lần → めったに."
-            },
-            {
-              "id": "you-to-shinai",
-              "diff": "なかなか〜ない phần nhiều là khách quan khó thực hiện; ようとしない là chủ ngữ “không chịu”, nguyên nhân nằm ở ý muốn của người đó.",
-              "this": [
-                {
-                  "tag": "Khó thực hiện",
-                  "tr": "Đứa bé phấn khích quá nên mãi không ngủ được."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Không chịu · ý muốn",
-                  "tr": "Nói bao nhiêu lần rồi mà đứa bé vẫn không chịu ngủ."
-                }
-              ],
-              "explain": "Xem nguyên nhân nằm ở đâu: nguyên nhân bản thân không kiểm soát được như phấn khích, ốm đau → なかなか寝ない (mãi không ngủ được); nói cũng không nghe, bản thân không muốn → 寝ようとしない (không chịu ngủ). ようとしない thường dùng để nói về người khác, kèm sự bất mãn."
+              "explain": "Cả hai câu đều là “mãi không nhớ được”. なかなか là “không dễ, cần thời gian”, vẫn đang cố gắng, cảm thấy rồi sẽ làm được (もう少し練習しよう); どうしても là “thử đủ mọi cách mà vẫn không được”, giọng điệu mạnh hơn, thường gần như muốn bỏ cuộc (もう諦めよう)."
             }
           ]
         }
@@ -8741,25 +8602,26 @@
       "id": "nakucha-nakya",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「なければ／なくては」 — “nếu không làm (thì không được)”",
+          "kind": "meaning",
+          "note": "Đều mang nghĩa “phải”",
           "items": [
             {
               "id": "nakereba-naranai",
-              "diff": "なきゃ／なくちゃ là dạng rút gọn trong văn nói, vế sau thường bị lược bỏ, chỉ nói với người quen; なければならない đầy đủ, trang trọng.",
+              "title": "〜なければならない",
+              "diff": "なきゃ／なくちゃ là dạng rút gọn trong văn nói, thường lược bỏ nửa sau, dùng khi nói với bản thân hoặc người thân quen; なければならない là dạng đầy đủ, dùng trong quy định, văn bản và những dịp trang trọng.",
               "this": [
                 {
-                  "tag": "Rút gọn · tự nói một mình",
-                  "tr": "A, tám giờ rồi. Phải đi thôi."
+                  "tag": "rút gọn · tự nói một mình",
+                  "tr": "Chết rồi, đã tám giờ rồi. Phải đi làm thôi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Đầy đủ · trang trọng",
-                  "tr": "Học sinh phải lên lớp."
+                  "tag": "đầy đủ · trang trọng",
+                  "tr": "Theo quy định của công ty, nhân viên phải có mặt tại công ty trước tám giờ."
                 }
               ],
-              "explain": "なきゃ＝なければ, なくちゃ＝なくては, phần 「ならない／いけない」 phía sau thường bị lược bỏ. Xem hoàn cảnh: tự nói một mình, nói chuyện với bạn bè, người nhà → なきゃ・なくちゃ (hai cái như nhau); quy định, bài viết, hoàn cảnh trang trọng → なければならない."
+              "explain": "Cả hai câu đều là “phải đến công ty”. なきゃ = なければ, なくちゃ = なくては, phần 「いけない／ならない」 phía sau thường bị lược bỏ. Hãy xem hoàn cảnh: tự nói một mình, nói chuyện với bạn bè, gia đình (やばい) → なきゃ・なくちゃ; nói về quy định, viết văn bản (規則では) → なければならない."
             }
           ]
         }

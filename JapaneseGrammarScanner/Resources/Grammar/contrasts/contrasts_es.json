@@ -8146,82 +8146,64 @@
           "items": [
             {
               "id": "made-until",
-              "diff": "までに es terminar algo una vez antes de ese momento; まで es seguir hasta ese momento.",
+              "diff": "Con まで, la acción continúa hasta ese límite; con までに, la acción se completa una vez antes de ese límite.",
               "this": [
                 {
-                  "tag": "Terminar antes de",
-                  "tr": "Volveré antes de las cinco."
+                  "tag": "terminar antes de…",
+                  "tr": "Vuelvo antes de las cinco."
                 }
               ],
               "that": [
                 {
-                  "tag": "Durar hasta",
-                  "tr": "Esperaré hasta las cinco."
+                  "tag": "continuar hasta…",
+                  "tr": "Voy a estar esperando hasta las cinco."
                 }
               ],
               "wrong": {
-                "why": "「出す」 es una acción puntual, así que se usa までに"
+                "why": "「出す」 es una acción que se hace de una vez, así que hay que usar までに."
               },
-              "explain": "Mira el verbo de detrás: acciones que se completan de una vez, como 帰る、出す、着く → までに; acciones que pueden durar, como 待つ、働く、勉強する → まで."
+              "explain": "El significado básico de 「まで」 es «hasta cierto límite». Con まで sola, la acción se prolonga hasta ese límite: acciones que pueden durar, como 待っています → まで (esperar hasta las cinco). Si después del límite se añade 「に」, que marca un momento, el límite se convierte en un punto en el tiempo y la acción debe completarse antes de que llegue: acciones que se hacen de una vez, como 帰ります o 出す → までに (volver antes de las cinco). Así que fíjate en si el verbo que sigue expresa algo que dura o algo que se completa de una vez."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas sitúan una acción en el tiempo: en ese momento o antes de él",
+          "note": "Ambos significan «antes de…»",
           "items": [
             {
               "id": "mae-ni",
-              "diff": "までに marca una fecha límite; 前に solo dice qué va primero y qué después.",
+              "diff": "までに marca una fecha límite: cualquier momento antes vale; 前に solo dice cuál de dos cosas va primero.",
               "this": [
                 {
-                  "tag": "Fecha límite",
-                  "tr": "Termina los deberes antes de irte a dormir."
+                  "tag": "fecha límite",
+                  "tr": "Ten los deberes terminados para cuando te acuestes."
                 }
               ],
               "that": [
                 {
-                  "tag": "Orden de las acciones",
-                  "tr": "Lávate los dientes antes de dormir."
+                  "tag": "orden",
+                  "tr": "Antes de acostarte, termina los deberes."
                 }
               ],
-              "explain": "Las dos llevan 「寝る」 delante; la diferencia está en lo que sigue: までに es un límite, y basta con terminar los deberes en cualquier momento antes de dormir; 前に solo indica el orden: primero los dientes, luego a dormir."
+              "explain": "Las dos frases son correctas; solo cambia まで por 前. までに toma 「寝る」 como fecha límite: hay que terminar como muy tarde antes de dormir, en cualquier momento hasta entonces, como si se fijara un plazo. 前に solo indica el orden: primero los deberes, luego a dormir. Para hablar solo del orden de las acciones (por ejemplo, lavarse los dientes antes de dormir) se usa 前に; para el plazo de entregar algo o terminar una tarea, までに."
             },
             {
               "id": "uchi-ni",
               "title": "〜ないうちに",
-              "diff": "までに toma como límite un momento concreto; ないうちに es «antes de que la situación cambie, date prisa…».",
+              "diff": "までに toma el hecho como fecha límite; ないうちに es «mientras todavía no…, date prisa», con sensación de urgencia.",
               "this": [
                 {
-                  "tag": "Límite concreto",
-                  "tr": "Volvamos antes de las seis."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Antes de que cambie",
+                  "tag": "fecha límite",
                   "tr": "Volvamos antes de que oscurezca."
                 }
               ],
-              "explain": "Mira lo que va delante: una hora o una fecha → までに; un estado que va a cambiar pronto, como 「暗くならない」「雨が降らない」「冷めない」 → ないうちに, con la urgencia de «hay que hacerlo ya, que si no será tarde»."
-            },
-            {
-              "id": "ni-destination-target",
-              "title": "〜に（momento concreto）",
-              "diff": "までに es cualquier momento antes de esa hora; に es justo en ese momento.",
-              "this": [
-                {
-                  "tag": "Antes del límite",
-                  "tr": "Mañana venga antes de las nueve, por favor."
-                }
-              ],
               "that": [
                 {
-                  "tag": "En ese momento",
-                  "tr": "Mañana venga a las nueve, por favor."
+                  "tag": "mientras todavía no · urgencia",
+                  "tr": "Volvamos mientras todavía no ha oscurecido."
                 }
               ],
-              "explain": "Solo cambia 「まで」: 「９時までに」 es un límite: puedes venir a las ocho o a las ocho y media, mientras no pase de las nueve; 「９時に」 es justo a las nueve en punto."
+              "explain": "Las dos frases significan «volver antes de que oscurezca». までに va con la forma afirmativa (暗くなる) y toma el anochecer como límite: basta con no pasarse de esa hora; el tono es tranquilo. ないうちに va con la forma negativa (暗くならない) y significa «mientras todavía no…», con la urgencia de «si no nos vamos ya, será tarde». Para cosas con un plazo claro, como entregar algo o hacer un trámite, normalmente se dice までに."
             }
           ]
         }
@@ -8237,77 +8219,69 @@
             {
               "id": "mama-ni-follow",
               "title": "〜られるままに",
-              "diff": "たまま es hacer otra cosa manteniendo un estado; 言われるままに es «hacer lo que te dicen», dejándose llevar.",
+              "diff": "たまま es hacer otra cosa manteniendo un estado; 言われるままに es «hacer lo que te digan», dejándose llevar.",
               "this": [
                 {
-                  "tag": "Mantener un estado",
-                  "tr": "Salí dejando la ventana abierta."
+                  "tag": "mantener un estado",
+                  "tr": "Salí con la ventana abierta."
                 }
               ],
               "that": [
                 {
-                  "tag": "Dejarse llevar",
-                  "tr": "Hice todo lo que me decía el dependiente y acabé comprando ropa carísima."
+                  "tag": "dejarse llevar",
+                  "tr": "Hice todo lo que me dijo el dependiente y acabé comprando ropa cara."
                 }
               ],
-              "explain": "「まま」 significa en origen «tal cual». Mira lo que va delante: forma た (開けた) → el estado que dejó la acción se mantiene tal cual; palabras como 「言われる」「思う」「気の向く」＋ままに → actuar tal cual según lo que dicen otros o lo que uno siente."
+              "explain": "El significado básico de 「まま」 es «tal como está». Fíjate en lo que va delante: た形 (開けた) → el resultado de la acción se queda tal cual; palabras como 「言われる」「思う」「気の向く」 + ままに → actuar tal como dicen otros o como a uno le apetece."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas tienen que ver con «mantener un estado»",
+          "sense": 1,
+          "note": "Ambos significan «dejar algo en un estado sin ocuparse de ello»",
           "items": [
             {
               "id": "ppanashi",
-              "diff": "たまま puede ser solo una descripción objetiva; っぱなし subraya «dejarlo así sin ocuparse» y suele llevar queja.",
+              "diff": "たまま puede ser una simple descripción objetiva; っぱなし recalca «dejarlo así sin ocuparse», normalmente con fastidio.",
               "this": [
                 {
-                  "tag": "Hacer algo en ese estado",
+                  "tag": "hacer algo en un estado",
                   "tr": "Estaba tan cansado que me dormí con la luz encendida."
                 }
               ],
               "that": [
                 {
-                  "tag": "Dejarlo así · queja",
-                  "tr": "¡Otra vez la luz encendida! Apágala como es debido."
+                  "tag": "dejar sin atender · fastidio",
+                  "tr": "¡Otra vez dejaste la luz encendida! Apágala como es debido."
                 }
               ],
-              "explain": "Tras たまま suele venir otra acción (寝てしまった) y solo dice «en qué estado»; っぱなし es en sí el blanco de la crítica, a menudo 「〜っぱなしにする」, con la queja de que «había que terminarlo y no se hizo» (また、ちゃんと)."
-            },
+              "explain": "たまま suele ir seguida de otra acción (寝てしまった) y solo indica «en qué estado». っぱなし es en sí el blanco de la crítica—se dice a menudo 「〜っぱなしにする」—y transmite fastidio porque algo que debía cerrarse no se cerró (また、ちゃんと)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Ambos significan «desde entonces no ha cambiado nada»",
+          "items": [
             {
-              "id": "naide-without",
-              "diff": "Dos formas de decir lo mismo: たまま dice «manteniendo cierto estado»; ないで dice «sin hacer algo».",
+              "id": "kiri-only",
+              "title": "〜たきり",
+              "diff": "たまま solo dice que el estado continúa; たきり recalca «después de esa vez, nada más», suele ir seguido de una negación y transmite preocupación.",
               "this": [
                 {
-                  "tag": "Mantener un estado",
-                  "tr": "Entró en la habitación con los zapatos puestos."
+                  "tag": "el estado continúa",
+                  "tr": "Mi padre salió por la mañana y todavía no ha vuelto."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sin hacer algo",
-                  "tr": "Entró en la habitación sin quitarse los zapatos."
+                  "tag": "nada desde entonces · preocupación",
+                  "tr": "Mi padre salió por la mañana y desde entonces no sabemos nada de él."
                 }
               ],
-              "explain": "Las dos frases significan lo mismo; mira el verbo: 履いた (ponerse)＋まま → mantiene el estado de «llevarlos puestos»; 脱が (quitarse)＋ないで → no hizo la acción de «quitárselos»."
-            },
-            {
-              "id": "te-iru",
-              "diff": "たまま es hacer otra cosa manteniendo un estado; ている describe un estado al final de la frase.",
-              "this": [
-                {
-                  "tag": "Hacer algo en ese estado",
-                  "tr": "Me quedé dormido con las gafas puestas."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Describir un estado",
-                  "tr": "Él lleva gafas."
-                }
-              ],
-              "explain": "Mira si después viene otra acción: haces otra cosa en ese estado (寝てしまった), a menudo con el matiz de «no debería ser así» → たまま; el estado mismo es lo que se quiere decir y la frase acaba ahí → ている. En español diríamos «con las gafas puestas» en un caso y «lleva gafas» en el otro; en japonés la clave es si sigue otra acción."
+              "explain": "Las dos frases significan «desde que salió no ha cambiado nada». たまま se fija en que el estado de «haber salido» continúa, y lo que sigue no tiene por qué ser negativo. たきり se fija en que «después de esa vez, se cortó todo»; casi siempre va seguido de una negación (連絡もない) y tiene un tono de sorpresa o preocupación."
             }
           ]
         }
@@ -8318,58 +8292,26 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas van con negación y dicen que algo «no ocurre mucho»",
+          "note": "Ambos significan «poco común, difícil de conseguir»",
           "items": [
             {
-              "id": "amari-nai",
-              "diff": "めったに solo habla de frecuencia, y muy baja, casi «rara vez»; あまり puede hablar de frecuencia o de grado, y la frecuencia no es tan baja.",
+              "id": "gatai",
+              "title": "得がたい（difícil de obtener）",
+              "thisTitle": "めったにない＋sustantivo",
+              "diff": "めったにない se fija en «se da muy pocas veces» y sirve tanto al hablar como al escribir; 得がたい es lenguaje escrito y añade la valoración «difícil de conseguir, valioso».",
               "this": [
                 {
-                  "tag": "Frecuencia · rara vez",
-                  "tr": "Casi nunca voy al cine."
+                  "tag": "poco común · también oral",
+                  "tr": "Estudiar en el extranjero fue una experiencia única, ¿eh?"
                 }
               ],
               "that": [
                 {
-                  "tag": "No muy a menudo",
-                  "tr": "No voy mucho al cine."
+                  "tag": "valioso · escrito",
+                  "tr": "Los tres años de estudios en el extranjero se convirtieron en una experiencia de valor incalculable."
                 }
               ],
-              "explain": "Para la frecuencia sirven las dos, y めったに es menos (una o dos veces al año). Para el grado de un adjetivo (甘くない、高くない) solo vale あまり: 「このりんごはあまり甘くない」; ahí no se puede cambiar por めったに."
-            },
-            {
-              "id": "zenzen-nai",
-              "diff": "めったに〜ない es «rara vez», aún hay alguna excepción; 全然〜ない es «nada, nunca».",
-              "this": [
-                {
-                  "tag": "Rara vez · alguna excepción",
-                  "tr": "Mi hermano mayor casi nunca bebe alcohol; solo un poco en Año Nuevo."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nada en absoluto",
-                  "tr": "Mi hermano pequeño no bebe nada de alcohol."
-                }
-              ],
-              "explain": "Mira si hay «alguna excepción»: si detrás puede ir «solo en Año Nuevo…» → めったに; si no hay ni una vez → 全然 (まったく)."
-            },
-            {
-              "id": "nakanaka-nai",
-              "diff": "めったに〜ない habla de que algo ocurre poco por lo general; なかなか〜ない, de que algo esperado tarda en llegar.",
-              "this": [
-                {
-                  "tag": "En general · poca frecuencia",
-                  "tr": "A este pueblo casi nunca llega el autobús."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Ahora · no acaba de llegar",
-                  "tr": "Llevo ya veinte minutos esperando y el autobús no viene."
-                }
-              ],
-              "explain": "Mira si se habla de «la frecuencia habitual» o de «la espera presente»: dos al día, una vez al mes → めったに; estás esperando y lo que esperas no se cumple (待っているのに) → なかなか, con impaciencia."
+              "explain": "Las dos frases hablan de «una experiencia poco común». めったにない se fija en que algo así ocurre muy rara vez y vale tanto en una charla (だったよ) como por escrito. 得がたい es lenguaje escrito: se fija en que es difícil de conseguir y valioso, lleva una valoración claramente positiva y aparece sobre todo en textos y discursos (となった)."
             }
           ]
         }
@@ -8384,41 +8326,41 @@
           "items": [
             {
               "id": "ku-ni-mieru",
-              "diff": "Sustantivo＋が見える es «verse, ser visible»; adjetivo en く／sustantivo＋に＋見える es «parecer…».",
+              "diff": "Sustantivo + が見える es «se ve»; adjetivo en く / sustantivo + に + 見える es «parece…».",
               "this": [
                 {
-                  "tag": "Verse",
+                  "tag": "se ve",
                   "tr": "Desde la ventana se ve el mar."
                 }
               ],
               "that": [
                 {
-                  "tag": "く見える · parecer",
-                  "tr": "Esta habitación tiene ventanas grandes, así que parece espaciosa."
+                  "tag": "く見える · parece",
+                  "tr": "Esta habitación tiene ventanas grandes, así que parece amplia."
                 },
                 {
-                  "tag": "に見える · parecer",
+                  "tag": "に見える · parece",
                   "tr": "Él siempre parece lleno de energía."
                 }
               ],
-              "explain": "Mira lo que va delante de 「見える」: 「sustantivo＋が」 → esa cosa entra en tu campo visual («se ve»); la forma く de un adjetivo o 「sustantivo・adjetivo な＋に」 → la impresión que da («parece»). Con 聞こえる pasa lo mismo: 「声が聞こえる」 es «se oye una voz», 「変に聞こえる」 es «suena raro»."
+              "explain": "El significado básico de 「見える」 es «entrar en la vista de forma natural, sin buscarlo». Si lo que se ve es la cosa en sí → «se ve»: sustantivo + が見える (海が見える). Si lo que se ve es su aspecto → «parece»: forma en く del adjetivo, o «sustantivo / adjetivo な + に», + 見える (広く見える、元気に見える). Así que fíjate en si delante de 「見える」 va 「が」 o 「く／に」. Con 聞こえる pasa lo mismo: 「声が聞こえる」 es «se oye una voz»; 「変に聞こえる」, «suena raro»."
             },
             {
               "id": "to-mieru",
-              "diff": "が見える es que los ojos ven algo de verdad; とみえる es deducir «por lo visto…» a partir de las señales que se ven.",
+              "diff": "が見える es ver algo realmente con los ojos; とみえる es deducir «parece que…» a partir de lo que se ve.",
               "this": [
                 {
-                  "tag": "Lo ven los ojos",
-                  "tr": "Aunque es medianoche, todavía se ve luz en la habitación de al lado."
+                  "tag": "visto con los ojos",
+                  "tr": "Aunque es medianoche, se ve la luz de la habitación de al lado."
                 }
               ],
               "that": [
                 {
-                  "tag": "Deducción · por lo visto",
-                  "tr": "En la habitación de al lado sigue la luz encendida. Por lo visto, aún está despierto."
+                  "tag": "deducción · parece que",
+                  "tr": "En la habitación de al lado hay luz. Parece que todavía están despiertos."
                 }
               ],
-              "explain": "が見える habla de lo que ves en sí (明かり); delante de とみえる va una frase completa (まだ起きている), una conclusión sacada de lo que se ve; es más escrito, y al hablar se suele decir 「〜みたいだ」."
+              "explain": "が見える habla de la cosa en sí que se tiene delante (明かり). とみえる va precedido de una oración completa (まだ起きている) y es una conclusión sacada de los indicios que se ven. Es más bien formal; al hablar se suele decir 「〜みたいだ」."
             }
           ]
         },
@@ -8428,24 +8370,21 @@
           "items": [
             {
               "id": "ga-mirareru",
-              "diff": "見える es un paisaje que entra a la vista de forma natural; が見られる es poder verlo si se dan las condiciones o la ocasión, y por escrito también «se observa (un fenómeno)».",
+              "title": "〜が見られる（se puede ver）",
+              "diff": "Con 見える el paisaje entra en la vista por sí solo; が見られる es tener la ocasión de ver algo en cierto lugar o estación, y se usa sobre todo para presentarlo.",
               "this": [
                 {
-                  "tag": "Entra a la vista solo",
-                  "tr": "Los días despejados, desde aquí se ve el monte Fuji."
+                  "tag": "delante · se ve solo",
+                  "tr": "¡Uau, desde la azotea se ve el monte Fuji!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Se puede ver si hay ocasión",
-                  "tr": "En este cine se pueden ver películas antiguas."
-                },
-                {
-                  "tag": "Escrito · fenómeno observado",
-                  "tr": "En esta región se observa una disminución de la población."
+                  "tag": "presentación · ocasión de ver",
+                  "tr": "Desde este mirador, cuando llega el invierno, se puede ver el monte Fuji."
                 }
               ],
-              "explain": "Mira qué es lo que «se ve»: paisajes que entran solos a la vista, como montañas, el mar o las estrellas → 見える; películas o exposiciones, que hay que buscar la ocasión o ir a un lugar para verlas → が見られる; fenómenos abstractos como 「減少」「変化」「傾向」, en tono de informe o noticia → también が見られる. 聞こえる／聞ける, igual: 「波の音が聞こえる」 es «se oye el mar», 「ここで昔の歌が聞ける」 es «aquí se pueden escuchar canciones antiguas»."
+              "explain": "Las dos frases significan «se puede ver el monte Fuji». Si lo estás viendo ahora mismo, o desde aquí simplemente se ve (わあ、屋上から) → 見える: el paisaje entra en la vista por sí solo; es lo más común al hablar. Si presentas lo que uno tiene ocasión de ver al ir a cierto lugar o en cierta estación (この展望台では、冬になると) → が見られる, con un tono de guía turística."
             }
           ]
         }
@@ -8460,44 +8399,20 @@
           "items": [
             {
               "id": "n-desu-explanatory",
-              "diff": "んですが expone primero la situación y luego viene una petición o pregunta; んです solo explica la situación y la frase termina ahí.",
+              "diff": "んですが primero presenta la situación y luego viene una petición o pregunta; んです solo explica la situación y la frase termina ahí.",
               "this": [
                 {
-                  "tag": "Preámbulo → pregunta",
-                  "tr": "Disculpe, me he perdido. ¿Dónde está la estación?"
+                  "tag": "introducción → pregunta",
+                  "tr": "Perdone, es que me he perdido. ¿Dónde está la estación?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Explicar el motivo",
-                  "tr": "Perdón por el retraso. Es que el tren se paró."
+                  "tag": "explicar el motivo",
+                  "tr": "Perdón por llegar tarde. Es que me perdí."
                 }
               ],
-              "explain": "Mira si la frase sigue: tras 「んですが、」 viene una petición o pregunta (駅はどこですか、〜てもいいですか) → es un preámbulo; la frase acaba en 「んです。」 y explica un motivo → んです."
-            }
-          ]
-        },
-        {
-          "kind": "look",
-          "note": "El けど de 「んですけど」 ↔ el けど adversativo: se escriben exactamente igual",
-          "items": [
-            {
-              "id": "kedo-keredomo",
-              "title": "〜けど（adversativo）",
-              "diff": "El けど de 「んですけど」 no es adversativo: solo introduce la petición que sigue; el けど normal significa «aunque…, pero».",
-              "this": [
-                {
-                  "tag": "Preámbulo · no adversativo",
-                  "tr": "Disculpe, quería llevarme este libro prestado. ¿Puedo?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Adversativo · partes opuestas",
-                  "tr": "Este libro es interesante, pero un poco difícil."
-                }
-              ],
-              "explain": "Mira si lo que va antes y después de けど «se opone»: 面白い↔難しい, uno positivo y otro negativo → adversativo; antes va la situación propia (借りたい) y después una petición, una pregunta o nada → es solo un preámbulo y no se traduce por «pero». Si delante hay 「んです」, casi siempre es un preámbulo."
+              "explain": "El significado básico de 「んです」 es exponer una situación y explicarla. Si te detienes en 「んです。」, quien escucha solo recibe una explicación (por qué llegas tarde) → んです. Si añades 「が」, dejas un hueco de «todavía no he terminado», que lleva con naturalidad a una petición o pregunta (駅はどこですか) → んですが. Las dos frases tienen 「道に迷った」; fíjate en lo que sigue a 「んです」: si hay 「が、」 y luego una petición o pregunta → es una introducción; si la frase termina en 「んです。」 → explica el motivo."
             }
           ]
         }
@@ -8513,20 +8428,20 @@
             {
               "id": "nai-form",
               "title": "〜ない（negación）",
-              "diff": "「〜ない？」 con entonación ascendente es una invitación; 「〜ない。」 dicho en tono llano es una negación.",
+              "diff": "「〜ない？」 con entonación ascendente al final es una invitación; 「〜ない。」 dicho en tono llano es una negación.",
               "this": [
                 {
-                  "tag": "Invitación · tono ascendente",
-                  "tr": "¿Vemos una película juntos mañana?"
+                  "tag": "invitación · tono ascendente",
+                  "tr": "Mañana, ¿vemos una película juntos?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Negación · tono descendente",
-                  "tr": "Mañana no veo ninguna película; estudio en casa."
+                  "tag": "negación · tono descendente",
+                  "tr": "Mañana no voy a ver ninguna película. Me quedo estudiando en casa."
                 }
               ],
-              "explain": "Por escrito solo los separa un signo de interrogación; al hablar, solo la entonación. Fíjate en 「一緒に」「ねえ」 y en el signo de interrogación: si se invita al otro → 〜ない？ (tono ascendente); si dices que tú no lo haces → 〜ない。 (tono descendente). Al leer chats, mira bien el signo de interrogación."
+              "explain": "Por escrito solo cambia un signo de interrogación; al hablar, solo la entonación. Fíjate en si aparecen 「一緒に」, 「ねえ」 y el signo de interrogación: si estás invitando a alguien → 〜ない？ (tono ascendente); si dices que tú no lo vas a hacer → 〜ない。 (tono descendente). Al leer mensajes de chat, mira bien el signo de interrogación."
             }
           ]
         },
@@ -8553,20 +8468,20 @@
             },
             {
               "id": "volitional-form",
-              "diff": "「行かない？」 pregunta primero si al otro le apetece, de forma más suave; 「行こう」 es un llamamiento directo que da por hecho que el otro aceptará.",
+              "diff": "「行かない？」 primero pregunta si la otra persona quiere, así que es más suave; 「行こう」 es una propuesta directa que da por hecho que el otro aceptará.",
               "this": [
                 {
-                  "tag": "Pedir opinión",
-                  "tr": "Oye, ¿vamos a la playa el fin de semana?"
+                  "tag": "pedir opinión",
+                  "tr": "Oye, ¿no te apetece ir a la playa este fin de semana?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Llamamiento directo",
-                  "tr": "¡Venga, el fin de semana vamos a la playa!"
+                  "tag": "propuesta directa",
+                  "tr": "¡Venga, este fin de semana vamos a la playa!"
                 }
               ],
-              "explain": "Mira si ya está acordado: aún no sabes si el otro quiere ir y lo tanteas → 〜ない？; seguro que quiere, o ya está decidido, y lo zanjas (よし、じゃあ) → 〜(よ)う. Cuando te preguntan 「行かない？」, también se suele responder 「うん、行こう！」."
+              "explain": "Fíjate en si ya está acordado. Si aún no sabes si la otra persona quiere ir y primero tanteas el terreno → 〜ない？. Si seguro que quiere, o ya lo habíais hablado, y decides sin rodeos (よし、じゃあ) → 〜(よ)う. Cuando a alguien le preguntan 「行かない？」, también suele responder 「うん、行こう！」."
             }
           ]
         }
@@ -8575,29 +8490,6 @@
     {
       "id": "nai-wa-nai",
       "groups": [
-        {
-          "kind": "look",
-          "note": "Ambas son dobles negaciones del tipo 「〜ない…はない」 y se parecen mucho",
-          "items": [
-            {
-              "id": "nai-koto-wa-nai",
-              "diff": "ない人はいない es «no hay nadie que no…» ＝ todos; ないことはない es «no es que no…», dejando margen.",
-              "this": [
-                {
-                  "tag": "Todos · tono fuerte",
-                  "tr": "No hay nadie que no conozca esta canción."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "No es que no · a regañadientes",
-                  "tr": "Esta canción… bueno, no es que no sepa cantarla, pero…"
-                }
-              ],
-              "explain": "Mira qué hay entre las dos negaciones: un sustantivo como 「人」「日」「もの」 → niega que «haya excepciones», y la conclusión es «todos…», con tono fuerte; 「こと」 → niega «no poder hacerlo», y la conclusión es «no es que no pueda», a menudo seguido de 「けど」, con tono reticente."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Ambas significan «todos, sin excepción»",
@@ -8633,43 +8525,20 @@
           "items": [
             {
               "id": "te-oku",
-              "diff": "ないでおく es no hacer algo a propósito pensando en después; ておく es hacerlo de antemano pensando en después.",
+              "diff": "ないでおく es no hacer algo a propósito por ahora, pensando en después; ておく es hacer algo de antemano, pensando en después.",
               "this": [
                 {
-                  "tag": "No hacerlo a propósito",
-                  "tr": "Me la beberé luego, así que no abro la cerveza todavía."
+                  "tag": "no hacerlo a propósito",
+                  "tr": "Me la tomaré luego, así que no abro la cerveza todavía."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hacerlo de antemano",
-                  "tr": "Me la beberé luego, así que pongo la cerveza a enfriar."
+                  "tag": "hacerlo de antemano",
+                  "tr": "Me la tomaré luego, así que voy a poner la cerveza a enfriar."
                 }
               ],
-              "explain": "Las dos frases tienen el mismo motivo (後で飲むから) y piensan en lo que vendrá después. Mira lo que va delante de 「おく」: forma ない＋で → a propósito no lo haces aún, y la cosa queda como está; forma て → lo haces por adelantado."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Ambas pueden expresar que algo se deja tal como está",
-          "items": [
-            {
-              "id": "mama-unchanged",
-              "diff": "ないでおく es no hacer algo a propósito; たまま solo dice que un estado se mantiene, a menudo por descuido.",
-              "this": [
-                {
-                  "tag": "A propósito · no hacer",
-                  "tr": "Como no hacía frío, dejé la ventana sin cerrar."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Por descuido · mantener un estado",
-                  "tr": "Sin darme cuenta, salí dejando la ventana abierta."
-                }
-              ],
-              "explain": "Mira si fue a propósito: por un motivo, eliges conscientemente no hacerlo (寒くないので) → ないでおく; 「うっかり」「〜てしまった」, sin fijarte se quedó así → たまま. Además, ないでおく se fija en «qué acción no haces» (閉めない), y たまま en «qué estado se mantiene» (開けた)."
+              "explain": "El significado básico de 「おく」 es «dejar, poner en un sitio», y de ahí «dejar algo preparado para después». ておく: haces una acción y dejas el resultado → hacerlo de antemano (冷やしておく). ないでおく: no haces la acción y dejas las cosas como están → no hacerlo a propósito por ahora (開けないでおく). Las dos frases tienen el mismo motivo (後で飲むから) y ambas piensan en después. Fíjate en lo que va delante de 「おく」: ない形 + で → no hacerlo todavía a propósito; て形 → hacerlo de antemano."
             }
           ]
         }
@@ -8680,58 +8549,50 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas van con negación y dicen que algo «no ocurre mucho o tarda en ocurrir»",
+          "sense": 1,
+          "note": "Ambos significan «lo que se espera todavía no ha ocurrido»",
           "items": [
             {
               "id": "mada-te-inai",
-              "diff": "なかなか〜ない es «no acaba de…», con la impaciencia de esperar; まだ〜ていない solo dice objetivamente «todavía no».",
+              "diff": "なかなか〜ない es «no acaba de…», con la impaciencia de quien espera; まだ〜ていない solo dice «todavía no» de forma objetiva.",
               "this": [
                 {
-                  "tag": "No acaba de · impaciencia",
-                  "tr": "Llevo ya treinta minutos esperando y el autobús no viene."
+                  "tag": "no acaba de · impaciencia",
+                  "tr": "Llevo nada menos que treinta minutos esperando y el autobús no acaba de llegar."
                 }
               ],
               "that": [
                 {
-                  "tag": "Objetivo · todavía no",
-                  "tr": "El autobús todavía no ha llegado."
+                  "tag": "objetivo · todavía no",
+                  "tr": "El autobús todavía no ha llegado. Debería llegar en cinco minutos."
                 }
               ],
-              "explain": "Mira si hay «impaciencia por la espera»: llevas mucho esperando y lo esperado no se cumple (30分も待っているのに) → なかなか来ない; solo informas de la situación → まだ来ていない. Además, tras なかなか va el 「ない」 normal, no 「ていない」."
-            },
+              "explain": "Las dos frases significan «el autobús todavía no ha llegado». Fíjate en si hay impaciencia por la espera: ya llevas mucho tiempo esperando y la expectativa se frustra una y otra vez (30分も待っているのに) → なかなか来ない. Solo informas objetivamente de la situación, sin emoción (あと５分で来るはずだ) → まだ来ていない."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Ambos significan «no hay manera de…»",
+          "items": [
             {
-              "id": "metta-ni-nai",
-              "diff": "なかなか〜ない habla de algo esperado que tarda en llegar; めったに〜ない, de que algo ocurre poco por lo general.",
+              "id": "question-word-temo",
+              "title": "どうしても〜ない",
+              "diff": "なかなか〜ない es «no es fácil, aún no lo consigo», y sigues intentándolo; どうしても〜ない es «haga lo que haga, no hay manera», con un tono más fuerte.",
               "this": [
                 {
-                  "tag": "Ahora · no acaba de llegar",
-                  "tr": "Llevo ya veinte minutos esperando y el autobús no viene."
+                  "tag": "no es fácil · sigo intentándolo",
+                  "tr": "Esta palabra no hay forma de que se me quede, ¿eh? Voy a practicar un poco más."
                 }
               ],
               "that": [
                 {
-                  "tag": "En general · poca frecuencia",
-                  "tr": "A este pueblo casi nunca llega el autobús."
+                  "tag": "imposible · ganas de rendirse",
+                  "tr": "Esta palabra no consigo aprenderla de ninguna manera. Me rindo."
                 }
               ],
-              "explain": "Mira si se habla de «la espera presente» o de «la frecuencia habitual»: estás esperando y lo que esperas no se cumple (待っているのに) → なかなか; dos al día, una vez al mes → めったに."
-            },
-            {
-              "id": "you-to-shinai",
-              "diff": "なかなか〜ない suele ser algo difícil de lograr por causas objetivas; ようとしない es que el sujeto «no quiere», la causa está en su voluntad.",
-              "this": [
-                {
-                  "tag": "Difícil de lograr",
-                  "tr": "El niño está tan emocionado que no consigue dormirse."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "No quiere · voluntad",
-                  "tr": "Se lo he dicho mil veces, y el niño no quiere dormirse."
-                }
-              ],
-              "explain": "Mira dónde está la causa: algo que la persona no controla, como la emoción o una enfermedad → なかなか寝ない (no consigue dormirse); no hace caso y simplemente no quiere → 寝ようとしない (se niega a dormir). ようとしない se usa sobre todo para hablar de otros, con tono de queja."
+              "explain": "Las dos frases significan «no consigo memorizarla». なかなか es «no es fácil, lleva tiempo»: sigues esforzándote y crees que al final lo lograrás (もう少し練習しよう). どうしても es «he probado de todo y no funciona»: el tono es más fuerte y a menudo está cerca de rendirse (もう諦めよう)."
             }
           ]
         }
@@ -8741,25 +8602,26 @@
       "id": "nakucha-nakya",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambas vienen de 「なければ／なくては」: «si no lo hago (no está bien)»",
+          "kind": "meaning",
+          "note": "Ambos significan «tener que»",
           "items": [
             {
               "id": "nakereba-naranai",
-              "diff": "なきゃ／なくちゃ son contracciones coloquiales, a menudo se omite la segunda mitad y solo se usan con gente de confianza; なければならない es la forma completa y formal.",
+              "title": "〜なければならない",
+              "diff": "なきゃ／なくちゃ son contracciones orales que suelen omitir la segunda parte, para hablar con uno mismo o con gente cercana; なければならない es la forma completa, para contextos formales como normas o textos.",
               "this": [
                 {
-                  "tag": "Contracción · para uno mismo",
-                  "tr": "Ah, ya son las ocho. Tengo que irme."
+                  "tag": "contracción · hablar solo",
+                  "tr": "¡Ay, ya son las ocho! Tengo que ir a la oficina."
                 }
               ],
               "that": [
                 {
-                  "tag": "Completa · formal",
-                  "tr": "Los estudiantes deben asistir a clase."
+                  "tag": "completa · formal",
+                  "tr": "Según las normas de la empresa, los empleados deben llegar a la oficina antes de las ocho."
                 }
               ],
-              "explain": "なきゃ＝なければ, なくちゃ＝なくては, y a menudo se omite el 「ならない／いけない」 final. Mira el contexto: hablando solo o con amigos y familia → なきゃ・なくちゃ (igual una que otra); normas, textos o situaciones formales → なければならない."
+              "explain": "Las dos frases significan «tener que ir a la oficina». なきゃ = なければ y なくちゃ = なくては, y lo que sigue, 「いけない／ならない」, a menudo se omite. Fíjate en la situación: hablando solo o con amigos y familia (やばい) → なきゃ・なくちゃ; al hablar de normas o escribir (規則では) → なければならない."
             }
           ]
         }

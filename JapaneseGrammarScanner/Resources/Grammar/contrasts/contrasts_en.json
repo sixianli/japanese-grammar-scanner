@@ -8146,82 +8146,64 @@
           "items": [
             {
               "id": "made-until",
-              "diff": "までに means doing something once before that point; まで means continuing until that point.",
+              "diff": "With まで, the action keeps going right up to that limit; with までに, the action is done once, before that limit.",
               "this": [
                 {
-                  "tag": "Done by",
-                  "tr": "I'll be back by five."
+                  "tag": "done before…",
+                  "tr": "I'll be back before five."
                 }
               ],
               "that": [
                 {
-                  "tag": "Continuing until",
-                  "tr": "I'll wait until five."
+                  "tag": "continues until…",
+                  "tr": "I'll be waiting until five."
                 }
               ],
               "wrong": {
-                "why": "「出す」 is a one-time action, so it takes までに"
+                "why": "「出す」 is a one-time action, so it needs までに."
               },
-              "explain": "Look at the verb that follows: actions completed in a moment, like 帰る、出す、着く → までに; actions that can continue, like 待つ、働く、勉強する → まで."
+              "explain": "The core meaning of 「まで」 is “up to a certain limit.” With まで alone, the action stretches all the way to that limit: actions that can continue, like 待っています → まで (waiting until five). Add the point-in-time 「に」 after the limit, and the limit becomes a single point in time; the action has to be completed before that point arrives: actions that happen all at once, like 帰ります or 出す → までに (back before five). So check whether the verb that follows describes something ongoing or something completed in one go."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "All set a time for an action: at that moment, or before it",
+          "note": "Both mean “before…”",
           "items": [
             {
               "id": "mae-ni",
-              "diff": "までに draws a deadline; 前に only says which of two things comes first.",
+              "diff": "までに draws a deadline—any time before it is fine; 前に only says which of two things comes first.",
               "this": [
                 {
-                  "tag": "Deadline",
-                  "tr": "Finish your homework by bedtime."
+                  "tag": "deadline",
+                  "tr": "Have your homework finished by the time you go to bed."
                 }
               ],
               "that": [
                 {
-                  "tag": "Order",
-                  "tr": "Brush your teeth before going to bed."
+                  "tag": "order",
+                  "tr": "Finish your homework before you go to bed."
                 }
               ],
-              "explain": "Both sentences start with 「寝る」; the difference is what follows: までに is a deadline — the homework can be done any time before bed; 前に only gives the order — brush your teeth first, then sleep."
+              "explain": "Both sentences work; the only difference is まで vs. 前. までに treats 「寝る」 as a deadline: get it done by bedtime at the latest, whenever you like before then—like setting a time limit. 前に only gives the order: homework first, then bed. For just the order of actions (e.g., brushing your teeth before bed), use 前に; for a deadline for handing something in or finishing a task, use までに."
             },
             {
               "id": "uchi-ni",
               "title": "〜ないうちに",
-              "diff": "までに takes a clear point in time as the deadline; ないうちに means “quickly, while the situation hasn't changed yet”.",
+              "diff": "までに treats the event as a deadline; ないうちに means “while it hasn’t … yet, hurry,” with a sense of urgency.",
               "this": [
                 {
-                  "tag": "Clear deadline",
-                  "tr": "Let's head back by six."
+                  "tag": "deadline",
+                  "tr": "Let's go home before it gets dark."
                 }
               ],
               "that": [
                 {
-                  "tag": "Before it changes",
-                  "tr": "Let's head back before it gets dark."
+                  "tag": "while not yet · urgent",
+                  "tr": "Let's go home while it's still light."
                 }
               ],
-              "explain": "Look at what comes before it: a clock time or date → までに; a state that's about to change, like 「暗くならない」「雨が降らない」「冷めない」 → ないうちに, with a sense of urgency: “do it now, or it'll be too late”."
-            },
-            {
-              "id": "ni-destination-target",
-              "title": "〜に（point in time）",
-              "diff": "までに means any time before that moment; に means exactly at that moment.",
-              "this": [
-                {
-                  "tag": "Before the deadline",
-                  "tr": "Please come by nine tomorrow."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "At that moment",
-                  "tr": "Please come at nine tomorrow."
-                }
-              ],
-              "explain": "Only 「まで」 differs: 「９時までに」 is a deadline — coming at eight or eight-thirty is fine, as long as it's no later than nine; 「９時に」 is exactly at nine o'clock."
+              "explain": "Both mean “go home before it gets dark.” までに takes the affirmative form (暗くなる) and treats nightfall as a deadline: as long as you’re not later than that, it’s fine—a calm tone. ないうちに takes the negative form (暗くならない) and means “while it still hasn’t…,” carrying the urgency of “if we don’t leave now, it’ll be too late.” For things with a clear deadline, like handing something in or completing paperwork, you normally say までに."
             }
           ]
         }
@@ -8237,77 +8219,69 @@
             {
               "id": "mama-ni-follow",
               "title": "〜られるままに",
-              "diff": "たまま means doing something else while keeping a certain state; 言われるままに means “doing whatever others say”, letting yourself be pushed around.",
+              "diff": "たまま means doing something else while keeping a state as it is; 言われるままに means “doing whatever someone tells you,” letting yourself be led.",
               "this": [
                 {
-                  "tag": "State kept",
+                  "tag": "keeping a state",
                   "tr": "I went out leaving the window open."
                 }
               ],
               "that": [
                 {
-                  "tag": "Pushed around",
-                  "tr": "I did whatever the salesclerk told me and ended up buying expensive clothes."
+                  "tag": "letting yourself be led",
+                  "tr": "I did whatever the clerk said and ended up buying expensive clothes."
                 }
               ],
-              "explain": "「まま」 originally means “as it is”. Look at what comes before it: ta-form (開けた) → the state after the action is left as it is; words like 「言われる」「思う」「気の向く」 + ままに → doing things just as others say or as you feel like."
+              "explain": "The core meaning of 「まま」 is “as it is.” Look at what comes before it: た形 (開けた) → the result of the action is left just as it is; words like 「言われる」「思う」「気の向く」 + ままに → doing things exactly as someone says or as you feel like."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both have to do with “keeping a certain state”",
+          "sense": 1,
+          "note": "Both mean “leaving something in a state and not dealing with it”",
           "items": [
             {
               "id": "ppanashi",
-              "diff": "たまま can just describe objectively; っぱなし stresses “leaving it as is”, usually with displeasure.",
+              "diff": "たまま can be a purely objective description; っぱなし stresses “leaving it and not dealing with it,” usually with annoyance.",
               "this": [
                 {
-                  "tag": "Doing it in a state",
+                  "tag": "doing something in a state",
                   "tr": "I was so tired I fell asleep with the light on."
                 }
               ],
               "that": [
                 {
-                  "tag": "Left as is · displeasure",
+                  "tag": "left undone · annoyance",
                   "tr": "You left the light on again! Turn it off properly."
                 }
               ],
-              "explain": "たまま is often followed by another action (寝てしまった) and only says “in what state”; っぱなし is itself the focus of criticism, often as 「〜っぱなしにする」, with displeasure that something that should have been finished wasn't (また、ちゃんと)."
-            },
+              "explain": "たまま is usually followed by another action (寝てしまった) and only tells you “in what state.” っぱなし is itself the target of the criticism—you often hear 「〜っぱなしにする」—and it carries annoyance that something should have been finished off but wasn’t (また、ちゃんと)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “nothing has changed since then”",
+          "items": [
             {
-              "id": "naide-without",
-              "diff": "Two ways of saying the same thing: たまま says “keeping a state”, ないで says “without doing something”.",
+              "id": "kiri-only",
+              "title": "〜たきり",
+              "diff": "たまま only says the state has continued; たきり stresses “after that one time, nothing more,” is usually followed by a negative, and carries worry.",
               "this": [
                 {
-                  "tag": "State kept",
-                  "tr": "I went into the room with my shoes on."
+                  "tag": "state continues",
+                  "tr": "My father went out this morning and still hasn't come back."
                 }
               ],
               "that": [
                 {
-                  "tag": "Didn't do something",
-                  "tr": "I went into the room without taking off my shoes."
+                  "tag": "nothing since · worry",
+                  "tr": "My father went out this morning and we haven't heard a word from him since."
                 }
               ],
-              "explain": "Both sentences mean the same; look at the verb: 履いた (put on) + まま → keeping the state of “having them on”; 脱が (take off) + ないで → not doing the action of “taking off”."
-            },
-            {
-              "id": "te-iru",
-              "diff": "たまま means doing something else while keeping a certain state; ている at the end of a sentence describes a state.",
-              "this": [
-                {
-                  "tag": "Doing it in a state",
-                  "tr": "I fell asleep with my glasses on."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Describing a state",
-                  "tr": "He's wearing glasses."
-                }
-              ],
-              "explain": "Check whether another action follows: doing something else in that state (寝てしまった), often implying “it shouldn't have been like that” → たまま; the state itself is the point and the sentence ends there → ている. In English, both can use “with … on / wearing”."
+              "explain": "Both mean “nothing has changed since he went out.” たまま focuses on the state of “having gone out” continuing, and what follows isn’t necessarily negative. たきり focuses on “after that one time, things just stopped”; it’s almost always followed by a negative (連絡もない) and has a tone of surprise or worry."
             }
           ]
         }
@@ -8318,58 +8292,26 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "All pair with a negative to say something “doesn't happen much”",
+          "note": "Both mean “rare, hard to come by”",
           "items": [
             {
-              "id": "amari-nai",
-              "diff": "めったに is only about frequency, and very low — close to “once in a blue moon”; あまり can describe frequency or degree, and the frequency isn't as low.",
+              "id": "gatai",
+              "title": "得がたい（hard to come by）",
+              "thisTitle": "めったにない + noun",
+              "diff": "めったにない focuses on “rarely encountered” and works in both speech and writing; 得がたい is written language and adds the judgment “hard-won, precious.”",
               "this": [
                 {
-                  "tag": "Frequency · rarely",
-                  "tr": "I rarely go to the movie theater."
+                  "tag": "rare · fine in speech",
+                  "tr": "Studying abroad was a really rare experience, you know."
                 }
               ],
               "that": [
                 {
-                  "tag": "Not very often",
-                  "tr": "I don't go to the movie theater very often."
+                  "tag": "precious · written",
+                  "tr": "My three years of study abroad became an invaluable experience."
                 }
               ],
-              "explain": "For frequency both work, with めったに being rarer (once or twice a year). For the degree of an adjective (甘くない、高くない) only あまり works: 「このりんごはあまり甘くない」 — you can't swap in めったに here."
-            },
-            {
-              "id": "zenzen-nai",
-              "diff": "めったに〜ない means “rarely”, still happening occasionally; 全然〜ない means “not at all, never”.",
-              "this": [
-                {
-                  "tag": "Rarely · occasionally",
-                  "tr": "My older brother rarely drinks. He only has a little at New Year's."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Not at all",
-                  "tr": "My younger brother doesn't drink at all."
-                }
-              ],
-              "explain": "Check for “occasional exceptions”: if it can be followed by “only at New Year's…” → めったに; not even once → 全然 (まったく)."
-            },
-            {
-              "id": "nakanaka-nai",
-              "diff": "めったに〜ない is about low frequency in general; なかなか〜ない is about something expected that just won't happen.",
-              "this": [
-                {
-                  "tag": "In general · rarely",
-                  "tr": "Buses rarely come to this village."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Right now · just won't come",
-                  "tr": "I've been waiting twenty minutes already, and the bus still isn't coming."
-                }
-              ],
-              "explain": "Check whether it's about “usual frequency” or “waiting right now”: two buses a day, once a month → めったに; you're waiting and your expectation keeps failing (待っているのに) → なかなか, with a sense of impatience."
+              "explain": "Both talk about “a rare experience.” めったにない focuses on the fact that such things seldom happen, and works in chat (だったよ) as well as writing. 得がたい is written language; it focuses on something being hard to obtain and precious, carries a clearly positive evaluation, and is mostly seen in writing and speeches (となった)."
             }
           ]
         }
@@ -8384,10 +8326,10 @@
           "items": [
             {
               "id": "ku-ni-mieru",
-              "diff": "noun + が見える means “can be seen”; adjective く／noun に + 見える means “looks…”.",
+              "diff": "Noun + が見える means “can be seen”; adjective く / noun に + 見える means “looks …”.",
               "this": [
                 {
-                  "tag": "Can be seen",
+                  "tag": "can be seen",
                   "tr": "You can see the sea from the window."
                 }
               ],
@@ -8401,24 +8343,24 @@
                   "tr": "He always looks full of energy."
                 }
               ],
-              "explain": "Look at what comes before 「見える」: 「noun + が」 → that thing comes into view (can be seen); the く-form of an adjective or 「noun / na-adjective + に」 → the impression given (looks). 聞こえる is the same: 「声が聞こえる」 is “can hear a voice”, 「変に聞こえる」 is “sounds strange”."
+              "explain": "The core meaning of 「見える」 is “to come into view naturally, without actively looking.” If what comes into view is the thing itself → “can be seen”: noun + が見える (海が見える). If it’s how the thing appears → “looks …”: the く form of an adjective, or “noun / な-adjective + に”, + 見える (広く見える、元気に見える). So check whether 「見える」 is preceded by 「が」 or by 「く／に」. 聞こえる works the same way: 「声が聞こえる」 is “I can hear a voice,” 「変に聞こえる」 is “it sounds strange.”"
             },
             {
               "id": "to-mieru",
-              "diff": "が見える means actually seeing with your eyes; とみえる infers “it seems…” from visible signs.",
+              "diff": "が見える means you actually see it with your eyes; とみえる is an inference from visible signs: “it seems …”.",
               "this": [
                 {
-                  "tag": "Seen with the eyes",
-                  "tr": "It's the middle of the night, but I can still see the light in the next room."
+                  "tag": "seen with the eyes",
+                  "tr": "Even though it's the middle of the night, I can see the light in the room next door."
                 }
               ],
               "that": [
                 {
-                  "tag": "Inference · it seems",
-                  "tr": "The light is still on in the next room. It seems he's still up."
+                  "tag": "inference · it seems",
+                  "tr": "The light is on in the room next door. It seems they're still up."
                 }
               ],
-              "explain": "が見える is about the thing you see right in front of you (明かり); とみえる follows a complete clause (まだ起きている) and is a conclusion drawn from visible signs — it's rather written, and in speech people mostly say 「〜みたいだ」."
+              "explain": "が見える talks about the thing itself that you see in front of you (明かり). とみえる is preceded by a complete clause (まだ起きている) and is a conclusion drawn from what you’ve seen. It’s rather formal; in speech people usually say 「〜みたいだ」."
             }
           ]
         },
@@ -8428,24 +8370,21 @@
           "items": [
             {
               "id": "ga-mirareru",
-              "diff": "見える is scenery naturally coming into view; が見られる is being able to see something given the conditions or a chance, and in writing it also means “(a phenomenon) is observed”.",
+              "title": "〜が見られる（can be seen）",
+              "diff": "With 見える the scenery simply comes into view on its own; が見られる means you get the chance to see something at a certain place or season, and is mostly used when introducing it.",
               "this": [
                 {
-                  "tag": "Naturally in view",
-                  "tr": "On clear days you can see Mt. Fuji from here."
+                  "tag": "right there · naturally visible",
+                  "tr": "Wow, you can see Mt. Fuji from the roof!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Chance to see",
-                  "tr": "You can watch old movies at this theater."
-                },
-                {
-                  "tag": "Written · phenomenon observed",
-                  "tr": "A population decline can be seen in this region."
+                  "tag": "introducing · chance to see",
+                  "tr": "From this observation deck, you can see Mt. Fuji once winter comes."
                 }
               ],
-              "explain": "Look at what is “seen”: scenery that naturally comes into view, like mountains, the sea or stars → 見える; things you need an opportunity or a particular place to see, like movies or exhibitions → が見られる; abstract phenomena like 「減少」「変化」「傾向」, in a report or news tone → also が見られる. 聞こえる／聞ける work the same: 「波の音が聞こえる」 is “can hear the waves”, 「ここで昔の歌が聞ける」 is “you get to hear old songs here”."
+              "explain": "Both mean “you can see Mt. Fuji.” When you’re looking at it right now, or it’s simply visible from here (わあ、屋上から) → 見える: the scenery comes into view by itself; this is the most common in speech. When you’re introducing what you’ll get a chance to see if you go to a certain place or in a certain season (この展望台では、冬になると) → が見られる, which sounds like a guidebook."
             }
           ]
         }
@@ -8460,44 +8399,20 @@
           "items": [
             {
               "id": "n-desu-explanatory",
-              "diff": "んですが first states the situation, then makes a request or asks a question; んです only explains the situation, and the sentence ends there.",
+              "diff": "んですが first lays out the situation, then a request or question follows; んです only explains the situation, and the sentence ends there.",
               "this": [
                 {
-                  "tag": "Lead-in → question",
-                  "tr": "Excuse me, I'm lost — where's the station?"
+                  "tag": "setup → question",
+                  "tr": "Excuse me, I'm lost—where is the station?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Explaining a reason",
-                  "tr": "Sorry I'm late. The train stopped."
+                  "tag": "explaining the reason",
+                  "tr": "Sorry I'm late. I got lost."
                 }
               ],
-              "explain": "Check whether something follows: after 「んですが、」 comes a request or question (駅はどこですか、〜てもいいですか) → it's a lead-in; the sentence ends at 「んです。」, explaining a reason → んです."
-            }
-          ]
-        },
-        {
-          "kind": "look",
-          "note": "the けど in 「んですけど」 ↔ the contrastive けど — written exactly the same",
-          "items": [
-            {
-              "id": "kedo-keredomo",
-              "title": "〜けど（contrast）",
-              "diff": "The けど in 「んですけど」 doesn't express contrast; it just leads into the request that follows; ordinary けど means “although…, but”.",
-              "this": [
-                {
-                  "tag": "Lead-in · no contrast",
-                  "tr": "Excuse me, I'd like to borrow this book — is that OK?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Contrast · opposite sides",
-                  "tr": "This book is interesting, but a bit difficult."
-                }
-              ],
-              "explain": "Check whether what's before and after けど are “opposites”: 面白い↔難しい, one positive and one negative → contrast; your own situation before it (借りたい) and a request or question after it, or nothing at all → just a lead-in; don't translate it as “but”. When 「んです」 comes before it, it's almost always a lead-in."
+              "explain": "The core meaning of 「んです」 is laying out a situation and explaining it. If you stop at 「んです。」, the listener just gets an explanation (why you’re late) → んです. Add 「が」 after it and you leave a gap that says “I’m not done yet,” which naturally leads into a request or question (駅はどこですか) → んですが. Both sentences contain 「道に迷った」, so look at what follows 「んです」: if there’s 「が、」 followed by a request or question → it’s a setup; if the sentence ends at 「んです。」 → it’s explaining a reason."
             }
           ]
         }
@@ -8513,20 +8428,20 @@
             {
               "id": "nai-form",
               "title": "〜ない（negative）",
-              "diff": "「〜ない？」 with rising intonation is an invitation; 「〜ない。」 said flat is a negation.",
+              "diff": "「〜ない？」 with rising intonation at the end is an invitation; 「〜ない。」 said flatly is a negative.",
               "this": [
                 {
-                  "tag": "Invitation · rising",
+                  "tag": "invitation · rising tone",
                   "tr": "Want to see a movie together tomorrow?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Negation · falling",
+                  "tag": "negative · falling tone",
                   "tr": "I'm not watching a movie tomorrow. I'm studying at home."
                 }
               ],
-              "explain": "In writing they differ only by a question mark; spoken, only by intonation. Look for 「一緒に」「ねえ」 and the question mark: inviting someone → 〜ない？ (rising); saying you won't do it → 〜ない。 (falling). Watch the question marks especially carefully when reading chat messages."
+              "explain": "In writing, the only difference is a question mark; in speech, only the intonation. Look for 「一緒に」, 「ねえ」 and a question mark: inviting the other person → 〜ない？ (rising); saying you won’t do something → 〜ない。 (falling). When reading chat messages, pay special attention to the question mark."
             }
           ]
         },
@@ -8553,20 +8468,20 @@
             },
             {
               "id": "volitional-form",
-              "diff": "「行かない？」 first asks whether the other person wants to, which is softer; 「行こう」 is a direct call, assuming they'll agree.",
+              "diff": "「行かない？」 first asks whether the other person wants to, so it’s softer; 「行こう」 is a direct call to action that assumes they’ll agree.",
               "this": [
                 {
-                  "tag": "Asking their opinion",
+                  "tag": "asking their view",
                   "tr": "Hey, want to go to the beach this weekend?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Direct call",
-                  "tr": "All right, let's go to the beach this weekend!"
+                  "tag": "direct call",
+                  "tr": "Right, let's go to the beach this weekend!"
                 }
               ],
-              "explain": "Check whether it's already been agreed: you don't know yet if they want to go, so you sound them out → 〜ない？; they'll surely want to, or it's already settled, and you decide decisively (よし、じゃあ) → 〜(よ)う. When asked 「行かない？」, people often answer 「うん、行こう！」."
+              "explain": "Check whether it’s already been agreed. If you don’t know yet whether they want to go and you’re sounding them out → 〜ない？. If they’ll definitely want to, or it’s already settled, and you’re deciding decisively (よし、じゃあ) → 〜(よ)う. When asked 「行かない？」, people also often answer 「うん、行こう！」."
             }
           ]
         }
@@ -8575,29 +8490,6 @@
     {
       "id": "nai-wa-nai",
       "groups": [
-        {
-          "kind": "look",
-          "note": "Both are 「〜ない…はない」 double negatives that look very similar",
-          "items": [
-            {
-              "id": "nai-koto-wa-nai",
-              "diff": "ない人はいない means “there's nobody who doesn't…” ＝ everyone; ないことはない means “it's not that I can't…”, leaving some leeway.",
-              "this": [
-                {
-                  "tag": "Everyone · strong",
-                  "tr": "There's no one who doesn't know this song."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Not that I can't · reluctant",
-                  "tr": "This song… well, it's not that I can't sing it, but…"
-                }
-              ],
-              "explain": "Look at what's sandwiched between the two negatives: a noun like 「人」「日」「もの」 → it denies that “there are exceptions”, concluding “all of them…”, with a strong tone; 「こと」 → it denies “being unable”, concluding “it's not impossible”, often followed by 「けど」, with a reluctant tone."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Both mean “all, without exception”",
@@ -8633,43 +8525,20 @@
           "items": [
             {
               "id": "te-oku",
-              "diff": "ないでおく means deliberately not doing something for now, for later's sake; ておく means doing something in advance for later.",
+              "diff": "ないでおく means deliberately not doing something for now, with later in mind; ておく means doing something in advance, with later in mind.",
               "this": [
                 {
-                  "tag": "Deliberately not doing",
-                  "tr": "I'll drink it later, so I'll leave the beer unopened."
+                  "tag": "deliberately not doing",
+                  "tr": "I'll drink it later, so I'm leaving the beer unopened."
                 }
               ],
               "that": [
                 {
-                  "tag": "Done in advance",
-                  "tr": "I'll drink it later, so I'll chill the beer now."
+                  "tag": "doing in advance",
+                  "tr": "I'll drink it later, so I'm putting the beer in to chill."
                 }
               ],
-              "explain": "Both sentences give the same reason (後で飲むから) and are both thinking ahead. Look at what comes before 「おく」: nai-form + で → deliberately not doing it yet, leaving things as they are; te-form → doing it in advance."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Both can express leaving things as they are",
-          "items": [
-            {
-              "id": "mama-unchanged",
-              "diff": "ないでおく is deliberately not doing something; たまま only says a state stayed as it was, often by accident.",
-              "this": [
-                {
-                  "tag": "On purpose · not doing",
-                  "tr": "It wasn't cold, so I left the window open."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "By accident · state kept",
-                  "tr": "I carelessly went out with the window open."
-                }
-              ],
-              "explain": "Check whether it was on purpose: a reason, a conscious choice not to do it (寒くないので) → ないでおく; 「うっかり」「〜てしまった」, left that way without noticing → たまま. Also, ないでおく focuses on “which action you don't do” (閉めない), while たまま focuses on “which state is kept” (開けた)."
+              "explain": "The core meaning of 「おく」 is “to put down, to leave there,” which extends to “arranging things for later.” ておく: you do an action and leave its result in place → doing it in advance (冷やしておく). ないでおく: you don’t do the action and leave things as they are → deliberately not doing it for now (開けないでおく). Both sentences have the same reason (後で飲むから) and are both done with later in mind. Look at what comes before 「おく」: ない形 + で → deliberately not doing it yet; て形 → doing it in advance."
             }
           ]
         }
@@ -8680,58 +8549,50 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "All pair with a negative to say something “doesn't happen much, or just won't happen”",
+          "sense": 1,
+          "note": "Both mean “something expected hasn’t happened yet”",
           "items": [
             {
               "id": "mada-te-inai",
-              "diff": "なかなか〜ない means “just won't…”, with the impatience of waiting; まだ〜ていない just objectively says “not yet”.",
+              "diff": "なかなか〜ない means “just won’t …,” with the impatience of waiting; まだ〜ていない simply says “not yet” objectively.",
               "this": [
                 {
-                  "tag": "Just won't · impatient",
-                  "tr": "I've been waiting thirty minutes, and the bus still isn't coming."
+                  "tag": "just won’t · impatient",
+                  "tr": "I've been waiting a whole thirty minutes, and the bus just won't come."
                 }
               ],
               "that": [
                 {
-                  "tag": "Objective · not yet",
-                  "tr": "The bus hasn't come yet."
+                  "tag": "objective · not yet",
+                  "tr": "The bus hasn't come yet. It should be here in five minutes."
                 }
               ],
-              "explain": "Check for the feeling of “impatient waiting”: you've waited a long time and keep being let down (30分も待っているのに) → なかなか来ない; just reporting the current situation → まだ来ていない. Also, なかなか is followed by a plain 「ない」, not 「ていない」."
-            },
+              "explain": "Both mean “the bus hasn’t come yet.” Check whether there’s impatience from waiting: you’ve waited a long time and keep being let down (30分も待っているのに) → なかなか来ない. You’re just objectively reporting the situation, without emotion (あと５分で来るはずだ) → まだ来ていない."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “just can’t…, no matter what”",
+          "items": [
             {
-              "id": "metta-ni-nai",
-              "diff": "なかなか〜ない is about something expected that just won't happen; めったに〜ない is about low frequency in general.",
+              "id": "question-word-temo",
+              "title": "どうしても〜ない",
+              "diff": "なかなか〜ない means “it’s not easy, not there yet,” and you’re still trying; どうしても〜ない means “it won’t work whatever I do,” with a stronger tone.",
               "this": [
                 {
-                  "tag": "Right now · just won't come",
-                  "tr": "I've been waiting twenty minutes already, and the bus still isn't coming."
+                  "tag": "not easy · still trying",
+                  "tr": "I just can't seem to get this word to stick. I'll practice a bit more."
                 }
               ],
               "that": [
                 {
-                  "tag": "In general · rarely",
-                  "tr": "Buses rarely come to this village."
+                  "tag": "no way at all · giving up",
+                  "tr": "I can't memorize this word no matter what. I'll give up."
                 }
               ],
-              "explain": "Check whether it's about “waiting right now” or “usual frequency”: you're waiting and your expectation keeps failing (待っているのに) → なかなか; two buses a day, once a month → めったに."
-            },
-            {
-              "id": "you-to-shinai",
-              "diff": "なかなか〜ない is usually something objectively hard to achieve; ようとしない means the subject “refuses to”, the cause being their will.",
-              "this": [
-                {
-                  "tag": "Hard to achieve",
-                  "tr": "The child is so excited he just can't fall asleep."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Refuses · will",
-                  "tr": "No matter how many times I tell him, the child won't go to sleep."
-                }
-              ],
-              "explain": "Look at where the cause lies: something the person can't control, like excitement or illness → なかなか寝ない (can't fall asleep); they won't listen and simply don't want to → 寝ようとしない (refuses to sleep). ようとしない is mostly used about others, with displeasure."
+              "explain": "Both mean “I can’t memorize it.” なかなか means “it’s not easy, it takes time”—you’re still trying and feel you’ll get there eventually (もう少し練習しよう). どうしても means “I’ve tried everything and it still doesn’t work”; the tone is stronger and often close to giving up (もう諦めよう)."
             }
           ]
         }
@@ -8741,25 +8602,26 @@
       "id": "nakucha-nakya",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from 「なければ／なくては」 — “if (I) don't… (it won't do)”",
+          "kind": "meaning",
+          "note": "Both mean “must, have to”",
           "items": [
             {
               "id": "nakereba-naranai",
-              "diff": "なきゃ／なくちゃ are spoken contractions whose second half is often dropped, used only with people you know well; なければならない is complete and formal.",
+              "title": "〜なければならない",
+              "diff": "なきゃ／なくちゃ are spoken contractions that often drop the second half, used to yourself or people you’re close to; なければならない is the full form, used in formal contexts like rules and writing.",
               "this": [
                 {
-                  "tag": "Contracted · to oneself",
-                  "tr": "Oh, it's already eight. I've gotta go."
+                  "tag": "contracted · talking to yourself",
+                  "tr": "Oh no, it's already eight. I've got to get to work."
                 }
               ],
               "that": [
                 {
-                  "tag": "Full · formal",
-                  "tr": "Students must attend class."
+                  "tag": "full · formal",
+                  "tr": "Under company rules, employees must arrive at work by eight."
                 }
               ],
-              "explain": "なきゃ＝なければ, なくちゃ＝なくては, and the following 「ならない／いけない」 is often dropped. It depends on the setting: talking to yourself or with friends and family → なきゃ・なくちゃ (the two are the same); rules, writing, formal settings → なければならない."
+              "explain": "Both mean “have to go to work.” なきゃ = なければ and なくちゃ = なくては, and the following 「いけない／ならない」 is often dropped. Look at the situation: talking to yourself or to friends and family (やばい) → なきゃ・なくちゃ; stating rules or writing (規則では) → なければならない."
             }
           ]
         }
