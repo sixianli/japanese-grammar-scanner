@@ -7879,28 +7879,28 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều là cùng một chữ 「か」 — nghĩa cốt lõi là “không chắc chắn”",
+          "note": "Đều xuất phát từ trợ từ nghi vấn 「か」 — nghĩa gốc là “phân vân, hỏi”",
           "items": [
             {
               "id": "ka-question",
-              "title": "〜か（câu hỏi gián tiếp）",
-              "diff": "Không có từ để hỏi, hỏi “có phải không” thì dùng 「かどうか」; câu hỏi có từ để hỏi thì thêm thẳng 「か」.",
+              "title": "〜か (câu hỏi gián tiếp)",
+              "diff": "Không có từ để hỏi, hỏi “có … hay không” thì dùng 「かどうか」; câu hỏi có từ để hỏi thì chỉ thêm 「か」.",
               "this": [
                 {
                   "tag": "Có hay không → かどうか",
-                  "tr": "Tôi không biết ngày mai anh ấy có đến không."
+                  "tr": "Tôi không biết ngày mai anh ấy có đến hay không."
                 }
               ],
               "that": [
                 {
-                  "tag": "Có từ để hỏi → か",
+                  "tag": "Hỏi “khi nào” → か",
                   "tr": "Tôi không biết khi nào anh ấy đến."
                 }
               ],
               "wrong": {
-                "why": "Khi có từ để hỏi thì không thêm 「どうか」 nữa"
+                "why": "Khi có từ để hỏi thì không thêm 「どうか」 được nữa"
               },
-              "explain": "Xem câu hỏi được lồng vào có từ để hỏi không: いつ、どこ、誰、何 → thêm thẳng か; không có từ để hỏi, chỉ hỏi “có đến không, có đúng không” → かどうか (cũng có thể nói 「来るか来ないか」)."
+              "explain": "Nghĩa gốc của 「か」 là phân vân, hỏi: nó đưa nguyên một câu hỏi vào trong câu. Nếu câu hỏi có từ để hỏi (いつ、どこ、誰、何), điều phân vân chính là từ đó, nên chỉ cần thêm 「か」: いつ来るか. Không có từ để hỏi, chỉ hỏi “có phải hay không” thì nói 「来るか、どうか」 — “có đến chăng, hay thế nào” — đặt hai vế cạnh nhau thành “có … hay không”: 来るかどうか. Vì vậy có từ để hỏi thì không thêm 「どうか」 nữa."
             }
           ]
         },
@@ -7934,32 +7934,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều là đuôi câu hỏi trong văn nói thể thông thường",
+          "note": "Đều là hỏi han quan tâm “… à?”",
           "items": [
             {
               "id": "casual-question-no",
-              "diff": "かい・だい mang giọng của người lớn tuổi, nam giới, lại phải chia theo có từ để hỏi hay không; の？ nam nữ già trẻ đều dùng, cũng không cần phân biệt.",
+              "diff": "かい mang giọng thân mật của người lớn nói với người nhỏ hơn, nay chủ yếu gặp trong tiểu thuyết, anime; の？ thì nam nữ già trẻ đều dùng.",
               "this": [
                 {
-                  "tag": "かい · hỏi có phải không",
-                  "tr": "Bài tập làm xong chưa?"
-                },
-                {
-                  "tag": "だい · có từ để hỏi",
-                  "tr": "Muốn ăn gì nào?"
+                  "tag": "Giọng người lớn · thân mật",
+                  "tr": "Cháu thấy trong người không khỏe à?"
                 }
               ],
               "that": [
                 {
                   "tag": "Nam nữ già trẻ đều dùng",
-                  "tr": "Bài tập làm xong chưa?"
-                },
-                {
-                  "tag": "Có hay không có từ để hỏi đều được",
-                  "tr": "Muốn ăn gì?"
+                  "tr": "Bạn thấy không khỏe ở đâu à?"
                 }
               ],
-              "explain": "かい・だい xem trong câu có từ để hỏi không: không có → かい; có 「何、どこ、誰」 → だい (thường nói 「〜んだい」). 「の？」 dùng được cho cả hai trường hợp. Ngày nay giới trẻ, phụ nữ hầu như chỉ nói 「の？」, còn かい・だい chủ yếu xuất hiện trong lời của ông, bố, thầy giáo hoặc trong tiểu thuyết."
+              "explain": "Hai câu cùng nghĩa, đều là thấy dáng vẻ của đối phương mà hỏi han quan tâm. Xem người nói: ông, bố, thầy cô nói với trẻ con, mang giọng thân mật của người lớn → 〜のかい; người bình thường, nhất là người trẻ và phụ nữ → 〜の？. かい chỉ dùng để hỏi “có phải không”; khi có từ để hỏi thì đổi thành だい.",
+              "thisTitle": "〜かい"
             }
           ]
         }
@@ -7970,66 +7963,15 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả sự suy đoán, khác nhau ở mức độ chắc chắn",
+          "note": "Đều mang nghĩa “có thể sẽ …”",
           "items": [
             {
-              "id": "darou-guess",
-              "diff": "かもしれない chỉ nói “cũng có khả năng”, ít chắc chắn; だろう là trong lòng đã đại khái khẳng định, khá chắc chắn.",
-              "this": [
-                {
-                  "tag": "Không chừng · ít chắc",
-                  "tr": "Không chừng trời sẽ mưa."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Có lẽ sẽ · khá chắc",
-                  "tr": "Trời tối thế này, chắc chắn sẽ mưa thôi."
-                }
-              ],
-              "explain": "Xem phó từ phía trước: 「もしかしたら」, 「ひょっとすると」 → かもしれない; 「きっと」, 「たぶん」 → だろう (thể lịch sự là でしょう). Khi chỉ đưa ra một khả năng, bản thân cũng không mấy chắc chắn thì dùng かもしれない."
-            },
-            {
-              "id": "hazu-da",
-              "diff": "かもしれない không có căn cứ cũng nói được; はずだ là dựa vào lý lẽ, sự thật mà suy ra “theo lẽ thì phải”.",
-              "this": [
-                {
-                  "tag": "Chỉ là một khả năng",
-                  "tr": "Tôi cũng không rõ lắm, không chừng anh Tanaka đã về đến nhà rồi."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Có căn cứ · theo lẽ",
-                  "tr": "Anh ấy rời công ty lúc sáu giờ rồi, theo lẽ thì phải về đến nhà rồi."
-                }
-              ],
-              "explain": "Xem phía trước có căn cứ không: nói được lý do cụ thể (６時に会社を出たから) → はずだ; không có căn cứ gì, chỉ nghĩ ra một khả năng (よく分からないけど) → かもしれない."
-            },
-            {
-              "id": "ni-chigainai",
-              "diff": "かもしれない ít chắc chắn nhất (có lẽ); に違いない chắc chắn nhất (nhất định là).",
-              "this": [
-                {
-                  "tag": "Có lẽ · chỉ là nghi ngờ",
-                  "tr": "Không chừng người đó chính là thủ phạm."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nhất định là · rất tin chắc",
-                  "tr": "Dấu vân tay cũng khớp rồi, người đó nhất định là thủ phạm."
-                }
-              ],
-              "explain": "Xem người nói nắm được bao nhiêu bằng chứng: chỉ là nghi ngờ (もしかすると) → かもしれない; bằng chứng đầy đủ, tin chắc không nghi ngờ (指紋も一致した) → に違いない. Nghĩa mặt chữ cũng ngược hẳn nhau: かもしれない＝“không thể biết được”, に違いない＝“không thể sai”."
-            },
-            {
               "id": "osore-ga-aru",
-              "diff": "かもしれない nói được cả việc tốt lẫn việc xấu, dùng được cả văn nói lẫn văn viết; おそれがある chỉ nói việc xấu, thường dùng trong tin tức, thông báo.",
+              "diff": "かもしれない dùng được cho cả việc tốt lẫn việc xấu, cả văn nói lẫn văn viết; おそれがある chỉ nói việc xấu, thường dùng trong tin tức, thông báo.",
               "this": [
                 {
-                  "tag": "Thông thường · văn nói",
-                  "tr": "Ngày mai không chừng sẽ có tuyết nhỉ."
+                  "tag": "Đời thường · tốt xấu đều được",
+                  "tr": "Ngày mai không chừng có tuyết rơi đấy nhỉ."
                 }
               ],
               "that": [
@@ -8041,7 +7983,7 @@
               "wrong": {
                 "why": "おそれがある chỉ dùng cho việc không tốt"
               },
-              "explain": "Xem nội dung và hoàn cảnh: trong dự báo thời tiết, tin tức, thông báo nói về khả năng xảy ra thiên tai, nguy hiểm → おそれがある; trò chuyện hằng ngày, hoặc là việc tốt (合格できるかもしれない) → かもしれない."
+              "explain": "Xem nội dung và hoàn cảnh: tin tức, dự báo thời tiết, thông báo nói thiên tai, nguy hiểm có thể xảy ra (台風の影響で) → おそれがある; trò chuyện hằng ngày, hoặc là việc tốt (合格できるかもしれない) → かもしれない. おそれがある không dùng cho việc tốt."
             }
           ]
         }
@@ -8076,7 +8018,7 @@
         },
         {
           "kind": "meaning",
-          "note": "Đều là kiểu tự hỏi hoặc hỏi khéo “… nhỉ?”",
+          "note": "Đều là tự hỏi một mình “… nhỉ”",
           "items": [
             {
               "id": "kashira-wonder",
@@ -8097,20 +8039,20 @@
             },
             {
               "id": "no-darou-ka",
-              "diff": "かな là câu tự hỏi nhẹ nhàng trong văn nói; のだろうか thiên về văn viết, giọng điệu nghiêm túc.",
+              "diff": "かな là tự hỏi nhẹ nhàng trong văn nói; のだろうか thiên về văn viết, giọng nghiêm túc.",
               "this": [
                 {
                   "tag": "Văn nói · nhẹ nhàng",
-                  "tr": "Trận đấu ngày mai không biết có thắng được không nhỉ."
+                  "tr": "Trận đấu ngày mai liệu có thắng được không nhỉ."
                 }
               ],
               "that": [
                 {
                   "tag": "Văn viết · suy nghĩ nghiêm túc",
-                  "tr": "Vì sao con người lại nằm mơ nhỉ?"
+                  "tr": "Vì sao con người lại nằm mơ?"
                 }
               ],
-              "explain": "Xem hoàn cảnh và chủ đề: chuyện nhỏ khi trò chuyện với bạn bè, tự nói một mình → かな; vấn đề suy nghĩ nghiêm túc trong bài viết, bài diễn thuyết (なぜ、本当に) → のだろうか (văn nói là 「んだろうか」)."
+              "explain": "Xem hoàn cảnh và chủ đề: chuyện nhỏ khi nói chuyện với bạn bè hay tự nói một mình → かな; vấn đề suy nghĩ nghiêm túc trong bài viết, bài phát biểu (なぜ、本当に) → のだろうか (văn nói là 「んだろうか」)."
             }
           ]
         }
@@ -8121,72 +8063,41 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều là kiểu tự hỏi hoặc hỏi khéo “… nhỉ?”",
+          "note": "Đều là tự hỏi một mình “… nhỉ”",
           "items": [
             {
               "id": "kana-wonder",
-              "diff": "かしら theo truyền thống là từ của nữ giới, mềm mại, hơi cổ; かな nam nữ đều dùng.",
+              "diff": "かしら vốn là cách nói của phụ nữ, mềm mại, hơi cổ; かな nam nữ đều dùng.",
               "this": [
                 {
-                  "tag": "Nữ giới · mềm mại",
-                  "tr": "Cái áo này có hợp với mình không nhỉ. (giọng nữ)"
+                  "tag": "Phụ nữ · mềm mại",
+                  "tr": "Chiếc váy này có hợp với mình không nhỉ? (giọng nữ)"
                 }
               ],
               "that": [
                 {
                   "tag": "Nam nữ đều dùng",
-                  "tr": "Cái áo này có hợp với mình không nhỉ."
+                  "tr": "Cái váy này có hợp với mình không ta?"
                 }
               ],
-              "explain": "Nghĩa về cơ bản như nhau, xem người nói: phụ nữ trung niên, lớn tuổi, hoặc nhân vật nữ thanh lịch trong tiểu thuyết, phim truyền hình → かしら; nam nữ già trẻ, nhất là giới trẻ → かな. Ngày nay phụ nữ trẻ cũng phần lớn nói かな."
+              "explain": "Nghĩa về cơ bản giống nhau, xem người nói: phụ nữ trung niên, lớn tuổi, hoặc nhân vật nữ thanh lịch trong tiểu thuyết, phim truyền hình → かしら; nam nữ già trẻ, nhất là người trẻ → かな. Ngày nay phụ nữ trẻ cũng phần lớn nói かな."
             },
             {
               "id": "no-darou-ka",
-              "diff": "かしら là văn nói của nữ giới; のだろうか không phân biệt nam nữ, thiên về văn viết.",
+              "diff": "かしら là văn nói của phụ nữ; のだろうか không phân nam nữ, thiên về văn viết.",
               "this": [
                 {
-                  "tag": "Nữ giới · văn nói",
-                  "tr": "Ơ kìa, hôm nay anh Tanaka không đến à?"
+                  "tag": "Phụ nữ · văn nói",
+                  "tr": "Ơ kìa, hôm nay anh Tanaka không đến hay sao nhỉ?"
                 }
               ],
               "that": [
                 {
                   "tag": "Trung tính · văn viết",
-                  "tr": "Vì sao anh Tanaka lại không đến nhỉ?"
+                  "tr": "Vì sao anh Tanaka không đến?"
                 }
               ],
-              "explain": "Xem người nói và văn phong: phụ nữ trong hội thoại hằng ngày, giọng mềm mại (あら、〜のかしら) → かしら; cách nói văn viết không phân biệt nam nữ, câu tự hỏi trong bài viết → のだろうか."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "kenjougo-special-verbs",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Đều là khiêm nhường ngữ, hạ thấp hành động của phía mình",
-          "items": [
-            {
-              "id": "o-suru-humble",
-              "diff": "参る・拝見する là những động từ khiêm nhường ngữ riêng; お〜する là công thức khiêm nhường cho động từ thông thường. Động từ nào có cách nói riêng thì phải dùng cách nói riêng.",
-              "this": [
-                {
-                  "tag": "Khiêm nhường ngữ riêng",
-                  "tr": "Tôi xin phép xem tài liệu."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Động từ thông thường → お〜する",
-                  "tr": "Tôi xin gửi tài liệu cho anh."
-                }
-              ],
-              "wrong": {
-                "why": "「見る」 có khiêm nhường ngữ riêng là 「拝見する」"
-              },
-              "explain": "Trước tiên nghĩ xem động từ này có khiêm nhường ngữ riêng không: 見る→拝見する、言う→申す、行く→参る／伺う、する→いたす; những động từ không có (送る、持つ、待つ) mới dùng 「お＋thể ます＋する」."
+              "explain": "Xem người nói và văn phong: phụ nữ trong hội thoại hằng ngày, giọng mềm mại (あら、〜のかしら) → かしら; cách nói văn viết không phân nam nữ, tự hỏi trong bài viết → のだろうか."
             }
           ]
         }
@@ -8197,15 +8108,15 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ các từ chỉ định 「こ・そ・あ・ど」",
+          "note": "Đều xuất phát từ chỉ thị từ gần 「こ」 — nghĩa gốc là “phía gần người nói”",
           "items": [
             {
               "id": "kosoado-determiners",
-              "diff": "こんな nói về “như thế này, loại này”, chú ý đến chủng loại và tính chất; この chỉ đúng một cái cụ thể này.",
+              "diff": "こんな là “như thế này, loại này”, chú ý vào chủng loại, tính chất; この chỉ đúng cái cụ thể này.",
               "this": [
                 {
                   "tag": "Loại này",
-                  "tr": "Ước gì một ngày nào đó mình cũng có một cái túi như thế này."
+                  "tr": "Ước gì một ngày nào đó mình cũng có một chiếc túi như thế này."
                 }
               ],
               "that": [
@@ -8214,15 +8125,15 @@
                   "tr": "Xin lỗi, cho tôi cái túi này."
                 }
               ],
-              "explain": "Nhìn 「いつか」 (“một ngày nào đó”): muốn có vào một ngày nào đó nghĩa là không phải cái trước mắt mà là loại như thế → こんな; nói 「ください」 ở cửa hàng là muốn đúng cái trước mắt → この. そんな／その、あんな／あの、どんな／どの cũng khác nhau như vậy."
+              "explain": "この＝「こ」＋「の」, “của phía này” → chỉ đúng cái cụ thể trước mắt; こんな rút gọn từ 「このような」, “giống như phía này” → chỉ loại này, tính chất này. Vì vậy hãy xem 「いつか」: một ngày nào đó muốn có, tức là không phải muốn đúng cái trước mắt mà là cái cùng loại → こんな; ở cửa hàng nói 「ください」 thì muốn đúng cái trước mắt → この. そんな／その、あんな／あの、どんな／どの cũng khác nhau như vậy."
             },
             {
               "id": "kosoado-pronouns",
-              "diff": "これ chỉ thẳng vào một vật; こんなの là “thứ như thế này”, chú ý đến tính chất, thường kèm cảm xúc.",
+              "diff": "これ chỉ thẳng vào một vật; こんなの là “thứ như thế này”, chú ý vào tính chất, thường mang cảm xúc.",
               "this": [
                 {
-                  "tag": "Thứ như thế này · chê bai",
-                  "tr": "Thứ như thế này tôi không cần đâu."
+                  "tag": "Thứ như thế này · chê",
+                  "tr": "Thứ như thế này thì tôi không cần."
                 }
               ],
               "that": [
@@ -8231,7 +8142,7 @@
                   "tr": "Cái này tôi không cần."
                 }
               ],
-              "explain": "Chỉ đơn thuần chỉ ra cần cái nào, không cần cái nào → これ; 「こんなの」 nói “thứ như thế này”, thường kèm cảm xúc — chê bai (こんなのいらない) hoặc ngạc nhiên (こんなの初めて). そんなの／それ、あんなの／あれ cũng vậy."
+              "explain": "これ＝「こ」＋「れ」 chỉ sự vật, chỉ thẳng vào vật ở phía này; こんな rút gọn từ 「このような」, nghĩa là “giống như phía này”, chú ý vào tính chất, nên 「こんなの」 là “thứ như thế này”, thường mang cảm xúc — chê bai (こんなのいらない) hoặc ngạc nhiên (こんなの初めて). Chỉ đơn giản chỉ ra muốn cái nào, không muốn cái nào → これ. そんなの／それ、あんなの／あれ cũng vậy."
             }
           ]
         },
@@ -8265,25 +8176,25 @@
       "id": "koto-ga-aru-sometimes",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều được cấu tạo từ 「こと（事）＋がある」 — “có chuyện như vậy”",
+          "kind": "look",
+          "note": "する ことがある ↔ した ことがある, chỉ khác る／た",
           "items": [
             {
               "id": "ta-koto-ga-aru",
-              "diff": "Thể từ điển＋ことがある là “thỉnh thoảng có khi…”; thể た＋ことがある là “đã từng…”.",
+              "diff": "Thể từ điển＋ことがある là “thỉnh thoảng có lúc …”; thể た＋ことがある là “đã từng …”.",
               "this": [
                 {
-                  "tag": "Thỉnh thoảng có khi",
-                  "tr": "Đến giờ thỉnh thoảng tôi vẫn có khi đi làm muộn."
+                  "tag": "する · thỉnh thoảng",
+                  "tr": "Đến giờ thỉnh thoảng tôi vẫn đi làm muộn."
                 }
               ],
               "that": [
                 {
-                  "tag": "Trải nghiệm trong quá khứ",
-                  "tr": "Hồi nhỏ tôi từng đi học muộn."
+                  "tag": "した · trải nghiệm trong quá khứ",
+                  "tr": "Hồi nhỏ tôi đã từng đi học muộn."
                 }
               ],
-              "explain": "Chỉ khác 「る」 và 「た」: thể từ điển → việc hiện nay thỉnh thoảng xảy ra, thường đi cùng 「たまに」, 「時々」; thể た → trải nghiệm trong quá khứ, thường đi cùng 「子どもの時」, 「一度」."
+              "explain": "Xem trước 「ことがある」 là 「る」 hay 「た」: thể từ điển (遅刻する) → hiện tại thỉnh thoảng vẫn xảy ra, hay đi cùng 「たまに」「時々」; thể た (遅刻した) → trải nghiệm từng có trong quá khứ, hay đi cùng 「子どもの時」「一度」."
             }
           ]
         }
@@ -8298,11 +8209,11 @@
           "items": [
             {
               "id": "mieru-kikoeru",
-              "diff": "Tính từ く／danh từ に＋見える là “trông có vẻ…”; danh từ＋が見える là “nhìn thấy được”.",
+              "diff": "Tính từ く／danh từ に＋見える là “trông có vẻ …”; danh từ＋が見える là “nhìn thấy được”.",
               "this": [
                 {
                   "tag": "く見える · trông có vẻ",
-                  "tr": "Thầy trông trẻ hơn tuổi thật."
+                  "tr": "Thầy giáo trông trẻ hơn tuổi."
                 },
                 {
                   "tag": "に見える · trông có vẻ",
@@ -8315,7 +8226,7 @@
                   "tr": "Từ cửa sổ có thể nhìn thấy núi Phú Sĩ."
                 }
               ],
-              "explain": "Xem phía trước 「見える」: dạng く của tính từ (若く) hoặc 「danh từ・tính từ đuôi な＋に」 (元気に) → ấn tượng tạo ra cho người khác “trông có vẻ…”; 「danh từ＋が」 → vật đó lọt vào tầm nhìn “nhìn thấy được”. 聞こえる cũng vậy: 「変に聞こえる」 là nghe có vẻ lạ, 「音が聞こえる」 là nghe thấy được."
+              "explain": "Nghĩa gốc của 「見える」 là sự vật tự nhiên lọt vào tầm mắt. Bản thân sự vật lọt vào tầm mắt → 「danh từ＋が見える」, nhìn thấy được (富士山が見える); người hay vật hiện ra với một dáng vẻ nào đó, để lại ấn tượng → 「tính từ く／danh từ・tính từ đuôi な に＋見える」, trông có vẻ … (若く見える、元気に見える), thường đi với những từ so sánh với thực tế như 「年より」. Vì vậy hãy xem trước 「見える」 là 「が」 hay 「く／に」. 聞こえる cũng vậy: 「変に聞こえる」 là nghe có vẻ lạ, 「音が聞こえる」 là nghe thấy tiếng."
             }
           ]
         },
@@ -8325,24 +8236,22 @@
           "items": [
             {
               "id": "sou-da-appearance",
-              "diff": "く／に見える nói ấn tượng do vẻ ngoài tạo ra, thường ngầm ý “thực tế chưa chắc đã vậy”; そうだ là nhìn dáng vẻ rồi nói thẳng ra cảm nghĩ, suy đoán.",
+              "title": "〜そうだ (trông có vẻ)",
+              "diff": "く／に見える nói ấn tượng mà vẻ bề ngoài đem lại, có thể biết rõ thực tế không phải vậy; そうだ là nhìn dáng vẻ mà đoán tính chất chưa được xác nhận.",
               "this": [
                 {
-                  "tag": "く見える · chỉ là vẻ ngoài",
-                  "tr": "Cái bánh này trong ảnh trông có vẻ ngon, nhưng thực tế thì bình thường."
-                },
-                {
-                  "tag": "に見える · chỉ là vẻ ngoài",
-                  "tr": "Anh ấy trông có vẻ nghiêm túc, nhưng thật ra hay trốn học."
+                  "tag": "く見える · chỉ là bề ngoài",
+                  "tr": "Nhờ có tấm gương, căn phòng này trông rộng hơn thực tế."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cảm nghĩ trực tiếp",
-                  "tr": "Oa, cái bánh này trông ngon quá nhỉ."
+                  "tag": "そうだ · đoán vị chưa nếm",
+                  "tr": "Oa, cái bánh này trông ngon quá."
                 }
               ],
-              "explain": "Xem nửa câu sau: 「けど、実際は…／実は…」 lật ngược ấn tượng → く／に見える, nhấn mạnh “chỉ là trông như vậy”; nhìn đồ ăn, dáng vẻ của người rồi nói thẳng cảm nghĩ, lời khen → そうだ (おいしそう、まじめそう). Khi khen đồ ăn, nói 「おいしそう！」 là tự nhiên nhất."
+              "explain": "Xem người nói có biết tình hình thực tế không: đã biết thực tế thế nào, chỉ nói ấn tượng bề ngoài (実際より広く見える) → く／に見える; nhìn dáng vẻ mà đoán ngay tính chất chưa xác nhận, ví dụ vị của món chưa nếm → そうだ (おいしそう). Những sự thật nhìn qua là xác nhận được (màu sắc…) thì không dùng そうだ.",
+              "thisTitle": "〜く見える"
             },
             {
               "id": "you-ni-mieru",
@@ -8376,49 +8285,51 @@
       "id": "ku-wa-nai",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ dạng phủ định của tính từ 「〜くない」 — 「くはない」 chính là chèn 「は」 chỉ sự đối lập vào giữa く và ない",
+          "kind": "meaning",
+          "sense": 1,
+          "note": "Đều mang nghĩa “không …”",
           "items": [
             {
               "id": "i-adj-negative",
-              "diff": "くない là phủ định thẳng; くはない thêm 「は」 đối lập, giọng điệu dịu đi, ngầm ý “mặt khác thì chưa nói”.",
+              "diff": "くない là phủ định thẳng; くはない thêm 「は」 đối chiếu, giọng nhẹ đi, ngụ ý “mặt khác thì tính sau”.",
               "this": [
                 {
-                  "tag": "Dịu đi · còn vế sau",
-                  "tr": "Quán này thì không đắt, nhưng cũng chẳng ngon."
+                  "tag": "Nhẹ nhàng · còn vế sau",
+                  "tr": "Quán này đắt thì không đắt, nhưng cũng chẳng ngon."
                 }
               ],
               "that": [
                 {
                   "tag": "Phủ định dứt khoát",
-                  "tr": "Quán này không đắt đâu. Vừa rẻ vừa ngon đấy."
+                  "tr": "Quán này không đắt đâu. Vừa rẻ vừa ngon."
                 }
               ],
-              "explain": "Xem phía sau có “nhưng…” không: sau くはない thường có 「けど」, 「が」, dẫn ra một mặt khác (phần lớn là điểm không hài lòng); くない chỉ là phủ định dứt khoát. 「は」 ở đây chính là 「は」 chỉ sự đối lập như trong 「肉は食べるが、魚は食べない」."
+              "explain": "Xem phía sau có “nhưng …” không: sau くはない thường có 「けど」「が」, dẫn ra một mặt khác (高くはないけど、おいしくもない); くない chỉ phủ định dứt khoát, phía sau có thể nói tiếp theo cùng hướng (高くない。安くておいしい). 「は」 ở đây chính là 「は」 đối chiếu như trong 「肉は食べるが、魚は食べない」."
             }
           ]
         },
         {
           "kind": "meaning",
+          "sense": 3,
           "note": "Đều là “thừa nhận trước, rồi mới chuyển ý”",
           "items": [
             {
               "id": "koto-wa-ga",
-              "thisTitle": "〜くはあるが",
-              "diff": "くはあるが thiên về văn viết; ことは〜が là cách nói thường dùng hơn khi nói chuyện hằng ngày, nghĩa như nhau.",
+              "diff": "くはあるが thiên về văn viết; ことは〜が là cách nói thường dùng hơn khi nói chuyện hằng ngày, nghĩa giống nhau.",
               "this": [
                 {
                   "tag": "Văn viết",
-                  "tr": "Căn phòng này chật thì có chật, nhưng gần ga nên rất tiện."
+                  "tr": "Căn phòng này tuy hẹp nhưng gần ga nên tiện lợi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Văn nói · lặp lại tính từ",
-                  "tr": "Phòng này chật thì chật thật, nhưng gần ga nên tiện lắm đấy."
+                  "tag": "Văn nói · lặp tính từ",
+                  "tr": "Phòng này hẹp thì hẹp thật, nhưng gần ga nên tiện lắm."
                 }
               ],
-              "explain": "Cả hai cách nói đều thừa nhận một sự thật trước, rồi nói mặt kia. Xem hoàn cảnh và hình thức: bài viết, phát biểu trang trọng → 「tính từ く＋はあるが」; nói chuyện hằng ngày → nói tính từ hai lần 「狭いことは狭いけど」."
+              "explain": "Cả hai đều thừa nhận một sự thật trước rồi nói mặt kia. Xem hoàn cảnh và hình thức: bài viết, phát biểu trang trọng → 「tính từ く＋はあるが」; nói chuyện hằng ngày → nói tính từ hai lần 「狭いことは狭いけど」.",
+              "thisTitle": "〜くはあるが"
             }
           ]
         }

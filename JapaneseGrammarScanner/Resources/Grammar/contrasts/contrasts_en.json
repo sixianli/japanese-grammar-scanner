@@ -7879,28 +7879,28 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both are the same 「か」 — its core meaning is “uncertainty”",
+          "note": "Both come from the question particle 「か」 — its original meaning is “being unsure, asking”",
           "items": [
             {
               "id": "ka-question",
-              "title": "〜か（embedded question）",
+              "title": "〜か (embedded question)",
               "diff": "With no question word, asking “whether or not” needs 「かどうか」; a question with a question word just takes 「か」.",
               "this": [
                 {
-                  "tag": "Whether → かどうか",
+                  "tag": "Whether or not → かどうか",
                   "tr": "I don't know whether he's coming tomorrow."
                 }
               ],
               "that": [
                 {
-                  "tag": "Question word → か",
+                  "tag": "Asking “when” → か",
                   "tr": "I don't know when he's coming."
                 }
               ],
               "wrong": {
-                "why": "When there's a question word, you can't add 「どうか」"
+                "why": "When there's a question word, you can't add 「どうか」 as well"
               },
-              "explain": "Check whether the embedded question has a question word: いつ、どこ、誰、何 → just add か; no question word, only asking “coming or not, right or not” → かどうか (you can also say 「来るか来ないか」)."
+              "explain": "「か」 originally expresses being unsure and asking: it puts a question into the sentence as it is. If the question has a question word (いつ、どこ、誰、何), the unsure part is that word, so just add 「か」: いつ来るか. With no question word, only asking “yes or no”, you say 「来るか、どうか」 — “is he coming, or how is it?” Putting the two sides side by side gives “whether”: 来るかどうか. That's why you can't add 「どうか」 when there's a question word."
             }
           ]
         },
@@ -7934,32 +7934,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both are question endings in casual (plain-form) speech",
+          "note": "Both ask “…?” out of concern",
           "items": [
             {
               "id": "casual-question-no",
-              "diff": "かい・だい sound like an older person or a man, and must be chosen depending on whether there's a question word; の？ is used by everyone and needs no such choice.",
+              "diff": "かい has the warm tone of an older person speaking to a younger one and is now mostly seen in novels and anime; の？ is used by everyone.",
               "this": [
                 {
-                  "tag": "かい · yes/no question",
-                  "tr": "Have you finished your homework?"
-                },
-                {
-                  "tag": "だい · with a question word",
-                  "tr": "What would you like to eat?"
+                  "tag": "Older speaker · warm",
+                  "tr": "Are you not feeling well, dear?"
                 }
               ],
               "that": [
                 {
                   "tag": "Used by everyone",
-                  "tr": "Have you finished your homework?"
-                },
-                {
-                  "tag": "With or without question word",
-                  "tr": "What do you want to eat?"
+                  "tr": "Are you not feeling well?"
                 }
               ],
-              "explain": "For かい・だい, check whether the sentence has a question word: none → かい; 「何、どこ、誰」 → だい (often 「〜んだい」). 「の？」 works in both cases. Today young people and women almost only say 「の？」; かい・だい mostly come from grandfathers, fathers, teachers, or appear in novels."
+              "explain": "Both sentences mean the same: asking out of concern after seeing how the other person looks. Look at the speaker: a grandfather, father or teacher speaking to a child with an affectionate, elderly tone → 〜のかい; most people, especially young people and women → 〜の？. かい only asks “yes or no”; with a question word, switch to だい.",
+              "thisTitle": "〜かい"
             }
           ]
         }
@@ -7970,78 +7963,27 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "All express a guess; the difference is how confident you are",
+          "note": "Both mean “might …”",
           "items": [
             {
-              "id": "darou-guess",
-              "diff": "かもしれない only says “it's possible”, with low confidence; だろう means you're fairly sure in your mind, with high confidence.",
-              "this": [
-                {
-                  "tag": "Maybe · low confidence",
-                  "tr": "It might rain."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Probably · high confidence",
-                  "tr": "The sky is dark, so it's surely going to rain."
-                }
-              ],
-              "explain": "Look at the adverb before it: 「もしかしたら」「ひょっとすると」 → かもしれない; 「きっと」「たぶん」 → だろう (polite: でしょう). When you're just raising a possibility and aren't very sure yourself, use かもしれない."
-            },
-            {
-              "id": "hazu-da",
-              "diff": "かもしれない can be said with no grounds at all; はずだ infers “it should be so” from logic or facts.",
-              "this": [
-                {
-                  "tag": "Just a possibility",
-                  "tr": "I'm not really sure, but Tanaka might already be home."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Has grounds · logically",
-                  "tr": "He left the office at six, so Tanaka should be home by now."
-                }
-              ],
-              "explain": "Check whether there are grounds before it: you can name a concrete reason (６時に会社を出たから) → はずだ; no real basis, just a possibility that occurs to you (よく分からないけど) → かもしれない."
-            },
-            {
-              "id": "ni-chigainai",
-              "diff": "かもしれない is the least confident (maybe); に違いない is the most confident (must be).",
-              "this": [
-                {
-                  "tag": "Maybe · just a suspicion",
-                  "tr": "That person might be the culprit."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Must be · very sure",
-                  "tr": "The fingerprints match too. That person must be the culprit."
-                }
-              ],
-              "explain": "Look at how much evidence the speaker has: just a suspicion (もしかすると) → かもしれない; plenty of evidence, no doubt at all (指紋も一致した) → に違いない. Literally they're opposites too: かもしれない＝“can't know”, に違いない＝“can't be wrong”."
-            },
-            {
               "id": "osore-ga-aru",
-              "diff": "かもしれない works for good or bad things, in speech or writing; おそれがある is only for bad things, mostly in news and announcements.",
+              "diff": "かもしれない works for good or bad things, spoken or written; おそれがある is only for bad things and is common in news and announcements.",
               "this": [
                 {
-                  "tag": "General · spoken",
-                  "tr": "It might snow tomorrow, huh."
+                  "tag": "Everyday · good or bad",
+                  "tr": "It might snow tomorrow, you know."
                 }
               ],
               "that": [
                 {
                   "tag": "Bad things · news",
-                  "tr": "Due to the typhoon, there is a risk of the river overflowing."
+                  "tr": "Due to the typhoon, the river is in danger of overflowing."
                 }
               ],
               "wrong": {
                 "why": "おそれがある can only be used for bad things"
               },
-              "explain": "Look at the content and setting: weather forecasts, news or announcements about possible disasters or dangers → おそれがある; everyday chat, or something good (合格できるかもしれない) → かもしれない."
+              "explain": "Look at the content and the setting: news, weather forecasts or announcements saying a disaster or danger may happen (台風の影響で) → おそれがある; everyday conversation, or something good (合格できるかもしれない) → かもしれない. おそれがある can't be used for good things."
             }
           ]
         }
@@ -8076,7 +8018,7 @@
         },
         {
           "kind": "meaning",
-          "note": "Both are “I wonder…?”-style self-questions or gentle questions",
+          "note": "Both ask oneself “I wonder …”",
           "items": [
             {
               "id": "kashira-wonder",
@@ -8097,10 +8039,10 @@
             },
             {
               "id": "no-darou-ka",
-              "diff": "かな is a casual spoken self-question; のだろうか is more written and serious in tone.",
+              "diff": "かな is a relaxed, spoken way of asking yourself; のだろうか leans written and sounds serious.",
               "this": [
                 {
-                  "tag": "Spoken · casual",
+                  "tag": "Spoken · relaxed",
                   "tr": "I wonder if we can win tomorrow's game."
                 }
               ],
@@ -8110,7 +8052,7 @@
                   "tr": "Why do people dream?"
                 }
               ],
-              "explain": "Look at the setting and topic: small things in chats with friends or talking to yourself → かな; questions pondered seriously in writing or speeches (なぜ、本当に) → のだろうか (spoken: 「んだろうか」)."
+              "explain": "Look at the setting and the topic: small matters when chatting with friends or talking to yourself → かな; serious questions pondered in writing or speeches (なぜ、本当に) → のだろうか (in speech, 「んだろうか」)."
             }
           ]
         }
@@ -8121,32 +8063,32 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both are “I wonder…?”-style self-questions or gentle questions",
+          "note": "Both ask oneself “I wonder …”",
           "items": [
             {
               "id": "kana-wonder",
-              "diff": "かしら is traditionally feminine — soft and a bit old-fashioned; かな is used by both men and women.",
+              "diff": "かしら is traditionally women's language — soft and a little old-fashioned; かな is used by both men and women.",
               "this": [
                 {
-                  "tag": "Feminine · soft",
-                  "tr": "I wonder if these clothes suit me. (feminine tone)"
+                  "tag": "Women · soft",
+                  "tr": "I wonder if this skirt suits me. (feminine tone)"
                 }
               ],
               "that": [
                 {
                   "tag": "Men and women",
-                  "tr": "I wonder if these clothes suit me."
+                  "tr": "Does this skirt suit me, I wonder?"
                 }
               ],
-              "explain": "The meaning is basically the same; look at the speaker: middle-aged or older women, or elegant female characters in novels and TV dramas → かしら; anyone, especially young people → かな. Young women today mostly say かな too."
+              "explain": "The meaning is basically the same; look at the speaker: middle-aged or older women, or elegant female characters in novels and TV dramas → かしら; men and women of all ages, especially young people → かな. Today young women also mostly say かな."
             },
             {
               "id": "no-darou-ka",
-              "diff": "かしら is spoken and feminine; のだろうか is gender-neutral and more written.",
+              "diff": "かしら is women's spoken language; のだろうか is used by anyone and leans written.",
               "this": [
                 {
-                  "tag": "Feminine · spoken",
-                  "tr": "Oh my, isn't Tanaka coming today?"
+                  "tag": "Women · spoken",
+                  "tr": "Oh my, I wonder if Tanaka isn't coming today."
                 }
               ],
               "that": [
@@ -8155,38 +8097,7 @@
                   "tr": "Why isn't Tanaka coming?"
                 }
               ],
-              "explain": "Look at the speaker and style: a woman in everyday conversation, with a soft tone (あら、〜のかしら) → かしら; a gender-neutral written expression, or a self-question in writing → のだろうか."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "kenjougo-special-verbs",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Both are humble language, lowering the actions of your own side",
-          "items": [
-            {
-              "id": "o-suru-humble",
-              "diff": "参る・拝見する and the like are special humble verbs; お〜する is the general humble pattern for ordinary verbs. If a verb has a special form, use the special form.",
-              "this": [
-                {
-                  "tag": "Special humble verb",
-                  "tr": "I'll take a look at the documents."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Ordinary verb → お〜する",
-                  "tr": "I'll send you the documents."
-                }
-              ],
-              "wrong": {
-                "why": "「見る」 has its own special humble form, 「拝見する」"
-              },
-              "explain": "First ask whether the verb has a special humble form: 見る→拝見する、言う→申す、行く→参る／伺う、する→いたす; only verbs without one (送る、持つ、待つ) use 「お + masu-stem + する」."
+              "explain": "Look at the speaker and the style: a woman in everyday conversation with a soft tone (あら、〜のかしら) → かしら; a written expression anyone can use, or asking yourself in writing → のだろうか."
             }
           ]
         }
@@ -8197,11 +8108,11 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from the demonstratives 「こ・そ・あ・ど」",
+          "note": "Both come from the near demonstrative 「こ」 — originally “this side, near the speaker”",
           "items": [
             {
               "id": "kosoado-determiners",
-              "diff": "こんな means “this kind of, like this”, focusing on type and quality; この points to this specific one.",
+              "diff": "こんな means “this kind of, like this”, focusing on type and nature; この points to this specific one.",
               "this": [
                 {
                   "tag": "This kind",
@@ -8211,18 +8122,18 @@
               "that": [
                 {
                   "tag": "This specific one",
-                  "tr": "Excuse me, I'll take this bag."
+                  "tr": "Excuse me, I'll take this bag, please."
                 }
               ],
-              "explain": "Look at 「いつか」 (“someday”): you want one someday, so it isn't the one in front of you but one of that kind → こんな; saying 「ください」 in a shop means you want exactly the one in front of you → この. そんな／その、あんな／あの、どんな／どの differ in the same way."
+              "explain": "この = 「こ」 + 「の」, “of this side” → points to the specific one in front of you; こんな is contracted from 「このような」, “like this side” → refers to this type, this kind of nature. So look at 「いつか」: wanting one someday means you want not this exact one but one of the same kind → こんな; saying 「ください」 in a shop means you want the one right in front of you → この. そんな／その, あんな／あの, どんな／どの differ in the same way."
             },
             {
               "id": "kosoado-pronouns",
-              "diff": "これ points directly at a thing; こんなの means “this kind of thing”, focusing on its nature and often carrying emotion.",
+              "diff": "これ points directly to a thing; こんなの means “this sort of thing”, focusing on its nature and often carrying feeling.",
               "this": [
                 {
-                  "tag": "This kind of thing · disdain",
-                  "tr": "I don't want this kind of thing."
+                  "tag": "This sort of thing · dismissive",
+                  "tr": "I don't want this sort of thing."
                 }
               ],
               "that": [
@@ -8231,7 +8142,7 @@
                   "tr": "I don't need this."
                 }
               ],
-              "explain": "Just pointing out which one you want or don't want → これ; 「こんなの」 means “this kind of thing” and often carries emotion — disdain (こんなのいらない) or surprise (こんなの初めて). そんなの／それ、あんなの／あれ work the same way."
+              "explain": "これ = 「こ」 + 「れ」 (marking a thing), pointing directly to the thing on this side; こんな is contracted from 「このような」 and means “like this side”, focusing on nature, so 「こんなの」 is “this sort of thing” and often carries feeling — distaste (こんなのいらない) or surprise (こんなの初めて). If you're just pointing out which one you want or don't want → これ. そんなの／それ, あんなの／あれ work the same way."
             }
           ]
         },
@@ -8265,25 +8176,25 @@
       "id": "koto-ga-aru-sometimes",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both are built from 「こと（事）+ がある」 — “there is such a thing”",
+          "kind": "look",
+          "note": "する ことがある ↔ した ことがある — only る／た differs",
           "items": [
             {
               "id": "ta-koto-ga-aru",
-              "diff": "dictionary form + ことがある means “sometimes…”; ta-form + ことがある means “have done… before”.",
+              "diff": "Dictionary form + ことがある is “sometimes …”; た-form + ことがある is “have … before”.",
               "this": [
                 {
-                  "tag": "Sometimes",
-                  "tr": "Even now, I'm occasionally late for work."
+                  "tag": "する · sometimes",
+                  "tr": "Even now I'm occasionally late for work."
                 }
               ],
               "that": [
                 {
-                  "tag": "Past experience",
-                  "tr": "When I was a kid, I was late for school once."
+                  "tag": "した · past experience",
+                  "tr": "I was late for school once when I was a kid."
                 }
               ],
-              "explain": "Only 「る」 vs. 「た」: dictionary form → something that occasionally happens now, often with 「たまに」「時々」; ta-form → a past experience, often with 「子どもの時」「一度」."
+              "explain": "Look at whether 「ことがある」 comes after 「る」 or 「た」: dictionary form (遅刻する) → something that happens now and then at present, often with 「たまに」 or 「時々」; た-form (遅刻した) → an experience you had in the past, often with 「子どもの時」 or 「一度」."
             }
           ]
         }
@@ -8298,11 +8209,11 @@
           "items": [
             {
               "id": "mieru-kikoeru",
-              "diff": "adjective く／noun に + 見える means “looks…”; noun + が見える means “can be seen”.",
+              "diff": "Adjective く／noun に + 見える is “looks …”; noun + が見える is “can be seen”.",
               "this": [
                 {
                   "tag": "く見える · looks",
-                  "tr": "My teacher looks younger than her age."
+                  "tr": "Our teacher looks younger than his age."
                 },
                 {
                   "tag": "に見える · looks",
@@ -8315,7 +8226,7 @@
                   "tr": "You can see Mt. Fuji from the window."
                 }
               ],
-              "explain": "Look at what comes before 「見える」: the く-form of an adjective (若く) or 「noun / na-adjective + に」 (元気に) → the impression given, “looks…”; 「noun + が」 → that thing comes into view, “can be seen”. 聞こえる is the same: 「変に聞こえる」 is “sounds strange”, 「音が聞こえる」 is “can hear a sound”."
+              "explain": "「見える」 originally means something naturally comes into view. The thing itself comes into view → 「noun + が見える」, “can be seen” (富士山が見える); a person or thing comes into view looking a certain way and leaves an impression → 「adjective く／noun or な-adjective に + 見える」, “looks …” (若く見える、元気に見える), often with words that compare with reality, like 「年より」. So check whether 「見える」 comes after 「が」 or 「く／に」. 聞こえる works the same way: 「変に聞こえる」 is “sounds strange”, 「音が聞こえる」 is “I can hear a sound”."
             }
           ]
         },
@@ -8325,24 +8236,22 @@
           "items": [
             {
               "id": "sou-da-appearance",
-              "diff": "く／に見える describes the impression the appearance gives, often implying “not necessarily so in reality”; そうだ directly states your impression or guess after seeing how something looks.",
+              "title": "〜そうだ (looks like)",
+              "diff": "く／に見える describes the impression something's appearance gives, even when you know the reality is different; そうだ is a guess from appearance about a quality not yet confirmed.",
               "this": [
                 {
-                  "tag": "く見える · only outward",
-                  "tr": "This cake looks delicious in the photo, but it's actually just ordinary."
-                },
-                {
-                  "tag": "に見える · only outward",
-                  "tr": "He looks serious, but actually he often skips class."
+                  "tag": "く見える · appearance only",
+                  "tr": "Thanks to the mirror, this room looks bigger than it really is."
                 }
               ],
               "that": [
                 {
-                  "tag": "Direct impression",
-                  "tr": "Wow, this cake looks delicious!"
+                  "tag": "そうだ · guessing an untried taste",
+                  "tr": "Wow, this cake looks delicious."
                 }
               ],
-              "explain": "Look at the second half: 「けど、実際は…／実は…」 overturns the impression → く／に見える, stressing “it only looks that way”; directly giving your impression or a compliment on seeing food or a person → そうだ (おいしそう、まじめそう). When praising something, 「おいしそう！」 is the most natural."
+              "explain": "Look at whether the speaker knows the actual situation: already knowing what it's really like and only describing the impression its appearance gives (実際より広く見える) → く／に見える; guessing on the spot from appearance about a quality not yet confirmed, such as the taste of something you haven't tried → そうだ (おいしそう). Facts you can confirm at a glance (colour, etc.) don't take そうだ.",
+              "thisTitle": "〜く見える"
             },
             {
               "id": "you-ni-mieru",
@@ -8376,49 +8285,51 @@
       "id": "ku-wa-nai",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from the adjective negative 「〜くない」 — 「くはない」 just inserts the contrastive 「は」 between く and ない",
+          "kind": "meaning",
+          "sense": 1,
+          "note": "Both mean “not …”",
           "items": [
             {
               "id": "i-adj-negative",
-              "diff": "くない is a straight negation; くはない adds the contrastive 「は」, softening it and implying “other aspects are another matter”.",
+              "diff": "くない is a plain negation; くはない adds the contrastive 「は」, softening the tone and hinting “other aspects are another matter”.",
               "this": [
                 {
-                  "tag": "Softened · more to say",
+                  "tag": "Softened · more to come",
                   "tr": "This place isn't expensive, but it isn't tasty either."
                 }
               ],
               "that": [
                 {
-                  "tag": "Flat negation",
+                  "tag": "Flat denial",
                   "tr": "This place isn't expensive. It's cheap and tasty."
                 }
               ],
-              "explain": "Check whether a “but…” follows: くはない is often followed by 「けど」「が」, leading into another aspect (usually something unsatisfying); くない is just a flat negation. This 「は」 is the same contrastive 「は」 as in 「肉は食べるが、魚は食べない」."
+              "explain": "Check whether a “but …” follows: くはない is often followed by 「けど」 or 「が」, bringing in another aspect (高くはないけど、おいしくもない); くない is just a flat denial and can carry on in the same direction (高くない。安くておいしい). This 「は」 is the same contrastive 「は」 as in 「肉は食べるが、魚は食べない」."
             }
           ]
         },
         {
           "kind": "meaning",
+          "sense": 3,
           "note": "Both “first concede, then turn”",
           "items": [
             {
               "id": "koto-wa-ga",
-              "thisTitle": "〜くはあるが",
-              "diff": "くはあるが is more written; ことは〜が is the more common everyday way of saying it, with the same meaning.",
+              "diff": "くはあるが leans written; ことは〜が is the more common way to say it in everyday speech, with the same meaning.",
               "this": [
                 {
                   "tag": "Written",
-                  "tr": "This room is small, admittedly, but it's close to the station and convenient."
+                  "tr": "This room is small, but it is close to the station and convenient."
                 }
               ],
               "that": [
                 {
                   "tag": "Spoken · adjective repeated",
-                  "tr": "This room is small, sure, but it's close to the station and convenient."
+                  "tr": "This room is small, sure, but it's close to the station, so it's handy."
                 }
               ],
-              "explain": "Both first concede a fact, then present the other side. Look at the setting and form: writing or formal speech → 「adjective く + はあるが」; everyday speech → say the adjective twice: 「狭いことは狭いけど」."
+              "explain": "Both first admit one fact and then give the other side. Look at the setting and the form: writing or formal speech → 「adjective く + はあるが」; everyday speech → say the adjective twice: 「狭いことは狭いけど」.",
+              "thisTitle": "〜くはあるが"
             }
           ]
         }
