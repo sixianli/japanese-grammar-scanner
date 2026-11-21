@@ -47884,6 +47884,379 @@
           "explain": "お〜です သည် 「〜ている」「〜する予定だ」 နှင့် ညီမျှပြီး တစ်ဖက်လူ၏ ယခုအခြေအနေကို ဖော်ပြသည် (もうお帰りです＝ ဒီမှာ မရှိတော့ဘူး)။ အတိတ်က အချိန်တစ်ခုတွင် လုပ်ဆောင်ချက်တစ်ခု လုပ်ခဲ့ကြောင်း (さっき帰った) ပြောလျှင် お〜になりました က ပိုသဘာဝကျသည်။ ထို့ပြင် お〜です ကို အသုံးများသော ကြိယာ အနည်းငယ်တွင်သာ သုံးသည် (お待ち、お持ち、お探し、お帰り)။"
         }
       }
+    },
+    {
+      "point": "nanka",
+      "kind": "look",
+      "reason": "なんか 和 なんて 的轻视、举例用法大量重叠（「温泉なんてどう？」也自然），不满足「长得像的」收录条件 2「意思明显不同」；讲解「名词→なんか、句子→なんて」也不成立（なんて可接名词）。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "nante",
+          "diff": "なんか 接名词，随口举个例子；なんて 接整个句子，表示「竟然……」的意外。",
+          "this": [
+            {
+              "ja": "今度:こんど|の|休:やす|み|、|温泉:おんせん|*なんか|どう|？",
+              "tag": "接名词 · 随意举例",
+              "tr": "这次放假，去泡个温泉什么的怎么样？"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~あの|~二人:ふたり|~が|~結婚:けっこん|~する|*なんて|、|信:しん|じられない|。",
+              "tag": "接句子 · 意外",
+              "tr": "那两个人居然要结婚，真不敢相信。"
+            }
+          ],
+          "wrong": {
+            "ja": "あの二人が結婚するなんか、信じられない",
+            "why": "接整个句子表示意外，只能用 なんて"
+          },
+          "explain": "只差最后一个假名 か／て，看前面接的是什么：名词（温泉）→ なんか，随口举个例子「……什么的」；整个句子（あの二人が結婚する）→ なんて，表示「竟然……」的意外，后面常接「信じられない」。接整个句子表示意外时不能换成 なんか。",
+          "title": "〜なんて（意外・惊讶）"
+        },
+        "en": {
+          "id": "nante",
+          "title": "〜なんて (surprise)",
+          "diff": "なんか follows a noun and gives a casual example; なんて follows a whole clause and expresses surprise: \"to think that…\".",
+          "this": [
+            {
+              "tag": "After a noun · casual example",
+              "tr": "How about a hot spring or something for our next day off?"
+            }
+          ],
+          "that": [
+            {
+              "tag": "After a sentence · surprise",
+              "tr": "Those two are getting married? I can't believe it."
+            }
+          ],
+          "wrong": {
+            "why": "To express surprise after a whole sentence, only なんて works"
+          },
+          "explain": "Only the last kana differs (か / て); look at what comes before. A noun (温泉) → なんか, casually giving an example: \"…or something\". A whole clause (あの二人が結婚する) → なんて, expressing surprise, \"to think that…\", often followed by 「信じられない」. When it follows a whole clause to express surprise, it can't be replaced with なんか."
+        },
+        "ko": {
+          "id": "nante",
+          "title": "〜なんて (의외・놀람)",
+          "diff": "なんか는 명사에 붙어 가볍게 예를 들고, なんて는 문장 전체에 붙어 '~하다니'라는 의외를 나타낸다.",
+          "this": [
+            {
+              "tag": "명사에 접속 · 가볍게 예시",
+              "tr": "이번 휴가에 온천 같은 데 어때?"
+            }
+          ],
+          "that": [
+            {
+              "tag": "문장에 접속 · 뜻밖",
+              "tr": "저 두 사람이 결혼하다니, 믿을 수 없다."
+            }
+          ],
+          "wrong": {
+            "why": "문장 전체에 붙어 뜻밖임을 나타낼 때는 なんて만 쓸 수 있다"
+          },
+          "explain": "마지막 가나 か／て만 다르다. 앞에 무엇이 오는지 보자. 명사(温泉) → なんか, '~같은 거'라고 가볍게 예를 든다. 문장 전체(あの二人が結婚する) → なんて, '~하다니'라는 의외를 나타내며 뒤에 「信じられない」가 자주 온다. 문장 전체에 붙어 의외를 나타낼 때는 なんか로 바꿀 수 없다."
+        },
+        "es": {
+          "id": "nante",
+          "title": "〜なんて (sorpresa)",
+          "diff": "なんか va tras un sustantivo y pone un ejemplo de pasada; なんて va tras una oración entera y expresa sorpresa: «¡que…!».",
+          "this": [
+            {
+              "tag": "Con sustantivo · ejemplo al azar",
+              "tr": "Para estas vacaciones, ¿qué tal unas aguas termales o algo así?"
+            }
+          ],
+          "that": [
+            {
+              "tag": "Con oración · sorpresa",
+              "tr": "¿Que esos dos se casan? No me lo puedo creer."
+            }
+          ],
+          "wrong": {
+            "why": "Para expresar sorpresa con una oración entera, solo vale なんて"
+          },
+          "explain": "Solo cambia el último kana (か / て); fíjate en lo que va delante. Un sustantivo (温泉) → なんか, para poner un ejemplo de pasada: «…o algo así». Una oración entera (あの二人が結婚する) → なんて, que expresa sorpresa, «¡que…!», y a menudo va seguida de 「信じられない」. Cuando va tras una oración entera para expresar sorpresa, no se puede cambiar por なんか."
+        },
+        "vi": {
+          "id": "nante",
+          "title": "〜なんて (bất ngờ, ngạc nhiên)",
+          "diff": "なんか đi sau danh từ, tiện nêu một ví dụ; なんて đi sau cả một mệnh đề, diễn tả sự bất ngờ \"vậy mà lại…\".",
+          "this": [
+            {
+              "tag": "Sau danh từ · nêu ví dụ tùy ý",
+              "tr": "Kỳ nghỉ lần này, đi tắm suối nước nóng hay gì đó thì sao?"
+            }
+          ],
+          "that": [
+            {
+              "tag": "Sau câu · bất ngờ",
+              "tr": "Hai người đó mà lại cưới nhau, thật không thể tin nổi."
+            }
+          ],
+          "wrong": {
+            "why": "Đi sau cả một câu để diễn tả bất ngờ thì chỉ dùng được なんて"
+          },
+          "explain": "Chỉ khác chữ kana cuối か／て; hãy xem phía trước là gì: danh từ (温泉) → なんか, tiện nêu một ví dụ \"…chẳng hạn\"; cả một mệnh đề (あの二人が結婚する) → なんて, diễn tả sự bất ngờ \"vậy mà lại…\", phía sau thường có 「信じられない」. Khi đi sau cả mệnh đề để diễn tả bất ngờ thì không thể đổi thành なんか."
+        },
+        "my": {
+          "id": "nante",
+          "title": "〜なんて (မမျှော်လင့်ခြင်း・အံ့သြခြင်း)",
+          "diff": "なんか သည် နာမ်နောက်တွင် ကပ်ပြီး ဥပမာ ပေါ့ပေါ့ပါးပါး ထုတ်ပြသည်။ なんて သည် ဝါကျတစ်ခုလုံးနောက်တွင် ကပ်ပြီး “...တယ်ဆိုတော့” ဆိုသော မမျှော်လင့်ခြင်းကို ဖော်ပြသည်။",
+          "this": [
+            {
+              "tag": "နာမ်နှင့်တွဲ · ပေါ့ပေါ့ ဥပမာ",
+              "tr": "ဒီတစ်ခါ အားလပ်ရက်မှာ ရေပူစမ်း လိုမျိုး သွားရင် ဘယ်လိုလဲ။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ဝါကျနှင့်တွဲ · မထင်မှတ်",
+              "tr": "ဟိုနှစ်ယောက် လက်ထပ်မယ် ဆိုတာ မယုံနိုင်ဘူး။"
+            }
+          ],
+          "wrong": {
+            "why": "ဝါကျ တစ်ခုလုံးနှင့် တွဲ၍ မထင်မှတ်ခြင်းကို ဖော်ပြလျှင် なんて ကိုသာ သုံးနိုင်သည်"
+          },
+          "explain": "နောက်ဆုံး ကာနာ か／て သာ ကွာသည်။ ရှေ့တွင် ဘာလာသလဲ ကြည့်ပါ - နာမ် (温泉) → なんか ဖြစ်ပြီး “...လိုမျိုး” ဟု ဥပမာ ပေါ့ပေါ့ပါးပါး ထုတ်ပြသည်။ ဝါကျတစ်ခုလုံး (あの二人が結婚する) → なんて ဖြစ်ပြီး “...တယ်ဆိုတော့” ဆိုသော မမျှော်လင့်ခြင်းကို ဖော်ပြကာ နောက်တွင် 「信じられない」 လိုက်လေ့ရှိသည်။ ဝါကျတစ်ခုလုံးနောက်တွင် ကပ်ပြီး မမျှော်လင့်ခြင်းကို ဖော်ပြသည့်အခါ なんか ဖြင့် အစားမထိုးနိုင်ပါ။"
+        }
+      }
+    },
+    {
+      "point": "ni-awasete",
+      "kind": "meaning",
+      "reason": "组说明「根据……来调整」不覆盖 に沿って（顺着既定方针不偏离，不含「调整」）；讲解按前项名词分辨不可靠（予算に沿って、方針に合わせて 都自然），不满足「意思差不多的」收录条件 1、4。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ni-soutte",
+          "thisTitle": "〜に合わせて（配合）",
+          "diff": "に合わせて 是根据对象调整自己；に沿って 是照着事先定好的方针、计划走，不偏离。",
+          "this": [
+            {
+              "ja": "お|客:きゃく|さま|の|~予算:よさん|*に|*合:あ|*わせて|、|プランを|作:つく|る|。",
+              "tag": "配合对象调整",
+              "tr": "根据客人的预算来制定方案。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "会社:かいしゃ|の|~方針:ほうしん|*に|*沿:そ|*って|、|計画:けいかく|を|進:すす|める|。",
+              "tag": "照着方针走",
+              "tr": "按照公司的方针推进计划。"
+            }
+          ],
+          "explain": "看前面是什么：「方針」、计划、说明书这种事先定好的路线 → に沿って，意思是照着走、不偏离；对方的「予算」、身高、日程这种要去迎合的对象 → に合わせて，意思是调整自己去配合。",
+          "title": "〜に沿って（按照）"
+        },
+        "en": {
+          "id": "ni-soutte",
+          "title": "〜に沿って (in line with)",
+          "thisTitle": "〜に合わせて (fitting in with)",
+          "diff": "に合わせて means adjusting yourself to a target; に沿って means following a policy or plan set in advance, without straying.",
+          "this": [
+            {
+              "tag": "Adjusting to a target",
+              "tr": "We put together a plan to fit the customer's budget."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Following a policy",
+              "tr": "We push the project forward in line with company policy."
+            }
+          ],
+          "explain": "Look at what comes before: a route set in advance, such as a 「方針」, a plan or a manual → に沿って, meaning you follow it without straying; something you need to fit, such as the other person's 「予算」, height or schedule → に合わせて, meaning you adjust yourself to match."
+        },
+        "ko": {
+          "id": "ni-soutte",
+          "title": "〜に沿って（따라）",
+          "thisTitle": "〜に合わせて（맞춤）",
+          "diff": "に合わせて는 대상에 따라 자신을 조정하는 것이고, に沿って는 미리 정해진 방침이나 계획을 따라 벗어나지 않고 가는 것이다.",
+          "this": [
+            {
+              "tag": "대상에 맞춰 조정",
+              "tr": "손님의 예산에 맞춰 플랜을 짠다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "방침을 따라감",
+              "tr": "회사 방침에 따라 계획을 추진한다."
+            }
+          ],
+          "explain": "앞에 무엇이 오는지 보자. 「方針」, 계획, 설명서 같은 미리 정해진 길 → に沿って로, 그대로 따라가며 벗어나지 않는다는 뜻이다. 상대의 「予算」, 키, 일정 같은 맞춰 줘야 할 대상 → に合わせて로, 자신을 조정해 맞춘다는 뜻이다."
+        },
+        "es": {
+          "id": "ni-soutte",
+          "title": "〜に沿って (conforme a)",
+          "thisTitle": "〜に合わせて (ajustarse)",
+          "diff": "に合わせて es ajustarse uno mismo según algo; に沿って es seguir una línea o un plan fijado de antemano, sin desviarse.",
+          "this": [
+            {
+              "tag": "Ajustarse a algo",
+              "tr": "Elaboramos el plan según el presupuesto del cliente."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Seguir una línea",
+              "tr": "Avanzamos con el proyecto conforme a la política de la empresa."
+            }
+          ],
+          "explain": "Mira lo que va delante: un camino fijado de antemano, como un 「方針」, un plan o un manual → に沿って, que significa seguirlo sin desviarse; algo a lo que hay que adaptarse, como el 「予算」, la estatura o el horario de otra persona → に合わせて, que significa ajustarse uno mismo."
+        },
+        "vi": {
+          "id": "ni-soutte",
+          "title": "〜に沿って（theo）",
+          "thisTitle": "〜に合わせて（phối hợp）",
+          "diff": "に合わせて là điều chỉnh bản thân theo đối tượng; に沿って là đi theo phương châm, kế hoạch đã định sẵn, không chệch hướng.",
+          "this": [
+            {
+              "tag": "Điều chỉnh theo đối tượng",
+              "tr": "Lập phương án phù hợp với ngân sách của khách hàng."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Đi theo phương châm",
+              "tr": "Triển khai kế hoạch theo phương châm của công ty."
+            }
+          ],
+          "explain": "Xem phía trước là gì: lộ trình định sẵn như 「方針」, kế hoạch, sách hướng dẫn → に沿って, nghĩa là làm theo, không chệch hướng; đối tượng cần chiều theo như 「予算」, chiều cao, lịch trình của đối phương → に合わせて, nghĩa là tự điều chỉnh để phối hợp."
+        },
+        "my": {
+          "id": "ni-soutte",
+          "title": "〜に沿って（အတိုင်း）",
+          "thisTitle": "〜に合わせて（လိုက်လျော）",
+          "diff": "に合わせて သည် ပစ်မှတ်အပေါ် မူတည်၍ ကိုယ့်ကိုယ်ကို ချိန်ညှိခြင်း ဖြစ်သည်။ に沿って သည် ကြိုတင်သတ်မှတ်ထားသော မူဝါဒ၊ အစီအစဉ်အတိုင်း သွေဖည်ခြင်းမရှိဘဲ လိုက်နာခြင်း ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "ပစ်မှတ်နှင့် လိုက်လျော ချိန်ညှိ",
+              "tr": "ဧည့်သည်ရဲ့ ဘတ်ဂျက်နဲ့ လိုက်အောင် အစီအစဉ် ရေးဆွဲတယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "မူဝါဒအတိုင်း လိုက်နာ",
+              "tr": "ကုမ္ပဏီရဲ့ မူဝါဒအတိုင်း စီမံကိန်းကို ဆောင်ရွက်တယ်။"
+            }
+          ],
+          "explain": "ရှေ့တွင် ဘာရှိသလဲ ကြည့်ပါ - 「方針」၊ အစီအစဉ်၊ လမ်းညွှန်စာအုပ် ကဲ့သို့ ကြိုတင်သတ်မှတ်ထားသော လမ်းကြောင်း → に沿って ဖြစ်ပြီး အတိုင်း လိုက်လုပ်ကာ သွေဖည်ခြင်း မရှိဟု ဆိုလိုသည်။ တစ်ဖက်လူ၏ 「予算」၊ အရပ်၊ အချိန်ဇယား ကဲ့သို့ လိုက်လျောရမည့် ပစ်မှတ် → に合わせて ဖြစ်ပြီး ကိုယ့်ကိုယ်ကို ချိန်ညှိ၍ လိုက်လျောခြင်း ဖြစ်သည်။"
+        }
+      }
+    },
+    {
+      "point": "ni-hoka-naranai",
+      "kind": "meaning",
+      "reason": "にほかならない 是句末谓语（AはBにほかならない），こそ 是贴在名词后的提示助词，找不到两边都能用、只换语法的自然句子，替换测试不成立，差别是语法功能而非同一意思下的语感（标准「意思差不多的」收录条件 3、4）。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "koso",
+          "diff": "都断定「正是这个」：にほかならない 放在句末作结论，冷静、书面；こそ 紧贴在被强调的词后面，口语书面都用，语气更带感情。",
+          "this": [
+            {
+              "ja": "この|失敗:しっぱい|の|原因:げんいん|は|、|準備:じゅんび|不足:ぶそく|*にほかならない|。",
+              "tag": "句末 · 冷静结论",
+              "tr": "这次失败的原因，正是准备不足。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "準備:じゅんび|不足:ぶそく|*こそ|、|この|失敗:しっぱい|の|本当:ほんとう|の|原因:げんいん|だ|。",
+              "tag": "紧贴名词 · 带感情",
+              "tr": "准备不足，才是这次失败真正的原因。"
+            }
+          ],
+          "explain": "两句说的是同一个判断（失败的原因＝准备不足）：にほかならない 用「AはBにほかならない」把结论放在句末，是论文、演讲里冷静的断定；こそ 直接贴在要强调的词后面（準備不足こそ），口语也常用，带「不是别的，就是它」的强烈感情。看语法是在句末作结论，还是紧贴在名词后面。"
+        },
+        "en": {
+          "id": "koso",
+          "diff": "Both assert “this and nothing else”: にほかならない comes at the end of the sentence as a conclusion, calm and formal; こそ sits right after the word it stresses, is used in both speech and writing, and sounds more emotional.",
+          "this": [
+            {
+              "tag": "End of sentence · calm conclusion",
+              "tr": "The cause of this failure is nothing other than a lack of preparation."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Right after the noun · emotional",
+              "tr": "Lack of preparation — that is the real cause of this failure."
+            }
+          ],
+          "explain": "Both sentences make the same judgment (cause of failure = lack of preparation): にほかならない uses 「AはBにほかならない」 to put the conclusion at the end, a calm assertion typical of papers and speeches; こそ attaches directly to the word being stressed (準備不足こそ), is common in speech too, and carries the strong feeling of “this and nothing else”. Check whether the grammar closes the sentence as a conclusion or sits right after a noun."
+        },
+        "ko": {
+          "id": "koso",
+          "diff": "둘 다 ‘바로 이것이다’라고 단정한다. にほかならない는 문장 끝에서 결론을 내리며 냉정하고 문어적이다. こそ는 강조하는 말 바로 뒤에 붙고 구어와 문어 모두 쓰며 감정이 더 실린다.",
+          "this": [
+            {
+              "tag": "문장 끝 · 냉정한 결론",
+              "tr": "이번 실패의 원인은 다름 아닌 준비 부족이다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "명사 바로 뒤 · 감정이 실림",
+              "tr": "준비 부족이야말로 이번 실패의 진짜 원인이다."
+            }
+          ],
+          "explain": "두 문장은 같은 판단(실패의 원인＝준비 부족)이다. にほかならない는 「AはBにほかならない」로 결론을 문장 끝에 두며, 논문이나 연설에서 쓰는 냉정한 단정이다. こそ는 강조할 말 바로 뒤에 붙고(準備不足こそ) 구어에서도 자주 쓰며 ‘다른 것이 아니라 바로 이것’이라는 강한 감정이 담긴다. 문법이 문장 끝에서 결론을 내리는지, 명사 바로 뒤에 붙어 있는지 보면 된다."
+        },
+        "es": {
+          "id": "koso",
+          "diff": "Ambos afirman «es esto y no otra cosa»: にほかならない va al final de la oración como conclusión, con tono sereno y formal; こそ va justo detrás de la palabra que enfatiza, se usa al hablar y al escribir, y suena más emotivo.",
+          "this": [
+            {
+              "tag": "Final de oración · conclusión serena",
+              "tr": "La causa de este fracaso no es otra que la falta de preparación."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Tras el sustantivo · emotivo",
+              "tr": "La falta de preparación es precisamente la verdadera causa de este fracaso."
+            }
+          ],
+          "explain": "Las dos oraciones expresan el mismo juicio (causa del fracaso = falta de preparación): にほかならない usa 「AはBにほかならない」 y deja la conclusión al final, una afirmación serena propia de artículos y discursos; こそ se pega a la palabra que se enfatiza (準備不足こそ), es frecuente también al hablar y transmite con fuerza «esto y no otra cosa». Mira si la gramática cierra la oración como conclusión o va justo detrás de un sustantivo."
+        },
+        "vi": {
+          "id": "koso",
+          "diff": "Đều khẳng định “chính là cái này”: にほかならない đứng cuối câu làm kết luận, điềm tĩnh, trang trọng; こそ đứng ngay sau từ được nhấn mạnh, dùng cả khẩu ngữ lẫn văn viết, mang nhiều cảm xúc hơn.",
+          "this": [
+            {
+              "tag": "Cuối câu · kết luận điềm tĩnh",
+              "tr": "Nguyên nhân của thất bại lần này chính là do chuẩn bị chưa đủ."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Ngay sau danh từ · có cảm xúc",
+              "tr": "Chính sự thiếu chuẩn bị mới là nguyên nhân thật sự của thất bại lần này."
+            }
+          ],
+          "explain": "Hai câu nói cùng một nhận định (nguyên nhân thất bại = thiếu chuẩn bị): にほかならない dùng 「AはBにほかならない」 đặt kết luận ở cuối câu, là lối khẳng định điềm tĩnh trong luận văn, diễn thuyết; こそ gắn ngay sau từ cần nhấn mạnh (準備不足こそ), khẩu ngữ cũng hay dùng, mang cảm xúc mạnh “không phải gì khác, chính là nó”. Hãy xem ngữ pháp đứng cuối câu làm kết luận hay đứng ngay sau danh từ."
+        },
+        "my": {
+          "id": "koso",
+          "diff": "နှစ်ခုလုံး “ဒါပဲ” ဟု အတိအကျ ဆိုသည်။ にほかならない သည် ဝါကျအဆုံးတွင် နိဂုံးအဖြစ် ရှိပြီး တည်ငြိမ်၍ စာစကားဆန်သည်။ こそ သည် အလေးပေးသော စကားလုံး၏ နောက်တွင် ကပ်လျက် ရှိပြီး ပြောစကား၊ စာစကား နှစ်မျိုးလုံးတွင် သုံးကာ ခံစားချက် ပိုပါသည်။",
+          "this": [
+            {
+              "tag": "ဝါကျအဆုံး · တည်ငြိမ်သော နိဂုံး",
+              "tr": "ဒီတစ်ခါ ကျရှုံးရတဲ့ အကြောင်းရင်းက ပြင်ဆင်မှု မလုံလောက်လို့ပဲ။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "နာမ်နောက် ကပ်လျက် · ခံစားချက်ပါ",
+              "tr": "ပြင်ဆင်မှု မလုံလောက်တာကပဲ ဒီတစ်ခါ ကျရှုံးရတဲ့ တကယ့် အကြောင်းရင်းပါ။"
+            }
+          ],
+          "explain": "ဝါကျ နှစ်ခုလုံးသည် တူညီသော ဆုံးဖြတ်ချက် (ကျရှုံးမှု အကြောင်းရင်း＝ပြင်ဆင်မှု မလုံလောက်) ဖြစ်သည်။ にほかならない သည် 「AはBにほかならない」 ဖြင့် နိဂုံးကို ဝါကျအဆုံးတွင် ထားပြီး စာတမ်း၊ မိန့်ခွန်းများ၏ တည်ငြိမ်သော အတိအကျ ဆိုချက် ဖြစ်သည်။ こそ သည် အလေးပေးလိုသော စကားလုံး နောက်တွင် တိုက်ရိုက် ကပ်ပြီး (準備不足こそ) ပြောစကားတွင်လည်း အသုံးများကာ “တခြားမဟုတ်၊ ဒါပဲ” ဆိုသော ပြင်းထန်သော ခံစားချက် ပါသည်။ သဒ္ဒါက ဝါကျအဆုံးတွင် နိဂုံးချသလား၊ နာမ်နောက်တွင် ကပ်နေသလား ကြည့်ပါ။"
+        }
+      }
     }
   ]
 }

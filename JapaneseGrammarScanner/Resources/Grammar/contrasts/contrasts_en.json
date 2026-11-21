@@ -2938,7 +2938,7 @@
                   "tr": "You must not drink alcohol while taking medicine."
                 }
               ],
-              "explain": "Look at what comes before 「いけない」: 「ないと」 (if you don't) → you must do it; 「ては／では」 (if you do) → you must not do it. The only difference is the negative in front, yet the meanings are exact opposites."
+              "explain": "The original meaning of 「いけない」 is 「行けない」 — “can't go, won't work”. Look at what comes before いけない: 「ないと」 (if you don't do it) + won't work → not doing it is not OK, so it means “must do”; 「ては／では」 (if you do it) + won't work → doing it is not OK, so it means “must not do”. It's the same いけない: flip the condition in front, and the meaning flips to the opposite."
             }
           ]
         },
@@ -17666,20 +17666,20 @@
             },
             {
               "id": "nai-koto-ni-wa",
-              "diff": "Same meaning; ないことには is more literary, stresses the “precondition” more, and is always followed by a negative.",
+              "diff": "Same meaning; ないことには is more formal and stresses the prerequisite, while ないと is the most common everyday form.",
               "this": [
                 {
-                  "tag": "Spoken",
-                  "tr": "You won't know until you try."
+                  "tag": "Spoken · most common",
+                  "tr": "You won't know unless you try."
                 }
               ],
               "that": [
                 {
-                  "tag": "Written · stresses the precondition",
-                  "tr": "Unless you actually try it, you can't know anything."
+                  "tag": "Written · stresses the prerequisite",
+                  "tr": "Unless you try it first, there's no way to know."
                 }
               ],
-              "explain": "Both sentences mean “unless you first…, you can't…”: ないことには leans written, and the second half is always negative (わからない, 始まらない, 決められない); ないと is more casual, and the second half can also be a bad result (遅れるよ, 困る)."
+              "explain": "The two sentences differ only in the grammar, and both mean “unless you first…, you can't…”: ないと is the everyday spoken choice and sounds casual; ないことには is more written and formal, and stresses “only once this step is done can the rest even be considered”; the second half is negative or unfavorable (わからない, 始まらない). In writing or formal speech, ないことには carries more weight."
             }
           ]
         }
@@ -17734,53 +17734,26 @@
       "id": "nanka",
       "groups": [
         {
-          "kind": "look",
-          "note": "なんか ↔ なんて: only the last kana differs, か / て",
-          "items": [
-            {
-              "id": "nante",
-              "title": "〜なんて (surprise)",
-              "diff": "なんか follows a noun and gives a casual example; なんて follows a whole clause and expresses surprise: \"to think that…\".",
-              "this": [
-                {
-                  "tag": "After a noun · casual example",
-                  "tr": "How about a hot spring or something for our next day off?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "After a sentence · surprise",
-                  "tr": "Those two are getting married? I can't believe it."
-                }
-              ],
-              "wrong": {
-                "why": "To express surprise after a whole sentence, only なんて works"
-              },
-              "explain": "Only the last kana differs (か / て); look at what comes before. A noun (温泉) → なんか, casually giving an example: \"…or something\". A whole clause (あの二人が結婚する) → なんて, expressing surprise, \"to think that…\", often followed by 「信じられない」. When it follows a whole clause to express surprise, it can't be replaced with なんか."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Both mean casually giving an example: \"…or something\"",
           "items": [
             {
               "id": "ya-nado",
               "title": "〜や〜など (gentle suggestion)",
-              "diff": "なんか is casual and mentions just one thing offhand; や〜など lists several things and sounds polite.",
+              "diff": "Same meaning when suggesting examples; なんか is casual, や〜など is polite and formal.",
               "this": [
                 {
-                  "tag": "Casual · just one item",
-                  "tr": "How about pudding or something for dessert?"
+                  "tag": "Casual · to a friend",
+                  "tr": "For dessert, how about some pudding or cake or something?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Polite · several items",
-                  "tr": "Would you like some pudding, cake or the like for dessert?"
+                  "tag": "Polite · to a guest",
+                  "tr": "For dessert, would you care for some pudding, cake or the like?"
                 }
               ],
-              "explain": "Look at how many things are mentioned and who you're talking to. Mentioning just one thing offhand (プリン) to a friend → なんか, casual. Listing two or three things (プリンやケーキ) and asking a guest politely, often with 「いかがですか」 → や〜など."
+              "explain": "Both sentences list the same things; the only difference is register, so look at the end of the sentence: asking a friend casually with 「どう？」 → なんか, casual speech; asking a guest or superior politely with 「いかがですか」 → や〜など. なんか can also follow several items, and など can follow just one, so you can't tell them apart by how many things are listed."
             },
             {
               "id": "demo-but",
@@ -18066,25 +18039,6 @@
                 }
               ],
               "explain": "Both sentences work: you adjust to the other person's level. に合わせて treats the other person as the one target you fit yourself to — the focus is “I accommodate you”. With に応じて, what comes first can be higher or lower and can vary — the focus is “different levels, different ways of speaking”. That is why rules and price lists that match each grade to a result usually use に応じて (年齢に応じて料金が変わる)."
-            },
-            {
-              "id": "ni-soutte",
-              "title": "〜に沿って (in line with)",
-              "thisTitle": "〜に合わせて (fitting in with)",
-              "diff": "に合わせて means adjusting yourself to a target; に沿って means following a policy or plan set in advance, without straying.",
-              "this": [
-                {
-                  "tag": "Adjusting to a target",
-                  "tr": "We put together a plan to fit the customer's budget."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Following a policy",
-                  "tr": "We push the project forward in line with company policy."
-                }
-              ],
-              "explain": "Look at what comes before: a route set in advance, such as a 「方針」, a plan or a manual → に沿って, meaning you follow it without straying; something you need to fit, such as the other person's 「予算」, height or schedule → に合わせて, meaning you adjust yourself to match."
             }
           ]
         },
@@ -29162,37 +29116,37 @@
           "items": [
             {
               "id": "ni-taru",
-              "diff": "に足る means “qualified, sufficient for”, focusing on whether the conditions are enough; に値する means “has the value”, focusing on whether it's worth it.",
+              "diff": "Same meaning; に足る mostly modifies a noun (〜に足る + noun), while に値する is also often used at the end of a sentence to give an evaluation.",
               "this": [
                 {
-                  "tag": "Has value · evaluation",
-                  "tr": "His efforts deserve praise."
+                  "tag": "Worthy · evaluation",
+                  "tr": "The new department head is a person worthy of trust."
                 }
               ],
               "that": [
                 {
-                  "tag": "Qualified · sufficient",
-                  "tr": "He is a person fully worthy of trust."
+                  "tag": "Sufficient · modifies a noun",
+                  "tr": "The new department head is a person who can be fully trusted."
                 }
               ],
-              "explain": "The two are often interchangeable with words like 「信頼, 尊敬」. に足る often goes with 「十分」, appears in phrases like 「取るに足らない」 (not worth mentioning), and mostly modifies a noun (信頼に足る人物); に値する mostly follows evaluative nouns like 「称賛, 注目, 一読」, judging “whether it's worth it”."
+              "explain": "The two sentences differ only in the grammar and mean the same; both are formal. The difference is in usage habits: に足る is mostly used as 「〜に足る + noun」 to modify a noun (信頼に足る人物), and its negative is commonly 「取るに足らない」 (“not worth mentioning”); に値する can modify a noun too, but is also often placed at the end of a sentence to make a direct judgment (称賛に値する, 一読に値する)."
             },
             {
               "id": "ni-taeru",
-              "diff": "に堪える means “able to withstand…, up to that standard”; に値する means “worth (doing)”.",
+              "diff": "Both mean “worth…”; に堪える focuses on “good enough in quality” and often pairs with a concession; に値する affirms the value directly.",
               "this": [
                 {
-                  "tag": "Worth a read",
-                  "tr": "This paper is worth reading."
+                  "tag": "Affirms the value directly",
+                  "tr": "Although taken by an amateur, the photo is well worth appreciating."
                 }
               ],
               "that": [
                 {
-                  "tag": "Up to standard · holds up",
-                  "tr": "It's an amateur's work, but it's well worth viewing."
+                  "tag": "Good enough in quality",
+                  "tr": "Although taken by an amateur, the photo is well worth a look."
                 }
               ],
-              "explain": "に堪える stresses “reaching a level where it can…”, often preceded by a concession like 「素人だが」「古いが」, with common phrases like 「鑑賞に堪える, 読むに堪える, 批判に堪える」; に値する judges value and carries no sense of “just barely qualifying”."
+              "explain": "The two sentences differ only in the grammar, and both work. に堪える focuses on “good enough in quality, worth a look”, which fits neatly with a concession like 「素人の写真だが」; common phrases are 「鑑賞に堪える」 and 「読むに堪える」. に値する affirms the value directly, “worth it”, without the sense of “although…, the quality is still good enough”, and is more common when there's no concession (称賛に値する)."
             }
           ]
         }
@@ -29269,7 +29223,7 @@
               "this": [
                 {
                   "tag": "Preparing for the event",
-                  "tr": "In preparation for moving to Tokyo, I started looking for an apartment."
+                  "tr": "On the occasion of moving to Tokyo, I started looking for an apartment."
                 }
               ],
               "that": [
@@ -29278,7 +29232,7 @@
                   "tr": "When I went up to Tokyo, I met a friend from my university days."
                 }
               ],
-              "explain": "Both mean “on the occasion of…”; look at what the second half does: preparing for the event itself or showing resolve (部屋探しを始めた) → にあたって, used for big life events like 入学, 就任, 上京; just using that time to do something along the way (大学時代の友人と会った) → 折に, refined in tone, used for pleasant occasions like visits and greetings."
+              "explain": "Both mean “on the occasion of…”, and both sentences start with 「上京」, so just look at what the second half does: preparing for the event itself or showing resolve (部屋探しを始めた) → にあたって; just using that time to do something else along the way (大学時代の友人と会った) → 折に, with a refined tone, often used for visits and meetings."
             }
           ]
         }
@@ -29318,23 +29272,6 @@
           "sense": 1,
           "note": "Both are used to stress “precisely…”",
           "items": [
-            {
-              "id": "koso",
-              "diff": "Both assert “this and nothing else”: にほかならない comes at the end of the sentence as a conclusion, calm and formal; こそ sits right after the word it stresses, is used in both speech and writing, and sounds more emotional.",
-              "this": [
-                {
-                  "tag": "End of sentence · calm conclusion",
-                  "tr": "The cause of this failure is nothing other than a lack of preparation."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Right after the noun · emotional",
-                  "tr": "Lack of preparation — that is the real cause of this failure."
-                }
-              ],
-              "explain": "Both sentences make the same judgment (cause of failure = lack of preparation): にほかならない uses 「AはBにほかならない」 to put the conclusion at the end, a calm assertion typical of papers and speeches; こそ attaches directly to the word being stressed (準備不足こそ), is common in speech too, and carries the strong feeling of “this and nothing else”. Check whether the grammar closes the sentence as a conclusion or sits right after a noun."
-            },
             {
               "id": "de-nakute-nan-darou",
               "diff": "でなくてなんだろう stresses with a rhetorical “if this isn't…, what is?”, with strong emotion; にほかならない is a calm, firm judgment.",
@@ -30085,20 +30022,20 @@
             {
               "id": "ni-oujite",
               "title": "〜に応じて (responding / accepting)",
-              "diff": "にこたえて means working to live up to someone's expectations; に応じて means agreeing to or accepting a request someone makes.",
+              "diff": "Both mean responding to someone's request; にこたえて stresses making an effort to satisfy them, に応じて means simply doing as asked.",
               "this": [
                 {
-                  "tag": "こたえて · living up to expectations",
-                  "tr": "Living up to the coach's expectations, the rookie shone in the game."
+                  "tag": "こたえて · working to satisfy",
+                  "tr": "Living up to the residents' wishes, the city built a park."
                 }
               ],
               "that": [
                 {
-                  "tag": "おうじて · accepting a request",
-                  "tr": "I accepted my friend's invitation and went to the party."
+                  "tag": "おうじて · doing as requested",
+                  "tr": "At the residents' request, the city built a park."
                 }
               ],
-              "explain": "Both respond to someone. Look at what comes before: hopes others place in you, like 「期待」 or 「声援」, which you meet through your performance → にこたえて (you don't say 「期待に応じて」); a request someone makes, like 「誘い」, 「取材」 or 「交渉」, which you simply agree to or go along with → に応じて. With 「要望」 or 「リクエスト」 both work: にこたえて stresses making the effort to satisfy the other person, に応じて just doing what was asked. Mind the readings too: 応えて＝こたえて, 応じて＝おうじて."
+              "explain": "The two sentences differ only in the grammar, and both work. にこたえて stresses making an effort to satisfy the other side, with a positive “not letting them down” tone; に応じて just means acting on what was asked, and sounds more objective. With 「期待」 or 「声援」 before it, にこたえて is more common; with 「誘い」 or 「取材」, に応じて is more common. Mind the readings: 応えて = こたえて, 応じて = おうじて."
             },
             {
               "id": "ni-soutte",
@@ -40952,20 +40889,20 @@
             },
             {
               "id": "nara-mada-shimo",
-              "diff": "ならいざしらず excludes the first item as a “special case”; ならまだしも compares the degree of the two, with the first “still bearable”.",
+              "diff": "Basically the same meaning; ならいざしらず is more written, with a classical flavor; ならまだしも is more conversational and carries the judgment “the lighter case is still bearable”.",
               "this": [
                 {
-                  "tag": "Special status · excluded",
-                  "tr": "It'd be one thing for a newcomer, but for a veteran to make a mistake like this…"
+                  "tag": "Written · classical",
+                  "tr": "Once would be one thing, but to make the same mistake three times!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Comparing degree · number of times",
-                  "tr": "Once would be one thing, but making the same mistake three times…"
+                  "tag": "Common in speech · weighing degrees",
+                  "tr": "Once might still be acceptable, but making the same mistake three times!"
                 }
               ],
-              "explain": "Look at how the two items relate: with ならいざしらず, they're different people or situations (新人 ↔ ベテラン), and the first is special so it can be treated differently; with ならまだしも, it's usually the same thing in lighter and heavier forms (一度 ↔ 三度も), saying the light one is bearable but the heavy one isn't."
+              "explain": "The two sentences differ only in the grammar, and both work. The difference is register and tone: ならいざしらず has a classical flavor and appears mostly in writing and commentary, often in phrases like 「昔はいざしらず」 and 「他の人はいざしらず」 that set aside the past, other people or other places; ならまだしも is more common in speech and carries a judgment of degree: “the lighter case before is just about bearable, but the heavier one after is not”."
             }
           ]
         }
@@ -40980,37 +40917,37 @@
           "items": [
             {
               "id": "nara-tomokaku",
-              "diff": "ならまだしも stresses that the first item is “just about acceptable”, comparing its degree with the second, with stronger dissatisfaction; ならともかく just sets the first item aside and has a wider range of uses.",
+              "diff": "ならまだしも always weighs two things, with the first “still just about bearable”; ならともかく simply sets the first aside, and the two need not differ in degree.",
               "this": [
                 {
-                  "tag": "Comparing degree · stronger complaint",
-                  "tr": "Being a little late would be one thing, but making someone wait two hours…"
+                  "tag": "Weighing degrees · first is just bearable",
+                  "tr": "Being a little late would be one thing, but making me wait two hours!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Leaving aside · can be neutral",
-                  "tr": "A genius aside, ordinary people can't do it."
+                  "tag": "Setting the first aside",
+                  "tr": "Being a little late is another matter, but making me wait two hours!"
                 }
               ],
-              "explain": "Look at whether the second half is a complaint: with ならまだしも, the first item is a mild case that's “just about bearable”, and the second is a reality of greater degree that can't be accepted (二時間も), so the whole sentence is a complaint; ならともかく has wider uses and can also neutrally say “A aside, B is like this” (普通の人には無理だ)."
+              "explain": "These two sentences have a lighter and a heavier case (少しの遅刻 ↔ 二時間も), so both work; ならまだしも highlights “the lighter one is just about bearable, the heavier one is not”. The difference is whether the two are weighed against each other: ならまだしも always compares degrees, with the first item the one that's barely acceptable; ならともかく just sets the first item aside, the two need not differ in degree, and what follows can even be neutral or positive (見た目はともかく、味はいい); such sentences usually aren't switched to まだしも."
             },
             {
               "id": "nara-iza-shirazu",
-              "diff": "ならまだしも compares degrees of the same thing; ならいざしらず excludes a special person or situation, and is more literary.",
+              "diff": "Basically the same meaning; ならまだしも is more conversational and carries the judgment “the lighter case is still bearable”; ならいざしらず is more written, with a classical flavor.",
               "this": [
                 {
-                  "tag": "Comparing degree · number of times",
-                  "tr": "Once would be one thing, but making the same mistake three times…"
+                  "tag": "Common in speech · weighing degrees",
+                  "tr": "Once might still be acceptable, but making the same mistake three times!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Special status · excluded",
-                  "tr": "It'd be one thing for a newcomer, but for a veteran to make a mistake like this…"
+                  "tag": "Written · classical",
+                  "tr": "Once would be one thing, but to make the same mistake three times!"
                 }
               ],
-              "explain": "Look at how the two items relate: with ならまだしも, it's usually the same thing in lighter and heavier forms (一度 ↔ 三度も), saying the light one is bearable but the heavy one isn't; with ならいざしらず, they're different people or situations (新人 ↔ ベテラン), and the first is special so it can be treated differently, with a more literary tone. はいざしらず is the same."
+              "explain": "The two sentences differ only in the grammar, and both work. The difference is register and tone: ならまだしも is more common in speech and carries a judgment of degree: “the lighter case before is just about bearable, but the heavier one after is not”; ならいざしらず has a classical flavor and appears mostly in writing and commentary, often in phrases like 「昔はいざしらず」 and 「他の人はいざしらず」 that set aside the past, other people or other places."
             }
           ]
         }
