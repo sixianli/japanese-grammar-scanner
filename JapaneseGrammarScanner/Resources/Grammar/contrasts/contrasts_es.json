@@ -5237,39 +5237,40 @@
               "this": [
                 {
                   "tag": "Recomendar una cosa",
-                  "tr": "Si estás resfriado, ¿qué tal esta medicina?"
+                  "tr": "Si estás resfriado, ¿qué tal este medicamento?"
                 }
               ],
               "that": [
                 {
                   "tag": "Sugerir una acción",
-                  "tr": "Si estás resfriado, ¿por qué no te tomas una medicina?"
+                  "tr": "Si estás resfriado, ¿por qué no te tomas algo?"
                 }
               ],
-              "explain": "Fíjate en lo que va delante de 「どう」: sustantivo + は (この薬は) → ofreces una cosa para que el otro la valore o la acepte; forma た del verbo + ら (飲んだら) → animas al otro a actuar; dicho a un superior suena a sermón. Con clientes o superiores es más cortés decir はいかがですか."
+              "explain": "Fíjate en lo que va delante de 「どう」: sustantivo + は (この薬は) → presentas una cosa para que el otro la valore o la acepte; forma た del verbo + ら (飲んだら) → animas al otro a actuar, y dicho a un superior suena a sermón. Con clientes o superiores es más cortés decir はいかがですか."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas sirven para animar a alguien o proponer algo",
+          "note": "Las dos sirven para invitar al otro a comer o beber algo",
           "items": [
             {
               "id": "masenka",
-              "diff": "はいかがですか ofrece una cosa y pregunta si la quiere; ませんか invita al otro a hacer algo juntos.",
+              "title": "〜ませんか (invitar a comer o beber)",
+              "diff": "Las dos invitan al otro a comer o beber: はいかがですか presenta la cosa directamente y es formal; ませんか pregunta con un verbo si le apetece, y es más desenfadada.",
               "this": [
                 {
-                  "tag": "Ofrecer una cosa",
-                  "tr": "¿Le apetece un café?"
+                  "tag": "Atender · formal",
+                  "tr": "¿Le apetece un zumo frío?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Invitar a hacer algo juntos",
-                  "tr": "¿Por qué no tomamos un café juntos?"
+                  "tag": "Ofrecer con naturalidad",
+                  "tr": "¿Por qué no te tomas un zumo frío o algo?"
                 }
               ],
-              "explain": "Fíjate en lo de delante: sustantivo + は → solo le ofreces la cosa al otro, y tú no tienes por qué tomarla también; forma ます del verbo + ませんか, a menudo con 「一緒に」 → invitas al otro a hacerlo contigo. De forma más informal se dice はどうですか, con el mismo uso."
+              "explain": "Las dos oraciones invitan al otro a tomar zumo. Fíjate en lo que va delante: sustantivo (ジュース) + はいかがですか pone la cosa directamente delante del otro y es formal; lo usan mucho los dependientes con los clientes o los anfitriones con los invitados. Forma ます del verbo (飲み) + ませんか, a menudo con 「〜でも」, suena a una propuesta casual entre amigos o compañeros y tiene un tono más relajado. Con invitados o superiores, la primera opción es はいかがですか."
             }
           ]
         }
@@ -5280,24 +5281,29 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas pueden decir cómo es una parte de algo",
+          "note": "Las dos marcan el sujeto de una oración subordinada que modifica a un sustantivo",
           "items": [
             {
               "id": "no-possessive",
-              "diff": "象は鼻が長い habla de una característica del «elefante»; 象の鼻は長い solo habla de «la trompa del elefante».",
+              "title": "〜の (sujeto de la subordinada)",
+              "thisTitle": "〜は〜が〜 (が en la subordinada)",
+              "diff": "En una subordinada que modifica a un sustantivo, el sujeto puede llevar が o の; の es algo más escrito y suave. En otras subordinadas solo vale が.",
               "this": [
                 {
-                  "tag": "El tema es el elefante",
-                  "tr": "Los elefantes tienen la trompa larga."
+                  "tag": "Sujeto de la subordinada · が",
+                  "tr": "Me encanta el pastel que hornea mi hermana mayor."
                 }
               ],
               "that": [
                 {
-                  "tag": "El tema es la trompa",
-                  "tr": "La trompa del elefante es larga."
+                  "tag": "Sujeto de la subordinada · の",
+                  "tr": "Me encanta el pastel que hornea mi hermana mayor."
                 }
               ],
-              "explain": "Fíjate en lo que va delante de 「は」: 「象は」 → toda la oración presenta al elefante, y 「鼻が長い」 es su característica; 「象の鼻は」 → el tema es solo la trompa. Para presentar rasgos de personas o animales, o hablar de sensaciones físicas (田中さんは目が大きい, 私は頭が痛い), se usa は〜が."
+              "wrong": {
+                "why": "La condicional 「〜たら」 no modifica a un sustantivo, así que su sujeto no puede pasar a の; hay que decir 「雨が降ったら」"
+              },
+              "explain": "Las dos oraciones significan exactamente lo mismo: en 「姉が焼いたケーキ」 y 「姉の焼いたケーキ」, la subordinada 「焼いた」 modifica al sustantivo 「ケーキ」 que la sigue, así que su sujeto puede llevar が o の; の es algo más escrito y suave. Fíjate en lo que va después de la subordinada: si es un sustantivo, valen las dos; en subordinadas como 「〜たら」 o 「〜から」, o para el sujeto de la oración principal, solo vale が."
             }
           ]
         }
@@ -5343,12 +5349,12 @@
       "id": "wa-topic",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Tanto は como が pueden ir detrás del sujeto",
+          "kind": "look",
+          "note": "「私は田中です」↔「私が田中です」 solo cambian は／が: una es una presentación; la otra, «el Tanaka soy yo»",
           "items": [
             {
               "id": "ga-subject",
-              "diff": "は presenta un tema ya conocido, y lo importante va después; が pone el foco en el sustantivo de delante y responde a «quién, cuál».",
+              "diff": "は presenta un tema ya conocido, con el foco en lo que sigue; が pone el foco en el sustantivo que va delante y responde a «quién» o «cuál».",
               "this": [
                 {
                   "tag": "Presentación · tema",
@@ -5357,14 +5363,14 @@
               ],
               "that": [
                 {
-                  "tag": "Responde «quién» · foco",
+                  "tag": "Responder «quién» · foco",
                   "tr": "¿Quién de ustedes es el señor Tanaka? — Tanaka soy yo."
                 }
               ],
               "wrong": {
-                "why": "Cuando un interrogativo es el sujeto, va seguido de が"
+                "why": "Cuando una palabra interrogativa es el sujeto, debe ir seguida de が"
               },
-              "explain": "Fíjate en qué se pregunta: si primero presentas «yo» como tema y después das la explicación → は; si el otro pregunta «¿quién es Tanaka?» y la respuesta es precisamente el sustantivo «yo» → が. Cuando un interrogativo (誰, 何, どれ) es el sujeto, también va siempre seguido de が."
+              "explain": "Fíjate en el contexto: al presentarte después de 「はじめまして」, tomas «yo» como tema y luego das información sobre él → は; si te preguntan 「田中さんはどの方ですか」 (quién es Tanaka), la respuesta es el propio sustantivo «yo» → が, con el sentido de «el Tanaka soy yo». Cuando una palabra interrogativa (誰, 何, どれ) es el sujeto, también va siempre seguida de が."
             }
           ]
         }
@@ -5379,7 +5385,7 @@
           "items": [
             {
               "id": "yori-starting-point",
-              "diff": "Si より va seguido de un adjetivo, significa «más que»; si va tras un momento o lugar y le sigue 「始まる・出発する」, es el «desde» del lenguaje escrito.",
+              "diff": "Si a より le sigue un adjetivo, significa «que» (comparación); tras una hora o un lugar, y seguida de 「始まる・出発する」, es un «desde» formal.",
               "this": [
                 {
                   "tag": "Comparación",
@@ -5388,51 +5394,52 @@
               ],
               "that": [
                 {
-                  "tag": "Punto de partida · escrito",
-                  "tr": "La reunión comenzará a partir de las dos de la tarde."
+                  "tag": "Punto de partida · formal",
+                  "tr": "La reunión comienza a las dos de la tarde."
                 }
               ],
-              "explain": "Fíjate en lo que sigue a より: un adjetivo (大きい, 速い) → referencia de la comparación; una acción como 「始まります」 o 「出発します」 → punto de partida en el tiempo o el espacio, equivalente a un 「から」 más formal, típico de avisos y anuncios por megafonía."
+              "explain": "Fíjate en lo que va detrás de より: un adjetivo (大きい, 速い) → el punto de referencia de la comparación; una acción como 「始まります」 o 「出発します」 → el punto de partida en el tiempo o el espacio, una versión más formal de 「から」 que se ve mucho en avisos y anuncios."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Todas se usan para comparar dos cosas",
+          "note": "Las dos significan «A es más… que B»",
           "items": [
             {
               "id": "yori-hou-ga",
-              "diff": "AはBより〜 narra tomando A como tema; BよりAのほうが〜 pone el foco en A, la que gana, y se usa sobre todo para responder «¿cuál es más…?».",
+              "diff": "AはBより〜 habla de A como tema; BよりAのほうが〜 pone el foco en A, la que gana, y se usa sobre todo para responder «¿cuál es más…?».",
               "this": [
                 {
-                  "tag": "Narrar · A es el tema",
+                  "tag": "Descripción · A es el tema",
                   "tr": "El tren es más rápido que el autobús."
                 }
               ],
               "that": [
                 {
-                  "tag": "Respuesta · destaca la que gana",
+                  "tag": "Respuesta · destaca a la que gana",
                   "tr": "¿Qué es más rápido, el tren o el autobús? — El tren es más rápido que el autobús."
                 }
               ],
               "explain": "Para simplemente presentar algo, se usa 「AはBより〜」; si el otro pregunta 「どちらが」, se responde con 「〜のほうが」, poniendo el foco en la opción elegida. Ojo: lo que va delante de より es lo que pierde en la comparación."
             },
             {
-              "id": "hodo-nai-comparison",
-              "diff": "より es la comparación afirmativa «más… que…»; ほど〜ない es la negativa «no tan… como…».",
+              "id": "ni-kurabete",
+              "title": "〜に比べて (en comparación con…)",
+              "diff": "Significan lo mismo: より es la forma cotidiana; に比べて es más formal y propia de la lengua escrita.",
               "this": [
                 {
-                  "tag": "Comparación afirmativa",
-                  "tr": "Hoy hace más frío que ayer."
+                  "tag": "Uso cotidiano",
+                  "tr": "Este invierno ha nevado más que el año pasado."
                 }
               ],
               "that": [
                 {
-                  "tag": "Negativa · no tanto",
-                  "tr": "Hoy no hace tanto frío como ayer."
+                  "tag": "Formal · escrito",
+                  "tr": "En comparación con el año pasado, este invierno ha nevado más."
                 }
               ],
-              "explain": "Fíjate en el final de la oración: forma afirmativa (寒い) → より; forma negativa (寒くない) → ほど, que indica «no llega al nivel de B». ほど siempre va seguido de negación."
+              "explain": "Las dos oraciones significan lo mismo; solo se cambia より por に比べて. より es la forma más básica y la más natural en la conversación diaria; に比べて significa literalmente «en comparación con…», suena más formal y escrito, y es frecuente en noticias, informes y al comentar datos. Con amigos usa より; en un informe o un discurso formal puedes usar に比べて."
             }
           ]
         }
@@ -5443,67 +5450,66 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「ください」, la forma imperativa de 「くださる」 («darme»)",
+          "note": "Las dos vienen de 「くださる」: su forma imperativa 「ください」 significa originalmente «deme, por favor»",
           "items": [
             {
               "id": "te-kudasai",
-              "diff": "Sustantivo + をください pide al otro que «dé» una cosa; forma て + ください le pide que «haga» algo.",
+              "diff": "Sustantivo + をください pide al otro que te «dé» algo; forma て + ください pide al otro que «haga» algo.",
               "this": [
                 {
                   "tag": "Pedir una cosa",
-                  "tr": "Disculpe, agua, por favor."
+                  "tr": "Perdone, agua, por favor."
                 }
               ],
               "that": [
                 {
                   "tag": "Pedir una acción",
-                  "tr": "Disculpe, ¿me trae agua, por favor?"
+                  "tr": "Perdone, ¿me trae un poco de agua, por favor?"
                 }
               ],
-              "explain": "Fíjate en lo que va delante de ください: sustantivo + を (水を) → pides que te dé esa cosa; la forma て de un verbo (持ってきて) → pides al otro que haga esa acción."
+              "explain": "ください es la forma imperativa de 「くださる」 (darme), así que su sentido básico es «deme, por favor». Sustantivo + を (水を) → pides directamente esa cosa; forma て del verbo (持ってきて) → pides la acción del otro como un «favor que se me da», y de ahí «hágame el favor de…». Así que fíjate en lo que va delante de ください: sustantivo + を es pedir una cosa; forma て del verbo es pedir que el otro haga algo."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Todas sirven para pedirle algo al otro",
+          "note": "Las dos significan «deme…, por favor»",
           "items": [
             {
               "id": "wo-onegaishimasu",
-              "diff": "をください solo sirve para pedir cosas; をお願いします es más cortés y también sirve para servicios.",
+              "title": "〜をお願いします (pedir en tiendas y restaurantes)",
+              "diff": "Para pedir cosas valen las dos: をください es directa y clara; をお願いします es más suave y más cortés.",
               "this": [
                 {
-                  "tag": "Pedir una cosa",
-                  "tr": "Disculpe, agua, por favor."
+                  "tag": "Directo",
+                  "tr": "Perdone, deme un platito, por favor."
                 }
               ],
               "that": [
                 {
-                  "tag": "También servicios",
-                  "tr": "Buenas, quería hacer el check-in, por favor."
+                  "tag": "Suave · más cortés",
+                  "tr": "Perdone, ¿sería tan amable de traerme un platito?"
                 }
               ],
-              "wrong": {
-                "why": "チェックイン es un servicio, no una cosa que se pueda entregar"
-              },
-              "explain": "Fíjate en qué se pide: cosas que se pueden tener en la mano (水, 切符) → valen をください y をお願いします, y la segunda es más cortés; servicios como hacer el check-in o pedir una explicación → solo vale をお願いします."
+              "explain": "Las dos oraciones piden un platito al camarero. をください dice «deme» sin rodeos, breve y claro; をお願いします significa literalmente «se lo ruego» y no dice «dar» directamente, así que suena más suave y más cortés. Las dos son habituales para pedir la comida o la cuenta; si quieres sonar más cortés, elige をお願いします."
             },
             {
-              "id": "ga-hoshii",
-              "diff": "がほしい solo expresa lo que quieres; をください es pedírselo al otro en persona.",
+              "id": "te-choudai",
+              "title": "〜てちょうだい (dame algo)",
+              "diff": "Las dos significan «dame»: をください es cortés y sirve con dependientes y desconocidos; をちょうだい es cariñosa y solo se usa con la familia o gente muy cercana.",
               "this": [
                 {
-                  "tag": "Pedirlo en persona",
-                  "tr": "Disculpe, ¿me trae la carta, por favor?"
+                  "tag": "A desconocidos · cortés",
+                  "tr": "Perdone, un zumo, por favor."
                 }
               ],
               "that": [
                 {
-                  "tag": "Expresar un deseo",
-                  "tr": "Qué sed tengo. Quiero agua fría."
+                  "tag": "A la familia · cariñoso",
+                  "tr": "Mamá, dame zumo, porfa."
                 }
               ],
-              "explain": "がほしい expresa tu deseo, puedes decirlo para ti mismo y no tiene por qué ir dirigido a nadie; para que en una tienda te den algo → をください. Decirle a un camarero 「メニューがほしいです」 suena poco natural."
+              "explain": "Las dos oraciones piden zumo; fíjate en a quién se habla: si llamas con 「すみません」 a un dependiente o a un desconocido → をください, cortés; si llamas 「ママ」 a alguien de la familia o muy cercano, sobre todo un niño a sus padres → をちょうだい, con un tono cariñoso y mimoso. ちょうだい no se usa con superiores ni con clientes."
             }
           ]
         }
@@ -5514,44 +5520,29 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas pueden marcar el objeto de una acción, un gusto o una capacidad: en español todos parecen «complemento directo», pero en japonés se dividen entre を y が",
+          "note": "Las dos significan «salir de…»",
           "items": [
             {
-              "id": "ga-suki-jouzu",
-              "diff": "El objeto de una acción va con を; el objeto de adjetivos como 好き・上手 va con が.",
+              "id": "kara-from",
+              "title": "〜から (punto de partida en el espacio)",
+              "thisTitle": "〜を (lugar del que se sale)",
+              "diff": "Cuando una persona sale de un sitio, valen を y から; cuando algo sin voluntad propia sale de un sitio, solo vale から.",
               "this": [
                 {
-                  "tag": "Verbo → を",
-                  "tr": "Mi hermana toca el piano todos los días."
+                  "tag": "Una persona sale · を",
+                  "tr": "Mi padre salió de la cocina a las ocho."
                 }
               ],
               "that": [
                 {
-                  "tag": "Adjetivo → が",
-                  "tr": "Mi hermana toca muy bien el piano."
+                  "tag": "Algo sale · から",
+                  "tr": "Está saliendo humo de la cocina."
                 }
               ],
               "wrong": {
-                "why": "上手 es un adjetivo: su objeto va con が"
+                "why": "煙 (el humo) no tiene voluntad propia, así que para decir que sale de algún sitio solo vale から"
               },
-              "explain": "Fíjate en la palabra final: verbos como 弾く o 食べる → を; 好き, 嫌い, 上手 y 下手 son adjetivos → su objeto va con が. Como en español «tocar bien el piano» parece llevar complemento directo, es fácil usar を por analogía."
-            },
-            {
-              "id": "ga-wakaru-dekiru",
-              "diff": "El objeto de acciones como estudiar o hablar va con を; わかる・できる expresan capacidad o estado, y su objeto va con が.",
-              "this": [
-                {
-                  "tag": "Acción → を",
-                  "tr": "Estudio japonés todos los días."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Capacidad → が",
-                  "tr": "Entiendo un poco de japonés."
-                }
-              ],
-              "explain": "Fíjate en el verbo: 勉強する o 話す son acciones que haces tú → を; わかる o できる hablan de una capacidad o un estado → が. En español «entender japonés» o «saber jugar al tenis» llevan complemento directo, pero en japonés se dice 「日本語がわかる」 y 「テニスができる」."
+              "explain": "Cuando una persona sale de un sitio por sí misma, valen を y から: 「台所を出た」 y 「台所から出た」 significan lo mismo; を habla de abandonar ese lugar, mientras que から destaca el punto desde donde se parte. Fíjate en el sujeto: cuando sale algo sin voluntad (煙, 水), solo vale から. Además, salidas abstractas como 「家を出る」 (irse de casa para independizarse) o 「大学を出る」 (graduarse) solo usan を."
             }
           ]
         }
@@ -5562,35 +5553,41 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Todas sirven para hacer una petición cortés",
+          "sense": 1,
+          "note": "Las dos significan «deme…, por favor»",
           "items": [
             {
               "id": "wo-kudasai",
-              "diff": "をお願いします es más cortés y también sirve para servicios; をください solo sirve para pedir cosas.",
+              "thisTitle": "〜をお願いします (pedir en tiendas y restaurantes)",
+              "diff": "Para pedir cosas valen las dos: をお願いします es más suave y más cortés; をください es directa y clara.",
               "this": [
                 {
-                  "tag": "También servicios",
-                  "tr": "Buenas, quería hacer el check-in, por favor."
+                  "tag": "Suave · más cortés",
+                  "tr": "Perdone, ¿sería tan amable de traerme una toallita?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Pedir una cosa",
-                  "tr": "Disculpe, agua, por favor."
+                  "tag": "Directo",
+                  "tr": "Perdone, deme una toallita, por favor."
                 }
               ],
-              "wrong": {
-                "why": "チェックイン es un servicio, no una cosa que se pueda entregar"
-              },
-              "explain": "Fíjate en qué se pide: servicios como hacer el check-in, pedir una explicación o que alguien se ponga al teléfono → solo vale をお願いします; cosas que se pueden tener en la mano (水, 切符) → valen las dos, y をお願いします es más cortés."
-            },
+              "explain": "Las dos oraciones piden una toallita húmeda al camarero. をお願いします significa literalmente «se lo ruego» y no dice «dar» directamente, así que suena más suave y más cortés; をください dice «deme» sin rodeos, breve y claro. Las dos son habituales para pedir la comida o la cuenta; si quieres sonar más cortés, elige をお願いします."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Las dos sirven para pedir a alguien que haga algo",
+          "items": [
             {
               "id": "te-itadakemasenka",
-              "diff": "をお願いします va tras un sustantivo y es breve y cortés; ていただけませんか va tras un verbo, pide con una pregunta y es más indirecto.",
+              "diff": "をお願いします va tras un sustantivo y es breve y cortés; ていただけませんか va tras un verbo y hace la petición en forma de pregunta, de manera más indirecta.",
               "this": [
                 {
                   "tag": "Sustantivo · breve",
-                  "tr": "Este documento, ¿lo revisa, por favor?"
+                  "tr": "Revise este documento, por favor."
                 }
               ],
               "that": [
@@ -5599,7 +5596,7 @@
                   "tr": "Perdone que le moleste estando tan ocupado, pero ¿podría revisar este documento?"
                 }
               ],
-              "explain": "Fíjate en lo de delante: sustantivo (確認, 説明) + をお願いします es breve y cortés, y se usa mucho en el trabajo; forma て del verbo + いただけませんか deja la decisión al otro con una pregunta, y es más adecuado para pedir un favor extra o cuando el otro tiene un rango muy alto."
+              "explain": "Fíjate en lo que va delante: sustantivo (確認, 説明) + をお願いします es breve y cortés, y muy habitual en el trabajo; forma て del verbo + いただけませんか deja la decisión al otro al formularlo como pregunta, y es más adecuado para pedir un favor extra o hablar con alguien de rango muy superior."
             }
           ]
         }
@@ -5609,77 +5606,96 @@
       "id": "ya-nado",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Todas sirven para enumerar",
+          "kind": "look",
+          "note": "「本やノート」↔「本とノート」 solo cambian や／と: una deja entender que hay más; la otra, que eso es todo",
           "items": [
             {
               "id": "to-quotation",
-              "title": "〜と（enumeración）",
-              "diff": "や〜など solo da algunos ejemplos e insinúa que hay más; と enumera todas las cosas.",
+              "title": "〜と (enumeración)",
+              "diff": "や〜など solo da algunos ejemplos y deja entender que hay más; と lo enumera todo.",
               "this": [
                 {
                   "tag": "Ejemplos · hay más",
-                  "tr": "En la bolsa hay libros, cuadernos, etc."
+                  "tr": "En la mochila hay libros, cuadernos y otras cosas."
                 }
               ],
               "that": [
                 {
                   "tag": "Lista completa",
-                  "tr": "En la bolsa hay un libro y un cuaderno (solo eso)."
+                  "tr": "En la mochila hay un libro y un cuaderno (solo eso)."
                 }
               ],
-              "explain": "Las dos frases solo se diferencian en la partícula: や (a menudo con など) elige algunos ejemplos representativos, y en la bolsa hay más cosas; lo que se enumera con と es todo lo que hay."
-            },
+              "explain": "Las dos oraciones solo cambian や／と: 「本やノート」 (a menudo con など) elige unos pocos ejemplos representativos, y en la mochila hay más cosas; 「本とノート」 es la lista completa, y en la mochila solo hay esas dos."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 1,
+          "note": "Las dos dan algunos ejemplos y dejan entender que hay más",
+          "items": [
             {
               "id": "tari-tari",
-              "diff": "や〜など enumera sustantivos; たり〜たりする enumera acciones.",
+              "title": "〜たり〜たりする (enumerar acciones)",
+              "diff": "Las dos dan algunos ejemplos: や〜など enumera sustantivos; たり〜たりする enumera acciones, y con los verbos normales es la única opción.",
               "this": [
                 {
-                  "tag": "Enumerar cosas",
-                  "tr": "En los grandes almacenes compré ropa, zapatos, etc."
+                  "tag": "Enumerar sustantivos",
+                  "tr": "Los días libres hago la colada, la limpieza y cosas así."
                 }
               ],
               "that": [
                 {
                   "tag": "Enumerar acciones",
-                  "tr": "Los días libres veo películas, voy de compras y cosas así."
+                  "tr": "Los días libres hago cosas como lavar la ropa y limpiar."
                 }
               ],
-              "explain": "Fíjate en lo que se enumera: sustantivos (服, 靴) → や〜など; acciones (見る, する) → forma た del verbo + り, con 「する」 al final."
+              "wrong": {
+                "why": "や solo va con sustantivos; una acción como 「映画を見る」 se dice 「映画を見たり買い物をしたりする」"
+              },
+              "explain": "Las dos oraciones significan lo mismo: enumeran algunas cosas que se hacen los días libres, y hay más. Con sustantivos que admiten 「する」, como 洗濯 o 掃除, valen las dos formas: や〜などをする enumera las actividades como sustantivos, y たり〜たりする las presenta como acciones. Los verbos normales, como 「映画を見る」 o 「友達に会う」, solo pueden ir con たり〜たりする."
             },
             {
               "id": "toka-listing",
-              "diff": "や〜など sirve tanto en lengua escrita como hablada y solo va con sustantivos; とか〜とか es coloquial y también puede ir con verbos.",
+              "diff": "や〜など sirve tanto en la lengua escrita como en la hablada, y solo va con sustantivos; とか〜とか es coloquial y también puede ir con verbos.",
               "this": [
                 {
                   "tag": "Uso general",
-                  "tr": "En la nevera hay leche, huevos, etc."
+                  "tr": "En la nevera hay leche, huevos y otras cosas."
                 }
               ],
               "that": [
                 {
                   "tag": "Coloquial · informal",
-                  "tr": "Oye, ¿hay leche o huevos o algo así en la nevera?"
+                  "tr": "Oye, ¿hay leche o huevos o algo en la nevera?"
                 }
               ],
-              "explain": "Fíjate en el tono: en oraciones con です・ます o en textos → や〜など; hablando de forma informal con amigos → とか〜とか. Además, とか puede ir con verbos (掃除するとか), y や no."
-            },
+              "explain": "Fíjate en el tono: en oraciones con です・ます y por escrito → や〜など; entre amigos, de forma informal → とか〜とか. Además, とか puede ir tras un verbo (掃除するとか), pero や no."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Las dos dan algún ejemplo para hacer una propuesta",
+          "items": [
             {
               "id": "nanka",
-              "diff": "El など de や〜など es una enumeración neutra; なんか, tras una persona o cosa, suele llevar desprecio o modestia.",
+              "title": "〜なんか (ejemplos informales)",
+              "diff": "Las dos dan algunos ejemplos para proponer algo: 〜などはいかがですか es formal; 〜なんかどう？ es coloquial e informal.",
               "this": [
                 {
-                  "tag": "Ejemplo neutro",
-                  "tr": "Preparé té, dulces y cosas así."
+                  "tag": "Formal · a invitados",
+                  "tr": "¿Le apetece un poco de pastel, galletas o algo así?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Modestia · desprecio",
-                  "tr": "Alguien como yo no podría hacerlo de ninguna manera."
+                  "tag": "Informal · a amigos",
+                  "tr": "¿Qué tal un poco de pastel o galletas o algo?"
                 }
               ],
-              "explain": "Mira lo que va delante de など／なんか: varias cosas enumeradas → solo es «etcétera»; una sola persona o cosa, normalmente seguida de una negación o una valoración negativa (無理だ, 嫌いだ) → lleva un matiz de desprecio o modestia, «alguien/algo como…, que no vale gran cosa». En situaciones formales se puede cambiar なんか por など con el mismo sentido (私などには無理です)."
+              "explain": "Las dos oraciones ofrecen algunos dulces para que el otro elija. Fíjate en el final de la frase y en a quién se habla: con invitados o mayores, 「〜などはいかがですか」, formal; entre amigos o en familia, 「〜なんかどう？」, informal. なんか es simplemente la forma coloquial de など."
             }
           ]
         }
@@ -5690,42 +5706,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Todas son partículas de final de oración que expresan el tono",
+          "note": "Las dos sirven para llamar la atención del otro sobre algo",
           "items": [
             {
-              "id": "ne-particle",
-              "diff": "よ le cuenta al otro algo que no sabe; ね busca complicidad o confirmación sobre algo que saben los dos.",
+              "id": "zo-ze",
+              "title": "〜ぞ (aviso, advertencia)",
+              "diff": "Las dos llaman la atención del otro: よ se puede usar con cualquiera; ぞ es enérgica y la usan sobre todo los hombres con iguales o con gente de menor rango.",
               "this": [
                 {
-                  "tag": "Informar al otro",
-                  "tr": "Ponte el abrigo antes de salir. Fuera hace frío, ¿sabes?"
+                  "tag": "A un superior · cortés",
+                  "tr": "Profesor, el suelo de ahí resbala."
                 }
               ],
               "that": [
                 {
-                  "tag": "Lo saben los dos · complicidad",
-                  "tr": "Hoy hace muchísimo frío, ¿eh?"
+                  "tag": "A un igual · enérgico",
+                  "tr": "¡Eh, que el suelo de ahí resbala!"
                 }
               ],
-              "explain": "Fíjate en si el otro lo sabe: si sigue dentro de casa y no sabe que fuera hace frío → 外は寒いよ (un aviso); si los dos estáis fuera temblando de frío → 寒いね (una exclamación compartida). Usar よ para algo que saben los dos suena a sermón."
-            },
-            {
-              "id": "naa-exclamation",
-              "title": "〜なあ（exclamación）",
-              "diff": "よ siempre se dirige al oyente; なあ suele ser una exclamación como hablando para uno mismo.",
-              "this": [
-                {
-                  "tag": "Dirigido al otro",
-                  "tr": "Mira, esta flor es muy bonita, ¿eh?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Para uno mismo",
-                  "tr": "¡Qué bonita es esta flor!"
-                }
-              ],
-              "explain": "Mira si hay alguien que escucha: si llamas al otro para que mire (ほら) o le das una información → よ; si estás solo mirando la flor y exclamas sin esperar respuesta → なあ."
+              "explain": "Las dos oraciones avisan de que el suelo resbala; fíjate en a quién se habla: a un 「先生」, a una persona mayor o a alguien con quien no tienes confianza → よ, que puede ir detrás de です・ます; un hombre que llama 「おい」 a un amigo o a alguien de menor rango → puede usar ぞ, con un tono enérgico y brusco. ぞ no se usa con mayores ni con superiores, y las mujeres casi no lo usan."
             }
           ]
         }
@@ -5743,7 +5742,7 @@
               "diff": "より〜のほうがいい compara dos cosas y dice cuál es mejor; forma た + ほうがいい es un consejo para el otro: «más vale que…».",
               "this": [
                 {
-                  "tag": "Comparar · cuál es mejor",
+                  "tag": "Comparación · cuál es mejor",
                   "tr": "Es mejor el tren que el autobús."
                 }
               ],
@@ -5753,81 +5752,48 @@
                   "tr": "Si tienes fiebre, más vale que te acuestes pronto."
                 }
               ],
-              "explain": "Fíjate en lo que va delante de ほう: sustantivo + の (電車の), con 「より」 → se comparan dos cosas; la forma た de un verbo (寝た) → das un consejo al otro, a menudo seguido de 「よ」."
+              "explain": "「ほう（方）」 significa originalmente «dirección, ese lado». Al comparar dos cosas, 「電車のほう」 es «el lado del tren», y より marca el otro lado → se dice qué lado es mejor; al aconsejar, 「寝たほうがいい」 pone «dormir» y «no dormir» como dos lados y dice que «el lado de haber dormido es mejor» → de ahí «más vale que…». Para distinguirlas, fíjate en lo que va delante de ほう: sustantivo + の (電車の), junto con 「より」 → comparación; forma た de un verbo (寝た) → consejo para el otro."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Todas se usan para comparar",
+          "note": "Las dos dicen que una cosa es más… que otra",
           "items": [
             {
               "id": "wa-yori-comparison",
-              "diff": "BよりAのほうが〜 pone el foco en A, la que gana, y se usa sobre todo para responder «¿cuál es más…?»; AはBより〜 narra tomando A como tema.",
+              "diff": "BよりAのほうが〜 pone el foco en A, la que gana, y se usa sobre todo para responder «¿cuál es más…?»; AはBより〜 habla de A como tema.",
               "this": [
                 {
-                  "tag": "Respuesta · destaca la que gana",
+                  "tag": "Respuesta · destaca a la que gana",
                   "tr": "¿Qué es más rápido, el tren o el autobús? — El tren es más rápido que el autobús."
                 }
               ],
               "that": [
                 {
-                  "tag": "Narrar · A es el tema",
+                  "tag": "Descripción · A es el tema",
                   "tr": "El tren es más rápido que el autobús."
                 }
               ],
               "explain": "Si el otro pregunta 「どちらが」, se responde con 「〜のほうが」, poniendo el foco en la opción elegida; para simplemente presentar algo, se usa 「AはBより〜」. Ojo: lo que va delante de より es lo que pierde en la comparación."
             },
             {
-              "id": "to-dochira",
-              "diff": "より〜のほうが sirve para responder «… es más…»; どちらが sirve para preguntar «¿cuál es más…?».",
+              "id": "ni-kurabete",
+              "title": "〜に比べて (en comparación con…)",
+              "diff": "Significan lo mismo: より〜のほうが es la forma cotidiana, con el foco en la que gana; に比べて es más formal y propia de la lengua escrita.",
               "this": [
                 {
-                  "tag": "Respuesta · elegir uno",
-                  "tr": "Me gustan más los gatos que los perros."
+                  "tag": "Cotidiano · foco en «ahora»",
+                  "tr": "Ahora los precios están más altos que antes."
                 }
               ],
               "that": [
                 {
-                  "tag": "Pregunta · elegir entre dos",
-                  "tr": "¿Qué te gustan más, los perros o los gatos?"
+                  "tag": "Formal · escrito",
+                  "tr": "En comparación con antes, ahora los precios están altos."
                 }
               ],
-              "explain": "Al preguntar, se colocan las dos opciones con 「AとBとどちらが」; al responder, 「より」 marca la opción que pierde y 「のほうが」 la que gana. No respondas ✗犬と猫と猫のほうが好きです."
-            },
-            {
-              "id": "hodo-nai-comparison",
-              "diff": "より〜のほうが dice en positivo que B es superior; ほど〜ない dice en negativo que A no llega al nivel de B.",
-              "this": [
-                {
-                  "tag": "Positivo · B es más…",
-                  "tr": "El tren es más rápido que el autobús."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Negativo · A no llega",
-                  "tr": "El autobús no es tan rápido como el tren."
-                }
-              ],
-              "explain": "Las dos oraciones dicen lo mismo: tras より〜のほうが va una afirmación (速い), con el foco en la que gana; tras ほど siempre va una negación (速くない), hablando desde la que pierde."
-            },
-            {
-              "id": "no-naka-de-ichiban",
-              "diff": "より〜のほうが solo compara dos cosas; con tres o más se usa 「の中で〜がいちばん」.",
-              "this": [
-                {
-                  "tag": "Comparar dos",
-                  "tr": "Me gustan más los gatos que los perros."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tres o más · el que más",
-                  "tr": "De todos los animales, el que más me gusta es el gato."
-                }
-              ],
-              "explain": "Primero cuenta los elementos que se comparan: si solo hay dos (犬と猫) → より〜のほうが; si hay muchos dentro de un ámbito (動物の中で) → の中で〜がいちばん."
+              "explain": "Las dos oraciones significan lo mismo: «ahora los precios están más altos que antes». より〜のほうが es la forma de la conversación diaria y pone el foco en la que gana (今); se usa mucho para responder a 「どちらが」. に比べて toma lo primero como referencia para describir lo segundo, suena más formal y escrito, y es frecuente en noticias e informes."
             }
           ]
         }

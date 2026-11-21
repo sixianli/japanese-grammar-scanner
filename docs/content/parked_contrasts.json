@@ -10142,6 +10142,460 @@
           "explain": "「お」 ၏ နောက်က နာမ်လား ကြိယာ ます形 လား ကြည့်ပါ - お荷物、お茶 → ပြောပုံကို ယဉ်ကျေးစေရုံသာ။ お持ちする、お送りする → နှိမ့်ချစကား ဖြစ်ပြီး ကတ္တားက “ကျွန်တော်” ဖြစ်ကာ တစ်ဖက်လူအတွက် လုပ်ပေးသော လုပ်ဆောင်ချက် ဖြစ်သည်။ ご လည်း အတူတူပင် - ご連絡 သည် နာမ်၊ ご連絡します သည် “ကျွန်တော် ဆက်သွယ်ပေးပါမယ်”။"
         }
       }
+    },
+    {
+      "point": "wo-object",
+      "kind": "meaning",
+      "reason": "「意思差不多的」要求替换测试成立、差别是同一个意思里的差别：を（动作对象）和 わかる・できる 的 が 是互补分布，只能写成「A 表示甲；B 表示乙」，三组都不合格。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ga-wakaru-dekiru",
+          "diff": "学、说这类动作的对象用 を；わかる・できる 表示能力或状态，对象用 が。",
+          "this": [
+            {
+              "ja": "毎日:まいにち|日本語:にほんご|*を|~勉強:べんきょう|~する|。",
+              "tag": "动作 → を",
+              "tr": "每天学习日语。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "少:すこ|し|日本語:にほんご|*が|~わかる|。",
+              "tag": "能力 → が",
+              "tr": "懂一点日语。"
+            }
+          ],
+          "explain": "看动词：勉強する、話す 是自己去做的动作 → を；わかる、できる 说的是能力或状态 → 用 が。中文的「懂日语」「会网球」带宾语，日语要说「日本語がわかる」「テニスができる」。"
+        },
+        "en": {
+          "id": "ga-wakaru-dekiru",
+          "diff": "The target of actions like studying or speaking takes を; わかる・できる express ability or a state, and their target takes が.",
+          "this": [
+            {
+              "tag": "Action → を",
+              "tr": "I study Japanese every day."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Ability → が",
+              "tr": "I understand a little Japanese."
+            }
+          ],
+          "explain": "Look at the verb: 勉強する and 話す are actions you actively do → を; わかる and できる describe an ability or state → が. English “understand Japanese” or “can play tennis” take an object, but Japanese says 「日本語がわかる」「テニスができる」."
+        },
+        "ko": {
+          "id": "ga-wakaru-dekiru",
+          "diff": "공부하다, 말하다 같은 동작의 대상에는 を를, 능력이나 상태를 나타내는 わかる・できる의 대상에는 が를 쓴다.",
+          "this": [
+            {
+              "tag": "동작 → を",
+              "tr": "매일 일본어를 공부한다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "능력 → が",
+              "tr": "일본어를 조금 안다."
+            }
+          ],
+          "explain": "동사를 보자. 勉強する, 話す는 스스로 하는 동작 → を, わかる, できる는 능력이나 상태 → が. 한국어로는 ‘일본어를 안다’, ‘테니스를 할 수 있다’처럼 ‘를’을 쓰지만 일본어는 「日本語がわかる」 「テニスができる」라고 한다."
+        },
+        "es": {
+          "id": "ga-wakaru-dekiru",
+          "diff": "El objeto de acciones como estudiar o hablar va con を; わかる・できる expresan capacidad o estado, y su objeto va con が.",
+          "this": [
+            {
+              "tag": "Acción → を",
+              "tr": "Estudio japonés todos los días."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Capacidad → が",
+              "tr": "Entiendo un poco de japonés."
+            }
+          ],
+          "explain": "Fíjate en el verbo: 勉強する o 話す son acciones que haces tú → を; わかる o できる hablan de una capacidad o un estado → が. En español «entender japonés» o «saber jugar al tenis» llevan complemento directo, pero en japonés se dice 「日本語がわかる」 y 「テニスができる」."
+        },
+        "vi": {
+          "id": "ga-wakaru-dekiru",
+          "diff": "Đối tượng của các hành động như học, nói dùng を; わかる・できる diễn tả khả năng hoặc trạng thái, đối tượng dùng が.",
+          "this": [
+            {
+              "tag": "Hành động → を",
+              "tr": "Ngày nào cũng học tiếng Nhật."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Khả năng → が",
+              "tr": "Hiểu một chút tiếng Nhật."
+            }
+          ],
+          "explain": "Xem động từ: 勉強する、話す là hành động mình chủ động làm → を; わかる、できる nói về khả năng hay trạng thái → dùng が. Tiếng Việt nói “hiểu tiếng Nhật”, “biết chơi tennis” có tân ngữ, nhưng tiếng Nhật phải nói 「日本語がわかる」「テニスができる」."
+        },
+        "my": {
+          "id": "ga-wakaru-dekiru",
+          "diff": "သင်ယူခြင်း၊ ပြောခြင်း ကဲ့သို့ လုပ်ဆောင်ချက်၏ အရာဝတ္ထုကို を ဖြင့် ပြသည်။ わかる・できる သည် စွမ်းရည် သို့မဟုတ် အခြေအနေကို ပြပြီး အရာဝတ္ထုကို が ဖြင့် ပြသည်။",
+          "this": [
+            {
+              "tag": "လုပ်ဆောင်ချက် → を",
+              "tr": "နေ့တိုင်း ဂျပန်စာ လေ့လာတယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "စွမ်းရည် → が",
+              "tr": "ဂျပန်စာ နည်းနည်း နားလည်တယ်။"
+            }
+          ],
+          "explain": "ကြိယာကို ကြည့်ပါ - 勉強する、話す သည် ကိုယ်တိုင် လုပ်သော လုပ်ဆောင်ချက် → を။ わかる、できる သည် စွမ်းရည် သို့မဟုတ် အခြေအနေကို ပြောသည် → が။ မြန်မာလို “ဂျပန်စာကို နားလည်တယ်”၊ “တင်းနစ်ကို ကစားတတ်တယ်” ဟု ပြောသော်လည်း ဂျပန်လိုတွင်「日本語がわかる」「テニスができる」ဟု ပြောရမည်။"
+        }
+      }
+    },
+    {
+      "point": "yo-particle",
+      "kind": "meaning",
+      "reason": "「意思差不多的」要求两边是同一个意思、替换测试成立：よ（告诉对方）与 なあ（自言自语的感叹）是两个意思，换了核心意思就变；形状也不相近，不属于「长得像的」。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "naa-exclamation",
+          "title": "〜なあ（感叹）",
+          "diff": "よ 一定是说给对方听的；なあ 多是自言自语式的感叹。",
+          "this": [
+            {
+              "ja": "~ほら|、|この|花:はな|、|きれいだ|*よ|。",
+              "tag": "说给对方",
+              "tr": "你看，这花很漂亮哦。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "この|花:はな|、|きれいだ|*なあ|。",
+              "tag": "自言自语",
+              "tr": "这花真漂亮啊。"
+            }
+          ],
+          "explain": "看有没有听话人：招呼对方来看（ほら）、把信息告诉对方 → よ；一个人看着花发出感叹，不需要对方回应 → なあ。"
+        },
+        "en": {
+          "id": "naa-exclamation",
+          "title": "〜なあ (exclamation)",
+          "diff": "よ is always said to the listener; なあ is mostly an exclamation to yourself.",
+          "this": [
+            {
+              "tag": "To the listener",
+              "tr": "Look, this flower is pretty, you know."
+            }
+          ],
+          "that": [
+            {
+              "tag": "To yourself",
+              "tr": "What a pretty flower."
+            }
+          ],
+          "explain": "Check whether there's a listener: calling someone over to look (ほら), or passing information to them → よ; exclaiming alone while looking at the flower, with no reply needed → なあ."
+        },
+        "ko": {
+          "id": "naa-exclamation",
+          "title": "〜なあ（감탄）",
+          "diff": "よ는 반드시 상대에게 하는 말이고, なあ는 주로 혼잣말처럼 하는 감탄이다.",
+          "this": [
+            {
+              "tag": "상대에게 말함",
+              "tr": "이것 봐, 이 꽃 예뻐."
+            }
+          ],
+          "that": [
+            {
+              "tag": "혼잣말",
+              "tr": "이 꽃 예쁘구나."
+            }
+          ],
+          "explain": "듣는 사람이 있는지 보자. 상대를 불러 보게 하거나(ほら) 정보를 알려 주면 → よ. 혼자 꽃을 보며 감탄하고 상대의 반응이 필요 없으면 → なあ."
+        },
+        "es": {
+          "id": "naa-exclamation",
+          "title": "〜なあ（exclamación）",
+          "diff": "よ siempre se dirige al oyente; なあ suele ser una exclamación como hablando para uno mismo.",
+          "this": [
+            {
+              "tag": "Dirigido al otro",
+              "tr": "Mira, esta flor es muy bonita, ¿eh?"
+            }
+          ],
+          "that": [
+            {
+              "tag": "Para uno mismo",
+              "tr": "¡Qué bonita es esta flor!"
+            }
+          ],
+          "explain": "Mira si hay alguien que escucha: si llamas al otro para que mire (ほら) o le das una información → よ; si estás solo mirando la flor y exclamas sin esperar respuesta → なあ."
+        },
+        "vi": {
+          "id": "naa-exclamation",
+          "title": "〜なあ（cảm thán）",
+          "diff": "よ nhất định là nói cho đối phương nghe; なあ thường là cảm thán kiểu tự nói một mình.",
+          "this": [
+            {
+              "tag": "Nói cho đối phương",
+              "tr": "Nhìn này, bông hoa này đẹp lắm đấy."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Tự nói một mình",
+              "tr": "Bông hoa này đẹp thật."
+            }
+          ],
+          "explain": "Xem có người nghe không: gọi đối phương lại xem (ほら), báo thông tin cho đối phương → よ; một mình ngắm hoa mà cảm thán, không cần đối phương đáp lại → なあ."
+        },
+        "my": {
+          "id": "naa-exclamation",
+          "title": "〜なあ（အာမေဍိတ်）",
+          "diff": "よ သည် တစ်ဖက်လူကို အမြဲ ပြောခြင်း ဖြစ်သည်။ なあ သည် အများအားဖြင့် ကိုယ့်ဘာသာ ရေရွတ်သော အာမေဍိတ် ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "တစ်ဖက်လူကို ပြော",
+              "tr": "ဟော ကြည့်၊ ဒီပန်း လှတယ်နော်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ကိုယ့်ဘာသာ ရေရွတ်",
+              "tr": "ဒီပန်းလေး လှလိုက်တာ။"
+            }
+          ],
+          "explain": "နားထောင်သူ ရှိ၊ မရှိ ကြည့်ပါ - တစ်ဖက်လူကို လာကြည့်ရန် ခေါ်ခြင်း (ほら)၊ အချက်အလက်ကို တစ်ဖက်လူအား ပြောပြခြင်း → よ။ တစ်ယောက်တည်း ပန်းကို ကြည့်ပြီး အာမေဍိတ် ပြုခြင်းဖြစ်ပြီး တစ်ဖက်လူ၏ တုံ့ပြန်မှု မလိုလျှင် → なあ။"
+        }
+      }
+    },
+    {
+      "point": "yori-hou-ga",
+      "kind": "meaning",
+      "reason": "「意思差不多的」要求替换测试成立：「AとBとどちらが」是提问，「より〜のほうが」是回答，言语行为不同，换了核心意思就变；三组都不合格。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "to-dochira",
+          "diff": "より〜のほうが 用来回答「……更……」；どちらが 用来提问「哪个更……」。",
+          "this": [
+            {
+              "ja": "犬:いぬ|*より|猫:ねこ|*のほうが|好:す|きです|。",
+              "tag": "回答 · 选出一方",
+              "tr": "比起狗，我更喜欢猫。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "犬:いぬ|*と|猫:ねこ|*と|*どちらが|好:す|きですか|。",
+              "tag": "提问 · 二选一",
+              "tr": "狗和猫，你更喜欢哪个？"
+            }
+          ],
+          "explain": "提问时用「AとBとどちらが」把两个选项并排摆出来；回答时用「より」标出被比下去的一方，「のほうが」标出胜出的一方，不要答成 ✗犬と猫と猫のほうが好きです。"
+        },
+        "en": {
+          "id": "to-dochira",
+          "diff": "より〜のほうが is used to answer “… is more…”; どちらが is used to ask “which is more…”.",
+          "this": [
+            {
+              "tag": "Answer · one wins",
+              "tr": "I like cats more than dogs."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Question · pick one",
+              "tr": "Dogs or cats — which do you like more?"
+            }
+          ],
+          "explain": "When asking, set the two options side by side with 「AとBとどちらが」; when answering, mark the losing side with 「より」 and the winning side with 「のほうが」 — don't answer ✗犬と猫と猫のほうが好きです."
+        },
+        "ko": {
+          "id": "to-dochira",
+          "diff": "より〜のほうが는 ‘~가 더 ~하다’라고 답할 때, どちらが는 ‘어느 쪽이 더 ~?’라고 물을 때 쓴다.",
+          "this": [
+            {
+              "tag": "대답 · 한쪽을 고름",
+              "tr": "개보다 고양이를 더 좋아해요."
+            }
+          ],
+          "that": [
+            {
+              "tag": "질문 · 둘 중 하나",
+              "tr": "개와 고양이 중 어느 쪽을 좋아해요?"
+            }
+          ],
+          "explain": "물을 때는 「AとBとどちらが」로 두 선택지를 나란히 놓는다. 대답할 때는 「より」로 밀린 쪽을, 「のほうが」로 이긴 쪽을 나타낸다. ✗犬と猫と猫のほうが好きです처럼 대답하지 말자."
+        },
+        "es": {
+          "id": "to-dochira",
+          "diff": "より〜のほうが sirve para responder «… es más…»; どちらが sirve para preguntar «¿cuál es más…?».",
+          "this": [
+            {
+              "tag": "Respuesta · elegir uno",
+              "tr": "Me gustan más los gatos que los perros."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Pregunta · elegir entre dos",
+              "tr": "¿Qué te gustan más, los perros o los gatos?"
+            }
+          ],
+          "explain": "Al preguntar, se colocan las dos opciones con 「AとBとどちらが」; al responder, 「より」 marca la opción que pierde y 「のほうが」 la que gana. No respondas ✗犬と猫と猫のほうが好きです."
+        },
+        "vi": {
+          "id": "to-dochira",
+          "diff": "より〜のほうが dùng để trả lời “… hơn”; どちらが dùng để hỏi “cái nào… hơn”.",
+          "this": [
+            {
+              "tag": "Trả lời · chọn một bên",
+              "tr": "So với chó, tôi thích mèo hơn."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Hỏi · chọn một trong hai",
+              "tr": "Chó và mèo, bạn thích con nào hơn?"
+            }
+          ],
+          "explain": "Khi hỏi, dùng 「AとBとどちらが」 đặt hai lựa chọn song song; khi trả lời, dùng 「より」 đánh dấu bên thua, 「のほうが」 đánh dấu bên thắng, đừng trả lời thành ✗犬と猫と猫のほうが好きです."
+        },
+        "my": {
+          "id": "to-dochira",
+          "diff": "より〜のほうが ကို “...က ပို...တယ်” ဟု ဖြေရာတွင် သုံးသည်။ どちらが ကို “ဘယ်ဟာက ပို...လဲ” ဟု မေးရာတွင် သုံးသည်။",
+          "this": [
+            {
+              "tag": "ဖြေ · တစ်ဖက်ကို ရွေး",
+              "tr": "ခွေးထက် ကြောင်ကို ပိုကြိုက်တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "မေး · နှစ်ခုမှ တစ်ခု",
+              "tr": "ခွေးနဲ့ ကြောင် ဘယ်ဟာကို ပိုကြိုက်လဲ။"
+            }
+          ],
+          "explain": "မေးလျှင်「AとBとどちらが」ဖြင့် ရွေးစရာ နှစ်ခုကို ယှဉ်ထားသည်။ ဖြေလျှင်「より」ဖြင့် ရှုံးသော ဘက်ကို၊「のほうが」ဖြင့် နိုင်သော ဘက်ကို ပြသည်။ ✗犬と猫と猫のほうが好きです ဟု မဖြေပါနှင့်။"
+        }
+      }
+    },
+    {
+      "point": "yori-hou-ga",
+      "kind": "meaning",
+      "reason": "「意思差不多的」不收两个意思：「より〜のほうが」是两者比较，「の中で〜がいちばん」是范围内的最高级，替换测试不成立；三组都不合格。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "no-naka-de-ichiban",
+          "diff": "より〜のほうが 只比较两样；三样以上用「の中で〜がいちばん」。",
+          "this": [
+            {
+              "ja": "~犬:いぬ|*より|猫:ねこ|*のほうが|好:す|きです|。",
+              "tag": "两样比较",
+              "tr": "比起狗，我更喜欢猫。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~動物:どうぶつ|*の|*中:なか|*で|猫:ねこ|*が|*いちばん|好:す|きです|。",
+              "tag": "三样以上 · 最",
+              "tr": "动物里我最喜欢猫。"
+            }
+          ],
+          "explain": "先数比较的对象：只有两个（犬と猫）→ より〜のほうが；一个范围里有很多个（動物の中で）→ の中で〜がいちばん。"
+        },
+        "en": {
+          "id": "no-naka-de-ichiban",
+          "diff": "より〜のほうが compares only two things; for three or more, use 「の中で〜がいちばん」.",
+          "this": [
+            {
+              "tag": "Comparing two",
+              "tr": "I like cats more than dogs."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Three or more · most",
+              "tr": "Of all animals, I like cats the best."
+            }
+          ],
+          "explain": "First count what's being compared: only two (犬と猫) → より〜のほうが; many within a range (動物の中で) → の中で〜がいちばん."
+        },
+        "ko": {
+          "id": "no-naka-de-ichiban",
+          "diff": "より〜のほうが는 두 가지만 비교하고, 셋 이상이면 「の中で〜がいちばん」을 쓴다.",
+          "this": [
+            {
+              "tag": "둘 비교",
+              "tr": "개보다 고양이를 더 좋아해요."
+            }
+          ],
+          "that": [
+            {
+              "tag": "셋 이상 · 가장",
+              "tr": "동물 중에서 고양이를 가장 좋아해요."
+            }
+          ],
+          "explain": "먼저 비교 대상을 세어 보자. 둘뿐이면(犬と猫) → より〜のほうが, 어떤 범위 안에 여럿이면(動物の中で) → の中で〜がいちばん."
+        },
+        "es": {
+          "id": "no-naka-de-ichiban",
+          "diff": "より〜のほうが solo compara dos cosas; con tres o más se usa 「の中で〜がいちばん」.",
+          "this": [
+            {
+              "tag": "Comparar dos",
+              "tr": "Me gustan más los gatos que los perros."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Tres o más · el que más",
+              "tr": "De todos los animales, el que más me gusta es el gato."
+            }
+          ],
+          "explain": "Primero cuenta los elementos que se comparan: si solo hay dos (犬と猫) → より〜のほうが; si hay muchos dentro de un ámbito (動物の中で) → の中で〜がいちばん."
+        },
+        "vi": {
+          "id": "no-naka-de-ichiban",
+          "diff": "より〜のほうが chỉ so sánh hai thứ; từ ba thứ trở lên dùng 「の中で〜がいちばん」.",
+          "this": [
+            {
+              "tag": "So sánh hai thứ",
+              "tr": "So với chó, tôi thích mèo hơn."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Từ ba trở lên · nhất",
+              "tr": "Trong các loài động vật, tôi thích mèo nhất."
+            }
+          ],
+          "explain": "Trước tiên đếm số đối tượng so sánh: chỉ có hai (犬と猫) → より〜のほうが; trong một phạm vi có nhiều thứ (動物の中で) → の中で〜がいちばん."
+        },
+        "my": {
+          "id": "no-naka-de-ichiban",
+          "diff": "より〜のほうが သည် နှစ်ခုကိုသာ နှိုင်းယှဉ်သည်။ သုံးခုနှင့်အထက်ဆိုလျှင်「の中で〜がいちばん」ကို သုံးသည်။",
+          "this": [
+            {
+              "tag": "နှစ်ခု နှိုင်းယှဉ်",
+              "tr": "ခွေးထက် ကြောင်ကို ပိုကြိုက်တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "သုံးခုနှင့်အထက် · အ...ဆုံး",
+              "tr": "တိရစ္ဆာန်တွေထဲမှာ ကြောင်ကို အကြိုက်ဆုံးပဲ။"
+            }
+          ],
+          "explain": "နှိုင်းယှဉ်သည့် အရာကို အရင် ရေကြည့်ပါ - နှစ်ခုတည်း (犬と猫) → より〜のほうが။ နယ်ပယ်တစ်ခုအတွင်း အများအပြား (動物の中で) → の中で〜がいちばん။"
+        }
+      }
     }
   ]
 }

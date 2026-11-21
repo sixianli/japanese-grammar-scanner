@@ -5236,13 +5236,13 @@
               "diff": "Danh từ＋はどうですか là giới thiệu một thứ; thể た của động từ＋らどうですか là gợi ý đối phương làm việc gì đó.",
               "this": [
                 {
-                  "tag": "Giới thiệu đồ",
+                  "tag": "Giới thiệu đồ vật",
                   "tr": "Nếu bị cảm thì thuốc này thế nào?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Gợi ý làm",
+                  "tag": "Gợi ý hành động",
                   "tr": "Nếu bị cảm thì uống thuốc đi xem sao?"
                 }
               ],
@@ -5252,24 +5252,25 @@
         },
         {
           "kind": "meaning",
-          "note": "Đều có thể dùng để khuyên, đề nghị",
+          "note": "Đều dùng để mời đối phương ăn uống",
           "items": [
             {
               "id": "masenka",
-              "diff": "はいかがですか là đưa đồ ra hỏi đối phương có muốn không; ませんか là rủ đối phương cùng làm việc gì đó.",
+              "title": "〜ませんか (mời ăn uống)",
+              "diff": "Đều là mời đối phương ăn uống: はいかがですか đưa thẳng món đồ ra, trang trọng; ませんか dùng động từ hỏi đối phương có muốn không, thoải mái hơn.",
               "this": [
                 {
-                  "tag": "Giới thiệu đồ",
-                  "tr": "Anh dùng một tách cà phê nhé?"
+                  "tag": "Tiếp đãi · trang trọng",
+                  "tr": "Anh/chị dùng một ly nước ép lạnh nhé?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Rủ cùng làm",
-                  "tr": "Cùng đi uống cà phê không?"
+                  "tag": "Mời thoải mái",
+                  "tr": "Uống chút nước ép lạnh không?"
                 }
               ],
-              "explain": "Nhìn phía trước: danh từ＋は → chỉ là giới thiệu một thứ cho đối phương, bản thân chưa chắc cùng uống; thể ます của động từ＋ませんか, hay đi cùng 「一緒に」 → rủ đối phương cùng mình làm. Nói thoải mái hơn là はどうですか, cách dùng như nhau."
+              "explain": "Cả hai câu đều mời đối phương uống nước ép. Nhìn phía trước nối với gì: danh từ (ジュース)＋はいかがですか, đưa thẳng món đồ đến trước mặt đối phương, trang trọng, nhân viên tiếp khách hàng hay chủ nhà tiếp khách hay dùng; thể ます của động từ (飲み)＋ませんか, hay đi cùng 「〜でも」, giống như bạn bè, đồng nghiệp tiện miệng rủ nhau, giọng thoải mái hơn. Với khách, cấp trên thì ưu tiên はいかがですか."
             }
           ]
         }
@@ -5280,24 +5281,29 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều có thể nói “một bộ phận nào đó của một vật thì thế nào”",
+          "note": "Đều chỉ “chủ ngữ trong mệnh đề bổ nghĩa cho danh từ”",
           "items": [
             {
               "id": "no-possessive",
-              "diff": "象は鼻が長い là đang nói về đặc điểm của “con voi”; 象の鼻は長い chỉ đang nói về “cái vòi của con voi”.",
+              "title": "〜の (chủ ngữ trong mệnh đề)",
+              "thisTitle": "〜は〜が〜 (dùng が trong mệnh đề)",
+              "diff": "Trong mệnh đề bổ nghĩa cho danh từ, chủ ngữ dùng が hay の đều được, の hơi mang tính văn viết và mềm mại hơn; các loại mệnh đề khác chỉ dùng が.",
               "this": [
                 {
-                  "tag": "Chủ đề là con voi",
-                  "tr": "Voi thì có vòi dài."
+                  "tag": "Chủ ngữ mệnh đề · が",
+                  "tr": "Tôi rất thích bánh ngọt chị gái nướng."
                 }
               ],
               "that": [
                 {
-                  "tag": "Chủ đề là cái vòi",
-                  "tr": "Vòi của con voi rất dài."
+                  "tag": "Chủ ngữ mệnh đề · の",
+                  "tr": "Tôi rất thích bánh ngọt chị gái nướng."
                 }
               ],
-              "explain": "Nhìn phía trước 「は」 là gì: 「象は」 → cả câu đang giới thiệu con voi, 「鼻が長い」 là đặc điểm của nó; 「象の鼻は」 → chủ đề chỉ là cái vòi. Khi giới thiệu đặc điểm của người hay động vật, nói về cảm giác cơ thể (田中さんは目が大きい、私は頭が痛い) thì dùng は〜が."
+              "wrong": {
+                "why": "Mệnh đề điều kiện 「〜たら」 không bổ nghĩa cho danh từ, nên chủ ngữ bên trong không thể đổi thành の, phải nói 「雨が降ったら」"
+              },
+              "explain": "Hai câu có nghĩa hoàn toàn giống nhau: trong 「姉が焼いたケーキ」 và 「姉の焼いたケーキ」, mệnh đề 「焼いた」 bổ nghĩa cho danh từ 「ケーキ」 phía sau, nên chủ ngữ của mệnh đề dùng が hay の đều được, の hơi mang tính văn viết và mềm mại hơn. Nhìn xem sau mệnh đề có phải danh từ không: là danh từ thì cả hai đều được; là mệnh đề kiểu 「〜たら」「〜から」, hoặc là chủ ngữ của cả câu, thì chỉ dùng が."
             }
           ]
         }
@@ -5343,28 +5349,28 @@
       "id": "wa-topic",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "は và が đều có thể đứng sau chủ ngữ",
+          "kind": "look",
+          "note": "「私は田中です」↔「私が田中です」 chỉ khác は／が: một câu là giới thiệu, một câu là “tôi chính là Tanaka”",
           "items": [
             {
               "id": "ga-subject",
-              "diff": "は nêu ra chủ đề đã biết, trọng tâm nằm ở phía sau; が đặt tiêu điểm vào danh từ phía trước, trả lời “ai, cái nào”.",
+              "diff": "は nêu ra chủ đề đã biết, trọng tâm ở phía sau; が đặt tiêu điểm vào danh từ phía trước, trả lời “ai, cái nào”.",
               "this": [
                 {
                   "tag": "Giới thiệu · chủ đề",
-                  "tr": "Rất hân hạnh được gặp, tôi là Tanaka."
+                  "tr": "Rất vui được gặp anh/chị. Tôi là Tanaka."
                 }
               ],
               "that": [
                 {
                   "tag": "Trả lời “ai” · tiêu điểm",
-                  "tr": "Anh Tanaka là vị nào ạ? — Tôi chính là Tanaka."
+                  "tr": "Anh Tanaka là vị nào ạ? — Tôi là Tanaka đây."
                 }
               ],
               "wrong": {
                 "why": "Khi từ để hỏi làm chủ ngữ thì phía sau phải dùng が"
               },
-              "explain": "Xem câu hỏi hỏi gì: lấy “tôi” làm chủ đề trước rồi giải thích ở phía sau → は; đối phương hỏi “ai là Tanaka”, câu trả lời chính là danh từ “tôi” → が. Khi từ để hỏi (誰、何、どれ) làm chủ ngữ, phía sau cũng nhất định dùng が."
+              "explain": "Nhìn ngữ cảnh phía trước: tự giới thiệu sau 「はじめまして」, lấy “tôi” làm chủ đề rồi nói thêm ở phía sau → は; đối phương hỏi 「田中さんはどの方ですか」 (vị nào là Tanaka), câu trả lời chính là danh từ “tôi” → が, nghĩa là “tôi chính là Tanaka”. Khi từ để hỏi (誰、何、どれ) làm chủ ngữ, phía sau cũng nhất định dùng が."
             }
           ]
         }
@@ -5379,7 +5385,7 @@
           "items": [
             {
               "id": "yori-starting-point",
-              "diff": "Khi phía sau より là tính từ thì nghĩa là “so với”; khi gắn sau thời gian, địa điểm và phía sau là 「始まる・出発する」 thì là “từ” trong văn viết.",
+              "diff": "Sau より là tính từ thì nghĩa là “so với / hơn”; đứng sau thời gian, địa điểm, phía sau là 「始まる・出発する」 thì là “từ” trong văn viết.",
               "this": [
                 {
                   "tag": "So sánh",
@@ -5392,13 +5398,13 @@
                   "tr": "Cuộc họp bắt đầu từ 2 giờ chiều."
                 }
               ],
-              "explain": "Nhìn phía sau より: tính từ (大きい、速い) → chuẩn để so sánh; hành động như 「始まります」「出発します」 → điểm bắt đầu về thời gian, địa điểm, tương đương 「から」 nhưng trang trọng hơn, hay gặp trong thông báo, phát thanh."
+              "explain": "Nhìn phía sau より: tính từ (大きい、速い) → chuẩn để so sánh; động tác như 「始まります」「出発します」 → điểm bắt đầu về thời gian, địa điểm, tương đương 「から」 nhưng trang trọng hơn, hay gặp trong thông báo, phát thanh."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều dùng để so sánh hai thứ",
+          "note": "Đều có nghĩa “A… hơn B”",
           "items": [
             {
               "id": "yori-hou-ga",
@@ -5411,28 +5417,29 @@
               ],
               "that": [
                 {
-                  "tag": "Trả lời · làm nổi bật bên thắng",
-                  "tr": "Tàu điện và xe buýt cái nào nhanh hơn? — Tàu điện nhanh hơn xe buýt."
+                  "tag": "Trả lời · nhấn bên thắng",
+                  "tr": "Tàu điện và xe buýt, cái nào nhanh hơn? — Tàu điện nhanh hơn xe buýt."
                 }
               ],
-              "explain": "Khi chỉ đơn thuần giới thiệu một thứ thì dùng 「AはBより〜」; khi đối phương hỏi 「どちらが」 thì trả lời phải dùng 「〜のほうが」, đặt tiêu điểm vào bên được chọn. Chú ý: thứ đứng trước より mới là bên thua."
+              "explain": "Khi chỉ đơn thuần giới thiệu một thứ thì dùng 「AはBより〜」; khi đối phương hỏi 「どちらが」, trả lời phải dùng 「〜のほうが」, đặt tiêu điểm vào bên được chọn. Chú ý: thứ đứng trước より mới là bên thua."
             },
             {
-              "id": "hodo-nai-comparison",
-              "diff": "より là so sánh khẳng định “… hơn…”; ほど〜ない là so sánh phủ định “không… bằng…”.",
+              "id": "ni-kurabete",
+              "title": "〜に比べて (so với…)",
+              "diff": "Nghĩa giống nhau: より là cách nói hằng ngày; に比べて trang trọng hơn, thiên về văn viết.",
               "this": [
                 {
-                  "tag": "So sánh khẳng định",
-                  "tr": "Hôm nay lạnh hơn hôm qua."
+                  "tag": "Cách nói hằng ngày",
+                  "tr": "Mùa đông năm nay tuyết nhiều hơn năm ngoái."
                 }
               ],
               "that": [
                 {
-                  "tag": "Phủ định · không bằng",
-                  "tr": "Hôm nay không lạnh bằng hôm qua."
+                  "tag": "Trang trọng · văn viết",
+                  "tr": "So với năm ngoái, mùa đông năm nay tuyết nhiều."
                 }
               ],
-              "explain": "Xem cuối câu: dạng khẳng định (寒い) → より; dạng phủ định (寒くない) → dùng ほど, nghĩa là “không đạt đến mức của B”. Sau ほど nhất định là phủ định."
+              "explain": "Hai câu nghĩa giống nhau, chỉ đổi より thành に比べて. より là cách nói cơ bản nhất, tự nhiên nhất khi trò chuyện hằng ngày; に比べて nghĩa đen là “so với…”, giọng trang trọng hơn, thiên về văn viết, hay dùng trong tin tức, báo cáo, khi nói về số liệu. Nói chuyện với bạn bè thì dùng より, viết báo cáo hay phát biểu chính thức có thể dùng に比べて."
             }
           ]
         }
@@ -5443,67 +5450,66 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「ください」 — thể mệnh lệnh của 「くださる（cho tôi）」",
+          "note": "Đều bắt nguồn từ 「くださる」 — thể mệnh lệnh 「ください」 nghĩa gốc là “xin hãy cho tôi”",
           "items": [
             {
               "id": "te-kudasai",
-              "diff": "Danh từ＋をください là xin đối phương “đưa” đồ; thể て＋ください là nhờ đối phương “làm” việc gì.",
+              "diff": "Danh từ＋をください là xin đối phương “đưa” đồ; thể て＋ください là nhờ đối phương “làm” việc gì đó.",
               "this": [
                 {
-                  "tag": "Xin đối phương đưa",
+                  "tag": "Xin đưa đồ",
                   "tr": "Xin lỗi, cho tôi xin nước."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nhờ đối phương làm",
-                  "tr": "Xin lỗi, làm ơn mang giúp tôi cốc nước."
+                  "tag": "Nhờ làm",
+                  "tr": "Xin lỗi, làm ơn mang giúp tôi ly nước."
                 }
               ],
-              "explain": "Nhìn phía trước ください: danh từ＋を (水を) → xin đối phương đưa thứ này cho mình; thể て của động từ (持ってきて) → nhờ đối phương làm hành động này."
+              "explain": "ください là thể mệnh lệnh của 「くださる」 (cho tôi), nghĩa gốc chính là “xin hãy cho tôi”. Danh từ＋を (水を) → xin thẳng đối phương đưa thứ đó cho mình; thể て của động từ (持ってきて) → xin hành động của đối phương như một “ân huệ dành cho tôi”, nên thành “xin hãy làm… cho tôi”. Vì vậy nhìn phía trước ください: danh từ＋を là xin đồ, thể て của động từ là nhờ đối phương làm việc."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều có thể dùng để xin đối phương thứ gì đó",
+          "note": "Đều có nghĩa “xin cho tôi…”",
           "items": [
             {
               "id": "wo-onegaishimasu",
-              "diff": "をください chỉ dùng để xin đồ; をお願いします lịch sự hơn, còn dùng được cho dịch vụ.",
+              "title": "〜をお願いします (gọi món · mua sắm)",
+              "diff": "Khi xin đồ thì cả hai đều dùng được: をください trực tiếp, rõ ràng; をお願いします mềm mại, lịch sự hơn.",
               "this": [
                 {
-                  "tag": "Xin đồ",
-                  "tr": "Xin lỗi, cho tôi xin nước."
+                  "tag": "Trực tiếp",
+                  "tr": "Xin lỗi, cho tôi một cái đĩa nhỏ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Xin cả dịch vụ",
-                  "tr": "Xin chào, cho tôi làm thủ tục nhận phòng."
+                  "tag": "Mềm mại · lịch sự hơn",
+                  "tr": "Xin lỗi, phiền anh/chị cho tôi một cái đĩa nhỏ."
                 }
               ],
-              "wrong": {
-                "why": "チェックイン là dịch vụ, không phải thứ có thể đưa tận tay"
-              },
-              "explain": "Xem đang xin cái gì: đồ vật cầm được trên tay (水、切符) → をください、をお願いします đều được, cái sau lịch sự hơn; dịch vụ như làm thủ tục nhận phòng, nhờ người giải thích → chỉ dùng được をお願いします."
+              "explain": "Cả hai câu đều là nhờ nhân viên trong quán lấy đĩa nhỏ. をください nói thẳng “xin cho tôi”, ngắn gọn rõ ràng; をお願いします nghĩa đen là “nhờ anh/chị”, không nói thẳng “cho”, nghe mềm mại và lịch sự hơn. Gọi món, tính tiền đều hay dùng cả hai; muốn nói lịch sự hơn thì chọn をお願いします."
             },
             {
-              "id": "ga-hoshii",
-              "diff": "がほしい chỉ là nói ra mong muốn của mình; をください là trực tiếp xin đối phương.",
+              "id": "te-choudai",
+              "title": "〜てちょうだい (cho tôi thứ gì đó)",
+              "diff": "Đều là “cho tôi”: をください lịch sự, dùng được với nhân viên, người ngoài; をちょうだい thân mật, chỉ dùng với người nhà, người rất thân.",
               "this": [
                 {
-                  "tag": "Xin trực tiếp",
-                  "tr": "Xin lỗi, cho tôi xem thực đơn."
+                  "tag": "Với người ngoài · lịch sự",
+                  "tr": "Xin lỗi, cho tôi nước ép."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nói ra mong muốn",
-                  "tr": "Khát quá, muốn uống nước lạnh ghê."
+                  "tag": "Với người nhà · thân mật",
+                  "tr": "Mẹ ơi, cho con nước ép đi."
                 }
               ],
-              "explain": "がほしい là đang nói mong muốn của mình, có thể tự nói một mình, không nhất thiết nói với ai; ở cửa hàng muốn người ta đưa đồ cho mình → をください. Nói với nhân viên 「メニューがほしいです」 sẽ nghe không tự nhiên."
+              "explain": "Cả hai câu đều xin nước ép, nhìn xem nói với ai: gọi 「すみません」, nói với nhân viên, người ngoài → をください, lịch sự; gọi 「ママ」, nói với người nhà, người rất thân, nhất là trẻ con nói với bố mẹ → をちょうだい, giọng thân mật pha chút nũng nịu. ちょうだい không được dùng với cấp trên, khách."
             }
           ]
         }
@@ -5514,44 +5520,29 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều có thể đánh dấu đối tượng của hành động, sở thích, khả năng — trong tiếng Việt đều giống “tân ngữ”, nhưng tiếng Nhật lại chia ra を và が",
+          "note": "Đều có nghĩa “rời khỏi…”",
           "items": [
             {
-              "id": "ga-suki-jouzu",
-              "diff": "Đối tượng của hành động dùng を; đối tượng của các tính từ như 好き・上手 dùng が.",
+              "id": "kara-from",
+              "title": "〜から (điểm xuất phát về nơi chốn)",
+              "thisTitle": "〜を (nơi rời đi)",
+              "diff": "Người rời khỏi một nơi thì を, から đều dùng được; thứ không có ý chí thoát ra ngoài thì chỉ dùng から.",
               "this": [
                 {
-                  "tag": "Động từ → を",
-                  "tr": "Chị tôi ngày nào cũng chơi piano."
+                  "tag": "Người rời đi · を",
+                  "tr": "Bố tôi ra khỏi bếp lúc tám giờ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tính từ → が",
-                  "tr": "Chị tôi chơi piano giỏi."
+                  "tag": "Đồ vật thoát ra · から",
+                  "tr": "Khói đang bốc ra từ trong bếp."
                 }
               ],
               "wrong": {
-                "why": "上手 là tính từ, đối tượng dùng が"
+                "why": "煙 (khói) không có ý chí của riêng nó, thoát ra từ bên trong thì chỉ dùng được から"
               },
-              "explain": "Xem từ ở cuối câu: động từ như 弾く、食べる → を; 好き、嫌い、上手、下手 là tính từ → đối tượng dùng が. Tiếng Việt nói “thích âm nhạc”, “giỏi piano” đều giống cấu trúc động từ＋tân ngữ, nên dễ áp dụng nhầm を."
-            },
-            {
-              "id": "ga-wakaru-dekiru",
-              "diff": "Đối tượng của các hành động như học, nói dùng を; わかる・できる diễn tả khả năng hoặc trạng thái, đối tượng dùng が.",
-              "this": [
-                {
-                  "tag": "Hành động → を",
-                  "tr": "Ngày nào cũng học tiếng Nhật."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Khả năng → が",
-                  "tr": "Hiểu một chút tiếng Nhật."
-                }
-              ],
-              "explain": "Xem động từ: 勉強する、話す là hành động mình chủ động làm → を; わかる、できる nói về khả năng hay trạng thái → dùng が. Tiếng Việt nói “hiểu tiếng Nhật”, “biết chơi tennis” có tân ngữ, nhưng tiếng Nhật phải nói 「日本語がわかる」「テニスができる」."
+              "explain": "Người tự mình rời khỏi một nơi thì を và から đều dùng được: 「台所を出た」「台所から出た」 nghĩa như nhau, を nói về việc rời khỏi nơi đó, から nhấn mạnh hơn điểm xuất phát từ bên trong. Nhìn chủ ngữ: thứ không có ý chí (煙、水) thoát ra ngoài thì chỉ dùng から. Ngoài ra, sự rời đi trừu tượng như 「家を出る」 (rời nhà ra ở riêng), 「大学を出る」 (tốt nghiệp) chỉ dùng を."
             }
           ]
         }
@@ -5562,44 +5553,50 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều dùng để nhờ vả một cách lịch sự",
+          "sense": 1,
+          "note": "Đều có nghĩa “xin cho tôi…”",
           "items": [
             {
               "id": "wo-kudasai",
-              "diff": "をお願いします lịch sự hơn, còn dùng được cho dịch vụ; をください chỉ dùng để xin đồ.",
+              "thisTitle": "〜をお願いします (gọi món · mua sắm)",
+              "diff": "Khi xin đồ thì cả hai đều dùng được: をお願いします mềm mại, lịch sự hơn; をください trực tiếp, rõ ràng.",
               "this": [
                 {
-                  "tag": "Xin cả dịch vụ",
-                  "tr": "Xin chào, cho tôi làm thủ tục nhận phòng."
+                  "tag": "Mềm mại · lịch sự hơn",
+                  "tr": "Xin lỗi, phiền anh/chị cho tôi một chiếc khăn ướt."
                 }
               ],
               "that": [
                 {
-                  "tag": "Xin đồ",
-                  "tr": "Xin lỗi, cho tôi xin nước."
+                  "tag": "Trực tiếp",
+                  "tr": "Xin lỗi, cho tôi một chiếc khăn ướt."
                 }
               ],
-              "wrong": {
-                "why": "チェックイン là dịch vụ, không phải thứ có thể đưa tận tay"
-              },
-              "explain": "Xem đang xin cái gì: dịch vụ như làm thủ tục nhận phòng, nhờ người giải thích, nhờ gọi người nghe điện thoại → chỉ dùng được をお願いします; đồ vật cầm được trên tay (水、切符) → cả hai đều được, をお願いします lịch sự hơn."
-            },
+              "explain": "Cả hai câu đều là nhờ nhân viên trong quán lấy khăn ướt. をお願いします nghĩa đen là “nhờ anh/chị”, không nói thẳng “cho”, nghe mềm mại và lịch sự hơn; をください nói thẳng “xin cho tôi”, ngắn gọn rõ ràng. Gọi món, tính tiền đều hay dùng cả hai; muốn nói lịch sự hơn thì chọn をお願いします."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều có nghĩa “nhờ đối phương làm việc gì đó”",
+          "items": [
             {
               "id": "te-itadakemasenka",
-              "diff": "Trước をお願いします là danh từ, ngắn gọn mà lịch sự; trước ていただけませんか là động từ, nhờ bằng câu hỏi, nhẹ nhàng hơn.",
+              "diff": "をお願いします đi sau danh từ, ngắn gọn lễ phép; ていただけませんか đi sau động từ, nhờ bằng câu hỏi nên uyển chuyển hơn.",
               "this": [
                 {
                   "tag": "Danh từ · ngắn gọn",
-                  "tr": "Tài liệu này, phiền anh kiểm tra giúp."
+                  "tr": "Tài liệu này, nhờ anh/chị kiểm tra giúp."
                 }
               ],
               "that": [
                 {
-                  "tag": "Động từ · nhẹ nhàng hơn",
-                  "tr": "Xin lỗi đã làm phiền lúc anh đang bận, anh có thể kiểm tra giúp tôi tài liệu này được không ạ?"
+                  "tag": "Động từ · uyển chuyển hơn",
+                  "tr": "Xin lỗi đã làm phiền lúc anh/chị đang bận, anh/chị có thể kiểm tra giúp tôi tài liệu này được không ạ?"
                 }
               ],
-              "explain": "Nhìn phía trước: danh từ (確認、説明)＋をお願いします, ngắn gọn mà lịch sự, rất hay dùng trong công việc; thể て của động từ＋いただけませんか, dùng câu hỏi để nhường quyền quyết định cho đối phương, hợp hơn khi nhờ đối phương giúp thêm việc hoặc khi đối phương có địa vị cao."
+              "explain": "Nhìn phía trước: danh từ (確認、説明)＋をお願いします, ngắn gọn lễ phép, rất hay dùng trong công việc; thể て của động từ＋いただけませんか, dùng câu hỏi để trao quyền quyết định cho đối phương, hợp hơn khi nhờ đối phương giúp thêm việc ngoài phận sự, hoặc khi đối phương có địa vị rất cao."
             }
           ]
         }
@@ -5609,77 +5606,96 @@
       "id": "ya-nado",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Đều dùng để liệt kê, nêu ví dụ “… chẳng hạn”",
+          "kind": "look",
+          "note": "「本やノート」↔「本とノート」 chỉ khác や／と: một câu là còn thứ khác, một câu là chỉ có vậy",
           "items": [
             {
               "id": "to-quotation",
-              "title": "〜と（liệt kê song song）",
-              "diff": "や〜など chỉ nêu vài ví dụ, ngụ ý còn thứ khác; と liệt kê toàn bộ các thứ.",
+              "title": "〜と (liệt kê song song)",
+              "diff": "や〜など chỉ nêu vài ví dụ, ngụ ý còn thứ khác; と liệt kê toàn bộ.",
               "this": [
                 {
-                  "tag": "Nêu ví dụ · còn thứ khác",
-                  "tr": "Trong cặp có sách, vở v.v."
+                  "tag": "Ví dụ · còn thứ khác",
+                  "tr": "Trong cặp có sách, vở, v.v."
                 }
               ],
               "that": [
                 {
                   "tag": "Liệt kê toàn bộ",
-                  "tr": "Trong cặp có sách và vở (chỉ hai thứ đó)."
+                  "tr": "Trong cặp có sách và vở (chỉ hai thứ này)."
                 }
               ],
-              "explain": "Hai câu chỉ khác trợ từ: や (hay đi cùng など) chỉ chọn vài thứ tiêu biểu, trong cặp còn có thứ khác; những thứ liệt kê bằng と là toàn bộ."
-            },
+              "explain": "Hai câu chỉ khác や／と: 「本やノート」 (hay đi cùng など) chỉ chọn vài thứ tiêu biểu, trong cặp còn có đồ khác; 「本とノート」 liệt kê ra là toàn bộ, trong cặp chỉ có hai thứ này."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 1,
+          "note": "Đều là “nêu vài ví dụ, ngụ ý còn thứ khác”",
+          "items": [
             {
               "id": "tari-tari",
-              "diff": "や〜など liệt kê danh từ; たり〜たりする liệt kê hành động.",
+              "title": "〜たり〜たりする (liệt kê hành động)",
+              "diff": "Đều là nêu vài ví dụ: や〜など liệt kê danh từ; たり〜たりする liệt kê hành động, động từ thông thường chỉ dùng được cách này.",
               "this": [
                 {
-                  "tag": "Liệt kê đồ vật",
-                  "tr": "Tôi đã mua quần áo, giày dép v.v. ở trung tâm thương mại."
+                  "tag": "Liệt kê danh từ",
+                  "tr": "Ngày nghỉ tôi giặt giũ, dọn dẹp, v.v."
                 }
               ],
               "that": [
                 {
                   "tag": "Liệt kê hành động",
-                  "tr": "Ngày nghỉ tôi hay xem phim, đi mua sắm các thứ."
+                  "tr": "Ngày nghỉ tôi lúc thì giặt đồ, lúc thì dọn dẹp."
                 }
               ],
-              "explain": "Xem đang liệt kê cái gì: danh từ (服、靴) → や〜など; hành động (見る、する) → thể た của động từ＋り, cuối cùng thêm 「する」."
+              "wrong": {
+                "why": "や chỉ đi sau danh từ, hành động như 「映画を見る」 phải nói 「映画を見たり買い物をしたりする」"
+              },
+              "explain": "Hai câu nghĩa giống nhau, đều nêu vài việc làm trong ngày nghỉ và ngụ ý còn việc khác. Với danh từ có thể thêm 「する」 như 洗濯、掃除 thì cả hai cách đều được: や〜などをする liệt kê hoạt động dưới dạng danh từ, たり〜たりする nói thành từng hành động. Động từ thông thường như 「映画を見る」「友達に会う」 thì chỉ dùng được たり〜たりする."
             },
             {
               "id": "toka-listing",
-              "diff": "や〜など dùng được cả trong văn viết lẫn văn nói, chỉ đi với danh từ; とか〜とか là khẩu ngữ, còn đi được với động từ.",
+              "diff": "や〜など dùng được cả trong văn viết lẫn văn nói, chỉ đi với danh từ; とか〜とか là văn nói, còn đi được với động từ.",
               "this": [
                 {
                   "tag": "Cách nói thông thường",
-                  "tr": "Trong tủ lạnh có sữa, trứng v.v."
+                  "tr": "Trong tủ lạnh có sữa, trứng, v.v."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khẩu ngữ · thoải mái",
-                  "tr": "Này, trong tủ lạnh có sữa hay trứng gì không?"
+                  "tag": "Văn nói · thoải mái",
+                  "tr": "Này, trong tủ lạnh có sữa hay trứng gì đó không?"
                 }
               ],
-              "explain": "Xem giọng điệu: câu です・ます, trong bài viết → や〜など; bạn bè nói chuyện thoải mái → とか〜とか. Ngoài ra とか còn đi được với động từ (掃除するとか), や thì không."
-            },
+              "explain": "Nhìn giọng điệu: câu です・ます, trong bài viết → や〜など; bạn bè nói chuyện thoải mái → とか〜とか. Ngoài ra とか còn đi được với động từ (掃除するとか), や thì không."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Đều là “nêu ví dụ để đề nghị”",
+          "items": [
             {
               "id": "nanka",
-              "diff": "など trong や〜など là nêu ví dụ trung tính; なんか gắn sau người hoặc sự vật, thường mang ý coi thường hoặc khiêm tốn.",
+              "title": "〜なんか (nêu ví dụ tùy ý)",
+              "diff": "Đều là nêu vài ví dụ để đề nghị: 〜などはいかがですか trang trọng; 〜なんかどう？ là văn nói thoải mái.",
               "this": [
                 {
-                  "tag": "Nêu ví dụ trung tính",
-                  "tr": "Tôi đã chuẩn bị trà, bánh kẹo các thứ."
+                  "tag": "Trang trọng · với khách",
+                  "tr": "Anh/chị dùng chút bánh ngọt, bánh quy gì đó nhé?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Khiêm tốn · coi thường",
-                  "tr": "Người như tôi thì chịu, không làm nổi đâu."
+                  "tag": "Thoải mái · với bạn",
+                  "tr": "Bánh ngọt, bánh quy gì đó, ăn không?"
                 }
               ],
-              "explain": "Nhìn phía trước など／なんか: nhiều thứ được liệt kê song song → chỉ là “vân vân”; một người hoặc một sự vật đơn lẻ, phía sau thường là phủ định hoặc đánh giá tiêu cực (無理だ、嫌いだ) → mang sắc thái “loại như… thì chẳng đáng kể”, coi thường hoặc khiêm tốn. Trong hoàn cảnh trang trọng thay なんか bằng など cũng được (私などには無理です)."
+              "explain": "Cả hai câu đều nêu vài món bánh để mời đối phương chọn. Nhìn cuối câu và người nghe: với khách, người lớn tuổi thì dùng 「〜などはいかがですか」, trang trọng; giữa bạn bè, người nhà thì nói 「〜なんかどう？」, thoải mái. なんか chính là cách nói khẩu ngữ của など."
             }
           ]
         }
@@ -5690,42 +5706,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều là trợ từ cuối câu thể hiện sắc thái",
+          "note": "Đều dùng để “nhắc đối phương chú ý”",
           "items": [
             {
-              "id": "ne-particle",
-              "diff": "よ báo cho đối phương thông tin họ chưa biết; ね tìm sự đồng cảm, xác nhận về việc cả hai bên đều biết.",
+              "id": "zo-ze",
+              "title": "〜ぞ (nhắc nhở · cảnh báo)",
+              "diff": "Đều là nhắc đối phương chú ý: よ dùng với ai cũng được; ぞ giọng mạnh, chủ yếu nam giới dùng với người ngang hàng, người dưới.",
               "this": [
                 {
-                  "tag": "Báo cho đối phương",
-                  "tr": "Mặc áo khoác vào rồi hãy đi, ngoài trời lạnh lắm đấy."
+                  "tag": "Với người trên · lịch sự",
+                  "tr": "Thầy ơi, sàn chỗ đó trơn đấy ạ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cả hai đều biết · tìm đồng cảm",
-                  "tr": "Hôm nay lạnh thật nhỉ."
+                  "tag": "Với người ngang hàng · giọng mạnh",
+                  "tr": "Này, sàn chỗ đó trơn đấy!"
                 }
               ],
-              "explain": "Xem đối phương có biết không: đối phương còn ở trong nhà, không biết ngoài trời lạnh → 外は寒いよ (nhắc nhở); hai người đều đang run cầm cập ngoài trời → 寒いね (cùng cảm thán). Dùng よ cho việc cả hai đều biết sẽ nghe như đang dạy đời."
-            },
-            {
-              "id": "naa-exclamation",
-              "title": "〜なあ（cảm thán）",
-              "diff": "よ nhất định là nói cho đối phương nghe; なあ thường là cảm thán kiểu tự nói một mình.",
-              "this": [
-                {
-                  "tag": "Nói cho đối phương",
-                  "tr": "Nhìn này, bông hoa này đẹp lắm đấy."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tự nói một mình",
-                  "tr": "Bông hoa này đẹp thật."
-                }
-              ],
-              "explain": "Xem có người nghe không: gọi đối phương lại xem (ほら), báo thông tin cho đối phương → よ; một mình ngắm hoa mà cảm thán, không cần đối phương đáp lại → なあ."
+              "explain": "Cả hai câu đều nhắc đối phương sàn trơn, nhìn xem nói với ai: với 「先生」, người lớn tuổi hoặc người không thân → dùng よ, có thể đi sau です・ます; nam giới gọi 「おい」 với bạn bè, người dưới → có thể dùng ぞ, giọng mạnh, thô. ぞ không dùng với người lớn tuổi, cấp trên, nữ giới cũng rất ít dùng."
             }
           ]
         }
@@ -5743,31 +5742,31 @@
               "diff": "より〜のほうがいい là so sánh hai thứ rồi nói cái nào tốt hơn; thể た＋ほうがいい là lời khuyên cho đối phương “tốt hơn là nên…”.",
               "this": [
                 {
-                  "tag": "So sánh · cái nào tốt",
+                  "tag": "So sánh · cái nào tốt hơn",
                   "tr": "So với xe buýt thì tàu điện tốt hơn."
                 }
               ],
               "that": [
                 {
                   "tag": "Lời khuyên · tốt hơn là nên",
-                  "tr": "Nếu bị sốt thì tốt hơn là nên ngủ sớm đấy."
+                  "tr": "Nếu bị sốt thì nên đi ngủ sớm đấy."
                 }
               ],
-              "explain": "Nhìn phía trước ほう: danh từ＋の (電車の), lại có 「より」 → so sánh giữa hai thứ; thể た của động từ (寝た) → góp ý cho đối phương, phía sau hay có 「よ」."
+              "explain": "「ほう（方）」 nghĩa gốc là “phương hướng, phía bên kia”. Khi so sánh hai thứ, 「電車のほう」 là “phía tàu điện”, より đánh dấu phía còn lại → nói phía nào tốt hơn; khi khuyên, 「寝たほうがいい」 là đặt hai cách làm “ngủ” và “không ngủ” thành hai phía, nói “phía đã ngủ thì tốt” → mở rộng thành “tốt hơn là nên…”. Để phân biệt, nhìn phía trước ほう: danh từ＋の (電車の), lại có 「より」 → so sánh; thể た của động từ (寝た) → góp ý cho đối phương."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều dùng để so sánh",
+          "note": "Đều có nghĩa “thứ này… hơn thứ kia”",
           "items": [
             {
               "id": "wa-yori-comparison",
               "diff": "BよりAのほうが〜 đặt tiêu điểm vào A là bên thắng, hay dùng để trả lời “cái nào… hơn”; AはBより〜 lấy A làm chủ đề để trình bày.",
               "this": [
                 {
-                  "tag": "Trả lời · làm nổi bật bên thắng",
-                  "tr": "Tàu điện và xe buýt cái nào nhanh hơn? — Tàu điện nhanh hơn xe buýt."
+                  "tag": "Trả lời · nhấn bên thắng",
+                  "tr": "Tàu điện và xe buýt, cái nào nhanh hơn? — Tàu điện nhanh hơn xe buýt."
                 }
               ],
               "that": [
@@ -5779,55 +5778,22 @@
               "explain": "Khi đối phương hỏi 「どちらが」, trả lời dùng 「〜のほうが」, đặt tiêu điểm vào bên được chọn; khi chỉ đơn thuần giới thiệu một thứ thì dùng 「AはBより〜」. Chú ý: thứ đứng trước より mới là bên thua."
             },
             {
-              "id": "to-dochira",
-              "diff": "より〜のほうが dùng để trả lời “… hơn”; どちらが dùng để hỏi “cái nào… hơn”.",
+              "id": "ni-kurabete",
+              "title": "〜に比べて (so với…)",
+              "diff": "Nghĩa giống nhau: より〜のほうが là cách nói hằng ngày, tiêu điểm ở bên thắng; に比べて trang trọng hơn, thiên về văn viết.",
               "this": [
                 {
-                  "tag": "Trả lời · chọn một bên",
-                  "tr": "So với chó, tôi thích mèo hơn."
+                  "tag": "Hằng ngày · tiêu điểm ở “bây giờ”",
+                  "tr": "Bây giờ vật giá cao hơn ngày xưa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hỏi · chọn một trong hai",
-                  "tr": "Chó và mèo, bạn thích con nào hơn?"
+                  "tag": "Trang trọng · văn viết",
+                  "tr": "So với ngày xưa, bây giờ vật giá cao."
                 }
               ],
-              "explain": "Khi hỏi, dùng 「AとBとどちらが」 đặt hai lựa chọn song song; khi trả lời, dùng 「より」 đánh dấu bên thua, 「のほうが」 đánh dấu bên thắng, đừng trả lời thành ✗犬と猫と猫のほうが好きです."
-            },
-            {
-              "id": "hodo-nai-comparison",
-              "diff": "より〜のほうが nói từ mặt thuận rằng B nhỉnh hơn; ほど〜ない nói từ mặt ngược rằng A không bằng B.",
-              "this": [
-                {
-                  "tag": "Mặt thuận · B hơn…",
-                  "tr": "Tàu điện nhanh hơn xe buýt."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Mặt ngược · A không bằng",
-                  "tr": "Xe buýt không nhanh bằng tàu điện."
-                }
-              ],
-              "explain": "Hai câu nói cùng một việc: sau より〜のほうが là khẳng định (速い), tiêu điểm ở bên thắng; sau ほど nhất định là phủ định (速くない), nói từ phía bên thua."
-            },
-            {
-              "id": "no-naka-de-ichiban",
-              "diff": "より〜のほうが chỉ so sánh hai thứ; từ ba thứ trở lên dùng 「の中で〜がいちばん」.",
-              "this": [
-                {
-                  "tag": "So sánh hai thứ",
-                  "tr": "So với chó, tôi thích mèo hơn."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Từ ba trở lên · nhất",
-                  "tr": "Trong các loài động vật, tôi thích mèo nhất."
-                }
-              ],
-              "explain": "Trước tiên đếm số đối tượng so sánh: chỉ có hai (犬と猫) → より〜のほうが; trong một phạm vi có nhiều thứ (動物の中で) → の中で〜がいちばん."
+              "explain": "Hai câu nghĩa giống nhau, đều là “vật giá bây giờ cao hơn ngày xưa”. より〜のほうが là cách nói trong hội thoại hằng ngày, đặt tiêu điểm vào bên thắng (今), hay dùng để trả lời 「どちらが」; に比べて lấy vế trước làm chuẩn để miêu tả vế sau, giọng trang trọng hơn, thiên về văn viết, hay gặp trong tin tức, báo cáo."
             }
           ]
         }
