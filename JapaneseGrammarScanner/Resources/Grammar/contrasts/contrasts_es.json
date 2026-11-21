@@ -34783,20 +34783,21 @@
             },
             {
               "id": "wa-betsu-to-shite",
-              "diff": "はともかく suele insinuar que A tiene algún problema que se deja pasar por ahora; は別として excluye A como excepción de forma neutra.",
+              "title": "〜は別として (dejando aparte)",
+              "diff": "Ambas significan «dejar A de lado por ahora»; はともかく suele insinuar que A no es muy bueno y que no se quiere entrar en ello; は別として solo aparta A como un asunto distinto, sin valorarlo.",
               "this": [
                 {
-                  "tag": "A tiene pegas · se deja pasar",
-                  "tr": "El precio es otra historia (algo caro), pero el sabor es inmejorable."
+                  "tag": "Insinúa que A es malo · no entrar en ello",
+                  "tr": "Dejando aparte la letra, el contenido del informe está muy bien hecho."
                 }
               ],
               "that": [
                 {
-                  "tag": "Pocas excepciones · el resto sí",
-                  "tr": "Salvo unos pocos, casi todos los empleados estuvieron a favor."
+                  "tag": "Otro asunto · sin valorar",
+                  "tr": "Al margen de que guste o no, este libro merece leerse al menos una vez."
                 }
               ],
-              "explain": "は別として puede significar «excepto…»: delante hay una pequeña excepción y detrás se habla de la mayoría restante (ほとんど, みんな); はともかく no se usa así: deja de lado A (normalmente porque no es muy bueno, por ejemplo, un precio alto) para pasar a valorar B."
+              "explain": "Las dos suelen ser intercambiables; la diferencia está en la actitud hacia A. Mira qué es A: algo como 「字」, que al hablante le parece flojo y en lo que no quiere entrar → はともかく, que da a entender «A no es gran cosa»; algo como 「好き嫌い」, que no es ni bueno ni malo, solo otro tema → は別として (「別」 = otro asunto), que simplemente aparta A sin juzgarlo."
             }
           ]
         }
@@ -34841,7 +34842,7 @@
                   "tr": "Haber entrenado no significa que vayas a ganar seguro."
                 }
               ],
-              "explain": "わけがない es el hablante afirmando «de ninguna manera»; わけではない corrige una deducción que se da por supuesta, y suele ir con 「からといって」, 「必ず」 o 「全部」. Mira si delante aparecen estas palabras y luego si al final hay 「が」 o 「では」."
+              "explain": "Ambas vienen de 「わけ」 (lógica, razón): わけがない = «no hay ninguna lógica para ello» → es totalmente imposible, una negación total del hablante; わけではない = «no es esa la lógica, no es así» → niega una conclusión que otro saca como natural, una negación parcial. Mira lo que va delante: con palabras como 「からといって」「必ず」「全部」, para decir «no necesariamente…» → わけではない; sin ellas, afirmando sin más «de ninguna manera» → わけがない. En la forma, fíjate en si es 「が」 o 「では」."
             },
             {
               "id": "wake-ni-wa-ikanai",
@@ -34858,7 +34859,7 @@
                   "tr": "Mañana tengo examen, así que hoy no puedo irme de juerga."
                 }
               ],
-              "explain": "Mira el sujeto y el punto de vista: una deducción sobre otra persona o sobre un hecho (彼が〜) → わけがない; el propio hablante que «aunque quiera, no puede hacerlo por responsabilidad o por las normas» → わけにはいかない."
+              "explain": "Ambas vienen de 「わけ」 (lógica, razón): わけがない = «no hay tal lógica» → se juzga que algo no puede ocurrir; わけにはいかない = «por lógica no funciona» (いかない = no funciona, no va) → por deber o por decoro, uno mismo no puede hacerlo. Así que mira el sujeto y el punto de vista: una suposición sobre otra persona o una situación (「彼が」〜) → わけがない; el hablante no puede hacer algo por una obligación o norma como 「明日は試験だから」 → わけにはいかない."
             }
           ]
         },
@@ -34885,7 +34886,7 @@
             },
             {
               "id": "kkonai",
-              "diff": "Significan lo mismo, «es imposible»; っこない es muy coloquial y solo va tras la forma ます del verbo.",
+              "diff": "Significan lo mismo, «es imposible»; っこない es muy coloquial y va tras el verbo sin ます (勝て).",
               "this": [
                 {
                   "tag": "Forma llana + わけがない",
@@ -34894,14 +34895,14 @@
               ],
               "that": [
                 {
-                  "tag": "Forma ます + っこない · coloquial",
+                  "tag": "Sin ます + っこない · coloquial",
                   "tr": "Contra un equipo tan fuerte no hay manera de ganar, hombre."
                 }
               ],
               "wrong": {
-                "why": "っこない va tras la forma ます: 勝てっこない"
+                "why": "っこない va tras la forma sin ます: 勝てます → 勝てっこない"
               },
-              "explain": "Mira la forma del verbo de delante: forma llana (勝てる) + わけがない; forma ます (勝て) + っこない. っこない solo se usa en charlas informales entre amigos; en situaciones formales y por escrito se usa わけがない."
+              "explain": "Mira la forma del verbo de delante: forma llana (勝てる) + わけがない; forma sin ます (勝てます → 勝て) + っこない. っこない solo se usa en charlas informales entre amigos; en situaciones formales y por escrito se usa わけがない."
             }
           ]
         }
@@ -34943,58 +34944,38 @@
           "note": "Ambas significan «hacer una cosa y, de paso / a la vez, cumplir otro propósito»",
           "items": [
             {
-              "id": "tsuide-ni",
-              "diff": "を兼ねて es una sola acción que tiene dos propósitos; ついでに es hacer otra cosa B aprovechando que se hace A.",
-              "this": [
-                {
-                  "tag": "Una acción · dos propósitos",
-                  "tr": "Fui andando a la estación, que de paso me sirvió de ejercicio."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Dos acciones · de paso",
-                  "tr": "Aprovechando que fui a la estación, pasé por la librería."
-                }
-              ],
-              "explain": "Cuenta cuántas acciones hay en la frase: con を兼ねて hay una sola (歩いて行った), y el sustantivo de delante es un propósito extra de esa acción; con ついでに hay dos acciones (駅に行く＋本屋に寄る), y la segunda se hace de paso."
-            },
-            {
               "id": "gatera",
-              "diff": "がてら solo une dos acciones, y detrás suele llevar 「行く・寄る」; を兼ねて además permite decir con «〜を兼ねた＋sustantivo» que una cosa tiene dos usos a la vez.",
+              "diff": "Ambas significan que una actividad cumple dos propósitos; がてら va tras una acción que se está haciendo, suele ir seguido de ir a algún sitio o pasar por él, y suena relajado; を兼ねて va tras el propósito extra que se logra, y detrás puede ir cualquier acción.",
               "this": [
                 {
-                  "tag": "Modifica un sustantivo · doble uso",
-                  "tr": "Esta habitación es un dormitorio que también hace de despacho."
+                  "tag": "Propósito extra · detrás, cualquier acción",
+                  "tr": "Todas las noches escucho la radio japonesa, que de paso me sirve de práctica de japonés."
                 }
               ],
               "that": [
                 {
-                  "tag": "Acción＋desplazamiento",
-                  "tr": "Aprovechando el paseo, pasé por una librería cercana."
+                  "tag": "Acción en curso · pasar por un sitio",
+                  "tr": "Aprovechando el paseo, fui hasta correos a enviar una carta."
                 }
               ],
-              "wrong": {
-                "why": "Delante de がてら tiene que ir una acción (散歩、買い物); no sirve para decir que una cosa hace también de otra"
-              },
-              "explain": "Delante de がてら suele haber una acción como 「散歩」「買い物」, y detrás un desplazamiento como 「行く・寄る・歩く」; para decir que una habitación o un objeto tiene dos usos a la vez, solo vale を兼ねた."
+              "explain": "Mira el sustantivo de delante y la acción de detrás: delante de を兼ねて va el propósito extra que la actividad también cumple (「練習」「運動」), y detrás puede ir cualquier cosa; delante de がてら va la acción que se está haciendo (「散歩」「買い物」), y detrás suele ir un desplazamiento de paso, como 「行く」「寄る」, en tono relajado. También se puede decir 「散歩を兼ねて郵便局まで行った」; pero con algo que no implica salir, como escuchar la radio cada noche, solo を兼ねて suena natural."
             },
             {
               "id": "katagata",
-              "diff": "かたがた solo se usa en cartas formales y saludos de negocios; を兼ねて también se usa en el día a día.",
+              "diff": "Ambas significan que una acción cumple dos propósitos; かたがた suena formal y aparece sobre todo en cartas y fórmulas de cortesía al visitar; を兼ねて sirve tanto en lo cotidiano como en lo formal.",
               "this": [
                 {
-                  "tag": "Día a día",
-                  "tr": "El fin de semana fui al recinto, que de paso me sirvió para conocerlo de antemano."
+                  "tag": "Informal · cotidiano",
+                  "tr": "Todas las mañanas saco a pasear al perro, y de paso me sirve de dieta."
                 }
               ],
               "that": [
                 {
-                  "tag": "Carta · formal",
-                  "tr": "Próximamente pasaré a saludarle y, de paso, a darle las gracias."
+                  "tag": "Formal · fórmula de cortesía",
+                  "tr": "He venido a informarle y, a la vez, a agradecerle lo del otro día."
                 }
               ],
-              "explain": "Delante de かたがた casi siempre va 「お礼」「ご挨拶」「ご報告」, y detrás suele ir 「伺う」「お願いする」: es una fórmula fija de cartas comerciales y saludos; para el «de paso, aprovechando…» cotidiano se usa を兼ねて."
+              "explain": "La diferencia está en el registro: かたがた es muy formal; delante suele llevar 「お礼」「ご挨拶」「ご報告」 y detrás verbos humildes de visita como 「伺う」, propios de cartas de negocios y fórmulas de cortesía (existen usos cotidianos como 「散歩かたがた」, pero en conjunto suena a lengua escrita). Hablando con amigos de manera informal (con 「んだ」 al final), se usa を兼ねて; con かたがた sonaría demasiado rígido."
             }
           ]
         }
@@ -35026,20 +35007,20 @@
             },
             {
               "id": "wo-ki-ni",
-              "diff": "を契機に se centra en «eso provocó un cambio»; を機に se centra en «aprovechar ese momento para hacer algo por iniciativa propia».",
+              "diff": "Significan básicamente lo mismo y a menudo son intercambiables; を契機に es el más formal y se usa sobre todo para grandes cambios sociales; を機に se usa a menudo para hitos de la vida personal, y en discursos también se dice 「これを機に」.",
               "this": [
                 {
-                  "tag": "Provoca un cambio",
-                  "tr": "A raíz del gran terremoto, aumentó la conciencia de la gente sobre la prevención de desastres."
+                  "tag": "Gran hecho social · tono periodístico",
+                  "tr": "A raíz del terremoto, el sistema nacional de prevención de desastres se revisó a fondo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Aprovechar · por iniciativa propia",
-                  "tr": "Aprovechando la jubilación, me mudé al campo."
+                  "tag": "Hito vital · personal",
+                  "tr": "Con motivo de su jubilación, se mudó al campo con su esposa."
                 }
               ],
-              "explain": "Mira la segunda parte: algo que el sujeto decide hacer por sí mismo (引っ越した、始めた) → lo más natural es を機に, y delante suele haber un hito vital como la jubilación, la boda o la graduación; un «cambio provocado» en la sociedad o la conciencia (高まった、広まった) → を契機に."
+              "explain": "Las dos suelen ser intercambiables; la diferencia está en el contexto y la escala: para grandes hechos sociales como 「地震」 o reformas, contados en tono periodístico o académico → を契機に es lo más adecuado; para hitos de la vida personal como 「退職」 o el matrimonio → を機に es más habitual, y en discursos y cartas se dice mucho 「これを機に」 (aprovechando esta ocasión)."
             },
             {
               "id": "wo-sakai-ni",
@@ -35180,24 +35161,24 @@
         },
         {
           "kind": "meaning",
-          "note": "Ambas significan «basándose en…»",
+          "note": "Ambas significan «sobre la base de…»",
           "items": [
             {
-              "id": "wo-tayori-ni",
-              "diff": "をもとに es usarlo como material para «crear algo»; を頼りに es usarlo como pista para «avanzar a tientas».",
+              "id": "wo-fumaete",
+              "diff": "Ambas dicen «sobre la base de…»; をもとに es habitual tanto al hablar como por escrito; を踏まえて es muy formal, propio de reuniones, informes y comunicados.",
               "this": [
                 {
-                  "tag": "Material → creación",
-                  "tr": "A partir de mis recuerdos de infancia, dibujé cómo era el pueblo antiguamente."
+                  "tag": "Charla · informal",
+                  "tr": "Hice el plan del viaje a partir de lo que me contó un amigo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Pista → a tientas",
-                  "tr": "Guiándome por mis recuerdos de infancia, busqué la casa donde vivía antes."
+                  "tag": "Formal · reuniones, comunicados",
+                  "tr": "Revisaremos el plan teniendo en cuenta las opiniones de todos ustedes."
                 }
               ],
-              "explain": "La primera parte es idéntica; mira el verbo de después: «crear una obra» como 描く、作る、書く → をもとに; «avanzar a tientas» en una situación incierta como 探す、歩く、たどり着く → を頼りに."
+              "explain": "Fíjate en la situación: charlando con amigos (con 「んだ」 al final) → をもとに; con を踏まえて parecería una reunión. Hablando formalmente en una reunión, un informe o un comunicado (「まいります」) → を踏まえて es lo más adecuado, y significa tener en cuenta esas opiniones o resultados como premisa. Al tomar una decisión sirven las dos; をもとに suena más informal."
             }
           ]
         }
@@ -35211,67 +35192,25 @@
           "note": "Ambas significan «dejar algo fuera»",
           "items": [
             {
-              "id": "nuki-de",
-              "title": "〜抜きで (sin…, quitando…)",
-              "diff": "を除いて quita una parte de un conjunto y habla del resto; 抜きで es hacer algo «sin eso».",
-              "this": [
-                {
-                  "tag": "Quitar una parte · todo el resto",
-                  "tr": "Salvo Tanaka, ya estamos todos."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "抜きで · hacerlo sin…",
-                  "tr": "Empezamos la reunión sin Tanaka."
-                }
-              ],
-              "explain": "Detrás de を除いて suele haber 「全員」「みんな」「毎日」: habla de «todo lo demás» una vez quitada esa parte; detrás de 抜きで va una acción: «hacerlo así, sin llevar eso o quitándolo», como en 「わさび抜きで」「冗談抜きで」."
-            },
-            {
               "id": "wa-betsu-to-shite",
-              "diff": "を除いて quita miembros concretos de un conjunto; は別として aparca un asunto para emitir una valoración.",
+              "title": "〜は別として (excepto)",
+              "diff": "Ambas significan «excepto…»; を除いて saca una parte del conjunto de forma objetiva, es habitual en avisos y normas, y también se usa como 「を除く」 + sustantivo; は別として tiene el tono de «esa parte es un caso especial, otro asunto», y no puede modificar directamente a un sustantivo.",
               "this": [
                 {
-                  "tag": "Excluir miembros · todo el resto",
-                  "tr": "Salvo los días de lluvia, voy a trabajar en bici todos los días."
+                  "tag": "Exclusión objetiva · modifica un sustantivo",
+                  "tr": "Repartimos el cuestionario a todos excepto a los menores de edad."
                 }
               ],
               "that": [
                 {
-                  "tag": "Aparcar un asunto · valoración",
-                  "tr": "Dejando aparte el tema del coste, el plan en sí me parece bueno."
+                  "tag": "Caso especial · otro asunto",
+                  "tr": "Dejando aparte a los menores, repartimos el cuestionario a todos."
                 }
               ],
-              "explain": "Mira la segunda parte: un hecho sobre todo lo demás (毎日、全員) → を除いて; una valoración (いいと思う) → は別として, con delante un «asunto o condición» que de momento no se tiene en cuenta."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "wo-tayori-ni",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Ambas significan «basándose en…»",
-          "items": [
-            {
-              "id": "wo-moto-ni",
-              "diff": "を頼りに es usarlo como pista para «avanzar a tientas»; をもとに es usarlo como material para «crear algo».",
-              "this": [
-                {
-                  "tag": "Pista → a tientas",
-                  "tr": "Guiándome por mis recuerdos de infancia, busqué la casa donde vivía antes."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Material → creación",
-                  "tr": "A partir de mis recuerdos de infancia, dibujé cómo era el pueblo antiguamente."
-                }
-              ],
-              "explain": "La primera parte es idéntica; mira el verbo de después: «avanzar a tientas» en una situación incierta como 探す、歩く、たどり着く → を頼りに; «crear una obra» como 描く、作る、書く → をもとに."
+              "wrong": {
+                "why": "は別として no puede modificar directamente a un sustantivo como 「を除く」 + sustantivo"
+              },
+              "explain": "Las dos pueden significar «excepto…». を除いて saca una parte de forma objetiva; en avisos y normas se escribe a menudo 「を除き」, y puede ir justo delante de un sustantivo, como en 「を除く全員」; は別として tiene el tono de «esa parte es un caso especial, otro asunto», solo se intercala en la oración y no puede modificar directamente a un sustantivo. Fíjate en si le sigue directamente un sustantivo (〜を除く全員) para distinguirlas."
             }
           ]
         }
