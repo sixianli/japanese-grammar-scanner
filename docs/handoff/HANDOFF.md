@@ -211,10 +211,10 @@ Build 17 包含的内容（详见 PR #6 描述）：Build 16 的全部反馈修�
 ## 4. CI 与发版流程（务必遵守 CLAUDE.md：同一提交 e2e 全绿才能发版）
 
 ### CI：`.github/workflows/ios.yml`（push 到 main / pull_request / 手动）
-- 任务：`validate-data`、`build-and-test`、`e2e`、`screenshots`。`e2e` 约 80–90 分钟（上限 150 分钟），整套约 1.5 小时。
+- 任务：`validate-data`、`build-and-test`、`e2e-plan`、`e2e-shard-1`…`e2e-shard-4`、`e2e`、`screenshots`。端到端测试（e2e）按测试类分成 4 组在 4 台机器上同时跑，分组写在 `tools/e2e_shards.py` 的 `SHARDS` 里；新加的测试类没分组时 `e2e-plan` 会失败并提示。`e2e` 是汇总任务（发版门槛认的就是这个名字）：4 组都通过、并且合并后的日志里每个用例都有通过记录才算通过。`screenshots` 等 4 组跑完才开始，因为免费账号最多同时跑 5 个 macOS 任务。
 - 并发组 `${{ github.workflow }}-${{ github.ref }}`，新提交会取消同一 PR 上正在跑的 CI。
 - 提交信息带 `[skip ci]` 不触发 CI（只改文档/资料时可用，但**发版用的提交必须有完整的绿色 CI**）。
-- e2e 稳定性措施：模拟器启动后 sleep 30 秒；先跑一个预热用例（`SearchTests/testNoResults`，结果忽略）；结束后 `tools/check_e2e_ran_all.py e2e.log` 核对 UITests 里声明的每个测试都出现 `passed`（模拟器头几分钟会出现启动超时、测试进程崩溃导致用例被静默跳过）。
+- e2e 稳定性措施：模拟器启动后 sleep 30 秒；先跑一个预热用例（`SearchTests/testNoResults`，结果忽略）；汇总任务用 `tools/check_e2e_ran_all.py` 对 4 组合并后的日志核对 UITests 里声明的每个测试都出现 `passed`（模拟器头几分钟会出现启动超时、测试进程崩溃导致用例被静默跳过）。
 - `build-and-test` 里另有一步按发版配置（`CLOUD_FEEDBACK`）编译并跑 `GuideAndLegalTests`，因为 iCloud 反馈代码只在这个编译条件下编译。
 
 ### 发版：`.github/workflows/release.yml`（手动触发，`ref` 选本分支，输入 `version`）

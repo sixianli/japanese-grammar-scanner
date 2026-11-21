@@ -58,8 +58,6 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             | tee build.log | grep -E "error:|warning: .*JapaneseGrammarScanner|Test Case .* (passed|failed)|Executed|\*\* (TEST|BUILD)" || true
           grep -q "\*\* TEST SUCCEEDED \*\*" build.log
-      # 发 TestFlight 时打开了 CLOUD_FEEDBACK（App 内反馈 / 匿名统计走 iCloud），那部分代码只在这个编译条件下才编译。
-      # 这里按发版配置再编译一次，并跑「隐私政策 / 条款与这一版一致」的测试，免得发版时才发现编不过或政策对不上。
       - name: Test with CLOUD_FEEDBACK (TestFlight configuration)
         run: |
           set -o pipefail
@@ -88,11 +86,33 @@ jobs:
           name: build-log
           path: build.log
 
-  # 端到端测试：在模拟器上像用户一样点击、跳转、返回（JapaneseGrammarScannerUITests）
-  e2e:
+  e2e-plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Split end-to-end tests into groups
+        id: plan
+        env:
+          E2E_ONLY: ${{ inputs.e2e_only }}
+        run: |
+          if [ -n "$E2E_ONLY" ]; then
+            M=$(python3 tools/e2e_shards.py --only "$E2E_ONLY")
+          else
+            M=$(python3 tools/e2e_shards.py)
+          fi
+          echo "$M"
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+
+  e2e-shard:
+    needs: e2e-plan
+    name: e2e-shard-${{ matrix.shard }}
     runs-on: xcode-27
-    # 64 个用例约 80 分钟（加上准备模拟器约 90 分钟），90 分钟的上限会在中途被取消
-    timeout-minutes: 150
+    timeout-minutes: 75
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.e2e-plan.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v4
       - name: Pick simulator
@@ -106,37 +126,45 @@ jobs:
           c.sort(key=lambda t:(t[0], t[1]['name'].endswith('Pro Max')))
           print(c[-1][1]['udid'])")
           echo "udid=$UDID" >> "$GITHUB_OUTPUT"
-      - name: Put sample photos into the simulator's photo library
+      - name: Boot simulator and add sample photos in background
         run: |
-          # 关闭「连接硬件键盘」，输入框获得焦点时会弹出软键盘（测试用它判断焦点）
+          UDID="${{ steps.sim.outputs.udid }}"
           defaults write com.apple.iphonesimulator ConnectHardwareKeyboard -bool false
-          xcrun simctl boot "${{ steps.sim.outputs.udid }}" || true
-          xcrun simctl bootstatus "${{ steps.sim.outputs.udid }}" -b
-          xcrun simctl addmedia "${{ steps.sim.outputs.udid }}" tests/ocr/samples/IMG_8936.jpg tests/ocr/samples/IMG_8939.jpg
-      - name: End-to-end tests
-        env:
-          E2E_ONLY: ${{ inputs.e2e_only }}
+          (
+            set -e
+            echo "$(date +%T) boot"
+            xcrun simctl boot "$UDID" || true
+            xcrun simctl bootstatus "$UDID" -b
+            echo "$(date +%T) booted, adding photos"
+            xcrun simctl addmedia "$UDID" tests/ocr/samples/IMG_8936.jpg tests/ocr/samples/IMG_8939.jpg
+            echo "$(date +%T) photos added"
+            touch sim-ready
+          ) > sim-prep.log 2>&1 &
+          echo $! > sim-prep.pid
+      - name: Build for testing
         run: |
           set -o pipefail
-          ONLY="-only-testing:JapaneseGrammarScannerUITests"
-          if [ -n "$E2E_ONLY" ]; then
-            ONLY=$(echo "$E2E_ONLY" | tr ',' '\n' | sed 's#^ *#-only-testing:JapaneseGrammarScannerUITests/#' | tr '\n' ' ')
-          fi
-          UDID="${{ steps.sim.outputs.udid }}"
           xcodebuild build-for-testing \
             -project JapaneseGrammarScanner.xcodeproj \
             -scheme JapaneseGrammarScanner \
-            -destination "id=$UDID" -derivedDataPath build \
+            -destination "id=${{ steps.sim.outputs.udid }}" -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO | tail -3
-          # 预热：刚启动的模拟器第一次打开 App 很慢，第一个用例偶尔「启动 App 超时」。先装好、打开一次再关掉
+      - name: Wait for simulator and sample photos
+        run: |
+          PID=$(cat sim-prep.pid)
+          while kill -0 "$PID" 2>/dev/null; do sleep 5; done
+          cat sim-prep.log
+          test -f sim-ready
+      - name: End-to-end tests
+        run: |
+          set -o pipefail
+          UDID="${{ steps.sim.outputs.udid }}"
           APP=$(ls -d build/Build/Products/Debug-iphonesimulator/JapaneseGrammarScanner.app)
           BID=$(/usr/libexec/PlistBuddy -c "Print CFBundleIdentifier" "$APP/Info.plist")
           xcrun simctl install "$UDID" "$APP"
           xcrun simctl launch "$UDID" "$BID" -e2e -demoUnlocked || true
           sleep 30
           xcrun simctl terminate "$UDID" "$BID" || true
-          # 再预热一次测试框架：模拟器刚起来的头几分钟很不稳定（第一个用例出现过「启动超时」「测试进程崩溃后被跳过」
-          # 「界面查询 30 秒超时」），先跑一个很短的用例（结果不计），让模拟器、测试进程、无障碍服务都热起来
           xcodebuild test-without-building \
             -project JapaneseGrammarScanner.xcodeproj \
             -scheme JapaneseGrammarScanner \
@@ -148,14 +176,11 @@ jobs:
             -project JapaneseGrammarScanner.xcodeproj \
             -scheme JapaneseGrammarScanner \
             -destination "id=$UDID" -derivedDataPath build \
-            $ONLY \
+            ${{ matrix.only }} \
             -resultBundlePath e2e.xcresult \
             CODE_SIGNING_ALLOWED=NO \
             | tee e2e.log | grep -E "error:|Test Case .* (passed|failed)|XCTAssert|Executed|\*\* (TEST|BUILD)" || true
-          # test-without-building 成功时输出的是「** TEST EXECUTE SUCCEEDED **」
           grep -qE "\*\* TEST (EXECUTE )?SUCCEEDED \*\*" e2e.log
-          # 测试进程崩溃重启时，正在跑的用例会被直接跳过、也不算失败；跑全部时核对每个用例都真的通过了
-          if [ -z "$E2E_ONLY" ]; then python3 tools/check_e2e_ran_all.py e2e.log; fi
       - name: Export failure screenshots
         if: failure()
         run: |
@@ -164,12 +189,36 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: e2e
+          name: e2e-${{ matrix.shard }}
           path: |
             e2e.log
             e2e-attachments
 
+  e2e:
+    needs: e2e-shard
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: e2e-*
+          path: e2e-logs
+      - name: Every group passed and every test ran
+        env:
+          SHARDS: ${{ needs.e2e-shard.result }}
+          E2E_ONLY: ${{ inputs.e2e_only }}
+        run: |
+          if [ "$SHARDS" != "success" ]; then
+            echo "::error::端对端测试有分组没有通过（$SHARDS），看 e2e-shard-* 任务"
+            exit 1
+          fi
+          cat e2e-logs/*/e2e.log > e2e-all.log
+          if [ -z "$E2E_ONLY" ]; then python3 tools/check_e2e_ran_all.py e2e-all.log; fi
+
   screenshots:
+    needs: e2e-shard
+    if: ${{ !cancelled() }}
     runs-on: xcode-27
     timeout-minutes: 40
     steps:
@@ -212,7 +261,6 @@ jobs:
               i=$((i+1))
             done
           done
-          # 自查用截图（简体中文）：含汉字标题的注音与等级标签、合并后的语法点、搜索、深色模式、大字号
           mkdir -p screenshots/qa
           qa() { name=$1; shift
             xcrun simctl terminate "$UDID" "$BID" 2>/dev/null || true
@@ -230,7 +278,6 @@ jobs:
           qa search_tab -demoScreen search -demoSearch ように
           qa favorites_sorted -demoScreen favorites
           qa detail_title_bar -demoScreen detail -demoGrammar izen -demoScroll sense-0
-          # 标题飞进导航栏途中（Build 16：有重影）：同一个语法滚到不同位置，每张图里标题都只有一个
           for y in 20 45 70 100; do qa detail_title_fly_$y -demoScreen detail -demoGrammar you-ni-naru -demoScrollY $y; done
           qa review_bar -demoScreen review -demoGrammar you-ni-naru
           qa contrast_collapsed -demoScreen detail -demoGrammar tokoro-da -demoScroll section-similar

@@ -11,13 +11,10 @@ final class DetailTests: E2ETestCase {
 
     func testSimilarGrammarPushesAndBackReturns() {
         openDetailBySearch("だけに")
-        let similar = id("detail.similar")
-        scrollTo(similar, maxSwipes: 25)
-        XCTAssertTrue(similar.exists, "讲解页应有相近语法")
-        similar.tap()
-        wait(detailScreen, "点相近语法应打开另一个讲解页")
+        let pages = openSimilarGrammar(id("detail.similar"))
         back()
-        wait(detailScreen, "返回应回到原来的讲解页")
+        wait(detailTitle(pages.from), "返回应回到原来的讲解页「\(pages.from)」")
+        waitGone(detailTitle(pages.to), "返回后不应还停在「\(pages.to)」")
         back()
         XCTAssertTrue(app.searchFields.firstMatch.waitForExistence(timeout: 8), "再返回应回到搜索页")
     }
@@ -34,12 +31,10 @@ final class DetailTests: E2ETestCase {
         button(startingWith: "收起").tap()
         waitGone(text(containing: "怎么分辨"), "收起后讲解应隐藏")
 
-        let similar = id("detail.similar")
-        scrollTo(similar)
-        similar.tap()
-        wait(detailScreen, "点相近语法的语法名应进入对方的讲解页")
+        let pages = openSimilarGrammar(id("detail.similar"))
         back()
-        wait(id("detail.contrast.toggle"), "返回后应回到原来的讲解页")
+        wait(detailTitle(pages.from), "返回后应回到原来的讲解页「\(pages.from)」")
+        waitGone(detailTitle(pages.to), "返回后不应还停在「\(pages.to)」")
     }
 
     func testMeaningGroupSplitsBySenseOnTameNi() {
@@ -127,7 +122,7 @@ final class DetailTests: E2ETestCase {
         wait(navBar("反馈"), "讲解页底部的反馈入口应打开反馈页")
         navBar("反馈").buttons["取消"].tap()
         waitGone(navBar("反馈"), "取消后关闭")
-        XCTAssertTrue(detailScreen.exists, "关闭反馈后仍在讲解页")
+        wait(detailScreen, "关闭反馈后仍在讲解页")
     }
 
     func testFavoriteFromDetailAndUnfavoriteFromList() {
