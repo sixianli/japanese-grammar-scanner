@@ -52,6 +52,21 @@ final class DetailTests: E2ETestCase {
         XCTAssertTrue(id("tag.mustKnow").waitForExistence(timeout: 5), "について 是必考语法，应显示「必考」")
     }
 
+    /// 列表行里的「必考」只是标签：点到它也要进讲解页，不能弹出说明（Build 18 前 e2e 发现：点行中间正好落在标签上）
+    func testTappingMustKnowTagInRowOpensDetail() {
+        tab("搜索").tap()
+        let field = app.searchFields.firstMatch
+        wait(field, "搜索页应有搜索框")
+        field.tap()
+        field.typeText("ようになる")
+        let row = id("search.result")
+        wait(row, "应有搜索结果")
+        let tag = row.descendants(matching: .any).matching(identifier: "tag.mustKnow").firstMatch
+        wait(tag, "〜ようになる 的结果行应有「必考」")
+        tag.tap()
+        wait(detailScreen, "点结果行里的「必考」也应进入讲解页")
+    }
+
     func testNoMustKnowTagOnLowFrequencyGrammar() {
         openDetailBySearch("たち")
         wait(id("detail.level"), "标题下方应有等级标签")
