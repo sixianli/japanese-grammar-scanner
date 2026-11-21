@@ -12361,7 +12361,8 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "てやる has two meanings, each with a look-alike: “do for…” ≈ てあげる, “defiance, resolve” ≈ てみせる・ものか",
+          "sense": 1,
+          "note": "Both mean “doing something for someone”",
           "items": [
             {
               "id": "te-ageru",
@@ -12378,41 +12379,32 @@
                   "tr": "I lent my notebook to a friend."
                 }
               ],
-              "explain": "Look at who it's for: your own younger brother, child, pet → てやる is possible, but it's rather blunt, and in polite settings people now mostly use てあげる; friends, people in general → てあげる."
-            },
+              "explain": "Look at who it's for: your own younger siblings, children or pets, like 「弟に」 → てやる is possible, casual and somewhat masculine in tone; equals or people in general, like 「友達に」 → use てあげる, since てやる would sound condescending. These days people often use てあげる even with children and pets, as it sounds gentler."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Both express determination to “get it done no matter what”",
+          "items": [
             {
               "id": "te-miseru",
-              "diff": "てやる is rough, often with anger or revenge; てみせる is “I'll show you”, proving yourself to others, with a more positive tone.",
+              "title": "〜てみせる (resolve)",
+              "diff": "てやる is spiteful, gritted-teeth defiance with a rough tone; てみせる declares to others “I'll show you”, and can be said to someone's face.",
               "this": [
                 {
-                  "tag": "Defiant · angry",
-                  "tr": "I'll definitely show those guys who looked down on me."
+                  "tag": "Spite · vowing to yourself",
+                  "tr": "Argh, I'm so frustrated! Next year I'll pass, no matter what."
                 }
               ],
               "that": [
                 {
-                  "tag": "Proving to others",
-                  "tr": "Don't worry. I'll pass for sure, you'll see."
+                  "tag": "Promise to someone · you'll see",
+                  "tr": "Don't worry. Next year I'll pass for sure, you'll see."
                 }
               ],
-              "explain": "Look at who it's said to and the emotion: aimed at rivals like 「やつら」, with anger or a wish for revenge → てやる, very rough; telling family or a teacher “don't worry, I'll do it” → てみせる, fine to say to someone's face."
-            },
-            {
-              "id": "mono-ka",
-              "diff": "てやる says “I will…, no matter what” in the affirmative; ものか says “no way I'll…” as a rhetorical question — the resolve is the same.",
-              "this": [
-                {
-                  "tag": "Affirmative · no matter what",
-                  "tr": "In the next match, I'm going to win no matter what."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Rhetorical · no way",
-                  "tr": "In the next match, there's no way I'll lose."
-                }
-              ],
-              "explain": "Both sentences carry the same drive: てやる attaches to what you'll achieve (勝つ); ものか attaches to what you'll never let happen (負ける), in a rhetorical “how could I…” tone. In speech, ものか is often もんか."
+              "explain": "Look at who it's said to: gritting your teeth out of spite, as with 「悔しい」 → てやる, rough in tone and mostly said to yourself; promising in front of someone that they'll see you succeed, as with 「心配しないで」 → てみせる, which you can say even to family or a teacher."
             }
           ]
         }
@@ -12450,29 +12442,6 @@
       "id": "to-itte-ita",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from the quotative 「と」 + 「言う」 (って is a casual contraction of 「と言って」)",
-          "items": [
-            {
-              "id": "to-iu-quote",
-              "diff": "と言っていました passes on a third person's words to the listener; と言いました recounts what was said at the time.",
-              "this": [
-                {
-                  "tag": "Passing it on to you",
-                  "tr": "The department head said tomorrow's meeting is canceled."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Recounting what was said",
-                  "tr": "At the meeting, the department head said, “Let's do our best.”"
-                }
-              ],
-              "explain": "Look at the purpose: passing someone's words on to the listener, “that's what he said” → と言っていました, often ending with 「よ」; narrating who said what in a scene → と言いました."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Both report something you heard",
           "items": [
@@ -12509,7 +12478,7 @@
                   "tr": "Hey, I heard Tanaka's off today."
                 }
               ],
-              "explain": "Look at who you're talking to: passing a message to a teacher or boss → 「〜と言っていました」; chatting casually with friends → 「〜んだって」, often starting with 「ねえ」. んだって also doesn't necessarily say who said it."
+              "explain": "Look at who you're talking to: passing a message to a teacher (先生) or boss → 「〜と言っていました」; chatting casually with friends → 「〜んだって」, often starting with 「ねえ」. んだって also doesn't necessarily say who said it."
             }
           ]
         }
@@ -12518,29 +12487,6 @@
     {
       "id": "to-ittemo-ii",
       "groups": [
-        {
-          "kind": "root",
-          "note": "Both come from 「と言っても」 — “even if you call it…”",
-          "items": [
-            {
-              "id": "to-ittemo",
-              "diff": "と言ってもいい is “it's fine to call it…” = you could say; といっても is “although I say… (it's not really that much)”.",
-              "this": [
-                {
-                  "tag": "Positive judgment",
-                  "tr": "You could say this shop's ramen is the best in Japan."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Although · not really that much",
-                  "tr": "I say I can cook, but curry is about all I can make."
-                }
-              ],
-              "explain": "Both come from 「と言っても (even if you call it…)」: followed by 「いい」 → it's fine to put it that way, a positive judgment; followed by another clause (〜しか…ない) → even though you say so, it's not really that much. Check whether 「と言っても」 is followed by 「いい」 or by a qualifying remark."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Both express the judgment “you could say…”",
@@ -12571,24 +12517,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both can explain or ask “what does it mean”",
+          "note": "Both check “So you mean…?”",
           "items": [
             {
               "id": "to-iu-koto-nominalizer",
-              "diff": "どういう意味 asks about the “meaning” of a word or remark; どういうこと asks “what on earth is going on”, about the other person's intention or the situation.",
+              "title": "〜ということ (checking what someone means)",
+              "diff": "という意味ですか zeroes in on a particular remark and presses for what it means; ということですか sums up what the other person said into a conclusion and checks it — the more common of the two.",
               "this": [
                 {
-                  "tag": "Asking the meaning",
-                  "tr": "What does this kanji mean?"
+                  "tag": "Pressing for what a remark means",
+                  "tr": "Does what you just said mean you're leaving the company next month?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Asking what's going on",
-                  "tr": "What do you mean I don't need to come in from tomorrow?"
+                  "tag": "Summing up to confirm",
+                  "tr": "So you're saying you're leaving the company next month?"
                 }
               ],
-              "explain": "Look at what's being asked: the meaning of a word, a kanji, a sign → どういう意味; the other person's words are a shock and you want to know the situation or intent behind them → どういうこと, often with a surprised “what's going on?”."
+              "explain": "Both sentences check what the other person means. Focusing on one particular remark and asking what exactly it means (「今の話は」「その言葉は」) → という意味ですか, sometimes with a probing, slightly disbelieving tone; summing up what they said into a conclusion and checking it, often after 「つまり」「じゃあ」 → ということですか, more neutral and more common in everyday speech."
             }
           ]
         }
@@ -12599,45 +12546,27 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both turn a sentence into a noun, meaning “the fact that…”",
+          "note": "Both mean “the fact of…”",
           "items": [
             {
               "id": "koto-nominalizer",
-              "diff": "こと mostly turns an action itself into a noun (撮ること); ということ turns a complete piece of information into a noun, and is required after a sentence ending in 「だ」.",
+              "diff": "ということ highlights the content itself and sounds a little more formal; こと simply turns the action into a noun and is more concise. Content ending in 「だ」 can only take ということ.",
               "this": [
                 {
-                  "tag": "A piece of information",
-                  "tr": "I didn't know he was a student."
+                  "tag": "Stresses the content · a bit formal",
+                  "tr": "What matters is the very act of keeping at it a little every day."
                 }
               ],
               "that": [
                 {
-                  "tag": "The action itself",
-                  "tr": "My hobby is taking photos."
+                  "tag": "Concise · common",
+                  "tr": "It's important to keep at it a little every day."
                 }
               ],
               "wrong": {
-                "why": "こと can't come directly after 「だ」"
+                "why": "こと can't come directly after 「だ」; say 「学生だということ」 (or, in writing, 「学生であること」)"
               },
-              "explain": "Look at what comes before: an action (撮る, 泳ぐ) → こと; a piece of news or a fact, especially a sentence ending in 「だ」 (学生だ, 休みだ) → ということ. You can't say 「学生だこと」; say 「学生だということ」 (or, in writing, 「学生であること」)."
-            },
-            {
-              "id": "no-possessive",
-              "title": "〜の (what is perceived)",
-              "diff": "の is for actions you directly hear or see; ということ is for information or news you've been told.",
-              "this": [
-                {
-                  "tag": "News heard from someone",
-                  "tr": "I heard from a friend that Tanaka is a singer."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Heard directly",
-                  "tr": "I heard Tanaka singing in the next room."
-                }
-              ],
-              "explain": "Both are 「〜を聞いた」: if what you heard is a sound, an action happening right there (隣の部屋で…歌うのを) → の; if it's a piece of information (友達から…歌手だということを) → ということ. Mix them up and the meaning changes: 「歌うということを聞いた」 means “I heard that he's going to sing”."
+              "explain": "Both sentences are correct and mean the same. ということ presents what comes before as a piece of information or a principle, highlighting the content itself, with a slightly more formal tone; こと simply turns the action into a noun — concise, and more common in everyday speech. Then check how the part before it ends: when a noun or な-adjective ends in 「だ」, only ということ works — 「学生だということ」 is fine, 「学生だこと」 is not."
             }
           ]
         }
@@ -12669,20 +12598,21 @@
             },
             {
               "id": "to-sarete-iru",
-              "diff": "と言われている is “everyone says so”; とされている is “is (officially) regarded as”, and only it can be used for laws, rules and definitions.",
+              "title": "〜とされている (is regarded as)",
+              "diff": "と言われている is “everyone says so” and is common in speech too; とされている is “is regarded as”, more formal and closer to a settled conclusion.",
               "this": [
                 {
-                  "tag": "Word of mouth",
-                  "tr": "Since long ago, people have said ginger is good for colds."
+                  "tag": "Common belief · also in speech",
+                  "tr": "People say this hot spring is good for stiff shoulders."
                 }
               ],
               "that": [
                 {
-                  "tag": "Rule · defined as",
-                  "tr": "Under the law, people aged 18 and over are defined as adults."
+                  "tag": "Formal · sounds settled",
+                  "tr": "This hot spring is regarded as effective for stiff shoulders."
                 }
               ],
-              "explain": "Look at where the statement comes from: passed along by word of mouth, sayings (昔から) → と言われている; officially set by laws, rules, definitions (法律では, 規則では) → only とされている. For general beliefs either works, and it's just a tendency: とされている is more formal and sounds more settled, common in news and textbooks."
+              "explain": "Both sentences mean the same, passing on a widely accepted view; the difference is register: と言われている is “everyone says so” and works both in conversation and in writing; とされている is “is regarded as”, more formal and like an official conclusion, common in news, textbooks and descriptions of tourist spots — in casual conversation it would sound stiff."
             },
             {
               "id": "sou-da-appearance",
@@ -12732,37 +12662,6 @@
               "explain": "Just あ vs. い: てある doesn't say who wrote it, and the sentence starts from where it's written (黒板に); ている has the writer in front (先生が), describing an action in progress. When reading a notice or manual and saying “it says…”, always use 書いてある."
             }
           ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Both quote content with 「と」",
-          "items": [
-            {
-              "id": "to-iu-quote",
-              "diff": "All quote with 「と」: と言う is words spoken aloud or what something is called; と書いてある is written text; と読む only says how a character is read.",
-              "this": [
-                {
-                  "tag": "と書いてある · written text",
-                  "tr": "The blackboard says “No class tomorrow.”"
-                },
-                {
-                  "tag": "と読む · reading of a kanji",
-                  "tr": "“桜” is read “さくら”."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Spoken words",
-                  "tr": "The teacher said, “No class tomorrow.”"
-                },
-                {
-                  "tag": "What something is called",
-                  "tr": "This flower is called “さくら” in Japanese."
-                }
-              ],
-              "explain": "Look at the verb after 「と」: 言う is words someone says aloud (先生が〜と言った) or what something is called (日本語で〜と言う); 書いてある is text written on paper or a blackboard, often preceded by 「〜に」 saying where; 読む is only for how a kanji or word is read — to ask, say 「何と読みますか」."
-            }
-          ]
         }
       ]
     },
@@ -12792,20 +12691,21 @@
             },
             {
               "id": "to-sarete-iru",
-              "diff": "と考えられている is a view reached by reasoning; とされている is more formal and sounds more settled, and can also mean “defined as” by law or rule.",
+              "title": "〜とされている (is regarded as)",
+              "diff": "と考えられている stresses that it's a view inferred from evidence; とされている is more formal, like a conclusion accepted by scholars or authorities.",
               "this": [
                 {
-                  "tag": "Reasoned view",
-                  "tr": "Based on fossil research, birds are thought to be descendants of dinosaurs."
+                  "tag": "Inferred view",
+                  "tr": "This mural is thought to have been painted 2,000 years ago."
                 }
               ],
               "that": [
                 {
-                  "tag": "Rule · defined as",
-                  "tr": "Under the law, people aged 18 and over are defined as adults."
+                  "tag": "Accepted conclusion · more formal",
+                  "tr": "This mural is held to have been painted 2,000 years ago."
                 }
               ],
-              "explain": "Look at the basis: a view inferred from fossils, data or research → と考えられている; something set by law, rules or authorities → only とされている (here it's not a “guess” but a “rule”). とされている can also express a generally accepted view, but it's more formal and sounds more settled than と考えられている."
+              "explain": "Both sentences mean the same; the difference is tone: と考えられている stresses that this is a view inferred from evidence, leaving some room for doubt, common in scientific explanations; とされている is more formal, like a view already endorsed by scholars or authorities, common in descriptions of history, cultural artifacts and traditions."
             }
           ]
         }
@@ -12849,60 +12749,43 @@
           "items": [
             {
               "id": "you-to-omou",
-              "diff": "Plain form + と思っている is an opinion or expectation; volitional form + と思っている is your own intention.",
+              "diff": "Plain form + と思っている is an opinion or expectation about how things will be; volitional form + と思っている is an intention to do something yourself.",
               "this": [
                 {
                   "tag": "Plain form · opinion",
-                  "tr": "My mother thinks I'll become a doctor."
+                  "tr": "He's convinced he'll become a doctor."
                 }
               ],
               "that": [
                 {
                   "tag": "Volitional · intention",
-                  "tr": "I'm planning to become a doctor."
+                  "tr": "He's planning to become a doctor."
                 }
               ],
-              "explain": "Just 「なる」 vs. 「なろう」: plain form (なる) → a view or expectation about something; volitional form (なろう) → something you yourself intend to do. One sound apart when read, completely different meanings. With 「ている」, both mean the thought has been held for some time."
+              "explain": "The two sentences differ only in 「なる」 vs. 「なろう」 — said quickly, just one 「う」 apart: plain form (なる) → he believes things will turn out this way, an opinion or expectation; volitional form (なろう) → he intends to do it himself, a plan. With 「ている」, both mean the thought has been held for some time, and both can describe someone else's thoughts."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both voice inner thoughts; と思っている and がる can also describe a third person's feelings",
+          "note": "Both mean “to think that…”",
           "items": [
             {
               "id": "to-omou",
-              "diff": "と思っている is a thought held over time and can describe others' thoughts too; と思う is the speaker's thought right now.",
+              "diff": "と思っている is a thought held over a period of time and can also describe others' thoughts; と思う is the speaker's view at this moment.",
               "this": [
                 {
-                  "tag": "Someone else · ongoing",
-                  "tr": "My older brother has been wanting to study abroad."
+                  "tag": "Ongoing thought",
+                  "tr": "I've always thought this method is the best."
                 }
               ],
               "that": [
                 {
-                  "tag": "Me · right now",
-                  "tr": "I think I'd like to study abroad."
+                  "tag": "View right now",
+                  "tr": "After all, I think this method is the best."
                 }
               ],
-              "explain": "Look at the subject: a third person's thoughts (兄, 彼), or your own long-held thoughts → と思っている; your own thought at this moment → と思う. The subject of と思う can only be the speaker, so you can't describe your brother's thoughts with 「兄は〜と思います」."
-            },
-            {
-              "id": "garu-third-person",
-              "diff": "と思っている describes an inner thought or opinion; たがっている describes a wish visible from someone's words and actions.",
-              "this": [
-                {
-                  "tag": "Inner plan",
-                  "tr": "My younger sister wants to work in Japan in the future."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Visible wish",
-                  "tr": "My little sister has been clamoring for cake for a while now."
-                }
-              ],
-              "explain": "Look at how you know about the wish: something the person has said or held in mind for a long time → と思っている; a present wish you can see from their expression or behavior (さっきから clamoring for it) → たがっている. と思っている can also express opinions (彼は自分が正しいと思っている), while がる only attaches to feeling words like 「ほしい」「〜たい」."
+              "explain": "Check whether the thought has been there all along: with 「ずっと」「前から」, describing a thought held for some time → と思っている; stating your view on the spot, say in a discussion → と思う. Also, to describe someone else's thoughts you need と思っている (兄は〜と思っている); you can't say 「兄は〜と思う」."
             }
           ]
         }

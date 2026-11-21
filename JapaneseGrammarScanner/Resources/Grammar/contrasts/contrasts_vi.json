@@ -12361,7 +12361,8 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "てやる có hai nghĩa, mỗi nghĩa có một cách nói gần giống: “làm cho…” ≈ てあげる, “nói cứng, quyết tâm” ≈ てみせる・ものか",
+          "sense": 1,
+          "note": "Cả hai đều có nghĩa “làm … cho người khác”",
           "items": [
             {
               "id": "te-ageru",
@@ -12378,41 +12379,32 @@
                   "tr": "Tôi đã cho bạn mượn vở."
                 }
               ],
-              "explain": "Xem đối tượng: em trai, con cái, thú cưng của mình → có thể dùng てやる, nhưng cách nói khá thô, ở chỗ lịch sự ngày nay thường đổi sang てあげる; bạn bè, người bình thường → てあげる."
-            },
+              "explain": "Xem đối tượng: em ruột, con cái, thú cưng của mình như 「弟に」 → có thể dùng てやる, giọng suồng sã, thiên về nam giới; người ngang hàng, người bình thường như 「友達に」 → dùng てあげる, nếu dùng てやる sẽ nghe như kẻ cả. Ngày nay với trẻ con, thú cưng người ta cũng hay chuyển sang てあげる cho nhẹ nhàng hơn."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Cả hai đều thể hiện quyết tâm “nhất định phải làm được”",
+          "items": [
             {
               "id": "te-miseru",
-              "diff": "てやる thô lỗ, thường mang sự tức giận hoặc ý trả đũa; てみせる là “làm cho cậu xem”, chứng minh với người khác, giọng điệu tích cực hơn.",
+              "title": "〜てみせる (quyết tâm)",
+              "diff": "てやる là nói trong lúc ấm ức, quyết chí, giọng thô; てみせる là tuyên bố với người khác “làm cho mà xem”, có thể nói trước mặt người ta.",
               "this": [
                 {
-                  "tag": "Nói cứng · có giận dữ",
-                  "tr": "Mấy tên đã coi thường tôi, nhất định tôi sẽ khiến chúng phải lác mắt."
+                  "tag": "Ấm ức · tự hạ quyết tâm",
+                  "tr": "Tức thật! Năm sau nhất định mình phải đỗ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Chứng minh cho người khác thấy",
-                  "tr": "Đừng lo. Nhất định con sẽ đỗ cho mà xem."
+                  "tag": "Hứa trước mặt · làm cho xem",
+                  "tr": "Đừng lo. Năm sau nhất định mình sẽ đỗ cho mà xem."
                 }
               ],
-              "explain": "Xem nói cho ai nghe, mang cảm xúc gì: nhắm vào đối thủ kiểu 「やつら」, mang giận dữ hoặc ý trả đũa → てやる, rất thô; nói với gia đình, thầy cô “yên tâm, nhất định tôi sẽ làm được” → てみせる, có thể nói trực tiếp với người khác."
-            },
-            {
-              "id": "mono-ka",
-              "diff": "てやる dùng câu khẳng định nói “nhất định phải…”; ものか dùng câu hỏi tu từ nói “đời nào lại…”, quyết tâm là như nhau.",
-              "this": [
-                {
-                  "tag": "Khẳng định · nhất định phải",
-                  "tr": "Trận đấu tới, tôi nhất định phải thắng."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Hỏi tu từ · đời nào",
-                  "tr": "Trận đấu tới, đời nào tôi chịu thua."
-                }
-              ],
-              "explain": "Hai câu cùng một nỗi quyết tâm: てやる đi với việc muốn làm được (勝つ); ものか đi với việc nhất quyết không để xảy ra (負ける), bằng giọng hỏi tu từ “làm sao mà… được”. Trong văn nói, ものか thường nói thành もんか."
+              "explain": "Xem câu nói nhắm vào ai: tự nghiến răng, ấm ức hạ quyết tâm như 「悔しい」 → てやる, giọng thô, thường là nói một mình; hứa trước mặt người khác, muốn cho họ thấy kết quả như 「心配しないで」 → てみせる, nói với gia đình, thầy cô cũng được."
             }
           ]
         }
@@ -12450,29 +12442,6 @@
       "id": "to-itte-ita",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「と」 trích dẫn ＋ 「言う」 (って là dạng rút gọn khẩu ngữ của 「と言って」)",
-          "items": [
-            {
-              "id": "to-iu-quote",
-              "diff": "と言っていました là chuyển lời của người thứ ba cho người trước mặt; と言いました kể lại lúc đó đã nói gì.",
-              "this": [
-                {
-                  "tag": "Chuyển lời cho bạn",
-                  "tr": "Trưởng phòng bảo cuộc họp ngày mai bị hủy rồi đấy."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Kể lại lời nói lúc đó",
-                  "tr": "Trong cuộc họp, trưởng phòng đã nói: “Mọi người cùng cố gắng nhé.”"
-                }
-              ],
-              "explain": "Xem mục đích của lời nói: chuyển lời người khác cho người nghe, “anh ấy nói vậy đấy” → と言っていました, cuối câu thường có 「よ」; kể lại trong một cảnh nào đó ai đã nói gì → と言いました."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Đều dùng để thuật lại điều nghe được",
           "items": [
@@ -12509,7 +12478,7 @@
                   "tr": "Này, nghe nói hôm nay Tanaka nghỉ đấy."
                 }
               ],
-              "explain": "Xem nói với ai: chuyển lời cho thầy cô, cấp trên thì dùng 「〜と言っていました」; nói chuyện phiếm với bạn bè thì buột miệng 「〜んだって」, đầu câu thường có 「ねえ」. んだって cũng không nhất thiết nói rõ ai đã nói."
+              "explain": "Xem nói với ai: chuyển lời cho thầy cô (先生), cấp trên thì dùng 「〜と言っていました」; nói chuyện phiếm với bạn bè thì buột miệng 「〜んだって」, đầu câu thường có 「ねえ」. んだって cũng không nhất thiết nói rõ ai đã nói."
             }
           ]
         }
@@ -12518,29 +12487,6 @@
     {
       "id": "to-ittemo-ii",
       "groups": [
-        {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「と言っても」 — “dù có nói là…”",
-          "items": [
-            {
-              "id": "to-ittemo",
-              "diff": "と言ってもいい là “nói là… cũng được” ＝ có thể nói là; といっても là “tuy nói là… (thực ra cũng không đến mức…)”.",
-              "this": [
-                {
-                  "tag": "Đánh giá khẳng định",
-                  "tr": "Mì ramen của quán này có thể nói là số một Nhật Bản."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tuy nói · thực ra không đến mức…",
-                  "tr": "Tuy nói là biết nấu ăn, nhưng thực ra tôi chỉ nấu được mỗi món cà ri."
-                }
-              ],
-              "explain": "Cả hai đều đến từ 「と言っても（dù có nói là…）」: phía sau là 「いい」 → nói như vậy cũng được, là đánh giá khẳng định; phía sau là nửa câu khác (〜しか…ない) → tuy nói vậy nhưng thực tế mức độ không cao. Xem sau 「と言っても」 là 「いい」 hay là phần giải thích bổ sung."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Đều diễn tả nhận định “có thể nói là…”",
@@ -12571,24 +12517,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều có thể dùng để giải thích hoặc hỏi “nghĩa là gì”",
+          "note": "Cả hai đều dùng để xác nhận “ý bạn là …?”",
           "items": [
             {
               "id": "to-iu-koto-nominalizer",
-              "diff": "どういう意味 hỏi “ý nghĩa” của từ ngữ, lời nói; どういうこと hỏi “rốt cuộc là chuyện gì”, ý đồ của đối phương hoặc tình hình.",
+              "title": "〜ということ (xác nhận ý đối phương)",
+              "diff": "という意味ですか bám vào một câu nói nào đó để hỏi cho rõ nghĩa; ということですか tóm nội dung đối phương nói thành kết luận để xác nhận, dùng phổ biến hơn.",
               "this": [
                 {
-                  "tag": "Hỏi ý nghĩa",
-                  "tr": "Chữ Hán này có nghĩa là gì?"
+                  "tag": "Hỏi kỹ nghĩa câu nói đó",
+                  "tr": "Điều anh vừa nói có nghĩa là tháng sau anh sẽ nghỉ việc ở công ty à?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Hỏi chuyện gì",
-                  "tr": "Bảo tôi từ mai không cần đến nữa, thế là sao?"
+                  "tag": "Tóm thành kết luận để xác nhận",
+                  "tr": "Tức là tháng sau anh sẽ nghỉ việc ở công ty phải không?"
                 }
               ],
-              "explain": "Xem đang hỏi về cái gì: nghĩa của một từ, một chữ Hán, một biển báo → どういう意味; lời đối phương khiến mình bất ngờ, muốn biết tình hình hay ý đồ phía sau → どういうこと, thường mang sự ngạc nhiên “rốt cuộc là sao”."
+              "explain": "Cả hai câu đều xác nhận ý của đối phương. Bám vào một câu cụ thể của đối phương, hỏi rốt cuộc nó nghĩa là gì (「今の話は」「その言葉は」) → という意味ですか, đôi khi mang giọng gặng hỏi, không mấy tin; tóm nội dung đối phương nói thành một kết luận để xác nhận, phía trước thường có 「つまり」「じゃあ」 → ということですか, trung tính hơn, dùng hằng ngày nhiều hơn."
             }
           ]
         }
@@ -12599,45 +12546,27 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều có thể biến một câu thành danh từ, diễn tả “việc…”",
+          "note": "Cả hai đều có nghĩa “việc …”",
           "items": [
             {
               "id": "koto-nominalizer",
-              "diff": "こと thường biến chính hành động thành danh từ (撮ること); ということ biến cả một thông tin hoàn chỉnh thành danh từ, sau câu kết thúc bằng 「だ」 bắt buộc phải dùng nó.",
+              "diff": "ということ nhấn mạnh “bản thân nội dung”, giọng hơi trang trọng; こと chỉ biến hành động thành danh từ, gọn hơn. Nội dung kết thúc bằng 「だ」 thì chỉ nối được với ということ.",
               "this": [
                 {
-                  "tag": "Một thông tin",
-                  "tr": "Tôi đã không biết anh ấy là sinh viên."
+                  "tag": "Nhấn mạnh nội dung · hơi trang trọng",
+                  "tr": "Việc kiên trì mỗi ngày một chút, chính điều đó mới quan trọng."
                 }
               ],
               "that": [
                 {
-                  "tag": "Bản thân hành động",
-                  "tr": "Sở thích của tôi là chụp ảnh."
+                  "tag": "Gọn · thông dụng",
+                  "tr": "Kiên trì mỗi ngày một chút là điều quan trọng."
                 }
               ],
               "wrong": {
-                "why": "Sau 「だ」 không thể gắn trực tiếp こと"
+                "why": "Không thể nối こと ngay sau 「だ」, phải nói 「学生だということ」 (văn viết cũng nói 「学生であること」)"
               },
-              "explain": "Nhìn phía trước: một hành động (撮る、泳ぐ) → こと; một tin tức, sự thật, đặc biệt là câu kết thúc bằng 「だ」 (学生だ、休みだ) → ということ. Không nói được 「学生だこと」, phải nói 「学生だということ」 (văn viết cũng nói 「学生であること」)."
-            },
-            {
-              "id": "no-possessive",
-              "title": "〜の（đối tượng cảm nhận）",
-              "diff": "の dùng cho hành động tai nghe mắt thấy; ということ dùng cho thông tin, tin tức nghe được.",
-              "this": [
-                {
-                  "tag": "Tin tức nghe được",
-                  "tr": "Tôi nghe bạn nói anh Tanaka là ca sĩ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tai nghe thấy",
-                  "tr": "Ở phòng bên cạnh, tôi nghe thấy anh Tanaka đang hát."
-                }
-              ],
-              "explain": "Cùng là 「〜を聞いた」: thứ nghe được là âm thanh, hành động đang diễn ra trước mắt (隣の部屋で…歌うのを) → の; thứ nghe được là một thông tin (友達から…歌手だということを) → ということ. Dùng nhầm thì nghĩa sẽ khác: 「歌うということを聞いた」 là “nghe nói anh ấy sẽ hát”."
+              "explain": "Cả hai câu đều đúng, nghĩa như nhau. ということ đưa nội dung phía trước ra như một thông tin, một đạo lý, nhấn mạnh bản thân nội dung, giọng hơi trang trọng; こと chỉ biến hành động thành danh từ, gọn, dùng hằng ngày nhiều hơn. Xem thêm phía trước kết thúc thế nào: danh từ, tính từ đuôi な kết thúc bằng 「だ」 thì chỉ nối được với ということ — 「学生だということ」 được, 「学生だこと」 thì không."
             }
           ]
         }
@@ -12669,20 +12598,21 @@
             },
             {
               "id": "to-sarete-iru",
-              "diff": "と言われている là “ai cũng nói vậy”; とされている là “được (chính thức) coi là”, với luật pháp, quy định, định nghĩa thì chỉ dùng được cách này.",
+              "title": "〜とされている (được cho là)",
+              "diff": "と言われている là “ai cũng nói vậy”, văn nói cũng hay dùng; とされている là “được công nhận là”, trang trọng hơn, giống kết luận đã định hơn.",
               "this": [
                 {
-                  "tag": "Truyền miệng",
-                  "tr": "Từ xưa người ta vẫn nói gừng tốt cho bệnh cảm."
+                  "tag": "Cách nói chung · văn nói cũng dùng",
+                  "tr": "Người ta nói suối nước nóng này chữa được chứng mỏi vai."
                 }
               ],
               "that": [
                 {
-                  "tag": "Quy định · được coi là",
-                  "tr": "Theo luật, người từ 18 tuổi trở lên được coi là người trưởng thành."
+                  "tag": "Văn viết · như kết luận",
+                  "tr": "Suối nước nóng này được cho là có hiệu quả với chứng mỏi vai."
                 }
               ],
-              "explain": "Xem cách nói đó từ đâu ra: mọi người truyền miệng, tục ngữ (昔から) → と言われている; những gì được chính thức quy định như luật pháp, quy tắc, định nghĩa (法律では、規則では) → chỉ dùng とされている. Với cách nói thông thường thì cả hai đều dùng được, lúc đó chỉ là khuynh hướng: とされている mang tính văn viết hơn, giống kết luận hơn, hay gặp trong tin tức, sách giáo khoa."
+              "explain": "Hai câu nghĩa như nhau, đều thuật lại một cách nói được thừa nhận rộng rãi, chỉ khác về văn phong: と言われている là “ai cũng nói vậy”, trò chuyện hay viết văn đều dùng được; とされている là “được công nhận là”, trang trọng hơn, giống kết luận chính thức, thường gặp trong tin tức, sách giáo khoa, giới thiệu điểm du lịch; nói trong trò chuyện hằng ngày sẽ nghe cứng nhắc."
             },
             {
               "id": "sou-da-appearance",
@@ -12732,37 +12662,6 @@
               "explain": "Chỉ khác あ và い: てある không nói ai viết, câu bắt đầu từ chỗ có chữ (黒板に); ている phía trước có người viết (先生が), nói hành động đang diễn ra. Khi đọc thông báo, sách hướng dẫn mà nói “trên đó có ghi”, đều dùng 書いてある."
             }
           ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Đều dùng 「と」 để dẫn nội dung",
-          "items": [
-            {
-              "id": "to-iu-quote",
-              "diff": "Cùng dẫn bằng 「と」: と言う là lời nói ra miệng, cách gọi tên một vật; と書いてある là chữ được viết; と読む chỉ nói chữ đó đọc thế nào.",
-              "this": [
-                {
-                  "tag": "と書いてある · chữ được viết",
-                  "tr": "Trên bảng có ghi “Ngày mai được nghỉ”."
-                },
-                {
-                  "tag": "と読む · cách đọc chữ Hán",
-                  "tr": "Chữ “桜” đọc là “さくら”."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Lời nói ra miệng",
-                  "tr": "Thầy nói “Ngày mai được nghỉ”."
-                },
-                {
-                  "tag": "Cách gọi tên",
-                  "tr": "Loài hoa này tiếng Nhật gọi là “さくら”."
-                }
-              ],
-              "explain": "Nhìn động từ sau 「と」: 言う là lời người ta nói ra (先生が〜と言った) hoặc cách gọi một vật (日本語で〜と言う); 書いてある là chữ viết trên giấy, trên bảng, phía trước thường có 「〜に」 chỉ chỗ viết; 読む chỉ dùng để nói chữ Hán, từ ngữ đọc thế nào, khi hỏi thì nói 「何と読みますか」."
-            }
-          ]
         }
       ]
     },
@@ -12792,20 +12691,21 @@
             },
             {
               "id": "to-sarete-iru",
-              "diff": "と考えられている là quan điểm rút ra từ suy luận; とされている mang tính văn viết hơn, giống kết luận hơn, còn có thể diễn tả “được quy định là” theo luật pháp, quy tắc.",
+              "title": "〜とされている (được cho là)",
+              "diff": "と考えられている nhấn mạnh đó là nhận định suy ra từ bằng chứng; とされている trang trọng hơn, giống kết luận được giới học thuật, cơ quan chính thức công nhận.",
               "this": [
                 {
-                  "tag": "Quan điểm từ suy luận",
-                  "tr": "Dựa trên nghiên cứu hóa thạch, người ta cho rằng loài chim là hậu duệ của khủng long."
+                  "tag": "Nhận định suy ra",
+                  "tr": "Người ta cho rằng bức bích họa này được vẽ cách đây hai nghìn năm."
                 }
               ],
               "that": [
                 {
-                  "tag": "Quy định · được coi là",
-                  "tr": "Theo luật, người từ 18 tuổi trở lên được coi là người trưởng thành."
+                  "tag": "Kết luận được công nhận · trang trọng hơn",
+                  "tr": "Bức bích họa này được xác định là vẽ cách đây hai nghìn năm."
                 }
               ],
-              "explain": "Nhìn căn cứ: quan điểm suy ra từ hóa thạch, số liệu, nghiên cứu → と考えられている; điều được luật pháp, quy tắc, cơ quan chính thức quy định → chỉ dùng とされている (ở đây không phải “phỏng đoán” mà là “quy định”). とされている cũng có thể diễn tả cách nói được công nhận chung, nhưng mang tính văn viết hơn, giống kết luận hơn so với と考えられている."
+              "explain": "Hai câu nghĩa như nhau, chỉ khác giọng điệu: と考えられている nhấn mạnh đây là nhận định suy ra từ bằng chứng, còn để ngỏ, thường gặp trong giải thích khoa học; とされている trang trọng hơn, giống điều giới học thuật, cơ quan chính thức đã công nhận, thường gặp khi giới thiệu lịch sử, di vật văn hóa, truyền thống."
             }
           ]
         }
@@ -12849,60 +12749,43 @@
           "items": [
             {
               "id": "you-to-omou",
-              "diff": "Thể thường＋と思っている là quan điểm, dự đoán; thể ý chí＋と思っている là dự định của bản thân.",
+              "diff": "Thể thường＋と思っている là nhận định, dự đoán về sự việc; thể ý chí＋と思っている là dự định tự mình sẽ làm.",
               "this": [
                 {
-                  "tag": "Thể thường · quan điểm",
-                  "tr": "Mẹ tôi nghĩ sau này tôi sẽ trở thành bác sĩ."
+                  "tag": "Thể thường · nhận định",
+                  "tr": "Anh ấy tin rằng mình sẽ trở thành bác sĩ."
                 }
               ],
               "that": [
                 {
                   "tag": "Thể ý chí · dự định",
-                  "tr": "Tôi định trở thành bác sĩ."
+                  "tr": "Anh ấy định trở thành bác sĩ."
                 }
               ],
-              "explain": "Chỉ khác 「なる」 và 「なろう」: thể thường (なる) → quan điểm, dự đoán về sự việc; thể ý chí (なろう) → dự định mình muốn làm. Khi đọc chỉ khác một âm mà nghĩa hoàn toàn khác. Thêm 「ている」 thì cả hai đều cho thấy suy nghĩ này đã kéo dài một thời gian."
+              "explain": "Hai câu chỉ khác 「なる」 và 「なろう」, đọc nhanh chỉ khác một âm 「う」: thể thường (なる) → anh ấy cho rằng sự việc sẽ như vậy, là nhận định, dự đoán; thể ý chí (なろう) → anh ấy định tự mình làm, là dự định. Thêm 「ている」, cả hai đều cho thấy suy nghĩ này đã kéo dài một thời gian, và đều dùng được để nói về người khác."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều dùng để nói ra suy nghĩ trong lòng; と思っている và がる còn có thể miêu tả nội tâm của ngôi thứ ba",
+          "note": "Cả hai đều có nghĩa “nghĩ rằng …”",
           "items": [
             {
               "id": "to-omou",
-              "diff": "と思っている là suy nghĩ ấp ủ từ lâu, cũng nói được suy nghĩ của người khác; と思う là suy nghĩ của người nói ngay lúc này.",
+              "diff": "と思っている là suy nghĩ kéo dài một thời gian, cũng nói được suy nghĩ của người khác; と思う là nhận định của người nói ngay lúc này.",
               "this": [
                 {
-                  "tag": "Người khác · từ lâu",
-                  "tr": "Anh trai tôi từ lâu đã muốn đi du học."
+                  "tag": "Suy nghĩ kéo dài",
+                  "tr": "Từ lâu tôi vẫn nghĩ cách này là tốt nhất."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tôi · lúc này",
-                  "tr": "Tôi muốn đi du học."
+                  "tag": "Nhận định lúc này",
+                  "tr": "Rốt cuộc tôi vẫn thấy cách này là tốt nhất."
                 }
               ],
-              "explain": "Nhìn chủ ngữ: nói suy nghĩ của người thứ ba (兄、彼), hoặc suy nghĩ lâu nay của chính mình → と思っている; nói suy nghĩ hiện tại của mình → と思う. Chủ ngữ của と思う chỉ có thể là người nói, nói suy nghĩ của anh trai thì không dùng 「兄は〜と思います」 được."
-            },
-            {
-              "id": "garu-third-person",
-              "diff": "と思っている nói suy nghĩ, quan điểm trong lòng; たがっている nói mong muốn có thể thấy được qua lời nói, cử chỉ.",
-              "this": [
-                {
-                  "tag": "Dự định trong lòng",
-                  "tr": "Em gái tôi muốn sau này làm việc ở Nhật."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Mong muốn nhìn thấy được",
-                  "tr": "Em gái tôi từ nãy cứ đòi ăn bánh kem."
-                }
-              ],
-              "explain": "Xem làm sao biết được mong muốn đó: suy nghĩ đương sự đã nói ra, ấp ủ lâu trong lòng → と思っている; mong muốn trước mắt nhìn nét mặt, cử chỉ là thấy (さっきから cứ đòi) → たがっている. と思っている còn nói được quan điểm (彼は自分が正しいと思っている), còn がる chỉ gắn với từ chỉ cảm xúc như 「ほしい」「〜たい」."
+              "explain": "Xem suy nghĩ đó có từ trước hay không: có 「ずっと」「前から」, nói về suy nghĩ đã kéo dài một thời gian → と思っている; bày tỏ ngay tại chỗ, chẳng hạn trong cuộc thảo luận, nói ra nhận định lúc này → と思う. Ngoài ra, nói suy nghĩ của người khác phải dùng と思っている (兄は〜と思っている), không nói 「兄は〜と思う」."
             }
           ]
         }
