@@ -7,9 +7,13 @@ on:
   workflow_dispatch:
     inputs:
       e2e_only:
-        description: "只跑指定的端对端测试（例如 SettingsTests/testEveryLanguage，逗号分隔）；留空跑全部"
+        description: "只跑指定的端对端测试：类名 或 类名/方法名，逗号分隔（例如 DetailTests/testSenseRowsJumpWithinPage）。填了就跳过单元测试和截图；留空跑全部"
         required: false
         default: ""
+      e2e_repeat:
+        description: "每个选中的用例连跑几遍（1–10），用来确认不稳的用例修好了"
+        required: false
+        default: "1"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -26,8 +30,10 @@ jobs:
           python3 tools/validate_contrasts.py
           python3 tools/validate_compliance.py
           python3 tools/check_strings.py
+          python3 -m unittest discover -s tools/tests
 
   build-and-test:
+    if: ${{ !inputs.e2e_only }}
     runs-on: xcode-27
     timeout-minutes: 40
     steps:
@@ -96,7 +102,12 @@ jobs:
         id: plan
         env:
           E2E_ONLY: ${{ inputs.e2e_only }}
+          E2E_REPEAT: ${{ inputs.e2e_repeat || '1' }}
         run: |
+          case "$E2E_REPEAT" in
+            [1-9]|10) ;;
+            *) echo "::error::e2e_repeat 要填 1 到 10 的整数，现在是「$E2E_REPEAT」"; exit 1 ;;
+          esac
           if [ -n "$E2E_ONLY" ]; then
             M=$(python3 tools/e2e_shards.py --only "$E2E_ONLY")
           else
@@ -156,6 +167,8 @@ jobs:
           cat sim-prep.log
           test -f sim-ready
       - name: End-to-end tests
+        env:
+          E2E_REPEAT: ${{ inputs.e2e_repeat || '1' }}
         run: |
           set -o pipefail
           UDID="${{ steps.sim.outputs.udid }}"
@@ -172,11 +185,14 @@ jobs:
             -only-testing:JapaneseGrammarScannerUITests/SearchTests/testNoResults \
             CODE_SIGNING_ALLOWED=NO > warmup.log 2>&1 || true
           grep -E "Test Case .* (passed|failed)" warmup.log || true
+          ITERATIONS=()
+          if [ "$E2E_REPEAT" -gt 1 ]; then ITERATIONS=(-test-iterations "$E2E_REPEAT"); fi
           xcodebuild test-without-building \
             -project JapaneseGrammarScanner.xcodeproj \
             -scheme JapaneseGrammarScanner \
             -destination "id=$UDID" -derivedDataPath build \
             ${{ matrix.only }} \
+            "${ITERATIONS[@]}" \
             -resultBundlePath e2e.xcresult \
             CODE_SIGNING_ALLOWED=NO \
             | tee e2e.log | grep -E "error:|Test Case .* (passed|failed)|XCTAssert|Executed|\*\* (TEST|BUILD)" || true
@@ -214,11 +230,11 @@ jobs:
             exit 1
           fi
           cat e2e-logs/*/e2e.log > e2e-all.log
-          if [ -z "$E2E_ONLY" ]; then python3 tools/check_e2e_ran_all.py e2e-all.log; fi
+          python3 tools/check_e2e_ran_all.py e2e-all.log --only "$E2E_ONLY"
 
   screenshots:
     needs: e2e-shard
-    if: ${{ !cancelled() }}
+    if: ${{ !cancelled() && !inputs.e2e_only }}
     runs-on: xcode-27
     timeout-minutes: 40
     steps:

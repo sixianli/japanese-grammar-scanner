@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""核对端对端测试的日志：JapaneseGrammarScannerUITests 里的每个测试方法都出现在「通过」的记录里。
-
-测试进程中途崩溃重启时，xcodebuild 会直接跳过当时正在跑的用例，既不算通过也不算失败，最后仍可能显示成功。
-用法: python3 tools/check_e2e_ran_all.py e2e.log
-"""
+import argparse
 import glob
 import os
 import re
@@ -12,9 +8,9 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-def declared():
+def declared(root=ROOT):
     tests = set()
-    for f in glob.glob(os.path.join(ROOT, "JapaneseGrammarScannerUITests", "*.swift")):
+    for f in glob.glob(os.path.join(root, "JapaneseGrammarScannerUITests", "*.swift")):
         cls = None
         for line in open(f, encoding="utf-8"):
             m = re.match(r"\s*(?:final\s+)?class\s+(\w+)\s*:\s*(\w+)", line)
@@ -32,14 +28,46 @@ def passed(log):
     return {f"{a}.{b}" for a, b in pat.findall(open(log, encoding="utf-8", errors="replace").read())}
 
 
+def selection_names(only):
+    return [t.strip() for t in only.split(",") if t.strip()]
+
+
+def expected(only, root=ROOT):
+    tests = declared(root)
+    names = selection_names(only)
+    if not names:
+        return tests
+    want = set()
+    for name in names:
+        if "/" in name:
+            want.add(name.replace("/", "."))
+        else:
+            want |= {t for t in tests if t.split(".")[0] == name}
+    return want
+
+
+def missing(log, only="", root=ROOT):
+    return sorted(expected(only, root) - passed(log))
+
+
+def rerun_value(tests):
+    return ",".join(t.replace(".", "/") for t in tests)
+
+
 def main():
-    want, got = declared(), passed(sys.argv[1])
-    missing = sorted(want - got)
-    print(f"端对端测试：声明 {len(want)} 个，通过 {len(got & want)} 个")
-    if missing:
+    parser = argparse.ArgumentParser(description="核对 e2e 日志里，该跑的每个用例都有「通过」记录（被跳过的用例 xcodebuild 不算失败）")
+    parser.add_argument("log")
+    parser.add_argument("--only", default="", help="和 workflow 的 e2e_only 输入相同；留空表示核对全部用例")
+    args = parser.parse_args()
+    want = expected(args.only)
+    gone = missing(args.log, args.only)
+    print(f"端对端测试：应跑 {len(want)} 个，通过 {len(want) - len(gone)} 个")
+    if gone:
         print("没有通过记录（失败、被跳过或没跑到）:")
-        for t in missing:
+        for t in gone:
             print("  - " + t)
+        print("只重跑这些用例：手动触发 iOS Build & Test，e2e_only 填")
+        print("  " + rerun_value(gone))
         return 1
     return 0
 
