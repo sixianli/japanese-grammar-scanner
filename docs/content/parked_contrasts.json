@@ -6787,6 +6787,778 @@
           "explain": "မြန်မာလို နှစ်ခုစလုံး “မကြည့်ရသေး၊ မကြည့်ဖူး” ဟု ရောပြောမိတတ်သည်။ ရှေ့နောက်စကားကို ကြည့်ပါ - ဤကိစ္စကို နောက်မှ လုပ်ရန် စီစဉ်ထားလျှင် (来週見に行く) → まだ〜ていない။ စီစဉ်ချက်နှင့် မဆိုင်ဘဲ ယခုအထိ ဘဝ အတွေ့အကြုံကို ပြောလျှင် (一度も) → 〜たことがない။"
         }
       }
+    },
+    {
+      "point": "na-adj-modify",
+      "kind": "meaning",
+      "reason": "标准「意思差不多的」不收「中文译法一样但意思不同的」，且要求替换测试成立：な形容词＋な 和 名词＋の 只是中文都译成“的”，きれいな花／バラの花 不能互换，差别是词类接续；三组都不合格（意思不是明显不同，不能进「长得像的」），找不到同一个意思的对象。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "no-possessive",
+          "title": "名詞＋の＋名詞",
+          "diff": "な形容词＋な＋名词；名词＋の＋名词。",
+          "this": [
+            {
+              "ja": "~きれい|*な|花:はな|を|もらった|。",
+              "tag": "な形容词 → な",
+              "tr": "收到了漂亮的花。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~バラ|*の|花:はな|を|もらった|。",
+              "tag": "名词 → の",
+              "tr": "收到了玫瑰花。"
+            }
+          ],
+          "wrong": {
+            "ja": "きれいの花をもらった",
+            "why": "な形容词修饰名词要用「な」"
+          },
+          "explain": "先判断前面是什么词：能说「とても〜」的形容（きれい、静か、有名）→ な；人、地方、东西的名字（バラ、日本、私）→ の。中文都是“……的”，所以最容易写成 ✗きれいの花。"
+        },
+        "en": {
+          "id": "no-possessive",
+          "title": "名詞＋の＋名詞",
+          "diff": "na-adjective＋な＋noun; noun＋の＋noun.",
+          "this": [
+            {
+              "tag": "na-adjective → な",
+              "tr": "I received some beautiful flowers."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Noun → の",
+              "tr": "I received some roses."
+            }
+          ],
+          "wrong": {
+            "why": "A na-adjective modifying a noun needs 「な」"
+          },
+          "explain": "First decide what kind of word comes before: a describing word that can take 「とても〜」 (きれい、静か、有名) → な; the name of a person, place or thing (バラ、日本、私) → の. In English both simply go in front of the noun, so the classic mistake is ✗きれいの花."
+        },
+        "ko": {
+          "id": "no-possessive",
+          "title": "名詞＋の＋名詞",
+          "diff": "な형용사＋な＋명사, 명사＋の＋명사.",
+          "this": [
+            {
+              "tag": "な형용사 → な",
+              "tr": "예쁜 꽃을 받았다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "명사 → の",
+              "tr": "장미꽃을 받았다."
+            }
+          ],
+          "wrong": {
+            "why": "な형용사가 명사를 꾸밀 때는 「な」를 쓴다"
+          },
+          "explain": "먼저 앞이 어떤 말인지 판단하자. 「とても〜」라고 할 수 있는 형용(きれい、静か、有名) → な. 사람, 장소, 물건의 이름(バラ、日本、私) → の. ‘~의’에 끌려 ✗きれいの花로 쓰기 쉬우니 주의하자."
+        },
+        "es": {
+          "id": "no-possessive",
+          "title": "名詞＋の＋名詞",
+          "diff": "Adjetivo-な＋な＋sustantivo; sustantivo＋の＋sustantivo.",
+          "this": [
+            {
+              "tag": "Adjetivo-な → な",
+              "tr": "Me regalaron unas flores bonitas."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Sustantivo → の",
+              "tr": "Me regalaron unas rosas."
+            }
+          ],
+          "wrong": {
+            "why": "Un adjetivo-な necesita 「な」 para modificar un sustantivo"
+          },
+          "explain": "Primero mira qué palabra va delante: si es una cualidad que admite 「とても〜」 (きれい, 静か, 有名) → な; si es el nombre de una persona, un lugar o una cosa (バラ, 日本, 私) → の. En español el sustantivo lleva «de» (flores de rosa) y el adjetivo no lleva nada; en japonés el sustantivo lleva の, pero el adjetivo-な necesita な, así que no escribas ✗きれいの花."
+        },
+        "vi": {
+          "id": "no-possessive",
+          "title": "名詞＋の＋名詞",
+          "diff": "Tính từ đuôi な＋な＋danh từ; danh từ＋の＋danh từ.",
+          "this": [
+            {
+              "tag": "Tính từ đuôi な → な",
+              "tr": "Tôi được tặng những bông hoa đẹp."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Danh từ → の",
+              "tr": "Tôi được tặng hoa hồng."
+            }
+          ],
+          "wrong": {
+            "why": "Tính từ đuôi な bổ nghĩa cho danh từ phải dùng 「な」"
+          },
+          "explain": "Trước hết xác định từ phía trước là gì: từ miêu tả nói được 「とても〜」 (きれい、静か、有名) → な; tên của người, nơi chốn, đồ vật (バラ、日本、私) → の. Tiếng Việt chỉ cần đặt hai từ cạnh nhau (“hoa đẹp”, “hoa hồng”), nên rất dễ viết thành ✗きれいの花."
+        },
+        "my": {
+          "id": "no-possessive",
+          "title": "名詞＋の＋名詞",
+          "diff": "な-နာမဝိသေသန＋な＋နာမ်။ နာမ်＋の＋နာမ်။",
+          "this": [
+            {
+              "tag": "な-နာမဝိသေသန → な",
+              "tr": "လှလှပပ ပန်းလေးတွေ ရခဲ့တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "နာမ် → の",
+              "tr": "နှင်းဆီပန်းတွေ ရခဲ့တယ်။"
+            }
+          ],
+          "wrong": {
+            "why": "な-နာမဝိသေသနက နာမ်ကို အထူးပြုလျှင် 「な」 ကို သုံးရမည်"
+          },
+          "explain": "ရှေ့က ဘာစကားလုံးလဲ အရင် ဆုံးဖြတ်ပါ - 「とても〜」 ဟု ပြောနိုင်သော ဖော်ပြချက် (きれい、静か、有名) → な။ လူ၊ နေရာ၊ ပစ္စည်း၏ အမည် (バラ、日本、私) → の။ နှစ်ခုစလုံး “...၏／...တဲ့” ဟု ဘာသာပြန်နိုင်သဖြင့် ✗きれいの花 ဟု အမှားဆုံး ဖြစ်တတ်သည်။"
+        }
+      }
+    },
+    {
+      "point": "na-adj-modify",
+      "kind": "meaning",
+      "reason": "标准「意思差不多的」第 1、4 条：要能用一个词说出共同意思，差别不能只是「A 是甲；B 是乙」。这里差别只是な形容词加な、い形容词直接接名词的接续规则，「放在名词前修饰」是语法功能大类，不是意思；也不是「长得像的」。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "noun-modifying-clause",
+          "title": "い形容词＋名詞",
+          "diff": "な形容词要加「な」；い形容词直接接名词，什么都不加。",
+          "this": [
+            {
+              "ja": "~有名:ゆうめい|*な|レストランに|行:い|った|。",
+              "tag": "な形容词 → 加な",
+              "tr": "去了一家有名的餐厅。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "*おいしい|レストランに|行:い|った|。",
+              "tag": "い形容词 → 直接接",
+              "tr": "去了一家好吃的餐厅。"
+            }
+          ],
+          "wrong": {
+            "ja": "おいしいなレストランに行った",
+            "why": "い形容词直接接名词，不加な"
+          },
+          "explain": "看形容词词尾：以「い」结尾的い形容词（おいしい、高い）直接接名词；な形容词（有名、静か）要加「な」。注意 きれい 虽然以「い」结尾，却是な形容词：きれいな花。"
+        },
+        "en": {
+          "id": "noun-modifying-clause",
+          "title": "い形容詞＋名詞",
+          "diff": "な-adjectives need 「な」; い-adjectives attach directly to the noun with nothing added.",
+          "this": [
+            {
+              "tag": "な-adjective → add な",
+              "tr": "I went to a famous restaurant."
+            }
+          ],
+          "that": [
+            {
+              "tag": "い-adjective → attach directly",
+              "tr": "I went to a delicious restaurant."
+            }
+          ],
+          "wrong": {
+            "why": "い-adjectives attach directly to nouns, without な"
+          },
+          "explain": "Look at how the adjective ends: い-adjectives ending in 「い」 (おいしい, 高い) attach directly to the noun; な-adjectives (有名, 静か) need 「な」. Note that きれい ends in 「い」 but is a な-adjective: きれいな花."
+        },
+        "ko": {
+          "id": "noun-modifying-clause",
+          "title": "い형용사＋名詞",
+          "diff": "な형용사는 「な」를 붙이고, い형용사는 아무것도 붙이지 않고 바로 명사에 이어진다.",
+          "this": [
+            {
+              "tag": "な형용사 → な를 붙임",
+              "tr": "유명한 레스토랑에 갔다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "い형용사 → 바로 이어짐",
+              "tr": "맛있는 레스토랑에 갔다."
+            }
+          ],
+          "wrong": {
+            "why": "い형용사는 명사에 바로 이어지며 な를 붙이지 않는다"
+          },
+          "explain": "형용사의 끝을 보자. 「い」로 끝나는 い형용사(おいしい、高い) → 바로 명사에 이어진다. な형용사(有名、静か) → 「な」를 붙인다. きれい는 「い」로 끝나지만 な형용사라는 점에 주의하자: きれいな花."
+        },
+        "es": {
+          "id": "noun-modifying-clause",
+          "title": "adjetivo い + 名詞",
+          "diff": "El adjetivo な necesita 「な」; el adjetivo い se une directamente al sustantivo, sin añadir nada.",
+          "this": [
+            {
+              "tag": "Adjetivo な → añade な",
+              "tr": "Fui a un restaurante famoso."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Adjetivo い → directo",
+              "tr": "Fui a un restaurante donde se come muy bien."
+            }
+          ],
+          "wrong": {
+            "why": "El adjetivo い va directamente con el sustantivo, sin な"
+          },
+          "explain": "Mira el final del adjetivo: los adjetivos い, que terminan en 「い」 (おいしい, 高い), van directamente con el sustantivo; los adjetivos な (有名, 静か) necesitan 「な」. Ojo: aunque きれい termina en 「い」, es un adjetivo な: きれいな花."
+        },
+        "vi": {
+          "id": "noun-modifying-clause",
+          "title": "い形容詞＋名詞",
+          "diff": "Tính từ đuôi な phải thêm 「な」; tính từ đuôi い nối thẳng với danh từ, không thêm gì.",
+          "this": [
+            {
+              "tag": "Tính từ đuôi な → thêm な",
+              "tr": "Tôi đã đến một nhà hàng nổi tiếng."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Tính từ đuôi い → nối thẳng",
+              "tr": "Tôi đã đến một nhà hàng ngon."
+            }
+          ],
+          "wrong": {
+            "why": "Tính từ đuôi い nối thẳng với danh từ, không thêm な"
+          },
+          "explain": "Xem đuôi tính từ: tính từ đuôi い kết thúc bằng 「い」 (おいしい、高い) nối thẳng với danh từ; tính từ đuôi な (有名、静か) phải thêm 「な」. Chú ý きれい tuy kết thúc bằng 「い」 nhưng là tính từ đuôi な: きれいな花."
+        },
+        "my": {
+          "id": "noun-modifying-clause",
+          "title": "い-နာမဝိသေသန＋名詞",
+          "diff": "な-နာမဝိသေသနတွင် 「な」 ထည့်ရသည်။ い-နာမဝိသေသနကို နာမ်နှင့် တိုက်ရိုက်ဆက်ပြီး ဘာမှ မထည့်ပါ။",
+          "this": [
+            {
+              "tag": "な-နာမဝိသေသန → な ထည့်",
+              "tr": "နာမည်ကြီးတဲ့ စားသောက်ဆိုင်ကို သွားခဲ့တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "い-နာမဝိသေသန → တိုက်ရိုက်ဆက်",
+              "tr": "စားလို့ကောင်းတဲ့ စားသောက်ဆိုင်ကို သွားခဲ့တယ်။"
+            }
+          ],
+          "wrong": {
+            "why": "い-နာမဝိသေသနကို နာမ်နှင့် တိုက်ရိုက်ဆက်ရပြီး な မထည့်ရ"
+          },
+          "explain": "နာမဝိသေသန၏ အဆုံးသတ်ကို ကြည့်ပါ - 「い」ဖြင့် ဆုံးသော い-နာမဝိသေသန (おいしい、高い) ကို နာမ်နှင့် တိုက်ရိုက်ဆက်သည်။ な-နာမဝိသေသန (有名、静か) တွင် 「な」 ထည့်ရသည်။ သတိပြုရန် - きれい သည် 「い」ဖြင့် ဆုံးသော်လည်း な-နာမဝိသေသန ဖြစ်သည် - きれいな花။"
+        }
+      }
+    },
+    {
+      "point": "naa-exclamation",
+      "kind": "look",
+      "reason": "标准「长得像的」不收「只是共用一个常见成分、学习者不会弄混的」：触るな／触らない 只共用一个「な」，前面的动词形也不同，不是只差一个小地方，也不是常见混淆项；没有找到形状只差一点的禁止「な」的对比对象（〜なあ 在本页内，不能和自己比）。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "nai-form",
+          "thisTitle": "〜な（禁止）",
+          "diff": "辞书形＋な 是禁止“别……”；ない形＋ない 是否定“不……”。",
+          "this": [
+            {
+              "ja": "それに|~触:さわ|~る|*な|！",
+              "tag": "禁止",
+              "tr": "别碰那个！"
+            }
+          ],
+          "that": [
+            {
+              "ja": "私:わたし|は|それに|~触:さわ|~ら|*ない|。",
+              "tag": "否定",
+              "tr": "我不碰那个。"
+            }
+          ],
+          "explain": "看「な」前面动词的形：辞书形（触る）＋な → 命令对方“别做”，动词本身是肯定形；ない形（触ら）＋ない → 陈述“不做”。看到「〜るな」「〜くな」不要当成否定。"
+        },
+        "en": {
+          "id": "nai-form",
+          "thisTitle": "〜な (prohibition)",
+          "diff": "dictionary form＋な is a prohibition, “don't…!”; nai-form＋ない is a negative, “not…”.",
+          "this": [
+            {
+              "tag": "Prohibition",
+              "tr": "Don't touch that!"
+            }
+          ],
+          "that": [
+            {
+              "tag": "Negative",
+              "tr": "I won't touch that."
+            }
+          ],
+          "explain": "Look at the verb form before 「な」: dictionary form (触る)＋な → ordering the other person “don't do it”, with the verb itself in the affirmative; nai-form stem (触ら)＋ない → stating “I don't do it”. Don't mistake 「〜るな」 or 「〜くな」 for a plain negative."
+        },
+        "ko": {
+          "id": "nai-form",
+          "thisTitle": "〜な（금지）",
+          "diff": "사전형＋な는 금지 ‘~하지 마’, ない형＋ない는 부정 ‘~하지 않는다’.",
+          "this": [
+            {
+              "tag": "금지",
+              "tr": "그거 만지지 마!"
+            }
+          ],
+          "that": [
+            {
+              "tag": "부정",
+              "tr": "나는 그것을 만지지 않는다."
+            }
+          ],
+          "explain": "「な」 앞 동사의 형태를 보자. 사전형(触る)＋な → 상대에게 ‘하지 마’라고 명령하며, 동사 자체는 긍정형이다. ない형(触ら)＋ない → ‘하지 않는다’고 진술한다. 「〜るな」「〜くな」를 보고 부정으로 착각하지 말자."
+        },
+        "es": {
+          "id": "nai-form",
+          "thisTitle": "〜な（prohibición）",
+          "diff": "Forma de diccionario＋な es una prohibición: «¡no…!»; forma ない＋ない es una negación: «no…».",
+          "this": [
+            {
+              "tag": "Prohibición",
+              "tr": "¡No toques eso!"
+            }
+          ],
+          "that": [
+            {
+              "tag": "Negación",
+              "tr": "Yo no toco eso."
+            }
+          ],
+          "explain": "Mira la forma del verbo delante de 「な」: forma de diccionario (触る)＋な → ordena al otro «no lo hagas», y el verbo en sí está en forma afirmativa; forma ない (触ら)＋ない → afirma que «no se hace». No confundas 「〜るな」 o 「〜くな」 con una negación."
+        },
+        "vi": {
+          "id": "nai-form",
+          "thisTitle": "〜な（cấm đoán）",
+          "diff": "Thể từ điển＋な là cấm đoán “đừng…”; thể ない＋ない là phủ định “không…”.",
+          "this": [
+            {
+              "tag": "Cấm đoán",
+              "tr": "Đừng chạm vào cái đó!"
+            }
+          ],
+          "that": [
+            {
+              "tag": "Phủ định",
+              "tr": "Tôi không chạm vào cái đó."
+            }
+          ],
+          "explain": "Xem dạng của động từ trước 「な」: thể từ điển (触る)＋な → ra lệnh cho người kia “đừng làm”, bản thân động từ ở dạng khẳng định; thể ない (触ら)＋ない → trần thuật “không làm”. Thấy 「〜るな」, 「〜くな」 thì đừng hiểu nhầm là phủ định."
+        },
+        "my": {
+          "id": "nai-form",
+          "thisTitle": "〜な（တားမြစ်ခြင်း）",
+          "diff": "အဘိဓာန်ပုံစံ＋な သည် “မ...နဲ့” တားမြစ်ချက် ဖြစ်သည်။ ない-ပုံစံ＋ない သည် “မ...ဘူး” ငြင်းဆိုချက် ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "တားမြစ်",
+              "tr": "အဲဒါကို မကိုင်နဲ့！"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ငြင်းဆို",
+              "tr": "ကျွန်တော် အဲဒါကို မကိုင်ဘူး။"
+            }
+          ],
+          "explain": "「な」 ၏ ရှေ့က ကြိယာ၏ ပုံစံကို ကြည့်ပါ - အဘိဓာန်ပုံစံ (触る)＋な → တစ်ဖက်သားကို “မလုပ်နဲ့” ဟု အမိန့်ပေးခြင်းဖြစ်ပြီး ကြိယာကိုယ်တိုင်က အဟုတ်ပုံစံ ဖြစ်သည်။ ない-ပုံစံ (触ら)＋ない → “မလုပ်ဘူး” ဟု ဖော်ပြခြင်း။ 「〜るな」「〜くな」 ကို တွေ့လျှင် ငြင်းဆိုချက်ဟု မထင်ပါနှင့်။"
+        }
+      }
+    },
+    {
+      "point": "nai-form",
+      "kind": "look",
+      "reason": "标准「长得像的」不收「只是共用一个常见成分、学习者不会弄混的」：触らない／触るな 只共用一个「な」，动词形也不同，不是只差一个小地方，也不是常见混淆项。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "naa-exclamation",
+          "title": "〜な（禁止）",
+          "diff": "ない形＋ない 是否定“不……”；辞书形＋な 是禁止“别……”。",
+          "this": [
+            {
+              "ja": "私:わたし|は|それに|~触:さわ|~ら|*ない|。",
+              "tag": "否定",
+              "tr": "我不碰那个。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "それに|~触:さわ|~る|*な|！",
+              "tag": "禁止",
+              "tr": "别碰那个！"
+            }
+          ],
+          "explain": "看「な」前面动词的形：ない形（触ら）＋ない → 陈述“不做”；辞书形（触る）＋な → 命令对方“别做”，动词本身是肯定形。"
+        },
+        "en": {
+          "id": "naa-exclamation",
+          "title": "〜な (prohibition)",
+          "diff": "ない-form＋ない is the negative “don't / doesn't”; dictionary form＋な is the prohibition “Don't…!”.",
+          "this": [
+            {
+              "tag": "Negative",
+              "tr": "I don't touch that."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Prohibition",
+              "tr": "Don't touch that!"
+            }
+          ],
+          "explain": "Look at the verb form before 「な」: ない-form (触ら) ＋ ない → states that you don't do it; dictionary form (触る) ＋ な → orders someone “Don't do it”, with the verb itself in the affirmative."
+        },
+        "ko": {
+          "id": "naa-exclamation",
+          "title": "〜な（금지）",
+          "diff": "ない형＋ない는 부정 ‘~하지 않는다’이고, 사전형＋な는 금지 ‘~하지 마’이다.",
+          "this": [
+            {
+              "tag": "부정",
+              "tr": "나는 그것을 만지지 않는다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "금지",
+              "tr": "그거 만지지 마!"
+            }
+          ],
+          "explain": "「な」 앞 동사의 형태를 보자. ない형(触ら)＋ない → ‘하지 않는다’는 서술. 사전형(触る)＋な → 상대에게 ‘하지 마’라는 명령이며, 동사 자체는 긍정형이다."
+        },
+        "es": {
+          "id": "naa-exclamation",
+          "title": "〜な（prohibición）",
+          "diff": "Forma ない + ない es negación, «no…»; forma de diccionario + な es prohibición, «¡no…!».",
+          "this": [
+            {
+              "tag": "Negación",
+              "tr": "Yo no toco eso."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Prohibición",
+              "tr": "¡No toques eso!"
+            }
+          ],
+          "explain": "Mira la forma del verbo delante de 「な」: forma ない (触ら) + ない → afirma que «no lo haces»; forma de diccionario (触る) + な → ordena al otro «¡no lo hagas!», y el verbo en sí está en afirmativo."
+        },
+        "vi": {
+          "id": "naa-exclamation",
+          "title": "〜な（cấm đoán）",
+          "diff": "Thể ない＋ない là phủ định “không…”; thể từ điển＋な là cấm đoán “đừng…”.",
+          "this": [
+            {
+              "tag": "Phủ định",
+              "tr": "Tôi không động vào cái đó."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Cấm đoán",
+              "tr": "Đừng động vào cái đó!"
+            }
+          ],
+          "explain": "Nhìn dạng của động từ đứng trước 「な」: thể ない (触ら)＋ない → trần thuật “không làm”; thể từ điển (触る)＋な → ra lệnh cho đối phương “đừng làm”, bản thân động từ ở dạng khẳng định."
+        },
+        "my": {
+          "id": "naa-exclamation",
+          "title": "〜な（တားမြစ်ခြင်း）",
+          "diff": "ない形＋ない သည် “မ...ဘူး” ဟု ငြင်းခြင်း ဖြစ်သည်။ 辞書形＋な သည် “မ...နဲ့” ဟု တားမြစ်ခြင်း ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "ငြင်းခြင်း",
+              "tr": "ကျွန်တော် အဲဒါကို မကိုင်ဘူး။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "တားမြစ်ခြင်း",
+              "tr": "အဲဒါကို မကိုင်နဲ့!"
+            }
+          ],
+          "explain": "「な」ရှေ့ရှိ ကြိယာပုံစံကို ကြည့်ပါ - ない形 (触ら)＋ない → “မလုပ်ဘူး” ဟု ဖော်ပြခြင်း။ 辞書形 (触る)＋な → တစ်ဖက်လူကို “မလုပ်နဲ့” ဟု အမိန့်ပေးခြင်း ဖြစ်ပြီး ကြိယာကိုယ်တိုင်မှာ အဟုတ်ပုံစံ ဖြစ်သည်။"
+        }
+      }
+    },
+    {
+      "point": "nai-form",
+      "kind": "meaning",
+      "reason": "标准「意思差不多的」第 3、4 条：替换测试要成立、差别不能只是「A 是甲；B 是乙」。食べない／おいしくない 谓语都不同，ない 接动词、くない 接い形容词是互补的接续规则，不能互换；也不是「长得像的」。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "i-adj-negative",
+          "diff": "动词的否定是 ない形＋ない；い形容词的否定要把「い」变成「くない」。",
+          "this": [
+            {
+              "ja": "この|料理:りょうり|は|~食:た|~べ|*ない|。",
+              "tag": "动词 → ない",
+              "tr": "我不吃这道菜。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "この|料理:りょうり|は|~おいし|*くない|。",
+              "tag": "い形容词 → くない",
+              "tr": "这道菜不好吃。"
+            }
+          ],
+          "wrong": {
+            "ja": "この料理はおいしいない",
+            "why": "い形容词要去掉「い」加「くない」"
+          },
+          "explain": "看前面是什么词：动词（食べる）→ 食べない；い形容词（おいしい）→ 去掉「い」加「くない」。「いい」的否定是「よくない」。"
+        },
+        "en": {
+          "id": "i-adj-negative",
+          "diff": "A verb's negative is nai-form + ない; an i-adjective's negative changes 「い」 to 「くない」.",
+          "this": [
+            {
+              "tag": "Verb → ない",
+              "tr": "I don't eat this dish."
+            }
+          ],
+          "that": [
+            {
+              "tag": "i-adjective → くない",
+              "tr": "This dish isn't tasty."
+            }
+          ],
+          "wrong": {
+            "why": "For an i-adjective, drop 「い」 and add 「くない」"
+          },
+          "explain": "Look at what kind of word comes before: a verb (食べる) → 食べない; an i-adjective (おいしい) → drop 「い」 and add 「くない」. The negative of 「いい」 is 「よくない」."
+        },
+        "ko": {
+          "id": "i-adj-negative",
+          "diff": "동사의 부정은 ない형＋ない이고, い형용사의 부정은 「い」를 「くない」로 바꾼다.",
+          "this": [
+            {
+              "tag": "동사 → ない",
+              "tr": "나는 이 요리는 안 먹는다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "い형용사 → くない",
+              "tr": "이 요리는 맛이 없다."
+            }
+          ],
+          "wrong": {
+            "why": "い형용사는 「い」를 빼고 「くない」를 붙인다"
+          },
+          "explain": "앞이 어떤 품사인지 보자. 동사(食べる) → 食べない, い형용사(おいしい) → 「い」를 빼고 「くない」. 「いい」의 부정은 「よくない」이다."
+        },
+        "es": {
+          "id": "i-adj-negative",
+          "diff": "La negación de un verbo es forma ない + ない; la de un adjetivo い se forma cambiando 「い」 por 「くない」.",
+          "this": [
+            {
+              "tag": "Verbo → ない",
+              "tr": "No me como este plato."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Adjetivo い → くない",
+              "tr": "Este plato no está rico."
+            }
+          ],
+          "wrong": {
+            "why": "Al adjetivo い se le quita 「い」 y se añade 「くない」"
+          },
+          "explain": "Fíjate en la palabra de delante: verbo (食べる) → 食べない; adjetivo い (おいしい) → se quita 「い」 y se añade 「くない」. La negación de 「いい」 es 「よくない」."
+        },
+        "vi": {
+          "id": "i-adj-negative",
+          "diff": "Phủ định của động từ là thể ない＋ない; phủ định của tính từ đuôi い phải đổi 「い」 thành 「くない」.",
+          "this": [
+            {
+              "tag": "Động từ → ない",
+              "tr": "Tôi không ăn món này."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Tính từ い → くない",
+              "tr": "Món này không ngon."
+            }
+          ],
+          "wrong": {
+            "why": "Tính từ đuôi い phải bỏ 「い」 rồi thêm 「くない」"
+          },
+          "explain": "Xem phía trước là từ gì: động từ (食べる) → 食べない; tính từ đuôi い (おいしい) → bỏ 「い」 thêm 「くない」. Phủ định của 「いい」 là 「よくない」."
+        },
+        "my": {
+          "id": "i-adj-negative",
+          "diff": "ကြိယာ၏ ငြင်းပုံစံမှာ ない形＋ない ဖြစ်သည်။ い နာမဝိသေသန၏ ငြင်းပုံစံမှာ「い」ကို「くない」ဟု ပြောင်းရသည်။",
+          "this": [
+            {
+              "tag": "ကြိယာ → ない",
+              "tr": "ဒီဟင်းကို ကျွန်တော် မစားဘူး။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "い နာမဝိသေသန → くない",
+              "tr": "ဒီဟင်း မစားကောင်းဘူး။"
+            }
+          ],
+          "wrong": {
+            "why": "い နာမဝိသေသနတွင်「い」ကို ဖြုတ်ပြီး「くない」ထည့်ရမည်"
+          },
+          "explain": "ရှေ့တွင် ဘာစကားလုံးလဲ ကြည့်ပါ - ကြိယာ (食べる) → 食べない။ い နာမဝိသေသန (おいしい) →「い」ကို ဖြုတ်ပြီး「くない」ထည့်သည်။「いい」၏ ငြင်းပုံစံမှာ「よくない」ဖြစ်သည်။"
+        }
+      }
+    },
+    {
+      "point": "nai-form",
+      "kind": "meaning",
+      "reason": "标准「意思差不多的」第 3、4 条：替换测试要成立、差别不能只是「A 是甲；B 是乙」。ない 接动词、じゃない 接名词／な形容词，同一句里不能互换，例句也不是最小对比；也不是「长得像的」。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ja-nai",
+          "diff": "动词的否定用「ない」；名词、な形容词的否定要用「じゃない」。",
+          "this": [
+            {
+              "ja": "田中:たなか|さんは|~学校:がっこう|~に|来:こ|*ない|。",
+              "tag": "动词 → ない",
+              "tr": "田中不来学校。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "田中:たなか|さんは|~学生:がくせい|*じゃない|。",
+              "tag": "名词 → じゃない",
+              "tr": "田中不是学生。"
+            }
+          ],
+          "wrong": {
+            "ja": "田中さんは学生ない",
+            "why": "名词的否定要用「じゃない」"
+          },
+          "explain": "看前面：动词（来る）→ 来ない；名词（学生）、な形容词（元気）→ じゃない（礼貌：ではありません）。中文“不”和“不是”的区别，在日语里就是 ない 和 じゃない。"
+        },
+        "en": {
+          "id": "ja-nai",
+          "diff": "Verbs are negated with 「ない」; nouns and na-adjectives are negated with 「じゃない」.",
+          "this": [
+            {
+              "tag": "Verb → ない",
+              "tr": "Tanaka doesn't come to school."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Noun → じゃない",
+              "tr": "Tanaka isn't a student."
+            }
+          ],
+          "wrong": {
+            "why": "A noun is negated with 「じゃない」"
+          },
+          "explain": "Look at what comes before: a verb (来る) → 来ない; a noun (学生) or na-adjective (元気) → じゃない (polite: ではありません). The difference between “doesn't (do)” and “isn't (a…)” in English is the difference between ない and じゃない in Japanese."
+        },
+        "ko": {
+          "id": "ja-nai",
+          "diff": "동사의 부정은 「ない」를 쓰고, 명사·な형용사의 부정은 「じゃない」를 쓴다.",
+          "this": [
+            {
+              "tag": "동사 → ない",
+              "tr": "다나카 씨는 학교에 오지 않는다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "명사 → じゃない",
+              "tr": "다나카 씨는 학생이 아니다."
+            }
+          ],
+          "wrong": {
+            "why": "명사의 부정은 「じゃない」를 쓴다"
+          },
+          "explain": "앞을 보자. 동사(来る) → 来ない, 명사(学生)·な형용사(元気) → じゃない(정중: ではありません). 한국어의 ‘~하지 않다’와 ‘~이 아니다’의 차이가 일본어에서는 ない와 じゃない의 차이다."
+        },
+        "es": {
+          "id": "ja-nai",
+          "diff": "Los verbos se niegan con 「ない」; los sustantivos y los adjetivos な se niegan con 「じゃない」.",
+          "this": [
+            {
+              "tag": "Verbo → ない",
+              "tr": "Tanaka no viene a la escuela."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Sustantivo → じゃない",
+              "tr": "Tanaka no es estudiante."
+            }
+          ],
+          "wrong": {
+            "why": "Los sustantivos se niegan con 「じゃない」"
+          },
+          "explain": "Fíjate en lo de delante: verbo (来る) → 来ない; sustantivo (学生) o adjetivo な (元気) → じゃない (cortés: ではありません). La diferencia entre «no + verbo» y «no ser…» es, en japonés, la diferencia entre ない y じゃない."
+        },
+        "vi": {
+          "id": "ja-nai",
+          "diff": "Phủ định của động từ dùng 「ない」; phủ định của danh từ và tính từ đuôi な phải dùng 「じゃない」.",
+          "this": [
+            {
+              "tag": "Động từ → ない",
+              "tr": "Anh Tanaka không đến trường."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Danh từ → じゃない",
+              "tr": "Anh Tanaka không phải là học sinh."
+            }
+          ],
+          "wrong": {
+            "why": "Phủ định của danh từ phải dùng 「じゃない」"
+          },
+          "explain": "Xem phía trước: động từ (来る) → 来ない; danh từ (学生), tính từ đuôi な (元気) → じゃない (lịch sự: ではありません). Sự khác nhau giữa “không” và “không phải là” trong tiếng Việt chính là ない và じゃない trong tiếng Nhật."
+        },
+        "my": {
+          "id": "ja-nai",
+          "diff": "ကြိယာကို ငြင်းလျှင်「ない」ကို သုံးသည်။ နာမ်နှင့် な နာမဝိသေသနကို ငြင်းလျှင်「じゃない」ကို သုံးရသည်။",
+          "this": [
+            {
+              "tag": "ကြိယာ → ない",
+              "tr": "တာနာကာ ကျောင်းကို မလာဘူး။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "နာမ် → じゃない",
+              "tr": "တာနာကာက ကျောင်းသား မဟုတ်ဘူး။"
+            }
+          ],
+          "wrong": {
+            "why": "နာမ်ကို ငြင်းလျှင်「じゃない」ကို သုံးရမည်"
+          },
+          "explain": "ရှေ့ကို ကြည့်ပါ - ကြိယာ (来る) → 来ない။ နာမ် (学生)၊ な နာမဝိသေသန (元気) → じゃない (ယဉ်ကျေးပုံစံ - ではありません)။ မြန်မာလို “မ...ဘူး” နှင့် “မဟုတ်ဘူး” ကွာခြားချက်သည် ဂျပန်လိုတွင် ない နှင့် じゃない ကွာခြားချက် ဖြစ်သည်။"
+        }
+      }
     }
   ]
 }

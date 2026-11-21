@@ -2481,26 +2481,10 @@
       "id": "mashou-ka-offer",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「う」 chỉ ý chí — ましょう＝ます＋う",
+          "kind": "meaning",
+          "sense": 1,
+          "note": "Đều là chủ động đề nghị giúp “để tôi… nhé?”",
           "items": [
-            {
-              "id": "mashou",
-              "diff": "ましょうか là “để tôi… nhé?” hoặc bàn bạc với người kia; bỏ 「か」 thành ましょう là thúc đẩy thẳng “cùng… nhé”.",
-              "this": [
-                {
-                  "tag": "Để tôi làm nhé?",
-                  "tr": "Để tôi dọn dẹp nhé?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Kêu gọi cùng làm",
-                  "tr": "Nào, mọi người cùng dọn dẹp nhé."
-                }
-              ],
-              "explain": "Xem chủ ngữ và 「か」: một mình tôi làm giúp người kia, hoặc muốn hỏi ý người kia → ましょうか; mọi người cùng làm, người nói đứng ra thúc đẩy → ましょう."
-            },
             {
               "id": "volitional-form",
               "title": "〜(よ)うか（thể thường）",
@@ -2514,33 +2498,53 @@
               "that": [
                 {
                   "tag": "Thể thường",
-                  "tr": "Mẹ ơi, để con xách hành lý đó cho nhé?"
+                  "tr": "Mẹ ơi, để con xách cái túi đó nhé?"
                 }
               ],
-              "explain": "Nghĩa như nhau, xem nói với ai: thầy cô, cấp trên, khách → 持ちましょうか; người nhà, bạn bè → 持とうか (động từ nhóm 1 đổi âm cột 「う」 sang cột 「お」＋う)."
+              "explain": "Nghĩa giống nhau, xem nói với ai: với thầy cô như 「先生」, cấp trên, khách → 持ちましょうか; với người nhà như 「お母さん」, bạn bè → 持とうか (động từ nhóm 1 đổi âm cuối hàng 「う」 sang hàng 「お」 rồi thêm う)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều dùng để đề nghị, mời",
+          "sense": 2,
+          "note": "Đều có nghĩa “chúng ta cùng… nhé?”",
           "items": [
             {
-              "id": "masenka",
-              "diff": "ましょうか có thể là “để tôi làm giúp”; ませんか là mời người kia (cùng) làm.",
+              "id": "mashou",
+              "title": "〜ましょう（rủ cùng làm）",
+              "diff": "Đều là rủ cùng làm; ましょうか dùng câu hỏi để xin sự đồng ý của người kia, tôn trọng người kia hơn; ましょう là kêu gọi thẳng, mặc định người kia sẽ đồng ý.",
               "this": [
                 {
-                  "tag": "Để tôi làm giúp",
-                  "tr": "Trông nặng quá nhỉ. Để tôi xách hành lý giúp nhé?"
+                  "tag": "Xin sự đồng ý",
+                  "tr": "Đến giờ rồi nhỉ. Mình về thôi chứ?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Mời người kia cùng làm",
-                  "tr": "Cùng đi bộ đến ga không?"
+                  "tag": "Kêu gọi thẳng",
+                  "tr": "Đến giờ rồi nhỉ. Mình về thôi."
                 }
               ],
-              "explain": "Xem ai làm hành động: tôi chủ động làm giúp người kia → ましょうか; người làm là người kia, hoặc người kia cùng với tôi → ませんか."
+              "explain": "Xem cuối câu có 「か」 không: có 「か」, lên giọng hỏi “…được không?”, để người kia quyết định → ましょうか; không có 「か」, người nói đứng ra kêu gọi, giọng tích cực hơn, mặc định người kia sẽ đồng ý → ましょう."
+            },
+            {
+              "id": "masenka",
+              "title": "〜ませんか（mời cùng làm）",
+              "diff": "Đều là lịch sự rủ cùng làm; ましょうか là “vậy mình cùng… nhé?”, còn ませんか là hỏi trước “bạn có muốn cùng… không?”, tôn trọng ý muốn của người kia hơn.",
+              "this": [
+                {
+                  "tag": "Đã bàn trước · chốt lại",
+                  "tr": "Bộ phim lần trước mình nói đến ấy, mình cùng đi xem nhé?"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Hỏi trước có muốn không",
+                  "tr": "Nếu được thì bạn có muốn cùng đi xem phim không?"
+                }
+              ],
+              "explain": "Xem người kia đã có ý cùng làm chưa: như 「この前話した」, hai bên đã bàn rồi, chỉ cần chốt → ましょうか, mang giọng tích cực “vậy làm thế nhé”; lần đầu mở lời, như 「よかったら」, hỏi trước người kia có muốn không → ませんか, để người kia hoàn toàn quyết định, khách sáo hơn."
             }
           ]
         }
@@ -2550,8 +2554,8 @@
       "id": "masu-forms",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ trợ động từ lịch sự 「ます」 — ませんか＝ません＋「か」 nghi vấn",
+          "kind": "look",
+          "note": "ません ↔ ませんか, chỉ khác một chữ 「か」 ở cuối câu",
           "items": [
             {
               "id": "masenka",
@@ -2593,7 +2597,7 @@
                   "tr": "Xin lỗi nhé, hôm nay tớ không uống rượu."
                 }
               ],
-              "explain": "Xem nói với ai: thầy cô, cấp trên, người lạ → 飲みません; bạn bè, người nhà → 飲まない. Chú ý cách chia: ません nối với thể ます (飲み), ない nối với thể ない (飲ま)."
+              "explain": "Xem nói với ai: với thầy cô như 「先生」, cấp trên, người lạ → 飲みません; nói với bạn bè, người nhà như 「ごめん」 → 飲まない. Chú ý cách chia: ません nối với thể ます (飲み), ない nối với thể ない (飲ま)."
             }
           ]
         }
@@ -2604,24 +2608,24 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ trợ từ 「も」 — “cũng”: 「何も〜ない」 chính là “cái gì cũng không…”",
+          "note": "Đều bắt nguồn từ trợ từ 「も」 — nghĩa gốc là “tính cả cái này vào”",
           "items": [
             {
               "id": "question-word-mo-nai",
-              "diff": "Danh từ＋も là “… cũng”; từ để hỏi＋も＋phủ định là “không gì cả, không ai cả”.",
+              "diff": "Danh từ＋も là “… cũng”; từ để hỏi＋も＋phủ định là “không… gì cả, không ai cả”.",
               "this": [
                 {
-                  "tag": "Cũng · thêm thứ cùng loại",
-                  "tr": "Tôi không uống cà phê. Nước hoa quả cũng không uống."
+                  "tag": "Cũng · thêm cái cùng loại",
+                  "tr": "Tôi không uống cà phê. Nước ép cũng không uống."
                 }
               ],
               "that": [
                 {
-                  "tag": "Không gì cả · phủ định toàn bộ",
-                  "tr": "Từ sáng đến giờ tôi chưa uống gì cả."
+                  "tag": "Không gì cả · phủ định hoàn toàn",
+                  "tr": "Từ sáng đến giờ chưa uống gì cả."
                 }
               ],
-              "explain": "Xem phía trước 「も」: thứ cụ thể (ジュース) → “cũng”, phía trước thường đã nói đến một thứ cùng loại (コーヒーは…); từ để hỏi (何、誰、どこ)＋も, phía sau là phủ định → “không gì cả／không ai cả”, là phủ định toàn bộ, không phải “cũng”."
+              "explain": "Nghĩa gốc của 「も」 là “tính cả cái này vào”: đứng sau một thứ cụ thể (ジュース), khi trước đó đã nói một thứ cùng loại (コーヒーは…), thì là thêm một thứ nữa → “cũng”; đứng sau từ để hỏi 「何」, là tính cả “bất cứ thứ nào” vào, phía sau đi với phủ định → không thứ nào cả → “không… gì cả”, là phủ định hoàn toàn. Vì vậy hãy xem trước 「も」 là thứ cụ thể hay từ để hỏi."
             }
           ]
         }
@@ -2632,32 +2636,40 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ danh từ hình thức 「の」 — đưa một sự việc ra như một “tình huống”",
+          "note": "Đều bắt nguồn từ danh từ hình thức 「の」 — nghĩa gốc là đưa một việc ra như một “tình hình”",
           "items": [
             {
               "id": "n-desu-ga-preface",
-              "diff": "んです là giải thích tình huống, câu kết thúc ở đó; んですが là nói tình huống trước, sau đó mới đưa ra yêu cầu hoặc câu hỏi.",
+              "diff": "んです đưa tình hình ra rồi kết thúc, là giải thích lý do; んですが đưa tình hình ra rồi dừng lại bằng 「が」, dẫn vào lời nhờ hoặc câu hỏi phía sau.",
               "this": [
                 {
                   "tag": "Giải thích lý do",
-                  "tr": "Xin lỗi vì đến muộn. Tàu điện bị dừng ạ."
+                  "tr": "Xin lỗi tôi đến muộn. Tàu điện bị dừng ạ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Rào đón → hỏi",
-                  "tr": "Xin lỗi, tôi bị lạc đường, cho hỏi nhà ga ở đâu ạ?"
+                  "tag": "Dẫn dắt → hỏi",
+                  "tr": "Xin lỗi, tôi bị lạc đường, ga ở đâu ạ?"
                 }
               ],
-              "explain": "Xem phía sau còn nói gì không: câu kết thúc ở 「んです。」, là đang giải thích lý do → んです; sau 「んですが、」 tiếp theo là yêu cầu, câu hỏi (駅はどこですか、〜てもいいですか) → là lời rào đón. Thể văn viết のです, thể thường んだ cũng vậy."
-            },
+              "explain": "Nghĩa gốc của 「の（ん）」 là đưa một việc ra như một “tình hình”: 「んです。」 đưa tình hình ra rồi kết thúc → giải thích lý do (遅れてすみません。電車が止まったんです); 「んですが、」 đưa tình hình ra rồi dừng lại ở 「が」, chưa kết luận, để dành lời cho phía sau → dẫn dắt, rồi đưa ra lời nhờ hoặc câu hỏi (駅はどこですか). Vì vậy hãy xem sau 「ん」 là 「です。」 kết thúc hay 「ですが、」 nói tiếp. のです trong văn viết, んだ ở thể thường cũng vậy."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Đều là thấy tình hình rồi hỏi “sao thế?”",
+          "items": [
             {
               "id": "casual-question-no",
-              "diff": "んですか là hỏi han tình hình một cách lịch sự; 〜の？ là thể thường của nó, dùng với bạn bè, người nhà.",
+              "title": "〜の？（hỏi han quan tâm）",
+              "thisTitle": "〜んですか（hỏi lý do）",
+              "diff": "んですか là lịch sự hỏi về tình hình; 〜の？ là thể thường của nó, dùng với bạn bè, người nhà.",
               "this": [
                 {
                   "tag": "Lịch sự",
-                  "tr": "Thưa thầy, thầy làm sao vậy ạ?"
+                  "tr": "Thưa thầy, thầy sao vậy ạ?"
                 }
               ],
               "that": [
@@ -2666,7 +2678,7 @@
                   "tr": "Này, sao thế?"
                 }
               ],
-              "explain": "Đều là hỏi nguyên do sau khi thấy dáng vẻ của người kia; xem nói với ai: thầy cô, cấp trên, người không thân → 〜んですか; bạn bè, người nhà → 「〜の？」 lên giọng. Cách viết trang trọng hơn là のですか."
+              "explain": "Đều là thấy dáng vẻ của người kia rồi hỏi lý do, xem nói với ai: với thầy cô như 「先生」, cấp trên, người không thân → 〜んですか; gọi bạn bè, người nhà như 「ねえ」 → 「〜の？」 lên giọng. Cách viết trang trọng hơn là のですか."
             }
           ]
         }
@@ -2677,76 +2689,28 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「なり」 trong tiếng Nhật cổ — bổ nghĩa cho danh từ dùng 「な」, bổ nghĩa cho động từ dùng 「に」",
+          "note": "Đều bắt nguồn từ 「なり」 (に＋あり) trong tiếng Nhật cổ — nghĩa gốc là “ở trạng thái…”",
           "items": [
             {
               "id": "adj-adverbial",
               "title": "〜に（tính từ đuôi な bổ nghĩa cho động từ）",
-              "diff": "Tính từ đuôi な bổ nghĩa cho danh từ dùng 「な」; bổ nghĩa cho động từ phải dùng 「に」.",
+              "diff": "Tính từ đuôi な bổ nghĩa cho danh từ thì dùng 「な」; bổ nghĩa cho động từ thì phải dùng 「に」.",
               "this": [
                 {
                   "tag": "＋danh từ → な",
-                  "tr": "Học trong một căn phòng yên tĩnh."
+                  "tr": "Học bài trong căn phòng yên tĩnh."
                 }
               ],
               "that": [
                 {
                   "tag": "＋động từ → に",
-                  "tr": "Trong thư viện, xin hãy nói chuyện khẽ thôi."
+                  "tr": "Trong thư viện xin hãy nói chuyện nhỏ nhẹ."
                 }
               ],
               "wrong": {
                 "why": "Bổ nghĩa cho động từ phải dùng 「に」"
               },
-              "explain": "Xem từ ngay phía sau: danh từ (部屋、人、町) → 静かな; động từ (話す、歩く、書く) → 静かに. Tiếng Việt thường không phân biệt hai trường hợp này, còn tiếng Nhật phân biệt bằng な và に."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Đều đặt trước danh từ để bổ nghĩa cho danh từ",
-          "items": [
-            {
-              "id": "no-possessive",
-              "title": "名詞＋の＋名詞",
-              "diff": "Tính từ đuôi な＋な＋danh từ; danh từ＋の＋danh từ.",
-              "this": [
-                {
-                  "tag": "Tính từ đuôi な → な",
-                  "tr": "Tôi được tặng những bông hoa đẹp."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Danh từ → の",
-                  "tr": "Tôi được tặng hoa hồng."
-                }
-              ],
-              "wrong": {
-                "why": "Tính từ đuôi な bổ nghĩa cho danh từ phải dùng 「な」"
-              },
-              "explain": "Trước hết xác định từ phía trước là gì: từ miêu tả nói được 「とても〜」 (きれい、静か、有名) → な; tên của người, nơi chốn, đồ vật (バラ、日本、私) → の. Tiếng Việt chỉ cần đặt hai từ cạnh nhau (“hoa đẹp”, “hoa hồng”), nên rất dễ viết thành ✗きれいの花."
-            },
-            {
-              "id": "noun-modifying-clause",
-              "title": "い形容詞＋名詞",
-              "diff": "Tính từ đuôi な phải thêm 「な」; tính từ đuôi い nối thẳng với danh từ, không thêm gì.",
-              "this": [
-                {
-                  "tag": "Tính từ đuôi な → thêm な",
-                  "tr": "Tôi đã đến một nhà hàng nổi tiếng."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tính từ đuôi い → nối thẳng",
-                  "tr": "Tôi đã đến một nhà hàng ngon."
-                }
-              ],
-              "wrong": {
-                "why": "Tính từ đuôi い nối thẳng với danh từ, không thêm な"
-              },
-              "explain": "Xem đuôi tính từ: tính từ đuôi い kết thúc bằng 「い」 (おいしい、高い) nối thẳng với danh từ; tính từ đuôi な (有名、静か) phải thêm 「な」. Chú ý きれい tuy kết thúc bằng 「い」 nhưng là tính từ đuôi な: きれいな花."
+              "explain": "Tiếng Nhật cổ nói 「静かなり」 = “là (trạng thái) yên tĩnh”. Dạng đứng trước danh từ của nó là 「静かなる」, về sau rút gọn thành 「静かな」 → 静かな部屋 (căn phòng yên tĩnh); dạng đứng trước động từ vốn đã là 「静かに」 → 静かに話してください (xin hãy nói chuyện nhỏ nhẹ). Vì vậy hãy xem từ đứng ngay sau: danh từ (部屋, 人, 町) → な; động từ (話してください, 歩く) → に."
             }
           ]
         }
@@ -2757,91 +2721,75 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「な」 cảm thán ở cuối câu — かな＝「か」 nghi vấn＋「な」 cảm thán",
+          "note": "Đều bắt nguồn từ 「な」 cảm thán ở cuối câu — nghĩa gốc là tự nói ra cảm xúc trong lòng như nói một mình",
           "items": [
             {
               "id": "kana-wonder",
-              "thisTitle": "〜なあ（cảm thán・mong ước）",
-              "diff": "なあ là cảm thán, mong ước; かな có thêm 「か」 nghi vấn, là tự hỏi “… nhỉ?”.",
+              "thisTitle": "〜なあ（cảm thán）",
+              "diff": "なあ là buột miệng nói ra cảm xúc, là câu cảm thán; かな thêm 「か」 nghi vấn ở trước, là tự hỏi khi trong lòng không chắc.",
               "this": [
                 {
-                  "tag": "Mong ước",
-                  "tr": "Ngày mai mà trời nắng thì hay biết mấy."
+                  "tag": "Đã nếm · cảm thán",
+                  "tr": "Mì ramen quán này ngon thật đấy."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tự hỏi · không chắc",
-                  "tr": "Không biết ngày mai trời có nắng không nhỉ."
+                  "tag": "Chưa nếm · không chắc",
+                  "tr": "Không biết mì ramen quán này có ngon không nhỉ."
                 }
               ],
-              "explain": "Xem trước 「な」 có 「か」 không: không có → chỉ đơn thuần cảm thán hoặc mong ước; có 「か」 → trong lòng không chắc, đang tự hỏi một mình."
-            }
-          ]
-        },
-        {
-          "kind": "look",
-          "note": "「な」 cấm đoán ↔ 「ない」 phủ định, đều có chữ 「な」",
-          "items": [
-            {
-              "id": "nai-form",
-              "thisTitle": "〜な（cấm đoán）",
-              "diff": "Thể từ điển＋な là cấm đoán “đừng…”; thể ない＋ない là phủ định “không…”.",
-              "this": [
-                {
-                  "tag": "Cấm đoán",
-                  "tr": "Đừng chạm vào cái đó!"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Phủ định",
-                  "tr": "Tôi không chạm vào cái đó."
-                }
-              ],
-              "explain": "Xem dạng của động từ trước 「な」: thể từ điển (触る)＋な → ra lệnh cho người kia “đừng làm”, bản thân động từ ở dạng khẳng định; thể ない (触ら)＋ない → trần thuật “không làm”. Thấy 「〜るな」, 「〜くな」 thì đừng hiểu nhầm là phủ định."
+              "explain": "「な」 vốn là tự nói ra cảm xúc trong lòng như nói một mình: gắn thẳng sau cảm xúc → おいしいなあ, đã nếm rồi và cảm thán “ngon thật”; thêm 「か」 nghi vấn trước rồi mới gắn 「な」 → おいしいかな, tự nói ra thắc mắc trong lòng, “không biết có ngon không nhỉ”. Vì vậy hãy xem trước 「な」 có 「か」 không: không có → cảm thán; có → tự hỏi khi không chắc."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "「なあ」 cảm thán gần với 「ね」, 「な」 cấm đoán gần với 「ないでください」",
+          "sense": 1,
+          "note": "Đều là cảm thán “… thật đấy”",
           "items": [
             {
               "id": "ne-particle",
               "thisTitle": "〜なあ（cảm thán）",
-              "diff": "なあ phần lớn là cảm thán tự nói một mình; ね là nói với người nghe, tìm sự đồng cảm.",
+              "diff": "なあ phần lớn là cảm thán nói một mình; ね là nói với người nghe, mong người kia đồng cảm.",
               "this": [
                 {
-                  "tag": "Tự nói một mình",
-                  "tr": "Ôi, nóng quá đi mất."
+                  "tag": "Nói một mình",
+                  "tr": "Ôi, nóng quá."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nói với người khác · tìm đồng cảm",
+                  "tag": "Nói với người khác · mong đồng cảm",
                   "tr": "Hôm nay nóng thật nhỉ."
                 }
               ],
-              "explain": "Xem có đối tượng để nói không: một mình tự nói, không cần người kia trả lời → なあ, thường đi với thể thường; chào hỏi người khác, mong người kia đáp “đúng vậy” → ね, có thể đi với 「です」."
-            },
+              "explain": "Xem có người để nói cùng không: như 「ああ」, một mình lẩm bẩm, không cần người kia trả lời → なあ, thường đi sau thể thường; chào hỏi người khác, mong người kia đáp lại “đúng vậy” → ね, có thể đi sau 「です」."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Đều là cấm đoán “đừng…”",
+          "items": [
             {
               "id": "naide-kudasai",
               "thisTitle": "〜な（cấm đoán）",
-              "diff": "Thể từ điển＋な là cấm đoán thô lỗ, cứng rắn; ないでください là yêu cầu lịch sự.",
+              "diff": "Thể từ điển＋な là cấm đoán thô lỗ, gay gắt; ないでください là lời nhờ lịch sự.",
               "this": [
                 {
-                  "tag": "Cứng rắn · thô lỗ",
-                  "tr": "Cấm hút thuốc ở đây!"
+                  "tag": "Gay gắt · thô lỗ",
+                  "tr": "Cấm chụp ảnh trong phòng này!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Yêu cầu lịch sự",
-                  "tr": "Xin lỗi, vui lòng không hút thuốc ở đây."
+                  "tag": "Nhờ lịch sự",
+                  "tr": "Xin lỗi, xin đừng chụp ảnh trong phòng này."
                 }
               ],
-              "explain": "Xem nói với ai, trong hoàn cảnh nào: với khách, người lạ, cấp trên → ないでください; quát mắng trong lúc tức giận, hét lên khi khẩn cấp hoặc trên biển báo → 〜な. Nói thẳng 「〜な」 trước mặt người khác là rất bất lịch sự."
+              "explain": "Xem nói với ai, trong hoàn cảnh nào: như 「すみません」, khách sáo mở lời với khách, người lạ, cấp trên → ないでください; tức giận quát mắng, hô hoán khẩn cấp hoặc biển báo → 〜な. Nói thẳng 「〜な」 trước mặt người khác là rất bất lịch sự."
             }
           ]
         }
@@ -2877,23 +2825,23 @@
               "explain": "Nhìn chủ ngữ của hai hành động trước và sau: cùng một người → ながら; khác người (母が…、私は…) → 間."
             },
             {
-              "id": "te-form-sequence",
-              "title": "〜て（kèm trạng thái）",
+              "id": "tsutsu",
+              "title": "〜つつ（vừa… vừa…）",
               "thisTitle": "〜ながら（vừa… vừa…）",
-              "diff": "ながら là hai hành động diễn ra song song; て là giữ nguyên trạng thái kết quả của hành động trước rồi làm việc sau.",
+              "diff": "Đều là một người cùng lúc làm hai việc; ながら dùng được cả trong khẩu ngữ hằng ngày lẫn văn viết, つつ là văn viết, trang nhã hơn.",
               "this": [
                 {
-                  "tag": "Diễn ra song song",
-                  "tr": "Vừa nghe nhạc vừa đọc báo."
+                  "tag": "Hằng ngày · khẩu ngữ",
+                  "tr": "Vừa tán gẫu với bạn vừa đi bộ trên con đường ven biển."
                 }
               ],
               "that": [
                 {
-                  "tag": "Giữ trạng thái",
-                  "tr": "Đeo kính rồi đọc báo."
+                  "tag": "Văn viết · trang nhã",
+                  "tr": "Vừa lắng nghe tiếng sóng vừa thong thả dạo bước trên con đường ven biển."
                 }
               ],
-              "explain": "Nhìn động từ phía trước: những hành động có thể kéo dài như 聞く、歌う、歩く → ながら; những hành động vừa làm xong là để lại trạng thái như かける、座る、持つ → て. Những trạng thái kiểu “đeo kính (mà đọc)”, “ngồi (mà xem)” đều phải dùng thể て."
+              "explain": "Nghĩa giống nhau, xem văn phong: tán gẫu, hội thoại hằng ngày → ながら; bài viết, diễn văn, tin tức và các kiểu văn viết → つつ, nghe trang nhã. Động từ rất khẩu ngữ như 「しゃべる」 mà đi với つつ thì rất gượng. Cả hai đều bắt buộc hai hành động là của cùng một người."
             }
           ]
         }
@@ -2903,41 +2851,17 @@
       "id": "nai-form",
       "groups": [
         {
-          "kind": "look",
-          "note": "「ない」 phủ định ↔ 「な」 cấm đoán, đều có 「な」",
-          "items": [
-            {
-              "id": "naa-exclamation",
-              "title": "〜な（cấm đoán）",
-              "diff": "Thể ない＋ない là phủ định “không…”; thể từ điển＋な là cấm đoán “đừng…”.",
-              "this": [
-                {
-                  "tag": "Phủ định",
-                  "tr": "Tôi không động vào cái đó."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Cấm đoán",
-                  "tr": "Đừng động vào cái đó!"
-                }
-              ],
-              "explain": "Nhìn dạng của động từ đứng trước 「な」: thể ない (触ら)＋ない → trần thuật “không làm”; thể từ điển (触る)＋な → ra lệnh cho đối phương “đừng làm”, bản thân động từ ở dạng khẳng định."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Đều diễn tả phủ định, xem phía trước gắn với từ gì và nói với ai",
+          "note": "Đều có nghĩa “không (làm)…”, chỉ khác mức độ lịch sự",
           "items": [
             {
               "id": "masu-forms",
               "title": "〜ません",
-              "diff": "ない là phủ định thể thông thường; ません là phủ định thể lịch sự, nghĩa giống nhau.",
+              "diff": "ない là phủ định thể thường; ません là phủ định thể lịch sự, nghĩa như nhau.",
               "this": [
                 {
-                  "tag": "Thông thường",
-                  "tr": "Xin lỗi nhé, hôm nay mình không uống rượu."
+                  "tag": "Thể thường",
+                  "tr": "Xin lỗi nhé, hôm nay tớ không uống rượu."
                 }
               ],
               "that": [
@@ -2946,47 +2870,7 @@
                   "tr": "Thưa thầy, hôm nay em không uống rượu ạ."
                 }
               ],
-              "explain": "Xem nói với ai: bạn bè, người nhà → 飲まない; thầy cô, cấp trên, người lạ → 飲みません. Chú ý cách chia: ない gắn vào thể ない (飲ま), ません gắn vào thể ます (飲み)."
-            },
-            {
-              "id": "i-adj-negative",
-              "diff": "Phủ định của động từ là thể ない＋ない; phủ định của tính từ đuôi い phải đổi 「い」 thành 「くない」.",
-              "this": [
-                {
-                  "tag": "Động từ → ない",
-                  "tr": "Tôi không ăn món này."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tính từ い → くない",
-                  "tr": "Món này không ngon."
-                }
-              ],
-              "wrong": {
-                "why": "Tính từ đuôi い phải bỏ 「い」 rồi thêm 「くない」"
-              },
-              "explain": "Xem phía trước là từ gì: động từ (食べる) → 食べない; tính từ đuôi い (おいしい) → bỏ 「い」 thêm 「くない」. Phủ định của 「いい」 là 「よくない」."
-            },
-            {
-              "id": "ja-nai",
-              "diff": "Phủ định của động từ dùng 「ない」; phủ định của danh từ và tính từ đuôi な phải dùng 「じゃない」.",
-              "this": [
-                {
-                  "tag": "Động từ → ない",
-                  "tr": "Anh Tanaka không đến trường."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Danh từ → じゃない",
-                  "tr": "Anh Tanaka không phải là học sinh."
-                }
-              ],
-              "wrong": {
-                "why": "Phủ định của danh từ phải dùng 「じゃない」"
-              },
-              "explain": "Xem phía trước: động từ (来る) → 来ない; danh từ (学生), tính từ đuôi な (元気) → じゃない (lịch sự: ではありません). Sự khác nhau giữa “không” và “không phải là” trong tiếng Việt chính là ない và じゃない trong tiếng Nhật."
+              "explain": "Xem nói với ai: nói với bạn bè, người nhà như 「ごめん」 → 飲まない; với thầy cô như 「先生」, cấp trên, người lạ → 飲みません. Chú ý cách chia: ない nối với thể ない (飲ま), ません nối với thể ます (飲み)."
             }
           ]
         }
@@ -3001,10 +2885,10 @@
           "items": [
             {
               "id": "te-wa-ikenai",
-              "diff": "ないといけない là “không làm thì không được”＝bắt buộc; てはいけない là “làm thì không được”＝cấm.",
+              "diff": "ないといけない là “không làm thì không được” = phải; てはいけない là “làm thì không được” = cấm.",
               "this": [
                 {
-                  "tag": "Bắt buộc làm",
+                  "tag": "Phải làm",
                   "tr": "Ngày nào cũng phải uống thuốc."
                 }
               ],
@@ -3014,7 +2898,7 @@
                   "tr": "Trong thời gian uống thuốc thì không được uống rượu."
                 }
               ],
-              "explain": "Nhìn phía trước 「いけない」: 「ないと」 (nếu không làm) → phải làm; 「ては／では」 (nếu làm) → không được làm. Chỉ khác nhau ở phủ định phía trước mà nghĩa hoàn toàn ngược lại."
+              "explain": "Xem phía trước 「いけない」: 「ないと」 (nếu không làm) → phải làm; 「ては／では」 (nếu làm) → không được làm. Chỉ khác phần phủ định phía trước mà nghĩa ngược hẳn nhau."
             }
           ]
         },
@@ -3024,20 +2908,20 @@
           "items": [
             {
               "id": "nakereba-naranai",
-              "diff": "ないといけない mang tính khẩu ngữ, hay nói về việc cụ thể của bản thân; なければならない trang trọng hơn, hay dùng cho quy định và văn viết.",
+              "diff": "ないといけない là khẩu ngữ, thường nói về việc cụ thể của bản thân; なければならない trang trọng hơn, thường dùng cho quy định và văn viết.",
               "this": [
                 {
                   "tag": "Việc cá nhân · khẩu ngữ",
-                  "tr": "Đã 10 giờ rồi, tôi phải về thôi."
+                  "tr": "Đã mười giờ rồi. Tôi phải về thôi."
                 }
               ],
               "that": [
                 {
                   "tag": "Quy định · văn viết",
-                  "tr": "Ở Nhật, xe phải chạy bên trái."
+                  "tr": "Ở Nhật, xe ô tô phải chạy bên trái."
                 }
               ],
-              "explain": "Xem đang nói về điều gì: tình hình cụ thể trước mắt của bản thân (もう10時だ) → ないといけない tự nhiên hơn; nghĩa vụ khách quan trong luật, quy tắc, văn bản → なければならない. Hai cách có nghĩa giống nhau, dùng thay cho nhau cũng không tính là sai."
+              "explain": "Xem đang nói về điều gì: tình hình cụ thể trước mắt của bản thân (もう10時だ) → ないといけない tự nhiên hơn; như 「日本では」, nói về luật pháp, quy tắc, nghĩa vụ khách quan trong bài viết → なければならない. Hai cách có nghĩa như nhau, dùng thay cho nhau cũng không sai."
             }
           ]
         }
@@ -3048,11 +2932,11 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「ないで」 phủ định — “trong trạng thái không làm…”",
+          "note": "Đều bắt nguồn từ 「ないで」 phủ định — nghĩa gốc là “trong trạng thái không làm…”",
           "items": [
             {
               "id": "naide-without",
-              "diff": "ないで＋ください là nhờ đối phương đừng làm; ないで＋động từ khác là “không… mà (đã)…”.",
+              "diff": "ないで＋ください là nhờ người kia đừng làm; ないで＋động từ khác là “không… mà đã…”.",
               "this": [
                 {
                   "tag": "Xin đừng làm",
@@ -3061,11 +2945,11 @@
               ],
               "that": [
                 {
-                  "tag": "Không… mà…",
-                  "tr": "Tôi đã ra ngoài mà không mang ô."
+                  "tag": "Không… mà đã…",
+                  "tr": "Tôi không mang ô mà đã ra ngoài."
                 }
               ],
-              "explain": "Nhìn phía sau 「ないで」: 「ください」 → nhờ đối phương đừng làm; động từ khác (出かけた、寝た) → kể rằng đã làm B trong trạng thái không làm A."
+              "explain": "Nghĩa gốc của 「ないで」 là “trong trạng thái không làm…”: phía sau là động từ khác (出かけた, 寝た), tức là làm B trong trạng thái chưa làm A → “không A mà đã B”; phía sau là 「ください」, tức là nhờ người kia giữ trạng thái “không làm” → “xin đừng…”. Vì vậy hãy xem sau 「ないで」 là 「ください」 hay động từ khác."
             }
           ]
         },
@@ -3075,7 +2959,7 @@
           "items": [
             {
               "id": "te-wa-ikenai",
-              "diff": "ないでください là lời nhờ, giọng lịch sự; てはいけません là tuyên bố quy tắc, nói với khách hay người trên sẽ có vẻ kẻ cả.",
+              "diff": "ないでください là lời nhờ, giọng lịch sự; てはいけません là tuyên bố quy định, dùng với khách hay cấp trên sẽ có vẻ bề trên.",
               "this": [
                 {
                   "tag": "Nhờ lịch sự",
@@ -3084,16 +2968,16 @@
               ],
               "that": [
                 {
-                  "tag": "Quy tắc",
+                  "tag": "Quy định",
                   "tr": "Trong bảo tàng mỹ thuật không được chụp ảnh."
                 }
               ],
-              "explain": "Xem lập trường của người nói: trực tiếp nhờ đối phương hợp tác, nhất là với khách, người lạ → ないでください; giải thích quy định, hoặc thầy giáo nói với học sinh, bố mẹ dạy con → てはいけません."
+              "explain": "Xem lập trường của người nói: như 「すみません」, trực tiếp nhờ người kia hợp tác, nhất là với khách, người lạ → ないでください; như 「美術館の中で」, giải thích quy định của nơi chốn, hoặc thầy cô với học sinh, bố mẹ với con cái giảng giải → てはいけません."
             },
             {
               "id": "naa-exclamation",
               "title": "〜な（cấm đoán）",
-              "diff": "ないでください là lời nhờ lịch sự; thể từ điển＋な là cấm đoán thô lỗ, cứng rắn.",
+              "diff": "ないでください là lời nhờ lịch sự; thể từ điển＋な là cấm đoán thô lỗ, gay gắt.",
               "this": [
                 {
                   "tag": "Nhờ lịch sự",
@@ -3102,11 +2986,11 @@
               ],
               "that": [
                 {
-                  "tag": "Cứng rắn · thô lỗ",
+                  "tag": "Gay gắt · thô lỗ",
                   "tr": "Cấm hút thuốc ở đây!"
                 }
               ],
-              "explain": "Xem nói với ai, trong hoàn cảnh nào: với khách, người lạ, cấp trên → ないでください; quát mắng lúc tức giận, hô hoán khẩn cấp hoặc trên biển báo → 〜な. Chú ý trước 〜な là thể từ điển (吸う), không phải thể ない."
+              "explain": "Xem nói với ai, trong hoàn cảnh nào: như 「すみません」, với khách, người lạ, cấp trên → ないでください; tức giận quát mắng, hô hoán khẩn cấp hoặc biển báo → 〜な. Chú ý trước 〜な là thể từ điển (吸う), không phải thể ない."
             }
           ]
         }

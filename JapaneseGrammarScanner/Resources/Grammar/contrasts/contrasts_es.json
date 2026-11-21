@@ -2481,66 +2481,70 @@
       "id": "mashou-ka-offer",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambas vienen de la 「う」 de voluntad: ましょう＝ます＋う",
+          "kind": "meaning",
+          "sense": 1,
+          "note": "Ambas ofrecen ayuda por iniciativa propia: «¿Lo hago yo?»",
           "items": [
-            {
-              "id": "mashou",
-              "diff": "ましょうか es «¿lo hago yo?» o una consulta al otro; sin 「か」, ましょう impulsa directamente: «hagamos… juntos».",
-              "this": [
-                {
-                  "tag": "¿Lo hago yo?",
-                  "tr": "¿Limpio yo?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Llamar a hacerlo juntos",
-                  "tr": "Venga, limpiemos todos juntos."
-                }
-              ],
-              "explain": "Mira el sujeto y el 「か」: yo solo, haciéndolo por el otro, o pidiendo su opinión → ましょうか; todos juntos, con el hablante tomando la iniciativa → ましょう."
-            },
             {
               "id": "volitional-form",
               "title": "〜(よ)うか（estilo llano）",
-              "diff": "ましょうか es el estilo cortés; 「〜(よ)うか」 es su versión llana, para la familia y los amigos.",
+              "diff": "ましょうか es cortés; 「〜(よ)うか」 es su forma llana, para familia y amigos.",
               "this": [
                 {
                   "tag": "Cortés",
-                  "tr": "Profesor, ¿le llevo yo ese equipaje?"
+                  "tr": "Profesor, ¿le llevo yo esa maleta?"
                 }
               ],
               "that": [
                 {
                   "tag": "Llano",
-                  "tr": "Mamá, ¿te llevo yo esa bolsa?"
+                  "tr": "Mamá, ¿te llevo esa bolsa?"
                 }
               ],
-              "explain": "Significan lo mismo; mira a quién le hablas: profesor, jefe, cliente → 持ちましょうか; familia, amigos → 持とうか (en los verbos godan, la sílaba en う pasa a la columna お + う)."
+              "explain": "Significan lo mismo; depende de a quién hablas: a un profesor como 「先生」, un jefe o un cliente → 持ちましょうか; a la familia como 「お母さん」 o a amigos → 持とうか (en los verbos godan, la vocal final -u pasa a la fila -o, más う)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Todas sirven para proponer o invitar",
+          "sense": 2,
+          "note": "Ambas significan «¿…juntos?»",
           "items": [
             {
-              "id": "masenka",
-              "diff": "ましょうか puede ser «lo hago yo por ti»; ませんか pide al otro que haga algo (contigo).",
+              "id": "mashou",
+              "title": "〜ましょう（propuesta de hacerlo juntos）",
+              "diff": "Ambas proponen hacer algo juntos; ましょうか pregunta para pedir el acuerdo del otro y es más respetuosa; ましょう anima directamente y da por hecho que el otro está de acuerdo.",
               "this": [
                 {
-                  "tag": "Lo hago por ti",
-                  "tr": "Parece pesado. ¿Te llevo el equipaje?"
+                  "tag": "Pide el acuerdo del otro",
+                  "tr": "Ya es hora. ¿Volvemos ya?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Hacerlo juntos",
-                  "tr": "¿Vamos andando juntos hasta la estación?"
+                  "tag": "Anima directamente",
+                  "tr": "Ya es hora. Volvamos ya."
                 }
               ],
-              "explain": "Mira quién hace la acción: yo, ofreciéndome a hacerlo por el otro → ましょうか; el otro, o el otro y yo juntos → ませんか."
+              "explain": "Mira si la frase termina en 「か」: con 「か」, en tono ascendente, como «¿…te parece?», dejas la decisión al otro → ましょうか; sin 「か」, quien habla toma la iniciativa y anima a todos, con un tono más decidido, dando por hecho que el otro acepta → ましょう."
+            },
+            {
+              "id": "masenka",
+              "title": "〜ませんか（invitación a hacerlo juntos）",
+              "diff": "Ambas proponen con cortesía hacer algo juntos; ましょうか es «Entonces, ¿lo hacemos?», mientras que ませんか primero pregunta «¿Te gustaría…?», respetando más lo que quiera el otro.",
+              "this": [
+                {
+                  "tag": "Ya lo hablaron · concretar",
+                  "tr": "Esa película de la que hablamos el otro día, ¿vamos a verla juntos?"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Pregunta primero si quiere",
+                  "tr": "Si te apetece, ¿te gustaría ir a ver una película conmigo?"
+                }
+              ],
+              "explain": "Mira si el otro ya tiene ganas de hacerlo: si ya lo hablaron, como con 「この前話した」, y solo falta concretar → ましょうか, con un tono decidido de «pues hagámoslo»; si lo propones por primera vez y antes preguntas si le apetece, como con 「よかったら」 → ませんか, que deja la decisión por completo al otro y es más cortés."
             }
           ]
         }
@@ -2550,8 +2554,8 @@
       "id": "masu-forms",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambas vienen del auxiliar cortés 「ます」: ませんか＝ません＋la 「か」 interrogativa",
+          "kind": "look",
+          "note": "ません ↔ ませんか: solo cambia un 「か」 al final",
           "items": [
             {
               "id": "masenka",
@@ -2593,7 +2597,7 @@
                   "tr": "Perdona, hoy no bebo."
                 }
               ],
-              "explain": "Mira a quién hablas: profesores, jefes, desconocidos → 飲みません; amigos, familia → 飲まない. Ojo con la conjugación: ません va con la raíz de ます (飲み) y ない con la forma ない (飲ま)."
+              "explain": "Mira a quién hablas: a un profesor como 「先生」, un jefe o un desconocido → 飲みません; a un amigo o familiar, como con 「ごめん」 → 飲まない. Ojo con la conjugación: ません va con la forma ます (飲み) y ない con la forma ない (飲ま)."
             }
           ]
         }
@@ -2604,24 +2608,24 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de la partícula 「も」 («también»): 「何も〜ない」 es literalmente «nada… tampoco»",
+          "note": "Ambas vienen de la partícula 「も」, cuyo sentido básico es «esto también cuenta»",
           "items": [
             {
               "id": "question-word-mo-nai",
-              "diff": "Sustantivo＋も es «… también / tampoco»; interrogativo＋も＋negación es «nada, nadie».",
+              "diff": "Sustantivo＋も significa «…también / tampoco»; palabra interrogativa＋も＋negación significa «nada / nadie en absoluto».",
               "this": [
                 {
-                  "tag": "También · otro del mismo tipo",
+                  "tag": "También · añade algo similar",
                   "tr": "No bebo café. Zumo tampoco."
                 }
               ],
               "that": [
                 {
                   "tag": "Nada · negación total",
-                  "tr": "No he bebido nada desde la mañana."
+                  "tr": "No he bebido nada desde esta mañana."
                 }
               ],
-              "explain": "Mira lo que va delante de 「も」: algo concreto (ジュース) → «también / tampoco», y antes suele haberse mencionado otro elemento del mismo tipo (コーヒーは…); un interrogativo (何, 誰, どこ)＋も seguido de negación → «nada / nadie», una negación total, no «también»."
+              "explain": "El sentido básico de 「も」 es «esto también cuenta»: tras algo concreto (ジュース), cuando antes se ha mencionado algo del mismo tipo (コーヒーは…), añade un elemento más → «también / tampoco»; tras la palabra interrogativa 「何」, incluye «cualquiera de ellos», y con una negación detrás → ni uno solo → «nada», una negación total. Así que mira si delante de 「も」 hay algo concreto o una palabra interrogativa."
             }
           ]
         }
@@ -2632,28 +2636,36 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen del sustantivo formal 「の」: presentan algo como una «situación»",
+          "note": "Ambas vienen del nominalizador 「の」, cuyo sentido básico es presentar un hecho como «la situación»",
           "items": [
             {
               "id": "n-desu-ga-preface",
-              "diff": "んです explica una situación y la oración termina ahí; んですが primero cuenta la situación y luego plantea una petición o pregunta.",
+              "diff": "んです presenta la situación y termina ahí, explicando un motivo; んですが presenta la situación y se detiene con 「が」 para dar paso a una petición o pregunta.",
               "this": [
                 {
-                  "tag": "Explicar la causa",
-                  "tr": "Perdón por llegar tarde. Es que se paró el tren."
+                  "tag": "Explica el motivo",
+                  "tr": "Perdón por llegar tarde. Es que el tren se paró."
                 }
               ],
               "that": [
                 {
-                  "tag": "Preámbulo → pregunta",
-                  "tr": "Perdone, es que me he perdido. ¿Dónde está la estación?"
+                  "tag": "Introducción → pregunta",
+                  "tr": "Disculpe, es que me he perdido. ¿Dónde está la estación?"
                 }
               ],
-              "explain": "Mira si la oración continúa: si termina en 「んです。」 y explica un motivo → んです; si después de 「んですが、」 viene una petición o pregunta (駅はどこですか, 〜てもいいですか) → es un preámbulo. La forma escrita のです y la llana んだ funcionan igual."
-            },
+              "explain": "「の（ん）」 presenta en origen un hecho como «la situación»: 「んです。」 expone la situación y termina → explica un motivo (遅れてすみません。電車が止まったんです); 「んですが、」 expone la situación y se detiene en 「が」 sin cerrar la idea, dejando paso a lo que sigue → una introducción seguida de una petición o pregunta (駅はどこですか). Así que mira si tras 「ん」 viene 「です。」, que cierra, o 「ですが、」, que continúa. Lo mismo vale para のです escrito y んだ llano."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Ambas preguntan «¿Qué pasa?» al notar algo",
+          "items": [
             {
               "id": "casual-question-no",
-              "diff": "んですか pregunta con cortesía por la situación; 〜の？ es su versión llana, para amigos y familia.",
+              "title": "〜の？（pregunta con interés）",
+              "thisTitle": "〜んですか（preguntar el motivo）",
+              "diff": "んですか pregunta con cortesía por la situación; 〜の？ es su forma llana, para amigos y familia.",
               "this": [
                 {
                   "tag": "Cortés",
@@ -2666,7 +2678,7 @@
                   "tr": "Oye, ¿qué te pasa?"
                 }
               ],
-              "explain": "Las dos preguntan el motivo después de notar algo en el otro; mira a quién hablas: profesores, jefes, gente con poca confianza → 〜んですか; amigos, familia → 「〜の？」 con entonación ascendente. La forma más formal es のですか."
+              "explain": "Las dos preguntan el motivo al ver cómo está el otro; depende de a quién hablas: a un profesor como 「先生」, un jefe o alguien con quien no tienes confianza → 〜んですか; llamando a un amigo o familiar con 「ねえ」 → 「〜の？」 con entonación ascendente. La versión escrita más formal es のですか."
             }
           ]
         }
@@ -2677,76 +2689,28 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de la antigua 「なり」: 「な」 para modificar sustantivos, 「に」 para modificar verbos",
+          "note": "Ambas vienen del clásico 「なり」 (に＋あり), cuyo sentido básico es «estar en el estado de…»",
           "items": [
             {
               "id": "adj-adverbial",
               "title": "〜に（adjetivo な que modifica un verbo）",
-              "diff": "Un adjetivo な usa 「な」 para modificar un sustantivo; para modificar un verbo tiene que usar 「に」.",
+              "diff": "Un adjetivo な usa 「な」 para modificar un sustantivo y 「に」 para modificar un verbo.",
               "this": [
                 {
-                  "tag": "+ sustantivo → な",
+                  "tag": "＋sustantivo → な",
                   "tr": "Estudio en una habitación tranquila."
                 }
               ],
               "that": [
                 {
-                  "tag": "+ verbo → に",
+                  "tag": "＋verbo → に",
                   "tr": "En la biblioteca, hablen en voz baja, por favor."
                 }
               ],
               "wrong": {
-                "why": "Para modificar un verbo hay que usar 「に」"
+                "why": "Para modificar un verbo se usa 「に」"
               },
-              "explain": "Mira la palabra que viene justo después: sustantivo (部屋, 人, 町) → 静かな; verbo (話す, 歩く, 書く) → 静かに. Es como «tranquilo» frente a «tranquilamente» en español: el japonés lo distingue con な y に."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Todas van delante de un sustantivo para modificarlo",
-          "items": [
-            {
-              "id": "no-possessive",
-              "title": "名詞＋の＋名詞",
-              "diff": "Adjetivo-な＋な＋sustantivo; sustantivo＋の＋sustantivo.",
-              "this": [
-                {
-                  "tag": "Adjetivo-な → な",
-                  "tr": "Me regalaron unas flores bonitas."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Sustantivo → の",
-                  "tr": "Me regalaron unas rosas."
-                }
-              ],
-              "wrong": {
-                "why": "Un adjetivo-な necesita 「な」 para modificar un sustantivo"
-              },
-              "explain": "Primero mira qué palabra va delante: si es una cualidad que admite 「とても〜」 (きれい, 静か, 有名) → な; si es el nombre de una persona, un lugar o una cosa (バラ, 日本, 私) → の. En español el sustantivo lleva «de» (flores de rosa) y el adjetivo no lleva nada; en japonés el sustantivo lleva の, pero el adjetivo-な necesita な, así que no escribas ✗きれいの花."
-            },
-            {
-              "id": "noun-modifying-clause",
-              "title": "adjetivo い + 名詞",
-              "diff": "El adjetivo な necesita 「な」; el adjetivo い se une directamente al sustantivo, sin añadir nada.",
-              "this": [
-                {
-                  "tag": "Adjetivo な → añade な",
-                  "tr": "Fui a un restaurante famoso."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Adjetivo い → directo",
-                  "tr": "Fui a un restaurante donde se come muy bien."
-                }
-              ],
-              "wrong": {
-                "why": "El adjetivo い va directamente con el sustantivo, sin な"
-              },
-              "explain": "Mira el final del adjetivo: los adjetivos い, que terminan en 「い」 (おいしい, 高い), van directamente con el sustantivo; los adjetivos な (有名, 静か) necesitan 「な」. Ojo: aunque きれい termina en 「い」, es un adjetivo な: きれいな花."
+              "explain": "En japonés clásico, 「静かなり」 significaba «está tranquilo (estado)». Su forma ante sustantivos, 「静かなる」, se acortó después a 「静かな」 → 静かな部屋 (una habitación tranquila); su forma ante verbos siempre fue 「静かに」 → 静かに話してください (hablen tranquilamente, por favor). Así que mira la palabra que va justo después: un sustantivo (部屋, 人, 町) → な; un verbo (話してください, 歩く) → に."
             }
           ]
         }
@@ -2757,74 +2721,58 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de la 「な」 exclamativa de final de oración: かな＝la 「か」 interrogativa＋la 「な」 exclamativa",
+          "note": "Ambas vienen de 「な」 exclamativa a final de frase, cuyo sentido básico es expresar en voz alta lo que uno siente, como hablando solo",
           "items": [
             {
               "id": "kana-wonder",
-              "thisTitle": "〜なあ（exclamación・deseo）",
-              "diff": "なあ es exclamación o deseo; かな añade una 「か」 interrogativa: es preguntarse a uno mismo «¿será que…?».",
+              "thisTitle": "〜なあ（exclamación）",
+              "diff": "なあ suelta un sentimiento como exclamación; かな añade antes la 「か」 interrogativa y se convierte en una pregunta insegura a uno mismo.",
               "this": [
                 {
-                  "tag": "Deseo",
-                  "tr": "¡Ojalá mañana haga sol!"
+                  "tag": "Ya lo probó · exclama",
+                  "tr": "¡Qué rico está el ramen de este local!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Preguntarse · duda",
-                  "tr": "¿Hará sol mañana?"
+                  "tag": "Aún no lo probó · inseguro",
+                  "tr": "¿Estará bueno el ramen de este local?"
                 }
               ],
-              "explain": "Mira si delante de 「な」 hay un 「か」: si no lo hay → simple exclamación o deseo; si lo hay → no estás seguro y te lo preguntas a ti mismo."
-            }
-          ]
-        },
-        {
-          "kind": "look",
-          "note": "La 「な」 de prohibición ↔ la 「ない」 de negación: las dos tienen 「な」",
-          "items": [
-            {
-              "id": "nai-form",
-              "thisTitle": "〜な（prohibición）",
-              "diff": "Forma de diccionario＋な es una prohibición: «¡no…!»; forma ない＋ない es una negación: «no…».",
-              "this": [
-                {
-                  "tag": "Prohibición",
-                  "tr": "¡No toques eso!"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Negación",
-                  "tr": "Yo no toco eso."
-                }
-              ],
-              "explain": "Mira la forma del verbo delante de 「な」: forma de diccionario (触る)＋な → ordena al otro «no lo hagas», y el verbo en sí está en forma afirmativa; forma ない (触ら)＋ない → afirma que «no se hace». No confundas 「〜るな」 o 「〜くな」 con una negación."
+              "explain": "「な」 expresa en origen lo que uno siente, como hablando solo: pegada directamente al sentimiento → おいしいなあ, ya lo has probado y exclamas «¡qué rico!»; si primero añades la 「か」 interrogativa y luego 「な」 → おいしいかな, expresas para ti una duda: «¿estará bueno?». Así que mira si hay 「か」 delante de 「な」: no → exclamación; sí → pregunta insegura a uno mismo."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "La なあ exclamativa se parece a 「ね」; la な de prohibición se parece a 「ないでください」",
+          "sense": 1,
+          "note": "Ambas son exclamaciones: «¡Qué…!»",
           "items": [
             {
               "id": "ne-particle",
               "thisTitle": "〜なあ（exclamación）",
-              "diff": "なあ suele ser una exclamación para uno mismo; ね se dirige al oyente buscando su acuerdo.",
+              "diff": "なあ suele ser una exclamación para uno mismo; ね se dirige al oyente, buscando su acuerdo.",
               "this": [
                 {
-                  "tag": "Para uno mismo",
-                  "tr": "¡Uf, qué calor!"
+                  "tag": "Hablando solo",
+                  "tr": "Ay, qué calor."
                 }
               ],
               "that": [
                 {
-                  "tag": "Al otro · buscar acuerdo",
+                  "tag": "A otra persona · busca acuerdo",
                   "tr": "Hoy hace mucho calor, ¿verdad?"
                 }
               ],
-              "explain": "Mira si hay alguien a quien hablar: si hablas solo y no esperas respuesta → なあ, normalmente con estilo llano; si saludas a alguien y esperas que responda «sí, es verdad» → ね, que puede ir con 「です」."
-            },
+              "explain": "Mira si hay alguien a quien hablas: si hablas solo, como con 「ああ」, sin esperar respuesta → なあ, normalmente tras la forma llana; si conversas con alguien y esperas que te responda «sí, ¿verdad?» → ね, que puede ir tras 「です」."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Ambas son prohibiciones: «No…»",
+          "items": [
             {
               "id": "naide-kudasai",
               "thisTitle": "〜な（prohibición）",
@@ -2832,16 +2780,16 @@
               "this": [
                 {
                   "tag": "Tajante · brusco",
-                  "tr": "¡Prohibido fumar aquí!"
+                  "tr": "¡No hagas fotos en esta sala!"
                 }
               ],
               "that": [
                 {
                   "tag": "Petición cortés",
-                  "tr": "Perdone, no fume aquí, por favor."
+                  "tr": "Disculpe, por favor, no haga fotos en esta sala."
                 }
               ],
-              "explain": "Mira a quién hablas y en qué situación: a clientes, desconocidos o superiores → ないでください; para reñir con enfado, gritar en una emergencia o en carteles → 〜な. Decirle 「〜な」 a alguien a la cara es muy descortés."
+              "explain": "Mira a quién hablas y en qué situación: si te diriges con cortesía a un cliente, un desconocido o un superior, empezando con 「すみません」 → ないでください; para regañar con enfado, gritar una advertencia urgente o en carteles → 〜な. Decir 「〜な」 a la cara a alguien es muy descortés."
             }
           ]
         }
@@ -2877,23 +2825,23 @@
               "explain": "Mira el sujeto de las dos acciones: la misma persona → ながら; personas distintas (母が……, 私は……) → 間."
             },
             {
-              "id": "te-form-sequence",
-              "title": "〜て（estado que acompaña）",
+              "id": "tsutsu",
+              "title": "〜つつ（mientras…）",
               "thisTitle": "〜ながら（mientras…）",
-              "diff": "ながら son dos acciones que se hacen a la vez; て es hacer algo manteniendo el estado que dejó la primera acción.",
+              "diff": "Ambas indican que una misma persona hace dos cosas a la vez; ながら sirve tanto en la conversación como por escrito, y つつ es lenguaje escrito, más elegante.",
               "this": [
                 {
-                  "tag": "A la vez",
-                  "tr": "Leo el periódico mientras escucho música."
+                  "tag": "Cotidiano · hablado",
+                  "tr": "Caminé por el paseo junto al mar charlando con un amigo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Mantener un estado",
-                  "tr": "Leo el periódico con las gafas puestas."
+                  "tag": "Escrito · elegante",
+                  "tr": "Paseé por el camino junto al mar escuchando el rumor de las olas."
                 }
               ],
-              "explain": "Mira el verbo de delante: acciones que pueden durar, como 聞く, 歌う, 歩く → ながら; acciones que dejan un estado nada más hacerse, como かける, 座る, 持つ → て. «Con las gafas puestas», «sentado» se dicen con la forma て."
+              "explain": "Significan lo mismo; depende del estilo: charlas y conversación cotidiana → ながら; textos, discursos, noticias y otros registros escritos → つつ, que suena elegante. Un verbo muy coloquial como 「しゃべる」 queda muy forzado con つつ. En los dos casos, ambas acciones las hace la misma persona."
             }
           ]
         }
@@ -2903,90 +2851,26 @@
       "id": "nai-form",
       "groups": [
         {
-          "kind": "look",
-          "note": "El 「ない」 de negación ↔ el 「な」 de prohibición: los dos tienen 「な」",
-          "items": [
-            {
-              "id": "naa-exclamation",
-              "title": "〜な（prohibición）",
-              "diff": "Forma ない + ない es negación, «no…»; forma de diccionario + な es prohibición, «¡no…!».",
-              "this": [
-                {
-                  "tag": "Negación",
-                  "tr": "Yo no toco eso."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Prohibición",
-                  "tr": "¡No toques eso!"
-                }
-              ],
-              "explain": "Mira la forma del verbo delante de 「な」: forma ない (触ら) + ない → afirma que «no lo haces»; forma de diccionario (触る) + な → ordena al otro «¡no lo hagas!», y el verbo en sí está en afirmativo."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Todas expresan negación: depende de la palabra que va delante y de a quién se habla",
+          "note": "Ambas significan «no (hacer)…»; solo cambia el grado de cortesía",
           "items": [
             {
               "id": "masu-forms",
               "title": "〜ません",
-              "diff": "ない es la negación en estilo llano; ません es la negación en estilo cortés. Significan lo mismo.",
+              "diff": "ない es la negación llana; ません es la negación cortés; significan lo mismo.",
               "this": [
                 {
                   "tag": "Llano",
-                  "tr": "Perdona, hoy no bebo alcohol."
+                  "tr": "Perdona, hoy no bebo."
                 }
               ],
               "that": [
                 {
                   "tag": "Cortés",
-                  "tr": "Profesor, hoy no voy a beber alcohol."
+                  "tr": "Profesor, hoy no voy a beber."
                 }
               ],
-              "explain": "Fíjate en a quién hablas: amigos, familia → 飲まない; profesores, jefes, desconocidos → 飲みません. Ojo a la conjugación: ない va con la forma ない (飲ま) y ません con la forma ます (飲み)."
-            },
-            {
-              "id": "i-adj-negative",
-              "diff": "La negación de un verbo es forma ない + ない; la de un adjetivo い se forma cambiando 「い」 por 「くない」.",
-              "this": [
-                {
-                  "tag": "Verbo → ない",
-                  "tr": "No me como este plato."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Adjetivo い → くない",
-                  "tr": "Este plato no está rico."
-                }
-              ],
-              "wrong": {
-                "why": "Al adjetivo い se le quita 「い」 y se añade 「くない」"
-              },
-              "explain": "Fíjate en la palabra de delante: verbo (食べる) → 食べない; adjetivo い (おいしい) → se quita 「い」 y se añade 「くない」. La negación de 「いい」 es 「よくない」."
-            },
-            {
-              "id": "ja-nai",
-              "diff": "Los verbos se niegan con 「ない」; los sustantivos y los adjetivos な se niegan con 「じゃない」.",
-              "this": [
-                {
-                  "tag": "Verbo → ない",
-                  "tr": "Tanaka no viene a la escuela."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Sustantivo → じゃない",
-                  "tr": "Tanaka no es estudiante."
-                }
-              ],
-              "wrong": {
-                "why": "Los sustantivos se niegan con 「じゃない」"
-              },
-              "explain": "Fíjate en lo de delante: verbo (来る) → 来ない; sustantivo (学生) o adjetivo な (元気) → じゃない (cortés: ではありません). La diferencia entre «no + verbo» y «no ser…» es, en japonés, la diferencia entre ない y じゃない."
+              "explain": "Mira a quién hablas: a un amigo o familiar, como con 「ごめん」 → 飲まない; a un profesor como 「先生」, un jefe o un desconocido → 飲みません. Ojo con la conjugación: ない va con la forma ない (飲ま) y ません con la forma ます (飲み)."
             }
           ]
         }
@@ -3001,7 +2885,7 @@
           "items": [
             {
               "id": "te-wa-ikenai",
-              "diff": "ないといけない es «no hacerlo no vale» = hay que hacerlo; てはいけない es «hacerlo no vale» = está prohibido.",
+              "diff": "ないといけない es «no hacerlo no vale» = obligación; てはいけない es «hacerlo no vale» = prohibición.",
               "this": [
                 {
                   "tag": "Obligación",
@@ -3011,10 +2895,10 @@
               "that": [
                 {
                   "tag": "Prohibición",
-                  "tr": "Mientras tomas la medicina, no puedes beber alcohol."
+                  "tr": "Mientras tomas la medicina no puedes beber alcohol."
                 }
               ],
-              "explain": "Fíjate en lo que va delante de 「いけない」: 「ないと」 (si no lo haces) → hay que hacerlo; 「ては／では」 (si lo haces) → no se permite. Solo cambia la negación de delante, y el significado es justo el contrario."
+              "explain": "Mira lo que va antes de 「いけない」: 「ないと」 (si no lo haces) → hay que hacerlo; 「ては／では」 (si lo haces) → no se puede hacer. Solo cambia la negación de delante, y el sentido es justo el contrario."
             }
           ]
         },
@@ -3024,20 +2908,20 @@
           "items": [
             {
               "id": "nakereba-naranai",
-              "diff": "ないといけない es coloquial y se usa sobre todo para asuntos concretos propios; なければならない es más formal y se usa en normas y textos escritos.",
+              "diff": "ないといけない es coloquial y suele hablar de algo concreto de uno mismo; なければならない es más formal y se usa sobre todo para normas y por escrito.",
               "this": [
                 {
-                  "tag": "Situación personal · coloquial",
+                  "tag": "Situación personal · hablado",
                   "tr": "Ya son las diez. Tengo que volver a casa."
                 }
               ],
               "that": [
                 {
                   "tag": "Norma · escrito",
-                  "tr": "En Japón, los coches tienen que circular por la izquierda."
+                  "tr": "En Japón, los coches deben circular por la izquierda."
                 }
               ],
-              "explain": "Fíjate en de qué se habla: de tu situación concreta del momento (もう10時だ) → ないといけない suena más natural; de obligaciones objetivas en leyes, normas o textos → なければならない. Significan lo mismo, así que intercambiarlas no es un error."
+              "explain": "Mira de qué hablas: de tu situación concreta del momento (もう10時だ) → ないといけない suena más natural; de leyes, normas u obligaciones objetivas en un texto, como con 「日本では」 → なければならない. Significan lo mismo, y usar una por otra no es un error."
             }
           ]
         }
@@ -3048,24 +2932,24 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de la negación 「ないで」: «en el estado de no hacer…»",
+          "note": "Ambas vienen del negativo 「ないで」, cuyo sentido básico es «sin hacer…»",
           "items": [
             {
               "id": "naide-without",
-              "diff": "ないで + ください pide al otro que no haga algo; ないで + otro verbo significa «sin hacer…, hice…».",
+              "diff": "ないで＋ください pide al otro que no haga algo; ないで＋otro verbo significa «hizo… sin…».",
               "this": [
                 {
-                  "tag": "Por favor, no…",
-                  "tr": "Por favor, no olvides el paraguas."
+                  "tag": "Por favor, no",
+                  "tr": "No se olvide el paraguas, por favor."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sin… hice…",
+                  "tag": "Sin…",
                   "tr": "Salí sin llevar paraguas."
                 }
               ],
-              "explain": "Fíjate en lo que sigue a 「ないで」: 「ください」 → pides al otro que no lo haga; otro verbo (出かけた, 寝た) → cuentas que hiciste B sin haber hecho A."
+              "explain": "「ないで」 significa en origen «en el estado de no hacer…»: seguido de otro verbo (出かけた, 寝た), es hacer B sin haber hecho A → «hizo B sin A»; seguido de 「ください」, pide al otro que se mantenga en el estado de «no hacer» → «por favor, no…». Así que mira si después de 「ないで」 viene 「ください」 u otro verbo."
             }
           ]
         },
@@ -3075,11 +2959,11 @@
           "items": [
             {
               "id": "te-wa-ikenai",
-              "diff": "ないでください es una petición cortés; てはいけません anuncia una norma y, dicha a clientes o superiores, suena condescendiente.",
+              "diff": "ないでください es una petición, de tono cortés; てはいけません anuncia una norma y, dicho a clientes o superiores, suena condescendiente.",
               "this": [
                 {
                   "tag": "Petición cortés",
-                  "tr": "Disculpe, por favor no haga fotos aquí."
+                  "tr": "Disculpe, por favor, no haga fotos aquí."
                 }
               ],
               "that": [
@@ -3088,25 +2972,25 @@
                   "tr": "Dentro del museo no está permitido hacer fotos."
                 }
               ],
-              "explain": "Fíjate en la posición de quien habla: si pides en persona la colaboración del otro, sobre todo a clientes o desconocidos → ないでください; si explicas una norma, o un profesor habla a sus alumnos o unos padres a sus hijos → てはいけません."
+              "explain": "Mira la posición de quien habla: si pides cara a cara que el otro colabore, empezando con 「すみません」, sobre todo a clientes o desconocidos → ないでください; si explicas las normas de un lugar, como con 「美術館の中で」, o un profesor a sus alumnos o unos padres a su hijo explican lo que está bien → てはいけません."
             },
             {
               "id": "naa-exclamation",
               "title": "〜な（prohibición）",
-              "diff": "ないでください es una petición cortés; forma de diccionario + な es una prohibición brusca y tajante.",
+              "diff": "ないでください es una petición cortés; forma de diccionario＋な es una prohibición brusca y tajante.",
               "this": [
                 {
                   "tag": "Petición cortés",
-                  "tr": "Perdone, no fume aquí, por favor."
+                  "tr": "Disculpe, por favor, no fume aquí."
                 }
               ],
               "that": [
                 {
                   "tag": "Tajante · brusco",
-                  "tr": "¡Prohibido fumar aquí!"
+                  "tr": "¡No fumes aquí!"
                 }
               ],
-              "explain": "Mira a quién le hablas y en qué situación: a clientes, desconocidos o superiores → ないでください; al regañar con enfado, en un grito de emergencia o en un cartel → 〜な. Ojo: delante de 〜な va la forma de diccionario (吸う), no la forma ない."
+              "explain": "Mira a quién hablas y en qué situación: a un cliente, un desconocido o un superior, empezando con 「すみません」 → ないでください; para regañar con enfado, gritar una advertencia urgente o en carteles → 〜な. Ojo: delante de 〜な va la forma de diccionario (吸う), no la forma ない."
             }
           ]
         }

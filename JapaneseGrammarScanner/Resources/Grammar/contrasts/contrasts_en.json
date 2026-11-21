@@ -2481,26 +2481,10 @@
       "id": "mashou-ka-offer",
       "groups": [
         {
-          "kind": "root",
-          "note": "All come from 「う」, which expresses intention — ましょう＝ます＋う",
+          "kind": "meaning",
+          "sense": 1,
+          "note": "Both offer help: “Shall I…?”",
           "items": [
-            {
-              "id": "mashou",
-              "diff": "ましょうか means “shall I…?” or consulting the other person; without 「か」, ましょう directly pushes “let's … together”.",
-              "this": [
-                {
-                  "tag": "Shall I do it?",
-                  "tr": "Shall I do the cleaning?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Let's all do it",
-                  "tr": "Come on, let's all clean up together."
-                }
-              ],
-              "explain": "Look at the subject and 「か」: me doing it alone for the other person, or asking their opinion → ましょうか; everyone doing it together, with the speaker taking the lead → ましょう."
-            },
             {
               "id": "volitional-form",
               "title": "〜(よ)うか (casual)",
@@ -2508,39 +2492,59 @@
               "this": [
                 {
                   "tag": "Polite",
-                  "tr": "Sensei, shall I carry that bag for you?"
+                  "tr": "Professor, shall I carry that bag for you?"
                 }
               ],
               "that": [
                 {
                   "tag": "Casual",
-                  "tr": "Mom, want me to carry that bag?"
+                  "tr": "Mom, shall I carry that bag?"
                 }
               ],
-              "explain": "Same meaning — look at who you're talking to: teachers, bosses, guests → 持ちましょうか; family, friends → 持とうか (for godan verbs, the う-row sound changes to the お-row, plus う)."
+              "explain": "Same meaning — it depends on who you're talking to: a teacher like 「先生」, a boss, a customer → 持ちましょうか; family like 「お母さん」 or friends → 持とうか (for godan verbs, the final -u sound changes to the -o row, plus う)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both can be used to suggest or invite",
+          "sense": 2,
+          "note": "Both mean “Shall we… together?”",
           "items": [
             {
-              "id": "masenka",
-              "diff": "ましょうか can mean “let me do it for you”; ませんか asks the other person to do something (together).",
+              "id": "mashou",
+              "title": "〜ましょう (let's do it together)",
+              "diff": "Both suggest doing something together; ましょうか asks for the other person's agreement and is more respectful; ましょう is a direct call to action that assumes they'll agree.",
               "this": [
                 {
-                  "tag": "Let me do it for you",
-                  "tr": "That looks heavy. Shall I carry your bag?"
+                  "tag": "Asking for agreement",
+                  "tr": "Look at the time. Shall we head home soon?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Ask them to join",
-                  "tr": "Shall we walk to the station together?"
+                  "tag": "Direct call",
+                  "tr": "Look at the time. Let's head home soon."
                 }
               ],
-              "explain": "Look at who does the action: I offer to do it for them → ましょうか; the other person, or the two of you together → ませんか."
+              "explain": "Check whether the sentence ends with 「か」: with 「か」, said with rising intonation as “…okay?”, you leave the decision to the other person → ましょうか; without 「か」, the speaker takes the lead and calls everyone to act, sounding more upbeat and assuming agreement → ましょう."
+            },
+            {
+              "id": "masenka",
+              "title": "〜ませんか (inviting someone to join)",
+              "diff": "Both politely suggest doing something together; ましょうか is “So, shall we…?”, while ませんか first asks “Would you like to…?”, showing more respect for the other person's wishes.",
+              "this": [
+                {
+                  "tag": "Already discussed · settling it",
+                  "tr": "That movie we talked about the other day — shall we go see it together?"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Asking if they want to",
+                  "tr": "If you'd like, would you like to go see a movie together?"
+                }
+              ],
+              "explain": "Check whether the other person already wants to do it: if you've both talked about it already, like 「この前話した」, and it just needs settling → ましょうか, with a positive “let's do it, then” tone; if you're bringing it up for the first time and asking if they're willing, like 「よかったら」 → ませんか, which leaves the decision entirely to them and is more polite."
             }
           ]
         }
@@ -2550,8 +2554,8 @@
       "id": "masu-forms",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from the polite auxiliary 「ます」 — ませんか＝ません＋the question marker 「か」",
+          "kind": "look",
+          "note": "ません ↔ ませんか: the only difference is one 「か」 at the end",
           "items": [
             {
               "id": "masenka",
@@ -2593,7 +2597,7 @@
                   "tr": "Sorry, I'm not drinking today."
                 }
               ],
-              "explain": "Look at who it's addressed to: teachers, bosses, strangers → 飲みません; friends, family → 飲まない. Note the conjugation: ません attaches to the masu-stem (飲み), ない to the nai-form stem (飲ま)."
+              "explain": "Look at who you're talking to: a teacher like 「先生」, a boss, a stranger → 飲みません; a friend or family member, as with 「ごめん」 → 飲まない. Note the conjugation: ません attaches to the ます-form (飲み), ない to the ない-form (飲ま)."
             }
           ]
         }
@@ -2604,24 +2608,24 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from the particle 「も」 — “also”: 「何も〜ない」 is literally “not … even anything”",
+          "note": "Both come from the particle 「も」 — its core meaning is “this one counts too”",
           "items": [
             {
               "id": "question-word-mo-nai",
-              "diff": "noun＋も means “… too”; question word＋も＋negative means “nothing at all, no one at all”.",
+              "diff": "Noun＋も means “…too”; question word＋も＋negative means “nothing / nobody at all”.",
               "this": [
                 {
-                  "tag": "Too · adds same kind",
+                  "tag": "Too · adding a similar item",
                   "tr": "I don't drink coffee. I don't drink juice either."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nothing · total negation",
+                  "tag": "Nothing at all · total negation",
                   "tr": "I haven't drunk anything since this morning."
                 }
               ],
-              "explain": "Look at what comes before 「も」: a specific thing (ジュース) → “too / either”, usually after an item of the same kind was mentioned (コーヒーは…); a question word (何、誰、どこ)＋も followed by a negative → “nothing / no one”, a total negation, not “too”."
+              "explain": "The core meaning of 「も」 is “this one counts too”: after a specific thing (ジュース), when a similar item has already been mentioned (コーヒーは…), it adds one more → “too / either”; after the question word 「何」, it counts in “any one of them at all”, and with a following negative → not a single one → “nothing at all”, a total negation. So check whether 「も」 follows a specific thing or a question word."
             }
           ]
         }
@@ -2632,14 +2636,14 @@
       "groups": [
         {
           "kind": "root",
-          "note": "All come from the formal noun 「の」 — presenting something as “the situation”",
+          "note": "Both come from the nominalizer 「の」 — its core meaning is presenting something as “the situation”",
           "items": [
             {
               "id": "n-desu-ga-preface",
-              "diff": "んです explains a situation and the sentence ends there; んですが first explains the situation, then goes on to a request or question.",
+              "diff": "んです presents the situation and stops there, giving a reason; んですが presents the situation and pauses with 「が」, leading into a request or question.",
               "this": [
                 {
-                  "tag": "Explains a reason",
+                  "tag": "Giving a reason",
                   "tr": "Sorry I'm late. The train stopped."
                 }
               ],
@@ -2649,15 +2653,23 @@
                   "tr": "Excuse me, I'm lost — where is the station?"
                 }
               ],
-              "explain": "Check whether anything follows: the sentence ends with 「んです。」, explaining a reason → んです; 「んですが、」 followed by a request or question (駅はどこですか、〜てもいいですか) → it's a lead-in. The written のです and the plain んだ work the same way."
-            },
+              "explain": "「の（ん）」 originally presents something as “the situation”: 「んです。」 lays out the situation and ends → explaining a reason (遅れてすみません。電車が止まったんです); 「んですが、」 lays out the situation, then pauses at 「が」 without concluding and leaves room for what follows → a lead-in to a request or question (駅はどこですか). So check whether 「ん」 is followed by 「です。」 that ends the sentence or by 「ですが、」 that keeps going. The same goes for written のです and casual んだ."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Both ask “What's wrong?” after noticing something",
+          "items": [
             {
               "id": "casual-question-no",
+              "title": "〜の？ (caring question)",
+              "thisTitle": "〜んですか (asking for the reason)",
               "diff": "んですか politely asks about the situation; 〜の？ is its casual form, used with friends and family.",
               "this": [
                 {
                   "tag": "Polite",
-                  "tr": "Professor, what's the matter?"
+                  "tr": "Professor, what's wrong?"
                 }
               ],
               "that": [
@@ -2666,7 +2678,7 @@
                   "tr": "Hey, what's wrong?"
                 }
               ],
-              "explain": "Both ask the reason after noticing how someone looks — look at who it's addressed to: teachers, bosses, people you don't know well → 〜んですか; friends, family → 「〜の？」 with rising intonation. A more formal written version is のですか."
+              "explain": "Both ask for the reason after seeing how someone looks; it depends on who you're talking to: a teacher like 「先生」, a boss, someone you don't know well → 〜んですか; calling out to a friend or family member with 「ねえ」 → 「〜の？」 with rising intonation. A more formal written version is のですか."
             }
           ]
         }
@@ -2677,12 +2689,12 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from the classical 「なり」 — 「な」 to modify nouns, 「に」 to modify verbs",
+          "note": "Both come from classical 「なり」 (に＋あり) — its core meaning is “to be in the state of…”",
           "items": [
             {
               "id": "adj-adverbial",
               "title": "〜に (な-adjective modifying a verb)",
-              "diff": "A な-adjective takes 「な」 to modify a noun, and 「に」 to modify a verb.",
+              "diff": "A な-adjective uses 「な」 to modify a noun, but 「に」 to modify a verb.",
               "this": [
                 {
                   "tag": "＋noun → な",
@@ -2696,57 +2708,9 @@
                 }
               ],
               "wrong": {
-                "why": "To modify a verb, use 「に」"
+                "why": "Use 「に」 to modify a verb"
               },
-              "explain": "Look at the word right after it: a noun (部屋, 人, 町) → 静かな; a verb (話す, 歩く, 書く) → 静かに. Just as English switches between “quiet” and “quietly”, Japanese uses な and に."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "All go before a noun to modify it",
-          "items": [
-            {
-              "id": "no-possessive",
-              "title": "名詞＋の＋名詞",
-              "diff": "na-adjective＋な＋noun; noun＋の＋noun.",
-              "this": [
-                {
-                  "tag": "na-adjective → な",
-                  "tr": "I received some beautiful flowers."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Noun → の",
-                  "tr": "I received some roses."
-                }
-              ],
-              "wrong": {
-                "why": "A na-adjective modifying a noun needs 「な」"
-              },
-              "explain": "First decide what kind of word comes before: a describing word that can take 「とても〜」 (きれい、静か、有名) → な; the name of a person, place or thing (バラ、日本、私) → の. In English both simply go in front of the noun, so the classic mistake is ✗きれいの花."
-            },
-            {
-              "id": "noun-modifying-clause",
-              "title": "い形容詞＋名詞",
-              "diff": "な-adjectives need 「な」; い-adjectives attach directly to the noun with nothing added.",
-              "this": [
-                {
-                  "tag": "な-adjective → add な",
-                  "tr": "I went to a famous restaurant."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "い-adjective → attach directly",
-                  "tr": "I went to a delicious restaurant."
-                }
-              ],
-              "wrong": {
-                "why": "い-adjectives attach directly to nouns, without な"
-              },
-              "explain": "Look at how the adjective ends: い-adjectives ending in 「い」 (おいしい, 高い) attach directly to the noun; な-adjectives (有名, 静か) need 「な」. Note that きれい ends in 「い」 but is a な-adjective: きれいな花."
+              "explain": "In classical Japanese, 「静かなり」 meant “is quiet (state)”. Its form before nouns, 「静かなる」, was later shortened to 「静かな」 → 静かな部屋 (a quiet room); its form before verbs was 「静かに」 all along → 静かに話してください (please speak quietly). So look at the word right after it: a noun (部屋, 人, 町) → な; a verb (話してください, 歩く) → に."
             }
           ]
         }
@@ -2757,91 +2721,75 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from the sentence-final exclamatory 「な」 — かな＝the question 「か」＋the exclamatory 「な」",
+          "note": "Both come from the sentence-final exclamatory 「な」 — its core meaning is voicing your feelings to yourself",
           "items": [
             {
               "id": "kana-wonder",
-              "thisTitle": "〜なあ (exclamation · wish)",
-              "diff": "なあ expresses an exclamation or a wish; かな adds a questioning 「か」, wondering to yourself “I wonder if…?”.",
+              "thisTitle": "〜なあ (exclamation)",
+              "diff": "なあ blurts out a feeling as an exclamation; かな adds the question marker 「か」 before it, making it an unsure question to yourself.",
               "this": [
                 {
-                  "tag": "Wish",
-                  "tr": "I hope it's sunny tomorrow."
+                  "tag": "Already tasted · exclaiming",
+                  "tr": "The ramen at this place is so good."
                 }
               ],
               "that": [
                 {
-                  "tag": "Wondering · unsure",
-                  "tr": "I wonder if it'll be sunny tomorrow."
+                  "tag": "Not tasted yet · unsure",
+                  "tr": "I wonder if the ramen at this place is good."
                 }
               ],
-              "explain": "Check whether 「か」 comes before 「な」: no → a simple exclamation or wish; with 「か」 → you're unsure and asking yourself."
-            }
-          ]
-        },
-        {
-          "kind": "look",
-          "note": "Prohibitive 「な」 ↔ negative 「ない」 — both contain 「な」",
-          "items": [
-            {
-              "id": "nai-form",
-              "thisTitle": "〜な (prohibition)",
-              "diff": "dictionary form＋な is a prohibition, “don't…!”; nai-form＋ない is a negative, “not…”.",
-              "this": [
-                {
-                  "tag": "Prohibition",
-                  "tr": "Don't touch that!"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Negative",
-                  "tr": "I won't touch that."
-                }
-              ],
-              "explain": "Look at the verb form before 「な」: dictionary form (触る)＋な → ordering the other person “don't do it”, with the verb itself in the affirmative; nai-form stem (触ら)＋ない → stating “I don't do it”. Don't mistake 「〜るな」 or 「〜くな」 for a plain negative."
+              "explain": "「な」 originally voices your feelings to yourself: attached right after the feeling → おいしいなあ, you've already tasted it and exclaim “this is so good”; add the question marker 「か」 first, then 「な」 → おいしいかな, you voice a doubt to yourself: “I wonder if it's good”. So check whether 「か」 comes before 「な」: no → exclamation; yes → an unsure question to yourself."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "The exclamatory 「なあ」 is close to 「ね」; the prohibitive 「な」 is close to 「ないでください」",
+          "sense": 1,
+          "note": "Both are exclamations: “How…!”",
           "items": [
             {
               "id": "ne-particle",
               "thisTitle": "〜なあ (exclamation)",
-              "diff": "なあ is mostly an exclamation to yourself; ね is said to the listener, seeking agreement.",
+              "diff": "なあ is mostly an exclamation to yourself; ね is said to a listener, seeking agreement.",
               "this": [
                 {
-                  "tag": "To oneself",
-                  "tr": "Ah, it's so hot."
+                  "tag": "Talking to yourself",
+                  "tr": "Ugh, it's so hot."
                 }
               ],
               "that": [
                 {
-                  "tag": "To someone · seeking agreement",
+                  "tag": "Said to someone · seeking agreement",
                   "tr": "It's really hot today, isn't it?"
                 }
               ],
-              "explain": "Check whether there's a listener: talking to yourself, needing no reply → なあ, usually after the plain form; making small talk and hoping for a “yes, it is” → ね, which can follow 「です」."
-            },
+              "explain": "Check whether there's someone you're talking to: talking to yourself with something like 「ああ」, not expecting a reply → なあ, usually after the plain form; making small talk and hoping the other person will say “It sure is” → ね, which can follow 「です」."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Both are prohibitions: “Don't…”",
+          "items": [
             {
               "id": "naide-kudasai",
               "thisTitle": "〜な (prohibition)",
-              "diff": "dictionary form＋な is a rude, forceful prohibition; ないでください is a polite request.",
+              "diff": "Dictionary form＋な is a rude, forceful prohibition; ないでください is a polite request.",
               "this": [
                 {
                   "tag": "Forceful · rude",
-                  "tr": "No smoking here!"
+                  "tr": "Don't take photos in this room!"
                 }
               ],
               "that": [
                 {
                   "tag": "Polite request",
-                  "tr": "Excuse me, please don't smoke here."
+                  "tr": "Excuse me, please don't take photos in this room."
                 }
               ],
-              "explain": "Look at who it's addressed to and the setting: guests, strangers, superiors → ないでください; angry scolding, urgent shouts or signs → 〜な. Saying 「〜な」 to someone's face is very rude."
+              "explain": "Consider who you're speaking to and the situation: politely addressing a customer, a stranger, or a superior, starting with 「すみません」 → ないでください; scolding angrily, shouting a warning in an emergency, or on signs → 〜な. Saying 「〜な」 to someone's face is very rude."
             }
           ]
         }
@@ -2877,23 +2825,23 @@
               "explain": "Look at the subjects of the two actions: the same person → ながら; different people (母が……, 私は……) → 間."
             },
             {
-              "id": "te-form-sequence",
-              "title": "〜て (accompanying state)",
+              "id": "tsutsu",
+              "title": "〜つつ (while doing)",
               "thisTitle": "〜ながら (while doing)",
-              "diff": "ながら is two actions going on at the same time; て is doing something while keeping the resulting state of the first action.",
+              "diff": "Both mean one person doing two things at once; ながら works in everyday speech and writing, while つつ is written language and more refined.",
               "this": [
                 {
-                  "tag": "At the same time",
-                  "tr": "I read the newspaper while listening to music."
+                  "tag": "Everyday · spoken",
+                  "tr": "I walked along the seaside road, chatting with a friend."
                 }
               ],
               "that": [
                 {
-                  "tag": "Keeping a state",
-                  "tr": "I read the newspaper with my glasses on."
+                  "tag": "Written · refined",
+                  "tr": "I strolled along the seaside road, listening to the sound of the waves."
                 }
               ],
-              "explain": "Look at the first verb: actions that can continue, like 聞く, 歌う, 歩く → ながら; actions that leave a state once done, like かける, 座る, 持つ → て. “With glasses on” or “sitting” in English both need the て-form."
+              "explain": "Same meaning — it depends on the style: chatting and everyday conversation → ながら; writing, speeches, news and other formal language → つつ, which sounds refined. A very colloquial verb like 「しゃべる」 sounds awkward with つつ. With both, the two actions must be done by the same person."
             }
           ]
         }
@@ -2903,90 +2851,26 @@
       "id": "nai-form",
       "groups": [
         {
-          "kind": "look",
-          "note": "Negative 「ない」 ↔ prohibitive 「な」 — both contain 「な」",
-          "items": [
-            {
-              "id": "naa-exclamation",
-              "title": "〜な (prohibition)",
-              "diff": "ない-form＋ない is the negative “don't / doesn't”; dictionary form＋な is the prohibition “Don't…!”.",
-              "this": [
-                {
-                  "tag": "Negative",
-                  "tr": "I don't touch that."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Prohibition",
-                  "tr": "Don't touch that!"
-                }
-              ],
-              "explain": "Look at the verb form before 「な」: ない-form (触ら) ＋ ない → states that you don't do it; dictionary form (触る) ＋ な → orders someone “Don't do it”, with the verb itself in the affirmative."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "All express negation — look at what comes before and who you're talking to",
+          "note": "Both mean “not (do)…”, differing only in politeness",
           "items": [
             {
               "id": "masu-forms",
               "title": "〜ません",
-              "diff": "ない is the plain negative; ません is the polite negative — same meaning.",
+              "diff": "ない is the plain negative; ません is the polite negative, with the same meaning.",
               "this": [
                 {
-                  "tag": "Plain",
+                  "tag": "Casual",
                   "tr": "Sorry, I'm not drinking today."
                 }
               ],
               "that": [
                 {
                   "tag": "Polite",
-                  "tr": "Sensei, I won't be drinking today."
+                  "tr": "Professor, I won't drink today."
                 }
               ],
-              "explain": "Look at who you're talking to: friends, family → 飲まない; teachers, bosses, strangers → 飲みません. Note the forms: ない attaches to the nai-form (飲ま), ません to the masu-stem (飲み)."
-            },
-            {
-              "id": "i-adj-negative",
-              "diff": "A verb's negative is nai-form + ない; an i-adjective's negative changes 「い」 to 「くない」.",
-              "this": [
-                {
-                  "tag": "Verb → ない",
-                  "tr": "I don't eat this dish."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "i-adjective → くない",
-                  "tr": "This dish isn't tasty."
-                }
-              ],
-              "wrong": {
-                "why": "For an i-adjective, drop 「い」 and add 「くない」"
-              },
-              "explain": "Look at what kind of word comes before: a verb (食べる) → 食べない; an i-adjective (おいしい) → drop 「い」 and add 「くない」. The negative of 「いい」 is 「よくない」."
-            },
-            {
-              "id": "ja-nai",
-              "diff": "Verbs are negated with 「ない」; nouns and na-adjectives are negated with 「じゃない」.",
-              "this": [
-                {
-                  "tag": "Verb → ない",
-                  "tr": "Tanaka doesn't come to school."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Noun → じゃない",
-                  "tr": "Tanaka isn't a student."
-                }
-              ],
-              "wrong": {
-                "why": "A noun is negated with 「じゃない」"
-              },
-              "explain": "Look at what comes before: a verb (来る) → 来ない; a noun (学生) or na-adjective (元気) → じゃない (polite: ではありません). The difference between “doesn't (do)” and “isn't (a…)” in English is the difference between ない and じゃない in Japanese."
+              "explain": "Look at who you're talking to: a friend or family member, as with 「ごめん」 → 飲まない; a teacher like 「先生」, a boss, a stranger → 飲みません. Note the conjugation: ない attaches to the ない-form (飲ま), ません to the ます-form (飲み)."
             }
           ]
         }
@@ -3001,11 +2885,11 @@
           "items": [
             {
               "id": "te-wa-ikenai",
-              "diff": "ないといけない is “not doing it is no good” = must; てはいけない is “doing it is no good” = must not.",
+              "diff": "ないといけない is “not doing it won't do” = must; てはいけない is “doing it won't do” = must not.",
               "this": [
                 {
                   "tag": "Must do",
-                  "tr": "I have to take my medicine every day."
+                  "tr": "I have to take medicine every day."
                 }
               ],
               "that": [
@@ -3014,7 +2898,7 @@
                   "tr": "You must not drink alcohol while taking medicine."
                 }
               ],
-              "explain": "Look at what comes before 「いけない」: 「ないと」 (if you don't) → must do; 「ては／では」 (if you do) → not allowed. Only the negative in front differs, yet the meanings are exact opposites."
+              "explain": "Look at what comes before 「いけない」: 「ないと」 (if you don't) → you must do it; 「ては／では」 (if you do) → you must not do it. The only difference is the negative in front, yet the meanings are exact opposites."
             }
           ]
         },
@@ -3024,11 +2908,11 @@
           "items": [
             {
               "id": "nakereba-naranai",
-              "diff": "ないといけない is conversational, mostly about your own specific situation; なければならない is more formal, mostly for rules and in writing.",
+              "diff": "ないといけない is conversational, mostly about your own specific situation; なければならない is more formal, mostly used for rules and in writing.",
               "this": [
                 {
-                  "tag": "Personal · spoken",
-                  "tr": "It's already ten. I have to go home."
+                  "tag": "Personal situation · spoken",
+                  "tr": "It's already ten o'clock. I have to go home."
                 }
               ],
               "that": [
@@ -3037,7 +2921,7 @@
                   "tr": "In Japan, cars must drive on the left."
                 }
               ],
-              "explain": "Look at what is being talked about: your own immediate situation (もう10時だ) → ないといけない sounds more natural; objective obligations in laws, rules or writing → なければならない. They mean the same, and swapping them isn't wrong."
+              "explain": "Look at what you're talking about: your own immediate situation (もう10時だ) → ないといけない sounds more natural; laws, rules, or objective obligations in writing, as with 「日本では」 → なければならない. Both mean the same, and swapping them isn't wrong."
             }
           ]
         }
@@ -3048,11 +2932,11 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from the negative 「ないで」 — “without doing…”",
+          "note": "Both come from the negative 「ないで」 — its core meaning is “without doing…”",
           "items": [
             {
               "id": "naide-without",
-              "diff": "ないで + ください asks someone not to do something; ないで + another verb means “did… without…”.",
+              "diff": "ないで＋ください asks someone not to do something; ないで＋another verb means “did … without …”.",
               "this": [
                 {
                   "tag": "Please don't",
@@ -3062,10 +2946,10 @@
               "that": [
                 {
                   "tag": "Without…",
-                  "tr": "I went out without an umbrella."
+                  "tr": "I went out without taking an umbrella."
                 }
               ],
-              "explain": "Look at what follows 「ないで」: 「ください」 → asking someone not to do it; another verb (出かけた, 寝た) → describing doing B without having done A."
+              "explain": "「ないで」 originally means “in a state of not doing…”: followed by another verb (出かけた, 寝た), it means doing B without having done A → “did B without A”; followed by 「ください」, it asks the other person to stay in the “not doing” state → “please don't…”. So check whether 「ないで」 is followed by 「ください」 or by some other verb."
             }
           ]
         },
@@ -3075,7 +2959,7 @@
           "items": [
             {
               "id": "te-wa-ikenai",
-              "diff": "ないでください is a request and sounds polite; てはいけません states a rule, and sounds condescending if said to guests or superiors.",
+              "diff": "ないでください is a polite request; てはいけません announces a rule and can sound condescending when said to customers or superiors.",
               "this": [
                 {
                   "tag": "Polite request",
@@ -3085,15 +2969,15 @@
               "that": [
                 {
                   "tag": "Rule",
-                  "tr": "Taking photos inside the art museum is not allowed."
+                  "tr": "Taking photos is not allowed inside the museum."
                 }
               ],
-              "explain": "Look at the speaker's position: asking someone face to face to cooperate, especially guests or strangers → ないでください; explaining a rule, or a teacher to students, a parent to a child → てはいけません."
+              "explain": "Consider the speaker's position: asking someone face to face to cooperate, starting with 「すみません」, especially customers or strangers → ないでください; explaining the rules of a place, as with 「美術館の中で」, or a teacher to students or a parent to a child explaining what's right → てはいけません."
             },
             {
               "id": "naa-exclamation",
               "title": "〜な (prohibition)",
-              "diff": "ないでください is a polite request; dictionary form＋な is a rough, forceful prohibition.",
+              "diff": "ないでください is a polite request; dictionary form＋な is a rude, forceful prohibition.",
               "this": [
                 {
                   "tag": "Polite request",
@@ -3102,11 +2986,11 @@
               ],
               "that": [
                 {
-                  "tag": "Forceful · rough",
-                  "tr": "No smoking here!"
+                  "tag": "Forceful · rude",
+                  "tr": "Don't smoke here!"
                 }
               ],
-              "explain": "Look at who you're talking to and the situation: guests, strangers, superiors → ないでください; angry scolding, urgent shouts or signs → 〜な. Note that 〜な follows the dictionary form (吸う), not the ない-form."
+              "explain": "Consider who you're speaking to and the situation: a customer, a stranger, or a superior, starting with 「すみません」 → ないでください; scolding angrily, shouting a warning in an emergency, or on signs → 〜な. Note that 〜な follows the dictionary form (吸う), not the ない-form."
             }
           ]
         }
