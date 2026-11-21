@@ -55,12 +55,14 @@ Build 17 包含的内容（详见 PR #6 描述）：Build 16 的全部反馈修�
 
 推测（未核实）：控制台以开发者身份能列出记录字段，但下载附件时文件服务器按「当前查看的 iCloud 账号对这条记录有没有读取权限」放行；开发者账号不是这条记录的创建者，又没有 `_world` 读取权限，于是下载失败（服务器给的是 500 而不是 403）。如果成立，影响是：开发者看不到任何用户反馈里的截图，只能看到文字。
 
-验证办法（用户在控制台操作，约 2 分钟）：
+验证结果（2026-11-21）：用户在控制台用「Act As iCloud Account」登录提交这条反馈的 Apple ID 后，查询 Feedback 直接报 `User does not have READ access`。也就是说任何 iCloud 账号都没有 Feedback 的读取权限，原因基本确认是权限设置，不是上传或控制台故障。开发者因此看不到任何用户的截图，修复优先级高。
+
+原先的验证办法（已做）：
 1. 在 Records 页左下角点「Act As iCloud Account...」，登录提交这条反馈时 iPhone 上用的 Apple ID（也就是记录的创建者），再查询 Feedback、下载截图。能下载 → 推测成立；仍然报错 → 不是权限问题，改为提交 Apple Feedback（附上记录名和时间）。
 2. 也可以在 Development 环境用开发版提交一条带截图的反馈，对照下载结果。
 
 修法候选（等反馈批次结束、用户确认后再做，属于「隐私与合规」大改动，需先出方案）：
-- 推荐：在 schema 里新建一个自定义角色（例如「反馈查看者」），只给它 Feedback 的读取权限，把开发者自己的 iCloud 用户记录加入这个角色；之后在控制台用「Act As iCloud Account」以开发者账号查看所有反馈截图。不对 `_world` 开放，符合现在的隐私设定。需要核实 `.ckdb` 语法里自定义角色的写法和 `cktool` 是否支持导入。
+- 推荐：在 schema 里新建一个自定义角色（例如「反馈查看者」），只给它 Feedback 的读取权限，把开发者自己的 iCloud 用户记录加入这个角色；之后在控制台用「Act As iCloud Account」以开发者账号查看所有反馈截图。不对 `_world` 开放，符合现在的隐私设定。`.ckdb` 语法支持自定义角色（Apple 文档 Integrating a Text-Based Schema into Your Workflow 里的 create-role 规则）；把开发者的用户记录加进角色要在控制台里操作。先在 Development 验证能下载截图，再部署 Production。不涉及 App 代码，不需要新 Build。
 - 不推荐：恢复 `GRANT READ TO "_world"`（任何装了 App 的人都能读到别人的反馈和截图，`tools/validate_compliance.py` 会拦）；启用服务器密钥转发（用户已拒绝）。
 - 门槛：`tools/validate_compliance.py` 加一条规则，要求 Feedback 有且只有这个自定义角色和 `_creator` 能读。控制台下载本身无法在 CI 里自动测，手动验收写进 `docs/feedback/SETUP.md`。
 
