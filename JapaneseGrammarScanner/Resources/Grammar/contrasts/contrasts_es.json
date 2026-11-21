@@ -2447,30 +2447,6 @@
       "id": "mashou",
       "groups": [
         {
-          "kind": "look",
-          "note": "ましょう ↔ ましょうか: solo los separa un 「か」",
-          "items": [
-            {
-              "id": "mashou-ka-offer",
-              "thisTitle": "〜ましょう（proponer hacerlo juntos）",
-              "diff": "ましょう es «hagamos… todos juntos»; con un 「か」 más, ましょうか pasa a ser «¿lo hago yo?».",
-              "this": [
-                {
-                  "tag": "Todos juntos",
-                  "tr": "Limpiemos todos juntos."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "¿Lo hago yo?",
-                  "tr": "¿Limpio yo?"
-                }
-              ],
-              "explain": "Mira si la frase termina en 「か」 y luego quién lo hace: sin 「か」 y hecho 「みんなで」 → ましょう, «hagamos… todos juntos»; con 「か」 y hecho por 「私が」 → ましょうか, «¿lo hago yo?», ofreciendo ayuda. Decir directamente 「手伝いましょう」 suena como si ya hubieras decidido por el otro; para ofrecer ayuda se suele decir 「手伝いましょうか」."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Ambas invitan al otro a hacer algo juntos",
           "items": [
@@ -2508,6 +2484,24 @@
                 }
               ],
               "explain": "Significan lo mismo: las dos invitan al otro a hacer algo juntos. Mira a quién hablas: un superior como 「部長」, una persona mayor o alguien con poca confianza → 行きましょう; amigos o familia, a menudo empezando con 「ねえ」 → 行こう, 食べよう."
+            },
+            {
+              "id": "mashou-ka-offer",
+              "title": "〜ましょうか（proponer hacerlo juntos）",
+              "diff": "ましょう toma la iniciativa y da por hecho que el otro estará de acuerdo; ましょうか, con un か de más, primero pide su opinión.",
+              "this": [
+                {
+                  "tag": "Tomar la iniciativa",
+                  "tr": "Bueno, limpiemos la habitación entre todos."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Pedir opinión",
+                  "tr": "Bueno, ¿limpiamos la habitación entre todos?"
+                }
+              ],
+              "explain": "Las dos proponen limpiar juntos. ましょう sin か suena decidido, como quien toma la iniciativa dando por hecho que todos estarán de acuerdo; ましょうか con か pide la opinión del otro, así que suena más cortés y respetuoso. Para proponer algo a un superior, o cuando no sabes si al otro le apetece, se usa más ましょうか."
             }
           ]
         }
@@ -8254,20 +8248,21 @@
             {
               "id": "mama-ni-follow",
               "title": "〜られるままに",
-              "diff": "たまま es hacer otra cosa manteniendo un estado; 言われるままに es «hacer lo que te digan», dejándose llevar.",
+              "thisTitle": "〜たまま (mantener un estado)",
+              "diff": "たまま es que un estado se mantiene tal cual mientras haces otra cosa; 勧められるままに es «hacer lo que otro te insiste», dejarse llevar.",
               "this": [
                 {
-                  "tag": "mantener un estado",
-                  "tr": "Salí con la ventana abierta."
+                  "tag": "El estado se queda igual",
+                  "tr": "Me quedé dormido con el aire acondicionado encendido."
                 }
               ],
               "that": [
                 {
-                  "tag": "dejarse llevar",
-                  "tr": "Hice todo lo que me dijo el dependiente y acabé comprando ropa cara."
+                  "tag": "Hacer lo que te dicen",
+                  "tr": "Bebí cada vez que mi compañero veterano me ofrecía y acabé bebiendo demasiado."
                 }
               ],
-              "explain": "El significado básico de 「まま」 es «tal como está». Fíjate en lo que va delante: た形 (開けた) → el resultado de la acción se queda tal cual; palabras como 「言われる」「思う」「気の向く」 + ままに → actuar tal como dicen otros o como a uno le apetece."
+              "explain": "まま significa originalmente «tal cual». Fíjate en lo que va después de まま: si tras 「〜たまま、」 viene otra acción (眠ってしまった) → el estado anterior (エアコンをつけた) se mantiene tal cual mientras ocurre otra cosa; si la acción que sigue a 「勧められる／言われる＋ままに」 (飲みすぎた) se hace exactamente según lo que dijo el otro → haces lo que te dicen, sin criterio propio."
             }
           ]
         },
@@ -8399,7 +8394,7 @@
                   "tr": "En la habitación de al lado hay luz. Parece que todavía están despiertos."
                 }
               ],
-              "explain": "が見える habla de la cosa en sí que se tiene delante (明かり). とみえる va precedido de una oración completa (まだ起きている) y es una conclusión sacada de los indicios que se ven. Es más bien formal; al hablar se suele decir 「〜みたいだ」."
+              "explain": "見える significa originalmente «algo entra solo en el campo de visión». Si lo que entra en la vista es la cosa misma → sustantivo + が見える: la ves de verdad (明かりが見える); si se introduce un juicio con と, como diciendo «así es como se me presentan las cosas» → とみえる: una deducción a partir de señales visibles, «parece que…» (まだ起きているとみえる). Así que mira lo que va delante de 見える: sustantivo + が → ves una cosa; una oración completa + と → una conclusión deducida. とみえる es más bien escrito; al hablar se suele decir 「〜みたいだ」."
             }
           ]
         },
@@ -8507,20 +8502,21 @@
             },
             {
               "id": "volitional-form",
+              "title": "〜(よ)う（propuesta, invitación）",
               "diff": "「行かない？」 primero pregunta si la otra persona quiere, así que es más suave; 「行こう」 es una propuesta directa que da por hecho que el otro aceptará.",
               "this": [
                 {
-                  "tag": "pedir opinión",
-                  "tr": "Oye, ¿no te apetece ir a la playa este fin de semana?"
+                  "tag": "Tantear primero",
+                  "tr": "Oye, ¿no te apetece ir a la playa juntos este fin de semana?"
                 }
               ],
               "that": [
                 {
-                  "tag": "propuesta directa",
-                  "tr": "¡Venga, este fin de semana vamos a la playa!"
+                  "tag": "Propuesta directa",
+                  "tr": "¡Pues este fin de semana vamos juntos a la playa!"
                 }
               ],
-              "explain": "Fíjate en si ya está acordado. Si aún no sabes si la otra persona quiere ir y primero tanteas el terreno → 〜ない？. Si seguro que quiere, o ya lo habíais hablado, y decides sin rodeos (よし、じゃあ) → 〜(よ)う. Cuando a alguien le preguntan 「行かない？」, también suele responder 「うん、行こう！」."
+              "explain": "Las dos invitan al otro a ir a la playa. 〜ない？ primero tantea si quiere, dejándole margen para decir que no, por eso va bien para una primera invitación; 〜(よ)う le llama directamente a hacerlo juntos dando por hecho que aceptará, así que suele decirse cuando el otro ya ha mostrado interés, a menudo precedido de じゃあ."
             }
           ]
         }
@@ -16753,20 +16749,21 @@
             },
             {
               "id": "made-mo-nai",
-              "diff": "ことはない aconseja al otro que «no hace falta hacer eso»; までもない es «es tan evidente o tan simple que no hace falta molestarse en hacerlo».",
+              "title": "〜までもない (no hace falta molestarse)",
+              "diff": "ことはない suele decírsele al otro: «no hace falta que te molestes»; までもない es el juicio del propio hablante de que el asunto es leve y no merece el esfuerzo.",
               "this": [
                 {
-                  "tag": "Aconsejar al otro",
-                  "tr": "Tú no tienes la culpa; no hace falta que pidas perdón."
+                  "tag": "Aconsejar al otro · no hace falta ir",
+                  "tr": "Es solo un resfriado leve, no hace falta que vayas al hospital."
                 }
               ],
               "that": [
                 {
-                  "tag": "Evidente",
-                  "tr": "Ni que decir tiene que la salud es importante."
+                  "tag": "Juicio propio · no merece la pena ir",
+                  "tr": "Es solo un resfriado leve; no merece la pena ir al hospital."
                 }
               ],
-              "explain": "Mira el motivo: ことはない apunta a la acción del otro y le dice «no lo hagas»; までもない es porque la cosa es tan obvia o tan simple que «no hace falta decirlo / comprobarlo»; son habituales 「言うまでもない」 y 「言うまでもなく」."
+              "explain": "Las dos dicen «no hace falta ir expresamente al hospital»; fíjate en desde qué punto de vista se dice. ことはない se le dice normalmente al otro, para aconsejarle o tranquilizarle y que no lo haga, a menudo con よ al final; までもない es el juicio del propio hablante de que el asunto es leve y evidente y no vale la pena hacerlo. Tiene un tono sereno y es frecuente también en textos escritos."
             }
           ]
         }
@@ -17203,24 +17200,25 @@
         },
         {
           "kind": "meaning",
-          "note": "Ambas presentan una razón con carga emocional",
+          "note": "Las dos expresan una causa: «porque…»",
           "items": [
             {
-              "id": "no-dakara",
-              "diff": "もん es excusarse o hacerse el mimoso; んだから es usar una razón para exigirle algo al otro o reprochárselo.",
+              "id": "kara-from",
+              "title": "〜から (explicar la causa al final)",
+              "diff": "から da la razón de forma neutra; もん tiene un tono mimoso y de protesta, y solo se usa con gente cercana.",
               "this": [
                 {
-                  "tag": "Excusarse uno mismo",
-                  "tr": "¡Es que todavía soy un niño!"
+                  "tag": "Mimoso · protesta",
+                  "tr": "¡Es que no sabía que había deberes!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Ya que… · exigir al otro",
-                  "tr": "Ya no eres un niño, así que hazlo tú solo."
+                  "tag": "Neutro · dar la razón",
+                  "tr": "Porque no sabía que había deberes."
                 }
               ],
-              "explain": "Mira hacia dónde va lo que se dice: buscar una razón para uno mismo, con la oración terminando en もん → excusa, mimo; usar una razón para presionar al otro, seguida de 「〜なさい」 o de un reproche que se omite → んだから (＝のだから), que significa «ya que…, deberías…»."
+              "explain": "En las dos, alguien a quien le piden explicaciones solo da la razón. から explica el motivo de forma neutra y, como 「〜からです」, sirve incluso ante un superior; もん tiene un tono mimoso y de protesta, como diciendo «no es culpa mía», y lo dicen sobre todo los niños o se usa con gente muy cercana, nunca con superiores ni clientes."
             }
           ]
         }
@@ -17367,20 +17365,20 @@
             {
               "id": "ni-mukete",
               "title": "〜に向けて (dirigido a)",
-              "diff": "向け va directamente tras un sustantivo, como una etiqueta de categoría, y es habitual en el habla cotidiana; に向けて／に向けた puede ir tras una descripción más larga, es más formal y se usa sobre todo al anunciar o difundir información.",
+              "diff": "向け es un sufijo que se pega al sustantivo e indica a quién va destinado algo; に向けた／に向けて viene del verbo 向ける y expresa dirigir una acción o un mensaje hacia un destinatario; es más formal.",
               "this": [
                 {
-                  "tag": "Sustantivo + 向け · etiqueta de categoría",
-                  "tr": "Compré una guía para principiantes."
+                  "tag": "向けの + sustantivo · indica el destinatario",
+                  "tr": "El ayuntamiento hizo una guía para turistas extranjeros."
                 }
               ],
               "that": [
                 {
-                  "tag": "に向けて · formal",
-                  "tr": "El ayuntamiento elaboró una guía dirigida a los turistas extranjeros."
+                  "tag": "に向けた · formal",
+                  "tr": "El ayuntamiento hizo una guía dirigida a los turistas extranjeros."
                 }
               ],
-              "explain": "Fíjate en qué va delante y en la situación. Un sustantivo corto (初心者、子供) lleva 向け directamente, como una etiqueta de categoría pegada a un producto; es habitual al hablar y en la publicidad. Si delante hay una descripción más larga (海外からの観光客), o si una institución anuncia o difunde información, se usa 「〜に向けて／〜に向けた」, más formal y frecuente en noticias y documentos oficiales."
+              "explain": "Las dos sirven en la misma frase; fíjate en la estructura y el contexto. 向け es un sufijo que va pegado al sustantivo, como 「〜向けの」 + sustantivo o 「〜向けに作る」, a modo de etiqueta de destinatario en un producto, y es habitual al hablar y en la publicidad; に向けて viene del verbo 向ける y va seguido de una acción (〜に向けて発信する, 呼びかける), y delante de un sustantivo pasa a 「〜に向けた」 + sustantivo. Transmite la idea de enviar algo hacia el destinatario, es más formal y abunda en noticias y documentos oficiales."
             }
           ]
         }
@@ -27667,29 +27665,6 @@
       "id": "koto-naku",
       "groups": [
         {
-          "kind": "root",
-          "note": "Las dos vienen de 「ない」 (en clásico, 「なし」) — significado original: «no haber»",
-          "items": [
-            {
-              "id": "koto-nashi-ni",
-              "diff": "ことなく describe sin más «hizo lo siguiente sin…»; ことなしに suele ir seguida de una negación: «sin…, no se puede…».",
-              "this": [
-                {
-                  "tag": "Describe lo que pasó",
-                  "tr": "Abrió su tienda con sus propias fuerzas, sin depender de nadie."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Condición · seguida de negación",
-                  "tr": "Sin esforzarse, es imposible tener éxito."
-                }
-              ],
-              "explain": "Las dos son 「こと (el hecho)」＋«no haber». ことなく usa 「なく」, la forma conjuntiva del 「ない」 moderno: literalmente «en un estado en que no hay…», modifica directamente la acción siguiente → «sin hacer…, hizo…», y describe lo que pasó de verdad (店を開いた); por eso 「休むことなく」 llega a significar «sin parar». ことなしに usa el adjetivo clásico 「なし」＋に: literalmente «si no hay…», y suele ir seguida de una negación como 「ありえない」「できない」 → «sin…, no se puede…», recalcando que lo primero es una condición necesaria. Fíjate en la segunda parte: si es negativa → ことなしに; si es algo que ocurrió de verdad → ことなく."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Las dos significan «sin hacer… (y…)»",
           "items": [
@@ -27712,6 +27687,24 @@
                 "why": "ことなく va tras la forma diccionario (相談する＋ことなく); la que va tras la forma ない sin ない es ずに (相談せ＋ずに)"
               },
               "explain": "Las dos sirven en la misma oración; fíjate en el contexto: en noticias, discursos o textos, con un tono formal → ことなく; en la conversación diaria o en textos corrientes → ずに, y en un registro más informal, ないで. La unión es distinta: ことなく va tras la forma diccionario (相談する＋ことなく), mientras que ずに va tras la forma ない sin ない (相談せ＋ずに; する pasa a せ)."
+            },
+            {
+              "id": "koto-nashi-ni",
+              "title": "〜ことなしに (sin hacer…)",
+              "diff": "Mismo significado; ことなしに es más rígido y formal que ことなく y casi no se usa en la conversación diaria.",
+              "this": [
+                {
+                  "tag": "Escrito",
+                  "tr": "Abrió su tienda por sus propios medios, sin depender de nadie."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Más rígido · más formal",
+                  "tr": "Abrió su tienda por sus propios medios, sin depender de nadie."
+                }
+              ],
+              "explain": "Al narrar algo que realmente ocurrió, los dos sirven y el significado no cambia; solo que ことなしに es más rígido y literario, propio de ensayos y discursos, mientras que para el registro escrito normal basta con ことなく. Además, ことなしに aparece mucho en el patrón formal de condición necesaria 「〜ことなしに（は）〜ない」 («sin…, no se puede…»), que es otro uso suyo; ことなく normalmente no se usa así."
             }
           ]
         }
@@ -28113,28 +28106,22 @@
           "items": [
             {
               "id": "mama-unchanged",
-              "diff": "まま es «sin cambiar, tal como está»; ままに es «hacer algo siguiendo el ánimo, las palabras de otro o la fuerza del otro».",
+              "title": "〜たまま (mantener un estado)",
+              "thisTitle": "〜られるままに（a merced de otros）",
+              "diff": "言われるままに es hacer exactamente lo que otro dice; たまま es que un estado se mantiene tal cual mientras ocurre otra cosa.",
               "this": [
                 {
-                  "tag": "ままに · a su antojo",
-                  "tr": "Paseé por una ciudad desconocida, a donde me llevaran los pies."
-                },
-                {
-                  "tag": "れるままに · empujado por otro",
-                  "tr": "Hice lo que me dijeron y puse mi sello en el documento."
-                },
-                {
-                  "tag": "がまま · a merced de otro",
-                  "tr": "Sin poder resistirme, quedé a merced del otro."
+                  "tag": "Hacer lo que te dicen",
+                  "tr": "Hice lo que me dijeron y puse mi sello en los documentos."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tal como está",
+                  "tag": "El estado se queda igual",
                   "tr": "Me quedé dormido con la ventana abierta."
                 }
               ],
-              "explain": "まま significa originalmente «tal cual». Justo después de una forma た o ない (開けたまま, 脱がないまま) → un estado se mantiene tal cual y luego se cuenta otra cosa (寝てしまった); al añadir 「に」 pasa a describir cómo se hace una acción → actuar tal cual siguiendo un estado de ánimo, las palabras de otro o la fuerza de otro, sin poner nada propio (気の向く, 言われる, されるが＋ままに): la acción siguiente se hace «dejándose llevar»."
+              "explain": "まま significa originalmente «tal cual, sin cambiar». Aplicado a las palabras de otro → haces exactamente lo que te dicen sin añadir nada tuyo, y de ahí «hacer lo que te manden» (言われるままに、はんこを押した). Aplicado a un estado → ese estado se queda tal cual (la ventana siguió abierta) y lo que sigue es otra cosa que pasa a la vez (寝てしまった). Así que fíjate en la acción que sigue: si la propia acción se hace siguiendo lo dicho antes → ままに; si la acción y el estado anterior son dos cosas distintas → たまま."
             }
           ]
         },
@@ -39824,7 +39811,7 @@
             {
               "id": "chittomo-nai",
               "title": "ちっとも〜ない (nada en absoluto)",
-              "diff": "Mismo significado; もなんともない solo va con adjetivos de sensación y suena a bravuconería o desdén; ちっとも〜ない es una negación enfática normal.",
+              "diff": "Mismo significado; もなんともない va sobre todo con palabras de sensación o valoración y suena a bravuconería o desdén; ちっとも〜ない es una negación enfática normal.",
               "this": [
                 {
                   "tag": "Bravuconería · me da igual",
@@ -39837,7 +39824,7 @@
                   "tr": "¿Las inyecciones? No me dan nada de miedo."
                 }
               ],
-              "explain": "Las dos frases funcionan; fíjate en el tono: ちっとも〜ない es el «nada» normal y también puede negar acciones (「ちっとも来ない」); もなんともない solo va tras adjetivos de sensación como 「痛い」 o 「怖い」, anula del todo la sensación y suena a «eso no es nada, me da igual», con bravuconería o frialdad, por eso se usa a menudo para responder a la preocupación de otro."
+              "explain": "Las dos se pueden decir; cambia el tono. ちっとも〜ない es el «nada en absoluto» normal y también puede negar acciones (ちっとも来ない); もなんともない va sobre todo con palabras de sensación o valoración como 痛い, 怖い, 面白い y niega esa sensación por completo, con un tono de bravuconería o frialdad («eso no es nada, me da igual»), por eso se usa mucho para responder a la preocupación o a los elogios de otro."
             }
           ]
         }

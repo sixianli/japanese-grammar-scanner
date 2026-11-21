@@ -2447,30 +2447,6 @@
       "id": "mashou",
       "groups": [
         {
-          "kind": "look",
-          "note": "ましょう ↔ ましょうか, chỉ khác một chữ 「か」",
-          "items": [
-            {
-              "id": "mashou-ka-offer",
-              "thisTitle": "〜ましょう（đề xuất cùng làm）",
-              "diff": "ましょう là “mọi người cùng … nhé”; thêm một chữ 「か」 thành ましょうか thì trở thành “để tôi … nhé?”.",
-              "this": [
-                {
-                  "tag": "Mọi người cùng làm",
-                  "tr": "Mọi người cùng dọn dẹp nhé."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Để tôi làm nhé?",
-                  "tr": "Để tôi dọn dẹp nhé?"
-                }
-              ],
-              "explain": "Xem cuối câu có 「か」 không, rồi xem ai làm: không có 「か」, người làm là 「みんなで」 → ましょう, “mọi người cùng … nhé”; có 「か」, người làm là 「私が」 → ましょうか, “để tôi … nhé?”, chủ động giúp đỡ. Nói thẳng 「手伝いましょう」 nghe như đã quyết định thay người kia; khi chủ động giúp thường nói 「手伝いましょうか」."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Đều dùng để mời người kia cùng làm",
           "items": [
@@ -2508,6 +2484,24 @@
                 }
               ],
               "explain": "Nghĩa như nhau, đều là rủ người kia cùng làm, xem nói với ai: cấp trên như 「部長」, người lớn tuổi, người không thân → 行きましょう; bạn bè, người nhà, thường mở đầu bằng 「ねえ」 → 行こう、食べよう."
+            },
+            {
+              "id": "mashou-ka-offer",
+              "title": "〜ましょうか（đề xuất cùng làm）",
+              "diff": "ましょう dẫn đầu thúc đẩy, mặc định người kia sẽ đồng ý; ましょうか thêm một chữ か, hỏi ý kiến người kia trước.",
+              "this": [
+                {
+                  "tag": "Dẫn đầu thúc đẩy",
+                  "tr": "Vậy mọi người cùng dọn phòng nào."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Hỏi ý kiến",
+                  "tr": "Vậy mọi người cùng dọn phòng nhé, được không?"
+                }
+              ],
+              "explain": "Cả hai đều đề xuất cùng dọn dẹp. ましょう không có か mang giọng tích cực, như đang dẫn đầu, mặc định mọi người sẽ đồng ý; ましょうか có か là hỏi ý kiến người kia, nghe lịch sự và tôn trọng hơn. Khi đề xuất với cấp trên, hoặc không chắc người kia có muốn làm không, thường dùng ましょうか."
             }
           ]
         }
@@ -8254,20 +8248,21 @@
             {
               "id": "mama-ni-follow",
               "title": "〜られるままに",
-              "diff": "たまま là giữ nguyên một trạng thái mà làm việc khác; 言われるままに là “người ta bảo sao làm vậy”, để mặc người khác điều khiển.",
+              "thisTitle": "〜たまま（giữ nguyên trạng thái）",
+              "diff": "たまま là một trạng thái được giữ nguyên trong khi làm việc khác; 勧められるままに là “người ta mời sao làm vậy”, mặc người khác sai khiến.",
               "this": [
                 {
-                  "tag": "giữ nguyên trạng thái",
-                  "tr": "Tôi để nguyên cửa sổ mở mà ra ngoài mất rồi."
+                  "tag": "Trạng thái giữ nguyên",
+                  "tr": "Tôi để nguyên điều hòa bật rồi ngủ quên mất."
                 }
               ],
               "that": [
                 {
-                  "tag": "để người khác điều khiển",
-                  "tr": "Nhân viên cửa hàng bảo gì tôi nghe nấy, kết quả là mua phải bộ quần áo đắt tiền."
+                  "tag": "Làm theo lời người khác",
+                  "tr": "Đàn anh mời bao nhiêu tôi uống bấy nhiêu, thế là uống quá chén."
                 }
               ],
-              "explain": "Nghĩa gốc của 「まま」 là “giữ nguyên như cũ”. Hãy nhìn phía trước: た形 (開けた) → trạng thái sau hành động được giữ nguyên; các từ như 「言われる」「思う」「気の向く」 + ままに → làm đúng theo lời người khác hoặc theo cảm hứng của mình."
+              "explain": "まま vốn có nghĩa là “giữ nguyên”. Hãy nhìn phía sau まま: sau 「〜たまま、」 là một hành động khác (眠ってしまった) → trạng thái phía trước (エアコンをつけた) vẫn giữ nguyên trong khi việc khác xảy ra; hành động sau 「勧められる／言われる＋ままに」 (飲みすぎた) chính là làm theo lời người khác → người ta bảo sao làm vậy, không có chủ kiến."
             }
           ]
         },
@@ -8399,7 +8394,7 @@
                   "tr": "Phòng bên cạnh vẫn sáng đèn. Có vẻ người ta vẫn còn thức."
                 }
               ],
-              "explain": "が見える nói về chính sự vật nhìn thấy trước mắt (明かり); trước とみえる là một câu hoàn chỉnh (まだ起きている), là kết luận rút ra từ dấu hiệu nhìn thấy, thiên về văn viết, khi nói thường dùng 「〜みたいだ」."
+              "explain": "見える vốn có nghĩa là “sự vật tự lọt vào tầm mắt”. Cái lọt vào mắt là chính sự vật → danh từ + が見える: mắt thực sự thấy (明かりが見える); dẫn một nhận định bằng と, ý là “sự việc hiện ra trong mắt tôi như thế” → とみえる: suy đoán “có vẻ…” dựa vào dấu hiệu nhìn thấy (まだ起きているとみえる). Vì vậy hãy nhìn phía trước 見える: danh từ + が → thấy một vật; một câu hoàn chỉnh + と → kết luận suy ra. とみえる mang tính văn viết, trong khẩu ngữ thường nói 「〜みたいだ」."
             }
           ]
         },
@@ -8507,20 +8502,21 @@
             },
             {
               "id": "volitional-form",
+              "title": "〜(よ)う（đề nghị, rủ rê）",
               "diff": "「行かない？」 hỏi xem người kia có muốn không trước, khá nhẹ nhàng; 「行こう」 rủ thẳng, mặc định người kia sẽ đồng ý.",
               "this": [
                 {
-                  "tag": "hỏi ý kiến",
-                  "tr": "Này, cuối tuần đi biển không?"
+                  "tag": "Thăm dò ý trước",
+                  "tr": "Này, cuối tuần mình cùng đi biển không?"
                 }
               ],
               "that": [
                 {
-                  "tag": "rủ thẳng",
-                  "tr": "Được, cuối tuần đi biển thôi!"
+                  "tag": "Rủ thẳng",
+                  "tr": "Vậy cuối tuần cùng đi biển nhé!"
                 }
               ],
-              "explain": "Hãy xem đã bàn bạc xong chưa: còn chưa biết người kia có muốn đi không, thăm dò trước → 〜ない？; người kia chắc chắn muốn, hoặc đã hẹn xong rồi, quyết định dứt khoát (よし、じゃあ) → 〜(よ)う. Khi được hỏi 「行かない？」, người ta cũng hay đáp lại bằng 「うん、行こう！」."
+              "explain": "Cả hai đều rủ người kia cùng đi biển. 〜ない？ thăm dò trước xem người kia có muốn không, chừa chỗ cho họ từ chối, nên hợp với lần mở lời rủ đầu tiên; 〜(よ)う rủ thẳng người kia cùng làm, mặc định họ sẽ đồng ý, nên hay nói sau khi người kia đã tỏ ra hứng thú, phía trước thường có じゃあ."
             }
           ]
         }
@@ -16753,20 +16749,21 @@
             },
             {
               "id": "made-mo-nai",
-              "diff": "ことはない là khuyên đối phương “không cần làm vậy”; までもない là “chuyện đã rõ ràng, đơn giản, không cần cất công làm”.",
+              "title": "〜までもない（không cần đến mức…）",
+              "diff": "ことはない thường là khuyên người nghe “đừng mất công làm thế”; までもない là người nói tự đánh giá việc này nhẹ, không đáng để cất công làm.",
               "this": [
                 {
-                  "tag": "Khuyên đối phương",
-                  "tr": "Cậu không sai, không cần xin lỗi."
+                  "tag": "Khuyên người nghe · đừng mất công đi",
+                  "tr": "Chỉ là cảm nhẹ thôi, không cần phải mất công đi bệnh viện đâu."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hiển nhiên",
-                  "tr": "Sức khỏe quan trọng, điều đó khỏi phải nói."
+                  "tag": "Tự đánh giá · không đáng phải đi",
+                  "tr": "Chỉ là cảm nhẹ, không cần đến mức phải đi bệnh viện."
                 }
               ],
-              "explain": "Xem lý do: ことはない nhắm vào hành động của đối phương, bảo họ “đừng làm vậy”; までもない là vì chuyện quá rõ ràng, quá đơn giản nên “khỏi cần nói / khỏi cần tra”, hay gặp 「言うまでもない」「言うまでもなく」."
+              "explain": "Cả hai đều là “không cần mất công đi bệnh viện”; hãy xem đứng ở góc nhìn của ai. ことはない thường nói với người nghe, khuyên hay an ủi họ đừng làm vậy, cuối câu hay có よ; までもない là người nói tự đánh giá việc này nhẹ, rõ ràng, không đáng để cất công làm, giọng điềm tĩnh, cũng hay dùng trong văn viết."
             }
           ]
         }
@@ -17203,24 +17200,25 @@
         },
         {
           "kind": "meaning",
-          "note": "Đều đưa ra một lý do kèm cảm xúc",
+          "note": "Đều diễn tả nguyên nhân “vì …”",
           "items": [
             {
-              "id": "no-dakara",
-              "diff": "もん là biện bạch, làm nũng cho bản thân; んだから là lấy lý do để đòi hỏi, trách móc đối phương.",
+              "id": "kara-from",
+              "title": "〜から（nói lý do ở cuối câu）",
+              "diff": "から nói lý do một cách trung tính; もん mang giọng nũng nịu, ấm ức, chỉ nói với người thân thiết.",
               "this": [
                 {
-                  "tag": "Biện bạch cho mình",
-                  "tr": "Tại người ta vẫn còn là trẻ con mà."
+                  "tag": "Nũng nịu · ấm ức",
+                  "tr": "Tại người ta không biết là có bài tập mà."
                 }
               ],
               "that": [
                 {
-                  "tag": "Đã… thì · đòi hỏi đối phương",
-                  "tr": "Con đâu còn là trẻ con nữa, tự làm đi."
+                  "tag": "Trung tính · nói lý do",
+                  "tr": "Vì tôi không biết là có bài tập."
                 }
               ],
-              "explain": "Xem hướng của lời nói: tìm lý do cho bản thân, câu dừng ở もん → biện bạch, làm nũng; lấy lý do để ép đối phương, phía sau là 「〜なさい」 hoặc sự bất mãn bị lược đi → んだから (＝のだから), nghĩa là “đã… thì phải…”."
+              "explain": "Cả hai đều là khi bị hỏi vặn thì chỉ nói ra lý do. から giải thích lý do một cách trung tính, nói thành 「〜からです」 thì dùng được cả với cấp trên; もん mang giọng nũng nịu, ấm ức kiểu “tôi đâu có lỗi”, chủ yếu trẻ con nói hoặc nói với người rất thân, không dùng với cấp trên hay khách."
             }
           ]
         }
@@ -17367,20 +17365,20 @@
             {
               "id": "ni-mukete",
               "title": "〜に向けて (hướng đến)",
-              "diff": "向け gắn trực tiếp sau danh từ, giống nhãn phân loại, dùng nhiều trong khẩu ngữ; に向けて／に向けた có thể đứng sau một cụm mô tả dài hơn, trang trọng hơn, chủ yếu dùng khi công bố, phát đi thông tin.",
+              "diff": "向け là hậu tố gắn sau danh từ, ghi rõ đối tượng; に向けた／に向けて đến từ động từ 向ける, chỉ việc hướng hành động, thông tin về phía đối tượng, trang trọng hơn.",
               "this": [
                 {
-                  "tag": "Danh từ + 向け · nhãn phân loại",
-                  "tr": "Tôi đã mua một cuốn sách hướng dẫn dành cho người mới bắt đầu."
+                  "tag": "向けの + danh từ · ghi đối tượng",
+                  "tr": "Thành phố đã làm sách hướng dẫn dành cho du khách nước ngoài."
                 }
               ],
               "that": [
                 {
-                  "tag": "に向けて · trang trọng",
-                  "tr": "Thành phố đã làm sách hướng dẫn dành cho khách du lịch nước ngoài."
+                  "tag": "に向けた · trang trọng",
+                  "tr": "Thành phố đã làm sách hướng dẫn hướng đến du khách nước ngoài."
                 }
               ],
-              "explain": "Hãy xem phía trước là gì và trong hoàn cảnh nào. Một danh từ ngắn (初心者、子供) gắn thẳng 向け, giống nhãn phân loại dán lên sản phẩm, thường dùng trong khẩu ngữ và quảng cáo. Khi phía trước là một cụm mô tả dài hơn (海外からの観光客), hoặc khi cơ quan công bố, phát đi thông tin, thì dùng 「〜に向けて／〜に向けた」, trang trọng hơn, thường gặp trong tin tức, văn bản hành chính."
+              "explain": "Cùng một câu dùng cái nào cũng được; hãy xem cấu trúc và hoàn cảnh. 向け là hậu tố gắn thẳng vào danh từ, dùng thành 「〜向けの」 + danh từ hay 「〜向けに作る」, giống nhãn đối tượng dán trên sản phẩm, hay gặp trong khẩu ngữ và quảng cáo; に向けて đến từ động từ 向ける, phía sau là hành động (〜に向けて発信する, 呼びかける), khi bổ nghĩa cho danh từ thì thành 「〜に向けた」 + danh từ. Nó có cảm giác gửi cái gì đó về phía đối tượng, trang trọng hơn, hay gặp trong tin tức và văn bản hành chính."
             }
           ]
         }
@@ -27667,29 +27665,6 @@
       "id": "koto-naku",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「ない」 (văn ngữ là 「なし」) — nghĩa gốc là “không có”",
-          "items": [
-            {
-              "id": "koto-nashi-ni",
-              "diff": "ことなく chỉ miêu tả “không… mà đã làm việc sau”; ことなしに phía sau thường là phủ định, diễn tả “không… thì không thể…”.",
-              "this": [
-                {
-                  "tag": "Miêu tả việc đã thực sự làm",
-                  "tr": "Anh ấy không dựa vào ai, tự sức mình mở được cửa hàng."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Điều kiện · sau là phủ định",
-                  "tr": "Không nỗ lực thì không thể nào thành công."
-                }
-              ],
-              "explain": "Cả hai đều là 「こと (việc đó)」＋“không có”. ことなく dùng 「なく」, thể liên dụng của 「ない」 hiện đại, nghĩa đen là “trong trạng thái không có việc…”, bổ nghĩa thẳng cho hành động phía sau → “không… mà…”, nói việc đã thực sự xảy ra (店を開いた); vì thế 「休むことなく」 thành “không ngừng”. ことなしに dùng tính từ văn ngữ 「なし」＋に, nghĩa đen là “nếu không có…”, phía sau thường là phủ định như 「ありえない」「できない」 → “không… thì không thể…”, nhấn mạnh vế trước là điều kiện cần. Xem vế sau: là phủ định → ことなしに; là việc đã thực sự làm → ことなく."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Đều diễn tả “không làm… (mà…)”",
           "items": [
@@ -27712,6 +27687,24 @@
                 "why": "ことなく đi sau thể từ điển (相談する＋ことなく); đi sau thể ない bỏ ない là ずに (相談せ＋ずに)"
               },
               "explain": "Cùng một câu đều dùng được cả hai, hãy xem hoàn cảnh: nói trang trọng trong tin tức, diễn văn, bài viết → ことなく; hội thoại hằng ngày, bài viết thông thường → ずに, nói suồng sã hơn thì dùng ないで. Cách nối cũng khác: ことなく đi sau thể từ điển (相談する＋ことなく), ずに đi sau thể ない bỏ ない (相談せ＋ずに, する đổi thành せ)."
+            },
+            {
+              "id": "koto-nashi-ni",
+              "title": "〜ことなしに（không … mà …）",
+              "diff": "Cùng nghĩa; ことなしに cứng và trang trọng hơn ことなく, gần như không dùng trong hội thoại hằng ngày.",
+              "this": [
+                {
+                  "tag": "Văn viết",
+                  "tr": "Anh ấy không dựa vào ai, tự sức mình mở cửa hàng."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Cứng hơn · trang trọng hơn",
+                  "tr": "Anh ấy không dựa vào ai, tự sức mình mở cửa hàng."
+                }
+              ],
+              "explain": "Khi kể việc đã thực sự làm, dùng cái nào cũng được, nghĩa không đổi; chỉ là ことなしに cứng và mang tính văn viết hơn, hay gặp trong bài luận, diễn văn, còn văn viết thông thường dùng ことなく là đủ. Ngoài ra, ことなしに thường xuất hiện trong mẫu câu điều kiện cần mang tính văn viết 「〜ことなしに（は）〜ない」 (không … thì không thể …), đó là một cách dùng khác của nó; ことなく thường không dùng như vậy."
             }
           ]
         }
@@ -28113,28 +28106,22 @@
           "items": [
             {
               "id": "mama-unchanged",
-              "diff": "まま là “giữ nguyên không đổi”; ままに là “làm theo cảm hứng, theo lời người khác hoặc theo sức đẩy của đối phương”.",
+              "title": "〜たまま（giữ nguyên trạng thái）",
+              "thisTitle": "〜られるままに (mặc người khác sai khiến)",
+              "diff": "言われるままに là người khác bảo sao làm vậy; たまま là một trạng thái được giữ nguyên trong khi xảy ra việc khác.",
               "this": [
                 {
-                  "tag": "ままに · tùy hứng",
-                  "tr": "Tôi tùy hứng dạo bước trên những con phố xa lạ."
-                },
-                {
-                  "tag": "れるままに · bị người khác đẩy",
-                  "tr": "Người ta bảo sao làm vậy, tôi đã đóng dấu vào giấy tờ."
-                },
-                {
-                  "tag": "がまま · mặc người ta định đoạt",
-                  "tr": "Không thể chống cự, chỉ đành mặc cho đối phương muốn làm gì thì làm."
+                  "tag": "Làm theo lời người khác",
+                  "tr": "Người ta bảo sao tôi làm vậy, đóng dấu vào giấy tờ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Giữ nguyên",
-                  "tr": "Để nguyên cửa sổ mở mà ngủ quên mất."
+                  "tag": "Trạng thái giữ nguyên",
+                  "tr": "Tôi để nguyên cửa sổ mở rồi ngủ quên mất."
                 }
               ],
-              "explain": "まま nghĩa gốc là “nguyên như vậy”. Đi ngay sau thể た, thể ない (開けたまま, 脱がないまま) → một trạng thái giữ nguyên không đổi, phía sau nói một việc khác (寝てしまった); thêm 「に」 thành cách nói bổ nghĩa cho hành động → làm y theo tâm trạng, lời người khác, sức của đối phương, bản thân không thêm gì (気の向く, 言われる, されるが＋ままに), hành động phía sau là làm “thuận theo nó”."
+              "explain": "まま vốn có nghĩa là “giữ nguyên, không thay đổi”. Dùng với lời người khác → làm đúng y như lời người ta nói, không thêm ý mình, thành ra “người ta bảo sao làm vậy” (言われるままに、はんこを押した). Dùng với một trạng thái → trạng thái đó được giữ nguyên (cửa sổ vẫn mở), phía sau là một việc khác xảy ra cùng lúc (寝てしまった). Vì vậy hãy nhìn hành động phía sau: bản thân hành động là làm theo lời phía trước → ままに; hành động và trạng thái phía trước là hai chuyện khác nhau → たまま."
             }
           ]
         },
@@ -39824,7 +39811,7 @@
             {
               "id": "chittomo-nai",
               "title": "ちっとも〜ない（chẳng … chút nào）",
-              "diff": "Cùng nghĩa; もなんともない chỉ gắn với tính từ chỉ cảm giác, mang vẻ tỏ ra cứng cỏi hoặc bất cần; ちっとも〜ない là cách phủ định nhấn mạnh bình thường.",
+              "diff": "Cùng nghĩa; もなんともない chủ yếu gắn với từ chỉ cảm giác hoặc đánh giá, mang vẻ tỏ ra cứng cỏi hoặc bất cần; ちっとも〜ない là cách phủ định nhấn mạnh bình thường.",
               "this": [
                 {
                   "tag": "Tỏ ra cứng cỏi · chẳng bận tâm",
@@ -39837,7 +39824,7 @@
                   "tr": "Tiêm thì tôi chẳng sợ chút nào."
                 }
               ],
-              "explain": "Cả hai câu đều được, hãy nhìn giọng điệu: ちっとも〜ない là “chẳng … chút nào” bình thường, còn phủ định được cả hành động (「ちっとも来ない」); もなんともない chỉ gắn sau tính từ chỉ cảm giác như 「痛い」, 「怖い」, phủ định trọn cảm giác đó, mang ý “có là gì đâu, tôi chẳng bận tâm” kiểu tỏ ra cứng cỏi hoặc lạnh nhạt, nên thường dùng để đáp lại sự lo lắng của người khác."
+              "explain": "Cả hai đều nói được, khác ở giọng điệu: ちっとも〜ない là “chẳng … chút nào” bình thường, còn phủ định được cả hành động (ちっとも来ない); もなんともない chủ yếu gắn với từ chỉ cảm giác hoặc đánh giá như 痛い, 怖い, 面白い, phủ định trọn vẹn cảm giác đó, mang giọng tỏ ra cứng cỏi hoặc lạnh nhạt kiểu “có gì đâu, tôi chẳng bận tâm”, nên hay dùng để đáp lại sự lo lắng hay lời khen của người khác."
             }
           ]
         }
