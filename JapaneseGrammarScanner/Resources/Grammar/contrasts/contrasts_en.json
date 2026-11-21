@@ -49020,7 +49020,7 @@
         },
         {
           "kind": "look",
-          "note": "For ichidan verbs, masu-stem + よう and the volitional form are spelled exactly the same",
+          "note": "「考えよう」: for ichidan verbs, masu-stem + よう and the volitional form are spelled exactly the same",
           "items": [
             {
               "id": "volitional-form",
@@ -49043,24 +49043,26 @@
         },
         {
           "kind": "meaning",
-          "note": "Both express the way or manner of doing something",
+          "note": "Both mean “way of doing”",
           "items": [
             {
               "id": "kata-way-of-doing",
-              "diff": "〜方（かた） is an objective method or way of saying; 〜よう in the sense of “manner” mostly appears in set phrases, stressing “change the approach and the result changes”.",
+              "title": "〜方 (way of doing)",
+              "thisTitle": "〜よう (way, manner)",
+              "diff": "〜方 is the neutral word for “method” and works anywhere; 〜よう in the sense of “way” mostly appears in set phrases like 「やりようはある」 and 「物は言いよう」, with the feel of “there's always some way”.",
               "this": [
                 {
-                  "tag": "How you say it · different result",
-                  "tr": "Even the same thing — it all depends on how you put it."
+                  "tag": "よう · set phrase · there's always a way",
+                  "tr": "Even without tools, there's always some way to do it."
                 }
               ],
               "that": [
                 {
-                  "tag": "A specific way of saying",
-                  "tr": "Speaking to a teacher that way is very rude."
+                  "tag": "方 · neutral “method”",
+                  "tr": "Even without tools, there's another way to do it."
                 }
               ],
-              "explain": "〜方 attaches to almost any verb and means a concrete method or way (読み方, 言い方, 作り方); 〜よう meaning “manner” mostly appears in set phrases — 物は言いようだ, 考えようによっては, やりようはある — with the point that “change the approach and the result changes”."
+              "explain": "Both sentences work and both mean “way of doing”. 〜方 is the neutral word, and when asking for concrete steps (作り方, 読み方) you normally only use 〜方. 〜よう in the sense of “way” mostly appears in set phrases — やりようはある, 物は言いよう, 考えようによっては — and carries the tone “change the approach and it can still work”, adding more of the speaker's own judgment than 〜方."
             }
           ]
         }
@@ -49144,32 +49146,6 @@
           ]
         },
         {
-          "kind": "look",
-          "note": "ようによっては ↔ によっては, differing only by 「よう」",
-          "items": [
-            {
-              "id": "ni-yotte-wa",
-              "diff": "によっては attaches to nouns, meaning “some … may”; ようによっては attaches to a verb's masu-stem, meaning “with a different view or approach, it might…”.",
-              "this": [
-                {
-                  "tag": "Verb masu-stem · different view",
-                  "tr": "Looked at another way, failure is also a good experience."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Noun · some people",
-                  "tr": "Some people may find this movie boring."
-                }
-              ],
-              "wrong": {
-                "why": "The verb must become masu-stem + よう: 考えようによっては"
-              },
-              "explain": "Look at what comes before: a noun (人, 場合, 地域) → によっては, referring to some of the cases; a verb's masu-stem + よう (考えよう, 見よう, やりよう) → ようによっては, meaning the same thing can lead to a different conclusion if you see it or do it differently."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Both mean “depending on…, the result will differ”",
           "items": [
@@ -49208,6 +49184,27 @@
                 }
               ],
               "explain": "Look at what comes before and the tone: noun (努力, 天気) + 次第で means the result is determined by it, and can be stated quite firmly (誰でも合格できる); verb masu-stem + ようによっては means “if you do it or see it a different way”, usually followed by a hedged statement like “it's also possible that…”."
+            },
+            {
+              "id": "ni-yotte-wa",
+              "title": "〜によっては (depending on the situation, possibly)",
+              "diff": "Same meaning; によっては attaches directly to nouns, while ようによっては attaches to a verb's masu-stem + よう and specifically means “with a different way of seeing or doing it”.",
+              "this": [
+                {
+                  "tag": "Verb masu-stem + よう",
+                  "tr": "Looked at a certain way, this postponement is actually a chance."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Noun + によっては",
+                  "tr": "From a certain point of view, this postponement is actually a chance."
+                }
+              ],
+              "wrong": {
+                "why": "A verb can't attach directly to によっては; say 「考えようによっては」 or 「考え方によっては」."
+              },
+              "explain": "Both sentences mean the same: “depending on…, it may turn out to be…”. Look at what comes before: a noun (見方, 場合, 人) attaches directly to によっては; a verb must first become masu-stem + よう (考えよう, やりよう). So ようによっては is basically 「〜方によっては」, and it's specifically about how a person sees or does something."
             }
           ]
         }
@@ -49284,41 +49281,29 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean doing something to your heart's content, nonstop",
+          "note": "Both mean “doing whatever one pleases”",
           "items": [
             {
               "id": "houdai",
-              "diff": "三昧 attaches to nouns, meaning wholly immersed in an activity; 放題 attaches to a verb's masu-stem, meaning without limits, doing as much as you like.",
+              "title": "〜放題 (doing as one pleases)",
+              "thisTitle": "〜三昧 (self-indulgence)",
+              "diff": "Both are critical and describe someone with no restraint; 三昧 only attaches to nouns (贅沢三昧), while 放題 can also attach to 「〜たい」 (やりたい放題).",
               "this": [
                 {
-                  "tag": "Noun · immersed in it",
-                  "tr": "Since retiring, I spend every day fishing to my heart's content."
+                  "tag": "Noun + 三昧 · wallowing in luxury",
+                  "tr": "Ever since he came into his inheritance, he's been living in unrestrained luxury every day."
                 }
               ],
               "that": [
                 {
-                  "tag": "masu-stem · no limits",
-                  "tr": "At this shop, it's all-you-can-eat cake for 2,000 yen."
+                  "tag": "〜たい + 放題 · doing whatever he wants",
+                  "tr": "Ever since he came into his inheritance, he's been doing whatever he likes every day."
                 }
               ],
-              "explain": "Look at the word before it: nouns like 「釣り」, 「読書」 or 「ゴルフ」 → 三昧, the point being you're immersed in it all day; verb masu-stems like 「食べ」 or 「飲み」 → 放題, the point being there's no limit, as in 「食べ放題」 and 「言いたい放題」. 「贅沢三昧」 and 「わがまま放題」 both carry criticism."
-            },
-            {
-              "id": "te-bakari-iru",
-              "diff": "三昧 is happily immersing yourself in something; てばかりいる is “always just doing…”, as seen by a disapproving onlooker.",
-              "this": [
-                {
-                  "tag": "Enjoyment · immersed",
-                  "tr": "I spent my summer vacation happily soaking in hot springs every day."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Always · disapproving",
-                  "tr": "My son does nothing but play all summer vacation."
-                }
-              ],
-              "explain": "Look at the tone: 三昧 is usually the person themselves happily enjoying something (温泉三昧, 読書三昧); てばかりいる is often a complaint from an onlooker such as a parent or boss (遊んでばかりいる). The connection differs too: 三昧 attaches to nouns, てばかりいる to a verb's te-form."
+              "wrong": {
+                "why": "三昧 only attaches to nouns, not to 「〜たい」; say 「やりたい放題」."
+              },
+              "explain": "Both are critical and describe someone indulging themselves without any restraint. Look at what comes before: 三昧 only attaches to nouns — typically 「贅沢三昧」 and 「わがまま三昧」 — and stresses being sunk in luxury and pleasure all day; 放題 can attach to 「〜たい」 (やりたい, 言いたい) and to 「好き」 or 「わがまま」, and stresses doing whatever one wants with nobody able to stop it. So after 「やりたい」 only 放題 works."
             }
           ]
         }
@@ -49329,32 +49314,26 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both are sentence-ending particles that add emphasis",
+          "note": "Both mean “warning the listener to watch out”",
           "items": [
             {
               "id": "yo-particle",
-              "diff": "ぞ・ぜ are forceful and strongly masculine, and normally only follow the plain form; よ is used by everyone, is gentler, and can follow polite forms too.",
+              "title": "〜よ (reminder / warning)",
+              "thisTitle": "〜ぞ (reminder / warning)",
+              "diff": "Both warn the listener; ぞ is forceful and strongly masculine, used only toward equals or juniors; よ is used by everyone and, with polite forms, can even be said to a superior.",
               "this": [
                 {
-                  "tag": "ぞ · warning · forceful",
-                  "tr": "If you don't hurry up, you'll be late!"
-                },
-                {
-                  "tag": "ぜ · rallying · friendly",
-                  "tr": "Come on, let's go together!"
+                  "tag": "ぞ · to an equal or junior · forceful",
+                  "tr": "Hey, it's slippery there. Watch out!"
                 }
               ],
               "that": [
                 {
-                  "tag": "よ · reminder · gentle",
-                  "tr": "If you don't hurry, you'll be late, you know."
-                },
-                {
-                  "tag": "よ · invitation · anyone",
-                  "tr": "Hey, let's go together."
+                  "tag": "よ · to a superior · polite form",
+                  "tr": "Sir, it's slippery there. Please be careful."
                 }
               ],
-              "explain": "Look at who you're talking to and the connection: to a boss, an elder, or when speaking politely, only 「〜ますよ」 works; ぞ is mostly used to psych yourself up (よし、やるぞ) or to warn juniors or peers, and ぜ to call out to or assert something forcefully to close friends (行こうぜ). ぞ・ぜ sound very masculine; women generally say よ."
+              "explain": "Look at who is being addressed: when calling out to an equal or junior with 「おい」, use ぞ — it sounds like “I'm warning you” and is quite blunt. To a superior like 「部長」 you must use a polite form + よ (滑りますよ); ぞ can't be used that way. ぞ is strongly masculine, and women generally use よ when warning someone too."
             }
           ]
         }
@@ -49364,42 +49343,26 @@
       "id": "zu-ni-wa-okanai",
       "groups": [
         {
-          "kind": "look",
-          "note": "ずには + おかない／いられない／すまない, differing only in the final verb",
+          "kind": "root",
+          "note": "Both come from 「置く（おく）」 — originally “to put down and leave as is”",
           "items": [
             {
-              "id": "zu-ni-wa-irarenai",
-              "diff": "ずにはおかない says something “is bound to make people…”, with a work or event as the subject; ずにはいられない says “I can't help…”, with yourself as the subject.",
+              "id": "naide-oku",
+              "title": "〜ないでおく (deliberately not doing)",
+              "diff": "ないでおく is “don't do it and leave it as is”; ずにはおかない is “won't leave it undone” = will definitely do it.",
               "this": [
                 {
-                  "tag": "Thing → bound to cause",
-                  "tr": "This movie is bound to move its audience."
+                  "tag": "negative おかない · won't let it go",
+                  "tr": "That guy's lies — I'm going to expose them in front of everyone, no matter what."
                 }
               ],
               "that": [
                 {
-                  "tag": "Oneself → can't help it",
-                  "tr": "Watching this movie, I couldn't help crying."
+                  "tag": "affirmative おく · not doing it for now",
+                  "tr": "That guy's lies — I'll leave them unexposed for now."
                 }
               ],
-              "explain": "Look at the subject and the verb: 「この映画は」 as the subject with a causative verb (感動させ) → ずにはおかない, meaning “is bound to make people…”; 「私は」 as the subject with your own action (泣か) → ずにはいられない. Memory aid: おく (put down) — won't let it go until…; いる (stay) — can't stay still without…. ないではおかない is the same, more colloquial."
-            },
-            {
-              "id": "zu-ni-wa-sumanai",
-              "diff": "ずにはおかない is a strong will, “I won't rest until…”; ずにはすまない is “it wouldn't be right not to…”, based on what is reasonable or proper.",
-              "this": [
-                {
-                  "tag": "Strong will · won't give up",
-                  "tr": "That criminal — I will track him down, no matter what."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "What's proper · have to",
-                  "tr": "Since I broke someone else's property, it wouldn't be right not to pay for it."
-                }
-              ],
-              "explain": "Look at who is demanding it: the speaker's own resolve (あの犯人だけは) → ずにはおかない, often about pursuing or getting revenge; what social norms or decency require (breaking someone else's property) → ずにはすまない. Memory aid: おく — won't let it go until…; 済む — the matter can't be settled without…."
+              "explain": "Both 「おく」 are 「置く」, originally “to put down and leave as is”. ないでおく: don't do it and just leave things that way → deliberately not doing, or not doing for now. ずにはおかない: won't leave the not-done state as it is → will definitely do it, won't let it go; with works or events as the subject (感動させずにはおかない) it becomes “is bound to make people…”. Check whether おく is affirmative or negative: おく / おこう → not doing it for now; with 「は」 before it and おかない after → will definitely do it."
             }
           ]
         }
@@ -49450,46 +49413,6 @@
           ]
         },
         {
-          "kind": "look",
-          "note": "ずには + すまない／おかない／いられない, differing only in the final verb",
-          "items": [
-            {
-              "id": "zu-ni-wa-okanai",
-              "diff": "ずにはすまない is “it wouldn't be right not to…”, based on what is proper; ずにはおかない is a strong will, “I won't rest until…”, or “is bound to cause…”.",
-              "this": [
-                {
-                  "tag": "What's proper · have to",
-                  "tr": "Since I broke someone else's property, it wouldn't be right not to pay for it."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Strong will · won't give up",
-                  "tr": "That criminal — I will track him down, no matter what."
-                }
-              ],
-              "explain": "Look at whose demand it is: social norms or decency require it (if you break someone's property, you pay) → ずにはすまない; the speaker's own resolve → ずにはおかない. Memory aid: 済む — can't be settled without…; おく — won't let it go until…."
-            },
-            {
-              "id": "zu-ni-wa-irarenai",
-              "diff": "ずにはすまない is having to do something because it's proper; ずにはいられない is being unable to stop yourself emotionally.",
-              "this": [
-                {
-                  "tag": "What's proper · must",
-                  "tr": "Since I broke my promise, it wouldn't be right not to apologize."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Emotion · can't help it",
-                  "tr": "His story was so funny that I couldn't help laughing."
-                }
-              ],
-              "explain": "Look at the motive: a moral obligation like “breaking a promise” → ずにはすまない, something you must do even if reluctant; an emotional impulse like “so funny” → ずにはいられない, being unable to control yourself. Memory aid: いる (stay) — can't stay still without…."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Both mean “can't not…, must…”",
           "items": [
@@ -49535,56 +49458,66 @@
       "id": "zu-shite",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from the classical negative 「ず」 — the equivalent of modern 「ない」",
+          "kind": "look",
+          "note": "ずして ↔ ずとも, differing only in the particle after ず",
           "items": [
             {
-              "id": "zuni-without",
-              "diff": "ずに is the general modern “without…”; ずして is archaic and stiff, mostly used in proverbs and set phrases, and often pairs with a negative later in the sentence.",
-              "this": [
-                {
-                  "tag": "Archaic · proverb",
-                  "tr": "To win without fighting."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Modern · everyday",
-                  "tr": "I went to school without eating breakfast."
-                }
-              ],
-              "explain": "Both are 「ず + particle」, meaning “without…”. Ordinary narration uses ずに (= ないで); ずして appears only in writing, proverbs and set phrases (戦わずして勝つ, 労せずして), and is often used as 「〜ずして〜ない」 meaning “you can't… without…”."
-            },
-            {
               "id": "zu-tomo",
-              "diff": "ずして is “without…, (still achieved it)” or “can't… without…”; ずとも is “even without…”.",
+              "diff": "ずして is “without doing…, (you can't)…”; ずとも is “even without doing…”, and the result still holds.",
               "this": [
                 {
-                  "tag": "Without… (still achieved it)",
-                  "tr": "The opponent withdrew, so we won without fighting."
+                  "tag": "ずして · negative follows",
+                  "tr": "Without seeing the actual item, you can't judge its quality."
                 }
               ],
               "that": [
                 {
-                  "tag": "Even without…",
-                  "tr": "We've known each other so long that I understand without you saying it."
+                  "tag": "ずとも · result still holds",
+                  "tr": "Even without seeing the actual item, you can judge its quality."
                 }
               ],
-              "explain": "Both are built on the negative 「ず」 — look at the particle that follows: して (= て) expresses manner or condition, often paired with a later negative (〜ずして〜ない); とも (= ても) expresses concession, usually followed by a result that still holds, like 「分かる」 or 「よい」."
+              "explain": "The front part is exactly the same (見ず); only the particle after ず differs. して (≈ て) → “without doing…”, often paired with a negative afterward (できない), meaning you can't manage it without doing the first thing. とも (≈ ても) → “even without doing…”, followed by an affirmative that still holds (できる, 分かる, よい). Check the particle, then check whether the second half is 「できない」 or 「できる」."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both mean “without…, (you can't)…”",
+          "sense": 1,
+          "note": "Both mean “without doing…, (still)…”",
+          "items": [
+            {
+              "id": "zuni-without",
+              "title": "〜ずに (doing without doing)",
+              "diff": "Same meaning, “without doing…”; ずに is the everyday form (= ないで), while ずして is archaic and literary, used mostly in maxims and set phrases.",
+              "this": [
+                {
+                  "tag": "Written · archaic",
+                  "tr": "Without saying a single word, he won the other person over."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "General · = ないで",
+                  "tr": "Without saying a single word, he won the other person over."
+                }
+              ],
+              "explain": "The two sentences mean the same; the difference is style. ずに is just a slightly more written ないで and works anywhere; ずして has the classical flavor of kanbun reading and mostly appears in set phrases like 「戦わずして勝つ」, 「労せずして」 and 「期せずして」, stressing “managed it without even doing…”. For everyday actions like 「傘を持たずに出かけた」 you normally only use ずに."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “without…, you can't…”",
           "items": [
             {
               "id": "nakushite",
-              "diff": "Same meaning, different connection: なくして attaches to nouns; ずして attaches to verbs (nai-form minus ない).",
+              "title": "〜なくして (without…, can't…)",
+              "diff": "Same meaning, different connection: なくして attaches to nouns; ずして attaches to the verb's 未然形 (する → せ).",
               "this": [
                 {
-                  "tag": "Verb + ずして",
-                  "tr": "You won't succeed without making an effort."
+                  "tag": "Verb 未然形 + ずして",
+                  "tr": "Without making an effort, there is no success."
                 }
               ],
               "that": [
@@ -49596,14 +49529,15 @@
               "wrong": {
                 "why": "ずして attaches to verbs: 努力せずして"
               },
-              "explain": "The two sentences differ only in what comes before: a noun (努力) takes なくして directly; a verb must first change to the nai-form (努力しない → 努力せ) before ずして. ずして can also mean “achieved it without…” (戦わずして勝つ), a use なくして doesn't have."
+              "explain": "The two sentences differ only in the connection: a noun (努力) attaches directly to なくして; a verb attaches to ずして in its 未然形, with する becoming 「せ」 (努力せずして), and godan verbs taking the form before 「ない」 (行かずして)."
             },
             {
               "id": "koto-nashi-ni",
-              "diff": "ことなしに attaches to the dictionary form and is modern written language; ずして attaches to the nai-form, is more archaic, and mostly appears in set phrases.",
+              "title": "〜ことなしに (without…, can't…)",
+              "diff": "Same meaning; ことなしに attaches to the dictionary form and is modern written language; ずして attaches to the verb's 未然形 (する → せ) and is more archaic.",
               "this": [
                 {
-                  "tag": "nai-form · archaic",
+                  "tag": "未然形 · archaic",
                   "tr": "Without hardship, you can't achieve great results."
                 }
               ],
@@ -49613,7 +49547,10 @@
                   "tr": "Without hardship, you can't achieve great results."
                 }
               ],
-              "explain": "Same meaning — look at the connection: dictionary form (苦労する) + ことなしに; nai-form (苦労せ) + ずして. ことなしに is the general written style of papers and speeches; ずして has the classical flavor of kanbun reading and is common in set phrases like 「労せずして」 and 「戦わずして」."
+              "wrong": {
+                "why": "ずして attaches to the verb's 未然形, so する becomes 「せ」: 苦労せずして"
+              },
+              "explain": "Same meaning; look at the connection: dictionary form (苦労する) + ことなしに; 未然形 (苦労せ) + ずして — it can't attach to 「ない」. ことなしに is the ordinary written style of papers and speeches; ずして has the classical flavor of kanbun reading and is common in set phrases like 「労せずして」."
             }
           ]
         }
@@ -49623,42 +49560,25 @@
       "id": "zu-tomo",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from the classical negative 「ず」 — the equivalent of modern 「ない」",
+          "kind": "look",
+          "note": "ずとも ↔ ずして, differing only in the particle after ず",
           "items": [
             {
               "id": "zu-shite",
-              "diff": "ずとも is “even without…”; ずして is “without…, (still achieved it)” or “can't… without…”.",
+              "diff": "ずとも is “even without doing…”, and the result still holds; ずして is “without doing…, (you can't)…”.",
               "this": [
                 {
-                  "tag": "Even without…",
-                  "tr": "We've known each other so long that I understand without you saying it."
+                  "tag": "ずとも · result still holds",
+                  "tr": "Even without seeing the actual item, you can judge its quality."
                 }
               ],
               "that": [
                 {
-                  "tag": "Without… (still achieved it)",
-                  "tr": "The opponent withdrew, so we won without fighting."
+                  "tag": "ずして · negative follows",
+                  "tr": "Without seeing the actual item, you can't judge its quality."
                 }
               ],
-              "explain": "Look at the particle after ず: とも (= ても) is concession, “understand even without being told”; して (= て) is manner, “won without fighting”, and also often pairs with a negative to mean “can't… without…”."
-            },
-            {
-              "id": "zuni-without",
-              "diff": "ずとも is “even without…” (= なくても); ずに is “without… (doing)” (= ないで).",
-              "this": [
-                {
-                  "tag": "＝ なくても",
-                  "tr": "If you leave now, you'll make it in time even without hurrying."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "＝ ないで",
-                  "tr": "We had plenty of time, so I didn't rush and walked there slowly."
-                }
-              ],
-              "explain": "Replace ず with ない and it's easy to understand: ずとも = なくても (even without…, it's fine / it still holds); ずに = ないで (doing the next action without doing…). ずとも is a written, archaic expression; in everyday speech you'd say なくても."
+              "explain": "The front part is exactly the same (見ず); only the particle after ず differs. して (≈ て) → “without doing…”, often paired with a negative afterward (できない), meaning you can't manage it without doing the first thing. とも (≈ ても) → “even without doing…”, followed by an affirmative that still holds (できる, 分かる, よい). Check the particle, then check whether the second half is 「できない」 or 「できる」."
             }
           ]
         },
