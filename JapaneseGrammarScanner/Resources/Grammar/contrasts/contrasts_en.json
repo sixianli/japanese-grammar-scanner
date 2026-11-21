@@ -47222,23 +47222,25 @@
           "items": [
             {
               "id": "dokoro-ka",
-              "diff": "Both can say “let alone A, not even B…”, with はおろか more formal; but どころか can also mean “far from…, on the contrary…”, which はおろか can't.",
+              "title": "〜どころか (not to mention, not even)",
+              "diff": "Both can say “never mind A, not even B”: はおろか is written and stiff, and basically attaches only to nouns; どころか is common in everyday speech too, and can attach directly to verbs.",
               "this": [
                 {
-                  "tag": "Let alone A · even B",
-                  "tr": "He can't even read hiragana, let alone kanji."
+                  "tag": "Written · after nouns",
+                  "tr": "This village doesn't even have a vending machine, let alone a convenience store."
                 }
               ],
               "that": [
                 {
-                  "tag": "Opposite · on the contrary",
-                  "tr": "I took the medicine, but far from going down, my fever went even higher."
+                  "tag": "Common in speech too",
+                  "tr": "This village doesn't even have a vending machine, let alone a convenience store."
+                },
+                {
+                  "tag": "Directly after verbs",
+                  "tr": "I'm so busy I don't even have time to sleep, let alone have fun."
                 }
               ],
-              "wrong": {
-                "why": "はおろか has no “on the contrary” meaning"
-              },
-              "explain": "Look at the direction of the two parts: if the second adds a further step in the same direction (can't do kanji → can't even do hiragana) → either works, with はおろか stiffer; if the two go in opposite directions (下がる ↔ 上がる) → only どころか. Also, はおろか generally follows only nouns."
+              "explain": "The first two sentences mean the same thing; choose by setting: in writing or formal situations use はおろか, which sounds stiff; in everyday conversation どころか is more natural. Also check what comes before it: はおろか basically follows a noun or 「〜こと」 (コンビニはおろか), while どころか can also follow a verb directly (「遊ぶどころか」)."
             },
             {
               "id": "wa-mochiron",
@@ -47256,23 +47258,6 @@
                 }
               ],
               "explain": "Look at the end of the sentence: はおろか is almost always followed by a negative like 「〜もない」 or 「〜もできない」, with surprise or dissatisfaction at how outrageous it is, and can't be followed by a request or intention; はもちろん (はもとより) is neutral and works in affirmative sentences and requests alike (パスポートはもちろん、お金も忘れないでね)."
-            },
-            {
-              "id": "ba-kari-ka",
-              "diff": "はおろか dismisses the lesser A in passing to stress how extreme B is, mostly negative; ばかりか means “not only A but also B” and works for good or bad things.",
-              "this": [
-                {
-                  "tag": "Negative · extreme",
-                  "tr": "I hurt my leg and can't even walk, let alone run."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Good things too · not only… but also",
-                  "tr": "Not only is he a good student, he's also great at sports."
-                }
-              ],
-              "explain": "Check whether the second half is good or bad: praising someone (スポーツも得意だ) sounds natural with ばかりか; はおろか is usually followed by something bad or extreme like 「〜さえできない」. Also look at what comes before: ばかりか can attach directly to verbs and adjectives (できるばかりか), while はおろか usually follows a noun or 「こと」."
             }
           ]
         }
@@ -47283,24 +47268,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both are sentence-final particles expressing the speaker's assertion or feeling",
+          "note": "Both mean “exclaiming to oneself”",
           "items": [
             {
-              "id": "yo-particle",
-              "diff": "よ “tells the listener” something they don't know; わ voices your own feeling or decision, more like talking to yourself, with a soft tone.",
+              "id": "naa-exclamation",
+              "title": "〜なあ (exclamation)",
+              "diff": "Both are exclamations to oneself: なあ is used by everyone regardless of gender or age, as if savoring one's own feeling; わ is shorter—in standard Japanese a rising わ sounds feminine, while a falling わ is mostly Kansai dialect or a casual remark by young men.",
               "this": [
                 {
-                  "tag": "Voicing one's own feeling",
-                  "tr": "Oh, it's so cold today."
+                  "tag": "Short · said in passing",
+                  "tr": "This room is a bit cold."
                 }
               ],
               "that": [
                 {
-                  "tag": "Telling the listener",
-                  "tr": "If you're going out, it's cold today, you know."
+                  "tag": "Drawn out · savoring the feeling",
+                  "tr": "This room is a bit cold."
                 }
               ],
-              "explain": "Look at who the remark is aimed at: aimed at someone else, pointing out something they don't know yet (出るなら〜よ) → よ; your own exclamation or decision, like talking to yourself (ああ、〜わ) → わ. A rising わ is feminine speech in standard Japanese; the two are often combined as 「わよ」, voicing a feeling while also alerting the listener."
+              "explain": "You can swap them without changing the meaning; the difference is tone and who's speaking: なあ sounds natural from anyone, like a drawn-out, savored exclamation; わ is shorter—said with a rising tone in standard Japanese it is a soft, feminine tone, and with a falling tone it is mostly Kansai dialect or a casual remark by young men. When in doubt, なあ is the safest choice."
             }
           ]
         }
@@ -47311,41 +47297,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean “focusing on one thing and neglecting another”",
+          "note": "Both mean “leaving aside someone you should care about”",
           "items": [
             {
-              "id": "ni-kamakete",
-              "diff": "They mark opposite things: before そっちのけで comes “what gets neglected”; before にかまけて comes “what you're absorbed in”.",
+              "id": "wo-kaerimizu",
+              "title": "〜を顧みず (disregarding others / consequences)",
+              "diff": "Both mean leaving aside someone you should care about: そっちのけで is colloquial and a bit teasing, focusing on “their mind is entirely on something else”; を顧みず is written and formal, focusing on criticizing “not giving them any thought,” and can also take consequences like 「危険」 or 「健康」.",
               "this": [
                 {
-                  "tag": "Before it = what's neglected",
-                  "tr": "My son has pushed his studies aside and is completely absorbed in video games."
+                  "tag": "Colloquial · mind elsewhere",
+                  "tr": "Dad leaves the family to fend for themselves and spends every weekend playing golf."
                 }
               ],
               "that": [
                 {
-                  "tag": "Before it = what you're absorbed in",
-                  "tr": "My son is so caught up in video games that he's neglecting his studies."
+                  "tag": "Written · criticizing neglect",
+                  "tr": "Dad neglects his family and spends every weekend playing golf."
                 }
               ],
-              "explain": "Both sentences describe the same situation — check whether 「勉強」 or 「ゲーム」 comes first: the neglected “studies” first → 勉強はそっちのけで, followed by what he's absorbed in; the absorbing “games” first → ゲームにかまけて, followed by what's being neglected (おろそかにする, 顧みない)."
-            },
-            {
-              "id": "wo-yoso-ni",
-              "diff": "Before そっちのけで comes something that should be done or someone who should be the focus; before をよそに usually comes other people's “worry, expectations or opposition”.",
-              "this": [
-                {
-                  "tag": "Sidelining the main figure",
-                  "tr": "The relatives were whooping it up, completely ignoring the bride and groom."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Ignoring others' worry",
-                  "tr": "Despite his parents' worries, he set off overseas on his own."
-                }
-              ],
-              "explain": "Look at the noun before it: serious business that should be done, like 「勉強」 or 「仕事」, or someone who should be at the center, like 「本人」, 「主役」 or 「客」 → そっちのけで; other people's feelings or attitudes like 「心配」, 「期待」, 「反対」 or 「批判」 → をよそに."
+              "explain": "You can swap them without changing the meaning; the difference is register and focus: in everyday speech, saying a bit teasingly that “their mind has gone entirely to something else” → 「家族そっちのけで」; criticizing formally, in writing, that “they gave no thought to their family” → 「家族を顧みず」. When what is ignored is a consequence like 「危険」 or 「健康」, normally only を顧みず is used (「危険を顧みず」)."
             }
           ]
         }
@@ -47355,66 +47325,33 @@
       "id": "wa-wa",
       "groups": [
         {
-          "kind": "look",
-          "note": "The 「わ」 in わ〜わ ↔ the sentence-final 「わ」: written the same",
-          "items": [
-            {
-              "id": "wa-particle",
-              "title": "〜わ (sentence-final particle)",
-              "diff": "わ〜わ says the same verb twice in a row, meaning “one after another”; a single sentence-final わ is a soft-toned particle.",
-              "this": [
-                {
-                  "tag": "Repeated verb · one after another",
-                  "tr": "When I cleared out the closet, old photos kept turning up one after another."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Sentence-final · soft tone",
-                  "tr": "I'd better be heading home. See you."
-                }
-              ],
-              "explain": "Count how many わ there are and whether the same verb comes before each: the same verb said twice, like 「出るわ出るわ」 → amazement at how many there are, used by men and women alike; a single わ at the end, stating your own intention or feeling → sentence-final particle. When reading fiction, don't take 「出るわ出るわ」 as feminine speech."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Both list things happening one after another, with surprise or complaint",
+          "note": "Both mean “what with this and that…”",
           "items": [
-            {
-              "id": "wa-wa-de",
-              "diff": "わ〜わ can end the sentence on its own, exclaiming “there's an amazing amount”; わ〜わで must be followed by a summing-up like “it was awful as a result”.",
-              "this": [
-                {
-                  "tag": "Ends the sentence · exclamation",
-                  "tr": "When I looked into it, problem after problem kept popping up."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "わで → sums up the outcome",
-                  "tr": "What with the rain and the wind, the trip was a total disaster."
-                }
-              ],
-              "explain": "Look at what follows the last わ: if the sentence stops there, simply marveling at how much there is → わ〜わ; if 「で」 follows, with a summing-up like 「散々だった」 or 「大変だった」 → わ〜わで, meaning “because things kept happening like this, the result was…”."
-            },
             {
               "id": "yara-yara",
-              "diff": "わ〜わ attaches only to verbs and adjectives, with strong surprise or complaint; やら〜やら has a flatter tone and can also take nouns.",
+              "title": "〜やら〜やら (listing things)",
+              "diff": "Both can list a pile of things and make it sound chaotic: わ〜わ attaches only to verbs and adjectives and carries surprise and complaint, as in “how unlucky can I get”; やら〜やら sounds calmer and can also follow nouns.",
               "this": [
                 {
-                  "tag": "Verbs · complaining",
-                  "tr": "On moving day, things got broken, it started raining — it was a total disaster."
+                  "tag": "Verbs · stronger complaint",
+                  "tr": "During the trip, it rained, I lost my wallet—it was awful."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nouns · plain listing",
-                  "tr": "Before the move, I'm busy with packing, cleaning and so on."
+                  "tag": "Verbs · calmer tone",
+                  "tr": "During the trip, what with the rain and losing my wallet, it was awful."
+                },
+                {
+                  "tag": "Nouns · only やら",
+                  "tr": "At the end of the year, what with the big cleaning and New Year's cards, I'm really busy."
                 }
               ],
-              "explain": "Look at what comes before: nouns (荷造り, 掃除) can only take やら〜やら; わ〜わ always follows a verb or adjective clause (壊れるわ, 降るわ), and carries surprise or complaint along the lines of “how unlucky can you get”. The repeated-verb 「出るわ出るわ」 also only works with わ."
+              "wrong": {
+                "why": "わ〜わ must follow a clause ending in a verb or adjective; it can't attach directly to a noun."
+              },
+              "explain": "The first two sentences can be swapped without changing the meaning: わ〜わ has a heavier tone of complaint, like saying “how unlucky can I get”; やら〜やら is flatter and simply says there's a chaotic pile of things. Then check what comes before it: nouns (「大掃除」, 「年賀状」) can only take やら〜やら; わ〜わ always follows a verb or adjective (「降るわ」, 「なくすわ」)."
             }
           ]
         }
@@ -47424,83 +47361,55 @@
       "id": "wa-wa-de",
       "groups": [
         {
-          "kind": "look",
-          "note": "The 「わ」 in わ〜わで ↔ the sentence-final 「わ」: written the same",
-          "items": [
-            {
-              "id": "wa-particle",
-              "title": "〜わ (sentence-final particle)",
-              "diff": "わ〜わで lists things happening one after another: “what with… and…”; sentence-final わ is a soft-toned particle.",
-              "this": [
-                {
-                  "tag": "Listing · one misfortune after another",
-                  "tr": "What with the rain and the wind, it was just awful."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Sentence-final · soft tone",
-                  "tr": "Oh, it's started raining. I'll need to take an umbrella."
-                }
-              ],
-              "explain": "Look at what follows わ: if another item follows, then 「で」 and a summing-up (散々だった) → listing a string of events, used by men and women alike; if わ is at the end and the sentence stops there → sentence-final particle. When you read 「降るわ、吹くわで」, don't take it as feminine speech."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Both list several things that happened in a row, implying “it was rough”",
+          "note": "Both mean “what with this and that…”",
           "items": [
-            {
-              "id": "wa-wa",
-              "diff": "わ〜わで must be followed by a summing-up like “it was awful as a result”; わ〜わ can end the sentence on its own, exclaiming “there's an amazing amount”.",
-              "this": [
-                {
-                  "tag": "わで → sums up the outcome",
-                  "tr": "What with the rain and the wind, the trip was a total disaster."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Ends the sentence · exclamation",
-                  "tr": "When I looked into it, problem after problem kept popping up."
-                }
-              ],
-              "explain": "Look at what follows the last わ: if 「で」 follows, with a summing-up like 「散々だった」 or 「大変だった」 → わ〜わで, meaning “because things kept happening like this, the result was…”; if the sentence stops there, simply marveling at how much there is → わ〜わ."
-            },
             {
               "id": "yara-yara",
-              "diff": "わ〜わで mostly lists a run of bad luck, with stronger complaint; やら〜やら has a flatter tone and can also take nouns or list mixed feelings.",
+              "title": "〜やら〜やら (listing things)",
+              "diff": "Both can list a pile of things and make it sound chaotic: わ〜わで attaches only to verbs and adjectives and has a heavier tone of complaint and exaggeration; やら〜やら sounds calmer and can also follow nouns.",
               "this": [
                 {
-                  "tag": "Bad luck · complaining",
-                  "tr": "I lost my wallet, the train was late — what a miserable day."
+                  "tag": "Verbs · heavier complaint",
+                  "tr": "When he got his shot, my son cried and thrashed about—it was such a struggle."
                 }
               ],
               "that": [
                 {
-                  "tag": "Mixed feelings",
-                  "tr": "Being praised in front of everyone, I was both happy and embarrassed."
+                  "tag": "Verbs · calmer tone",
+                  "tr": "When he got his shot, what with my son crying and thrashing about, it was a struggle."
+                },
+                {
+                  "tag": "Nouns · only やら",
+                  "tr": "Before the trip, what with exchanging money and packing, I'm really busy."
                 }
               ],
-              "explain": "Look at what's being listed: a string of misfortunes (落とす, 遅れる) → わ〜わで captures it best; mixed feelings like happiness and embarrassment, or nouns (宿題やら掃除やら) → usually やら〜やら."
+              "wrong": {
+                "why": "わ〜わで must follow a clause ending in a verb or adjective; it can't attach directly to a noun."
+              },
+              "explain": "The first two sentences can be swapped without changing the meaning: わ〜わで has a heavier tone of complaint and exaggeration; やら〜やら is flatter and simply says there's a chaotic pile of things. When listing nouns (「両替」, 「荷造り」), only やら〜やら works; わ〜わで always follows a verb or adjective (「泣くわ」, 「暴れるわで」)."
             },
             {
               "id": "shi",
-              "diff": "わ〜わで grumbles about things that have already happened, with strong surprise and complaint; し〜し calmly lists reasons that lead to a conclusion.",
+              "title": "〜し (listing)",
+              "diff": "Both can list bad things one after another: わ〜わで carries surprise and complaint, a sense of “what an ordeal,” followed by an exclamation about the outcome; し〜し calmly lays out the facts and is often followed by one's own decision or suggestion.",
               "this": [
                 {
-                  "tag": "Already happened · grumbling",
-                  "tr": "What with the rain and the wind, it was just awful."
+                  "tag": "Complaining · strong tone",
+                  "tr": "Last week my computer broke down, my car broke down—it was awful."
                 }
               ],
               "that": [
                 {
-                  "tag": "Listing reasons · calm",
-                  "tr": "It's raining and windy, so let's not go out today."
+                  "tag": "Calmly stating facts",
+                  "tr": "Last week my computer broke down, and my car broke down too; it was awful."
+                },
+                {
+                  "tag": "Giving reasons · leading to a decision",
+                  "tr": "It's raining and the wind is strong, so let's call it off today."
                 }
               ],
-              "explain": "The first halves are almost identical — look at the second half: し lists reasons for a decision, followed by a conclusion like 「やめよう」 or 「行きたくない」; わ〜わで grumbles about what has already happened, followed by 「散々だった」 or 「ひどい目にあった」, with a much stronger tone."
+              "explain": "The first two sentences can be swapped without changing the meaning; the difference is tone: わ〜わで carries surprise and complaint, like “how unlucky can I get,” and sounds more dramatic; し〜し simply lays things out one by one, calmly. When what follows is your own decision or suggestion (「やめておこう」), use し〜し; わ〜わで is usually followed by an exclamation about the outcome, like 「散々だった」 or 「大変だった」."
             }
           ]
         }
@@ -47532,20 +47441,25 @@
             },
             {
               "id": "wo-moto-ni",
-              "diff": "を踏まえて treats facts as a “premise” for making a judgment; をもとに uses something as “material” to create something.",
+              "title": "〜をもとに (material / basis)",
+              "diff": "Both mean “based on…”: を踏まえて treats it as a premise to take into account before deciding, and sounds formal; をもとに uses it directly as material or a source to make something.",
               "this": [
                 {
-                  "tag": "Premise · then judge",
-                  "tr": "Based on the survey results, we'll consider our future policy."
+                  "tag": "Take into account · then decide",
+                  "tr": "Taking the survey results into account, we came up with a new menu."
                 }
               ],
               "that": [
                 {
-                  "tag": "Material · create a work",
-                  "tr": "This film is based on a true story."
+                  "tag": "Use as material · build from it",
+                  "tr": "Using the survey results as a basis, we came up with a new menu."
+                },
+                {
+                  "tag": "Source for a work",
+                  "tr": "This novel was written based on my grandmother's diary."
                 }
               ],
-              "explain": "Look at the verb that follows: thinking about the next step on top of a premise, like 「検討する」, 「判断する」 or 「見直す」 → を踏まえて; turning material into a work, like 「作る」, 「書く」 or 「描く」 → をもとに (実話をもとにした小説)."
+              "explain": "Something like 「アンケートの結果」 works with both: を踏まえて means taking the results into account as a premise before deciding, and sounds formal; をもとに means using the results directly as material. When what comes before is the source a work is written or made from, like 「祖母の日記」 or 「実話」, only をもとに is used; for situations that first need to be digested, like 「反省」 or 「現状」, use を踏まえて."
             },
             {
               "id": "wo-zentei-to-shite",
@@ -47591,23 +47505,6 @@
                 }
               ],
               "explain": "Look at the second half: a state or feeling as the event approaches, like 「緊張している」 or 「準備に追われている」, often with 「明日に」 or 「目前に」 before it saying how close it is → を控えて; a specific activity carried out before that event, like 「開会式が行われた」 or 「挨拶する」 → に先立って."
-            },
-            {
-              "id": "ni-atatte",
-              "diff": "を控えて only says the event is “coming up soon”; にあたって says what you do “when setting about” that event.",
-              "this": [
-                {
-                  "tag": "Coming up · feelings",
-                  "tr": "I'm leaving to study abroad next month, and I can't settle down at all these days."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Setting about · what to do",
-                  "tr": "In preparing to study abroad, I got a passport."
-                }
-              ],
-              "explain": "Look at what comes before and what's said after: を控えて takes only a noun, often with a time like 「来月に」, followed by feelings or a state during that period; にあたって can follow a verb (留学するにあたって), followed by preparations made for it or a formal address (パスポートを取った, 一言ご挨拶申し上げます). (Same with にあたり, which is more formal.)"
             }
           ]
         }
@@ -47671,7 +47568,7 @@
               "this": [
                 {
                   "tag": "No heed · criticism",
-                  "tr": "My father neglected his family and devoted himself solely to work."
+                  "tr": "My father neglected his family and was out drinking until late every night."
                 }
               ],
               "that": [
@@ -47684,20 +47581,25 @@
             },
             {
               "id": "mo-kamawazu",
-              "diff": "も顧みず disregards serious things like health or family, and is more formal; もかまわず doesn't care about others' eyes or the setting, and is more conversational.",
+              "title": "〜もかまわず (regardless of…)",
+              "diff": "Both mean “with no regard for…”: も顧みず is written and formal, mostly used for serious matters like family, health or danger; もかまわず is common in everyday speech too and can be used for small things.",
               "this": [
                 {
-                  "tag": "Serious matters · written",
-                  "tr": "Without regard even for his own health, he carried on with his research."
+                  "tag": "Written · formal",
+                  "tr": "Heedless of the people around her, she cried out loud."
                 }
               ],
               "that": [
                 {
-                  "tag": "Others' eyes · spoken",
-                  "tr": "Not caring who saw, she cried out loud."
+                  "tag": "Common in speech too",
+                  "tr": "Not caring who was watching, she cried out loud."
+                },
+                {
+                  "tag": "Everyday trifles",
+                  "tr": "Not caring about getting their clothes dirty, the children are absorbed in playing in the mud."
                 }
               ],
-              "explain": "Look at the noun before it: everyday small matters or others' eyes, like 「人目」, 「服が汚れる」 or 「時間」 → もかまわず; weighty matters like 「危険」, 「健康」 or 「家族」 → を顧みず (も顧みず has a stronger tone)."
+              "explain": "A word like 「人目」 works with both and the meaning is the same, so choose by register: in writing or the news use も顧みず, which sounds formal; in everyday speech もかまわず is more natural. When what's ignored is an everyday trifle like 「服が汚れるの」, use もかまわず; for serious matters like 「危険」, 「健康」 or 「家庭」, も顧みず fits better."
             }
           ]
         }
@@ -47731,7 +47633,7 @@
         },
         {
           "kind": "meaning",
-          "note": "Both mark a boundary at a certain point in time",
+          "note": "Both mean “up to…, and then it ends”",
           "items": [
             {
               "id": "wo-motte",
@@ -47750,51 +47652,6 @@
                 }
               ],
               "explain": "Listen to the tone: the speaker says “that's it as of today” with resolve or emotion (きっぱりやめる, 引退する) → を限りに; a notice or announcement calmly declaring a cutoff (終了いたします, 閉店いたします) → をもって (more politely, をもちまして)."
-            },
-            {
-              "id": "wo-sakai-ni",
-              "diff": "を限りに says something “ends there” as of that point in time; を境に says things “changed” before and after that point.",
-              "this": [
-                {
-                  "tag": "Ending here",
-                  "tr": "This year is my last; after it I'll retire from competition."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Before/after change",
-                  "tr": "Ever since that accident, his personality has completely changed."
-                }
-              ],
-              "explain": "Look at the second half: something ongoing that stops here, like 「引退する」, 「やめる」 or 「閉店する」 → を限りに; a change contrasting two periods before and after, like 「変わった」 or 「増え始めた」 → を境に."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "wo-kawakiri-ni",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Both put A first, implying a whole series of similar things follows",
-          "items": [
-            {
-              "id": "wo-hajime",
-              "diff": "を皮切りに means things unfold in sequence, “starting” from A in time; をはじめ puts A first as the “representative” when listing.",
-              "this": [
-                {
-                  "tag": "Time order · unfolding in turn",
-                  "tr": "The exhibition opens in Osaka, then moves on to Nagoya and Tokyo in turn."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Listing a representative",
-                  "tr": "The exhibition will be held across the country, in Osaka, Nagoya, Tokyo and elsewhere."
-                }
-              ],
-              "explain": "Look at the second half: 「順に」 or 「次々と」 describing a sequence → を皮切りに, with A as the first stop in time; 「〜など」 grouping similar things together without any order → をはじめ, with A merely the most representative one."
             }
           ]
         }
