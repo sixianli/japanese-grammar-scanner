@@ -126,6 +126,21 @@ jobs:
           c.sort(key=lambda t:(t[0], t[1]['name'].endswith('Pro Max')))
           print(c[-1][1]['udid'])")
           echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+      - name: Boot simulator and add sample photos in background
+        run: |
+          UDID="${{ steps.sim.outputs.udid }}"
+          defaults write com.apple.iphonesimulator ConnectHardwareKeyboard -bool false
+          (
+            set -e
+            echo "$(date +%T) boot"
+            xcrun simctl boot "$UDID" || true
+            xcrun simctl bootstatus "$UDID" -b
+            echo "$(date +%T) booted, adding photos"
+            xcrun simctl addmedia "$UDID" tests/ocr/samples/IMG_8936.jpg tests/ocr/samples/IMG_8939.jpg
+            echo "$(date +%T) photos added"
+            touch sim-ready
+          ) > sim-prep.log 2>&1 &
+          echo $! > sim-prep.pid
       - name: Build for testing
         run: |
           set -o pipefail
@@ -134,13 +149,12 @@ jobs:
             -scheme JapaneseGrammarScanner \
             -destination "id=${{ steps.sim.outputs.udid }}" -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO | tail -3
-      - name: Boot simulator
+      - name: Wait for simulator and sample photos
         run: |
-          defaults write com.apple.iphonesimulator ConnectHardwareKeyboard -bool false
-          xcrun simctl boot "${{ steps.sim.outputs.udid }}" || true
-          xcrun simctl bootstatus "${{ steps.sim.outputs.udid }}" -b
-      - name: Put sample photos into the simulator's photo library
-        run: xcrun simctl addmedia "${{ steps.sim.outputs.udid }}" tests/ocr/samples/IMG_8936.jpg tests/ocr/samples/IMG_8939.jpg
+          PID=$(cat sim-prep.pid)
+          while kill -0 "$PID" 2>/dev/null; do sleep 5; done
+          cat sim-prep.log
+          test -f sim-ready
       - name: End-to-end tests
         run: |
           set -o pipefail
