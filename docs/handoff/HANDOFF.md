@@ -258,6 +258,13 @@ Build 17 包含的内容（详见 PR #6 描述）：Build 16 的全部反馈修�
 - 必考：`frequency.json` 里 ni-tsuite、kara-ni-kakete、wo-chuushin-ni、dake-de-naku 由 low 改 high；kke、tatte、ttara 由 low 改 medium。
 - 留到 Build 19（等「相近语法内容质量标准」定稿）：逐组复核 800 个 meaning 组；按标准重写 1685 条线索 / 讲解，清空 cue debt；全面复核出题频率。
 
+## Build 18 / Build 19 进度（2026-11-21）
+
+- Build 18：版本号 1.0（Andy 决定首发改回 1.0），提交 `e3acedc`，单元测试和 e2e 4 组全绿后上传 App Store Connect 成功。
+- Build 19（分支 `claude/project-thread-93x500`，PR #8）：Build 18 反馈 1、2 已实现（首页复习一行 + 铃铛 + 樱花飘过；收藏樱花 + 巾着标签 + 飘进收藏）；商店文案去掉「完全离线」、补复习、写明免费；合入相近语法按质量规范全量重做（PR #12，`fac9984`，两道内容门槛通过）。
+- 发现并修好：CI 宽屏模拟器上导航栏按钮挪到右侧竖排时，自绘的樱花按钮留在页面右上角、往下滑就消失；改成图片资源 SakuraOutline / SakuraFilled 做按钮标签（定向 e2e 已通过）。
+- 待办：整套 CI 全绿后发 Build 19（版本 1.0）；Andy 已同意测试全绿后把 #12→#10→#8→#6→#5 逐个合进 main。
+
 ## Build 18 体验反馈清单（等用户说「反馈完了」再统一改）
 
 ### 反馈 1：首页「快要忘了」太显眼，App 要克制（截图 `docs/handoff/b18_fb01_review_card.png`，2026-11-21）
