@@ -104,7 +104,7 @@ final class DetailTests: E2ETestCase {
         wait(navBar("反馈"), "讲解页底部的反馈入口应打开反馈页")
         navBar("反馈").buttons["取消"].tap()
         waitGone(navBar("反馈"), "取消后关闭")
-        XCTAssertTrue(detailScreen.exists, "关闭反馈后仍在讲解页")
+        wait(detailScreen, "关闭反馈后仍在讲解页")
     }
 
     func testFavoriteFromDetailAndUnfavoriteFromList() {

@@ -38,8 +38,12 @@ class E2ETestCase: XCTestCase {
         // 三次重试都没有 identifier，No matches）。按钮里的图标（Image，identifier 如 text.viewfinder、选中时 house.fill）
         // 一直都有，所以按「按钮名 == 标签名、按钮里有这个图标」找：按钮自己的 identifier 是图标名或还没给（空）都算。
         // 页面里同名按钮（如讲解页的「收藏」detail.favorite）有自己的 identifier，排除在外。
-        return app.buttons
+        let candidates = app.buttons
             .matching(NSPredicate(format: "label == %@ AND (identifier BEGINSWITH %@ OR identifier == '')", title, icon))
+        // 「收藏」用的是自绘的巾着图（资源图片），按钮里的图片没有图标名做 identifier，只按按钮本身找；
+        // 页面里的「收藏」樱花按钮有自己的 identifier（detail.favorite、row.star），不会被找到。
+        if icon == "Kinchaku" { return candidates.firstMatch }
+        return candidates
             .containing(NSPredicate(format: "identifier BEGINSWITH %@", icon))
             .firstMatch
     }
