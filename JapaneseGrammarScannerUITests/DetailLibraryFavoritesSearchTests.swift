@@ -45,6 +45,19 @@ final class DetailTests: E2ETestCase {
     }
 
     /// Build 17 反馈 1：往上滑后，标题栏正中出现同一个标题和等级；回到顶部后标题栏里的标题藏起来
+    /// 「必考」只给出题频率最高的语法显示（Build 17 反馈 4）：について 有，〜たち 没有
+    func testMustKnowTagOnlyOnHighFrequencyGrammar() {
+        openDetailBySearch("について")
+        wait(id("detail.level"), "标题下方应有等级标签")
+        XCTAssertTrue(id("tag.mustKnow").waitForExistence(timeout: 5), "について 是必考语法，应显示「必考」")
+    }
+
+    func testNoMustKnowTagOnLowFrequencyGrammar() {
+        openDetailBySearch("たち")
+        wait(id("detail.level"), "标题下方应有等级标签")
+        XCTAssertFalse(id("tag.mustKnow").exists, "〜たち 不是必考语法，不应显示「必考」")
+    }
+
     func testTitleBarShowsCenteredTitleAfterScrolling() {
         openDetailBySearch("ようになる")
         let pageTitle = id("detail.title")

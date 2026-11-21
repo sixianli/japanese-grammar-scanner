@@ -138,7 +138,8 @@ struct RubyText: View {
     }
 
     /// 讲解文字（任意语言），其中「」『』里的日语会自动注音。
-    init(explanation: String, style: Style = Style()) {
+    /// `cues`：「相近语法」对比例句里的线索词；讲解里出现时同样画虚线（规则见 `cueRanges`）。
+    init(explanation: String, cues: [String] = [], style: Style = Style()) {
         plain = explanation
         self.style = style
         var segs: [RubySegment] = []
@@ -154,6 +155,9 @@ struct RubyText: View {
             cursor = NSMaxRange(innerRange)
         }
         if cursor < ns.length { segs.append(RubySegment(text: ns.substring(from: cursor))) }
+        if !cues.isEmpty {
+            segs = RubyText.applyMarks(segs, ranges: RubyText.cueRanges(in: explanation, cues: cues), mark: \.cue)
+        }
         segments = segs
         hasRuby = segs.contains { $0.ruby != nil }
         groups = AtomBuilder.groups(AtomBuilder.atoms(from: segs))
@@ -230,7 +234,35 @@ struct RubyText: View {
     }
 
     /// 把高亮范围（UTF-16）映射到片段上；必要时拆分无注音片段，使高亮边界精确。
+    /// 线索词在讲解里出现的位置（UTF-16）。含假名的词直接按字面找；全是汉字的词（如「去年」）
+    /// 前后紧挨着汉字时不算，免得把中文里的「今天」当成线索「今」。validate_contrasts.py 用同一条规则。
+    static func cueRanges(in text: String, cues: [String]) -> [NSRange] {
+        let ns = text as NSString
+        func isHan(_ c: unichar) -> Bool { (0x4E00...0x9FFF).contains(c) || c == 0x3005 }
+        func hasKana(_ s: String) -> Bool { s.unicodeScalars.contains { (0x3040...0x30FF).contains($0.value) } }
+        var out: [NSRange] = []
+        for cue in cues where !cue.isEmpty {
+            let kana = hasKana(cue)
+            var search = NSRange(location: 0, length: ns.length)
+            while true {
+                let r = ns.range(of: cue, options: [], range: search)
+                if r.location == NSNotFound { break }
+                let before = r.location > 0 ? ns.character(at: r.location - 1) : nil
+                let after = NSMaxRange(r) < ns.length ? ns.character(at: NSMaxRange(r)) : nil
+                if kana || !(before.map(isHan) ?? false || after.map(isHan) ?? false) { out.append(r) }
+                let next = r.location + 1
+                search = NSRange(location: next, length: ns.length - next)
+            }
+        }
+        return out
+    }
+
     private static func applyHighlights(_ segs: [RubySegment], highlights: [NSRange]) -> [RubySegment] {
+        applyMarks(segs, ranges: highlights, mark: \.highlighted)
+    }
+
+    /// 把落在 ranges 里的字标上 mark（高亮或线索）；带注音的词不拆分，有重叠就整体标上
+    static func applyMarks(_ segs: [RubySegment], ranges highlights: [NSRange], mark: WritableKeyPath<RubySegment, Bool>) -> [RubySegment] {
         guard !highlights.isEmpty else { return segs }
         var out: [RubySegment] = []
         var offset = 0
@@ -242,11 +274,18 @@ struct RubyText: View {
             defer { offset += len }
             if ruby != nil {
                 // 注音词不拆分：有任何重叠就整体高亮
-                let hit = highlights.contains { NSIntersectionRange($0, segRange).length > 0 }
-                out.append(RubySegment(text: text, ruby: ruby, highlighted: hit))
+                var marked = seg
+                if highlights.contains(where: { NSIntersectionRange($0, segRange).length > 0 }) { marked[keyPath: mark] = true }
+                out.append(marked)
                 continue
             }
-            // 按字符逐个判断是否在高亮范围内，再合并相邻同状态字符
+            // 按字符逐个判断是否在范围内，再合并相邻同状态字符（其它标记保持原样）
+            func piece(_ t: String, _ hit: Bool) -> RubySegment {
+                var p = seg
+                p.text = t
+                if hit { p[keyPath: mark] = true }
+                return p
+            }
             let ns = text as NSString
             var buffer = ""
             var bufferHit: Bool?
@@ -256,14 +295,14 @@ struct RubyText: View {
                 let global = NSRange(location: offset + r.location, length: r.length)
                 let hit = highlights.contains { NSIntersectionRange($0, global).length > 0 }
                 if let bh = bufferHit, bh != hit {
-                    out.append(RubySegment(text: buffer, ruby: nil, highlighted: bh))
+                    out.append(piece(buffer, bh))
                     buffer = ""
                 }
                 buffer += ns.substring(with: r)
                 bufferHit = hit
                 i = NSMaxRange(r)
             }
-            if let bh = bufferHit, !buffer.isEmpty { out.append(RubySegment(text: buffer, ruby: nil, highlighted: bh)) }
+            if let bh = bufferHit, !buffer.isEmpty { out.append(piece(buffer, bh)) }
         }
         return out
     }

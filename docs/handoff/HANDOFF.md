@@ -248,3 +248,12 @@ Build 17 包含的内容（详见 PR #6 描述）：Build 16 的全部反馈修�
 
 - 相近语法：`JapaneseGrammarScanner/Resources/Grammar/contrasts/contrasts.json`（简中原稿）+ `contrasts_{zh-Hant,en,ko,es,vi,my}.json`。繁体用 `tools/make_contrasts_zh_hant.py` 由简中生成。改了原稿后，其它语言要同步重译对应条目，`tools/validate_contrasts.py` 会检查句子数、标题等是否和原稿对得上。
 - 之前批量翻译用的临时脚本在旧会话的临时目录里，已不可用；以后少量修改直接手改各语言 JSON 即可。
+
+### Build 17 反馈处理进度（2026-11-21，Build 18）
+
+- 已改：反馈 1、2、3、4、6、7、8 全部；反馈 5、9 先改了截图里指出的条目：
+  - 反馈 5：`te-iru` ↔ `ta-form` 互相从「意思差不多的」移出，原文（7 种语言）存到 `docs/content/parked_contrasts.json`（待用清单）；两组说明改成唯一的共同意思。
+  - 反馈 9：`kosoado-konna` ↔ `kosoado-determiners` 的线索改为 いつか、ください，「怎么分辨」点名这两个词；App 里「怎么分辨」正文出现线索词时画同样的虚线（`RubyText.cueRanges`）。
+  - `tools/validate_contrasts.py` 新规则：线索词必须出现在 explain 里。还没改好的旧条目（1685 条）记在 `tools/contrast_cue_debt.json`，只能删不能加。
+- 必考：`frequency.json` 里 ni-tsuite、kara-ni-kakete、wo-chuushin-ni、dake-de-naku 由 low 改 high；kke、tatte、ttara 由 low 改 medium。
+- 留到 Build 19（等「相近语法内容质量标准」定稿）：逐组复核 800 个 meaning 组；按标准重写 1685 条线索 / 讲解，清空 cue debt；全面复核出题频率。

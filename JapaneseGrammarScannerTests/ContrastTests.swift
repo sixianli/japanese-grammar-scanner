@@ -139,4 +139,60 @@ final class ContrastTests: XCTestCase {
             }
         }
     }
+
+    // MARK: Build 17 反馈 9：虚线线索要在「怎么分辨」里点名，两边对应
+
+    func testCuesJoinAdjacentSegments() {
+        let s = GrammarContrasts.Sentence(ja: "今:いま|から|走:はし|っ|*たところで|、|~間:ま|~に|~合:あ|~わない|。", tag: "", tr: "")
+        XCTAssertEqual(s.segments.filter(\.cue).map(\.text).joined(), "間に合わない")
+    }
+
+    func testCueRangesInExplanation() {
+        let text = "看「いつか」：今天想要的 → こんな；去年結婚した。说「今」的时候"
+        let ns = text as NSString
+        // 含假名的词按字面找到
+        XCTAssertEqual(RubyText.cueRanges(in: text, cues: ["いつか"]).map { ns.substring(with: $0) }, ["いつか"])
+        // 全是汉字的词：紧挨着汉字（今天）不算，引号里的「今」算
+        let r = RubyText.cueRanges(in: text, cues: ["今"])
+        XCTAssertEqual(r.count, 1)
+        XCTAssertEqual(r.first.map { ns.substring(with: NSRange(location: $0.location - 1, length: 3)) }, "「今」")
+        XCTAssertTrue(RubyText.cueRanges(in: text, cues: ["結婚"]).isEmpty, "去年結婚した 里的 結婚 前后都是汉字，不算")
+        XCTAssertTrue(RubyText.cueRanges(in: text, cues: []).isEmpty)
+    }
+
+    func testApplyMarksKeepsOtherFlags() {
+        let segs = [RubySegment(text: "看"), RubySegment(text: "いつか"), RubySegment(text: "今", ruby: "いま", highlighted: true)]
+        let out = RubyText.applyMarks(segs, ranges: [NSRange(location: 1, length: 3), NSRange(location: 4, length: 1)], mark: \.cue)
+        XCTAssertEqual(out.map(\.text), ["看", "いつか", "今"])
+        XCTAssertEqual(out.map(\.cue), [false, true, true])
+        XCTAssertEqual(out.last?.highlighted, true, "加线索不能丢掉原来的高亮")
+        XCTAssertEqual(out.last?.ruby, "いま")
+    }
+
+    /// 截图里的这一条（いつかこんなかばんがほしいなあ）：虚线标的词，每种语言的「怎么分辨」都点名了
+    func testKosoadoCuesAreNamedInExplainInEveryLanguage() throws {
+        for lang in ContentLanguage.allCases {
+            let lib = GrammarLibrary(language: lang)
+            for (page, target) in [("kosoado-konna", "kosoado-determiners"), ("kosoado-determiners", "kosoado-konna")] {
+                let item = try XCTUnwrap(lib.contrasts(for: page)?.groups.flatMap(\.items).first { $0.id == target }, "\(lang.rawValue) \(page)")
+                XCTAssertEqual(Set(item.cues), ["いつか", "ください"], "\(page) 的线索应是 いつか 和 ください")
+                for cue in item.cues {
+                    XCTAssertFalse(RubyText.cueRanges(in: item.explain, cues: [cue]).isEmpty, "\(lang.rawValue) \(page)：「怎么分辨」没有点名线索 \(cue)")
+                }
+            }
+        }
+    }
+
+    // MARK: Build 17 反馈 5：ている 和 た 意思不同，不放进「意思差不多的」
+
+    func testTeIruAndTaAreNotListedAsSameMeaning() {
+        let lib = GrammarLibrary(language: .zhHans)
+        for (a, b) in [("te-iru", "ta-form"), ("ta-form", "te-iru")] {
+            let meaning = lib.contrasts(for: a)?.groups.first { $0.kind == .meaning }
+            XCTAssertFalse(meaning?.items.contains { $0.id == b } ?? false, "\(a) 的「意思差不多的」里不应有 \(b)")
+        }
+        // 「た／ました」只是语体不同，仍然算意思差不多
+        let ta = lib.contrasts(for: "ta-form")?.groups.first { $0.kind == .meaning }
+        XCTAssertTrue(ta?.items.contains { $0.id == "masu-forms" } ?? false)
+    }
 }

@@ -58,6 +58,21 @@ struct GrammarContrasts: Decodable {
             other = try Self.sentences(c, .other)
         }
 
+        /// 例句里标成线索（虚线）的词：相邻的线索片段连成一个词（如「間に合わない」）。
+        /// 「怎么分辨」里出现这些词时用同样的虚线标出，两边对应（Build 17 反馈 9）。
+        var cues: [String] {
+            var out: [String] = []
+            for s in current + other {
+                var cur = ""
+                for seg in s.segments {
+                    if seg.cue { cur += seg.text } else if !cur.isEmpty { out.append(cur); cur = "" }
+                }
+                if !cur.isEmpty { out.append(cur) }
+            }
+            var seen = Set<String>()
+            return out.filter { seen.insert($0).inserted }
+        }
+
         /// 例句数组（也兼容旧格式的单个对象）
         private static func sentences(_ c: KeyedDecodingContainer<CodingKeys>, _ key: CodingKeys) throws -> [Sentence] {
             if let list = try? c.decode([Sentence].self, forKey: key) { return list }

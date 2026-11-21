@@ -63,7 +63,7 @@ struct ContrastSection: View {
                     side(item.current, label: Text(localized: "本页") + Text(verbatim: " · \(item.thisTitle ?? currentTitle)"), isCurrent: true)
                     side(item.other, label: Text(verbatim: item.title ?? target?.titleForm ?? item.id), isCurrent: false)
                     if let wrong = item.wrong { wrongLine(wrong) }
-                    explainBox(item.explain)
+                    explainBox(item.explain, cues: item.cues)
                 }
                 .transition(.opacity)
             }
@@ -182,7 +182,8 @@ struct ContrastSection: View {
         .accessibilityElement(children: .combine)
     }
 
-    private func explainBox(_ text: String) -> some View {
+    /// 「怎么分辨」：例句里虚线标出的线索词，在这里出现时也画同样的虚线，两边对应（Build 17 反馈 9）
+    private func explainBox(_ text: String, cues: [String]) -> some View {
         VStack(alignment: .leading, spacing: 6) {
             Label {
                 Text(localized: "怎么分辨")
@@ -191,7 +192,7 @@ struct ContrastSection: View {
             }
             .font(.footnote.weight(.bold))
             .foregroundStyle(.secondary)
-            RubyText(explanation: text, style: .init(font: .callout, lineSpacing: 5))
+            RubyText(explanation: text, cues: cues, style: .init(font: .callout, lineSpacing: 5))
         }
         .padding(12)
         .frame(maxWidth: .infinity, alignment: .leading)

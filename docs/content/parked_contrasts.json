@@ -1,0 +1,229 @@
+{
+  "_doc": "从相近语法里移出、暂不显示的对比（不合三组收录标准，内容先留着）。每条记下原来所在的语法点、组和各语言全文。",
+  "items": [
+    {
+      "point": "te-iru",
+      "kind": "meaning",
+      "reason": "Build 17 反馈 5：ている（现在的状态）和 た（过去发生）意思不同，只是中文都可能译成「了」，不合「意思差不多的」标准",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ta-form",
+          "diff": "ている 说现在的状态；た 说那件事在某个时间发生了。",
+          "this": [
+            {
+              "ja": "兄:あに|は|~もう|結婚:けっこん|し|*ている|。",
+              "tag": "现在的状态",
+              "tr": "哥哥已经结婚了（现在是已婚）。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~去年:きょねん|、|兄:あに|は|結婚:けっこん|し|*た|。",
+              "tag": "那件事",
+              "tr": "哥哥去年结婚了。"
+            }
+          ],
+          "explain": "看时间词：没有具体时间、说的是现在的状态（已婚、住在哪儿、认识谁）→ ている；「去年」点出事情发生的时间 → た。"
+        },
+        "en": {
+          "id": "ta-form",
+          "diff": "ている describes the current state; た says the event happened at a certain time.",
+          "this": [
+            {
+              "tag": "Current state",
+              "tr": "My brother is already married."
+            }
+          ],
+          "that": [
+            {
+              "tag": "The event",
+              "tr": "My brother got married last year."
+            }
+          ],
+          "explain": "Look at the time words: no specific time, talking about the present state (married, where someone lives, who someone knows) → ている; 「去年」 pins down when it happened → た."
+        },
+        "ko": {
+          "id": "ta-form",
+          "diff": "ている는 지금의 상태를 말하고, た는 그 일이 어느 때에 일어났다는 것을 말한다.",
+          "this": [
+            {
+              "tag": "지금의 상태",
+              "tr": "형은 이미 결혼했다(지금 기혼이다)."
+            }
+          ],
+          "that": [
+            {
+              "tag": "그 사건",
+              "tr": "형은 작년에 결혼했다."
+            }
+          ],
+          "explain": "시간을 나타내는 말을 보자. 구체적인 때 없이 지금의 상태(기혼, 어디에 산다, 누구를 안다)를 말하면 → ている, 「去年」처럼 일이 일어난 때를 짚으면 → た."
+        },
+        "es": {
+          "id": "ta-form",
+          "diff": "ている dice el estado actual; た dice que ese hecho ocurrió en un momento dado.",
+          "this": [
+            {
+              "tag": "Estado actual",
+              "tr": "Mi hermano ya se ha casado (ahora está casado)."
+            }
+          ],
+          "that": [
+            {
+              "tag": "El hecho",
+              "tr": "Mi hermano se casó el año pasado."
+            }
+          ],
+          "explain": "Fíjate en las palabras de tiempo: si no hay un momento concreto y se habla del estado actual (estar casado, dónde vive, a quién conoce) → ている; 「去年」 indica cuándo ocurrió → た."
+        },
+        "vi": {
+          "id": "ta-form",
+          "diff": "ている nói trạng thái hiện tại; た nói sự việc đó đã xảy ra vào một thời điểm nào đó.",
+          "this": [
+            {
+              "tag": "Trạng thái hiện tại",
+              "tr": "Anh tôi đã kết hôn rồi (hiện đã có gia đình)."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Sự việc đó",
+              "tr": "Anh tôi đã kết hôn vào năm ngoái."
+            }
+          ],
+          "explain": "Xem từ chỉ thời gian: không có thời gian cụ thể, nói về trạng thái hiện tại (đã kết hôn, sống ở đâu, quen ai) → ている; 「去年」 chỉ ra thời điểm sự việc xảy ra → た."
+        },
+        "my": {
+          "id": "ta-form",
+          "diff": "ている သည် ယခု အခြေအနေကို ပြောသည်။ た သည် ထိုကိစ္စ အချိန်တစ်ခုတွင် ဖြစ်ခဲ့ကြောင်း ပြောသည်။",
+          "this": [
+            {
+              "tag": "ယခု အခြေအနေ",
+              "tr": "အစ်ကို အိမ်ထောင်ကျနေပြီ (အခု အိမ်ထောင်ရှိ)။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ထိုကိစ္စ",
+              "tr": "အစ်ကို မနှစ်က လက်ထပ်ခဲ့တယ်။"
+            }
+          ],
+          "explain": "အချိန်ပြစကားလုံးကို ကြည့်ပါ - တိကျသော အချိန် မပါဘဲ ယခု အခြေအနေ (အိမ်ထောင်ရှိ၊ ဘယ်မှာ နေသလဲ၊ ဘယ်သူ့ကို သိသလဲ) ကို ပြောလျှင် → ている။「去年」က ကိစ္စ ဖြစ်ခဲ့သည့်အချိန်ကို ဖော်ပြသည် → た။"
+        }
+      }
+    },
+    {
+      "point": "ta-form",
+      "kind": "meaning",
+      "reason": "Build 17 反馈 5（反方向）：た 和 ている 意思不同，不合「意思差不多的」标准",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "te-iru",
+          "diff": "た 说那件事发生了；ている 说那件事留下的状态现在还在。",
+          "this": [
+            {
+              "ja": "~去年:きょねん|、|兄:あに|は|結婚:けっこん|し|*た|。",
+              "tag": "那件事",
+              "tr": "哥哥去年结婚了。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "兄:あに|は|~もう|結婚:けっこん|し|*ている|。",
+              "tag": "现在的状态",
+              "tr": "哥哥已经结婚了（现在是已婚）。"
+            }
+          ],
+          "explain": "看时间词：「去年」点出事情发生的时间 → た；没有具体时间、说的是现在的状态（已婚、住在哪儿、认识谁）→ ている。中文都是「结婚了」，日语要分清是「那件事」还是「现在的状态」。"
+        },
+        "en": {
+          "id": "te-iru",
+          "diff": "た says the event happened; ている says the state left by that event still holds now.",
+          "this": [
+            {
+              "tag": "The event",
+              "tr": "My brother got married last year."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Current state",
+              "tr": "My brother is already married."
+            }
+          ],
+          "explain": "Look at the time words: 「去年」 pins down when it happened → た; no specific time, talking about the present state (married, where someone lives, who someone knows) → ている. English sometimes blurs “got married” and “is married”; Japanese makes you choose between “the event” and “the current state”."
+        },
+        "ko": {
+          "id": "te-iru",
+          "diff": "た는 그 일이 일어났다는 것을 말하고, ている는 그 일이 남긴 상태가 지금도 계속된다는 것을 말한다.",
+          "this": [
+            {
+              "tag": "그 사건",
+              "tr": "형은 작년에 결혼했다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "지금의 상태",
+              "tr": "형은 이미 결혼했다(지금 기혼이다)."
+            }
+          ],
+          "explain": "시간을 나타내는 말을 보자. 「去年」처럼 일이 일어난 때를 짚으면 → た, 구체적인 때 없이 지금의 상태(기혼, 어디에 산다, 누구를 안다)를 말하면 → ている. 한국어로는 둘 다 ‘결혼했다’지만 일본어에서는 ‘그 사건’인지 ‘지금의 상태’인지 구별해야 한다."
+        },
+        "es": {
+          "id": "te-iru",
+          "diff": "た dice que ese hecho ocurrió; ている dice que el estado que dejó ese hecho sigue ahora.",
+          "this": [
+            {
+              "tag": "El hecho",
+              "tr": "Mi hermano se casó el año pasado."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Estado actual",
+              "tr": "Mi hermano ya se ha casado (ahora está casado)."
+            }
+          ],
+          "explain": "Fíjate en las palabras de tiempo: 「去年」 indica cuándo ocurrió → た; si no hay un momento concreto y se habla del estado actual (estar casado, dónde vive, a quién conoce) → ている. Fíjate en si se habla del «hecho» o del «estado actual»."
+        },
+        "vi": {
+          "id": "te-iru",
+          "diff": "た nói sự việc đó đã xảy ra; ている nói trạng thái mà sự việc đó để lại hiện vẫn còn.",
+          "this": [
+            {
+              "tag": "Sự việc đó",
+              "tr": "Anh tôi đã kết hôn vào năm ngoái."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Trạng thái hiện tại",
+              "tr": "Anh tôi đã kết hôn rồi (hiện đã có gia đình)."
+            }
+          ],
+          "explain": "Xem từ chỉ thời gian: 「去年」 chỉ ra thời điểm sự việc xảy ra → た; không có thời gian cụ thể, nói về trạng thái hiện tại (đã kết hôn, sống ở đâu, quen ai) → ている. Tiếng Việt đều nói “đã kết hôn”, tiếng Nhật phải phân biệt là “sự việc đó” hay “trạng thái hiện tại”."
+        },
+        "my": {
+          "id": "te-iru",
+          "diff": "た သည် ထိုကိစ္စ ဖြစ်ခဲ့ကြောင်း ပြောသည်။ ている သည် ထိုကိစ္စကြောင့် ကျန်ခဲ့သော အခြေအနေ ယခုထိ ရှိနေကြောင်း ပြောသည်။",
+          "this": [
+            {
+              "tag": "ထိုကိစ္စ",
+              "tr": "အစ်ကို မနှစ်က လက်ထပ်ခဲ့တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ယခု အခြေအနေ",
+              "tr": "အစ်ကို အိမ်ထောင်ကျနေပြီ (အခု အိမ်ထောင်ရှိ)။"
+            }
+          ],
+          "explain": "အချိန်ပြစကားလုံးကို ကြည့်ပါ -「去年」က ကိစ္စ ဖြစ်ခဲ့သည့်အချိန်ကို ဖော်ပြသည် → た။ တိကျသော အချိန် မပါဘဲ ယခု အခြေအနေ (အိမ်ထောင်ရှိ၊ ဘယ်မှာ နေသလဲ၊ ဘယ်သူ့ကို သိသလဲ) ကို ပြောလျှင် → ている။ မြန်မာလို နှစ်ခုစလုံး “လက်ထပ်ပြီ” ဟု ပြောနိုင်သော်လည်း ဂျပန်လိုတွင် “ထိုကိစ္စ” လား “ယခု အခြေအနေ” လား ခွဲခြားရမည်။"
+        }
+      }
+    }
+  ]
+}

@@ -6,6 +6,10 @@ contrasts.json（简体中文基础文件）：
   * 分组 kind 只能是 root / look / meaning，且按这个顺序出现、不重复、不为空
   * 例句写法正确：用 | 分段；「漢字:かな」注音只放在含汉字的片段上、读音只用假名；
     * 开头 = 语法本体（每句至少一处）；~ 开头 = 线索
+  * 线索（虚线）必须是「怎么分辨」（explain）里点名的词（Build 17 反馈 9）：相邻的 ~ 片段连成一个词，
+    这个词要在 explain 里出现（全是汉字的词，前后紧挨着汉字不算，和 App 里 RubyText.cueRanges 同一条规则）。
+    找不出起决定作用的词就不标。旧资料里还没改好的条目记在 tools/contrast_cue_debt.json，
+    新写的、改过的条目不能再进这个清单；清单里的条目改好后要删掉（--update-cue-debt 重新生成）。
   * 文字字段不为空
   * this / that 是例句数组（兼容旧的单个对象）
   * 多形式语法点（contrasts/forms.json 里 type=A）：没有用 title / thisTitle 点明只比哪一种时，
@@ -63,6 +67,50 @@ def check_ja(ja, where, errors):
             errors.append(f"{where}: 汉字没有注音「{seg}」")
     if not has_grammar:
         errors.append(f"{where}: 例句里没有标出语法本体（* 开头的片段）")
+
+
+CUE_DEBT = os.path.join(ROOT, "tools", "contrast_cue_debt.json")
+
+
+def is_han(c):
+    return "\u4e00" <= c <= "\u9fff" or c == "々"
+
+
+def has_kana(text):
+    return any("\u3040" <= c <= "\u30ff" for c in text)
+
+
+def cue_words(ja):
+    """例句里的线索词：相邻的 ~ 片段连成一个词。"""
+    out, cur = [], ""
+    for seg in ja.split("|"):
+        if not seg:
+            continue
+        body = seg[1:] if seg[0] in "*~" else seg
+        if seg[0] == "~":
+            cur += body.split(":", 1)[0]
+        elif cur:
+            out.append(cur)
+            cur = ""
+    if cur:
+        out.append(cur)
+    return out
+
+
+def cue_named(word, text):
+    """线索词在讲解里出现（规则同 RubyText.cueRanges）。"""
+    start = 0
+    while True:
+        i = text.find(word, start)
+        if i < 0:
+            return False
+        if has_kana(word):
+            return True
+        before = text[i - 1] if i > 0 else ""
+        after = text[i + len(word)] if i + len(word) < len(text) else ""
+        if not (before and is_han(before)) and not (after and is_han(after)):
+            return True
+        start = i + 1
 
 
 def sentences(item, key):
@@ -126,6 +174,12 @@ def main():
         with open(forms_path, encoding="utf-8") as fh:
             forms = {k: v["forms"] for k, v in json.load(fh).items() if v.get("type") == "A" and v.get("forms")}
 
+    cue_debt = set()
+    if not only_base and os.path.exists(CUE_DEBT):
+        with open(CUE_DEBT, encoding="utf-8") as fh:
+            cue_debt = set(json.load(fh)["items"])
+    cue_failing = set()
+
     seen_points = set()
     for p in base:
         pid = p["id"]
@@ -165,6 +219,14 @@ def main():
                     check_forms(pid, sentences(it, "this"), forms[pid], where + " (本页)", errors)
                 if it["id"] in forms and "title" not in it:
                     check_forms(it["id"], sentences(it, "that"), forms[it["id"]], where + " (对方)", errors)
+                unnamed = [w for key in ("this", "that") for sent in sentences(it, key)
+                           for w in cue_words(sent.get("ja", "")) if not cue_named(w, it.get("explain", ""))]
+                if unnamed:
+                    key = f"{pid}/{g['kind']}/{it['id']}"
+                    cue_failing.add(key)
+                    if key not in cue_debt:
+                        errors.append(f"{where}: 虚线线索没有在「怎么分辨」里点名：{'、'.join(dict.fromkeys(unnamed))}"
+                                      f"（讲解里写出这个词，或者不标线索）")
                 if "wrong" in it and not it["wrong"].get("ja", "").strip():
                     errors.append(f"{where}: wrong.ja 为空")
 
@@ -211,6 +273,21 @@ def main():
                         left = set(strip_quotes(v)) & CHINESE_ONLY
                         if left:
                             errors.append(f"{where} 残留中文：{''.join(sorted(left))}")
+
+    if not only_base:
+        if "--update-cue-debt" in sys.argv:
+            with open(CUE_DEBT, "w", encoding="utf-8") as fh:
+                json.dump({"_doc": "虚线线索还没在「怎么分辨」里点名的旧条目（语法点/组/对比对象）。只能删，不能加；"
+                                   "改好一条就删一条（python3 tools/validate_contrasts.py --update-cue-debt）。",
+                           "items": sorted(cue_failing)}, fh, ensure_ascii=False, indent=2)
+                fh.write("\n")
+            cue_debt = cue_failing
+            print(f"已写入 {os.path.relpath(CUE_DEBT, ROOT)}：{len(cue_failing)} 条")
+        stale = sorted(cue_debt - cue_failing)
+        if stale:
+            errors.append(f"tools/contrast_cue_debt.json 里有 {len(stale)} 条已经改好（或已删除），请运行 "
+                          f"--update-cue-debt 把它们移出清单：{'、'.join(stale[:5])}")
+        print(f"虚线线索待改的旧条目：{len(cue_failing & cue_debt)} 条")
 
     n_items = sum(len(g["items"]) for p in base for g in p["groups"])
     print(f"相近语法对比：{len(base)} 个语法点，{n_items} 条对比")
