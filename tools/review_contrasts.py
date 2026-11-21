@@ -234,7 +234,7 @@ def allowance_used(usage):
     return (usage.get("opencode") or {}).get("allowance", 0.0)
 
 
-def run_many(jobs, workers):
+def run_many(jobs, workers, on_result=None):
     results = {}
     with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
         futures = {pool.submit(call_model, payload): key for key, payload in jobs}
@@ -244,6 +244,9 @@ def run_many(jobs, workers):
                 results[key] = fut.result()
             except RuntimeError as e:
                 print(f"  ! {key}: {e}", file=sys.stderr)
+            else:
+                if on_result:
+                    on_result(key, results[key])
             if n % 50 == 0:
                 print(f"  已审 {n}/{len(jobs)}", file=sys.stderr)
     return results
@@ -260,6 +263,22 @@ def save_records(records, path=RECORDS):
     with open(path, "w", encoding="utf-8") as fh:
         json.dump({"model": MODEL, "records": dict(sorted(records.items()))}, fh, ensure_ascii=False, indent=1)
         fh.write("\n")
+
+
+def review_and_record(jobs, records, workers, path=RECORDS):
+    payloads = dict(jobs)
+    totals = {"cost": 0.0, "allowance": 0.0}
+
+    def record(key, result):
+        verdict, usage = result
+        totals["cost"] += usage_cost(usage)
+        totals["allowance"] += allowance_used(usage)
+        records[key] = {"hash": content_hash(payloads[key]), "verdict": verdict.get("verdict"),
+                        "reason": reason_text(verdict), "fix": verdict.get("fix", "")}
+        save_records(records, path)
+
+    run_many(jobs, workers, on_result=record)
+    return totals["cost"], totals["allowance"]
 
 
 def reason_text(verdict):
@@ -349,14 +368,7 @@ def main():
         if args.limit:
             jobs = jobs[:args.limit]
         print(f"待审 {len(jobs)} 条", file=sys.stderr)
-        payloads = dict(jobs)
-        cost, allowance = 0.0, 0.0
-        for key, (verdict, usage) in run_many(jobs, args.workers).items():
-            cost += usage_cost(usage)
-            allowance += allowance_used(usage)
-            records[key] = {"hash": content_hash(payloads[key]), "verdict": verdict.get("verdict"),
-                            "reason": reason_text(verdict), "fix": verdict.get("fix", "")}
-        save_records(records)
+        cost, allowance = review_and_record(jobs, records, args.workers)
         fails = sum(1 for r in records.values() if r["verdict"] != "pass")
         print(f"按量计价约 ${cost:.3f}，用掉 Go 额度 ${allowance:.3f}；记录 {len(records)} 条，其中不通过 {fails} 条")
         return 0

@@ -147,5 +147,31 @@ class ApplyFinalTests(unittest.TestCase):
         self.assertEqual(len(errors), 1)
 
 
+class RunTests(unittest.TestCase):
+    def test_interrupted_run_keeps_reviews_already_finished(self):
+        import tempfile
+        jobs = [("a", {"n": 1}), ("b", {"n": 2})]
+        calls = []
+
+        def fake_call(payload):
+            calls.append(payload["n"])
+            if payload["n"] == 2:
+                raise KeyboardInterrupt
+            return {"verdict": "pass", "problems": []}, {}
+
+        original = rc.call_model
+        rc.call_model = fake_call
+        path = os.path.join(tempfile.mkdtemp(), "records.json")
+        try:
+            with self.assertRaises(KeyboardInterrupt):
+                rc.review_and_record(jobs, {}, workers=1, path=path)
+        finally:
+            rc.call_model = original
+        saved = rc.load_records(path)
+        self.assertEqual(saved["a"]["verdict"], "pass")
+        self.assertEqual(saved["a"]["hash"], rc.content_hash({"n": 1}))
+        self.assertNotIn("b", saved)
+
+
 if __name__ == "__main__":
     unittest.main()
