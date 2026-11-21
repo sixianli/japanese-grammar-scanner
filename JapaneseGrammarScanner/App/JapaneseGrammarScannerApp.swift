@@ -7,6 +7,7 @@ struct JapaneseGrammarScannerApp: App {
     @StateObject private var entitlements = EntitlementStore()
     @StateObject private var history = HistoryStore()
     @StateObject private var appearance = AppearanceStore.shared
+    @StateObject private var favoriteFlight = FavoriteFlight()
 
     var body: some Scene {
         WindowGroup {
@@ -19,6 +20,9 @@ struct JapaneseGrammarScannerApp: App {
                 .environmentObject(favorites)
                 .environmentObject(entitlements)
                 .environmentObject(history)
+                .environmentObject(favoriteFlight)
+                // 收藏时樱花飘进底部「收藏」标签（盖在所有页面上面）
+                .overlay { FavoriteFlightOverlay(model: favoriteFlight) }
                 // 端对端测试用：显示各种查找翻译的方式实际得到的结果，排查 App 内切换语言
                 .overlay(alignment: .bottomLeading) {
                     if DemoMode.e2e { LanguageDiagnostics(code: languages.language.rawValue) }
@@ -224,7 +228,7 @@ struct RootTabView: View {
                 // 相机只在用户切换到「扫描」时才启动
                 Tab(tr("扫描"), systemImage: "text.viewfinder", value: AppTab.scan) { ScanHomeView() }
                 Tab(tr("语法库"), systemImage: "books.vertical", value: AppTab.library) { LibraryView() }
-                Tab(tr("收藏"), systemImage: "star", value: AppTab.favorites) { FavoritesView() }
+                Tab(tr("收藏"), image: "Kinchaku", value: AppTab.favorites) { FavoritesView() }
                 Tab(tr("搜索"), systemImage: "magnifyingglass", value: AppTab.search, role: .search) { SearchView() }
             }
         } else {
@@ -236,7 +240,7 @@ struct RootTabView: View {
                 LibraryView()
                     .tabItem { Label(tr("语法库"), systemImage: "books.vertical") }.tag(AppTab.library)
                 FavoritesView()
-                    .tabItem { Label(tr("收藏"), systemImage: "star") }.tag(AppTab.favorites)
+                    .tabItem { Label(tr("收藏"), image: "Kinchaku") }.tag(AppTab.favorites)
                 SearchView()
                     .tabItem { Label(tr("搜索"), systemImage: "magnifyingglass") }.tag(AppTab.search)
             }

@@ -27,7 +27,7 @@ enum AppFeature: String, CaseIterable, Identifiable, Hashable {
         case .scanResult: GuideCard(title: "点橙色框", line: "橙色框里就是语法，点一下打开讲解。")
         case .detail: GuideCard(title: "看语法讲解", line: "每种用法都有讲解、接续和带注音的例句。")
         case .contrast: GuideCard(title: "相近语法", line: "点「看例句对比」，看清和相近语法的差别。")
-        case .review: GuideCard(title: "复习「快要忘了」", line: "首页提醒时点「开始复习」，看完自评记得程度。")
+        case .review: GuideCard(title: "到时间就复习", line: "首页出现「N 个语法可以复习了」时点一下，看完自评。")
         case .library, .search, .history, .appearance, .feedback: nil
         }
     }

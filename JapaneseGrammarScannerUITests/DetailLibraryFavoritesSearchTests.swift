@@ -132,11 +132,13 @@ final class DetailTests: E2ETestCase {
 
     func testFavoriteFromDetailAndUnfavoriteFromList() {
         openDetailBySearch("にもかかわらず")
+        XCTAssertEqual(id("detail.favorite").label, "收藏", "没收藏时右上角是线条樱花，读作「收藏」")
         id("detail.favorite").tap()
+        XCTAssertEqual(id("detail.favorite").label, "取消收藏", "收藏后变成粉色樱花，读作「取消收藏」")
         tab("收藏").tap()
         wait(id("favorites.row"), "收藏后应出现在收藏页")
         id("row.star").tap()
-        wait(text(containing: "还没有收藏"), "在列表里点星号取消收藏后应为空")
+        wait(text(containing: "还没有收藏"), "在列表里点樱花取消收藏后应为空")
     }
 }
 
@@ -278,5 +280,29 @@ final class SearchTests: E2ETestCase {
         waitGone(app.keyboards.firstMatch, "点空白处应收起键盘")
         id("search.result").tap()
         wait(detailScreen, "收起键盘后结果仍能打开讲解")
+    }
+}
+
+/// 樱花动画照常播放时（-playAnimations）：动画不挡操作（Build 18 反馈 1、2）
+final class SakuraAnimationTests: E2ETestCase {
+    override var extraLaunchArguments: [String] { ["-playAnimations"] }
+
+    /// 首页复习提醒上樱花飘过时，提醒照样能点
+    func testReviewRowTappableWhileSakuraDrifts() {
+        scrollToTop()
+        let row = id("home.review")
+        wait(row, "有到期的语法时应显示复习提醒")
+        row.tap()
+        wait(id("review.bar"), "樱花飘过时点复习提醒也应进入复习")
+    }
+
+    /// 收藏时樱花飘进「收藏」标签：动画期间和之后都能马上切到收藏页
+    func testFavoriteFlightDoesNotBlockTabs() {
+        openDetailBySearch("にもかかわらず")
+        id("detail.favorite").tap()
+        tab("收藏").tap()
+        wait(id("favorites.row"), "收藏后马上切到收藏页应能看到")
+        id("row.star").tap()
+        wait(text(containing: "还没有收藏"), "取消收藏后应为空")
     }
 }

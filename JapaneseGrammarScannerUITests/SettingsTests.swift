@@ -141,7 +141,7 @@ final class SettingsTests: E2ETestCase {
         id("settings.guide").tap()
         wait(navBar("使用指南"), "应打开使用指南")
         wait(id("guide.card"), "使用指南应显示图文卡片")
-        for title in ["扫描日语", "点橙色框", "看语法讲解", "相近语法", "复习「快要忘了」"] {
+        for title in ["扫描日语", "点橙色框", "看语法讲解", "相近语法", "到时间就复习"] {
             let card = app.descendants(matching: .any).matching(NSPredicate(format: "identifier == 'guide.card' AND label CONTAINS %@", title)).firstMatch
             scrollTo(card)
             XCTAssertTrue(card.exists, "使用指南应有「\(title)」卡片")

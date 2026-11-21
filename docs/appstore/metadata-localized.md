@@ -1,6 +1,7 @@
 # App Store 多语言商店信息
 
 在 App Store Connect → App 信息 → 右上角语言菜单中添加以下本地化：English (U.S.)、한국어、Español (México / España)、Tiếng Việt、简体中文、繁體中文。
+（App 界面另有缅甸语，App Store 没有缅甸语商店页，缅甸用户看英文页。）
 每种语言需填写：名称、副标题（App 信息页）；宣传文本、描述、关键词（版本页）。截图可各语言共用（CI 也可用 `-AppleLanguages` 生成各语言截图）。
 
 ---
@@ -9,7 +10,7 @@
 
 - **Name**: Japanese Grammar Lookup
 - **Subtitle**: JLPT N5-N1 grammar by photo
-- **Promotional Text**: Point your camera at any Japanese book and every grammar point lights up. Tap to see meaning, usage, when to use it, origin and similar grammar. 100% offline.
+- **Promotional Text**: Point your camera at any Japanese book and every grammar point lights up. Tap to see meaning, usage, origin and similar grammar, then review at the right time. Free.
 - **Keywords**: nihongo,bunpo,learn,study,reading,textbook,camera,scanner,ocr,n5,n4,n3,n2,n1,exam,dictionary
 - **Description**:
 
@@ -32,13 +33,20 @@ For every grammar point:
 
 LIBRARY & FAVORITES
 • Built-in JLPT N5–N1 grammar, browse by level or search
-• Save the grammar you want to review
+• Save the grammar you want to keep
 
-PRIVATE & OFFLINE
-• Text recognition runs entirely on your iPhone — no images are uploaded
-• No account, no internet, no ads, no tracking
+REVIEW AT THE RIGHT TIME
+• Grammar you look up is scheduled for review before you forget it
+• When it's time, the home screen shows how many are ready — tap, read, and rate yourself
 
-Explanations available in English, 한국어, Español, Tiếng Việt, 简体中文 and 繁體中文 — the app follows your device language.
+PRIVATE
+• Text recognition runs entirely on your iPhone — no images are uploaded; scanning and explanations work offline
+• No account, no ads, no tracking
+• Only anonymous usage statistics and feedback you choose to send are collected, never linked to you
+
+Completely free — no in-app purchases.
+
+Explanations available in English, 한국어, Español, Tiếng Việt, မြန်မာ, 简体中文 and 繁體中文 — the app follows your device language.
 
 ---
 
@@ -46,7 +54,7 @@ Explanations available in English, 한국어, Español, Tiếng Việt, 简体�
 
 - **이름**: 일본어 문법 사전
 - **부제**: 일본어 공부 JLPT N1-N5 문법 사진 인식
-- **프로모션 텍스트**: 카메라를 일본어 책에 대면 문법이 바로 하이라이트됩니다. 누르면 의미, 용법, 사용 장면, 어원, 비슷한 문법 비교까지. 완전 오프라인.
+- **프로모션 텍스트**: 카메라를 일본어 책에 대면 문법이 바로 하이라이트됩니다. 누르면 의미, 용법, 어원, 비슷한 문법 비교까지. 잊기 전에 복습 알림. 무료.
 - **키워드**: 문법,일본어공부,JPT,독해,교재,카메라,스캔,N5,N4,N3,N2,N1,시험,사전,일본어문법
 - **설명**:
 
@@ -63,11 +71,18 @@ Explanations available in English, 한국어, Español, Tiếng Việt, 简体�
 
 【문법 사전과 즐겨찾기】
 • JLPT N5–N1 전체 문법 수록, 레벨별 보기·검색
-• 중요한 문법은 즐겨찾기로 복습
+• 중요한 문법은 즐겨찾기에 저장
 
-【개인정보 보호·오프라인】
-• 문자 인식은 기기 안에서만 처리되며 이미지는 업로드되지 않습니다
-• 계정·인터넷·광고·추적 없음
+【제때 복습】
+• 찾아본 문법은 잊기 전에 복습 일정이 잡힙니다
+• 홈 화면에서 복습할 문법 수를 확인하고, 설명을 본 뒤 스스로 평가
+
+【개인정보 보호】
+• 문자 인식은 기기 안에서만 처리되며 이미지는 업로드되지 않습니다. 인터넷 없이도 스캔·설명 보기 가능
+• 계정·광고·추적 없음
+• 익명 사용 통계와 직접 보낸 피드백만 수집하며, 개인과 연결되지 않습니다
+
+완전 무료, 인앱 구매 없음.
 
 ---
 
@@ -75,7 +90,7 @@ Explanations available in English, 한국어, Español, Tiếng Việt, 简体�
 
 - **Nombre**: Gramática japonesa: consulta
 - **Subtítulo**: Japonés JLPT N1-N5 con fotos
-- **Texto promocional**: Apunta la cámara a un libro en japonés y cada punto gramatical se resalta. Toca para ver significado, uso, contexto, origen y gramática similar. Sin conexión.
+- **Texto promocional**: Apunta la cámara a un libro en japonés y cada punto gramatical se resalta. Toca para ver significado, uso, origen y gramática similar, y repasa a tiempo. Gratis.
 - **Palabras clave**: japonés,gramática,nihongo,estudio,lectura,libro,cámara,escáner,ocr,n5,n4,n3,n2,n1,examen,diccionario
 - **Descripción**:
 
@@ -92,11 +107,18 @@ EXPLICACIONES CLARAS
 
 BIBLIOTECA Y FAVORITOS
 • Gramática JLPT N5–N1 completa incluida, por nivel o con búsqueda
-• Guarda la gramática que quieras repasar
+• Guarda la gramática que quieras conservar
 
-PRIVADO Y SIN CONEXIÓN
-• El reconocimiento de texto se hace en tu iPhone; no se sube ninguna imagen
-• Sin cuenta, sin internet, sin anuncios ni rastreo
+REPASA A TIEMPO
+• La gramática que consultas se programa para repasar antes de olvidarla
+• La pantalla de inicio te avisa cuántas puedes repasar: toca, lee y evalúate
+
+PRIVACIDAD
+• El reconocimiento de texto se hace en tu iPhone; no se sube ninguna imagen. Escanear y leer explicaciones funciona sin conexión
+• Sin cuenta, sin anuncios ni rastreo
+• Solo se recopilan estadísticas de uso anónimas y los comentarios que envíes, nunca vinculados a ti
+
+Totalmente gratis, sin compras dentro de la app.
 
 ---
 
@@ -104,7 +126,7 @@ PRIVADO Y SIN CONEXIÓN
 
 - **Tên**: Tra Ngữ Pháp Tiếng Nhật
 - **Phụ đề**: Tiếng Nhật JLPT N1-N5 qua ảnh
-- **Văn bản quảng cáo**: Hướng camera vào sách tiếng Nhật, mọi mẫu ngữ pháp được tô sáng ngay. Nhấn để xem ý nghĩa, cách dùng, tình huống, nguồn gốc và ngữ pháp tương tự. Hoàn toàn ngoại tuyến.
+- **Văn bản quảng cáo**: Hướng camera vào sách tiếng Nhật, mọi mẫu ngữ pháp được tô sáng ngay. Nhấn để xem ý nghĩa, cách dùng, nguồn gốc và ngữ pháp tương tự, rồi ôn đúng lúc. Miễn phí.
 - **Từ khóa**: ngữ pháp,học tiếng nhật,nihongo,đọc hiểu,giáo trình,camera,quét,ocr,n5,n4,n3,n2,n1,thi,từ điển
 - **Mô tả**:
 
@@ -121,11 +143,18 @@ PRIVADO Y SIN CONEXIÓN
 
 【TỪ ĐIỂN VÀ YÊU THÍCH】
 • Toàn bộ ngữ pháp JLPT N5–N1, xem theo cấp độ hoặc tìm kiếm
-• Lưu các mẫu cần ôn tập
+• Lưu các mẫu muốn giữ lại
 
-【RIÊNG TƯ VÀ NGOẠI TUYẾN】
-• Nhận dạng chữ ngay trên iPhone, không tải ảnh lên
-• Không tài khoản, không cần mạng, không quảng cáo, không theo dõi
+【ÔN ĐÚNG LÚC】
+• Ngữ pháp bạn đã tra được xếp lịch ôn trước khi quên
+• Màn hình chính báo số mẫu cần ôn: nhấn, đọc lại và tự đánh giá
+
+【RIÊNG TƯ】
+• Nhận dạng chữ ngay trên iPhone, không tải ảnh lên; quét và xem giải thích không cần mạng
+• Không tài khoản, không quảng cáo, không theo dõi
+• Chỉ thu thập thống kê sử dụng ẩn danh và phản hồi bạn tự gửi, không gắn với danh tính
+
+Hoàn toàn miễn phí, không mua trong ứng dụng.
 
 ---
 
@@ -139,7 +168,7 @@ PRIVADO Y SIN CONEXIÓN
 
 - **名稱**：日語文法速查
 - **副標題**：學日文 JLPT N1-N5 文法拍照辨識
-- **宣傳文字**：把相機對準日語書，文中的語法點立刻反白標示！點一下就能看到意思、用法、使用場景、詞源和相近語法比較。完全離線。
+- **宣傳文字**：把相機對準日語書，文中的語法點立刻反白標示！點一下就能看到意思、用法、使用場景、詞源和相近語法比較；看過的語法到時間提醒你複習。全部免費。
 - **關鍵字**：日語,日檢,語法,能力考,日本語,五十音,掃描,OCR,讀書,考試,自學,備考,字典,入門
 - **描述**：
 
@@ -156,8 +185,15 @@ PRIVADO Y SIN CONEXIÓN
 
 【語法庫與收藏】
 • 內建 N5–N1 全部語法，可依等級瀏覽、搜尋
-• 收藏重點語法，隨時複習
+• 收藏重點語法，隨時翻看
 
-【隱私與離線】
-• 文字辨識在手機本機完成，不上傳任何圖片
-• 不需網路，無廣告、無追蹤
+【到時間就複習】
+• 查過的語法依遺忘規律排好複習時間
+• 首頁提示「N 個語法可以複習了」，點一下看講解、自評記住了沒有
+
+【隱私】
+• 文字辨識在手機本機完成，不上傳任何圖片；沒網路也能掃描和看講解
+• 不需註冊，無廣告、無追蹤
+• 只收集匿名使用統計和你主動送出的回饋，不與身分關聯
+
+完全免費，無 App 內購買。

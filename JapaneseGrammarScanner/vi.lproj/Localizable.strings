@@ -1,5 +1,6 @@
 /* 由 tools/make_strings.py 生成，请勿手改 */
 "%lld 个没看过" = "%lld mẫu chưa xem";
+"%lld 个语法可以复习了" = "%lld mẫu ngữ pháp có thể ôn lại";
 "%lld 次扫描" = "%lld lần quét";
 "App 内的语法讲解为原创内容，仅供学习参考；文字识别结果可能有误，请以原文为准。" = "Phần giải thích ngữ pháp trong ứng dụng là nội dung tự biên soạn, chỉ để tham khảo khi học. Kết quả nhận dạng văn bản có thể sai, vui lòng lấy văn bản gốc làm chuẩn.";
 "一个语法有几种用法时，顶部列出了每一种，点一下跳到对应的讲解和例句。" = "Khi một ngữ pháp có nhiều cách dùng, đầu trang sẽ liệt kê từng cách, nhấn vào để chuyển tới phần giải thích và ví dụ tương ứng.";
@@ -65,6 +66,7 @@
 "出现 %lld 次" = "%lld lần";
 "出题频率" = "Tần suất ra đề";
 "删除截图" = "Xóa ảnh";
+"到时间就复习" = "Đến lúc thì ôn lại";
 "前 %lld 天免费使用全部功能。之后可一次性 %@ 永久解锁完整讲解，不订阅、不自动扣费。" = "Miễn phí mọi tính năng trong %lld ngày đầu. Sau đó, mua một lần %@ để mở khóa vĩnh viễn toàn bộ giải thích. Không đăng ký, không tự động trừ tiền.";
 "前 %lld 天免费使用全部功能。之后可一次性购买永久解锁完整讲解，不订阅、不自动扣费。" = "Miễn phí mọi tính năng trong %lld ngày đầu. Sau đó, mua một lần để mở khóa vĩnh viễn toàn bộ giải thích. Không đăng ký, không tự động trừ tiền.";
 "前 %lld 天免费使用全部功能。之后可一次性购买，永久解锁完整讲解；不是订阅，不会自动扣费。购买在同一 Apple ID 的设备间通用，可以在「设置 → 购买」中恢复。" = "Miễn phí mọi tính năng trong %lld ngày đầu. Sau đó, bạn có thể mua một lần để mở khóa vĩnh viễn toàn bộ giải thích; đây không phải gói đăng ký và không tự động trừ tiền. Giao dịch dùng chung trên các thiết bị cùng Apple ID và có thể khôi phục trong “Cài đặt → Mua”.";
@@ -98,6 +100,7 @@
 "在反馈页点「发送」后，会打开系统的邮件或分享面板，由你决定用哪个 App、发给谁；内容是你选择的反馈类型、填写的描述、附上的截图、所在的页面，以及 App 版本、系统版本、设备型号和界面语言。App 本身不会上传任何内容。" = "Sau khi nhấn “Gửi” ở trang góp ý, bảng Mail hoặc bảng chia sẻ của hệ thống sẽ mở ra, bạn tự quyết định dùng ứng dụng nào và gửi cho ai; nội dung gồm loại góp ý bạn chọn, nội dung mô tả, ảnh chụp màn hình đính kèm, trang bạn đang ở cùng phiên bản ứng dụng, phiên bản iOS, mẫu thiết bị và ngôn ngữ giao diện. Bản thân ứng dụng không tải lên bất cứ nội dung nào.";
 "在底部选「忘了」「有点模糊」或「记得」，App 按你的记忆情况安排下次复习的时间。" = "Ở phía dưới, chọn “Quên rồi”, “Hơi mơ hồ” hoặc “Còn nhớ”, ứng dụng sẽ sắp xếp lần ôn tiếp theo theo mức độ nhớ của bạn.";
 "在讲解页点星星收藏；「收藏」页可以排序，向左滑动可以取消收藏。" = "Nhấn ngôi sao trong trang giải thích để lưu; trang “Yêu thích” có thể sắp xếp, vuốt sang trái để bỏ yêu thích.";
+"在语法讲解页或列表中点一下樱花，就能收进这里。" = "Nhấn vào hoa anh đào ở trang ngữ pháp hoặc trong danh sách để cất vào đây.";
 "在语法讲解页或列表中点击 ☆ 即可收藏。" = "Nhấn ☆ trong trang giải thích hoặc danh sách để lưu vào đây.";
 "复习「快要忘了」" = "Ôn tập “Sắp quên”";
 "复习：看完了，你还记得这个语法吗？" = "Ôn tập: bạn còn nhớ ngữ pháp này không?";
@@ -277,6 +280,7 @@
 "看文中的语法列表" = "Xem danh sách ngữ pháp trong bài";
 "看语法讲解" = "Xem giải thích ngữ pháp";
 "看过的语法快要忘记时，首页会出现「有 N 个快要忘了」；没有要复习的就不显示。" = "Khi ngữ pháp đã xem sắp bị quên, Trang chủ sẽ hiện “N mẫu sắp quên”; nếu không có gì cần ôn thì không hiện.";
+"看过的语法快要忘记时，首页会出现一行「N 个语法可以复习了」。点一下开始复习，看完选「忘了」「有点模糊」或「记得」，App 会按你的记忆安排下次复习。" = "Khi ngữ pháp đã xem sắp bị quên, Trang chủ sẽ hiện một dòng “N mẫu ngữ pháp có thể ôn lại”. Nhấn vào để bắt đầu, xem xong chọn “Quên rồi”, “Hơi mơ hồ” hoặc “Còn nhớ”, ứng dụng sẽ sắp xếp lần ôn tiếp theo theo trí nhớ của bạn.";
 "看过的语法快要忘记时，首页会提醒你。点「开始复习」，看完选「忘了」「有点模糊」或「记得」，App 会按你的记忆安排下次复习。" = "Khi ngữ pháp đã xem sắp bị quên, Trang chủ sẽ nhắc bạn. Nhấn “Bắt đầu ôn tập”, xem xong chọn “Quên rồi”, “Hơi mơ hồ” hoặc “Còn nhớ”, ứng dụng sẽ sắp xếp lần ôn tiếp theo theo trí nhớ của bạn.";
 "看过的语法讲解会出现在这里。" = "Các mẫu ngữ pháp bạn đã xem sẽ hiện ở đây.";
 "看过讲解的语法计为“已学”。" = "Mẫu ngữ pháp được tính là đã học khi bạn xem giải thích.";
@@ -352,5 +356,6 @@
 "隐私政策" = "Chính sách quyền riêng tư";
 "青磁绿" = "Xanh men ngọc";
 "首页" = "Trang chủ";
+"首页出现「N 个语法可以复习了」时点一下，看完自评。" = "Khi Trang chủ hiện “N mẫu ngữ pháp có thể ôn lại”, hãy nhấn vào, xem xong tự đánh giá.";
 "首页出现「快要忘了」" = "“Sắp quên” xuất hiện ở Trang chủ";
 "首页提醒时点「开始复习」，看完自评记得程度。" = "Khi Trang chủ nhắc, nhấn “Bắt đầu ôn tập”, xem xong tự đánh giá mức độ còn nhớ.";
