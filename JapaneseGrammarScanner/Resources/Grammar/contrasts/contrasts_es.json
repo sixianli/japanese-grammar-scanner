@@ -32863,20 +32863,20 @@
             {
               "id": "question-word-temo",
               "title": "〜ても (aunque…)",
-              "diff": "てでも es «aunque sea recurriendo a esto, (lo haré)»; ても es «aunque…, el resultado sigue siendo…».",
+              "diff": "てでも es «aunque tenga que hacer esto, lo haré»: lo primero es un precio que uno elige pagar; ても es «aunque…, igualmente…»: lo primero es solo algo que puede pasar.",
               "this": [
                 {
-                  "tag": "Medio · lograrlo sea como sea",
-                  "tr": "Aunque tenga que pasar la noche en vela, lo terminaré antes de mañana."
+                  "tag": "Medio · lo conseguiré",
+                  "tr": "Aunque tenga que pedir dinero prestado, seguiré con la tienda."
                 }
               ],
               "that": [
                 {
-                  "tag": "Concesión · el resultado no cambia",
-                  "tr": "Aunque pase la noche en vela, no creo que lo termine antes de mañana."
+                  "tag": "Concesión · no cambia nada",
+                  "tr": "Aunque bajen los clientes, seguiré con la tienda."
                 }
               ],
-              "explain": "Mira la segunda parte: una decisión propia, como 「終わらせる」, 「〜たい」 o 「〜つもりだ」 → てでも, y lo de delante es el medio al que se está dispuesto a recurrir; un resultado que no se ve afectado, como 「終わらない」 → ても, una simple concesión."
+              "explain": "Las dos segundas partes expresan la misma decisión, así que mira la primera: 「借金して」 es un medio costoso que uno toma a propósito para lograr el objetivo → てでも, «aunque tenga que hacer esto»; 「客が減って」 es solo algo que puede ocurrir y el resultado no cambia → ても, «aunque…». Después de ても también puede ir una decisión (何があっても続ける), así que la segunda parte sola no basta."
             }
           ]
         },
@@ -32890,17 +32890,17 @@
               "diff": "てでも suele expresar en positivo la propia determinación; てまで suele llevar sorpresa o crítica, a menudo «no hace falta llegar a tanto».",
               "this": [
                 {
-                  "tag": "Determinación · sea como sea",
-                  "tr": "Aunque tenga que pedir un préstamo, quiero comprar esta casa."
+                  "tag": "Decisión · aun así",
+                  "tr": "Aunque tenga que pedir dinero prestado, quiero tener mi propia tienda."
                 }
               ],
               "that": [
                 {
-                  "tag": "Crítica · no hace falta llegar a tanto",
-                  "tr": "No quiero endeudarme solo para comprar una casa."
+                  "tag": "Crítica · no llegaría a tanto",
+                  "tr": "No llegaría a pedir dinero prestado para tener mi propia tienda."
                 }
               ],
-              "explain": "Mira la actitud de la segunda parte: una determinación afirmativa (買いたい, やり遂げる) → てでも; negación, sorpresa o crítica (〜とは思わない, 〜なんて信じられない) → てまで: «llegar a ese extremo es pasarse»."
+              "explain": "Mira la actitud de la segunda parte: una decisión positiva (持ちたい, やり遂げる) → てでも; negación, sorpresa o crítica (〜とは思わない, 〜なんて信じられない) → てまで, que significa «llegar a ese extremo es demasiado»."
             }
           ]
         }
@@ -32973,7 +32973,7 @@
                   "tr": "Precisamente porque fracasé muchas veces de joven, soy quien soy hoy."
                 }
               ],
-              "explain": "Mira lo que va delante de 「こそ」 y la segunda parte: forma て (失敗して) + こそ, seguido normalmente de una verdad general con 「できる」 o 「分かる」 → condición, «solo así…»; forma llana (失敗した) + からこそ, explicando el motivo de algo que ya ocurrió → causa, «precisamente porque…»."
+              "explain": "El sentido básico de 「こそ」 es poner el foco en lo que va delante: «precisamente esto, y no otra cosa». Si el foco cae en una condición (forma て + こそ: 失敗してこそ), significa «solo pasando por esto, no hay otro camino» → condición «solo si…», normalmente seguida de verdades generales como 「できる」 o 「分かる」. Si cae en la causa 「から」 (失敗したからこそ), significa «precisamente por esta razón» → «precisamente porque…», y explica algo que ya ha ocurrido. Para distinguirlas, mira lo que hay delante de 「こそ」: la forma て es condición; forma simple + 「から」 es causa."
             }
           ]
         },
@@ -32997,23 +32997,6 @@
                 }
               ],
               "explain": "Mira el final: て初めて suele hablar de una experiencia propia, a menudo en pasado (気づいた, 分かった), con el acento en «solo entonces, por primera vez»; てこそ suele expresar una verdad general, en presente (分かる, 価値がある), con el acento en «solo así es auténtico»."
-            },
-            {
-              "id": "nai-koto-ni-wa",
-              "diff": "La misma idea en positivo y en negativo: てこそ dice «solo si lo haces, puedes…»; ないことには dice «si no lo haces, no…».",
-              "this": [
-                {
-                  "tag": "Positivo · resultado favorable",
-                  "tr": "Solo haciéndolo uno mismo se descubre lo interesante del trabajo."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Negativo · resultado negado",
-                  "tr": "Si no lo pruebas tú mismo, no sabrás si es interesante."
-                }
-              ],
-              "explain": "Mira la segunda parte: un resultado positivo (分かる, できる) → てこそ; uno negativo (分からない, 始まらない) → ないことには. Se pueden reformular la una en la otra: やってみてこそ分かる ＝ やってみないことには分からない."
             },
             {
               "id": "atte-no",
@@ -33132,20 +33115,21 @@
             },
             {
               "id": "te-mo-kamawanai",
-              "diff": "てもかまわない se inclina por «a mí no me importa»; ても差し支えない se inclina por «objetivamente no hay inconveniente», y es más formal.",
+              "title": "〜てもかまわない (permiso)",
+              "diff": "El mismo significado, los dos dan permiso: てもかまわない es la forma cortés habitual; ても差し支えない es más formal y escrita, propia de documentos oficiales y del trabajo.",
               "this": [
                 {
-                  "tag": "Sin inconveniente objetivo · lo más formal",
-                  "tr": "Las preguntas también pueden enviarse por correo electrónico sin ningún inconveniente."
+                  "tag": "Formal · documentos, negocios",
+                  "tr": "También puede presentar los documentos por correo."
                 }
               ],
               "that": [
                 {
-                  "tag": "A mí no me importa",
-                  "tr": "A mí me da igual dónde sentarme."
+                  "tag": "Cortés normal · también cotidiano",
+                  "tr": "Puede entregar los documentos por correo, no hay problema."
                 }
               ],
-              "explain": "Mira la postura del hablante: decir que a uno no le importa (私は〜) → かまいません; decirle al otro, en tono de norma o reglamento, que «hacerlo así no causa problemas» → 差し支えありません. Grado de formalidad: てもいい ＜ てもかまわない ＜ ても差し支えない."
+              "explain": "Solo cambia la gramática y el significado es el mismo; la diferencia está en lo formal que suena. Avisos, documentos oficiales o explicaciones formales a clientes → 差し支えありません, con un tono cuidadoso y escrito; conversación cortés corriente → かまいません, y con gente de confianza incluso 「かまわないよ」. Para el mismo permiso, la formalidad va así: てもいい < てもかまわない < ても差し支えない."
             }
           ]
         }
@@ -33156,25 +33140,8 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「ならない」, cuyo sentido original es «no vale, no se puede aguantar»",
+          "note": "Ambas vienen de 「ならない」 (la negación de 「なる」), cuyo sentido original es «no sirve, no funciona»",
           "items": [
-            {
-              "id": "te-wa-naranai",
-              "diff": "Solo se diferencian en una 「は」: てならない es «…muchísimo, no puedo evitarlo»; てはならない es «está prohibido…».",
-              "this": [
-                {
-                  "tag": "Sentimiento · muchísimo",
-                  "tr": "Me preocupa muchísimo el resultado del examen."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Prohibición · no se permite",
-                  "tr": "Durante el examen está prohibido mirar las respuestas del de al lado."
-                }
-              ],
-              "explain": "Primero mira si hay 「は」 y luego la palabra de delante: sentimientos o sensaciones como 気になる, 心配, 悔しい o 思える → てならない, «tanto que no puedo más»; acciones que uno controla, como 見る o 入る, más 「は」 → てはならない, «si lo haces, no vale» = prohibición."
-            },
             {
               "id": "nakereba-naranai",
               "diff": "てならない es un sentimiento: «…tanto que no puedo más»; なければならない es una obligación: «si no lo haces, no vale».",
@@ -33195,25 +33162,48 @@
           ]
         },
         {
+          "kind": "look",
+          "note": "てならない ↔ てはならない: solo se diferencian en una 「は」",
+          "items": [
+            {
+              "id": "te-wa-naranai",
+              "diff": "Solo se diferencian en una 「は」: てならない es «…muchísimo, no puedo evitarlo»; てはならない es «está prohibido…».",
+              "this": [
+                {
+                  "tag": "Sentimiento · muchísimo",
+                  "tr": "Me preocupa muchísimo el resultado del examen."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Prohibición · no se permite",
+                  "tr": "Durante el examen está prohibido mirar las respuestas del de al lado."
+                }
+              ],
+              "explain": "Primero mira si hay 「は」 y luego la palabra de delante: sentimientos o sensaciones como 気になる, 心配, 悔しい o 思える → てならない, «tanto que no puedo más»; acciones que uno controla, como 見る o 入る, más 「は」 → てはならない, «si lo haces, no vale» = prohibición."
+            }
+          ]
+        },
+        {
           "kind": "meaning",
           "note": "Ambas expresan un sentimiento o sensación muy fuerte: «…muchísimo»",
           "items": [
             {
               "id": "te-tamaranai",
-              "diff": "てたまらない es coloquial y se usa mucho con sensaciones físicas; てならない es más escrito y suele ir tras 「気がする」 o 「思える」.",
+              "diff": "El mismo significado, un sentimiento tan fuerte que no se aguanta: てたまらない es coloquial y directo, y también se usa con sensaciones físicas; てならない es más escrito y va sobre todo con palabras de sentimiento.",
               "this": [
                 {
-                  "tag": "Sin poder evitarlo · escrito",
-                  "tr": "No puedo evitar la sensación de que este caso esconde algo."
+                  "tag": "Escrito · palabras de sentimiento",
+                  "tr": "Me preocupa muchísimo mi padre, que va a operarse."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sensación física · coloquial",
-                  "tr": "Se ha estropeado el aire acondicionado y hace un calor insoportable."
+                  "tag": "Coloquial · también sensaciones físicas",
+                  "tr": "Estoy preocupadísimo por mi padre, que va a operarse."
                 }
               ],
-              "explain": "Mira lo que va delante: sensaciones físicas como 暑い, 痛い o 眠い, o un deseo intenso como 「〜たくてたまらない」 → normalmente てたまらない; 「気がする」 o 「思える」, es decir, «sentir sin poder evitarlo» → normalmente てならない."
+              "explain": "En esta frase sirven los dos y significan lo mismo. La diferencia está en el tono y en lo que puede ir delante: てたまらない es coloquial y directo, y además de sentimientos acepta sensaciones físicas (暑い, 痛い, 眠い); てならない es más escrito y va sobre todo con palabras de sentimiento como 「心配」「残念」「悔しい」; para sensaciones físicas normalmente no se usa."
             },
             {
               "id": "te-shou-ga-nai",
@@ -33342,25 +33332,8 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「ならない」, cuyo sentido original es «no vale, no funciona»",
+          "note": "Ambas vienen de 「ならない」 (la negación de 「なる」), cuyo sentido original es «no sirve, no funciona»",
           "items": [
-            {
-              "id": "te-naranai",
-              "diff": "Solo se diferencian en una 「は」: てはならない es «está prohibido…»; てならない es «…muchísimo, no puedo evitarlo».",
-              "this": [
-                {
-                  "tag": "Prohibición · no se permite",
-                  "tr": "Durante el examen está prohibido mirar las respuestas del de al lado."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Sentimiento · muchísimo",
-                  "tr": "Me preocupa muchísimo el resultado del examen."
-                }
-              ],
-              "explain": "Primero mira si hay 「は」 y luego la palabra de delante: acciones que uno controla, como 見る o 入る, más 「は」 → てはならない, «si lo haces, no vale» = prohibición; sentimientos o sensaciones como 気になる, 心配 o 悔しい → てならない, «tanto que no puedo más»."
-            },
             {
               "id": "nakereba-naranai",
               "diff": "てはならない es «si lo haces, no vale» = prohibición; なければならない es «si no lo haces, no vale» = obligación.",
@@ -33381,8 +33354,32 @@
           ]
         },
         {
+          "kind": "look",
+          "note": "てはならない ↔ てならない: solo se diferencian en una 「は」",
+          "items": [
+            {
+              "id": "te-naranai",
+              "diff": "Solo se diferencian en una 「は」: てはならない es «está prohibido…»; てならない es «…muchísimo, no puedo evitarlo».",
+              "this": [
+                {
+                  "tag": "Prohibición · no se permite",
+                  "tr": "Durante el examen está prohibido mirar las respuestas del de al lado."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Sentimiento · muchísimo",
+                  "tr": "Me preocupa muchísimo el resultado del examen."
+                }
+              ],
+              "explain": "Primero mira si hay 「は」 y luego la palabra de delante: acciones que uno controla, como 見る o 入る, más 「は」 → てはならない, «si lo haces, no vale» = prohibición; sentimientos o sensaciones como 気になる, 心配 o 悔しい → てならない, «tanto que no puedo más»."
+            }
+          ]
+        },
+        {
           "kind": "meaning",
-          "note": "Ambas expresan prohibición o «no se debe»",
+          "sense": 1,
+          "note": "Ambas expresan prohibición: «no se permite…»",
           "items": [
             {
               "id": "te-wa-ikenai",
@@ -33390,33 +33387,16 @@
               "this": [
                 {
                   "tag": "Norma · escrito",
-                  "tr": "Prohibida la entrada a esta sala a toda persona ajena."
+                  "tr": "Prohibida la entrada a esta sala sin autorización."
                 }
               ],
               "that": [
                 {
                   "tag": "Coloquial · a una persona concreta",
-                  "tr": "Es peligroso, así que no entres en esta habitación, ¿vale?"
+                  "tr": "Es peligroso, así que no entres en esta habitación, ¿eh?"
                 }
               ],
-              "explain": "Mira a quién se habla y el final de la frase: a la persona que tienes delante (sobre todo a un niño), con 「よ」 al final → てはいけない (más informal: ちゃだめ); carteles, reglamentos o advertencias al público → てはならない."
-            },
-            {
-              "id": "beki-dewa-nai",
-              "diff": "べきではない es la opinión del hablante, «en buena lógica no se debería»; てはならない es «no se permite en absoluto».",
-              "this": [
-                {
-                  "tag": "No se permite en absoluto",
-                  "tr": "Nunca más debemos volver a provocar una guerra."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Opinión personal · consejo",
-                  "tr": "Personalmente, creo que este plan no debería precipitarse."
-                }
-              ],
-              "explain": "Mira la fuerza del tono: べきではない es una opinión discutible y suele ir con 「と思う」 o 「個人的には」; てはならない es una prohibición sin discusión posible y suele ir con 「決して」 o 「二度と」."
+              "explain": "Mira a quién se habla y cómo acaba la frase: si se le dice a alguien que está delante (sobre todo a un niño) y termina en 「よ」 → てはいけない (más informal, ちゃだめ); avisos y reglamentos (a menudo con expresiones escritas como 「許可なく」) o advertencias al público → てはならない."
             },
             {
               "id": "bekarazu",
@@ -33437,6 +33417,31 @@
               "explain": "Mira el estilo y la conexión: べからず va tras la forma de diccionario (入る＋べからず; con する suele decirse すべからず); es arcaico y aparece sobre todo en carteles y máximas (「働かざる者食うべからず」). Para escribir o hablar se usa てはならない."
             }
           ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Ambas significan «no se debe…»",
+          "items": [
+            {
+              "id": "beki-dewa-nai",
+              "title": "〜べきではない (no se debe)",
+              "diff": "Las dos significan «no se debe»: べきではない es un juicio razonado del hablante y deja margen para discutir; てはならない lo presenta como un principio que no se puede romper, más tajante y solemne.",
+              "this": [
+                {
+                  "tag": "Principio · advertencia tajante",
+                  "tr": "Los políticos jamás deben mentir al pueblo."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Juicio · no sería correcto",
+                  "tr": "Los políticos no deberían mentir al pueblo."
+                }
+              ],
+              "explain": "Las dos frases son correctas y significan «no se debe»; cambia la postura del hablante. べきではない es un juicio basado en la razón («creo que no está bien»): se le puede añadir 「と思う」, deja algo de margen y es común en opiniones cotidianas. てはならない lo proclama como un principio que no admite excepción: es más tajante y solemne, típico de discursos y editoriales, y suele ir con 「決して」「二度と」."
+            }
+          ]
         }
       ]
     },
@@ -33445,7 +33450,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de la cita 「と言う」: «llamarse…, decirse…»",
+          "note": "Ambas vienen de 「言う」, cuyo sentido original es «decir»",
           "items": [
             {
               "id": "to-iu-called",
@@ -33463,7 +33468,7 @@
                   "tr": "Comí ramen en un restaurante llamado «Sakura»."
                 }
               ],
-              "explain": "Mira lo que va delante: si delante de という hay un nombre (さくら), el sustantivo de detrás es eso mismo; si delante de といった hay varios ejemplos (ラーメンやカレー), el sustantivo de detrás es la categoría a la que pertenecen, y se insinúa que no son los únicos."
+              "explain": "Las dos vienen de 「言う」 («decir»): 「A という B」 era originalmente «un B al que se llama A» → presentar un nombre, «un B llamado A»; delante va un solo nombre (さくら) y el sustantivo de detrás es esa misma cosa. 「A や B といった C」 era «un C del tipo que se describe como A y B» → dar algunos ejemplos y agruparlos en la categoría C, dando a entender que hay más (ラーメンやカレー). Para distinguirlas, mira lo que va delante: un nombre → という; varios ejemplos → といった."
             }
           ]
         },
@@ -33500,44 +33505,53 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas significan «como… (de esa manera, con ese aspecto)»",
+          "sense": 1,
+          "note": "Ambas significan «de esta manera»",
           "items": [
             {
               "id": "you-na-example",
-              "title": "〜ように (como…)",
-              "thisTitle": "〜ふうに",
-              "diff": "ふうに es coloquial y suele combinarse con こんな o そんな; ように va directamente tras una oración verbal e indica hacer algo siguiendo una referencia.",
+              "title": "〜ように (como sigue, así)",
+              "thisTitle": "〜ふうに (manera)",
+              "diff": "Las dos significan «hazlo así»: こんなふうに es coloquial y lo más natural al enseñarlo en persona; このように es escrito y formal, propio de manuales y documentos.",
               "this": [
                 {
-                  "tag": "Demostración en persona · coloquial",
-                  "tr": "Doblen el papel por la mitad, así."
+                  "tag": "Coloquial · mostrando en persona",
+                  "tr": "Organiza los materiales así, por favor."
                 }
               ],
               "that": [
                 {
-                  "tag": "Según una referencia · neutro",
-                  "tr": "Doblen el papel por la mitad, tal como dicen las instrucciones."
+                  "tag": "Escrito · documentos, instrucciones",
+                  "tr": "Les rogamos que organicen los materiales de esta manera."
                 }
               ],
-              "explain": "Mira lo que va delante: tras こんな, そんな o どんな va ふうに, lo más habitual cuando se explica mientras se hace; tras una oración verbal como 「書いてある」 o 「言った」 va directamente ように, con el sentido de «tal como…». Para que ふうに vaya tras una oración, normalmente hay que añadir 「という」."
-            },
+              "explain": "Mismo significado; fíjate en el estilo y en la palabra de delante. 「こんなふうに」 es coloquial y lo más natural cuando lo enseñas mientras hablas; 「このように」 es más escrito y formal, y se usa en manuales, documentos y presentaciones (「次のように」 y 「図のように」 son el mismo uso). La combinación es fija: ふうに va tras こんな o そんな; ように va tras この o その."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Ambas significan «aparentar…, poner cara de…»",
+          "items": [
             {
-              "id": "furi-wo-suru",
-              "thisTitle": "〜ふうな (aspecto)",
-              "diff": "ふりをする es que el sujeto finge a propósito; ふうな es el aspecto que percibe el hablante, a menudo con crítica.",
+              "id": "ka-no-you-da",
+              "title": "〜かのようだ (hacer como si…)",
+              "thisTitle": "〜ふうに (apariencia)",
+              "diff": "Las dos significan «actuar como si…, aunque no sea así»: ふうに es coloquial; かのように es escrito, subraya más que en realidad no es así y suele llevar crítica.",
               "this": [
                 {
-                  "tag": "Parecer · crítica",
-                  "tr": "No sabe nada, pero habla como si lo supiera todo."
+                  "tag": "Coloquial · describe una actitud",
+                  "tr": "Siguió leyendo con cara de no haber oído nada."
                 }
               ],
               "that": [
                 {
-                  "tag": "Fingir a propósito",
-                  "tr": "En realidad lo sabía, pero hizo como si no lo supiera."
+                  "tag": "Escrito · subraya que no es así",
+                  "tr": "Siguió leyendo como si no hubiera oído nada."
                 }
               ],
-              "explain": "ふりをする es que el propio sujeto finge conscientemente (知らないふりをする); ふうな es el hablante describiendo la actitud que muestra el otro. 「知ったふうな口をきく」 (hablar como si lo supiera todo) es casi una expresión fija y suele llevar descontento."
+              "explain": "En esta frase sirven los dos y ambos dicen que ella hace como que no ha oído. La diferencia es el estilo: ふうに es coloquial y frecuente al hablar; かのように es escrito, aparece en novelas y noticias, suele ir precedido de 「まるで」「あたかも」 y subraya más que «en realidad no es así», a menudo con un matiz de reproche o crítica."
             }
           ]
         }
