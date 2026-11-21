@@ -1,5 +1,9 @@
 # 交接：Build 17 之后（2026-11-21）
 
+> **注意：Build 14–17 的全部代码还在分支 `claude/ecstatic-ptolemy-i3xbbp`（PR #6，未合并），main 上没有。**
+> 接手后先切到这个分支（`git fetch origin claude/ecstatic-ptolemy-i3xbbp && git checkout claude/ecstatic-ptolemy-i3xbbp`）再继续，
+> 或者由用户决定先合并 PR #6 到 main。下文提到的文件、工作流改动都以该分支为准。
+
 接手前先读仓库根目录的 `CLAUDE.md`（测试、使用引导、合规硬门槛、内容质量、工作方式），本文只写当前进度和需要知道的上下文。
 回复用户用简体中文；网页搜索用英文查询、优先英文一手资料。
 
