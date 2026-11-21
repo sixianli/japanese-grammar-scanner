@@ -237,7 +237,7 @@ Build 17 包含的内容（详见 PR #6 描述）：Build 16 的全部反馈修�
 ## 5. CloudKit 反馈（已配置完成）
 
 - 说明文档：`docs/feedback/SETUP.md`。
-- Schema：`cloudkit/schema.ckdb`，已由用户部署到 Production。Feedback、UsageDay 只给 `_creator` 写、`_icloud` 创建，**不对 `_world` 开放读取**（用户数据只给提交者本人）。`tools/validate_compliance.py` 有规则拦截给 `_world` 开权限。
+- Schema：`cloudkit/schema.ckdb`，已由用户部署到 Production。Feedback、UsageDay 只给 `_creator` 写、`_icloud` 创建，**对 `_world` 开放读取**（Build 17 反馈 2，用户决定，便于开发者在后台直接看截图）。`tools/validate_compliance.py` 要求这两类必须 `_world` 可读、任何记录不能对 `_world` 开放写入或创建。
 - GitHub Secrets 里有 CloudKit 管理令牌（用于 `cktool` 导入 schema）和 ASC API Key（`ASC_KEY_ID` / `ASC_ISSUER_ID` / `ASC_KEY_P8`）。变量：`APPLE_TEAM_ID`、`BUNDLE_ID`、`CLOUD_FEEDBACK=true`。
 - 「把反馈转发到邮箱」（SETUP.md 第 3、4 步，需要 Server-to-Server Key）**用户已同意不启用**：避免让 GitHub 读到用户数据。不要再提议启用，除非用户主动要求。
 - 令牌、密钥只放 GitHub Secrets，不要让用户贴到聊天里。
