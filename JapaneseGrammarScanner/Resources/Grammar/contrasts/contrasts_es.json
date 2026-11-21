@@ -16751,40 +16751,41 @@
             {
               "id": "noni-usage",
               "title": "〜のに (aunque…, en cambio)",
-              "diff": "のに solo expresa sorpresa o pena, y los sujetos de las dos partes pueden ser distintos; くせに tiene el mismo sujeto en ambas partes y lleva un fuerte reproche.",
+              "diff": "Con el mismo sujeto valen las dos: くせに lleva un reproche fuerte y desprecio, y las dos partes deben referirse a la misma persona; のに solo expresa sorpresa e insatisfacción en un tono más neutro, y los sujetos pueden ser distintos.",
               "this": [
                 {
-                  "tag": "Misma persona · reproche",
-                  "tr": "Él lo sabe y, aun así, (adrede) no me lo dice."
+                  "tag": "Reproche · desprecio",
+                  "tr": "Él sabe la respuesta y, aun así, (encima) no me la dice."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sujetos distintos · sorpresa",
-                  "tr": "Aunque estaba lloviendo, el partido se jugó igualmente."
+                  "tag": "Insatisfacción · tono neutro",
+                  "tr": "Aunque sabe la respuesta, no me la dice."
                 }
               ],
               "wrong": {
-                "why": "Con くせに, las dos partes tienen que referirse a la misma persona, y es para reprocharle algo"
+                "why": "Con くせに las dos partes deben referirse a la misma persona, y es para reprocharle algo; con sujetos distintos solo vale のに"
               },
-              "explain": "Mira si las dos partes hablan de la misma persona: 「彼は知っている」 y 「（彼は）教えてくれない」 son los dos él → くせに, con un reproche de «qué desfachatez»; 「雨」 y 「試合」 no son el mismo sujeto ni se está criticando a nadie → solo vale のに."
+              "explain": "Las dos frases solo cambian en una palabra, así que fíjate en el tono: con くせに estás diciendo «qué poca vergüenza», con desprecio; es sobre todo oral y no se usa ante superiores ni por escrito. Con のに solo expresas sorpresa e insatisfacción en un tono neutro, y sirve también en situaciones formales. Cuando los sujetos son distintos y no se está reprochando a nadie (雨が降っているのに、試合は行われた), solo vale のに."
             },
             {
-              "id": "ni-shite-wa",
-              "diff": "にしては evalúa tomando como referencia lo que es alguien, para bien o para mal; くせに solo sirve para reprochar que lo que alguien dice o hace no cuadra con lo que es.",
+              "id": "nagara",
+              "title": "〜ながら (aun sabiéndolo)",
+              "diff": "くせに reprocha a otra persona, con un tono fuerte y coloquial; ながら (aun sabiéndolo) es frecuente también por escrito y puede referirse a uno mismo, con autoironía o resignación.",
               "this": [
                 {
-                  "tag": "Reproche",
-                  "tr": "¡Siendo un crío, no digas esas impertinencias!"
+                  "tag": "Sobre otra persona · reproche",
+                  "tr": "Mi hermano pequeño sabe perfectamente que engorda y, aun así, come ramen a medianoche."
                 }
               ],
               "that": [
                 {
-                  "tag": "Valoración · también elogio",
-                  "tr": "Para ser un niño, tiene muy buena letra."
+                  "tag": "Sobre uno mismo · autoironía",
+                  "tr": "Aun sabiendo que engorda, no puedo evitar comer ramen a medianoche."
                 }
               ],
-              "explain": "Mira si la segunda parte elogia o critica: 「上手な字だ」 es una valoración tomando como referencia «niño» → にしては (también vale para algo malo: 大人にしては字が下手だ); 「生意気なことを言うな」 es un reproche con desprecio → くせに."
+              "explain": "Las dos frases significan «aun sabiéndolo…»; fíjate en de quién se habla: si es de otra persona (弟は) y se le reprocha que «no tiene remedio» → くせに, coloquial; si es de uno mismo, a menudo seguido de 「つい〜てしまう」, con autoironía o resignación → ながら, frecuente también por escrito (〜ていながら). くせに normalmente no se usa para hablar de uno mismo."
             },
             {
               "id": "ni-mo-kakawarazu",
@@ -16816,20 +16817,24 @@
           "items": [
             {
               "id": "ka-no-you-da",
-              "diff": "Delante de まるで〜ようだ puede ir directamente «sustantivo＋の»; delante de かのようだ va una oración completa, suele describir «no lo es, pero se comporta como si…» y es más escrito.",
+              "title": "〜かのようだ (como si)",
+              "diff": "まるで〜ようだ puede ir directamente tras «sustantivo + の»; かのようだ va tras una oración completa, subraya más que «en realidad no es así» y es más literario.",
               "this": [
                 {
-                  "tag": "Sustantivo の＋ようだ",
-                  "tr": "Aunque nos acabábamos de conocer, era como si fuéramos viejos amigos."
+                  "tag": "Sustantivo の + ようだ",
+                  "tr": "En los días libres la oficina está tan tranquila que parece plena noche."
                 }
               ],
               "that": [
                 {
-                  "tag": "Oración＋かのように · fingir",
-                  "tr": "Él pone cara de nada, como si no supiera nada."
+                  "tag": "Oración + かのようだ · literario",
+                  "tr": "En los días libres la oficina está tan tranquila que es como si el tiempo se hubiera detenido."
                 }
               ],
-              "explain": "Mira lo que va delante de 「よう」: «sustantivo＋の» (友達の) → まるで〜ようだ; una oración entera (何も知らない、〜である、〜た)＋か → かのようだ, que suele describir «la apariencia fingida» de alguien y es frecuente en novelas y textos. A menudo se combinan: まるで何も知らないかのように."
+              "wrong": {
+                "why": "かのようだ no puede ir directamente tras «sustantivo + の»; hay que decir 「夜中のようだ」 o 「夜中であるかのようだ」"
+              },
+              "explain": "Las dos frases son comparaciones; fíjate en lo que va delante de 「よう」: un sustantivo con 「の」 (夜中の) → まるで〜ようだ; una oración completa (時間が止まった) seguida de 「か」 → かのようだ. かのようだ subraya más que «en realidad no es así», suena más literario, es habitual en novelas y textos escritos, y a menudo va junto con 「まるで」."
             }
           ]
         }
@@ -16840,29 +16845,29 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Todas vienen de 「よう（様）＋に」: «hacer que quede así»",
+          "note": "Ambas vienen de 「よう（様）」 — significado original «aspecto, estado de las cosas»; 「ように」 es «hacia ese estado»",
           "items": [
             {
               "id": "you-na-example",
               "title": "〜ように (finalidad)",
-              "diff": "ように (finalidad) va seguida de la acción que se hace con ese fin; ますように omite la acción y deja solo el deseo.",
+              "diff": "Las dos significan «hacia ese estado»: ように (finalidad) va seguida de lo que uno hace para lograrlo; ますように solo desea que las cosas lleguen a ser así: es un ruego.",
               "this": [
                 {
                   "tag": "Deseo · la oración termina aquí",
-                  "tr": "Ojalá apruebe el examen."
+                  "tr": "Ojalá apruebe el examen de ingreso."
                 }
               ],
               "that": [
                 {
                   "tag": "Finalidad · sigue una acción",
-                  "tr": "Estudio todos los días para poder aprobar el examen."
+                  "tr": "Estudio todos los días para aprobar el examen de ingreso."
                 }
               ],
-              "explain": "Mira lo que viene después de ように: si sigue «lo que uno hace para ello» (毎日勉強している) → finalidad, «para poder…»; si la oración termina en 「ますように」, a menudo con 「どうか」 delante → deseo, «ojalá…». El deseo suele ir en forma ます (できますように) y la finalidad en forma llana (できるように)."
+              "explain": "En las dos, 「ように」 es よう (aspecto, estado) + に: «hacia ese estado». Si después viene lo que uno hace para ello (毎日勉強している) → se actúa para que las cosas lleguen a ese estado: finalidad, «para poder…». Si se omite el 「祈ります」 que vendría después y la frase termina en 「ますように」, a menudo con 「どうか」 delante → solo se desea que las cosas lleguen a ser así: ruego, «ojalá…». El ruego usa la forma ます (受かりますように); la finalidad, la forma simple (受かるように)."
             },
             {
               "id": "you-ni-iu",
-              "diff": "ますように es un deseo que no dice quién debe actuar; ように言う es pedirle a alguien concreto que haga algo.",
+              "diff": "Las dos significan «hacia ese estado»: ますように desea que las cosas lleguen a ser así; ように言う pide a una persona concreta que lo haga.",
               "this": [
                 {
                   "tag": "Deseo · sin decir quién",
@@ -16875,7 +16880,7 @@
                   "tr": "El médico me dijo que me acostara temprano."
                 }
               ],
-              "explain": "Mira si después hay 「言う／お願いする」 y alguien que pide (医者に): si lo hay → una petición, o se transmite lo que otro pidió; si la oración termina en 「ますように」 → un deseo propio. El 「ご協力くださいますようお願いいたします」 de los avisos es en realidad la forma solemne de 「ようにお願いする」, y siempre va seguido de 「お願いいたします」."
+              "explain": "En las dos, 「ように」 es よう (aspecto, estado) + に y señala «ese estado». Si después viene 「言う／頼む」 y hay alguien que pide (医者に) → se expresa el estado que otra persona debe lograr: «decirle a alguien que…». Si la frase termina en 「ますように」, omitiendo el 「祈ります」 que seguiría, a menudo con 「どうか」 delante → se desea que las cosas lleguen a ser así: es un ruego y no se encarga a nadie que lo haga."
             }
           ]
         },
@@ -16902,20 +16907,20 @@
             },
             {
               "id": "te-hoshii",
-              "diff": "ますように es rezar al cielo o por dentro; てほしい es decir en voz alta lo que uno espera, a menudo que alguien haga algo.",
+              "diff": "ますように es un ruego al cielo o para tus adentros, formal y devoto; てほしい expresa directamente tu propio deseo, coloquial y desenfadado.",
               "this": [
                 {
-                  "tag": "Rezar · al cielo",
+                  "tag": "Ruego · formal",
                   "tr": "Ojalá la operación de mi padre salga bien."
                 }
               ],
               "that": [
                 {
-                  "tag": "Querer que alguien lo haga",
-                  "tr": "Quiero que mi padre se cuide más."
+                  "tag": "Expresar un deseo · coloquial",
+                  "tr": "Ojalá que la operación de papá salga bien."
                 }
               ],
-              "explain": "Mira a quién se dirige el deseo: pedir un deseo, rezar o escribirlo en una tablilla ema, a menudo con 「どうか」 delante → ますように; expresar lo que uno espera de alguien, a menudo con 「（persona）に」 → てほしい (てもらいたい es igual). Para el tiempo también se puede decir 「晴れてほしい」, pero sin ese aire de oración."
+              "explain": "Las dos frases desean que la operación de papá salga bien; fíjate en cómo se dice: si se ruega para tus adentros o a los dioses, a menudo con 「どうか」 delante y la frase terminando en 「ますように」 → ruego, formal y devoto, que también se escribe en tablillas ema y tarjetas de felicitación; si se le dice directamente a alguien cercano, con 「な」 o 「よ」 al final → てほしい, coloquial y desenfadado."
             }
           ]
         }
@@ -16926,7 +16931,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Todas van con negación y expresan una negación muy fuerte",
+          "note": "Ambas significan «nada en absoluto…»",
           "items": [
             {
               "id": "zenzen-nai",
@@ -16960,24 +16965,7 @@
                   "tr": "Por mucho que se lo diga, mi hijo no estudia nada."
                 }
               ],
-              "explain": "Mira la situación y la emoción: en informes o noticias, una afirmación objetiva → まったく; quejarse a la familia o a los amigos de «es que no hay manera de que…» → ちっとも; por escrito no se usa ちっとも."
-            },
-            {
-              "id": "kesshite-nai",
-              "diff": "まったく describe un grado objetivo, «nada en absoluto»; 決して expresa voluntad o una afirmación tajante, «jamás, de ninguna manera».",
-              "this": [
-                {
-                  "tag": "Grado · hecho",
-                  "tr": "No sabía nada de eso."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Voluntad · jamás",
-                  "tr": "Este secreto no se lo contaré jamás a nadie."
-                }
-              ],
-              "explain": "Mira si lo que sigue expone un hecho o expresa una decisión o prohibición: un estado objetivo como 「知らなかった」 o 「問題がない」 → まったく; voluntad, promesa o prohibición como 「話しません」, 「諦めない」 o 「〜しないでください」 → 決して."
+              "explain": "Fíjate en la situación y la emoción: una afirmación objetiva en un informe o en las noticias, como 「検査の結果」 → まったく; una queja a la familia o a los amigos de «por qué no hay manera de que…», como 「何度言っても」 → ちっとも. ちっとも no se usa por escrito."
             }
           ]
         }
@@ -16987,12 +16975,12 @@
       "id": "mi-nominal",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Ambas van tras la raíz de un adjetivo y lo convierten en sustantivo",
+          "kind": "look",
+          "note": "〜さ ↔ 〜み: las dos van tras la raíz del adjetivo y solo cambia el último kana",
           "items": [
             {
               "id": "sa-nominal",
-              "diff": "さ expresa un grado o medida que se puede medir; み expresa una cualidad o un matiz que se percibe.",
+              "diff": "Solo cambia el último kana: さ expresa un grado o una medida que se puede medir; み, una cualidad o un sabor que se percibe.",
               "this": [
                 {
                   "tag": "Cualidad que se percibe",
@@ -17008,7 +16996,7 @@
               "wrong": {
                 "why": "み solo se une a unos pocos adjetivos; con 大きい solo se puede decir 大きさ"
               },
-              "explain": "Mira si se puede responder con un número: 深さ、重さ、高さ se pueden medir (２メートル、５キロ), y casi todos los adjetivos admiten さ; 深み、重み、甘み son el «matiz, el peso» que se percibe, suelen ir con 「ある／増す」, y solo unos pocos adjetivos admiten み."
+              "explain": "Pregúntate si se puede responder con un número: 深さ, 重さ, 高さ son medidas que se pueden medir (２メートル, ５キロ), y casi cualquier adjetivo admite さ; 深み, 重み, 甘み son cualidades o un peso que se percibe, como en 「深みのある味」 o 「重みがある」, y solo unos pocos adjetivos admiten み."
             }
           ]
         }
@@ -17018,66 +17006,26 @@
       "id": "mo-ba-mo",
       "groups": [
         {
-          "kind": "look",
-          "note": "Todas tienen la forma «Aも＋forma condicional, Bも»",
-          "items": [
-            {
-              "id": "ga-nara",
-              "title": "〜も〜なら〜も",
-              "diff": "もばも enumera dos cosas de forma objetiva; AもAならBもB critica que «los dos son tal para cual (y ninguno se salva)».",
-              "this": [
-                {
-                  "tag": "Enumeración objetiva",
-                  "tr": "En esta familia, los padres son amables y los hijos también."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Crítica · tal para cual",
-                  "tr": "Los padres son un desastre, y los hijos igual."
-                }
-              ],
-              "explain": "Mira si antes y después de なら se repite tal cual el mismo sustantivo: 「親も親なら、子も子だ」 es «AもAなら、BもB» y significa que ninguno de los dos se salva; siempre es una crítica. En もばも, delante de ば va un verbo o un adjetivo (優しければ、いれば), y solo se enumeran hechos."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Todas expresan «tanto… como…», enumerando dos cosas",
           "items": [
             {
-              "id": "dake-de-naku",
-              "diff": "だけでなく tiene jerarquía: «no solo A, además B»; もばも pone las dos cosas al mismo nivel.",
-              "this": [
-                {
-                  "tag": "Al mismo nivel",
-                  "tr": "Este restaurante es barato y, además, la comida está buena."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Gradación · no solo… sino",
-                  "tr": "Este restaurante no solo es barato, sino que la comida también está buena."
-                }
-              ],
-              "explain": "Las dos se parecen; mira la estructura: en 「Aも〜ば、Bも〜」 las dos partes son simétricas y A y B están a la par; 「Aだけでなく、Bも」 dice una cosa primero y añade la otra, con sensación de gradación."
-            },
-            {
               "id": "shi",
-              "diff": "En もばも, las dos cosas son en sí lo que se quiere decir, con una estructura equilibrada; し suele enumerar razones que llevan a una conclusión.",
+              "title": "〜し (enumeración)",
+              "diff": "もばも enumera dos elementos de forma pulida con un esquema fijo; し es más informal y permite ir añadiendo elementos uno tras otro.",
               "this": [
                 {
-                  "tag": "Enumeración equilibrada",
-                  "tr": "Él sabe tanto cantar como bailar."
+                  "tag": "Esquema fijo · dos elementos",
+                  "tr": "Ella sabe tocar el piano y además dibuja bien."
                 }
               ],
               "that": [
                 {
-                  "tag": "Enumerar razones → conclusión",
-                  "tr": "Sabe cantar, sabe bailar… ¡es increíble!"
+                  "tag": "Uno tras otro · informal",
+                  "tr": "Ella sabe tocar el piano, dibuja bien y además cocina de maravilla."
                 }
               ],
-              "explain": "Mira si después viene una conclusión: lo que enumera し suelen ser razones, y a menudo le sigue una valoración o conclusión (本当にすごい、だから人気がある); es coloquial y relajado; en もばも la oración termina tras decir las dos cosas, con un ritmo equilibrado, y se usa tanto al hablar como por escrito."
+              "explain": "Las dos frases enumeran virtudes y terminan ahí, sin sacar conclusión. Fíjate en la estructura: 「Aも〜ば、Bも〜」 es un esquema fijo que solo empareja dos elementos de forma simétrica y suena pulido; con し se pueden ir añadiendo elementos uno tras otro (弾けるし、上手だし、……), incluso tres o más, y en la lengua hablada es más informal."
             }
           ]
         }
@@ -17086,29 +17034,6 @@
     {
       "id": "mono-da",
       "groups": [
-        {
-          "kind": "root",
-          "note": "Todas vienen de 「もの（物）」: «cómo son las cosas por naturaleza, lo normal»",
-          "items": [
-            {
-              "id": "mono-dewa-nai",
-              "diff": "ものだ aconseja «lo normal es que se haga…»; ものではない aconseja «lo normal es que no se haga…».",
-              "this": [
-                {
-                  "tag": "Se debe",
-                  "tr": "Con los mayores y los superiores hay que usar lenguaje honorífico."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "No se debe",
-                  "tr": "No se debe hablar mal de los demás."
-                }
-              ],
-              "explain": "El mismo 「もの (lo normal)」, en positivo y en negativo: lo que normalmente se debe hacer → ものだ; lo que normalmente no se debe hacer → ものではない; ambos tienen el tono de un mayor sermoneando a un joven. ものではない también puede significar «por naturaleza es difícil…» (人の心はわかるものではない)."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Ambas sirven para aconsejar «se debería…»",
@@ -17119,7 +17044,7 @@
               "this": [
                 {
                   "tag": "Sentido común · sermón",
-                  "tr": "Si alguien te da algo, hay que darle las gracias."
+                  "tr": "A quien te ha ayudado, lo propio es escribirle una carta de agradecimiento."
                 }
               ],
               "that": [
@@ -17132,20 +17057,20 @@
             },
             {
               "id": "koto-da-advice",
-              "diff": "ものだ es una verdad que vale para todo el mundo; ことだ es un consejo concreto para la persona que se tiene delante.",
+              "diff": "ものだ apela al sentido común social, «es lo que toca hacer»; ことだ da un consejo concreto para la situación del oyente, «lo mejor es que…».",
               "this": [
                 {
-                  "tag": "Verdad general",
-                  "tr": "Los niños deben acostarse temprano."
+                  "tag": "Sentido común · sermón",
+                  "tr": "La hora acordada hay que respetarla."
                 }
               ],
               "that": [
                 {
-                  "tag": "Consejo personal",
-                  "tr": "Si quieres curarte pronto el resfriado, lo mejor es dormir mucho."
+                  "tag": "Situación concreta · consejo práctico",
+                  "tr": "Mañana, lo mejor es que llegues puntual."
                 }
               ],
-              "explain": "Mira si hay una condición ligada a una situación concreta: 「〜たいなら」 o 「〜なら」 seguido de ことだ es aconsejar a quien se tiene delante (lo mejor es…); con un sujeto general como 「子どもは」 o 「人は」 → ものだ, que expresa una verdad general."
+              "explain": "Las dos frases piden puntualidad; fíjate en si se habla de un principio general o del asunto concreto: sin ocasión concreta, apelando al sentido común de «es lo que toca hacer», como un mayor sermoneando → ものだ; un consejo para la situación concreta del oyente (明日は), «lo mejor es que…» → ことだ, a menudo junto con 「〜たいなら」 o 「まず」."
             }
           ]
         }
@@ -17156,25 +17081,8 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Todas vienen del sustantivo formal 「もの」: presentan la razón como «una situación que ya es así», con tono de excusa",
+          "note": "Ambas vienen de 「もの（物）」 — significado original «cosa», y en sentido amplio «asunto, hecho»",
           "items": [
-            {
-              "id": "mono-de",
-              "diff": "Significan lo mismo; もので es más breve y formal, y se usa mucho al pedir disculpas.",
-              "this": [
-                {
-                  "tag": "Coloquial · a amigos",
-                  "tr": "Había atasco, así que llegué tarde."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Formal · disculpa",
-                  "tr": "El tren se retrasó y por eso llegué tarde. Lo siento mucho."
-                }
-              ],
-              "explain": "Las dos son razones a modo de excusa; mira a quién se habla: entre amigos → ものだから (al hablar se dice a menudo 「もんだから」); al disculparse ante un superior o un cliente → もので o 「ものですから」, a menudo seguido de 「申し訳ありません」."
-            },
             {
               "id": "mono-reason",
               "diff": "ものだから va seguido del resultado; もん al final de la oración omite la segunda parte y deja solo la razón, de forma coloquial y mimosa.",
@@ -17190,7 +17098,7 @@
                   "tr": "¡Es que estaba muy ocupado!"
                 }
               ],
-              "explain": "Mira si después de もの sigue algo: si sigue 「だから、＋resultado」 → ものだから, que también sirve para que un adulto se disculpe; si la oración termina en 「もん」, a menudo con 「だって」 delante → solo da la razón sin el resultado, como un niño haciéndose el mimoso, y solo se dice a gente cercana."
+              "explain": "もの significa originalmente «cosa» y, en sentido amplio, «asunto». «Tal asunto + だから» → ものだから: presenta el motivo como un hecho que está ahí y no tiene remedio, seguido del resultado (連絡できなかった); los adultos pueden usarlo al disculparse. La もの a final de frase (もん en el habla) es ese mismo «asunto»: pone «es que es así» al final como motivo, sin decir el resultado, a menudo con 「だって」 delante; suena a niño que se excusa y solo se usa con gente cercana."
             }
           ]
         },
@@ -17203,8 +17111,8 @@
               "diff": "ので explica de forma objetiva y admite una petición después; ものだから lleva un tono de excusa, de «las circunstancias me obligaron», y se usa sobre todo para explicar un fallo propio.",
               "this": [
                 {
-                  "tag": "Excusa · fallo propio",
-                  "tr": "Como había atasco, he llegado tarde."
+                  "tag": "Excusa · no puedo evitarlo",
+                  "tr": "Es que hay mucho tráfico, así que llegaré un poco tarde."
                 }
               ],
               "that": [
@@ -17213,7 +17121,24 @@
                   "tr": "Hay atasco; por favor, salga con tiempo."
                 }
               ],
-              "explain": "Mira la segunda parte: un mal resultado que uno ya ha causado, a menudo seguido de una disculpa → ものだから (ものですから); una petición o sugerencia al otro (〜てください) → ので; ものだから normalmente no se usa así."
+              "explain": "La primera mitad es igual, así que fíjate en la segunda: un resultado que uno no pudo evitar (遅れます), con tono de excusa de «las circunstancias me obligan» → ものだから (ものですから); una petición al oyente (出てください) → ので. Tras ものだから normalmente no van peticiones ni órdenes."
+            },
+            {
+              "id": "mono-de",
+              "diff": "Las dos dan un motivo a modo de excusa; ものだから en el habla suele decirse もんだから y se usa también con amigos; もので es más breve y formal, frecuente al disculparse.",
+              "this": [
+                {
+                  "tag": "Coloquial · a amigos",
+                  "tr": "Es que el tren estaba parado, así que llegué tarde."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Formal · disculpa",
+                  "tr": "Como el tren estaba detenido, he llegado tarde. Lo siento muchísimo."
+                }
+              ],
+              "explain": "Las dos frases excusan un retraso; fíjate en a quién se habla: a un amigo, terminando de forma informal con algo como 「ちゃった」 → ものだから (en el habla, a menudo 「もんだから」); al disculparse ante un jefe o un cliente, seguido de 「申し訳ありません」 → もので (o 「ものですから」), más breve y formal."
             }
           ]
         }
@@ -17224,7 +17149,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Todas vienen del sustantivo formal 「もの」: presentan la razón como «una situación que ya es así»",
+          "note": "Ambas vienen de 「もの（物）」 — significado original «cosa», y en sentido amplio «asunto, hecho»",
           "items": [
             {
               "id": "mono-dakara",
@@ -17241,7 +17166,7 @@
                   "tr": "Como estaba muy ocupado, no pude contactarte."
                 }
               ],
-              "explain": "Mira si después de もの sigue algo: si la oración termina en 「もん／もの」, a menudo con 「だって」 delante → solo da la razón, como un niño haciéndose el mimoso, y solo se dice a gente cercana (la versión femenina y formal es 「ですもの」); si sigue 「だから、＋resultado」 → ものだから."
+              "explain": "もの significa originalmente «cosa» y, en sentido amplio, «asunto». La もの a final de frase (もん en el habla) pone «es que es así» al final como motivo, sin decir el resultado, a menudo con 「だって」 delante; suena a niño que se excusa y solo se usa con gente cercana (la forma femenina más cortés es 「ですもの」). «Tal asunto + だから» → ものだから: presenta el motivo como un hecho que está ahí y no tiene remedio, seguido del resultado (連絡できなかった); los adultos pueden usarlo al disculparse."
             }
           ]
         },
