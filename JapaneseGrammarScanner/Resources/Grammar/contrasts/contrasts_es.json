@@ -45229,36 +45229,7 @@
                   "tr": "Ya que firmamos el contrato, debemos asumir la responsabilidad hasta el final."
                 }
               ],
-              "explain": "Mira la naturaleza del motivo: 以上は se basa en la lógica, un contrato o una responsabilidad, y suele ir seguido de 「〜べきだ」「〜なければならない」; 手前 se basa en que otros han visto lo que uno dijo o hizo, y suele ir seguido de 「〜わけにはいかない」, con la incomodidad de no poder echarse atrás. からには se usa básicamente igual que 以上は."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "temo-shiranai",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Ambas advierten de que «hacer eso tendrá malas consecuencias»",
-          "items": [
-            {
-              "id": "te-wa-negative-condition",
-              "title": "〜ては (suposición → mal resultado)",
-              "diff": "ては señala con bastante calma que habrá malas consecuencias; ても知らない es emocional, un aviso picado del tipo «si pasa algo, yo no me hago responsable».",
-              "this": [
-                {
-                  "tag": "Picado · yo paso",
-                  "tr": "Si comes tanto y luego engordas, no me vengas a mí."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Aviso sereno",
-                  "tr": "Si comes tanto, vas a engordar."
-                }
-              ],
-              "explain": "Las dos frases avisan de que «si comes demasiado, engordarás». Mira qué se dice al final: tras ては se dice directamente el resultado (太るよ), un aviso objetivo; ても知らない pone el mal resultado delante de ても y termina con la actitud del hablante, «yo paso»; se usa a menudo cuando el otro no hace caso del consejo y uno está algo molesto."
+              "explain": "Fíjate en el tipo de razón: 以上は se basa en principios, contratos o responsabilidades, y suele ir seguido de 「〜べきだ」「〜なければならない」; 手前 se basa en lo que uno ha dicho o hecho delante de otros, suele ir seguido de 「〜わけにはいかない」 y transmite la incomodidad de no poder echarse atrás. からには funciona básicamente igual que 以上は. En los ejemplos: 「契約を結んだ」 es un contrato → 以上は; 「みんなの前で約束した」 es algo dicho delante de todos → 手前."
             }
           ]
         }
@@ -45271,23 +45242,6 @@
           "kind": "meaning",
           "note": "Ambas expresan «sumado a…» otro factor",
           "items": [
-            {
-              "id": "ni-kuwaete",
-              "diff": "に加えて solo suma dos cosas; と相まって recalca que dos factores se influyen mutuamente y producen un efecto mayor.",
-              "this": [
-                {
-                  "tag": "Interacción · aún más",
-                  "tr": "Junto con el precioso paisaje, la comida nos pareció aún más deliciosa."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Simple suma",
-                  "tr": "Además de la lluvia, el viento también ha empezado a soplar más fuerte."
-                }
-              ],
-              "explain": "Mira el resultado: tras に加えて solo viene «hay además otra cosa» (風も強い), y ambas son independientes; tras と相まって viene el efecto «aún más…» de sumar las dos (いっそう, ますます, 〜効果を生む); tiene un fuerte tono escrito."
-            },
             {
               "id": "koto-mo-atte",
               "diff": "こともあって solo menciona de pasada una de las causas; も相まって recalca que ese factor se suma a otros y hace el resultado más notable.",
@@ -45362,20 +45316,21 @@
             },
             {
               "id": "to-naru-to",
-              "diff": "となれば es «si de verdad se llega a eso, entonces…», normalmente seguido de una suposición o juicio; とあれば es «si es por…, estoy dispuesto a…», seguido de la determinación del hablante.",
+              "title": "〜となれば (si de verdad llega a…)",
+              "diff": "Ambos significan «si hace falta». Tras とあれば el hablante se compromete por iniciativa propia («entonces estoy dispuesto a…»), con tono formal; tras となれば suele venir una deducción objetiva («en ese caso habría que…, supongo»).",
               "this": [
                 {
-                  "tag": "Seguido de determinación",
-                  "tr": "Si es por mis hijos, no me importa ni faltar al trabajo."
+                  "tag": "Compromiso propio · formal",
+                  "tr": "Si hace falta, vendré a la oficina incluso en mi día libre."
                 }
               ],
               "that": [
                 {
-                  "tag": "Seguido de suposición",
-                  "tr": "Si de verdad vas a estudiar en el extranjero, te costará bastante dinero."
+                  "tag": "Deducción objetiva",
+                  "tr": "Si de verdad hace falta, supongo que habrá que venir a la oficina incluso en días libres."
                 }
               ],
-              "explain": "Mira la segunda mitad: tras となれば／となると suele venir una suposición o juicio del tipo «en ese caso, seguramente…» (費用がかかるだろう); tras とあれば viene la determinación del hablante de «estar dispuesto a hacer…» por lo primero (いとわない, 何でもする)."
+              "explain": "La premisa es la misma; fíjate en el tono de la segunda parte. Si el hablante se compromete y se ofrece a hacer el esfuerzo (出社します、何でもします) → とあれば, formal y frecuente al hablar con clientes o superiores. Si solo deduce lo que pasaría llegado ese punto (〜ことになるだろう, a menudo con 「だろう」 al final) → となれば."
             }
           ]
         }
@@ -45412,13 +45367,13 @@
           ]
         },
         {
-          "kind": "meaning",
-          "note": "Ambas expresan causa: «como se trata de…, por eso…»",
+          "kind": "look",
+          "note": "とあって ↔ だけあって: solo cambia 「と」 o 「だけ」 delante de 「あって」",
           "items": [
             {
               "id": "dake-atte",
               "thisTitle": "〜とあって",
-              "diff": "とあって solo dice el resultado que produce una situación especial; だけあって es «como era de esperar de…», con elogio.",
+              "diff": "とあって significa «como es (una ocasión especial)» y va seguido de la escena resultante; だけあって significa «como era de esperar de…» y va seguido de una valoración de que hace honor a su fama.",
               "this": [
                 {
                   "tag": "Situación especial → escena",
@@ -45431,8 +45386,14 @@
                   "tr": "Como era de esperar de una tienda famosa, la comida está buenísima."
                 }
               ],
-              "explain": "Mira la segunda mitad: tras とあって viene una escena objetiva causada por una situación especial (行列ができていた, 混んでいた), frecuente en noticias; tras だけあって viene una valoración: hace honor a su fama (さすがにおいしい), a menudo junto con 「さすが」."
-            },
+              "explain": "Solo se diferencian en la palabra que va delante de 「あって」: と o だけ. Mira ese punto y luego la segunda parte: とあって = «como es…», seguido de una escena objetiva causada por la situación especial (行列ができていた、混んでいた), frecuente en noticias; だけあって = «como era de esperar de…», seguido de una valoración de que hace honor a su fama, a menudo junto con 「さすが」 (さすがにおいしい)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Ambas expresan causa: «como se trata de…, por eso…»",
+          "items": [
             {
               "id": "koto-mo-atte",
               "thisTitle": "〜とあって",
@@ -45449,7 +45410,7 @@
                   "tr": "En parte porque llovía, el recinto estaba bastante vacío."
                 }
               ],
-              "explain": "Mira si lo primero es «algo especial»: algo poco habitual como la visita de una estrella, un puente o una venta limitada → とあって, seguido de la escena que provoca; una causa corriente como la lluvia o encontrarse mal, insinuando además que hay otras causas → こともあって."
+              "explain": "Comprueba si lo primero es algo especial: que venga un cantante famoso (人気歌手が来る), un puente largo, un lanzamiento limitado, situaciones poco habituales → とあって, seguido de la escena resultante; razones corrientes como la lluvia (雨だった) o no encontrarse bien, insinuando que hay otras razones → こともあって."
             }
           ]
         }
@@ -45477,7 +45438,10 @@
                   "tr": "Se lo suplicó casi llorando."
                 }
               ],
-              "explain": "Aquí ばかり significa «casi hasta el punto de…». Mira lo de delante: la forma ない del verbo sin ない + ん (泣か + んばかり) → a punto de hacer esa acción; una frase (早く帰れ, 待ってました) + と → la actitud es tan clara que es como si dijera esa frase. 「と言わんばかりに」 es precisamente 言う + んばかり, y significa lo mismo que とばかりに."
+              "wrong": {
+                "why": "んばかり se une a la ない形 del verbo sin ない (泣か＋ん); no puede ir tras el 辞書形 「泣く」"
+              },
+              "explain": "Aquí ばかり significa «casi hasta el punto de…». Mira lo que va delante: la ない形 del verbo sin ない ＋ ん (泣か＋んばかり) → a punto de hacer esa acción; una frase dicha (早く帰れ、待ってました) ＋ と → la actitud es tan evidente como si la hubiera dicho. 「と言わんばかりに」 es simplemente 言う＋んばかり, con el mismo significado que とばかりに. Ojo: delante de ん tiene que ir la raíz de la ない形 (泣か); no se dice 「泣くんばかり」."
             }
           ]
         },
@@ -45487,20 +45451,24 @@
           "items": [
             {
               "id": "ka-no-you-da",
-              "diff": "かのように es una comparación general y va tras todo tipo de situaciones; とばかりに «lee» específicamente, en una actitud o un gesto, una frase que nadie ha dicho.",
+              "title": "〜かのように (como si…)",
+              "diff": "とばかりに pone directamente delante la frase no dicha, de forma breve y viva; かのように es un «como si…» general, así que hay que decir 「〜と言うかのように」.",
               "this": [
                 {
-                  "tag": "Leer una frase no dicha",
-                  "tr": "El perro, como diciendo «¡por fin!», salió disparado moviendo la cola."
+                  "tag": "Frase directa · vivo",
+                  "tr": "El gato se me arrimó a los pies como diciendo «dame de comer ya»."
                 }
               ],
               "that": [
                 {
-                  "tag": "Comparación general",
-                  "tr": "Sonreía tan tranquilo, como si no hubiera pasado nada."
+                  "tag": "Comparación general · se añade 「と言う」",
+                  "tr": "El gato se me arrimó a los pies como si dijera «dame de comer ya»."
                 }
               ],
-              "explain": "Mira si delante de と hay una «frase»: delante de とばかりに va lo que el otro quiere decir para sus adentros (待ってました, ここぞ, 帰れ), y sirve para describir los gestos y la actitud de otros; delante de かのように va una situación que en realidad no se da (何もなかった), y es una simple comparación."
+              "wrong": {
+                "why": "かのように debe ir tras la forma llana; no puede unirse directamente a una frase como 「くれ」: hay que decir 「くれと言うかのように」"
+              },
+              "explain": "Las dos frases significan lo mismo: comparan la acción con decir una frase. Fíjate en lo que sigue a la frase: con とばかりに basta con ponerla delante, queda breve y vivo, y se usa específicamente para describir gestos y acciones de personas o animales; con かのように primero hay que añadir 「と言う」 (くれと言うかのように), porque かのように es una comparación general que va tras la forma llana y suena más escrita."
             }
           ]
         }
@@ -45511,27 +45479,11 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「と言う」 más un valor adversativo: «aunque se diga que…»",
+          "note": "Ambos vienen de 「言う」: significado original «decir»",
           "items": [
             {
-              "id": "to-wa-ie",
-              "diff": "とはいえ tiene un uso amplio, tanto escrito como hablado, y puede ir al principio de la frase; といえども es más clásica y elegante, y suele recalcar «incluso…, no es excepción».",
-              "this": [
-                {
-                  "tag": "Sin excepción · por principio",
-                  "tr": "Aunque sean niños, tienen que respetar las normas."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Aunque… · añade la realidad",
-                  "tr": "Aunque sea primavera, por la mañana y por la noche todavía hace frío."
-                }
-              ],
-              "explain": "Mira la segunda mitad: といえども suele ir seguido de principios como 「〜なければならない」「〜べきだ」 y recalca que «ni la condición más especial es una excepción»; es frecuente en leyes y discursos, y suele hacer pareja con 「いかに」「たとえ」; とはいえ suele usarse para admitir un hecho y añadir «pero en realidad…», vale también en el día a día y puede ir sola al principio de la frase (とはいえ、…)."
-            },
-            {
               "id": "to-ittemo",
+              "title": "〜といっても (aunque se diga…, en realidad)",
               "diff": "といえども es lengua escrita: «incluso…, (no es excepción)»; といっても es «aunque se diga…, en realidad no es para tanto».",
               "this": [
                 {
@@ -45545,12 +45497,13 @@
                   "tr": "Es profesor, sí, pero acaba de salir de la universidad."
                 }
               ],
-              "explain": "Mira la segunda mitad: si dice que «por especial que sea la condición, es igual» (間違うことはある, ルールは守るべきだ) → といえども, con un fuerte tono literario; si rebaja la impresión del otro (まだ…たばかりだ, 簡単なものだけ) → といっても, que es coloquial."
+              "explain": "Los dos son 「言う (decir)」 más un concesivo: といえども = 言え ＋ el ども clásico, «aunque se diga que es X, aun así…» → por especial que sea la condición, no hay excepción; といっても = 言っ ＋ ても, «aunque se diga X» → se ha dicho X, pero en realidad no es para tanto. Mira la segunda parte: si dice «también ocurre» (間違うことはある) → といえども, de sabor clásico; si rebaja la impresión del oyente (まだ大学を出たばかりだ) → といっても, coloquial."
             }
           ]
         },
         {
           "kind": "meaning",
+          "sense": 1,
           "note": "Ambas significan «incluso…, también…»",
           "items": [
             {
@@ -45569,27 +45522,61 @@
                 }
               ],
               "explain": "Mira el sustantivo de delante y el tono: delante de とて suelen ir personas como 「私」「彼」「親」, para expresar «yo (él) también tengo sentimientos», con matiz de justificación o desahogo; delante de といえども suelen ir condiciones como 「大臣」「プロ」「子供」, seguidas de un juicio objetivo de principio, con tono solemne."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Ambos significan «aunque…, (pero)…»",
+          "items": [
             {
-              "id": "tari-tomo",
-              "thisTitle": "〜といえども (uno + contador)",
-              "diff": "一円といえども es «aunque sea solo un yen» y también puede ir seguido de una valoración afirmativa; 一円たりとも solo puede ir seguido de negación o prohibición.",
+              "id": "to-wa-ie",
+              "title": "〜とはいえ (aunque…, pero)",
+              "thisTitle": "〜といえども (aunque…, pero)",
+              "diff": "Mismo significado; cambia el registro: といえども es clásico y rígido; とはいえ es habitual tanto por escrito como en el habla formal, y además puede ir al principio de la oración.",
               "this": [
                 {
-                  "tag": "Aunque sea solo… · admite afirmación",
-                  "tr": "Aunque sea solo un yen, sigue siendo dinero de los impuestos, y es valioso."
+                  "tag": "Clásico · rígido",
+                  "tr": "Aunque haya aprobado, solo he llegado a la línea de salida."
                 }
               ],
               "that": [
                 {
-                  "tag": "Solo con negación",
-                  "tr": "No se puede malgastar ni un yen."
+                  "tag": "Habitual · sirve al escribir y al hablar",
+                  "tr": "Aunque haya aprobado, solo he llegado a la línea de salida."
+                }
+              ],
+              "explain": "Las dos frases solo cambian la gramática y significan exactamente lo mismo; la diferencia es de registro. といえども es una expresión clásica, rígida y solemne, que se ve sobre todo en textos y discursos; とはいえ es habitual por escrito y en el habla formal, y además puede ir sola al principio de la oración como conector (とはいえ、……). En la conversación diaria o en un correo, とはいえ suena más natural."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Ambos significan «ni un solo… »",
+          "items": [
+            {
+              "id": "tari-tomo",
+              "title": "〜たりとも (ni un solo…)",
+              "thisTitle": "〜といえども (uno + contador)",
+              "diff": "たりとも recalca de forma tajante «ni uno solo» y debe ir seguido de una negación; といえども conserva un tono concesivo de «aunque sea tan poco».",
+              "this": [
+                {
+                  "tag": "Concesivo · razonando",
+                  "tr": "Aunque sea solo un minuto, no se permite llegar tarde."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Tajante",
+                  "tr": "No se permite llegar tarde ni un solo minuto."
                 }
               ],
               "wrong": {
                 "why": "Tras たりとも tiene que venir negación o prohibición"
               },
-              "explain": "Tras «uno + contador» las dos se parecen; mira la segunda mitad: たりとも solo va con negación o prohibición (無駄にできない); といえども significa originalmente «aunque sea…» y puede ir con negación (一円といえども無駄にはできない) o con una valoración afirmativa como «también es importante»."
+              "explain": "Tras 「一＋contador」 y con una negación detrás, los dos significan «ni un solo…». Fíjate en el tono: たりとも es un «nada en absoluto» tajante, solo se usa así y siempre va seguido de una negación o prohibición; といえども tiene un tono concesivo («aunque sea solo un minuto»), como quien razona: puede parecer poco, pero aun así no se puede…"
             }
           ]
         }
@@ -45600,7 +45587,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Todas vienen de 「と言う」: se «dice» A y se dice B: といい = ya digas A, といわず = no ya decir A, というか = no sé si decir A",
+          "note": "Ambos vienen de 「言う」: significado original «decir»",
           "items": [
             {
               "id": "to-iwazu",
@@ -45617,7 +45604,7 @@
                   "tr": "El niño estaba lleno de barro, en la cara, en las manos, por todas partes."
                 }
               ],
-              "explain": "といい = hablando de (A y también B): se enumeran varios aspectos, seguidos de la valoración del hablante (文句なしだ, さすがだ); といわず = no ya decir (A o B): seguido de un objetivo «por todas partes, todo» (泥だらけ); delante suelen ir partes del cuerpo, lugares o tiempos."
+              "explain": "Los dos «dicen» A y B por turnos: といい es la forma continuativa de 言う, «hablando de A, hablando de B», que señala varios aspectos uno a uno y va seguida de la valoración del hablante (文句なしだ、さすがだ); といわず es «sin decir A, sin decir B», es decir, sin distinguir entre A y B, seguida de un objetivo «por todas partes, todo» (泥だらけ), y lo que va delante suele ser partes del cuerpo, lugares o momentos."
             },
             {
               "id": "to-iu-ka-to-iu-ka",
@@ -45634,7 +45621,7 @@
                   "tr": "Lo que hizo ella, no sé si llamarlo audaz o temerario, pero desde luego sorprende."
                 }
               ],
-              "explain": "Mira lo que va delante: delante de といい van varios aspectos de algo (センス, 話し方, 味, 値段), para decir que todos son buenos o todos malos; delante de というか van varias palabras de valoración de una misma cosa (大胆, 無謀), para indicar que no se sabe con cuál describirla; suele ir seguido de 「とにかく」."
+              "explain": "Los dos vienen de 言う: といい es «hablando de A, hablando de B», que señala varios aspectos uno a uno → sea A o B, todo es…; というか es la pregunta a uno mismo «¿debería llamarlo A?» → no saber con qué palabra describirlo. Fíjate en lo que va delante: といい va tras varios aspectos de algo (センス、話し方), seguido de una valoración conjunta (本当に魅力的だ); というか va tras varias palabras valorativas sobre lo mismo (大胆、無謀), a menudo seguido de 「とにかく」."
             }
           ]
         },
@@ -45668,24 +45655,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas indican que una cantidad o un grado «no es mucho, no pasa de ahí»",
+          "note": "Ambos significan «como mucho, solo unos…»",
           "items": [
             {
-              "id": "ni-suginai",
-              "diff": "といったところだ es un cálculo aproximado: «como mucho, unos…»; にすぎない es una afirmación sobre un hecho conocido: «no es más que…».",
+              "id": "kurai-no-mono-da",
+              "title": "〜くらいのものだ (como mucho, solo…)",
+              "diff": "Ambos significan «como mucho, solo unos…». といったところだ es una estimación aproximada y neutra; くらいのものだ tiene un tono de «eso es todo, nada del otro mundo» y recalca lo poco que es.",
               "this": [
                 {
-                  "tag": "Cálculo · como mucho",
-                  "tr": "Mañana vendrán, como mucho, unas 50 personas."
+                  "tag": "Estimación aproximada · neutra",
+                  "tr": "Mi tiempo de estudio diario es, como mucho, de unas dos horas."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hecho · no más que",
-                  "tr": "En realidad, los participantes no fueron más que 50."
+                  "tag": "Recalca lo poco · nada del otro mundo",
+                  "tr": "Mi tiempo de estudio diario es de dos horas como mucho, y ya está."
                 }
               ],
-              "explain": "Mira si es un cálculo o un hecho: un cálculo aún no confirmado, con 「せいぜい」「〜だろう」, del tipo «más o menos así» → といったところだ; un hecho ya confirmado, con 「実際は」「たった」, y con cierto desdén → にすぎない. といったところだ también puede dar una valoración aproximada de la situación actual (まあまあといったところだ); にすぎない no tiene ese uso."
+              "explain": "Las dos frases solo cambian la gramática y ambas dicen «dos horas como mucho». La diferencia está en el tono: といったところだ solo da un rango aproximado, con tono neutro; くらいのものだ sugiere «eso es todo, nada que contar», recalca lo poco que es y a veces lleva autocrítica o desdén. Para dar una cifra aproximada de forma objetiva → といったところだ; para recalcar que es lamentablemente poco → くらいのものだ."
             }
           ]
         }
@@ -45696,24 +45684,25 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de la forma condicional de 「と言う」: «hablando de…»",
+          "note": "Ambos vienen de 「言う」: significado original «decir»",
           "items": [
             {
               "id": "to-ittara",
-              "diff": "といったらない cierra directamente la frase: «… a más no poder»; といったら primero presenta el tema y después describe el grado.",
+              "title": "〜といったら (hablando de…, es…)",
+              "diff": "といったら es «hablando de…, es…»: plantea un tema y luego nombra el ejemplo típico; といったらない es «increíblemente…» y cierra la oración por sí solo.",
               "this": [
                 {
-                  "tag": "Final de frase · cierra directamente",
+                  "tag": "Final de oración · grado extremo",
                   "tr": "El monte Fuji de aquella vez era bonito a más no poder."
                 }
               ],
               "that": [
                 {
-                  "tag": "Mitad de frase · sigue algo más",
-                  "tr": "La belleza del monte Fuji de aquella vez… era imposible describirla con palabras."
+                  "tag": "Plantea un tema · nombra lo típico",
+                  "tr": "Hablando de montañas de Japón, tiene que ser el monte Fuji."
                 }
               ],
-              "explain": "Mira lo que sigue a といったら: si va 「ない／なかった」 y la frase termina → といったらない, que por sí sola significa «… al máximo»; si sigue una descripción como 「言葉にできない」「〜ほどだ」 → といったら. El sentido es el mismo; solo cambia la estructura."
+              "explain": "Los dos son el condicional de 言う, 「と言ったら」 («si se habla de…»): si sigue un ejemplo típico → «hablando de X, es…» (日本の山といったら富士山); si sigue 「ない」 → «si se habla de lo X que era, no hay palabras» → el grado llega al límite y la oración termina ahí. Fíjate en lo que sigue a といったら: si cierra enseguida con 「ない／なかった」 → といったらない; si continúa nombrando lo típico (やっぱり富士山だ) → といったら."
             }
           ]
         },
@@ -45740,7 +45729,8 @@
             },
             {
               "id": "no-nan-no-tte",
-              "diff": "といったらない suele ir tras sustantivos en 「〜さ」 y también vale por escrito; のなんのって va tras la forma llana de un adjetivo y es puramente coloquial.",
+              "title": "〜のなんのって (increíblemente…)",
+              "diff": "といったらない suele ir tras un sustantivo en 「〜さ」 y también sirve por escrito; のなんのって va tras adjetivos y verbos (los adjetivos-な y los sustantivos necesitan 「な」) y es puramente coloquial.",
               "this": [
                 {
                   "tag": "Tras sustantivo en 「〜さ」",
@@ -45753,24 +45743,10 @@
                   "tr": "Ayer hacía un frío que pelaba; no había quien saliera a la calle."
                 }
               ],
-              "explain": "Mira la forma de delante: sustantivo 「寒さ」 + といったらない; adjetivo en forma de diccionario 「寒い」 + のなんのって. のなんのって solo se usa al charlar, y en la segunda mitad suele venir la situación concreta, o se omite sin más; といったらない también puede usarse por escrito."
-            },
-            {
-              "id": "koto-ka",
-              "diff": "といったらない va directamente tras sustantivos y adjetivos: «tan… que no se puede describir»; ことか usa una pregunta retórica, «¡cuánto…!», y necesita una palabra interrogativa.",
-              "this": [
-                {
-                  "tag": "Tras sustantivo · al máximo",
-                  "tr": "La rabia que sentí al perder era indescriptible."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Con interrogativo · retórica",
-                  "tr": "Cuando perdí… ¡no sabes la rabia que me dio!"
-                }
-              ],
-              "explain": "Mira la estructura: ことか lleva 「どんなに／どれほど」 delante y la frase tiene forma de pregunta; delante de といったらない van sustantivos o adjetivos como 「悔しさ」「寒さ」, sin interrogativo, y dice directamente que el grado llegó al máximo."
+              "wrong": {
+                "why": "のなんのって va tras adjetivos y verbos (寒いのなんのって); no puede ir directamente tras un sustantivo como 「寒さ」"
+              },
+              "explain": "Fíjate en la forma que va delante: el sustantivo 「寒さ」 ＋ といったらない; el adjetivo 「寒い」 ＋ のなんのって (con adjetivos-な se dice 「静かなのなんのって」). のなんのって solo se usa en la charla informal, y la segunda parte suele dar el resultado concreto (外に出られなかった) o directamente se omite; といったらない también puede usarse por escrito."
             }
           ]
         }
