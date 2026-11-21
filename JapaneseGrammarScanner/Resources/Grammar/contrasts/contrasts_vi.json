@@ -241,20 +241,24 @@
             },
             {
               "id": "tate-fresh",
-              "diff": "たばかり gắn được với mọi động từ; たて chỉ gắn được với một số từ hạn chế, chủ yếu dùng cho thứ vừa làm xong và người vừa bước vào một vị trí, nhấn mạnh “rất mới”.",
+              "title": "〜たて (vừa làm xong)",
+              "diff": "Cả hai đều có thể nói “vừa … xong”; たばかり nhấn vào “làm xong chưa lâu”, gắn được với mọi động từ; たて chỉ dùng cho thứ vừa làm xong và người vừa bước vào một vị trí, nhấn mạnh sự tươi mới.",
               "this": [
                 {
-                  "tag": "Mọi động từ",
-                  "tr": "Tôi làm mất cái ô vừa mua hôm qua."
+                  "tag": "た形 · làm xong chưa lâu",
+                  "tr": "Tôi đã mua bánh mì vừa nướng xong ở trước ga."
                 }
               ],
               "that": [
                 {
-                  "tag": "Vừa làm xong · tươi mới",
-                  "tr": "Bánh mì vừa ra lò rất ngon."
+                  "tag": "ます形 · tươi mới",
+                  "tr": "Tôi đã mua bánh mì mới ra lò ở trước ga."
                 }
               ],
-              "explain": "たて gắn thẳng vào ます形 (焼き＋たて), số từ dùng được có hạn: chủ yếu là đồ ăn v.v. vừa làm xong (焼きたて、できたて) và người vừa bước vào một vị trí (入社したて); たばかり gắn vào た形 (買った＋ばかり), động từ nào cũng dùng được, ví dụ 「昨日買ったばかりの傘」. Không chắc thì dùng たばかり sẽ không sai."
+              "wrong": {
+                "why": "Nói mình vừa làm xong một việc thì dùng 食べたばかり; たて chỉ bổ nghĩa cho thứ vừa làm xong hoặc người vừa bước vào một vị trí"
+              },
+              "explain": "Cả hai câu đều nói về “bánh mì vừa nướng xong”, chỉ đổi ngữ pháp: 焼いたばかり gắn vào た形, nói “nướng xong chưa lâu”; 焼きたて gắn vào ます形, nhấn mạnh “tươi, còn nóng”, giống cách nói của quảng cáo hay cửa hàng. Số từ dùng được với たて có hạn: chủ yếu là thứ vừa làm xong (焼きたて、できたて) và người vừa bước vào một vị trí (入社したて). Nói mình vừa làm xong một việc (さっき食べた) thì chỉ dùng được たばかり."
             }
           ]
         }
@@ -9106,29 +9110,6 @@
       "id": "no-darou-ka",
       "groups": [
         {
-          "kind": "look",
-          "note": "のだろうか ↔ のではないだろうか, chỉ khác 「ではない」",
-          "items": [
-            {
-              "id": "no-dewa-nai-darou-ka",
-              "diff": "のだろうか là tự hỏi, nghi ngờ; のではないだろうか là nói một cách uyển chuyển “tôi thấy là…”.",
-              "this": [
-                {
-                  "tag": "Nghi ngờ · e là không ổn",
-                  "tr": "Cứ thế này thật sự có ổn không?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Khẳng định uyển chuyển · tôi thấy ổn",
-                  "tr": "Cứ thế này chẳng phải cũng ổn sao?"
-                }
-              ],
-              "explain": "Hai câu chỉ khác nhau ở 「ではない」 nhưng nghĩa khác xa. Hãy xem sau 「の」 có 「ではない」 không: không có → のだろうか, là đặt dấu hỏi cho 「có phải vậy không」, thêm 「本当に」 thì thành hoài nghi, hàm ý 「e là không được」; có → のではないだろうか, nghĩa đen là 「chẳng phải là vậy sao」, thực ra là cách nói khéo ý kiến của mình 「tôi thấy là vậy」."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Đều diễn tả việc tự hỏi “…nhỉ?”",
           "items": [
@@ -9663,25 +9644,26 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ bị động 「られる」 — nghĩa gốc là 「chịu hành động của người khác」",
+          "note": "Cả hai đều bắt nguồn từ trợ động từ 「られる」 — nghĩa gốc là sự việc tự nhiên xảy ra, ngoài ý mình",
           "items": [
             {
-              "id": "causative-passive",
+              "id": "to-kangaerareru",
               "thisTitle": "〜れる・〜られる (bị động)",
-              "diff": "Bị động là “bị người khác làm…”; させられる là “bị ép phải tự mình làm…”.",
+              "title": "〜と考えられる (suy đoán khách quan)",
+              "diff": "Bị động là “bị người khác …”; と考えられる là “có thể cho rằng …”, nói phán đoán một cách khách quan.",
               "this": [
                 {
-                  "tag": "Người khác làm · tôi chịu thiệt",
-                  "tr": "Bánh của tôi bị em trai ăn mất."
+                  "tag": "người に + られる → bị …",
+                  "tr": "Phương án đó bị trưởng phòng phản đối."
                 }
               ],
               "that": [
                 {
-                  "tag": "Bị ép tự mình làm",
-                  "tr": "Tôi bị mẹ bắt ăn rau."
+                  "tag": "〜と + 考えられる → có thể cho rằng",
+                  "tr": "Có thể cho rằng phương án đó khó thực hiện."
                 }
               ],
-              "explain": "Cả hai đều bắt nguồn từ 「られる」, nghĩa gốc là 「chịu hành động của người khác」. Nếu cái mình chịu là hành động 「ăn」 của người khác → 弟に食べられた: người ăn là em trai, mình là bên bị thiệt; nếu cái mình chịu là hành động 「bắt mình ăn」 của người khác (sai khiến 食べさせる) → 母に食べさせられた: người ăn là chính mình, bị mẹ bắt ăn. Vì vậy hãy xem trước 「られる」 có 「させ」 không: không có → người khác làm, mình chịu ảnh hưởng; có → người khác bắt mình làm, mình bị ép làm."
+              "explain": "「られる」 thường được cho là ban đầu mang nghĩa “sự việc tự nhiên xảy ra, ngoài ý mình”. Sự việc ập đến chủ ngữ mà chủ ngữ không quyết định được → bị động: phương án không tự muốn bị phản đối, mà là 「部長に」 phản đối nó (反対された). Phán đoán không phải do mình cố ý đưa ra mà tự nhiên rút ra từ tình hình → と考えられる: “có thể cho rằng khó thực hiện”, nên nghe khách quan, nhẹ nhàng, hay gặp trong tin tức, báo cáo. Phân biệt bằng cách xem phía trước: có người thực hiện hành động như 「部長に」 → bị động; phía trước là một phán đoán dẫn bằng 「〜と」 → と考えられる."
             }
           ]
         },

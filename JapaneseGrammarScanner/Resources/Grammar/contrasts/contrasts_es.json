@@ -241,20 +241,24 @@
             },
             {
               "id": "tate-fresh",
-              "diff": "たばかり va con cualquier verbo; たて solo con un número limitado de palabras, sobre todo cosas recién hechas y personas que acaban de asumir un papel, y recalca «muy nuevo».",
+              "title": "〜たて (recién hecho)",
+              "diff": "Ambos pueden significar «recién …»; たばかり se centra en «hace poco que se hizo» y va con cualquier verbo; たて solo sirve para cosas recién hechas y personas que acaban de asumir un papel, y recalca lo fresco.",
               "this": [
                 {
-                  "tag": "Cualquier verbo",
-                  "tr": "Perdí el paraguas que compré ayer mismo."
+                  "tag": "た形 · hace poco que se hizo",
+                  "tr": "Compré pan que acababan de hornear en la tienda frente a la estación."
                 }
               ],
               "that": [
                 {
-                  "tag": "Recién hecho · fresco",
-                  "tr": "El pan recién horneado está delicioso."
+                  "tag": "ます形 · fresco",
+                  "tr": "Compré pan recién horneado en la tienda frente a la estación."
                 }
               ],
-              "explain": "たて se une directamente a la ます形 (焼き＋たて) y solo funciona con un número limitado de palabras: sobre todo comida y cosas recién hechas (焼きたて, できたて) y personas que acaban de asumir un papel (入社したて). たばかり se une a la た形 (買った＋ばかり) y sirve con cualquier verbo, como en 「昨日買ったばかりの傘」. Si dudas, con たばかり nunca te equivocas."
+              "wrong": {
+                "why": "Para decir que uno mismo acaba de hacer algo se usa 食べたばかり; たて solo describe cosas recién hechas o personas que acaban de asumir un papel"
+              },
+              "explain": "Las dos frases hablan de «pan recién horneado»; solo cambia la gramática. 焼いたばかり se une a la た形 y dice «hace poco que se horneó»; 焼きたて se une a la ます形 y recalca «fresco y calentito», más propio de un anuncio o de una tienda. たて solo funciona con un número limitado de palabras: sobre todo cosas recién hechas (焼きたて, できたて) y personas que acaban de asumir un papel (入社したて). Para decir que uno mismo acaba de hacer algo (さっき食べた) solo sirve たばかり."
             }
           ]
         }
@@ -9106,29 +9110,6 @@
       "id": "no-darou-ka",
       "groups": [
         {
-          "kind": "look",
-          "note": "のだろうか ↔ のではないだろうか, solo cambia 「ではない」",
-          "items": [
-            {
-              "id": "no-dewa-nai-darou-ka",
-              "diff": "のだろうか es preguntarse a uno mismo, una duda; のではないだろうか es una forma indirecta de decir «creo que…».",
-              "this": [
-                {
-                  "tag": "Duda · seguramente no",
-                  "tr": "¿De verdad está bien seguir así?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Opinión indirecta · creo que sí",
-                  "tr": "¿No estaría bien seguir así?"
-                }
-              ],
-              "explain": "Las dos frases solo se diferencian en 「ではない」, pero el sentido cambia mucho. Mira si después de 「の」 aparece 「ではない」: si no → のだろうか, que pone un signo de interrogación a «¿será así?»; con 「本当に」 se vuelve duda, con el trasfondo de «seguramente no». Si aparece → のではないだろうか, literalmente «¿no será así?», pero en realidad es una forma suave de dar tu opinión: «yo creo que sí»."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Ambas expresan una pregunta a uno mismo: «¿…será?»",
           "items": [
@@ -9663,25 +9644,26 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambos vienen de la pasiva 「られる」: originalmente «recibir la acción de otro»",
+          "note": "Ambos vienen del auxiliar 「られる」: originalmente, algo que ocurre por sí solo, sin que uno lo controle",
           "items": [
             {
-              "id": "causative-passive",
+              "id": "to-kangaerareru",
               "thisTitle": "〜れる・〜られる (pasiva)",
-              "diff": "La pasiva es «alguien me hizo…»; させられる es «me obligaron a hacer… yo mismo».",
+              "title": "〜と考えられる (deducción objetiva)",
+              "diff": "La pasiva es «ser …do por alguien»; と考えられる es «se puede considerar que…», y presenta un juicio como objetivo.",
               "this": [
                 {
-                  "tag": "Otro lo hace · yo salgo perjudicado",
-                  "tr": "Mi hermano pequeño se me comió el pastel."
+                  "tag": "persona に + られる → ser …do",
+                  "tr": "El jefe de departamento se opuso a ese plan."
                 }
               ],
               "that": [
                 {
-                  "tag": "Obligado a hacerlo yo",
-                  "tr": "Mi madre me obligó a comer verdura."
+                  "tag": "〜と + 考えられる → se puede considerar",
+                  "tr": "Se considera que ese plan es difícil de llevar a cabo."
                 }
               ],
-              "explain": "Ambos vienen de 「られる」, cuyo sentido original es «recibir la acción de otro». Si lo que recibes es la acción de «comer» de otro → 弟に食べられた: quien come es tu hermano, y tú eres el perjudicado; si lo que recibes es la acción de «hacerte comer» de otro (el causativo 食べさせる) → 母に食べさせられた: quien come eres tú, obligado por tu madre. Así que mira si hay 「させ」 delante de 「られる」: no → otro lo hizo y te afectó; sí → otro te hizo hacerlo y lo hiciste obligado."
+              "explain": "Se suele pensar que 「られる」 significaba al principio «algo ocurre por sí solo, sin que uno lo controle». Algo le sobreviene al sujeto sin que él lo decida → pasiva: el plan no eligió recibir la oposición; fue 「部長に」 quien se opuso (反対された). Un juicio que no se toma a propósito, sino que se desprende por sí solo de la situación → と考えられる: «se puede considerar que es difícil de llevar a cabo», por eso suena objetivo y suave, y es habitual en noticias e informes. Para distinguirlos, mira lo que va delante: alguien que realiza la acción, como 「部長に」 → pasiva; un juicio introducido por 「〜と」 → と考えられる."
             }
           ]
         },

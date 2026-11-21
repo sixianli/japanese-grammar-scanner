@@ -241,20 +241,24 @@
             },
             {
               "id": "tate-fresh",
-              "diff": "たばかり works with any verb; たて works with only a limited set of words, mostly for things just made and people who have just taken on a role, stressing “very new”.",
+              "title": "〜たて (just made)",
+              "diff": "Both can mean “just …ed”; たばかり focuses on “not long since it was done” and works with any verb; たて is only for things just made and people who just took on a role, and stresses freshness.",
               "this": [
                 {
-                  "tag": "Any verb",
-                  "tr": "I lost the umbrella I bought just yesterday."
+                  "tag": "た形 · not long since it was done",
+                  "tr": "I bought some bread that had just been baked at the shop by the station."
                 }
               ],
               "that": [
                 {
-                  "tag": "Just made · fresh",
-                  "tr": "Freshly baked bread is delicious."
+                  "tag": "ます形 · fresh",
+                  "tr": "I bought some freshly baked bread at the shop by the station."
                 }
               ],
-              "explain": "たて attaches directly to the ます形 (焼き＋たて) and only works with a limited set of words: mostly freshly made food and the like (焼きたて, できたて), and people who have just taken on a role (入社したて). たばかり attaches to the た形 (買った＋ばかり) and works with any verb, as in 「昨日買ったばかりの傘」. When unsure, たばかり is never wrong."
+              "wrong": {
+                "why": "To say you've just done something yourself, use 食べたばかり; たて only describes things just made or people who just took on a role"
+              },
+              "explain": "Both sentences are about “bread that was just baked”; only the grammar changes. 焼いたばかり attaches to the た形 and says “not long since it was baked”; 焼きたて attaches to the ます形 and stresses “fresh and warm,” sounding more like an ad or a shop's wording. たて only works with a limited set of words: mostly things just made (焼きたて, できたて) and people who just took on a role (入社したて). To say you've just done something yourself (さっき食べた), only たばかり works."
             }
           ]
         }
@@ -9106,29 +9110,6 @@
       "id": "no-darou-ka",
       "groups": [
         {
-          "kind": "look",
-          "note": "のだろうか ↔ のではないだろうか, differing only by 「ではない」",
-          "items": [
-            {
-              "id": "no-dewa-nai-darou-ka",
-              "diff": "のだろうか is asking oneself, a doubt; のではないだろうか is a roundabout way of saying “I think…”.",
-              "this": [
-                {
-                  "tag": "Doubt · probably not OK",
-                  "tr": "Is it really OK to carry on like this?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Indirect claim · I think it's fine",
-                  "tr": "Wouldn't it be fine to carry on like this?"
-                }
-              ],
-              "explain": "The two sentences differ only by 「ではない」, yet the meanings are far apart. Check whether 「ではない」 follows 「の」: without it → のだろうか, putting a question mark on “is it so?”; add 「本当に」 and it becomes doubt, implying “probably not.” With it → のではないだろうか, literally “isn't it so?”, but really a gentle way of giving your own view: “I think it is.”"
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Both ask oneself “I wonder…?”",
           "items": [
@@ -9663,25 +9644,26 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from the passive 「られる」 — originally “receiving someone else's action”",
+          "note": "Both come from the auxiliary 「られる」 — originally, something happening naturally, beyond one's control",
           "items": [
             {
-              "id": "causative-passive",
+              "id": "to-kangaerareru",
               "thisTitle": "〜れる・〜られる (passive)",
-              "diff": "The passive is “someone did … to me”; させられる is “I was made to do … myself”.",
+              "title": "〜と考えられる (objective inference)",
+              "diff": "The passive is “be …ed by someone”; と考えられる is “it can be thought that …”, which makes a judgment sound objective.",
               "this": [
                 {
-                  "tag": "Someone else did it · I suffered",
-                  "tr": "My cake got eaten by my little brother."
+                  "tag": "person に + られる → be …ed",
+                  "tr": "That plan was opposed by the department head."
                 }
               ],
               "that": [
                 {
-                  "tag": "Made to do it myself",
-                  "tr": "My mom made me eat my vegetables."
+                  "tag": "〜と + 考えられる → it can be thought",
+                  "tr": "That plan is thought to be difficult to carry out."
                 }
               ],
-              "explain": "Both come from 「られる」, originally “receiving someone else's action.” If what you receive is someone's action of “eating” → 弟に食べられた: your brother is the one eating, and you're the one who loses out; if what you receive is someone's action of “making you eat” (the causative 食べさせる) → 母に食べさせられた: you're the one eating, forced to by your mother. So check whether 「させ」 comes before 「られる」: no → someone else did it and it affected you; yes → someone made you do it and you were forced to."
+              "explain": "「られる」 is generally believed to have first meant “something happens naturally, beyond one's control.” Something lands on the subject without its say → passive: the plan didn't choose to be opposed; 「部長に」 opposed it (反対された). A judgment isn't something you deliberately make but something that naturally follows from the situation → と考えられる: “it can be thought that it's hard to carry out,” so it sounds objective and soft, and is common in news and reports. To tell them apart, look at what comes before: a doer such as 「部長に」 → passive; a judgment introduced by 「〜と」 → と考えられる."
             }
           ]
         },
