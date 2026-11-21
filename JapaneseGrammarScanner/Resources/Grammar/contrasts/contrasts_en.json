@@ -2010,27 +2010,27 @@
       "groups": [
         {
           "kind": "root",
-          "note": "All are built from the prefixes 「こ・そ・あ・ど」 — the prefix shows distance, the ending shows the category",
+          "note": "All come from the old Japanese pronoun 「こ」, whose basic meaning is “near the speaker (this)”",
           "items": [
             {
               "id": "kosoado-determiners",
-              "diff": "これ stands alone, directly followed by 「は・が・を」; この must be followed by a noun.",
+              "diff": "これ is a noun by itself, directly followed by 「は・が・を」; この must be followed by a noun.",
               "this": [
                 {
-                  "tag": "Stands alone",
-                  "tr": "This is my book."
+                  "tag": "Used alone as a noun",
+                  "tr": "This is my older brother's bag."
                 }
               ],
               "that": [
                 {
                   "tag": "＋ noun",
-                  "tr": "This book is mine."
+                  "tr": "This bag is my older brother's."
                 }
               ],
               "wrong": {
                 "why": "To modify a noun, use 「この」"
               },
-              "explain": "Look at what comes right after: a particle 「は・が・を」 → これ; a noun (本、人、店) → この. 「これ」 is a pronoun and can't sit directly in front of a noun. The same goes for その／それ, あの／あれ and どの／どれ."
+              "explain": "The basic meaning of 「こ」 is “near the speaker (this)”. Add 「れ」, which points to a thing, and you get 「これ」 — “this thing”. It is a noun on its own, so 「は」 follows directly. Add 「の」, meaning “of / …'s”, and you get 「この」 — “of here”, which can only hang in front of a noun, so a noun like 「かばん」 comes next. Just check whether the word right after it is the particle 「は」 or a noun like 「かばん」. The same goes for 「それ／その」."
             },
             {
               "id": "kosoado-places",
@@ -2047,7 +2047,7 @@
                   "tr": "Where is this (place)?"
                 }
               ],
-              "explain": "Check whether it's a thing or a place: the ending 「れ」 refers to things and pairs with 「何」; the ending 「こ」 refers to places and pairs with 「どこ」. The same goes for そこ／それ and あそこ／あれ."
+              "explain": "The basic meaning of 「こ」 is “near the speaker (this)”. Add 「れ」, which points to a thing, and you get 「これ」 (this thing); to ask about a thing, use 「何」. Add 「こ」, which marks a place, and you get 「ここ」 (this place); to ask about a place, use 「どこ」. So whether the question uses 「何」 or 「どこ」 tells you if it's about a thing or a place. The same goes for 「それ／そこ」."
             }
           ]
         }
@@ -2056,33 +2056,6 @@
     {
       "id": "koto-ga-dekiru",
       "groups": [
-        {
-          "kind": "root",
-          "note": "Both are 「〜ができる」 (出来る: can do, be able) — ことができる＝こと (turns an action into a noun)＋ができる",
-          "items": [
-            {
-              "id": "ga-wakaru-dekiru",
-              "title": "〜ができる",
-              "diff": "Nouns attach directly to 「ができる」; actions must be expressed as “verb＋ことができる”.",
-              "this": [
-                {
-                  "tag": "Verb＋こと",
-                  "tr": "I can write letters in Japanese."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Noun directly",
-                  "tr": "I can speak Japanese."
-                }
-              ],
-              "wrong": {
-                "why": "A verb needs 「こと」 added"
-              },
-              "explain": "Look at what comes before 「ができる」: nouns (日本語、テニス、料理) → attach directly; verbs (書く、泳ぐ) → must add 「こと」 first to become a noun. English just says “can…” for both, so it's easy to leave out こと."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Both mean “can, be able to”",
@@ -2104,6 +2077,27 @@
                 }
               ],
               "explain": "Same meaning — look at the setting and the particle: notices, explanations, formal settings → ことができます, and the object keeps 「を」 (本を借りる); chatting with friends → the potential form sounds more natural, and the object often changes to 「が」 (本が借りられる)."
+            },
+            {
+              "id": "ga-wakaru-dekiru",
+              "title": "〜ができる (can, know how to)",
+              "diff": "Nouns attach directly to 「ができる」; actions must be expressed as “verb＋ことができる”.",
+              "this": [
+                {
+                  "tag": "Verb＋こと",
+                  "tr": "I can play the piano."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Noun directly",
+                  "tr": "I can play the piano."
+                }
+              ],
+              "wrong": {
+                "why": "A verb needs 「こと」 added first"
+              },
+              "explain": "Same meaning — “can, know how to”. Look at what comes before 「ができる」: a noun (ピアノ、日本語) attaches directly; a verb (弾く、書く) must first take 「こと」 to become a noun. ことができる spells out the actual action and also sounds more formal; when you just mean having a skill, noun＋ができる is shorter. English says “can…” for both, so it's easy to leave out こと."
             }
           ]
         }
@@ -2114,88 +2108,24 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both can turn an action into a noun — “the act of doing…”",
+          "note": "Both mean “like doing …”",
           "items": [
             {
               "id": "no-ga-suki",
-              "diff": "こと is more abstract and can be used in 「趣味は〜ことです」; の is more concrete and colloquial, often used in 「〜のが好き」.",
+              "diff": "こと is slightly formal and leans written; の is more colloquial and more common in everyday conversation.",
               "this": [
                 {
-                  "tag": "Sentence-end explanation · only こと",
-                  "tr": "My hobby is taking photos."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Before 好き · usually の",
+                  "tag": "Slightly formal · writing, self-introductions",
                   "tr": "I like taking photos."
                 }
               ],
-              "wrong": {
-                "why": "When 「AはBです」 explains a hobby or dream, only こと works"
-              },
-              "explain": "Look at the sentence structure: 「趣味は／夢は〜」 ending with 「です」 → only ことです; before 「好き・上手・嫌い」 both work, but 「のが好き」 is more natural in conversation."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ku-naru-ni-naru",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "All express “change”",
-          "items": [
-            {
-              "id": "ni-suru-decide",
-              "title": "〜くする・〜にする (making something change)",
-              "diff": "くなる／になる is changing naturally; くする／にする is someone deliberately making it change.",
-              "this": [
-                {
-                  "tag": "くなる · natural change",
-                  "tr": "The sun came in and the room got warm."
-                },
-                {
-                  "tag": "になる · natural change",
-                  "tr": "Because of the snow, the yard turned pure white."
-                }
-              ],
               "that": [
                 {
-                  "tag": "くする · someone changes it",
-                  "tr": "I turned on the air conditioner and warmed up the room."
-                },
-                {
-                  "tag": "にする · someone changes it",
-                  "tr": "I painted the wall pure white."
+                  "tag": "Colloquial · everyday chat",
+                  "tr": "I like taking photos."
                 }
               ],
-              "explain": "Look at the particle and the cause: 「部屋が」「庭が」 ＋ a natural cause (日が当たる, 雪) → くなる／になる; 「部屋を」「壁を」 ＋ a person's action (エアコンをつける, ペンキ) → くする／にする. なる takes が, する takes を."
-            },
-            {
-              "id": "you-ni-naru",
-              "diff": "Adjectives and nouns use くなる／になる; verbs use ようになる.",
-              "this": [
-                {
-                  "tag": "になる · na-adjective",
-                  "tr": "I got better at swimming."
-                },
-                {
-                  "tag": "くなる · i-adjective",
-                  "tr": "Swimming got more fun."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Verb → ようになる",
-                  "tr": "I became able to swim."
-                }
-              ],
-              "wrong": {
-                "why": "A verb can't attach directly to になる"
-              },
-              "explain": "Look at the word before 「なる」: 上手 is a na-adjective → になる; 楽しい is an i-adjective → くなる (nouns: 医者 → 医者になる); 泳げる is a verb → add 「よう」 first to make ようになる. English uses “become / get…” for everything, so the most common mistake is ✗泳げるになった."
+              "explain": "Before 「好き・嫌い・得意」 both work and the meaning doesn't change: こと is slightly formal, common in essays and self-introductions; の is more colloquial, and 「〜のが好き」 sounds more natural in everyday chat."
             }
           ]
         }
@@ -2206,118 +2136,51 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "All express “about” or a “degree”",
+          "sense": 1,
+          "note": "Both mean “about …”",
           "items": [
             {
-              "id": "goro-around-time",
-              "diff": "くらい follows a length of time (how many hours); ごろ follows a point in time (what time).",
+              "id": "bakari-only",
+              "title": "〜ばかり (about)",
+              "diff": "Both mean “around …”: くらい is the most ordinary; ばかり is a bit more formal and a little old-fashioned.",
               "this": [
                 {
-                  "tag": "Duration",
-                  "tr": "I slept about seven hours yesterday."
+                  "tag": "Most ordinary",
+                  "tr": "I bought about five apples."
                 }
               ],
               "that": [
                 {
-                  "tag": "Point in time",
-                  "tr": "I went to bed around eleven yesterday."
+                  "tag": "A bit formal · a bit old-fashioned",
+                  "tr": "I bought some five apples."
                 }
               ],
-              "wrong": {
-                "why": "ごろ only follows a point in time; for duration, use くらい"
-              },
-              "explain": "Look at the word before: 「〜時間」, 「〜日」 or 「〜年」 is a span of time → くらい／ぐらい; a point in time like 「〜時」 or 「〜月」 → ごろ. In speech some people say 「11時ぐらい」, but 「〜時間ごろ」 is always wrong."
-            },
-            {
-              "id": "hodo-degree",
-              "title": "〜ほど (degree)",
-              "diff": "For degree, the two are mostly interchangeable; for “at least this much”, only くらい works.",
-              "this": [
-                {
-                  "tag": "At least this much",
-                  "tr": "However busy you are, you can at least make a phone call, right?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Degree",
-                  "tr": "My feet hurt so much that I can't walk anymore."
-                }
-              ],
-              "wrong": {
-                "why": "For “at least, at minimum”, only くらい works"
-              },
-              "explain": "Check whether the example is “extreme” or “easy”: using something extreme to show a degree (歩けないほど／くらい) → either works; using the most basic, easiest thing to make a demand (電話ぐらい) → only くらい (ぐらい), often with a reproachful tone."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "mada-te-inai",
-      "groups": [
-        {
-          "kind": "look",
-          "note": "まだ〜ていない ↔ まだ〜ている — they differ only by 「ない」",
-          "items": [
-            {
-              "id": "te-iru",
-              "title": "まだ〜ている (still …ing)",
-              "diff": "まだ〜ていない is “not … yet”; まだ〜ている is “still …ing”.",
-              "this": [
-                {
-                  "tag": "Not asleep yet",
-                  "tr": "It's already midnight, but my little brother hasn't gone to bed yet."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Still asleep",
-                  "tr": "It's already noon, but my little brother is still sleeping."
-                }
-              ],
-              "explain": "The same 「まだ」 — check whether the sentence ends with 「ない」: まだ寝ていない → going to sleep, which should have happened, hasn't yet; まだ寝ている → the state of sleeping hasn't ended. Just as “not asleep yet” and “still asleep” look similar in English, in Japanese they differ only by 「ない」."
+              "explain": "After a quantity, both mean “around …” and are interchangeable: in everyday conversation くらい (ぐらい) is the most ordinary; ばかり is a bit more formal and has a slightly old-fashioned feel, so young people rarely use it in daily speech."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "All mean “not … yet” up to now",
+          "sense": 4,
+          "note": "Both mean “to the point of …”",
           "items": [
             {
-              "id": "nakanaka-nai",
-              "diff": "まだ〜ていない just objectively says “not yet”; なかなか〜ない means “just won't…”, with impatience from waiting.",
+              "id": "hodo-degree",
+              "title": "〜ほど (degree)",
+              "diff": "Both work when using an exaggerated example to show degree: くらい is more colloquial, ほど slightly more formal.",
               "this": [
                 {
-                  "tag": "Objective · not yet",
-                  "tr": "The bus hasn't come yet."
+                  "tag": "Colloquial · more casual",
+                  "tr": "It was so funny I laughed until I cried."
                 }
               ],
               "that": [
                 {
-                  "tag": "Just won't · impatient",
-                  "tr": "I've been waiting for thirty minutes, and the bus just won't come."
+                  "tag": "Slightly formal · also common in writing",
+                  "tr": "It was so funny I laughed until I cried."
                 }
               ],
-              "explain": "Look for a feeling of impatient waiting: just reporting the current situation → まだ来ていない; you've waited a long time and keep being disappointed (30分も待っているのに) → なかなか来ない. Also, なかなか is followed by a plain 「ない」, not 「ていない」."
-            },
-            {
-              "id": "ta-koto-ga-aru",
-              "title": "〜たことがない (have never)",
-              "diff": "まだ〜ていない is something you plan to do but “haven't done yet”; 〜たことがない is something you've “never done” in your life.",
-              "this": [
-                {
-                  "tag": "Not yet · will do later",
-                  "tr": "I haven't seen that movie yet. I'm going to see it next week."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Never · experience",
-                  "tr": "I've never once seen a horror movie."
-                }
-              ],
-              "explain": "In English both can be “I haven't seen it”. Look at the surrounding words: something you plan to do later (来週見に行く) → まだ〜ていない; your life experience up to now, unrelated to any plans (一度も) → 〜たことがない."
+              "explain": "When an exaggerated example shows the degree, both work and the meaning stays the same: くらい (ぐらい) is more colloquial and casual; ほど is slightly more formal and more common in writing and formal settings."
             }
           ]
         }
@@ -2328,7 +2191,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「まで」 — drawing a finish line for an action",
+          "note": "Both come from 「まで」, whose basic meaning is the end point “up to …”",
           "items": [
             {
               "id": "made-ni-deadline",
@@ -2348,31 +2211,31 @@
               "wrong": {
                 "why": "「出す」 is a one-time action, so use までに"
               },
-              "explain": "Look at the verb that follows: actions that can continue, like 待つ, 働く or 勉強する → まで; actions completed in a moment, like 帰る, 出す or 着く → までに."
+              "explain": "Both contain 「まで」, whose basic meaning is the end point “up to …”. まで alone says the action continues all the way to that end point, so it goes with actions that can last, like 「待って」. Add 「に」, which marks a point in time, and you get までに: the end point becomes a deadline, and the action has to be done once at some moment before it, so it goes with actions completed in one go, like 「帰ります」. Check whether the verb that follows can continue over time."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both can mean “even…”",
+          "note": "Both mean “even …”",
           "items": [
             {
               "id": "sae",
               "title": "〜さえ (even)",
-              "diff": "まで is “even this is added”, mostly for adding on or escalating; さえ is “even the most basic thing”, mostly used with a negative.",
+              "diff": "Both mean “even …”: まで stresses that the range has spread all the way to this point; さえ stresses that the example given is the most extreme.",
               "this": [
                 {
-                  "tag": "Adding on · more and more",
-                  "tr": "Not only is it raining, but even the wind has picked up."
+                  "tag": "Range spreads to someone unexpected",
+                  "tr": "Even children laughed at me."
                 }
               ],
               "that": [
                 {
-                  "tag": "Even the basics · negative",
-                  "tr": "My fever is so high that I can't even drink water."
+                  "tag": "Gives the most extreme example",
+                  "tr": "Even children laughed at me."
                 }
               ],
-              "explain": "Look at which way the sentence is going: adding one more item after 「〜だけでなく」, with things getting worse (or better) and worse → まで; naming the most basic, easiest thing and saying even that can't be done → さえ, usually followed by a negative."
+              "explain": "Both fit the same sentence, meaning “even children…”. まで feels like others were laughing at me and in the end even children joined in — it stresses the range spreading to someone unexpected. さえ feels like children were the last ones who should laugh at me, yet even they did — it stresses that this example is the most extreme. When a negative follows, saying you can't even do the most basic thing, さえ is the usual choice."
             }
           ]
         }
@@ -2383,7 +2246,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 前 (まえ) — originally “in front” in space",
+          "note": "Both come from 「前（まえ）」, whose basic meaning is “in front” in space",
           "items": [
             {
               "id": "no-mae-position",
@@ -2401,7 +2264,30 @@
                   "tr": "There's a bank in front of the station."
                 }
               ],
-              "explain": "Both sentences use 「〜の前に」 — look at the noun before it: activities like 食事, 会議, 試験 → “before” in time; places or things like 駅, 家, 机 → “in front of” in space, often followed by 「あります・います」."
+              "explain": "The basic meaning of 「前」 is “in front” in space: 駅の前 = the area in front of the station, often followed by 「あります・います」. If you picture time as a line, the stretch of time lined up ahead of an event is also called 「前」, which gives the time meaning “before”: 食事の前 = before eating, followed by the action you do first. To tell them apart, look at the noun before 「の前」: a place or thing like 駅、家、机 → space; an activity like 食事、会議、試験 → time."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "まえに ↔ までに: only one kana differs, 「え／で」",
+          "items": [
+            {
+              "id": "made-ni-deadline",
+              "diff": "まえに states the order of two events; までに states a deadline — any time before it is fine.",
+              "this": [
+                {
+                  "tag": "Order",
+                  "tr": "Please take the medicine before going to bed."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Deadline",
+                  "tr": "Please take the medicine by bedtime (any time before then)."
+                }
+              ],
+              "explain": "The two sentences differ by just one kana, え／で. 前に (まえに) is about order: take the medicine first, then go to bed. までに treats “going to bed” as a deadline: you can take it any time between now and bedtime, as long as it's not later than that. English often says “before …” for both, so they're easy to mix up."
             }
           ]
         },
@@ -2410,42 +2296,22 @@
           "note": "All mean “(do) before…”",
           "items": [
             {
-              "id": "made-ni-deadline",
-              "diff": "前に says which of two things comes first; までに gives a deadline — just finish before then.",
-              "this": [
-                {
-                  "tag": "Order",
-                  "tr": "Please close the window before you go out."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Deadline",
-                  "tr": "Please submit your report by Friday."
-                }
-              ],
-              "explain": "Look at what comes before: another action (出かける、寝る) → 前に, only giving the order; a date or time (金曜日、３時) as a deadline → までに, stressing “by then at the latest” — any time before that is fine."
-            },
-            {
               "id": "uchi-ni",
-              "title": "〜うちに (while still…)",
-              "diff": "前に follows an action; うちに mostly follows a state, with the feeling of “hurry and do it while it's still…”.",
+              "title": "〜ないうちに (before … happens)",
+              "diff": "前に neutrally says “before …”; ないうちに carries urgency: “quickly, while it hasn't … yet”.",
               "this": [
                 {
-                  "tag": "Before an action",
-                  "tr": "I want to travel the world before I get old."
+                  "tag": "Neutral · order",
+                  "tr": "Let's bring in the laundry before it rains."
                 }
               ],
               "that": [
                 {
-                  "tag": "While the state lasts",
-                  "tr": "I want to travel the world while I'm young."
+                  "tag": "Urgent · while it hasn't started",
+                  "tr": "Let's bring in the laundry while it still isn't raining."
                 }
               ],
-              "wrong": {
-                "why": "前に can't follow an adjective"
-              },
-              "explain": "Look at whether an action or a state comes before it: actions of change like 年を取る, 暗くなる → 前に; states that will fade, like 若い, 元気な, 明るい → うちに, stressing “while you still can”."
+              "explain": "Both work and both mean “before it rains”: 前に just states the order neutrally; ないうちに carries the urgency of “it hasn't started yet, so hurry”, and often comes with 「早く」 or 「〜ておこう」. Note that うちに takes the negative 「降らない」, while 前に takes the affirmative 「降る」."
             }
           ]
         }
@@ -2456,7 +2322,8 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "All can be used to invite or suggest",
+          "sense": 1,
+          "note": "All invite the other person to do something together",
           "items": [
             {
               "id": "mashou",
@@ -2477,20 +2344,21 @@
             },
             {
               "id": "mashou-ka-offer",
-              "diff": "ませんか asks the other person to do something (together); ましょうか can mean “let me do it for you”.",
+              "title": "〜ましょうか (suggesting doing it together)",
+              "diff": "ませんか leaves the decision to the other person and is more indirect; ましょうか is you proposing “let's …” yourself, then asking for agreement.",
               "this": [
                 {
-                  "tag": "Ask them to join",
-                  "tr": "Shall we walk to the station together?"
+                  "tag": "Indirect · asks if they want to",
+                  "tr": "It's about time — why don't we head home?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Let me do it for you",
-                  "tr": "That looks heavy. Shall I carry your bag?"
+                  "tag": "Proactive · proposes a plan",
+                  "tr": "It's about time — shall we head home?"
                 }
               ],
-              "explain": "Look at who does the action: the other person, or the two of you together → ませんか; I offer to do it for them → ましょうか."
+              "explain": "Both fit the same sentence, meaning “it's about time we went home, isn't it?”: ませんか uses a negative question to leave the decision to the other person, so it's more indirect and suits superiors or cases where you're not sure what they think; ましょうか is you putting forward the plan yourself and then asking whether they agree."
             },
             {
               "id": "nai-invitation",
@@ -2509,24 +2377,31 @@
                 }
               ],
               "explain": "Look at who you're talking to: elders and superiors like 「先生」「部長」 → ませんか; friends and family (ねえ, 〜くん) → 「〜ない？」 with rising intonation. Both invite by asking a negative question."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both offer the other person something to eat, drink or enjoy",
+          "items": [
             {
               "id": "wa-dou-desu-ka",
               "title": "〜はいかがですか (offering)",
-              "diff": "ませんか follows an action, inviting the other person to do it; 〜はいかがですか follows a thing, offering it to them.",
+              "diff": "Both offer the other person something to drink: いかがですか names only the thing and is more formal; ませんか says the action and sounds a bit more relaxed.",
               "this": [
                 {
-                  "tag": "Action · invitation",
-                  "tr": "Would you like to have some tea?"
+                  "tag": "Names the action · relaxed",
+                  "tr": "Would you like to have some coffee or something?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Thing · offer",
-                  "tr": "How about some tea?"
+                  "tag": "Names only the thing · formal",
+                  "tr": "How about some coffee?"
                 }
               ],
-              "explain": "Look at what comes before it: a verb (飲み, 行き) ＋ ませんか, often with 「でも」, invites the other person to do something; a noun (お茶, コーヒー) ＋ はいかがですか offers the thing directly, typically said by a host or shop staff to a guest. More casually you can say はどうですか."
+              "explain": "Both sentences offer the other person coffee, and both often take 「でも」 (“… or something”): いかがですか doesn't mention the action — it just puts the thing in front of the other person, a formal phrase hosts and shop staff use with guests; ませんか spells out the action 「飲み」, sounds a bit more relaxed than いかがですか, and sometimes also implies “let's drink together”."
             }
           ]
         }
@@ -2536,16 +2411,17 @@
       "id": "mashou",
       "groups": [
         {
-          "kind": "root",
-          "note": "All come from 「う」, which expresses intention — ましょう＝ます＋う",
+          "kind": "look",
+          "note": "ましょう ↔ ましょうか: only one 「か」 apart",
           "items": [
             {
               "id": "mashou-ka-offer",
-              "diff": "ましょう means “let's … together”; adding 「か」 to make ましょうか turns it into “shall I…?” or consulting the other person.",
+              "thisTitle": "〜ましょう (suggesting doing it together)",
+              "diff": "ましょう means “let's all … together”; add one 「か」 to get ましょうか, and it becomes “shall I …?”.",
               "this": [
                 {
-                  "tag": "Let's all do it",
-                  "tr": "Come on, let's all clean up together."
+                  "tag": "Everyone does it together",
+                  "tr": "Let's all clean up together."
                 }
               ],
               "that": [
@@ -2554,30 +2430,13 @@
                   "tr": "Shall I do the cleaning?"
                 }
               ],
-              "explain": "Look at the subject and 「か」: everyone doing it together, with the speaker taking the lead → ましょう; me doing it alone for the other person, or asking their opinion → ましょうか. When offering help, 「手伝いましょう」 sounds pushy — say 「手伝いましょうか」."
-            },
-            {
-              "id": "volitional-form",
-              "diff": "ましょう is polite; the volitional form 「〜(よ)う」 is its casual form, used between friends.",
-              "this": [
-                {
-                  "tag": "Polite",
-                  "tr": "Sir, shall we get going soon?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Casual",
-                  "tr": "Hey, let's get going soon."
-                }
-              ],
-              "explain": "Look at who it's addressed to: superiors, seniors, people you don't know well → 行きましょう; friends, family → 行こう, 食べよう. Both mean the same — stating your own intention while drawing the other person in."
+              "explain": "Check whether the sentence ends with 「か」, then who does it: no 「か」, done 「みんなで」 → ましょう, “let's all … together”; with 「か」, done by 「私が」 → ましょうか, “shall I …?”, offering to help. Saying 「手伝いましょう」 outright sounds as if you've already decided for the other person; when offering help, people usually say 「手伝いましょうか」."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both can invite the other person to do something together",
+          "note": "Both invite the other person to do something together",
           "items": [
             {
               "id": "masenka",
@@ -2595,6 +2454,24 @@
                 }
               ],
               "explain": "Look at the order in the conversation: they've already agreed, or everyone has already decided → ましょう; a first invitation, not knowing if they want to → ませんか (often with 「よかったら」). Usually you ask 「〜ませんか」 first, and say 「〜ましょう」 once they agree."
+            },
+            {
+              "id": "volitional-form",
+              "title": "〜(よ)う (suggestion, invitation)",
+              "diff": "ましょう is polite; the volitional form 「〜(よ)う」 is its casual form, used between friends.",
+              "this": [
+                {
+                  "tag": "Polite",
+                  "tr": "Sir, shall we get going soon?"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Casual",
+                  "tr": "Hey, let's get going soon."
+                }
+              ],
+              "explain": "Same meaning — both draw the other person into doing something together. Look at who you're talking to: a superior like 「部長」, an elder, or someone you don't know well → 行きましょう; friends or family, often opening with 「ねえ」 → 行こう, 食べよう."
             }
           ]
         }

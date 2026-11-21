@@ -2010,27 +2010,27 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều biến đổi từ tiền tố 「こ・そ・あ・ど」 — tiền tố quyết định xa gần, phần đuôi quyết định loại",
+          "note": "Đều bắt nguồn từ đại từ tiếng Nhật cổ 「こ」 — nghĩa gốc là “gần người nói (này)”",
           "items": [
             {
               "id": "kosoado-determiners",
-              "diff": "これ dùng độc lập, phía sau là 「は・が・を」; この phía sau bắt buộc phải có danh từ.",
+              "diff": "これ tự nó là danh từ, theo sau trực tiếp là 「は・が・を」; この phía sau bắt buộc phải là danh từ.",
               "this": [
                 {
-                  "tag": "Dùng độc lập",
-                  "tr": "Đây là sách của tôi."
+                  "tag": "Đứng một mình làm danh từ",
+                  "tr": "Đây là cặp của anh trai tôi."
                 }
               ],
               "that": [
                 {
-                  "tag": "＋danh từ",
-                  "tr": "Quyển sách này là của tôi."
+                  "tag": "＋ danh từ",
+                  "tr": "Cái cặp này là của anh trai tôi."
                 }
               ],
               "wrong": {
                 "why": "Bổ nghĩa cho danh từ phải dùng 「この」"
               },
-              "explain": "Xem ngay phía sau là gì: trợ từ 「は・が・を」 → これ; danh từ (本、人、店) → この. 「これ」 là đại từ, không gắn thẳng vào trước danh từ được. その／それ、あの／あれ、どの／どれ cũng tương tự."
+              "explain": "Nghĩa gốc của 「こ」 là “gần người nói (này)”. Thêm 「れ」 chỉ đồ vật thành 「これ」 — “cái này”, tự nó là danh từ nên theo sau trực tiếp là 「は」; thêm 「の」 nghĩa là “của” thành 「この」 — “thuộc chỗ này”, chỉ có thể gắn trước danh từ, nên phía sau xuất hiện trước một danh từ như 「かばん」. Chỉ cần xem ngay sau đó là trợ từ 「は」 hay danh từ 「かばん」 là phân biệt được. 「それ／その」 cũng vậy."
             },
             {
               "id": "kosoado-places",
@@ -2047,7 +2047,7 @@
                   "tr": "Đây là đâu?"
                 }
               ],
-              "explain": "Xem nói về đồ vật hay nơi chốn: đuôi 「れ」 chỉ đồ vật, đi cặp với 「何」; đuôi 「こ」 chỉ nơi chốn, đi cặp với 「どこ」. そこ／それ、あそこ／あれ cũng tương tự."
+              "explain": "Nghĩa gốc của 「こ」 là “gần người nói (này)”. Thêm 「れ」 chỉ đồ vật thành 「これ」 (cái này), hỏi về đồ vật thì dùng 「何」; thêm 「こ」 chỉ nơi chốn thành 「ここ」 (chỗ này), hỏi về nơi chốn thì dùng 「どこ」. Vì vậy, nhìn câu hỏi dùng 「何」 hay 「どこ」 là biết đang nói về đồ vật hay nơi chốn. 「それ／そこ」 cũng vậy."
             }
           ]
         }
@@ -2056,33 +2056,6 @@
     {
       "id": "koto-ga-dekiru",
       "groups": [
-        {
-          "kind": "root",
-          "note": "Đều là 「〜ができる」 (出来る: làm được, biết) — ことができる＝こと (biến hành động thành danh từ)＋ができる",
-          "items": [
-            {
-              "id": "ga-wakaru-dekiru",
-              "title": "〜ができる",
-              "diff": "Danh từ nối thẳng với 「ができる」; hành động phải nói thành 「động từ＋ことができる」.",
-              "this": [
-                {
-                  "tag": "Động từ＋こと",
-                  "tr": "Tôi có thể viết thư bằng tiếng Nhật."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Danh từ nối thẳng",
-                  "tr": "Tôi biết tiếng Nhật."
-                }
-              ],
-              "wrong": {
-                "why": "Sau động từ phải thêm 「こと」"
-              },
-              "explain": "Xem phía trước 「ができる」: danh từ (日本語、テニス、料理) → nối thẳng; động từ (書く、泳ぐ) → bắt buộc thêm 「こと」 để thành danh từ trước. Tiếng Việt đều nói “biết…, có thể…”, nên dễ bỏ sót こと."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Đều có nghĩa “có thể, biết”",
@@ -2104,6 +2077,27 @@
                 }
               ],
               "explain": "Nghĩa như nhau, xem hoàn cảnh và trợ từ: thông báo, hướng dẫn, dịp trang trọng → ことができます, tân ngữ giữ 「を」 (本を借りる); trò chuyện với bạn → thể khả năng tự nhiên hơn, tân ngữ thường đổi thành 「が」 (本が借りられる)."
+            },
+            {
+              "id": "ga-wakaru-dekiru",
+              "title": "〜ができる（biết, có thể）",
+              "diff": "Danh từ nối thẳng với 「ができる」; hành động phải nói thành 「động từ＋ことができる」.",
+              "this": [
+                {
+                  "tag": "Động từ＋こと",
+                  "tr": "Tôi có thể chơi đàn piano."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Danh từ nối thẳng",
+                  "tr": "Tôi biết đàn piano."
+                }
+              ],
+              "wrong": {
+                "why": "Sau động từ phải thêm 「こと」 trước"
+              },
+              "explain": "Nghĩa như nhau, đều là “biết, có thể”. Xem phía trước 「ができる」: danh từ (ピアノ、日本語) nối thẳng; động từ (弾く、書く) bắt buộc thêm 「こと」 để thành danh từ trước. ことができる nói rõ hành động cụ thể, giọng cũng trang trọng hơn; khi chỉ nói mình biết một kỹ năng nào đó, danh từ＋ができる ngắn gọn hơn. Tiếng Việt đều nói “biết…, có thể…”, nên dễ bỏ sót こと."
             }
           ]
         }
@@ -2114,88 +2108,24 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều biến hành động thành danh từ: “việc làm…”",
+          "note": "Đều có nghĩa “thích làm …”",
           "items": [
             {
               "id": "no-ga-suki",
-              "diff": "こと thiên về trừu tượng, dùng được trong 「趣味は〜ことです」; の thiên về cụ thể, khẩu ngữ, hay dùng trong 「〜のが好き」.",
+              "diff": "こと hơi trang trọng, thiên về văn viết; の mang tính khẩu ngữ hơn, dùng nhiều hơn trong hội thoại hằng ngày.",
               "this": [
                 {
-                  "tag": "Giải thích ở cuối câu · chỉ dùng こと",
-                  "tr": "Sở thích của tôi là chụp ảnh."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Trước 好き · thường dùng の",
+                  "tag": "Hơi trang trọng · văn viết, tự giới thiệu",
                   "tr": "Tôi thích chụp ảnh."
                 }
               ],
-              "wrong": {
-                "why": "Khi giải thích sở thích, ước mơ bằng 「AはBです」 thì chỉ dùng こと"
-              },
-              "explain": "Xem cấu trúc câu: sau 「趣味は／夢は〜」 kết thúc bằng 「です」 → chỉ dùng ことです; trước 「好き・上手・嫌い」 thì cả hai đều được, nhưng trong hội thoại 「のが好き」 tự nhiên hơn."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ku-naru-ni-naru",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Đều chỉ “sự thay đổi”",
-          "items": [
-            {
-              "id": "ni-suru-decide",
-              "title": "〜くする・〜にする（làm cho thay đổi）",
-              "diff": "くなる／になる là tự nhiên trở nên; くする／にする là có người cố ý làm cho nó thay đổi.",
-              "this": [
-                {
-                  "tag": "くなる · thay đổi tự nhiên",
-                  "tr": "Nắng chiếu vào, căn phòng ấm lên."
-                },
-                {
-                  "tag": "になる · thay đổi tự nhiên",
-                  "tr": "Tuyết rơi, sân trở nên trắng xóa."
-                }
-              ],
               "that": [
                 {
-                  "tag": "くする · có người làm thay đổi",
-                  "tr": "Bật điều hòa lên, làm cho căn phòng ấm lên."
-                },
-                {
-                  "tag": "にする · có người làm thay đổi",
-                  "tr": "Quét sơn cho bức tường trắng tinh."
+                  "tag": "Khẩu ngữ · trò chuyện thường ngày",
+                  "tr": "Tôi thích chụp ảnh lắm."
                 }
               ],
-              "explain": "Nhìn trợ từ và nguyên nhân: 「部屋が」「庭が」＋ nguyên nhân tự nhiên (日が当たる、雪) → くなる／になる; 「部屋を」「壁を」＋ hành động của con người (エアコンをつける、ペンキ) → くする／にする. Trước なる dùng が, trước する dùng を."
-            },
-            {
-              "id": "you-ni-naru",
-              "diff": "Tính từ, danh từ dùng くなる／になる; động từ phải dùng ようになる.",
-              "this": [
-                {
-                  "tag": "になる · Tính từ đuôi な",
-                  "tr": "Bơi giỏi lên rồi."
-                },
-                {
-                  "tag": "くなる · Tính từ đuôi い",
-                  "tr": "Bơi đã trở nên vui rồi."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Động từ → ようになる",
-                  "tr": "Đã biết bơi rồi."
-                }
-              ],
-              "wrong": {
-                "why": "Động từ không nối thẳng với になる được"
-              },
-              "explain": "Xem phía trước 「なる」 là từ loại gì: 上手 là tính từ đuôi な → になる; 楽しい là tính từ đuôi い → くなる (danh từ: 医者 → 医者になる); 泳げる là động từ → phải thêm 「よう」 thành ようになる. Tiếng Việt đều nói “trở nên…”, nên dễ viết sai thành ✗泳げるになった nhất."
+              "explain": "Trước 「好き・嫌い・得意」 dùng cái nào cũng được, nghĩa không đổi: こと hơi trang trọng, hay dùng khi viết bài văn, tự giới thiệu; の mang tính khẩu ngữ hơn, khi trò chuyện thường ngày nói 「〜のが好き」 tự nhiên hơn."
             }
           ]
         }
@@ -2206,118 +2136,51 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều chỉ “khoảng” hoặc “mức độ”",
+          "sense": 1,
+          "note": "Đều có nghĩa “khoảng …”",
           "items": [
             {
-              "id": "goro-around-time",
-              "diff": "くらい đi với khoảng thời gian (mấy tiếng); ごろ đi với mốc thời gian (mấy giờ).",
+              "id": "bakari-only",
+              "title": "〜ばかり（khoảng）",
+              "diff": "Đều là “khoảng …”: くらい thông dụng nhất; ばかり hơi trang trọng, cũng hơi cổ.",
               "this": [
                 {
-                  "tag": "Khoảng thời gian",
-                  "tr": "Hôm qua tôi ngủ khoảng bảy tiếng."
+                  "tag": "Thông dụng nhất",
+                  "tr": "Tôi đã mua khoảng năm quả táo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Mốc thời gian",
-                  "tr": "Hôm qua tôi đi ngủ vào khoảng mười một giờ."
+                  "tag": "Hơi trang trọng · hơi cổ",
+                  "tr": "Tôi đã mua chừng năm quả táo."
                 }
               ],
-              "wrong": {
-                "why": "ごろ chỉ đi với mốc thời gian, khoảng thời gian phải dùng くらい"
-              },
-              "explain": "Xem từ phía trước: 「〜時間」, 「〜日」, 「〜年」 là một khoảng thời gian → くらい／ぐらい; mốc thời gian như 「〜時」, 「〜月」 → ごろ. Trong văn nói cũng có người nói 「11時ぐらい」, nhưng 「〜時間ごろ」 thì chắc chắn sai."
-            },
-            {
-              "id": "hodo-degree",
-              "title": "〜ほど（mức độ）",
-              "diff": "Khi nói mức độ thì hai từ phần lớn thay được cho nhau; khi chỉ “ít nhất chừng này” thì chỉ dùng くらい.",
-              "this": [
-                {
-                  "tag": "Ít nhất chừng này",
-                  "tr": "Dù bận đến mấy thì gọi một cuộc điện thoại chắc cũng được chứ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Mức độ",
-                  "tr": "Chân đau đến mức không đi nổi nữa."
-                }
-              ],
-              "wrong": {
-                "why": "Chỉ “ít nhất, tối thiểu” thì chỉ dùng くらい"
-              },
-              "explain": "Nhìn ví dụ là việc “rất cường điệu” hay “rất dễ”: lấy việc cường điệu để nói mức độ (歩けないほど／くらい) → cả hai đều được; lấy việc tối thiểu, dễ nhất để đưa ra yêu cầu (電話ぐらい) → chỉ dùng được くらい (ぐらい), thường mang giọng trách móc."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "mada-te-inai",
-      "groups": [
-        {
-          "kind": "look",
-          "note": "まだ〜ていない ↔ まだ〜ている, chỉ khác 「ない」",
-          "items": [
-            {
-              "id": "te-iru",
-              "title": "まだ〜ている（vẫn đang…）",
-              "diff": "まだ〜ていない là “vẫn chưa…”; まだ〜ている là “vẫn đang…”.",
-              "this": [
-                {
-                  "tag": "Vẫn chưa ngủ",
-                  "tr": "Đã nửa đêm rồi mà em trai tôi vẫn chưa ngủ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Vẫn đang ngủ",
-                  "tr": "Đã trưa rồi mà em trai tôi vẫn đang ngủ."
-                }
-              ],
-              "explain": "Cùng một chữ 「まだ」, xem cuối câu có 「ない」 không: まだ寝ていない → việc đáng lẽ phải ngủ vẫn chưa xảy ra; まだ寝ている → trạng thái ngủ vẫn chưa kết thúc. Tiếng Việt “vẫn chưa ngủ” và “vẫn đang ngủ” chỉ khác một chữ, tiếng Nhật cũng chỉ khác 「ない」."
+              "explain": "Đứng sau số lượng, cả hai đều nghĩa là “khoảng …” và có thể thay cho nhau: trong hội thoại hằng ngày, くらい (ぐらい) thông dụng nhất; ばかり hơi trang trọng, lại mang chút sắc thái cổ, người trẻ bình thường ít nói."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều có nghĩa đến giờ “vẫn chưa…”",
+          "sense": 4,
+          "note": "Đều có nghĩa “đến mức …”",
           "items": [
             {
-              "id": "nakanaka-nai",
-              "diff": "まだ〜ていない chỉ nói khách quan “vẫn chưa”; なかなか〜ない là “mãi mà không…”, mang tâm trạng sốt ruột vì chờ đợi.",
+              "id": "hodo-degree",
+              "title": "〜ほど（mức độ）",
+              "diff": "Khi dùng một việc phóng đại để diễn tả mức độ thì cả hai đều được: くらい khẩu ngữ hơn, ほど hơi trang trọng.",
               "this": [
                 {
-                  "tag": "Khách quan · vẫn chưa",
-                  "tr": "Xe buýt vẫn chưa đến."
+                  "tag": "Khẩu ngữ · thoải mái hơn",
+                  "tr": "Buồn cười quá, tôi cười đến chảy cả nước mắt."
                 }
               ],
               "that": [
                 {
-                  "tag": "Mãi không · sốt ruột",
-                  "tr": "Đã đợi những ba mươi phút rồi mà xe buýt mãi vẫn không đến."
+                  "tag": "Hơi trang trọng · cũng hay dùng trong văn viết",
+                  "tr": "Buồn cười quá, tôi cười đến mức chảy nước mắt."
                 }
               ],
-              "explain": "Xem có tâm trạng “chờ đến sốt ruột” không: chỉ báo cáo tình hình hiện tại → まだ来ていない; đã chờ rất lâu, kỳ vọng cứ bị hụt (30分も待っているのに) → なかなか来ない. Ngoài ra sau なかなか dùng 「ない」 bình thường, không dùng 「ていない」."
-            },
-            {
-              "id": "ta-koto-ga-aru",
-              "title": "〜たことがない（chưa từng）",
-              "diff": "まだ〜ていない là việc định làm nhưng “vẫn chưa làm”; 〜たことがない là trong đời “chưa bao giờ làm”.",
-              "this": [
-                {
-                  "tag": "Chưa · sau này sẽ làm",
-                  "tr": "Bộ phim đó tôi vẫn chưa xem, tuần sau sẽ đi xem."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Chưa từng · trải nghiệm",
-                  "tr": "Phim kinh dị thì tôi chưa xem lần nào cả."
-                }
-              ],
-              "explain": "Tiếng Việt đều có thể nói “chưa xem”. Hãy xem những câu xung quanh: việc này sau đó định làm (来週見に行く) → まだ〜ていない; nói về trải nghiệm trong đời đến nay, không liên quan đến dự định (一度も) → 〜たことがない."
+              "explain": "Khi lấy một việc phóng đại để diễn tả mức độ, cả hai đều dùng được, nghĩa không đổi: くらい (ぐらい) khẩu ngữ, thoải mái hơn; ほど hơi trang trọng, gặp nhiều hơn trong văn viết và dịp trang trọng."
             }
           ]
         }
@@ -2328,7 +2191,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「まで」 — vạch một đường đích cho hành động",
+          "note": "Đều bắt nguồn từ 「まで」 — nghĩa gốc là điểm kết thúc “cho đến …”",
           "items": [
             {
               "id": "made-ni-deadline",
@@ -2348,31 +2211,31 @@
               "wrong": {
                 "why": "「出す」 là hành động một lần, phải dùng までに"
               },
-              "explain": "Xem động từ phía sau: hành động kéo dài được như 待つ、働く、勉強する → まで; hành động hoàn thành trong chốc lát như 帰る、出す、着く → までに."
+              "explain": "Cả hai đều có 「まで」, nghĩa gốc là điểm kết thúc “cho đến …”. Chỉ dùng まで thì hành động kéo dài liên tục đến điểm kết thúc đó, nên phía sau là hành động có thể kéo dài như 「待って」; thêm 「に」 chỉ mốc thời gian thành までに thì điểm kết thúc trở thành hạn chót, hành động phải làm xong một lần vào lúc nào đó trước hạn, nên phía sau là hành động xong ngay một lúc như 「帰ります」. Xem động từ phía sau có kéo dài được không là phân biệt được."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều chỉ được “ngay cả… cũng”",
+          "note": "Đều có nghĩa “ngay cả … cũng”",
           "items": [
             {
               "id": "sae",
               "title": "〜さえ（ngay cả…）",
-              "diff": "まで là “thêm cả cái này nữa”, hay dùng để bổ sung, mở rộng; さえ là “ngay cả điều cơ bản nhất cũng”, hay đi với phủ định.",
+              "diff": "Đều là “ngay cả … cũng”: まで nhấn mạnh phạm vi lan rộng dần đến tận đây; さえ nhấn mạnh ví dụ đưa ra là cực đoan nhất.",
               "this": [
                 {
-                  "tag": "Bổ sung · ngày càng…",
-                  "tr": "Không chỉ mưa mà ngay cả gió cũng mạnh lên."
+                  "tag": "Phạm vi lan đến người bất ngờ",
+                  "tr": "Đến cả trẻ con cũng cười tôi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cả điều cơ bản · phủ định",
-                  "tr": "Sốt cao đến mức ngay cả nước cũng không uống nổi."
+                  "tag": "Đưa ra ví dụ cực đoan nhất",
+                  "tr": "Ngay cả trẻ con cũng cười tôi."
                 }
               ],
-              "explain": "Xem câu đi theo hướng nào: sau 「〜だけでなく」 thêm một mục nữa, tình hình ngày càng nghiêm trọng (hoặc ngày càng tốt) → まで; nêu ra việc cơ bản nhất, dễ nhất mà ngay cả việc đó cũng không làm được → さえ, phía sau thường là phủ định."
+              "explain": "Cùng một câu dùng cái nào cũng được, nghĩa đều là “đến cả trẻ con cũng…”: まで cho cảm giác người khác cười tôi, cuối cùng đến cả trẻ con cũng hùa vào, nhấn mạnh phạm vi lan dần đến người không ngờ tới; さえ cho cảm giác trẻ con lẽ ra là những người ít nên cười tôi nhất, vậy mà chúng cũng cười, nhấn mạnh ví dụ đưa ra là cực đoan nhất. Khi phía sau là phủ định, nói rằng ngay cả việc tối thiểu cũng không làm được, thường dùng さえ."
             }
           ]
         }
@@ -2383,7 +2246,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「前（まえ）」 — vốn là “phía trước” về không gian",
+          "note": "Đều bắt nguồn từ 「前（まえ）」 — nghĩa gốc là “phía trước” trong không gian",
           "items": [
             {
               "id": "no-mae-position",
@@ -2401,7 +2264,30 @@
                   "tr": "Trước nhà ga có một ngân hàng."
                 }
               ],
-              "explain": "Cả hai câu đều là 「〜の前に」, hãy xem danh từ phía trước: hoạt động như 食事、会議、試験 → “trước khi” về thời gian; nơi chốn hay đồ vật như 駅、家、机 → “phía trước” về không gian, phía sau thường là 「あります・います」."
+              "explain": "Nghĩa gốc của 「前」 là “phía trước” trong không gian: 駅の前 = khoảng chỗ phía trước nhà ga, phía sau thường đi với 「あります・います」. Coi thời gian như một đường thẳng, khoảng thời gian đứng trước một việc nào đó cũng gọi là 「前」, từ đó có nghĩa thời gian “trước khi”: 食事の前 = trước bữa ăn, phía sau là hành động làm trước. Để phân biệt, xem danh từ đứng trước 「の前」: nơi chốn hay đồ vật như 駅、家、机 → không gian; hoạt động như 食事、会議、試験 → thời gian."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "まえに ↔ までに, chỉ khác một chữ kana 「え／で」",
+          "items": [
+            {
+              "id": "made-ni-deadline",
+              "diff": "まえに nói thứ tự trước sau của hai việc; までに nói hạn chót, làm xong lúc nào trước đó cũng được.",
+              "this": [
+                {
+                  "tag": "Trước sau",
+                  "tr": "Hãy uống thuốc trước khi đi ngủ."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Hạn chót",
+                  "tr": "Hãy uống thuốc trước giờ đi ngủ (lúc nào trong khoảng đó cũng được)."
+                }
+              ],
+              "explain": "Hai câu chỉ khác một chữ kana え／で: 前に (まえに) nói về thứ tự trước sau, uống thuốc trước rồi mới đi ngủ; までに coi “đi ngủ” là hạn chót, từ bây giờ đến lúc đi ngủ uống lúc nào cũng được, miễn là không muộn hơn giờ ngủ. Tiếng Việt đều nói “trước …”, nên dễ nhầm."
             }
           ]
         },
@@ -2410,42 +2296,22 @@
           "note": "Đều có nghĩa “(làm) trước…”",
           "items": [
             {
-              "id": "made-ni-deadline",
-              "diff": "前に nói hai việc cái nào trước cái nào sau; までに nói một hạn chót, làm xong trước lúc đó là được.",
-              "this": [
-                {
-                  "tag": "Trước sau",
-                  "tr": "Trước khi ra ngoài, hãy đóng cửa sổ lại."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Hạn chót",
-                  "tr": "Hãy nộp báo cáo trước thứ Sáu."
-                }
-              ],
-              "explain": "Xem phía trước đi với gì: một hành động khác (出かける、寝る) → 前に, chỉ nói thứ tự trước sau; ngày, giờ (金曜日、３時) làm hạn chót → までに, nhấn mạnh “muộn nhất là đến lúc đó”, trước đó lúc nào làm cũng được."
-            },
-            {
               "id": "uchi-ni",
-              "title": "〜うちに（nhân lúc…）",
-              "diff": "Trước 前に là hành động; trước うちに thường là trạng thái, mang cảm giác “nhân lúc còn… thì làm ngay”.",
+              "title": "〜ないうちに（trước khi …）",
+              "diff": "前に nói trung tính “trước khi …”; ないうちに mang cảm giác gấp gáp “nhân lúc còn chưa … thì mau”.",
               "this": [
                 {
-                  "tag": "Trước một hành động",
-                  "tr": "Tôi muốn đi du lịch vòng quanh thế giới trước khi già."
+                  "tag": "Trung tính · thứ tự",
+                  "tr": "Mang quần áo phơi vào trước khi trời mưa thôi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nhân lúc trạng thái còn",
-                  "tr": "Tôi muốn đi du lịch vòng quanh thế giới khi còn trẻ."
+                  "tag": "Gấp gáp · nhân lúc chưa mưa",
+                  "tr": "Nhân lúc trời chưa mưa, mang quần áo phơi vào thôi."
                 }
               ],
-              "wrong": {
-                "why": "前に không đi với tính từ"
-              },
-              "explain": "Xem phía trước là hành động hay trạng thái: hành động thay đổi như 年を取る、暗くなる → 前に; trạng thái sẽ mất đi như 若い、元気な、明るい → うちに, nhấn mạnh “nhân lúc bây giờ”."
+              "explain": "Cả hai đều dùng được, nghĩa đều là “trước khi trời mưa”: 前に chỉ nói thứ tự trước sau một cách trung tính; ないうちに mang cảm giác gấp gáp “nhân lúc chưa mưa, phải nhanh lên”, hay đi với 「早く」, 「〜ておこう」. Chú ý trước うちに dùng phủ định 「降らない」, còn trước 前に dùng khẳng định 「降る」."
             }
           ]
         }
@@ -2456,7 +2322,8 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều dùng để mời, đề nghị",
+          "sense": 1,
+          "note": "Đều dùng để mời người kia cùng làm",
           "items": [
             {
               "id": "mashou",
@@ -2477,20 +2344,21 @@
             },
             {
               "id": "mashou-ka-offer",
-              "diff": "ませんか là mời người kia (cùng) làm; ましょうか có thể là “để tôi làm giúp”.",
+              "title": "〜ましょうか（đề xuất cùng làm）",
+              "diff": "ませんか giao quyền quyết định cho người kia, uyển chuyển hơn; ましょうか là mình chủ động đề xuất “chúng ta … nhé”, rồi hỏi người kia có đồng ý không.",
               "this": [
                 {
-                  "tag": "Mời người kia cùng làm",
-                  "tr": "Cùng đi bộ đến ga không?"
+                  "tag": "Uyển chuyển · hỏi người kia có muốn không",
+                  "tr": "Cũng muộn rồi, mình về không?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Để tôi làm giúp",
-                  "tr": "Trông nặng quá nhỉ. Để tôi xách hành lý giúp nhé?"
+                  "tag": "Chủ động · đưa ra đề xuất",
+                  "tr": "Cũng muộn rồi, chúng ta về nhé?"
                 }
               ],
-              "explain": "Xem ai làm hành động: người làm là người kia, hoặc người kia cùng với tôi → ませんか; tôi chủ động làm giúp người kia → ましょうか."
+              "explain": "Cùng một câu dùng cái nào cũng được, nghĩa đều là “chúng ta sắp phải về rồi nhỉ”: ませんか dùng câu hỏi phủ định để giao quyền quyết định cho người kia, uyển chuyển hơn, hợp khi nói với cấp trên hoặc khi chưa rõ ý người kia; ましょうか là mình chủ động đưa ra phương án rồi hỏi người kia có đồng ý không."
             },
             {
               "id": "nai-invitation",
@@ -2509,24 +2377,31 @@
                 }
               ],
               "explain": "Xem nói với ai: người trên, cấp trên như 「先生」, 「部長」 → ませんか; bạn bè, người nhà (ねえ、〜くん) → 「〜ない？」 lên giọng. Cả hai đều dùng câu hỏi phủ định để mời."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều dùng để mời người kia ăn uống, thưởng thức",
+          "items": [
             {
               "id": "wa-dou-desu-ka",
               "title": "〜はいかがですか（mời dùng）",
-              "diff": "Trước ませんか là hành động, mời người kia làm; trước 〜はいかがですか là đồ vật, mời người kia dùng nó.",
+              "diff": "Đều mời người kia uống gì đó: いかがですか chỉ nói đồ vật, trang trọng hơn; ませんか nói ra hành động, giọng thoải mái hơn một chút.",
               "this": [
                 {
-                  "tag": "Hành động · mời làm",
-                  "tr": "Uống chút trà không?"
+                  "tag": "Nói ra hành động · thoải mái",
+                  "tr": "Uống chút cà phê không?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Đồ vật · mời dùng",
-                  "tr": "Mời bạn dùng trà nhé?"
+                  "tag": "Chỉ nói đồ vật · trang trọng",
+                  "tr": "Mời anh/chị dùng chút cà phê ạ?"
                 }
               ],
-              "explain": "Nhìn phía trước gắn gì: động từ (飲み、行き)＋ませんか, thường kèm 「でも」, rủ đối phương làm một hành động; danh từ (お茶、コーヒー)＋はいかがですか, đưa thẳng món đồ đến trước mặt đối phương, thường là cách chủ nhà, nhân viên cửa hàng mời khách. Thân mật hơn một chút có thể nói はどうですか."
+              "explain": "Cả hai câu đều mời người kia uống cà phê, đều hay đi với 「でも」 (chút gì đó): いかがですか không nói hành động, chỉ đưa đồ vật đến trước mặt người kia, là cách nói trang trọng chủ nhà, nhân viên cửa hàng dùng để tiếp khách; ませんか nói ra hành động 「飲み」, giọng thoải mái hơn いかがですか một chút, đôi khi còn mang ý “cùng uống”."
             }
           ]
         }
@@ -2536,16 +2411,17 @@
       "id": "mashou",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「う」 chỉ ý chí — ましょう＝ます＋う",
+          "kind": "look",
+          "note": "ましょう ↔ ましょうか, chỉ khác một chữ 「か」",
           "items": [
             {
               "id": "mashou-ka-offer",
-              "diff": "ましょう là “cùng… nhé”; thêm 「か」 thành ましょうか thì trở thành “để tôi… nhé?” hoặc bàn bạc với người kia.",
+              "thisTitle": "〜ましょう（đề xuất cùng làm）",
+              "diff": "ましょう là “mọi người cùng … nhé”; thêm một chữ 「か」 thành ましょうか thì trở thành “để tôi … nhé?”.",
               "this": [
                 {
-                  "tag": "Kêu gọi cùng làm",
-                  "tr": "Nào, mọi người cùng dọn dẹp nhé."
+                  "tag": "Mọi người cùng làm",
+                  "tr": "Mọi người cùng dọn dẹp nhé."
                 }
               ],
               "that": [
@@ -2554,30 +2430,13 @@
                   "tr": "Để tôi dọn dẹp nhé?"
                 }
               ],
-              "explain": "Xem chủ ngữ và 「か」: mọi người cùng làm, người nói đứng ra thúc đẩy → ましょう; một mình tôi làm giúp người kia, hoặc muốn hỏi ý người kia → ましょうか. Khi chủ động giúp đỡ mà nói 「手伝いましょう」 sẽ có vẻ áp đặt, nên nói 「手伝いましょうか」."
-            },
-            {
-              "id": "volitional-form",
-              "diff": "ましょう là thể lịch sự; thể ý chí 「〜(よ)う」 là thể thường của nó, dùng giữa bạn bè.",
-              "this": [
-                {
-                  "tag": "Lịch sự",
-                  "tr": "Thưa trưởng phòng, chúng ta đi thôi ạ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Thể thường",
-                  "tr": "Này, mình đi thôi."
-                }
-              ],
-              "explain": "Xem nói với ai: cấp trên, người lớn tuổi, người không thân → 行きましょう; bạn bè, người nhà → 行こう、食べよう. Nghĩa như nhau, đều nói lên ý chí của mình, đồng thời rủ người kia cùng làm."
+              "explain": "Xem cuối câu có 「か」 không, rồi xem ai làm: không có 「か」, người làm là 「みんなで」 → ましょう, “mọi người cùng … nhé”; có 「か」, người làm là 「私が」 → ましょうか, “để tôi … nhé?”, chủ động giúp đỡ. Nói thẳng 「手伝いましょう」 nghe như đã quyết định thay người kia; khi chủ động giúp thường nói 「手伝いましょうか」."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều dùng để rủ người kia cùng làm",
+          "note": "Đều dùng để mời người kia cùng làm",
           "items": [
             {
               "id": "masenka",
@@ -2595,6 +2454,24 @@
                 }
               ],
               "explain": "Xem trình tự hội thoại: người kia đã đồng ý, hoặc mọi người đã thống nhất → ましょう; mời lần đầu, chưa biết người kia có muốn không → ませんか (hay đi với 「よかったら」). Thường hỏi 「〜ませんか」 trước, người kia đồng ý rồi mới nói 「〜ましょう」."
+            },
+            {
+              "id": "volitional-form",
+              "title": "〜(よ)う（đề nghị, rủ rê）",
+              "diff": "ましょう là thể lịch sự; thể ý chí 「〜(よ)う」 là thể thường của nó, dùng giữa bạn bè.",
+              "this": [
+                {
+                  "tag": "Lịch sự",
+                  "tr": "Thưa trưởng phòng, chúng ta đi thôi ạ."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Thể thường",
+                  "tr": "Này, mình đi thôi."
+                }
+              ],
+              "explain": "Nghĩa như nhau, đều là rủ người kia cùng làm, xem nói với ai: cấp trên như 「部長」, người lớn tuổi, người không thân → 行きましょう; bạn bè, người nhà, thường mở đầu bằng 「ねえ」 → 行こう、食べよう."
             }
           ]
         }
