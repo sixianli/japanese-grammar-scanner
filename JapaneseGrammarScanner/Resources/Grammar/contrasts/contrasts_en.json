@@ -29980,7 +29980,8 @@
           "items": [
             {
               "id": "kara-ni-kakete",
-              "diff": "にかけては means “when it comes to… (no one can beat)”; から〜にかけて means “from… through…”, describing a range.",
+              "title": "〜にかけて (start point omitted)",
+              "diff": "にかけては means “when it comes to… (no one can beat)”; にかけて means “through until…”, describing a stretch of time.",
               "this": [
                 {
                   "tag": "Field · the best",
@@ -29989,11 +29990,11 @@
               ],
               "that": [
                 {
-                  "tag": "Range · from… to…",
-                  "tr": "Heavy rain is expected from the Kanto region through Tohoku."
+                  "tag": "Time · up until…",
+                  "tr": "The snow will keep falling through tomorrow morning."
                 }
               ],
-              "explain": "First check whether 「から」 comes before it and whether it's a place name or a time (関東から東北, 夜から朝) — that's marking out a range; then check for 「は」: にかけては is preceded by a skill or field (料理, 数学), and the second half is praise like “no one can beat…”."
+              "explain": "They differ by just one 「は」, but the meanings are completely different. Look at the word before it: a skill or field like 「料理」 or 「数学」, followed by praise like “no one can beat…” → にかけては (when it comes to…); a time like 「明日の朝」 or 「夕方」, followed by weather or a state continuing or changing → にかけて (through until…; the full form is 「から〜にかけて」)."
             }
           ]
         },
@@ -30017,23 +30018,6 @@
                 }
               ],
               "explain": "Look at the judgment in the second half: praising someone's ability, like 「誰にも負けない」「右に出る者はいない」 → にかけては; an ordinary judgment that can be good or bad, like 「不満がある」「優れている」, where the subject can also be a thing → 点で (after a clause, 「という点で」). にかけては isn't used to talk about weaknesses."
-            },
-            {
-              "id": "koto-to-naru-to",
-              "diff": "にかけては says someone has “the greatest ability” in this area; こととなると says that whenever the topic comes up, “their attitude changes”.",
-              "this": [
-                {
-                  "tag": "The greatest ability",
-                  "tr": "When it comes to fishing, my brother is second to none."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Attitude changes completely",
-                  "tr": "Whenever fishing comes up, my brother gets so absorbed he's like a different person."
-                }
-              ],
-              "explain": "Both sentences are 「釣り＋……」; look at the second half: talking about ability or skill level (誰にも負けない, 一番だ) → にかけては; talking about losing one's usual self whenever the topic comes up (夢中になる, 目の色が変わる) → こととなると (ことになると works the same way)."
             }
           ]
         }
@@ -30089,44 +30073,43 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean acting in line with someone's expectations or requests",
+          "note": "Both mean “responding to someone's expectations or requests”",
           "items": [
             {
               "id": "ni-oujite",
-              "diff": "にこたえて means repaying expectations with action — “living up to them”; に応じて means adjusting to someone's request or situation — “adapting accordingly”.",
+              "title": "〜に応じて (responding / accepting)",
+              "diff": "にこたえて means working to live up to someone's expectations; に応じて means agreeing to or accepting a request someone makes.",
               "this": [
                 {
-                  "tag": "こたえて · meeting expectations",
-                  "tr": "To meet our customers' requests, we created a new menu."
+                  "tag": "こたえて · living up to expectations",
+                  "tr": "Living up to the coach's expectations, the rookie shone in the game."
                 }
               ],
               "that": [
                 {
-                  "tag": "おうじて · adjusting to requests",
-                  "tr": "We adjust portion sizes to suit our customers' requests."
+                  "tag": "おうじて · accepting a request",
+                  "tr": "I accepted my friend's invitation and went to the party."
                 }
               ],
-              "wrong": {
-                "why": "応える only takes expectations, requests or support before it; for quantities that vary, like the number of people, use に応じて"
-              },
-              "explain": "When what comes before is 「要望、リクエスト」, both work: にこたえて stresses making an effort to fulfil them, not letting people down, and is followed by something accomplished (新しいメニューを作った); に応じて stresses flexibly adapting to the request and is often followed by 「変える、対応する」. When what comes before is a varying quantity like 「人数、年齢、収入」 → only に応じて. Don't mix up the readings, either: 応えて＝こたえて, 応じて＝おうじて."
+              "explain": "Both respond to someone. Look at what comes before: hopes others place in you, like 「期待」 or 「声援」, which you meet through your performance → にこたえて (you don't say 「期待に応じて」); a request someone makes, like 「誘い」, 「取材」 or 「交渉」, which you simply agree to or go along with → に応じて. With 「要望」 or 「リクエスト」 both work: にこたえて stresses making the effort to satisfy the other person, に応じて just doing what was asked. Mind the readings too: 応えて＝こたえて, 応じて＝おうじて."
             },
             {
               "id": "ni-soutte",
-              "diff": "にこたえて is a positive response, working to “fulfil” expectations; に沿って means “not straying from” a policy or wish and following it.",
+              "title": "〜に沿う (living up to expectations)",
+              "diff": "にこたえて means actively repaying expectations with results; に沿う means not straying from what someone hopes for, mostly in polite business phrases.",
               "this": [
                 {
-                  "tag": "Fulfilling expectations · active",
-                  "tr": "The players lived up to their fans' expectations and won the championship in fine style."
+                  "tag": "こたえて · delivering results",
+                  "tr": "Living up to the fans' expectations, the players won the championship in style."
                 }
               ],
               "that": [
                 {
-                  "tag": "Not straying · following",
-                  "tr": "We drew up a new plan in line with company policy."
+                  "tag": "沿う · polite business phrase",
+                  "tr": "We sincerely apologize that we were unable to meet your wishes."
                 }
               ],
-              "explain": "Look at what comes before: hopes others place in you, like 「期待、声援」, followed by results that repay them → にこたえて; a set course like 「方針、計画、マニュアル」, followed by acting accordingly → に沿って. Both 「ご希望に沿って」 and 「ご希望にこたえて」 are fine, but 「方針にこたえて」 sounds unnatural."
+              "explain": "Both can take 「期待」 or 「希望」. Look at what follows and the setting: saying someone delivered real results in return (見事に優勝した) → にこたえて, with a positive tone; a polite phrase from a shop or company to a customer about (not) meeting their wishes (ご希望に沿えず, ご期待に沿えるよう) → に沿う, which stresses not straying from what the other person wants and sounds humble. 「ご希望にこたえられず」 is also possible, but に沿う is more common in these polite phrases."
             }
           ]
         }
@@ -30184,8 +30167,8 @@
       "id": "ni-mo-kakawarazu",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from 「かかわる（関わる）＋ず」 — “not affected by…”",
+          "kind": "look",
+          "note": "にもかかわらず ↔ にかかわらず: they differ by just one 「も」",
           "items": [
             {
               "id": "ni-kakawarazu",
@@ -30254,7 +30237,7 @@
                   "tr": "I wrote a novel based on a real incident."
                 }
               ],
-              "explain": "Look at what the second half does: making judgments or plans according to data or law, where the content can't stray from the basis → に基づいて; using it as raw material for a novel or film, which can be freely adapted → をもとに. 基づく itself is 「基（もと）＋付く」: stuck close to the foundation."
+              "explain": "Both come from 「もと（基）」, “foundation, base.” 基づく is 「もと＋付く」, “sticking to the foundation,” so に基づいて means strictly basing something on it, and the judgment or plan that follows can't depart from it (結果に基づいて計画を立てた); をもとに is “taking something as the もと,” using it as a base or raw material and then reworking it, so what follows is usually a creative work (小説を書いた), whose content can be freely adapted. Look at the second half: making a judgment or plan that follows the basis → に基づいて; using it as material to write, film or make something → をもとに."
             }
           ]
         },
@@ -30287,65 +30270,44 @@
       "id": "ni-mukatte",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from 「向く」 — “to face”",
-          "items": [
-            {
-              "id": "ni-mukete",
-              "diff": "に向かって means you yourself are “heading toward” or facing something; に向けて means preparing “for” an upcoming goal, or directing something at someone.",
-              "this": [
-                {
-                  "tag": "Toward · moving oneself",
-                  "tr": "We walked slowly toward the summit."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "For · preparing",
-                  "tr": "I'm practising every day for next month's match."
-                }
-              ],
-              "explain": "向かう is intransitive: you move toward a direction or face someone (頂上に向かって歩く、客に向かって話す); 向ける is transitive: you direct effort or a message at something, and it's often preceded by a goal that hasn't arrived yet, like 「来月の試合」「〜の実現」, followed by 「準備」「練習」. Check whether what comes before is a place or person, or a future event."
-            },
-            {
-              "id": "muke",
-              "diff": "子どもに向かって means doing something “facing the child”; 子ども向け means “designed for children”.",
-              "this": [
-                {
-                  "tag": "Facing · action",
-                  "tr": "She spoke to the child in a loud voice."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Aimed at · target audience",
-                  "tr": "This is a book for children."
-                }
-              ],
-              "explain": "Check whether there's a 「に」 and what follows: 「に向かって＋action」 means doing something while facing the other person; 「向け」 attaches directly to a noun (no に) and is followed by 「の＋noun」 (子ども向けの本、海外向けの商品), saying who the thing is made for."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Both mark who or what an action or attitude is directed at",
+          "note": "Both mean “to/at…”, showing whom an action is aimed at",
           "items": [
             {
               "id": "ni-taishite",
-              "diff": "に向かって means “facing” someone in person; に対して marks the target an action or attitude is “directed at”, which can be quite abstract.",
+              "title": "〜に対して (target)",
+              "diff": "に向かって means saying or doing something face to face, straight at the person in front of you; に対して marks the target of an attitude or action, not necessarily face to face.",
               "this": [
                 {
-                  "tag": "Face to face · concrete",
-                  "tr": "You must not say rude things to a customer's face."
+                  "tag": "Face to face · speaking at someone",
+                  "tr": "You mustn't talk to a customer like that."
                 }
               ],
               "that": [
                 {
-                  "tag": "Directed at · can be abstract",
-                  "tr": "I answered the customer's question politely."
+                  "tag": "Toward · attitude",
+                  "tr": "I always make a point of being polite toward customers."
                 }
               ],
-              "explain": "Look at what comes before: a person you're actually facing while speaking or bowing (親に向かって、客に向かって) → に向かって; abstract things like questions, opinions and policies → に対して; you can't say 「質問に向かって」."
+              "explain": "Both sentences are about customers. Look at what follows: an action done face to face, like speaking or shouting at someone (口のきき方) → に向かって, which stresses that the person is right in front of you and often sounds like a scolding; an attitude or judgment, like 「丁寧な態度」, 「親切だ」 or 「反対する」, not necessarily in person → に対して. For speaking, に対して also works, but it lacks the sense of “straight at the person in front of you.” When what comes before is abstract, like 「質問」 or 「意見」, only に対して works."
+            },
+            {
+              "id": "ni-mukete",
+              "title": "〜に向けて (toward / facing)",
+              "diff": "に向かって means facing the person in front of you; に向けて means sending words or information to someone who isn't necessarily in front of you.",
+              "this": [
+                {
+                  "tag": "Facing · in person",
+                  "tr": "The company president spoke to the employees in front of him."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Sending · not in person",
+                  "tr": "The company president addressed employees across the country by video."
+                }
+              ],
+              "explain": "The only difference is whether the listeners are in front of you. They're right there, 「目の前」, and you face them as you speak → に向かって (向かう: you yourself turn toward them); you send your words out 「ビデオで」, on TV or online → に向けて (向ける: you direct words or information at them). That's why announcements and messages, like 「国民に向けてメッセージを発表する」, usually use に向けて."
             }
           ]
         }
@@ -30356,25 +30318,8 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「向く」 — “to face”",
+          "note": "Both come from 「向ける」 — original meaning “to turn something toward”",
           "items": [
-            {
-              "id": "ni-mukatte",
-              "diff": "に向けて means preparing “for” an upcoming goal, or directing something at someone; に向かって means you yourself are “heading toward” or facing something.",
-              "this": [
-                {
-                  "tag": "For · preparing",
-                  "tr": "I'm practising every day for next month's match."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Toward · moving oneself",
-                  "tr": "We walked slowly toward the summit."
-                }
-              ],
-              "explain": "向ける is transitive: you direct effort or a message at something, and it's often preceded by a goal that hasn't arrived yet, like 「来月の試合」「〜の実現」, followed by 「準備」「練習」; 向かう is intransitive: you move toward a direction or face someone (頂上に向かって歩く、客に向かって話す). Check whether what comes before is a future event, or a place or person."
-            },
             {
               "id": "muke",
               "diff": "に向けて is followed by an action, “sending toward…”; 向け attaches directly to a noun, meaning “designed for…”.",
@@ -30390,12 +30335,38 @@
                   "tr": "This is a product for overseas markets."
                 }
               ],
-              "explain": "Look at what follows: 「に向けて」 is followed by an action (発信する、準備する); 「向け」 has no 「に」, attaches directly to a noun, and then modifies a noun with 「の」 (海外向けの商品、子ども向けの本), saying who the thing is made for."
+              "explain": "Both come from the transitive verb 「向ける」 (to turn something toward somewhere). に向けて: an action or information is sent toward a target, so an action follows (海外に向けて発信している); 向け: 「向ける」 turned into a noun and attached directly to a noun, saying a thing was made “facing” this group of people from the start — hence “made especially for…,” followed by 「の」 and a noun (海外向けの商品). Check whether there's a 「に」 and whether an action or 「の＋noun」 follows."
             }
           ]
         },
         {
           "kind": "meaning",
+          "sense": 1,
+          "note": "Both mean “toward a target (speaking or sending something)”",
+          "items": [
+            {
+              "id": "ni-mukatte",
+              "title": "〜に向かって (facing someone)",
+              "diff": "に向けて means sending words or information to someone who isn't necessarily in front of you; に向かって means facing the person in front of you.",
+              "this": [
+                {
+                  "tag": "Sending · not in person",
+                  "tr": "The prime minister addressed the nation on television."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Facing · in person",
+                  "tr": "The prime minister spoke to the audience in front of him."
+                }
+              ],
+              "explain": "The only difference is whether the listeners are in front of you. You send your words out 「テレビで」, by video or online → に向けて (向ける: you direct words or information at them); they're right there, 「目の前」, and you face them as you speak → に向かって (向かう: you yourself turn toward them). Announcing or communicating something (メッセージを発表する, 情報を発信する) usually takes に向けて."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
           "note": "Both mean “for (the purpose of)…”",
           "items": [
             {
@@ -30449,20 +30420,21 @@
             },
             {
               "id": "nite",
-              "diff": "において can also mean “in the field or area of…”; にて is mostly used in notices for a place or means (メールにて).",
+              "title": "〜にて (place)",
+              "diff": "において is mostly used for where an event or ceremony is held; にて is also a written 「で」, and is common in notices for where you pick something up or get something done.",
               "this": [
                 {
-                  "tag": "Field · area",
-                  "tr": "In modern society, English is indispensable."
+                  "tag": "Event venue · formal",
+                  "tr": "The awards ceremony will be held in the main hall."
                 }
               ],
               "that": [
                 {
-                  "tag": "Notice · means",
-                  "tr": "We will notify you of the results by email."
+                  "tag": "Service point · notice",
+                  "tr": "Tickets will be handed out at the reception desk."
                 }
               ],
-              "explain": "Look at what comes before: fields or areas like 「社会、教育、経済」 → において (にて has no such use); means like 「メール、書面、電話」, or a place given in a notice (受付にて) → にて. Both are written language; にて reads more like a set phrase in notices and letters."
+              "explain": "Both are written versions of 「で」 for a place. Look at what kind of thing it is: where an event like 「表彰式」 or 「会議」 takes place (行われます, 開催します) → において is most common, though にて also works; a spot where people are told to pick something up or get something done, like 「受付」, 「窓口」 or 「店頭」 → にて, since において sounds too heavy there. にて can also mark means (メールにて); において can't."
             }
           ]
         }
@@ -30473,63 +30445,50 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean producing a corresponding result according to the preceding situation or request",
+          "sense": 1,
+          "note": "Both mean “adjusting accordingly to the circumstances”",
           "items": [
             {
-              "id": "ni-yotte",
-              "title": "〜によって (varies with…)",
-              "diff": "に応じて means actively “adjusting according to…”; によって means objectively “differing depending on…”.",
+              "id": "ni-awasete",
+              "title": "〜に合わせて (adjusting to match)",
+              "diff": "に応じて means changing in step with how much or what level something is; に合わせて means making what follows fit or line up with a target.",
               "this": [
                 {
-                  "tag": "Active adjustment",
-                  "tr": "We set our fees according to age."
+                  "tag": "By amount · in tiers",
+                  "tr": "We decide the size of the room according to the number of people."
                 }
               ],
               "that": [
                 {
-                  "tag": "Objective difference",
-                  "tr": "Fees differ by age."
+                  "tag": "Fitting a target · lining up",
+                  "tr": "We'll set the schedule to fit everyone's plans."
                 }
               ],
-              "explain": "The two sentences differ only in the verb in the second half: adjusting accordingly, with verbs like 「変える」「決める」「選ぶ」 → に応じて; describing a difference that objectively exists, with 「違う」「異なる」「さまざまだ」 → によって."
-            },
-            {
-              "id": "shidai-as-soon-as",
-              "title": "〜次第で (depending on…)",
-              "diff": "に応じて means adjusting in proportion to “how much or to what degree…”; 次第で means “it all depends on…” — whether the outcome is good or bad is decided entirely by it.",
-              "this": [
-                {
-                  "tag": "By degree · proportional",
-                  "tr": "The scholarship amount is set according to your grades."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "All depends on it · decides success",
-                  "tr": "With enough effort, anyone can get good at it."
-                }
-              ],
-              "explain": "Look at the second half: proportional or tiered adjustments like 「金額が決まる」「量を変える」 → に応じて; outcomes like 「できる／できない」 or whether you succeed, governed entirely by that one factor → 次第で, often rendered “it all depends on…”."
-            },
+              "explain": "Both mean deciding what follows based on what comes before. Look at what comes before: an amount that can be larger or smaller, like 「人数」, 「年齢」 or 「収入」, with what follows changing in tiers along with it → に応じて; a target you line up with, like 「予定」, 「音楽」 or 「相手のペース」, with your side fitting in with or accommodating it → に合わせて. 「人数に合わせて」 is also possible, but 「音楽に合わせて踊る」 can't be changed to に応じて, because there's no question of amount or level."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Both mean “responding to someone's request”",
+          "items": [
             {
               "id": "ni-kotaete",
-              "diff": "に応じて means adjusting to someone's request or situation — “adapting accordingly”; にこたえて means repaying expectations with action — “living up to them”.",
+              "diff": "に応じて means agreeing to or accepting a request someone makes; にこたえて means working to live up to someone's expectations.",
               "this": [
                 {
-                  "tag": "おうじて · adjusting to requests",
-                  "tr": "We adjust portion sizes to suit our customers' requests."
+                  "tag": "おうじて · accepting a request",
+                  "tr": "I accepted my friend's invitation and went to the party."
                 }
               ],
               "that": [
                 {
-                  "tag": "こたえて · meeting expectations",
-                  "tr": "To meet our customers' requests, we created a new menu."
+                  "tag": "こたえて · living up to expectations",
+                  "tr": "Living up to the coach's expectations, the rookie shone in the game."
                 }
               ],
-              "wrong": {
-                "why": "応える only takes expectations, requests or support before it; for quantities that vary, like the number of people, use に応じて"
-              },
-              "explain": "When what comes before is 「要望、リクエスト」, both work: に応じて stresses flexibly adapting to the request and is often followed by 「変える、対応する」; にこたえて stresses making an effort to fulfil them, not letting people down, and is followed by something accomplished (新しいメニューを作った). When what comes before is a varying quantity like 「人数、年齢、収入」 → only に応じて. Don't mix up the readings, either: 応じて＝おうじて, 応えて＝こたえて."
+              "explain": "Both respond to someone. Look at what comes before: a request someone makes, like 「誘い」, 「取材」 or 「交渉」, which you simply agree to or go along with → に応じて; hopes others place in you, like 「期待」 or 「声援」, which you meet through your performance → にこたえて (you don't say 「期待に応じて」). With 「要望」 or 「リクエスト」 both work: に応じて just means doing what was asked, にこたえて stresses making the effort to satisfy the other person. Mind the readings too: 応じて＝おうじて, 応えて＝こたえて."
             }
           ]
         }
