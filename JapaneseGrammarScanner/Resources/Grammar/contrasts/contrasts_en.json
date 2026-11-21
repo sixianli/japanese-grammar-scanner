@@ -19798,26 +19798,26 @@
                   "tr": "He can't even write his own name."
                 }
               ],
-              "explain": "The two sentences are interchangeable; the difference is style: さえ is common in both speech and writing; すら is mostly written and heavier in tone. Also, さえ can form 「さえ〜ば (as long as…)」, which すら can't."
+              "explain": "The two sentences are interchangeable; the difference is style: さえ is common in both speech and writing; すら is mostly written and heavier in tone, and in everyday speech people usually say さえ."
             },
             {
               "id": "made-until",
               "title": "〜まで (even)",
               "thisTitle": "〜さえ (even…)",
-              "diff": "さえ names the most basic, minimal thing (not even this); まで names the extreme the range has spread to (even that…).",
+              "diff": "さえ singles out one extreme (even this…, let alone anything else); まで adds one more layer on top of what's already there (even this too…).",
               "this": [
                 {
-                  "tag": "Bare minimum · usually negative",
-                  "tr": "I'm so busy I can't even eat lunch."
+                  "tag": "One extreme singled out",
+                  "tr": "Even my family was against it."
                 }
               ],
               "that": [
                 {
-                  "tag": "Spreads to the extreme · adding on",
+                  "tag": "Piling up · with だけでなく",
                   "tr": "Not just my friends — even my family opposed it."
                 }
               ],
-              "explain": "さえ often goes with a negative, saying “can't even do the most basic thing”; まで often goes with 「〜だけでなく」 or 「〜も」, saying things escalate step by step, reaching people or things you'd never expect."
+              "explain": "When you name just one extreme, both work (家族にさえ／家族にまで反対された), with different nuance: さえ picks out this one, implying “even the ones who should least object did, so of course others did too”; it also often goes with a negative to say even the bare minimum can't be done. まで adds one more layer beyond what's already there, often paired with 「だけでなく」 or 「〜も」, saying things kept getting worse. When 「だけでなく」 comes before and you're stacking things up layer by layer, まで is the usual choice."
             }
           ]
         }
@@ -19855,24 +19855,6 @@
           "note": "All mean “as long as…”",
           "items": [
             {
-              "id": "kagiri",
-              "title": "〜限り (as long as…)",
-              "diff": "さえ〜ば stresses “just this one condition”; 限り stresses “for as long as this state continues”.",
-              "this": [
-                {
-                  "tag": "Only condition · nothing else needed",
-                  "tr": "As long as I'm healthy, I don't need money or anything."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "While the state lasts",
-                  "tr": "As long as I'm healthy, I want to keep working."
-                }
-              ],
-              "explain": "Look at the second half: 「お金はいらない」 says no other condition matters → さえ〜ば; 「ずっと働き続けたい」 says “I'll keep this up for as long as my health lasts” → 限り, often followed by an intention or resolve."
-            },
-            {
               "id": "dake-de",
               "title": "〜だけで (just… is enough)",
               "diff": "だけでいい says “you only need to do this (it's easy)”; さえ〜ばいい says “as long as this is met, nothing else matters”.",
@@ -19898,29 +19880,6 @@
       "id": "sai-ni",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from 「際（さい）」 — originally “edge, boundary”, extended to “critical moment, occasion”",
-          "items": [
-            {
-              "id": "ni-saishite",
-              "diff": "際に is used for everyday procedures and the like, “when…”; に際して is more formal, mostly used on the occasion of starting something important.",
-              "this": [
-                {
-                  "tag": "Everyday procedure",
-                  "tr": "Please watch your step when getting off."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Important event · more formal",
-                  "tr": "When I went abroad to study, many people helped me."
-                }
-              ],
-              "explain": "Look at what kind of event comes before it: everyday procedures like getting off, using something or applying → 〜の際に／際は; big life or career events like studying abroad, entering school or opening a business, mostly in speeches and documents → に際して. They also attach differently: 際 needs 「の」 after a noun, while に際して attaches directly to the noun."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Both mean “when…”",
           "items": [
@@ -19939,10 +19898,30 @@
                   "tr": "Turn off the light when you go home, OK?"
                 }
               ],
+              "explain": "Look at the setting: between family and friends, とき; in notices, manuals and business emails, 際 (ご利用の際, お帰りの際). Also, 際 is only used for the moment of doing something; states and periods like 「子どものとき」 or 「暇なとき」 can only take とき.",
               "wrong": {
                 "why": "際 only follows actions or events — it can't be used for a period like “when I was little”"
-              },
-              "explain": "Look at the setting: between family and friends, とき; in notices, manuals and business emails, 際 (ご利用の際, お帰りの際). Also, 際 is only used for the moment of doing something; states and periods like 「子どものとき」 or 「暇なとき」 can only take とき."
+              }
+            },
+            {
+              "id": "ni-saishite",
+              "diff": "Same meaning; 際 is common in notices and procedures and takes 「の」 after a noun; に際して is more formal, attaches directly to a noun, and is mostly used for something being formally started.",
+              "this": [
+                {
+                  "tag": "Notices · also everyday procedures",
+                  "tr": "When you join, we'll give you a membership card."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "More formal · a formal start",
+                  "tr": "Upon your joining, we'll present you with a membership card."
+                }
+              ],
+              "explain": "The two mean the same; the difference is formality and how they attach: 際 needs 「の」 after a noun (入会の際に) and is common in notices, manuals and everyday procedures (ご利用の際、お降りの際); に際して attaches directly to a noun (入会に際して), is more formal and written, and is mostly used for things being formally started, like joining, opening a business or departing. Small everyday actions like getting off or using something usually don't take 「に際して」.",
+              "wrong": {
+                "why": "に際して attaches directly to a noun, without 「の」"
+              }
             }
           ]
         }
@@ -19958,20 +19937,20 @@
             {
               "id": "juu-chuu-throughout",
               "title": "〜中 (ちゅう: in the middle of…)",
-              "diff": "〜中 objectively describes the state of “being in the middle of…”; 最中に stresses being halfway through, followed by something that suddenly cuts in.",
+              "diff": "〜中に objectively states “during…”; 最中に stresses being right in the middle of it, interrupted at just that moment.",
               "this": [
                 {
-                  "tag": "In progress → interrupted",
-                  "tr": "Right in the middle of the meeting, a cell phone rang."
+                  "tag": "Midway through · at just that moment",
+                  "tr": "Right in the middle of class, the power suddenly went out."
                 }
               ],
               "that": [
                 {
-                  "tag": "Objective state",
-                  "tr": "The manager is in a meeting right now."
+                  "tag": "Objective · during this time",
+                  "tr": "During class, the power suddenly went out."
                 }
               ],
-              "explain": "〜中 sticks directly onto a noun and states a status like a door sign (会議中, 工事中, 電話中), and the sentence ends there; 最中に needs 「の」 before it and is always followed by something that cuts in, usually inconvenient or troublesome."
+              "explain": "Both sentences work. 授業中に just objectively states “during class”: 「中」 goes straight after the noun, as on signs (授業中、会議中). 授業の最中に needs 「の」 and stresses being right in the middle, at the most important point, so the feeling of “interrupted at just that moment” is stronger. To highlight the bad timing, use 最中に."
             },
             {
               "id": "tokoro-da",
@@ -20017,34 +19996,6 @@
       "id": "sasete-itadaku",
       "groups": [
         {
-          "kind": "root",
-          "note": "All come from the causative 「させて」 — “let (me) do”",
-          "items": [
-            {
-              "id": "sasete-kudasai",
-              "title": "〜させてください／〜させてもらう",
-              "diff": "させてください asks for permission; させてもらう says afterwards “I was allowed to do it”; させていただく states what you're going to do with a “by your kind permission” stance — the most humble.",
-              "this": [
-                {
-                  "tag": "Announcing · most humble",
-                  "tr": "I'm not feeling well, so I'll be taking today off, if I may."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "させてください · asking permission",
-                  "tr": "I'm not feeling well, so please let me take today off."
-                },
-                {
-                  "tag": "させてもらう · was allowed to",
-                  "tr": "I asked the store manager, and he let me take the day off."
-                }
-              ],
-              "explain": "All have the causative 「させて (let me do)」; the difference is the second half: ください is asking, and the other person hasn't agreed yet; もらった says afterwards that you got permission, common among equals and in speech; いただきます means you've already decided to do it, and uses “by your kind permission” to show humility, common at work and in speeches."
-            }
-          ]
-        },
-        {
           "kind": "look",
           "note": "していただく ↔ させていただく — just one 「させ」 differs, and the person doing it switches",
           "items": [
@@ -20069,6 +20020,7 @@
         },
         {
           "kind": "meaning",
+          "sense": 1,
           "note": "Both humbly describe something you're going to do",
           "items": [
             {
@@ -20090,6 +20042,32 @@
               "explain": "Both sentences humbly describe your own action. させていただく was originally used when you really need the other person's permission or are benefiting yourself (休ませていただく); to simply state what you're going to do, いたします is enough, and using させていただく over and over in one speech actually sounds wordy. The same goes for other humble verbs like 参る and 申す."
             }
           ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “please let me…”",
+          "items": [
+            {
+              "id": "sasete-kudasai",
+              "title": "〜させてください (let me do)",
+              "thisTitle": "〜させていただけませんか (asking permission)",
+              "diff": "させてください states the request directly; させていただけませんか asks for permission as a question, softer and more polite.",
+              "this": [
+                {
+                  "tag": "Question · softer, more polite",
+                  "tr": "Could I possibly use this computer for a bit?"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Direct request",
+                  "tr": "Please let me use this computer for a bit."
+                }
+              ],
+              "explain": "Both ask permission to use the computer. Look at the end: 「〜せてください」 states the request directly and is fine with coworkers or a boss you know well; 「〜せていただけませんか」 asks “might I receive your permission?”, leaving the decision to the other person, so it is softer and more polite, suited to clients or people you don't know well."
+            }
+          ]
         }
       ]
     },
@@ -20098,7 +20076,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「せい（所為）」 — “the result caused by (someone or something)”",
+          "note": "Both come from 「せい（所為）」 — originally “the cause of, or blame for, a bad result”",
           "items": [
             {
               "id": "sei-ka",
@@ -20116,31 +20094,14 @@
                   "tr": "Maybe because I didn't get enough sleep, my head feels foggy today."
                 }
               ],
-              "explain": "Only 「で」 vs 「か」 differs: with せいで, the speaker is sure this is the cause, and blames it; せいか, with the questioning 「か」, means “probably because of…”, the speaker isn't sure, and the result isn't necessarily bad (気のせいか、少し痩せたみたい)."
+              "explain": "せい originally means the cause of, or blame for, a bad result (「私のせいです」 = it's my fault). Add 「で」, which marks a cause → せいで: you pin it down as the cause, “it's all because of…”, with blame. Add the question particle 「か」 → せいか: “could it be because of…?”, the cause is uncertain, hence “maybe because…”, and the result isn't necessarily bad (気のせいか、少し痩せたみたい). Check whether 「せい」 is followed by 「で」 or 「か」."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both express a cause",
+          "note": "Both express cause: “because of…”",
           "items": [
-            {
-              "id": "okage-de",
-              "diff": "せいで is used for bad results, with blame; おかげで is used for good results, with gratitude.",
-              "this": [
-                {
-                  "tag": "Bad result · blaming",
-                  "tr": "Because of the rain, the match was canceled."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Good result · grateful",
-                  "tr": "Thanks to the rain, it's cooled down."
-                }
-              ],
-              "explain": "The cause can be the same (雨), so look at the result that follows: the match being canceled is bad → せいで; cooling down is good → おかげで."
-            },
             {
               "id": "tame-ni",
               "title": "〜ために (cause)",
@@ -20158,6 +20119,27 @@
                 }
               ],
               "explain": "Check whether the sentence carries emotion: complaining about someone or something (君が遅れたせいで) → せいで; station announcements and the news just state the cause without assigning blame → ために (ため). Using せいで in formal settings sounds like you're shifting the blame."
+            },
+            {
+              "id": "bakari-ni",
+              "title": "〜ばかりに (just because…)",
+              "diff": "せいで focuses on who or what is to blame; ばかりに focuses on “just because of this one little thing, it ended up like this”, with regret.",
+              "this": [
+                {
+                  "tag": "Pinning the cause · blame",
+                  "tr": "It's all because I said one word too many — I made her angry."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Just this one thing · regret",
+                  "tr": "Just because I said one word too many, I ended up making her angry."
+                }
+              ],
+              "explain": "Both work, with different nuance: せいで focuses on “who or what is to blame” and is often used to blame others, though you can also blame yourself; ばかりに focuses on “just because of this one little thing, it turned out like this”, carrying regret, and is usually followed by an unexpected bad result like 「〜てしまった」. To stress a small cause with big consequences, use ばかりに. They also attach differently: せいで can follow “noun＋の” directly; ばかりに can't.",
+              "wrong": {
+                "why": "ばかりに can't follow “noun＋の”; say 「寝坊したばかりに」. With せいで you can say 「寝坊のせいで」"
+              }
             }
           ]
         }
@@ -20236,29 +20218,6 @@
       "id": "sono-tame",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from 「ため（為）」 — expressing “purpose, cause”",
-          "items": [
-            {
-              "id": "tame-ni",
-              "diff": "そのため stands at the start of a sentence and refers back to the previous one; ために sits inside the sentence, with the cause or purpose directly before it.",
-              "this": [
-                {
-                  "tag": "Sentence start · refers back",
-                  "tr": "There was heavy snow last night. As a result, the trains stopped."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Mid-sentence · one sentence",
-                  "tr": "The trains stopped due to heavy snow."
-                }
-              ],
-              "explain": "Same meaning, different position: そのため is a standalone conjunction that needs a sentence before it, and 「その」 refers to that sentence's content; ために comes right after the cause (大雪の＋ために), all in one sentence. The same goes for purpose: 「そのために」 = “for that purpose”."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "All mean “therefore, so” — following up on a cause just mentioned",
           "items": [
@@ -20307,29 +20266,32 @@
       "groups": [
         {
           "kind": "root",
-          "note": "All come from 「上（うえ）」 — “on top of…”",
+          "note": "Both come from 「上（うえ）」 — originally “on top, above”",
           "items": [
             {
               "id": "ue-ni",
-              "diff": "その上 stands at the start of a sentence and refers to the previous one; 上に sits inside the sentence, saying it all in one go.",
+              "diff": "Same meaning; その上 comes at the start of a sentence and points back to the previous one; 〜上に sits inside the sentence, saying it all in one.",
               "this": [
                 {
                   "tag": "Sentence start · two sentences",
-                  "tr": "This restaurant is cheap. On top of that, it's delicious."
+                  "tr": "That clerk is kind. On top of that, he works fast too."
                 }
               ],
               "that": [
                 {
                   "tag": "Mid-sentence · one sentence",
-                  "tr": "This restaurant is not only cheap but also delicious."
+                  "tr": "That clerk is not only kind but also works fast."
                 }
               ],
-              "explain": "Same meaning; look at the position: the previous sentence has already ended with a period and a new one begins → その上 (「その」 refers to the previous sentence); attached directly after an adjective or verb (安い＋上に), all in one sentence → 上に. With nouns, say 「noun＋の上に」."
+              "explain": "Both mean “add one more layer on top of what's there” → “moreover”. その上 is 「その」 (that previous thing) ＋ 「上」 = on top of that, so it stands on its own at the start of a new sentence, pointing back to the previous one; 〜上に puts the first item directly in front of 「上」 (親切な上に、安い上に), stacking the next point on within one sentence. Look at the position: the previous sentence has ended with a period → その上; attached directly after an adjective or verb → 上に (with a noun, say “noun＋の上に”).",
+              "wrong": {
+                "why": "A な-adjective takes 「な」 before 「上に」: 親切な上に"
+              }
             },
             {
               "id": "ue-de",
               "title": "〜上で (on the basis of…)",
-              "diff": "その上 means “moreover, on top of that”; その上で means “on that basis (take the next step)” — one extra 「で」 changes the meaning.",
+              "diff": "その上 means “moreover, on top of that”; 〜た上で means “after first finishing…, then on that basis (take the next step)”.",
               "this": [
                 {
                   "tag": "Moreover · one more thing",
@@ -20339,10 +20301,10 @@
               "that": [
                 {
                   "tag": "On that basis · next step",
-                  "tr": "Please read the materials first, and then ask your questions based on them."
+                  "tr": "First check the content, and then ask your questions based on that."
                 }
               ],
-              "explain": "Look for 「で」 and the words around it: その上 is often followed by 「も」, adding another thing of the same kind on top of the first; その上で often has 「まず」 before it, meaning “do the first thing properly, then use it as a foundation for the next step”. Both come from “on top of that”: stacked on top = moreover; standing on top = on that basis."
+              "explain": "Both come from “on top”: その上 piles one more thing on top of the previous one → moreover; it stands alone at the start of a sentence and is often followed by 「も」. 〜た上で stands on top of something already done → first finish one thing properly, then take the next step based on it; it follows the 「た」 form and often goes with 「まず」. Check whether 「上」 is followed by 「で」 and preceded by 「〜た」."
             }
           ]
         },
@@ -20352,20 +20314,20 @@
           "items": [
             {
               "id": "soreni-conjunction",
-              "diff": "その上 is a bit more written, often used in descriptions and introductions; それに is spoken, often used in chat to add another reason.",
+              "diff": "Same meaning; その上 is slightly written and heavier in tone; それに is conversational, casually adding one more point.",
               "this": [
                 {
-                  "tag": "Written · introduction",
+                  "tag": "Slightly written · describing",
                   "tr": "This room is spacious and bright. On top of that, the rent is cheap too."
                 }
               ],
               "that": [
                 {
-                  "tag": "Spoken · adding a reason",
-                  "tr": "I'm not going today. It's raining, and besides, I'm tired."
+                  "tag": "Conversational · casually adding",
+                  "tr": "This room is spacious and bright. Plus, the rent is cheap too."
                 }
               ],
-              "explain": "Look at the setting: describing a home or writing an essay → その上; adding another reason in chat with 「〜し、それに〜し」 → それに. その上 is also often used when bad things happen one after another (道に迷い、その上雨まで降ってきた), and sounds heavier than それに."
+              "explain": "The two are interchangeable; the difference is style: それに is conversational, used to casually add one more point in chat; その上 is slightly more written and a bit heavier, common in descriptions and writing."
             },
             {
               "id": "dake-de-naku",
@@ -20425,25 +20387,8 @@
       "groups": [
         {
           "kind": "root",
-          "note": "All come from the 「そう」 of appearance — “how something looks”",
+          "note": "Both come from the appearance 「そう」 — originally “looking as if it's about to…”",
           "items": [
-            {
-              "id": "sou-da-appearance",
-              "diff": "そうもない means “doesn't look like it will…”; そうだ means “looks like it will…”.",
-              "this": [
-                {
-                  "tag": "Doesn't look likely",
-                  "tr": "It doesn't look like this work will be done today."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Looks likely",
-                  "tr": "It looks like this work will be done today."
-                }
-              ],
-              "explain": "The two sentences differ only in the final 「もない」 vs 「だ」. For the negative of そうだ (appearance), the most natural way is to put the negation after そう: 終わりそうもない／終わりそうにない, meaning “there's no sign at all that it will…”."
-            },
             {
               "id": "sou-ni-naru",
               "diff": "そうにない means “doesn't look like it will…”; そうになる means “almost…” — only the final 「ない」 vs 「なる」 differs.",
@@ -20459,48 +20404,34 @@
                   "tr": "My foot slipped and I almost fell."
                 }
               ],
-              "explain": "Look at the last word after 「そうに」: ない → it doesn't look like it will happen (そうもない works the same); なる, almost always in the past tense 「なった」 → something that was about to happen but in the end didn't. Just one kana apart, with completely different meanings."
-            },
-            {
-              "id": "nasasou-yosasou",
-              "title": "〜なさそう",
-              "diff": "そうもない only attaches to verbs; to say “doesn't look…” with adjectives and nouns, use なさそう.",
-              "this": [
-                {
-                  "tag": "Verb → そうもない",
-                  "tr": "With it this crowded, it doesn't look like I'll get a seat."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Adjective → なさそう",
-                  "tr": "This dish doesn't look spicy."
-                }
-              ],
-              "explain": "First look at the word before it: verbs like 座れる, 来る, 終わる → そうもない／そうにない; adjectives like 辛い, 高い (for nouns, 「〜じゃなさそう」) → なさそう. Also, そうもない is stronger, with a feeling of “no way it'll happen, however you look at it”."
+              "explain": "The appearance 「そう」 originally means “looking as if it's about to…”. Followed by 「にない」 → “there isn't even a sign of it about to…” → it doesn't look like it will happen (止みそうにない; そうもない is the same). Followed by 「になる」 → “it came to look as if it was about to…” → it was on the verge of happening; almost always in the past 「なった」, meaning it didn't happen in the end, i.e. “almost” (転びそうになった). Check whether 「そうに」 is followed by 「ない」 or 「なる」."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both express a negative judgment: “won't…”",
+          "note": "Both mean “probably won't…”",
           "items": [
             {
-              "id": "hazu-ga-nai",
-              "diff": "そうもない guesses from what you see: “doesn't look like it will”; はずがない concludes by reasoning: “there's no way”.",
+              "id": "mai",
+              "title": "〜まい (probably won't…)",
+              "diff": "そうもない works in speech and writing, saying “it doesn't look like…” from what you see; まい is very written, and the speaker's judgment sounds firmer.",
               "this": [
                 {
-                  "tag": "From appearances · leaves room",
-                  "tr": "It's already eight. It doesn't look like he's coming."
+                  "tag": "Judging from the situation · spoken and written",
+                  "tr": "The way things look, the negotiations don't look like they'll reach an agreement."
                 }
               ],
               "that": [
                 {
-                  "tag": "By reasoning · impossible",
-                  "tr": "He's overseas right now, so there's no way he'll come to today's party."
+                  "tag": "Written · firmer tone",
+                  "tr": "The way things look, the negotiations will probably not reach an agreement."
                 }
               ],
-              "explain": "Look at the basis in the first half: the situation in front of you, like 「もう８時だ」 → そうもない, just a guess that leaves a little possibility; a fact that makes it logically impossible, like 「海外にいる」 → はずがない, very certain in tone. They also attach differently: 来＋そうもない (ます-stem), 来る＋はずがない (dictionary form)."
+              "explain": "Both say “at this rate, the negotiations won't reach an agreement”. そうもない works in speech and writing and says “it doesn't look like it” based on the situation in front of you; まい is very written (roughly 「〜ないだろう」), found mostly in essays and commentary, with a firmer tone of judgment, and is hardly ever used in everyday chat. They attach differently too: そうもない follows the ます stem (まとまり＋そうもない), while まい generally follows the dictionary form (まとまる＋まい).",
+              "wrong": {
+                "why": "そうもない must follow the ます stem: まとまりそうもない"
+              }
             }
           ]
         }
