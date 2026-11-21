@@ -4554,41 +4554,24 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「ください」 — the imperative of 「くださる」 (to give me)",
+          "note": "Both come from 「くださる」 — originally “(someone) gives me”; ください is its imperative, “please give me”",
           "items": [
             {
               "id": "wo-kudasai",
-              "diff": "te-form + ください asks someone to “do” something; noun + をください asks someone to “give” something.",
+              "diff": "te-form + ください asks someone to “do” something; noun + をください asks someone to “give” you something.",
               "this": [
                 {
                   "tag": "Asking to do",
-                  "tr": "Excuse me, could you bring me a glass of water?"
+                  "tr": "Excuse me, could you bring me some water?"
                 }
               ],
               "that": [
                 {
                   "tag": "Asking to give",
-                  "tr": "Excuse me, water, please."
+                  "tr": "Excuse me, some water, please."
                 }
               ],
-              "explain": "Look at what comes before ください: a verb's te-form (持ってきて) → asking someone to do that action; noun + を (水を) → asking someone to give you that thing. When shopping or ordering, use をください."
-            },
-            {
-              "id": "o-kudasai",
-              "diff": "てください is an ordinary request; お〜ください is the honorific form used with customers, and is more respectful.",
-              "this": [
-                {
-                  "tag": "Ordinary request",
-                  "tr": "Please wait a moment."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "To customers · respectful",
-                  "tr": "We apologize, but please wait a moment."
-                }
-              ],
-              "explain": "Look at the form and setting: お + masu-stem (待ち) + ください, often with 「少々」「恐れ入りますが」, appears in shops, announcements and notices; between friends or coworkers, 「待ってください」 is enough."
+              "explain": "ください is the imperative of 「くださる」 (someone gives me), so its basic meaning is “please give me.” Asking for a thing directly → noun + を + ください (水をください) = please give me this thing; treating the other person's action as a favor done for you → verb te-form + ください (持ってきてください) = please do this for me. Look at what comes before ください: “noun + を” asks for a thing; a te-form asks for an action."
             }
           ]
         },
@@ -4614,21 +4597,38 @@
               "explain": "Look at who you're asking and the tone: instructions from a service counter or teacher → てください; asking a superior or client to do something extra for you, often after 「お忙しいところすみませんが」 → ていただけませんか."
             },
             {
-              "id": "nasai",
-              "diff": "てください is a polite request; なさい is a command from someone higher to someone lower.",
+              "id": "o-kudasai",
+              "diff": "Both ask someone to do something; てください works with anyone, while お〜ください is the respectful form used toward customers.",
               "this": [
                 {
-                  "tag": "Polite · to anyone",
-                  "tr": "It's getting late, so please get some rest early."
+                  "tag": "Ordinary request",
+                  "tr": "Please wait a moment."
                 }
               ],
               "that": [
                 {
-                  "tag": "Top-down · command",
-                  "tr": "It's already ten! Go to bed now!"
+                  "tag": "To customers · respectful",
+                  "tr": "I'm sorry, but please wait just a moment."
                 }
               ],
-              "explain": "Look at the relationship between speakers: parent to child, teacher to student → なさい, never to equals or superiors; a polite request to people in general → てください. They attach differently too: なさい follows the masu-stem (寝なさい, 書きなさい)."
+              "explain": "Both sentences ask the listener to wait; which one to use depends on who you're talking to and where. Speaking to customers in shops, announcements or notices, often after 「恐れ入りますが」 or with 「少々」 → お + masu-stem + ください (お待ちください); between friends or coworkers → 待ってください is enough, and お〜ください would sound distant."
+            },
+            {
+              "id": "nasai",
+              "diff": "Both tell someone to do something; てください is polite and works with anyone, while なさい is an instruction from above to below and leaves less room for discussion.",
+              "this": [
+                {
+                  "tag": "Polite · to anyone",
+                  "tr": "Please read the following sentence aloud."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Top-down · instruction",
+                  "tr": "Read the following sentence aloud."
+                }
+              ],
+              "explain": "Both sentences are instructions, and the choice depends on the relationship between the speakers: teacher to student, parent to child, or exam questions → なさい, never used to equals or superiors; to customers, coworkers or people in general → てください. They also attach differently: なさい follows the masu-stem (読みなさい), while てください follows the te-form (読んでください)."
             }
           ]
         }
@@ -4694,20 +4694,20 @@
           "items": [
             {
               "id": "nai-to-ikenai",
-              "diff": "てはいけない is “doing it is no good” = must not; ないといけない is “not doing it is no good” = must.",
+              "diff": "てはいけない means “doing it won't do” = prohibition; ないといけない means “not doing it won't do” = obligation.",
               "this": [
                 {
-                  "tag": "Doing is bad · forbidden",
-                  "tr": "You're not allowed to use English in this class."
+                  "tag": "Doing it won't do · prohibition",
+                  "tr": "You may not use English in this class."
                 }
               ],
               "that": [
                 {
-                  "tag": "Not doing is bad · must",
-                  "tr": "You have to use Japanese in this class."
+                  "tag": "Not doing it won't do · must",
+                  "tr": "You have to use English in this class."
                 }
               ],
-              "explain": "Look at the condition before いけない: affirmative 「使っては」 (if you use it) → no good = forbidden; negative 「使わないと」 (if you don't use it) → no good = must."
+              "explain": "いけない originally means “it won't work, it's no good.” Preceded by the affirmative 「〜ては」 (使っては = if you use it) → doing it is no good = prohibition; preceded by the negative 「〜ないと」 (使わないと = if you don't use it) → not doing it is no good = obligation. The two sentences differ only in 使っては / 使わないと, yet mean exact opposites."
             }
           ]
         },
@@ -4717,11 +4717,11 @@
           "items": [
             {
               "id": "te-wa-naranai",
-              "diff": "Both express prohibition; てはならない is used in laws, maxims and writing, and sounds more solemn.",
+              "diff": "Both express prohibition; てはならない is used in laws, maxims and formal writing, and sounds more solemn.",
               "this": [
                 {
                   "tag": "Everyday rule",
-                  "tr": "You're not allowed to chew gum in the classroom."
+                  "tr": "You may not chew gum in the classroom."
                 }
               ],
               "that": [
@@ -4730,15 +4730,15 @@
                   "tr": "Whatever the reason, you must never hurt others."
                 }
               ],
-              "explain": "Look at the setting and topic: everyday rules at school or work → てはいけない; laws, maxims, speeches laying down principles → てはならない, which is rare in everyday conversation."
+              "explain": "Look at the setting and the topic: everyday rules at school or work (教室で) → てはいけない; statements of principle in laws, maxims or speeches (どんな理由があっても) → てはならない, which is rare in everyday conversation."
             },
             {
               "id": "naide-kudasai",
-              "diff": "てはいけない announces a rule; ないでください asks someone not to do something, and is more polite.",
+              "diff": "てはいけない announces a rule; ないでください asks the listener not to do something, and is more polite.",
               "this": [
                 {
                   "tag": "Announcing a rule",
-                  "tr": "This is a non-smoking area. Smoking is not allowed."
+                  "tr": "This is a no-smoking area. Smoking is not allowed."
                 }
               ],
               "that": [
@@ -4747,70 +4747,25 @@
                   "tr": "Excuse me, please don't smoke here."
                 }
               ],
-              "explain": "てはいけない passes judgment from the standpoint of a rule, so saying it to a customer's or superior's face sounds like a scolding; ないでください makes a request of the listener and sounds gentle. When asking someone in person to stop, ないでください is usually used."
+              "explain": "てはいけない speaks from the rule's standpoint and states a conclusion, often after the rule has been given (ここは禁煙です); said directly to a customer or a superior, it can sound like a scolding. ないでください makes a request to the listener, often starting with 「すみません」, and sounds gentle. When asking someone face to face not to do something, ないでください is the usual choice."
             },
             {
               "id": "naa-exclamation",
               "title": "〜な (prohibition)",
-              "diff": "てはいけない states a rule; dictionary form＋な is a very direct, command-style prohibition.",
+              "diff": "てはいけない explains a rule; dictionary form + な is a very blunt, command-style prohibition.",
               "this": [
                 {
-                  "tag": "Stating a rule",
-                  "tr": "It's dangerous, so you mustn't swim in the river."
+                  "tag": "Explaining a rule",
+                  "tr": "It's dangerous, so you may not swim in the river."
                 }
               ],
               "that": [
                 {
                   "tag": "Shouted order · harsh",
-                  "tr": "It's dangerous! Don't swim in the river!"
+                  "tr": "Danger! Don't swim in the river!"
                 }
               ],
-              "explain": "Look at the end of the sentence: 「な」 added directly to the dictionary form (泳ぐな) is a command-style prohibition used on signs, when yelling at someone, or in men's casual speech, and is very blunt when said to a person; てはいけない reasons with you or states a rule, and isn't as harsh."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "to-dochira",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Both are used for comparison",
-          "items": [
-            {
-              "id": "yori-hou-ga",
-              "diff": "どちらが is used to ask “which is more…”; より〜のほうが is used to answer “… is more…”.",
-              "this": [
-                {
-                  "tag": "Question · pick one",
-                  "tr": "Dogs or cats — which do you like more?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Answer · one wins",
-                  "tr": "I like cats more than dogs."
-                }
-              ],
-              "explain": "When asking, set the two options side by side with 「と」 and follow with 「どちらが」; when answering, mark the losing side with 「より」 and the winning side with 「のほうが」 — don't answer ✗犬と猫と猫のほうが好きです."
-            },
-            {
-              "id": "no-naka-de-ichiban",
-              "diff": "どちら is only used between two things; for three or more, use 「の中で〜がいちばん」.",
-              "this": [
-                {
-                  "tag": "Two → どちら",
-                  "tr": "Apples or mandarins — which do you like more?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Three or more → いちばん",
-                  "tr": "Of all fruits, which do you like best?"
-                }
-              ],
-              "explain": "First count the options: only two (りんごとみかん) → どちらが; three or more within a range (果物の中で) → use 「何／どれ／誰が いちばん」."
+              "explain": "Look at the end of the sentence: な added straight after the dictionary form (泳ぐな) is a command-style prohibition used on signs, when yelling at someone, or in men's casual speech; it often bursts out right after 「危ない！」 and is quite rude when said to a person. てはいけない gives a reason or states a rule (危ないから、〜てはいけません) and is much less harsh."
             }
           ]
         }
@@ -4821,28 +4776,28 @@
       "groups": [
         {
           "kind": "root",
-          "note": "All come from 「と + 言う」 — originally “to be called… / to say…”",
+          "note": "Both come from 「言う」 — originally “to say”",
           "items": [
             {
               "id": "to-iu-quote",
-              "diff": "という is followed by a noun and means “(a person, thing) called…”; と言う is the predicate and means “(someone) said…”.",
+              "diff": "という is followed by a noun and means “(a person or thing) called …”; と言う is a predicate and means “(someone) said …”.",
               "this": [
                 {
                   "tag": "Before a noun · called",
-                  "tr": "A man named Tanaka called just now."
+                  "tr": "This is a food called 「もち」 (rice cake)."
                 }
               ],
               "that": [
                 {
-                  "tag": "Predicate · said",
-                  "tr": "Mr. Tanaka said he'd come tomorrow."
+                  "tag": "Sentence ends · said",
+                  "tr": "My grandmother said, “I want to eat rice cakes.”"
                 }
               ],
-              "explain": "Look at what follows 「と」: a noun (人, 店, 本) → introducing a name, usually written in kana as 「という」; the sentence ends at 「言いました」 → quoting someone, usually written with the kanji 「言う」."
+              "explain": "言う originally means “to say.” When と marks what was said and the sentence ends at 「言いました」 → quoting what someone said (「もちが食べたい」と言いました); when a name is said and then attached to the following noun → 「X という + noun」 = a … called X (「もち」という食べ物). Look at what follows という / と言う: a noun → introducing a name, usually written in kana; the sentence ends there → what someone said, usually written with the kanji 「言う」."
             },
             {
               "id": "to-iu-no-wa",
-              "diff": "という is followed by a noun and introduces a name; というのは takes a word as the topic and then explains its meaning.",
+              "diff": "という is followed by a noun and introduces a name; というのは makes a word the topic and then explains its meaning.",
               "this": [
                 {
                   "tag": "Introducing a name",
@@ -4855,7 +4810,7 @@
                   "tr": "「スマホ」 means a smartphone."
                 }
               ],
-              "explain": "Look at what follows: 「という + noun (言葉, 人)」 just attaches a name to the noun; 「というのは」 is followed by an explanation of it, often ending in 「〜のことです」「〜という意味です」."
+              "explain": "言う originally means “to say.” 「という + noun」 says a name and attaches it to a noun (「スマホ」という言葉 = the word called スマホ); adding 「の」 and 「は」 turns “the word just mentioned” into the topic, followed by an explanation, giving “what is called … is …”. The sentence often ends with 「〜のことです」 or 「〜という意味です」. Look at what follows: a noun → introducing a name; 「のは」 followed by an explanation → a definition."
             }
           ]
         }
@@ -4866,59 +4821,65 @@
       "groups": [
         {
           "kind": "root",
-          "note": "All come from quotative 「と」 + 「言う」 (って is the spoken contraction of 「と言って」)",
+          "note": "Both come from 「言う」 — originally “to say”",
           "items": [
             {
               "id": "to-iu-called",
-              "diff": "と言う is the predicate and means “(someone) said…”; という is followed by a noun and means “(a person, thing) called…”.",
+              "diff": "と言う is a predicate and means “(someone) said …”; という is followed by a noun and means “(a thing or person) called …”.",
               "this": [
                 {
-                  "tag": "Predicate · said",
-                  "tr": "Mr. Tanaka said he'd come tomorrow."
+                  "tag": "Sentence ends · said",
+                  "tr": "My grandmother said, “I want to eat rice cakes.”"
                 }
               ],
               "that": [
                 {
                   "tag": "Before a noun · called",
-                  "tr": "A man named Tanaka called just now."
+                  "tr": "This is a food called 「もち」 (rice cake)."
                 }
               ],
-              "explain": "Look at what follows 「と」: the sentence ends at 「言いました」 → quoting someone, usually written with the kanji 「言う」; a noun (人, 店, 本) → introducing a name, usually written in kana as 「という」."
-            },
+              "explain": "言う originally means “to say.” When と marks what was said and the sentence ends at 「言いました」 → quoting what someone said (「もちが食べたい」と言いました); when a name is said and then attached to the following noun → 「X という + noun」 = a … called X (「もち」という食べ物). Look at what follows と言う / という: the sentence ends there → what someone said, usually written with the kanji 「言う」; a noun → introducing a name, usually written in kana."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Both report what someone said: “(someone) said …”",
+          "items": [
             {
               "id": "to-itte-ita",
-              "diff": "と言いました narrates what was said at the time; と言っていました passes on a third person's words to the listener.",
+              "diff": "Both report what someone said; と言いました narrates what was said at the time, while と言っていました passes a third person's words on to the listener.",
               "this": [
                 {
                   "tag": "Narrating what was said",
-                  "tr": "At the meeting, the manager said, “Let's give it our best.”"
+                  "tr": "At the meeting, the department head said we would start a new project."
                 }
               ],
               "that": [
                 {
                   "tag": "Passing it on to you",
-                  "tr": "The manager said tomorrow's meeting is canceled."
+                  "tr": "The department head said we're starting a new project, you know."
                 }
               ],
-              "explain": "Look at the purpose: recounting who said what in a scene → と言いました; passing someone's words on to the listener, “that's what he said” → と言っていました, often ending with 「よ」."
+              "explain": "Both sentences report the same words; look at the purpose: describing who said what in a particular scene (会議で) → と言いました; passing someone's words on to the person in front of you, “that's what he said” → と言っていました, often ending with 「よ」."
             },
             {
               "id": "tte-quote-topic",
               "title": "〜って (sentence-final hearsay)",
-              "diff": "と言っていました is a full, polite report of what someone said; sentence-final って is the casual shortened form.",
+              "diff": "Both report what someone said; と言いました is the full, formal form, while sentence-final って is a casual shortened form.",
               "this": [
                 {
-                  "tag": "Full · polite",
-                  "tr": "The teacher said there's no school tomorrow."
+                  "tag": "Full · formal",
+                  "tr": "The teacher said there's no class tomorrow."
                 }
               ],
               "that": [
                 {
-                  "tag": "Spoken · shortened",
-                  "tr": "Hey, I heard there's no school tomorrow."
+                  "tag": "Casual · shortened",
+                  "tr": "The teacher said there's no class tomorrow, apparently."
                 }
               ],
-              "explain": "って can replace 「と」, and at the end of a sentence it can also drop 「言っていた」, meaning “I heard…” — used only among friends and family; with teachers, bosses or in formal settings, say the full 「と言っていました」."
+              "explain": "The two sentences mean the same and differ only at the end: the full 「と言いました」 works with anyone and suits formal situations; ending with just 「って」, dropping the 「言っていた」 that would follow, is casual speech among friends and family, not used with teachers or bosses or in formal settings."
             }
           ]
         }
@@ -4952,32 +4913,40 @@
         },
         {
           "kind": "meaning",
-          "note": "と思う has two jobs, each with a similar alternative: stating your own thoughts ≈ と思っている (have been thinking); making a guess ≈ でしょう",
+          "sense": 1,
+          "note": "Both mean “I think …”",
           "items": [
             {
               "id": "to-omotte-iru",
-              "diff": "と思う is the speaker's thought at this moment; と思っている is a thought held over time, and can also describe someone else's thoughts.",
+              "diff": "Both state your own opinion; と思います is what you think right now, while と思っています is what you have thought all along.",
               "this": [
                 {
-                  "tag": "Me · right now",
-                  "tr": "I'd like to study abroad."
+                  "tag": "Current opinion",
+                  "tr": "I think this town is a nice place to live."
                 }
               ],
               "that": [
                 {
-                  "tag": "Someone else · all along",
-                  "tr": "My older brother has always wanted to study abroad."
+                  "tag": "Long-held opinion",
+                  "tr": "I've always thought this town is a nice place to live."
                 }
               ],
-              "explain": "Look at the subject: your own thought right now → と思う; a third person's thoughts (兄, 彼), or a thought you've held for a long time → と思っている. The subject of と思う can only be the speaker, so you can't describe your brother's thoughts with 「兄は〜と思います」."
-            },
+              "explain": "In both sentences the subject is “I”; look for words showing continuity: stating what you think right now → と思います; having thought so all along, with words like 「昔から」 or 「ずっと」 → と思っています. Also, when talking about someone else's thoughts (兄, 彼), と思っている is generally used."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both express a guess: “probably …”",
+          "items": [
             {
               "id": "deshou-guess",
               "diff": "と思う carries the speaker's personal opinion; でしょう sounds objective and is common in weather forecasts.",
               "this": [
                 {
                   "tag": "My personal view",
-                  "tr": "I think it'll rain tomorrow."
+                  "tr": "I think it will rain tomorrow."
                 }
               ],
               "that": [
@@ -4987,9 +4956,9 @@
                 }
               ],
               "wrong": {
-                "why": "After a noun, add 「だ」: 雨だと思います"
+                "why": "A noun needs 「だ」 before と思う: 雨だと思います"
               },
-              "explain": "と思う is “I think”, suited to giving your own opinion in conversation; でしょう doesn't foreground “I”, and makes an objective guess like a weather forecast. Note how they attach: after a noun, と思う needs 「だ」 (雨だと思う), while でしょう attaches directly (雨でしょう)."
+              "explain": "と思う means “I think” and suits giving your own view in conversation; でしょう doesn't put “I” forward and makes an objective guess, like a weather forecast. Note how they attach: after a noun, と思う needs 「だ」 (雨だと思う), while でしょう attaches directly (雨でしょう)."
             }
           ]
         }
@@ -5000,28 +4969,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both can be rendered in English as “the same as / like…”",
+          "note": "Both mean “do something like …”",
           "items": [
             {
               "id": "you-na-example",
-              "title": "〜ように (comparison)",
-              "diff": "と同じ means actually “the same”; のように means “like…”, and can be followed by an adjective or verb.",
+              "title": "〜ように (like …)",
+              "diff": "Both mean “do something like …”; と同じように stresses doing it exactly the same way, while のように only says “similar” and can also be used for figurative comparisons.",
               "this": [
                 {
-                  "tag": "Actually the same",
-                  "tr": "My sister graduated from the same university as my mother."
+                  "tag": "Exactly the same",
+                  "tr": "I read the newspaper every morning, exactly as my father does."
                 }
               ],
               "that": [
                 {
-                  "tag": "Like…",
-                  "tr": "My sister is kind like my mother."
+                  "tag": "Like …",
+                  "tr": "Like my father, I read the newspaper every morning."
                 }
               ],
-              "wrong": {
-                "why": "同じ can't directly modify an adjective"
-              },
-              "explain": "Look at what follows 「同じ」: a noun (大学, 色) or 「だ」 → the two really are the same; to say “(kind, pretty) like…”, followed by an adjective or verb → use のように. Because English can say “the same as” or “like” for both, it's easy to write ✗母と同じ優しい."
+              "explain": "Both sentences work; choose by what you want to stress: doing it in exactly the same way as someone, following their example → と同じように; just saying “like …”, with a hint of taking that person as a model → のように. Figurative comparisons (鳥のように空を飛ぶ) can only use のように, not と同じように."
             }
           ]
         }
@@ -5032,11 +4998,12 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "と has several jobs, each with a similar alternative: “and” ≈ や, “as soon as / when” ≈ たら, “the person you meet” ≈ に",
+          "sense": 4,
+          "note": "Both list things: “… and …”",
           "items": [
             {
               "id": "ya-nado",
-              "diff": "と lists everything; や〜など only gives a few examples, implying there are others.",
+              "diff": "と lists everything; や〜など gives just a few examples and implies there are others.",
               "this": [
                 {
                   "tag": "Complete list",
@@ -5045,52 +5012,66 @@
               ],
               "that": [
                 {
-                  "tag": "Examples · there's more",
+                  "tag": "Examples · others too",
                   "tr": "There are books, notebooks and so on in my bag."
                 }
               ],
-              "explain": "The two sentences differ only in the particle: what と lists is everything; や (often with など) just picks a few representatives, and there are other things in the bag."
-            },
+              "explain": "The two sentences differ only in the particles, and both list things one by one: if that's the whole list (only a book and a notebook) → と; if you're picking a few representative items and implying there are others → や, often paired with など."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 6,
+          "note": "Both mark the other party of an action: “with …”",
+          "items": [
             {
-              "id": "tara",
-              "diff": "と can only be followed by something that naturally happens; たら can also be followed by a request or intention.",
+              "id": "ni-destination-target",
+              "title": "〜に (target of an action)",
+              "diff": "Both mark the person you meet; と means both sides arranged to meet each other, while に means going to see someone one-sidedly or running into them.",
               "this": [
                 {
-                  "tag": "When… · natural result",
+                  "tag": "Mutual · arranged",
+                  "tr": "As arranged, I met Mr. Tanaka at the station."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "One-sided · ran into",
+                  "tr": "I happened to run into Mr. Tanaka at the station."
+                }
+              ],
+              "wrong": {
+                "why": "結婚する needs both people to take part, so the partner is marked with 「と」"
+              },
+              "explain": "「会う」 works with both; look at the clues before it: arranged, meeting each other (約束どおり) → と; going to see someone from your side alone, or meeting by chance (偶然) → に. Actions that need two people to happen, like 「結婚する」 or 「けんかする」, can only use と."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 7,
+          "note": "Both mean “as soon as … / when …”",
+          "items": [
+            {
+              "id": "tara",
+              "diff": "と can only be followed by something that happens naturally; たら can also be followed by requests and intentions.",
+              "this": [
+                {
+                  "tag": "As soon as · natural result",
                   "tr": "When you get to the station, there's a bank right in front of you."
                 }
               ],
               "that": [
                 {
-                  "tag": "Followed by request",
-                  "tr": "When you get to the station, please give me a call."
+                  "tag": "Followed by a request",
+                  "tr": "Please call me when you get to the station."
                 }
               ],
               "wrong": {
-                "why": "と can't be followed by a request or command"
+                "why": "と cannot be followed by a request or a command"
               },
-              "explain": "The first halves are the same; look at the second half: directions, machine operations, natural laws — “once A happens, B appears” → と; a request or intention like 「てください」「〜たい」「〜よう」 → only たら."
-            },
-            {
-              "id": "ni-destination-target",
-              "title": "〜に (target of an action)",
-              "diff": "と shows both sides doing it together; に shows it directed one-way at the other person.",
-              "this": [
-                {
-                  "tag": "Mutual · together",
-                  "tr": "On the weekend I met up with a friend and we had a meal together."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "One-way · ran into",
-                  "tr": "I happened to run into my teacher at the station."
-                }
-              ],
-              "wrong": {
-                "why": "結婚する needs both people taking part, so the partner takes 「と」"
-              },
-              "explain": "「会う」 can take either: arranging to meet, seeing each other → と; you going to see someone, or bumping into them by chance → に. Actions that only work with two people, like 「結婚する」「けんかする」, can only take と."
+              "explain": "The first halves are the same, so look at the second half: a result that naturally appears as soon as A happens, like 「目の前に銀行があります」 → と; if the second half is a request like 「電話してください」, or an intention such as 「〜たい」 or 「〜よう」 → only たら works."
             }
           ]
         }
@@ -5101,59 +5082,42 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "All can express “when…”",
+          "note": "Both mean “when …”",
           "items": [
             {
-              "id": "tara",
-              "diff": "とき only states the time; たら carries a condition, “once… happens, then…”.",
+              "id": "sai-ni",
+              "diff": "Both mean “when …”; とき is used in everyday conversation, while 際（は） is more formal and common in notices, announcements and business settings.",
               "this": [
                 {
-                  "tag": "Past · time",
-                  "tr": "When I went to Japan last year, I climbed Mt. Fuji."
+                  "tag": "Everyday · spoken",
+                  "tr": "Remember to turn off the light when you leave the room, OK?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Future · condition",
-                  "tr": "When I go to Japan next time, I want to climb Mt. Fuji."
+                  "tag": "Notice · formal",
+                  "tr": "Please turn off the lights when leaving the room."
                 }
               ],
-              "explain": "Look at the time words and the end of the sentence: 「去年」 + a past fact → とき, just stating when; 「今度」 + an intention or request like 「〜たい」「〜てください」 → usually たら, meaning “once A happens, do B”."
+              "explain": "The two sentences mean the same; look at the setting and the ending: said casually to family or friends, ending with 「ね」 → とき; in notices, announcements or business emails, ending with a formal phrase like 「お消しください」 → 際（は）. Using とき in formal situations isn't wrong, but 際 sounds more formal; in everyday conversation 際 sounds stiff."
             },
             {
               "id": "aida-during",
-              "title": "〜間 (throughout)",
-              "diff": "とき is a point or period in time; 間 is a whole stretch of time, often used with 「ずっと」.",
+              "title": "〜間に (at some point during)",
+              "diff": "Both mark when something happens; とき only says when, while 間に treats it as a period that will end and stresses getting something done before it ends.",
               "this": [
                 {
-                  "tag": "At that time · one event",
-                  "tr": "During summer vacation I went back to my home country once."
+                  "tag": "Just says when",
+                  "tr": "When I was in Japan, I climbed Mt. Fuji once."
                 }
               ],
               "that": [
                 {
-                  "tag": "Whole stretch · all along",
-                  "tr": "I stayed in my home country for the whole summer vacation."
+                  "tag": "While the period lasts",
+                  "tr": "While I was in Japan, I took the chance to climb Mt. Fuji once."
                 }
               ],
-              "explain": "Look at the second half: a state that lasts through the whole period, like 「ずっと〜ていた」 → 間; a single event that happened during that time (一度帰った) → とき. To say “did something at some point during that period”, you can also use 間に (夏休みの間に一度帰った)."
-            },
-            {
-              "id": "baai-wa",
-              "diff": "とき refers to an actual time; 場合は refers to a hypothetical situation, mostly in rules and instructions.",
-              "this": [
-                {
-                  "tag": "Actual period",
-                  "tr": "When I was a kid, I often played in this river."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Hypothetical · rule",
-                  "tr": "In case of fire, please do not use the elevator."
-                }
-              ],
-              "explain": "場合は means “in the event of…”, used in rules, manuals and notices about hypothetical situations that haven't happened, with a formal tone; things that already happened, or a period of life (子どものとき), can only take とき."
+              "explain": "Both sentences work and differ only in とき / 間に: とき simply says when it happened; 間に treats 「日本にいる」 as a period that will end sooner or later and stresses getting something done before it does, so “while I still can” plans usually use 間に (日本にいる間に登りたい). Note that 「間」 without 「に」 means something continues throughout the whole period (その間ずっと) and can't be used for one-time events."
             }
           ]
         }
@@ -5168,7 +5132,7 @@
           "items": [
             {
               "id": "you-to-omou",
-              "diff": "(よ)うと思う is mostly an idea that just came up while speaking; つもりだ is a firmer plan decided long ago.",
+              "diff": "(よ)うと思う is usually an idea that has just come to mind; つもりだ is a firmer plan decided well in advance.",
               "this": [
                 {
                   "tag": "Decided long ago",
@@ -5177,19 +5141,19 @@
               ],
               "that": [
                 {
-                  "tag": "Idea right now",
+                  "tag": "Spur-of-the-moment idea",
                   "tr": "It's raining, so I think I'll take a taxi home today."
                 }
               ],
-              "explain": "Look at when it was decided: thought of on the spot after seeing the rain → (よ)うと思う; a plan settled long ago and being prepared for (前から) → つもりだ."
+              "explain": "Look at when the decision was made: thought of on the spot after seeing the rain (雨だから) → (よ)うと思う; a plan settled long ago and already being prepared for (前から) → つもりだ."
             },
             {
               "id": "yotei-plan",
-              "diff": "つもり is a personal intention in your mind; 予定 is an already-arranged schedule.",
+              "diff": "つもり is a personal intention in someone's mind; 予定 is a schedule that has already been set.",
               "this": [
                 {
                   "tag": "Personal intention",
-                  "tr": "I'm planning to go back to my home country over summer vacation."
+                  "tr": "I plan to go back to my home country for summer vacation."
                 }
               ],
               "that": [
@@ -5199,26 +5163,9 @@
                 }
               ],
               "wrong": {
-                "why": "A plane has no “intentions” — use 予定 for schedules"
+                "why": "A plane has no “intentions”; use 予定 for schedules"
               },
-              "explain": "Look at the subject: a person's own thoughts → つもり; already-arranged schedules like flights, meetings or events, or arrangements set by a company or others → 予定."
-            },
-            {
-              "id": "koto-ni-suru",
-              "diff": "つもりだ is an intention you've had in mind; ことにした is the moment you make up your mind.",
-              "this": [
-                {
-                  "tag": "Plan in mind",
-                  "tr": "I plan to study abroad next year."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Making up one's mind",
-                  "tr": "I went back and forth for a long time, but in the end I decided to study abroad."
-                }
-              ],
-              "explain": "つもりだ just states an intention without stressing the moment of decision, and you might not end up going; ことにした often carries a sense of “finally deciding after hesitation” (迷ったけど, いろいろ考えて)."
+              "explain": "Look at the subject: a person's own intention → つもり; something already scheduled, like a flight (飛行機), a meeting or an event, or arrangements decided by a company or someone else → 予定."
             }
           ]
         }

@@ -4554,41 +4554,24 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「ください」 — thể mệnh lệnh của 「くださる（cho tôi）」",
+          "note": "Đều bắt nguồn từ 「くださる」 — nghĩa gốc là “(người khác) cho tôi”; ください là thể mệnh lệnh của nó, “xin hãy cho tôi”",
           "items": [
             {
               "id": "wo-kudasai",
-              "diff": "Thể て＋ください là nhờ đối phương “làm” việc gì; danh từ＋をください là xin đối phương “đưa” đồ.",
+              "diff": "Thể て＋ください là nhờ người khác “làm” gì đó; danh từ＋をください là xin người khác “cho” mình vật gì đó.",
               "this": [
                 {
-                  "tag": "Nhờ đối phương làm",
+                  "tag": "Nhờ làm",
                   "tr": "Xin lỗi, làm ơn mang giúp tôi cốc nước."
                 }
               ],
               "that": [
                 {
-                  "tag": "Xin đối phương đưa",
+                  "tag": "Xin cho",
                   "tr": "Xin lỗi, cho tôi xin nước."
                 }
               ],
-              "explain": "Nhìn phía trước ください: thể て của động từ (持ってきて) → nhờ đối phương làm hành động này; danh từ＋を (水を) → xin đối phương đưa thứ này cho mình. Khi mua đồ, gọi món thì dùng をください."
-            },
-            {
-              "id": "o-kudasai",
-              "diff": "てください là lời nhờ thông thường; お〜ください là cách nói tôn kính với khách, cung kính hơn.",
-              "this": [
-                {
-                  "tag": "Nhờ thông thường",
-                  "tr": "Chờ một chút nhé."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Với khách · cung kính",
-                  "tr": "Xin lỗi, xin quý khách vui lòng đợi một lát."
-                }
-              ],
-              "explain": "Xem cách nối và hoàn cảnh: お＋thể ます (待ち)＋ください, hay đi cùng 「少々」「恐れ入りますが」, xuất hiện ở cửa hàng, thông báo phát thanh, bảng thông báo; giữa bạn bè, đồng nghiệp thì nói 「待ってください」 là đủ."
+              "explain": "ください là thể mệnh lệnh của 「くださる」 (người khác cho tôi), nghĩa gốc là “xin hãy cho tôi”. Xin trực tiếp một vật → danh từ＋を＋ください (水をください) = xin cho tôi vật này; coi hành động của đối phương cũng là ân huệ dành cho mình → thể て của động từ＋ください (持ってきてください) = xin làm việc này cho tôi. Hãy xem trước ください: “danh từ＋を” là xin vật; thể て của động từ là nhờ làm một hành động."
             }
           ]
         },
@@ -4614,21 +4597,38 @@
               "explain": "Xem đối tượng và giọng điệu: lời hướng dẫn, chỉ thị của quầy tiếp nhận, thầy cô → てください; nhờ cấp trên, khách hàng làm thêm một việc cho mình, phía trước hay có 「お忙しいところすみませんが」 → ていただけませんか."
             },
             {
-              "id": "nasai",
-              "diff": "てください là lời nhờ lịch sự; なさい là mệnh lệnh của người trên với người dưới.",
+              "id": "o-kudasai",
+              "diff": "Đều là nhờ người khác làm gì đó; てください dùng được với bất kỳ ai, còn お〜ください là cách nói tôn kính dành cho khách, trang trọng hơn.",
               "this": [
                 {
-                  "tag": "Lịch sự · với ai cũng được",
-                  "tr": "Muộn rồi, anh nghỉ sớm đi nhé."
+                  "tag": "Nhờ thông thường",
+                  "tr": "Đợi một chút nhé."
                 }
               ],
               "that": [
                 {
-                  "tag": "Trên với dưới · mệnh lệnh",
-                  "tr": "10 giờ rồi đấy, mau đi ngủ!"
+                  "tag": "Với khách · trang trọng",
+                  "tr": "Thành thật xin lỗi, xin quý khách vui lòng đợi một chút."
                 }
               ],
-              "explain": "Xem quan hệ giữa hai người: bố mẹ với con cái, thầy giáo với học sinh → なさい, không được dùng với người ngang hàng hay cấp trên; nhờ người bình thường một cách lịch sự → てください. Cách nối cũng khác: なさい gắn vào thể ます (寝なさい、書きなさい)."
+              "explain": "Cả hai câu đều nhờ đối phương đợi; chọn câu nào tùy vào đối tượng và hoàn cảnh: nói với khách ở cửa hàng, trong thông báo, biển báo, phía trước hay có 「恐れ入りますが」「少々」 → お＋thể ます＋ください (お待ちください); giữa bạn bè, đồng nghiệp → 待ってください là đủ, dùng お〜ください lại thành ra xa cách."
+            },
+            {
+              "id": "nasai",
+              "diff": "Đều có thể bảo đối phương làm theo; てください lịch sự, dùng với ai cũng được; なさい là chỉ thị của người trên với người dưới, giọng dứt khoát hơn, không có chỗ bàn cãi.",
+              "this": [
+                {
+                  "tag": "Lịch sự · với ai cũng được",
+                  "tr": "Hãy đọc to câu sau đây."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Trên với dưới · chỉ thị",
+                  "tr": "Đọc to câu sau đây."
+                }
+              ],
+              "explain": "Cả hai câu đều là chỉ thị bảo đối phương làm theo; chọn câu nào tùy quan hệ giữa hai người: thầy cô với học sinh, bố mẹ với con cái, đề bài thi → なさい, không được dùng với người ngang hàng hay cấp trên; với khách, đồng nghiệp hay người bình thường → てください. Cách nối cũng khác: なさい gắn vào thể ます (読みなさい), てください gắn vào thể て (読んでください)."
             }
           ]
         }
@@ -4694,7 +4694,7 @@
           "items": [
             {
               "id": "nai-to-ikenai",
-              "diff": "てはいけない là “làm thì không được”＝cấm; ないといけない là “không làm thì không được”＝bắt buộc.",
+              "diff": "てはいけない là “làm thì không được” = cấm; ないといけない là “không làm thì không được” = bắt buộc.",
               "this": [
                 {
                   "tag": "Làm thì không được · cấm",
@@ -4704,10 +4704,10 @@
               "that": [
                 {
                   "tag": "Không làm không được · bắt buộc",
-                  "tr": "Trong giờ học này phải dùng tiếng Nhật."
+                  "tr": "Trong giờ học này phải dùng tiếng Anh."
                 }
               ],
-              "explain": "Xem điều kiện đứng trước いけない: khẳng định 「使っては」 (nếu dùng) → không ổn＝cấm; phủ định 「使わないと」 (nếu không dùng) → không ổn＝bắt buộc."
+              "explain": "いけない nghĩa gốc là “không được, không xong”. Phía trước là dạng khẳng định 「〜ては」 (使っては = nếu dùng) → làm thì không được = cấm; phía trước là dạng phủ định 「〜ないと」 (使わないと = nếu không dùng) → không làm thì không được = bắt buộc. Hai câu chỉ khác 使っては／使わないと mà nghĩa hoàn toàn trái ngược."
             }
           ]
         },
@@ -4717,11 +4717,11 @@
           "items": [
             {
               "id": "te-wa-naranai",
-              "diff": "Cả hai đều diễn tả cấm đoán; てはならない dùng trong luật pháp, châm ngôn, văn viết, giọng trang nghiêm hơn.",
+              "diff": "Đều diễn tả sự cấm đoán; てはならない dùng trong luật pháp, châm ngôn, văn viết, giọng trang nghiêm hơn.",
               "this": [
                 {
-                  "tag": "Quy định hằng ngày",
-                  "tr": "Trong lớp học không được nhai kẹo cao su."
+                  "tag": "Quy định thường ngày",
+                  "tr": "Không được nhai kẹo cao su trong lớp học."
                 }
               ],
               "that": [
@@ -4730,87 +4730,42 @@
                   "tr": "Dù có lý do gì đi nữa cũng không được làm tổn thương người khác."
                 }
               ],
-              "explain": "Xem hoàn cảnh và chủ đề: quy định hằng ngày ở trường, công ty → てはいけない; nói đạo lý lớn trong điều luật, châm ngôn, diễn văn → てはならない, hội thoại hằng ngày rất ít dùng."
+              "explain": "Xem hoàn cảnh và chủ đề: quy định thường ngày ở trường học, công ty (教室で) → てはいけない; nói về nguyên tắc lớn trong điều luật, châm ngôn, bài diễn văn (どんな理由があっても) → てはならない, rất ít dùng trong hội thoại hằng ngày."
             },
             {
               "id": "naide-kudasai",
-              "diff": "てはいけない là tuyên bố quy tắc; ないでください là nhờ đối phương đừng làm, lịch sự hơn.",
+              "diff": "てはいけない là tuyên bố quy định; ないでください là nhờ đối phương đừng làm, lịch sự hơn.",
               "this": [
                 {
-                  "tag": "Tuyên bố quy tắc",
-                  "tr": "Ở đây cấm hút thuốc, không được hút thuốc."
+                  "tag": "Tuyên bố quy định",
+                  "tr": "Ở đây cấm hút thuốc. Không được hút thuốc."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nhờ · lịch sự",
+                  "tag": "Lời nhờ · lịch sự",
                   "tr": "Xin lỗi, xin đừng hút thuốc ở đây."
                 }
               ],
-              "explain": "てはいけない đứng trên lập trường quy tắc để kết luận, nói thẳng với khách, cấp trên sẽ giống như đang dạy đời; ないでください là đưa ra lời nhờ với đối phương, giọng mềm mỏng. Khi trực tiếp can ngăn người khác thường dùng ないでください."
+              "explain": "てはいけない đứng trên lập trường của quy định để đưa ra kết luận, thường nói rõ quy định trước (ここは禁煙です); nói thẳng với khách hay cấp trên sẽ nghe như đang dạy dỗ. ないでください là đưa ra lời nhờ với đối phương, thường mở đầu bằng 「すみません」, giọng nhẹ nhàng. Khi trực tiếp can người khác, thường dùng ないでください."
             },
             {
               "id": "naa-exclamation",
               "title": "〜な（cấm đoán）",
-              "diff": "てはいけない là giải thích quy tắc; thể từ điển của động từ＋な là cấm đoán kiểu mệnh lệnh rất thẳng thừng.",
+              "diff": "てはいけない là giải thích quy định; thể từ điển＋な là lệnh cấm kiểu mệnh lệnh, rất thẳng thừng.",
               "this": [
                 {
-                  "tag": "Giải thích quy tắc",
+                  "tag": "Giải thích quy định",
                   "tr": "Nguy hiểm nên không được bơi ở sông."
                 }
               ],
               "that": [
                 {
-                  "tag": "Quát · rất gắt",
-                  "tr": "Nguy hiểm! Đừng có bơi ở sông!"
+                  "tag": "Quát · gay gắt",
+                  "tr": "Nguy hiểm! Cấm bơi ở sông!"
                 }
               ],
-              "explain": "Xem cuối câu: thể từ điển gắn trực tiếp 「な」 (泳ぐな) là cấm đoán kiểu mệnh lệnh, dùng trên biển báo, khi quát mắng hoặc trong khẩu ngữ của nam giới, nói với người khác thì rất bất lịch sự; てはいけない là giảng giải, nói quy tắc, giọng không gắt như vậy."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "to-dochira",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Đều dùng để so sánh",
-          "items": [
-            {
-              "id": "yori-hou-ga",
-              "diff": "どちらが dùng để hỏi “cái nào hơn”; より〜のほうが dùng để trả lời “… hơn”.",
-              "this": [
-                {
-                  "tag": "Hỏi · chọn một trong hai",
-                  "tr": "Chó và mèo, bạn thích con nào hơn?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Trả lời · chọn một bên",
-                  "tr": "So với chó, tôi thích mèo hơn."
-                }
-              ],
-              "explain": "Khi hỏi, đặt hai lựa chọn song song bằng 「と」, phía sau là 「どちらが」; khi trả lời, dùng 「より」 đánh dấu bên thua, dùng 「のほうが」 đánh dấu bên thắng, đừng trả lời thành ✗犬と猫と猫のほうが好きです."
-            },
-            {
-              "id": "no-naka-de-ichiban",
-              "diff": "どちら chỉ dùng giữa hai thứ; từ ba thứ trở lên phải dùng 「の中で〜がいちばん」.",
-              "this": [
-                {
-                  "tag": "Hai thứ → どちら",
-                  "tr": "Táo và quýt, bạn thích cái nào hơn?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Từ ba trở lên → いちばん",
-                  "tr": "Trong các loại trái cây, bạn thích nhất loại nào?"
-                }
-              ],
-              "explain": "Trước tiên đếm số lựa chọn: chỉ có hai (りんごとみかん) → どちらが; trong một phạm vi có từ ba thứ trở lên (果物の中で) → dùng 「何／どれ／誰が いちばん」."
+              "explain": "Xem cuối câu: thêm 「な」 ngay sau thể từ điển (泳ぐな) là lệnh cấm kiểu mệnh lệnh, dùng trong khẩu hiệu, khi quát mắng hoặc trong khẩu ngữ của nam giới, thường bật ra ngay sau tiếng 「危ない！」, nói với người khác thì rất thiếu lịch sự; てはいけない là nói lý lẽ, nêu quy định (危ないから、〜てはいけません), giọng không gay gắt bằng."
             }
           ]
         }
@@ -4821,28 +4776,28 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「と＋言う」 — nghĩa gốc là “gọi là…, nói…”",
+          "note": "Đều bắt nguồn từ 「言う」 — nghĩa gốc là “nói”",
           "items": [
             {
               "id": "to-iu-quote",
-              "diff": "という phía sau là danh từ, nói “(người, vật) tên là…”; と言う làm vị ngữ, nói “(ai đó) nói…”.",
+              "diff": "という có danh từ đi sau, nói “(người, vật) tên là…”; と言う làm vị ngữ, nói “(ai đó) nói rằng…”.",
               "this": [
                 {
-                  "tag": "Sau là danh từ · gọi là",
-                  "tr": "Lúc nãy có một người tên là Tanaka gọi điện đến."
+                  "tag": "Trước danh từ · tên là",
+                  "tr": "Đây là món ăn tên là 「もち」 (bánh dày)."
                 }
               ],
               "that": [
                 {
-                  "tag": "Làm vị ngữ · nói",
-                  "tr": "Anh Tanaka nói là ngày mai anh ấy sẽ đến."
+                  "tag": "Câu kết thúc · đã nói",
+                  "tr": "Bà tôi nói: “Bà muốn ăn bánh dày.”"
                 }
               ],
-              "explain": "Nhìn phía sau 「と」: đi với danh từ (人、店、本) → đang giới thiệu tên gọi, thường viết bằng kana 「という」; câu kết thúc ở 「言いました」 → đang dẫn lời người khác, thường viết bằng chữ Hán 「言う」."
+              "explain": "言う nghĩa gốc là “nói”. 「と」 đánh dấu nội dung được nói, câu kết thúc ở 「言いました」 → trích dẫn lời ai đó (「もちが食べたい」と言いました); nói ra một cái tên rồi gắn vào danh từ phía sau → 「X という＋danh từ」 = … được gọi là X (「もち」という食べ物). Hãy xem sau 「という／と言う」: có danh từ → giới thiệu tên gọi, thường viết bằng kana; câu kết thúc ở đó → ai đó đã nói gì, thường viết bằng chữ Hán 「言う」."
             },
             {
               "id": "to-iu-no-wa",
-              "diff": "という phía sau là danh từ, giới thiệu tên gọi; というのは lấy từ ngữ làm chủ đề, rồi giải thích nghĩa của nó.",
+              "diff": "という có danh từ đi sau, dùng để giới thiệu tên gọi; というのは đưa một từ ra làm chủ đề rồi giải thích nghĩa của nó.",
               "this": [
                 {
                   "tag": "Giới thiệu tên gọi",
@@ -4855,7 +4810,7 @@
                   "tr": "「スマホ」 nghĩa là điện thoại thông minh."
                 }
               ],
-              "explain": "Xem phía sau: 「という＋danh từ (言葉、人)」 chỉ gắn tên gọi cho danh từ; sau 「というのは」 là lời giải thích về nó, cuối câu hay là 「〜のことです」「〜という意味です」."
+              "explain": "言う nghĩa gốc là “nói”. 「という＋danh từ」 là nói ra tên gọi rồi gắn vào danh từ (「スマホ」という言葉 = từ gọi là スマホ); thêm 「の」「は」 thì đưa “từ vừa nói đến” ra làm chủ đề, phía sau là lời giải thích, thành “cái gọi là… tức là…”, cuối câu thường là 「〜のことです」「〜という意味です」. Hãy xem phía sau: có danh từ → giới thiệu tên gọi; có 「のは」 rồi giải thích → định nghĩa."
             }
           ]
         }
@@ -4866,59 +4821,65 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「と」 trích dẫn＋「言う」 (って là dạng rút gọn khẩu ngữ của 「と言って」)",
+          "note": "Đều bắt nguồn từ 「言う」 — nghĩa gốc là “nói”",
           "items": [
             {
               "id": "to-iu-called",
-              "diff": "と言う làm vị ngữ, nói “(ai đó) nói…”; という phía sau là danh từ, nói “(người, vật) tên là…”.",
+              "diff": "と言う làm vị ngữ, nói “(ai đó) nói rằng…”; という có danh từ đi sau, nói “(vật, người) tên là…”.",
               "this": [
                 {
-                  "tag": "Làm vị ngữ · nói",
-                  "tr": "Anh Tanaka nói là ngày mai anh ấy sẽ đến."
+                  "tag": "Câu kết thúc · đã nói",
+                  "tr": "Bà tôi nói: “Bà muốn ăn bánh dày.”"
                 }
               ],
               "that": [
                 {
-                  "tag": "Sau là danh từ · gọi là",
-                  "tr": "Lúc nãy có một người tên là Tanaka gọi điện đến."
+                  "tag": "Trước danh từ · tên là",
+                  "tr": "Đây là món ăn tên là 「もち」 (bánh dày)."
                 }
               ],
-              "explain": "Nhìn phía sau 「と」: câu kết thúc ở 「言いました」 → đang dẫn lời người khác, thường viết bằng chữ Hán 「言う」; đi với danh từ (人、店、本) → đang giới thiệu tên gọi, thường viết bằng kana 「という」."
-            },
+              "explain": "言う nghĩa gốc là “nói”. 「と」 đánh dấu nội dung được nói, câu kết thúc ở 「言いました」 → trích dẫn lời ai đó (「もちが食べたい」と言いました); nói ra một cái tên rồi gắn vào danh từ phía sau → 「X という＋danh từ」 = … được gọi là X (「もち」という食べ物). Hãy xem sau 「と言う／という」: câu kết thúc ở đó → ai đó đã nói gì, thường viết bằng chữ Hán 「言う」; có danh từ → giới thiệu tên gọi, thường viết bằng kana."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Đều dùng để thuật lại “(ai đó) nói rằng…”",
+          "items": [
             {
               "id": "to-itte-ita",
-              "diff": "と言いました kể lại lúc đó đã nói gì; と言っていました là chuyển lời của người thứ ba cho người đang đứng trước mặt.",
+              "diff": "Đều thuật lại lời ai đó; と言いました kể lại lúc đó đã nói gì, と言っていました là chuyển lời của người thứ ba cho người trước mặt.",
               "this": [
                 {
                   "tag": "Kể lại lời nói lúc đó",
-                  "tr": "Trong cuộc họp, trưởng phòng đã nói: “Mọi người cùng cố gắng nhé.”"
+                  "tr": "Trong cuộc họp, trưởng phòng nói sẽ bắt đầu kế hoạch mới."
                 }
               ],
               "that": [
                 {
                   "tag": "Chuyển lời cho bạn",
-                  "tr": "Trưởng phòng bảo cuộc họp ngày mai bị hủy rồi đấy."
+                  "tr": "Trưởng phòng bảo là sẽ bắt đầu kế hoạch mới đấy."
                 }
               ],
-              "explain": "Xem mục đích nói: kể lại trong một tình huống ai đã nói gì → と言いました; chuyển lời người khác cho người nghe, “anh ấy nói thế đấy” → と言っていました, cuối câu hay kèm 「よ」."
+              "explain": "Hai câu thuật lại cùng một lời nói, hãy xem mục đích: kể lại trong một tình huống ai đã nói gì (会議で) → と言いました; chuyển lời người khác cho người trước mặt, kiểu “anh ấy bảo thế đấy” → と言っていました, cuối câu thường có 「よ」."
             },
             {
               "id": "tte-quote-topic",
               "title": "〜って（chuyển lời cuối câu）",
-              "diff": "と言っていました là cách chuyển lời đầy đủ, lịch sự; って ở cuối câu là cách nói giản lược trong khẩu ngữ.",
+              "diff": "Đều thuật lại lời ai đó; と言いました là cách nói đầy đủ, trang trọng; って ở cuối câu là cách nói rút gọn trong khẩu ngữ.",
               "this": [
                 {
-                  "tag": "Đầy đủ · lịch sự",
-                  "tr": "Thầy bảo là ngày mai được nghỉ."
+                  "tag": "Đầy đủ · trang trọng",
+                  "tr": "Thầy giáo nói ngày mai được nghỉ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khẩu ngữ · giản lược",
-                  "tr": "Này, nghe nói mai được nghỉ đấy."
+                  "tag": "Khẩu ngữ · rút gọn",
+                  "tr": "Thầy bảo mai được nghỉ đấy."
                 }
               ],
-              "explain": "って có thể thay cho 「と」, đặt ở cuối câu còn có thể lược bỏ 「言っていた」, nghĩa là “nghe nói…”, chỉ dùng giữa bạn bè, người nhà; với thầy cô, cấp trên hoặc trong hoàn cảnh trang trọng thì phải nói đầy đủ 「と言っていました」."
+              "explain": "Hai câu nghĩa như nhau, chỉ khác cuối câu: nói đầy đủ 「と言いました」 thì dùng với ai cũng được, hợp cả với hoàn cảnh trang trọng; cuối câu chỉ để lại 「って」, lược bỏ 「言っていた」 phía sau, là khẩu ngữ giữa bạn bè, người nhà, không dùng với thầy cô, cấp trên hay trong hoàn cảnh trang trọng."
             }
           ]
         }
@@ -4952,44 +4913,52 @@
         },
         {
           "kind": "meaning",
-          "note": "と思う kiêm hai vai, mỗi vai có cách nói gần nghĩa: nói suy nghĩ của mình ≈ と思っている (vẫn luôn nghĩ vậy), nói suy đoán ≈ でしょう",
+          "sense": 1,
+          "note": "Đều diễn tả “tôi nghĩ rằng…”",
           "items": [
             {
               "id": "to-omotte-iru",
-              "diff": "と思う là suy nghĩ của người nói ngay lúc này; と思っている là suy nghĩ ấp ủ từ lâu, cũng dùng được cho suy nghĩ của người khác.",
+              "diff": "Đều nói ra suy nghĩ của mình; と思います là suy nghĩ ngay lúc này, と思っています là đã nghĩ như vậy từ lâu.",
               "this": [
                 {
-                  "tag": "Tôi · lúc này",
-                  "tr": "Tôi muốn đi du học."
+                  "tag": "Suy nghĩ lúc này",
+                  "tr": "Tôi thấy thành phố này dễ sống."
                 }
               ],
               "that": [
                 {
-                  "tag": "Người khác · vẫn luôn",
-                  "tr": "Anh trai tôi vẫn luôn muốn đi du học."
+                  "tag": "Suy nghĩ từ lâu",
+                  "tr": "Từ lâu tôi đã thấy thành phố này dễ sống."
                 }
               ],
-              "explain": "Nhìn chủ ngữ: nói suy nghĩ hiện tại của mình → と思う; nói suy nghĩ của người thứ ba (兄、彼) hoặc suy nghĩ lâu nay của mình → と思っている. Chủ ngữ của と思う chỉ có thể là người nói, nói suy nghĩ của anh trai thì không dùng 「兄は〜と思います」 được."
-            },
+              "explain": "Chủ ngữ của cả hai câu đều là “tôi”, hãy xem có từ chỉ sự kéo dài không: nói ra suy nghĩ ngay lúc này → と思います; đã nghĩ như vậy từ lâu, với những từ như 「昔から」「ずっと」 → と思っています. Ngoài ra, khi nói về suy nghĩ của người khác (兄、彼) thường cũng dùng と思っている."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều diễn tả phỏng đoán “có lẽ…”",
+          "items": [
             {
               "id": "deshou-guess",
-              "diff": "と思う mang quan điểm cá nhân của người nói; でしょう giọng khách quan, hay gặp trong dự báo thời tiết.",
+              "diff": "と思う mang quan điểm cá nhân của người nói; でしょう có giọng khách quan, hay gặp trong dự báo thời tiết.",
               "this": [
                 {
-                  "tag": "Cá nhân tôi thấy",
+                  "tag": "Tôi thấy là",
                   "tr": "Tôi nghĩ ngày mai trời sẽ mưa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Thông báo · khách quan",
-                  "tr": "Ngày mai phần lớn các khu vực trên cả nước sẽ có mưa."
+                  "tag": "Phát thanh · khách quan",
+                  "tr": "Ngày mai trời có mưa trên phạm vi cả nước."
                 }
               ],
               "wrong": {
                 "why": "Sau danh từ phải thêm 「だ」: 雨だと思います"
               },
-              "explain": "と思う là “tôi cho rằng”, hợp để nói ra quan điểm của mình trong hội thoại; でしょう không làm nổi bật “tôi”, suy đoán khách quan như dự báo thời tiết. Chú ý cách nối: sau danh từ, と思う phải thêm 「だ」 (雨だと思う), でしょう gắn trực tiếp (雨でしょう)."
+              "explain": "と思う là “tôi cho rằng”, hợp để nói ra quan điểm của mình trong hội thoại; でしょう không nhấn mạnh “tôi”, phỏng đoán một cách khách quan như dự báo thời tiết. Chú ý cách nối: sau danh từ, と思う phải thêm 「だ」 (雨だと思う), còn でしょう nối trực tiếp (雨でしょう)."
             }
           ]
         }
@@ -5000,28 +4969,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Tiếng Việt đều có thể nói thành “giống như…”",
+          "note": "Đều diễn tả “làm giống như…”",
           "items": [
             {
               "id": "you-na-example",
-              "title": "〜ように（so sánh ví von）",
-              "diff": "と同じ nói về sự “giống nhau” thực tế; のように là “giống như…”, phía sau có thể là tính từ, động từ.",
+              "title": "〜ように（giống như…）",
+              "diff": "Đều là “làm giống như…”; と同じように nhấn mạnh hoàn toàn giống nhau, làm theo y hệt; のように chỉ nói là giống, còn dùng được để so sánh ví von.",
               "this": [
                 {
-                  "tag": "Thực sự giống nhau",
-                  "tr": "Chị tôi tốt nghiệp cùng trường đại học với mẹ."
+                  "tag": "Hoàn toàn giống",
+                  "tr": "Giống hệt bố, sáng nào tôi cũng đọc báo."
                 }
               ],
               "that": [
                 {
                   "tag": "Giống như…",
-                  "tr": "Chị tôi hiền giống như mẹ."
+                  "tr": "Giống như bố, sáng nào tôi cũng đọc báo."
                 }
               ],
-              "wrong": {
-                "why": "同じ không bổ nghĩa trực tiếp cho tính từ được"
-              },
-              "explain": "Nhìn phía sau 「同じ」: đi với danh từ (大学、色) hoặc 「だ」 → hai thứ thực sự giống nhau; muốn nói “(hiền, đẹp) giống như…”, phía sau là tính từ hay động từ → dùng のように. Tiếng Việt đều nói “giống…”, nên dễ viết thành ✗母と同じ優しい."
+              "explain": "Cả hai câu đều được, chọn câu nào tùy vào điều muốn nhấn mạnh: muốn nói cách làm hoàn toàn giống người kia, làm theo y hệt → と同じように; chỉ nói “giống như…”, có chút sắc thái coi người kia là tấm gương → のように. So sánh ví von (鳥のように空を飛ぶ) chỉ dùng được のように, không thể đổi thành と同じように."
             }
           ]
         }
@@ -5032,28 +4998,64 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "と kiêm nhiều vai trò, mỗi vai có một cách nói nghĩa gần: “và” ≈ や, “hễ… là” ≈ たら, “đối tượng gặp mặt” ≈ に",
+          "sense": 4,
+          "note": "Đều dùng để liệt kê “… và …”",
           "items": [
             {
               "id": "ya-nado",
-              "diff": "と liệt kê toàn bộ các thứ; や〜など chỉ nêu vài ví dụ, ngụ ý còn thứ khác.",
+              "diff": "と liệt kê toàn bộ; や〜など chỉ nêu vài ví dụ, ngụ ý còn có thứ khác.",
               "this": [
                 {
-                  "tag": "Liệt kê toàn bộ",
-                  "tr": "Trong cặp có sách và vở (chỉ hai thứ đó)."
+                  "tag": "Liệt kê đủ",
+                  "tr": "Trong cặp có sách và vở (chỉ hai thứ này)."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nêu ví dụ · còn thứ khác",
-                  "tr": "Trong cặp có sách, vở v.v."
+                  "tag": "Ví dụ · còn thứ khác",
+                  "tr": "Trong cặp có sách, vở, v.v."
                 }
               ],
-              "explain": "Hai câu chỉ khác trợ từ: những thứ liệt kê bằng と là toàn bộ; や (hay đi cùng など) chỉ chọn vài thứ tiêu biểu, trong cặp còn có thứ khác."
-            },
+              "explain": "Hai câu chỉ khác trợ từ, đều kể ra từng thứ: nói ra là toàn bộ (chỉ có sách và vở) → と; chỉ chọn vài thứ tiêu biểu, ngụ ý còn có thứ khác → や, thường đi kèm など."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 6,
+          "note": "Đều chỉ đối phương của hành động “với…”",
+          "items": [
+            {
+              "id": "ni-destination-target",
+              "title": "〜に（đối tượng của hành động）",
+              "diff": "Đều chỉ ra người mình gặp; と là hai bên hẹn trước, gặp nhau; に là một phía đi gặp hoặc tình cờ gặp.",
+              "this": [
+                {
+                  "tag": "Hai phía · hẹn trước",
+                  "tr": "Như đã hẹn, tôi gặp anh Tanaka ở nhà ga."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Một phía · tình cờ",
+                  "tr": "Tôi tình cờ gặp anh Tanaka ở nhà ga."
+                }
+              ],
+              "wrong": {
+                "why": "結婚する nhất định phải có cả hai bên tham gia, đối phương dùng 「と」"
+              },
+              "explain": "「会う」 dùng được cả hai, hãy xem manh mối phía trước: hẹn trước, gặp nhau (約束どおり) → と; một mình mình đi gặp, hoặc tình cờ gặp (偶然) → に. Những hành động nhất định phải có hai người mới thành như 「結婚する」「けんかする」 thì chỉ dùng được と."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 7,
+          "note": "Đều diễn tả “hễ… là… / khi…”",
+          "items": [
             {
               "id": "tara",
-              "diff": "Sau と chỉ có thể là tình huống tự nhiên sẽ xảy ra; sau たら còn có thể là lời nhờ, dự định.",
+              "diff": "Sau と chỉ có thể là tình huống tự nhiên sẽ xảy ra; sau たら còn có thể là lời nhờ, ý định.",
               "this": [
                 {
                   "tag": "Hễ… là · kết quả tự nhiên",
@@ -5069,28 +5071,7 @@
               "wrong": {
                 "why": "Sau と không thể là lời nhờ, mệnh lệnh"
               },
-              "explain": "Nửa trước giống nhau, hãy xem nửa sau: chỉ đường, thao tác máy móc, quy luật tự nhiên kiểu “hễ A xảy ra thì B sẽ xuất hiện” → と; nửa sau là lời nhờ hay ý chí như 「てください」「〜たい」「〜よう」 → chỉ dùng được たら."
-            },
-            {
-              "id": "ni-destination-target",
-              "title": "〜に（đối tượng của hành động）",
-              "diff": "と diễn tả hai bên cùng làm; に diễn tả hướng một chiều về phía đối phương.",
-              "this": [
-                {
-                  "tag": "Hai bên · cùng nhau",
-                  "tr": "Cuối tuần tôi gặp bạn và cùng đi ăn."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Một chiều · tình cờ gặp",
-                  "tr": "Tôi tình cờ gặp thầy ở ga."
-                }
-              ],
-              "wrong": {
-                "why": "結婚する cần hai bên cùng tham gia, đối tượng dùng 「と」"
-              },
-              "explain": "「会う」 dùng cả hai đều được: hẹn trước, gặp nhau → と; một mình đi gặp, tình cờ gặp → に. Với hành động phải có hai người cùng làm mới thành như 「結婚する」「けんかする」 thì chỉ dùng được と."
+              "explain": "Nửa trước giống nhau, hãy xem nửa sau: kết quả tự nhiên xuất hiện ngay khi A xảy ra như 「目の前に銀行があります」 → と; nửa sau là lời nhờ như 「電話してください」, hoặc ý chí như 「〜たい」「〜よう」 → chỉ dùng được たら."
             }
           ]
         }
@@ -5101,59 +5082,42 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều có thể diễn tả “khi…”",
+          "note": "Đều diễn tả “khi…”",
           "items": [
             {
-              "id": "tara",
-              "diff": "とき chỉ nói rõ thời gian; たら mang điều kiện, nói “khi… thành hiện thực thì…”.",
+              "id": "sai-ni",
+              "diff": "Đều diễn tả “khi…”; とき dùng trong hội thoại hằng ngày, 際（は） trang trọng hơn, hay gặp trong biển báo, thông báo, bối cảnh công việc.",
               "this": [
                 {
-                  "tag": "Quá khứ · thời gian",
-                  "tr": "Năm ngoái khi đi Nhật, tôi đã leo núi Phú Sĩ."
+                  "tag": "Hằng ngày · khẩu ngữ",
+                  "tr": "Lúc ra khỏi phòng nhớ tắt đèn nhé."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tương lai · điều kiện",
-                  "tr": "Lần tới đi Nhật, tôi muốn leo núi Phú Sĩ."
+                  "tag": "Biển báo · trang trọng",
+                  "tr": "Khi rời khỏi phòng, xin vui lòng tắt đèn."
                 }
               ],
-              "explain": "Xem từ chỉ thời gian và cuối câu: 「去年」＋sự thật trong quá khứ → とき, chỉ nói rõ là lúc nào; 「今度」＋dự định, lời nhờ như 「〜たい」「〜てください」 → hay dùng たら, nghĩa là “khi A thành hiện thực thì làm B”."
+              "explain": "Hai câu nghĩa như nhau, hãy xem hoàn cảnh và cuối câu: nói tự nhiên với người nhà, bạn bè, cuối câu là 「ね」 → とき; trong biển báo, thông báo, email công việc, cuối câu là cách nói trang trọng như 「お消しください」 → 際（は）. Dùng とき trong hoàn cảnh trang trọng cũng không sai, nhưng 際 nghe trang trọng hơn; dùng 際 trong hội thoại hằng ngày sẽ nghe cứng nhắc."
             },
             {
               "id": "aida-during",
-              "title": "〜間（suốt）",
-              "diff": "とき là một thời điểm hay một thời kỳ; 間 là cả một khoảng thời gian, hay dùng cùng 「ずっと」.",
+              "title": "〜間に（một lúc trong khoảng thời gian）",
+              "diff": "Đều chỉ ra lúc sự việc xảy ra; とき chỉ nói là lúc nào, 間に coi đó là một khoảng thời gian có điểm kết thúc, nhấn mạnh làm xong trước khi khoảng thời gian đó hết.",
               "this": [
                 {
-                  "tag": "Lúc đó · một việc",
-                  "tr": "Hồi nghỉ hè tôi đã về nước một chuyến."
+                  "tag": "Chỉ nói lúc nào",
+                  "tr": "Khi ở Nhật, tôi đã leo núi Phú Sĩ một lần."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cả quãng · suốt",
-                  "tr": "Suốt kỳ nghỉ hè tôi ở trong nước."
+                  "tag": "Tranh thủ trong khoảng đó",
+                  "tr": "Tranh thủ lúc còn ở Nhật, tôi đã leo núi Phú Sĩ một lần."
                 }
               ],
-              "explain": "Nhìn nửa câu sau: trạng thái kéo dài suốt cả khoảng thời gian như 「ずっと〜ていた」 → 間; một việc xảy ra trong khoảng thời gian đó (一度帰った) → とき. Muốn nói “trong khoảng thời gian đó đã làm một việc” thì cũng có thể dùng 間に (夏休みの間に一度帰った)."
-            },
-            {
-              "id": "baai-wa",
-              "diff": "とき nói thời gian thực tế; 場合は nói tình huống giả định, hay dùng trong quy định và hướng dẫn.",
-              "this": [
-                {
-                  "tag": "Thời kỳ thực tế",
-                  "tr": "Hồi nhỏ tôi hay chơi ở con sông này."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Giả định · quy định",
-                  "tr": "Khi xảy ra hỏa hoạn, xin đừng sử dụng thang máy."
-                }
-              ],
-              "explain": "場合は là “trong trường hợp…”, dùng trong quy định, sách hướng dẫn, thông báo, nói về giả định chưa xảy ra, giọng trang trọng; việc đã xảy ra, một thời kỳ trong đời (子どものとき) chỉ dùng được とき."
+              "explain": "Cả hai câu đều được, chỉ khác とき／間に: とき chỉ cho biết là lúc nào; 間に coi 「日本にいる」 là một khoảng thời gian sớm muộn sẽ kết thúc, nhấn mạnh tranh thủ làm xong việc khi khoảng thời gian đó chưa hết, vì vậy dự định kiểu “tranh thủ…” thường dùng 間に (日本にいる間に登りたい). Chú ý 「間」 không có 「に」 nghĩa là liên tục suốt cả khoảng thời gian (その間ずっと), không dùng cho việc chỉ xảy ra một lần."
             }
           ]
         }
@@ -5168,20 +5132,20 @@
           "items": [
             {
               "id": "you-to-omou",
-              "diff": "(よ)うと思う thường là ý nghĩ vừa nảy ra khi nói; つもりだ là kế hoạch đã nghĩ sẵn từ lâu, khá chắc chắn.",
+              "diff": "(よ)うと思う thường là ý nghĩ vừa nảy ra lúc nói; つもりだ là kế hoạch đã nghĩ kỹ từ trước, khá chắc chắn.",
               "this": [
                 {
-                  "tag": "Đã nghĩ từ lâu",
-                  "tr": "Tôi đã định từ lâu là sang năm sẽ đi du học."
+                  "tag": "Đã định từ lâu",
+                  "tr": "Từ trước tôi đã định sang năm đi du học."
                 }
               ],
               "that": [
                 {
                   "tag": "Ý nghĩ lúc này",
-                  "tr": "Trời mưa rồi, hôm nay tôi định đi taxi về."
+                  "tr": "Trời mưa nên hôm nay tôi định đi taxi về."
                 }
               ],
-              "explain": "Xem thời điểm quyết định: thấy trời mưa mới chợt nghĩ ra → (よ)うと思う; kế hoạch đã định từ lâu, đang chuẩn bị (前から) → つもりだ."
+              "explain": "Xem thời điểm quyết định: thấy trời mưa mới chợt nghĩ ra (雨だから) → (よ)うと思う; kế hoạch đã định từ lâu, đang chuẩn bị (前から) → つもりだ."
             },
             {
               "id": "yotei-plan",
@@ -5194,31 +5158,14 @@
               ],
               "that": [
                 {
-                  "tag": "Lịch trình đã xếp",
+                  "tag": "Lịch trình đã định",
                   "tr": "Máy bay dự kiến hạ cánh lúc 3 giờ."
                 }
               ],
               "wrong": {
-                "why": "Máy bay không có “dự định”, lịch trình dùng 予定"
+                "why": "Máy bay không có “dự định”, lịch trình thì dùng 予定"
               },
-              "explain": "Xem chủ ngữ: suy nghĩ của chính một người → つもり; lịch trình đã sắp xếp như chuyến bay, cuộc họp, sự kiện, hoặc sắp xếp do công ty, người khác quyết định → 予定."
-            },
-            {
-              "id": "koto-ni-suru",
-              "diff": "つもりだ là dự định có sẵn trong lòng; ことにした là khoảnh khắc hạ quyết tâm.",
-              "this": [
-                {
-                  "tag": "Kế hoạch trong lòng",
-                  "tr": "Tôi định sang năm sẽ đi du học."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Hạ quyết tâm",
-                  "tr": "Đắn đo mãi, cuối cùng tôi đã quyết định đi du học."
-                }
-              ],
-              "explain": "つもりだ chỉ trình bày dự định, không nhấn mạnh khoảnh khắc quyết định, cuối cùng có thể không đi; ことにした thường mang cảm giác về quá trình “sau khi đắn đo thì cuối cùng đã quyết định” (迷ったけど、いろいろ考えて)."
+              "explain": "Xem chủ ngữ: suy nghĩ của chính con người → つもり; lịch trình đã sắp xếp như chuyến bay (飛行機), cuộc họp, sự kiện, hoặc sắp xếp do công ty, người khác quyết định → 予定."
             }
           ]
         }
