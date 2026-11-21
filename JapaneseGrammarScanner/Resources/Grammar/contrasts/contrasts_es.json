@@ -23337,43 +23337,26 @@
       "id": "tsumari",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Ambas sirven para «decirlo de otra manera o sacar una conclusión»",
+          "kind": "look",
+          "note": "つまり ↔ つもり: solo cambia ま／も",
           "items": [
             {
-              "id": "to-iu-ka-rather",
-              "diff": "つまり reformula lo anterior con algo que significa lo mismo, pero más breve; というか corrige lo anterior porque parece poco preciso.",
+              "id": "tsumori",
+              "title": "〜つもりだ (tener la intención de)",
+              "diff": "つまり significa «es decir» y reformula lo anterior; つもり significa «intención» y va tras un verbo para expresar tu plan.",
               "this": [
                 {
-                  "tag": "Reformular · lo mismo",
-                  "tr": "Él es el hermano mayor de mi madre, es decir, mi tío."
+                  "tag": "Conjunción · reformular",
+                  "tr": "El mes que viene, es decir, a partir de abril, empiezo un trabajo nuevo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Corregirse · algo distinto",
-                  "tr": "Él es serio, o más bien, terco."
+                  "tag": "Sustantivo · intención",
+                  "tr": "Tengo la intención de empezar un trabajo nuevo el mes que viene."
                 }
               ],
-              "explain": "Mira si las dos partes significan lo mismo: 母の兄＝おじ, el contenido es idéntico, solo se dice de forma más breve → つまり; まじめ ≠ 頑固, se cambia la primera palabra porque no encaja bien → というか."
-            },
-            {
-              "id": "to-iu-koto-da",
-              "title": "〜ということだ（conclusión）",
-              "diff": "つまり va al principio de la frase y avisa de que «viene una conclusión»; ということだ va al final y cierra la conclusión. A menudo se usan juntas.",
-              "this": [
-                {
-                  "tag": "Al inicio · anuncia conclusión",
-                  "tr": "El tren está parado. Es decir, hoy voy a llegar tarde."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Al final · cierra conclusión",
-                  "tr": "El tren está parado. Eso significa que hoy llego tarde."
-                }
-              ],
-              "explain": "Mira la posición: つまり va al inicio y en cuanto se oye se sabe que viene una conclusión; ということだ va al final y resume toda la frase como «o sea, que…». La forma más completa es usar las dos juntas: 「つまり、今日は遅刻ということだ」."
+              "explain": "Solo cambia ま／も, así que mira la posición: entre dos expresiones, reformulando la primera (来月＝四月) → つまり, una conjunción; tras la forma de diccionario de un verbo y seguido de 「だ／です」 (始めるつもりだ) → つもり, un sustantivo que expresa tu intención."
             }
           ]
         }
@@ -23388,6 +23371,7 @@
           "items": [
             {
               "id": "ta-tsumori",
+              "title": "〜たつもり (creer haberlo hecho)",
               "diff": "Forma de diccionario＋つもりだった es «tenía intención de hacerlo»; forma た＋つもりだった es «creía que ya lo había hecho».",
               "this": [
                 {
@@ -23401,34 +23385,34 @@
                   "tr": "Creía que había cerrado con llave, pero no estaba cerrado."
                 }
               ],
-              "explain": "Solo cambia si delante de つもり va 「かける」 o 「かけた」: la forma de diccionario es un plan previo, y la segunda parte dice que no se hizo (忘れてしまった); la forma た es creer que ya se había hecho, y la segunda parte dice que la realidad no coincide (かかっていなかった)."
+              "explain": "つもり viene del verbo 「積もる」, cuyo sentido original es «calcular, hacer cuentas mentalmente». Si calculas hacia el futuro algo aún no hecho, sale «intención»: かける＋つもりだった = pensaba cerrar con llave, y la segunda parte dice que no se hizo (忘れてしまった). Si das por hecho algo ya hecho, sale «creer haberlo hecho»: かけた＋つもりだった = creía haber cerrado, y la segunda parte dice que la realidad fue otra (かかっていなかった). Fíjate en si delante de つもり va 「かける」 o 「かけた」."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan «en principio iba a…, pero no fue así»",
+          "note": "Ambas significan «estaba previsto… (pero no se cumplió)»",
           "items": [
             {
-              "id": "hazu-da",
-              "title": "〜はずだった",
-              "diff": "つもりだった es lo que una persona «tenía intención» de hacer; はずだった es lo que «según lo previsto debía» pasar y no pasó.",
+              "id": "yotei-plan",
+              "title": "〜予定だった",
+              "diff": "つもりだった es una intención personal que no se cumplió; 予定だった es un horario o plan fijado que no salió como estaba previsto.",
               "this": [
                 {
-                  "tag": "Intención de alguien",
-                  "tr": "Yo tenía intención de coger el tren de las tres."
+                  "tag": "Propósito personal",
+                  "tr": "Este año sí que pensaba hacer ejercicio a diario, pero lo dejé a los tres días."
                 }
               ],
               "that": [
                 {
-                  "tag": "Debía ser así",
-                  "tr": "El tren debía llegar a las tres."
+                  "tag": "Horario fijado",
+                  "tr": "El shinkansen tenía prevista la llegada a Tokio a las diez, pero se retrasó una hora por la nieve."
                 }
               ],
               "wrong": {
-                "why": "Un tren no tiene «intenciones»; hay que usar はずだった"
+                "why": "Un shinkansen no tiene intenciones propias; para lo que marca el horario hay que usar 予定だった"
               },
-              "explain": "Mira el sujeto: el plan propio de una persona con voluntad → つもりだった; cosas que «según lo previsto debían» ocurrir, como un tren, un paquete o un horario → はずだった. Con personas también vale はずだった (今日は休みのはずだった), pero habla de lo previsto, no de la propia voluntad."
+              "explain": "Mira de quién es el plan y de qué tipo: un propósito que te has hecho tú (今年こそ) → つもりだった, la intención del hablante; algo fijado en una agenda u horario (新幹線は) → 予定だった, que dice objetivamente lo previsto, y el sujeto no tiene que ser una persona. Para algo que es a la vez tu intención y está en la agenda, como 「週末は京都へ行く」, valen los dos: つもりだった pone el peso en tu voluntad y 予定だった en lo ya fijado."
             }
           ]
         }
@@ -23439,10 +23423,11 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「つもり（積もり）」: «calcular mentalmente»; calcular el futuro＝intención, calcular el presente＝creer que uno ya…",
+          "note": "Ambas vienen de 「つもり（積もり）」: «cálculo mental»; calcular el futuro = intención; darlo por ocurrido = hacer como si ya",
           "items": [
             {
               "id": "ta-tsumori",
+              "title": "〜たつもり (hacer como si ya)",
               "diff": "Forma de diccionario＋つもりで es «con la intención de hacerlo»; forma た＋つもりで es «haciendo como si ya se hubiera hecho», aunque en realidad no se hace.",
               "this": [
                 {
@@ -23453,10 +23438,10 @@
               "that": [
                 {
                   "tag": "Forma た → como si ya",
-                  "tr": "Haciendo como si ya hubiera viajado, metí ese dinero en el banco."
+                  "tr": "Hice como si ya hubiera viajado y pasé todo ese dinero a ahorros."
                 }
               ],
-              "explain": "Solo cambia si delante de つもり va 「する」 o 「した」: la forma de diccionario es algo que de verdad se va a hacer, y se ahorra para ello; la forma た es «hacer como si ya se hubiera hecho»: en realidad no se hace, y el dinero o el tiempo ahorrado se usa en otra cosa."
+              "explain": "つもり viene de 「積もる」, originalmente «calcular mentalmente». Si cuentas con algo que vas a hacer → する＋つもりで = con la intención de…, y de verdad lo harás (来年旅行する, por eso ahorras ahora). Si das por hecho algo que no ha pasado → した＋つもりで = hacer como si ya…, y en realidad no lo haces (旅行したつもりで, y ahorras el dinero del viaje). Fíjate en si delante de つもり va 「する」 o 「した」."
             }
           ]
         }
@@ -23467,15 +23452,16 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de la cita 「と言う」: «hablando de…»",
+          "note": "Ambas vienen de 「と言う」: originalmente «decir»",
           "items": [
             {
               "id": "to-ittara",
-              "diff": "ったら va tras una persona y comenta, con resignación, sus manías; といったら saca un tema y nombra lo más representativo o subraya un grado.",
+              "title": "〜といったら (hablando de…, es…)",
+              "diff": "ったら va tras alguien cercano y se queja con resignación de sus manías; といったら plantea un tema y nombra lo más representativo.",
               "this": [
                 {
                   "tag": "Hablando de él · no tiene remedio",
-                  "tr": "Mi marido, como siempre, se ha vuelto a dejar el paraguas."
+                  "tr": "Mi madre, de verdad, ha vuelto a salir sin el paraguas."
                 }
               ],
               "that": [
@@ -23484,7 +23470,7 @@
                   "tr": "Hablando de montañas de Japón, la número uno es el Fuji."
                 }
               ],
-              "explain": "ったら es la contracción de 「と言ったら」. Mira lo que sigue: una conducta de alguien que exaspera (また忘れた) → ったら, normalmente con familiares o conocidos; una respuesta representativa (富士山だ) o un «…muchísimo» → といったら, de tono neutro."
+              "explain": "Ambas vienen de 「と言う」 (decir): 「と言ったら」 es «si hablamos de…», y ったら es su contracción. La forma contraída ったら se usa al mencionar a alguien cercano, seguida enseguida de una manía suya que te exaspera (うちの母ったら、また忘れて……); la forma completa といったら plantea un tema y va seguida de lo primero que a todos se les ocurre (日本の山といったら、富士山). Mira lo que sigue: una queja sobre alguien → ったら; un ejemplo representativo → といったら."
             },
             {
               "id": "tte-quote-topic",
@@ -23502,30 +23488,31 @@
                   "tr": "¿Qué tipo de persona es Tanaka?"
                 }
               ],
-              "explain": "Las dos son abreviaciones coloquiales de 「と言う」 y pueden ir tras un nombre de persona como tema. Mira lo que sigue: una pregunta o presentación neutra → って; una queja sobre sus manías (また遅刻、いつも〜) → ったら, con fastidio o cariño."
+              "explain": "Ambas vienen de 「と言う」 (decir, llamar). って es contracción de 「というのは」, «lo que se llama…», y solo presenta a alguien o algo como tema, en tono neutro; ったら es contracción de 「と言ったら」, «si hablamos de…», y en cuanto sale esa persona viene su mala costumbre, con resignación o cariño. Así que mira lo que sigue: preguntar o presentar a alguien (どんな人) → って; seguir con una queja (また遅刻) → ったら."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan una emoción al hablar de alguien",
+          "note": "Ambas significan «hablando de…, no hay quien pueda con él»",
           "items": [
             {
-              "id": "nante",
-              "diff": "ったら es «no tiene remedio», a menudo con cariño; なんて es desprecio, desdén.",
+              "id": "to-kitara",
+              "title": "〜ときたら (hablando de…, queja)",
+              "diff": "ったら se usa sobre todo con gente cercana, con cariño en la queja; ときたら reprocha con más fuerza y también puede referirse a un grupo de personas o a cosas.",
               "this": [
                 {
-                  "tag": "Resignación · cariño",
-                  "tr": "Mi hijo… otra vez ha vuelto con la ropa sucia."
+                  "tag": "Alguien cercano · con cariño",
+                  "tr": "Mi hijo, de verdad, ha vuelto otra vez con la ropa llena de barro."
                 }
               ],
               "that": [
                 {
-                  "tag": "Desprecio · desdén",
-                  "tr": "Esa clase de persona… ya no quiero saber nada."
+                  "tag": "Un grupo · reproche",
+                  "tr": "Los jóvenes de hoy… hasta en el tren hablan a gritos."
                 }
               ],
-              "explain": "Mira la actitud del hablante hacia esa persona: pequeñas manías de familiares o amigos que dan dolor de cabeza, una queja con cercanía → ったら; alguien a quien se menosprecia o se detesta, como 「あんな人」 → なんて, seguido a menudo de una negación o una valoración negativa."
+              "explain": "Las dos mencionan a alguien y siguen con una queja. Mira de quién se habla: tu familia o gente que conoces bien (うちの子), con cariño en la queja, en plan «hay que ver…» → ったら; un grupo de personas o cosas (最近の若い人), criticados en serio y con un reproche fuerte → ときたら. Con tu propia familia valen las dos, pero 「うちの子ときたら」 suena más a regañina."
             }
           ]
         }
@@ -23583,26 +23570,34 @@
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan hacer algo «durante…» o «antes de…»",
+          "sense": 1,
+          "note": "Ambas significan «aprovechando que…»",
           "items": [
             {
               "id": "aida-during",
               "title": "〜間に",
-              "diff": "うちに lleva una urgencia de «aprovechar ahora, que luego será tarde»; 間に solo dice que se hizo algo dentro de ese periodo.",
+              "diff": "うちに tiene urgencia, «ahora que se puede, después será tarde»; 間に solo dice que algo se hizo durante ese tiempo.",
               "this": [
                 {
-                  "tag": "Aprovechar · luego tarde",
+                  "tag": "Aprovechar · contra reloj",
                   "tr": "Mientras el niño duerme, terminemos de lavar la ropa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Dentro del periodo · sin prisa",
-                  "tr": "Durante las vacaciones de verano me saqué el carné de conducir."
+                  "tag": "Durante · narración neutra",
+                  "tr": "Mientras los niños dormían, fui a hacer la compra."
                 }
               ],
-              "explain": "Mira si el estado anterior puede terminar en cualquier momento: el niño puede despertarse en cualquier momento → うちに, seguido a menudo de una acción a contrarreloj como 「〜てしまおう」; un periodo con principio y fin claros como las vacaciones de verano, donde solo se dice qué se hizo en ese tiempo → 間に."
-            },
+              "explain": "Las dos sirven para «hacer algo mientras…». Mira el tono de la segunda parte: el estado puede acabar en cualquier momento (los niños pueden despertarse) y te das prisa en acabar antes (済ませてしまおう) → うちに, con la urgencia de «luego será tarde»; si solo cuentas con calma lo que hiciste en ese tiempo (行ってきた) → 間に. 「寝ている間に済ませてしまおう」 también se puede decir, pero pierde esa urgencia."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Ambas significan «antes de…»",
+          "items": [
             {
               "id": "mae-ni",
               "thisTitle": "〜ないうちに",
@@ -23619,7 +23614,7 @@
                   "tr": "Cada noche me lavo los dientes antes de dormir."
                 }
               ],
-              "explain": "Mira si hay urgencia: se teme que algo desfavorable (que llueva, que se enfríe la comida) pase enseguida y se actúa antes → ないうちに, a menudo con 「急いで」; un hábito diario o un simple orden temporal (毎晩寝る前に) → 前に. Ojo con la conexión: aquí うちに va con la forma negativa (降らない) y 前に con la forma de diccionario (寝る)."
+              "explain": "Mira si hay urgencia: se teme que algo desfavorable (que llueva, que se enfríe la comida) pase enseguida y se actúa antes → ないうちに, a menudo con 「急いで」; un hábito diario o un simple orden temporal (毎晩、寝る前に) → 前に. Ojo con la conexión: aquí うちに va con la forma negativa (降らない) y 前に con la forma de diccionario (寝る)."
             }
           ]
         }
@@ -23630,7 +23625,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「上（うえ）」: «encima de…»",
+          "note": "Ambas vienen de 「上（うえ）」: originalmente «encima, arriba»",
           "items": [
             {
               "id": "sono-ue",
@@ -23647,15 +23642,16 @@
                   "tr": "Esta habitación es amplia. Además, está cerca de la estación."
                 }
               ],
-              "explain": "Significan lo mismo; cambia la posición: 上に va directamente tras la forma llana del primer elemento (広い上に); その上 es una conjunción independiente, delante tiene que haber ya una frase, y 「その」 se refiere precisamente a esa frase."
+              "explain": "「上」 significa originalmente «encima», y las dos significan «añadir algo encima de lo anterior». 上に va justo detrás del primer elemento (広い上に) y apila otra cosa encima, todo en una oración; en その上, 「その」 señala la oración que acaba de terminar y añade algo encima, por eso empieza otra oración. Significan lo mismo, así que mira la posición: justo tras un adjetivo o verbo → 上に; al inicio de una oración nueva tras el punto → その上."
             },
             {
               "id": "ue-de",
+              "title": "〜上で (después de…, sobre esa base)",
               "diff": "上に es «encima de…, además»; た上で es «después de…, y sobre esa base…».",
               "this": [
                 {
                   "tag": "Añadir · además",
-                  "tr": "Él no solo trabaja rápido, sino que además comete pocos errores."
+                  "tr": "Ella no solo cocina bien, sino que también recoge rápido."
                 }
               ],
               "that": [
@@ -23664,8 +23660,14 @@
                   "tr": "Lo decidiré después de hablarlo bien con mi familia."
                 }
               ],
-              "explain": "Solo cambia に por で. 上に une dos valoraciones en la misma dirección (速い＋ミスが少ない) y a menudo va con 「も」; delante de 上で suele ir un paso en forma た (相談した) y detrás la acción que se toma sobre esa base (決める): habla de orden, no de añadir."
-            },
+              "explain": "「上」 significa originalmente «encima». 上に: apilar algo del mismo signo encima de lo anterior → no solo…, sino también (上手な上に、片付けも早い); 上で: tomar lo anterior como el suelo bajo tus pies y, sobre él, dar el siguiente paso → primero…, luego… (相談した上で、決めます). Solo cambian に y で: dos valoraciones en la misma dirección, a menudo con 「も」 → 上に; un paso ya hecho (た形) y luego una acción → 上で."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "〜上に ↔ 〜上は: solo cambia に／は",
+          "items": [
             {
               "id": "ue-wa",
               "diff": "上に es «además, encima»; 上は es «ya que…, (hay que)…».",
@@ -23681,7 +23683,7 @@
                   "tr": "Ya que lo he aceptado, no me queda más que llevarlo hasta el final."
                 }
               ],
-              "explain": "Mira la segunda parte: tras 上に va otro hecho en la misma dirección (〜まで、〜も); tras 上は va una determinación o una obligación (〜しかない、〜なければならない); significa lo mismo que 「以上は」 y 「からには」, y tiene un fuerte tono escrito."
+              "explain": "Solo mira si tras 「上」 va に o は: 上に → además, encima, seguido de otro hecho en la misma dirección (財布までなくした); 上は → ya que…, seguido de una determinación u obligación que nace de ello (やるしかない), de sentido cercano a 「以上は」「からには」 y algo formal."
             }
           ]
         },
@@ -23695,7 +23697,7 @@
               "this": [
                 {
                   "tag": "Narrar hechos",
-                  "tr": "Este restaurante no solo es barato, sino que además está rico."
+                  "tr": "Esta panadería no solo es barata, sino que además está buena."
                 }
               ],
               "that": [
@@ -23710,21 +23712,24 @@
               "explain": "Mira la segunda parte: peticiones o invitaciones como 「〜てください」「〜ましょう」 → solo だけでなく; al afirmar un hecho (おいしい) valen las dos, y 上に recalca más la acumulación, «cada vez mejor» o «para colmo»."
             },
             {
-              "id": "shi",
-              "diff": "上に simplemente dice «y además»; し enumera razones y a menudo lleva a una conclusión o decisión del hablante.",
+              "id": "ni-kuwaete",
+              "diff": "上に va directamente tras adjetivos y verbos y es habitual al hablar; に加えて va tras sustantivos y es más formal.",
               "this": [
                 {
-                  "tag": "Acumular · afirmar",
-                  "tr": "Esta habitación no solo es amplia, sino que el alquiler también es barato."
+                  "tag": "Tras adjetivo · cotidiano",
+                  "tr": "Llueve con fuerza y, encima, se ha levantado viento."
                 }
               ],
               "that": [
                 {
-                  "tag": "Enumerar razones → decisión",
-                  "tr": "Esta habitación es amplia, el alquiler es barato… nos quedamos con esta."
+                  "tag": "Tras sustantivo · noticias",
+                  "tr": "Por efecto del tifón, además de lluvias intensas, se prevén fuertes vientos."
                 }
               ],
-              "explain": "Mira si después hay una conclusión: し se repite a menudo dos o tres veces (〜し、〜し) y al final lleva a una decisión del tipo «así que…», con tono muy hablado; 上に normalmente solo une dos elementos, dice simplemente «además» y es más escrito."
+              "wrong": {
+                "why": "に加えて no puede ir directamente tras un adjetivo: di 「強いことに加えて」 o usa 「強い上に」"
+              },
+              "explain": "Mira qué va delante: los adjetivos y verbos van directamente con 上に (強い上に); に加えて necesita un sustantivo delante (大雨に加えて), y los adjetivos o verbos deben llevar antes 「こと」 o 「の」 (強いことに加えて). En cuanto al tono, に加えて es más formal y frecuente en noticias y avisos; 上に también es habitual al hablar."
             }
           ]
         }
@@ -23752,30 +23757,30 @@
                   "tr": "Si fuera un niño, pase; pero que un adulto haga eso es muy raro."
                 }
               ],
-              "explain": "Mira la segunda parte: tras は別として se habla directamente del resto (大人は全員参加); なら別だが primero supone una excepción y luego, con 「が」, da un giro para criticar o subrayar el caso general (大人がするのはおかしい)."
+              "explain": "「別」 significa originalmente «otro asunto». は別として: tratas lo primero como otro asunto, lo dejas a un lado y hablas solo del resto (大人は全員参加してください); なら別だが: «si fuera lo primero, sería otro asunto»; primero lo admites como excepción y luego con 「が」 vuelves al juicio sobre el caso normal, casi siempre una crítica (おかしい). Mira la segunda parte: una petición o juicio directo sobre el resto → は別として; una concesión seguida de una crítica → なら別だが."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan «dejar fuera» un elemento",
+          "note": "Ambas significan «excepto…»",
           "items": [
             {
               "id": "wo-nozoite",
-              "diff": "は別として deja de lado un tema o una cuestión; を除いて quita objetivamente un elemento de un conjunto, y todo lo demás queda igual.",
+              "diff": "は別として es el hablante dejando fuera un elemento como excepción, frecuente también al hablar; を除いて quita un elemento de forma objetiva y es típico de avisos y normas.",
               "this": [
                 {
-                  "tag": "Tema · dejarlo aparte",
-                  "tr": "El resultado aparte, todos se esforzaron mucho."
+                  "tag": "Juicio del hablante · oral",
+                  "tr": "Dejando aparte a Tanaka, los demás miembros aún no parecen acostumbrados al trabajo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Miembro · excluir",
-                  "tr": "Abrimos todos los días excepto los lunes."
+                  "tag": "Aviso · normas",
+                  "tr": "Salvo los festivos, se atiende de nueve de la mañana a cinco de la tarde."
                 }
               ],
-              "explain": "Mira lo que va delante: un «tema» que se deja de lado por ahora, como el resultado, los gastos o una broma → は別として; un miembro que se quita de un conjunto, como un día de la semana o una persona, y luego se habla de todo lo demás → を除いて, frecuente en avisos y normas."
+              "explain": "Ambas significan «excepto…». Mira la situación y el tono: el hablante, según su impresión, deja fuera a alguien como excepción (田中さんは別として、……ようだ), algo común al hablar → は別として; un aviso o norma quita un elemento de forma objetiva y precisa, y todo lo demás se aplica tal cual (祝日を除き、……受け付けます) → を除いて, por escrito a menudo 「を除き」. 「田中さんを除いて、ほかのメンバーは……」 también es correcto, solo que suena a delimitar formalmente."
             }
           ]
         }
@@ -23786,7 +23791,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas expresan «A, por supuesto, y también B»",
+          "note": "Ambas significan «no solo A, también B»",
           "items": [
             {
               "id": "wa-iu-made-mo-naku",
@@ -23833,11 +23838,11 @@
               ],
               "that": [
                 {
-                  "tag": "No solo · sin jerarquía",
-                  "tr": "No te limites a hablar tú; escucha también lo que dice el otro."
+                  "tag": "Solo amplía el alcance",
+                  "tr": "Este templo es popular no solo entre los japoneses, sino también entre los extranjeros."
                 }
               ],
-              "explain": "Delante de はもちろん va un sustantivo (un verbo necesita 「の」), y además es «el caso más obvio» (un templo japonés → los japoneses); だけでなく solo amplía el alcance, puede ir directamente tras un verbo (話す) y a menudo le sigue una sugerencia como 「〜ましょう」."
+              "explain": "Las dos oraciones son correctas; la diferencia está en cómo ve el hablante el primer elemento: はもちろん lo da por lo más obvio (日本人) — que a los japoneses les guste un templo japonés no hace falta decirlo — y carga el peso en el segundo; だけでなく solo dice que el alcance va más allá del primero, sin juzgarlo obvio. Cuando el primer elemento no es obvio y merece mención, だけでなく resulta más natural."
             }
           ]
         }
@@ -23852,10 +23857,10 @@
           "items": [
             {
               "id": "wake-da",
-              "diff": "わけではない es «no es que…», niega una parte; わけだ saca una conclusión siguiendo la lógica.",
+              "diff": "わけではない significa «no es que…» y niega una conclusión sacada por lógica; わけだ saca una conclusión siguiendo la lógica.",
               "this": [
                 {
-                  "tag": "Negación parcial",
+                  "tag": "Negar una inferencia",
                   "tr": "He vivido en Japón, pero no es que conozca muy bien el país."
                 }
               ],
@@ -23865,7 +23870,7 @@
                   "tr": "Así que viviste allí tres años. Con razón conoces tan bien Japón."
                 }
               ],
-              "explain": "わけだ sigue la razón anterior y concluye «con razón»; わけではない sirve justo para corregir esa deducción «obvia»: haber vivido en Japón ≠ conocerlo bien necesariamente. Si delante ves 「けど」 o 「からといって」, lo más probable es que siga わけではない."
+              "explain": "わけ significa originalmente «razón, lógica». わけだ = «esa es la lógica» → saca una conclusión de la razón anterior, con matiz de «con razón» (３年も住んでいたのか → 詳しいわけだ); わけではない = «no es esa la lógica» → niega una inferencia que parece obvia: haber vivido en Japón ≠ conocer bien Japón. Si antes aparece 「けど」 o 「からといって」, lo que sigue suele ser わけではない."
             },
             {
               "id": "wake-ga-nai",
@@ -23882,7 +23887,7 @@
                   "tr": "Algo tan barato no puede ser bueno."
                 }
               ],
-              "explain": "Solo cambia では por が, pero el tono cambia muchísimo. わけではない suele ir con 「全部」「いつも」「別に」 y solo niega una parte o un malentendido del otro; わけがない es «no tiene ninguna lógica»＝imposible, y suele ir con 「こんなに」「あの人が」."
+              "explain": "わけ significa originalmente «razón, lógica». わけではない = «no es esa la lógica» → niega solo una parte: no todo (「全部」) lo caro es bueno, en tono suave; わけがない = «no tiene ninguna lógica» → por sentido común es imposible, en tono muy fuerte. Solo cambian では y が: suele ir con 「全部」「いつも」「別に」 → わけではない; suele ir con 「こんなに」「あの人が」 → わけがない."
             },
             {
               "id": "wake-ni-wa-ikanai",
@@ -23899,30 +23904,30 @@
                   "tr": "Tengo una familia que mantener, así que ahora no puedo dejar la empresa."
                 }
               ],
-              "explain": "Mira lo que sigue: tras わけではない suele venir 「けど／が」 y luego lo que uno piensa de verdad, para aclarar un malentendido; delante de わけにはいかない suele haber un 「〜から」 que explica la responsabilidad o el compromiso, e indica que el propio hablante «no puede hacerlo». Si ves 「いかない」, significa «no poder»."
+              "explain": "わけ significa originalmente «razón, lógica». わけではない = «no es esa la lógica, no es así» → sirve para deshacer un malentendido y suele seguir 「けど／が」 con lo que de verdad piensas (少し休みたい); わけにはいかない = «por lógica no puede ser» → por responsabilidad u obligación no puedes hacerlo tú, a menudo con una razón delante (家族がいるから). Si ves 「いかない」, significa «no poder»."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan una negación parcial: «no necesariamente…»",
+          "note": "Ambas significan «no necesariamente todos…»",
           "items": [
             {
               "id": "to-wa-kagiranai",
-              "diff": "とは限らない habla de una regla general, «no siempre»; わけではない también sirve para negar lo que otro supone sobre uno mismo.",
+              "diff": "Con わけではない el hablante conoce los hechos y niega directamente el «todos»; con とは限らない no puede asegurarlo y advierte que puede haber excepciones.",
               "this": [
                 {
-                  "tag": "Aclarar un malentendido",
-                  "tr": "Que no estoy enfadado, ¿eh?"
+                  "tag": "Conoce los hechos · niega «todos»",
+                  "tr": "No es que toda la clase esté a favor."
                 }
               ],
               "that": [
                 {
-                  "tag": "Regla · con excepciones",
-                  "tr": "Que una medicina sea cara no significa que funcione."
+                  "tag": "No se puede asegurar · puede haber excepciones",
+                  "tr": "No necesariamente toda la clase va a estar a favor."
                 }
               ],
-              "explain": "Mira de qué se habla: una regla general como «caro＝eficaz» que tiene excepciones → とは限らない (aquí también vale わけではない); el otro ha entendido mal algo de ti (cree que estás enfadado) y lo aclaras con 「別に〜わけではない」 → aquí se usa わけではない. Delante de las dos se suele poner 「必ずしも」."
+              "explain": "Ambas significan «no necesariamente todos…». Mira si el hablante conoce los hechos: ya sabe que alguien se opone y corrige directamente lo de «todos» (賛成している) → わけではない; la cosa aún no está decidida y solo advierte que puede haber excepciones (賛成する) → とは限らない. Con reglas generales valen las dos: 「高い薬がよく効くとは限らない」 también puede decirse con わけではない."
             }
           ]
         }
@@ -23950,7 +23955,7 @@
                   "tr": "Alguien tan amable como él es imposible que se niegue."
                 }
               ],
-              "explain": "Mira qué se juzga: si el propio hablante «puede o no hacer algo» → わけにはいかない; una suposición sobre si otra persona o una cosa «va a ser así» → わけがない (＝imposible). En español las dos pueden traducirse como «no poder», por eso se confunden fácilmente."
+              "explain": "わけ significa originalmente «razón, lógica». わけにはいかない = «por lógica o por deber no puede ser» → el hablante no puede hacerlo por responsabilidad o por su posición (約束したから); わけがない = «no tiene ninguna lógica» → se supone que otra persona o algo de ninguna manera será así (あの優しい彼が). Mira qué se juzga: si tú mismo puedes hacerlo → わけにはいかない; si otro lo haría → わけがない. Las dos pueden traducirse con «no poder», por eso se confunden."
             },
             {
               "id": "wake-dewa-nai",
@@ -23967,7 +23972,7 @@
                   "tr": "No es que quiera dejar la empresa; solo quiero descansar un poco."
                 }
               ],
-              "explain": "Si ves 「いかない」, significa «no poder»: delante suele haber un 「〜から」 que explica la responsabilidad o el compromiso; tras わけではない suele venir 「けど／が」 y luego lo que uno piensa de verdad, para aclarar un malentendido, sin nada que ver con «poder o no hacerlo»."
+              "explain": "わけ significa originalmente «razón, lógica». わけにはいかない = «por lógica no puede ser» → por responsabilidad u obligación no puedes hacerlo tú, a menudo con una razón delante (家族がいるから); わけではない = «no es esa la lógica, no es así» → solo aclara, suele seguir 「けど／が」 con lo que de verdad piensas (少し休みたい) y no tiene que ver con poder o no hacerlo. Si ves 「いかない」, significa «no poder»."
             }
           ]
         },
@@ -23991,23 +23996,6 @@
                 }
               ],
               "explain": "Mira quién lo impide: la ley, una norma o un superior que dice a otros «no se permite» → てはいけない; el propio hablante, teniendo en cuenta la situación (conducir, el trabajo, los compromisos), siente que «no puede hacerlo» → わけにはいかない, con sujeto casi siempre «yo»."
-            },
-            {
-              "id": "you-ga-nai",
-              "diff": "わけにはいかない es que se podría hacer pero no se debe; ようがない es que, aunque se quiera, no hay forma de hacerlo.",
-              "this": [
-                {
-                  "tag": "Se puede · no se debe",
-                  "tr": "Todavía me queda trabajo, así que no puedo irme a casa."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "No hay forma",
-                  "tr": "No hay ni último tren ni taxis, así que no hay manera de volver."
-                }
-              ],
-              "explain": "Mira la causa: queda trabajo, hay una responsabilidad → volver, se podría, pero no se debe → わけにはいかない; no hay transporte ni forma de contactar → faltan los medios, y aunque se quiera no se puede volver → ようがない. Ojo con la conexión: ようがない va con la raíz ます (帰り＋ようがない)."
             }
           ]
         }
