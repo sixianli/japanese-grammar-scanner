@@ -108,6 +108,13 @@ Build 17 包含的内容（详见 PR #6 描述）：Build 16 的全部反馈修�
 
 建议：用主题色（数字 `Theme.accentText`、圆圈 `Theme.accentFill` 浅底或主题色描边），和使用指南里的编号块、各段的绿色小标题是同一套颜色。黑色的话会和旁边加粗的黑色义项名抢视线。设计图里两种都画出来给用户选。
 
+### 反馈 7：「这里有多个语法点，请选择」弹窗里选项文字用黑色（截图 `docs/handoff/b17_fb07_chooser_color.png`，2026-11-21）
+
+用户要求：扫描结果页点重叠的高亮块后弹出的选择框，选项文字（如「〜れる・〜られる (N4)　「れて」」）改成黑色，不用主题色。
+
+现状：`Views/Components/GrammarChooser.swift` 用系统的 `confirmationDialog`，按钮文字颜色跟着 App 的全局主题色（tint）走，代码里没单独设颜色。
+改法：在这个弹窗上把颜色设成主文字色（例如 `.tint(.primary)`）。系统弹窗不一定都认这个设置（iOS 26 上这个弹窗是气泡样式），真机上不生效的话，就改成自己画的选择框。深色模式下「黑色」应是白色（用系统主文字色，不写死黑色）。改完补一个界面测试或截图核对。
+
 ### 反馈 2：CloudKit 后台下载反馈截图报错（2026-11-21）
 
 现象：Build 17（1.3 (17)，iPhone15,2，iOS 27.2.1）在 App 里提交「体验与建议」反馈，CloudKit Console → Production → Public Database → Feedback 能看到记录，`screenshots`（Asset 列表）显示 `Binary file (922.05KB)`，但点下载按钮打开的 `cvws.icloud-content.com/...` 页面只返回 `Internal Server Error`。
