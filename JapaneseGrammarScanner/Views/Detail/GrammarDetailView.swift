@@ -695,6 +695,8 @@ private struct DetailTitleBar: View {
                             .opacity(TitleBarLayout.dividerOpacity(scrolled: scroll.offset))
                     }
                 }
+                .accessibilityElement(children: .contain)
+                .accessibilityIdentifier("detail.titleBar")
                 Spacer(minLength: 0)
             }
             .ignoresSafeArea(edges: .top)
