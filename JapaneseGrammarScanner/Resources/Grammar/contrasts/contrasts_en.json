@@ -10634,7 +10634,7 @@
         },
         {
           "kind": "meaning",
-          "note": "Both are used to give the other person advice",
+          "note": "Both are used to suggest the other person do something",
           "items": [
             {
               "id": "hou-ga-ii",
@@ -10651,7 +10651,7 @@
                   "tr": "You have a high fever, so you'd better go to the hospital right away."
                 }
               ],
-              "explain": "Look at how serious the matter is: just lightly offering an idea and letting them decide → たらどうですか; something might go wrong if they don't (a high fever, being late) → ほうがいい."
+              "explain": "Look at how serious the matter is: with something like 「疲れているなら」, you're just lightly offering an idea and letting them decide → たらどうですか; with something like 「熱が高い」, where not doing it could cause trouble → ほうがいい."
             },
             {
               "id": "tara-ii",
@@ -10668,7 +10668,7 @@
                   "tr": "When you don't understand, just ask the teacher."
                 }
               ],
-              "explain": "Look at the tone: urging like 「〜ていないで」 before it, with the other person dragging their feet → たらどう, which easily sounds annoyed; the other person doesn't know what to do and you're telling them how → たらいい (〜といい works the same). When answering 「どうしたらいいですか」, use たらいい, not たらどう."
+              "explain": "Look at the tone: when there's urging like 「ぐずぐずしていないで」 before it and the other person keeps putting things off → たらどう, which pushes the suggestion back at them with a rhetorical question and easily sounds annoyed; when, as with 「分からないときは」, the other person doesn't know what to do and you calmly tell them how → たらいい (〜といい works the same). Both can answer 「どうしたらいいですか」, but たらどう sounds more like a rhetorical question, while たらいい is calmer and more direct."
             }
           ]
         }
@@ -10679,11 +10679,12 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean “that would be good”: giving advice, or expressing a wish",
+          "sense": 1,
+          "note": "Both are used to suggest the other person do something",
           "items": [
             {
               "id": "tara-dou",
-              "diff": "たらいい calmly tells the other person “just do this”; たらどう pushes a suggestion on them with a rhetorical question and can sound impatient.",
+              "diff": "たらいい calmly tells the other person “just do this”; たらどう pushes the suggestion back at them with a rhetorical question and can sound impatient.",
               "this": [
                 {
                   "tag": "Telling how",
@@ -10696,28 +10697,18 @@
                   "tr": "Stop dawdling — why don't you just hurry up and decide?"
                 }
               ],
-              "explain": "Look at the tone: the other person doesn't know what to do and you're telling them how → たらいい (〜といい works the same); urging like 「〜ていないで」 before it, with the other person dragging their feet → たらどう, which easily sounds annoyed. When answering 「どうしたらいいですか」, only たらいい works."
-            },
-            {
-              "id": "te-hoshii",
-              "diff": "といいね wishes the other person well from their side, in a gentle tone; てほしい is the speaker's own wish for someone else, and said to that person's face it sounds like a demand.",
-              "this": [
-                {
-                  "tag": "Wishing them well",
-                  "tr": "I hope you pass your exam tomorrow."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "My own wish",
-                  "tr": "I really want my daughter to pass, no matter what."
-                }
-              ],
-              "explain": "Look at who it's said to and whose wish it is: saying 「〜といいね」 to a friend (〜たらいいね works the same) is wishing them well; 「人に〜てほしい」 (〜てもらいたい works the same) is my own wish for someone else to achieve something, and saying 「合格してほしい」 to the person directly puts pressure on them."
-            },
+              "explain": "Look at the tone: when, as with 「分からないときは」, the other person doesn't know what to do and you calmly tell them how → たらいい (〜といい works the same); when there's urging like 「ぐずぐずしていないで」 before it and the other person keeps putting things off → たらどう, which pushes the suggestion back at them with a rhetorical question and easily sounds annoyed. Both can answer 「どうしたらいいですか」, but たらいい is calmer and more direct, while たらどう sounds more like a rhetorical question."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Both express hoping something will happen",
+          "items": [
             {
               "id": "nai-kana",
-              "diff": "といいな calmly says “it would be nice if…”; ないかな is longing and waiting, with a sense of impatience — negative in form, yet expressing a wish.",
+              "diff": "といいな calmly says “it would be nice if…”; ないかな is longing and waiting, with a sense of impatience — negative in form, yet it expresses a wish.",
               "this": [
                 {
                   "tag": "Calm wish",
@@ -10727,10 +10718,29 @@
               "that": [
                 {
                   "tag": "Impatient longing",
-                  "tr": "I wish the weekend would hurry up and get here."
+                  "tr": "I wish the weekend would hurry up and come."
                 }
               ],
-              "explain": "Look for an impatient word like 「早く」: longing for something to come soon → 〜ないかな (negative in form, but meaning “I really wish…”); just stating a wish → 〜といいな (〜たらいいな works the same)."
+              "explain": "Check for an impatient word like 「早く」: longing for something to come soon → 〜ないかな (negative in form, but it means “I really wish…”); simply stating a wish → 〜といいな (〜たらいいな works the same).",
+              "title": "〜ないかな（longing）"
+            },
+            {
+              "id": "te-hoshii",
+              "title": "〜てほしい（wanting someone to do something）",
+              "diff": "といいな just hopes things turn out that way, with a light tone; てほしい means I want someone to do it, a more direct wish.",
+              "this": [
+                {
+                  "tag": "Hoping · no demand",
+                  "tr": "It would be nice if he came to the party too."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Wanting him to come · more direct",
+                  "tr": "I want him to come to the party too."
+                }
+              ],
+              "explain": "Check whether 「に」 names who should do it: 「彼に」 + てほしい says I want him to do it — a direct wish that, said to his face, is almost a request; 〜といいな (〜たらいいな works the same) just hopes things go that way without asking anything of anyone, so it sounds lighter."
             }
           ]
         }
@@ -10776,13 +10786,13 @@
                   "tr": "I showed the customer the way to the station."
                 }
               ],
-              "explain": "Look at who benefits: friends or family → てあげる; customers or superiors → てさしあげる. Both carry a “doing you a favor” nuance, so when speaking directly to a superior, switch to 「お〜します」 (駅までご案内します)."
+              "explain": "「上げる」 originally means to lift up or offer up, and later became an ordinary “give”: あげる gives a thing, and putting a verb te-form before it gives away “doing something for the other person” → てあげる, used for equals like 「友達」; 「差し上げる」 keeps the respectful sense of “offering up to someone above”, so てさしあげる is the humble way to say you do something for 「お客様」 or superiors. Both carry a sense of doing someone a favor, so when speaking directly to a superior, switch to 「お〜します」 (駅までご案内します)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both mean “I do something for someone else”; the difference is in who it's for and the tone",
+          "note": "Both mean doing something for someone else",
           "items": [
             {
               "id": "te-yaru",
@@ -10795,11 +10805,12 @@
               ],
               "that": [
                 {
-                  "tag": "To a junior · casual",
+                  "tag": "To someone younger · casual",
                   "tr": "I lent my notes to my little brother."
                 }
               ],
-              "explain": "Look at who it's for: friends or people in general → てあげる; your own little brother, kids or pets → てやる also works, but it's rather blunt, and in polite settings people now mostly use てあげる instead. てやる also has meanings like “I'll show you!” or “I'll do it anyway”, which てあげる doesn't."
+              "explain": "Look at who it's for: equals or people in general, like 「友達に」 → てあげる; your own younger siblings or children, like 「弟に」, or pets → てやる is also possible, but it sounds rather rough, so in polite situations people now usually use てあげる instead.",
+              "title": "〜てやる（doing for someone younger）"
             }
           ]
         }
@@ -10810,50 +10821,48 @@
       "groups": [
         {
           "kind": "look",
-          "note": "てある ↔ ている — just one character apart",
+          "note": "てある ↔ ている: just one kana apart",
           "items": [
             {
               "id": "te-iru",
-              "diff": "てある (with transitive verbs) means someone did it on purpose and the result remains; ている (with intransitive verbs) just describes a state.",
+              "diff": "てある describes the state left after someone has written something (it's written there); ている with a transitive verb says the action is in progress (someone is writing).",
               "this": [
                 {
-                  "tag": "Someone did it on purpose",
-                  "tr": "The window has been (left) open for cleaning."
+                  "tag": "Resulting state · written",
+                  "tr": "A name is written on the blackboard."
                 }
               ],
               "that": [
                 {
-                  "tag": "Just a state",
-                  "tr": "The window is open."
+                  "tag": "In progress · writing",
+                  "tr": "The teacher is writing a name on the blackboard."
                 }
               ],
-              "wrong": {
-                "why": "After 「窓が」, use 「開いている」 or 「開けてある」"
-              },
-              "explain": "Look at the verb first: 開ける (transitive) + てある → someone opened it for a purpose and has left it open; 開く (intransitive) + ている → just says “it's open”. When you see a purpose like 「〜のために」, it's most likely てある."
+              "explain": "Same verb 「書く」, only あ/い differs — then look at the particle before it: 「名前が」 + 書いてある → it's already written on the blackboard, the result left after someone finished writing, without saying who wrote it; 「名前を」 + 書いている → someone is writing it right now, and the doer (先生が) often appears."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both have to do with “preparing in advance”",
+          "note": "Both mean something has already been done in advance",
           "items": [
             {
               "id": "te-oku",
-              "diff": "てある describes the state left after preparing; ておく describes the action of “doing it in advance”.",
+              "title": "〜ておく（preparing in advance）",
+              "diff": "Both sentences say “it's already booked”: てある focuses on the state of being ready now; ておいた focuses on my having done it in advance.",
               "this": [
                 {
-                  "tag": "Already prepared · state",
-                  "tr": "The meeting materials have already been copied."
+                  "tag": "Current state",
+                  "tr": "The restaurant is already booked."
                 }
               ],
               "that": [
                 {
-                  "tag": "Doing it in advance · action",
-                  "tr": "I'll copy the meeting materials by tomorrow."
+                  "tag": "I did it in advance",
+                  "tr": "I've already booked the restaurant."
                 }
               ],
-              "explain": "Look at the time word and the particle: 「もう」 + てあります describes a state that's already prepared now, with the object usually marked by 「は／が」; 「明日までに」 + ておきます describes an action you'll do in advance, with the object marked by 「を」. The usual order is: first ておいた, so now てある."
+              "explain": "The two sentences are interchangeable; both mean “it's already booked”. Look at what you want to stress: just that things are ready now, to reassure the other person, without caring who booked it → てある; that I did it beforehand and arranged it for them → ておいた."
             }
           ]
         }
@@ -10863,29 +10872,35 @@
       "id": "te-bakari-iru",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from 「ばかり」 — originally “only this much”",
+          "kind": "look",
+          "note": "てばかり ↔ たばかり: only て/た differs",
           "items": [
             {
               "id": "ta-bakari",
-              "diff": "てばかりいる means “always doing, doing nothing but”, often with dissatisfaction; たばかり means “just finished doing”.",
+              "diff": "てばかりいる means “always doing”, often with displeasure; たばかり means “just finished doing”.",
               "this": [
                 {
                   "tag": "te-form → always",
-                  "tr": "My little brother does nothing but play games every day."
+                  "tr": "My little brother eats nothing but snacks every day."
                 }
               ],
               "that": [
                 {
-                  "tag": "ta-form → just",
-                  "tr": "I just ate."
+                  "tag": "ta-form → just now",
+                  "tr": "My little brother just had some snacks."
                 }
               ],
-              "explain": "They differ only in て vs. た: て + ばかり + いる means doing the same thing over and over, often to the speaker's dissatisfaction; た + ばかり means only a short time has passed. If you see 「ている」, it's “always”."
-            },
+              "explain": "Just check whether ばかり is preceded by て or た: て + ばかり + いる → doing the same thing over and over, often with frequency words like 「毎日」; た + ばかり → not long after finishing, often with time words like 「さっき」. If 「いる」 follows, it means “always”."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Both mean “nothing but…”",
+          "items": [
             {
               "id": "bakari-only",
-              "diff": "てばかりいる limits the action, “always doing…”; noun + ばかり limits the object, “nothing but…”.",
+              "diff": "てばかりいる limits the action: “always doing…”; noun + ばかり limits the object: “nothing but…”.",
               "this": [
                 {
                   "tag": "Limits the action",
@@ -10898,24 +10913,26 @@
                   "tr": "My little brother eats nothing but sweets."
                 }
               ],
-              "explain": "Look at what 「ばかり」 directly follows: after a noun (物ばかり) → eats only this kind of thing; after a verb te-form (食べてばかり) → does only this one action and nothing else. The two sentences are very close in meaning, but てばかりいる stresses more that “they aren't doing what they should”. In speech, ばかり is often pronounced ばっかり."
+              "explain": "Look at what 「ばかり」 comes right after: after a noun (物ばかり) → eating only this kind of thing; after a verb te-form (食べてばかり) → doing only this one action and nothing else. The two sentences are very close in meaning, but てばかりいる puts more stress on “not doing what you should”. In casual speech ばかり is often said as ばっかり.",
+              "title": "〜ばかり（nothing but…）"
             },
             {
               "id": "bakari-de",
-              "diff": "てばかりいる goes at the end of the sentence and is a criticism in itself; ばかりで goes mid-sentence, followed by an explicit “but doesn't…”.",
+              "title": "〜ばかりで（only doing… and not…）",
+              "diff": "Both sentences mean “only plays and doesn't study”: てばかりいる can end a sentence on its own; ばかりで follows the dictionary form, can only sit mid-sentence, and must be followed by “but doesn't…”.",
               "this": [
                 {
-                  "tag": "Sentence end · criticism",
-                  "tr": "My little brother is always playing."
+                  "tag": "te-form · can also end a sentence",
+                  "tr": "My little brother does nothing but play and doesn't study at all."
                 }
               ],
               "that": [
                 {
-                  "tag": "Mid-sentence · but doesn't…",
-                  "tr": "My little brother does nothing but play and doesn't study at all."
+                  "tag": "Dictionary form · needs a second half",
+                  "tr": "My little brother just plays and doesn't study at all."
                 }
               ],
-              "explain": "Look at where the sentence ends: てばかりいる closes the sentence by itself, leaving “not doing what they should” unsaid; ばかりで follows the dictionary form and has another clause after it, spelling out “but doesn't…” (全然勉強しない)."
+              "explain": "The two sentences are interchangeable and mean the same. Look at the connection and where the sentence ends: te-form + ばかりいる can stand alone, as in 「弟は遊んでばかりいる。」, leaving “not doing what he should” unsaid; dictionary form + ばかりで is a linking form that can't end the sentence, so “but doesn't…” must be stated after it."
             }
           ]
         }
@@ -10939,51 +10956,56 @@
               ],
               "that": [
                 {
-                  "tag": "Want a thing",
-                  "tr": "I want a new bike."
+                  "tag": "Wanting a thing",
+                  "tr": "I want a new bicycle."
                 }
               ],
-              "explain": "Look before 「ほしい」: a verb te-form → wanting someone else to do that action, with the doer marked by 「に」; noun + が → wanting that thing."
+              "explain": "「ほしい」 originally means wanting some thing: if what you want is a thing → noun + がほしい (自転車がほしい); if what you want is replaced by someone else's action → verb te-form + ほしい, with the doer marked by 「に」 as in 「父に」, and the meaning becomes “wanting someone else to do it”.",
+              "wrong": {
+                "why": "To want someone else to do an action, use the te-form before ほしい: 直してほしい"
+              }
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both express “want / wish”; the difference is who you want to do it and how you say it",
+          "note": "Both express a wish: “I hope…”",
           "items": [
             {
-              "id": "tai",
-              "diff": "てほしい means wanting someone else to do something; たい means wanting to do it yourself.",
+              "id": "nai-kana",
+              "title": "〜ないかな（longing）",
+              "diff": "てほしい states my wish directly; ないかな hopes in the form of a negative question, as if talking to oneself, with a feeling of not being able to wait.",
               "this": [
                 {
-                  "tag": "Want someone to do",
-                  "tr": "I want my husband to come home early today."
+                  "tag": "Stating a wish directly",
+                  "tr": "I really want the bus to come soon."
                 }
               ],
               "that": [
                 {
-                  "tag": "Doing it yourself",
-                  "tr": "I want to go home early today."
+                  "tag": "Talking to oneself · can't wait",
+                  "tr": "I wish the bus would hurry up and come."
                 }
               ],
-              "explain": "Look at who does the action: wanting the other person or someone else to do it → 「人に + te-form + ほしい」 (夫に〜てほしい; 〜てもらいたい works the same); doing it yourself → たい. In English both are “want”, but “want someone to…” needs てほしい."
+              "explain": "Both sentences hope the bus will come soon and are interchangeable. Look at how it's said: てほしい states “I want” directly, and can also voice a request to someone with 「人に〜てほしい」; ないかな is negative plus question in form, usually muttered to oneself about something beyond one's control, with a feeling of impatient waiting."
             },
             {
-              "id": "te-moraemasenka",
-              "diff": "てほしい states your own wish; てもらえませんか makes a request to the other person, and is what you use when asking someone for help face to face.",
+              "id": "o-negau",
+              "title": "お〜願いたい（I would ask you to…）",
+              "diff": "てほしい voices a wish in everyday speech; お〜願いたい is a formal expression, polite yet very firm.",
               "this": [
                 {
-                  "tag": "Stating a wish · to oneself",
-                  "tr": "I really wish Tanaka would help me with this job."
+                  "tag": "Everyday · voicing a wish",
+                  "tr": "I'd like you to come again tomorrow."
                 }
               ],
               "that": [
                 {
-                  "tag": "Asking face to face",
-                  "tr": "Tanaka, could you help me with this job?"
+                  "tag": "Formal · nearly a demand",
+                  "tr": "We would ask you to kindly come again tomorrow."
                 }
               ],
-              "explain": "Look at whether you're speaking to the person themselves: 「田中さんに〜てほしいな」 states your own wish (to yourself or to a third party); calling out 「田中さん、〜」 and asking for help → てもらえませんか (てくれませんか works the same). Saying 「手伝ってほしい」 to their face sounds like a demand."
+              "explain": "The two sentences mean the same; look at the situation and who you're talking to: voicing a wish to family, friends or acquaintances → てほしい; speaking to a client or another company at work or on formal occasions → お〜願いたい, where the verb becomes お + masu-stem (お越し, お待ち) or ご + a Sino-Japanese word (ご確認); it's polite but firm — practically a demand."
             },
             {
               "id": "tara-ii",
@@ -11000,25 +11022,25 @@
                   "tr": "I hope you pass your exam tomorrow."
                 }
               ],
-              "explain": "Look at whose wish it is and who it's said to: 「人に〜てほしい」 is my wish for someone else to achieve something, and saying it to the person directly puts pressure on them; saying 「〜といいね」 to a friend (〜たらいいね works the same) is wishing them well."
+              "explain": "Look at whose wish it is and who you're saying it to: 「娘には〜てほしい」 says I want someone else to achieve something, and saying it to that person puts pressure on them; 「明日の試験、〜といいね」 said to a friend (〜たらいいね works the same) is wishing them well."
             },
             {
               "id": "tai-mono-da",
               "title": "〜てほしいものだ",
-              "diff": "てほしい is an ordinary wish; てほしいものだ is reflective, usually a strong hope directed at society or people in general.",
+              "diff": "てほしい states a wish plainly; てほしいものだ adds a note of deep feeling, like making a pronouncement or lecturing.",
               "this": [
                 {
-                  "tag": "To a specific person",
-                  "tr": "I want my son to read more books."
+                  "tag": "Plain wish",
+                  "tr": "I want the children to play outside more."
                 }
               ],
               "that": [
                 {
-                  "tag": "To society · reflective",
-                  "tr": "I really wish young people would read more books."
+                  "tag": "Deep feeling · lecturing",
+                  "tr": "I really do wish children would play outside more."
                 }
               ],
-              "explain": "Look at the target and the tone: stating your own expectation of a specific person around you → てほしい; a reflective, slightly preachy hope directed at a group like 「若い人」 or 「政府」 → てほしいものだ, mostly used in writing and speeches."
+              "explain": "The only difference is whether 「ものだ」 is at the end: without it → simply stating your own wish; with ものだ → it carries deep feeling, like commenting on society or a whole generation, and is common in writing and speeches. Said about a specific person, 「〜てほしいものだ」 is often an indirect complaint."
             }
           ]
         }
@@ -11065,8 +11087,8 @@
               "diff": "ていただけませんか is a direct request; ていただく is mostly used to describe a favor already received.",
               "this": [
                 {
-                  "tag": "Direct request",
-                  "tr": "Sensei, could you please look over this essay for me?"
+                  "tag": "Face-to-face request",
+                  "tr": "Teacher, could you please look over this essay for me?"
                 }
               ],
               "that": [
@@ -11075,24 +11097,7 @@
                   "tr": "Yesterday, my teacher kindly looked over my essay."
                 }
               ],
-              "explain": "Both sentences come from the same 「ていただく」: turned into the negative potential question 「いただけませんか」 → a direct request to the other person (literally “could I not receive your…?”); in the past tense 「いただいた」, with the doer marked by 「に」 → telling others about a favor you received."
-            },
-            {
-              "id": "te-itadakeru-to-arigatai",
-              "diff": "ていただけませんか asks directly; ていただけるとありがたい doesn't ask, only says “I'd be grateful if you could…”, which is softer.",
-              "this": [
-                {
-                  "tag": "Asking directly",
-                  "tr": "Could you send me the materials by next week?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Phrased as a feeling · softer",
-                  "tr": "I would be grateful if you could send me the materials by next week."
-                }
-              ],
-              "explain": "Look at whether the sentence ends in a question: 「〜ませんか」 asks the other person “can you or not”, requiring an answer; 「〜とありがたいです」 turns the request into a statement of your own feelings without pressing them to commit, and is common in emails."
+              "explain": "Both come from the same 「ていただく」: turned into the negative question of the potential form, 「いただけませんか」 → a face-to-face request (literally “could I not receive your…?”); in the past tense 「いただいた」, with the doer marked by 「に」 and often with past time words like 「昨日」 → telling others about a favor you received."
             }
           ]
         },
@@ -11115,7 +11120,7 @@
                   "tr": "Tanaka, could you check this document for me?"
                 }
               ],
-              "explain": "Look at who you're speaking to: a teacher, superior or client → ていただけませんか; a coworker, friend or shop staff → てもらえませんか (てくれませんか works the same). The structure is exactly the same; 「もらう」 is just replaced with the humble 「いただく」."
+              "explain": "Look at who you're asking: 「先生」, superiors, clients → ていただけませんか; a colleague like 「田中さん」, or friends and shop staff → てもらえませんか (てくれませんか works the same). The structure is identical; 「もらう」 is just swapped for the humble 「いただく」."
             },
             {
               "id": "te-kudasai",
@@ -11149,7 +11154,24 @@
                   "tr": "Please check this document."
                 }
               ],
-              "explain": "Look at what comes before: verb te-form + いただけませんか uses a question to leave the decision to the other person, better suited to asking for extra help or to someone of very high status; noun (確認, 説明) + をお願いします is concise and polite, and very common at work."
+              "explain": "Look at what comes before: verb te-form + いただけませんか hands the decision to the other person through a question, is often preceded by 「お忙しいところすみませんが」, and suits asking for an extra favor or addressing someone of high status; noun (確認, 説明) + をお願いします is concise and polite, and very common at work."
+            },
+            {
+              "id": "te-itadakeru-to-arigatai",
+              "diff": "ていただけませんか asks directly with a question; ていただけるとありがたい doesn't ask but just says “I'd be grateful if you could…”, which is more indirect.",
+              "this": [
+                {
+                  "tag": "Asking directly",
+                  "tr": "Could you please send me the materials by next week?"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "As a feeling · more indirect",
+                  "tr": "I would be grateful if you could send me the materials by next week."
+                }
+              ],
+              "explain": "Check whether the sentence ends as a question: 「〜ませんか」 asks the other person whether they can, and needs an answer; 「〜とありがたいです」 turns the request into your own feelings, doesn't press them to commit, and is common in emails."
             }
           ]
         }
@@ -11191,11 +11213,11 @@
               ],
               "that": [
                 {
-                  "tag": "Direct request",
-                  "tr": "Sensei, could you please look over this essay for me?"
+                  "tag": "Face-to-face request",
+                  "tr": "Teacher, could you please look over this essay for me?"
                 }
               ],
-              "explain": "Both sentences come from the same 「ていただく」: in the past tense 「いただいた」, with the doer marked by 「に」 → telling others about a favor you received; turned into the negative potential question 「いただけませんか」 → a direct request to the other person."
+              "explain": "「いただく」 originally means to raise something above your head and receive it respectfully. Receiving a superior's action as a favor → ていただく, with the doer marked by 「に」; 「昨日」 + いただいた tells others about a favor already received. Turn it into the negative question of the potential form → いただけませんか, literally asking “could I not receive your…?”, which makes it a polite face-to-face request."
             }
           ]
         },
@@ -11218,7 +11240,7 @@
                   "tr": "I had a friend correct my essay."
                 }
               ],
-              "explain": "The structure and particles are exactly the same (人に + te-form); just look at who helped: a teacher, boss or customer → ていただく; a friend, family member or junior → てもらう."
+              "explain": "The structure and particles are identical (person に + te-form); just look at who's helping: 「先生」, a boss, a guest → ていただく; 「友達」, family, someone younger → てもらう."
             },
             {
               "id": "te-kudasaru",
@@ -11255,7 +11277,7 @@
                   "tr": "We had the client check the materials."
                 }
               ],
-              "explain": "Look at the verb form: 確認し + ていただく is the ordinary humble expression; replacing the verb with 「ご＋確認」 or 「お＋待ち」 and attaching いただく directly is more respectful, and common in business emails and announcements (ご確認いただけますか, お待ちいただけますか). Native Japanese verbs take 「お」, Sino-Japanese words take 「ご」."
+              "explain": "Look at who it's for and the verb form: for an ordinary person like 「田中さんに」, 確認し + ていただく is the usual humble expression; for someone requiring special formality like 「お客様に」, change the verb to 「ご＋確認」 or 「お＋待ち」 and attach いただく directly — this is more respectful and common in business emails and announcements (ご確認いただけますか, お待ちいただけますか). Native Japanese verbs take 「お」; Sino-Japanese words take 「ご」."
             }
           ]
         }
@@ -11283,7 +11305,7 @@
                   "tr": "Please explain it once more."
                 }
               ],
-              "explain": "「ください」 is simply the imperative form of 「くださる」, so 「〜てください」 literally means “please bestow on me the act of…”. Check whether the sentence describes what the other person did (〜てくださった) or makes a request to their face (〜てください)."
+              "explain": "「ください」 is the imperative form of 「くださる」, so 「〜てください」 literally means “please bestow on me the act of…”. Look at whether the sentence describes what the other person did (「丁寧に」〜てくださった) or makes a face-to-face request (「もう一度」〜てください)."
             },
             {
               "id": "giving-receiving-honorific",
@@ -11301,7 +11323,7 @@
                   "tr": "My teacher gave me a book."
                 }
               ],
-              "explain": "The two sentences differ only by 「貸して」: if くださる comes straight after 「noun + を」 → a superior gives me a thing; if it follows a verb's て-form → a superior did that for me. With equals, say 「貸してくれた」「本をくれた」."
+              "explain": "「くださる」 originally means a superior bestowing something on me. If what's bestowed is a thing → noun + をくださる (本をくださった: the teacher gave me a book); if “doing something for me” is also treated as something bestowed → verb te-form + くださる (貸してくださった: the teacher gave me the act of lending). So the two sentences differ only by 「貸して」: check whether くださる is preceded by noun + を or a verb te-form. With equals, say 「貸してくれた」 or 「本をくれた」."
             }
           ]
         },
@@ -11324,7 +11346,7 @@
                   "tr": "My colleague helped me with my work."
                 }
               ],
-              "explain": "Same structure, same direction (person が + て-form); just look at who's helping: superiors, teachers, customers → てくださる; friends, colleagues, family → てくれる."
+              "explain": "The structure and direction are identical (person が + te-form); just look at who's helping: a superior like 「部長」, or a teacher or guest → てくださる; a colleague like 「同僚」, or friends and family → てくれる."
             },
             {
               "id": "te-itadaku",
@@ -11363,23 +11385,23 @@
               "diff": "て-form + くれる means someone does something for me; noun + をくれる means someone gives me a thing.",
               "this": [
                 {
-                  "tag": "Does for me",
-                  "tr": "My older sister made me a cake."
+                  "tag": "Doing for me",
+                  "tr": "My older sister made a cake for me."
                 }
               ],
               "that": [
                 {
-                  "tag": "Gives me a thing",
+                  "tag": "Giving me a thing",
                   "tr": "My older sister gave me a cake."
                 }
               ],
-              "explain": "The two sentences differ only by 「作って」: if くれる comes straight after 「noun + を」 → someone gives me a thing; if it follows a verb's て-form → someone did that for me. Either way, the receiver is “me” or my side."
+              "explain": "「くれる」 originally means someone gives something to me: directly preceded by noun + を → someone gives me a thing; if the action someone does for me is also treated as something given to me → verb te-form + くれる, meaning “someone does it for me”. The two sentences differ only by 「作って」. Either way, the receiver is “me” or my side."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both describe someone's action directed at me; they differ in viewpoint, respect and feeling",
+          "note": "Both mean someone else does something toward me",
           "items": [
             {
               "id": "te-morau",
@@ -11392,14 +11414,14 @@
               ],
               "that": [
                 {
-                  "tag": "I as subject · に",
+                  "tag": "I'm the subject · に",
                   "tr": "I got my friend to help me with my homework."
                 }
               ],
               "wrong": {
                 "why": "With てくれる, the helper takes 「が」"
               },
-              "explain": "Look at the particle after the friend: 「友達が」 → stresses the friend's own kindness, so てくれた; 「友達に」 → told from my side, so てもらった, often implying “I asked them to”."
+              "explain": "Look at the particle after 友達: 「友達が」 → the other person is the subject, highlighting their kindness, so use てくれた; 「友達に」 → told from my point of view, use てもらった, which can also imply “I asked them to”."
             },
             {
               "id": "te-kudasaru",
@@ -11416,12 +11438,12 @@
                   "tr": "The department head helped me with my work."
                 }
               ],
-              "explain": "Same structure, same direction (person が + て-form); just look at who's helping: friends, colleagues, family → てくれる; superiors, teachers, customers → てくださる."
+              "explain": "The structure and direction are identical (person が + te-form); just look at who's helping: a colleague like 「同僚」, or friends and family → てくれる; a superior like 「部長」, or a teacher or guest → てくださる."
             },
             {
               "id": "te-kuru",
               "title": "〜てくる (action toward me)",
-              "diff": "てくれる carries gratitude; てくる only says the action comes toward me, often neutral or annoyed.",
+              "diff": "てくれる carries gratitude; てくる just says the action comes toward me, with no gratitude in itself.",
               "this": [
                 {
                   "tag": "Grateful",
@@ -11430,11 +11452,11 @@
               ],
               "that": [
                 {
-                  "tag": "Direction only · annoyed",
-                  "tr": "A stranger called me in the middle of the night."
+                  "tag": "Direction only",
+                  "tr": "My friend called me in the middle of the night."
                 }
               ],
-              "explain": "Look at the speaker's feelings: the action benefits me and I'm grateful → てくれる; it just comes at me, maybe even bothering me (夜中に, 知らない人が) → てくる."
+              "explain": "In both sentences a friend calls me; the difference is the speaker's feeling: seeing it as the other person's kindness and feeling grateful (「心配して」) → てくれる; just saying the call came my way, with no thanks → てくる. てくる itself only shows direction, but in a bothersome context like 「夜中に」 it lets annoyance show through."
             }
           ]
         }
