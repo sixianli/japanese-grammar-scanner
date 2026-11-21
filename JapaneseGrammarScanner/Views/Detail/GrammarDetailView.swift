@@ -204,7 +204,7 @@ struct GrammarDetailView: View {
                 }
             }
             ToolbarItem(placement: .topBarTrailing) {
-                FavoriteSakuraButton(id: p.id, size: 22)
+                FavoriteSakuraButton(id: p.id)
                     .accessibilityIdentifier("detail.favorite")
             }
         }

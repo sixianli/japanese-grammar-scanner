@@ -198,7 +198,8 @@ enum TabBarLocator {
 /// 收藏按钮：未收藏 = 线条樱花，已收藏 = 粉色樱花。点了收藏时樱花飘进底部「收藏」标签。
 struct FavoriteSakuraButton: View {
     let id: String
-    var size: CGFloat = 22
+    /// nil：用图片本来的大小（24pt，放在导航栏里用）
+    var size: CGFloat? = nil
     var outlineColor: Color = Theme.accentText
     @EnvironmentObject private var favorites: FavoritesStore
     @EnvironmentObject private var flight: FavoriteFlight
@@ -212,15 +213,27 @@ struct FavoriteSakuraButton: View {
             favorites.toggle(id)
             if launch { flight.launch(from: center) }
         } label: {
-            SakuraFlower(size: size, outline: !isFavorite)
-                .foregroundStyle(outlineColor)
+            // 标签必须是一张图片：大屏 iPhone 上导航栏按钮会挪到右侧竖排的按钮栏里，
+            // 只有图片标签会被挪过去；自己画的视图会留在页面右上角，往下滑就看不到了。
+            icon(isFavorite)
+        }
+        .foregroundStyle(outlineColor)
+        .onGeometryChange(for: CGPoint.self) { g in
+            let r = g.frame(in: .global)
+            return CGPoint(x: r.midX, y: r.midY)
+        } action: { center = $0 }
+        .accessibilityLabel(isFavorite ? Text(localized: "取消收藏") : Text(localized: "收藏"))
+    }
+
+    @ViewBuilder
+    private func icon(_ isFavorite: Bool) -> some View {
+        let image = Image(isFavorite ? "SakuraFilled" : "SakuraOutline")
+        if let size {
+            image.resizable().frame(width: size, height: size)
                 .frame(width: max(size, 28), height: max(size, 28))
                 .contentShape(Rectangle())
-                .onGeometryChange(for: CGPoint.self) { g in
-                    let r = g.frame(in: .global)
-                    return CGPoint(x: r.midX, y: r.midY)
-                } action: { center = $0 }
+        } else {
+            image
         }
-        .accessibilityLabel(isFavorite ? Text(localized: "取消收藏") : Text(localized: "收藏"))
     }
 }

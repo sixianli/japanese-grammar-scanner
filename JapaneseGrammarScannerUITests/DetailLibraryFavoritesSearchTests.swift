@@ -118,6 +118,8 @@ final class DetailTests: E2ETestCase {
         openDetailBySearch("ように")
         let link = id("detail.feedback")
         scrollTo(link, maxSwipes: 40)
+        // 大屏 iPhone 上导航栏按钮在右侧竖排；樱花按钮曾因为不是图片标签而留在页面右上角，滑下来就不见了
+        XCTAssertTrue(detailScreen.isHittable, "滑到页面底部后，右上角的收藏按钮仍应可点")
         link.tap()
         wait(navBar("反馈"), "讲解页底部的反馈入口应打开反馈页")
         navBar("反馈").buttons["取消"].tap()
