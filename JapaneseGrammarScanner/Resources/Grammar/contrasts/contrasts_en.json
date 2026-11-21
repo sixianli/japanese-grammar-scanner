@@ -28484,7 +28484,7 @@
               "this": [
                 {
                   "tag": "Affirmative → never",
-                  "tr": "I'm never going to a shop like that again!"
+                  "tr": "I'm never going back to that awful dentist!"
                 }
               ],
               "that": [
@@ -28499,27 +28499,12 @@
         },
         {
           "kind": "meaning",
-          "note": "Both express a strong denial: “never… / no way…”",
+          "note": "Both mean “I will never…”",
+          "sense": 1,
           "items": [
             {
-              "id": "wake-ga-nai",
-              "diff": "ものか carries anger or spite; わけがない calmly rules something out as “impossible” on logical grounds.",
-              "this": [
-                {
-                  "tag": "Spite · emotional",
-                  "tr": "Shut up already. Like I care about your problems!"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Logical · calm",
-                  "tr": "I haven't told anyone, so there's no way he knows."
-                }
-              ],
-              "explain": "わけがない is often preceded by a reason (誰にも話していないから) and is a calm deduction; ものか／もんか is an emotional rhetorical question, common in arguments and fits of spite, and can also express a resolve of “I'll never…” (二度と行くものか), which わけがない can't do."
-            },
-            {
               "id": "mai",
+              "title": "〜まい (I will never…)",
               "diff": "ものか is spite said out loud; まい is a calm, formal “never again…”.",
               "this": [
                 {
@@ -28534,23 +28519,52 @@
                 }
               ],
               "explain": "まい mostly appears in writing or inner monologue, often with 「と思う」「と誓う」, in a restrained tone; ものか／もんか is a rhetorical question blurted out with strong emotion, mainly used in speech."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Both mean “there's no way…”",
+          "sense": 2,
+          "items": [
             {
-              "id": "kkonai",
-              "diff": "っこない only judges “there's no way”; ものか, when about oneself, can also express a resolve of “I'll never…”.",
+              "id": "wake-ga-nai",
+              "title": "〜わけがない (there's no way…)",
+              "diff": "ものか is an emotional rhetorical question used to hit back; わけがない is a calm conclusion drawn from reasoning.",
               "this": [
                 {
-                  "tag": "Resolve · won't lose",
-                  "tr": "There's no way I'm losing to a guy like that!"
+                  "tag": "Rhetorical · emotional",
+                  "tr": "As if that guy would have that kind of money!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Possibility · giving up",
-                  "tr": "We could never beat a team that strong."
+                  "tag": "Conclusion · calm",
+                  "tr": "There's no way that guy has that kind of money."
                 }
               ],
-              "explain": "っこない attaches to the ます-stem (勝てっこない, 分かりっこない) and only judges “impossible”, usually sounding defeated; ものか attaches to the dictionary form and, when about oneself, means “I'll never…” (負けるもんか), with a refuse-to-lose spirit."
+              "explain": "Both sentences deny that he has that much money. もんか (ものか) is the rhetorical question “as if he'd have it?”, full of scorn or defiance; it is only used in speech, and the polite version is ものですか. わけがない draws a calm conclusion from reasoning, often after stating a reason (学生だから); it also works in writing and can be followed by 「と思う」."
+            },
+            {
+              "id": "kkonai",
+              "title": "〜っこない (there's no way…)",
+              "diff": "っこない is a deflated judgment that something can't happen; ものか is a rhetorical question with a sharper tone, often used to hit back at someone.",
+              "this": [
+                {
+                  "tag": "Rhetorical · hitting back",
+                  "tr": "As if we could beat a team that strong!"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Conclusion · deflated",
+                  "tr": "There's no way we can beat a team that strong."
+                }
+              ],
+              "explain": "Both sentences say “we can't win”. Look at how each attaches: っこない follows the ます-stem (勝てっこない, 分かりっこない) and sounds deflated, sure it can't be done; もんか follows the dictionary form (勝てるもんか) and is the rhetorical question “as if we could win?”, with a sharp tone, often used to shoot down someone who says “we'll definitely win”.",
+              "wrong": {
+                "why": "っこない attaches to the ます-stem (drop ます): 勝てっこない"
+              }
             }
           ]
         }
@@ -28578,51 +28592,10 @@
                   "tr": "If you're ever late to a meeting, the department head will chew you out."
                 }
               ],
+              "explain": "First look at the verb form before ものなら: potential form (戻れる, できる) → “if I really could”, followed by a wish (戻りたい); volitional form (遅刻しよう, 言おう) → “if you dare to”, followed by a serious consequence (怒られる).",
               "wrong": {
                 "why": "Volitional form＋ものなら is followed by a bad outcome, not a wish"
-              },
-              "explain": "First look at the verb form before ものなら: the potential form (戻れる, できる) → “if I really could”, followed by 「〜たい」 or 「〜てみろ」; the volitional form (しよう, 言おう) → “if you were to do it”, followed by a serious consequence."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Both express a strong wish",
-          "items": [
-            {
-              "id": "tai-mono-da",
-              "title": "〜たいものだ (I'd really love to…)",
-              "diff": "ものなら first supposes “if it were really possible”, stressing that it's hard to achieve; たいものだ directly exclaims “I'd really love to…”.",
-              "this": [
-                {
-                  "tag": "Supposition · actually hard",
-                  "tr": "If I could, I'd quit my job right now and travel around the world."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Directly exclaiming a wish",
-                  "tr": "After I retire, I'd really love to travel around the world."
-                }
-              ],
-              "explain": "ものなら comes after a potential form and first admits “this probably can't happen in reality” before stating the wish, with a sense of helplessness; たいものだ at the end of the sentence voices the wish directly, and it isn't necessarily hard to achieve (after retiring, you might really go)."
-            },
-            {
-              "id": "nai-mono-ka",
-              "diff": "ものなら means “if I could…, I'd want to…”; ないものか means “is there really no way to…?”, anxiously searching for a way out.",
-              "this": [
-                {
-                  "tag": "Supposition → stating a wish",
-                  "tr": "If I could, I'd gladly take my sick daughter's place."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Question → looking for a way",
-                  "tr": "Is there really nothing that can cure my daughter's illness?"
-                }
-              ],
-              "explain": "ものなら is a condition and must be followed by a wish (〜たい); ないものか comes at the end of the sentence after a negative form, often with 「何とか」「どうにか」, fretting over “whether there's any way”."
+              }
             }
           ]
         }
@@ -28641,7 +28614,7 @@
               "this": [
                 {
                   "tag": "Calm contrast",
-                  "tr": "I did take the medicine, but the fever didn't go down."
+                  "tr": "I did get an injection, but the fever didn't go down."
                 }
               ],
               "that": [
@@ -28679,20 +28652,23 @@
             {
               "id": "nagara",
               "title": "〜ながらも (although…)",
-              "diff": "ながらも is mostly preceded by an ongoing state (狭い, 知っている); ものの is mostly preceded by a one-time fact (買った, 合格した).",
+              "diff": "ながらも is mostly used to judge two opposite sides of the same thing, and sounds written and gentle; ものの is a general “although…, but”, and its two halves can be about different things.",
               "this": [
                 {
-                  "tag": "One-time fact",
-                  "tr": "I got into university, but I can't afford the tuition and don't know what to do."
+                  "tag": "General contrast",
+                  "tr": "The shop is small, but it has a wide selection."
                 }
               ],
               "that": [
                 {
-                  "tag": "State · gentle",
-                  "tr": "The room may be small, but it gets plenty of sunlight."
+                  "tag": "Two sides of one thing",
+                  "tr": "Small as it is, the shop has a wide selection."
                 }
               ],
-              "explain": "Look at what comes before: an adjective or a state like 「知っている」「子どもながら」 → ながらも, often followed by a positive judgment; an action in the た-form (合格した, 買った) → ものの, mostly followed by a disappointing result."
+              "explain": "When you say of one thing “it's small, but…”, both work: ながらも sounds more like weighing its two sides and is gentle, as in the common 「狭いながらも」「小さいながらも」; ものの can follow something that has already happened (終わったものの, 買ったものの), and its two halves can be about different things — then it can't be replaced with ながらも.",
+              "wrong": {
+                "why": "The two halves are different things (the exam ended / the results aren't out), so ながらも can't be used; say 「試験は終わったものの」."
+              }
             },
             {
               "id": "ni-mo-kakawarazu",
@@ -28709,10 +28685,10 @@
                   "tr": "Despite the heavy rain, a large crowd turned out for the game."
                 }
               ],
+              "explain": "にもかかわらず can attach directly to a noun (大雨にもかかわらず) and is followed by a surprising fact, common in the news; ものの can't attach directly to a noun, is mostly preceded by something that was done and followed by a result that fell short, in a flat tone.",
               "wrong": {
                 "why": "ものの can't attach directly to a noun (you'd need 「大雨であるものの」)"
-              },
-              "explain": "にもかかわらず can attach directly to a noun (大雨にもかかわらず) and is followed by a surprising fact, common in the news; ものの can't attach directly to a noun, is mostly preceded by something that was done and followed by a result that fell short, in a flat tone."
+              }
             }
           ]
         }
@@ -28745,51 +28721,13 @@
           ]
         },
         {
-          "kind": "look",
-          "note": "ないでは＋いられない／すまない／おかない: they differ only in the last word",
-          "items": [
-            {
-              "id": "zu-ni-wa-sumanai",
-              "diff": "ないではいられない is you yourself “can't help it”; ないではすまない is “not doing it would be unacceptable” by moral or social standards.",
-              "this": [
-                {
-                  "tag": "Feeling · can't help it",
-                  "tr": "I felt so sorry for them that I couldn't help speaking to them."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Moral duty · must",
-                  "tr": "I scratched the company president's car, so I can't get away without apologizing."
-                }
-              ],
-              "explain": "Look at what's driving it: a feeling before it (かわいそうで, おかしくて) → いられない, you can't control yourself; a wrongdoing or responsibility before it (傷つけたのだから) → すまない, morally or socially you have to do it, often unwillingly. (ないではすまない is also written ずにはすまない, with the same meaning.)"
-            },
-            {
-              "id": "zu-ni-wa-okanai",
-              "diff": "ないではいられない is a person who can't help doing something; ないではおかない is “will inevitably make people…” or a strong will of “will not rest until…”.",
-              "this": [
-                {
-                  "tag": "A person can't help it",
-                  "tr": "Anyone who hears that story can't help laughing."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Something inevitably causes it",
-                  "tr": "This movie is bound to move anyone who sees it."
-                }
-              ],
-              "explain": "Look at the subject: the subject of いられない is the person doing the action (誰でも); the subject of おかない is often a thing (この映画は), mostly preceded by a causative form (感動させ, 考えさせ), meaning “inevitably makes people…”; when the subject is a person, it shows a resolve of “I won't rest until…”. (ないではおかない is also written ずにはおかない, with the same meaning.)"
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Both mean “can't help…, can't not…” — pushed along by feelings or circumstances",
+          "note": "Both mean “can't help…”",
+          "sense": 1,
           "items": [
             {
               "id": "zu-ni-wa-irarenai",
+              "title": "〜ずにはいられない (can't help…)",
               "diff": "They mean exactly the same; ずにはいられない uses the classical negative 「ず」 and is more formal; ないではいられない is a bit more colloquial.",
               "this": [
                 {
@@ -28803,44 +28741,35 @@
                   "tr": "It was just so funny that I couldn't help laughing."
                 }
               ],
+              "explain": "The two are interchangeable; it's just that 「ず」 is the classical form of 「ない」, so ずにはいられない is more formal and more common in exams and writing. Watch how する changes: しないでは／せずには.",
               "wrong": {
                 "why": "する has to become 「せずには」 (or 「しないでは」)"
-              },
-              "explain": "The two are interchangeable; it's just that 「ず」 is the classical form of 「ない」, so ずにはいられない is more formal and more common in exams and writing. Watch how する changes: しないでは／せずには."
-            },
+              }
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Both mean “can't not…”",
+          "sense": 2,
+          "items": [
             {
               "id": "nai-wake-ni-wa-ikanai",
-              "diff": "ないではいられない is driven by feeling, involuntary; ないわけにはいかない is “can't not do it” out of reason or obligation.",
+              "title": "〜ないわけにはいかない (can't not, out of duty)",
+              "diff": "ないではいられない means you yourself can't sit still; ないわけにはいかない is judging from your position or from what is right that not doing it would be unacceptable.",
               "this": [
                 {
-                  "tag": "Feeling · involuntary",
-                  "tr": "Whenever I see someone in trouble, I can't help lending a hand."
+                  "tag": "Subjective · can't sit still",
+                  "tr": "If I saw bullying right in front of me, I couldn't help stepping in to stop it."
                 }
               ],
               "that": [
                 {
-                  "tag": "Obligation · have to",
-                  "tr": "The department head invited me, so I can't not go to the drinking party."
+                  "tag": "Objective · duty",
+                  "tr": "If I saw bullying right in front of me, I would have to step in and stop it."
                 }
               ],
-              "explain": "Look at the reason: a feeling welling up inside (見ると, かわいそうで) → ないではいられない, you actually want to do it; social ties, rules, responsibility (誘われたから, 約束したから) → ないわけにはいかない, often the person doesn't really want to."
-            },
-            {
-              "id": "te-tamaranai",
-              "diff": "てたまらない describes the feeling itself as overwhelming: “unbearably…”; ないではいられない describes an action driven by that feeling.",
-              "this": [
-                {
-                  "tag": "Action · can't help doing it",
-                  "tr": "I missed him so much that I couldn't help calling him."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Feeling · longing terribly",
-                  "tr": "I miss him so much; he lives so far away."
-                }
-              ],
-              "explain": "Look at what comes before: てたまらない is preceded by a feeling or sensation (会いたくて, うれしくて, 痛くて), describing an inner state; ないではいられない is preceded by an action (電話をかけ, 泣か), describing something you couldn't stop yourself from doing."
+              "explain": "Both sentences mean “I can't not step in”. ないではいられない is an urge welling up inside, so you can't sit still; ないわけにはいかない is judging from your position or from what is right that not doing it would be unacceptable, so it often comes after a reason like 「教師として」「約束した以上」, and is also used for things you don't really want to do (先輩の結婚式だから、出席しないわけにはいかない)."
             }
           ]
         }
@@ -28851,7 +28780,7 @@
       "groups": [
         {
           "kind": "look",
-          "note": "ないことには ↔ ないことはない: they differ by just one 「に」",
+          "note": "ないことには ↔ ないことはない: the difference is whether こと is followed by には or はない",
           "items": [
             {
               "id": "nai-koto-wa-nai",
@@ -28868,7 +28797,7 @@
                   "tr": "It's not that I can't eat spicy food, but I'm not very fond of it."
                 }
               ],
-              "explain": "Look at what follows 「こと」: 「には」 is followed by another half-sentence, always negative (分からない, 始まらない) → a prerequisite; 「はない」 ends the sentence directly → a double negative, a roundabout yes, “I can…”, often followed by 「が」「けど」 adding a reservation."
+              "explain": "Look at what follows こと: には → the sentence isn't finished, and what follows is always negative (分からない, 始まらない), giving a precondition, “unless you first…, you can't”; はない → a double negative that ends the sentence, a soft affirmative “it's not that I can't…”, often followed by 「が」 or 「けど」 to add a reservation."
             }
           ]
         },
@@ -28878,37 +28807,38 @@
           "items": [
             {
               "id": "nai-to",
-              "diff": "They're similar in meaning; ないと is colloquial, and anything can follow it; ないことには stresses the prerequisite, can only be followed by something negative, and sounds more serious.",
+              "title": "〜ないと (unless…, can't)",
+              "diff": "Same meaning; ないと is casual and conversational, while ないことには is more formal and stresses the precondition more.",
               "this": [
                 {
-                  "tag": "Prerequisite · negative follows",
+                  "tag": "Formal · precondition",
                   "tr": "Unless the president gives approval, nothing can get started."
                 }
               ],
               "that": [
                 {
-                  "tag": "Spoken · anything can follow",
-                  "tr": "If you don't leave early, you'll miss the train."
+                  "tag": "Conversational · casual",
+                  "tr": "If the president doesn't approve, we can't start anything."
                 }
               ],
-              "explain": "ないことには is always followed by a negative like 「できない, 分からない, 始まらない」, stressing “if this condition isn't met, there's nothing more to discuss”; ないと can be followed by all kinds of results (遅れるよ) and can also end a sentence by itself to mean “I need to…” (もう帰らないと)."
+              "explain": "The two sentences are interchangeable. In everyday talk ないと is enough; ないことには sounds more formal and stresses that unless this condition is met, nothing else can even begin, which is why it is always followed by a negative like 「できない」「分からない」「始まらない」."
             },
             {
               "id": "te-kara-de-nai-to",
-              "diff": "てからでないと focuses on “the order of events”; ないことには focuses on “whether the condition is met”.",
+              "diff": "てからでないと focuses on the order “finish A first, then B”; ないことには focuses on whether condition A has been met.",
               "this": [
                 {
-                  "tag": "Condition · no good if unmet",
-                  "tr": "You won't know the real reason unless you ask the person themselves."
+                  "tag": "Condition · met or not",
+                  "tr": "Unless we confirm the payment, we can't ship the item."
                 }
               ],
               "that": [
                 {
                   "tag": "Order · A first, then B",
-                  "tr": "We can only ship the goods after confirming payment."
+                  "tr": "We can only ship the item after we have confirmed the payment."
                 }
               ],
-              "explain": "てからでないと means “only after doing A can B happen”, with a clear time order between A and B (確認してから→発送); ないことには only cares whether condition A is in place, not the order, as in the common phrase 「やってみないことには分からない」."
+              "explain": "With an action, both work: てからでないと stresses the order, “confirm first, then ship”; ないことには stresses that without the confirmation, it can't be done. When what comes before is a state, only ないことには works (体が丈夫でないことには, 値段が安くないことには); てからでないと only follows actions."
             },
             {
               "id": "nashi-ni",
@@ -28937,7 +28867,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「もの＋か」 — expressed as a rhetorical “as if that would happen?”",
+          "note": "Both come from the rhetorical 「ものか」 — originally “would there be such a thing?”",
           "items": [
             {
               "id": "mono-ka",
@@ -28954,13 +28884,13 @@
                   "tr": "I'm never going to such a noisy shop again!"
                 }
               ],
-              "explain": "A negative form before it (ならない, できない) → asking “can't it…?” ＝ really wishing it could; an affirmative form before it (行く) → asking “would I ever…?” ＝ never. 「何とか」「どうにか」 signal a wish; 「二度と」「絶対」 signal resolve."
+              "explain": "The original meaning of ものか is the rhetorical “would there be such a thing?”. After an affirmative (行くものか) → “would I go?”, and the answer is no, so it became “I'll never…”; after a negative (ならないものか) → “can't it be…?”, implying you hope it can, so it became the wish “I really wish it could…”. So look at what comes before: a negative form with 「何とか」「どうにか」 is a wish; an affirmative form with 「二度と」「絶対」 is determination."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both express a strong wish: “I really hope…”",
+          "note": "Both express the hope “if only…”",
           "items": [
             {
               "id": "nai-kana",
@@ -28981,24 +28911,21 @@
             },
             {
               "id": "tai-mono-da",
-              "diff": "たいものだ／てほしいものだ use a statement to say directly “I'd really love to… / I really wish…”; ないものか uses a question, with an anxious “is there any way?”.",
+              "title": "〜てほしいものだ (hoping others will…)",
+              "diff": "ないものか is a worried question, “is there really no way?”; てほしいものだ calmly states the wish outright.",
               "this": [
                 {
-                  "tag": "Question · anxious",
-                  "tr": "Can't the construction noise next door get a little quieter?"
+                  "tag": "Question · worried",
+                  "tr": "The construction next door — couldn't they make it a bit quieter?"
                 }
               ],
               "that": [
                 {
-                  "tag": "てほしいものだ · wishing others would",
+                  "tag": "Statement · said outright",
                   "tr": "I really wish the construction next door would be a little quieter."
-                },
-                {
-                  "tag": "たいものだ · wanting to oneself",
-                  "tr": "Just once, I'd love to try living in a quiet place in the countryside."
                 }
               ],
-              "explain": "Look at the sentence ending: 「ものだ」 → calmly stating a wish, たいものだ for something you want to do, てほしいものだ for wanting others or the situation to change; 「ないものか」 → a question, like fretfully asking “is there any way?”, often with 「何とか」「もう少し」 before it."
+              "explain": "Both sentences wish the construction were quieter. ないものか is a question form, as if worriedly asking “is there any way?”, and is often preceded by 「何とか」 or 「もう少し」; てほしいものだ is a statement that calmly says outright what you hope others will do, and is also often used to complain politely."
             }
           ]
         }
@@ -29043,22 +28970,23 @@
           "note": "Both mean “still doing… despite unfavorable conditions”",
           "items": [
             {
-              "id": "wo-oshite",
+              "id": "mo-kamawazu",
+              "title": "〜もかまわず (heedless of…)",
               "thisTitle": "〜中を (braving)",
-              "diff": "中を is acting despite outside conditions like the weather; を押して is pushing through one's own obstacles like illness or opposition, and is more formal.",
+              "diff": "中を simply says someone carried on in the rain; もかまわず stresses “not caring at all”, with the speaker's surprise or disapproval.",
               "this": [
                 {
-                  "tag": "Outside conditions · weather",
-                  "tr": "Despite the heavy snow, our guests still came."
+                  "tag": "Objective description",
+                  "tr": "The children were running around happily in the rain."
                 }
               ],
               "that": [
                 {
-                  "tag": "Own obstacle · pushing through",
-                  "tr": "Despite a high fever, he pushed himself to play in the match."
+                  "tag": "Not caring · surprise",
+                  "tr": "Not caring a bit about the rain, the children were running around happily."
                 }
               ],
-              "explain": "Look at what comes before: conditions anyone might face, like 雨, 雪, 寒さ → 中を, mostly followed by 「来る, 歩く, 出かける」; obstacles of the person themselves, like 病気, けが, 反対 → を押して, stressing “forcing oneself, toughing it out”."
+              "explain": "Both sentences can say “they ran around despite the rain”. 中を just objectively describes acting in conditions like rain or cold wind, and can also be used to thank someone (寒い中を来てくれてありがとう); もかまわず stresses not caring at all about something one normally should, often with surprise or disapproval, and what comes before can also be something other than the weather, like 「人目」 or 「服が濡れるの」."
             },
             {
               "id": "ni-mo-kakawarazu",
@@ -29104,7 +29032,7 @@
                   "tr": "Taste aside, this place gives you big portions."
                 }
               ],
-              "explain": "はともかく is preceded by a topic (味, 値段) that the speaker just isn't discussing for now, then moves on to what they really want to say; ならともかく is preceded by a hypothetical case (子ども), followed by a different, real case (大人), contrasting the two, usually with dissatisfaction."
+              "explain": "The original meaning of ともかく is “setting aside for now”. はともかく uses this meaning directly: it sets the topic before it (味) aside and moves on to what the speaker really wants to say; ならともかく means “if it were A, we could let it go”, which leads to “A would be understandable, but B is not OK”: before it is a hypothetical case (子ども), after it is the real case (大人), usually with disapproval."
             }
           ]
         },
@@ -29163,7 +29091,7 @@
               "this": [
                 {
                   "tag": "ね＋ば ＝ なければ",
-                  "tr": "Promises must be kept."
+                  "tr": "Borrowed money must be paid back."
                 }
               ],
               "that": [
@@ -29172,7 +29100,7 @@
                   "tr": "Before I knew it, dawn had broken."
                 }
               ],
-              "explain": "Classical 「ず」 has several forms: ぬ (modifying a noun or ending a sentence), ね (followed by 「ば」), ざる (followed by a noun). So 「守らねばならない」 is just 「守らなければならない」, and 「知らぬ間に」 is just 「知らない間に」. Read ね・ぬ as 「ない」 and the meaning becomes clear."
+              "explain": "Classical 「ず」 has several forms: ぬ (modifying nouns, ending a sentence), ね (before 「ば」) and ざる (before nouns). So 「返さねばならない」 is the same as 「返さなければならない」, and 「知らぬ間に」 is the same as 「知らない間に」. Read ね and ぬ as 「ない」 and the meaning becomes clear."
             },
             {
               "id": "zaru-wo-enai",
@@ -29195,7 +29123,7 @@
         },
         {
           "kind": "meaning",
-          "note": "Both mean “must, have to”",
+          "note": "Both mean “must”",
           "items": [
             {
               "id": "nakereba-naranai",
@@ -29213,23 +29141,6 @@
                 }
               ],
               "explain": "Exactly the same meaning; look at the setting: speeches, editorials, writing, or wanting to sound solemn → ねばならない; everyday speech → なければならない (colloquially also 「なきゃ」). Using ねばならない for small everyday things sounds exaggerated, a bit humorous."
-            },
-            {
-              "id": "beki-da",
-              "diff": "べきだ means “should” by reason, carrying the speaker's opinion; ねばならない means “it has to be this way”, stressing necessity.",
-              "this": [
-                {
-                  "tag": "Necessity · must be done",
-                  "tr": "I have to submit this document by tomorrow."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Should · advice, opinion",
-                  "tr": "You should gain lots of different experiences while you're young."
-                }
-              ],
-              "explain": "Look at whether there's a hard reason that “it won't do otherwise”: a deadline, rule or responsibility → ねばならない; just the speaker feeling “this is the right thing” or giving advice → べきだ. Not doing what べきだ says has no immediate consequence; not doing what ねばならない says isn't an option."
             }
           ]
         }
@@ -29248,7 +29159,7 @@
               "this": [
                 {
                   "tag": "Has value · evaluation",
-                  "tr": "His courageous act deserves praise."
+                  "tr": "His efforts deserve praise."
                 }
               ],
               "that": [

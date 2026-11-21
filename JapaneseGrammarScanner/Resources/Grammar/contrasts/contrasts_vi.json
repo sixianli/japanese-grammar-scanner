@@ -28484,7 +28484,7 @@
               "this": [
                 {
                   "tag": "Khẳng định → nhất định không",
-                  "tr": "Cái quán đó, tôi không bao giờ đến nữa đâu!"
+                  "tr": "Cái phòng nha tệ hại đó, tôi không bao giờ quay lại nữa!"
                 }
               ],
               "that": [
@@ -28499,27 +28499,12 @@
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả phủ định mạnh “nhất định không… / không thể nào…”",
+          "note": "Đều diễn tả “nhất định không…”",
+          "sense": 1,
           "items": [
             {
-              "id": "wake-ga-nai",
-              "diff": "ものか mang cảm xúc giận dữ, dỗi hờn; わけがない là khẳng định “không thể nào” một cách bình tĩnh theo lý lẽ.",
-              "this": [
-                {
-                  "tag": "Dỗi hờn · cảm xúc",
-                  "tr": "Phiền quá, chuyện của mày tao mặc kệ!"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Theo lý lẽ · bình tĩnh",
-                  "tr": "Tôi chưa nói với ai cả, anh ấy không thể nào biết được."
-                }
-              ],
-              "explain": "Trước わけがない thường có một lý do (誰にも話していないから), là suy luận bình tĩnh; ものか／もんか là câu hỏi tu từ đầy cảm xúc, hay gặp khi cãi nhau, dỗi hờn, còn có thể diễn tả quyết tâm “tôi nhất định không…” (二度と行くものか), điều mà わけがない không làm được."
-            },
-            {
               "id": "mai",
+              "title": "〜まい (nhất định không…)",
               "diff": "ものか là lời dỗi hờn nói ra miệng; まい là “nhất định không… nữa” bình tĩnh, trang trọng.",
               "this": [
                 {
@@ -28534,23 +28519,52 @@
                 }
               ],
               "explain": "まい hay xuất hiện trong văn viết, độc thoại nội tâm, thường nối với 「と思う」, 「と誓う」, giọng kiềm chế; ものか／もんか là câu hỏi tu từ buột miệng nói ra, mang cảm xúc mạnh, chủ yếu dùng trong khẩu ngữ."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Đều diễn tả “không thể nào…”",
+          "sense": 2,
+          "items": [
             {
-              "id": "kkonai",
-              "diff": "っこない chỉ phán đoán “không thể nào”; ものか khi nói về bản thân còn có thể diễn tả quyết tâm “tôi nhất định không…”.",
+              "id": "wake-ga-nai",
+              "title": "〜わけがない (không thể nào…)",
+              "diff": "ものか là câu hỏi tu từ mang cảm xúc, dùng để vặn lại; わけがない là kết luận bình tĩnh dựa trên lý lẽ.",
               "this": [
                 {
-                  "tag": "Quyết tâm · nhất định không thua",
-                  "tr": "Tôi mà lại thua cái thằng đó à!"
+                  "tag": "Hỏi vặn · cảm xúc",
+                  "tr": "Thằng đó làm gì có nhiều tiền như thế!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Khả năng · nản lòng",
-                  "tr": "Đội mạnh như thế, làm sao mà thắng nổi."
+                  "tag": "Khẳng định · bình tĩnh",
+                  "tr": "Thằng đó không thể nào có nhiều tiền như thế."
                 }
               ],
-              "explain": "っこない nối với thể ます (勝てっこない, 分かりっこない), chỉ phán đoán “không thể nào”, thường là nản lòng; ものか nối với thể từ điển, khi nói về bản thân là “nhất định không…” (負けるもんか), mang tinh thần không chịu thua."
+              "explain": "Cả hai câu đều phủ định chuyện “hắn có nhiều tiền như vậy”. もんか (ものか) là câu hỏi tu từ “hắn mà có à?”, mang cảm xúc coi thường, cãi lại, chỉ dùng trong văn nói, cách nói lịch sự là ものですか; わけがない là kết luận bình tĩnh dựa trên lý lẽ, thường nêu lý do trước (学生だから), dùng được cả trong văn viết và có thể nối thêm 「と思う」 phía sau."
+            },
+            {
+              "id": "kkonai",
+              "title": "〜っこない (không thể nào…)",
+              "diff": "っこない là khẳng định một cách nản lòng rằng “không thể”; ものか là câu hỏi tu từ, giọng gay gắt hơn, thường dùng để vặn lại người khác.",
+              "this": [
+                {
+                  "tag": "Hỏi vặn · bác lại",
+                  "tr": "Đội mạnh như thế, làm sao mà thắng nổi!"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Khẳng định · nản lòng",
+                  "tr": "Đội mạnh như thế thì không thể nào thắng được đâu."
+                }
+              ],
+              "explain": "Cả hai câu đều nói “không thắng nổi”. Nhìn cách nối: っこない nối với thể ます (勝てっこない, 分かりっこない), giọng nản lòng, cho rằng chắc chắn không làm được; もんか nối với thể từ điển (勝てるもんか), là câu hỏi tu từ “thắng được chắc?”, giọng gay gắt, thường dùng để bác lại người khác khi họ nói kiểu “chắc chắn thắng”.",
+              "wrong": {
+                "why": "っこない nối với thể ます (bỏ ます): 勝てっこない"
+              }
             }
           ]
         }
@@ -28578,51 +28592,10 @@
                   "tr": "Đi họp mà dám đến muộn là bị trưởng phòng mắng cho một trận ra trò."
                 }
               ],
+              "explain": "Trước hết nhìn dạng động từ trước ものなら: thể khả năng (戻れる, できる) → “nếu thật sự làm được”, phía sau là mong muốn (戻りたい); thể ý chí (遅刻しよう, 言おう) → “lỡ mà làm vậy”, phía sau là hậu quả nghiêm trọng (怒られる).",
               "wrong": {
                 "why": "Thể ý chí＋ものなら phía sau là kết quả xấu, không thể là mong muốn"
-              },
-              "explain": "Trước hết nhìn dạng động từ trước ものなら: thể khả năng (戻れる, できる) → “nếu thực sự làm được”, phía sau là 「〜たい」 hoặc 「〜てみろ」; thể ý chí (しよう, 言おう) → “lỡ mà làm”, phía sau là hậu quả rất nghiêm trọng."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Đều diễn tả mong muốn mãnh liệt",
-          "items": [
-            {
-              "id": "tai-mono-da",
-              "title": "〜たいものだ (thật muốn…)",
-              "diff": "ものなら giả định trước “nếu thực sự làm được”, nhấn mạnh việc khó thực hiện; たいものだ trực tiếp cảm thán “thật muốn…”.",
-              "this": [
-                {
-                  "tag": "Giả định · thực ra rất khó",
-                  "tr": "Nếu được, tôi thật muốn nghỉ việc ngay bây giờ để đi vòng quanh thế giới."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Cảm thán mong muốn trực tiếp",
-                  "tr": "Sau khi nghỉ hưu, thật muốn đi vòng quanh thế giới quá."
-                }
-              ],
-              "explain": "Trước ものなら là thể khả năng, thừa nhận trước rằng “thực tế chắc không làm được”, rồi mới nói mong muốn, lộ vẻ bất lực; たいものだ ở cuối câu trực tiếp bày tỏ mong muốn, mong muốn đó không nhất thiết khó thực hiện (sau khi nghỉ hưu biết đâu đi thật)."
-            },
-            {
-              "id": "nai-mono-ka",
-              "diff": "ものなら là “nếu có thể… thì muốn…”; ないものか là “chẳng lẽ không có cách nào… sao”, sốt ruột tìm lối thoát.",
-              "this": [
-                {
-                  "tag": "Giả định → nói ra mong muốn",
-                  "tr": "Nếu thay được, tôi thật muốn chịu thay đứa con gái đang ốm."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nghi vấn → tìm cách",
-                  "tr": "Bệnh của con gái tôi, chẳng lẽ không có cách nào chữa khỏi sao?"
-                }
-              ],
-              "explain": "ものなら là điều kiện, phía sau còn phải nói ra mong muốn (〜たい); ないものか đặt ở cuối câu, phía trước nối với thể phủ định, hay có 「何とか」, 「どうにか」, là đang rầu rĩ “liệu có cách nào không”."
+              }
             }
           ]
         }
@@ -28641,7 +28614,7 @@
               "this": [
                 {
                   "tag": "Chuyển ý bình tĩnh",
-                  "tr": "Thuốc thì uống rồi, nhưng sốt vẫn không hạ."
+                  "tr": "Tiêm thì đã tiêm rồi, nhưng sốt vẫn không hạ."
                 }
               ],
               "that": [
@@ -28679,20 +28652,23 @@
             {
               "id": "nagara",
               "title": "〜ながらも (tuy… nhưng)",
-              "diff": "Trước ながらも thường là trạng thái kéo dài (狭い, 知っている); trước ものの thường là sự việc xảy ra một lần (買った, 合格した).",
+              "diff": "ながらも chủ yếu dùng để đánh giá hai mặt trái ngược của cùng một sự vật, thiên về văn viết, nhẹ nhàng; ものの là “tuy… nhưng” thông thường, hai vế có thể là hai việc khác nhau.",
               "this": [
                 {
-                  "tag": "Sự việc một lần",
-                  "tr": "Tuy đã đỗ đại học, nhưng không đóng nổi học phí, đang rất khổ sở."
+                  "tag": "Đối lập thông thường",
+                  "tr": "Cửa hàng tuy nhỏ nhưng hàng hóa rất phong phú."
                 }
               ],
               "that": [
                 {
-                  "tag": "Trạng thái · nhẹ nhàng",
-                  "tr": "Căn phòng tuy nhỏ nhưng đón nắng tốt."
+                  "tag": "Hai mặt của cùng một sự vật",
+                  "tr": "Cửa hàng nhỏ vậy mà hàng hóa rất phong phú."
                 }
               ],
-              "explain": "Nhìn phía trước là gì: tính từ hoặc trạng thái như 「知っている」, 「子どもながら」 → ながらも, phía sau thường là đánh giá tích cực; hành động ở thể た (合格した, 買った) → ものの, phía sau thường là kết quả không như ý."
+              "explain": "Khi nói về cùng một sự vật “nhỏ, nhưng…” thì dùng được cả hai: ながらも mang cảm giác đánh giá hai mặt của nó, giọng nhẹ nhàng, hay gặp 「狭いながらも」「小さいながらも」; trước ものの có thể là việc đã xảy ra (終わったものの, 買ったものの), hai vế cũng có thể là hai việc khác nhau, khi đó không thay bằng ながらも được.",
+              "wrong": {
+                "why": "Hai vế là hai việc khác nhau (kỳ thi đã kết thúc / kết quả chưa có), nên không dùng ながらも được; phải nói 「試験は終わったものの」."
+              }
             },
             {
               "id": "ni-mo-kakawarazu",
@@ -28709,10 +28685,10 @@
                   "tr": "Mặc dù mưa to, trận đấu vẫn có rất đông khán giả đến xem."
                 }
               ],
+              "explain": "にもかかわらず có thể nối trực tiếp với danh từ (大雨にもかかわらず), phía sau là sự thật gây bất ngờ, hay gặp trong tin tức; ものの không nối trực tiếp với danh từ, phía trước thường là việc đã làm, phía sau là kết quả không đạt kỳ vọng, giọng bình thản.",
               "wrong": {
                 "why": "ものの không nối trực tiếp với danh từ được (phải nói 「大雨であるものの」)"
-              },
-              "explain": "にもかかわらず có thể nối trực tiếp với danh từ (大雨にもかかわらず), phía sau là sự thật gây bất ngờ, hay gặp trong tin tức; ものの không nối trực tiếp với danh từ, phía trước thường là việc đã làm, phía sau là kết quả không đạt kỳ vọng, giọng bình thản."
+              }
             }
           ]
         }
@@ -28745,51 +28721,13 @@
           ]
         },
         {
-          "kind": "look",
-          "note": "ないでは＋いられない／すまない／おかない, chỉ khác từ cuối cùng",
-          "items": [
-            {
-              "id": "zu-ni-wa-sumanai",
-              "diff": "ないではいられない là bản thân “không nhịn được”; ないではすまない là “không làm thì về tình về lý không xong”.",
-              "this": [
-                {
-                  "tag": "Cảm xúc · không nhịn được",
-                  "tr": "Thấy tội nghiệp quá, tôi không nhịn được mà lên tiếng hỏi han."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tình lý · bắt buộc",
-                  "tr": "Đã làm xước xe của giám đốc thì không xin lỗi là không xong."
-                }
-              ],
-              "explain": "Nhìn động lực: phía trước là cảm xúc (かわいそうで, おかしくて) → いられない, là bản thân không kiềm chế được; phía trước là làm sai, trách nhiệm (傷つけたのだから) → すまない, là về tình lý, xã hội buộc phải làm, thường không hề muốn. (ないではすまない cũng viết là ずにはすまない, nghĩa như nhau.)"
-            },
-            {
-              "id": "zu-ni-wa-okanai",
-              "diff": "ないではいられない là bản thân người đó không nhịn được mà làm; ないではおかない là “chắc chắn sẽ khiến người ta…” hoặc ý chí mạnh mẽ “nhất định phải…”.",
-              "this": [
-                {
-                  "tag": "Bản thân không nhịn được",
-                  "tr": "Nghe câu chuyện đó thì ai cũng không nhịn được cười."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Sự vật tất yếu gây ra",
-                  "tr": "Bộ phim này chắc chắn sẽ khiến người xem cảm động."
-                }
-              ],
-              "explain": "Nhìn chủ ngữ: chủ ngữ của いられない là chính người làm hành động (誰でも); chủ ngữ của おかない thường là sự vật (この映画は), phía trước thường là thể sai khiến (感動させ, 考えさせ), diễn tả “tất yếu khiến người ta…”; khi chủ ngữ là người thì là quyết tâm “nhất định phải…”. (ないではおかない cũng viết là ずにはおかない, nghĩa như nhau.)"
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Đều diễn tả “không kiềm chế được, không thể không…” — bị cảm xúc hoặc tình huống đẩy đi",
+          "note": "Đều diễn tả “không nhịn được…”",
+          "sense": 1,
           "items": [
             {
               "id": "zu-ni-wa-irarenai",
+              "title": "〜ずにはいられない (không kìm được…)",
               "diff": "Nghĩa hoàn toàn giống nhau; ずにはいられない dùng phủ định văn ngữ 「ず」, trang trọng hơn; ないではいられない hơi khẩu ngữ.",
               "this": [
                 {
@@ -28803,44 +28741,35 @@
                   "tr": "Buồn cười quá, tôi không nhịn được bật cười."
                 }
               ],
+              "explain": "Hai cái có thể thay thế nhau, chỉ là 「ず」 là 「ない」 của văn ngữ, nên ずにはいられない trang trọng hơn, gặp nhiều hơn trong đề thi, văn viết. Chú ý biến đổi của する: しないでは／せずには.",
               "wrong": {
                 "why": "する phải đổi thành 「せずには」 (hoặc 「しないでは」)"
-              },
-              "explain": "Hai cái có thể thay thế nhau, chỉ là 「ず」 là 「ない」 của văn ngữ, nên ずにはいられない trang trọng hơn, gặp nhiều hơn trong đề thi, văn viết. Chú ý biến đổi của する: しないでは／せずには."
-            },
+              }
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Đều diễn tả “không thể không…”",
+          "sense": 2,
+          "items": [
             {
               "id": "nai-wake-ni-wa-ikanai",
-              "diff": "ないではいられない là bị cảm xúc thôi thúc, không tự chủ được; ないわけにはいかない là theo lý lẽ, nghĩa vụ “không thể không làm”.",
+              "title": "〜ないわけにはいかない (về lý phải…)",
+              "diff": "ないではいられない là bản thân trong lòng không ngồi yên được; ないわけにはいかない là xét theo vị trí, đạo lý thấy không làm thì không được.",
               "this": [
                 {
-                  "tag": "Cảm xúc · không tự chủ được",
-                  "tr": "Hễ thấy ai gặp khó khăn là tôi không nhịn được mà muốn giúp một tay."
+                  "tag": "Chủ quan · không ngồi yên được",
+                  "tr": "Nếu tận mắt thấy cảnh bắt nạt, tôi không thể không ngăn lại."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nghĩa vụ · đành phải",
-                  "tr": "Trưởng phòng đã mời thì không thể không đi nhậu."
+                  "tag": "Khách quan · về lý phải làm",
+                  "tr": "Nếu tận mắt thấy cảnh bắt nạt, thì không thể không ngăn lại."
                 }
               ],
-              "explain": "Nhìn lý do: cảm xúc trào dâng trong lòng (見ると, かわいそうで) → ないではいられない, thực ra là bản thân muốn làm; tình nghĩa, quy tắc, trách nhiệm (誘われたから, 約束したから) → ないわけにはいかない, thường bản thân không hề muốn làm."
-            },
-            {
-              "id": "te-tamaranai",
-              "diff": "てたまらない nói bản thân cảm xúc mạnh mẽ “… không chịu nổi”; ないではいられない nói hành động bị cảm xúc thôi thúc mà làm ra.",
-              "this": [
-                {
-                  "tag": "Hành động · không nhịn được mà làm",
-                  "tr": "Nhớ anh ấy quá, tôi không nhịn được mà gọi điện."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Cảm xúc · muốn đến phát điên",
-                  "tr": "Tôi nhớ anh ấy ở phương xa đến không chịu nổi."
-                }
-              ],
-              "explain": "Nhìn phía trước là gì: trước てたまらない là cảm xúc, cảm giác (会いたくて, うれしくて, 痛くて), nói về trạng thái trong lòng; trước ないではいられない là hành động (電話をかけ, 泣か), nói về việc không kiềm chế được mà làm ra."
+              "explain": "Cả hai câu đều là “không thể không ngăn lại”. ないではいられない là sự thôi thúc trào lên từ trong lòng, bản thân không ngồi yên được; ないわけにはいかない là xét theo vị trí, đạo lý mà thấy “không làm thì không được”, nên phía trước thường có lý do như 「教師として」「約束した以上」, cũng hay dùng cho việc bản thân không muốn làm (先輩の結婚式だから、出席しないわけにはいかない)."
             }
           ]
         }
@@ -28851,7 +28780,7 @@
       "groups": [
         {
           "kind": "look",
-          "note": "ないことには ↔ ないことはない, chỉ khác một chữ 「に」",
+          "note": "ないことには ↔ ないことはない, khác ở chỗ sau こと là には hay はない",
           "items": [
             {
               "id": "nai-koto-wa-nai",
@@ -28868,7 +28797,7 @@
                   "tr": "Món cay cũng không phải là không ăn được, nhưng tôi không thích lắm."
                 }
               ],
-              "explain": "Nhìn phía sau 「こと」: sau 「には」 còn nửa câu, và nhất định là phủ định (分からない, 始まらない) → điều kiện tiên quyết; 「はない」 kết thúc câu luôn → phủ định kép, khẳng định khéo “cũng có thể…”, phía sau hay nối 「が」, 「けど」 thêm một câu dè dặt."
+              "explain": "Nhìn phía sau こと: には → câu chưa kết thúc, phía sau nhất định là phủ định (分からない, 始まらない), nghĩa là điều kiện tiên quyết “không… trước thì không được”; はない → phủ định kép ở cuối câu, là khẳng định nhẹ nhàng “cũng không phải là không…”, phía sau thường thêm 「が」「けど」 để bảo lưu."
             }
           ]
         },
@@ -28878,37 +28807,38 @@
           "items": [
             {
               "id": "nai-to",
-              "diff": "Nghĩa gần nhau; ないと khẩu ngữ, vế sau không giới hạn; ないことには nhấn mạnh điều kiện tiên quyết, vế sau chỉ có thể là phủ định, tiêu cực, giọng trịnh trọng hơn.",
+              "title": "〜ないと (không… thì không thể)",
+              "diff": "Nghĩa giống nhau; ないと mang tính khẩu ngữ, thoải mái, còn ないことには trang trọng hơn, nhấn mạnh “điều kiện tiên quyết” hơn.",
               "this": [
                 {
-                  "tag": "Điều kiện tiên quyết · vế sau phủ định",
+                  "tag": "Trang trọng · điều kiện tiên quyết",
                   "tr": "Giám đốc chưa phê duyệt thì chẳng bắt đầu được việc gì."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khẩu ngữ · vế sau không giới hạn",
-                  "tr": "Không ra khỏi nhà sớm là lỡ tàu đấy."
+                  "tag": "Khẩu ngữ · thoải mái",
+                  "tr": "Giám đốc không cho phép thì chẳng bắt đầu được việc gì."
                 }
               ],
-              "explain": "Sau ないことには nhất định là phủ định kiểu 「できない, 分からない, 始まらない」, nhấn mạnh “điều kiện này chưa thỏa thì không thể bàn đến”; sau ないと có thể là đủ loại kết quả (遅れるよ), còn có thể đứng riêng kết thúc câu với nghĩa “phải… thôi” (もう帰らないと)."
+              "explain": "Hai câu có thể thay cho nhau. Nói chuyện hằng ngày thì dùng ないと là đủ; ないことには giọng trang trọng hơn, nhấn mạnh điều kiện này chưa thỏa thì việc phía sau không thể bàn tới, nên phía sau nhất định là phủ định như 「できない」「分からない」「始まらない」."
             },
             {
               "id": "te-kara-de-nai-to",
-              "diff": "てからでないと chú trọng “trình tự trước sau”; ないことには chú trọng “điều kiện đã thỏa hay chưa”.",
+              "diff": "てからでないと chú ý thứ tự “làm xong A trước rồi mới tới B”; ないことには chú ý điều kiện A đã được đáp ứng hay chưa.",
               "this": [
                 {
-                  "tag": "Điều kiện · chưa thỏa thì không được",
-                  "tr": "Không hỏi chính người đó thì không biết được lý do thật sự."
+                  "tag": "Điều kiện · đã thỏa chưa",
+                  "tr": "Chưa xác nhận tiền chuyển vào thì không thể gửi hàng."
                 }
               ],
               "that": [
                 {
                   "tag": "Trình tự · A trước B sau",
-                  "tr": "Phải xác nhận đã nhận tiền hàng thì mới gửi hàng được."
+                  "tr": "Phải xác nhận tiền chuyển vào rồi mới gửi hàng được."
                 }
               ],
-              "explain": "てからでないと là “làm A trước, rồi mới B được”, A và B có trình tự thời gian rõ ràng (確認してから→発送); ないことには chỉ quan tâm điều kiện A đã có hay chưa, không nhấn mạnh trình tự, hay nói 「やってみないことには分からない」."
+              "explain": "Khi nói về một hành động thì dùng được cả hai: てからでないと nhấn mạnh trình tự “xác nhận xong rồi mới gửi hàng”; ないことには nhấn mạnh điều kiện “xác nhận” chưa thỏa thì không được. Khi phía trước là trạng thái thì chỉ dùng ないことには (体が丈夫でないことには, 値段が安くないことには), てからでないと chỉ nối với hành động."
             },
             {
               "id": "nashi-ni",
@@ -28937,7 +28867,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「もの＋か」 — dùng câu hỏi tu từ “làm gì có chuyện đó?” để diễn đạt",
+          "note": "Đều bắt nguồn từ câu hỏi tu từ 「ものか」 — nghĩa gốc là “lẽ nào lại có chuyện như thế?”",
           "items": [
             {
               "id": "mono-ka",
@@ -28954,13 +28884,13 @@
                   "tr": "Quán ồn ào như thế, tôi không bao giờ đến nữa đâu!"
                 }
               ],
-              "explain": "Phía trước là thể phủ định (ならない, できない) → hỏi ngược “chẳng lẽ không thể… sao” ＝ rất mong là có thể; phía trước là thể khẳng định (行く) → hỏi ngược “tôi mà… à” ＝ nhất định không. Có 「何とか」, 「どうにか」 là mong muốn, có 「二度と」, 「絶対」 là quyết tâm."
+              "explain": "Nghĩa gốc của ものか là câu hỏi tu từ “lẽ nào lại có chuyện đó?”. Nối với thể khẳng định (行くものか) → “tôi mà đi à?”, câu trả lời là không, nên thành “nhất định không…”; nối với thể phủ định (ならないものか) → “lẽ nào không thể… sao?”, hàm ý mong là được, nên thành mong muốn “thật mong có thể…”. Vì vậy hãy nhìn phía trước: thể phủ định, có 「何とか」「どうにか」 là mong muốn; thể khẳng định, có 「二度と」「絶対」 là quyết tâm."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả mong muốn mãnh liệt “thật mong…”",
+          "note": "Đều diễn tả mong ước “giá mà… thì tốt”",
           "items": [
             {
               "id": "nai-kana",
@@ -28981,24 +28911,21 @@
             },
             {
               "id": "tai-mono-da",
-              "diff": "たいものだ／てほしいものだ dùng câu trần thuật nói thẳng “thật muốn… / thật mong…”; ないものか dùng dạng nghi vấn, mang sự sốt ruột “có cách nào không”.",
+              "title": "〜てほしいものだ (mong người khác…)",
+              "diff": "ないものか là hỏi một cách sốt ruột “thật sự không có cách nào sao?”; てほしいものだ là bình thản nói thẳng ra mong muốn.",
               "this": [
                 {
-                  "tag": "Nghi vấn · sốt ruột",
-                  "tr": "Tiếng thi công nhà bên, chẳng lẽ không thể nhỏ hơn chút nữa sao?"
+                  "tag": "Câu hỏi · sốt ruột",
+                  "tr": "Công trình bên cạnh, không thể nhờ họ làm yên lặng hơn một chút sao?"
                 }
               ],
               "that": [
                 {
-                  "tag": "てほしいものだ · mong người khác",
+                  "tag": "Trần thuật · nói thẳng",
                   "tr": "Công trình nhà bên, thật mong họ làm yên lặng hơn chút."
-                },
-                {
-                  "tag": "たいものだ · bản thân muốn",
-                  "tr": "Dù chỉ một lần thôi, tôi thật muốn thử sống ở một vùng quê yên tĩnh."
                 }
               ],
-              "explain": "Nhìn cuối câu: 「ものだ」 → bình thản trình bày mong muốn, bản thân muốn làm thì dùng たいものだ, mong người khác hoặc tình hình thay đổi thì dùng てほしいものだ; 「ないものか」 → dạng nghi vấn, như đang rầu rĩ hỏi “có cách nào không”, phía trước hay có 「何とか」, 「もう少し」."
+              "explain": "Cả hai câu đều mong tiếng thi công nhỏ đi một chút. ないものか là dạng câu hỏi, như đang sốt ruột hỏi “có cách nào không?”, phía trước thường có 「何とか」「もう少し」; てほしいものだ là câu trần thuật, bình thản nói thẳng mong muốn đối với người khác, cũng hay dùng để phàn nàn một cách khéo léo."
             }
           ]
         }
@@ -29043,22 +28970,23 @@
           "note": "Đều diễn tả “trong tình huống bất lợi mà vẫn…”",
           "items": [
             {
-              "id": "wo-oshite",
+              "id": "mo-kamawazu",
+              "title": "〜もかまわず (bất kể…)",
               "thisTitle": "〜中を (bất chấp)",
-              "diff": "中を là hành động bất chấp môi trường bên ngoài như thời tiết; を押して là gắng gượng vượt qua trở ngại của bản thân như bệnh tật, sự phản đối để làm, trang trọng hơn.",
+              "diff": "中を chỉ nói là vẫn hành động trong mưa; もかまわず nhấn mạnh “hoàn toàn không để tâm”, mang sự ngạc nhiên hoặc trách móc của người nói.",
               "this": [
                 {
-                  "tag": "Môi trường bên ngoài · thời tiết",
-                  "tr": "Bất chấp tuyết rơi dày, khách vẫn đến."
+                  "tag": "Miêu tả khách quan",
+                  "tr": "Bọn trẻ vẫn chạy nhảy tung tăng giữa trời mưa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Trở ngại bản thân · gắng gượng",
-                  "tr": "Anh ấy đang sốt cao mà vẫn gắng gượng ra thi đấu."
+                  "tag": "Không để tâm · ngạc nhiên",
+                  "tr": "Mặc kệ trời mưa, bọn trẻ vẫn chạy nhảy tung tăng."
                 }
               ],
-              "explain": "Nhìn phía trước là gì: môi trường ai cũng gặp như 雨, 雪, 寒さ → 中を, phía sau thường là 「来る, 歩く, 出かける」; trở ngại của chính đương sự như 病気, けが, 反対 → を押して, nhấn mạnh “miễn cưỡng, gắng gượng”."
+              "explain": "Cả hai câu đều nói được “chạy nhảy bất chấp trời mưa”. 中を chỉ miêu tả khách quan việc hành động trong hoàn cảnh như mưa, gió lạnh, cũng dùng được để cảm ơn (寒い中を来てくれてありがとう); もかまわず nhấn mạnh việc hoàn toàn không để tâm đến điều lẽ ra phải để ý, thường mang sự ngạc nhiên hoặc trách móc, phía trước còn có thể là thứ không phải thời tiết như 「人目」「服が濡れるの」."
             },
             {
               "id": "ni-mo-kakawarazu",
@@ -29104,7 +29032,7 @@
                   "tr": "Hương vị thì chưa bàn, quán này khẩu phần rất nhiều."
                 }
               ],
-              "explain": "Trước はともかく là một chủ đề (味, 値段), người nói chỉ tạm thời không bàn đến nó, phía sau nói điều mình muốn nói hơn; trước ならともかく là một đối tượng giả định (子ども), phía sau là một đối tượng khác trong thực tế (大人), hai bên đối chiếu nhau, phía sau thường là bất mãn."
+              "explain": "Nghĩa gốc của ともかく là “tạm gác lại”. はともかく dùng thẳng nghĩa này: tạm gác chủ đề phía trước (味) để nói điều muốn nói hơn; ならともかく là “nếu là A thì còn có thể tạm bỏ qua”, từ đó thành “A thì còn thông cảm được, B thì không được”: phía trước là đối tượng giả định (子ども), phía sau là đối tượng thực tế (大人), thường mang sự bất mãn."
             }
           ]
         },
@@ -29163,7 +29091,7 @@
               "this": [
                 {
                   "tag": "ね＋ば ＝ なければ",
-                  "tr": "Lời hứa thì phải giữ."
+                  "tr": "Tiền đã vay thì phải trả."
                 }
               ],
               "that": [
@@ -29172,7 +29100,7 @@
                   "tr": "Lúc nào không hay, trời đã sáng."
                 }
               ],
-              "explain": "「ず」 cổ điển có nhiều dạng: ぬ (bổ nghĩa danh từ, kết câu), ね (nối với 「ば」), ざる (nối với danh từ). Vì vậy 「守らねばならない」 chính là 「守らなければならない」, 「知らぬ間に」 chính là 「知らない間に」. Cứ thay ね・ぬ bằng 「ない」 mà đọc là nghĩa rõ ngay."
+              "explain": "「ず」 trong văn cổ có nhiều dạng: ぬ (bổ nghĩa cho danh từ, kết câu), ね (đứng trước 「ば」), ざる (đứng trước danh từ). Vì vậy 「返さねばならない」 chính là 「返さなければならない」, 「知らぬ間に」 chính là 「知らない間に」. Đọc ね, ぬ thành 「ない」 là hiểu ngay nghĩa."
             },
             {
               "id": "zaru-wo-enai",
@@ -29195,7 +29123,7 @@
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “phải, nên”",
+          "note": "Đều diễn tả “phải”",
           "items": [
             {
               "id": "nakereba-naranai",
@@ -29213,23 +29141,6 @@
                 }
               ],
               "explain": "Nghĩa hoàn toàn giống nhau, xem hoàn cảnh: diễn văn, xã luận, văn viết hoặc muốn tỏ ra trịnh trọng → ねばならない; nói chuyện thường ngày → なければならない (khẩu ngữ còn nói 「なきゃ」). Dùng ねばならない cho việc nhỏ thường ngày sẽ nghe phóng đại, hơi hài hước."
-            },
-            {
-              "id": "beki-da",
-              "diff": "べきだ là “nên” theo lý lẽ, mang chủ trương của người nói; ねばならない là “không thể không làm thế”, nhấn mạnh tính cần thiết.",
-              "this": [
-                {
-                  "tag": "Cần thiết · không làm không được",
-                  "tr": "Trước ngày mai phải nộp tài liệu này."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nên · khuyên, chủ trương",
-                  "tr": "Nên tranh thủ lúc còn trẻ tích lũy nhiều kinh nghiệm."
-                }
-              ],
-              "explain": "Nhìn có lý do cứng nhắc “không làm không được” không: thời hạn, quy định, trách nhiệm → ねばならない; chỉ là người nói thấy “làm thế mới đúng”, đưa ra lời khuyên → べきだ. べきだ thì không làm cũng chưa có hậu quả ngay, ねばならない thì không làm là không được."
             }
           ]
         }
@@ -29248,7 +29159,7 @@
               "this": [
                 {
                   "tag": "Có giá trị · đánh giá",
-                  "tr": "Hành động dũng cảm của anh ấy đáng được khen ngợi."
+                  "tr": "Sự nỗ lực của anh ấy đáng được khen ngợi."
                 }
               ],
               "that": [
