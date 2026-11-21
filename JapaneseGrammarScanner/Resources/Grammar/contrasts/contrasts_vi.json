@@ -10068,61 +10068,54 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "さ danh từ hóa gần với み、こと (đều biến từ thành danh từ); さ chỉ ngữ khí cuối câu gần với よ (đều là ngữ khí khẳng định ở cuối câu)",
+          "sense": 2,
+          "note": "Đều diễn tả “tính chất…”, biến tính từ thành danh từ",
           "items": [
             {
               "id": "mi-nominal",
-              "thisTitle": "〜さ (danh từ hóa)",
-              "diff": "さ là mức độ khách quan, có thể đo lường, điều chỉnh; み là thứ cảm nhận được bằng lưỡi, bằng lòng, chỉ đi với một số ít từ.",
+              "thisTitle": "〜さ (tính chất)",
+              "diff": "さ nói về mức độ, “ngọt đến đâu”, có thể so sánh, điều chỉnh; み nói về chính vị hay cảm giác mà mình nếm được, cảm nhận được.",
               "this": [
                 {
-                  "tag": "Độ ngọt · đo được",
-                  "tr": "Điều chỉnh độ ngọt bằng lượng đường."
+                  "tag": "さ · mức độ",
+                  "tr": "Cái bánh này độ ngọt vừa phải."
                 }
               ],
               "that": [
                 {
-                  "tag": "Vị ngọt nếm được",
-                  "tr": "Nhai kỹ thì sẽ cảm nhận được vị ngọt của cơm."
+                  "tag": "み · vị nếm được",
+                  "tr": "Cái bánh này có vị ngọt của trái cây."
                 }
               ],
-              "explain": "Nhìn xem đang nói về “lượng” hay về “cảm nhận”: mức độ có thể điều chỉnh, so sánh bằng con số (甘さ、高さ、重さ) → さ; thứ nếm được trong miệng, cảm thấy trong lòng (甘み、苦み、悲しみ、楽しみ) → み. Hầu như mọi tính từ đều thêm được さ, còn thêm được み chỉ có một số ít từ."
-            },
+              "explain": "Cả hai câu đều nói về vị “ngọt” của bánh. Hãy xem phía sau: đánh giá mức độ ngọt, đi với các cách nói mức độ như 「ちょうどいい」「控えめ」「足りない」 → 甘さ; nói về chính vị ngọt nếm được, đi với 「〜がある」「〜が広がる」 → 甘み. Hầu hết tính từ đều thêm được さ, còn み chỉ đi với một số ít từ như 甘い、苦い、重い、深い."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 7,
+          "note": "Đều diễn tả “nghe nói…”",
+          "items": [
             {
-              "id": "koto-nominalizer",
-              "thisTitle": "〜さ (danh từ hóa)",
-              "diff": "さ chỉ lấy ra bản thân tính chất (sự dịu dàng, độ lớn); こと biến cả “việc là…” thành danh từ.",
+              "id": "n-datte",
+              "thisTitle": "〜ってさ (truyền đạt lại)",
+              "diff": "ってさ là thuận miệng truyền lại điều nghe được, có chút hờ hững kiểu “người ta nói thế”; んだって là cách truyền đạt thông thường trong văn nói, sắc thái trung tính.",
               "this": [
                 {
-                  "tag": "Bản thân tính chất",
-                  "tr": "Tôi cảm động trước sự dịu dàng của anh ấy."
+                  "tag": "ってさ · thuận miệng truyền lại",
+                  "tr": "Nghe nói trận đấu ngày mai bị hủy rồi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Việc này",
-                  "tr": "Ai cũng biết anh ấy rất dịu dàng."
+                  "tag": "んだって · truyền đạt thông thường",
+                  "tr": "Nghe nói trận đấu ngày mai bị hủy rồi."
                 }
               ],
-              "explain": "Nhìn hình thức phía trước: tính từ bỏ 「い」 rồi thêm さ (優しさ), phía trước dùng 「の」 (彼の優しさ); cả một câu hoàn chỉnh thì thêm こと (彼が優しいこと), nói về sự thật “anh ấy dịu dàng”. Đối tượng khiến mình cảm động, yêu thích thường dùng さ, nội dung biết, quên thường dùng こと."
-            },
-            {
-              "id": "yo-particle",
-              "thisTitle": "〜さ (ngữ khí cuối câu)",
-              "diff": "よ là nói rõ thông tin cho đối phương; さ là kết luận một cách bất cần, mang cảm giác nhẹ nhàng “chẳng phải rõ rành rành sao”.",
-              "this": [
-                {
-                  "tag": "Nói nhẹ tênh",
-                  "tr": "Chuyện đó thì dễ ợt ấy mà."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Cho đối phương biết",
-                  "tr": "Bài này dễ lắm đấy, cậu làm thử xem."
-                }
-              ],
-              "explain": "Nhìn ý đồ của người nói: muốn đối phương biết, muốn họ làm (やってみて) → よ; tự mình buột miệng kết luận, có chút ra vẻ, bất cần → さ. さ gắn trực tiếp sau danh từ, gốc tính từ đuôi な (簡単さ), không thêm 「だ」; nó rất suồng sã, không dùng với cấp trên."
+              "wrong": {
+                "why": "Danh từ đứng trước んだって phải thêm 「な」: 中止なんだって"
+              },
+              "explain": "Cả hai câu đều truyền lại tin nghe được. Trước hết xem cách nối: ってさ gắn thẳng sau câu thể thường (中止だってさ); んだって phải có 「ん」 phía trước, sau danh từ và tính từ đuôi な phải thêm 「な」 (中止なんだって). Sau đó xem sắc thái: ってさ suồng sã hơn, như thuận miệng chuyển lời người khác; んだって là cách nói bình thường, muốn lịch sự hơn một chút thì nói 「んですって」."
             }
           ]
         }
@@ -10137,8 +10130,8 @@
           "items": [
             {
               "id": "causative",
-              "title": "〜せる・〜させる (cho người khác làm)",
-              "diff": "させる là cho／bắt người khác làm; thêm 「ください／もらう／いただく」 phía sau thì người được “cho” làm lại trở thành chính mình.",
+              "title": "〜せる・〜させる (bắt／cho người khác làm)",
+              "diff": "させる là cho／bắt người khác làm; thêm 「ください／もらう／いただく」 phía sau thì người được “cho” làm trở thành chính mình.",
               "this": [
                 {
                   "tag": "せてください · xin cho tôi làm",
@@ -10146,20 +10139,20 @@
                 },
                 {
                   "tag": "せてもらう · được phép làm",
-                  "tr": "Vì bị sốt nên tôi đã (được phép) nghỉ làm."
+                  "tr": "Vì bị sốt nên tôi đã được cho nghỉ làm."
                 },
                 {
                   "tag": "せていただく · khiêm tốn làm",
-                  "tr": "Vậy thì, xin phép cho tôi được giải thích."
+                  "tr": "Vậy thì, xin phép để tôi giải thích."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cho／bắt người khác làm",
+                  "tag": "Bắt người khác làm",
                   "tr": "Mẹ bắt em trai dọn phòng."
                 }
               ],
-              "explain": "Nhìn xem sau “cho／bắt” là gì: chỉ có thể sai khiến (掃除させた) → bảo người khác làm, người làm là em trai đứng trước 「に」; sau thể sai khiến có ください／もらう／いただく → người làm là chính người nói: xin “cho tôi làm”, được phép “đã cho tôi làm”, trịnh trọng tuyên bố “xin phép cho tôi làm”."
+              "explain": "Xem sau thể sai khiến là gì: chỉ có thể sai khiến (掃除させた) → bảo người khác làm, người làm là em trai đứng trước 「に」; thể sai khiến + ください／もらう／いただく → người làm là chính người nói: xin “cho tôi làm”, được phép “đã được cho làm”, hoặc trịnh trọng nói “xin phép cho tôi làm”."
             }
           ]
         },
@@ -10173,17 +10166,17 @@
               "diff": "させてください mang ý muốn tích cực “xin hãy để tôi làm”; てもいいですか chỉ hỏi có được không, để đối phương quyết định.",
               "this": [
                 {
-                  "tag": "Xin để tôi làm · tích cực",
-                  "tr": "Công việc đó, nhất định xin hãy để tôi làm."
+                  "tag": "Xin cho tôi làm · tích cực",
+                  "tr": "Vai đó, nhất định xin hãy để tôi đóng."
                 }
               ],
               "that": [
                 {
                   "tag": "Hỏi có được không",
-                  "tr": "Công việc đó, tôi làm có được không?"
+                  "tr": "Vai đó, tôi đóng có được không?"
                 }
               ],
-              "explain": "Cả hai câu đều xin phép, hãy nhìn giọng điệu: 「ぜひ」＋ させてください là chủ động tranh thủ, có ý “tôi rất muốn làm”, cũng hay dùng khi xin nghỉ (休ませてください); てもいいですか chỉ là hỏi xem có được không, đối phương nói không được thì thôi. Lưu ý người làm việc: câu sai khiến dùng 「私に」, てもいい dùng 「私が」."
+              "explain": "Cả hai câu đều xin phép, hãy xem sắc thái: 「ぜひ」 + させてください là chủ động xin, có ý “tôi rất muốn làm”, cũng hay dùng khi xin nghỉ (休ませてください); てもいいですか chỉ hỏi thử có được không, đối phương bảo không thì thôi. Chú ý người làm: câu sai khiến dùng 「私に」, còn てもいい dùng 「私が」."
             }
           ]
         }
@@ -10194,7 +10187,70 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều có thể liệt kê vài sự việc, hoặc nêu lý do",
+          "sense": 1,
+          "note": "Đều diễn tả “vừa… vừa…”, liệt kê nhiều điều cùng chiều hướng",
+          "items": [
+            {
+              "id": "adj-te-connect",
+              "title": "〜くて (nối tính từ đuôi い)",
+              "diff": "し bày ra từng ưu điểm một, như đang “kể cái hay”, và ngầm ý còn nữa; くて／で nối hai tính chất thành một câu miêu tả nhẹ nhàng.",
+              "this": [
+                {
+                  "tag": "し · bày ra từng điểm",
+                  "tr": "Quán này vừa rẻ, mà vị cũng ngon."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "くて · miêu tả nhẹ nhàng",
+                  "tr": "Quán này rẻ và vị cũng ngon."
+                }
+              ],
+              "wrong": {
+                "why": "Tính từ đuôi な nối với し phải thêm 「だ」: 静かだし"
+              },
+              "explain": "Hai câu cùng nghĩa, khác ở sắc thái và cách nối. Sắc thái: し đưa từng đặc điểm ra thành một ý riêng, giọng như đang liệt kê ưu điểm, hay đi với 「も」; くて chỉ nối hai tính chất một cách trôi chảy để miêu tả. Cách nối: し gắn sau thể thường (安いし、静かだし), danh từ và tính từ đuôi な phải thêm 「だ」; くて là dạng biến đổi của tính từ đuôi い, tính từ đuôi な và danh từ dùng 「で」 (静かで)."
+            },
+            {
+              "id": "soreni-conjunction",
+              "diff": "し gắn sau thể thường, nối tiếp đặc điểm kế tiếp ngay trong cùng một câu; それに đứng đầu câu, bổ sung thêm một ý sau khi câu trước đã kết thúc. Hai từ thường dùng chung: 「〜し、それに〜」.",
+              "this": [
+                {
+                  "tag": "Nối giữa câu",
+                  "tr": "Căn phòng này rộng, lại gần ga nữa."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Thêm ở đầu câu",
+                  "tr": "Căn phòng này rộng. Hơn nữa lại gần ga."
+                }
+              ],
+              "explain": "Xem vị trí: gắn sau thể thường, câu vẫn chưa kết thúc → し; câu trước đã kết thúc bằng 「。」, đầu câu mới bổ sung thêm một ý → それに. Hai từ cũng hay dùng chung: 「広いし、それに駅にも近い」."
+            },
+            {
+              "id": "tari-tari",
+              "diff": "し bày ra từng việc đã làm như những sự thật; たり〜たり chỉ chọn vài việc làm ví dụ, giọng nhẹ nhàng.",
+              "this": [
+                {
+                  "tag": "し · bày ra từng việc",
+                  "tr": "Chủ nhật tôi vừa dọn dẹp, vừa đi mua sắm."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "たり · nêu vài ví dụ",
+                  "tr": "Chủ nhật tôi dọn dẹp, đi mua sắm các thứ."
+                }
+              ],
+              "explain": "Cả hai câu đều liệt kê những việc làm vào Chủ nhật. Xem hình thức và sắc thái: たり〜たり chỉ chọn vài việc làm ví dụ, mang cảm giác thoải mái “làm cái này, làm cái kia”, cuối cùng phải kết thúc bằng 「する」; し đưa mỗi việc ra như một sự thật trọn vẹn, hay đi với 「も」, giọng như nhấn mạnh “cái này cũng làm rồi, cái kia cũng làm rồi”."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều diễn tả nguyên nhân “vì…”",
           "items": [
             {
               "id": "kara-from",
@@ -10213,61 +10269,6 @@
                 }
               ],
               "explain": "Nhìn xem có mấy lý do, nói chắc chắn đến đâu: 「安いし、近いし」 liệt kê từng cái, hoặc chỉ nói một cái nhưng ngầm ý còn cái khác → し; chỉ đưa ra một lý do mang tính quyết định → から. Khi từ chối người khác, dùng し (今日は雨だし…) khéo hơn から."
-            },
-            {
-              "id": "adj-te-connect",
-              "diff": "し liệt kê từng điểm như những lý do, phía sau thường đi với kết luận; くて／で chỉ đơn thuần nối các ý ngang hàng.",
-              "this": [
-                {
-                  "tag": "Liệt kê lý do → kết luận",
-                  "tr": "Quán này vừa rẻ vừa ngon, nên tôi hay đến."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "くて · nối ngang hàng",
-                  "tr": "Quán này vừa rẻ vừa ngon."
-                },
-                {
-                  "tag": "で · nối ngang hàng",
-                  "tr": "Quán này vừa yên tĩnh vừa sạch sẽ."
-                }
-              ],
-              "explain": "Nhìn xem phía sau có kết luận “cho nên…” không: coi vài ưu điểm là lý do, dẫn đến phán đoán kiểu “nên hay đến” → し; chỉ miêu tả dáng vẻ của sự vật → くて (tính từ đuôi な dùng で: 静かで). Cách nối cũng khác: trước し dùng thể thông thường (安いし、静かだし), くて／で là dạng biến đổi của tính từ."
-            },
-            {
-              "id": "soreni-conjunction",
-              "diff": "し nối các lý do ở giữa câu; それに đặt ở đầu câu để thêm một ý nữa, hai cách thường dùng chung: 「〜し、それに〜」.",
-              "this": [
-                {
-                  "tag": "Nối giữa câu",
-                  "tr": "Căn phòng này rộng, lại gần ga."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Thêm ở đầu câu",
-                  "tr": "Căn phòng này rộng rãi. Hơn nữa còn gần ga."
-                }
-              ],
-              "explain": "Nhìn vị trí: nối sau thể thông thường, câu chưa kết thúc → し; câu trước đã kết thúc bằng 「。」, đầu câu mới thêm một ý nữa → それに. Hai cách cũng hay dùng cùng nhau: 「広いし、それに駅にも近い」."
-            },
-            {
-              "id": "tari-tari",
-              "diff": "し coi sự thật là lý do để dẫn đến kết luận; たり〜たり chỉ nêu ví dụ đã làm những hành động nào.",
-              "this": [
-                {
-                  "tag": "Sự thật → kết luận",
-                  "tr": "Chủ nhật vừa dọn dẹp vừa đi mua sắm, mệt rã rời."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nêu ví dụ hành động",
-                  "tr": "Chủ nhật tôi dọn dẹp, đi mua sắm các thứ."
-                }
-              ],
-              "explain": "Nhìn xem phía sau có kết luận không: たり〜たりする chỉ nêu ví dụ đã làm những việc gì, câu dừng ở đó; sau し thường có một kết luận hoặc cảm nhận rút ra từ đó (疲れた). し còn liệt kê được tính chất (広いし、明るい), たり chủ yếu liệt kê hành động."
             }
           ]
         }
@@ -10287,16 +10288,16 @@
               "this": [
                 {
                   "tag": "Ở (いる)",
-                  "tr": "Thầy Tanaka hiện đang ở phòng nghiên cứu."
+                  "tr": "Thầy Tanaka bây giờ đang ở phòng nghiên cứu."
                 }
               ],
               "that": [
                 {
                   "tag": "Là (である)",
-                  "tr": "Xin lỗi, có phải ngài là thầy Tanaka không ạ?"
+                  "tr": "Xin lỗi, có phải thầy là thầy Tanaka không ạ?"
                 }
               ],
-              "explain": "Nhìn trợ từ phía trước: địa điểm＋「に」＋ いらっしゃる → ai đó ở đâu đó (hoặc đến, đi); danh từ＋「で」＋ いらっしゃる → nói ai đó “là…”, tương đương cách nói tôn kính của 「です」 (お元気でいらっしゃいますか cũng là cách dùng này)."
+              "explain": "Xem trợ từ phía trước: địa điểm + 「に」 + いらっしゃる → ai đó ở đâu (hoặc đến, đi); danh từ + 「で」 + いらっしゃる → nói ai đó “là…”, tương đương cách nói tôn kính của 「です」 (お元気でいらっしゃいますか cũng là cách dùng này)."
             }
           ]
         },
@@ -10305,29 +10306,9 @@
           "note": "Đều là tôn kính ngữ, nâng hành động của đối phương lên",
           "items": [
             {
-              "id": "o-ni-naru",
-              "diff": "Những động từ có tôn kính ngữ đặc biệt như 見る、言う、来る thì phải dùng ご覧になる、おっしゃる、いらっしゃる; động từ không có dạng đặc biệt mới dùng 「お〜になる」.",
-              "this": [
-                {
-                  "tag": "Dạng đặc biệt",
-                  "tr": "Thầy đã xem bộ phim này chưa ạ?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Động từ thông thường",
-                  "tr": "Thầy đã đọc cuốn sách này chưa ạ?"
-                }
-              ],
-              "wrong": {
-                "why": "見る có tôn kính ngữ đặc biệt 「ご覧になる」"
-              },
-              "explain": "Trước tiên nghĩ xem động từ này có tôn kính ngữ đặc biệt không: 見る→ご覧になる、言う→おっしゃる、行く・来る・いる→いらっしゃる、食べる→召し上がる、する→なさる; nếu có thì không dùng お〜になる (✗お見になる). Những động từ như 読む、書く、帰る không có dạng đặc biệt → お読みになる."
-            },
-            {
               "id": "passive",
               "title": "〜れる・〜られる (tôn kính)",
-              "diff": "おっしゃる、いらっしゃる là tôn kính ngữ đặc biệt, mức kính trọng cao, không bị hiểu lầm; 言われる、来られる mức kính trọng nhẹ, lại dễ lẫn với bị động.",
+              "diff": "おっしゃる、いらっしゃる là tôn kính ngữ đặc biệt, mức kính trọng cao, không thể hiểu lầm; 言われる、来られる kính trọng nhẹ hơn, lại dễ nhầm với bị động.",
               "this": [
                 {
                   "tag": "Tôn kính ngữ đặc biệt",
@@ -10340,7 +10321,7 @@
                   "tr": "Giám đốc đã nói như vậy."
                 }
               ],
-              "explain": "「言われました」 vừa có thể là tôn kính (giám đốc đã nói), vừa có thể là bị động (bị người ta nói), phải nhìn phía trước là 「が」 hay 「に」; おっしゃる chỉ có một nghĩa. いらっしゃる／来られる、召し上がる／食べられる cũng vậy. Khi nói với khách hàng, cấp trên thì ưu tiên dùng dạng đặc biệt."
+              "explain": "「言われました」 có thể là tôn kính (giám đốc đã nói) cũng có thể là bị động (bị người khác nói), phải xem phía trước là 「が」 hay 「に」; おっしゃる chỉ có một nghĩa. いらっしゃる／来られる、召し上がる／食べられる cũng vậy. Khi nói với khách hàng, cấp trên, nên ưu tiên dùng dạng đặc biệt."
             }
           ]
         }
@@ -10350,80 +10331,69 @@
       "id": "sorede-conjunction",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Đều có thể đặt ở đầu câu để nối tiếp câu trước, dẫn ra sự việc phía sau",
+          "kind": "look",
+          "note": "それで ↔ それから, chỉ khác phần cuối で／から",
           "items": [
             {
-              "id": "soshite-conjunction",
-              "diff": "それで thể hiện rõ phía trước là nguyên nhân, phía sau là kết quả; そして chỉ diễn tả việc xảy ra tiếp theo.",
-              "this": [
-                {
-                  "tag": "Vì → nên",
-                  "tr": "Mưa to lên. Vì vậy trận đấu bị hủy."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Xảy ra tiếp theo",
-                  "tr": "Tôi mở cửa, rồi bước vào trong."
-                }
-              ],
-              "explain": "Nhìn xem trước sau có quan hệ nhân quả không: “mưa to lên” là nguyên nhân của “trận đấu bị hủy” → それで; “mở cửa → bước vào” chỉ là thứ tự trước sau của hành động → そして. Bản thân そして không mang nghĩa “cho nên”."
-            },
-            {
-              "id": "kara-from",
-              "title": "〜から (「だから」 đầu câu)",
-              "diff": "それで khách quan thuật lại quan hệ nhân quả đã xảy ra; だから mang phán đoán của người nói, phía sau có thể đi với mệnh lệnh, nhờ vả, ý chí.",
-              "this": [
-                {
-                  "tag": "Thuật lại · đã xảy ra",
-                  "tr": "Hôm qua tôi bị sốt. Vì vậy đã nghỉ học."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Chủ quan · đi với mệnh lệnh",
-                  "tr": "Mai phải dậy sớm đấy. Vậy nên mau đi ngủ đi."
-                }
-              ],
-              "wrong": {
-                "why": "Sau それで không đi với mệnh lệnh, nhờ vả"
-              },
-              "explain": "Nhìn nửa sau: kết quả đã xảy ra (休んだ、中止になった) → それで và だから đều được; mệnh lệnh, nhờ vả, ý chí kiểu 「〜なさい」「〜てください」「〜よう」 → chỉ dùng được だから."
-            },
-            {
-              "id": "sono-tame",
-              "diff": "Nghĩa như nhau, đều là “do đó”; それで thiên về khẩu ngữ, thường kể trải nghiệm của bản thân; そのため mang tính văn viết hơn, hay dùng trong tin tức, báo cáo.",
-              "this": [
-                {
-                  "tag": "Khẩu ngữ · kể trải nghiệm",
-                  "tr": "Tôi ngủ quên mất. Thế nên lỡ chuyến tàu điện."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Văn viết · giải thích nguyên nhân",
-                  "tr": "Đêm qua tuyết rơi dày. Do đó tàu điện đã ngừng chạy."
-                }
-              ],
-              "explain": "Nhìn văn phong: khi trò chuyện kể chuyện của mình (寝坊しちゃって、〜んだ) → それで; khách quan giải thích nguyên nhân trong tin tức, thông báo, báo cáo (昨夜は大雪だった) → そのため. そのため còn có thể diễn tả mục đích “vì việc đó”, それで thì không."
-            },
-            {
               "id": "sorekara-conjunction",
-              "diff": "それで diễn tả nhân quả “cho nên”; それから chỉ diễn tả thứ tự thời gian “sau đó”, không có nhân quả.",
+              "diff": "それで là “cho nên”, câu trước là nguyên nhân; それから là “sau đó”, câu trước chỉ là việc xảy ra trước. Về mặt chữ chỉ khác phần cuối で／から.",
               "this": [
                 {
-                  "tag": "Vì → nên",
-                  "tr": "Trời bắt đầu mưa. Vì vậy tôi mua một cái ô ở cửa hàng tiện lợi."
+                  "tag": "Nguyên nhân → cho nên",
+                  "tr": "Trời đổ mưa, cho nên tôi đã mua cây dù ở cửa hàng tiện lợi."
                 }
               ],
               "that": [
                 {
                   "tag": "Trước sau · sau đó",
-                  "tr": "Tôi đến ga. Sau đó mua một cái ô ở cửa hàng tiện lợi."
+                  "tr": "Tôi đến ga, sau đó mua cây dù ở cửa hàng tiện lợi."
                 }
               ],
-              "explain": "Nhìn xem câu trước có phải là nguyên nhân của câu sau không: “trời mưa” là lý do mua ô → それで; “đến ga” chỉ là xảy ra trước về mặt thời gian → それから. Tiếng Việt đều có thể nói “rồi／sau đó”, nhưng それで nhất định mang quan hệ nhân quả."
+              "explain": "Xem quan hệ giữa câu trước và câu sau: 「雨が降ってきた」 là nguyên nhân mua dù → それで (cho nên); 「駅に着いた」 chỉ là việc xảy ra trước → それから (sau đó). Cả hai từ đều bắt đầu bằng 「それ」, chỉ khác phần cuối で／から, đọc nhanh dễ nhìn nhầm."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Đều diễn tả “cho nên”",
+          "items": [
+            {
+              "id": "kara-from",
+              "title": "〜から (nguyên nhân)",
+              "diff": "Đều có nghĩa “cho nên”; それで mở đầu câu mới, kể lại kết quả đã xảy ra; から gắn sau nguyên nhân, vế sau còn có thể là mệnh lệnh, nhờ vả, ý chí.",
+              "this": [
+                {
+                  "tag": "それで · kể kết quả",
+                  "tr": "Tôi đã mệt. Cho nên đi ngủ sớm."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "から · đi với mệnh lệnh",
+                  "tr": "Con mệt rồi nên đi ngủ sớm đi."
+                }
+              ],
+              "wrong": {
+                "why": "それで không đi với mệnh lệnh, nhờ vả phía sau"
+              },
+              "explain": "Xem vế sau: kết quả đã xảy ra (早く寝た) → cả それで và から đều dùng được (疲れていたから、早く寝た); vế sau là mệnh lệnh, nhờ vả, ý chí như 「〜なさい」「〜てください」「〜よう」 → chỉ dùng được から. Về hình thức, それで đứng đầu câu mới, から gắn sau câu nêu nguyên nhân."
+            },
+            {
+              "id": "sono-tame",
+              "diff": "Đều có nghĩa “vì thế”; それで thiên về văn nói, thường kể chuyện của bản thân; そのため trang trọng hơn, thường dùng trong tin tức, báo cáo.",
+              "this": [
+                {
+                  "tag": "Văn nói · kể trải nghiệm",
+                  "tr": "Tớ ngủ quên mất. Thế nên bị lỡ tàu."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Văn viết · giải thích nguyên nhân",
+                  "tr": "Đêm qua có tuyết rơi dày. Vì thế tàu điện đã ngừng chạy."
+                }
+              ],
+              "explain": "Xem văn phong: khi trò chuyện kể chuyện của mình (寝坊しちゃって、〜んだ) → それで; trong tin tức, thông báo, báo cáo trình bày nguyên nhân một cách khách quan (昨夜は大雪だった) → そのため."
             }
           ]
         }
@@ -10438,71 +10408,71 @@
           "items": [
             {
               "id": "sono-ue",
-              "diff": "それに thiên về khẩu ngữ, giọng nhẹ nhàng, hay dùng để bổ sung lý do; その上 mang tính văn viết hơn, có sự tăng tiến “đã tốt lại càng tốt, đã tệ lại càng tệ”.",
+              "diff": "Đều có nghĩa “hơn nữa”; それに thiên về văn nói, thuận miệng thêm một ý; その上 hơi trang trọng, giọng “không chỉ vậy, mà còn…”.",
               "this": [
                 {
-                  "tag": "Khẩu ngữ · bổ sung lý do",
-                  "tr": "Căn phòng này rộng, mà lại còn rẻ nữa đấy."
+                  "tag": "Văn nói · thuận miệng thêm ý",
+                  "tr": "Căn phòng này gần ga, mà tiền thuê cũng rẻ nữa đấy."
                 }
               ],
               "that": [
                 {
-                  "tag": "Văn viết · họa vô đơn chí",
-                  "tr": "Tôi bị lạc đường. Tệ hơn nữa là trời còn đổ mưa."
+                  "tag": "Hơi trang trọng · không chỉ vậy",
+                  "tr": "Căn phòng này gần ga. Không chỉ vậy, tiền thuê cũng rẻ."
                 }
               ],
-              "explain": "Nhìn văn phong và giọng điệu: khi trò chuyện buột miệng thêm một lý do, ưu điểm (〜し、それに〜よ) → それに; khi thuật lại, nhấn mạnh tình hình ngày càng nặng thêm, thường đi với 「〜まで」「さらに」 → その上."
+              "explain": "Cả hai câu đều thêm một ưu điểm vào ưu điểm trước. Xem hoàn cảnh và giọng điệu: nói chuyện với bạn bè, thuận miệng thêm một câu (〜し、それに〜よ) → それに; khi giới thiệu, giải thích, trịnh trọng nhấn mạnh “không chỉ vậy” → その上, trang trọng hơn それに một chút."
             },
             {
               "id": "soshite-conjunction",
-              "diff": "それに là thêm một lý do vào các lý do, khẩu ngữ hơn; そして là bổ sung một cách bình ổn.",
+              "diff": "Đều có nghĩa “hơn nữa, và”; それに mang giọng bổ sung “còn một điểm nữa”, thiên về văn nói; そして chỉ nối nhẹ nhàng sang ý tiếp theo, hơi trang trọng.",
               "this": [
                 {
-                  "tag": "Thêm lý do",
-                  "tr": "Hôm nay tôi không đi đâu. Trời đang mưa, với lại tôi cũng mệt rồi."
+                  "tag": "Bổ sung · văn nói",
+                  "tr": "Anh ấy hiền. Hơn nữa còn thông minh."
                 }
               ],
               "that": [
                 {
-                  "tag": "Bổ sung bình ổn",
-                  "tr": "Anh ấy rất dịu dàng. Và đầu óc cũng thông minh."
+                  "tag": "Nối nhẹ nhàng · hơi trang trọng",
+                  "tr": "Anh ấy hiền. Và anh ấy cũng thông minh."
                 }
               ],
-              "explain": "Nhìn xem có đang nói lý do không: để giải thích “tại sao” mà thêm từng lý do, thường đi với 「〜し」 → それに; chỉ giới thiệu đặc điểm của một người hay một vật → そして."
+              "explain": "Cả hai câu đều giới thiệu ưu điểm của anh ấy, hãy xem giọng điệu: それに có cảm giác bổ sung “còn một điểm nữa”, hay dùng khi trò chuyện, phía trước cũng hay có 「〜し」; そして chỉ nối nhẹ nhàng sang ý tiếp theo, dùng nhiều khi viết văn, diễn thuyết, còn có thể đứng trước mục cuối cùng của phép liệt kê (日本語と英語、そして中国語)."
             },
             {
               "id": "sorekara-conjunction",
-              "diff": "それに là thêm một lý do, đánh giá nữa “hơn nữa”; それから chỉ là “còn một việc nữa”.",
+              "diff": "それに là thêm một ý “hơn nữa” vào lý do, đánh giá; それから chỉ là “còn một việc nữa”.",
               "this": [
                 {
                   "tag": "Thêm một lý do",
-                  "tr": "Chọn phòng này đi. Vừa rộng, lại còn gần ga."
+                  "tr": "Chọn phòng này đi. Rộng, mà lại gần ga nữa."
                 }
               ],
               "that": [
                 {
                   "tag": "Thêm một việc",
-                  "tr": "Mua sữa về giúp mình nhé. À còn nữa, nhờ mua cả trứng."
+                  "tr": "Mua sữa về giúp mẹ nhé. Còn nữa, nhờ mua cả trứng."
                 }
               ],
-              "explain": "Nhìn xem đang thêm cái gì: để thuyết phục người khác mà thêm một ưu điểm, lý do → それに, hay dùng cùng 「〜し」; việc cần làm, đồ cần mua thêm một mục → それから."
+              "explain": "Xem đang thêm cái gì: để thuyết phục người khác, thêm một ưu điểm, lý do → それに, hay dùng với 「〜し」; việc cần làm, đồ cần mua thêm một món → それから."
             },
             {
               "id": "shi",
-              "diff": "それに đặt ở đầu câu để thêm một ý nữa; し nối các lý do ở giữa câu, hai cách thường dùng chung: 「〜し、それに〜」.",
+              "diff": "それに đứng đầu câu, mở câu mới để thêm một ý; し gắn sau thể thường, nối các nội dung cùng loại ngay trong một câu. Hai từ thường dùng chung: 「〜し、それに〜」.",
               "this": [
                 {
                   "tag": "Thêm ở đầu câu",
-                  "tr": "Căn phòng này rộng rãi. Hơn nữa còn gần ga."
+                  "tr": "Căn phòng này rộng. Hơn nữa lại gần ga."
                 }
               ],
               "that": [
                 {
                   "tag": "Nối giữa câu",
-                  "tr": "Căn phòng này rộng, lại gần ga."
+                  "tr": "Căn phòng này rộng, lại gần ga nữa."
                 }
               ],
-              "explain": "Nhìn vị trí: câu trước đã kết thúc bằng 「。」, đầu câu mới thêm một ý nữa → それに; nối sau thể thông thường, câu chưa kết thúc → し. Hai cách cũng hay dùng cùng nhau: 「広いし、それに駅にも近い」."
+              "explain": "Xem vị trí: câu trước đã kết thúc bằng 「。」, đầu câu mới bổ sung thêm một ý → それに; gắn sau thể thường, câu vẫn chưa kết thúc → し. Hai từ cũng hay dùng chung: 「広いし、それに駅にも近い」."
             }
           ]
         }
@@ -10517,20 +10487,20 @@
           "items": [
             {
               "id": "ni-suginai",
-              "diff": "すぎる là “vượt quá giới hạn” ＝ quá…; にすぎない là “không vượt quá” ＝ chẳng qua chỉ là…",
+              "diff": "すぎる là “vượt quá giới hạn” = quá…; にすぎない là “không vượt quá” = chỉ là… mà thôi.",
               "this": [
                 {
-                  "tag": "Vượt quá giới hạn · quá…",
-                  "tr": "Ăn đồ ngọt quá nhiều nên bị đau bụng."
+                  "tag": "Vượt giới hạn · quá…",
+                  "tr": "Ăn đồ ngọt nhiều quá nên đau bụng."
                 }
               ],
               "that": [
                 {
-                  "tag": "Không vượt quá · chẳng qua chỉ là",
-                  "tr": "Tôi chẳng qua chỉ là một sinh viên thôi."
+                  "tag": "Không vượt quá · chỉ là",
+                  "tr": "Tôi chỉ là một sinh viên bình thường mà thôi."
                 }
               ],
-              "explain": "Cả hai đều bắt nguồn từ 「過ぎる (vượt qua)」: vượt quá giới hạn → すぎる “quá…, … quá mức”, nối sau thể ます của động từ, gốc tính từ; thêm phủ định thành にすぎない, nghĩa là “không vượt qua mức này” → “chẳng qua chỉ là…”, phía trước là danh từ, hay đi với 「ただ」. Nhìn phía sau có phủ định 「ない」 không là phân biệt được."
+              "explain": "Cả hai đều bắt nguồn từ 「過ぎる」 (vượt qua): vượt qua giới hạn → すぎる “quá…, …quá mức”, gắn sau thể ます của động từ (bỏ ます) hoặc gốc tính từ; thêm phủ định thành にすぎない, “không vượt quá mức này” → “chỉ là… mà thôi”, đứng sau danh từ, hay đi cùng 「ただ」. Nhìn xem phía sau có phủ định 「ない」 hay không là phân biệt được."
             }
           ]
         },
@@ -10564,69 +10534,61 @@
       "id": "sukoshimo-nai",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「も」 — “đến lượng nhỏ nhất cũng (không có)”",
-          "items": [
-            {
-              "id": "mo-also",
-              "title": "〜も (không một… nào)",
-              "diff": "少しも dùng cho mức độ và lượng không đếm thành cái được (tiền, thời gian, cảm giác); 一人も、一つも dùng cho thứ đếm được.",
-              "this": [
-                {
-                  "tag": "Lượng · không chút nào",
-                  "tr": "Trong ví không còn chút tiền nào."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Đếm được · không một… nào",
-                  "tr": "Trong lớp không có một ai."
-                }
-              ],
-              "explain": "Cả hai đều là 「lượng nhỏ nhất＋も＋phủ định」 ＝ đến cái ít nhất cũng không có. Nhìn xem đối tượng có đếm được không: tiền, thời gian, mức độ… không nói được là “mấy cái” → 少しも; người, đồ vật đếm từng cái được → 一人も、一つも、一回も."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Đều đi cùng phủ định, diễn tả “không… chút nào”",
+          "note": "Đều diễn tả “không… một chút nào”",
           "items": [
             {
               "id": "zenzen-nai",
-              "diff": "Sau 少しも nhất định là phủ định; 全然 trong khẩu ngữ còn đi được với khẳng định (全然大丈夫).",
+              "title": "〜ぜんぜん〜ない (mức độ)",
+              "diff": "Đều có nghĩa “không… chút nào”; 全然 là cách nói thông dụng nhất trong văn nói, thoải mái; 少しも hơi trang trọng, giọng cứng hơn, nhấn mạnh “đến một chút cũng không”.",
               "this": [
                 {
-                  "tag": "Nhất định đi với phủ định",
-                  "tr": "Bộ phim này chẳng hay chút nào."
+                  "tag": "Hơi trang trọng · giọng cứng",
+                  "tr": "Cuốn sách này chẳng thú vị chút nào."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khẩu ngữ · đi với khẳng định",
-                  "tr": "Đừng lo, hoàn toàn không sao đâu."
+                  "tag": "Văn nói · thông dụng nhất",
+                  "tr": "Cuốn sách này hoàn toàn chẳng hay."
                 }
               ],
-              "wrong": {
-                "why": "Sau 少しも nhất định là phủ định"
-              },
-              "explain": "Nghĩa đều là “không… chút nào”, nhưng 少しも chỉ dùng được với phủ định; 全然 trong khẩu ngữ giữa bạn bè còn đi được với khẳng định (全然大丈夫、全然平気), bối cảnh trang trọng thì nên tránh. 少しも trang trọng hơn 全然 một chút."
+              "explain": "Hai câu cùng nghĩa, hãy xem hoàn cảnh và giọng điệu: nói thoải mái với bạn bè → 全然 tự nhiên nhất; khi viết hoặc muốn nhấn mạnh “đến một chút cũng không” → 少しも, giọng cứng hơn. Lưu ý sau 少しも nhất định là phủ định; trong văn nói 全然 còn có cách nói như 「全然大丈夫」, nhưng đó là cách dùng khác."
             },
             {
               "id": "chittomo-nai",
-              "diff": "ちっとも rất khẩu ngữ, thường mang sự bất mãn, phàn nàn; 少しも giọng trung tính, dùng được cả trong bối cảnh trang trọng.",
+              "diff": "ちっとも rất khẩu ngữ, thường mang ý bất mãn, than phiền; 少しも sắc thái trung tính, dùng được cả trong tình huống trang trọng.",
               "this": [
                 {
                   "tag": "Trung tính · dùng được khi trang trọng",
-                  "tr": "Lúc đó tôi không sợ chút nào."
+                  "tr": "Lúc đó tôi không sợ một chút nào."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khẩu ngữ · phàn nàn",
-                  "tr": "Đã đợi ba mươi phút rồi mà xe buýt mãi chẳng đến."
+                  "tag": "Văn nói · than phiền",
+                  "tr": "Đã đợi những ba mươi phút rồi mà xe buýt mãi chẳng thấy đến."
                 }
               ],
-              "explain": "Nhìn văn phong và cảm xúc: phàn nàn với bạn bè “đợi lâu thế mà vẫn chưa đến” → ちっとも là chuẩn nhất; thuật lại bằng 「です・ます」, viết văn → 少しも hợp hơn, ちっとも ít dùng trong bối cảnh trang trọng."
+              "explain": "Xem văn phong và cảm xúc: than phiền giữa bạn bè rằng “đợi lâu thế rồi vẫn chưa đến” → ちっとも tự nhiên nhất; khi kể bằng 「です・ます」 hoặc viết văn → 少しも phù hợp hơn, ちっとも ít dùng trong tình huống trang trọng."
+            },
+            {
+              "id": "mo-also",
+              "title": "〜も (một… cũng không)",
+              "diff": "Đều có nghĩa “không có chút nào”; 少しも nói chung chung “một chút”; kiểu 「一円も」 “một + lượng từ + も” nêu ra đơn vị nhỏ nhất cụ thể, nên cụ thể hơn.",
+              "this": [
+                {
+                  "tag": "Chung chung · một chút cũng không",
+                  "tr": "Trong ví không còn lại chút tiền nào."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Một + lượng từ · một yên cũng không",
+                  "tr": "Trong ví không còn lại một yên nào."
+                }
+              ],
+              "explain": "Cả hai câu đều là “đến cái ít nhất cũng không có”. Xem lấy gì làm lượng nhỏ nhất: 少しも nói chung chung “một chút”, dùng được cho tiền, thời gian, cảm giác; 「一円も」「一人も」「一つも」 dùng “một + lượng từ” nêu ra đơn vị nhỏ nhất cụ thể, nghe cụ thể hơn, như nói “một đồng cũng không có”. Khi đếm người, đếm đồ vật thường dùng 「一人も」「一つも」."
             }
           ]
         }
@@ -10637,64 +10599,47 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「たい」 hoặc 「がる」 — たがる ＝ たい＋がる",
+          "note": "Đều bắt nguồn từ 「がる」 — nghĩa gốc là “biểu lộ cảm giác trong lòng ra bên ngoài”",
           "items": [
             {
-              "id": "tai",
-              "diff": "たがる nói người khác trông có vẻ muốn làm; たい nói bản thân muốn làm.",
-              "this": [
-                {
-                  "tag": "Người khác",
-                  "tr": "Em trai muốn mua trò chơi mới."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Bản thân",
-                  "tr": "Tôi muốn mua trò chơi mới."
-                }
-              ],
-              "explain": "Nhìn chủ ngữ: người thứ ba như em trai, bạn bè → không nhìn thấy được nội tâm của người khác, chỉ có thể nói dáng vẻ họ thể hiện ra → たがっている (hay dùng dạng ている); tôi (hoặc “bạn” trong câu hỏi) → たい."
-            },
-            {
               "id": "garu-third-person",
-              "diff": "たがる là 「たい」＋がる, nối sau thể ます của động từ; がる nối sau những tính từ như 「欲しい・怖い」.",
+              "diff": "たがる là 「たい」 + がる, chỉ người khác trông có vẻ muốn làm; 欲しがる、怖がる là tính từ + がる, chỉ người khác trông có vẻ muốn có, sợ.",
               "this": [
                 {
-                  "tag": "Động từ＋たがる",
+                  "tag": "たい + がる",
                   "tr": "Em trai muốn ra ngoài chơi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tính từ＋がる",
+                  "tag": "欲しい + がる",
                   "tr": "Em trai muốn có đồ chơi mới."
                 }
               ],
-              "explain": "Nhìn từ phía trước: động từ (遊ぶ→遊び) → たがる; tính từ (欲しい、怖い、寂しい) → bỏ 「い」 rồi thêm がる (欲しがる、怖がる). Nói người khác “muốn có vật gì” thì dùng 欲しがっている, “muốn làm việc gì” thì dùng 〜たがっている."
+              "explain": "Cả hai đều dựa vào 「がる」: nghĩa gốc của nó là biểu lộ ra ngoài cảm giác mà chỉ bản thân biết, để người bên cạnh nhìn thấy được. Gắn sau tính từ chỉ cảm giác như 欲しい、怖い (bỏ 「い」) → 欲しがる、怖がる “(trông có vẻ) muốn có, sợ”; gắn sau 「たい」 chỉ mong muốn → たがる “(trông có vẻ) muốn làm”. Vì vậy muốn có đồ vật thì dùng 欲しがっている, muốn làm việc gì thì dùng động từ thể ます (bỏ ます) + たがっている."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “muốn, mong”",
+          "note": "Đều diễn tả “muốn làm”",
           "items": [
             {
-              "id": "te-hoshii",
-              "diff": "たがる là người khác tự mình muốn làm; てほしい là người nói mong người khác làm.",
+              "id": "tai",
+              "diff": "Đều có nghĩa “muốn làm”; たい là mong muốn trong lòng mình, nói thẳng ra; たがる là nhìn từ bên ngoài thấy người khác muốn làm.",
               "this": [
                 {
-                  "tag": "Đứa trẻ tự muốn",
-                  "tr": "Trẻ con lúc nào cũng muốn ra ngoài chơi."
+                  "tag": "Người khác · nhìn thấy được",
+                  "tr": "Em trai muốn mua trò chơi mới."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tôi mong đứa trẻ làm",
-                  "tr": "Tôi mong con ra ngoài chơi."
+                  "tag": "Bản thân · trong lòng",
+                  "tr": "Tôi muốn mua trò chơi mới."
                 }
               ],
-              "explain": "Nhìn xem ai là người “muốn”: chủ ngữ (đứa trẻ) tự muốn làm → たがる; người nói mong người khác làm, người làm được biểu thị bằng 「に」 (子どもに) → てほしい. Thấy 「〜に〜てほしい」 thì người muốn làm không phải chính người đó."
+              "explain": "Xem ai muốn: 「私は」 nói mong muốn trong lòng mình → たい (hỏi đối phương “bạn có muốn… không” cũng dùng たい); người thứ ba như 「弟は」, không thấy được trong lòng nghĩ gì, chỉ nhìn qua lời nói, hành động mới biết → たがる, thường dùng 「たがっている」. Khi nói về người khác cũng có thể dùng 「〜たいと言っている」, thuật lại たい như lời người đó nói."
             }
           ]
         }
@@ -10710,72 +10655,82 @@
             {
               "id": "ttara",
               "title": "〜ったら (nhắc đến ai đó)",
-              "diff": "Thể た của động từ＋ら là “nếu…／sau khi…”; danh từ＋ったら là nhắc đến ai đó, mang sự bất mãn hoặc bất lực.",
+              "diff": "Động từ thể た + ら là “nếu… / sau khi…”; danh từ + ったら là nhắc đến ai đó, mang ý bất mãn hoặc bất lực.",
               "this": [
                 {
-                  "tag": "Thể た của động từ · điều kiện",
-                  "tr": "Đợi mẹ về rồi mình ăn cơm nhé."
+                  "tag": "Động từ thể た · điều kiện",
+                  "tr": "Mẹ về thì mình ăn cơm nhé."
                 }
               ],
               "that": [
                 {
-                  "tag": "Danh từ · nhắc đến ai đó",
-                  "tr": "Mẹ tôi thật là, lại tự tiện vào phòng tôi nữa rồi."
+                  "tag": "Danh từ · nhắc đến ai",
+                  "tr": "Mẹ tôi thật là, lại tự ý vào phòng tôi nữa rồi."
                 }
               ],
-              "explain": "Nhìn phía trước 「ったら」: là thể た của động từ (帰った＋ら), phía sau là dự định tiếp theo → điều kiện “đợi… thì…”; là danh từ như tên người, cách gọi (お母さん＋ったら), phía sau thường là lời phàn nàn → “nói đến ai đó thì thật là”, không liên quan đến điều kiện. Trong khẩu ngữ còn hay kêu riêng một câu 「もう、お母さんったら！」."
+              "explain": "Xem phía trước 「ったら」: là động từ thể た (帰った + ら), phía sau là việc định làm tiếp theo → điều kiện “khi… thì…”; là danh từ như tên người, cách xưng hô (お母さん + ったら), phía sau thường là lời phàn nàn → “nói đến ai đó thì thật là”, không liên quan đến điều kiện. Trong văn nói còn hay chỉ kêu một câu 「もう、お母さんったら！」."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều có thể diễn tả điều kiện “nếu…” hoặc “khi…”",
+          "sense": 1,
+          "note": "Đều diễn tả “nếu”",
           "items": [
             {
               "id": "ba-conditional",
-              "diff": "Sau たら có thể đi với nhờ vả, ý chí; ば nhấn mạnh “thỏa mãn điều kiện thì sẽ…”, khi phía trước là hành động thì phía sau không đi với nhờ vả được.",
+              "title": "〜ば (điều kiện giả định)",
+              "diff": "Đều có nghĩa “nếu”; たら có phạm vi dùng rộng nhất, thông dụng nhất trong văn nói; ば đặt trọng tâm vào “chỉ cần có điều kiện này”, khi vế trước là hành động thì vế sau không thể là lời nhờ vả.",
               "this": [
                 {
-                  "tag": "Phía sau là nhờ vả",
-                  "tr": "Đến ga thì gọi điện cho tôi nhé."
+                  "tag": "たら · thông dụng trong văn nói",
+                  "tr": "Nếu có thời gian thì giúp tôi một tay nhé."
                 }
               ],
               "that": [
                 {
-                  "tag": "Điều kiện → kết quả",
-                  "tr": "Đi thẳng con đường này là sẽ ra đến ga."
+                  "tag": "ば · chỉ cần có điều kiện",
+                  "tr": "Chỉ cần có thời gian thì giúp tôi một tay nhé."
                 }
               ],
               "wrong": {
-                "why": "Khi vế trước là hành động như 「着く」, sau ば không đi với nhờ vả được, phải nói 「着いたら」"
+                "why": "Vế trước là hành động như 「着く」, vế sau là lời nhờ vả thì ば không tự nhiên, phải nói 「着いたら」"
               },
-              "explain": "Nhìn nửa sau: nhờ vả, ý chí kiểu 「てください」「〜たい」「〜よう」 → dùng たら; nửa sau là kết quả “thỏa mãn điều kiện thì sẽ xuất hiện” (chỉ đường, quy luật, phương pháp) → ば rất tự nhiên (たら cũng được)."
+              "explain": "Khi vế trước là trạng thái như 「ある」「安い」, cả hai đều có thể đi với lời nhờ vả: たら thoải mái, thông dụng nhất trong văn nói; ば đặt trọng tâm vào “chỉ cần thỏa mãn điều kiện này”. Khi vế trước là hành động như 「着く」「来る」, vế sau là nhờ vả, ý chí như 「〜てください」「〜たい」「〜よう」 thì chỉ dùng được たら."
             },
             {
               "id": "nara",
-              "diff": "たら là sau khi việc phía trước thành hiện thực thì mới làm; なら tiếp nhận chủ đề để đưa lời khuyên, việc phía sau có thể xảy ra “trước”.",
+              "title": "〜なら (nếu là… thì)",
+              "diff": "Đều có nghĩa “nếu”; たら là tự mình đặt ra một điều kiện; なら tiếp lời đối phương vừa nói hoặc điều đã biết, rồi bày tỏ thái độ.",
               "this": [
                 {
-                  "tag": "Sau khi đến",
-                  "tr": "Đến Kyoto rồi, tôi muốn đi ngắm chùa."
+                  "tag": "Tự đặt điều kiện",
+                  "tr": "Nếu rẻ thì tôi mua."
                 }
               ],
               "that": [
                 {
-                  "tag": "Trước khi đi · lời khuyên",
-                  "tr": "Nếu đi Kyoto thì nên đặt khách sạn trước nhé."
+                  "tag": "Tiếp lời đối phương",
+                  "tr": "Nếu rẻ đến thế thì tôi mua."
                 }
               ],
-              "explain": "Nhìn xem việc ở nửa sau làm vào lúc nào: ngắm chùa thì phải đến Kyoto rồi mới làm → 行ったら (thành hiện thực trước rồi mới làm); đặt khách sạn là chuẩn bị trước khi xuất phát → 行くなら (lấy “đi Kyoto” làm tiền đề, khuyên trước). Trước なら thường là chủ đề đối phương vừa nhắc đến."
-            },
+              "explain": "Xem vế trước có phải đang tiếp lời đối phương không: tự mình đặt ra điều kiện “(đến lúc đó) nếu rẻ” → たら; đối phương vừa nói, hoặc đã biết là như vậy, dùng 「そんなに」「それ」 tiếp lời rồi bày tỏ thái độ → なら, mang sắc thái “nếu bạn đã nói vậy”. Cách nối cũng khác: たら dùng thể た (安かったら), なら gắn thẳng sau thể thường (安いなら、雨なら)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều diễn tả “hễ… thì…”",
+          "items": [
             {
               "id": "to-quotation",
               "title": "〜と (hễ… là)",
-              "diff": "Sau たら có thể đi với lời rủ rê, dự định; sau と chỉ đi được với kết quả tự nhiên sẽ xảy ra.",
+              "diff": "Sau たら có thể là lời rủ rê, dự định; sau と chỉ có thể là kết quả tự nhiên xảy ra.",
               "this": [
                 {
-                  "tag": "Phía sau là lời rủ",
-                  "tr": "Đến mùa xuân thì cùng đi ngắm hoa nhé."
+                  "tag": "Đi với lời rủ",
+                  "tr": "Đến mùa xuân thì mình cùng đi ngắm hoa nhé."
                 }
               ],
               "that": [
@@ -10785,26 +10740,9 @@
                 }
               ],
               "wrong": {
-                "why": "Sau と không đi với lời rủ rê, ý chí được"
+                "why": "Sau と không thể là lời rủ rê, ý chí"
               },
-              "explain": "Nửa câu đầu giống nhau, hãy nhìn nửa sau: kiểu “A vừa xảy ra thì B sẽ xuất hiện” như thay đổi mùa, thao tác máy móc, quy luật tự nhiên → と; nửa sau là lời rủ rê, nhờ vả, ý chí kiểu 「〜よう」「〜てください」「〜たい」 → chỉ dùng được たら."
-            },
-            {
-              "id": "toki-when",
-              "diff": "たら mang tính điều kiện, nói “đợi… thành hiện thực thì…”; とき chỉ cho biết thời gian.",
-              "this": [
-                {
-                  "tag": "Tương lai · điều kiện",
-                  "tr": "Lần tới sang Nhật, tôi muốn leo núi Phú Sĩ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Quá khứ · thời gian",
-                  "tr": "Năm ngoái khi sang Nhật, tôi đã leo núi Phú Sĩ."
-                }
-              ],
-              "explain": "Nhìn từ chỉ thời gian và cuối câu: 「今度」＋ dự định, nhờ vả kiểu 「〜たい」「〜てください」 → thường dùng たら, nghĩa là “đợi A thành hiện thực thì làm B”; 「去年」＋ sự thật trong quá khứ → とき, chỉ nói rõ là lúc nào."
+              "explain": "Vế trước giống nhau, hãy xem vế sau: kết quả hễ đến lúc là tất yếu xuất hiện như 「桜が咲く」 → と (たら cũng được); vế sau là lời rủ như 「一緒に花見に行こう」, hoặc nhờ vả, ý chí → chỉ dùng được たら."
             }
           ]
         }

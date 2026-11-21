@@ -10068,61 +10068,54 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Nominalizing さ is close to み and こと (all turn words into nouns); sentence-final さ is close to よ (both add an assertive tone at the end)",
+          "sense": 2,
+          "note": "Both mean “the quality of …” and turn an adjective into a noun",
           "items": [
             {
               "id": "mi-nominal",
-              "thisTitle": "〜さ (nominalizer)",
-              "diff": "さ is an objective degree that can be measured and adjusted; み is something sensed by the tongue or the heart, and only attaches to a few words.",
+              "thisTitle": "〜さ (quality)",
+              "diff": "さ talks about degree, “how sweet”, which can be compared and adjusted; み talks about the taste or sensation itself that you actually perceive.",
               "this": [
                 {
-                  "tag": "Sweetness level · measurable",
-                  "tr": "Adjust the sweetness with the amount of sugar."
+                  "tag": "さ · degree",
+                  "tr": "This cake is just the right sweetness."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sweet taste",
-                  "tr": "If you chew it well, you can taste the sweetness of the rice."
+                  "tag": "み · the taste you notice",
+                  "tr": "This cake has the sweetness of fruit."
                 }
               ],
-              "explain": "Look at whether it's about “amount” or “sensation”: a degree you can adjust or compare by how much (甘さ, 高さ, 重さ) → さ; something tasted in the mouth or felt in the heart (甘み, 苦み, 悲しみ, 楽しみ) → み. Almost every adjective can take さ, but only a few words can take み."
-            },
+              "explain": "Both sentences are about the cake’s sweetness. Look at what follows: if it judges how sweet it is, with degree words like 「ちょうどいい」「控えめ」「足りない」 → 甘さ; if it describes the taste itself that comes through, with 「〜がある」「〜が広がる」 → 甘み. Almost every adjective can take さ, but only a few words such as 甘い、苦い、重い、深い can take み."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 7,
+          "note": "Both mean “I heard that …”",
+          "items": [
             {
-              "id": "koto-nominalizer",
-              "thisTitle": "〜さ (nominalizer)",
-              "diff": "さ extracts just the quality itself (kindness, size); こと turns the whole “the fact that…” into a noun.",
+              "id": "n-datte",
+              "thisTitle": "〜ってさ (passing on what you heard)",
+              "diff": "ってさ casually passes on something you heard, with a slightly offhand “that’s what they say” feel; んだって is the ordinary spoken way to report hearsay, neutral in tone.",
               "this": [
                 {
-                  "tag": "The quality itself",
-                  "tr": "I was moved by his kindness."
+                  "tag": "ってさ · casually passing it on",
+                  "tr": "I heard tomorrow’s game is canceled."
                 }
               ],
               "that": [
                 {
-                  "tag": "The fact",
-                  "tr": "Everyone knows that he's kind."
+                  "tag": "んだって · ordinary hearsay",
+                  "tr": "I heard tomorrow’s game is canceled."
                 }
               ],
-              "explain": "Look at the form before it: an adjective drops 「い」 and takes さ (優しさ), with 「の」 before it (彼の優しさ); a full clause takes こと (彼が優しいこと), referring to the fact “he is kind”. Things that move you or that you like usually take さ; things you know or forget usually take こと."
-            },
-            {
-              "id": "yo-particle",
-              "thisTitle": "〜さ (sentence-final tone)",
-              "diff": "よ clearly tells the listener some information; さ casually draws a conclusion, with a breezy “isn't it obvious?” feel.",
-              "this": [
-                {
-                  "tag": "Playing it down",
-                  "tr": "That kind of thing? Easy."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Telling the listener",
-                  "tr": "This problem is easy, you know. Give it a try."
-                }
-              ],
-              "explain": "Look at the speaker's intent: wanting the listener to know or to do something (やってみて) → よ; tossing off a conclusion yourself, a bit bravado-like and nonchalant → さ. さ attaches directly to nouns and na-adjective stems (簡単さ) without 「だ」; it's very casual, so don't use it with superiors."
+              "wrong": {
+                "why": "A noun before んだって needs 「な」: 中止なんだって"
+              },
+              "explain": "Both sentences pass on news you heard. First, the connection: ってさ attaches directly to a plain-form sentence (中止だってさ); んだって needs 「ん」 before it, and nouns and な-adjectives take 「な」 (中止なんだって). Then the tone: ってさ is more casual, as if you are just passing along what someone said; んだって is the ordinary way to say it, and for a slightly politer version you can say 「んですって」."
             }
           ]
         }
@@ -10138,7 +10131,7 @@
             {
               "id": "causative",
               "title": "〜せる・〜させる (make/let others do)",
-              "diff": "させる means making someone else do something; add 「ください／もらう／いただく」 after it, and the person being “let” do it becomes yourself.",
+              "diff": "させる means having someone else do something; add 「ください／もらう／いただく」 after it, and the person who gets “let” do it becomes yourself.",
               "this": [
                 {
                   "tag": "せてください · please let me",
@@ -10146,7 +10139,7 @@
                 },
                 {
                   "tag": "せてもらう · was allowed to",
-                  "tr": "I had a fever, so I (was allowed to) take the day off work."
+                  "tr": "I had a fever, so I was allowed to take the day off work."
                 },
                 {
                   "tag": "せていただく · humbly doing",
@@ -10155,11 +10148,11 @@
               ],
               "that": [
                 {
-                  "tag": "Making others do",
-                  "tr": "My mom made my little brother clean his room."
+                  "tag": "Having others do it",
+                  "tr": "My mother made my little brother clean the room."
                 }
               ],
-              "explain": "Look at what follows the causative: the causative alone (掃除させた) → making someone else do it, and the doer is the little brother before 「に」; causative + ください／もらう／いただく → the doer is the speaker: asking “let me do it”, being allowed “I got to do it”, or formally announcing “allow me to do it”."
+              "explain": "Look at what follows the causative: the causative alone (掃除させた) → having someone else do it, and the doer is the little brother before 「に」; causative + ください／もらう／いただく → the doer is the speaker: a request “let me do it”, having been allowed “I was let do it”, or a formal announcement “allow me to do it”."
             }
           ]
         },
@@ -10170,20 +10163,20 @@
             {
               "id": "te-mo-ii",
               "thisTitle": "〜させてください",
-              "diff": "させてください carries an eager “please let me do it”; てもいいですか just asks whether it's OK and leaves the decision to the other person.",
+              "diff": "させてください carries an eager “please let me do it”; てもいいですか just asks whether it is OK and leaves the decision to the other person.",
               "this": [
                 {
-                  "tag": "Let me · eager",
-                  "tr": "Please, by all means, let me do that job."
+                  "tag": "Please let me · eager",
+                  "tr": "That role, please let me play it."
                 }
               ],
               "that": [
                 {
-                  "tag": "Asking if OK",
-                  "tr": "May I do that job?"
+                  "tag": "Asking if it’s OK",
+                  "tr": "That role, may I play it?"
                 }
               ],
-              "explain": "Both ask for permission; look at the tone: 「ぜひ」 + させてください is actively pushing for it, meaning “I really want to do it”, and is also common when asking for time off (休ませてください); てもいいですか just asks if it's OK, and if the answer is no, so be it. Note the doer: the causative sentence uses 「私に」, while てもいい uses 「私が」."
+              "explain": "Both sentences ask for permission; look at the tone: 「ぜひ」 + させてください actively pushes for it, meaning “I really want to do it”, and is also often used to ask for time off (休ませてください); てもいいですか just checks whether it is OK, and if the answer is no, that’s that. Note the doer: the causative sentence uses 「私に」, while てもいい uses 「私が」."
             }
           ]
         }
@@ -10194,7 +10187,70 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both can list several things side by side, or give a reason",
+          "sense": 1,
+          "note": "Both mean “… and also …”, listing several things in the same direction",
+          "items": [
+            {
+              "id": "adj-te-connect",
+              "title": "〜くて (linking い-adjectives)",
+              "diff": "し sets out the good points one by one, as if “counting the merits”, and hints there are more; くて／で links two qualities into one smooth description.",
+              "this": [
+                {
+                  "tag": "し · setting out point by point",
+                  "tr": "This shop is cheap, and the food is good too."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "くて · smooth description",
+                  "tr": "This shop is cheap and the food is good."
+                }
+              ],
+              "wrong": {
+                "why": "A な-adjective needs 「だ」 before し: 静かだし"
+              },
+              "explain": "The two sentences mean the same; the difference is in feel and connection. Feel: し presents each feature as a separate point, sounding like you are listing merits, and often pairs with 「も」; くて simply links two qualities in a flowing description. Connection: し attaches to the plain form (安いし、静かだし), with nouns and な-adjectives taking 「だ」; くて is a form of い-adjectives, while な-adjectives and nouns use 「で」 (静かで)."
+            },
+            {
+              "id": "soreni-conjunction",
+              "diff": "し follows the plain form and lists the next feature within the same sentence; それに goes at the start of a sentence and adds one more after the previous sentence has ended. The two are often combined: 「〜し、それに〜」.",
+              "this": [
+                {
+                  "tag": "Linking mid-sentence",
+                  "tr": "This room is spacious and close to the station, too."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Adding at the start",
+                  "tr": "This room is spacious. And it’s close to the station, too."
+                }
+              ],
+              "explain": "Look at the position: attached to a plain form while the sentence continues → し; the previous sentence already ended with 「。」 and a new sentence starts by adding one more point → それに. The two are also often used together: 「広いし、それに駅にも近い」."
+            },
+            {
+              "id": "tari-tari",
+              "diff": "し presents each thing you did as a fact, one by one; たり〜たり just picks a few as examples, in a relaxed tone.",
+              "this": [
+                {
+                  "tag": "し · one by one",
+                  "tr": "On Sunday I cleaned, and I went shopping too."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "たり · giving a few examples",
+                  "tr": "On Sunday I did some cleaning, some shopping and so on."
+                }
+              ],
+              "explain": "Both sentences list what was done on Sunday. Look at the form and the feel: たり〜たり just picks a few things as examples, with a relaxed “doing this and that” feel, and must end with 「する」; し presents each thing as a complete fact, often pairs with 「も」, and sounds like stressing “I did this, and I did that too”."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both express a reason: “because …”",
           "items": [
             {
               "id": "kara-from",
@@ -10213,61 +10269,6 @@
                 }
               ],
               "explain": "Look at how many reasons there are and how firmly they're stated: listing them one by one like 「安いし、近いし」, or giving just one while hinting at others → し; presenting a single decisive reason → から. When turning someone down, し (今日は雨だし…) is softer than から."
-            },
-            {
-              "id": "adj-te-connect",
-              "diff": "し lists points one by one as reasons, often followed by a conclusion; くて / で just lists things neutrally.",
-              "this": [
-                {
-                  "tag": "Listing reasons → conclusion",
-                  "tr": "This place is cheap and the food's good, so I come here a lot."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "くて · neutral listing",
-                  "tr": "This place is cheap and the food's good."
-                },
-                {
-                  "tag": "で · neutral listing",
-                  "tr": "This place is quiet and clean."
-                }
-              ],
-              "explain": "Look for a “so…” conclusion afterward: several good points used as reasons to lead to a judgment like “so I come often” → し; just describing what something is like → くて (na-adjectives use で: 静かで). They also attach differently: し follows the plain form (安いし, 静かだし), while くて / で are conjugated forms of the adjective."
-            },
-            {
-              "id": "soreni-conjunction",
-              "diff": "し links reasons within a sentence; それに goes at the start of a sentence to add one more, and the two are often combined: 「〜し、それに〜」.",
-              "this": [
-                {
-                  "tag": "Linking mid-sentence",
-                  "tr": "This room is spacious and close to the station, too."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Adding at sentence start",
-                  "tr": "This room is spacious. Besides, it's close to the station, too."
-                }
-              ],
-              "explain": "Look at the position: after a plain form, with the sentence not yet finished → し; the previous sentence already ended with 「。」 and a new sentence adds one more point at the start → それに. They're also often used together: 「広いし、それに駅にも近い」."
-            },
-            {
-              "id": "tari-tari",
-              "diff": "し presents facts as reasons leading to a conclusion; たり〜たり just gives examples of actions done.",
-              "this": [
-                {
-                  "tag": "Facts → conclusion",
-                  "tr": "On Sunday I cleaned and went shopping, so I'm worn out."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Example actions",
-                  "tr": "On Sunday I did some cleaning, some shopping and so on."
-                }
-              ],
-              "explain": "Look for a conclusion afterward: たり〜たりする just gives examples of what was done, and the sentence ends there; し is often followed by a conclusion or feeling drawn from it (疲れた). し can also list qualities (広いし、明るい), while たり mainly lists actions."
             }
           ]
         }
@@ -10283,20 +10284,20 @@
             {
               "id": "de-irassharu",
               "thisTitle": "いらっしゃる",
-              "diff": "いらっしゃる means “be (somewhere), come, go”; でいらっしゃる, with 「で」 in front, means “to be (something)” (the respectful form of である).",
+              "diff": "いらっしゃる means “to be (somewhere), come, go”; with 「で」 in front, でいらっしゃる means “to be …” (the honorific of である).",
               "this": [
                 {
-                  "tag": "Be there (いる)",
-                  "tr": "Professor Tanaka is in the lab right now."
+                  "tag": "Being there (いる)",
+                  "tr": "Professor Tanaka is in his office right now."
                 }
               ],
               "that": [
                 {
-                  "tag": "Be someone (である)",
-                  "tr": "Excuse me, are you Professor Tanaka?"
+                  "tag": "Being someone (である)",
+                  "tr": "Excuse me, but are you Professor Tanaka?"
                 }
               ],
-              "explain": "Look at the particle before it: place + 「に」 + いらっしゃる → someone is at a place (or comes/goes); noun + 「で」 + いらっしゃる → saying someone “is…”, the respectful version of 「です」 (お元気でいらっしゃいますか is the same usage)."
+              "explain": "Look at the particle before it: place + 「に」 + いらっしゃる → someone is somewhere (or comes, goes); noun + 「で」 + いらっしゃる → saying someone “is …”, the honorific counterpart of 「です」 (お元気でいらっしゃいますか is the same usage)."
             }
           ]
         },
@@ -10305,42 +10306,22 @@
           "note": "Both are respectful language, elevating the other person's action",
           "items": [
             {
-              "id": "o-ni-naru",
-              "diff": "Verbs like 見る, 言う, 来る that have special respectful forms use ご覧になる, おっしゃる, いらっしゃる; 「お〜になる」 is only for verbs without one.",
-              "this": [
-                {
-                  "tag": "Special form",
-                  "tr": "Sensei, have you already seen this movie?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Ordinary verb",
-                  "tr": "Sensei, have you already read this book?"
-                }
-              ],
-              "wrong": {
-                "why": "見る has a special respectful form, 「ご覧になる」"
-              },
-              "explain": "First ask whether the verb has a special respectful form: 見る→ご覧になる, 言う→おっしゃる, 行く・来る・いる→いらっしゃる, 食べる→召し上がる, する→なさる; if it does, don't use お〜になる (✗お見になる). Verbs like 読む, 書く, 帰る have no special form → お読みになる."
-            },
-            {
               "id": "passive",
-              "title": "〜れる・〜られる (respectful)",
-              "diff": "おっしゃる and いらっしゃる are special respectful forms — highly respectful and unambiguous; 言われる and 来られる are only mildly respectful and easily confused with the passive.",
+              "title": "〜れる・〜られる (honorific)",
+              "diff": "おっしゃる and いらっしゃる are special honorific verbs: highly respectful and impossible to misread; 言われる and 来られる are lighter in respect and easy to confuse with the passive.",
               "this": [
                 {
-                  "tag": "Special respectful form",
-                  "tr": "That's what the president said."
+                  "tag": "Special honorific verb",
+                  "tr": "The company president said so."
                 }
               ],
               "that": [
                 {
-                  "tag": "Mildly respectful · confusable",
-                  "tr": "That's what the president said."
+                  "tag": "Light respect · easily confused",
+                  "tr": "The company president said so."
                 }
               ],
-              "explain": "「言われました」 can be respectful (the president said it) or passive (I was told / someone said it to me) — check whether 「が」 or 「に」 comes before it; おっしゃる has only one meaning. いらっしゃる / 来られる and 召し上がる / 食べられる work the same way. When speaking to clients or superiors, prefer the special forms."
+              "explain": "「言われました」 can be honorific (the president said it) or passive (someone said it to me); you have to check whether 「が」 or 「に」 comes before it. おっしゃる has only one meaning. The same goes for いらっしゃる／来られる and 召し上がる／食べられる. When speaking to clients or superiors, prefer the special forms."
             }
           ]
         }
@@ -10350,80 +10331,69 @@
       "id": "sorede-conjunction",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Both go at the start of a sentence, picking up from the previous one and leading into what follows",
+          "kind": "look",
+          "note": "それで ↔ それから: only the ending で／から differs",
           "items": [
             {
-              "id": "soshite-conjunction",
-              "diff": "それで clearly marks what came before as the cause and what follows as the result; そして only means it happened next.",
+              "id": "sorekara-conjunction",
+              "diff": "それで means “so”: the previous sentence is the cause; それから means “and then”: the previous sentence is just what happened first. On the surface only the ending で／から differs.",
               "this": [
                 {
-                  "tag": "Because → so",
-                  "tr": "The rain got heavier. So the game was canceled."
+                  "tag": "Cause → so",
+                  "tr": "It started raining, so I bought an umbrella at a convenience store."
                 }
               ],
               "that": [
                 {
-                  "tag": "Happened next",
-                  "tr": "I opened the door. Then I went inside."
+                  "tag": "Sequence · and then",
+                  "tr": "I arrived at the station, and then I bought an umbrella at a convenience store."
                 }
               ],
-              "explain": "Look for cause and effect: “the rain got heavier” is the reason “the game was canceled” → それで; “open the door → go in” is just a sequence of actions → そして. そして itself carries no “so” meaning."
-            },
+              "explain": "Look at how the two sentences relate: 「雨が降ってきた」 is the reason for buying the umbrella → それで (so); 「駅に着いた」 is just what happened first → それから (and then). Both words start with 「それ」 and differ only in the ending で／から, so they are easy to mix up when reading quickly."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Both mean “so”",
+          "items": [
             {
               "id": "kara-from",
-              "title": "〜から (sentence-initial 「だから」)",
-              "diff": "それで objectively narrates a cause and effect that already happened; だから carries the speaker's judgment and can be followed by commands, requests and intentions.",
+              "title": "〜から (reason)",
+              "diff": "Both mean “so”; それで starts a new sentence and narrates a result that has already happened; から attaches after the reason, and the second half can even be a command, request or intention.",
               "this": [
                 {
-                  "tag": "Narration · already happened",
-                  "tr": "I had a fever yesterday. So I stayed home from school."
+                  "tag": "それで · narrating a result",
+                  "tr": "I was tired, so I went to bed early."
                 }
               ],
               "that": [
                 {
-                  "tag": "Subjective · with command",
-                  "tr": "You have to get up early tomorrow. So go to bed now."
+                  "tag": "から · followed by a command",
+                  "tr": "You’re tired, so go to bed early."
                 }
               ],
               "wrong": {
-                "why": "それで can't be followed by a command or request"
+                "why": "それで is not followed by a command or request"
               },
-              "explain": "Look at the second half: a result that has already happened (休んだ, 中止になった) → both それで and だから work; a command, request or intention like 「〜なさい」, 「〜てください」, 「〜よう」 → only だから."
+              "explain": "Look at the second half: a result that already happened (早く寝た) → both それで and から work (疲れていたから、早く寝た); if the second half is a command, request or intention such as 「〜なさい」「〜てください」「〜よう」 → only から. In form, それで begins a new sentence, while から attaches to the end of the reason clause."
             },
             {
               "id": "sono-tame",
-              "diff": "Both mean “therefore”; それで is more conversational, often used to tell your own experiences; そのため is more written, mostly used in news and reports.",
+              "diff": "Both mean “therefore”; それで is more conversational and mostly used about your own experiences; そのため is more formal and mostly used in news and reports.",
               "this": [
                 {
-                  "tag": "Spoken · telling a story",
+                  "tag": "Spoken · telling an experience",
                   "tr": "I overslept. So I missed the train."
                 }
               ],
               "that": [
                 {
                   "tag": "Written · explaining a cause",
-                  "tr": "There was heavy snow last night. As a result, the trains stopped running."
+                  "tr": "There was heavy snow last night. As a result, the trains stopped."
                 }
               ],
-              "explain": "Look at the style: talking about yourself in conversation (寝坊しちゃって, 〜んだ) → それで; objectively explaining a cause in news, notices or reports (昨夜は大雪だった) → そのため. そのため can also express purpose, “for that purpose”, but それで can't."
-            },
-            {
-              "id": "sorekara-conjunction",
-              "diff": "それで expresses cause and effect, “so”; それから only expresses time order, “and then”, with no cause and effect.",
-              "this": [
-                {
-                  "tag": "Because → so",
-                  "tr": "It started raining. So I bought an umbrella at a convenience store."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Sequence · and then",
-                  "tr": "I got to the station. Then I bought an umbrella at a convenience store."
-                }
-              ],
-              "explain": "Look at whether the previous sentence is the reason for the next: “it started raining” is the reason for buying an umbrella → それで; “arriving at the station” just happened first → それから. In English both could come out as “and then”, but それで always implies cause and effect."
+              "explain": "Look at the register: telling a friend about something that happened to you (寝坊しちゃって、〜んだ) → それで; objectively stating a cause in news, notices or reports (昨夜は大雪だった) → そのため."
             }
           ]
         }
@@ -10438,62 +10408,62 @@
           "items": [
             {
               "id": "sono-ue",
-              "diff": "それに is more conversational and light, often used to add a reason; その上 is more written, with an escalating “good on top of good, bad on top of bad” feel.",
+              "diff": "Both mean “besides”; それに is more conversational, casually adding one more point; その上 is slightly more formal, with a “not only that, but also …” tone.",
               "this": [
                 {
-                  "tag": "Spoken · adding a reason",
-                  "tr": "This room is spacious, and it's cheap too, you know."
+                  "tag": "Spoken · casually adding one more",
+                  "tr": "This room is close to the station, and besides, the rent is cheap too."
                 }
               ],
               "that": [
                 {
-                  "tag": "Written · to make matters worse",
-                  "tr": "I got lost. On top of that, it even started to rain."
+                  "tag": "Slightly formal · not only that",
+                  "tr": "This room is close to the station. On top of that, the rent is also cheap."
                 }
               ],
-              "explain": "Look at the style and tone: casually adding one more reason or good point in conversation (〜し、それに〜よ) → それに; in narration, stressing that things keep piling up, often with 「〜まで」 or 「さらに」 → その上."
+              "explain": "Both sentences add a second merit to the first. Look at the setting and tone: casually adding one more point while chatting with a friend (〜し、それに〜よ) → それに; formally stressing “not only that” when introducing or explaining something → その上, which is somewhat more formal than それに."
             },
             {
               "id": "soshite-conjunction",
-              "diff": "それに adds one more reason on top of others and is more conversational; そして adds information smoothly.",
+              "diff": "Both mean “and also”; それに has an add-on “and there’s one more thing” tone and leans conversational; そして just smoothly moves on to the next item and is slightly more formal.",
               "this": [
                 {
-                  "tag": "Adding a reason",
-                  "tr": "I'm not going today. It's raining, and besides, I'm tired."
+                  "tag": "Adding on · conversational",
+                  "tr": "He is kind. Besides, he’s smart too."
                 }
               ],
               "that": [
                 {
-                  "tag": "Smooth addition",
-                  "tr": "He's kind. And he's smart, too."
+                  "tag": "Smooth link · slightly formal",
+                  "tr": "He is kind. And he is also smart."
                 }
               ],
-              "explain": "Look at whether reasons are being given: adding reasons one by one to explain “why”, often together with 「〜し」 → それに; just introducing the features of a person or thing → そして."
+              "explain": "Both sentences describe his good points; look at the tone: それに has an add-on “and one more thing” feel, is common in conversation, and is often preceded by 「〜し」; そして just moves smoothly to the next item, is more common in writing and speeches, and can also stand before the last item in a list (日本語と英語、そして中国語)."
             },
             {
               "id": "sorekara-conjunction",
-              "diff": "それに adds one more reason or evaluation, “besides”; それから is just “one more thing”.",
+              "diff": "それに adds one more point, “besides”, to reasons or evaluations; それから just means “one more thing”.",
               "this": [
                 {
                   "tag": "One more reason",
-                  "tr": "Let's go with this room. It's spacious, and besides, it's close to the station."
+                  "tr": "Let’s go with this room. It’s spacious, and besides, it’s close to the station."
                 }
               ],
               "that": [
                 {
-                  "tag": "One more thing",
-                  "tr": "Buy some milk on your way back. Oh, and eggs too, please."
+                  "tag": "One more task",
+                  "tr": "Go buy some milk. Oh, and eggs too, please."
                 }
               ],
-              "explain": "Look at what's being added: one more good point or reason to persuade someone → それに, often used with 「〜し」; one more errand or item to buy → それから."
+              "explain": "Look at what is being added: one more merit or reason, to persuade someone → それに, often used with 「〜し」; one more errand or item to buy → それから."
             },
             {
               "id": "shi",
-              "diff": "それに goes at the start of a sentence to add one more point; し links reasons within a sentence, and the two are often combined: 「〜し、それに〜」.",
+              "diff": "それに goes at the start of a sentence and adds one more item in a new sentence; し follows the plain form and links similar items within the same sentence. The two are often combined: 「〜し、それに〜」.",
               "this": [
                 {
-                  "tag": "Adding at sentence start",
-                  "tr": "This room is spacious. Besides, it's close to the station, too."
+                  "tag": "Adding at the start",
+                  "tr": "This room is spacious. And it’s close to the station, too."
                 }
               ],
               "that": [
@@ -10502,7 +10472,7 @@
                   "tr": "This room is spacious and close to the station, too."
                 }
               ],
-              "explain": "Look at the position: the previous sentence already ended with 「。」 and a new sentence adds one more point at the start → それに; after a plain form, with the sentence not yet finished → し. They're also often used together: 「広いし、それに駅にも近い」."
+              "explain": "Look at the position: the previous sentence already ended with 「。」 and a new sentence starts by adding one more point → それに; attached to a plain form while the sentence continues → し. The two are also often used together: 「広いし、それに駅にも近い」."
             }
           ]
         }
@@ -10517,20 +10487,20 @@
           "items": [
             {
               "id": "ni-suginai",
-              "diff": "すぎる means “exceeded the limit” = too…; にすぎない means “doesn't exceed” = merely….",
+              "diff": "すぎる means “going past the limit” = too …; にすぎない means “not going past” = nothing more than ….",
               "this": [
                 {
-                  "tag": "Exceeds the limit · too…",
+                  "tag": "Past the limit · too …",
                   "tr": "I ate too many sweets, and now my stomach hurts."
                 }
               ],
               "that": [
                 {
-                  "tag": "Doesn't exceed · merely",
-                  "tr": "I'm merely a student."
+                  "tag": "Not beyond · merely",
+                  "tr": "I am nothing more than a student."
                 }
               ],
-              "explain": "Both come from 「過ぎる」 (to pass beyond): going past the limit → すぎる, “too…, overdo”, attached to a verb's masu-stem or an adjective stem; adding the negative to make にすぎない turns it into “doesn't go beyond this level” → “is merely…”, preceded by a noun and often used with 「ただ」. Check for a negative 「ない」 after it to tell them apart."
+              "explain": "Both come from 「過ぎる」 (to pass beyond): passing the limit → すぎる, “too …, overdo”, attached to the ます形 stem of verbs or the stem of adjectives; adding the negative gives にすぎない, “not going beyond this level” → “nothing more than …”, which follows nouns and often goes with 「ただ」. Check whether a negative 「ない」 follows and you can tell them apart."
             }
           ]
         },
@@ -10564,69 +10534,61 @@
       "id": "sukoshimo-nai",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from 「も」 — “not even the smallest amount”",
-          "items": [
-            {
-              "id": "mo-also",
-              "title": "〜も (not a single one)",
-              "diff": "少しも is used for degree and uncountable amounts (money, time, feelings); 一人も and 一つも are used for countable things.",
-              "this": [
-                {
-                  "tag": "Amount · not at all",
-                  "tr": "There's not a bit of money left in my wallet."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Countable · not a single one",
-                  "tr": "There's not a single person in the classroom."
-                }
-              ],
-              "explain": "Both are “smallest amount + も + negative” = not even the least. Look at whether the thing can be counted: money, time, degree and other things you can't count “how many” of → 少しも; people and things you can count one by one → 一人も, 一つも, 一回も."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Both pair with a negative to mean “not at all”",
+          "note": "All mean “not at all”",
           "items": [
             {
               "id": "zenzen-nai",
-              "diff": "少しも must be followed by a negative; in casual speech, 全然 can even be followed by an affirmative (全然大丈夫).",
+              "title": "〜ぜんぜん〜ない (degree)",
+              "diff": "Both mean “not at all”; 全然 is the most common, casual way to say it in speech; 少しも is slightly more formal and firmer, stressing “not even a little”.",
               "this": [
                 {
-                  "tag": "Always negative",
-                  "tr": "This movie wasn't interesting at all."
+                  "tag": "Slightly formal · firm",
+                  "tr": "This book wasn’t the least bit interesting."
                 }
               ],
               "that": [
                 {
-                  "tag": "Casual · with affirmative",
-                  "tr": "Don't worry, it's totally fine."
+                  "tag": "Spoken · most common",
+                  "tr": "This book was totally boring."
                 }
               ],
-              "wrong": {
-                "why": "少しも must be followed by a negative"
-              },
-              "explain": "Both mean “not at all”, but 少しも can only be used with a negative; in casual speech among friends, 全然 can also take an affirmative (全然大丈夫, 全然平気), which is best avoided in formal settings. 少しも is slightly more formal than 全然."
+              "explain": "The two sentences mean the same; look at the setting and tone: casually talking with friends → 全然 sounds most natural; in writing or to stress “not even a little” → 少しも, which is firmer. Note that 少しも is always followed by a negative; in casual speech 全然 also appears in phrases like 「全然大丈夫」, but that is a different usage."
             },
             {
               "id": "chittomo-nai",
-              "diff": "ちっとも is very colloquial and often carries dissatisfaction or complaint; 少しも is neutral and can be used in formal settings too.",
+              "diff": "ちっとも is very colloquial and often carries dissatisfaction or complaint; 少しも is neutral and can also be used in formal situations.",
               "this": [
                 {
-                  "tag": "Neutral · formal OK",
-                  "tr": "At that time, I wasn't scared at all."
+                  "tag": "Neutral · OK in formal use",
+                  "tr": "At that time, I was not the least bit afraid."
                 }
               ],
               "that": [
                 {
                   "tag": "Spoken · complaining",
-                  "tr": "I've been waiting for thirty minutes already, and the bus just won't come."
+                  "tr": "I’ve been waiting a whole thirty minutes, and the bus just won’t come."
                 }
               ],
-              "explain": "Look at the style and feeling: complaining to a friend, “I've waited so long and it still hasn't come” → ちっとも is the most natural; narrating in 「です・ます」 or writing → 少しも fits better, as ちっとも is rarely used in formal settings."
+              "explain": "Look at the register and the feeling: complaining among friends that something “still hasn’t come after all this time” → ちっとも sounds most natural; narrating in です・ます style or in writing → 少しも fits better, as ちっとも is rarely used in formal situations."
+            },
+            {
+              "id": "mo-also",
+              "title": "〜も (not even one)",
+              "diff": "Both mean “not even a little”; 少しも vaguely says “a little”; 「一円も」-type “one + counter + も” names a concrete smallest unit, so it is more specific.",
+              "this": [
+                {
+                  "tag": "General · not a bit",
+                  "tr": "There’s not a bit of money left in my wallet."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "One + counter · not one yen",
+                  "tr": "There’s not a single yen left in my wallet."
+                }
+              ],
+              "explain": "Both sentences mean “not even the smallest amount”. Look at what is used as the smallest amount: 少しも vaguely says “a little” and works for money, time or feelings; 「一円も」「一人も」「一つも」 use “one + counter” to name a concrete smallest unit, which sounds more specific, like saying “not even one yen”. When counting people or things, 「一人も」「一つも」 are usually used."
             }
           ]
         }
@@ -10637,64 +10599,47 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「たい」 or 「がる」 — たがる = たい + がる",
+          "note": "Both come from 「がる」, whose basic meaning is “showing an inner feeling on the outside”",
           "items": [
             {
-              "id": "tai",
-              "diff": "たがる says someone else seems to want to do something; たい says you yourself want to.",
-              "this": [
-                {
-                  "tag": "Someone else",
-                  "tr": "My little brother wants to buy a new game."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Yourself",
-                  "tr": "I want to buy a new game."
-                }
-              ],
-              "explain": "Look at the subject: a third person like a little brother or friend → you can't see inside other people's minds, so you can only describe how they appear → たがっている (usually in the ている form); me (or “you” in questions) → たい."
-            },
-            {
               "id": "garu-third-person",
-              "diff": "たがる is 「たい」 + がる and attaches to a verb's masu-stem; がる attaches to adjectives like 「欲しい・怖い」.",
+              "diff": "たがる is 「たい」 + がる: someone else seems to want to do something; 欲しがる and 怖がる are adjective + がる: someone else seems to want something or be afraid.",
               "this": [
                 {
-                  "tag": "Verb + たがる",
+                  "tag": "たい + がる",
                   "tr": "My little brother wants to go play outside."
                 }
               ],
               "that": [
                 {
-                  "tag": "Adjective + がる",
+                  "tag": "欲しい + がる",
                   "tr": "My little brother wants a new toy."
                 }
               ],
-              "explain": "Look at the word before it: a verb (遊ぶ→遊び) → たがる; an adjective (欲しい, 怖い, 寂しい) → drop 「い」 and add がる (欲しがる, 怖がる). To say someone else “wants something”, use 欲しがっている; “wants to do something”, use 〜たがっている."
+              "explain": "Both rely on 「がる」: its basic meaning is showing a feeling that only the person themselves knows, so that others can see it. Attached to feeling adjectives like 欲しい or 怖い (dropping 「い」) → 欲しがる、怖がる, “(seem to) want, be afraid”; attached to the desire form 「たい」 → たがる, “(seem to) want to do”. So for wanting a thing use 欲しがっている, and for wanting to do something use the verb ます形 stem + たがっている."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both mean “want, wish”",
+          "note": "Both mean “want to do”",
           "items": [
             {
-              "id": "te-hoshii",
-              "diff": "たがる is someone else wanting to do something themselves; てほしい is the speaker wanting someone else to do something.",
+              "id": "tai",
+              "diff": "Both mean “want to do”; たい is your own inner wish, stated directly; たがる is seeing from the outside that someone else wants to do something.",
               "this": [
                 {
-                  "tag": "Kids want it themselves",
-                  "tr": "Kids always want to play outside."
+                  "tag": "Someone else · seen from outside",
+                  "tr": "My little brother wants to buy a new game."
                 }
               ],
               "that": [
                 {
-                  "tag": "I want the kids to",
-                  "tr": "I want my kids to play outside."
+                  "tag": "Yourself · inner wish",
+                  "tr": "I want to buy a new game."
                 }
               ],
-              "explain": "Look at who is doing the “wanting”: the subject (the kids) wants to do it themselves → たがる; the speaker wants someone else to do it, with the doer marked by 「に」 (子どもに) → てほしい. When you see 「〜に〜てほしい」, the one who wants it isn't the person doing it."
+              "explain": "Look at who wants it: 「私は」, your own inner wish → たい (also used to ask the listener “do you want to …?”); a third person like 「弟は」, whose mind you cannot see, so you can only tell from what they say and do → たがる, usually as 「たがっている」. For other people you can also say 「〜たいと言っている」, reporting たい as something they said."
             }
           ]
         }
@@ -10710,72 +10655,82 @@
             {
               "id": "ttara",
               "title": "〜ったら (speaking of someone)",
-              "diff": "Verb ta-form + ら is “if… / after…”; noun + ったら brings up someone, with annoyance or exasperation.",
+              "diff": "Verb た形 + ら means “if … / after …”; noun + ったら brings up a person with annoyance or exasperation.",
               "this": [
                 {
-                  "tag": "Verb ta-form · condition",
-                  "tr": "When Mom gets home, let's eat."
+                  "tag": "Verb た形 · condition",
+                  "tr": "Once Mom gets home, let’s eat."
                 }
               ],
               "that": [
                 {
                   "tag": "Noun · bringing someone up",
-                  "tr": "Honestly, my mom — she came into my room without asking again."
+                  "tr": "Honestly, my mom went into my room without asking again."
                 }
               ],
-              "explain": "Look before 「ったら」: if it's a verb ta-form (帰った + ら), followed by what happens next → a condition, “when…, then…”; if it's a noun like a name or form of address (お母さん + ったら), usually followed by a complaint → “honestly, that person…”, with nothing to do with conditions. In speech it's also often used alone as an exclamation: 「もう、お母さんったら！」."
+              "explain": "Look at what comes before 「ったら」: a verb た形 (帰った + ら), followed by what will happen next → a condition, “once …, then …”; a noun such as a name or a form of address (お母さん + ったら), usually followed by a complaint → “honestly, that person …”, with nothing to do with conditions. In speech people also often just exclaim 「もう、お母さんったら！」."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both can express a condition, “if…”, or “when…”",
+          "sense": 1,
+          "note": "Both mean “if”",
           "items": [
             {
               "id": "ba-conditional",
-              "diff": "たら can be followed by requests and intentions; ば focuses on “once the condition is met, … will happen”, and when the first half is an action, it can't be followed by a request.",
+              "title": "〜ば (hypothetical condition)",
+              "diff": "Both mean “if”; たら is the most versatile and the most common in speech; ば puts the focus on “as long as this condition holds”, and when the first half is an action, it cannot be followed by a request.",
               "this": [
                 {
-                  "tag": "Followed by a request",
-                  "tr": "Please call me when you get to the station."
+                  "tag": "たら · common in speech",
+                  "tr": "If you have time, please give me a hand."
                 }
               ],
               "that": [
                 {
-                  "tag": "Condition → result",
-                  "tr": "If you go straight down this road, you'll come out at the station."
+                  "tag": "ば · as long as the condition holds",
+                  "tr": "As long as you have time, please give me a hand."
                 }
               ],
               "wrong": {
-                "why": "When the first half is an action like 「着く」, ば can't be followed by a request; say 「着いたら」 instead"
+                "why": "When the first half is an action like 「着く」 and the second half is a request, ば sounds unnatural; say 「着いたら」"
               },
-              "explain": "Look at the second half: a request or intention like 「てください」, 「〜たい」, 「〜よう」 → use たら; a result that “appears once the condition is met” (directions, general rules, methods) → ば is natural (たら works too)."
+              "explain": "When the first half is a state such as 「ある」 or 「安い」, both can be followed by a request: たら is casual and the most common in speech; ば puts the focus on “as long as this condition is met”. When the first half is an action such as 「着く」 or 「来る」 and the second half is a request or intention such as 「〜てください」「〜たい」「〜よう」, only たら works."
             },
             {
               "id": "nara",
-              "diff": "With たら, you do the next thing “after” the first thing happens; なら picks up a topic to give advice, and the next thing can happen “before”.",
+              "title": "〜なら (if that’s the case)",
+              "diff": "Both mean “if”; with たら you set up a condition yourself; なら picks up what the other person just said or something already known, then gives your response.",
               "this": [
                 {
-                  "tag": "After arriving",
-                  "tr": "When I get to Kyoto, I want to see some temples."
+                  "tag": "Setting up a condition yourself",
+                  "tr": "If it’s cheap, I’ll buy it."
                 }
               ],
               "that": [
                 {
-                  "tag": "Before going · advice",
-                  "tr": "If you're going to Kyoto, you should book a hotel in advance."
+                  "tag": "Picking up what was said",
+                  "tr": "If it’s that cheap, I’ll buy it."
                 }
               ],
-              "explain": "Look at when the second half happens: seeing temples happens only after you reach Kyoto → 行ったら (it happens first, then you act); booking a hotel is preparation before leaving → 行くなら (taking “going to Kyoto” as given and advising in advance). What comes before なら is usually a topic the other person just brought up."
-            },
+              "explain": "Look at whether the first half is picking up the other person’s words: you set up a condition yourself, “(when the time comes) if it’s cheap” → たら; the other person just said it, or it is already known, and you pick it up with 「そんなに」 or 「それ」 before responding → なら, with a “since you say so” feel. The connection also differs: たら uses the た形 (安かったら), while なら attaches directly to the plain form (安いなら、雨なら)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “when …, then …”",
+          "items": [
             {
               "id": "to-quotation",
-              "title": "〜と (as soon as)",
-              "diff": "たら can be followed by invitations and plans; と can only be followed by a result that happens naturally.",
+              "title": "〜と (whenever …, then)",
+              "diff": "たら can be followed by an invitation or a plan; と can only be followed by a result that naturally happens.",
               "this": [
                 {
-                  "tag": "Followed by invitation",
-                  "tr": "When spring comes, let's go see the cherry blossoms together."
+                  "tag": "Followed by an invitation",
+                  "tr": "When spring comes, let’s go cherry-blossom viewing together."
                 }
               ],
               "that": [
@@ -10785,26 +10740,9 @@
                 }
               ],
               "wrong": {
-                "why": "と can't be followed by an invitation or intention"
+                "why": "と cannot be followed by an invitation or intention"
               },
-              "explain": "The first half is the same; look at the second half: like seasonal change, operating machines or laws of nature, “as soon as A happens, B follows” → と; the second half is an invitation, request or intention like 「〜よう」, 「〜てください」, 「〜たい」 → only たら."
-            },
-            {
-              "id": "toki-when",
-              "diff": "たら carries a condition, “once … happens, then…”; とき just states the time.",
-              "this": [
-                {
-                  "tag": "Future · condition",
-                  "tr": "Next time I go to Japan, I want to climb Mt. Fuji."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Past · time",
-                  "tr": "When I went to Japan last year, I climbed Mt. Fuji."
-                }
-              ],
-              "explain": "Look at the time word and the sentence ending: 「今度」 + a plan or request like 「〜たい」 or 「〜てください」 → usually たら, meaning “once A happens, do B”; 「去年」 + a past fact → とき, just saying when it was."
+              "explain": "The first halves are the same, so look at the second half: a result that inevitably appears when the time comes, like 「桜が咲く」 → と (たら also works); if the second half is an invitation like 「一緒に花見に行こう」, or a request or intention → only たら."
             }
           ]
         }
