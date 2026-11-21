@@ -40200,28 +40200,29 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Cada mitad de んばかり tiene su familia: 「ん」 viene del clásico 「む」 (ir a…), como んとする・んがため; 「ばかり」 indica grado (casi hasta el punto de…), como とばかりに",
+          "note": "Ambas vienen del auxiliar clásico 「む」 — originalmente «ir a, querer…» (conjetura, intención), que pasó a sonar 「ん」",
           "items": [
             {
               "id": "n-to-suru",
-              "diff": "んばかり es «como si fuera a…», sin que llegue a ocurrir; んとする es «estar a punto de…», y de verdad va a ocurrir.",
+              "diff": "んばかり significa «casi como si fuera a…»: es solo una exageración, no llega a ocurrir; んとする significa «estar a punto de…»: realmente va a ocurrir.",
+              "explain": "El ん de ambos lados es el clásico 「む (ir a…)」. む＋ばかり (hasta el punto de…) → «hasta el punto de parecer que va a…», solo sirve para describir lo intenso de una apariencia: el barco solo estaba escorado (傾いていた), no se hundió. む＋とする → ese «ir a…» se está haciendo realidad, es decir, «estar a punto de…»; suele ir con 「今まさに」, y el barco de verdad está a punto de hundirse.",
               "this": [
                 {
                   "tag": "Casi · exageración",
-                  "tr": "Suplicó como si fuera a echarse a llorar."
+                  "tr": "El barco estaba tan escorado que parecía que iba a hundirse en cualquier momento."
                 }
               ],
               "that": [
                 {
                   "tag": "A punto · ocurre de verdad",
-                  "tr": "En este preciso momento el sol está a punto de ponerse."
+                  "tr": "En ese preciso instante, el barco estaba a punto de hundirse."
                 }
-              ],
-              "explain": "ん＝el clásico 「む (ir a)」. Si sigue ばかり (casi hasta el punto de…) → solo describe la apariencia: ella no llegó a llorar; si sigue とする → la acción de verdad está a punto de producirse, y suele ir con 「今まさに」. んばかりの＋sustantivo y んばかりだ al final también son exageraciones."
+              ]
             },
             {
               "id": "n-ga-tame",
               "diff": "んばかり describe una apariencia: «casi como si fuera a…»; んがため expresa un propósito: «con tal de… (a toda costa)».",
+              "explain": "El ん de ambos lados es el clásico 「む (ir a…)」; fíjate en lo que viene después. む＋ばかり (hasta el punto de…) → «hasta el punto de ir a…», describe con exageración lo intenso de un sonido o un sentimiento: la sala no se partió de verdad (割れんばかりの拍手). む＋が＋ため (el が clásico equivale a 「の」) → «con el fin de ir a…», es decir, un propósito; la segunda parte es lo que se hace para lograrlo (手段を選ばない).",
               "this": [
                 {
                   "tag": "Casi · describe el grado",
@@ -40233,35 +40234,18 @@
                   "tag": "Con tal de · propósito",
                   "tr": "Con tal de ganar, no repara en medios."
                 }
-              ],
-              "explain": "Es el mismo 「ん (ir a)」; fíjate en lo que sigue: ばかり → «casi hasta el punto de…», describe la fuerza de un sonido o un sentimiento (割れんばかりの拍手); が＋ため → «con tal de…», y la segunda parte es lo que se hace para lograrlo (手段を選ばない)."
-            },
-            {
-              "id": "to-bakari-ni",
-              "diff": "んばかりに va tras un verbo: «casi hacer cierto gesto»; とばかりに va tras una frase: «como diciendo…».",
-              "this": [
-                {
-                  "tag": "Verbo → casi lo hace",
-                  "tr": "Se disculpó casi restregando la cabeza contra el suelo."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Frase → como diciendo",
-                  "tr": "El encargado miraba el reloj una y otra vez, como diciendo «¡vete ya!»."
-                }
-              ],
-              "explain": "Fíjate en lo que va delante de ばかりに: raíz de la forma ない del verbo＋ん (こすりつけん, 泣かん) → casi llega a hacer ese gesto; una frase entre 「」＋と → expresa el sentido de esa frase con gestos o actitud, sin llegar a decirla. と言わんばかりに funciona igual."
+              ]
             }
           ]
         },
         {
           "kind": "look",
-          "note": "んばかりに ↔ たばかりに: solo cambia la letra de delante",
+          "note": "んばかりに ↔ たばかりに ↔ とばかりに: solo cambia el carácter que va antes de ばかりに",
           "items": [
             {
               "id": "bakari-ni",
               "diff": "んばかりに es «como si fuera a…»; たばかりに es «solo por haber… (acabó mal)».",
+              "explain": "Fíjate en lo que va delante de ばかりに: raíz de la forma ない＋ん (上がらん, 泣かん) → describe con exageración una apariencia que no llegó a darse; forma た (言った) → explica una causa, y la segunda parte siempre es un mal resultado (〜てしまった), a menudo con arrepentimiento.",
               "this": [
                 {
                   "tag": "ん → casi",
@@ -40273,31 +40257,48 @@
                   "tag": "た → solo por",
                   "tr": "Por decir una cosa de más, hice que ella se enfadara."
                 }
+              ]
+            },
+            {
+              "id": "to-bakari-ni",
+              "diff": "んばかりに va tras un verbo: «casi hacer cierto gesto»; とばかりに va tras una frase: «como diciendo…».",
+              "explain": "Fíjate en el carácter que va antes de ばかりに: ん (precedido de la raíz de la ない形 de un verbo, こすりつけん) → casi llega a hacer esa acción, describe con exageración la apariencia; と (precedido de una frase, 「早く帰れ」) → no lo dice en voz alta, pero con gestos y actitud expresa lo que significa esa frase. と言わんばかりに pertenece a este segundo caso.",
+              "this": [
+                {
+                  "tag": "ん → casi lo hace",
+                  "tr": "Se disculpó casi restregando la cabeza contra el suelo."
+                }
               ],
-              "explain": "Fíjate en lo que va delante de ばかりに: raíz de la forma ない＋ん (上がらん, 泣かん) → describe con exageración una apariencia que no llegó a darse; forma た (言った) → explica una causa, y la segunda parte siempre es un mal resultado (〜てしまった), a menudo con arrepentimiento."
+              "that": [
+                {
+                  "tag": "Frase → como diciendo",
+                  "tr": "El encargado miraba el reloj una y otra vez, como diciendo «¡vete ya!»."
+                }
+              ]
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas son comparaciones exageradas: «igual que si…»",
+          "note": "Ambas significan «estar casi a punto de…»",
           "items": [
             {
-              "id": "ka-no-you-da",
-              "diff": "んばかり recalca el grado: «a punto ya de…»; かのようだ es «como si…», y suele expresar que la apariencia contradice la realidad.",
+              "id": "sou-da-appearance",
+              "title": "〜そうだ (estar a punto de…)",
+              "diff": "Significan lo mismo, «a punto de…»; んばかり es una expresión escrita y exagerada, y そうだ es la forma cotidiana, que solo juzga por lo que se ve.",
+              "explain": "Las dos frases funcionan y significan lo mismo. En la conversación diaria se usa そうだ (泣き出しそう), que solo juzga por la apariencia que algo «está a punto de…»; んばかり es lengua escrita, con un toque de exageración que recalca lo extremo de algo, y se usa sobre todo en descripciones de novelas y reportajes. Cuando algo nunca podría ocurrir de verdad y es pura exageración (割れんばかりの拍手: la sala no se va a partir), se usa normalmente んばかり; no se dice 「割れそうな拍手」. Conexión: そうだ va con la raíz de la ます形 (泣き出し), んばかり con la raíz de la ない形 (泣き出さ).",
               "this": [
                 {
-                  "tag": "Casi · grado extremo",
-                  "tr": "Tenía cara de estar a punto de echarse a llorar."
+                  "tag": "Escrito · exageración",
+                  "tr": "El niño perdido buscaba a su madre con cara de estar a punto de echarse a llorar."
                 }
               ],
               "that": [
                 {
-                  "tag": "Como si · contrario a la realidad",
-                  "tr": "Ponía cara de no saber nada."
+                  "tag": "Cotidiano · juzga por la apariencia",
+                  "tr": "El niño perdido buscaba a su madre con cara de ir a echarse a llorar en cualquier momento."
                 }
-              ],
-              "explain": "Fíjate en lo que va delante: raíz de la forma ない del verbo＋ん (泣き出さん) → dice que una acción «está a punto de ocurrir», recalcando la intensidad del sentimiento o del grado; una oración en forma llana＋かのよう (何も知らない) → algo que en realidad no es cierto (en realidad ella sí lo sabe), para mostrar el contraste entre apariencia y realidad."
+              ]
             }
           ]
         }
@@ -40313,6 +40314,7 @@
             {
               "id": "n-to-suru",
               "diff": "んがため dice «con tal de…», y le sigue lo que se hace para ello; んとする dice «estar a punto de, intentar…», y no expresa propósito por sí mismo.",
+              "explain": "Las dos frases solo se diferencian en が＋ため y と＋して: en んがため, la segunda parte es «lo que se hace con ese fin» (必死に働いた); んとする／んとして solo dice «a punto de, intentar hacer», y le sigue el desarrollo o el resultado de la acción (命を落とした). ん es en ambos el clásico 「む (ir a)」; hoy se dirían 「〜ために」 y 「〜ようとして」.",
               "this": [
                 {
                   "tag": "Con tal de · propósito",
@@ -40324,12 +40326,12 @@
                   "tag": "Intentar · intención",
                   "tr": "Intentando proteger a su familia, perdió la vida."
                 }
-              ],
-              "explain": "Las dos frases solo se diferencian en が＋ため y と＋して: en んがため, la segunda parte es «lo que se hace con ese fin» (必死に働いた); んとする／んとして solo dice «a punto de, intentar hacer», y le sigue el desarrollo o el resultado de la acción. ん es en ambos el clásico 「む (ir a)」; hoy se dirían 「〜ために」 y 「〜ようとして」."
+              ]
             },
             {
               "id": "n-bakari",
               "diff": "んがため expresa un propósito: «con tal de…»; んばかり describe una apariencia: «casi como si fuera a…».",
+              "explain": "El ん de ambos lados es el clásico 「む (ir a…)」; fíjate en lo que sigue a ん. む＋が＋ため (el が clásico equivale a 「の」) → «con el fin de ir a…», es decir, un propósito; la segunda parte es la acción realizada para ese fin (毎日練習を重ねた). む＋ばかり (hasta el punto de…) → «hasta el punto de parecer que va a…», solo describe con exageración la apariencia; lo que hizo de verdad es la acción que sigue (喜んだ): no llegó a saltar. んがための＋sustantivo y んばかりの＋sustantivo se distinguen igual.",
               "this": [
                 {
                   "tag": "Con tal de · sigue un esfuerzo",
@@ -40341,8 +40343,7 @@
                   "tag": "Casi · describe la apariencia",
                   "tr": "Ganó el partido y se alegró tanto que casi da un salto."
                 }
-              ],
-              "explain": "Fíjate en lo que sigue a ん: が＋ため → la segunda parte es la acción realizada para ese fin (練習を重ねた); ばかり → solo describe con exageración la apariencia: no llegó a saltar. んがための＋sustantivo y んばかりの＋sustantivo se distinguen igual."
+              ]
             }
           ]
         },
@@ -40353,6 +40354,7 @@
             {
               "id": "tame-ni",
               "diff": "ために es el «para» más corriente; んがため es un registro escrito y rígido, con una determinación fuerte de «a toda costa».",
+              "explain": "Las dos son «para». Al hablar y en textos normales se usa ために; んがため es una forma escrita de corte clásico, y suele ir seguida de acciones desesperadas como 「手段を選ばない」 o 「〜までした」. Ojo con la conexión: ために va con la forma de diccionario (生きる) y んがため con la raíz de la forma ない (生き＋ん; する → せんがため).",
               "this": [
                 {
                   "tag": "Intenso · a toda costa",
@@ -40364,12 +40366,12 @@
                   "tag": "Propósito corriente",
                   "tr": "Hago ejercicio todos los días para vivir con salud."
                 }
-              ],
-              "explain": "Las dos son «para». Al hablar y en textos normales se usa ために; んがため es una forma escrita de corte clásico, y suele ir seguida de acciones desesperadas como 「手段を選ばない」 o 「〜までした」. Ojo con la conexión: ために va con la forma de diccionario (生きる) y んがため con la raíz de la forma ない (生き＋ん; する → せんがため)."
+              ]
             },
             {
               "id": "beku",
               "diff": "べく es un «para» escrito y sereno; んがため expresa una determinación más violenta, a menudo con el matiz despectivo de «sin reparar en medios».",
+              "explain": "Las dos son el «para» escrito. べく se usa mucho en noticias y documentos oficiales para fines legítimos (調査が進められている); んがため es más violento y se usa a menudo para criticar que «con tal de lograrlo se hizo incluso lo que no se debía» (事実と違う広告). Conexión: べく va con la forma de diccionario (する → すべく) y んがため con la raíz de la forma ない (売ら＋ん).",
               "this": [
                 {
                   "tag": "Sin reparar en medios · despectivo",
@@ -40381,8 +40383,7 @@
                   "tag": "Neutro · fin legítimo",
                   "tr": "Se está llevando a cabo una investigación para esclarecer la causa del accidente."
                 }
-              ],
-              "explain": "Las dos son el «para» escrito. べく se usa mucho en noticias y documentos oficiales para fines legítimos (調査が進められている); んがため es más violento y se usa a menudo para criticar que «con tal de lograrlo se hizo incluso lo que no se debía» (事実と違う広告). Conexión: べく va con la forma de diccionario (する → すべく) y んがため con la raíz de la forma ない (売ら＋ん)."
+              ]
             }
           ]
         }
@@ -40397,41 +40398,45 @@
           "items": [
             {
               "id": "you-to-suru",
-              "diff": "Significan lo mismo, «estar a punto de…, intentar…»; んとする es lengua clásica y solo se usa por escrito o en discursos.",
+              "title": "〜(よ)うとする (estar a punto de…)",
+              "thisTitle": "〜んとする (estar a punto de…)",
+              "diff": "Ambas significan «estar a punto de…»; んとする es lengua clásica, solo para textos escritos y discursos, y ようとする es la forma moderna de uso general.",
+              "explain": "El ん de 「昇らん」 y el う de 「昇ろう」 vienen ambos del clásico 「む (ir a…)」: 「〜むとす」 significaba originalmente «estar a punto de…», y la lengua escrita lo conservó como んとする; en el habla, む pasó además a う (昇らむ → 昇らう → 昇ろう), y así surgió ようとする. Por eso las dos frases significan lo mismo: «estar a punto de…». En la conversación y en textos normales se usa ようとする; んとする solo aparece en descripciones literarias, discursos y comentarios, y suena solemne. Conexión: んとする va con la raíz de la ない形 (昇ら＋ん), y する se convierte en 「せんとする」.",
               "this": [
                 {
                   "tag": "Clásico · escrito",
-                  "tr": "El sol poniente está a punto de hundirse en este preciso momento."
+                  "tr": "En el cielo del este, el sol de la mañana está justo a punto de salir."
                 }
               ],
               "that": [
                 {
                   "tag": "Moderno · uso general",
-                  "tr": "El sol poniente está a punto de ponerse."
+                  "tr": "En el cielo del este, el sol de la mañana está a punto de salir."
                 }
-              ],
-              "explain": "El ん de 「沈まん」 y el う de 「沈もう」 vienen los dos del clásico 「む」, así que ambas frases significan lo mismo. Al hablar y en textos normales se usa ようとする; んとする solo aparece en descripciones literarias, discursos y editoriales, con un tono solemne (新しい時代を切り開かんとする). Conexión: んとする va con la raíz de la forma ない (沈ま＋ん), y する pasa a 「せんとする」."
+              ]
             },
             {
               "id": "n-bakari",
-              "diff": "んとする es «a punto de ocurrir» de verdad; んばかり es una exageración, «casi como si…», que no llega a ocurrir.",
+              "diff": "んとする significa «estar a punto de…»: realmente va a ocurrir; んばかり es una exageración, «casi como si fuera a…»: no llega a ocurrir.",
+              "explain": "El ん de ambos lados es el clásico 「む (ir a…)」. む＋とする → ese «ir a…» se está haciendo realidad, es decir, «estar a punto de…»: de verdad va a ocurrir (幕が開く), y suele ir con 「今まさに」. む＋ばかり (hasta el punto de…) → «hasta el punto de parecer que va a…», es solo una figura: el aplauso fue tan fuerte que casi parte el teatro, pero el teatro no se partió.",
               "this": [
                 {
                   "tag": "De verdad a punto de ocurrir",
-                  "tr": "El partido está a punto de empezar en este preciso momento."
+                  "tr": "El telón está justo a punto de levantarse."
                 }
               ],
               "that": [
                 {
                   "tag": "Exageración · no ocurre",
-                  "tr": "En el momento de ganar, se alegró tanto que casi da un salto."
+                  "tr": "Al caer el telón, el público estalló en un aplauso atronador, como si fuera a partir el teatro."
                 }
-              ],
-              "explain": "Fíjate en si de verdad va a ocurrir: lo que describe んとする está a punto de hacerse realidad (el partido de verdad va a empezar), y suele ir con 「今まさに」; んばかり es una comparación que dice que la intensidad es tal que «casi…»: no llegó a saltar."
+              ]
             },
             {
               "id": "n-ga-tame",
-              "diff": "んとする dice «estar a punto de, intentar hacer»; んがため dice «con tal de hacer», y le sigue la acción emprendida para ello.",
+              "thisTitle": "〜んとする (intentar…)",
+              "diff": "んとする significa «intentar, querer hacer»; んがため significa «con tal de hacer», y le sigue la acción emprendida para ello.",
+              "explain": "El ん de ambos lados es el clásico 「む (ir a…)」: む＋とする → la intención de «ir a hacer…» se convierte en acción, es decir, «intentar…», y le sigue el desarrollo o el resultado de la acción (命を落とした); む＋が＋ため (el が clásico equivale a 「の」) → «con el fin de ir a…», es decir, un propósito; la segunda parte es lo que se hace con ese fin (必死に働いた). Las dos frases solo se diferencian en と＋して y が＋ため.",
               "this": [
                 {
                   "tag": "Intentar · intención",
@@ -40443,8 +40448,7 @@
                   "tag": "Con tal de · propósito",
                   "tr": "Trabajó desesperadamente para proteger a su familia."
                 }
-              ],
-              "explain": "Las dos frases solo se diferencian en と＋して y が＋ため: んとして solo dice «intentar hacer», y le sigue el desarrollo o el resultado de la acción (命を落とした); en んがため, la segunda parte es «lo que se hace con ese fin» (必死に働いた)."
+              ]
             }
           ]
         }
@@ -40461,6 +40465,7 @@
               "id": "nagara",
               "title": "〜ながら (mientras)",
               "diff": "ながら va con la forma ます del verbo: «mientras…»; ながらに solo va con unos pocos sustantivos y conserva el sentido antiguo de «tal como está».",
+              "explain": "El significado es muy parecido; fíjate en lo que va delante de ながら: forma ます del verbo (泣き) → el «mientras…» normal, válido con cualquier verbo; sustantivo (涙, 生まれ, 昔)＋ながらに／ながらの → solo en unas pocas expresiones fijas, escritas y solemnes. Las dos significan «manteniendo ese estado»: hablar manteniendo el llanto＝hablar mientras se llora.",
               "this": [
                 {
                   "tag": "Sustantivo · expresión fija",
@@ -40472,8 +40477,7 @@
                   "tag": "Verbo · mientras",
                   "tr": "Contó cómo fue el accidente mientras lloraba."
                 }
-              ],
-              "explain": "El significado es muy parecido; fíjate en lo que va delante de ながら: forma ます del verbo (泣き) → el «mientras…» normal, válido con cualquier verbo; sustantivo (涙, 生まれ, 昔)＋ながらに／ながらの → solo en unas pocas expresiones fijas, escritas y solemnes. Las dos significan «manteniendo ese estado»: hablar manteniendo el llanto＝hablar mientras se llora."
+              ]
             }
           ]
         },
@@ -40484,19 +40488,19 @@
             {
               "id": "mama-unchanged",
               "diff": "まま se une libremente a todo tipo de palabras y solo dice «sin cambios»; ながらの solo se usa en expresiones fijas como 「昔ながらの」, con nostalgia o aprecio.",
+              "explain": "Las dos frases significan algo parecido; fíjate en la conexión y en el matiz: まま admite 「sustantivo＋の」, la forma た del verbo (靴を履いたまま), etc., y solo dice «sin cambios»; ながらの solo va con unas pocas palabras como 「昔, 生まれ, いつも」, y 「昔ながらの」 lleva el aprecio de «se ha mantenido la tradición, algo valioso».",
               "this": [
                 {
                   "tag": "Expresión fija · con aprecio",
-                  "tr": "En este pueblo se conservan las calles de toda la vida, con su encanto de antaño."
+                  "tr": "Esta calle está llena de tiendas de toda la vida, con encanto tradicional."
                 }
               ],
               "that": [
                 {
                   "tag": "Neutro · tal cual",
-                  "tr": "En este pueblo se conservan las calles exactamente igual que antes."
+                  "tr": "Esta calle está llena de tiendas que siguen igual que antes."
                 }
-              ],
-              "explain": "Las dos frases significan algo parecido; fíjate en la conexión y en el matiz: まま admite 「sustantivo＋の」, la forma た del verbo (靴を履いたまま), etc., y solo dice «sin cambios»; ながらの solo va con unas pocas palabras como 「昔, 生まれ, いつも」, y 「昔ながらの」 lleva el aprecio de «se ha mantenido la tradición, algo valioso»."
+              ]
             }
           ]
         }
@@ -40512,10 +40516,11 @@
             {
               "id": "made-mo-nai",
               "diff": "ないまでも es «aunque no llegue a…, al menos…»; までもない es «no hace falta…».",
+              "explain": "Fíjate primero en lo que va delante de 「まで」: forma ない (言わない)＋までも → primero se menciona un nivel alto que no se alcanza y después siempre viene una exigencia mínima, rebajada (週に一度は); forma de diccionario (する, 言う)＋までもない → la cosa es sencilla u obvia y no hace falta llegar a ese punto. En las dos, まで es «hasta ese punto»: sin llegar a ese punto, al menos… / no hace falta llegar a ese punto. までもなく funciona igual.",
               "this": [
                 {
                   "tag": "Forma ない → al menos",
-                  "tr": "Aunque no sea a diario, al menos llámame una vez por semana."
+                  "tr": "No digo que todos los días, pero al menos llámame una vez a la semana."
                 }
               ],
               "that": [
@@ -40523,31 +40528,31 @@
                   "tag": "Forma de diccionario → no hace falta",
                   "tr": "Estás tan cerca que no hace falta que llames a propósito."
                 }
-              ],
-              "explain": "Fíjate primero en lo que va delante de 「まで」: forma ない (言わない)＋までも → primero se menciona un nivel alto que no se alcanza y después siempre viene una exigencia mínima, rebajada (週に一度は); forma de diccionario (する, 言う)＋までもない → la cosa es sencilla u obvia y no hace falta llegar a ese punto. En las dos, まで es «hasta ese punto»: sin llegar a ese punto, al menos… / no hace falta llegar a ese punto. までもなく funciona igual."
+              ]
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas significan «aunque sea lo mínimo»",
+          "note": "Ambas significan «aunque no llegue a…, al menos…»",
           "items": [
             {
-              "id": "nari-tomo",
-              "diff": "ないまでも primero menciona un nivel alto que no se alcanza y luego rebaja: «al menos…»; なりとも presenta directamente lo mínimo: «aunque sea un poco».",
+              "id": "ni-shite-mo",
+              "title": "〜にしても (aunque…)",
+              "diff": "Las dos frases significan lo mismo; ないまでも es más formal y sirve específicamente para «rebajar» la exigencia a un mínimo; にしても se usa tanto al hablar como al escribir, y además suele ir seguido de críticas o quejas.",
+              "explain": "Las dos frases funcionan y significan lo mismo: primero se menciona un nivel alto que no se alcanza (全額) y luego se rebaja a una exigencia mínima (半分は). ないまでも es más formal y sirve precisamente para «rebajar» así: lo que va delante tiene que ser negativo (言わない, できない), y la segunda parte es siempre una exigencia de nivel más bajo. にしても se usa al hablar y al escribir; delante puede ir algo afirmativo o negativo (忙しいにしても), y la segunda parte no se limita a una exigencia mínima: a menudo es una crítica o una queja (連絡ぐらいはできるはずだ).",
               "this": [
                 {
-                  "tag": "Nivel alto → rebaja",
-                  "tr": "Aunque no me lo devuelvas todo, al menos devuélveme la mitad."
+                  "tag": "Formal · rebajar la exigencia",
+                  "tr": "No digo que todo, pero al menos quiero que me devuelvas la mitad."
                 }
               ],
               "that": [
                 {
-                  "tag": "Solo lo mínimo",
-                  "tr": "Me alegraría poder ser de ayuda, aunque sea un poco."
+                  "tag": "Uso general · concesión",
+                  "tr": "Aunque no sea todo, al menos quiero que me devuelvas la mitad."
                 }
-              ],
-              "explain": "Fíjate en cuántos niveles hay en la oración: con ないまでも hay uno antes y otro después (全額 → 半分), una «rebaja comparando»; なりとも solo va con palabras de cantidad mínima como 「少し, 多少, 一目」, es una forma escrita y formal, y equivale al 「少しでも」 hablado."
+              ]
             }
           ]
         }
@@ -40557,52 +40562,32 @@
       "id": "nai-mono-demo-nai",
       "groups": [
         {
-          "kind": "look",
-          "note": "Las dos son dobles negaciones del tipo 「〜ない＋も＋negación」 y se parecen mucho",
-          "items": [
-            {
-              "id": "nai-tomo-kagiranai",
-              "diff": "ないものでもない es «no es que no (lo haga)», para decir que uno podría aceptar; ないとも限らない es «no se puede descartar que…», para advertir de que algo malo podría pasar.",
-              "this": [
-                {
-                  "tag": "No es que no · acepta a regañadientes",
-                  "tr": "Según las condiciones, no es que no pueda aceptarlo."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "No se puede descartar · prevención",
-                  "tr": "Puede que llueva, así que llevemos paraguas."
-                }
-              ],
-              "explain": "Fíjate en de quién y de qué se habla: ないものでもない suele hablar de uno mismo, que bajo ciertas condiciones «estaría dispuesto» (引き受ける, 許す); en lo hablado también se dice ないでもない; ないとも限らない habla de que fuera «puede pasar algo» (雨が降る, 事故が起きる), y suele seguirle una precaución (〜から, 〜ておこう)."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Ambas significan «no es que no…»: una doble negación que deja margen con suavidad",
           "items": [
             {
               "id": "naku-mo-nai",
-              "diff": "Significan lo mismo; ないものでもない es la más escrita y rígida, y suele expresar disposición con condiciones; なくもない es más coloquial y también sirve para sensaciones: «un poco sí».",
+              "title": "〜なくもない (no es que no…)",
+              "thisTitle": "〜ないものでもない (no es imposible)",
+              "diff": "Significan lo mismo: ceder con condiciones, «no es que no…»; ないものでもない es formal y rígido, なくもない es más coloquial y relajado.",
+              "explain": "Las dos frases significan lo mismo —aceptar a regañadientes y con condiciones, «no es que no…»—, así que se elige según la situación: ないものでもない es más formal y rígido, como quien se pronuncia dándose importancia, y aparece sobre todo en textos y en situaciones formales (お受けしないものでもありません); なくもない es lengua cotidiana y suena más relajado (なくはない es igual).",
               "this": [
                 {
-                  "tag": "Escrito · disposición con condiciones",
+                  "tag": "Formal · dándose importancia",
                   "tr": "Según las condiciones, no es que no podamos colaborar."
                 }
               ],
               "that": [
                 {
-                  "tag": "Coloquial · un poco sí",
-                  "tr": "Ahora que lo dices, sí que me da un poco esa impresión."
+                  "tag": "Coloquial · relajado",
+                  "tr": "Según las condiciones, no es que no pueda colaborar."
                 }
-              ],
-              "explain": "Fíjate en la situación y en el contenido: para negociar condiciones o pronunciarse dándose importancia → ないものでもない (en lo hablado, ないでもない); en la conversación diaria, sobre todo con sensaciones como 「気がする, 分かる」 → なくもない (なくはない es igual), que suena más cercano."
+              ]
             },
             {
               "id": "nai-koto-wa-nai",
               "diff": "Significan lo mismo, «no es que no…»; ないものでもない es más escrito y más rígido.",
+              "explain": "ないことはない es frecuente tanto hablado como escrito, y además sirve para decir que algo «se puede» objetivamente (急げば間に合う); ないものでもない suele ser el hablante cediendo con condiciones, mostrando que «estaría dispuesto» (許す, 引き受ける), con un tono más rígido y escrito.",
               "this": [
                 {
                   "tag": "Escrito · cede con condiciones",
@@ -40614,8 +40599,7 @@
                   "tag": "Frecuente · objetivamente posible",
                   "tr": "Si nos damos prisa, no es que no lleguemos a tiempo."
                 }
-              ],
-              "explain": "ないことはない es frecuente tanto hablado como escrito, y además sirve para decir que algo «se puede» objetivamente (急げば間に合う); ないものでもない suele ser el hablante cediendo con condiciones, mostrando que «estaría dispuesto» (許す, 引き受ける), con un tono más rígido y escrito."
+              ]
             }
           ]
         }
@@ -40626,11 +40610,13 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「限らない」, «no se limita a eso», es decir, «no necesariamente»",
+          "note": "Ambas vienen de 「限る」 — originalmente «fijar un límite, limitar»",
           "items": [
             {
               "id": "to-wa-kagiranai",
+              "title": "〜とは限らない (no necesariamente)",
               "diff": "ないとも限らない va tras una negación: «no se puede descartar que…»; とは限らない va tras una afirmación: «no necesariamente…».",
+              "explain": "「限る」 significa originalmente fijar un límite. 「Pとは限らない」 = no se puede limitar la situación a P → no necesariamente P; sirve para desmontar una suposición (高い物がいい物だ). 「Pないとも限らない」 = ni siquiera se puede asegurar que P no pase → puede que P pase; lleva delante una negación (起きない), sirve para advertir de que algo podría salir mal y suele ir seguido de una precaución (保険に入っておこう).",
               "this": [
                 {
                   "tag": "Negación＋限らない → no se descarta",
@@ -40642,31 +40628,7 @@
                   "tag": "Afirmación＋限らない → no necesariamente",
                   "tr": "Lo caro no es necesariamente bueno."
                 }
-              ],
-              "explain": "Las dos son 「限らない (no necesariamente)」: si va tras una negación (起きない) → «no necesariamente no pasará»＝no se puede descartar, para advertir de que algo puede pasar, y suele seguirle una precaución (〜ておこう); si va tras una afirmación (いい物だ) → no necesariamente es así, para desmontar una idea que se da por sentada."
-            }
-          ]
-        },
-        {
-          "kind": "look",
-          "note": "Las dos son dobles negaciones del tipo 「〜ない＋も＋negación」 y se parecen mucho",
-          "items": [
-            {
-              "id": "nai-mono-demo-nai",
-              "diff": "ないとも限らない es «no se puede descartar que…», para advertir de que algo malo podría pasar; ないものでもない es «no es que no (lo haga)», para decir que uno podría aceptar.",
-              "this": [
-                {
-                  "tag": "No se puede descartar · prevención",
-                  "tr": "Puede que llueva, así que llevemos paraguas."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "No es que no · acepta a regañadientes",
-                  "tr": "Según las condiciones, no es que no pueda aceptarlo."
-                }
-              ],
-              "explain": "Fíjate en de quién y de qué se habla: ないとも限らない habla de que fuera «puede pasar algo» (雨が降る, 事故が起きる), y suele seguirle una precaución (〜から, 〜ておこう); ないものでもない suele hablar de uno mismo, que bajo ciertas condiciones «estaría dispuesto» (引き受ける, 許す); en lo hablado también se dice ないでもない."
+              ]
             }
           ]
         },
@@ -40675,29 +40637,13 @@
           "note": "Ambas significan «puede que pase (algo malo)»",
           "items": [
             {
-              "id": "kanenai",
-              "diff": "かねない es «muy probablemente lleve a un mal resultado», con alta probabilidad; ないとも限らない es solo «no se puede descartar», con baja probabilidad.",
-              "this": [
-                {
-                  "tag": "Baja probabilidad · no se descarta",
-                  "tr": "Es muy raro, pero no se puede descartar que haya un terremoto."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Alta probabilidad · causada por una acción",
-                  "tr": "Si corres tanto, puedes acabar teniendo un accidente."
-                }
-              ],
-              "explain": "Fíjate en lo que va delante: delante de かねない suele haber una acción peligrosa (スピードを出したら), y dice «si sigues así, es muy probable que pase algo», con crítica; ないとも限らない suele ir con 「めったにないが」 o 「念のため」, y dice que la probabilidad es pequeña pero no se puede descartar. La conexión también cambia: かねない va con la raíz de la forma ます (起こし＋かねない)."
-            },
-            {
               "id": "osore-ga-aru",
               "diff": "おそれがある es un aviso objetivo de noticias y comunicados; ないとも限らない es el propio hablante advirtiendo «a lo mejor…».",
+              "explain": "Fíjate en la situación: previsiones del tiempo, noticias y avisos públicos que advierten de forma objetiva (台風の影響で, 川があふれる) → おそれがある; quien habla se avisa a sí mismo o a quienes le rodean, «puede que…, mejor prepararse» → ないとも限らない, que suele ir seguido de 「〜から、〜ておこう」 (薬を持っておこう).",
               "this": [
                 {
                   "tag": "Aviso personal · prepararse",
-                  "tr": "No se puede descartar que te suba la fiebre durante el viaje, así que llévate medicinas."
+                  "tr": "Puede que me dé fiebre durante el viaje, así que llevaré medicinas por si acaso."
                 }
               ],
               "that": [
@@ -40705,8 +40651,7 @@
                   "tag": "Noticias · aviso objetivo",
                   "tr": "Por efecto del tifón, existe riesgo de que el río se desborde."
                 }
-              ],
-              "explain": "Fíjate en la situación: previsiones del tiempo, noticias o comunicados que avisan de forma objetiva → おそれがある; el hablante advirtiéndose a sí mismo o a alguien cercano «a lo mejor…, mejor prepararse» → ないとも限らない, a menudo seguido de 「〜から、〜ておこう」."
+              ]
             }
           ]
         }
@@ -40721,37 +40666,41 @@
           "items": [
             {
               "id": "nai-mono-demo-nai",
-              "diff": "Significan lo mismo; なくもない es más coloquial y suele expresar sensaciones, «un poco sí»; ないものでもない es más escrito y rígido, y suele expresar disposición con condiciones.",
+              "title": "〜ないものでもない (no es imposible)",
+              "thisTitle": "〜なくもない (no es que no…)",
+              "diff": "Significan lo mismo: ceder con condiciones, «no es que no…»; なくもない es más coloquial y relajado, ないものでもない es formal y rígido.",
+              "explain": "Las dos frases significan lo mismo —aceptar a regañadientes y con condiciones, «no es que no…»—, así que se elige según la situación: なくもない es lengua cotidiana y suena relajado (なくはない es igual); ないものでもない es más formal y rígido, como quien se pronuncia dándose importancia, y aparece sobre todo en textos y en situaciones formales.",
               "this": [
                 {
-                  "tag": "Coloquial · un poco sí",
-                  "tr": "Ahora que lo dices, sí que me da un poco esa impresión."
+                  "tag": "Coloquial · relajado",
+                  "tr": "Si me lo pides tanto, no es que no pueda ayudarte."
                 }
               ],
               "that": [
                 {
-                  "tag": "Escrito · disposición con condiciones",
-                  "tr": "Según las condiciones, no es que no podamos colaborar."
+                  "tag": "Formal · dándose importancia",
+                  "tr": "Si se me ruega de ese modo, no me niego a prestar ayuda."
                 }
-              ],
-              "explain": "Fíjate en la situación y en el contenido: en la conversación diaria, sobre todo con sensaciones como 「気がする, 分かる」 → なくもない (なくはない es igual), que suena más cercano; para negociar condiciones o pronunciarse dándose importancia → ないものでもない (en lo hablado, ないでもない)."
+              ]
             },
             {
               "id": "nai-koto-wa-nai",
-              "diff": "ないことはない es más objetivo: «no es imposible»; なくもない lleva más reserva subjetiva: «un poquito sí…».",
+              "title": "〜ないことはない (no es que no se pueda…)",
+              "thisTitle": "〜なくもない (no es que no…)",
+              "diff": "Significan lo mismo, «no es que no se pueda…»; ないことはない es lo más habitual y suena neutro, なくもない es más vago, con un punto de duda.",
+              "explain": "Las dos frases significan lo mismo, «no es que no se pueda…»; solo cambia el tono: ないことはない es la expresión más habitual, neutra y objetiva; なくもない es más vaga, con algo de duda y desgana, como «llegar, llego, pero…» (también se dice なくはない).",
               "this": [
                 {
-                  "tag": "Subjetivo · un poco sí",
-                  "tr": "Ahora que lo dices, en cierto modo entiendo cómo se siente."
+                  "tag": "Más vago · con duda",
+                  "tr": "Si corro ahora, no es imposible que llegue al último tren."
                 }
               ],
               "that": [
                 {
-                  "tag": "Objetivo · no es imposible",
-                  "tr": "Es difícil, pero si nos damos prisa, no es que no lleguemos a tiempo."
+                  "tag": "Habitual · neutro",
+                  "tr": "Si corro ahora, no es que no pueda llegar al último tren."
                 }
-              ],
-              "explain": "Fíjate en si habla de una sensación o de una posibilidad: ないことはない se usa mucho para juzgar de forma objetiva «si se cumplen las condiciones, se puede» (急げば間に合う), con un grado de afirmación bastante alto; なくもない suele ir con sensaciones como 「気がする, 分かる」 y expresa «un poquito sí», con duda y reserva. なくはない es igual."
+              ]
             }
           ]
         }
@@ -40762,11 +40711,12 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Todas vienen del adjetivo clásico 「なし」 (no haber)",
+          "note": "Ambas vienen del adjetivo clásico 「なし」 — originalmente «no haber, sin»",
           "items": [
             {
               "id": "nashi-ni",
               "diff": "なくして solo dice «sin…, sería imposible», y es la más solemne; なしでは significa lo mismo pero es más frecuente; なしに además puede decir «sin…, (lo hizo directamente)».",
+              "explain": "Ambas vienen del adjetivo clásico 「なし (no haber)」: なくして = forma continuativa 「なく」＋して, «en un estado de no tener…» → «sin… (no se puede…)»; なしに／なしでは = 「なし」 usado como sustantivo, seguido de に／では, también «en una situación sin…». Fíjate en la segunda parte: si es negativa (できない, ありえませんでした) → sirven なくして y なしでは, y dicen que lo primero es imprescindible; なくして es más solemne y se usa sobre todo en discursos y textos; si es una acción ya realizada (休んだ) → solo sirve なしに, que significa «hizo… sin antes…», a menudo con tono de reproche.",
               "this": [
                 {
                   "tag": "Sin… sería imposible · solemne",
@@ -40782,39 +40732,40 @@
                   "tag": "なしに · sin…, lo hizo directamente",
                   "tr": "Faltó al trabajo sin avisar."
                 }
-              ],
-              "explain": "「なし」 es simplemente «no haber». Fíjate en la segunda parte: si sigue una negación (できない, ありえない) → sirven なくして y なしでは, que dicen que lo primero es imprescindible; なくして es más solemne y se usa en discursos y textos; si sigue una acción ya realizada (休んだ) → solo vale なしに, que significa «sin pasar por…, hizo…», a menudo con reproche."
+              ]
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas recalcan «A es imprescindible: sin A no hay B»",
+          "note": "Ambas significan «sin…, no se puede…»",
           "items": [
             {
-              "id": "atte-no",
-              "diff": "なくして lo dice en negativo: «sin A no hay B»; あっての lo dice en positivo: «gracias a A existe B».",
+              "id": "nuki-de",
+              "title": "〜抜きでは (sin…, no se puede…)",
+              "diff": "Significan lo mismo, «sin…, no se puede…»; なくして es lengua escrita y solemne, 抜きでは es la forma cotidiana.",
+              "explain": "Las dos frases dicen lo mismo: sin la colaboración local, el festival no puede continuar. なくして es lengua escrita y solemne, frecuente en discursos, cartas de agradecimiento y textos, y el resto de la frase se vuelve cortés a juego (ご協力, 続けられません); 抜きでは es la forma cotidiana, para la conversación. Además, 抜き puede significar «quitar, sin añadir» (わさび抜き), un uso que なくして no tiene.",
               "this": [
                 {
-                  "tag": "En negativo · sigue negación",
-                  "tr": "Sin clientes, el negocio no puede sostenerse."
+                  "tag": "Solemne · discursos, textos",
+                  "tr": "Sin la colaboración de todos los vecinos, este festival no podría continuar."
                 }
               ],
               "that": [
                 {
-                  "tag": "En positivo · sigue sustantivo",
-                  "tr": "El negocio existe gracias a los clientes."
+                  "tag": "Cotidiano · conversación",
+                  "tr": "Sin la ayuda de la gente del lugar, este festival no puede seguir."
                 }
-              ],
-              "explain": "Las dos frases expresan la misma idea; fíjate en la estructura: tras 「AなくしてB」 siempre viene una negación o 「ありえない」; 「AあってのB」 va directamente con un sustantivo y la oración es afirmativa. あっての se usa mucho para agradecer (皆さんあっての私です)."
+              ]
             },
             {
               "id": "nai-koto-ni-wa",
               "diff": "なくして va con sustantivo y recalca que algo es imprescindible; ないことには va con la forma ない del verbo: «si no se hace primero…, no se puede…».",
+              "explain": "Primero fíjate en la palabra de delante: un sustantivo (信頼, 努力, 協力) → なくして, lengua escrita y solemne; un verbo en ない形 (使ってみない, 会わない) → ないことには, más habitual en juicios cotidianos (会ってみないことには分からない).",
               "this": [
                 {
                   "tag": "Sustantivo · solemne",
-                  "tr": "Sin esfuerzo no hay éxito posible."
+                  "tr": "Sin confianza, un negocio no se sostiene."
                 }
               ],
               "that": [
@@ -40822,36 +40773,7 @@
                   "tag": "Verbo · si no se hace primero…",
                   "tr": "Hasta que no lo uses de verdad, no sabrás si es bueno."
                 }
-              ],
-              "explain": "Fíjate primero en la palabra de delante: sustantivo (努力, 協力, 愛) → なくして, lengua escrita y solemne; forma ない del verbo (使ってみない, 会わない) → ないことには, más frecuente en juicios cotidianos (会ってみないことには分からない)."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "nami-par",
-      "groups": [
-        {
-          "kind": "root",
-          "note": "Ambas vienen de 「並ぶ」, cuyo sentido original es «ponerse en fila»",
-          "items": [
-            {
-              "id": "to-narande",
-              "diff": "並み va tras un sustantivo y dice «llegar al nivel de…»; と並んで dice que dos cosas «tienen la misma fama o la misma categoría».",
-              "this": [
-                {
-                  "tag": "Al nivel de…",
-                  "tr": "Cocina a nivel profesional."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Igual de famoso que…",
-                  "tr": "Kioto, igual que Nara, es conocida como una ciudad con muchos templos antiguos."
-                }
-              ],
-              "explain": "Las dos son «ponerse en fila»: 並み va pegado al sustantivo (プロ並み, 平年並み), toma ese sustantivo como referencia y dice que el grado «está a su altura»; 「Aと並んで」 coloca dos cosas una al lado de la otra, igual de famosas o importantes, y luego suele decir lo que tienen en común."
+              ]
             }
           ]
         }
