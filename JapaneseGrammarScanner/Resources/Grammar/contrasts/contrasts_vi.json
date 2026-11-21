@@ -15065,44 +15065,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả có một khuynh hướng nào đó (thường là không tốt)",
+          "note": "Đều diễn tả “có xu hướng…”",
           "items": [
             {
-              "id": "gachi",
-              "diff": "気味 là hiện tại “hơi…”, nhìn mức độ; がち là “hay…, dễ…”, nhìn tần suất.",
+              "id": "keikou-ga-aru",
+              "title": "〜傾向にある（Xu hướng）",
+              "diff": "気味 nói “hơi…”, mức độ nhẹ, mang cảm nhận của người nói, chủ yếu dùng trong khẩu ngữ; 傾向にある nói khách quan về chiều hướng chung, hay gặp trong báo cáo, tin tức.",
               "this": [
                 {
-                  "tag": "Mức độ · hơi",
-                  "tr": "Dạo này công việc hơi bị chậm."
+                  "tag": "Khẩu ngữ · hơi",
+                  "tr": "Doanh thu của cửa hàng này hơi có chiều đi xuống đấy."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tần suất · thường hay",
-                  "tr": "Anh ta lúc nào cũng hay trễ hẹn."
+                  "tag": "Văn viết · xu hướng khách quan",
+                  "tr": "Doanh thu của cửa hàng này đang có xu hướng giảm."
                 }
               ],
-              "explain": "Cùng một chữ 「遅れ」: 遅れ気味 là tiến độ hiện tại hơi chậm; 遅れがち là thường xuyên trễ, lặp đi lặp lại. Nhìn có từ chỉ tần suất như 「いつも」「よく」 không: có → がち; nói trạng thái hiện tại → 気味."
-            },
-            {
-              "id": "ppoi",
-              "diff": "気味 chỉ nói trạng thái không tốt “hơi…” của cơ thể, sự việc; っぽい phạm vi rộng, còn nói được “giống như…”.",
-              "this": [
-                {
-                  "tag": "Cơ thể · hơi",
-                  "tr": "Hôm nay tôi hơi bị cảm nên sẽ ngủ sớm."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Giống như…",
-                  "tr": "Cách nói chuyện của anh ta rất trẻ con."
-                }
-              ],
-              "wrong": {
-                "why": "気味 không diễn tả được “giống như…”"
-              },
-              "explain": "Khi nói cơ thể “hơi bị cảm”, 風邪気味 và 風邪っぽい đều được, 気味 trang trọng hơn; nói người hay vật “giống như…” (子どもっぽい、白っぽい) → chỉ dùng được っぽい."
+              "explain": "Hai câu nói về cùng một xu hướng đi xuống, đổi cho nhau thì ý chính không đổi. Nhìn giọng điệu và hoàn cảnh: trong trò chuyện hằng ngày, nói “hơi không ổn”, hay đi với 「ちょっと」「少し」 → 気味, mức độ nhẹ, mang cảm nhận của người nói, chủ yếu dùng cho thay đổi không tốt; trong báo cáo, tin tức, mô tả khách quan chiều hướng chung, hay đi sau từ Hán như 「減少」「増加」 → 傾向にある, thay đổi tốt hay xấu đều dùng được."
             }
           ]
         }
@@ -15113,7 +15094,8 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “mỗi…”",
+          "sense": 2,
+          "note": "Đều diễn tả “cứ cách…”",
           "items": [
             {
               "id": "oki-ni",
@@ -15131,43 +15113,30 @@
                 }
               ],
               "explain": "Hai câu nói cùng một việc. Nhìn con số đếm cái gì: ごとに là cứ đến mỗi đơn vị này thì làm một lần (２日ごと＝ngày 1, ngày 3, ngày 5…); おきに là để trống ở giữa từng ấy (１日おき＝bỏ trống một ngày). Khi thời gian, khoảng cách khá lớn (10分ごと／10分おき), hai cái thường được coi như nhau."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Đều diễn tả “mỗi lần … đều”",
+          "items": [
             {
               "id": "tabi-ni",
-              "diff": "ごとに nối được số lượng, danh từ, diễn tả mỗi đơn vị hoặc cứ cách bao lâu; たびに chỉ nối động từ hoặc 「danh từ＋の」, nói “mỗi khi… thì”.",
+              "diff": "Đều nói “mỗi lần…”; たびに thông dụng nhất, lần nào cũng xuất hiện cùng một phản ứng; ごとに hơi trang trọng, phía sau thường là sự thay đổi dần dần theo số lần.",
               "this": [
                 {
-                  "tag": "Nối số lượng · cứ cách",
-                  "tr": "Xe buýt cứ 10 phút có một chuyến."
+                  "tag": "Thay đổi dần theo số lần",
+                  "tr": "Mỗi lần ra thi đấu, cô ấy lại mạnh lên một chút."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nối động từ · mỗi khi",
-                  "tr": "Mỗi khi nhìn bức ảnh này, tôi lại nhớ về ngày xưa."
+                  "tag": "Lần nào cũng phản ứng như nhau",
+                  "tr": "Lần nào ra thi đấu, cô ấy cũng căng thẳng đến mất ngủ."
                 }
               ],
-              "wrong": {
-                "why": "たびに không nối trực tiếp với số lượng"
-              },
-              "explain": "Nhìn phía trước nối gì: số lượng (10分、３時間) hoặc danh từ đơn vị (国、クラス) → chỉ dùng được ごとに; động từ (見る、会う) → たびに thông dụng nhất, nhấn mạnh “lần nào cũng…”; khi ごとに nối động từ, phía sau thường là sự thay đổi từng chút một (回を重ねるごとに上手になる)."
-            },
-            {
-              "id": "atari-per",
-              "diff": "ごとに nói hành động lặp lại sau mỗi khoảng; 当たり tính lượng bình quân trên mỗi đơn vị.",
-              "this": [
-                {
-                  "tag": "Hành động lặp lại",
-                  "tr": "Cứ mỗi giờ lại nghỉ giải lao một lần."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Lượng trên mỗi đơn vị",
-                  "tr": "Cái máy này mỗi giờ làm được 100 cái."
-                }
-              ],
-              "explain": "Nhìn phía sau: một hành động lặp lại (休憩を取る、バスが来る) → ごとに; một số lượng (100個、1000円) → 当たり, dùng để tính tỉ lệ, bình quân."
+              "explain": "Cả hai đều nói “mỗi lần…”. Nhìn nửa sau: lần nào cũng xuất hiện cùng một phản ứng, kết quả (緊張して眠れなくなる) → たびに tự nhiên nhất và cũng khẩu ngữ hơn; thay đổi từng chút một khi số lần tăng lên (少しずつ強くなっている) → ごとに rất hợp, giọng hơi trang trọng, lúc này đổi sang たびに cũng được."
             }
           ]
         }
@@ -15176,29 +15145,6 @@
     {
       "id": "hazu-ga-nai",
       "groups": [
-        {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「はず（筈）」 — diễn tả “theo lẽ”",
-          "items": [
-            {
-              "id": "hazu-da",
-              "diff": "はずがない là “theo lẽ tuyệt đối không thể”; はずだ là “theo lẽ thì chắc là”.",
-              "this": [
-                {
-                  "tag": "Theo lẽ không thể",
-                  "tr": "Anh ấy chưa học lần nào, không thể nói được tiếng Nhật."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Theo lẽ chắc là",
-                  "tr": "Anh ấy sống ở Nhật mười năm rồi, theo lẽ chắc là nói được tiếng Nhật."
-                }
-              ],
-              "explain": "Nhìn lý do ở nửa câu trước: lý do rõ ràng không dẫn tới kết luận → はずがない; lý do ủng hộ kết luận → はずだ. Chú ý 「話せないはずだ」 chỉ là “theo lẽ thì chắc không nói được”, yếu hơn nhiều so với はずがない (tuyệt đối không thể)."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Đều diễn tả “không thể nào, không lẽ nào”",
@@ -15218,7 +15164,7 @@
                   "tr": "Luyện tập nhiều đến thế, làm sao mà thua được!"
                 }
               ],
-              "explain": "Hai cái phần lớn thay được cho nhau. Nhìn căn cứ và giọng điệu: suy đoán bình tĩnh dựa trên sự thật, trí nhớ chắc chắn (鍵はかけた) → はずがない tự nhiên hơn; mang cảm xúc tự tin, không phục, trong khẩu ngữ còn hay nói 「〜わけない（じゃん）」 → わけがない."
+              "explain": "Hai cái phần lớn thay được cho nhau. Nhìn căn cứ và giọng điệu: suy đoán bình tĩnh dựa trên sự thật, trí nhớ chắc chắn (鍵はちゃんとかけた) → はずがない tự nhiên hơn; mang cảm xúc tự tin, không phục (あんなに練習したんだから), trong khẩu ngữ còn hay nói 「〜わけない（じゃん）」 → わけがない."
             },
             {
               "id": "kkonai",
@@ -15263,7 +15209,7 @@
                   "tr": "Hôm nay không nóng bằng hôm qua."
                 }
               ],
-              "explain": "Nhìn phía trước ほど và cuối câu: phía trước là một tình huống phóng đại (汗が止まらない), cuối câu là khẳng định → nói mức độ cao đến đâu; phía trước là danh từ dùng để so (昨日), cuối câu là phủ định → so sánh, “không… bằng”."
+              "explain": "Nghĩa gốc của ほど là “mức độ”. Trang này nói thẳng ra mức độ: nóng đến mức 「汗が止まらない」; 「Aほど〜ない」 là “không đạt tới mức của A”, từ đó thành phép so sánh “không … bằng A”. Để phân biệt, nhìn phía trước ほど và cuối câu: phía trước là một tình huống phóng đại (汗が止まらない), cuối câu khẳng định → nói mức độ cao đến đâu; phía trước là danh từ dùng để so sánh (昨日), cuối câu phủ định → “không … bằng”."
             },
             {
               "id": "ba-hodo",
@@ -15271,7 +15217,7 @@
               "this": [
                 {
                   "tag": "Một mức độ nào đó",
-                  "tr": "Tôi đã luyện tập đến mức đau cả tay."
+                  "tr": "Tôi đã luyện tập đến mức tê cả ngón tay."
                 }
               ],
               "that": [
@@ -15280,7 +15226,7 @@
                   "tr": "Càng luyện tập càng giỏi."
                 }
               ],
-              "explain": "Nhìn phía trước ほど có thể 「ば」 của cùng một từ không: すればするほど、高ければ高いほど → càng… càng…, phía sau là kết quả thay đổi theo (上手になる); không có ば, phía trước chỉ là một tình huống (手が痛くなる) → nói mức độ."
+              "explain": "Nghĩa gốc của ほど là “mức độ”. Trang này dùng một tình huống để đánh dấu mức độ đạt tới (指がしびれる = luyện đến mức tê ngón tay); 「〜ば〜ほど」 là “càng đạt tới mức…”: mức độ ở nửa trước tăng lên thì kết quả ở nửa sau cũng tăng theo, nên thành “càng… càng…”. Để phân biệt, xem trước ほど có dạng ば của cùng một từ không: すればするほど → càng… càng…, phía sau là kết quả thay đổi theo (上手になる); không có ば, phía trước chỉ là một tình huống (指がしびれる) → nói mức độ."
             },
             {
               "id": "hodo-wa-nai",
@@ -15297,34 +15243,31 @@
                   "tr": "Không có ngọn núi nào đẹp hơn núi Phú Sĩ."
                 }
               ],
-              "explain": "Nhìn phía trước ほど và cuối câu: phía trước là một tình huống (涙が出る), nói mức độ → ほど; phía trước là một danh từ (富士山), cuối câu là 「〜はない／はいない」 → không có gì… hơn nó, tức là “… nhất”."
+              "explain": "Nghĩa gốc của ほど là “mức độ”. Trang này nói thẳng mức độ đạt tới (涙が出る = đẹp đến mức rơi nước mắt); 「Aほど〜はない」 là “không có gì đạt tới mức của A”, từ đó thành “không có gì … hơn A”, tức là “… nhất”. Để phân biệt, nhìn phía trước ほど và cuối câu: phía trước là một tình huống (涙が出る) → nói mức độ; phía trước là danh từ (富士山), cuối câu là 「〜はない／はいない」 → so sánh nhất."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều có thể dùng ví dụ phóng đại để diễn tả “mức độ”",
+          "note": "Đều diễn tả “đến mức…”",
           "items": [
             {
               "id": "kurai-approximately",
               "title": "〜くらい（Mức độ）",
-              "diff": "Khi nói mức độ hai cái phần lớn thay được cho nhau; khi nêu việc nhỏ tối thiểu (“ít nhất cái này”) thì chỉ dùng được くらい.",
+              "diff": "Khi nói mức độ, hai cái phần lớn thay được cho nhau, ý chính không đổi; ほど hơi trang trọng, くらい（ぐらい） khẩu ngữ hơn.",
               "this": [
                 {
-                  "tag": "Mức độ",
+                  "tag": "ほど · hơi trang trọng",
                   "tr": "Chân đau đến mức không đi nổi nữa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Ít nhất cái này",
-                  "tr": "Dù bận thì gọi một cuộc điện thoại chắc cũng được chứ."
+                  "tag": "くらい · khẩu ngữ",
+                  "tr": "Chân đau đến mức không đi nổi nữa luôn."
                 }
               ],
-              "wrong": {
-                "why": "Diễn tả “ít nhất, tối thiểu” chỉ dùng được くらい"
-              },
-              "explain": "Nhìn ví dụ là phóng đại hay nhỏ nhặt: lấy việc phóng đại để nói mức độ (歩けないほど／くらい) → cả hai đều được, ほど hơi trang trọng; lấy việc tối thiểu, dễ nhất để đưa ra yêu cầu (電話ぐらい) → chỉ dùng được くらい (ぐらい cũng vậy), thường mang ý trách móc."
+              "explain": "Hai câu chỉ đổi ほど／くらい, đều lấy tình huống phóng đại như 「歩けない」 để nói chân đau đến mức nào, ý nghĩa không đổi. Nhìn hoàn cảnh: khi viết văn hay giải thích trang trọng thì ほど phổ biến hơn; nói chuyện với bạn bè thì hay nói くらい hoặc ぐらい, phía sau cũng hay có 「よ」「ね」."
             }
           ]
         }
@@ -15352,30 +15295,30 @@
                   "tr": "Phong cảnh đẹp đến mức khiến người ta rơi nước mắt."
                 }
               ],
-              "explain": "Nhìn phía trước ほど và cuối câu: phía trước là một danh từ (富士山), cuối câu là 「〜はない／はいない」 → không có gì… hơn nó, tức là “… nhất”; phía trước là một tình huống (涙が出る) → chỉ nói mức độ."
+              "explain": "Nghĩa gốc của ほど là “mức độ”. 「Aほど〜はない」 là “không có gì đạt tới mức của A”, từ đó thành “không có gì … hơn A”, tức là “… nhất”; ほど dùng riêng thì nói thẳng mức độ đạt tới (涙が出る = đẹp đến mức rơi nước mắt). Để phân biệt, nhìn phía trước ほど và cuối câu: phía trước là danh từ (富士山), cuối câu là 「〜はない／はいない」 → so sánh nhất; phía trước là một tình huống (涙が出る) → chỉ nói mức độ."
             }
           ]
         },
         {
           "kind": "look",
-          "note": "Aほど〜はない ↔ Aほど〜ない, chỉ khác một chữ 「は」, một cái là “… nhất”, một cái là “không bằng…”",
+          "note": "Aほど…ない ↔ Aほど…はない: chỉ khác ở chỗ trước ない có “danh từ + は” hay không; một cái là “không … bằng”, một cái là “… nhất”",
           "items": [
             {
               "id": "hodo-nai-comparison",
-              "diff": "Aほど〜はない là “không có gì… hơn A” (A là nhất); Bは Aほど〜ない là “B không bằng A”.",
+              "diff": "Aほど〜 danh từ はない là “không có gì … hơn A” (A là nhất); Aほど〜くない là “không … bằng A”.",
               "this": [
                 {
-                  "tag": "A là nhất",
-                  "tr": "Không ai nấu ăn giỏi hơn mẹ."
+                  "tag": "Danh từ + はない · A là nhất",
+                  "tr": "Không có cửa hàng nào rẻ hơn cửa hàng này."
                 }
               ],
               "that": [
                 {
-                  "tag": "B không bằng A",
-                  "tr": "Tôi nấu ăn không giỏi bằng mẹ."
+                  "tag": "Tính từ phủ định · không bằng A",
+                  "tr": "Cửa hàng bên cạnh không rẻ bằng cửa hàng này."
                 }
               ],
-              "explain": "Nhìn phủ định cuối câu phủ định cái gì: 「人はいない」「ものはない」 phủ định “sự tồn tại” → không có người hay vật nào… hơn A, A đứng đầu; 「上手ではない」 phủ định tính từ, phía trước còn có chủ ngữ 「私は」 → tôi không bằng A. Cả hai câu đều có 「母ほど」, một câu khen mẹ, một câu nói mình kém."
+              "explain": "Hai câu đều là 「この店ほど安…ない」. Nhìn phía trước ない: là danh từ thêm は (店はない、人はいない) → phủ định “có hay không”, không có cửa hàng nào rẻ hơn, 「この店」 đứng đầu; là dạng phủ định của tính từ (安くない), phía trước còn có chủ ngữ được so sánh (隣の店) → cửa hàng bên cạnh không bằng 「この店」. Một câu khen cửa hàng này, một câu nói cửa hàng khác không sánh bằng."
             }
           ]
         },
@@ -15399,24 +15342,6 @@
                 }
               ],
               "explain": "Nhìn đang nói sự thật hay cảm nhận: xếp hạng có thể so sánh khách quan như chiều cao, thành tích, thường nói rõ phạm vi (クラスの中で) → いちばん; kèm cảm thán, hồi tưởng, khen ngợi (やっぱり、こんなに) → ほど〜はない, phạm vi so sánh thường không nói ra."
-            },
-            {
-              "id": "ni-kagiru",
-              "title": "〜に限る（… là nhất）",
-              "diff": "ほど〜はない là đánh giá sự vật “không có gì… hơn nó”; に限る là chủ trương “làm… là lựa chọn tốt nhất”.",
-              "this": [
-                {
-                  "tag": "Đánh giá · … nhất",
-                  "tr": "Lúc mệt, không có gì dễ chịu hơn ngâm suối nước nóng."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Chủ trương · lựa chọn tốt nhất",
-                  "tr": "Lúc mệt thì ngâm suối nước nóng là nhất."
-                }
-              ],
-              "explain": "Cả hai câu đều khen suối nước nóng. Nhìn cấu trúc câu: ở giữa ほど〜はない phải nói ra so về điểm nào (気持ちいい、おいしい); に限る kết câu ngay sau danh từ, động từ, diễn tả “lúc như thế này thì nên làm vậy”, mang giọng giới thiệu, khuyên dùng."
             }
           ]
         }
@@ -15427,24 +15352,27 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả nhượng bộ “dù / cho dù… cũng…”",
+          "note": "Đều diễn tả nhượng bộ “dù … cũng …”",
           "items": [
             {
               "id": "tatoe-temo",
-              "diff": "いくら〜ても là “dù… đến đâu cũng”, phía trước phải có mức độ hoặc số lần có thể nhiều ít; たとえ〜ても chỉ là “dù (giả sử)… cũng”, có thể giả định thẳng một việc.",
+              "diff": "Đều là “dù … cũng”; いくら đẩy mức độ lên cao, “dù … đến đâu”; たとえ chỉ nhấn mạnh giả định, “cho dù…”, và cũng có thể nói về phía nhỏ “dù chỉ…”.",
               "this": [
                 {
-                  "tag": "Mức độ dù cao cũng",
-                  "tr": "Mưa có to đến đâu, trận đấu cũng không hủy."
+                  "tag": "Mức độ · dù … đến đâu",
+                  "tr": "Dù bận đến đâu, ngày nào tôi cũng viết nhật ký."
                 }
               ],
               "that": [
                 {
-                  "tag": "Giả định · dù",
-                  "tr": "Dù có mưa, trận đấu cũng không hủy."
+                  "tag": "Giả định · dù chỉ",
+                  "tr": "Dù chỉ một dòng, ngày nào tôi cũng viết nhật ký."
                 }
               ],
-              "explain": "いくら vốn là từ hỏi “bao nhiêu”, nên phía sau phải nối nội dung có nhiều có ít (雨が強くても、何度言っても); たとえ chỉ tăng sắc thái giả định, có thể nối thẳng danh từ 「雨でも」「子どもでも」. Nhìn trước ても có phải thứ “có mức độ, có thể lặp lại” hay không là phân biệt được."
+              "wrong": {
+                "why": "いくら là “dù … đến đâu”, đẩy mức độ lên cao; giả định về phía nhỏ như “dù chỉ một dòng” phải dùng たとえ"
+              },
+              "explain": "Cả hai đều là “dù … cũng”. Nhìn phía trước ても／でも: thứ có mức độ, số lần (忙しくても、高くても), nói “dù … đến đâu” → いくら, đổi sang たとえ cũng được, chỉ mất đi sắc thái nhấn mạnh “đến đâu”; nói về phía nhỏ “dù chỉ…” (一行でも、一日でも) → chỉ dùng được たとえ."
             },
             {
               "id": "tatte",
@@ -15489,7 +15417,7 @@
                   "tr": "Dân số thành thị tăng, mặt khác dân số địa phương lại đang giảm."
                 }
               ],
-              "explain": "Nhìn sau 一方: 「だ」 kết thúc câu → chỉ thay đổi theo một hướng (ngày càng…); 「で、」 phía sau còn một việc khác → đặt hai phía cạnh nhau để so sánh. 「一方」 vốn là “một hướng / một phía”, cả hai nghĩa đều từ đây mà ra."
+              "explain": "Nhìn phía sau 一方: 「だ」 kết thúc câu → chỉ thay đổi theo một hướng (ngày càng…); sau 「で、」 còn một việc khác (地方の人口は減っている) → đặt hai bên cạnh nhau để đối chiếu. 「一方」 vốn là “một hướng / một phía”, cả hai nghĩa đều từ đây mà ra."
             }
           ]
         },
@@ -15520,7 +15448,7 @@
               "this": [
                 {
                   "tag": "Không dừng lại",
-                  "tr": "Vật giá cứ tăng mãi."
+                  "tr": "Giá xăng cứ tăng mãi."
                 }
               ],
               "that": [
@@ -15557,21 +15485,47 @@
                   "tr": "Dân số ở các địa phương ngày càng giảm."
                 }
               ],
-              "explain": "Nhìn sau 一方: 「で、」 phía sau còn một việc khác → hai phía so sánh hoặc song song; 「だ」 kết thúc câu → chỉ thay đổi theo một hướng (ngày càng…). 「一方」 vốn là “một hướng / một phía”, cả hai nghĩa đều từ đây mà ra."
+              "explain": "Nhìn phía sau 一方: sau 「で、」 còn một việc khác (地方の人口は減っている) → hai bên đối chiếu hoặc song song; 「だ」 kết thúc câu → chỉ thay đổi theo một hướng (ngày càng…). 「一方」 vốn là “một hướng / một phía”, cả hai nghĩa đều từ đây mà ra."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều có thể đặt hai việc cạnh nhau (so sánh hai mặt, hoặc diễn ra đồng thời)",
+          "sense": 1,
+          "note": "Đều diễn tả “vừa … vừa …”",
+          "items": [
+            {
+              "id": "nagara",
+              "title": "〜ながら（Vừa… vừa）",
+              "diff": "Đều nói một người làm hai việc cùng lúc; với ながら, vế trước là động tác phụ đi kèm, vế sau mới là chính; với 一方で, hai vế là hai hoạt động ngang hàng, thiên về văn viết.",
+              "this": [
+                {
+                  "tag": "Hai việc ngang hàng · song song",
+                  "tr": "Chị tôi vừa làm y tá, vừa hoạt động với tư cách tác giả sách tranh."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Đi kèm · động tác phụ",
+                  "tr": "Chị tôi vừa nghe radio vừa nấu ăn."
+                }
+              ],
+              "explain": "Nhìn sức nặng của hai việc: một việc là động tác phụ làm kèm, việc kia mới là trọng tâm (ラジオを聞き＋ながら料理を作る) → ながら, nối với ます形; hai vai trò hay hoạt động ngang nhau, song song trong một thời gian (看護師として働く／絵本作家としても活躍している) → 一方で, nối với 辞書形, thiên về văn viết. Động tác nhỏ đang làm cùng lúc ngay lúc này thì không dùng được 一方で. Việc song song lâu dài cũng có thể dùng ながら (働きながら大学に通う), nhưng khi đó vế trước chỉ là bối cảnh, vế sau mới là trọng tâm."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều diễn tả “mặt khác”",
           "items": [
             {
               "id": "hanmen",
-              "diff": "反面 chỉ nói hai mặt tốt xấu của cùng một sự vật; 一方で còn so sánh được hai sự vật khác nhau.",
+              "diff": "Nói hai mặt của cùng một sự vật thì cả hai đều được; 反面 chuyên nói “hai mặt của một vấn đề”, thường một tốt một xấu; 一方で trung tính hơn, còn đối chiếu được hai sự vật khác nhau.",
               "this": [
                 {
-                  "tag": "Hai sự vật khác nhau",
-                  "tr": "Ở thành thị dân số tăng, còn ở địa phương thì đang giảm."
+                  "tag": "Cùng một sự vật · trung tính",
+                  "tr": "Điện thoại thông minh tiện lợi, mặt khác lại dễ làm mỏi mắt."
                 }
               ],
               "that": [
@@ -15580,25 +15534,7 @@
                   "tr": "Điện thoại thông minh tiện lợi, nhưng mặt khác lại dễ làm mỏi mắt."
                 }
               ],
-              "explain": "Nhìn trước sau có nói cùng một thứ không: ưu điểm và nhược điểm của スマホ → 反面、一方で đều dùng được; 都会 và 地方 là hai nơi khác nhau → dùng 一方で. 反面 chuyên nói “hai mặt của một vấn đề”, và thường là một tốt một xấu."
-            },
-            {
-              "id": "nagara",
-              "title": "〜ながら（Vừa… vừa）",
-              "diff": "ながら là cùng một lúc làm hai hành động; 一方で là song song làm hai việc trong một giai đoạn, không nhất thiết cùng lúc.",
-              "this": [
-                {
-                  "tag": "Một giai đoạn · song song",
-                  "tr": "Anh ấy ban ngày làm ở công ty, buổi tối đi học đại học."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Cùng một lúc · đồng thời",
-                  "tr": "Tôi lúc nào cũng vừa nghe nhạc vừa học."
-                }
-              ],
-              "explain": "Nhìn hai hành động có thể diễn ra cùng một lúc không: nghe nhạc và học có thể làm cùng lúc → ながら; đi làm và học đại học lần lượt vào 「昼」 và 「夜」, chỉ là cùng một giai đoạn đều làm → 一方で. Ngoài ra ながら nối thể ます (聞き＋ながら), 一方で nối thể từ điển (働く＋一方で)."
+              "explain": "Hai câu đều nói ưu điểm và nhược điểm của スマホ, dùng 一方で hay 反面 đều được, ý nghĩa không đổi. 反面 chuyên nói “hai mặt” của cùng một sự vật, trước sau thường là một đánh giá tốt, một đánh giá xấu; 一方で giọng trung tính hơn. Nếu hai vế là hai sự vật khác nhau (都会では増えている一方で、地方では減っている) thì chỉ dùng được 一方で."
             }
           ]
         }
@@ -15609,31 +15545,31 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「何か（なにか）」 — “cái gì đó”",
+          "note": "Đều bắt nguồn từ 「何か（なにか）」 — nghĩa gốc là “một thứ gì đó không rõ”",
           "items": [
             {
               "id": "nanka",
               "title": "〜なんか",
-              "diff": "か何か là “X hoặc thứ gì tương tự”; なんか chính là 何か nói nhanh, ngoài nêu ví dụ còn hay mang ý coi nhẹ.",
+              "diff": "か何か là “X, hoặc thứ gì khác”, nêu ví dụ một cách khách quan; なんか là dạng nói nhanh của 何か, gắn thẳng sau X, ngoài nêu ví dụ tùy ý còn hay mang ý coi thường hoặc khiêm tốn.",
               "this": [
                 {
-                  "tag": "Nêu ví dụ · hoặc thứ tương tự",
-                  "tr": "Mệt rồi nhỉ. Uống cà phê hay gì đó đi."
+                  "tag": "Ví dụ · không đánh giá",
+                  "tr": "Để cảm ơn, mình tặng hoa hay gì đó nhé?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Coi nhẹ · đâu có rảnh",
-                  "tr": "Bận đến mức chẳng có thời gian mà uống cà phê cà pháo gì."
+                  "tag": "Coi thường · cái thứ đó",
+                  "tr": "Hoa thì chẳng mấy chốc là héo thôi."
                 }
               ],
-              "explain": "なんか là dạng nói tắt khẩu ngữ của 何か, nên cũng có thể tùy miệng nêu ví dụ; nhưng khi phía sau nối phủ định hoặc bất mãn (〜なんか…ない、〜なんか嫌いだ), thì thành “cái thứ… gì đó, chẳng đáng nhắc tới”. か何か chỉ nói khách quan “cái này hoặc thứ na ná”, không mang cảm xúc. Cách nói văn viết など dùng tương tự (など cũng từ 「何と」 mà ra)."
+              "explain": "Nghĩa gốc của 「何か」 là “một thứ gì đó không rõ”. か何か chính là 「X か＋何か」: X, hoặc thứ gì khác → nêu một ví dụ, bao gồm cả những thứ tương tự, không mang đánh giá (花か何か贈ろう). なんか là dạng nói nhanh của 何か, gắn thẳng sau X, nói X là “thứ thuộc loại đó”: khi đề xuất tùy ý thì chỉ là ví dụ (花なんかどう？); khi người nói đang đánh giá X thì thành “chẳng qua là thứ như thế”, mang ý coi thường hoặc khiêm tốn (花なんか、すぐ枯れちゃう／私なんか), không nhất thiết có phủ định. Để phân biệt, nhìn ngay sau X: có 「か」 rồi đến 何か → chỉ là ví dụ; gắn thẳng なんか và đang đánh giá X → thường mang ý coi thường."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều có thể nêu ví dụ một cách mơ hồ, diễn tả “… chẳng hạn”",
+          "note": "Đều nêu ví dụ “… gì đó”",
           "items": [
             {
               "id": "toka-listing",
@@ -15650,7 +15586,7 @@
                   "tr": "Đến ga rồi thì gọi điện hoặc gửi email chẳng hạn báo cho tôi nhé."
                 }
               ],
-              "explain": "Hai câu chỉ khác cách nêu ví dụ: chỉ nói một 「電話」, phía sau dùng 「何か」 bao gồm cả các cách tương tự như nhắn tin → か何か; bày ra từng cái 「電話」「メール」 → とか〜とか. Ngoài ra か何か còn diễn tả suy đoán không chắc chắn (風邪か何かで休んでいるらしい)."
+              "explain": "Hai câu chỉ khác cách nêu ví dụ: chỉ nói một cái 「電話」, phía sau dùng 「何か」 bao luôn các cách tương tự như nhắn tin → か何か; liệt kê từng cái 「電話」「メール」 → とか〜とか."
             }
           ]
         }
@@ -15661,24 +15597,25 @@
       "groups": [
         {
           "kind": "look",
-          "note": "かというと ↔ かといって, chỉ khác hai chữ kana cuối",
+          "note": "かというと ↔ というと: chỉ khác một chữ 「か」",
           "items": [
             {
-              "id": "ka-to-itte",
-              "diff": "かというと là hỏi trước rồi trả lời; かといって là chuyển ý “nói thì nói vậy, nhưng cũng không thể…”.",
+              "id": "to-iu-to",
+              "title": "〜というと（Nhắc đến…）",
+              "diff": "かというと phía trước là một câu hỏi, “nếu hỏi vì sao… thì là vì…”; というと phía trước là một chủ đề, “nhắc đến… thì nghĩ ngay đến…”.",
               "this": [
                 {
-                  "tag": "Đặt câu hỏi → nêu lý do",
-                  "tr": "Nói tại sao tôi nghỉ việc, là vì đã làm hỏng sức khỏe."
+                  "tag": "Câu hỏi → trả lời lý do",
+                  "tr": "Nếu hỏi vì sao tôi thích Kyoto thì là vì ở đó có nhiều chùa cổ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Chuyển ý · cũng không thể",
-                  "tr": "Công việc vất vả. Nói thì nói vậy, nhưng cũng không thể nghỉ việc."
+                  "tag": "Chủ đề → liên tưởng",
+                  "tr": "Nhắc đến Kyoto thì quả nhiên là nghĩ ngay đến chùa chiền."
                 }
               ],
-              "explain": "Trước hết nhìn chữ cuối là 「と」 hay 「って」, rồi nhìn nửa câu sau: sau かというと là câu trả lời (〜からだ); trước かといって thừa nhận một tình huống, phía sau nối phủ định kiểu “cũng không thể…”, “cũng không phải…”. かといって còn hay đứng riêng ở đầu câu."
+              "explain": "Xem trước 「と」 có 「か」 hay không: phía trước là một câu hỏi (có từ để hỏi なぜ), phía sau đưa ra câu trả lời (〜からだ) → かというと, “nếu hỏi vì sao… thì là vì…”; phía trước chỉ là danh từ chủ đề (京都), phía sau nói điều liên tưởng đến (思い浮かべる) → というと, “nhắc đến… thì nghĩ ngay đến…”."
             }
           ]
         },
@@ -15709,16 +15646,16 @@
               "this": [
                 {
                   "tag": "Hỏi trước · trả lời sau",
-                  "tr": "Nói tại sao tôi đến muộn, là vì tàu điện bị dừng."
+                  "tr": "Nếu hỏi vì sao thua trận thì là vì luyện tập chưa đủ."
                 }
               ],
               "that": [
                 {
                   "tag": "Kết quả làm chủ đề",
-                  "tr": "Sở dĩ tôi đến muộn là vì tàu điện bị dừng."
+                  "tr": "Sở dĩ thua trận là vì luyện tập chưa đủ."
                 }
               ],
-              "explain": "Hai câu nghĩa như nhau, nhìn phần đầu: có từ để hỏi 「なぜ」 và 「か」 → かというと, gợi tò mò trước rồi mới trả lời; 「遅れたのは」 lấy thẳng kết quả làm chủ đề → のは〜からだ, gọn hơn."
+              "explain": "Hai câu nghĩa như nhau, nhìn phần đầu câu: có từ để hỏi 「なぜ」 và 「か」 → かというと, gợi tò mò một chút rồi mới trả lời; 「負けたのは」 lấy luôn kết quả làm chủ đề → のは〜からだ, gọn hơn."
             }
           ]
         }

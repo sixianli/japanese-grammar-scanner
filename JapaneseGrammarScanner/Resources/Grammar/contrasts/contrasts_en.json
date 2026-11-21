@@ -15065,44 +15065,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both express a (usually bad) tendency",
+          "note": "Both mean “there is a tendency toward…”",
           "items": [
             {
-              "id": "gachi",
-              "diff": "気味 is “a bit…” right now, about degree; がち is “often…, tends to…”, about frequency.",
+              "id": "keikou-ga-aru",
+              "title": "〜傾向にある (trend)",
+              "diff": "気味 says “a bit…”: a mild degree, colored by the speaker's feeling, mostly in speech; 傾向にある objectively describes the overall direction, mostly in reports and the news.",
               "this": [
                 {
-                  "tag": "Degree · a bit",
-                  "tr": "Work has been running a bit behind lately."
+                  "tag": "Spoken · a bit",
+                  "tr": "This shop's sales have been slipping a bit, you know."
                 }
               ],
               "that": [
                 {
-                  "tag": "Frequency · often",
-                  "tr": "He always tends to be late for appointments."
+                  "tag": "Written · objective trend",
+                  "tr": "This shop's sales are on a downward trend."
                 }
               ],
-              "explain": "The same 「遅れ」: 遅れ気味 means progress is a bit slow right now; 遅れがち means being late often, again and again. Look for frequency words like 「いつも」「よく」: if there is one → がち; if it's about the current state → 気味."
-            },
-            {
-              "id": "ppoi",
-              "diff": "気味 only describes a bad state of the body or a situation, “a bit…”; っぽい is broader and can also mean “like…”.",
-              "this": [
-                {
-                  "tag": "Body · a bit",
-                  "tr": "I have a bit of a cold today, so I'll go to bed early."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Like…",
-                  "tr": "He talks like a child."
-                }
-              ],
-              "wrong": {
-                "why": "気味 cannot mean “like…”"
-              },
-              "explain": "For having “a bit of a cold”, both 風邪気味 and 風邪っぽい work, with 気味 more formal; to say a person or thing is “like…” (子どもっぽい、白っぽい) → only っぽい works."
+              "explain": "Both sentences describe the same downward trend; swapping them keeps the core meaning. Look at the tone and the setting: in everyday chat, saying things are “a bit off”, often with 「ちょっと」「少し」 → 気味, a mild degree colored by the speaker's feeling, mostly for bad changes; in reports or the news, objectively describing the overall direction, often after Sino-Japanese words like 「減少」「増加」 → 傾向にある, usable for good or bad changes."
             }
           ]
         }
@@ -15113,7 +15094,8 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "All mean “every…”",
+          "sense": 2,
+          "note": "Both mean “every … (at intervals)”",
           "items": [
             {
               "id": "oki-ni",
@@ -15131,43 +15113,30 @@
                 }
               ],
               "explain": "The two sentences say the same thing. Look at what the number counts: ごとに means doing it once each time this unit comes around (２日ごと = day 1, day 3, day 5…); おきに means leaving this much space in between (１日おき = skipping one day). With larger units of time or distance (10分ごと／10分おき), the two are often treated as the same."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Both mean “every time …”",
+          "items": [
             {
               "id": "tabi-ni",
-              "diff": "ごとに can follow quantities and nouns, meaning each unit or every so often; たびに only follows verbs or 「noun + の」, meaning “every time…”.",
+              "diff": "Both say “every time…”; たびに is the most common, with the same reaction each time; ごとに is slightly more formal and is usually followed by a gradual change with each time.",
               "this": [
                 {
-                  "tag": "After quantity · every",
-                  "tr": "The bus comes every 10 minutes."
+                  "tag": "Gradual change each time",
+                  "tr": "Every time she plays in a match, she gets a little stronger."
                 }
               ],
               "that": [
                 {
-                  "tag": "After verb · every time",
-                  "tr": "Every time I see this photo, I remember the old days."
+                  "tag": "Same reaction every time",
+                  "tr": "Every time she plays in a match, she gets so nervous she can't sleep."
                 }
               ],
-              "wrong": {
-                "why": "たびに cannot directly follow a quantity"
-              },
-              "explain": "Look at what comes before: a quantity (10分、３時間) or a unit noun (国、クラス) → only ごとに; a verb (見る、会う) → たびに is the most common, stressing “every single time…”; when ごとに follows a verb, it's usually followed by gradual change (回を重ねるごとに上手になる)."
-            },
-            {
-              "id": "atari-per",
-              "diff": "ごとに describes an action repeated at every interval; 当たり calculates an amount averaged over each unit.",
-              "this": [
-                {
-                  "tag": "Repeated action",
-                  "tr": "I take a break every hour."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Amount per unit",
-                  "tr": "This machine can make 100 pieces per hour."
-                }
-              ],
-              "explain": "Look at what follows: a repeated action (休憩を取る、バスが来る) → ごとに; a quantity (100個、1000円) → 当たり, used to calculate rates and averages."
+              "explain": "Both say “every time…”. Look at the second half: the same reaction or result each time (緊張して眠れなくなる) → たびに is the most natural and also more conversational; a change that builds up little by little as the times add up (少しずつ強くなっている) → ごとに fits well and sounds slightly more formal; たびに also works here."
             }
           ]
         }
@@ -15176,29 +15145,6 @@
     {
       "id": "hazu-ga-nai",
       "groups": [
-        {
-          "kind": "root",
-          "note": "Both come from はず (筈) — meaning “by reason, it should be”",
-          "items": [
-            {
-              "id": "hazu-da",
-              "diff": "はずがない is “by all logic, there's no way”; はずだ is “by all logic, it should be”.",
-              "this": [
-                {
-                  "tag": "Logically impossible",
-                  "tr": "He's never studied it even once, so there's no way he can speak Japanese."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Logically should be",
-                  "tr": "He's lived in Japan for ten years, so he should be able to speak Japanese."
-                }
-              ],
-              "explain": "Look at the reason given in the first half: the reason clearly can't lead to the conclusion → はずがない; the reason supports the conclusion → はずだ. Note that 「話せないはずだ」 only means “logically he shouldn't be able to speak it”, much weaker than はずがない (absolutely impossible)."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "All mean “impossible, can't be”",
@@ -15218,7 +15164,7 @@
                   "tr": "We practiced so hard — there's no way we'll lose!"
                 }
               ],
-              "explain": "The two are mostly interchangeable. Look at the basis and the tone: calm inference from certain facts or memory (鍵はかけた) → はずがない sounds more natural; with emotions like confidence or defiance, often said 「〜わけない(じゃん)」 in speech → わけがない."
+              "explain": "The two are mostly interchangeable. Look at the basis and the tone: calm inference from certain facts or memory (鍵はちゃんとかけた) → はずがない sounds more natural; with emotions like confidence or defiance (あんなに練習したんだから), often said 「〜わけない（じゃん）」 in speech → わけがない."
             },
             {
               "id": "kkonai",
@@ -15263,7 +15209,7 @@
                   "tr": "Today isn't as hot as yesterday."
                 }
               ],
-              "explain": "Look at what's before ほど and at the end of the sentence: an exaggerated situation before it (汗が止まらない) and a positive ending → it shows how far the degree goes; a noun being compared (昨日) before it and a negative ending → comparison, “not as… as”."
+              "explain": "The core meaning of ほど is “degree”. This page states the degree directly: hot to the degree that 「汗が止まらない」; 「Aほど〜ない」 means “not reaching the degree of A”, which became the comparison “not as … as A”. To tell them apart, look before ほど and at the end of the sentence: an exaggerated situation before it (汗が止まらない) with an affirmative ending → it shows how high the degree goes; a noun being compared (昨日) with a negative ending → “not as … as”."
             },
             {
               "id": "ba-hodo",
@@ -15271,7 +15217,7 @@
               "this": [
                 {
                   "tag": "A certain degree",
-                  "tr": "I practiced until my hands hurt."
+                  "tr": "I practiced until my fingers went numb."
                 }
               ],
               "that": [
@@ -15280,7 +15226,7 @@
                   "tr": "The more you practice, the better you get."
                 }
               ],
-              "explain": "Look at whether the same word appears in the 「ば」 form before ほど: すればするほど、高ければ高いほど → the more…, the more…, followed by a result that changes with it (上手になる); no ば, just a situation before it (手が痛くなる) → describes degree."
+              "explain": "The core meaning of ほど is “degree”. On this page a situation marks the degree reached (指がしびれる = practicing to the point that the fingers go numb); 「〜ば〜ほど」 means “the more it reaches the degree of…”: as the degree in the first half goes up, the result in the second half goes up with it, so it became “the more…, the more…”. To tell them apart, check whether the ば form of the same word comes before ほど: すればするほど → “the more…, the more…”, followed by a result that changes along with it (上手になる); no ば, just a situation before it (指がしびれる) → it shows degree."
             },
             {
               "id": "hodo-wa-nai",
@@ -15297,34 +15243,31 @@
                   "tr": "There's no mountain more beautiful than Mt. Fuji."
                 }
               ],
-              "explain": "Look at what's before ほど and at the end of the sentence: a situation before it (涙が出る), describing degree → ほど; a noun before it (富士山) and 「〜はない／はいない」 at the end → nothing is more… than it, i.e. “the most…”."
+              "explain": "The core meaning of ほど is “degree”. This page states the degree reached directly (涙が出る = so beautiful it brings tears); 「Aほど〜はない」 means “nothing reaches the degree of A”, which became “nothing is more … than A”, i.e. “the most…”. To tell them apart, look before ほど and at the end of the sentence: a situation before it (涙が出る) → it shows degree; a noun before it (富士山) and the sentence ends in 「〜はない／はいない」 → superlative."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both can use an exaggerated example to express “degree”",
+          "note": "Both mean “to the degree that…”",
           "items": [
             {
               "id": "kurai-approximately",
               "title": "〜くらい (degree)",
-              "diff": "When expressing degree, the two are mostly interchangeable; when naming the bare minimum (“at least this much”), only くらい works.",
+              "diff": "When expressing degree, the two are mostly interchangeable and the core meaning stays the same; ほど sounds slightly more formal, くらい (ぐらい) more conversational.",
               "this": [
                 {
-                  "tag": "Degree",
+                  "tag": "ほど · slightly formal",
                   "tr": "My feet hurt so much I can't walk anymore."
                 }
               ],
               "that": [
                 {
-                  "tag": "At least this much",
-                  "tr": "However busy you are, you can at least make a phone call, right?"
+                  "tag": "くらい · spoken",
+                  "tr": "My feet hurt so much I can hardly walk anymore."
                 }
               ],
-              "wrong": {
-                "why": "Only くらい can mean “at least, at the very least”"
-              },
-              "explain": "Look at whether the example is exaggerated or trivial: using something extreme to show degree (歩けないほど／くらい) → both work, with ほど slightly more formal; using the most basic, easiest thing to make a demand (電話ぐらい) → only くらい works (ぐらい is the same), often with reproach."
+              "explain": "The two sentences only swap ほど／くらい; both use an extreme situation like 「歩けない」 to show how much the feet hurt, and the meaning doesn't change. Look at the setting: in writing or formal explanations ほど is more common; chatting with friends, people mostly say くらい or ぐらい, often followed by 「よ」「ね」."
             }
           ]
         }
@@ -15352,30 +15295,30 @@
                   "tr": "The scenery was so beautiful it brought tears to my eyes."
                 }
               ],
-              "explain": "Look at what's before ほど and at the end of the sentence: a noun before it (富士山) and 「〜はない／はいない」 at the end → nothing is more… than it, i.e. “the most…”; a situation before it (涙が出る) → it just describes degree."
+              "explain": "The core meaning of ほど is “degree”. 「Aほど〜はない」 means “nothing reaches the degree of A”, which became “nothing is more … than A”, i.e. “the most…”; ほど on its own states the degree reached directly (涙が出る = so beautiful it brings tears). To tell them apart, look before ほど and at the end of the sentence: a noun before it (富士山) and the sentence ends in 「〜はない／はいない」 → superlative; a situation before it (涙が出る) → it only shows degree."
             }
           ]
         },
         {
           "kind": "look",
-          "note": "Aほど〜はない ↔ Aほど〜ない — only 「は」 is different, but one means “the most…” and the other “not as… as”",
+          "note": "Aほど…ない ↔ Aほど…はない: the only difference is whether a “noun + は” comes before ない — one means “not as … as”, the other “the most…”",
           "items": [
             {
               "id": "hodo-nai-comparison",
-              "diff": "Aほど〜はない is “nothing/no one is more… than A” (A is the best); Bは Aほど〜ない is “B is not as… as A”.",
+              "diff": "Aほど〜 noun はない means “nothing is more … than A” (A is the best); Aほど〜くない means “not as … as A”.",
               "this": [
                 {
-                  "tag": "A is the best",
-                  "tr": "Nobody is a better cook than my mom."
+                  "tag": "Noun + はない · A is the most",
+                  "tr": "There's no shop cheaper than this one."
                 }
               ],
               "that": [
                 {
-                  "tag": "B is not as… as A",
-                  "tr": "I'm not as good a cook as my mom."
+                  "tag": "Adjective negative · not as … as A",
+                  "tr": "The shop next door isn't as cheap as this one."
                 }
               ],
-              "explain": "Look at what the negative at the end denies: 「人はいない」「ものはない」 deny “existence” → there's no person or thing more… than A, A is number one; 「上手ではない」 negates the adjective, with the subject 「私は」 before it → I'm not as good as A. Both sentences have 「母ほど」, but one praises Mom and the other says I'm worse."
+              "explain": "Both sentences are 「この店ほど安…ない」. Look at what comes before ない: a noun plus は (店はない、人はいない) → it denies existence: there is no cheaper shop, so 「この店」 is number one; the negative form of an adjective (安くない), with a subject being compared in front (隣の店) → the shop next door falls short of 「この店」. One praises this shop, the other says another shop can't match it."
             }
           ]
         },
@@ -15399,24 +15342,6 @@
                 }
               ],
               "explain": "Look at whether it's a fact or a feeling: a ranking that can be compared objectively, like height or grades, often with the range stated explicitly (クラスの中で) → いちばん; with emotion, memories or praise (やっぱり、こんなに) → ほど〜はない, where the range of comparison often goes unstated."
-            },
-            {
-              "id": "ni-kagiru",
-              "title": "〜に限る (… is best)",
-              "diff": "ほど〜はない evaluates a thing: “nothing is more… than it”; に限る asserts “doing… is the best choice”.",
-              "this": [
-                {
-                  "tag": "Evaluation · most…",
-                  "tr": "When you're tired, nothing feels better than a hot spring."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Assertion · best choice",
-                  "tr": "When you're tired, there's nothing like a hot spring."
-                }
-              ],
-              "explain": "Both sentences praise hot springs. Look at the sentence structure: ほど〜はない needs to say in between which point is being compared (気持ちいい、おいしい); に限る ends the sentence right after a noun or verb, meaning “at times like this, this is what you should do”, with a recommending tone."
             }
           ]
         }
@@ -15427,24 +15352,27 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "All express concession: “even if / no matter…, still…”",
+          "note": "Both express concession: “even if…”",
           "items": [
             {
               "id": "tatoe-temo",
-              "diff": "いくら〜ても is “no matter how (much)…, still”, and needs a degree or number of times before it; たとえ〜ても is just “even if (supposing)…”, and can directly suppose something.",
+              "diff": "Both mean “even if…”; いくら pushes the degree up, “no matter how…”; たとえ only strengthens the supposition, “even if…”, and can also go small: “even just…”.",
               "this": [
                 {
-                  "tag": "No matter how much",
-                  "tr": "No matter how hard it rains, the match won't be canceled."
+                  "tag": "Degree · no matter how",
+                  "tr": "No matter how busy I am, I write in my diary every day."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hypothesis · even if",
-                  "tr": "Even if it rains, the match won't be canceled."
+                  "tag": "Supposition · even just",
+                  "tr": "Even if it's just one line, I write in my diary every day."
                 }
               ],
-              "explain": "いくら is originally a word asking “how much”, so it must be followed by something that can be more or less (雨が強くても、何度言っても); たとえ only strengthens the hypothetical tone and can directly take a noun: 「雨でも」「子どもでも」. Check whether what comes before ても has degrees or can be repeated, and you can tell them apart."
+              "wrong": {
+                "why": "いくら means “no matter how…” and pushes the degree up; a small-side supposition like “even just one line” needs たとえ"
+              },
+              "explain": "Both mean “even if…”. Look at what comes before ても／でも: something with degrees or repetitions (忙しくても、高くても), saying “no matter how…” → いくら; たとえ also works, just without the “however much” emphasis; going small, “even just…” (一行でも、一日でも) → only たとえ works."
             },
             {
               "id": "tatte",
@@ -15489,7 +15417,7 @@
                   "tr": "While the urban population is increasing, the rural population is decreasing."
                 }
               ],
-              "explain": "Look at what follows 一方: 「だ」 ending the sentence → change in only one direction (more and more…); 「で、」 followed by another matter → putting two sides side by side for contrast. 「一方」 literally means “one direction / one side”, and both meanings come from there."
+              "explain": "Look at what follows 一方: 「だ」 ends the sentence → change in one direction only (more and more…); 「で、」 followed by something else (地方の人口は減っている) → the two sides are set against each other. 「一方」 originally means “one direction / one side”, and both meanings come from that."
             }
           ]
         },
@@ -15520,7 +15448,7 @@
               "this": [
                 {
                   "tag": "Won't stop",
-                  "tr": "Prices just keep going up."
+                  "tr": "Gas prices just keep going up."
                 }
               ],
               "that": [
@@ -15557,21 +15485,47 @@
                   "tr": "The population of rural areas keeps decreasing."
                 }
               ],
-              "explain": "Look at what follows 一方: 「で、」 followed by another matter → contrasting or running two things side by side; 「だ」 ending the sentence → change in only one direction (more and more…). 「一方」 literally means “one direction / one side”, and both meanings come from there."
+              "explain": "Look at what follows 一方: 「で、」 followed by something else (地方の人口は減っている) → the two sides are contrasted or run in parallel; 「だ」 ends the sentence → change in one direction only (more and more…). 「一方」 originally means “one direction / one side”, and both meanings come from that."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both can put two things together (contrasting two sides, or doing both at once)",
+          "sense": 1,
+          "note": "Both mean “while also… / doing … and … at the same time”",
+          "items": [
+            {
+              "id": "nagara",
+              "title": "〜ながら (while…)",
+              "diff": "Both say one person does two things at once; with ながら the first part is a secondary accompanying action and the main one comes after; with 一方で the two parts are activities of equal weight, and it sounds more formal.",
+              "this": [
+                {
+                  "tag": "Two equal activities · in parallel",
+                  "tr": "My older sister works as a nurse while also being active as a picture-book author."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Accompanying · secondary action",
+                  "tr": "My older sister cooks while listening to the radio."
+                }
+              ],
+              "explain": "Look at the weight of the two actions: one is a secondary thing done on the side and the other is the main point (ラジオを聞き＋ながら料理を作る) → ながら, attached to the ます形; two roles or activities of equal weight carried on in parallel over a period (看護師として働く／絵本作家としても活躍している) → 一方で, attached to the 辞書形, more formal. Small actions your hands are doing at this very moment can't take 一方で. Long-running parallel activities can also take ながら (働きながら大学に通う), but then the first part is only background and the second is the main point."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “on the other hand”",
           "items": [
             {
               "id": "hanmen",
-              "diff": "反面 only describes the good and bad sides of the same thing; 一方で can also contrast two different things.",
+              "diff": "For two sides of the same thing, both work; 反面 is specifically about “two sides of one coin”, usually one good and one bad; 一方で is more neutral and can also contrast two different things.",
               "this": [
                 {
-                  "tag": "Two different things",
-                  "tr": "In cities the population is increasing, while in rural areas it is decreasing."
+                  "tag": "Same thing · neutral",
+                  "tr": "Smartphones are convenient, but on the other hand they tire your eyes easily."
                 }
               ],
               "that": [
@@ -15580,25 +15534,7 @@
                   "tr": "Smartphones are convenient, but on the other hand they tire your eyes easily."
                 }
               ],
-              "explain": "Look at whether both halves are about the same thing: the pros and cons of スマホ → both 反面 and 一方で work; 都会 and 地方 are two different places → use 一方で. 反面 is specifically about “two sides of the same coin”, usually one good and one bad."
-            },
-            {
-              "id": "nagara",
-              "title": "〜ながら (while…)",
-              "diff": "ながら is doing two actions at the same moment; 一方で is doing two things in parallel over a period of time, not necessarily at the same moment.",
-              "this": [
-                {
-                  "tag": "Over a period · in parallel",
-                  "tr": "He works at a company during the day while attending university at night."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Same moment · simultaneous",
-                  "tr": "I always study while listening to music."
-                }
-              ],
-              "explain": "Look at whether the two actions can happen at the same moment: listening to music and studying can be done at once → ながら; working and attending university happen in the 「昼」 and the 「夜」 respectively, only during the same period → 一方で. Also, ながら attaches to the masu-stem (聞き + ながら), while 一方で attaches to the dictionary form (働く + 一方で)."
+              "explain": "Both sentences describe the pros and cons of スマホ; either 一方で or 反面 works and the meaning doesn't change. 反面 is specifically about the “two sides of one coin” of the same thing, usually one good and one bad evaluation; 一方で sounds more neutral. If the two parts are different things (都会では増えている一方で、地方では減っている), only 一方で works."
             }
           ]
         }
@@ -15609,31 +15545,31 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 何か (なにか) — “something”",
+          "note": "Both come from 「何か（なにか）」 — originally “some unspecified thing”",
           "items": [
             {
               "id": "nanka",
               "title": "〜なんか",
-              "diff": "か何か is “X or something like it”; なんか is simply 何か said quickly, and besides giving examples it often carries contempt.",
+              "diff": "か何か means “X, or something else”, giving an example objectively; なんか is a quick form of 何か attached directly to X, and besides casual examples it often carries contempt or modesty.",
               "this": [
                 {
-                  "tag": "Example · or something like it",
-                  "tr": "You must be tired. Shall we have some coffee or something?"
+                  "tag": "Example · no judgment",
+                  "tr": "As a thank-you, shall we give flowers or something?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Contempt · no time for that",
-                  "tr": "I'm so busy I have no time to sit around drinking coffee."
+                  "tag": "Contempt · that kind of thing",
+                  "tr": "Flowers just wilt right away, you know."
                 }
               ],
-              "explain": "なんか is a spoken contraction of 何か, so it can also casually give an example; but when followed by a negative or a complaint (〜なんか…ない、〜なんか嫌いだ), it becomes “stuff like…, not even worth mentioning”. か何か just objectively says “this or something similar”, without emotion. The written form など works the same way (など also comes from 「何と」)."
+              "explain": "The core meaning of 「何か」 is “some unspecified thing”. か何か is simply 「X か＋何か」: X, or something else → it names one example and includes similar things, with no judgment (花か何か贈ろう). なんか is a quick form of 何か attached straight to X, presenting X as “that sort of thing”: in a casual suggestion it is just an example (花なんかどう？); when the speaker is evaluating X, it becomes “nothing more than that sort of thing”, with contempt or modesty (花なんか、すぐ枯れちゃう／私なんか), and no negative is needed. To tell them apart, look right after X: 「か」 and then 何か → just an example; なんか attached directly while X is being judged → usually contempt."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both give vague examples, meaning “… and the like”",
+          "note": "Both give examples: “… or something”",
           "items": [
             {
               "id": "toka-listing",
@@ -15650,7 +15586,7 @@
                   "tr": "When you get to the station, let me know by phone, email or whatever."
                 }
               ],
-              "explain": "The two sentences differ only in how the examples are given: naming just 「電話」 and covering similar means like texting with 「何か」 → か何か; laying out 「電話」 and 「メール」 one by one → とか〜とか. Also, か何か can express an uncertain guess (風邪か何かで休んでいるらしい)."
+              "explain": "The two sentences differ only in how the examples are given: naming just one, 「電話」, and then using 「何か」 to cover similar means such as texting → か何か; listing 「電話」 and 「メール」 one by one → とか〜とか."
             }
           ]
         }
@@ -15661,24 +15597,25 @@
       "groups": [
         {
           "kind": "look",
-          "note": "かというと ↔ かといって — only the last two kana differ",
+          "note": "かというと ↔ というと: the only difference is one 「か」",
           "items": [
             {
-              "id": "ka-to-itte",
-              "diff": "かというと asks a question and then answers it; かといって is a contrast: “that said, you can't…”.",
+              "id": "to-iu-to",
+              "title": "〜というと (speaking of…)",
+              "diff": "With かというと, a question comes before it: “if you ask why…, it's because…”; with というと, a topic comes before it: “speaking of…, what comes to mind is…”.",
               "this": [
                 {
-                  "tag": "Question → reason",
-                  "tr": "As for why I quit, it's because I ruined my health."
+                  "tag": "Question → answer with a reason",
+                  "tr": "If you ask why I like Kyoto, it's because there are many old temples."
                 }
               ],
               "that": [
                 {
-                  "tag": "Contrast · can't either",
-                  "tr": "Work is hard. That said, I can't just quit."
+                  "tag": "Topic → association",
+                  "tr": "Speaking of Kyoto, temples are what come to mind after all."
                 }
               ],
-              "explain": "First look at whether it ends in 「と」 or 「って」, then at the second half: かというと is followed by the answer (〜からだ); かといって first concedes a situation, then is followed by a negative like “can't… either” or “it's not that…”. かといって also often stands alone at the start of a sentence."
+              "explain": "Check whether 「か」 comes before 「と」: a question in front (with the question word なぜ) and an answer after it (〜からだ) → かというと, “if you ask why…, it's because…”; just a topic noun in front (京都) and what it brings to mind after it (思い浮かべる) → というと, “speaking of…, what comes to mind is…”."
             }
           ]
         },
@@ -15709,16 +15646,16 @@
               "this": [
                 {
                   "tag": "Question first · then answer",
-                  "tr": "As for why I was late, it's because the train stopped."
+                  "tr": "If you ask why we lost the match, it's because we didn't practice enough."
                 }
               ],
               "that": [
                 {
                   "tag": "Result as topic",
-                  "tr": "The reason I was late is that the train stopped."
+                  "tr": "The reason we lost the match is that we didn't practice enough."
                 }
               ],
-              "explain": "The two sentences mean the same; look at the beginning: the question word 「なぜ」 and 「か」 → かというと, building a bit of suspense before answering; 「遅れたのは」 directly makes the result the topic → のは〜からだ, more concise."
+              "explain": "The two sentences mean the same; look at how they start: with the question word 「なぜ」 and 「か」 → かというと, building a little suspense before answering; 「負けたのは」 makes the result the topic directly → のは〜からだ, more concise."
             }
           ]
         }
