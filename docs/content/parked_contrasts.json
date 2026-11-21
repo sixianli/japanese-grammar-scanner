@@ -18175,6 +18175,814 @@
           "explain": "ဝါကျနှစ်ခုလုံး ရေပူစမ်းကို ချီးမွမ်းနေသည်။ ဝါကျဖွဲ့စည်းပုံကို ကြည့်ပါ - ほど〜はない တွင် အလယ်၌ ဘယ်အချက်ကို နှိုင်းယှဉ်သလဲ (気持ちいい、おいしい) ပြောရမည်။ に限る သည် နာမ်၊ ကြိယာ၏ နောက်တွင် တိုက်ရိုက် ဝါကျ အဆုံးသတ်ပြီး “ဒီလိုအချိန်မှာ ဒီလိုလုပ်ရမယ်” ဟု ဆိုလိုကာ အကြံပြုသံ ပါသည်။"
         }
       }
+    },
+    {
+      "point": "kakeru-halfway",
+      "kind": "meaning",
+      "reason": "不是同一个意思：ようとする 是「正要做、还没开始」，かける 是「已经开始、做到一半」，「言いかけて」换成「言おうとして」事实就变了，替换测试不成立（标准「意思差不多的」收录条件 3、4）；本页「做到一半」已由 途中で 一条兑现",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "you-to-suru",
+          "thisTitle": "〜かける（做到一半）",
+          "diff": "ようとする 是「正要做」，动作还没开始；かける 是动作已经开始，做了一部分就停下。",
+          "this": [
+            {
+              "ja": "彼:かれ|は|何:なに|か|言:い|い|*かけて|、|~やめた|。",
+              "tag": "说到一半",
+              "tr": "他话说到一半，就不说了。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "彼:かれ|は|何:なに|か|言:い|*おうとして|、|~やめた|。",
+              "tag": "正要说 · 还没开口",
+              "tr": "他正想说什么，又打住了。"
+            }
+          ],
+          "explain": "两句只换了动词后面：言い＋かけて → 已经开口、说了一半；言お＋うとして → 刚想说，还没说出口。看到「〜かけて、やめた」就是做了一半。"
+        },
+        "en": {
+          "id": "you-to-suru",
+          "thisTitle": "〜かける (halfway through)",
+          "diff": "ようとする is “about to do”, and the action hasn't started; with かける the action has already started, got partway, and stopped.",
+          "this": [
+            {
+              "tag": "Stopped mid-sentence",
+              "tr": "He started to say something, then stopped."
+            }
+          ],
+          "that": [
+            {
+              "tag": "About to speak · hadn't started",
+              "tr": "He was about to say something, then held back."
+            }
+          ],
+          "explain": "Only what follows the verb is different: 言い + かけて → had already started speaking and got halfway; 言お + うとして → was just about to say it but hadn't yet. When you see 「〜かけて、やめた」, it was done halfway."
+        },
+        "ko": {
+          "id": "you-to-suru",
+          "thisTitle": "〜かける（하다 맒）",
+          "diff": "ようとする는 ‘막 ~하려 하다’로 동작이 아직 시작되지 않았고, かける는 동작이 이미 시작되어 일부만 하고 멈춘 것이다.",
+          "this": [
+            {
+              "tag": "말하다 맒",
+              "tr": "그는 뭔가 말하다가 그만두었다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "막 말하려 함 · 아직 입을 안 엶",
+              "tr": "그는 뭔가 말하려다가 그만두었다."
+            }
+          ],
+          "explain": "두 문장은 동사 뒤만 바뀌었다. 言い＋かけて → 이미 입을 열어 절반쯤 말했다. 言お＋うとして → 막 말하려 했을 뿐 아직 말하지 않았다. 「〜かけて、やめた」가 보이면 하다 만 것이다."
+        },
+        "es": {
+          "id": "you-to-suru",
+          "thisTitle": "〜かける (a medias)",
+          "diff": "ようとする es «estar a punto de hacer», la acción aún no ha empezado; con かける la acción ya ha empezado y se interrumpe a medias.",
+          "this": [
+            {
+              "tag": "Dicho a medias",
+              "tr": "Empezó a decir algo, pero lo dejó a medias."
+            }
+          ],
+          "that": [
+            {
+              "tag": "A punto de · aún no habla",
+              "tr": "Iba a decir algo, pero se contuvo."
+            }
+          ],
+          "explain": "Las dos frases solo cambian lo que sigue al verbo: 言い + かけて → ya abrió la boca y dijo una parte; 言お + うとして → estaba a punto de decirlo, pero no llegó a hacerlo. Si ves 「〜かけて、やめた」, es que lo hizo a medias."
+        },
+        "vi": {
+          "id": "you-to-suru",
+          "thisTitle": "〜かける（Làm dở）",
+          "diff": "ようとする là “định làm”, hành động chưa bắt đầu; かける là hành động đã bắt đầu, làm được một phần thì dừng.",
+          "this": [
+            {
+              "tag": "Nói dở chừng",
+              "tr": "Anh ấy nói được nửa chừng thì thôi."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Định nói · chưa mở lời",
+              "tr": "Anh ấy định nói gì đó, rồi lại thôi."
+            }
+          ],
+          "explain": "Hai câu chỉ đổi phần sau động từ: 言い＋かけて → đã mở lời, nói được một nửa; 言お＋うとして → vừa định nói, chưa nói ra. Thấy 「〜かけて、やめた」 là làm dở chừng."
+        },
+        "my": {
+          "id": "you-to-suru",
+          "thisTitle": "〜かける（တစ်ဝက်တစ်ပျက်）",
+          "diff": "ようとする သည် “လုပ်တော့မလို့” ဖြစ်ပြီး လုပ်ရပ် မစရသေးပါ။ かける သည် လုပ်ရပ် စပြီးပြီ ဖြစ်ပြီး တစ်စိတ်တစ်ပိုင်း လုပ်ပြီးမှ ရပ်လိုက်ခြင်း ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "တစ်ဝက်ပြောပြီး",
+              "tr": "သူက စကား တစ်ဝက်လောက် ပြောပြီးမှ ဆက်မပြောတော့ဘူး။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ပြောတော့မလို့ · ပါးစပ်မဟရသေး",
+              "tr": "သူက တစ်ခုခု ပြောမလို့ လုပ်ပြီးမှ ပြန်ရပ်လိုက်တယ်။"
+            }
+          ],
+          "explain": "ဝါကျနှစ်ခုသည် ကြိယာ၏ နောက်ပိုင်းသာ ပြောင်းထားသည် - 言い＋かけて → ပါးစပ် ဟပြီး တစ်ဝက် ပြောပြီးပြီ။ 言お＋うとして → ပြောမလို့ ရှိရုံ၊ မပြောရသေး။ 「〜かけて、やめた」 ကို တွေ့လျှင် တစ်ဝက်တစ်ပျက် လုပ်ခဲ့ခြင်း ဖြစ်သည်။"
+        }
+      }
+    },
+    {
+      "point": "kara-ni-kakete",
+      "kind": "meaning",
+      "reason": "共同意思不成立：にわたって 是「整整覆盖某段时间或范围」，不是「从……到……的大致范围」，差别是覆盖方式和规模，例句也不是同一句只换语法（标准「意思差不多的」收录条件 1、4）；本组已由 から〜まで 一条兑现",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ni-watatte",
+          "diff": "にかけて 是两个点之间的大致范围；にわたって 强调整个期间、整片范围都覆盖，规模大。",
+          "this": [
+            {
+              "ja": "~金曜:きんよう|*から|~日曜:にちよう|*にかけて|、|町:まち|で|お|祭:まつ|り|が|ある|。",
+              "tag": "两点之间 · 大致",
+              "tr": "从周五到周日，镇上有庆典。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~３日間:みっかかん|*にわたって|、|町:まち|で|お|祭:まつ|り|が|行:おこな|われた|。",
+              "tag": "整个期间 · 持续",
+              "tr": "镇上的庆典持续了整整三天。"
+            }
+          ],
+          "explain": "看前面的词：「金曜から日曜」是两个点 → から〜にかけて；「３日間」「10年」「全国」是一整段长度或一整片范围 → にわたって，强调从头到尾都在进行，多用于新闻、正式场合。"
+        },
+        "en": {
+          "id": "ni-watatte",
+          "diff": "にかけて is a rough range between two points; にわたって stresses covering the entire period or area, on a large scale.",
+          "this": [
+            {
+              "tag": "Between two points · rough",
+              "tr": "There's a festival in town from Friday to Sunday."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Entire period · lasting",
+              "tr": "The town festival went on for three whole days."
+            }
+          ],
+          "explain": "Look at the words before it: 「金曜から日曜」 are two points → から〜にかけて; 「３日間」「10年」「全国」 are a whole length or a whole area → にわたって, stressing it went on from start to finish, common in news and formal settings."
+        },
+        "ko": {
+          "id": "ni-watatte",
+          "diff": "にかけて는 두 지점 사이의 대략적인 범위이고, にわたって는 기간 전체, 범위 전체를 아우름을 강조하며 규모가 크다.",
+          "this": [
+            {
+              "tag": "두 지점 사이 · 대략",
+              "tr": "금요일부터 일요일에 걸쳐 마을에서 축제가 있다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "기간 전체 · 지속",
+              "tr": "마을 축제가 꼬박 사흘에 걸쳐 열렸다."
+            }
+          ],
+          "explain": "앞의 말을 보자. 「金曜から日曜」는 두 지점 → から〜にかけて. 「３日間」 「10年」 「全国」은 하나의 긴 기간이나 넓은 범위 → にわたって, 처음부터 끝까지 계속 진행됨을 강조하며 뉴스나 격식 있는 자리에서 많이 쓴다."
+        },
+        "es": {
+          "id": "ni-watatte",
+          "diff": "にかけて es un intervalo aproximado entre dos puntos; にわたって subraya que cubre todo el período o toda la zona, a gran escala.",
+          "this": [
+            {
+              "tag": "Entre dos puntos · aproximado",
+              "tr": "De viernes a domingo hay fiestas en el pueblo."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Todo el período · continuo",
+              "tr": "Las fiestas del pueblo duraron tres días enteros."
+            }
+          ],
+          "explain": "Mira la palabra anterior: 「金曜から日曜」 son dos puntos → から〜にかけて; 「３日間」「10年」「全国」 son una duración o un área completa → にわたって, que subraya que ocurre de principio a fin; es frecuente en noticias y contextos formales."
+        },
+        "vi": {
+          "id": "ni-watatte",
+          "diff": "にかけて là phạm vi đại khái giữa hai điểm; にわたって nhấn mạnh bao trùm toàn bộ thời gian, toàn bộ phạm vi, quy mô lớn.",
+          "this": [
+            {
+              "tag": "Giữa hai điểm · đại khái",
+              "tr": "Từ thứ sáu đến chủ nhật, thị trấn có lễ hội."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Toàn bộ thời gian · kéo dài",
+              "tr": "Lễ hội ở thị trấn diễn ra suốt ba ngày liền."
+            }
+          ],
+          "explain": "Nhìn từ phía trước: 「金曜から日曜」 là hai điểm → から〜にかけて; 「３日間」「10年」「全国」 là cả một độ dài hoặc cả một phạm vi → にわたって, nhấn mạnh từ đầu đến cuối đều diễn ra, hay dùng trong tin tức, hoàn cảnh trang trọng."
+        },
+        "my": {
+          "id": "ni-watatte",
+          "diff": "にかけて သည် အမှတ်နှစ်ခုကြားရှိ ခန့်မှန်းခြေ နယ်ပယ် ဖြစ်သည်။ にわたって သည် ကာလတစ်ခုလုံး၊ နယ်ပယ်တစ်ခုလုံးကို လွှမ်းခြုံကြောင်း အလေးပေးပြီး အတိုင်းအတာ ကြီးသည်။",
+          "this": [
+            {
+              "tag": "အမှတ်နှစ်ခုကြား · ခန့်မှန်းခြေ",
+              "tr": "သောကြာနေ့ကနေ တနင်္ဂနွေနေ့အထိ မြို့မှာ ပွဲတော် ရှိတယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ကာလတစ်ခုလုံး · ဆက်တိုက်",
+              "tr": "မြို့တွင် ပွဲတော်ကို သုံးရက်တိုင်တိုင် ကျင်းပခဲ့သည်။"
+            }
+          ],
+          "explain": "ရှေ့က စကားလုံးကို ကြည့်ပါ - 「金曜から日曜」 သည် အမှတ်နှစ်ခု → から〜にかけて။ 「３日間」「10年」「全国」 သည် အရှည်တစ်ခုလုံး သို့မဟုတ် နယ်ပယ်တစ်ခုလုံး → にわたって၊ အစမှ အဆုံးထိ ဆက်ဖြစ်နေကြောင်း အလေးပေးပြီး သတင်း၊ တရားဝင် အခြေအနေတွင် များသည်။"
+        }
+      }
+    },
+    {
+      "point": "kekka",
+      "kind": "meaning",
+      "reason": "不是同一个意思：結果 是一番过程后得出的结论，たところ 是试着做一下后发现了某个事实（对方义项「一做就发现」），差别只能写成「A 表示结论；B 表示发现」（标准「意思差不多的」收录条件 2、4）；本组已有 末に、あげく 两条",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ta-tokoro-result",
+          "diff": "た結果 是认真做完一番过程后得出的结论；たところ 是试着做了某事，碰巧发现一个事实。",
+          "this": [
+            {
+              "ja": "~詳:くわ|~しく|~検査:けんさ|~した|*結果:けっか|、|ただの|風邪:かぜ|だと|分:わ|かった|。",
+              "tag": "过程 → 结论",
+              "tr": "经过详细检查，结果查明只是感冒。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~医者:いしゃ|~に|~聞:き|~いてみ|*たところ|、|ただの|風邪:かぜ|だった|。",
+              "tag": "试着做 → 发现",
+              "tr": "问了一下医生，原来只是感冒。"
+            }
+          ],
+          "explain": "看前面的动作：「詳しく検査した」「話し合った」是一个认真的过程，后面是由此得出的结论 → 結果；「聞いてみた」「行ってみた」只是简单试着做了一下，后面是碰巧知道的事实，常带一点意外 → たところ。"
+        },
+        "en": {
+          "id": "ta-tokoro-result",
+          "diff": "た結果 is a conclusion reached after carefully going through a process; たところ means you tried doing something and happened to discover a fact.",
+          "this": [
+            {
+              "tag": "Process → conclusion",
+              "tr": "After a thorough examination, it turned out to be just a cold."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Tried → discovered",
+              "tr": "I asked the doctor, and it turned out to be just a cold."
+            }
+          ],
+          "explain": "Look at the action before it: 「詳しく検査した」「話し合った」 are a careful process, followed by the conclusion drawn from it → 結果; 「聞いてみた」「行ってみた」 are just a simple try, followed by a fact you happened to learn, often with a bit of surprise → たところ."
+        },
+        "ko": {
+          "id": "ta-tokoro-result",
+          "diff": "た結果는 어떤 과정을 제대로 마친 뒤 얻은 결론이고, たところ는 어떤 일을 해 봤더니 우연히 어떤 사실을 알게 된 것이다.",
+          "this": [
+            {
+              "tag": "과정 → 결론",
+              "tr": "자세히 검사한 결과, 그냥 감기라는 것을 알았다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "해 봄 → 발견",
+              "tr": "의사에게 물어봤더니 그냥 감기였다."
+            }
+          ],
+          "explain": "앞의 동작을 보자. 「詳しく検査した」 「話し合った」는 제대로 된 과정이고 뒤에 그로부터 얻은 결론이 온다 → 結果. 「聞いてみた」 「行ってみた」는 간단히 한번 해 본 것뿐이고 뒤에 우연히 알게 된 사실이 오며 약간 의외의 느낌이 담기는 경우가 많다 → たところ."
+        },
+        "es": {
+          "id": "ta-tokoro-result",
+          "diff": "た結果 es la conclusión a la que se llega tras completar con cuidado un proceso; たところ es probar a hacer algo y descubrir un hecho por casualidad.",
+          "this": [
+            {
+              "tag": "Proceso → conclusión",
+              "tr": "Tras un examen detallado, resultó que solo era un resfriado."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Probar → descubrir",
+              "tr": "Le pregunté al médico y resultó que solo era un resfriado."
+            }
+          ],
+          "explain": "Mira la acción anterior: 「詳しく検査した」「話し合った」 son un proceso serio, y detrás va la conclusión que se saca de ello → 結果; 「聞いてみた」「行ってみた」 son solo probar algo de forma sencilla, y detrás va un hecho que uno descubre por casualidad, a menudo con algo de sorpresa → たところ."
+        },
+        "vi": {
+          "id": "ta-tokoro-result",
+          "diff": "た結果 là kết luận rút ra sau khi nghiêm túc làm xong một quá trình; たところ là thử làm việc gì đó, tình cờ phát hiện ra một sự thật.",
+          "this": [
+            {
+              "tag": "Quá trình → kết luận",
+              "tr": "Sau khi kiểm tra kỹ, kết quả là chỉ bị cảm thông thường."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Thử làm → phát hiện",
+              "tr": "Thử hỏi bác sĩ thì hóa ra chỉ là cảm thông thường."
+            }
+          ],
+          "explain": "Nhìn hành động phía trước: 「詳しく検査した」「話し合った」 là một quá trình nghiêm túc, phía sau là kết luận rút ra từ đó → 結果; 「聞いてみた」「行ってみた」 chỉ là thử làm đơn giản, phía sau là sự thật tình cờ biết được, thường hơi bất ngờ → たところ."
+        },
+        "my": {
+          "id": "ta-tokoro-result",
+          "diff": "た結果 သည် ဖြစ်စဉ်တစ်ခုကို သေသေချာချာ လုပ်ပြီးမှ ရလာသော ကောက်ချက် ဖြစ်သည်။ たところ သည် တစ်ခုခုကို စမ်းလုပ်ကြည့်ရာ မတော်တဆ အဖြစ်မှန် တစ်ခုကို တွေ့ရှိခြင်း ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "ဖြစ်စဉ် → ကောက်ချက်",
+              "tr": "အသေးစိတ် စစ်ဆေးပြီးတဲ့ ရလဒ်အနေနဲ့ ရိုးရိုး အအေးမိတာပဲလို့ သိရတယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "စမ်းလုပ် → တွေ့ရှိ",
+              "tr": "ဆရာဝန်ကို မေးကြည့်တော့ ရိုးရိုး အအေးမိတာပဲ ဖြစ်နေတယ်။"
+            }
+          ],
+          "explain": "ရှေ့က လုပ်ရပ်ကို ကြည့်ပါ - 「詳しく検査した」「話し合った」 သည် သေသေချာချာ လုပ်သော ဖြစ်စဉ် ဖြစ်ပြီး နောက်တွင် ၎င်းမှ ရလာသော ကောက်ချက် လိုက်လျှင် → 結果။ 「聞いてみた」「行ってみた」 သည် ရိုးရိုးရှင်းရှင်း စမ်းလုပ်ကြည့်ရုံသာ ဖြစ်ပြီး နောက်တွင် မတော်တဆ သိလိုက်ရသော အဖြစ်မှန် လိုက်ကာ မထင်မှတ်မှု နည်းနည်း မကြာခဏ ပါလျှင် → たところ။"
+        }
+      }
+    },
+    {
+      "point": "kesshite-nai",
+      "kind": "meaning",
+      "reason": "不是同一个意思：全然〜ない 是程度上的「一点也不」，決して〜ない 是意志、断定上的「绝不」，两句互换后不自然，替换测试不成立；组说明「和否定呼应」是大类（标准「意思差不多的」收录条件 1、3、4）。本组改用 まい",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "zenzen-nai",
+          "diff": "全然〜ない 描述程度「一点也不」，偏口语；決して〜ない 多表示意志或断定「绝不」，语气郑重。",
+          "this": [
+            {
+              "ja": "この|ご|恩:おん|は|*決:けっ|*して|~忘:わす|~れ|*ません|。",
+              "tag": "决心 · 郑重",
+              "tr": "这份恩情我绝不会忘记。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "昨日:きのう|の|ことは|*全然:ぜんぜん|~覚:おぼ|~えて|*いない|。",
+              "tag": "状态 · 口语",
+              "tr": "昨天的事我完全不记得了。"
+            }
+          ],
+          "explain": "看说的是「决心」还是「状态」：不会忘、不会放弃、不许做 这类意志和禁止 → 決して；不记得、不懂、不好吃 这类眼下的状态程度 → 全然。決して 语气郑重，也常用在注意事项里（決して触らないでください）。"
+        },
+        "en": {
+          "id": "zenzen-nai",
+          "diff": "全然〜ない describes degree, “not at all”, and is casual; 決して〜ない usually expresses will or a firm assertion, “never”, and sounds formal.",
+          "this": [
+            {
+              "tag": "Resolve · formal",
+              "tr": "I will never forget this kindness."
+            }
+          ],
+          "that": [
+            {
+              "tag": "State · casual",
+              "tr": "I don't remember anything about yesterday."
+            }
+          ],
+          "explain": "Ask whether it's about “resolve” or a “state”: will and prohibition, like won't forget, won't give up, must not do → 決して; a current state or degree, like don't remember, don't understand, doesn't taste good → 全然. 決して sounds formal and is also common in warnings (決して触らないでください)."
+        },
+        "ko": {
+          "id": "zenzen-nai",
+          "diff": "全然〜ない는 ‘조금도 ~않다’라는 정도를 말하며 구어적이다. 決して〜ない는 주로 ‘결코 ~않다’라는 의지나 단정을 나타내며 말투가 정중하다.",
+          "this": [
+            {
+              "tag": "결심 · 정중",
+              "tr": "이 은혜는 결코 잊지 않겠습니다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "상태 · 구어",
+              "tr": "어제 일은 전혀 기억나지 않는다."
+            }
+          ],
+          "explain": "말하는 것이 ‘결심’인지 ‘상태’인지 보자. 잊지 않겠다, 포기하지 않겠다, 해서는 안 된다 같은 의지나 금지 → 決して. 기억나지 않는다, 모르겠다, 맛이 없다 같은 지금의 상태나 정도 → 全然. 決して는 말투가 정중해서 주의 사항에도 자주 쓰인다(決して触らないでください)."
+        },
+        "es": {
+          "id": "zenzen-nai",
+          "diff": "全然〜ない describe un grado, «nada en absoluto», y es más coloquial; 決して〜ない suele expresar voluntad o una afirmación tajante, «jamás», con un tono solemne.",
+          "this": [
+            {
+              "tag": "Decisión · solemne",
+              "tr": "Jamás olvidaré lo que hiciste por mí."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Estado · coloquial",
+              "tr": "No me acuerdo de nada de lo de ayer."
+            }
+          ],
+          "explain": "Fíjate si se habla de una «decisión» o de un «estado»: voluntad o prohibición, como no olvidar, no rendirse o no permitir hacer algo → 決して; el grado de un estado presente, como no acordarse, no entender o no estar rico → 全然. 決して tiene un tono solemne y también es frecuente en advertencias (決して触らないでください)."
+        },
+        "vi": {
+          "id": "zenzen-nai",
+          "diff": "全然〜ない mô tả mức độ “không… chút nào”, thiên về văn nói; 決して〜ない thường diễn tả ý chí hoặc khẳng định “tuyệt đối không”, giọng trang trọng.",
+          "this": [
+            {
+              "tag": "Quyết tâm · trang trọng",
+              "tr": "Ơn này tôi tuyệt đối sẽ không quên."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Trạng thái · văn nói",
+              "tr": "Chuyện hôm qua tôi hoàn toàn không nhớ gì cả."
+            }
+          ],
+          "explain": "Xem câu nói về “quyết tâm” hay “trạng thái”: ý chí và cấm đoán kiểu không quên, không bỏ cuộc, không được làm → 決して; trạng thái, mức độ trước mắt kiểu không nhớ, không hiểu, không ngon → 全然. 決して có giọng trang trọng, cũng hay dùng trong các lưu ý (決して触らないでください)."
+        },
+        "my": {
+          "id": "zenzen-nai",
+          "diff": "全然〜ない သည် အတိုင်းအတာ “နည်းနည်းမှ မ...” ကို ဖော်ပြပြီး အပြောစကားဘက် ပိုသည်။ 決して〜ない သည် အများအားဖြင့် စိတ်ဆန္ဒ သို့မဟုတ် ပြတ်ပြတ်သားသား “ဘယ်တော့မှ မ...” ကို ဖော်ပြပြီး လေသံ လေးနက်သည်။",
+          "this": [
+            {
+              "tag": "ဆုံးဖြတ်ချက် · လေးနက်",
+              "tr": "ဒီကျေးဇူးကို ဘယ်တော့မှ မမေ့ပါဘူး။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "အခြေအနေ · အပြောစကား",
+              "tr": "မနေ့က အကြောင်းကို လုံးဝ မမှတ်မိတော့ဘူး။"
+            }
+          ],
+          "explain": "ပြောနေသည်မှာ “ဆုံးဖြတ်ချက်” လား “အခြေအနေ” လား ကြည့်ပါ - မမေ့ဘူး၊ လက်မလျှော့ဘူး၊ မလုပ်ရ စသည့် စိတ်ဆန္ဒနှင့် တားမြစ်ချက် → 決して။ မမှတ်မိဘူး၊ နားမလည်ဘူး၊ မကောင်းဘူး စသည့် လက်ရှိ အခြေအနေ၏ အတိုင်းအတာ → 全然။ 決して သည် လေသံ လေးနက်ပြီး သတိပေးချက်များတွင်လည်း မကြာခဏ သုံးသည် (決して触らないでください)။"
+        }
+      }
+    },
+    {
+      "point": "kiri-only",
+      "kind": "meaning",
+      "reason": "不是同一个意思：たきり 是「做了之后再没下文」，たまま 是「保持某状态去做另一件事」，替换后意思改变，替换测试不成立；对方三个义项都没有「只有」或「之后再也没」（标准「意思差不多的」收录条件 2、3、4）。本页第 2 义项改用 て以来",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "mama-unchanged",
+          "thisTitle": "〜たきり（之后再也没）",
+          "diff": "たまま 是保持某个状态去做别的事；たきり 是做了之后就再也没有下文，后面多是否定。",
+          "this": [
+            {
+              "ja": "兄:あに|は|３年前:さんねんまえ|に|家:いえ|を|出:で|*たきり|、|~連絡:れんらく|~が|~ない|。",
+              "tag": "之后 · 再没下文",
+              "tr": "哥哥三年前离家后，就再也没联系过。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "窓:まど|を|開:あ|け|*たまま|、|~寝:ね|~てしまった|。",
+              "tag": "保持状态 · 做别的",
+              "tr": "开着窗就睡着了。"
+            }
+          ],
+          "explain": "看后半句：「連絡がない」「帰ってこない」这类「再也没有……」→ たきり，带担心或意外；后面是在这个状态下做的另一个动作（寝てしまった、出かけた）→ たまま。"
+        },
+        "en": {
+          "id": "mama-unchanged",
+          "thisTitle": "〜たきり (never… since)",
+          "diff": "たまま means doing something else while a state is kept; たきり means after doing something, nothing more ever followed — usually followed by a negative.",
+          "this": [
+            {
+              "tag": "Since then · nothing more",
+              "tr": "My brother left home three years ago and we haven't heard from him since."
+            }
+          ],
+          "that": [
+            {
+              "tag": "State kept · doing something else",
+              "tr": "I fell asleep with the window open."
+            }
+          ],
+          "explain": "Look at the second half: “never… again” like 「連絡がない」「帰ってこない」 → たきり, with worry or surprise; another action done in that state (寝てしまった, 出かけた) → たまま."
+        },
+        "ko": {
+          "id": "mama-unchanged",
+          "thisTitle": "〜たきり（그 뒤로 다시는 안 함）",
+          "diff": "たまま는 어떤 상태를 유지한 채 다른 일을 하는 것이고, たきり는 한 뒤로 다시는 소식이 없는 것으로, 뒤에 주로 부정이 온다.",
+          "this": [
+            {
+              "tag": "그 뒤로 · 소식 없음",
+              "tr": "형은 3년 전에 집을 나간 뒤로 연락이 없다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "상태 유지 · 다른 일",
+              "tr": "창문을 연 채로 잠들어 버렸다."
+            }
+          ],
+          "explain": "뒷부분을 보자. 「連絡がない」 「帰ってこない」처럼 ‘다시는 ~없다’ → たきり로, 걱정이나 뜻밖이라는 느낌이 담긴다. 그 상태에서 하는 다른 동작(寝てしまった、出かけた)이 오면 → たまま."
+        },
+        "es": {
+          "id": "mama-unchanged",
+          "thisTitle": "〜たきり (y nunca más)",
+          "diff": "たまま es mantener un estado mientras se hace otra cosa; たきり es hacer algo y que después no haya más noticias; lo que sigue suele ser negativo.",
+          "this": [
+            {
+              "tag": "Desde entonces · nada más",
+              "tr": "Mi hermano se fue de casa hace tres años y desde entonces no ha dado señales de vida."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Estado mantenido · otra acción",
+              "tr": "Me quedé dormido con la ventana abierta."
+            }
+          ],
+          "explain": "Mira la segunda parte: algo del tipo «nunca más…», como 「連絡がない」 o 「帰ってこない」 → たきり, con preocupación o sorpresa; otra acción que se hace en ese estado (寝てしまった、出かけた) → たまま."
+        },
+        "vi": {
+          "id": "mama-unchanged",
+          "thisTitle": "〜たきり（rồi không bao giờ nữa）",
+          "diff": "たまま là giữ nguyên một trạng thái để làm việc khác; たきり là làm xong rồi không còn diễn biến gì nữa, phía sau thường là phủ định.",
+          "this": [
+            {
+              "tag": "Sau đó · bặt tin",
+              "tr": "Anh trai rời nhà từ ba năm trước, từ đó không hề liên lạc."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Giữ trạng thái · làm việc khác",
+              "tr": "Để nguyên cửa sổ mở mà ngủ quên mất."
+            }
+          ],
+          "explain": "Xem nửa sau câu: kiểu “không còn… nữa” như 「連絡がない」「帰ってこない」 → たきり, mang sự lo lắng hoặc bất ngờ; phía sau là một hành động khác làm trong trạng thái đó (寝てしまった, 出かけた) → たまま."
+        },
+        "my": {
+          "id": "mama-unchanged",
+          "thisTitle": "〜たきり（ပြီးနောက် ဘယ်တော့မှ မ...）",
+          "diff": "たまま သည် အခြေအနေတစ်ခုကို ထိန်းထားရင်း တခြားအရာ လုပ်ခြင်း ဖြစ်သည်။ たきり သည် လုပ်ပြီးနောက် ဘာသတင်းမှ မရှိတော့ခြင်း ဖြစ်ပြီး နောက်တွင် အများအားဖြင့် ငြင်းဆိုချက် လိုက်သည်။",
+          "this": [
+            {
+              "tag": "ပြီးနောက် · သတင်းမရှိ",
+              "tr": "အစ်ကို သုံးနှစ်လောက်က အိမ်ကနေ ထွက်သွားပြီးကတည်းက ဆက်သွယ်မှု လုံးဝ မရှိတော့ဘူး။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "အခြေအနေ ထိန်းထား · တခြားလုပ်",
+              "tr": "ပြတင်းပေါက် ဖွင့်ထားလျက်နဲ့ အိပ်ပျော်သွားတယ်။"
+            }
+          ],
+          "explain": "ဝါကျ နောက်ပိုင်းကို ကြည့်ပါ - 「連絡がない」「帰ってこない」 ကဲ့သို့ “ဘယ်တော့မှ ... မရှိတော့” → たきり ဖြစ်ပြီး စိုးရိမ်မှု သို့မဟုတ် အံ့အားသင့်မှု ပါသည်။ နောက်တွင် ထိုအခြေအနေအတိုင်း လုပ်သော တခြားလုပ်ဆောင်ချက် (寝てしまった、出かけた) ရှိလျှင် → たまま။"
+        }
+      }
+    },
+    {
+      "point": "kiru-complete",
+      "kind": "meaning",
+      "reason": "不是同一个意思：切れない 是量太多「做不完」，かねる 是出于立场「不便做、礼貌拒绝」，互换后意思改变，替换测试不成立；对方页面没有「做不完」（标准「意思差不多的」收录条件 2、3、4）",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "kaneru",
+          "thisTitle": "〜切れない",
+          "diff": "切れない 是量太多、做不完；かねる 是因为立场、情理「不便做」，常用于礼貌拒绝。",
+          "this": [
+            {
+              "ja": "~量:りょう|~が|~多:おお|~くて|、|食:た|べ|*切:き|*れない|。",
+              "tag": "量多 · 做不完",
+              "tr": "量太多，吃不完。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "その|ご|質問:しつもん|には|、|お|答:こた|えし|*かねます|。",
+              "tag": "立场 · 礼貌拒绝",
+              "tr": "这个问题恕我无法回答。"
+            }
+          ],
+          "explain": "看「做不到」的原因：量太多、程度不够（多くて、数が多い）→ 切れない；能力上做得到，但出于立场、规定不方便做 → かねる，是对客户、上级婉拒时的固定说法。"
+        },
+        "en": {
+          "id": "kaneru",
+          "thisTitle": "〜切れない",
+          "diff": "切れない means there's too much to finish; かねる means you “can't very well” do it because of your position or propriety — often used to decline politely.",
+          "this": [
+            {
+              "tag": "Too much · can't finish",
+              "tr": "There's too much — I can't eat it all."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Position · polite refusal",
+              "tr": "I'm afraid I can't answer that question."
+            }
+          ],
+          "explain": "Look at why it can't be done: too much, or not enough capacity (多くて, 数が多い) → 切れない; you're able to, but your position or the rules make it inappropriate → かねる, the set phrase for politely declining customers or superiors."
+        },
+        "ko": {
+          "id": "kaneru",
+          "thisTitle": "〜切れない",
+          "diff": "切れない는 양이 너무 많아 다 하지 못하는 것이고, かねる는 입장이나 도리상 ‘하기 곤란하다’는 것으로, 정중한 거절에 자주 쓰인다.",
+          "this": [
+            {
+              "tag": "양이 많음 · 다 못 함",
+              "tr": "양이 너무 많아서 다 못 먹겠다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "입장 · 정중한 거절",
+              "tr": "그 질문에는 답변드리기 어렵습니다."
+            }
+          ],
+          "explain": "‘할 수 없는’ 이유를 보자. 양이 너무 많거나 정도가 모자라면(多くて、数が多い) → 切れない. 능력으로는 할 수 있지만 입장이나 규정상 하기 곤란하면 → かねる로, 고객이나 윗사람에게 완곡하게 거절할 때의 정해진 표현이다."
+        },
+        "es": {
+          "id": "kaneru",
+          "thisTitle": "〜切れない",
+          "diff": "切れない es que hay demasiado y no se puede terminar; かねる es que, por la posición o por consideración, «no conviene hacerlo»; se usa mucho para rechazar con cortesía.",
+          "this": [
+            {
+              "tag": "Mucha cantidad · no se acaba",
+              "tr": "Hay demasiada comida; no puedo acabármela."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Posición · rechazo cortés",
+              "tr": "Lamento no poder responder a esa pregunta."
+            }
+          ],
+          "explain": "Mira por qué «no se puede»: demasiada cantidad o grado insuficiente (多くて、数が多い) → 切れない; se podría hacer, pero por la posición o las normas no conviene → かねる, la fórmula fija para rechazar con tacto ante clientes o superiores."
+        },
+        "vi": {
+          "id": "kaneru",
+          "thisTitle": "〜切れない",
+          "diff": "切れない là khối lượng quá nhiều, làm không hết; かねる là vì lập trường, lẽ phải mà “không tiện làm”, thường dùng để từ chối lịch sự.",
+          "this": [
+            {
+              "tag": "Nhiều · làm không hết",
+              "tr": "Nhiều quá, ăn không hết."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Lập trường · từ chối lịch sự",
+              "tr": "Câu hỏi đó, xin thứ lỗi, tôi không thể trả lời."
+            }
+          ],
+          "explain": "Xem nguyên nhân của “không làm được”: khối lượng quá nhiều, mức độ không đủ (多くて, 数が多い) → 切れない; về năng lực thì làm được nhưng vì lập trường, quy định nên không tiện làm → かねる, là cách nói cố định khi khéo léo từ chối khách hàng, cấp trên."
+        },
+        "my": {
+          "id": "kaneru",
+          "thisTitle": "〜切れない",
+          "diff": "切れない သည် ပမာဏ များလွန်းလို့ မပြီးနိုင်ခြင်း ဖြစ်သည်။ かねる သည် ရပ်တည်ချက်၊ သင့်တော်မှုကြောင့် “လုပ်ရန် အဆင်မပြေ” ခြင်း ဖြစ်ပြီး ယဉ်ကျေးစွာ ငြင်းရာတွင် မကြာခဏ သုံးသည်။",
+          "this": [
+            {
+              "tag": "ပမာဏများ · မပြီးနိုင်",
+              "tr": "ပမာဏ များလွန်းလို့ စားလို့ မကုန်နိုင်ဘူး။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ရပ်တည်ချက် · ယဉ်ကျေးစွာ ငြင်း",
+              "tr": "အဲဒီမေးခွန်းကိုတော့ ဖြေကြားပေးနိုင်ခြင်း မရှိပါ၊ ခွင့်လွှတ်ပါ။"
+            }
+          ],
+          "explain": "“မလုပ်နိုင်” ရသည့် အကြောင်းရင်းကို ကြည့်ပါ - ပမာဏ များလွန်းခြင်း၊ အတိုင်းအတာ မမီခြင်း (多くて、数が多い) → 切れない။ စွမ်းရည်အရ လုပ်နိုင်သော်လည်း ရပ်တည်ချက်၊ စည်းမျဉ်းကြောင့် လုပ်ရန် အဆင်မပြေ → かねる ဖြစ်ပြီး ဖောက်သည်၊ အထက်လူကို ယဉ်ကျေးစွာ ငြင်းရာတွင် သုံးသော ပုံသေအသုံး ဖြစ်သည်။"
+        }
+      }
+    },
+    {
+      "point": "kiru-complete",
+      "kind": "meaning",
+      "reason": "不是同一个意思：切れない 是量太多「做不完」，ようがない 是缺少手段「没法做」，「数え切れない」不能换成「数えようがない」，替换测试不成立（标准「意思差不多的」收录条件 3、4）",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "you-ga-nai",
+          "thisTitle": "〜切れない",
+          "diff": "切れない 是能做，但量太多做不完；ようがない 是根本没有办法下手。",
+          "this": [
+            {
+              "ja": "空:そら|に|星:ほし|が|~多:おお|~くて|、|数:かぞ|え|*切:き|*れない|。",
+              "tag": "能做 · 做不完",
+              "tr": "天上星星太多，数也数不完。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~連絡先:れんらくさき|~が|~分:わ|~からないので|、|連絡:れんらく|し|*ようがない|。",
+              "tag": "没有手段",
+              "tr": "不知道联系方式，没法联系。"
+            }
+          ],
+          "explain": "看原因：「多くて」→ 有办法做，只是做不完 → 切れない；「連絡先が分からない」→ 缺少手段，连开始都做不到 → ようがない（接ます形：し＋ようがない）。"
+        },
+        "en": {
+          "id": "you-ga-nai",
+          "thisTitle": "〜切れない",
+          "diff": "切れない means you can do it, but there's too much to finish; ようがない means there's no way to even start.",
+          "this": [
+            {
+              "tag": "Can do · can't finish",
+              "tr": "There are so many stars in the sky that I can't count them all."
+            }
+          ],
+          "that": [
+            {
+              "tag": "No means",
+              "tr": "I don't know his contact details, so there's no way to reach him."
+            }
+          ],
+          "explain": "Look at the reason: 「多くて」 → there's a way to do it, it just can't be finished → 切れない; 「連絡先が分からない」 → the means are missing, so you can't even begin → ようがない (attaches to the masu-stem: し＋ようがない)."
+        },
+        "ko": {
+          "id": "you-ga-nai",
+          "thisTitle": "〜切れない",
+          "diff": "切れない는 할 수는 있지만 양이 너무 많아 다 하지 못하는 것이고, ようがない는 아예 손쓸 방법이 없는 것이다.",
+          "this": [
+            {
+              "tag": "할 수 있음 · 다 못 함",
+              "tr": "하늘에 별이 너무 많아서 셀 수가 없다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "수단이 없음",
+              "tr": "연락처를 몰라서 연락할 방법이 없다."
+            }
+          ],
+          "explain": "이유를 보자. 「多くて」 → 방법은 있는데 다 하지 못할 뿐 → 切れない. 「連絡先が分からない」 → 수단이 없어 시작조차 못 함 → ようがない(ます형에 접속: し＋ようがない)."
+        },
+        "es": {
+          "id": "you-ga-nai",
+          "thisTitle": "〜切れない",
+          "diff": "切れない es que se puede hacer, pero hay demasiado para terminar; ようがない es que no hay manera de empezar siquiera.",
+          "this": [
+            {
+              "tag": "Se puede · no se acaba",
+              "tr": "Hay tantas estrellas en el cielo que no se pueden contar todas."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Sin medios",
+              "tr": "No sé cómo contactarlo, así que no hay manera de avisarle."
+            }
+          ],
+          "explain": "Mira la causa: 「多くて」 → hay forma de hacerlo, solo que no se acaba → 切れない; 「連絡先が分からない」 → faltan los medios y ni siquiera se puede empezar → ようがない (va con la raíz ます: し＋ようがない)."
+        },
+        "vi": {
+          "id": "you-ga-nai",
+          "thisTitle": "〜切れない",
+          "diff": "切れない là làm được nhưng nhiều quá làm không hết; ようがない là hoàn toàn không có cách nào để bắt tay vào.",
+          "this": [
+            {
+              "tag": "Làm được · làm không hết",
+              "tr": "Sao trên trời nhiều quá, đếm không xuể."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Không có cách",
+              "tr": "Không biết thông tin liên lạc nên không có cách nào liên lạc."
+            }
+          ],
+          "explain": "Xem nguyên nhân: 「多くて」 → có cách làm, chỉ là làm không hết → 切れない; 「連絡先が分からない」 → thiếu phương tiện, ngay cả bắt đầu cũng không được → ようがない (đi sau thể ます: し＋ようがない)."
+        },
+        "my": {
+          "id": "you-ga-nai",
+          "thisTitle": "〜切れない",
+          "diff": "切れない သည် လုပ်နိုင်သော်လည်း ပမာဏ များလွန်းလို့ မပြီးနိုင်ခြင်း ဖြစ်သည်။ ようがない သည် စတင်ရန်ပင် နည်းလမ်း လုံးဝ မရှိခြင်း ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "လုပ်နိုင် · မပြီးနိုင်",
+              "tr": "ကောင်းကင်မှာ ကြယ်တွေ များလွန်းလို့ ရေလို့တောင် မကုန်နိုင်ဘူး။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "နည်းလမ်း မရှိ",
+              "tr": "ဆက်သွယ်ရမယ့် လိပ်စာ မသိလို့ ဆက်သွယ်လို့ မရဘူး။"
+            }
+          ],
+          "explain": "အကြောင်းရင်းကို ကြည့်ပါ - 「多くて」 → လုပ်နိုင်သော နည်းလမ်း ရှိသော်လည်း မပြီးနိုင်ခြင်းသာ → 切れない။ 「連絡先が分からない」 → နည်းလမ်း မရှိ၍ စတင်ရန်ပင် မဖြစ်နိုင် → ようがない (ます形 နှင့် တွဲသည် - し＋ようがない)။"
+        }
+      }
     }
   ]
 }

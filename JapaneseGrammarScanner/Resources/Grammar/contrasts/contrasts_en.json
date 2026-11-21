@@ -15665,8 +15665,34 @@
       "id": "ka-to-omou",
       "groups": [
         {
-          "kind": "root",
-          "note": "All come from と思う — “to think so”",
+          "kind": "look",
+          "note": "かと思った ↔ かと思ったら — only 「ら」 is different",
+          "items": [
+            {
+              "id": "ka-to-omou-to",
+              "diff": "かと思った ends the sentence and means “I thought…”; かと思ったら sits mid-sentence and means “no sooner… than…”.",
+              "this": [
+                {
+                  "tag": "End · I thought",
+                  "tr": "It was so quiet I thought nobody was here."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Mid-sentence · no sooner… than",
+                  "tr": "No sooner had it started raining than it stopped."
+                }
+              ],
+              "explain": "The two differ only by 「ら」. Look at what follows 「思った」: if a period ends it → it's a misunderstanding at the time, “I thought…” (someone was actually there); if 「ら」 follows and the sentence goes on to something that happened right after (すぐやんだ) → two things in quick succession, “no sooner… than…”. かと思ったら always has to continue; it can't end the sentence the way かと思った can.",
+              "title": "〜かと思ったら (no sooner… than)",
+              "thisTitle": "〜かと思った (I thought…)"
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 1,
+          "note": "Both mean stating your own view: “I think…”",
           "items": [
             {
               "id": "to-omou",
@@ -15687,49 +15713,6 @@
               "explain": "The two sentences differ only by 「か」. With 「か」, the opinion becomes a “question” and sounds less assertive, so 「〜かと思います」 is common in business emails and when offering opinions to superiors; when you're sure and want to state your position clearly, use 「と思います」."
             },
             {
-              "id": "ka-to-omou-to",
-              "title": "〜かと思ったら (no sooner… than)",
-              "thisTitle": "〜かと思った (I thought…)",
-              "diff": "かと思った ends the sentence and means “I thought…”; かと思ったら sits mid-sentence and means “no sooner… than…”.",
-              "this": [
-                {
-                  "tag": "End · I thought",
-                  "tr": "It was so quiet I thought nobody was here."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Mid-sentence · no sooner… than",
-                  "tr": "No sooner had it started raining than it stopped again."
-                }
-              ],
-              "explain": "Look at what follows 「思った」: a period ends it → it describes a misunderstanding at the time, “I thought”; followed by 「ら」 and something that happened right after (すぐやんだ) → two things happening in quick succession, “no sooner… than…”."
-            },
-            {
-              "id": "to-omoikiya",
-              "thisTitle": "〜かと思った (I thought…)",
-              "diff": "かと思った is spoken, and the result after “I thought…” can be left unsaid; かと思いきや is written and must be followed by an unexpected result.",
-              "this": [
-                {
-                  "tag": "Spoken · result can be omitted",
-                  "tr": "I thought today was a day off."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Written · unexpected result follows",
-                  "tr": "I thought today was a day off, but there were classes as usual."
-                }
-              ],
-              "explain": "Look at whether the sentence goes on to state the result: かと思った can end right there, and the listener naturally understands “it actually wasn't”; かと思いきや can't end the sentence and must be followed by something unexpected; it's common in writing and news."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Both use a questioning tone to tentatively offer an opinion: “might it be…?”",
-          "items": [
-            {
               "id": "no-de-wa-nai-ka",
               "thisTitle": "〜かと思う (tentative)",
               "diff": "Both use a questioning tone to offer an opinion tentatively; かと思います is mostly used in business reports and emails, のではないか mostly in discussions and writing, and in speech it's んじゃない.",
@@ -15748,6 +15731,32 @@
               "explain": "The two sentences mean almost the same; the difference is the setting: when reporting to clients or bosses, 「〜かと思います」 is the most appropriate; raising concerns in writing or at meetings, 「〜のではないか」 is common; between friends, 「〜んじゃない？」."
             }
           ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “I thought… (but it wasn't so)”",
+          "items": [
+            {
+              "id": "to-omoikiya",
+              "diff": "かと思った is spoken, and you can leave out what actually happened after “I thought…”; かと思いきや is written and must be followed by the unexpected result.",
+              "this": [
+                {
+                  "tag": "Spoken · result optional",
+                  "tr": "I thought today was a day off."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Written · unexpected result follows",
+                  "tr": "I thought today was a day off, but there were classes as usual."
+                }
+              ],
+              "explain": "Both say “I thought today was a day off.” Look at where the sentence stops: かと思った can end right there, leaving the listener to infer “but it wasn't”, and is common in speech; かと思いきや can't end a sentence — it must be followed by the unexpected reality (普通に授業があった), and appears mostly in writing and the news.",
+              "thisTitle": "〜かと思った (I thought…)",
+              "title": "〜かと思いきや (I thought…, but)"
+            }
+          ]
         }
       ]
     },
@@ -15756,61 +15765,53 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "All describe a stage where an action isn't finished yet (about to, nearly, halfway through)",
+          "sense": 1,
+          "note": "Both mean “halfway through”",
           "items": [
             {
-              "id": "you-to-suru",
-              "thisTitle": "〜かける (halfway through)",
-              "diff": "ようとする is “about to do”, and the action hasn't started; with かける the action has already started, got partway, and stopped.",
+              "id": "tochuu-de",
+              "diff": "Both describe an action “halfway done”; かけ attaches to the ます形 of a verb and stresses that the action stopped partway and wasn't finished; 途中 is a noun that just points to a moment in the process, usually followed by something that happened at that moment.",
               "this": [
                 {
-                  "tag": "Stopped mid-sentence",
-                  "tr": "He started to say something, then stopped."
+                  "tag": "Unfinished · left aside",
+                  "tr": "There's still some half-drunk coffee left on the table."
                 }
               ],
               "that": [
                 {
-                  "tag": "About to speak · hadn't started",
-                  "tr": "He was about to say something, then held back."
+                  "tag": "Mid-process · something cuts in",
+                  "tr": "While I was drinking my coffee, the phone rang."
                 }
               ],
-              "explain": "Only what follows the verb is different: 言い + かけて → had already started speaking and got halfway; 言お + うとして → was just about to say it but hadn't yet. When you see 「〜かけて、やめた」, it was done halfway."
-            },
+              "explain": "Look at the focus: 「飲みかけのコーヒー」 is about the thing left unfinished and set aside — 「〜かけの + noun」 is the most common form; 「飲んでいる途中で」 is about the moment you were drinking, followed by what happened then (電話が鳴った), and you may well go on drinking afterwards. Sometimes both work: 仕事をやりかけのまま帰った ≈ 仕事の途中で帰った; かけ puts more stress on “stopped partway, not finished”.",
+              "thisTitle": "〜かけの (half-done)",
+              "title": "〜途中で (in the middle of)"
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “nearly…”",
+          "items": [
             {
               "id": "sou-ni-naru",
+              "diff": "Both mean “nearly…”, and it didn't actually happen; かける feels like it had already begun, while そうになる just says it was about to happen and is the most widely used.",
+              "this": [
+                {
+                  "tag": "Already begun",
+                  "tr": "My foot slipped on the stairs and I nearly fell (I was already going over)."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "About to happen",
+                  "tr": "My foot slipped on the stairs and I nearly fell."
+                }
+              ],
+              "explain": "Both work, and both mean “nearly fell, but didn't”. かける originally means “halfway through”, so 転びかけた says the fall had already begun (you were already halfway down); 転びそうになった just says “it looked like I'd fall”, without stressing that it had started. 死にかけた (actually came close to death) and 死にそうになった (nearly died) differ in the same way. In everyday speech, そうになる is the most common way to say “nearly…”.",
               "thisTitle": "〜かける (almost)",
-              "diff": "かける says a state has already begun to appear; そうになる says something was about to happen but in the end didn't.",
-              "this": [
-                {
-                  "tag": "Already half forgotten",
-                  "tr": "I had already half forgotten my childhood dreams."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nearly · didn't happen",
-                  "tr": "I nearly forgot an important promise."
-                }
-              ],
-              "explain": "Look at the adverb and the tense: 「もう〜かけていた」 says the forgetting was already under way and the memory had grown hazy; 「危うく〜そうになった」 says you very nearly forgot but actually didn't. 死にかけた (really was in danger of dying once) vs. 死にそうになった (nearly died) is the same difference."
-            },
-            {
-              "id": "tochuu-de",
-              "thisTitle": "〜かけの (half-done)",
-              "diff": "かけの modifies an object, meaning “something left half-done”; 途中で refers to a point in the middle of a process, followed by what happened then.",
-              "this": [
-                {
-                  "tag": "Half-done thing",
-                  "tr": "There's a half-read book on the desk."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "During the process → something happened",
-                  "tr": "I fell asleep in the middle of reading a book."
-                }
-              ],
-              "explain": "Look at what follows: 「〜かけの + noun」 is followed by a thing (本、コーヒー), saying it was left unfinished; 「〜途中で」 is followed by what happened at that moment (眠ってしまった、電話が来た). 途中 can also mean on the way (帰る途中で), but かけ can't."
+              "title": "〜そうになる (nearly)"
             }
           ]
         }
@@ -15825,23 +15826,23 @@
           "items": [
             {
               "id": "to-wa-kagiranai",
-              "diff": "とは限らない can mean “not necessarily” on its own; 必ずしも is an adverb that must be followed by a negative, and is often used together with とは限らない for emphasis.",
+              "diff": "Both mean “not necessarily”; 必ずしも is an adverb that signals “not always” from the start and must be followed by a negative (〜わけではない etc.); とは限らない is negative in itself, works on its own, and is common in speech too.",
               "this": [
                 {
-                  "tag": "Adverb + negative · more emphatic",
-                  "tr": "Expensive things aren't necessarily good."
+                  "tag": "Adverb + negative · formal",
+                  "tr": "Brand-name goods don't necessarily last long."
                 }
               ],
               "that": [
                 {
                   "tag": "On its own · not necessarily",
-                  "tr": "Expensive things aren't always good."
+                  "tr": "Brand-name goods won't necessarily last long."
                 }
               ],
+              "explain": "Both sentences mean the same; choose by tone. Starting with 必ずしも tells the listener right away that you're going to say “not always”; paired with 「わけではない」 or 「とは言えない」 it sounds objective and formal, typical of writing and formal remarks. When you just casually say “not necessarily”, とは限らない at the end of the sentence is enough. You can also use both together (必ずしも〜とは限らない) to make “not necessarily” stronger. Remember that 必ずしも always needs a negative after it.",
               "wrong": {
                 "why": "必ずしも must be followed by a negative"
-              },
-              "explain": "とは限らない is itself a negative and is enough on its own; adding 必ずしも before it makes the “not necessarily” meaning clearer. Conversely, 必ずしも can't be used alone and must be followed by a negative such as 「〜ない」「〜とは限らない」「〜わけではない」 (必ずしも〜ない works too)."
+              }
             }
           ]
         }
@@ -15852,58 +15853,73 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both express the angle or basis of a judgment (judging from…)",
+          "sense": 1,
+          "note": "Both mean “from someone's standpoint”",
           "items": [
             {
               "id": "ni-totte",
-              "diff": "にとって is “for…”, followed by an evaluation (important, difficult); からすると is “judging from…”, and can be followed by a guess.",
+              "diff": "から見ると means looking through that person's eyes; にとって says what the matter means to that person or how it affects them.",
               "this": [
                 {
-                  "tag": "Basis → guess",
-                  "tr": "Judging from the sky, it'll probably rain tomorrow."
+                  "tag": "Through their eyes",
+                  "tr": "In international students' eyes, Japan's garbage sorting is complicated."
                 }
               ],
               "that": [
                 {
-                  "tag": "For someone → evaluation",
-                  "tr": "For farmers, rain is important."
+                  "tag": "Effect on them",
+                  "tr": "For international students, Japan's garbage sorting is complicated."
                 }
               ],
-              "explain": "Look at what comes before and after: evidence like 「様子」「表情」 before it, and a guess with 「だろう」「ようだ」 after → からすると; the person affected before it, and an evaluation like 「大切だ」「難しい」「ありがたい」 after → にとって. から見ると works the same as からすると."
+              "explain": "Both sentences work and mean almost the same. から見ると focuses on “how it looks to that person”, so it can also be followed by appearance expressions like 「〜そうだ」 (子どもから見ると、大人はいつも忙しそうだ) — にとって isn't normally used there; にとって focuses on “what this means to that person or how it affects them”, and is usually followed by evaluations like 「大切だ」「難しい」「ありがたい」."
             },
             {
               "id": "kara-iu-to",
-              "diff": "から見ると can directly follow a person; からいうと usually follows abstract nouns like 「立場」「経験」「点」.",
+              "diff": "Both mean looking from a certain standpoint; から見ると can come directly after a person, while からいうと needs a word for a viewpoint such as 「立場」 or 「点」.",
               "this": [
                 {
                   "tag": "Directly after a person",
-                  "tr": "To children, the adult world must seem strange."
+                  "tr": "To users, this screen is hard to use."
                 }
               ],
               "that": [
                 {
-                  "tag": "After experience・position",
-                  "tr": "From my experience, this method won't work."
+                  "tag": "After 立場 · slightly formal",
+                  "tr": "From the users' standpoint, this screen is hard to use."
                 }
               ],
-              "explain": "Look at what comes before から: a specific person like 「子ども」「親」 → から見ると／からすると; abstract nouns like 「経験」「立場」「点」 → からいうと is most natural, focusing on “by a certain standard”. (からいえば works the same.)"
-            },
+              "explain": "The two sentences mean the same; look at what comes before から: a person directly (「利用者」「子ども」) → only から見ると works; a word for a viewpoint such as 「立場」「経験」「点」 → both work, and からいうと has the explanatory tone of “speaking from this point”, slightly more formal.",
+              "title": "〜からいうと (from the standpoint of)",
+              "wrong": {
+                "why": "からいうと can't come directly after a word for a person; say 「利用者の立場からいうと」"
+              }
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “guessing from what you see”",
+          "items": [
             {
               "id": "tokoro-wo-miru-to",
-              "diff": "からすると follows a noun; ところを見ると follows a whole clause describing what you see.",
+              "diff": "Both mean guessing from what you see; からすると follows a noun (表情, 様子); ところを見ると follows a whole clause describing the situation you see.",
               "this": [
                 {
                   "tag": "Noun → basis",
-                  "tr": "Judging from his expression, it seems he passed the exam."
+                  "tr": "Judging from his expression, he seems to have passed the exam."
                 }
               ],
               "that": [
                 {
                   "tag": "Clause → what you see",
-                  "tr": "Seeing him grinning like that, it seems he passed the exam."
+                  "tr": "Seeing him all smiles, he seems to have passed the exam."
                 }
               ],
-              "explain": "The second halves of the two sentences are identical, so look only at the first: 「表情」 is a noun → からすると (から見ると works too); 「にこにこしている」 is a whole clause describing the scene in front of you → ところを見ると. Both are often followed by 「らしい」 or 「ようだ」."
+              "explain": "The second halves are identical, so look only at the first half: 「表情」 is a noun → からすると (から見ると works too); 「にこにこしている」 is a whole clause describing what you see right in front of you → ところを見ると. Both are often followed by 「らしい」 or 「ようだ」.",
+              "wrong": {
+                "why": "からすると needs a noun before it; with a whole clause, use 「〜ところを見ると」"
+              }
             }
           ]
         }
@@ -15937,41 +15953,28 @@
         },
         {
           "kind": "meaning",
-          "note": "Both express a range “from… to…”",
+          "note": "Both mean “from… to…” in time",
           "items": [
             {
               "id": "kara-made",
-              "diff": "から〜にかけて only describes a rough range, common in weather forecasts and news; から〜まで has a clear start and end.",
+              "diff": "Both give a span of time from one point to another; から〜にかけて only says roughly which period; から〜まで has a clear start and end, up to and including the end point.",
               "this": [
                 {
-                  "tag": "Rough range",
-                  "tr": "It will probably rain from tonight through tomorrow."
+                  "tag": "Rough period",
+                  "tr": "The construction is scheduled to take place from October to November."
                 }
               ],
               "that": [
                 {
                   "tag": "Clear start and end",
-                  "tr": "Class is from 9 to 12."
+                  "tr": "The construction is scheduled to run from October 1 to November 30."
                 }
               ],
-              "explain": "Look at whether it's a precise time: a vague stretch of time or area like “tonight through tomorrow” in a weather forecast → から〜にかけて; things with clear start and end times like classes or business hours → から〜まで."
-            },
-            {
-              "id": "ni-watatte",
-              "diff": "にかけて is a rough range between two points; にわたって stresses covering the entire period or area, on a large scale.",
-              "this": [
-                {
-                  "tag": "Between two points · rough",
-                  "tr": "There's a festival in town from Friday to Sunday."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Entire period · lasting",
-                  "tr": "The town festival went on for three whole days."
-                }
-              ],
-              "explain": "Look at the words before it: 「金曜から日曜」 are two points → から〜にかけて; 「３日間」「10年」「全国」 are a whole length or a whole area → にわたって, stressing it went on from start to finish, common in news and formal settings."
+              "explain": "Both sentences give the construction period; look at how precise the start and end are: only saying roughly when (October to November) → にかけて, common in weather forecasts and notices; exact dates (October 1 to November 30), right up to that day → まで. Precise clock times, like class or business hours, can only take まで.",
+              "title": "〜から〜まで (time range)",
+              "wrong": {
+                "why": "Exact start and end times can't take にかけて; say 「９時から１２時まで」"
+              }
             }
           ]
         }
@@ -15986,20 +15989,20 @@
           "items": [
             {
               "id": "ni-kawatte",
-              "diff": "の代わりに is the everyday expression; に代わって is more formal, mostly used in speeches and formal settings, and only means “in place of”.",
+              "diff": "の代わりに is everyday language and also extends to “in exchange” and “trade-off”; に代わって is more formal, used in speeches and official settings, and only means “in place of”.",
               "this": [
                 {
                   "tag": "Everyday · instead of",
-                  "tr": "I attended the meeting in place of my father."
+                  "tr": "I made dinner in place of my mother."
                 }
               ],
               "that": [
                 {
                   "tag": "Formal · speech",
-                  "tr": "On behalf of my father, I would like to say a few words."
+                  "tr": "On behalf of our president, I would like to say a few words."
                 }
               ],
-              "explain": "Look at the particle before it and the setting: 「noun + の代わりに」 is the most common and is what you use in everyday speech; 「noun + に代わって」 is formal, common in speeches and news (社長に代わって、人に代わってロボットが働く). Also, 代わりに can mean “in exchange” or “there's a trade-off”, which に代わって can't."
+              "explain": "Both come from the verb 「代わる」 (to replace, take someone's place). The noun form 「代わり」 means “a person or thing that takes another's place”, so 「Nの代わりに」 = put in N's place → instead of; from “using this in place of that” it also came to mean “in exchange” and “trade-off”. The て形 「代わって」 keeps its verb use: 「Nに代わって」 = I take N's place and do this; it's formal, common in speeches and the news, and means only “in place of”. To tell them apart, look at the particle: 「の代わりに」 is everyday; 「に代わって」 is formal and is often followed by set phrases like 「ご挨拶申し上げます」."
             }
           ]
         },
@@ -16009,8 +16012,7 @@
           "items": [
             {
               "id": "hanmen",
-              "thisTitle": "〜代わりに (trade-off)",
-              "diff": "代わりに carries a sense of “equal exchange”: to get this, you give up that; 反面 just objectively points out two opposite sides of the same thing.",
+              "diff": "代わりに carries a sense of “equal exchange”: you get this, so you pay with that; 反面 just objectively points out two opposite sides of the same thing.",
               "this": [
                 {
                   "tag": "Trade-off",
@@ -16023,7 +16025,8 @@
                   "tr": "Smartphones are convenient, but on the other hand they tire your eyes easily."
                 }
               ],
-              "explain": "With 代わりに, the two halves are in a “price paid” relationship, like a deal (high pay ↔ paid for with days off), and it's common in speech; 反面 objectively states the positive and negative sides of the same thing, and leans written. When setting a condition, 「その代わり」 at the start of a sentence is also common: 手伝うよ。その代わり、昼ご飯おごってね。"
+              "explain": "With 代わりに, the two halves are a “price” relationship, like a deal (給料がいい is paid for with 休みが少ない), and it's common in speech; 反面 objectively states the good and bad sides of the same thing (スマホは便利, and the other side is 目が疲れやすい), and leans toward writing.",
+              "thisTitle": "〜代わりに (trade-off)"
             }
           ]
         }
@@ -16055,37 +16058,20 @@
             },
             {
               "id": "ageku",
-              "diff": "結果 can be good or bad; あげく means that after a lot of fuss, it ended badly, with dissatisfaction.",
+              "diff": "結果 can be good or bad; あげく means that after a lot of fuss you ended up with a bad result, with a tone of dissatisfaction.",
               "this": [
                 {
                   "tag": "Good or bad",
-                  "tr": "After comparing lots of models, I settled on this computer."
+                  "tr": "After trying on lots of pairs, I decided to buy these shoes."
                 }
               ],
               "that": [
                 {
-                  "tag": "Lots of fuss → bad result",
-                  "tr": "After dithering for ages, I ended up not buying anything."
+                  "tag": "Fuss → bad result",
+                  "tr": "After dithering for ages, I ended up buying nothing."
                 }
               ],
-              "explain": "Look at whether the result is disappointing: 「このパソコンに決めた」 is an ordinary conclusion → 結果; an outcome where all the effort was wasted, like 「何も買わなかった」「けんかになった」, often preceded by 「さんざん」「長い間」 → あげく, with a complaining tone."
-            },
-            {
-              "id": "ta-tokoro-result",
-              "diff": "た結果 is a conclusion reached after carefully going through a process; たところ means you tried doing something and happened to discover a fact.",
-              "this": [
-                {
-                  "tag": "Process → conclusion",
-                  "tr": "After a thorough examination, it turned out to be just a cold."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tried → discovered",
-                  "tr": "I asked the doctor, and it turned out to be just a cold."
-                }
-              ],
-              "explain": "Look at the action before it: 「詳しく検査した」「話し合った」 are a careful process, followed by the conclusion drawn from it → 結果; 「聞いてみた」「行ってみた」 are just a simple try, followed by a fact you happened to learn, often with a bit of surprise → たところ."
+              "explain": "Look at whether the result is disappointing: 「この靴を買うことにした」 is an ordinary conclusion → 結果; an outcome where all the effort was wasted, like 「何も買わなかった」 or 「けんかになった」, often preceded by 「さんざん」 or 「長い間」 → あげく, with a complaining tone."
             }
           ]
         }
@@ -16096,24 +16082,26 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both pair with a negative to mean “not at all / never”",
+          "note": "Both mean “never…”",
           "items": [
             {
-              "id": "zenzen-nai",
-              "diff": "全然〜ない describes degree, “not at all”, and is casual; 決して〜ない usually expresses will or a firm assertion, “never”, and sounds formal.",
+              "id": "mai",
+              "diff": "Both express the resolve “I will never…”; 決して〜ない is an adverb plus an ordinary negative and is widely used; まい is an older, written form, and when it expresses resolve it is only about yourself.",
               "this": [
                 {
-                  "tag": "Resolve · formal",
-                  "tr": "I will never forget this kindness."
+                  "tag": "Adverb + negative · wide use",
+                  "tr": "I'll never go to that shop again."
                 }
               ],
               "that": [
                 {
-                  "tag": "State · casual",
-                  "tr": "I don't remember anything about yesterday."
+                  "tag": "Written · a vow to yourself",
+                  "tr": "That shop — I shall never go there again."
                 }
               ],
-              "explain": "Ask whether it's about “resolve” or a “state”: will and prohibition, like won't forget, won't give up, must not do → 決して; a current state or degree, like don't remember, don't understand, doesn't taste good → 全然. 決して sounds formal and is also common in warnings (決して触らないでください)."
+              "explain": "Both sentences express the resolve never to go again, and they can be swapped. 決して〜ない is an adverb plus an ordinary negative, used in both speech and writing; its subject can be someone else (彼は決して嘘をつかない), and it can also be used in prohibitions (決して触らないでください). まい attaches after a verb and is a written, rather old-fashioned form; when it expresses resolve it only refers to yourself and reads like a vow made to yourself, often together with 「二度と」.",
+              "title": "〜まい (will never…)",
+              "thisTitle": "決して〜ない (never…)"
             }
           ]
         }
@@ -16151,7 +16139,8 @@
         },
         {
           "kind": "meaning",
-          "note": "Both can mean “only” or “stayed that way ever since”",
+          "sense": 1,
+          "note": "Both mean “only, just”",
           "items": [
             {
               "id": "dake-only",
@@ -16170,24 +16159,31 @@
                 }
               ],
               "explain": "Listen to the tone: 「人生は一度きり」 carries the feeling “just this once, never again”; 「一度だけ受けられる」 just states a rule objectively. Also, だけ attaches to any noun (野菜だけ, 私だけ), while きり generally attaches only to number words (一度, 二人) and これ・それ."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “ever since…”",
+          "items": [
             {
-              "id": "mama-unchanged",
-              "thisTitle": "〜たきり (never… since)",
-              "diff": "たまま means doing something else while a state is kept; たきり means after doing something, nothing more ever followed — usually followed by a negative.",
+              "id": "te-irai",
+              "diff": "Both mean “ever since…”; たきり has the tone of “things stopped at that moment and nothing followed”, and is almost always followed by a negative; て以来 simply states objectively how things have been since then.",
               "this": [
                 {
-                  "tag": "Since then · nothing more",
-                  "tr": "My brother left home three years ago and we haven't heard from him since."
+                  "tag": "Stopped at that moment · unexpected",
+                  "tr": "Since we parted at the station, I haven't seen him even once."
                 }
               ],
               "that": [
                 {
-                  "tag": "State kept · doing something else",
-                  "tr": "I fell asleep with the window open."
+                  "tag": "Since then · objective",
+                  "tr": "I haven't seen him once since we parted at the station."
                 }
               ],
-              "explain": "Look at the second half: “never… again” like 「連絡がない」「帰ってこない」 → たきり, with worry or surprise; another action done in that state (寝てしまった, 出かけた) → たまま."
+              "explain": "Both sentences work. たきり means “up to that moment, and then it broke off”, with a tone of surprise or regret, and is almost always followed by 「〜ない」; て以来 just objectively reports the state since then, and can also be followed by a positive, continuing state (大学に入って以来、ずっと一人暮らしだ) — たきり isn't normally used in sentences like that.",
+              "thisTitle": "〜たきり (never… since)"
             }
           ]
         }
@@ -16225,16 +16221,15 @@
         },
         {
           "kind": "meaning",
-          "note": "Both relate to “finishing” or “not managing to” (matching 切る and 切れない)",
+          "note": "Both mean “to finish doing…”",
           "items": [
             {
               "id": "owaru-finish",
-              "thisTitle": "〜切る",
-              "diff": "終わる just objectively says an action ended; 切る stresses doing it all, completely, often with a sense of “in one go, impressive”.",
+              "diff": "Both mean finishing an action; 終わる simply states objectively that the action ended; 切る stresses doing all of it, thoroughly, with nothing left, often with a feeling of “in one go, impressive”.",
               "this": [
                 {
-                  "tag": "Completely · in one go",
-                  "tr": "I read the whole thick novel in a single night."
+                  "tag": "Thoroughly · in one go",
+                  "tr": "I read the whole thick novel in one night."
                 }
               ],
               "that": [
@@ -16243,43 +16238,8 @@
                   "tr": "I finished reading the novel yesterday."
                 }
               ],
-              "explain": "Look for a sense of “all of it, in one go, to the very end”: 「厚い」「一晩で」 stress a large amount finished completely → 切る; just reporting that it's done → 終わる. 切る can also describe a state reaching its extreme (疲れ切る); 終わる can't."
-            },
-            {
-              "id": "kaneru",
-              "thisTitle": "〜切れない",
-              "diff": "切れない means there's too much to finish; かねる means you “can't very well” do it because of your position or propriety — often used to decline politely.",
-              "this": [
-                {
-                  "tag": "Too much · can't finish",
-                  "tr": "There's too much — I can't eat it all."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Position · polite refusal",
-                  "tr": "I'm afraid I can't answer that question."
-                }
-              ],
-              "explain": "Look at why it can't be done: too much, or not enough capacity (多くて, 数が多い) → 切れない; you're able to, but your position or the rules make it inappropriate → かねる, the set phrase for politely declining customers or superiors."
-            },
-            {
-              "id": "you-ga-nai",
-              "thisTitle": "〜切れない",
-              "diff": "切れない means you can do it, but there's too much to finish; ようがない means there's no way to even start.",
-              "this": [
-                {
-                  "tag": "Can do · can't finish",
-                  "tr": "There are so many stars in the sky that I can't count them all."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "No means",
-                  "tr": "I don't know his contact details, so there's no way to reach him."
-                }
-              ],
-              "explain": "Look at the reason: 「多くて」 → there's a way to do it, it just can't be finished → 切れない; 「連絡先が分からない」 → the means are missing, so you can't even begin → ようがない (attaches to the masu-stem: し＋ようがない)."
+              "explain": "Both can say “finished reading”. Look at whether the sentence has a sense of “all of it, in one go, to the very end”: 「厚い」 and 「一晩で」 stress a large amount read thoroughly in one go → 切る, which is why 「全部」 and 「最後まで」 also often go with 切る; if you're just plainly reporting that it's done → 終わる.",
+              "thisTitle": "〜切る (finish completely)"
             }
           ]
         }

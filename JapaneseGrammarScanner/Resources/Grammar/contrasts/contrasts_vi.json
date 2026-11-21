@@ -15665,8 +15665,34 @@
       "id": "ka-to-omou",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「と思う」 — “trong lòng nghĩ như vậy”",
+          "kind": "look",
+          "note": "かと思った ↔ かと思ったら, chỉ khác một chữ 「ら」",
+          "items": [
+            {
+              "id": "ka-to-omou-to",
+              "diff": "かと思った đứng cuối câu, nghĩa là “cứ tưởng…”; かと思ったら đứng giữa câu, nghĩa là “vừa… thì đã…”.",
+              "this": [
+                {
+                  "tag": "Cuối câu · cứ tưởng",
+                  "tr": "Yên tĩnh quá nên tôi cứ tưởng không có ai."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Giữa câu · vừa… thì đã",
+                  "tr": "Mưa vừa bắt đầu rơi thì đã tạnh ngay."
+                }
+              ],
+              "explain": "Hai câu chỉ khác 「ら」. Hãy nhìn sau 「思った」: kết thúc bằng dấu chấm → là sự hiểu lầm lúc đó, “cứ tưởng…” (thực ra có người); có 「ら」 và phía sau nói tiếp một việc xảy ra ngay sau đó (すぐやんだ) → hai việc nối tiếp nhau, “vừa… thì đã…”. かと思ったら luôn phải nói tiếp, không thể kết thúc câu như かと思った.",
+              "title": "〜かと思ったら (vừa… thì đã)",
+              "thisTitle": "〜かと思った (cứ tưởng…)"
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 1,
+          "note": "Đều dùng để nói ý kiến của mình: “tôi nghĩ là…”",
           "items": [
             {
               "id": "to-omou",
@@ -15687,49 +15713,6 @@
               "explain": "Hai câu chỉ khác một chữ 「か」. Thêm 「か」, quan điểm trở thành một “câu hỏi”, nghe không độc đoán, nên email công việc, góp ý với cấp trên hay dùng 「〜かと思います」; khi bản thân chắc chắn, muốn bày tỏ rõ ràng thì dùng 「と思います」."
             },
             {
-              "id": "ka-to-omou-to",
-              "title": "〜かと思ったら（Vừa… thì đã）",
-              "thisTitle": "〜かと思った（Cứ tưởng）",
-              "diff": "かと思った ở cuối câu, nói “cứ tưởng…”; かと思ったら ở giữa câu, nói “vừa… thì đã…”.",
-              "this": [
-                {
-                  "tag": "Cuối câu · cứ tưởng",
-                  "tr": "Yên tĩnh thế này, tôi cứ tưởng không có ai."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Giữa câu · vừa… thì đã",
-                  "tr": "Mưa vừa bắt đầu rơi thì đã tạnh ngay."
-                }
-              ],
-              "explain": "Nhìn sau 「思った」: kết thúc bằng dấu chấm → nói sự hiểu lầm lúc đó “cứ tưởng”; nối 「ら」, phía sau còn một việc xảy ra ngay (すぐやんだ) → hai việc xảy ra liền nhau “vừa… thì đã…”."
-            },
-            {
-              "id": "to-omoikiya",
-              "thisTitle": "〜かと思った（Cứ tưởng）",
-              "diff": "かと思った là khẩu ngữ, kết quả sau “cứ tưởng” có thể không nói; かと思いきや là văn viết, phía sau nhất định nối kết quả bất ngờ.",
-              "this": [
-                {
-                  "tag": "Khẩu ngữ · có thể lược kết quả",
-                  "tr": "Tôi cứ tưởng hôm nay được nghỉ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Văn viết · nối kết quả bất ngờ",
-                  "tr": "Cứ ngỡ hôm nay được nghỉ, không ngờ vẫn học như thường."
-                }
-              ],
-              "explain": "Nhìn câu có nói tiếp kết quả hay không: かと思った nói đến đây là kết thúc được, người nghe tự hiểu “thật ra không phải”; かと思いきや không kết câu được, phía sau bắt buộc nói ra việc ngoài dự đoán, hay gặp trong văn bản, tin tức."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Đều dùng giọng nghi vấn để nói quan điểm một cách uyển chuyển “phải chăng là…”",
-          "items": [
-            {
               "id": "no-de-wa-nai-ka",
               "thisTitle": "〜かと思う（Uyển chuyển）",
               "diff": "Đều dùng giọng nghi vấn để nói quan điểm một cách uyển chuyển; かと思います hay dùng trong báo cáo công việc, email, のではないか hay dùng trong thảo luận, văn bản, khẩu ngữ nói んじゃない.",
@@ -15748,6 +15731,32 @@
               "explain": "Hai câu nghĩa gần như nhau, khác ở hoàn cảnh: báo cáo với khách hàng, cấp trên thì nói 「〜かと思います」 là chuẩn mực nhất; viết văn, nêu băn khoăn trong cuộc họp hay dùng 「〜のではないか」, giữa bạn bè nói 「〜んじゃない？」."
             }
           ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều có nghĩa “cứ tưởng là… (nhưng thực ra không phải)”",
+          "items": [
+            {
+              "id": "to-omoikiya",
+              "diff": "かと思った là văn nói, có thể không nói kết quả thực tế sau “cứ tưởng…”; かと思いきや là văn viết, phía sau nhất định phải có kết quả bất ngờ.",
+              "this": [
+                {
+                  "tag": "Văn nói · có thể bỏ kết quả",
+                  "tr": "Tôi cứ tưởng hôm nay được nghỉ."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Văn viết · tiếp theo là điều bất ngờ",
+                  "tr": "Cứ tưởng hôm nay được nghỉ, ai ngờ vẫn học như bình thường."
+                }
+              ],
+              "explain": "Cả hai câu đều nói “cứ tưởng hôm nay được nghỉ”. Hãy xem câu dừng ở đâu: かと思った có thể kết thúc ngay tại đó, để người nghe tự hiểu “thực ra không phải”, hay dùng trong văn nói; かと思いきや không thể kết thúc câu, phía sau nhất định phải nói ra thực tế bất ngờ (普通に授業があった), thường gặp trong bài viết, tin tức.",
+              "thisTitle": "〜かと思った (cứ tưởng…)",
+              "title": "〜かと思いきや (cứ tưởng… ai ngờ)"
+            }
+          ]
         }
       ]
     },
@@ -15756,61 +15765,53 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều miêu tả giai đoạn hành động chưa hoàn thành (sắp làm, sắp sửa, làm dở)",
+          "sense": 1,
+          "note": "Đều có nghĩa “làm dở, làm được một nửa”",
           "items": [
             {
-              "id": "you-to-suru",
-              "thisTitle": "〜かける（Làm dở）",
-              "diff": "ようとする là “định làm”, hành động chưa bắt đầu; かける là hành động đã bắt đầu, làm được một phần thì dừng.",
+              "id": "tochuu-de",
+              "diff": "Đều nói hành động “làm dở”; かけ gắn sau ます形 của động từ, nhấn mạnh hành động dừng giữa chừng, chưa xong; 途中 là danh từ, chỉ một thời điểm trong quá trình, phía sau thường là việc chen vào lúc đó.",
               "this": [
                 {
-                  "tag": "Nói dở chừng",
-                  "tr": "Anh ấy nói được nửa chừng thì thôi."
+                  "tag": "Chưa xong · để đó",
+                  "tr": "Trên bàn vẫn còn cốc cà phê uống dở."
                 }
               ],
               "that": [
                 {
-                  "tag": "Định nói · chưa mở lời",
-                  "tr": "Anh ấy định nói gì đó, rồi lại thôi."
+                  "tag": "Đang làm · có việc chen vào",
+                  "tr": "Đang uống cà phê thì điện thoại reo."
                 }
               ],
-              "explain": "Hai câu chỉ đổi phần sau động từ: 言い＋かけて → đã mở lời, nói được một nửa; 言お＋うとして → vừa định nói, chưa nói ra. Thấy 「〜かけて、やめた」 là làm dở chừng."
-            },
+              "explain": "Hãy nhìn trọng tâm: 「飲みかけのコーヒー」 nói về đồ vật chưa uống xong, bị để lại, hay dùng nhất là 「〜かけの + danh từ」; 「飲んでいる途中で」 nói về lúc đang uống, phía sau là việc xảy ra lúc đó (電話が鳴った), sau đó có thể uống tiếp. Đôi khi cả hai đều dùng được: 仕事をやりかけのまま帰った ≈ 仕事の途中で帰った, dùng かけ thì nhấn mạnh hơn “dừng giữa chừng, chưa xong”.",
+              "thisTitle": "〜かけの (làm dở)",
+              "title": "〜途中で (giữa chừng)"
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều có nghĩa “suýt nữa thì…”",
+          "items": [
             {
               "id": "sou-ni-naru",
-              "thisTitle": "〜かける（Sắp sửa）",
-              "diff": "かける nói một trạng thái nào đó đã bắt đầu xuất hiện; そうになる nói suýt nữa thì xảy ra, cuối cùng không xảy ra.",
+              "diff": "Đều có nghĩa “suýt nữa thì…”, rốt cuộc không xảy ra; かける có cảm giác “đã bắt đầu rồi”, còn そうになる chỉ nói sắp xảy ra, dùng rộng rãi nhất.",
               "this": [
                 {
-                  "tag": "Đã quên một nửa",
-                  "tr": "Ước mơ thời thơ ấu, tôi đã gần như quên mất."
+                  "tag": "Đã bắt đầu",
+                  "tr": "Trượt chân trên cầu thang, suýt nữa thì ngã (người đã nghiêng đi rồi)."
                 }
               ],
               "that": [
                 {
-                  "tag": "Suýt nữa · không xảy ra",
-                  "tr": "Suýt nữa thì quên mất cuộc hẹn quan trọng."
+                  "tag": "Sắp xảy ra",
+                  "tr": "Trượt chân trên cầu thang, suýt nữa thì ngã."
                 }
               ],
-              "explain": "Nhìn phó từ và thì: 「もう〜かけていた」 nói việc quên đang diễn ra, ký ức đã mờ đi; 「危うく〜そうになった」 nói suýt nữa thì quên, thực tế không quên. 死にかけた (thật sự từng cận kề cái chết) và 死にそうになった (suýt chết) cũng khác nhau như vậy."
-            },
-            {
-              "id": "tochuu-de",
-              "thisTitle": "〜かけの（Làm dở）",
-              "diff": "かけの bổ nghĩa cho đồ vật, nói “thứ làm dở rồi bỏ đó”; 途中で chỉ một thời điểm trong quá trình, phía sau nối việc xảy ra lúc đó.",
-              "this": [
-                {
-                  "tag": "Thứ làm dở",
-                  "tr": "Trên bàn có một cuốn sách đọc dở."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Giữa chừng → có việc xảy ra",
-                  "tr": "Đang đọc sách thì ngủ quên mất."
-                }
-              ],
-              "explain": "Nhìn phía sau nối gì: sau 「〜かけの＋danh từ」 là đồ vật (本、コーヒー), nói nó chưa làm xong, đang bị bỏ đó; sau 「〜途中で」 là việc xảy ra lúc đó (眠ってしまった、電話が来た). 途中 còn nói được trên đường (帰る途中で), かけ thì không."
+              "explain": "Cả hai câu đều dùng được, đều là “suýt ngã nhưng không ngã”. かける vốn nghĩa là “làm dở”, nên 転びかけた nói việc ngã đã bắt đầu (người đã ngã xuống một nửa); 転びそうになった chỉ nói “trông như sắp ngã”, không nhấn mạnh đã bắt đầu. 死にかけた (thật sự đã từng cận kề cái chết) và 死にそうになった (suýt chết) cũng khác nhau như vậy. Trong đời thường, nói “suýt nữa thì…” hay dùng nhất là そうになる.",
+              "thisTitle": "〜かける (suýt)",
+              "title": "〜そうになる (suýt nữa)"
             }
           ]
         }
@@ -15825,23 +15826,23 @@
           "items": [
             {
               "id": "to-wa-kagiranai",
-              "diff": "とは限らない tự nó đã diễn tả được “không nhất thiết”; 必ずしも là phó từ, phía sau bắt buộc phải có phủ định, hay dùng liền với とは限らない để tăng sắc thái.",
+              "diff": "Đều có nghĩa “không nhất thiết”; 必ずしも là phó từ, báo trước ngay từ đầu “chưa chắc”, phía sau phải có phủ định (〜わけではない v.v.); とは限らない tự nó đã là phủ định, dùng một mình là đủ, văn nói cũng hay dùng.",
               "this": [
                 {
-                  "tag": "Phó từ＋phủ định · nhấn mạnh hơn",
-                  "tr": "Đồ đắt chưa hẳn đã là đồ tốt."
+                  "tag": "Phó từ + phủ định · trang trọng",
+                  "tr": "Hàng hiệu chưa chắc đã bền."
                 }
               ],
               "that": [
                 {
-                  "tag": "Dùng riêng · không nhất thiết",
-                  "tr": "Đồ đắt không nhất thiết là đồ tốt."
+                  "tag": "Dùng một mình · không nhất thiết",
+                  "tr": "Hàng hiệu không nhất thiết là bền."
                 }
               ],
+              "explain": "Hai câu nghĩa như nhau, chọn theo giọng điệu. Mở đầu bằng 必ずしも thì người nghe biết ngay bạn sắp nói “không hẳn”; đi với 「わけではない」「とは言えない」 nghe khách quan, trang trọng, hay gặp trong bài viết, phát biểu chính thức. Bình thường nói tùy tiện “chưa chắc” thì chỉ cần とは限らない ở cuối câu là đủ. Cũng có thể dùng cả hai (必ずしも〜とは限らない) để nhấn mạnh “chưa chắc”. Lưu ý sau 必ずしも nhất định phải có phủ định.",
               "wrong": {
-                "why": "Sau 必ずしも nhất định phải nối phủ định"
-              },
-              "explain": "とは限らない bản thân đã là phủ định, dùng riêng là đủ; thêm 必ずしも phía trước thì nghĩa “chưa hẳn” rõ hơn. Ngược lại, 必ずしも không dùng riêng được, phía sau nhất định phải có phủ định như 「〜ない」「〜とは限らない」「〜わけではない」 (必ずしも〜ない cũng vậy)."
+                "why": "Sau 必ずしも nhất định phải có phủ định"
+              }
             }
           ]
         }
@@ -15852,45 +15853,57 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả góc độ hoặc căn cứ phán đoán (nhìn từ…)",
+          "sense": 1,
+          "note": "Đều có nghĩa “đứng ở lập trường của ai đó mà nhìn”",
           "items": [
             {
               "id": "ni-totte",
-              "diff": "にとって là “đối với…”, phía sau nối đánh giá (quan trọng, khó); からすると là “nhìn từ…”, phía sau có thể nối suy đoán.",
+              "diff": "から見ると là nhìn bằng con mắt của người đó; にとって là nói việc đó có ý nghĩa, ảnh hưởng gì với người đó.",
               "this": [
                 {
-                  "tag": "Căn cứ → suy đoán",
-                  "tr": "Nhìn bầu trời thì có lẽ ngày mai trời mưa."
+                  "tag": "Con mắt của người đó",
+                  "tr": "Trong mắt du học sinh, cách phân loại rác ở Nhật rất phức tạp."
                 }
               ],
               "that": [
                 {
-                  "tag": "Đối với ai → đánh giá",
-                  "tr": "Đối với nhà nông, mưa rất quan trọng."
+                  "tag": "Ảnh hưởng tới người đó",
+                  "tr": "Đối với du học sinh, cách phân loại rác ở Nhật rất phức tạp."
                 }
               ],
-              "explain": "Nhìn phía trước và phía sau: phía trước là chứng cứ như 「様子」「表情」, phía sau là suy đoán 「だろう」「ようだ」 → からすると; phía trước là người chịu ảnh hưởng, phía sau là đánh giá như 「大切だ」「難しい」「ありがたい」 → にとって. から見ると cũng vậy."
+              "explain": "Cả hai câu đều đúng, nghĩa gần như nhau. から見ると tập trung vào “điều người đó nhìn thấy”, nên phía sau còn có thể là cách nói về vẻ bề ngoài như 「〜そうだ」 (子どもから見ると、大人はいつも忙しそうだ), lúc này thường không dùng にとって; にとって tập trung vào “ý nghĩa hay ảnh hưởng của việc đó với người đó”, phía sau thường là đánh giá như 「大切だ」「難しい」「ありがたい」."
             },
             {
               "id": "kara-iu-to",
-              "diff": "から見ると có thể nối thẳng người; からいうと thường nối danh từ trừu tượng như 「立場」「経験」「点」.",
+              "diff": "Đều là nhìn từ một lập trường nào đó; から見ると có thể đứng ngay sau người, còn からいうと phải đứng sau từ chỉ góc độ như 「立場」「点」.",
               "this": [
                 {
-                  "tag": "Nối thẳng người",
-                  "tr": "Trong mắt trẻ con, thế giới người lớn có lẽ thật khó hiểu."
+                  "tag": "Ngay sau người",
+                  "tr": "Với người dùng, màn hình này khó dùng."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nối kinh nghiệm・lập trường",
-                  "tr": "Theo kinh nghiệm của tôi, cách này không hiệu quả đâu."
+                  "tag": "Sau 立場 · hơi trang trọng",
+                  "tr": "Xét từ lập trường của người dùng, màn hình này khó dùng."
                 }
               ],
-              "explain": "Nhìn trước から là gì: người cụ thể như 「子ども」「親」 → から見ると／からすると; danh từ trừu tượng như 「経験」「立場」「点」 → からいうと tự nhiên nhất, thiên về “xét theo một tiêu chuẩn nào đó”. (からいえば cũng vậy)"
-            },
+              "explain": "Hai câu nghĩa như nhau, hãy nhìn trước から: là người trực tiếp (「利用者」「子ども」) → chỉ dùng được から見ると; là từ chỉ góc độ như 「立場」「経験」「点」 → cả hai đều được, からいうと mang giọng giải thích “xét về điểm này mà nói”, hơi trang trọng.",
+              "title": "〜からいうと (xét từ lập trường)",
+              "wrong": {
+                "why": "からいうと không đứng ngay sau từ chỉ người, phải nói 「利用者の立場からいうと」"
+              }
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều có nghĩa “suy đoán dựa vào tình hình nhìn thấy”",
+          "items": [
             {
               "id": "tokoro-wo-miru-to",
-              "diff": "Trước からすると là danh từ; trước ところを見ると là cả một câu tả tình huống nhìn thấy.",
+              "diff": "Đều là suy đoán dựa vào điều nhìn thấy; からすると đứng sau danh từ (表情, 様子); ところを見ると đứng sau cả một câu miêu tả tình hình trước mắt.",
               "this": [
                 {
                   "tag": "Danh từ → căn cứ",
@@ -15899,11 +15912,14 @@
               ],
               "that": [
                 {
-                  "tag": "Câu → tình huống nhìn thấy",
-                  "tr": "Thấy anh ấy cứ cười tủm tỉm thì hình như đã thi đỗ."
+                  "tag": "Câu → điều nhìn thấy",
+                  "tr": "Thấy anh ấy cười tươi thế, hình như đã thi đỗ."
                 }
               ],
-              "explain": "Nửa sau hai câu giống hệt nhau, chỉ nhìn phía trước: 「表情」 là danh từ → からすると (から見ると cũng vậy); 「にこにこしている」 là cả một câu miêu tả tình huống trước mắt → ところを見ると. Sau cả hai đều hay nối 「らしい」「ようだ」."
+              "explain": "Nửa sau hai câu giống hệt nhau, chỉ cần nhìn nửa đầu: 「表情」 là danh từ → からすると (から見ると cũng được); 「にこにこしている」 là cả một câu miêu tả điều mình đang thấy trước mắt → ところを見ると. Phía sau cả hai đều hay đi với 「らしい」「ようだ」.",
+              "wrong": {
+                "why": "Trước からすると phải là danh từ; cả một câu thì dùng 「〜ところを見ると」"
+              }
             }
           ]
         }
@@ -15937,41 +15953,28 @@
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả phạm vi “từ… đến…”",
+          "note": "Đều có nghĩa “từ… đến…” về thời gian",
           "items": [
             {
               "id": "kara-made",
-              "diff": "から〜にかけて chỉ nói phạm vi đại khái, hay dùng cho thời tiết, tin tức; から〜まで điểm đầu điểm cuối rõ ràng.",
+              "diff": "Đều nói về thời gian từ đâu đến đâu; から〜にかけて chỉ nói đại khái trong khoảng nào; から〜まで có mốc đầu và cuối rõ ràng, tính đến tận mốc cuối.",
               "this": [
                 {
-                  "tag": "Phạm vi đại khái",
-                  "tr": "Từ tối nay đến ngày mai có lẽ sẽ mưa."
+                  "tag": "Khoảng đại khái",
+                  "tr": "Công trình dự kiến tiến hành trong khoảng tháng 10 đến tháng 11."
                 }
               ],
               "that": [
                 {
-                  "tag": "Đầu cuối rõ ràng",
-                  "tr": "Giờ học từ chín giờ đến mười hai giờ."
+                  "tag": "Mốc rõ ràng",
+                  "tr": "Công trình dự kiến tiến hành từ ngày 1 tháng 10 đến ngày 30 tháng 11."
                 }
               ],
-              "explain": "Nhìn có nói thời gian chính xác không: một khoảng thời gian, một vùng mơ hồ như “tối nay đến ngày mai” trong dự báo thời tiết → から〜にかけて; giờ học, giờ mở cửa có điểm đầu cuối rõ ràng → から〜まで."
-            },
-            {
-              "id": "ni-watatte",
-              "diff": "にかけて là phạm vi đại khái giữa hai điểm; にわたって nhấn mạnh bao trùm toàn bộ thời gian, toàn bộ phạm vi, quy mô lớn.",
-              "this": [
-                {
-                  "tag": "Giữa hai điểm · đại khái",
-                  "tr": "Từ thứ sáu đến chủ nhật, thị trấn có lễ hội."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Toàn bộ thời gian · kéo dài",
-                  "tr": "Lễ hội ở thị trấn diễn ra suốt ba ngày liền."
-                }
-              ],
-              "explain": "Nhìn từ phía trước: 「金曜から日曜」 là hai điểm → から〜にかけて; 「３日間」「10年」「全国」 là cả một độ dài hoặc cả một phạm vi → にわたって, nhấn mạnh từ đầu đến cuối đều diễn ra, hay dùng trong tin tức, hoàn cảnh trang trọng."
+              "explain": "Cả hai câu đều nói thời gian thi công, hãy xem mốc đầu cuối có chính xác không: chỉ nói đại khái trong khoảng nào (tháng 10 đến tháng 11) → にかけて, hay gặp trong dự báo thời tiết, thông báo; nói chính xác ngày (từ 1/10 đến 30/11), kéo dài đến đúng ngày đó → まで. Giờ giấc chính xác như giờ học, giờ mở cửa chỉ dùng được まで.",
+              "title": "〜から〜まで (khoảng thời gian)",
+              "wrong": {
+                "why": "Giờ bắt đầu và kết thúc chính xác không dùng にかけて, phải nói 「９時から１２時まで」"
+              }
             }
           ]
         }
@@ -15986,20 +15989,20 @@
           "items": [
             {
               "id": "ni-kawatte",
-              "diff": "の代わりに là cách nói hằng ngày; に代わって trang trọng hơn, hay dùng trong phát biểu, hoàn cảnh trang trọng, và chỉ diễn tả “thay thế”.",
+              "diff": "の代わりに là cách nói hằng ngày, còn mở rộng sang “đổi lại” và “được cái này mất cái kia”; に代わって trang trọng hơn, dùng trong phát biểu, dịp chính thức, chỉ có nghĩa “thay cho”.",
               "this": [
                 {
-                  "tag": "Hằng ngày · thay thế",
-                  "tr": "Tôi đã đi họp thay bố."
+                  "tag": "Hằng ngày · thay cho",
+                  "tr": "Tôi nấu bữa tối thay mẹ."
                 }
               ],
               "that": [
                 {
                   "tag": "Trang trọng · phát biểu",
-                  "tr": "Thay mặt cha tôi, xin gửi lời chào đến quý vị."
+                  "tr": "Thay mặt giám đốc, tôi xin gửi lời chào đến quý vị."
                 }
               ],
-              "explain": "Nhìn trợ từ phía trước và hoàn cảnh: 「danh từ＋の代わりに」 thông dụng nhất, nói chuyện hằng ngày dùng cái này; 「danh từ＋に代わって」 trang trọng, hay gặp trong phát biểu, tin tức (社長に代わって、人に代わってロボットが働く). Ngoài ra 代わりに còn diễn tả “để đổi lại”, “được cái này mất cái kia”, に代わって không có những cách dùng này."
+              "explain": "Cả hai đều từ động từ 「代わる」 (thay thế, thế chỗ). Dạng danh từ 「代わり」 là “người hay vật thế chỗ”, nên 「Nの代わりに」 = đặt vào chỗ của N → thay cho; từ “lấy cái này thế cái kia” lại phát triển thành “đổi lại” và “được cái này mất cái kia”. Thể て 「代わって」 vẫn là cách dùng của động từ: 「Nに代わって」 = tôi thế chỗ N làm việc này, trang trọng, hay gặp trong phát biểu, tin tức, chỉ có nghĩa “thay cho”. Phân biệt bằng trợ từ: 「の代わりに」 là hằng ngày; 「に代わって」 trang trọng, phía sau thường là cách nói chính thức như 「ご挨拶申し上げます」."
             }
           ]
         },
@@ -16009,21 +16012,21 @@
           "items": [
             {
               "id": "hanmen",
-              "thisTitle": "〜代わりに（Được cái này mất cái kia）",
-              "diff": "代わりに mang nghĩa “trao đổi ngang giá”: được cái này thì phải trả cái kia; 反面 chỉ khách quan chỉ ra hai mặt trái ngược của cùng một sự vật.",
+              "diff": "代わりに mang ý “trao đổi ngang giá”: được cái này thì phải trả bằng cái kia; 反面 chỉ khách quan chỉ ra hai mặt trái ngược của cùng một sự vật.",
               "this": [
                 {
-                  "tag": "Trao đổi được mất",
+                  "tag": "Đánh đổi",
                   "tr": "Công việc này lương cao, nhưng bù lại ít ngày nghỉ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hai mặt của một vấn đề",
-                  "tr": "Điện thoại thông minh tiện lợi, nhưng mặt khác lại dễ làm mỏi mắt."
+                  "tag": "Hai mặt của một sự vật",
+                  "tr": "Điện thoại thông minh tiện lợi, nhưng mặt khác lại dễ mỏi mắt."
                 }
               ],
-              "explain": "Trước và sau 代わりに là quan hệ “cái giá phải trả”, như một cuộc trao đổi (lương cao ↔ đổi bằng ngày nghỉ), khẩu ngữ hay dùng; 反面 là nói khách quan hai mặt tích cực, tiêu cực của cùng một sự vật, thiên về văn viết. Khi đưa ra điều kiện cũng hay dùng 「その代わり」 ở đầu câu: 手伝うよ。その代わり、昼ご飯おごってね。"
+              "explain": "Với 代わりに, hai vế có quan hệ “cái giá”, như một cuộc trao đổi (給料がいい phải đổi bằng 休みが少ない), hay dùng trong văn nói; 反面 khách quan nói mặt tốt và mặt xấu của cùng một sự vật (スマホは便利, mặt kia là 目が疲れやすい), thiên về văn viết.",
+              "thisTitle": "〜代わりに (được cái này mất cái kia)"
             }
           ]
         }
@@ -16055,37 +16058,20 @@
             },
             {
               "id": "ageku",
-              "diff": "結果 có thể tốt có thể xấu; あげく là loay hoay mãi rồi rốt cuộc nhận kết quả không tốt, mang bất mãn.",
+              "diff": "結果 có thể tốt hoặc xấu; あげく là loay hoay mãi rồi đi đến kết quả không hay, mang ý bất mãn.",
               "this": [
                 {
-                  "tag": "Tốt xấu đều được",
-                  "tr": "So sánh nhiều loại, cuối cùng tôi chọn cái máy tính này."
+                  "tag": "Tốt hay xấu đều được",
+                  "tr": "Thử nhiều đôi, cuối cùng tôi quyết định mua đôi giày này."
                 }
               ],
               "that": [
                 {
                   "tag": "Loay hoay → kết quả xấu",
-                  "tr": "Đắn đo mãi, rốt cuộc chẳng mua gì."
+                  "tr": "Phân vân mãi, rốt cuộc chẳng mua gì."
                 }
               ],
-              "explain": "Nhìn kết quả có khiến người ta thất vọng không: 「このパソコンに決めた」 là kết luận bình thường → 結果; kết cục công cốc như 「何も買わなかった」「けんかになった」, phía trước thường có 「さんざん」「長い間」 → あげく, giọng mang ý than phiền."
-            },
-            {
-              "id": "ta-tokoro-result",
-              "diff": "た結果 là kết luận rút ra sau khi nghiêm túc làm xong một quá trình; たところ là thử làm việc gì đó, tình cờ phát hiện ra một sự thật.",
-              "this": [
-                {
-                  "tag": "Quá trình → kết luận",
-                  "tr": "Sau khi kiểm tra kỹ, kết quả là chỉ bị cảm thông thường."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Thử làm → phát hiện",
-                  "tr": "Thử hỏi bác sĩ thì hóa ra chỉ là cảm thông thường."
-                }
-              ],
-              "explain": "Nhìn hành động phía trước: 「詳しく検査した」「話し合った」 là một quá trình nghiêm túc, phía sau là kết luận rút ra từ đó → 結果; 「聞いてみた」「行ってみた」 chỉ là thử làm đơn giản, phía sau là sự thật tình cờ biết được, thường hơi bất ngờ → たところ."
+              "explain": "Hãy xem kết quả có làm thất vọng không: 「この靴を買うことにした」 là một kết luận bình thường → 結果; kết cục công cốc như 「何も買わなかった」「けんかになった」, phía trước hay có 「さんざん」「長い間」 → あげく, giọng có ý phàn nàn."
             }
           ]
         }
@@ -16096,24 +16082,26 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều đi cùng phủ định, diễn tả “hoàn toàn không / tuyệt đối không”",
+          "note": "Đều có nghĩa “tuyệt đối không…”",
           "items": [
             {
-              "id": "zenzen-nai",
-              "diff": "全然〜ない mô tả mức độ “không… chút nào”, thiên về văn nói; 決して〜ない thường diễn tả ý chí hoặc khẳng định “tuyệt đối không”, giọng trang trọng.",
+              "id": "mai",
+              "diff": "Đều thể hiện quyết tâm “tuyệt đối không…”; 決して〜ない là phó từ cộng phủ định thông thường, dùng rộng rãi; まい là cách nói văn viết, cổ, khi diễn tả quyết tâm thì chỉ dùng cho bản thân.",
               "this": [
                 {
-                  "tag": "Quyết tâm · trang trọng",
-                  "tr": "Ơn này tôi tuyệt đối sẽ không quên."
+                  "tag": "Phó từ + phủ định · dùng rộng",
+                  "tr": "Tôi tuyệt đối không đến quán đó nữa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Trạng thái · văn nói",
-                  "tr": "Chuyện hôm qua tôi hoàn toàn không nhớ gì cả."
+                  "tag": "Văn viết · tự thề với mình",
+                  "tr": "Quán đó, ta quyết không đến nữa."
                 }
               ],
-              "explain": "Xem câu nói về “quyết tâm” hay “trạng thái”: ý chí và cấm đoán kiểu không quên, không bỏ cuộc, không được làm → 決して; trạng thái, mức độ trước mắt kiểu không nhớ, không hiểu, không ngon → 全然. 決して có giọng trang trọng, cũng hay dùng trong các lưu ý (決して触らないでください)."
+              "explain": "Cả hai câu đều là quyết tâm “không bao giờ đến nữa”, có thể thay cho nhau. 決して〜ない là phó từ cộng phủ định thông thường, nói và viết đều dùng, chủ ngữ có thể là người khác (彼は決して嘘をつかない), còn dùng được trong cấm đoán (決して触らないでください); まい gắn sau động từ, là cách nói văn viết hơi cổ, khi diễn tả quyết tâm chỉ nói về bản thân, đọc lên như tự thề trong lòng, hay đi với 「二度と」.",
+              "title": "〜まい (quyết không…)",
+              "thisTitle": "決して〜ない (tuyệt đối không…)"
             }
           ]
         }
@@ -16151,7 +16139,8 @@
         },
         {
           "kind": "meaning",
-          "note": "Đều có thể diễn tả “chỉ có” hoặc “từ đó cứ như vậy mãi”",
+          "sense": 1,
+          "note": "Đều có nghĩa “chỉ, chỉ có”",
           "items": [
             {
               "id": "dake-only",
@@ -16170,24 +16159,31 @@
                 }
               ],
               "explain": "Xem giọng người nói: 「人生は一度きり」 mang cảm khái “chỉ một lần này thôi, không còn nữa”; 「一度だけ受けられる」 chỉ giải thích quy định một cách khách quan. Ngoài ra だけ đi được với mọi danh từ (野菜だけ, 私だけ), còn きり thường chỉ đi với số lượng từ (一度, 二人) và これ・それ."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều có nghĩa “kể từ khi…”",
+          "items": [
             {
-              "id": "mama-unchanged",
-              "thisTitle": "〜たきり（rồi không bao giờ nữa）",
-              "diff": "たまま là giữ nguyên một trạng thái để làm việc khác; たきり là làm xong rồi không còn diễn biến gì nữa, phía sau thường là phủ định.",
+              "id": "te-irai",
+              "diff": "Đều có nghĩa “kể từ khi…”; たきり mang giọng “mọi việc dừng lại ở lúc đó, không có gì tiếp theo”, phía sau hầu như luôn là phủ định; て以来 chỉ khách quan nói từ lúc đó đến nay ra sao.",
               "this": [
                 {
-                  "tag": "Sau đó · bặt tin",
-                  "tr": "Anh trai rời nhà từ ba năm trước, từ đó không hề liên lạc."
+                  "tag": "Dừng ở lúc đó · bất ngờ",
+                  "tr": "Từ hôm chia tay ở ga, tôi chưa gặp lại anh ấy lần nào."
                 }
               ],
               "that": [
                 {
-                  "tag": "Giữ trạng thái · làm việc khác",
-                  "tr": "Để nguyên cửa sổ mở mà ngủ quên mất."
+                  "tag": "Từ lúc đó · khách quan",
+                  "tr": "Kể từ khi chia tay ở ga, tôi chưa gặp anh ấy lần nào."
                 }
               ],
-              "explain": "Xem nửa sau câu: kiểu “không còn… nữa” như 「連絡がない」「帰ってこない」 → たきり, mang sự lo lắng hoặc bất ngờ; phía sau là một hành động khác làm trong trạng thái đó (寝てしまった, 出かけた) → たまま."
+              "explain": "Cả hai câu đều dùng được. たきり là “đến lúc đó rồi đứt luôn”, mang giọng bất ngờ, tiếc nuối, phía sau hầu như luôn là 「〜ない」; て以来 chỉ khách quan kể trạng thái từ lúc đó, phía sau cũng có thể là trạng thái khẳng định kéo dài (大学に入って以来、ずっと一人暮らしだ), câu kiểu này thường không dùng たきり.",
+              "thisTitle": "〜たきり (từ đó không còn…)"
             }
           ]
         }
@@ -16225,61 +16221,25 @@
         },
         {
           "kind": "meaning",
-          "note": "Đều liên quan đến “làm xong” hoặc “không làm được” (ứng với 切る và 切れない)",
+          "note": "Đều có nghĩa “làm xong…”",
           "items": [
             {
               "id": "owaru-finish",
-              "thisTitle": "〜切る",
-              "diff": "終わる chỉ nói khách quan là hành động kết thúc; 切る nhấn mạnh toàn bộ, triệt để, thường mang cảm giác “một mạch, giỏi thật”.",
+              "diff": "Đều là làm xong một hành động; 終わる chỉ khách quan nói hành động đã kết thúc; 切る nhấn mạnh làm hết, triệt để, không sót gì, thường mang cảm giác “một mạch, giỏi thật”.",
               "this": [
                 {
                   "tag": "Triệt để · một mạch",
-                  "tr": "Chỉ trong một đêm đã đọc hết cuốn tiểu thuyết dày cộp."
+                  "tr": "Một đêm tôi đã đọc hết cuốn tiểu thuyết dày."
                 }
               ],
               "that": [
                 {
-                  "tag": "Chỉ là kết thúc",
-                  "tr": "Hôm qua tôi đã đọc xong cuốn tiểu thuyết."
+                  "tag": "Chỉ là xong",
+                  "tr": "Hôm qua tôi đọc xong cuốn tiểu thuyết."
                 }
               ],
-              "explain": "Xem có ý “toàn bộ, một mạch, đến cuối cùng” hay không: 「厚い」「一晩で」 nhấn mạnh khối lượng lớn, hoàn thành triệt để → 切る; chỉ báo là đã làm xong → 終わる. 切る còn nói được trạng thái đến cực điểm (疲れ切る), 終わる thì không."
-            },
-            {
-              "id": "kaneru",
-              "thisTitle": "〜切れない",
-              "diff": "切れない là khối lượng quá nhiều, làm không hết; かねる là vì lập trường, lẽ phải mà “không tiện làm”, thường dùng để từ chối lịch sự.",
-              "this": [
-                {
-                  "tag": "Nhiều · làm không hết",
-                  "tr": "Nhiều quá, ăn không hết."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Lập trường · từ chối lịch sự",
-                  "tr": "Câu hỏi đó, xin thứ lỗi, tôi không thể trả lời."
-                }
-              ],
-              "explain": "Xem nguyên nhân của “không làm được”: khối lượng quá nhiều, mức độ không đủ (多くて, 数が多い) → 切れない; về năng lực thì làm được nhưng vì lập trường, quy định nên không tiện làm → かねる, là cách nói cố định khi khéo léo từ chối khách hàng, cấp trên."
-            },
-            {
-              "id": "you-ga-nai",
-              "thisTitle": "〜切れない",
-              "diff": "切れない là làm được nhưng nhiều quá làm không hết; ようがない là hoàn toàn không có cách nào để bắt tay vào.",
-              "this": [
-                {
-                  "tag": "Làm được · làm không hết",
-                  "tr": "Sao trên trời nhiều quá, đếm không xuể."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Không có cách",
-                  "tr": "Không biết thông tin liên lạc nên không có cách nào liên lạc."
-                }
-              ],
-              "explain": "Xem nguyên nhân: 「多くて」 → có cách làm, chỉ là làm không hết → 切れない; 「連絡先が分からない」 → thiếu phương tiện, ngay cả bắt đầu cũng không được → ようがない (đi sau thể ます: し＋ようがない)."
+              "explain": "Cả hai đều nói được “đọc xong”. Hãy xem câu có ý “hết, một mạch, đến cùng” không: 「厚い」「一晩で」 nhấn mạnh khối lượng lớn, đọc hết một mạch → 切る, vì vậy 「全部」「最後まで」 cũng hay đi với 切る; chỉ bình thản thông báo việc đã xong → 終わる.",
+              "thisTitle": "〜切る (làm hết)"
             }
           ]
         }
