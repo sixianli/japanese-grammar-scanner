@@ -20346,84 +20346,93 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Todas vienen del 「そう」 de apariencia: «el aspecto que tiene algo»",
+          "note": "Todas vienen del 「そう」 de apariencia — su sentido original es «tener aspecto de…»",
           "items": [
             {
               "id": "sou-da-appearance",
-              "diff": "そうになる dice «estar a punto de…, casi…», y en realidad no ocurrió; そうだ dice «parece que va a…».",
+              "title": "〜そうだ (a punto de)",
+              "diff": "そうだ es un juicio a partir del aspecto («está a punto de…») y aún no ha ocurrido; そうになった indica que de verdad se llegó al borde: casi ocurrió, pero al final no.",
               "this": [
                 {
-                  "tag": "Casi · no llegó a pasar",
-                  "tr": "Me resbalé y casi me caigo."
+                  "tag": "Casi · no ocurrió",
+                  "tr": "Con el terremoto, el jarrón de la estantería casi se cae."
                 }
               ],
               "that": [
                 {
-                  "tag": "Parece · suposición",
-                  "tr": "El cielo está oscuro. Parece que va a llover."
+                  "tag": "A punto de · juicio",
+                  "tr": "El jarrón de la estantería parece que se va a caer en cualquier momento."
                 }
               ],
-              "explain": "そうになった habla de algo que a uno mismo «estuvo a punto de pasarle y al final no le pasó», casi siempre en pasado 「なった」; そうだ es un juicio a partir de lo que se ve, y la cosa aún no ha ocurrido."
-            },
+              "explain": "Ambas usan el 「そう」 de apariencia: 「落ちそう」 = con aspecto de ir a caerse. そうだ es un juicio que se hace en el momento a partir de ese aspecto («está a punto de…»); aún no ha pasado nada y suele ir con 「今にも」. そうになる añade 「になる」 («llegar a ser»): la situación de verdad llegó a estar «a punto de ocurrir», al borde; al contarlo después con 「なった」, significa que casi ocurrió pero al final no."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "「そうになる」 ↔ 「そうにない」: solo cambia el último kana",
+          "items": [
             {
               "id": "sou-mo-nai",
-              "diff": "そうになる es «estar a punto de…, casi…»; そうにない es «no parece que vaya a…»: solo cambia el final, 「なる」 o 「ない」.",
+              "diff": "そうになる significa «estar a punto de…»; そうにない, «no parece que vaya a…»; solo cambia la る / い final.",
               "this": [
                 {
-                  "tag": "Casi · no llegó a pasar",
-                  "tr": "Me resbalé y casi me caigo."
+                  "tag": "A punto de · al borde",
+                  "tr": "Justo cuando por fin iba a terminar el trabajo, llegó otro encargo nuevo."
                 }
               ],
               "that": [
                 {
                   "tag": "No parece que",
-                  "tr": "No parece que esta lluvia vaya a parar en un tiempo."
+                  "tr": "No parece que el trabajo vaya a terminar todavía."
                 }
               ],
-              "explain": "Mira la última palabra tras 「そうに」: なる, casi siempre en pasado 「なった」 → estuvo a punto de ocurrir y al final no ocurrió; ない → por ahora no parece que vaya a ocurrir (igual que そうもない). Solo cambia un kana y el sentido es completamente distinto."
+              "explain": "Solo cambia el último kana: ¿después de 「そうにな」 viene る (なった) o い? そうになる es «llegar a tener aspecto de ir a…» → estar a punto de, casi; そうにない es «no tener aspecto de…» → no parece que vaya a. Si ves 「そうにない」 o 「そうもない」, es un juicio negativo."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan «estar a punto de ocurrir» o «faltar poco para…»",
+          "note": "Todas significan «por poco…»",
           "items": [
             {
               "id": "tokoro-datta",
-              "diff": "Las dos pueden decir «casi…»; そうになった describe cómo en ese momento algo estaba a punto de descontrolarse; ところだった dice la consecuencia: «si no hubiera sido por…, habría…».",
+              "title": "〜ところだった (por poco…)",
+              "diff": "Ambas dicen «por poco…, pero no llegó a pasar»; そうになった describe cómo parecía a punto de ocurrir en ese momento, y ところだった mira hacia atrás después («casi acaba así») con alivio: «¡qué poco faltó!».",
               "this": [
                 {
-                  "tag": "Cómo fue en ese momento",
-                  "tr": "Me resbalé en la escalera y casi me caigo."
+                  "tag": "Cómo estaba en ese momento",
+                  "tr": "Se me resbaló el pie en la escalera y casi me caigo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Si no fuera por… · consecuencia",
-                  "tr": "Si no me lo hubieras dicho, habría llegado tarde a la reunión."
+                  "tag": "Después · ¡qué poco faltó!",
+                  "tr": "Se me resbaló el pie en la escalera; por poco me caigo."
                 }
               ],
               "wrong": {
-                "why": "Tras la hipótesis «si no hubiera sido por…» solo puede ir ところだった"
+                "why": "そうになる va con la raíz de ます (転び); la que va con la forma de diccionario (転ぶ) es ところだった"
               },
-              "explain": "Mira la primera mitad y cómo se une: el cuerpo o las emociones estuvieron a punto de descontrolarse en ese momento, como 「足が滑って」 → forma ます + そうになった; con 「〜なかったら」, 「もう少しで」 o 「危うく」 delante, para decir la consecuencia que casi se produce → forma de diccionario + ところだった."
+              "explain": "Las dos significan «casi me caigo, pero no». Primero mira la conexión: raíz de ます (転び)＋そうになった; forma de diccionario (転ぶ)＋ところだった. En el matiz, そうになった se fija en la situación del momento y describe algo a punto de ocurrir (perder el equilibrio, estar a punto de llorar); ところだった se fija en el resultado: mirando atrás dice «casi acaba así», con alivio de que no pasara."
             },
             {
-              "id": "you-to-suru",
-              "diff": "そうになる es algo que «está a punto de pasar» sin querer; ようとする es «estar a punto de hacer» algo a propósito.",
+              "id": "kakeru-halfway",
+              "title": "〜かける (a punto de / casi)",
+              "diff": "Ambas pueden decir «casi…»; そうになった indica que parecía a punto de ocurrir pero aún faltaba un paso, y かけた indica que el cambio ya había empezado en parte, pero no llegó hasta el final.",
               "this": [
                 {
-                  "tag": "Sin querer",
-                  "tr": "Casi me pilla la puerta del tren."
+                  "tag": "Aún faltaba un paso",
+                  "tr": "De niño, casi me ahogo en el mar."
                 }
               ],
               "that": [
                 {
-                  "tag": "A propósito · a punto de hacer",
-                  "tr": "Justo cuando iba a subir al tren, se cerró la puerta."
+                  "tag": "Ya había empezado · no del todo",
+                  "tr": "De niño, estuve a punto de morir ahogado en el mar (ya estaba muy mal)."
                 }
               ],
-              "explain": "Mira si el verbo es algo que uno quiere hacer: cosas que no se controlan, como 挟まれる, 転ぶ o 泣く → forma ます + そうになる; acciones que uno pretende hacer, como 乗る o 出かける → forma volitiva + とする (乗ろうとする)."
+              "explain": "Las dos pueden decir «casi me ahogo». そうになった indica que parecía a punto de ocurrir pero aún no había empezado, a un paso; かけた indica que el cambio ya había empezado en parte, pero no llegó al final (la persona ya estaba muy mal). かける suele ir con verbos de cambio gradual como 死ぬ, 忘れる, 壊れる; para reacciones repentinas, como estar a punto de llorar o reír, lo normal es そうになる."
             }
           ]
         }
@@ -20480,11 +20489,12 @@
       "id": "ta-tokoro-result",
       "groups": [
         {
-          "kind": "root",
-          "note": "Todas vienen de 「ところ（所）」: sitúan un hecho en un «punto del tiempo»",
+          "kind": "look",
+          "note": "「たところ、」 ↔ 「たところだ」 y 「たところで」: solo cambia la だ / で que va detrás",
           "items": [
             {
               "id": "tokoro-da",
+              "title": "〜ところだ (acabar de)",
               "diff": "たところ、 dice «lo hice y, como resultado, resultó que…»; たところだ dice que una acción «acaba de terminar».",
               "this": [
                 {
@@ -20498,10 +20508,11 @@
                   "tr": "Acabo de enviarle un correo al profesor."
                 }
               ],
-              "explain": "En medio de la oración, 「たところ、」 siempre va seguido de un resultado (a menudo un descubrimiento inesperado) y toda la oración va en pasado; al final de la oración, 「たところだ」 solo marca un punto en el tiempo y la oración termina ahí. Si después de 「たところ、」 ocurre algo, es el uso de «resultado»."
+              "explain": "Solo cambia la 「だ」 final: 「たところだ」 al final de la oración solo indica el momento en que acaba de terminar la acción, y la oración termina ahí; 「たところ、」 en medio de la oración siempre va seguida de un resultado (すぐ返事が来た), y toda la oración va en pasado. Fíjate si después de 「たところ」 hay un punto o una coma con lo que pasó."
             },
             {
               "id": "ta-tokoro-de",
+              "title": "〜たところで (aunque…, no sirve)",
               "diff": "たところ、 es «lo hice y, como resultado…» (ocurrió de verdad); たところで、 es «aunque lo haga… (no sirve de nada)».",
               "this": [
                 {
@@ -20525,20 +20536,21 @@
           "items": [
             {
               "id": "tara-ta-discovery",
-              "diff": "たところ es más escrito y se usa sobre todo para el resultado de una investigación o consulta; たら〜た es hablado y también sirve para descubrimientos casuales del día a día.",
+              "title": "〜たら〜た (descubrimiento)",
+              "diff": "Significan lo mismo: hiciste algo y te enteraste del resultado; たところ es más formal y se usa en informes, mientras que たら es lenguaje hablado cotidiano.",
               "this": [
                 {
-                  "tag": "Escrito · consulta con un fin",
-                  "tr": "Pregunté en el hotel y resultó que aún quedaban habitaciones libres."
+                  "tag": "Formal · informe",
+                  "tr": "Llamé al hotel y todavía tenían habitaciones libres."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hablado · descubrimiento casual",
-                  "tr": "Por la mañana abrí la ventana y había nevado."
+                  "tag": "Coloquial · charla",
+                  "tr": "Llamé al hotel y todavía quedaba una habitación."
                 }
               ],
-              "explain": "Mira la acción de delante y la situación: acciones con un fin, como 「問い合わせる」, 「調べる」 o 「聞いてみる」, al informar o redactar un informe → たところ; algo que se hace sin más en la vida diaria y un descubrimiento casual → たら (「窓を開けると、雪が積もっていた」 también vale, más escrito, de novela)."
+              "explain": "Las dos oraciones dicen lo mismo: hiciste algo y te enteraste del resultado; ambas son correctas. Fíjate en el estilo: たところ es más formal y se usa al informar a un superior o al redactar un informe, a menudo con terminaciones corteses como 「〜ました」; たら es lenguaje cotidiano, y en una charla informal con amigos, como con 「空いてた」, たら suena más natural."
             },
             {
               "id": "kekka",
@@ -20569,29 +20581,28 @@
           "note": "Ambas significan «en cuanto…, nada más…»",
           "items": [
             {
-              "id": "shidai-as-soon-as",
-              "title": "〜次第 (en cuanto…, enseguida)",
-              "diff": "Tras たとたん viene algo que pasa de forma inesperada; tras 次第, algo que uno mismo piensa hacer (avisar, salir).",
+              "id": "ya-ina-ya",
+              "diff": "Significan lo mismo, «en cuanto…»; たとたん sirve tanto en la conversación como en textos, mientras que や否や es una expresión escrita y literaria que va con la forma de diccionario.",
               "this": [
                 {
-                  "tag": "Seguido de imprevisto",
-                  "tr": "Nada más llegar a la estación, se puso a llover."
+                  "tag": "Común también al hablar",
+                  "tr": "En cuanto me vio la cara, se echó a llorar."
                 }
               ],
               "that": [
                 {
-                  "tag": "Seguido de intención",
-                  "tr": "En cuanto llegue a la estación, te llamo."
+                  "tag": "Escrito · novela",
+                  "tr": "Nada más verme la cara, rompió a llorar."
                 }
               ],
               "wrong": {
-                "why": "Tras たとたん no puede ir un plan propio"
+                "why": "や否や va con la forma de diccionario (見る), no con la forma た"
               },
-              "explain": "Mira la segunda mitad: algo inesperado que uno no controla, como 「雨が降り出した」, y en pasado → forma た + とたん; algo que uno piensa hacer enseguida, como 「電話します」 o 「連絡します」 → forma ます + 次第, frecuente en los negocios."
+              "explain": "Las dos oraciones significan lo mismo. Primero mira la conexión: たとたん va con la forma た (見た) y や否や con la forma de diccionario (見る). Luego el contexto: たとたん sirve en la conversación diaria y en textos; や否や es una expresión escrita propia de novelas y noticias, y casi no se usa al charlar."
             },
             {
               "id": "ka-nai-ka-no-uchi-ni",
-              "diff": "Con たとたん la primera acción acaba de completarse; con か〜ないかのうちに la primera acción aún no ha terminado del todo: casi a la vez.",
+              "diff": "たとたん indica que lo primero acaba de pasar y lo siguiente ocurre justo después; か〜ないかのうちに es el instante en que ni siquiera se sabe si lo primero ha ocurrido ya, y subraya que son casi simultáneos.",
               "this": [
                 {
                   "tag": "Recién completado · y ya",
@@ -20600,11 +20611,11 @@
               ],
               "that": [
                 {
-                  "tag": "Sin terminar · casi a la vez",
-                  "tr": "Apenas había empezado a sonar el timbre cuando los alumnos salieron disparados del aula."
+                  "tag": "Casi a la vez",
+                  "tr": "Apenas había empezado a sonar el timbre cuando los alumnos salieron corriendo del aula."
                 }
               ],
-              "explain": "Mira la estructura: 「鳴るか鳴らないか」 dice el mismo verbo en afirmativo y en negativo, «sin saber si ha terminado de sonar o no», recalca que fue casi a la vez y tiene un fuerte tono escrito; たとたん usa la forma た: la primera acción ya ha ocurrido y justo después aparece la siguiente."
+              "explain": "Las dos oraciones significan «en cuanto sonó el timbre, salieron corriendo». たとたん usa la forma た: lo primero ya ha ocurrido y lo siguiente pasa justo después, a menudo con un matiz de «de repente, sin esperarlo»; 「鳴るか鳴らないか」 dice el mismo verbo en afirmativo y en negativo, y significa el instante en que no se sabe si ha sonado o no: un intervalo aún más corto que con たとたん, propio de la narración escrita. Para subrayar «casi a la vez: lo segundo pasó justo cuando empezaba lo primero», usa か〜ないかのうちに."
             },
             {
               "id": "nari-immediately",
@@ -20648,8 +20659,8 @@
       "id": "ta-tsumori",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambas vienen de 「つもり（積もり）」, cuyo sentido original es «cálculo o estimación que uno hace en su cabeza»",
+          "kind": "look",
+          "note": "「たつもり」 ↔ 「るつもり」: solo cambia la た / る de delante",
           "items": [
             {
               "id": "tsumori-datta",
@@ -20689,24 +20700,25 @@
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan «hacer como si…» cuando en realidad no es así",
+          "note": "Todas significan «hacer como si ya se hubiera hecho»",
           "items": [
             {
-              "id": "furi-wo-suru",
-              "diff": "たつもり es hacerse a la idea uno mismo de que ya…; ふりをする es fingir de cara a los demás.",
+              "id": "ta-koto-ni-suru",
+              "title": "〜たことにする (hacer como si…)",
+              "diff": "Ambas significan «hacer como si ya se hubiera hecho»; たつもりで es una actitud mental, lo que uno se dice a sí mismo, y たことにする es tratar algo que no ocurrió como si hubiera ocurrido, a menudo como un acuerdo con otros.",
               "this": [
                 {
-                  "tag": "Para uno mismo",
-                  "tr": "Haciendo como si ya hubiera ido de viaje, ahorré ese dinero."
+                  "tag": "Actitud propia",
+                  "tr": "Haciéndome a la idea de que ya me había comido el pastel, ahorré ese dinero."
                 }
               ],
               "that": [
                 {
-                  "tag": "De cara a los demás",
-                  "tr": "En realidad lo sé, pero hice como que no lo sabía."
+                  "tag": "Se da por hecho",
+                  "tr": "Di el pastel por comido y ahorré ese dinero."
                 }
               ],
-              "explain": "Mira a quién va dirigido: たつもり es lo que uno cree o se hace a la idea en su interior (行ったつもりで貯金する, 言ったつもりだった), sin que nadie tenga que verlo; ふりをする es actuar para que los demás se lo crean (知らないふり, 寝たふり)."
+              "explain": "Las dos pueden decir «hice como si me lo hubiera comido y ahorré el dinero». たつもりで pone el peso en la actitud propia: imaginas que ya lo hiciste para consolarte o contenerte; たことにする pone el peso en cómo se trata el asunto: algo que no pasó se cuenta como hecho, y también es habitual al decir a otros «digamos que…» como arreglo o para encubrir algo (聞かなかったことにする, 私が払ったことにしておこう); en esos casos lo normal es ことにする."
             }
           ]
         }
@@ -20721,23 +20733,21 @@
           "items": [
             {
               "id": "goto-ni",
-              "diff": "たびに solo va tras verbos o «sustantivo + の» y significa «cada vez que…»; ごとに puede ir tras cantidades y sustantivos, e indica «por cada unidad» o «cada tanto tiempo».",
+              "title": "〜ごとに (cada vez que…)",
+              "diff": "Ambas pueden decir «cada vez que…»; cuando lo que sigue es un cambio que se acumula poco a poco, ごとに subraya «un poco más cada vez» y es más formal, mientras que たびに es más coloquial.",
               "this": [
                 {
-                  "tag": "Tras verbo · cada vez que",
-                  "tr": "Cada vez que veo esta foto, me acuerdo de los viejos tiempos."
+                  "tag": "Neutro · cada vez",
+                  "tr": "Cada vez que practico, voy mejorando."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tras cantidad · cada",
-                  "tr": "El autobús pasa cada 10 minutos."
+                  "tag": "Más formal · cada vez más",
+                  "tr": "Con cada práctica, uno se va volviendo más hábil."
                 }
               ],
-              "wrong": {
-                "why": "たびに no puede ir directamente tras una cantidad"
-              },
-              "explain": "Mira lo que va delante: un verbo (見る, 会う) → たびに es lo más común y subraya «siempre que ocurre, pasa…»; una cantidad (10分, ３時間) o un sustantivo de unidad (国, クラス) → solo ごとに."
+              "explain": "Las dos oraciones son correctas. Cuando lo que sigue es un cambio que se va acumulando, como 「なっていく」, ごとに subraya «un paso más cada vez» y es más formal; たびに solo dice «pasa cada vez» y es más coloquial. Cuando lo que sigue es la misma reacción cada vez (思い出す, 文句を言う), lo normal es たびに."
             },
             {
               "id": "ni-tsuke",
@@ -20812,11 +20822,11 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen del 「たり」 de enumeración: «por poner un ejemplo, como…»",
+          "note": "Todas vienen del 「たり」 de enumeración — su sentido original es «poner un ejemplo, como…»",
           "items": [
             {
               "id": "tari-tari",
-              "diff": "たりして a final de oración menciona una sola posibilidad, «a lo mejor…»; たり〜たりする enumera varias acciones.",
+              "diff": "たり significa originalmente «poner un ejemplo»: si das varias acciones, es una enumeración («hacer esto y aquello»); si das una sola posibilidad y la pones al final de la oración, se convierte en «a lo mejor…».",
               "this": [
                 {
                   "tag": "Final · a lo mejor",
@@ -20829,7 +20839,7 @@
                   "tr": "Los días libres veo películas, voy de compras y esas cosas."
                 }
               ],
-              "explain": "Mira la posición: たり en medio de la oración, seguido de 「〜たりする」, enumera cosas que se suelen hacer; たりして al final, sin nada detrás, lanza una posibilidad al aire, a menudo con 「もしかして」 o 「なんて」, y en tono de broma."
+              "explain": "En ambas, たり significa «poner un ejemplo». 〜たり〜たりする elige unas pocas acciones entre muchas para decir lo que sueles hacer; 〜たりして da una sola situación posible y se detiene en 「して」 sin decir el resto, así que suena a «algo como… podría ser»; por eso se convirtió en una suposición casual al final de la oración. Así que fíjate en la posición: en medio de la oración y seguido de 「〜たりする」, es una enumeración; al final de la oración y sin nada detrás, es «a lo mejor…»."
             }
           ]
         },
@@ -20839,20 +20849,20 @@
           "items": [
             {
               "id": "kamoshirenai",
-              "diff": "たりして se dice medio en broma, sin que el hablante se lo tome muy en serio; かもしれない es una suposición seria.",
+              "diff": "Ambas son suposiciones, «a lo mejor…»; たりして solo se usa en charlas relajadas entre amigos, mientras que かもしれない es la expresión general y sirve también con un jefe o en contextos formales.",
               "this": [
                 {
-                  "tag": "En broma · por decir",
-                  "tr": "Esos dos siempre están juntos últimamente, ¿eh? ¿No estarán saliendo?"
+                  "tag": "Entre amigos · suposición casual",
+                  "tr": "Oye, a lo mejor esos dos están saliendo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Suposición seria",
-                  "tr": "Últimamente siempre están juntos; puede que esos dos estén saliendo."
+                  "tag": "General · vale con un jefe",
+                  "tr": "Jefe, puede que esos dos estén saliendo."
                 }
               ],
-              "explain": "Mira el tono y la situación: たりして solo se usa charlando entre amigos, como broma o para pinchar al otro (a menudo con 「もしかして」 o 「なんて」); かもしれない es una suposición normal, válida tanto en charlas como en contextos formales, y el hablante está juzgando en serio."
+              "explain": "Las dos oraciones significan «a lo mejor están saliendo»; fíjate en a quién le hablas. たりして es solo una suposición ligera y casual entre amigos, típica de charlas que empiezan con 「ねえ」; かもしれない es una suposición general, y al hablar con un superior como un 「部長」 o con personas mayores, o en contextos formales y por escrito, hay que usar かもしれない (かもしれません), no たりして."
             }
           ]
         }
@@ -20867,7 +20877,7 @@
           "items": [
             {
               "id": "ta-bakari",
-              "diff": "たて solo va con unos pocos verbos y subraya «recién hecho, muy fresco»; たばかり va con cualquier verbo.",
+              "diff": "たて solo va con unos pocos verbos y habla de cosas recién hechas o de personas que acaban de asumir un papel; たばかり va con cualquier verbo.",
               "this": [
                 {
                   "tag": "Pocos verbos · fresco",
@@ -20880,24 +20890,7 @@
                   "tr": "Perdí el paraguas que acababa de comprar ayer."
                 }
               ],
-              "explain": "たて se une directamente a la forma ます (焼き + たて) y solo se usa con unas pocas palabras sobre cosas recién hechas: 焼きたて, できたて, 生まれたて, 塗りたて; en todos los demás casos se usa たばかり, como en 「昨日買ったばかりの傘」."
-            },
-            {
-              "id": "tokoro-da",
-              "diff": "たて modifica a un sustantivo y subraya «recién hecho, fresco»; たところだ va al final de la oración e indica un momento en el tiempo.",
-              "this": [
-                {
-                  "tag": "Modifica sustantivo · fresco",
-                  "tr": "Compré pan recién horneado."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Final · momento",
-                  "tr": "El pan se acaba de hornear."
-                }
-              ],
-              "explain": "たて se usa como un adjetivo, 「〜たての + sustantivo」, para decir que algo está muy fresco; para decir que algo «acaba de ocurrir» o informar de cómo va algo se usa たところだ (今、着いたところです)."
+              "explain": "たて se une directamente a la raíz de ます (焼き＋たて) y solo se usa con unos pocos verbos: para cosas recién hechas y frescas (焼きたて, できたて, 取れたて) o para personas que acaban de asumir un papel y aún no se han acostumbrado (入社したて, 覚えたて). Para acciones corrientes, «acabar de…», como en 「昨日買ったばかりの傘」, se usa たばかり."
             }
           ]
         }
@@ -20934,7 +20927,7 @@
               "this": [
                 {
                   "tag": "Hipótesis · aunque sea",
-                  "tr": "Aunque sea en broma, no se puede decir algo así."
+                  "tr": "Aunque sea en broma, no está bien hablar mal de los demás."
                 }
               ],
               "that": [

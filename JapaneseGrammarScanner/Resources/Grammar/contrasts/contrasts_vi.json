@@ -20346,51 +20346,59 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「そう」 chỉ dáng vẻ — diễn tả “dáng vẻ nhìn thấy được”",
+          "note": "Đều bắt nguồn từ 「そう」 chỉ dáng vẻ — nghĩa gốc là “trông có vẻ như…”",
           "items": [
             {
               "id": "sou-da-appearance",
-              "diff": "そうになる nói “suýt nữa thì…”, thực tế không xảy ra; そうだ nói “trông như sắp…”.",
+              "title": "〜そうだ (sắp sửa)",
+              "diff": "そうだ là phán đoán dựa vào dáng vẻ “sắp sửa…”, sự việc chưa xảy ra; そうになった là sự việc thật sự đã đến sát mép, suýt xảy ra nhưng cuối cùng không xảy ra.",
               "this": [
                 {
-                  "tag": "Suýt nữa · không xảy ra",
-                  "tr": "Trượt chân, suýt nữa thì ngã."
+                  "tag": "Suýt · không xảy ra",
+                  "tr": "Lúc động đất, bình hoa trên kệ suýt rơi xuống."
                 }
               ],
               "that": [
                 {
-                  "tag": "Trông như · suy đoán",
-                  "tr": "Trời tối sầm. Trông như sắp mưa."
+                  "tag": "Sắp sửa · phán đoán",
+                  "tr": "Bình hoa trên kệ trông như sắp rơi đến nơi."
                 }
               ],
-              "explain": "そうになった nói về việc trên chính bản thân mình “sắp sửa xảy ra đến nơi, cuối cùng không xảy ra”, hầu như luôn dùng thì quá khứ 「なった」; そうだ là nhìn dáng vẻ trước mắt để phán đoán, việc vẫn chưa xảy ra."
-            },
+              "explain": "Cả hai đều là 「そう」 chỉ dáng vẻ: 「落ちそう」＝trông như sắp rơi. そうだ là đứng trước mắt, dựa vào dáng vẻ đó để phán đoán “sắp sửa…”, sự việc chưa xảy ra, hay đi với 「今にも」; そうになる thêm 「になる」 (trở thành) vào sau, nói sự việc thật sự đã trở thành “sắp xảy ra”, đến sát mép; khi nhìn lại bằng 「なった」 thì có nghĩa là suýt xảy ra nhưng cuối cùng không xảy ra."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "「そうになる」 ↔ 「そうにない」, chỉ khác chữ kana cuối cùng",
+          "items": [
             {
               "id": "sou-mo-nai",
-              "diff": "そうになる là “suýt nữa thì…”; そうにない là “xem chừng sẽ không…” — chỉ khác ở 「なる」 và 「ない」 cuối cùng.",
+              "diff": "そうになる là “sắp…”; そうにない là “xem ra sẽ không…”, chỉ khác る／い ở cuối.",
               "this": [
                 {
-                  "tag": "Suýt nữa · không xảy ra",
-                  "tr": "Trượt chân, suýt nữa thì ngã."
+                  "tag": "Sắp · đến sát mép",
+                  "tr": "Đúng lúc công việc cuối cùng cũng sắp xong thì lại có việc mới đến."
                 }
               ],
               "that": [
                 {
                   "tag": "Xem chừng sẽ không",
-                  "tr": "Cơn mưa này xem chừng một lúc nữa cũng chưa tạnh."
+                  "tr": "Công việc xem ra vẫn chưa xong được."
                 }
               ],
-              "explain": "Sau 「そうに」 hãy xem từ cuối cùng: なる, và hầu như luôn dùng thì quá khứ 「なった」 → sắp sửa xảy ra đến nơi, cuối cùng không xảy ra; ない → bây giờ xem ra sẽ không xảy ra (そうもない cũng vậy). Chỉ khác một chữ kana mà nghĩa hoàn toàn khác nhau."
+              "explain": "Chỉ khác chữ kana cuối: sau 「そうにな」 là る (なった) hay い. そうになる là “trở thành dáng vẻ sắp…” → sắp, suýt; そうにない là “không có dáng vẻ sắp…” → xem ra sẽ không. Thấy 「そうにない」「そうもない」 là phán đoán phủ định."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “sắp sửa xảy ra” hoặc “suýt chút nữa thì…”",
+          "note": "Đều có nghĩa “suýt nữa thì…”",
           "items": [
             {
               "id": "tokoro-datta",
-              "diff": "Đều nói được “suýt nữa…”; そうになった miêu tả dáng vẻ lúc đó sắp mất kiểm soát, ところだった nói hậu quả “nếu không… thì đã…”.",
+              "title": "〜ところだった (suýt nữa thì…)",
+              "diff": "Đều nói “suýt…, thực tế không xảy ra”; そうになった miêu tả dáng vẻ sắp xảy ra lúc đó, còn ところだった là sau đó nhìn lại nói “suýt nữa thì thành ra như vậy”, mang cảm giác may mắn “hú hồn”.",
               "this": [
                 {
                   "tag": "Dáng vẻ lúc đó",
@@ -20399,31 +20407,32 @@
               ],
               "that": [
                 {
-                  "tag": "Nếu không… · hậu quả",
-                  "tr": "Nếu cậu không nói cho tớ thì tớ đã đi họp muộn rồi."
+                  "tag": "Sau đó · hú hồn",
+                  "tr": "Trượt chân trên cầu thang, suýt chút nữa là ngã rồi."
                 }
               ],
               "wrong": {
-                "why": "Sau giả định “nếu không…” chỉ có thể dùng ところだった"
+                "why": "Trước そうになる là thể ます (転び); thể từ điển (転ぶ) thì đi với ところだった"
               },
-              "explain": "Xem nửa câu đầu và cách nối: cơ thể, cảm xúc lúc đó sắp mất kiểm soát như 「足が滑って」 → thể ます＋そうになった; phía trước có 「〜なかったら」, 「もう少しで」, 「危うく」, nói về hậu quả suýt gây ra → thể từ điển＋ところだった."
+              "explain": "Cả hai câu đều là “suýt ngã, thực tế không ngã”. Trước hết xem cách nối: thể ます (転び)＋そうになった, thể từ điển (転ぶ)＋ところだった. Về sắc thái, そうになった chú ý vào tình huống lúc đó, miêu tả dáng vẻ sắp xảy ra như mất thăng bằng, nước mắt sắp trào ra; ところだった chú ý vào kết quả, sau đó nhìn lại nói “suýt nữa thì thành ra như vậy”, mang cảm giác may mắn “hú hồn”."
             },
             {
-              "id": "you-to-suru",
-              "diff": "そうになる là bất giác “sắp xảy ra”; ようとする là bản thân có chủ ý “định làm”.",
+              "id": "kakeru-halfway",
+              "title": "〜かける (sắp / suýt)",
+              "diff": "Đều có thể nói “suýt…”; そうになった là trông như sắp xảy ra nhưng còn cách một bước, còn かけた là sự thay đổi đó đã bắt đầu một phần, chỉ là chưa đi đến cùng.",
               "this": [
                 {
-                  "tag": "Bất giác",
-                  "tr": "Suýt nữa bị cửa tàu điện kẹp."
+                  "tag": "Còn cách một bước",
+                  "tr": "Hồi nhỏ, tôi bị đuối nước ở biển, suýt chết."
                 }
               ],
               "that": [
                 {
-                  "tag": "Có chủ ý · định làm",
-                  "tr": "Đúng lúc tôi định lên tàu thì cửa đóng lại."
+                  "tag": "Đã bắt đầu · chưa đến cùng",
+                  "tr": "Hồi nhỏ, tôi bị đuối nước ở biển, đã suýt chết (gần như không qua khỏi)."
                 }
               ],
-              "explain": "Xem động từ có phải việc bản thân muốn làm không: những việc không kiểm soát được như 挟まれる、転ぶ、泣く → thể ます＋そうになる; những hành động bản thân định làm như 乗る、出かける → thể ý chí＋とする (乗ろうとする)."
+              "explain": "Cả hai câu đều có thể nói “suýt chết đuối”. そうになった là trông như sắp xảy ra nhưng chưa bắt đầu, chỉ còn một bước; かけた là sự thay đổi đó đã bắt đầu một phần, chỉ là chưa đi đến cùng (người đã gần như không qua khỏi). かける thường đi với các động từ thay đổi dần dần như 死ぬ、忘れる、壊れる; khi nói phản ứng trong chốc lát như suýt khóc, suýt cười thì thường dùng そうになる."
             }
           ]
         }
@@ -20480,11 +20489,12 @@
       "id": "ta-tokoro-result",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「ところ（所）」 — đặt một sự việc vào một “thời điểm” nào đó",
+          "kind": "look",
+          "note": "「たところ、」 ↔ 「たところだ」「たところで」, chỉ khác だ／で phía sau",
           "items": [
             {
               "id": "tokoro-da",
+              "title": "〜ところだ (vừa mới xong)",
               "diff": "たところ、 nói “làm rồi thì kết quả phát hiện ra…”; たところだ nói hành động “vừa mới kết thúc”.",
               "this": [
                 {
@@ -20498,10 +20508,11 @@
                   "tr": "Tôi vừa mới gửi email cho thầy."
                 }
               ],
-              "explain": "Sau 「たところ、」 ở giữa câu nhất định nối với một kết quả (thường là phát hiện bất ngờ), và cả câu dùng thì quá khứ; 「たところだ」 ở cuối câu chỉ nói thời điểm, câu kết thúc ở đó. Thấy sau 「たところ、」 còn có việc xảy ra thì đó là cách dùng “kết quả”."
+              "explain": "Chỉ khác 「だ」 ở cuối: 「たところだ」 ở cuối câu chỉ nói thời điểm hành động vừa kết thúc, câu dừng ở đó; 「たところ、」 giữa câu thì phía sau nhất định còn một kết quả (すぐ返事が来た), cả câu dùng thì quá khứ. Xem sau 「たところ」 là dấu chấm hay dấu phẩy kèm sự việc đã xảy ra."
             },
             {
               "id": "ta-tokoro-de",
+              "title": "〜たところで (dù có… cũng vô ích)",
               "diff": "たところ、 là “thử làm, kết quả là…” (đã thực sự xảy ra); たところで、 là “cho dù có làm thì cũng… (vô ích)”.",
               "this": [
                 {
@@ -20525,20 +20536,21 @@
           "items": [
             {
               "id": "tara-ta-discovery",
-              "diff": "たところ thiên về văn viết, thường dùng cho kết quả sau khi điều tra, hỏi han; たら〜た là khẩu ngữ, dùng được cả cho phát hiện tình cờ thường ngày.",
+              "title": "〜たら〜た (phát hiện)",
+              "diff": "Nghĩa giống nhau, đều là làm việc gì đó rồi biết được kết quả; たところ thiên về văn viết, dùng khi báo cáo, còn たら là khẩu ngữ hằng ngày.",
               "this": [
                 {
-                  "tag": "Văn viết · có mục đích hỏi han",
-                  "tr": "Tôi hỏi khách sạn thử, kết quả là vẫn còn phòng trống."
+                  "tag": "Văn viết · báo cáo",
+                  "tr": "Tôi đã gọi điện cho khách sạn thì vẫn còn phòng trống."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khẩu ngữ · phát hiện tình cờ",
-                  "tr": "Sáng ra vừa mở cửa sổ thì thấy tuyết đã phủ dày."
+                  "tag": "Khẩu ngữ · tán gẫu",
+                  "tr": "Gọi điện cho khách sạn thì vẫn còn phòng đấy."
                 }
               ],
-              "explain": "Xem hành động phía trước và hoàn cảnh: những hành động có mục đích như 「問い合わせる」, 「調べる」, 「聞いてみる」, lại đang báo cáo, viết báo cáo → たところ; trong đời sống thường ngày tiện tay làm gì đó, tình cờ phát hiện → たら (「窓を開けると、雪が積もっていた」 cũng vậy, thiên về văn viết, tiểu thuyết)."
+              "explain": "Hai câu nói cùng một việc: làm gì đó rồi biết được kết quả, dùng cái nào cũng đúng. Xem văn phong: たところ thiên về văn viết, thường dùng khi báo cáo với cấp trên hay viết báo cáo, phía sau hay đi với cách nói trang trọng như 「〜ました」; たら là khẩu ngữ hằng ngày, khi nói chuyện thoải mái với bạn bè như 「空いてた」 thì dùng たら tự nhiên hơn."
             },
             {
               "id": "kekka",
@@ -20569,29 +20581,28 @@
           "note": "Đều diễn tả “vừa… là…”",
           "items": [
             {
-              "id": "shidai-as-soon-as",
-              "title": "〜次第（vừa… là lập tức）",
-              "diff": "Sau たとたん là việc bất ngờ xảy ra; sau 次第 là việc bản thân có chủ ý làm (liên lạc, xuất phát).",
+              "id": "ya-ina-ya",
+              "diff": "Nghĩa giống nhau, đều là “vừa… thì…”; たとたん dùng được cả trong hội thoại và văn viết, còn や否や là cách nói văn viết, văn chương, đi với thể từ điển.",
               "this": [
                 {
-                  "tag": "Sau là việc bất ngờ",
-                  "tr": "Vừa đến nhà ga thì trời đổ mưa."
+                  "tag": "Hội thoại cũng hay dùng",
+                  "tr": "Cô ấy vừa nhìn thấy mặt tôi thì bật khóc."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sau là ý chí",
-                  "tr": "Vừa đến nhà ga là tôi sẽ gọi điện cho anh ngay."
+                  "tag": "Văn viết · tiểu thuyết",
+                  "tr": "Cô ấy vừa trông thấy mặt tôi liền òa khóc."
                 }
               ],
               "wrong": {
-                "why": "Sau たとたん không thể nối với dự định của bản thân"
+                "why": "Trước や否や là thể từ điển (見る), không dùng thể た"
               },
-              "explain": "Xem nửa câu sau: những việc bất ngờ, bản thân không kiểm soát được như 「雨が降り出した」, lại ở thì quá khứ → thể た＋とたん; những việc bản thân định làm ngay như 「電話します」, 「連絡します」 → thể ます＋次第, thường dùng trong công việc."
+              "explain": "Hai câu nghĩa giống nhau. Trước hết xem cách nối: たとたん đi với thể た (見た), や否や đi với thể từ điển (見る). Sau đó xem hoàn cảnh: たとたん dùng được cả trong hội thoại hằng ngày lẫn văn viết; や否や là cách nói văn viết trong tiểu thuyết, tin tức, khi tán gẫu bình thường rất ít dùng."
             },
             {
               "id": "ka-nai-ka-no-uchi-ni",
-              "diff": "たとたん là việc trước vừa mới hoàn thành; か〜ないかのうちに là việc trước còn chưa kết thúc hẳn, gần như đồng thời.",
+              "diff": "たとたん là việc trước vừa xảy ra thì ngay sau đó việc sau xảy ra; か〜ないかのうちに là khoảnh khắc mà việc trước đã xảy ra hay chưa cũng không rõ, nhấn mạnh gần như cùng lúc.",
               "this": [
                 {
                   "tag": "Vừa hoàn thành · là",
@@ -20600,11 +20611,11 @@
               ],
               "that": [
                 {
-                  "tag": "Chưa kết thúc · gần như đồng thời",
-                  "tr": "Chuông còn chưa reo hết, học sinh đã lao ra khỏi lớp."
+                  "tag": "Gần như cùng lúc",
+                  "tr": "Chuông vừa mới reo, gần như cùng lúc, học sinh đã lao ra khỏi lớp."
                 }
               ],
-              "explain": "Xem cấu trúc: 「鳴るか鳴らないか」 nói cùng một động từ ở cả thể khẳng định và phủ định, diễn tả “reo xong hay chưa cũng không rõ”, nhấn mạnh gần như đồng thời, màu sắc văn viết đậm; たとたん dùng thể た, việc trước đã xảy ra, ngay sau đó xuất hiện việc phía sau."
+              "explain": "Cả hai câu đều là “chuông vừa reo là lao ra”. たとたん dùng thể た, việc trước đã xảy ra, ngay sau đó việc sau xảy ra, thường mang cảm giác “bất ngờ, không ngờ”; 「鳴るか鳴らないか」 nói cùng một động từ ở dạng khẳng định và phủ định, nghĩa là khoảnh khắc “reo hay chưa reo cũng không rõ”, khoảng cách thời gian còn ngắn hơn たとたん, thường dùng trong văn kể chuyện. Muốn nhấn mạnh “gần như cùng lúc, việc trước vừa bắt đầu thì việc sau đã xảy ra” thì dùng か〜ないかのうちに."
             },
             {
               "id": "nari-immediately",
@@ -20648,8 +20659,8 @@
       "id": "ta-tsumori",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「つもり（積もり）」 — nghĩa gốc là “sự ước tính, tính toán trong lòng”",
+          "kind": "look",
+          "note": "「たつもり」 ↔ 「るつもり」, chỉ khác た／る phía trước",
           "items": [
             {
               "id": "tsumori-datta",
@@ -20689,24 +20700,25 @@
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “coi như, giả vờ” — thực tế không phải như vậy",
+          "note": "Đều có nghĩa “coi như đã…”",
           "items": [
             {
-              "id": "furi-wo-suru",
-              "diff": "たつもり là trong lòng tự coi như đã…; ふりをする là làm cho người khác xem.",
+              "id": "ta-koto-ni-suru",
+              "title": "〜たことにする (coi như…)",
+              "diff": "Đều là “coi như đã…”; たつもりで là tâm thế tự mình nghĩ trong lòng, còn たことにする là xử lý việc chưa xảy ra như thể đã xảy ra, thường là sự sắp xếp đã thỏa thuận với người khác.",
               "this": [
                 {
-                  "tag": "Tự coi như trong lòng",
-                  "tr": "Coi như mình đã đi du lịch rồi, tôi để dành số tiền đó."
+                  "tag": "Tâm thế của bản thân",
+                  "tr": "Coi như mình đã ăn bánh rồi, tôi bỏ số tiền đó vào tiết kiệm."
                 }
               ],
               "that": [
                 {
-                  "tag": "Làm cho người khác xem",
-                  "tr": "Thật ra tôi biết, nhưng giả vờ không biết."
+                  "tag": "Xử lý như sự thật",
+                  "tr": "Cái bánh thì coi như đã ăn rồi, tôi bỏ số tiền đó vào tiết kiệm."
                 }
               ],
-              "explain": "Xem đối tượng là ai: たつもり là bản thân trong lòng nghĩ hoặc coi như vậy (行ったつもりで貯金する、言ったつもりだった), không cần người khác nhìn thấy; ふりをする là diễn cho người khác xem, để người khác tin (知らないふり、寝たふり)."
+              "explain": "Cả hai câu đều có thể nói “coi như đã ăn rồi, đem tiền đi tiết kiệm”. たつもりで nặng về tâm thế của bản thân: tưởng tượng trong lòng là đã làm rồi, để tự an ủi, kiềm chế không làm; たことにする nặng về cách xử lý: việc chưa xảy ra được tính như đã xảy ra, cũng hay dùng khi nói với người khác “cứ coi như… đi” để sắp xếp hoặc che đậy (聞かなかったことにする、私が払ったことにしておこう), những trường hợp này thường dùng ことにする."
             }
           ]
         }
@@ -20721,23 +20733,21 @@
           "items": [
             {
               "id": "goto-ni",
-              "diff": "たびに chỉ đi sau động từ hoặc “danh từ＋の”, nghĩa là “mỗi khi… thì”; ごとに đi được với số lượng, danh từ, chỉ từng đơn vị hoặc cứ cách bao lâu một lần.",
+              "title": "〜ごとに (mỗi lần… đều)",
+              "diff": "Đều có thể nói “mỗi lần… đều”; khi phía sau là sự thay đổi tích lũy dần dần, ごとに nhấn mạnh “lần sau hơn lần trước”, thiên về văn viết, còn たびに mang tính khẩu ngữ hơn.",
               "this": [
                 {
-                  "tag": "Đi với động từ · mỗi khi",
-                  "tr": "Mỗi khi nhìn bức ảnh này, tôi lại nhớ về ngày xưa."
+                  "tag": "Trung tính · lần nào cũng",
+                  "tr": "Mỗi lần luyện tập là lại giỏi lên."
                 }
               ],
               "that": [
                 {
-                  "tag": "Đi với số lượng · cứ cách",
-                  "tr": "Xe buýt cứ 10 phút có một chuyến."
+                  "tag": "Văn viết · lần sau hơn lần trước",
+                  "tr": "Cứ mỗi lần luyện tập lại giỏi thêm một chút."
                 }
               ],
-              "wrong": {
-                "why": "たびに không đi trực tiếp sau số lượng được"
-              },
-              "explain": "Xem phía trước là gì: động từ (見る、会う) → たびに là thông dụng nhất, nhấn mạnh “lần nào cũng…”; số lượng (10分、３時間) hoặc danh từ chỉ đơn vị (国、クラス) → chỉ dùng được ごとに."
+              "explain": "Cả hai câu đều dùng được. Khi phía sau là sự thay đổi tích lũy dần như 「なっていく」, ごとに nhấn mạnh “mỗi lần làm lại tiến thêm một bước”, thiên về văn viết; たびに chỉ nói “lần nào cũng như vậy”, mang tính khẩu ngữ hơn. Khi phía sau là phản ứng giống nhau mỗi lần (思い出す、文句を言う) thì thường dùng たびに."
             },
             {
               "id": "ni-tsuke",
@@ -20812,11 +20822,11 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「たり」 liệt kê — “nêu một ví dụ, chẳng hạn như…”",
+          "note": "Đều bắt nguồn từ 「たり」 liệt kê — nghĩa gốc là “nêu ví dụ, chẳng hạn như…”",
           "items": [
             {
               "id": "tari-tari",
-              "diff": "たりして ở cuối câu chỉ nêu ra một khả năng, nghĩa là “không chừng… đấy”; たり〜たりする là liệt kê vài hành động.",
+              "diff": "たり vốn là “nêu ví dụ”: nêu ra vài hành động thì thành liệt kê “nào là… nào là…”; chỉ nêu một khả năng và đặt ở cuối câu thì thành “không chừng… đấy”.",
               "this": [
                 {
                   "tag": "Cuối câu · không chừng",
@@ -20829,7 +20839,7 @@
                   "tr": "Ngày nghỉ tôi hay xem phim, đi mua sắm các thứ."
                 }
               ],
-              "explain": "Xem vị trí: たり ở giữa câu, phía sau còn có 「〜たりする」, là liệt kê những việc thường làm; たりして đặt ở cuối câu, phía sau không có gì, là buột miệng nêu ra một khả năng, hay đi với 「もしかして」「なんて」, mang giọng đùa cợt."
+              "explain": "たり ở cả hai bên đều là “nêu ví dụ”. 〜たり〜たりする chọn ra vài hành động trong số nhiều hành động, nói thường ngày làm gì; 〜たりして chỉ nêu một tình huống có thể xảy ra, nói đến 「して」 thì dừng, không nói phần sau, nghe như “chẳng hạn chuyện… cũng không chừng”, nên thành lời đoán buột miệng ở cuối câu. Vì vậy hãy xem vị trí: ở giữa câu, phía sau còn 「〜たりする」 là liệt kê; ở cuối câu, phía sau không có gì là “không chừng…”."
             }
           ]
         },
@@ -20839,20 +20849,20 @@
           "items": [
             {
               "id": "kamoshirenai",
-              "diff": "たりして là nói vu vơ nửa đùa nửa thật, bản thân cũng không mấy coi là thật; かもしれない là phỏng đoán nghiêm túc.",
+              "diff": "Đều là phỏng đoán “không chừng…”; たりして chỉ dùng khi tán gẫu thoải mái giữa bạn bè, còn かもしれない là cách nói chung, nói với cấp trên hay trong hoàn cảnh trang trọng cũng dùng được.",
               "this": [
                 {
-                  "tag": "Nói đùa · buột miệng",
-                  "tr": "Hai người đó dạo này lúc nào cũng đi cùng nhau nhỉ. Không lẽ đang hẹn hò chắc?"
+                  "tag": "Giữa bạn bè · đoán buột miệng",
+                  "tr": "Này, không chừng hai người đó đang hẹn hò đấy."
                 }
               ],
               "that": [
                 {
-                  "tag": "Phỏng đoán nghiêm túc",
-                  "tr": "Dạo này họ lúc nào cũng ở cùng nhau, hai người đó có lẽ đang hẹn hò."
+                  "tag": "Chung · nói với cấp trên cũng được",
+                  "tr": "Trưởng phòng ơi, hai người đó có khi đang hẹn hò đấy ạ."
                 }
               ],
-              "explain": "Xem giọng điệu và hoàn cảnh: たりして chỉ dùng khi tán gẫu với bạn bè, như đang đùa hoặc trêu đối phương (hay đi với 「もしかして」「なんて」); かもしれない là phỏng đoán thông thường, tán gẫu hay trang trọng đều dùng được, người nói đang phán đoán nghiêm túc."
+              "explain": "Cả hai câu đều là “không chừng đang hẹn hò”, hãy xem nói với ai: たりして chỉ là lời đoán buột miệng nhẹ nhàng giữa bạn bè, hay dùng trong câu chuyện kiểu 「ねえ」; かもしれない là phỏng đoán thông thường, khi nói với cấp trên như 「部長」, người lớn tuổi, hoặc trong hoàn cảnh trang trọng, văn viết thì phải dùng かもしれない (かもしれません), không dùng たりして."
             }
           ]
         }
@@ -20867,7 +20877,7 @@
           "items": [
             {
               "id": "ta-bakari",
-              "diff": "たて chỉ đi với một số ít động từ, nhấn mạnh “vừa làm xong, còn rất mới”; たばかり đi với động từ nào cũng được.",
+              "diff": "たて chỉ đi với một số ít động từ, nói đồ vừa làm xong còn tươi mới hoặc người vừa mới có thân phận nào đó; たばかり đi với động từ nào cũng được.",
               "this": [
                 {
                   "tag": "Ít động từ · còn mới",
@@ -20880,24 +20890,7 @@
                   "tr": "Tôi làm mất chiếc ô vừa mới mua hôm qua."
                 }
               ],
-              "explain": "たて gắn thẳng vào thể ます (焼き＋たて), chỉ dùng với số ít từ nói về “đồ vừa làm ra còn rất mới”: 焼きたて、できたて、生まれたて、塗りたて; các trường hợp khác đều dùng たばかり, ví dụ 「昨日買ったばかりの傘」."
-            },
-            {
-              "id": "tokoro-da",
-              "diff": "たて bổ nghĩa cho danh từ, nhấn mạnh “vừa làm xong, còn rất mới”; たところだ đặt ở cuối câu nói về thời điểm.",
-              "this": [
-                {
-                  "tag": "Bổ nghĩa danh từ · còn mới",
-                  "tr": "Tôi đã mua bánh mì vừa ra lò."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Cuối câu · thời điểm",
-                  "tr": "Bánh mì vừa nướng xong."
-                }
-              ],
-              "explain": "たて dùng giống tính từ theo dạng 「〜たての＋danh từ」, nói đồ vật vẫn còn rất mới; khi nói “việc gì đó vừa mới xảy ra”, báo cáo tiến độ thì dùng たところだ (今、着いたところです)."
+              "explain": "たて gắn trực tiếp sau thể ます (焼き＋たて), chỉ dùng với một số ít động từ: nói đồ vừa làm xong, còn tươi mới (焼きたて、できたて、取れたて), hoặc người vừa mới có thân phận nào đó, chưa quen (入社したて、覚えたて). Các hành động thông thường nói “vừa mới…”, ví dụ 「昨日買ったばかりの傘」, thì phải dùng たばかり."
             }
           ]
         }
@@ -20934,7 +20927,7 @@
               "this": [
                 {
                   "tag": "Giả định · cho dù là",
-                  "tr": "Cho dù là nói đùa thì cũng không được nói những điều như vậy."
+                  "tr": "Dù chỉ là đùa, nói xấu người khác cũng không hay."
                 }
               ],
               "that": [
