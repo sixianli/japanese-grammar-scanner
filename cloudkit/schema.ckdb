@@ -1,0 +1,58 @@
+DEFINE SCHEMA
+
+    RECORD TYPE Feedback (
+        "___createTime" TIMESTAMP QUERYABLE SORTABLE,
+        "___createdBy"  REFERENCE,
+        "___etag"       STRING,
+        "___modTime"    TIMESTAMP,
+        "___modifiedBy" REFERENCE,
+        "___recordID"   REFERENCE QUERYABLE,
+        appVersion      STRING,
+        context         STRING,
+        device          STRING,
+        kind            STRING,
+        language        STRING,
+        message         STRING,
+        osVersion       STRING,
+        screenshots     LIST<ASSET>,
+        GRANT WRITE TO "_creator",
+        GRANT CREATE TO "_icloud",
+        GRANT READ TO "_world"
+    );
+
+    RECORD TYPE UsageDay (
+        "___createTime" TIMESTAMP QUERYABLE SORTABLE,
+        "___createdBy"  REFERENCE,
+        "___etag"       STRING,
+        "___modTime"    TIMESTAMP QUERYABLE SORTABLE,
+        "___modifiedBy" REFERENCE,
+        "___recordID"   REFERENCE QUERYABLE,
+        appVersion      STRING,
+        country         STRING,
+        day             STRING QUERYABLE SORTABLE,
+        firstInMonth    INT64,
+        firstInWeek     INT64,
+        grammar         STRING,
+        hours           STRING,
+        language        STRING,
+        levels          STRING,
+        month           STRING QUERYABLE,
+        newInstall      INT64 QUERYABLE,
+        sessions        INT64,
+        week            STRING QUERYABLE,
+        GRANT WRITE TO "_creator",
+        GRANT CREATE TO "_icloud",
+        GRANT READ TO "_world"
+    );
+
+    RECORD TYPE Users (
+        "___createTime" TIMESTAMP,
+        "___createdBy"  REFERENCE,
+        "___etag"       STRING,
+        "___modTime"    TIMESTAMP,
+        "___modifiedBy" REFERENCE,
+        "___recordID"   REFERENCE,
+        roles           LIST<INT64>,
+        GRANT WRITE TO "_creator",
+        GRANT READ TO "_world"
+    );

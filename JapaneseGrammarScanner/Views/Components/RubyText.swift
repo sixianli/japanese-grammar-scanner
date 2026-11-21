@@ -95,15 +95,20 @@ private enum AtomBuilder {
 struct RubyText: View {
     struct Style {
         var font: Font = .body
-        var rubyFont: Font = .system(size: 9)
+        /// 假名字号（pt）
+        var rubySize: CGFloat = 8
         var color: Color = .primary
         var highlightColor: Color = .accentColor
         var lineSpacing: CGFloat = 6
         var weight: Font.Weight = .regular
     }
 
+    private static let quoteRegex = try! NSRegularExpression(pattern: "「([^」]+)」|『([^』]+)』")
+
     private let plain: String
     private let segments: [RubySegment]
+    /// 排版分组在初始化时算好，重绘时不再重复计算
+    private let groups: [[Atom]]
     private let hasRuby: Bool
     private var style: Style
 
@@ -116,6 +121,7 @@ struct RubyText: View {
         let segs = FuriganaStore.shared.segments(for: japanese)
         segments = RubyText.applyHighlights(segs.map { RubySegment(text: $0.base, ruby: $0.ruby) }, highlights: highlights)
         hasRuby = segs.contains { $0.ruby != nil }
+        groups = AtomBuilder.groups(AtomBuilder.atoms(from: segments))
     }
 
     /// 讲解文字（任意语言），其中「」『』里的日语会自动注音。
@@ -125,8 +131,7 @@ struct RubyText: View {
         var segs: [RubySegment] = []
         let ns = explanation as NSString
         var cursor = 0
-        let regex = try! NSRegularExpression(pattern: "「([^」]+)」|『([^』]+)』")
-        for m in regex.matches(in: explanation, range: NSRange(location: 0, length: ns.length)) {
+        for m in RubyText.quoteRegex.matches(in: explanation, range: NSRange(location: 0, length: ns.length)) {
             let innerRange = m.range(at: 1).location != NSNotFound ? m.range(at: 1) : m.range(at: 2)
             if innerRange.location > cursor {
                 segs.append(RubySegment(text: ns.substring(with: NSRange(location: cursor, length: innerRange.location - cursor))))
@@ -138,6 +143,7 @@ struct RubyText: View {
         if cursor < ns.length { segs.append(RubySegment(text: ns.substring(from: cursor))) }
         segments = segs
         hasRuby = segs.contains { $0.ruby != nil }
+        groups = AtomBuilder.groups(AtomBuilder.atoms(from: segs))
     }
 
     var body: some View {
@@ -154,9 +160,8 @@ struct RubyText: View {
     }
 
     private var flow: some View {
-        let groups = AtomBuilder.groups(AtomBuilder.atoms(from: segments))
         // 注音行本身已经占了一定高度，这里把行距收紧，避免段落显得松散
-        return FlowLayout(lineSpacing: max(0, style.lineSpacing - 5)) {
+        return FlowLayout(lineSpacing: max(2, style.lineSpacing - 4)) {
             ForEach(Array(groups.enumerated()), id: \.offset) { _, group in
                 if group.first?.isLineBreak == true {
                     Color.clear.frame(width: 0, height: 0).layoutValue(key: LineBreakKey.self, value: true)
@@ -173,21 +178,32 @@ struct RubyText: View {
         .accessibilityLabel(plain)
     }
 
+    /// 一个排版单元：正文 + 正上方居中的假名。
+    /// 每个单元顶部都预留一行假名的高度（无论有没有注音），假名画在这块预留区域里，
+    /// 永远不会和本行或上一行的汉字重叠；假名不改变正文宽度，过长时自动缩小。
     private func atomView(_ atom: Atom) -> some View {
-        VStack(spacing: 0) {
-            Text(atom.ruby ?? " ")
-                .font(style.rubyFont)
-                .foregroundStyle(atom.ruby == nil ? .clear : style.color.opacity(0.75))
-                .lineLimit(1)
-                .fixedSize()
-            Text(atom.text)
-                .font(style.font)
-                .fontWeight(atom.highlighted ? .bold : style.weight)
-                .foregroundStyle(atom.highlighted ? style.highlightColor : style.color)
-                .lineLimit(1)
-                .fixedSize()
-                .background(atom.highlighted ? style.highlightColor.opacity(0.15) : Color.clear)
-        }
+        let rubySize = UIFontMetrics(forTextStyle: .body).scaledValue(for: style.rubySize)
+        let rubyLine = ceil(rubySize * 1.3)
+        return Text(atom.text)
+            .font(style.font)
+            .fontWeight(atom.highlighted ? .semibold : style.weight)
+            .foregroundStyle(atom.highlighted ? style.highlightColor : style.color)
+            .lineLimit(1)
+            .fixedSize()
+            .background(atom.highlighted ? style.highlightColor.opacity(0.14) : Color.clear)
+            .padding(.top, rubyLine)
+            .overlay(alignment: .top) {
+                if let ruby = atom.ruby {
+                    Text(ruby)
+                        .font(.system(size: rubySize))
+                        .foregroundStyle(Color.secondary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal, -4)
+                        .frame(height: rubyLine, alignment: .bottom)
+                }
+            }
     }
 
     /// 把高亮范围（UTF-16）映射到片段上；必要时拆分无注音片段，使高亮边界精确。

@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
-"""生成界面文字的 String Catalog（Localizable.xcstrings / InfoPlist.xcstrings）。
+"""生成界面文字的多语言文件。
+- 界面文字：每种语言一个 xx.lproj/Localizable.strings（带复数的写进 Localizable.stringsdict）。
+  不用 String Catalog（.xcstrings）：新版 Xcode 把它编译成整包的语言表，App 内切换语言时
+  SwiftUI 按所选语言去 xx.lproj 里找普通文字会找不到，只有带复数的文字能切换。
+- InfoPlist.xcstrings（App 名称、相机权限说明）：由系统读取，仍用 String Catalog。
 源语言为简体中文（代码中的字符串即 key）；繁体中文由 OpenCC 自动转换。
 用法: python3 tools/make_strings.py
 """
 import json
 import os
+import re
 
 from opencc import OpenCC
 
@@ -14,6 +19,69 @@ cc = OpenCC("s2twp")
 
 # key(简体中文) : (en, ko, es, vi)
 S = {
+    "你扫到的：": ("You scanned: ", "스캔한 문장: ", "Escaneaste: ", "Bạn đã quét: "),
+    "对应 用法 ": ("Matches usage ", "해당 용법 ", "Corresponde al uso ", "Ứng với cách dùng "),
+    "%lld 个没看过": ({"one": "%lld not viewed", "other": "%lld not viewed"}, "%lld개 안 봄", {"one": "%lld sin ver", "other": "%lld sin ver"}, "%lld mẫu chưa xem"),
+    "在例句中出现": ("Appears in examples", "예문에 나옴", "Aparece en ejemplos", "Xuất hiện trong ví dụ"),
+    "对准书页或选一张截图，句子里的语法会被标出来。": ("Point at a page or pick a screenshot, and the grammar in each sentence is marked.", "책 페이지를 비추거나 스크린샷을 고르면 문장 속 문법이 표시됩니다.", "Apunta a una página o elige una captura y se marcará la gramática de cada frase.", "Hướng vào trang sách hoặc chọn ảnh chụp màn hình, ngữ pháp trong câu sẽ được đánh dấu."),
+    "快要忘了": ("Fading from Memory", "곧 잊어버릴 문법", "A punto de olvidar", "Sắp quên"),
+    "搜索语法或意思": ("Search grammar or meaning", "문법 또는 의미 검색", "Busca gramática o significado", "Tìm ngữ pháp hoặc ý nghĩa"),
+    "来源与构成": ("Origin & Structure", "유래와 구성", "Origen y estructura", "Nguồn gốc và cấu tạo"),
+    "来源与构成、相近语法对比": ("Origin, structure and similar-grammar comparisons", "유래·구성과 비슷한 문법 비교", "Origen, estructura y comparación con gramática similar", "Nguồn gốc, cấu tạo và so sánh ngữ pháp tương tự"),
+    "相近语法": ("Similar Grammar", "비슷한 문법", "Gramática similar", "Ngữ pháp tương tự"),
+    "跳到用法": ("Jump to usage", "용법으로 이동", "Ir al uso", "Đến cách dùng"),
+    "这些语法你看过，按遗忘曲线快要忘了，再看一眼吧。": ("You've seen these before and, by the forgetting curve, they're about to slip away. Take another look.", "본 적 있는 문법이지만 망각 곡선상 곧 잊어버릴 때입니다. 한 번 더 보세요.", "Ya las viste, pero según la curva del olvido estás a punto de olvidarlas. Échales otro vistazo.", "Bạn đã xem những mẫu này, theo đường cong quên lãng thì sắp quên rồi. Xem lại một chút nhé."),
+    "搜索": ("Search", "검색", "Buscar", "Tìm kiếm"),
+    "搜索语法": ("Search Grammar", "문법 검색", "Buscar gramática", "Tìm ngữ pháp"),
+    "输入语法、读音或意思，例如「ようになる」「にもかかわらず」「尽管」。": ("Type a grammar form, reading or meaning, e.g. 「ようになる」, 「にもかかわらず」 or \"despite\".", "문법, 읽는 법 또는 의미를 입력하세요. 예: 「ようになる」「にもかかわらず」「~에도 불구하고」", "Escribe una forma gramatical, su lectura o su significado, p. ej. 「ようになる」, 「にもかかわらず」 o «a pesar de».", "Nhập ngữ pháp, cách đọc hoặc ý nghĩa, ví dụ 「ようになる」, 「にもかかわらず」 hoặc \"mặc dù\"."),
+    "外观": ("Appearance", "화면 스타일", "Apariencia", "Giao diện"),
+    "主题色与背景色": ("Theme & Background Colors", "테마 색상과 배경색", "Color de tema y fondo", "Màu chủ đề và nền"),
+    "主题色": ("Theme Color", "테마 색상", "Color de tema", "Màu chủ đề"),
+    "浅色模式背景": ("Light Mode Background", "라이트 모드 배경", "Fondo en modo claro", "Nền chế độ sáng"),
+    "深色模式背景": ("Dark Mode Background", "다크 모드 배경", "Fondo en modo oscuro", "Nền chế độ tối"),
+    "浅色、深色背景分别生效，随系统的深浅模式自动切换。": ("Light and dark backgrounds apply separately and switch automatically with the system appearance.", "라이트·다크 배경은 각각 적용되며 시스템 설정에 따라 자동으로 바뀝니다.", "Los fondos claro y oscuro se aplican por separado y cambian automáticamente con el modo del sistema.", "Nền sáng và tối được áp dụng riêng và tự chuyển theo chế độ của hệ thống."),
+    "抹茶绿": ("Matcha", "말차 그린", "Matcha", "Xanh matcha"),
+    "柿子橙": ("Persimmon", "감 오렌지", "Caqui", "Cam hồng"),
+    "樱花粉": ("Sakura", "벚꽃 핑크", "Sakura", "Hồng anh đào"),
+    "橙黄": ("Amber", "앰버", "Ámbar", "Vàng cam"),
+    "青磁绿": ("Celadon", "청자색", "Celadón", "Xanh men ngọc"),
+    "纸白": ("Paper", "종이색", "Papel", "Giấy"),
+    "米黄": ("Cream", "크림", "Crema", "Kem"),
+    "豆沙绿": ("Sage", "세이지 그린", "Salvia", "Xanh lá dịu"),
+    "浅灰": ("Light Gray", "연회색", "Gris claro", "Xám nhạt"),
+    "暖炭灰": ("Warm Charcoal", "웜 차콜", "Carbón cálido", "Than ấm"),
+    "深墨蓝": ("Ink Blue", "잉크 블루", "Azul tinta", "Xanh mực"),
+    "深棕褐": ("Umber", "다크 브라운", "Sombra", "Nâu đậm"),
+    "纯黑": ("Black", "블랙", "Negro", "Đen"),
+    "排序": ("Sort", "정렬", "Ordenar", "Sắp xếp"),
+    "快遗忘了": ("Fading First", "곧 잊을 순", "A punto de olvidar", "Sắp quên"),
+    "最近收藏": ("Recently Added", "최근 추가순", "Añadidos recientemente", "Mới thêm"),
+    "最多查看": ("Most Viewed", "많이 본 순", "Más vistos", "Xem nhiều nhất"),
+    "有语法没识别出来？": ("Missing a grammar point?", "인식되지 않은 문법이 있나요?", "¿Falta algún punto gramatical?", "Có ngữ pháp chưa nhận ra?"),
+    "手动修正文字": ("Fix the text", "텍스트 수정", "Corregir el texto", "Sửa văn bản"),
+    "点击高亮或下方列表查看讲解；双指可直接放大图片。": ("Tap a highlight or an item below for the explanation. Pinch the photo to zoom.", "하이라이트나 아래 목록을 누르면 설명을 볼 수 있습니다. 사진은 두 손가락으로 확대하세요.", "Toca un resaltado o un elemento para ver la explicación. Pellizca la foto para ampliarla.", "Chạm vào phần tô sáng hoặc mục bên dưới để xem giải thích. Dùng hai ngón tay để phóng to ảnh."),
+    "正确": ("Correct", "올바름", "Correcto", "Đúng"),
+    "错误": ("Incorrect", "틀림", "Incorrecto", "Sai"),
+    "反馈问题或建议": ("Send Feedback", "피드백 보내기", "Enviar comentarios", "Gửi góp ý"),
+    "遇到 bug、讲解有误或有任何建议，都可以附上截图告诉我们。": ("Found a bug, an error in an explanation, or have an idea? Tell us, screenshots welcome.", "버그나 설명 오류, 제안이 있으면 스크린샷과 함께 알려 주세요.", "¿Un error, una explicación incorrecta o una idea? Cuéntanoslo, con capturas si quieres.", "Gặp lỗi, giải thích sai hay có góp ý? Hãy cho chúng tôi biết, có thể kèm ảnh chụp màn hình."),
+    "功能问题 / bug": ("Bug / Problem", "버그 / 문제", "Error / problema", "Lỗi / sự cố"),
+    "讲解内容有误": ("Error in an explanation", "설명 내용 오류", "Error en una explicación", "Giải thích sai"),
+    "建议": ("Suggestion", "제안", "Sugerencia", "Góp ý"),
+    "类型": ("Type", "유형", "Tipo", "Loại"),
+    "描述": ("Description", "내용", "Descripción", "Mô tả"),
+    "请描述遇到的问题：在哪个页面、做了什么、看到了什么。": ("Describe the problem: which screen, what you did, and what you saw.", "어느 화면에서 무엇을 했고 무엇이 보였는지 적어 주세요.", "Describe el problema: en qué pantalla, qué hiciste y qué viste.", "Hãy mô tả: ở màn hình nào, bạn đã làm gì và thấy gì."),
+    "删除截图": ("Remove screenshot", "스크린샷 삭제", "Quitar captura", "Xóa ảnh"),
+    "添加截图": ("Add Screenshots", "스크린샷 추가", "Añadir capturas", "Thêm ảnh chụp màn hình"),
+    "重新选择截图": ("Choose Screenshots Again", "스크린샷 다시 선택", "Volver a elegir capturas", "Chọn lại ảnh"),
+    "截图（可选，最多 4 张）": ("Screenshots (optional, up to 4)", "스크린샷 (선택, 최대 4장)", "Capturas (opcional, hasta 4)", "Ảnh chụp màn hình (tùy chọn, tối đa 4)"),
+    "反馈": ("Feedback", "피드백", "Comentarios", "Góp ý"),
+    "发送": ("Send", "보내기", "Enviar", "Gửi"),
+    "讲解有误或看不懂？": ("Something wrong or unclear?", "설명이 틀렸거나 이해하기 어렵나요?", "¿Algo incorrecto o poco claro?", "Có gì sai hoặc khó hiểu?"),
+    "告诉我们": ("Tell us", "알려 주세요", "Cuéntanos", "Cho chúng tôi biết"),
+    "遇到问题或有建议？反馈给我们": ("Problems or ideas? Send us feedback", "문제나 제안이 있나요? 피드백 보내기", "¿Problemas o ideas? Envíanos comentarios", "Gặp vấn đề hay có góp ý? Gửi cho chúng tôi"),
+    "内容：讲解有误或看不懂": ("Content: wrong or unclear explanation", "내용: 설명 오류 또는 이해 어려움", "Contenido: explicación errónea o poco clara", "Nội dung: giải thích sai hoặc khó hiểu"),
+    "功能：bug 或用不了": ("Function: bug or not working", "기능: 버그 또는 작동 안 함", "Función: error o no funciona", "Chức năng: lỗi hoặc không dùng được"),
+    "体验与建议": ("Experience & suggestions", "사용 경험과 제안", "Experiencia y sugerencias", "Trải nghiệm và góp ý"),
     "扫描": ("Scan", "스캔", "Escanear", "Quét"),
     "语法库": ("Grammar", "문법 사전", "Gramática", "Ngữ pháp"),
     "收藏": ("Favorites", "즐겨찾기", "Favoritos", "Yêu thích"),
@@ -29,7 +97,7 @@ S = {
     "好": ("OK", "확인", "Aceptar", "OK"),
     "解锁完整讲解": ("Unlock Full Explanations", "전체 설명 잠금 해제", "Desbloquear explicaciones completas", "Mở khóa toàn bộ giải thích"),
     "扫到不懂的语法，马上看懂。": ("Scan a grammar point you don't know — understand it instantly.", "모르는 문법을 스캔하면 바로 이해됩니다.", "Escanea la gramática que no entiendes y compréndela al instante.", "Quét mẫu ngữ pháp chưa hiểu, hiểu ngay lập tức."),
-    "全部 N5–N2 语法点的完整讲解": ("Full explanations for every N5–N2 grammar point", "N5–N2 모든 문법의 전체 설명", "Explicaciones completas de toda la gramática N5–N2", "Giải thích đầy đủ mọi mẫu ngữ pháp N5–N2"),
+    "全部 N5–N1 语法点的完整讲解": ("Full explanations for every N5–N1 grammar point", "N5–N1 모든 문법의 전체 설명", "Explicaciones completas de toda la gramática N5–N1", "Giải thích đầy đủ mọi mẫu ngữ pháp N5–N1"),
     "按义项分段的用法、接续与例句": ("Usage by meaning, with formation and examples", "의미별 용법·접속·예문", "Usos por significado, con formación y ejemplos", "Cách dùng theo từng nghĩa, kèm cách kết hợp và ví dụ"),
     "日常生活与职场的使用场景": ("Real situations from daily life and work", "일상생활과 직장의 사용 장면", "Situaciones reales de la vida diaria y el trabajo", "Tình huống thực tế trong đời sống và công việc"),
     "词源与相近语法对比": ("Origins and comparisons with similar grammar", "어원과 비슷한 문법 비교", "Origen y comparación con gramática similar", "Nguồn gốc và so sánh ngữ pháp tương tự"),
@@ -37,16 +105,34 @@ S = {
     "完全离线，无广告，无追踪": ("Fully offline. No ads, no tracking.", "완전 오프라인 · 광고 없음 · 추적 없음", "Totalmente sin conexión. Sin anuncios ni rastreo.", "Hoàn toàn ngoại tuyến, không quảng cáo, không theo dõi"),
     "免费试用中，还剩 %lld 天": ({"one": "Free trial: %lld day left", "other": "Free trial: %lld days left"}, "무료 체험 중 · %lld일 남음", {"one": "Prueba gratis: queda %lld día", "other": "Prueba gratis: quedan %lld días"}, "Đang dùng thử miễn phí, còn %lld ngày"),
     "免费试用已结束": ("Free trial has ended", "무료 체험이 끝났습니다", "La prueba gratis ha terminado", "Thời gian dùng thử đã kết thúc"),
-    "开始 7 天免费试用": ("Start 7-Day Free Trial", "7일 무료 체험 시작", "Empezar prueba gratis de 7 días", "Bắt đầu dùng thử miễn phí 7 ngày"),
+    "开始 %lld 天免费试用": ("Start %lld-Day Free Trial", "%lld일 무료 체험 시작", "Empezar prueba gratis de %lld días", "Bắt đầu dùng thử miễn phí %lld ngày"),
+    "编辑": ("Edit", "편집", "Editar", "Sửa"),
+    "完成": ("Done", "완료", "Listo", "Xong"),
+    "免费开始使用": ("Start Free", "무료로 시작하기", "Empezar gratis", "Bắt đầu miễn phí"),
+    "前 %lld 天免费使用全部功能。之后可一次性 %@ 永久解锁完整讲解，不订阅、不自动扣费。": (
+        "All features free for the first %lld days. After that, unlock full explanations forever with a one-time %@ purchase. No subscription, no automatic charges.",
+        "처음 %lld일 동안 모든 기능 무료. 이후 %@ 한 번 구매로 전체 설명을 영구 잠금 해제할 수 있습니다. 구독 없음, 자동 결제 없음.",
+        "Todas las funciones gratis durante los primeros %lld días. Después, desbloquea las explicaciones completas para siempre con una compra única de %@. Sin suscripción ni cargos automáticos.",
+        "Miễn phí mọi tính năng trong %lld ngày đầu. Sau đó, mua một lần %@ để mở khóa vĩnh viễn toàn bộ giải thích. Không đăng ký, không tự động trừ tiền.",
+    ),
+    "前 %lld 天免费使用全部功能。之后可一次性购买永久解锁完整讲解，不订阅、不自动扣费。": (
+        "All features free for the first %lld days. After that, unlock full explanations forever with a one-time purchase. No subscription, no automatic charges.",
+        "처음 %lld일 동안 모든 기능 무료. 이후 한 번 구매로 전체 설명을 영구 잠금 해제할 수 있습니다. 구독 없음, 자동 결제 없음.",
+        "Todas las funciones gratis durante los primeros %lld días. Después, desbloquea las explicaciones completas para siempre con una compra única. Sin suscripción ni cargos automáticos.",
+        "Miễn phí mọi tính năng trong %lld ngày đầu. Sau đó, mua một lần để mở khóa vĩnh viễn toàn bộ giải thích. Không đăng ký, không tự động trừ tiền.",
+    ),
+    "免费试用还剩 %lld 天": ({"one": "%lld day left in your free trial", "other": "%lld days left in your free trial"}, "무료 체험 %lld일 남음", {"one": "Te queda %lld día de prueba gratis", "other": "Te quedan %lld días de prueba gratis"}, "Còn %lld ngày dùng thử miễn phí"),
+    "一次性 %@ 永久解锁，不订阅": ("Unlock forever for a one-time %@. No subscription.", "%@ 한 번 구매로 영구 잠금 해제 · 구독 없음", "Desbloqueo para siempre por un pago único de %@. Sin suscripción.", "Mua một lần %@ để mở khóa vĩnh viễn, không đăng ký"),
+    "一次性购买永久解锁，不订阅": ("Unlock forever with a one-time purchase. No subscription.", "한 번 구매로 영구 잠금 해제 · 구독 없음", "Desbloqueo para siempre con un pago único. Sin suscripción.", "Mua một lần để mở khóa vĩnh viễn, không đăng ký"),
     "免费 · 到期后不会自动扣费": ("Free · No automatic charge afterwards", "무료 · 종료 후 자동 결제 없음", "Gratis · Sin cargos automáticos después", "Miễn phí · Không tự động trừ tiền"),
     "一次性购买 %@": ("One-Time Purchase %@", "한 번 구매 %@", "Compra única %@", "Mua một lần %@"),
     "永久解锁 · 无需订阅": ("Unlock forever · No subscription", "영구 잠금 해제 · 구독 없음", "Desbloqueo para siempre · Sin suscripción", "Mở khóa vĩnh viễn · Không cần đăng ký"),
     "恢复购买": ("Restore Purchases", "구매 복원", "Restaurar compras", "Khôi phục giao dịch"),
-    "免费试用期为 7 天，期间可使用全部内容。试用结束后不会自动收费；如需继续查看完整讲解，可一次性购买永久解锁。扫描识别与语法高亮始终免费。": (
-        "The free trial lasts 7 days and includes all content. You won't be charged automatically when it ends; to keep reading full explanations, make a one-time purchase to unlock them forever. Scanning and grammar highlighting are always free.",
-        "무료 체험은 7일이며 모든 콘텐츠를 이용할 수 있습니다. 체험이 끝나도 자동으로 결제되지 않습니다. 전체 설명을 계속 보려면 한 번 구매로 영구 잠금 해제하세요. 스캔과 문법 하이라이트는 항상 무료입니다.",
-        "La prueba gratis dura 7 días e incluye todo el contenido. No se te cobrará automáticamente al terminar; para seguir leyendo las explicaciones completas, haz una compra única y desbloquéalas para siempre. El escaneo y el resaltado de gramática son siempre gratis.",
-        "Dùng thử miễn phí 7 ngày với toàn bộ nội dung. Khi hết hạn sẽ không tự động trừ tiền; để tiếp tục xem giải thích đầy đủ, hãy mua một lần để mở khóa vĩnh viễn. Quét và tô sáng ngữ pháp luôn miễn phí.",
+    "免费试用期为 %lld 天，期间可使用全部内容。试用结束后不会自动收费；如需继续查看完整讲解，可一次性购买永久解锁。扫描识别与语法高亮始终免费。": (
+        "The free trial lasts %lld days and includes all content. You won't be charged automatically when it ends; to keep reading full explanations, make a one-time purchase to unlock them forever. Scanning and grammar highlighting are always free.",
+        "무료 체험은 %lld일이며 모든 콘텐츠를 이용할 수 있습니다. 체험이 끝나도 자동으로 결제되지 않습니다. 전체 설명을 계속 보려면 한 번 구매로 영구 잠금 해제하세요. 스캔과 문법 하이라이트는 항상 무료입니다.",
+        "La prueba gratis dura %lld días e incluye todo el contenido. No se te cobrará automáticamente al terminar; para seguir leyendo las explicaciones completas, haz una compra única y desbloquéalas para siempre. El escaneo y el resaltado de gramática son siempre gratis.",
+        "Dùng thử miễn phí %lld ngày với toàn bộ nội dung. Khi hết hạn sẽ không tự động trừ tiền; để tiếp tục xem giải thích đầy đủ, hãy mua một lần để mở khóa vĩnh viễn. Quét và tô sáng ngữ pháp luôn miễn phí.",
     ),
     "隐私政策": ("Privacy Policy", "개인정보 처리방침", "Política de privacidad", "Chính sách quyền riêng tư"),
     "使用条款": ("Terms of Use", "이용 약관", "Términos de uso", "Điều khoản sử dụng"),
@@ -107,7 +193,43 @@ S = {
         "Không có sách tiếng Nhật bên cạnh? Hãy thử trước với trang mẫu có sẵn."),
     "帮助": ("Help", "도움말", "Ayuda", "Trợ giúp"),
     "使用引导": ("How to Use", "사용 안내", "Cómo usar", "Hướng dẫn sử dụng"),
-    "注意": ("Notes", "주의", "Notas", "Lưu ý"),
+    "今天没有需要复习的语法。看过的语法会按遗忘曲线，在快要忘记时提醒你复习。": ("Nothing to review today. Grammar you've read comes back right before you're likely to forget it.", "오늘 복습할 문법이 없습니다. 본 문법은 망각 곡선에 따라 잊기 직전에 복습하도록 알려 드립니다.", "Hoy no hay nada que repasar. La gramática que leas volverá justo antes de que la olvides.", "Hôm nay không có mẫu cần ôn. Ngữ pháp đã xem sẽ được nhắc ôn ngay trước khi bạn sắp quên."),
+    "按遗忘曲线排序：最快要忘记的排在最前面。点开回顾一遍即完成复习。": ("Ordered by the forgetting curve: what you're closest to forgetting comes first. Open one to review it.", "망각 곡선 순서: 가장 먼저 잊을 문법이 맨 위에 있습니다. 열어서 한 번 보면 복습 완료.", "Ordenado por la curva del olvido: lo que estás más cerca de olvidar va primero. Ábrelo para repasarlo.", "Sắp xếp theo đường cong lãng quên: mẫu sắp quên nhất ở trên cùng. Mở ra xem lại là hoàn thành."),
+    "记忆约 %lld%%": ("~%lld%% recall", "기억 약 %lld%%", "~%lld%% recuerdo", "Nhớ ~%lld%%"),
+    "出题频率": ("Exam Frequency", "출제 빈도", "Frecuencia en el examen", "Tần suất ra đề"),
+    "常考": ("Often Tested", "자주 출제", "Muy frecuente", "Hay thi"),
+    "考过": ("Has Appeared", "출제된 적 있음", "Ha salido", "Đã từng thi"),
+    "根据公开的考试复原资料与教材整理，仅供参考。": ("Compiled from publicly available exam recollections and textbooks. For reference only.", "공개된 시험 복원 자료와 교재를 바탕으로 정리한 참고용 정보입니다.", "Recopilado de reconstrucciones públicas del examen y libros de texto. Solo como referencia.", "Tổng hợp từ tài liệu phục dựng đề thi công khai và giáo trình, chỉ mang tính tham khảo."),
+    "继续上次": ("Pick Up Where You Left Off", "이어서 보기", "Continuar donde lo dejaste", "Tiếp tục lần trước"),
+    "全部扫描记录": ("All Scans", "전체 스캔 기록", "Todos los escaneos", "Tất cả lần quét"),
+    "还有 %lld 个没看过": ({"one": "%lld not viewed yet", "other": "%lld not viewed yet"}, "아직 안 본 문법 %lld개", {"one": "%lld sin ver", "other": "%lld sin ver"}, "Còn %lld mẫu chưa xem"),
+    "全部看过了": ("All viewed", "모두 확인함", "Todo visto", "Đã xem hết"),
+    "今日复习": ("Review Today", "오늘의 복습", "Repaso de hoy", "Ôn tập hôm nay"),
+    "今天没有需要复习的语法。看过的语法会按 1、3、7、14、30 天的间隔提醒你复习。": ("Nothing to review today. Grammar you've read comes back for review after 1, 3, 7, 14 and 30 days.", "오늘 복습할 문법이 없습니다. 본 문법은 1·3·7·14·30일 간격으로 복습 알림이 표시됩니다.", "Hoy no hay nada que repasar. La gramática que leas volverá a repaso a los 1, 3, 7, 14 y 30 días.", "Hôm nay không có mẫu cần ôn. Ngữ pháp đã xem sẽ được nhắc ôn sau 1, 3, 7, 14 và 30 ngày."),
+    "按遗忘曲线安排，点开回顾一遍即完成复习。": ("Spaced by the forgetting curve. Open one to review it.", "망각 곡선에 맞춰 배치했습니다. 열어서 한 번 보면 복습 완료.", "Organizado según la curva del olvido. Ábrelo para repasarlo.", "Sắp xếp theo đường cong lãng quên. Mở ra xem lại là hoàn thành."),
+    "常出现但还没学": ("Common in Your Reading", "자주 나오지만 아직 안 배운 문법", "Frecuente en tus lecturas", "Hay gặp nhưng chưa học"),
+    "你扫描的材料里经常出现、但还没看过讲解的语法。": ("Grammar that shows up often in what you scan but you haven't read yet.", "스캔한 자료에 자주 나오지만 아직 설명을 보지 않은 문법입니다.", "Gramática que aparece a menudo en lo que escaneas y que aún no has leído.", "Ngữ pháp xuất hiện nhiều trong tài liệu bạn quét nhưng bạn chưa xem."),
+    "%lld 次扫描": ({"one": "in %lld scan", "other": "in %lld scans"}, "스캔 %lld회", {"one": "en %lld escaneo", "other": "en %lld escaneos"}, "%lld lần quét"),
+    "学习进度": ("Progress", "학습 진도", "Progreso", "Tiến độ"),
+    "看过讲解的语法计为“已学”。": ("A grammar point counts as learned once you've read its explanation.", "설명을 본 문법은 '학습 완료'로 집계됩니다.", "Un punto cuenta como aprendido cuando lees su explicación.", "Mẫu ngữ pháp được tính là đã học khi bạn xem giải thích."),
+    "从 N5 开始": ("Start with N5", "N5부터 시작", "Empieza por N5", "Bắt đầu từ N5"),
+    "首页": ("Home", "홈", "Inicio", "Trang chủ"),
+    "扫描日文，找出语法": ("Scan Japanese, Find the Grammar", "일본어를 스캔해 문법 찾기", "Escanea japonés y encuentra la gramática", "Quét tiếng Nhật, tìm ngữ pháp"),
+    "对准书页或选择截图，所有语法点都会被高亮出来。": ("Point at a page or pick a screenshot — every grammar point gets highlighted.", "책 페이지를 비추거나 스크린샷을 고르면 모든 문법이 하이라이트됩니다.", "Apunta a una página o elige una captura: se resaltará cada punto gramatical.", "Hướng vào trang sách hoặc chọn ảnh chụp màn hình, mọi mẫu ngữ pháp sẽ được tô sáng."),
+    "相机扫描": ("Scan with Camera", "카메라로 스캔", "Escanear con la cámara", "Quét bằng camera"),
+    "从相册识别": ("From Photos", "사진에서 인식", "Desde Fotos", "Từ thư viện ảnh"),
+    "今日语法": ("Grammar of the Day", "오늘의 문법", "Gramática del día", "Ngữ pháp hôm nay"),
+    "最近扫描": ("Recent Scans", "최근 스캔", "Escaneos recientes", "Quét gần đây"),
+    "最近查看": ("Recently Viewed", "최근 본 문법", "Vistos recientemente", "Xem gần đây"),
+    "清除": ("Clear", "지우기", "Borrar", "Xóa"),
+    "确定要清除吗？": ("Clear this history?", "기록을 지울까요?", "¿Borrar este historial?", "Xóa lịch sử này?"),
+    "扫描过的书页会保存在这里，方便回看。": ("Pages you scan are saved here so you can revisit them.", "스캔한 페이지가 여기에 저장되어 다시 볼 수 있습니다.", "Las páginas que escanees se guardan aquí para volver a verlas.", "Các trang đã quét sẽ được lưu ở đây để xem lại."),
+    "看过的语法讲解会出现在这里。": ("Grammar points you've read will appear here.", "읽은 문법 설명이 여기에 표시됩니다.", "Aquí aparecerán los puntos gramaticales que hayas leído.", "Các mẫu ngữ pháp bạn đã xem sẽ hiện ở đây."),
+    "组词逻辑": ("How It's Built", "구성 원리", "Cómo se forma", "Logic cấu tạo"),
+    "出现 %lld 次": ({"one": "%lld time", "other": "%lld times"}, "%lld회", {"one": "%lld vez", "other": "%lld veces"}, "%lld lần"),
+    "双指缩放查看原文，点击高亮查看讲解": ("Pinch to zoom into the text. Tap a highlight to see its explanation.", "두 손가락으로 확대해 원문을 보고, 하이라이트를 눌러 설명을 보세요", "Pellizca para ampliar el texto y toca un resaltado para ver la explicación", "Dùng hai ngón tay để phóng to, nhấn vào phần tô sáng để xem giải thích"),
+    "点击高亮或下方列表查看讲解；点击图片可放大查看原文。": ("Tap a highlight or an item below for the explanation. Tap the photo to zoom in.", "하이라이트나 아래 목록을 눌러 설명을 보세요. 사진을 누르면 확대할 수 있습니다.", "Toca un resaltado o un elemento para ver la explicación. Toca la foto para ampliarla.", "Nhấn vào phần tô sáng hoặc danh sách để xem giải thích. Nhấn vào ảnh để phóng to."),
+    "注意": ("Watch Out", "주의", "Atención", "Lưu ý"),
     "日常生活": ("Daily Life", "일상생활", "Vida diaria", "Đời sống hằng ngày"),
     "职场": ("At Work", "직장", "En el trabajo", "Nơi làm việc"),
     "相似・相近语法": ("Similar Grammar", "비슷한 문법", "Gramática similar", "Ngữ pháp tương tự"),
@@ -179,16 +301,296 @@ S = {
     "取消": ("Cancel", "취소", "Cancelar", "Hủy"),
     "重新识别": ("Analyze", "다시 분석", "Analizar", "Phân tích lại"),
     "这里有多个语法点，请选择": ("Several grammar points overlap here. Choose one:", "여러 문법이 겹쳐 있습니다. 선택하세요", "Aquí se superponen varios puntos gramaticales. Elige uno:", "Có nhiều mẫu ngữ pháp ở đây, hãy chọn một:"),
+    "通用": ("General", "일반", "General", "Chung"),
+    "语言": ("Language", "언어", "Idioma", "Ngôn ngữ"),
+    "跟随系统": ("Follow System", "시스템 설정 따르기", "Seguir el sistema", "Theo hệ thống"),
+    "界面文字和语法讲解会一起切换。": ("Interface text and grammar explanations switch together.", "화면 문구와 문법 설명이 함께 바뀝니다.", "El texto de la interfaz y las explicaciones gramaticales cambian juntos.", "Giao diện và phần giải thích ngữ pháp sẽ đổi ngôn ngữ cùng lúc."),
+    "一句话说明": ("In Short", "한마디로", "En resumen", "Tóm tắt"),
+    "本 App 不需要注册账号，不包含广告或任何第三方 SDK。文字识别全部在你的设备上完成。匿名使用统计可以在设置中随时关闭。": ("This app needs no account and contains no ads or third-party SDKs. All text recognition happens on your device. Anonymous usage statistics can be turned off in Settings at any time.", "이 앱은 계정 가입이 필요 없으며 광고나 제3자 SDK를 포함하지 않습니다. 텍스트 인식은 모두 기기 안에서 이루어집니다. 익명 사용 통계는 설정에서 언제든 끌 수 있습니다.", "Esta app no requiere cuenta y no incluye anuncios ni SDK de terceros. Todo el reconocimiento de texto se realiza en tu dispositivo. Las estadísticas de uso anónimas se pueden desactivar en Ajustes en cualquier momento.", "Ứng dụng không cần tài khoản và không có quảng cáo hay SDK của bên thứ ba. Việc nhận dạng văn bản diễn ra hoàn toàn trên thiết bị của bạn. Có thể tắt thống kê sử dụng ẩn danh trong Cài đặt bất cứ lúc nào."),
+    "相机与照片": ("Camera & Photos", "카메라 및 사진", "Cámara y fotos", "Camera và ảnh"),
+    "相机画面和你从相册选择的图片，只在你的设备上由 Apple Vision 识别文字，不会上传。拍照或从相册识别的图片保存在本机的「最近扫描」中，方便回看，可以随时删除。": ("Camera frames and images you pick from your library are read by Apple Vision on your device only and are never uploaded. Images you scan or import are kept in \"Recent Scans\" on this device so you can revisit them, and you can delete them at any time.", "카메라 화면과 사진 보관함에서 선택한 이미지는 기기에서 Apple Vision이 텍스트를 인식하며 업로드되지 않습니다. 촬영하거나 불러와 인식한 이미지는 다시 볼 수 있도록 이 기기의 \"최근 스캔\"에 저장되며 언제든 삭제할 수 있습니다.", "Las imágenes de la cámara y las que eliges de tu fototeca las lee Apple Vision solo en tu dispositivo y nunca se suben. Las imágenes escaneadas o importadas se guardan en \"Escaneos recientes\" en este dispositivo para que puedas volver a verlas, y puedes eliminarlas cuando quieras.", "Hình ảnh từ camera và ảnh bạn chọn từ thư viện chỉ được Apple Vision nhận dạng chữ ngay trên thiết bị và không được tải lên. Ảnh đã quét hoặc chọn từ thư viện được lưu trong \"Quét gần đây\" trên máy để bạn xem lại, và bạn có thể xóa bất cứ lúc nào."),
+    "收藏与浏览记录": ("Favorites & History", "즐겨찾기 및 기록", "Favoritos e historial", "Mục yêu thích và lịch sử"),
+    "收藏、浏览记录和设置只保存在本机，删除 App 即一并删除。": ("Favorites, history and settings are stored only on this device and are removed when you delete the app.", "즐겨찾기, 기록, 설정은 이 기기에만 저장되며 앱을 삭제하면 함께 삭제됩니다.", "Los favoritos, el historial y los ajustes se guardan solo en este dispositivo y se eliminan al borrar la app.", "Mục yêu thích, lịch sử và cài đặt chỉ được lưu trên thiết bị này và sẽ bị xóa cùng khi bạn xóa ứng dụng."),
+    "只有当你在反馈页主动点击「发送」时，你填写的描述、附上的截图，以及 App 版本、系统版本、设备型号和界面语言，才会通过 Apple 的 iCloud（CloudKit）发送给开发者。这些信息只用于排查问题和改进 App，不会用于其他用途，也不会提供给任何第三方。": ("Only when you tap \"Send\" on the feedback page are your description, any attached screenshot, and the app version, iOS version, device model and interface language sent to the developer through Apple's iCloud (CloudKit). This information is used only to investigate problems and improve the app, never for anything else, and is never shared with third parties.", "피드백 화면에서 직접 \"보내기\"를 누를 때만, 작성한 설명과 첨부한 스크린샷, 앱 버전, iOS 버전, 기기 모델, 화면 언어가 Apple의 iCloud(CloudKit)를 통해 개발자에게 전송됩니다. 이 정보는 문제 해결과 앱 개선에만 사용되며 다른 용도로 쓰이거나 제3자에게 제공되지 않습니다.", "Solo cuando pulsas \"Enviar\" en la pantalla de comentarios, tu descripción, la captura adjunta y la versión de la app, la versión de iOS, el modelo del dispositivo y el idioma de la interfaz se envían al desarrollador mediante iCloud (CloudKit) de Apple. Esta información solo se usa para investigar problemas y mejorar la app, nunca para otros fines, y no se comparte con terceros.", "Chỉ khi bạn chủ động nhấn \"Gửi\" ở trang phản hồi, nội dung mô tả, ảnh chụp màn hình đính kèm cùng phiên bản ứng dụng, phiên bản iOS, mẫu thiết bị và ngôn ngữ giao diện mới được gửi đến nhà phát triển qua iCloud (CloudKit) của Apple. Thông tin này chỉ dùng để tìm lỗi và cải thiện ứng dụng, không dùng cho mục đích nào khác và không chia sẻ cho bên thứ ba."),
+    "联系我们": ("Contact Us", "문의하기", "Contacto", "Liên hệ"),
+    "对本隐私政策有任何疑问，可以在「设置 → 反馈」中告诉我们。": ("If you have any questions about this privacy policy, let us know in \"Settings → Feedback\".", "이 개인정보 처리방침에 대해 궁금한 점이 있으면 \"설정 → 피드백\"에서 알려 주세요.", "Si tienes alguna pregunta sobre esta política de privacidad, cuéntanosla en \"Ajustes → Comentarios\".", "Nếu có thắc mắc về chính sách quyền riêng tư này, hãy cho chúng tôi biết trong \"Cài đặt → Phản hồi\"."),
+    "许可协议": ("License Agreement", "라이선스 계약", "Acuerdo de licencia", "Thỏa thuận cấp phép"),
+    "本 App 的使用适用 Apple 标准最终用户许可协议（EULA）。": ("Use of this app is subject to Apple's Standard End User License Agreement (EULA).", "이 앱의 사용에는 Apple 표준 최종 사용자 사용권 계약(EULA)이 적용됩니다.", "El uso de esta app se rige por el Contrato de licencia estándar de Apple para el usuario final (EULA).", "Việc sử dụng ứng dụng này tuân theo Thỏa thuận cấp phép người dùng cuối tiêu chuẩn của Apple (EULA)."),
+    "内容说明": ("About the Content", "콘텐츠 안내", "Sobre el contenido", "Về nội dung"),
+    "App 内的语法讲解为原创内容，仅供学习参考；文字识别结果可能有误，请以原文为准。": ("Grammar explanations in the app are original content for study reference only. Text recognition results may contain errors, so please rely on the original text.", "앱 속 문법 설명은 직접 작성한 콘텐츠로 학습 참고용입니다. 텍스트 인식 결과는 틀릴 수 있으니 원문을 기준으로 해 주세요.", "Las explicaciones gramaticales de la app son contenido original, solo como referencia de estudio. El reconocimiento de texto puede contener errores; confía en el texto original.", "Phần giải thích ngữ pháp trong ứng dụng là nội dung tự biên soạn, chỉ để tham khảo khi học. Kết quả nhận dạng văn bản có thể sai, vui lòng lấy văn bản gốc làm chuẩn."),
+    "查看 Apple 标准最终用户许可协议": ("View Apple's Standard EULA", "Apple 표준 EULA 보기", "Ver el EULA estándar de Apple", "Xem EULA tiêu chuẩn của Apple"),
+    "最后更新：%@": ("Last updated: %@", "최종 업데이트: %@", "Última actualización: %@", "Cập nhật lần cuối: %@"),
+    "已收到，谢谢你的反馈": ("Received, thanks for your feedback", "접수되었습니다. 피드백 감사합니다", "Recibido, gracias por tus comentarios", "Đã nhận, cảm ơn phản hồi của bạn"),
+    "我们会尽快查看并改进。": ("We'll take a look and improve things soon.", "가능한 한 빨리 확인하고 개선하겠습니다.", "Lo revisaremos y mejoraremos lo antes posible.", "Chúng tôi sẽ sớm xem xét và cải thiện."),
+    "没能直接发送": ("Couldn't Send Directly", "바로 보내지 못했습니다", "No se pudo enviar directamente", "Không thể gửi trực tiếp"),
+    "用邮件发送": ("Send by Email", "이메일로 보내기", "Enviar por correo", "Gửi bằng email"),
+    "用其他方式发送": ("Send Another Way", "다른 방법으로 보내기", "Enviar de otra forma", "Gửi cách khác"),
+    "暂时无法在 App 内提交反馈": ("Can't submit feedback in the app right now", "지금은 앱에서 피드백을 제출할 수 없습니다", "Ahora mismo no se pueden enviar comentarios desde la app", "Hiện không thể gửi phản hồi trong ứng dụng"),
+    "这台设备没有登录 iCloud，无法在 App 内直接提交": ("This device isn't signed in to iCloud, so feedback can't be submitted directly in the app", "이 기기는 iCloud에 로그인되어 있지 않아 앱에서 직접 제출할 수 없습니다", "Este dispositivo no ha iniciado sesión en iCloud, por lo que no se pueden enviar comentarios directamente desde la app", "Thiết bị này chưa đăng nhập iCloud nên không thể gửi trực tiếp trong ứng dụng"),
+    "会自动附上 App 版本、系统版本、设备型号和语言，方便定位问题。不会附带其他个人信息。": ("The app version, iOS version, device model and language are added automatically to help us find the problem. No other personal information is included.", "문제 파악을 위해 앱 버전, iOS 버전, 기기 모델, 언어가 자동으로 첨부됩니다. 다른 개인정보는 포함되지 않습니다.", "Se añaden automáticamente la versión de la app, la de iOS, el modelo del dispositivo y el idioma. No se incluye otra información personal.", "Phiên bản ứng dụng, phiên bản iOS, mẫu thiết bị và ngôn ngữ sẽ được tự động đính kèm. Không kèm thông tin cá nhân nào khác."),
+    "匿名使用统计": ("Anonymous Usage Statistics", "익명 사용 통계", "Estadísticas de uso anónimas", "Thống kê sử dụng ẩn danh"),
+    "隐私": ("Privacy", "개인정보", "Privacidad", "Quyền riêng tư"),
+    "帮助我们了解有多少人在用、来自哪些地区、哪些语法最常被查，以便改进。不包含任何能识别你或你设备的信息。": ("Helps us learn how many people use the app, where they are and which grammar is looked up most, so we can improve it. Contains nothing that identifies you or your device.", "몇 명이 사용하는지, 어느 지역에서 쓰는지, 어떤 문법을 가장 많이 찾는지 파악해 앱을 개선하는 데 도움이 됩니다. 사용자나 기기를 식별할 수 있는 정보는 포함되지 않습니다.", "Nos ayuda a saber cuántas personas usan la app, desde dónde y qué gramática se consulta más, para mejorarla. No contiene nada que te identifique a ti ni a tu dispositivo.", "Giúp chúng tôi biết có bao nhiêu người dùng, đến từ đâu và ngữ pháp nào được tra nhiều nhất để cải thiện ứng dụng. Không chứa thông tin nào nhận dạng bạn hoặc thiết bị của bạn."),
+    "为了解有多少人在用、来自哪些国家或地区、在什么时段使用、哪些语法点最常被查，App 每天会匿名上报一条使用汇总：当天打开次数、按小时的使用分布、查看过的语法点及其等级、App Store 所在的国家或地区、界面语言和 App 版本。不包含姓名、账号、设备编号或任何能识别你的信息，通过 Apple 的 iCloud（CloudKit）保存，只用于改进 App。可以随时在「设置 → 匿名使用统计」中关闭。": ("To learn how many people use the app, which countries or regions they are in, when they use it and which grammar points are looked up most, the app sends one anonymous daily summary: how many times it was opened that day, usage by hour, the grammar points viewed and their levels, the App Store country or region, the interface language and the app version. It contains no name, account, device ID or anything that identifies you, is stored via Apple's iCloud (CloudKit) and is used only to improve the app. You can turn it off at any time in Settings → Anonymous Usage Statistics.", "얼마나 많은 사람이 쓰는지, 어느 국가·지역에서 쓰는지, 언제 쓰는지, 어떤 문법을 가장 많이 찾는지 알기 위해 앱은 하루에 한 번 익명 사용 요약을 보냅니다. 그날 앱을 연 횟수, 시간대별 사용량, 본 문법과 그 급수, App Store 국가·지역, 화면 언어, 앱 버전이 포함됩니다. 이름, 계정, 기기 ID 등 사용자를 식별할 수 있는 정보는 포함되지 않으며, Apple iCloud(CloudKit)에 저장되어 앱 개선에만 사용됩니다. 「설정 → 익명 사용 통계」에서 언제든 끌 수 있습니다.", "Para saber cuántas personas usan la app, en qué países o regiones están, cuándo la usan y qué puntos gramaticales se consultan más, la app envía un resumen diario anónimo: cuántas veces se abrió ese día, el uso por horas, los puntos gramaticales vistos y su nivel, el país o región de la App Store, el idioma de la interfaz y la versión de la app. No contiene nombre, cuenta, identificador del dispositivo ni nada que te identifique; se guarda mediante iCloud (CloudKit) de Apple y solo se usa para mejorar la app. Puedes desactivarlo en cualquier momento en Ajustes → Estadísticas de uso anónimas.", "Để biết có bao nhiêu người dùng, họ ở quốc gia hoặc khu vực nào, dùng vào lúc nào và ngữ pháp nào được tra nhiều nhất, ứng dụng gửi một bản tóm tắt ẩn danh mỗi ngày: số lần mở trong ngày, mức sử dụng theo giờ, các điểm ngữ pháp đã xem và cấp độ, quốc gia hoặc khu vực của App Store, ngôn ngữ giao diện và phiên bản ứng dụng. Không có tên, tài khoản, mã thiết bị hay thông tin nào nhận dạng bạn; dữ liệu được lưu qua iCloud (CloudKit) của Apple và chỉ dùng để cải thiện ứng dụng. Bạn có thể tắt bất cứ lúc nào trong Cài đặt → Thống kê sử dụng ẩn danh."),
+    "书页弯曲较大，个别高亮可能落在相邻的行。把书页压平、正对拍摄，效果更好。": ("The page is strongly curved, so a few highlights may land on a neighboring line. Flatten the page and shoot straight on for better results.", "페이지가 많이 휘어 있어 일부 하이라이트가 옆 줄에 표시될 수 있습니다. 페이지를 펴고 정면에서 찍으면 더 정확합니다.", "La página está muy curvada, así que algún resaltado puede caer en la línea vecina. Aplana la página y fotografíala de frente para mejores resultados.", "Trang sách bị cong nhiều nên một vài chỗ tô sáng có thể rơi vào dòng bên cạnh. Hãy ép phẳng trang và chụp thẳng để có kết quả tốt hơn."),
+}
+
+# 缅甸语（my，Myanmar Unicode）。缅甸语没有复数变化，统一用普通字符串。
+MY = {
+    "你扫到的：": "စကင်ဖတ်ထားသည်- ",
+    "对应 用法 ": "သက်ဆိုင်သော အသုံး ",
+    "%lld 个没看过": "မကြည့်ရသေး %lld ခု",
+    "在例句中出现": "ဥပမာဝါကျများတွင် ပါဝင်သည်",
+    "对准书页或选一张截图，句子里的语法会被标出来。": "စာမျက်နှာကို ချိန်ပါ သို့မဟုတ် ဖန်သားပြင်ဓာတ်ပုံ ရွေးပါ၊ ဝါကျထဲရှိ သဒ္ဒါများကို အမှတ်အသားပြပေးမည်။",
+    "快要忘了": "မေ့တော့မည့် သဒ္ဒါ",
+    "搜索语法或意思": "သဒ္ဒါ သို့မဟုတ် အဓိပ္ပာယ် ရှာရန်",
+    "来源与构成": "မူလအစနှင့် ဖွဲ့စည်းပုံ",
+    "来源与构成、相近语法对比": "မူလအစ၊ ဖွဲ့စည်းပုံနှင့် ဆင်တူသဒ္ဒါ နှိုင်းယှဉ်ချက်",
+    "相近语法": "ဆင်တူသဒ္ဒါ",
+    "跳到用法": "အသုံးပြုပုံသို့ သွားရန်",
+    "这些语法你看过，按遗忘曲线快要忘了，再看一眼吧。": "ဤသဒ္ဒါများကို ကြည့်ဖူးပြီး မေ့လျော့မှုမျဉ်းအရ မေ့တော့မည်ဖြစ်၍ နောက်တစ်ကြိမ် ကြည့်လိုက်ပါ။",
+    "搜索": "ရှာရန်",
+    "搜索语法": "သဒ္ဒါ ရှာရန်",
+    "输入语法、读音或意思，例如「ようになる」「にもかかわらず」「尽管」。": "သဒ္ဒါ၊ အသံထွက် သို့မဟုတ် အဓိပ္ပာယ်ကို ရိုက်ထည့်ပါ၊ ဥပမာ 「ようになる」「にもかかわらず」။",
+    "外观": "အသွင်အပြင်",
+    "主题色与背景色": "အဓိကအရောင်နှင့် နောက်ခံအရောင်",
+    "主题色": "အဓိကအရောင်",
+    "浅色模式背景": "အလင်းမုဒ် နောက်ခံ",
+    "深色模式背景": "အမှောင်မုဒ် နောက်ခံ",
+    "浅色、深色背景分别生效，随系统的深浅模式自动切换。": "အလင်း၊ အမှောင် နောက်ခံများကို သီးခြားသက်ရောက်ပြီး စနစ်၏ မုဒ်အလိုက် အလိုအလျောက် ပြောင်းသည်။",
+    "抹茶绿": "မတ်ချာ အစိမ်း",
+    "柿子橙": "တည်သီး လိမ္မော်",
+    "樱花粉": "ချယ်ရီ ပန်းရောင်",
+    "橙黄": "ပယင်းဝါ",
+    "青磁绿": "ကြွေ အစိမ်းနု",
+    "纸白": "စက္ကူအဖြူ",
+    "米黄": "နို့နှစ်ရောင်",
+    "豆沙绿": "အစိမ်းနု",
+    "浅灰": "မီးခိုးနု",
+    "暖炭灰": "မီးသွေးနွေး",
+    "深墨蓝": "မင်ပြာရင့်",
+    "深棕褐": "အညိုရင့်",
+    "纯黑": "အနက်",
+    "排序": "စီရန်",
+    "快遗忘了": "မေ့တော့မည့်အစဉ်",
+    "最近收藏": "မကြာသေးမီ ထည့်ထားသည်",
+    "最多查看": "အများဆုံး ကြည့်ထားသည်",
+    "有语法没识别出来？": "မသိရှိရသေးသော သဒ္ဒါ ရှိပါသလား။",
+    "手动修正文字": "စာသားကို ပြင်ရန်",
+    "点击高亮或下方列表查看讲解；双指可直接放大图片。": "ရှင်းလင်းချက်ကြည့်ရန် အမှတ်အသား သို့မဟုတ် အောက်ပါစာရင်းကို နှိပ်ပါ။ ဓာတ်ပုံကို လက်နှစ်ချောင်းဖြင့် ချဲ့နိုင်သည်။",
+    "正确": "မှန်",
+    "错误": "မှား",
+    "反馈问题或建议": "အကြံပြုချက် ပေးပို့ရန်",
+    "遇到 bug、讲解有误或有任何建议，都可以附上截图告诉我们。": "ချို့ယွင်းချက်၊ ရှင်းလင်းချက် အမှား သို့မဟုတ် အကြံပြုချက် ရှိပါက ဖန်သားပြင်ဓာတ်ပုံနှင့်အတူ ပြောပြပါ။",
+    "功能问题 / bug": "ချို့ယွင်းချက် / ပြဿနာ",
+    "讲解内容有误": "ရှင်းလင်းချက် မှားနေသည်",
+    "建议": "အကြံပြုချက်",
+    "类型": "အမျိုးအစား",
+    "描述": "ဖော်ပြချက်",
+    "请描述遇到的问题：在哪个页面、做了什么、看到了什么。": "မည်သည့်စာမျက်နှာတွင် ဘာလုပ်ပြီး ဘာမြင်ရသည်ကို ရေးပါ။",
+    "删除截图": "ပုံဖျက်ရန်",
+    "添加截图": "ဖန်သားပြင်ဓာတ်ပုံ ထည့်ရန်",
+    "重新选择截图": "ပုံ ပြန်ရွေးရန်",
+    "截图（可选，最多 4 张）": "ဖန်သားပြင်ဓာတ်ပုံ (မထည့်လည်းရ၊ အများဆုံး ၄ ပုံ)",
+    "反馈": "အကြံပြုချက်",
+    "发送": "ပို့ရန်",
+    "讲解有误或看不懂？": "မှားနေသလား သို့မဟုတ် နားမလည်ဘူးလား။",
+    "告诉我们": "ပြောပြပါ",
+    "遇到问题或有建议？反馈给我们": "ပြဿနာ သို့မဟုတ် အကြံပြုချက် ရှိပါသလား။ ပေးပို့ပါ",
+    "内容：讲解有误或看不懂": "အကြောင်းအရာ - ရှင်းလင်းချက် မှားခြင်း သို့မဟုတ် နားမလည်ခြင်း",
+    "功能：bug 或用不了": "လုပ်ဆောင်ချက် - ချို့ယွင်းချက် သို့မဟုတ် အလုပ်မလုပ်ခြင်း",
+    "体验与建议": "အသုံးပြုမှု အတွေ့အကြုံနှင့် အကြံပြုချက်",
+    "扫描": "စကင်ဖတ်",
+    "语法库": "သဒ္ဒါ",
+    "收藏": "အကြိုက်ဆုံး",
+    "取消收藏": "အကြိုက်ဆုံးမှ ဖယ်ရန်",
+    "意思": "အဓိပ္ပာယ်",
+    "用法": "အသုံးပြုပုံ",
+    "接续": "တွဲဆက်ပုံ",
+    "使用场景": "သုံးရမည့် အခြေအနေ",
+    "词源": "ဇစ်မြစ်",
+    "例句": "ဥပမာများ",
+    "关闭": "ပိတ်ရန်",
+    "购买失败": "ဝယ်ယူမှု မအောင်မြင်ပါ",
+    "好": "OK",
+    "解锁完整讲解": "ရှင်းလင်းချက် အပြည့်အစုံ ဖွင့်ရန်",
+    "扫到不懂的语法，马上看懂。": "နားမလည်တဲ့ သဒ္ဒါကို စကင်ဖတ်လိုက်ရုံနဲ့ ချက်ချင်း နားလည်ပါမယ်။",
+    "全部 N5–N1 语法点的完整讲解": "N5–N1 သဒ္ဒါအားလုံးအတွက် ရှင်းလင်းချက် အပြည့်အစုံ",
+    "按义项分段的用法、接续与例句": "အဓိပ္ပာယ်အလိုက် အသုံးပြုပုံ၊ တွဲဆက်ပုံနှင့် ဥပမာများ",
+    "日常生活与职场的使用场景": "နေ့စဉ်ဘဝနှင့် အလုပ်ခွင်မှ လက်တွေ့ အခြေအနေများ",
+    "词源与相近语法对比": "ဇစ်မြစ်နှင့် ဆင်တူသဒ္ဒါများ နှိုင်းယှဉ်ချက်",
+    "例句汉字全部标注假名": "ဥပမာများထဲရှိ ခန်ဂျီတိုင်းတွင် ဖူရီဂါနာ ပါဝင်",
+    "完全离线，无广告，无追踪": "အော့ဖ်လိုင်း အပြည့်အဝ။ ကြော်ငြာ မရှိ၊ ခြေရာခံခြင်း မရှိ။",
+    "免费试用中，还剩 %lld 天": "အခမဲ့ အစမ်းသုံးကာလ - %lld ရက် ကျန်သေးသည်",
+    "免费试用已结束": "အခမဲ့ အစမ်းသုံးကာလ ပြီးဆုံးပါပြီ",
+    "开始 %lld 天免费试用": "%lld ရက် အခမဲ့ အစမ်းသုံးမှု စတင်ရန်",
+    "编辑": "ပြင်ဆင်ရန်",
+    "完成": "ပြီးပါပြီ",
+    "免费开始使用": "အခမဲ့ စတင်ရန်",
+    "前 %lld 天免费使用全部功能。之后可一次性 %@ 永久解锁完整讲解，不订阅、不自动扣费。": "ပထမ %lld ရက်အတွင်း လုပ်ဆောင်ချက်အားလုံးကို အခမဲ့ သုံးနိုင်ပါသည်။ ထို့နောက် %@ ဖြင့် တစ်ကြိမ်တည်း ဝယ်ယူ၍ ရှင်းလင်းချက် အပြည့်အစုံကို အမြဲတမ်း ဖွင့်နိုင်ပါသည်။ လစဉ်ကြေး မရှိ၊ အလိုအလျောက် ငွေဖြတ်ခြင်း မရှိပါ။",
+    "前 %lld 天免费使用全部功能。之后可一次性购买永久解锁完整讲解，不订阅、不自动扣费。": "ပထမ %lld ရက်အတွင်း လုပ်ဆောင်ချက်အားလုံးကို အခမဲ့ သုံးနိုင်ပါသည်။ ထို့နောက် တစ်ကြိမ်တည်း ဝယ်ယူ၍ ရှင်းလင်းချက် အပြည့်အစုံကို အမြဲတမ်း ဖွင့်နိုင်ပါသည်။ လစဉ်ကြေး မရှိ၊ အလိုအလျောက် ငွေဖြတ်ခြင်း မရှိပါ။",
+    "免费试用还剩 %lld 天": "အခမဲ့ အစမ်းသုံးရန် %lld ရက် ကျန်သေးသည်",
+    "一次性 %@ 永久解锁，不订阅": "%@ ဖြင့် တစ်ကြိမ်ဝယ်ပြီး အမြဲတမ်း ဖွင့်ပါ။ လစဉ်ကြေး မရှိပါ။",
+    "一次性购买永久解锁，不订阅": "တစ်ကြိမ်ဝယ်ယူရုံဖြင့် အမြဲတမ်း ဖွင့်ပါ။ လစဉ်ကြေး မရှိပါ။",
+    "免费 · 到期后不会自动扣费": "အခမဲ့ · ပြီးဆုံးပါက အလိုအလျောက် ငွေမဖြတ်ပါ",
+    "一次性购买 %@": "တစ်ကြိမ်တည်း ဝယ်ယူရန် %@",
+    "永久解锁 · 无需订阅": "အမြဲတမ်း ဖွင့်ထားမည် · လစဉ်ကြေး မလိုပါ",
+    "恢复购买": "ဝယ်ယူမှုများ ပြန်ယူရန်",
+    "免费试用期为 %lld 天，期间可使用全部内容。试用结束后不会自动收费；如需继续查看完整讲解，可一次性购买永久解锁。扫描识别与语法高亮始终免费。": "အခမဲ့ အစမ်းသုံးကာလသည် %lld ရက် ဖြစ်ပြီး အကြောင်းအရာအားလုံးကို သုံးနိုင်ပါသည်။ အစမ်းသုံးကာလ ပြီးဆုံးချိန်တွင် အလိုအလျောက် ငွေမဖြတ်ပါ။ ရှင်းလင်းချက် အပြည့်အစုံကို ဆက်ဖတ်လိုပါက တစ်ကြိမ်တည်း ဝယ်ယူ၍ အမြဲတမ်း ဖွင့်နိုင်ပါသည်။ စကင်ဖတ်ခြင်းနှင့် သဒ္ဒါ အရောင်ခြယ်ပြခြင်းမှာ အမြဲ အခမဲ့ ဖြစ်ပါသည်။",
+    "隐私政策": "ကိုယ်ရေးအချက်အလက် မူဝါဒ",
+    "使用条款": "အသုံးပြုမှု စည်းမျဉ်းများ",
+    "用法、例句、使用场景、词源、相近语法对比": "အသုံးပြုပုံ၊ ဥပမာ၊ အခြေအနေ၊ ဇစ်မြစ်နှင့် ဆင်တူသဒ္ဒါ",
+    "查看解锁方式": "ဖွင့်ရန် နည်းလမ်းများ ကြည့်ရန်",
+    "设置": "ဆက်တင်များ",
+    "购买": "ဝယ်ယူမှု",
+    "状态": "အခြေအနေ",
+    "关于": "အကြောင်း",
+    "支持与反馈": "အကူအညီနှင့် အကြံပြုချက်",
+    "开源许可": "Open Source လိုင်စင်များ",
+    "版本": "ဗားရှင်း",
+    "已永久解锁": "အမြဲတမ်း ဖွင့်ပြီးပါပြီ",
+    "未开始试用": "အစမ်းသုံးမှု မစတင်ရသေးပါ",
+    "用于离线生成例句的假名注音数据": "ဥပမာဝါကျများအတွက် ဖူရီဂါနာကို အော့ဖ်လိုင်းဖြင့် ထုတ်ရန် အသုံးပြုသည်",
+    "用于把讲解转换为繁体中文": "ရှင်းလင်းချက်များကို ရိုးရာ တရုတ်စာ (Traditional Chinese) သို့ ပြောင်းရန် အသုံးပြုသည်",
+    "用于绘制 App 图标": "အက်ပ် အိုင်ကွန်ကို ဆွဲရန် အသုံးပြုသည်",
+    "用于绘制示例书页图片": "နမူနာ စာမျက်နှာပုံကို ဆွဲရန် အသုံးပြုသည်",
+    "本 App 的语法讲解为原创内容。文字识别使用 Apple Vision 框架在设备上完成。以下第三方开源组件仅在构建阶段用于生成 App 内的静态数据或图片：": "သဒ္ဒါ ရှင်းလင်းချက်အားလုံးသည် မူရင်း ရေးသားထားသော အကြောင်းအရာများ ဖြစ်ပါသည်။ စာသား ဖတ်ယူခြင်းကို Apple ၏ Vision framework ဖြင့် စက်ပေါ်တွင်သာ လုပ်ဆောင်ပါသည်။ အောက်ပါ Open Source အစိတ်အပိုင်းများကို အက်ပ်ထဲရှိ ဒေတာ သို့မဟုတ် ပုံများ ထုတ်ရန် build လုပ်ချိန်တွင်သာ အသုံးပြုခဲ့ပါသည်:",
+    "跳过": "ကျော်ရန်",
+    "下一步": "ရှေ့ဆက်ရန်",
+    "开始使用": "စတင်ရန်",
+    "先用示例书页试试": "နမူနာ စာမျက်နှာဖြင့် အရင် စမ်းကြည့်ရန်",
+    "对准日文，语法一目了然": "ဂျပန်စာကို ချိန်လိုက်ရုံနဲ့ သဒ္ဒါကို မြင်ရမယ်",
+    "读日语书遇到看不懂的句子？用相机扫一下，文中的语法点会自动找出来并高亮。": "ဂျပန်စာအုပ် ဖတ်ရင်း နားမလည်တဲ့ ဝါကျ တွေ့နေသလား။ ကင်မရာနဲ့ စကင်ဖတ်လိုက်ရုံနဲ့ သဒ္ဒါအားလုံးကို အလိုအလျောက် ရှာပြီး အရောင်ခြယ်ပြပေးပါမယ်။",
+    "扫描书本或截图": "စာအုပ် သို့မဟုတ် စခရင်ရှော့ကို စကင်ဖတ်ပါ",
+    "把相机对准书页，语法会实时高亮，颜色代表 JLPT 等级。按中间的快门定格画面做精细识别，也可以从相册选择截图。": "ကင်မရာကို စာမျက်နှာဆီ ချိန်လိုက်ရင် သဒ္ဒါတွေကို ချက်ချင်း အရောင်ခြယ်ပြပြီး အရောင်က JLPT အဆင့်ကို ပြပါတယ်။ အသေးစိတ် ခွဲခြမ်းဖို့ ရိုက်ခလုတ်ကို နှိပ်ပါ၊ ဒါမှမဟုတ် ဓာတ်ပုံများထဲက စခရင်ရှော့ကို ရွေးနိုင်ပါတယ်။",
+    "点击高亮，查看讲解": "အရောင်ခြယ်ထားတာကို နှိပ်ပြီး ရှင်းလင်းချက် ကြည့်ပါ",
+    "每个语法点都有意思、用法、例句、使用场景、词源和相近语法对比。例句里的汉字都标注了假名。": "သဒ္ဒါတိုင်းမှာ အဓိပ္ပာယ်၊ အသုံးပြုပုံ၊ ဥပမာ၊ လက်တွေ့ အခြေအနေ၊ ဇစ်မြစ်နှင့် ဆင်တူသဒ္ဒါ နှိုင်းယှဉ်ချက်တွေ ပါဝင်ပါတယ်။ ဥပမာထဲက ခန်ဂျီတွေမှာ ဖူရီဂါနာ ပါပါတယ်။",
+    "语法库与收藏": "သဒ္ဒါနှင့် အကြိုက်ဆုံး",
+    "在「语法库」按等级浏览或搜索全部语法，点 ☆ 收藏需要复习的语法。讲解会跟随手机语言显示。": "「သဒ္ဒါ」 မှာ အဆင့်အလိုက် သဒ္ဒါအားလုံးကို ကြည့်ရှု သို့မဟုတ် ရှာဖွေနိုင်ပြီး ပြန်လေ့လာချင်တာကို ☆ နှိပ်ပြီး သိမ်းထားနိုင်ပါတယ်။ ရှင်းလင်းချက်တွေကို ဖုန်းရဲ့ ဘာသာစကားအတိုင်း ပြပါမယ်။",
+    "准备好了": "အဆင်သင့်ပါပြီ",
+    "手边没有日语书也没关系，可以先用内置的示例书页体验一下。": "လက်ထဲမှာ ဂျပန်စာအုပ် မရှိလည်း ရပါတယ်။ ပါဝင်ပြီးသား နမူနာ စာမျက်နှာနဲ့ အရင် စမ်းကြည့်ပါ။",
+    "帮助": "အကူအညီ",
+    "使用引导": "အသုံးပြုနည်း",
+    "今天没有需要复习的语法。看过的语法会按遗忘曲线，在快要忘记时提醒你复习。": "ဒီနေ့ ပြန်လေ့လာစရာ သဒ္ဒါ မရှိပါ။ ဖတ်ပြီးသား သဒ္ဒါတွေကို မေ့လျော့မှုမျဉ်းကွေးအရ မေ့ခါနီးချိန်မှာ ပြန်လေ့လာဖို့ သတိပေးပါမယ်။",
+    "按遗忘曲线排序：最快要忘记的排在最前面。点开回顾一遍即完成复习。": "မေ့လျော့မှုမျဉ်းကွေးအလိုက် စီထားပါတယ်- အမေ့နီးဆုံး သဒ္ဒါက ထိပ်ဆုံးမှာ ရှိပါတယ်။ ဖွင့်ပြီး တစ်ခေါက် ပြန်ကြည့်ရင် ပြန်လေ့လာမှု ပြီးပါပြီ။",
+    "记忆约 %lld%%": "မှတ်မိနှုန်း ~%lld%%",
+    "出题频率": "စာမေးပွဲ ထွက်နှုန်း",
+    "常考": "မကြာခဏ ထွက်",
+    "考过": "ထွက်ဖူးသည်",
+    "根据公开的考试复原资料与教材整理，仅供参考。": "အများသိ စာမေးပွဲ ပြန်လည်မှတ်တမ်းများနှင့် ဖတ်စာအုပ်များမှ စုစည်းထားခြင်း ဖြစ်ပါသည်။ ကိုးကားရန်သာ ဖြစ်ပါသည်။",
+    "继续上次": "ရပ်ခဲ့သည့်နေရာမှ ဆက်ရန်",
+    "全部扫描记录": "စကင်ဖတ်မှု အားလုံး",
+    "还有 %lld 个没看过": "မကြည့်ရသေးသော %lld ခု",
+    "全部看过了": "အားလုံး ကြည့်ပြီးပါပြီ",
+    "今日复习": "ယနေ့ ပြန်လေ့လာရန်",
+    "今天没有需要复习的语法。看过的语法会按 1、3、7、14、30 天的间隔提醒你复习。": "ဒီနေ့ ပြန်လေ့လာစရာ သဒ္ဒါ မရှိပါ။ ဖတ်ပြီးသား သဒ္ဒါတွေကို 1၊ 3၊ 7၊ 14 နှင့် 30 ရက် ကြာတိုင်း ပြန်လေ့လာဖို့ သတိပေးပါမယ်။",
+    "按遗忘曲线安排，点开回顾一遍即完成复习。": "မေ့လျော့မှုမျဉ်းကွေးအလိုက် စီစဉ်ထားပါတယ်။ ဖွင့်ပြီး တစ်ခေါက် ပြန်ကြည့်ရင် ပြီးပါပြီ။",
+    "常出现但还没学": "မကြာခဏ တွေ့ရပေမယ့် မလေ့လာရသေး",
+    "你扫描的材料里经常出现、但还没看过讲解的语法。": "သင် စကင်ဖတ်တဲ့ စာတွေထဲမှာ မကြာခဏ ပါပေမယ့် ရှင်းလင်းချက် မဖတ်ရသေးတဲ့ သဒ္ဒါများ။",
+    "%lld 次扫描": "စကင်ဖတ်မှု %lld ကြိမ်",
+    "学习进度": "လေ့လာမှု တိုးတက်မှု",
+    "看过讲解的语法计为“已学”。": "ရှင်းလင်းချက် ဖတ်ပြီးသော သဒ္ဒါကို “လေ့လာပြီး” ဟု သတ်မှတ်ပါသည်။",
+    "从 N5 开始": "N5 မှ စတင်ရန်",
+    "首页": "ပင်မ",
+    "扫描日文，找出语法": "ဂျပန်စာကို စကင်ဖတ်ပြီး သဒ္ဒါ ရှာပါ",
+    "对准书页或选择截图，所有语法点都会被高亮出来。": "စာမျက်နှာကို ချိန်ပါ သို့မဟုတ် စခရင်ရှော့ ရွေးပါ — သဒ္ဒါအားလုံးကို အရောင်ခြယ်ပြပေးပါမယ်။",
+    "相机扫描": "ကင်မရာဖြင့် စကင်ဖတ်ရန်",
+    "从相册识别": "ဓာတ်ပုံများမှ",
+    "今日语法": "ယနေ့ သဒ္ဒါ",
+    "最近扫描": "မကြာသေးမီ စကင်ဖတ်မှုများ",
+    "最近查看": "မကြာသေးမီက ကြည့်ခဲ့သည်များ",
+    "清除": "ရှင်းရန်",
+    "确定要清除吗？": "ဤမှတ်တမ်းကို ရှင်းမလား။",
+    "扫描过的书页会保存在这里，方便回看。": "စကင်ဖတ်ထားသော စာမျက်နှာများကို ပြန်ကြည့်နိုင်ရန် ဤနေရာတွင် သိမ်းထားပါမည်။",
+    "看过的语法讲解会出现在这里。": "ဖတ်ပြီးသော သဒ္ဒါများ ဤနေရာတွင် ပေါ်လာပါမည်။",
+    "组词逻辑": "ဖွဲ့စည်းပုံ",
+    "出现 %lld 次": "%lld ကြိမ်",
+    "双指缩放查看原文，点击高亮查看讲解": "လက်နှစ်ချောင်းဖြင့် ချဲ့ကြည့်ပါ။ ရှင်းလင်းချက် ကြည့်ရန် အရောင်ခြယ်ထားသည်ကို နှိပ်ပါ။",
+    "点击高亮或下方列表查看讲解；点击图片可放大查看原文。": "ရှင်းလင်းချက် ကြည့်ရန် အရောင်ခြယ်ထားသည် သို့မဟုတ် အောက်ပါစာရင်းကို နှိပ်ပါ။ ပုံကို နှိပ်၍ ချဲ့ကြည့်နိုင်သည်။",
+    "注意": "သတိပြုရန်",
+    "日常生活": "နေ့စဉ်ဘဝ",
+    "职场": "အလုပ်ခွင်",
+    "相似・相近语法": "ဆင်တူသဒ္ဒါ",
+    "查看讲解": "ကြည့်ရန်",
+    "找不到该语法点": "ဤသဒ္ဒါကို ရှာမတွေ့ပါ",
+    "等级": "အဆင့်",
+    "全部": "အားလုံး",
+    "搜索语法、意思或例句": "သဒ္ဒါ၊ အဓိပ္ပာယ် သို့မဟုတ် ဥပမာ ရှာရန်",
+    "还没有收藏": "အကြိုက်ဆုံး မရှိသေးပါ",
+    "在语法讲解页或列表中点击 ☆ 即可收藏。": "သဒ္ဒါ စာမျက်နှာ သို့မဟုတ် စာရင်းတွင် ☆ ကို နှိပ်၍ ဤနေရာတွင် သိမ်းနိုင်ပါသည်။",
+    "将相机对准书本上的日文": "ကင်မရာကို ဂျပန်စာသားဆီ ချိန်ပါ",
+    "识别到 %lld 个语法点，点击高亮或下方标签查看": "သဒ္ဒါ %lld ခု တွေ့ရှိ — အရောင်ခြယ်ထားသည် သို့မဟုတ် အညွှန်းကို နှိပ်ပါ",
+    "识别到 %lld 个语法点": "သဒ္ဒါ %lld ခု တွေ့ရှိသည်",
+    "试试示例": "နမူနာ စမ်းရန်",
+    "试试示例书页": "နမူနာ စာမျက်နှာ စမ်းကြည့်ရန်",
+    "打开设置": "ဆက်တင်များ ဖွင့်ရန်",
+    "没有相机权限。\n请在「设置」中允许访问相机，或从相册选择图片。": "ကင်မရာ သုံးခွင့် မရှိပါ။\nဆက်တင်များတွင် ကင်မရာ သုံးခွင့်ပေးပါ သို့မဟုတ် ဓာတ်ပုံတစ်ပုံ ရွေးပါ။",
+    "此设备无法使用相机。\n可以从相册选择图片进行识别。": "ဤစက်တွင် ကင်မရာ သုံး၍ မရပါ။\nဓာတ်ပုံတစ်ပုံကို ရွေး၍ ဖတ်ယူနိုင်ပါသည်။",
+    "相册": "ဓာတ်ပုံများ",
+    "补光": "ဓာတ်မီး",
+    "定格并精细识别": "ရိုက်ယူပြီး အသေးစိတ် ခွဲခြမ်းရန်",
+    "识别结果": "ရလဒ်များ",
+    "编辑文本": "စာသား ပြင်ရန်",
+    "正在识别文字和语法点…": "စာသားနှင့် သဒ္ဒါကို ဖတ်ယူနေသည်…",
+    "识别失败": "ဖတ်ယူ၍ မရပါ",
+    "无法读取图片": "ပုံကို ဖတ်၍ မရပါ။",
+    "没有识别到日文": "ဂျပန်စာ မတွေ့ပါ",
+    "请让文字清晰、光线充足，尽量正对书页拍摄。": "စာသား ကြည်လင်ပြီး အလင်း လုံလောက်ပါစေ၊ စာမျက်နှာကို တည့်တည့် ရိုက်ပါ။",
+    "没有识别到收录的语法点": "သဒ္ဒါ မတွေ့ပါ",
+    "点击图片或文本中的高亮，或下方列表，查看详细讲解。": "ရှင်းလင်းချက် ကြည့်ရန် ပုံ သို့မဟုတ် စာသားထဲရှိ အရောင်ခြယ်ထားသည်ကို၊ သို့မဟုတ် အောက်ပါစာရင်းကို နှိပ်ပါ။",
+    "识别文本": "ဖတ်ယူထားသော စာသား",
+    "文本已手动修改，图片上的高亮已隐藏。": "စာသားကို ပြင်ထားသဖြင့် ပုံပေါ်ရှိ အရောင်ခြယ်မှုများကို ဖျောက်ထားပါသည်။",
+    "修正识别文本": "စာသား ပြင်ဆင်ရန်",
+    "取消": "ပယ်ဖျက်ရန်",
+    "重新识别": "ပြန်ခွဲခြမ်းရန်",
+    "这里有多个语法点，请选择": "ဤနေရာတွင် သဒ္ဒါ အများအပြား ထပ်နေပါသည်။ တစ်ခု ရွေးပါ:",
+    "通用": "ယေဘုယျ",
+    "语言": "ဘာသာစကား",
+    "跟随系统": "စနစ်အတိုင်း",
+    "界面文字和语法讲解会一起切换。": "မျက်နှာပြင် စာသားနှင့် သဒ္ဒါရှင်းလင်းချက်တို့ ပူးတွဲ ပြောင်းလဲပါမည်။",
+    "一句话说明": "အတိုချုပ်",
+    "本 App 不需要注册账号，不包含广告或任何第三方 SDK。文字识别全部在你的设备上完成。匿名使用统计可以在设置中随时关闭。": "ဤ App သည် အကောင့်ဖွင့်ရန် မလိုပါ။ ကြော်ငြာ သို့မဟုတ် ပြင်ပ SDK မပါဝင်ပါ။ စာသားဖတ်ယူမှုအားလုံးကို သင့်စက်ပေါ်တွင်သာ လုပ်ဆောင်ပါသည်။ အမည်မဖော် အသုံးပြုမှု စာရင်းအင်းကို ဆက်တင်တွင် အချိန်မရွေး ပိတ်နိုင်ပါသည်။",
+    "相机与照片": "ကင်မရာနှင့် ဓာတ်ပုံများ",
+    "相机画面和你从相册选择的图片，只在你的设备上由 Apple Vision 识别文字，不会上传。拍照或从相册识别的图片保存在本机的「最近扫描」中，方便回看，可以随时删除。": "ကင်မရာမှ ပုံနှင့် ဓာတ်ပုံစာကြည့်တိုက်မှ ရွေးထားသော ပုံများကို သင့်စက်ပေါ်တွင်သာ Apple Vision ဖြင့် စာသားဖတ်ယူပြီး မည်သည့်နေရာသို့မျှ မတင်ပါ။ ရိုက်ယူခြင်း သို့မဟုတ် ဓာတ်ပုံစာကြည့်တိုက်မှ ဖတ်ယူထားသော ပုံများကို ပြန်ကြည့်နိုင်ရန် ဤစက်ရှိ \"မကြာသေးမီ စကင်များ\" တွင် သိမ်းထားပြီး အချိန်မရွေး ဖျက်နိုင်ပါသည်။",
+    "收藏与浏览记录": "အကြိုက်ဆုံးများနှင့် မှတ်တမ်း",
+    "收藏、浏览记录和设置只保存在本机，删除 App 即一并删除。": "အကြိုက်ဆုံးများ၊ မှတ်တမ်းနှင့် ဆက်တင်များကို ဤစက်ပေါ်တွင်သာ သိမ်းထားပြီး App ကို ဖျက်လျှင် အတူတကွ ပျက်သွားပါမည်။",
+    "只有当你在反馈页主动点击「发送」时，你填写的描述、附上的截图，以及 App 版本、系统版本、设备型号和界面语言，才会通过 Apple 的 iCloud（CloudKit）发送给开发者。这些信息只用于排查问题和改进 App，不会用于其他用途，也不会提供给任何第三方。": "သင်က အကြံပြုချက်စာမျက်နှာတွင် \"ပို့မည်\" ကို ကိုယ်တိုင် နှိပ်မှသာ ရေးသားထားသော ဖော်ပြချက်၊ ပူးတွဲထားသော ဖန်သားပြင်ပုံ၊ App ဗားရှင်း၊ iOS ဗားရှင်း၊ စက်မော်ဒယ်နှင့် မျက်နှာပြင်ဘာသာစကားတို့ကို Apple ၏ iCloud (CloudKit) မှတစ်ဆင့် ဖန်တီးသူထံ ပို့ပါမည်။ ဤအချက်အလက်များကို ပြဿနာရှာဖွေခြင်းနှင့် App တိုးတက်စေခြင်းအတွက်သာ သုံးပြီး အခြားရည်ရွယ်ချက်များအတွက် မသုံးပါ၊ ပြင်ပအဖွဲ့အစည်းများကိုလည်း မပေးပါ။",
+    "联系我们": "ဆက်သွယ်ရန်",
+    "对本隐私政策有任何疑问，可以在「设置 → 反馈」中告诉我们。": "ဤ ကိုယ်ရေးအချက်အလက်မူဝါဒနှင့် ပတ်သက်၍ မေးစရာရှိပါက \"ဆက်တင် → အကြံပြုချက်\" တွင် ပြောပြပါ။",
+    "许可协议": "လိုင်စင်သဘောတူညီချက်",
+    "本 App 的使用适用 Apple 标准最终用户许可协议（EULA）。": "ဤ App အသုံးပြုမှုသည် Apple ၏ စံနှုန်း အဆုံးသုံးစွဲသူ လိုင်စင်သဘောတူညီချက် (EULA) နှင့် ကိုက်ညီရပါမည်။",
+    "内容说明": "အကြောင်းအရာ ရှင်းလင်းချက်",
+    "App 内的语法讲解为原创内容，仅供学习参考；文字识别结果可能有误，请以原文为准。": "App ထဲရှိ သဒ္ဒါရှင်းလင်းချက်များသည် မူလရေးသားထားသော အကြောင်းအရာဖြစ်ပြီး လေ့လာရန် ကိုးကားရုံသာ ဖြစ်ပါသည်။ စာသားဖတ်ယူမှု ရလဒ်တွင် အမှားပါနိုင်သဖြင့် မူရင်းစာသားကို အခြေခံပါ။",
+    "查看 Apple 标准最终用户许可协议": "Apple စံနှုန်း EULA ကြည့်ရန်",
+    "最后更新：%@": "နောက်ဆုံး ပြင်ဆင်ချိန်: %@",
+    "已收到，谢谢你的反馈": "လက်ခံရရှိပါပြီ၊ အကြံပြုချက်ပေးသည့်အတွက် ကျေးဇူးတင်ပါသည်",
+    "我们会尽快查看并改进。": "အမြန်ဆုံး စစ်ဆေးပြီး တိုးတက်အောင် ပြုလုပ်ပါမည်။",
+    "没能直接发送": "တိုက်ရိုက် မပို့နိုင်ပါ",
+    "用邮件发送": "အီးမေးလ်ဖြင့် ပို့ရန်",
+    "用其他方式发送": "အခြားနည်းဖြင့် ပို့ရန်",
+    "暂时无法在 App 内提交反馈": "လောလောဆယ် App ထဲတွင် အကြံပြုချက် မပို့နိုင်ပါ",
+    "这台设备没有登录 iCloud，无法在 App 内直接提交": "ဤစက်တွင် iCloud မဝင်ထားသဖြင့် App ထဲမှ တိုက်ရိုက် မပို့နိုင်ပါ",
+    "会自动附上 App 版本、系统版本、设备型号和语言，方便定位问题。不会附带其他个人信息。": "ပြဿနာရှာရန် App ဗားရှင်း၊ iOS ဗားရှင်း၊ စက်မော်ဒယ်နှင့် ဘာသာစကားကို အလိုအလျောက် ထည့်ပေးမည်။ အခြား ကိုယ်ရေးအချက်အလက် မပါပါ။",
+    "匿名使用统计": "အမည်မဖော် အသုံးပြုမှု စာရင်းအင်း",
+    "隐私": "ကိုယ်ရေးလုံခြုံမှု",
+    "帮助我们了解有多少人在用、来自哪些地区、哪些语法最常被查，以便改进。不包含任何能识别你或你设备的信息。": "လူမည်မျှ အသုံးပြုသည်၊ မည်သည့်ဒေသမှ ဖြစ်သည်၊ မည်သည့်သဒ္ဒါကို အများဆုံး ရှာသည်ကို သိရှိပြီး App ကို တိုးတက်စေရန် ကူညီပါသည်။ သင် သို့မဟုတ် သင့်စက်ကို ခွဲခြားသိနိုင်သော အချက်အလက် မပါဝင်ပါ။",
+    "为了解有多少人在用、来自哪些国家或地区、在什么时段使用、哪些语法点最常被查，App 每天会匿名上报一条使用汇总：当天打开次数、按小时的使用分布、查看过的语法点及其等级、App Store 所在的国家或地区、界面语言和 App 版本。不包含姓名、账号、设备编号或任何能识别你的信息，通过 Apple 的 iCloud（CloudKit）保存，只用于改进 App。可以随时在「设置 → 匿名使用统计」中关闭。": "လူမည်မျှ အသုံးပြုသည်၊ မည်သည့်နိုင်ငံ သို့မဟုတ် ဒေသမှ ဖြစ်သည်၊ မည်သည့်အချိန်တွင် သုံးသည်၊ မည်သည့်သဒ္ဒါကို အများဆုံး ရှာသည်ကို သိရှိရန် App သည် နေ့စဉ် အမည်မဖော် အသုံးပြုမှု အကျဉ်းချုပ်တစ်ခု ပို့ပါသည်- ထိုနေ့ ဖွင့်သည့်အကြိမ်ရေ၊ နာရီအလိုက် အသုံးပြုမှု၊ ကြည့်ခဲ့သော သဒ္ဒါနှင့် အဆင့်၊ App Store နိုင်ငံ သို့မဟုတ် ဒေသ၊ မျက်နှာပြင် ဘာသာစကားနှင့် App ဗားရှင်း။ အမည်၊ အကောင့်၊ စက်နံပါတ် သို့မဟုတ် သင့်ကို ခွဲခြားသိနိုင်သော အချက်အလက် မပါဝင်ပါ။ Apple ၏ iCloud (CloudKit) တွင် သိမ်းဆည်းပြီး App ကို တိုးတက်စေရန်သာ အသုံးပြုပါသည်။ 「ဆက်တင် → အမည်မဖော် အသုံးပြုမှု စာရင်းအင်း」 တွင် အချိန်မရွေး ပိတ်နိုင်ပါသည်။",
+    "书页弯曲较大，个别高亮可能落在相邻的行。把书页压平、正对拍摄，效果更好。": "စာမျက်နှာ အလွန်ကွေးနေသဖြင့် အချို့ အသားပေးချက်များ ဘေးလိုင်းပေါ် ရောက်နိုင်ပါသည်။ စာမျက်နှာကို ပြားအောင်ဖိပြီး တည့်တည့် ရိုက်ပါက ပိုကောင်းပါသည်။",
 }
 
 INFO = {
-    "CFBundleDisplayName": ("语法扫描", ("Grammar Scan", "문법 스캔", "Gramática JP", "Ngữ Pháp JP")),
+    "CFBundleDisplayName": ("日语语法速查", ("JP Grammar", "일본어 문법", "Gramática JP", "Ngữ Pháp JP")),
     "NSCameraUsageDescription": ("需要使用相机扫描书本上的日文，以识别其中的语法点。", (
         "The camera is used to scan Japanese text in books and identify grammar points. Images are processed on your device only.",
         "책의 일본어를 스캔해 문법을 인식하기 위해 카메라를 사용합니다. 이미지는 기기 안에서만 처리됩니다.",
         "La cámara se usa para escanear texto japonés de libros e identificar puntos gramaticales. Las imágenes se procesan solo en tu dispositivo.",
         "Ứng dụng dùng camera để quét chữ tiếng Nhật trong sách và nhận diện ngữ pháp. Hình ảnh chỉ được xử lý trên thiết bị.",
     )),
+}
+
+MY_INFO = {
+    "CFBundleDisplayName": "ဂျပန်သဒ္ဒါ",
+    "NSCameraUsageDescription": "စာအုပ်ထဲရှိ ဂျပန်စာကို စကင်ဖတ်ပြီး သဒ္ဒါများကို ရှာဖွေရန် ကင်မရာကို အသုံးပြုပါသည်။ ပုံများကို သင့်စက်ပေါ်တွင်သာ လုပ်ဆောင်ပါသည်။",
 }
 
 LANGS = ["en", "ko", "es", "vi"]
@@ -208,25 +610,74 @@ def catalog(entries):
     return {"sourceLanguage": "zh-Hans", "strings": entries, "version": "1.0"}
 
 
+def check_my():
+    missing = [k for k in S if k not in MY]
+    extra = [k for k in MY if k not in S]
+    assert not missing and not extra, f"MY 缺少 {missing} / 多余 {extra}"
+    missing = [k for k in INFO if k not in MY_INFO]
+    extra = [k for k in MY_INFO if k not in INFO]
+    assert not missing and not extra, f"MY_INFO 缺少 {missing} / 多余 {extra}"
+    for k, v in MY.items():
+        assert isinstance(v, str), f"MY[{k!r}] 必须是字符串"
+        assert re.findall(r"%(?:\d+\$)?(?:lld|@|%)", k) == re.findall(r"%(?:\d+\$)?(?:lld|@|%)", v), f"MY[{k!r}] 格式符不一致"
+
+
+def esc(v):
+    return v.replace("\\", "\\\\").replace('"', '\\"').replace("\n", "\\n")
+
+
+def write_lproj(lang, entries):
+    d = os.path.join(APP, f"{lang}.lproj")
+    os.makedirs(d, exist_ok=True)
+    plain = {k: v for k, v in entries.items() if isinstance(v, str)}
+    plural = {k: v for k, v in entries.items() if isinstance(v, dict)}
+    with open(os.path.join(d, "Localizable.strings"), "w", encoding="utf-8") as f:
+        f.write("/* 由 tools/make_strings.py 生成，请勿手改 */\n")
+        for k in sorted(plain):
+            f.write(f'"{esc(k)}" = "{esc(plain[k])}";\n')
+    path = os.path.join(d, "Localizable.stringsdict")
+    if not plural:
+        if os.path.exists(path):
+            os.remove(path)
+        return
+    import plistlib
+    out = {}
+    for k, forms in plural.items():
+        spec = re.search(r"%(?:\d+\$)?(lld|ld|d|@)", k).group(1)
+        rule = {"NSStringFormatSpecTypeKey": "NSStringPluralRuleType", "NSStringFormatValueTypeKey": spec}
+        rule.update(forms)
+        if "other" not in rule:
+            rule["other"] = list(forms.values())[-1]
+        out[k] = {"NSStringLocalizedFormatKey": "%#@n@", "n": rule}
+    with open(path, "wb") as f:
+        plistlib.dump(out, f)
+
+
 def main():
-    strings = {}
+    check_my()
+    per_lang = {lang: {} for lang in LANGS + ["my", "zh-Hans", "zh-Hant"]}
     for key, vals in S.items():
-        l = {lang: loc(v) for lang, v in zip(LANGS, vals)}
-        l["zh-Hans"] = unit(key)
-        l["zh-Hant"] = unit(cc.convert(key))
-        strings[key] = {"extractionState": "manual", "localizations": l}
-    with open(os.path.join(APP, "Localizable.xcstrings"), "w", encoding="utf-8") as f:
-        json.dump(catalog(strings), f, ensure_ascii=False, indent=2, sort_keys=True)
+        for lang, v in zip(LANGS, vals):
+            per_lang[lang][key] = v
+        per_lang["my"][key] = MY[key]
+        per_lang["zh-Hans"][key] = key
+        per_lang["zh-Hant"][key] = cc.convert(key)
+    for lang, entries in per_lang.items():
+        write_lproj(lang, entries)
+    old_catalog = os.path.join(APP, "Localizable.xcstrings")
+    if os.path.exists(old_catalog):
+        os.remove(old_catalog)
 
     info = {}
     for key, (zh, vals) in INFO.items():
         l = {lang: unit(v) for lang, v in zip(LANGS, vals)}
+        l["my"] = unit(MY_INFO[key])
         l["zh-Hans"] = unit(zh)
         l["zh-Hant"] = unit(cc.convert(zh))
         info[key] = {"extractionState": "manual", "localizations": l}
     with open(os.path.join(APP, "InfoPlist.xcstrings"), "w", encoding="utf-8") as f:
         json.dump(catalog(info), f, ensure_ascii=False, indent=2, sort_keys=True)
-    print(f"Localizable: {len(strings)} keys, InfoPlist: {len(info)} keys")
+    print(f"Localizable: {len(S)} keys × {len(per_lang)} languages, InfoPlist: {len(info)} keys")
 
 
 if __name__ == "__main__":

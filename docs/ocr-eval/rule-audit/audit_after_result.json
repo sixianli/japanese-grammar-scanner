@@ -1,0 +1,198 @@
+{
+ "causative": {
+  "judgments": [
+   false,
+   true,
+   true,
+   true,
+   true,
+   false,
+   true,
+   true
+  ],
+  "problem": "误把可能形/词汇化动词当使役：「欠かせない」是「欠かす」的可能形否定；「済ませる」是独立他动词（=済ます），不是使役。",
+  "fix": "排除「欠かせ」「済ませ」及「任せ・合わせ・知らせ・見せ・聞かせ（固定）」等词汇化他动词词干；「〜せない」前为「欠か」时不匹配。"
+ },
+ "ga-aru-iru": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "imperative-form": {
+  "judgments": [
+   false,
+   false,
+   true,
+   false,
+   false,
+   false,
+   true,
+   false
+  ],
+  "problem": "大量误匹配名词/形容词词尾：「しつこい」的「こい」、「幸せ」、「詰め合わせ」的「合わせ」都不是命令形。",
+  "fix": "排除「幸せ」「合わせ」「〜こい」等固定词；要求命令形后接「」」「と（言う）」「。」「！」或句末，且不接「は/と限らない/というもの」之类名词用法；去掉匹配「〜せ」「〜こい」的宽松模式。"
+ },
+ "mi-nominal": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "mono-wo": {
+  "judgments": [
+   false,
+   false,
+   false
+  ],
+  "problem": "全部是试题指令「意味が最も近いものを、一つ選びなさい」中的名词「もの」+宾格「を」，不是表惋惜/逆接的「ものを」。",
+  "fix": "排除后接「、」或「選び」的情况；要求前接た形/ば/たら等假定或过去形，并位于句末（后接「。」「…」「のに」）或后接逆接句。"
+ },
+ "naa-exclamation": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   false,
+   true,
+   true
+  ],
+  "problem": "「頑張ろうな」中的「な」是接在意志形后的确认/叮嘱（念押し），既非感叹也非禁止。",
+  "fix": "排除接在意志形「〜う/よう」后的「な」，或为该用法单独加一个「念押し」义项。"
+ },
+ "question-word-temo": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   false,
+   true,
+   false
+  ],
+  "problem": "复合格助词「として」「に対して」后加「も」（表示“也”）被误判为逆接「ても」。",
+  "fix": "排除「として・に対して・について・にとって・に関して」+「も」，除非前面有疑问词（誰・何・どこ等）。"
+ },
+ "te-wa-negative-condition": {
+  "judgments": [
+   true,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   true
+  ],
+  "problem": "误匹配很多：复合助词「について/に関して」+は（话题）、「なくてはならない」（义务）、「にしては」（与预期不符）、「言って＋はっきり」跨词、「てはいけない」（禁止，属另一语法点）。",
+  "fix": "排除「について・に関して・に対して・にしては」+は；排除「なくては」；排除后接「っきり」；排除后接「いけない・ならない・だめ（表禁止/义务）」或交给专门的禁止/义务语法点。"
+ },
+ "to-iu-called": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   false,
+   false,
+   true
+  ],
+  "problem": "「」内是一个观点/内容句时（「〜のか」というビジョン、「それが当たり前だ」という評価），「という」表示内容同位（说明名词内容），不是“叫做……的名称”。",
+  "fix": "「」内以「だ/のか/る」等句子结尾且后接抽象名词（考え・評価・ビジョン・意見・気持ち・事実）时，不归入“名称”义项，或另加“内容同位”义项。"
+ },
+ "to-omou": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "to-quotation": {
+  "judgments": [
+   false,
+   false,
+   false,
+   true,
+   false,
+   false,
+   true,
+   false
+  ],
+  "problem": "大量误匹配：「とき」的「と」、条件「〜と、」（考えると、見ていると）、「ようとする」（尝试）、「といった」（举例）。",
+  "fix": "排除后接「き」；排除动词辞书形/ている后接「と、」（条件）；排除「よう/おう＋と＋する」；排除后接「いった」。只在后接引用动词（言う・思う・聞く・書く・呼ぶ）、名词并列或「一緒に/結婚する」等时匹配。"
+ },
+ "to-wa-definition": {
+  "judgments": [
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "toka-listing": {
+  "judgments": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "",
+  "fix": ""
+ },
+ "tte-quote-topic": {
+  "judgments": [
+   true,
+   true,
+   false,
+   true,
+   true,
+   false,
+   true
+  ],
+  "problem": "「からといって」中的「といって」被误判为引用「って」。",
+  "fix": "排除前接「とい」（即「といって/からといって」）的「って」。"
+ },
+ "wa-ga-double-subject": {
+  "judgments": [
+   false,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "problem": "「〜人は少ないことがわかった」中「が」标的是名词化的「こと」从句（わかる的对象），不是「AはBが述语」结构。",
+  "fix": "排除「が」前为「こと/の」名词化且后接「わかる・ある」等，即「は」与「が」之间含谓语（形容词/动词）+「こと」的情况。"
+ }
+}

@@ -18,6 +18,8 @@ struct GrammarPoint: Codable, Identifiable, Hashable {
     /// 一个义项（用法）：意思讲解 + 接续讲解 + 最常见例句（≤3）。
     struct Sense: Codable, Hashable {
         var label: String
+        /// 该义项所属的 JLPT 等级（同形语法合并后，各义项等级可能不同；缺省 = 语法点等级）。
+        var level: JLPTLevel?
         var meaning: String
         var connection: String
         var examples: [Example]
@@ -54,14 +56,22 @@ struct GrammarPoint: Codable, Identifiable, Hashable {
     var notes: [String]
     var scenes: Scenes
     var etymology: String
+    /// 组词逻辑：由哪些部分构成、为什么这样组合、如何体现在意思和用法上。
+    var formation: String
     var similar: [Similar]
+    /// 常见的汉字写法（如「〜挙げ句」）。考试/工作/日常中常以汉字书写时提供，用于标题显示与搜索。
+    let kanji: String?
+    /// 其它常见写法（用于搜索）。
+    let aliases: [String]
+    /// JLPT 出题频率（来自 Resources/Grammar/frequency.json，根据公开资料整理，仅供参考）
+    var frequency: ExamFrequency?
     let patterns: [String]
     let subsumes: [String]?
     /// 是否在扫描时高亮。最基础的助词等（は・が・を…）设为 false：收录在语法库，但不在扫描结果中高亮。
     let scannable: Bool
 
     enum CodingKeys: String, CodingKey {
-        case id, title, reading, level, meaning, connection, senses, notes, scenes, etymology, similar, patterns, subsumes, scannable
+        case id, title, reading, level, meaning, connection, senses, notes, scenes, etymology, formation, similar, patterns, subsumes, scannable, kanji, aliases
     }
 
     init(from decoder: Decoder) throws {
@@ -76,11 +86,29 @@ struct GrammarPoint: Codable, Identifiable, Hashable {
         notes = try c.decodeIfPresent([String].self, forKey: .notes) ?? []
         scenes = try c.decode(Scenes.self, forKey: .scenes)
         etymology = try c.decode(String.self, forKey: .etymology)
+        formation = try c.decodeIfPresent(String.self, forKey: .formation) ?? ""
         similar = try c.decode([Similar].self, forKey: .similar)
+        kanji = try c.decodeIfPresent(String.self, forKey: .kanji)
+        aliases = try c.decodeIfPresent([String].self, forKey: .aliases) ?? []
         patterns = try c.decode([String].self, forKey: .patterns)
         subsumes = try c.decodeIfPresent([String].self, forKey: .subsumes)
         scannable = try c.decodeIfPresent(Bool.self, forKey: .scannable) ?? true
     }
+
+    /// 标题中的日语形式（优先使用常见汉字写法）。
+    var titleForm: String {
+        if let k = kanji, !k.isEmpty { return k }
+        return title
+    }
+
+    /// 列表与导航栏中显示的标题。
+    var displayTitle: String { titleForm }
+
+    /// 义项的等级（未标注时为语法点等级）。
+    func level(of sense: Sense) -> JLPTLevel { sense.level ?? level }
+
+    /// 本语法点涉及的全部等级（合并后的语法点可能横跨多个等级），从低到高。
+    var levels: [JLPTLevel] { Array(Set([level] + senses.compactMap(\.level))).sorted() }
 
     /// 所有义项的例句。
     var allExamples: [Example] { senses.flatMap(\.examples) }
@@ -94,6 +122,7 @@ struct GrammarPoint: Codable, Identifiable, Hashable {
         meaning = l.meaning
         connection = l.connection
         etymology = l.etymology
+        if let f = l.formation, !f.isEmpty { formation = f }
         if l.senses.count == senses.count {
             for i in senses.indices {
                 let ls = l.senses[i]
@@ -159,7 +188,13 @@ struct GrammarLocalization: Decodable {
     let notes: [String]?
     let scenes: ScenesText
     let etymology: String
+    let formation: String?
     let similar: [SimilarText]
+}
+
+/// JLPT 出题频率三档
+enum ExamFrequency: String, Codable {
+    case high, medium, low
 }
 
 enum JLPTLevel: String, Codable, CaseIterable, Comparable, Identifiable {
@@ -182,12 +217,11 @@ enum JLPTLevel: String, Codable, CaseIterable, Comparable, Identifiable {
 
 /// 讲解内容使用的语言。
 enum ContentLanguage: String, CaseIterable {
-    case zhHans = "zh-Hans", zhHant = "zh-Hant", en, ko, es, vi
+    case zhHans = "zh-Hans", zhHant = "zh-Hant", en, ko, es, vi, my
 
-    /// 根据 App 当前生效的本地化语言（跟随系统，可在 设置 → App → 语言 中单独修改）决定。
+    /// 根据 App 内选择的语言决定；选「跟随系统」时用系统为本 App 选定的本地化语言。
     static var current: ContentLanguage {
-        let preferred = Bundle.main.preferredLocalizations.first ?? Locale.preferredLanguages.first ?? "en"
-        return from(identifier: preferred)
+        from(identifier: AppLanguage.effectiveIdentifier)
     }
 
     static func from(identifier: String) -> ContentLanguage {
@@ -198,6 +232,7 @@ enum ContentLanguage: String, CaseIterable {
         if id.hasPrefix("ko") { return .ko }
         if id.hasPrefix("es") { return .es }
         if id.hasPrefix("vi") { return .vi }
+        if id.hasPrefix("my") { return .my }
         return .en
     }
 }

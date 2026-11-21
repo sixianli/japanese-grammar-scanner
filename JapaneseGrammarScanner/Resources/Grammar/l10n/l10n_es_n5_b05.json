@@ -35,9 +35,9 @@
       }
     ],
     "notes": [
-      "Detrás de 「しか」 siempre va una negación. No se dice 「✕千円しかある」.",
-      "「しか」 sustituye a 「は」, 「が」 y 「を」: 「水を飲む」→「水しか飲まない」. Partículas como 「で」 o 「に」 se quedan delante.",
-      "「しかし」 (sin embargo), 「しかも」 (además) y 「仕方（しかた）」 no son esta gramática."
+      "Detrás de 「しか」 siempre va una negación, pero la frase tiene un sentido afirmativo de «solo»: 「千円しかない」 = «tengo solo mil yenes (y nada más)», no «no tengo mil yenes». ✕「千円しかある」.",
+      "「しか」 sustituye a 「が」 y 「を」; no se pueden acumular: ✕「水をしか飲まない」→ ○「水しか飲まない」. En cambio, 「で」, 「に」 y 「から」 se quedan delante: 「駅でしか買えない」.",
+      "「しか」 lleva una queja de que algo es poco. Decir 「お土産を一つしかもらわなかった」 sobre un regalo suena a protesta; si solo quieres constatar el hecho, usa 「だけ」: 「一つだけもらった」."
     ],
     "scenes": {
       "daily": [
@@ -71,25 +71,26 @@
       ]
     },
     "etymology": "Se suele pensar que 「しか」 viene del antiguo adverbio 「しか」 (然), «así, de ese modo». Más tarde se fijó como partícula limitativa ligada a la negación y se extendió en el habla a partir del período Edo.",
+    "formation": "「しか」 es una partícula limitativa que traza una frontera alrededor del elemento anterior; la negación 「ない」 niega luego todo lo que queda fuera de esa frontera. Juntas dicen «no hay nada excepto X», que equivale a «solo X». Como el «solo» se obtiene negando todo lo demás, la forma tiene que ser negativa aunque el sentido sea afirmativo. Y como el hablante se fija en que «no hay nada más», surge de forma natural la sensación de «es poco, no alcanza». 「〜しかない」 tras la forma de diccionario sigue la misma lógica: «no hay (otro camino) aparte de hacer esto» → «no queda más remedio que».",
     "similar": [
       {
         "title": "〜だけ",
-        "explanation": "「だけ」 limita de forma objetiva y admite verbos afirmativos o negativos. 「しか〜ない」 exige negación y añade la sensación de «es poco». 「千円だけある」 es un dato; 「千円しかない」 es quejarse de que no alcanza."
+        "explanation": "「だけ」 limita el alcance de forma objetiva y admite tanto afirmación como negación. 「しか〜ない」 exige negación y añade la sensación subjetiva de «es poco, no alcanza». 「千円だけある」 es un dato neutro; 「千円しかない」 es quejarse de que no llega."
       },
       {
-        "title": "〜ばかり",
-        "explanation": "「ばかり」 significa «solo, todo el rato» y subraya que hay mucho de lo mismo. 「しか〜ない」 subraya poca cantidad o un rango estrecho: la dirección contraria."
+        "title": "〜のみ",
+        "explanation": "「のみ」 también significa «solo» y va con afirmación, pero es lengua escrita, típica de avisos y reglamentos, como 「現金のみ使用可」. Hablando se dice 「現金しか使えない」 o 「現金だけ」."
       },
       {
-        "title": "〜以外〜ない",
-        "explanation": "「〜以外〜ない」 significa «nada excepto...». Se parece a 「しか〜ない」, pero es más escrito y objetivo, típico de textos explicativos."
+        "title": "〜しかない (no queda más remedio que)",
+        "explanation": "Mismo origen: 「しか」 detrás de la forma de diccionario del verbo, seguido de 「ない」, significa «no hay otra opción que hacer esto», es decir, «no queda más remedio que», como en 「歩いて帰るしかない」. Esta entrada, sustantivo + 「しか〜ない」, limita cosas y cantidades."
       }
     ]
   },
   {
     "id": "dake-only",
-    "meaning": "«Solo, solamente». Limita un rango o una cantidad. Puede ir con verbo afirmativo o negativo.",
-    "connection": "Sustantivo / cantidad / forma llana de verbos y adjetivos + だけ",
+    "meaning": "「だけ」 significa «solo, únicamente» y limita el alcance de una persona, cosa, cantidad o acción; también expresa llegar hasta el máximo posible o deseado (todo lo que se quiera, lo más posible, lo suficiente para..., cuanto más... más...).",
+    "connection": "Sustantivo / cuantificador / verbo o adjetivo en forma simple + だけ; verbo en forma たい / potencial + だけ; verbo en forma diccionario + だけの + sustantivo; できるだけ; verbo en forma ば + mismo verbo en forma diccionario + だけ",
     "senses": [
       {
         "label": "Solo, solamente",
@@ -119,12 +120,50 @@
           "Solo estoy mirando. No voy a comprar.",
           "Solo estoy un poco cansado."
         ]
+      },
+      {
+        "label": "Todo lo que quieras",
+        "meaning": "Se repite el mismo verbo: «hacer todo lo que uno quiera». Son frecuentes 「〜たいだけ〜」, 「好きなだけ」 y 「〜られるだけ〜」.",
+        "connection": "Verbo en forma たい／forma potencial + だけ + el mismo verbo; 好きなだけ",
+        "examples": [
+          "Coman todo lo que quieran.",
+          "Llévate todos los que quieras.",
+          "Me llevé a casa todo lo que pude cargar."
+        ]
+      },
+      {
+        "label": "Lo más... posible",
+        "meaning": "「できるだけ」 es una expresión fija que significa «lo más... posible» o «en la medida de lo posible». Se parece a 「なるべく」, pero es más enfática.",
+        "connection": "できるだけ + verbo／adjetivo",
+        "examples": [
+          "Por favor, ven lo antes posible.",
+          "Procuro comer toda la verdura que puedo."
+        ]
+      },
+      {
+        "label": "Suficiente para...",
+        "meaning": "「〜だけの + sustantivo」 significa «... suficiente para...». Se usa mucho en negativo: «no tener ... suficiente para...».",
+        "connection": "Verbo en forma de diccionario + だけの + sustantivo",
+        "examples": [
+          "No tengo dinero suficiente para comprar una casa.",
+          "Él tiene capacidad suficiente para convencer a la gente."
+        ]
+      },
+      {
+        "label": "Cuanto más..., más...",
+        "meaning": "「〜ば〜だけ」 indica que una cosa cambia en proporción a otra. Equivale a «cuanto más..., más...», y resalta que el esfuerzo tiene su recompensa.",
+        "connection": "Verbo en forma ば + el mismo verbo en forma de diccionario + だけ",
+        "examples": [
+          "Cuanto más practicas, mejor lo haces."
+        ]
       }
     ],
     "notes": [
-      "「だけど」 y 「だけれど」 significan «pero». No son esta gramática.",
-      "「できるだけ」 (en la medida de lo posible) y 「どれだけ」 (cuánto) son expresiones fijas de grado.",
-      "「〜だけでなく」 significa «no solo... sino también...»."
+      "Cuando 「だけ」 va con negación, lo negado es ese elemento en sí: 「肉だけ食べない」 = «la carne es lo único que no como». Para decir «solo como carne» hay que usar 「肉だけ食べる」 o 「肉しか食べない」; si los confundes, dices justo lo contrario.",
+      "Decir 「これだけですか」 al recibir un regalo, una ayuda o un presupuesto suena a «¿solo esto?» y es muy descortés. Aunque solo quieras confirmar la cantidad, di 「こちらで全部でしょうか」.",
+      "「〜だけの + sustantivo」 significa “suficiente para...”, no “solo...”: 「家を買うだけのお金はない」 = no tengo dinero suficiente para comprar una casa. Si lo entiendes como “solo el dinero para comprar una casa”, el sentido se invierte.",
+      "「できるだけ」 significa “al máximo posible”, y 「なるべく」, “en la medida de lo posible (si no se puede, no pasa nada)”. Cuando se exige darlo todo se usa 「できるだけ」, que suena más fuerte.",
+      "「だけど」 y 「だけれど」 significan «pero», no «solo»: 「雨だけど行く」 = «llueve, pero voy», no «solo lluvia»."
     ],
     "scenes": {
       "daily": [
@@ -139,9 +178,14 @@
           "example": "Solo un café, por favor."
         },
         {
-          "title": "Contar un secreto",
-          "description": "Quieres contarle un secreto solo a tu mejor amigo.",
-          "example": "Esto solo te lo digo a ti, ¿eh?"
+          "title": "Atender a invitados",
+          "description": "El anfitrión habla a sus invitados.",
+          "example": "No te preocupes, bebe todo lo que quieras."
+        },
+        {
+          "title": "Hablar de una compra",
+          "description": "Hablas del presupuesto con tu familia.",
+          "example": "Ahora mismo no nos podemos permitir comprar un auto."
         }
       ],
       "work": [
@@ -154,29 +198,48 @@
           "title": "Confirmar asistentes",
           "description": "Informas a tu jefe de quién asistirá a un evento.",
           "example": "Esta vez solo asistiremos el jefe de departamento y yo."
+        },
+        {
+          "title": "Responder a un cliente",
+          "description": "Prometes a un cliente una respuesta rápida.",
+          "example": "Le responderemos lo antes posible."
+        },
+        {
+          "title": "Explicar hasta dónde puedes ayudar",
+          "description": "Un jefe explica lo que está en su mano.",
+          "example": "Haré todo lo que esté en mi mano."
         }
       ]
     },
-    "etymology": "「だけ」 viene del sustantivo 「たけ」 (丈), «altura, longitud». Pasó a significar «toda la cantidad, el límite» y luego, ya sonorizado como 「だけ」, «limitado a esto».",
+    "etymology": "「だけ」 procede del sustantivo 「たけ」 (丈), cuyo sentido original era «altura, longitud»; pasó a significar «la cantidad total, el límite» y después se sonorizó en 「だけ」, con el valor de «limitado a esto». También conservó el uso de «hasta el punto de...».",
+    "formation": "「だけ」 procede del sustantivo 「丈（たけ）」, cuyo sentido original es «altura, medida, la cantidad total». Tras un sustantivo o cuantificador significa «la cantidad llega hasta aquí», de ahí «solo, únicamente». Como habla del límite superior de un ámbito, no contiene negación por sí mismo, así que puede ir con predicados afirmativos o negativos y su tono es bastante objetivo. La misma idea de «cantidad, grado» se desarrolló en otra dirección en los demás sentidos: 「食べたいだけ」 = «la cantidad que se quiere comer» → todo lo que se quiera; 「できるだけ」 = «el grado que se puede alcanzar» → lo más posible; 「〜だけの＋sustantivo」 = «que alcanza el grado de...» → suficiente para...; 「〜ば〜だけ」 empareja dos cantidades → cuanto más se hace, más se obtiene. Es decir, «limitación» es «hasta aquí» y «extensión» es «hasta este grado»; ambas nacen del núcleo «cantidad».",
     "similar": [
       {
         "title": "〜しか〜ない",
-        "explanation": "「しか」 exige negación y transmite «es demasiado poco». 「だけ」 funciona con afirmación y negación y suena más objetivo."
+        "explanation": "「しか」 exige negación y transmite la idea de «demasiado poco»; 「だけ」 admite afirmación y negación y suena objetivo. 「三人だけ来た」 es un dato; 「三人しか来なかった」 es lamentar que vinieran tan pocos."
       },
       {
-        "title": "〜ばかり",
-        "explanation": "「ばかり」 significa «no hay más que, todo es...» y subraya que hay demasiado de lo mismo, a menudo con disgusto. 「だけ」 solo limita de forma neutra."
+        "title": "〜のみ",
+        "explanation": "「のみ」 significa casi lo mismo que 「だけ」, pero es lengua escrita: avisos, normativas y noticias (「会員のみ入場可」). En la conversación se usa 「だけ」; 「のみ」 suena rígido."
       },
       {
         "title": "〜だけで",
-        "explanation": "「だけで」 significa «con solo..., (ya basta)», como en 「見るだけで楽しい」 (con solo mirar ya es divertido)."
+        "explanation": "Mismo origen: 「だけ」 + 「で」 significa «con solo ..., ya ...» y subraya que eso basta para producir el resultado, como en 「見るだけで楽しい」. En esta entrada 「だけ」 solo limita el alcance."
+      },
+      {
+        "title": "〜限り",
+        "explanation": "「できる限り」 y 「できるだけ」 significan lo mismo: “en la medida de lo posible”. 「できる限り」 es más solemne y escrito, frecuente en situaciones formales."
+      },
+      {
+        "title": "〜ば〜ほど",
+        "explanation": "「〜ば〜ほど」 expresa un cambio proporcional general (“cuanto más..., más...”); 「〜ば〜だけ」 subraya más que “se obtiene tanto como se pone”, y tiene un uso más restringido."
       }
     ]
   },
   {
     "id": "kurai-approximately",
-    "meaning": "Detrás de una cantidad o duración significa «unos, más o menos, aproximadamente». 「どのくらい」 pregunta «cuánto».",
-    "connection": "Cantidad + くらい／ぐらい; どの／どれ + くらい",
+    "meaning": "Tras una cantidad o una duración significa «aproximadamente» (「どのくらい」 pregunta «cuánto»); tras un verbo, un adjetivo o un sustantivo pone un ejemplo extremo para indicar grado, o cita algo trivial para expresar desprecio o un mínimo exigible: «al menos esto».",
+    "connection": "Cantidad・duración + くらい／ぐらい; どの／どれ + くらい; verbo・adjetivo en forma simple + くらい; sustantivo + くらい（は）／くらいで",
     "senses": [
       {
         "label": "Aproximadamente (cantidad)",
@@ -205,12 +268,44 @@
           "¿Cuánto se tarda hasta el aeropuerto?",
           "¿Cuánto tiempo llevas estudiando japonés?"
         ]
+      },
+      {
+        "label": "Grado",
+        "meaning": "Usa un ejemplo exagerado para mostrar cuánto: «tanto que...», «hasta el punto de...». 「くらい」 y 「ぐらい」 significan lo mismo.",
+        "connection": "Verbo en forma de diccionario / forma ない, adjetivo い + くらい (「泣きたいくらい」, 「歩けないくらい」)",
+        "examples": [
+          "Estaba tan feliz que me daban ganas de llorar.",
+          "Me dolían tanto los pies que casi no podía caminar.",
+          "Me reí tanto que me dolió la barriga."
+        ]
+      },
+      {
+        "label": "Lo mínimo",
+        "meaning": "Menciona lo más fácil y básico: «por lo menos podrías...». Suele sonar despectivo o de reproche, y va con 「〜なさい」 o 「できる」.",
+        "connection": "Sustantivo / verbo en forma de diccionario + くらい (は)",
+        "examples": [
+          "Por lo menos limpia tu propia habitación.",
+          "Aunque estés ocupado, por lo menos puedes llamar, ¿no?",
+          "Por favor, escriba al menos su nombre."
+        ]
+      },
+      {
+        "label": "Restar importancia: solo...",
+        "meaning": "El hablante considera que el asunto es menor y no merece atención. Equivale a «solo», «una simple...». Suele llevar 「で」: 「〜くらいで」, «solo por algo así». Normalmente tiene un tono de crítica o fastidio.",
+        "connection": "Sustantivo / forma た del verbo + くらいで・ぐらいで (a menudo con 「そんな」「ちょっと」「一度」)",
+        "examples": [
+          "No te rindas solo porque fallaste una vez.",
+          "No puedo faltar al trabajo por un simple resfriado.",
+          "Algo así, hazlo tú mismo."
+        ]
       }
     ],
     "notes": [
-      "Para una hora concreta, 「ごろ」: 「三時ごろ」 (hacia las tres). Para una duración, 「くらい」: 「三時間くらい」 (unas tres horas). En el habla también se oye 「三時くらい」.",
-      "「くらい」 y 「ぐらい」 son básicamente intercambiables. Detrás de 「この・その・あの・どの」 es más común 「くらい」.",
-      "Detrás de un sustantivo o verbo para expresar grado (p. ej. 「泣きたいくらい」) es otro uso. Véase 「〜くらい」 (grado)."
+      "Para un momento concreto se usa 「ごろ」 y para una duración 「くらい」: 「三時ごろ」 = hacia las tres, 「三時間くらい」 = unas tres horas. ✕「三時間ごろ」.",
+      "「くらい」 va detrás del número, no delante: ✕「くらい十人来た」→ ○「十人くらい来た」. Delante de un sustantivo se dice 「十人くらいの学生」.",
+      "El 「くらい」 de “como mínimo” tiene un tono de menosprecio o reproche. Decirle a un superior o cliente 「電話くらいしてください」 o 「これくらい分かりますよ」 suena a sermón o a réplica insolente, y es muy descortés.",
+      "Detrás de una cantidad significa «aproximadamente», no «solo»: 「10分くらい待った」 es «esperé unos diez minutos», no «esperé apenas diez minutos».",
+      "「くらいなら」 significa «antes que ...» y es un sentido completamente distinto: 「謝るくらいなら最初からするな」 (si vas a pedir perdón después, mejor no lo hagas desde el principio)."
     ],
     "scenes": {
       "daily": [
@@ -225,9 +320,19 @@
           "example": "Corro unos treinta minutos todas las mañanas."
         },
         {
-          "title": "Hablar de precios",
-          "description": "Un amigo pregunta cuánto costó algo y no lo recuerdas bien.",
-          "example": "Creo que fueron unos veinte mil yenes."
+          "title": "Expresar emoción",
+          "description": "Le cuentas a un amigo cómo te sentiste al recibir un regalo.",
+          "example": "Estaba tan contento que no me lo podía creer."
+        },
+        {
+          "title": "Una madre a su hijo",
+          "description": "La madre le pide al niño que al menos se ocupe de lo suyo.",
+          "example": "Por lo menos haz la tarea tú solo."
+        },
+        {
+          "title": "Consolar a un amigo tras una ruptura",
+          "description": "Animar a un amigo a no hundirse por un tropiezo.",
+          "example": "No te deprimas solo porque te dejaron una vez."
         }
       ],
       "work": [
@@ -240,22 +345,41 @@
           "title": "Informar de asistentes",
           "description": "Informas a tu jefe de cuántas personas vinieron aproximadamente.",
           "example": "A la sesión informativa asistieron unas cincuenta personas."
+        },
+        {
+          "title": "Recordar algo a un compañero",
+          "description": "Un compañero veterano le recuerda a otro los modales básicos.",
+          "example": "Si vas a llegar tarde, por lo menos avisa."
+        },
+        {
+          "title": "Un jefe anima a su equipo",
+          "description": "Le dice que no se desanime por un pequeño error.",
+          "example": "No hace falta desanimarse por un error tan pequeño."
         }
       ]
     },
-    "etymology": "「くらい」 viene del sustantivo 「位（くらい）」, «rango, categoría». Pasó a significar «grado, medida» y luego se usó como partícula de cantidad aproximada. 「ぐらい」 es su forma sonorizada, que se extendió en el habla desde el período Edo.",
+    "etymology": "「くらい」 procede del sustantivo 「位（くらい）」, que originalmente significaba «rango, categoría» y pasó a «grado, cantidad» y luego a partícula para cantidades aproximadas. 「ぐらい」 es su forma sonorizada, con el mismo significado y totalmente intercambiable.",
+    "formation": "「くらい」 era originalmente el sustantivo 「位（くらい）」, «rango, posición en una escala». 「Xくらい」 significa «el nivel donde está X», usando X como vara para medir el grado. Tras una cantidad no señala un punto exacto sino «alrededor de ese nivel», de ahí «aproximadamente»; como mide cantidades, se une a cifras y duraciones, mientras que las horas del reloj usan 「ごろ」. 「どのくらい」 es «¿en qué nivel?», y sirve para preguntar cuánto o cuánto tiempo. Si la vara es un hecho extremo (「泣きたいくらい」), indica un grado asombroso; si es el acto más fácil y elemental (「電話くらい」), indica «al menos esto se espera», y el trasfondo «ni siquiera llegaste a una vara tan baja» le da un tono despectivo y reprobatorio. Con 「で」 resulta 「〜くらいで」, «solo por algo tan pequeño...»; con 「は」, 「〜くらいは」, «lo demás aparte, al menos este mínimo». Así, «aproximadamente», «grado», «mínimo» y «desprecio» son usos distintos de la misma vara.",
     "similar": [
       {
         "title": "〜ごろ",
-        "explanation": "「ごろ」 va detrás de una hora concreta (「七時ごろ」) y significa «hacia esa hora». 「くらい」 va sobre todo detrás de cantidades y duraciones (「七時間くらい」)."
+        "explanation": "「ごろ」 va detrás de un momento (「七時ごろ」) e indica en torno a esa hora; 「くらい」 va detrás de una cantidad o una duración (「七時間くらい」). En la lengua hablada se oye 「七時くらい」, pero la forma correcta es 「七時ごろ」."
       },
       {
-        "title": "〜くらい (grado)",
-        "explanation": "Detrás de un sustantivo o verbo significa «hasta el punto de...» o «al menos...», como en 「泣きたいくらい痛い」 o 「挨拶くらいしなさい」. No indica una cantidad aproximada."
+        "title": "〜ほど (grado)",
+        "explanation": "Significado parecido: para expresar grado suelen ser intercambiables (「泣きたいくらい／ほどうれしい」); 「ほど」 transmite más intensidad y es más formal. Para “como mínimo” o con menosprecio, solo sirve 「くらい」."
       },
       {
-        "title": "〜ほど",
-        "explanation": "「ほど」 detrás de una cantidad también significa «unos», como en 「十人ほど」. Es algo más formal y escrito que 「くらい」."
+        "title": "〜くらいなら",
+        "explanation": "Mismo origen: 「くらい」 + 「なら」 toma lo anterior como “algo de ese grado” para comparar, y significa “antes que..., mejor...” (「謝るくらいなら最初からやるな」)."
+      },
+      {
+        "title": "〜なんか・〜など (menosprecio)",
+        "explanation": "Ambos pueden expresar menosprecio. 「なんか」 desprecia el objeto mismo (「勉強なんか嫌いだ」) y hiere si se dirige a una persona; 「くらい」 minimiza la magnitud del asunto, con el foco en «ni siquiera algo tan pequeño ...»."
+      },
+      {
+        "title": "〜さえ",
+        "explanation": "「さえ」 significa «incluso, hasta», y cita un ejemplo extremo para expresar sorpresa o disgusto (「挨拶さえしない」: ni siquiera saluda). 「くらい」 significa «al menos esto» y se usa a menudo para exigir un mínimo (「挨拶ぐらいしなさい」)."
       }
     ]
   },
@@ -294,9 +418,9 @@
       }
     ],
     "notes": [
-      "「ごろ」 va con momentos y 「くらい」 con duraciones: 「三時ごろ」 (hacia las tres), 「三時間くらい」 (unas tres horas).",
-      "Se puede decir 「〜ごろに」 o 「〜ごろ」. En el habla, 「に」 se omite a menudo.",
-      "「子どもの頃（ころ）」 significa «cuando era niño» y se lee 「ころ」. 「このごろ」 (últimamente) y 「日頃」 (habitualmente) también son palabras fijas."
+      "「ごろ」 solo va con momentos, nunca con duraciones: ✕「三時間ごろ待った」→ ○「三時間くらい待った」.",
+      "「ごろ」 expresa una hora aproximada, así que no puede ir con 「ちょうど」 (justo, en punto): ✕「ちょうど三時ごろ」→ ○「ちょうど三時に」 o 「三時ごろ」.",
+      "Sola o detrás de 「の」 se lee 「ころ」 y significa «la época en que ...»: 「子どもの頃（ころ）」 = cuando era niño, no «aproximadamente». 「このごろ」 significa «últimamente»."
     ],
     "scenes": {
       "daily": [
@@ -330,25 +454,22 @@
       ]
     },
     "etymology": "「ごろ」 es el sustantivo 「頃（ころ）」 sonorizado al unirse a otra palabra. 「頃」 significa «tiempo, época»; detrás de una hora concreta indica «alrededor de ese momento», es decir, un momento aproximado.",
+    "formation": "「ごろ」 es el sustantivo 「頃（ころ）」 sonorizado (rendaku) al ir detrás de otra palabra. 「頃」 significa «tiempo, época», así que 「七時頃」 es literalmente «la franja de las siete». Una franja tiene cierta anchura, de modo que el conjunto significa «hacia las siete»: una hora aproximada. Y como su núcleo es «un momento o una época», solo va con horas, fechas y estaciones, nunca con duraciones. 「いつ＋ごろ」 = «¿en qué época?», para preguntar aproximadamente cuándo.",
     "similar": [
       {
         "title": "〜くらい・〜ぐらい",
-        "explanation": "「くらい」 indica una cantidad o duración aproximada (「二時間くらい」). 「ごろ」 solo indica un momento aproximado (「二時ごろ」)."
+        "explanation": "「くらい」 indica una cantidad o duración aproximada (「二時間くらい」); 「ごろ」 solo indica un momento aproximado (「二時ごろ」). Para preguntar «¿a qué hora más o menos?» se usa 「何時ごろ」, y para «¿cuánto tiempo?», 「どのくらい」."
       },
       {
-        "title": "〜に (momento)",
-        "explanation": "「七時に」 es una hora exacta. 「七時ごろ（に）」 es más o menos hacia las siete."
-      },
-      {
-        "title": "〜前後",
-        "explanation": "「〜前後」 también puede indicar «alrededor de» una hora, como en 「七時前後」. Es más escrito y se usa también con edades y cantidades."
+        "title": "〜に (momento puntual)",
+        "explanation": "「七時に」 es a las siete en punto; 「七時ごろ（に）」 es hacia las siete, con cierto margen. Usa 「に」 cuando el otro tiene que ser puntual (reuniones, citas) y 「ごろ」 cuando solo das una hora aproximada."
       }
     ]
   },
   {
     "id": "juu-chuu-throughout",
     "meaning": "Leído 「じゅう」 significa «durante todo..., por todo...» o «dentro de (un plazo)». Leído 「ちゅう」 significa «en pleno..., estar haciendo...».",
-    "connection": "Sustantivo + 中 (じゅう／ちゅう)",
+    "connection": "Sustantivo + 中 (ちゅう: 会議中・今週中 / じゅう: 一日中・世界中)",
     "senses": [
       {
         "label": "Todo (tiempo o espacio)",
@@ -366,7 +487,8 @@
         "connection": "今日中・今週中・今月中・午前中 + に",
         "examples": [
           "Entregue este informe antes de que acabe el día, por favor.",
-          "Le respondo antes de que termine la semana."
+          "Le respondo antes de que termine la semana.",
+          "Mientras no estaba, llegó un paquete."
         ]
       },
       {
@@ -376,14 +498,16 @@
         "examples": [
           "El jefe de departamento está ahora en una reunión.",
           "No usen el móvil durante la clase, por favor.",
-          "Esta tienda abre las 24 horas."
+          "Esta calle está en obras y no se puede pasar."
         ]
       }
     ],
     "notes": [
-      "「〜の中（なか）」 significa «dentro de...», como en 「箱の中」. No es esta gramática.",
-      "Regla general: «todo...» se lee 「じゅう」; «en curso», 「ちゅう」. El uso de plazo admite las dos lecturas.",
-      "El 「中」 de palabras como 「中学」, 「中国」, 「集中」 o 「背中」 no tiene que ver con esta gramática."
+      "El sentido de “todo el ámbito” se lee obligatoriamente 「じゅう」: ✕「いちにちちゅう」「せかいちゅう」→○「いちにちじゅう」「せかいじゅう」. Si lo lees mal, el oyente entenderá “en proceso de”.",
+      "「午前中」 se lee 「ごぜんちゅう」 y significa “en algún momento de la mañana”, no “toda la mañana”. Para decir “toda la mañana” usa 「午前中ずっと」.",
+      "「〜中（ちゅう）」 solo va detrás de sustantivos, no directamente de verbos: ✕「食べる中」→ ○「食事中」 o 「食べている」.",
+      "「〜中（じゅう）」 y 「〜の中（なか）」 no significan lo mismo: 「家中（いえじゅう）探した」 = busqué por toda la casa; 「家の中で探した」 = busqué dentro de la casa.",
+      "Cuando tu jefe dice 「今日中に」, es un plazo: «antes de que acabe hoy (normalmente antes de salir del trabajo)», no «en algún momento de hoy». Dejarlo para el día siguiente se considera faltar a tu palabra."
     ],
     "scenes": {
       "daily": [
@@ -401,6 +525,11 @@
           "title": "Buscar algo",
           "description": "No encuentras las llaves y has buscado por toda la casa.",
           "example": "He buscado por toda la casa, pero no aparecen las llaves."
+        },
+        {
+          "title": "Contestar el teléfono",
+          "description": "Un familiar dice que la persona no puede ponerse.",
+          "example": "Lo siento, mi hermano se está bañando ahora."
         }
       ],
       "work": [
@@ -413,22 +542,24 @@
           "title": "Indicar un plazo",
           "description": "Te comprometes a terminar algo dentro de un plazo.",
           "example": "Le enviaremos el presupuesto antes de que termine la semana."
+        },
+        {
+          "title": "Fijar un plazo",
+          "description": "Prometes terminar algo dentro de un plazo.",
+          "example": "Le enviaré el presupuesto a lo largo del día de mañana."
         }
       ]
     },
-    "etymology": "「中」 es un préstamo del chino. La lectura 「ちゅう」 conserva el sentido de «medio, dentro de», que se amplió a «en curso». 「じゅう」 es una variante sonorizada que significa «por todo el ámbito».",
+    "etymology": "「中」 es una palabra de origen chino. 「ちゅう」 es la lectura on y conserva el sentido chino de “dentro de, en medio de”. 「じゅう」 es una versión sonora de esa lectura, y en japonés desarrolló el sentido propio de “por todo el ámbito”.",
+    "formation": "「中」 significa originalmente «centro, interior». Con la lectura 「ちゅう」 conserva la idea de «estar dentro de ...»: detrás de sustantivos de acción como 「会議」 o 「授業」 significa «dentro de una reunión» → en curso. Con la lectura 「じゅう」 se fija en «cada punto dentro de este ámbito», así que 「一日中」 = cada momento del día → todo el día, y 「世界中」 = cada rincón del mundo → en todo el mundo. 「今日中に」 es «dentro del ámbito de hoy» → antes de que acabe hoy. La misma idea de «interior» se divide en dos lecturas y dos usos según se mire como «estar dentro» o «llenarlo todo».",
     "similar": [
       {
-        "title": "〜の中（なか）",
-        "explanation": "「の中」 se lee 「なか」 y significa «dentro» de un espacio físico, como en 「かばんの中」. 「〜中（じゅう）」 significa «por todo...», como en 「町中」 (por toda la ciudad)."
+        "title": "〜最中に",
+        "explanation": "「最中」 también se forma con 「中」 y significa «en pleno ...»; suele ir seguido de algo inesperado: 「会議の最中に電話が鳴った」. 「〜中」 solo describe que se está en un estado; 「最中に」 subraya «justo en ese momento»."
       },
       {
         "title": "〜間・〜間に",
-        "explanation": "「間（あいだ）」 significa «durante...» y puede ir con verbos. 「〜中（ちゅう）」 solo va con sustantivos y se usa en avisos breves y descripciones de estado."
-      },
-      {
-        "title": "〜ている",
-        "explanation": "「会議をしている」 y 「会議中だ」 significan casi lo mismo. 「〜中」 es más breve y formal, típico de carteles y del ámbito laboral."
+        "explanation": "「間（あいだ）」 también significa «durante ...» y puede ir detrás de verbos (「寝ている間に」); 「〜中」 solo va con sustantivos, es más conciso y es habitual en carteles y en el trabajo. 「会議の間」 ≈ 「会議中」."
       }
     ]
   },
@@ -466,10 +597,10 @@
       }
     ],
     "notes": [
-      "「たち」 se usa sobre todo con personas. No se añade a objetos comunes: 「✕本たち」.",
-      "Con un número o con palabras como 「みんな」 o 「たくさん」, normalmente no hace falta 「たち」: 「三人の学生」.",
-      "「友達（ともだち）」 ya es una sola palabra. Un solo amigo también es 「友達」.",
-      "Una forma más respetuosa es 「方（がた）」, como en 「先生方」. Formas más humildes o informales son 「ども」 y 「ら」, como en 「私ども」 y 「彼ら」."
+      "「〜たち」 significa «el grupo representado por esa persona», no necesariamente varios del mismo tipo: 「田中さんたち」 = Tanaka y la gente que va con él, no «varios Tanakas».",
+      "「たち」 no es lo bastante cortés para profesores, clientes y otros superiores: ✕「先生たち」「お客様たち」→ ○「先生方（がた）」, 「お客様方」 o 「皆様」.",
+      "En principio 「たち」 solo se usa con personas (y animales personificados): ✕「本たち」「車たち」.",
+      "「友達」 es una sola palabra y puede referirse a un solo amigo. ✕「友達たち」 suena infantil; para el plural basta con 「友達」 o 「友人たち」."
     ],
     "scenes": {
       "daily": [
@@ -503,18 +634,15 @@
       ]
     },
     "etymology": "「たち」 se escribe 「達」. Antiguamente era un sufijo honorífico de plural para dioses y nobles, como en 「公達（きんだち）」. Con el tiempo perdió su matiz de respeto y pasó a ser un sufijo general de plural para personas.",
+    "formation": "「たち」 se escribe 「達」 y era en origen un sufijo de plural honorífico para dioses y nobles. La estructura es sencilla: sustantivo de persona + marca de plural, así que 「私＋たち」 = «el grupo centrado en mí». Su núcleo es «un grupo representado por alguien», no un «más de uno» mecánico; por eso 「田中さんたち」 es el grupo de Tanaka, y por eso no suele añadirse cuando ya hay un número. Como nació para referirse a personas, en principio solo va con personas; el matiz de respeto se fue perdiendo, así que con superiores se cambia por el más cortés 「方（がた）」.",
     "similar": [
       {
-        "title": "〜ら",
-        "explanation": "「ら」 también marca plural, como en 「彼ら」 o 「僕ら」. Es más informal y, usado para otros, a veces suena poco educado."
+        "title": "〜ら (plural)",
+        "explanation": "「ら」 también marca plural (「彼ら」, 「僕ら」, 「これら」). Es más informal que 「たち」 y, aplicado a otros, a veces suena despectivo. 「ら」 también puede usarse con cosas (「これら」), mientras que 「たち」 en principio es solo para personas."
       },
       {
-        "title": "〜方（がた）",
-        "explanation": "「方（がた）」 es la versión respetuosa de 「たち」, como en 「先生方」 o 「あなた方」, para personas a las que se quiere mostrar respeto."
-      },
-      {
-        "title": "〜ども",
-        "explanation": "「ども」, usado para uno mismo, expresa humildad, como en 「私ども」 (nosotros, nuestra empresa). Es común en el ámbito laboral."
+        "title": "〜や〜など",
+        "explanation": "「など」 significa «etcétera» y pone ejemplos de un grupo; sirve para personas y cosas. Nombre + 「たち」 significa «X y compañía», el grupo centrado en esa persona. 「田中さんたちが来た」 se fija en ese grupo; 「田中さんや鈴木さんなどが来た」, en enumerar quiénes vinieron."
       }
     ]
   },
@@ -553,10 +681,9 @@
       }
     ],
     "notes": [
-      "La partícula 「を」 pasa a 「の」: 「✕漢字を書き方」→「漢字の書き方」.",
-      "Aquí 「〜方」 se lee 「かた」. En 「〜た方がいい」 y 「大きい方」 se lee 「ほう」 y significa otra cosa.",
-      "En 「あの方」 y 「係の方」, 「方」 es una forma respetuosa de decir «persona». No es esta gramática.",
-      "「仕方がない」 es una expresión fija: «no hay remedio»."
+      "「〜方」 convierte todo en un sustantivo, así que el 「を」 original pasa a 「の」: ✕「漢字を書き方」→ ○「漢字の書き方」.",
+      "A un verbo con する no se le puede añadir 「方」 directamente: ✕「勉強し方」→ ○「勉強の仕方（しかた）」.",
+      "Detrás de un adjetivo o de la forma た, 「方」 se lee 「ほう」 y significa algo totalmente distinto: 「行った方（ほう）がいい」 = más vale que vayas, 「大きい方（ほう）」 = el más grande. Ninguno significa «la manera de ...»."
     ],
     "scenes": {
       "daily": [
@@ -590,18 +717,15 @@
       ]
     },
     "etymology": "「方」 significa originalmente «dirección, lado». Unido a la raíz verbal, pasó de «la dirección en que se hace algo» a «la manera de hacer algo». Este uso ya existía en el período Heian.",
+    "formation": "「方」 significa originalmente «dirección, lado». La raíz de la forma ます de un verbo ya puede funcionar como sustantivo que nombra «esa acción» (「書き」 = el acto de escribir); al añadir 「方」 se obtiene «la dirección o el camino de escribir» → la manera de escribir. Como 「書き方」 entero es un sustantivo, el 「を」 que marcaba el objeto del verbo pasa a ser el 「の」 que modifica sustantivos (「漢字の書き方」), y detrás van 「が」, 「を」 o 「は」. La raíz de 「する」 es 「し」, y 「し＋方」 da 「仕方」; por eso los verbos con する se dicen 「勉強の仕方」.",
     "similar": [
       {
-        "title": "〜方法",
-        "explanation": "「方法（ほうほう）」 es un sustantivo independiente, «método». Es más formal y frecuente en la escritura. 「〜方」 va pegado al verbo y es muy común tanto hablado como escrito."
+        "title": "〜よう (manera)",
+        "explanation": "「〜よう」 también va detrás de la raíz de la forma ます para indicar «manera, modo», como en 「話しよう」 o 「書きよう」, con un sentido parecido a 「〜方」, pero es más literario y aparece sobre todo en frases hechas (「物は言いよう」). Para preguntar «cómo se hace» en el día a día, usa siempre 「〜方」."
       },
       {
-        "title": "〜ほうがいい",
-        "explanation": "「〜た方（ほう）がいい」 se lee 「ほう」 y es un consejo: «más vale que...». No tiene nada que ver con 「〜方（かた）」, «la manera de»."
-      },
-      {
-        "title": "〜ように",
-        "explanation": "Cuando se pregunta cómo con 「どうやって」 o 「どのように」, la respuesta suele usar 「〜方」: 「どうやって作りますか」 ≈ 「作り方を教えてください」."
+        "title": "〜ようがない",
+        "explanation": "「〜ようがない」 = «no hay manera de ...» (「連絡しようがない」); aquí 「よう」 significa precisamente «método». «No sé cómo se hace» es 「やり方がわからない」; «no hay nada que hacer» es 「やりようがない」."
       }
     ]
   },
@@ -640,9 +764,9 @@
       }
     ],
     "notes": [
-      "Detrás de 「あまり」 suele ir una negación. En el habla es común 「あんまり」.",
-      "「あまりにも〜」 y 「あまりの〜に」 significan «demasiado...» y van con afirmación. Es otro uso.",
-      "Al responder, se puede dejar la frase en 「あまり……」 como un «no» suave: 「好きですか」「うーん、あまり……」."
+      "Si se omite la negación, el sentido pasa a ser «demasiado»: 「あまり高くない」 = no es muy caro, 「あまりに（も）高い」 = es demasiado caro.",
+      "Cuando les piden su opinión, los japoneses suelen usar 「あまり〜ない」 para decir que no con suavidad. Decir directamente 「全然おいしくない」 o 「まずい」 hiere mucho, sobre todo a quien te ha cocinado o te ha hecho un regalo.",
+      "「あんまり」 es coloquial; con superiores, clientes o en situaciones formales di 「あまり」."
     ],
     "scenes": {
       "daily": [
@@ -676,18 +800,19 @@
       ]
     },
     "etymology": "「あまり」 se escribe 「余り」 y viene de la raíz del verbo 「余る」 (sobrar, excederse). Originalmente significaba «lo que sobra; exceso». Con negación, «no en exceso» pasó a «no muy...». 「あんまり」 es su forma enfática coloquial.",
+    "formation": "「あまり」 es la forma sustantiva del verbo 「余る」 (sobrar, exceder), y su sentido original es «exceso». 「あまり〜ない」 dice literalmente «no hasta un grado excesivo», es decir, «algo hay, pero no mucho» → «no muy». Como solo niega la parte del «exceso» y deja margen para «un poco», suena más suave que 「全然〜ない」 y se usa a menudo para negar de forma indirecta. Sin negación, 「あまりに（も）〜」 conserva el sentido original de «exceso» y significa «demasiado».",
     "similar": [
       {
         "title": "〜ぜんぜん〜ない",
-        "explanation": "「ぜんぜん〜ない」 significa «nada en absoluto», la negación más fuerte. 「あまり〜ない」 significa «no muy», solo un grado bajo."
+        "explanation": "「全然〜ない」 es «nada en absoluto», una negación total; 「あまり〜ない」 es «no mucho», deja margen. 「あまり飲まない」 = no bebo mucho; 「全然飲まない」 = no bebo ni una gota."
       },
       {
         "title": "ちっとも〜ない",
-        "explanation": "「ちっとも」 significa «ni un poco», parecido a 「ぜんぜん」. Es coloquial, suele sonar a queja y es mucho más fuerte que 「あまり」."
+        "explanation": "「ちっとも」 = «ni lo más mínimo», casi tan fuerte como 「全然」, y en la lengua hablada suele sonar a queja (「ちっとも来ない」). 「あまり」 es tranquilo y solo dice que el grado no es alto."
       },
       {
-        "title": "〜あまりにも",
-        "explanation": "「あまりにも〜」 significa «demasiado» y va con afirmación, como en 「あまりにも高い」 (carísimo). Es lo contrario de 「あまり〜ない」."
+        "title": "〜あまり（に）",
+        "explanation": "Mismo origen: 「あまりに（も）〜」 seguido de afirmación significa «demasiado, en exceso» (「あまりに高くて買えない」); esta entrada, 「あまり〜ない」 con negación, significa «no muy». Ambos vienen de 「余る」: uno dice «es excesivo» y el otro «no llega a ser excesivo»."
       }
     ]
   },
@@ -725,9 +850,9 @@
       }
     ],
     "notes": [
-      "El uso estándar lleva negación. En el habla, 「全然 + afirmación」 (p. ej. 「全然大丈夫」) es muy común, pero no conviene en situaciones formales.",
-      "「全然」 también va con palabras de sentido negativo, como 「全然だめだ」 (no sirve para nada).",
-      "Como respuesta, 「いいえ、全然。」 sola significa «no, para nada»."
+      "Decir 「全然おいしくない」 o 「全然だめ」 sobre la comida, el trabajo o el regalo de alguien hiere mucho. Suaviza una opinión negativa con 「あまり…」 o 「ちょっと…」.",
+      "「全然」 + afirmación (「全然大丈夫」) es solo para hablar entre amigos. Con superiores y clientes di 「まったく問題ございません」 o 「大丈夫です」.",
+      "En la lengua coloquial, 「こっちの方が全然いい」 significa «este es muchísimo mejor»: es énfasis, no negación, así que no lo entiendas como «no es nada bueno»."
     ],
     "scenes": {
       "daily": [
@@ -761,18 +886,23 @@
       ]
     },
     "etymology": "「全然」 es un préstamo del chino que significa «completamente». En la era Meiji se usaba tanto con afirmación como con negación, pero el uso con negación se impuso y se consideró la norma. Últimamente, 「全然 + afirmación」 vuelve a ser común en el habla.",
+    "formation": "「全然」 se compone de 「全」 (todo) + 「然」 (de tal modo), con el sentido original de «completamente, por entero». Combinado con una negación significa «completamente no ...», es decir, negación total. 「全然」 por sí solo solo significa «completamente» y no contiene negación, por eso en la era Meiji también podía ir con afirmaciones; después, su uso con negación se volvió abrumador y pasó a considerarse un adverbio que exige negación. En el habla actual, 「全然大丈夫」 o 「全然いい」 vuelven a usarlo simplemente como «completamente, con diferencia» para enfatizar: es un regreso a su sentido original.",
     "similar": [
       {
-        "title": "〜あまり〜ない",
-        "explanation": "「あまり〜ない」 significa «no muy», solo un grado bajo. 「全然〜ない」 significa «nada en absoluto», una negación total."
+        "title": "まったく〜ない",
+        "explanation": "「まったく〜ない」 significa lo mismo que 「全然〜ない」, pero es más escrito y formal, propio de textos y del trabajo; 「全然」 es coloquial. Con un cliente, 「まったく問題ありません」 es más adecuado que 「全然問題ないです」."
       },
       {
         "title": "ちっとも〜ない",
-        "explanation": "「ちっとも」 también significa «nada en absoluto». Es coloquial y suele sonar a queja. A diferencia de 「全然」, no va con afirmación (✕ちっとも大丈夫)."
+        "explanation": "「ちっとも」 también significa «nada en absoluto»; es coloquial y suele sonar a queja o reproche. A diferencia de 「全然」, no puede ir con afirmación (✕「ちっとも大丈夫」)."
       },
       {
-        "title": "まったく〜ない",
-        "explanation": "「まったく〜ない」 significa lo mismo que 「全然〜ない」, pero es más escrito y formal, típico de textos y del ámbito laboral."
+        "title": "すこしも〜ない",
+        "explanation": "「少しも〜ない」 significa literalmente «ni siquiera un poco», lo mismo que 「全然〜ない」, pero con un tono más neutro que sirve tanto por escrito como hablando; en la conversación lo más habitual es 「全然」."
+      },
+      {
+        "title": "〜あまり〜ない",
+        "explanation": "「あまり〜ない」 es «no muy» y solo indica que el grado es bajo; 「全然〜ない」 es «nada en absoluto», una negación total. Cuando quieras ser suave, usa 「あまり」."
       }
     ]
   },
@@ -811,9 +941,9 @@
       }
     ],
     "notes": [
-      "Para «todavía no lo he hecho» no se dice 「✕まだ食べなかった」, sino 「まだ食べていない」, porque el estado sigue hasta ahora.",
-      "La forma afirmativa 「まだ〜ている」 significa «todavía está...», como en 「まだ雨が降っている」 (todavía está lloviendo). Es otro sentido.",
-      "En el habla, 「〜ていない」 se convierte a menudo en 「〜てない」."
+      "«Todavía no lo he hecho» no se dice con el pasado negativo: ✕「まだ食べなかった」→ ○「まだ食べていない」. Si te preguntan 「もう食べましたか」 y respondes 「いいえ、食べませんでした」, suena a «(en aquel momento) no comí / no pienso comer»; di 「いいえ、まだです」.",
+      "Presionar a un superior o a un cliente con 「まだですか」 o 「まだ送っていないんですか」 suena impaciente y acusador. Di mejor 「〜の件、いかがでしょうか」.",
+      "Si quitas la negación, el sentido cambia por completo: 「まだ雨が降っている」 = todavía llueve, 「まだ雨が降っていない」 = todavía no ha empezado a llover."
     ],
     "scenes": {
       "daily": [
@@ -847,24 +977,24 @@
       ]
     },
     "etymology": "Se suele pensar que 「まだ」 viene de la antigua palabra 「いまだ」 (未だ), con la 「い」 perdida. Significa «todavía, hasta ahora». Con 「〜ていない」 expresa «hasta ahora sigue sin completarse».",
+    "formation": "「まだ」 (「未だ」) significa «todavía, hasta ahora», y 「〜ていない」 es la negación de 「〜ている」 (el resultado de una acción terminada que continúa), es decir, «ahora no está en estado de hecho». Juntos: «hasta este momento, todavía no está en estado de terminado» → «todavía no ...». Como describe el estado presente, hay que usar 「〜ていない」 y no 「〜なかった」, que señala un momento del pasado. Además, 「まだ」 implica que «se espera que ocurra más adelante», por eso la estructura se usa sobre todo con cosas que deberían hacerse o que se piensan hacer.",
     "similar": [
       {
-        "title": "〜もう〜た",
-        "explanation": "「もう〜た」 significa «ya...». Forma pareja de pregunta y respuesta con 「まだ〜ていない」: 「もう食べましたか」「いいえ、まだ食べていません」."
-      },
-      {
         "title": "〜ている",
-        "explanation": "La forma afirmativa 「まだ〜ている」 significa «todavía está...» (la acción o el estado continúa). 「まだ〜ていない」 significa «todavía no...»."
+        "explanation": "「〜ていない」 es simplemente la negación de 「〜ている」: «ahora no está en estado de hecho». 「まだ〜ている」 (afirmativo) significa «todavía está ...ndo»; 「まだ〜ていない」, «todavía no ha ...»."
       },
       {
-        "title": "〜ていない (solo)",
-        "explanation": "「〜ていない」 sin 「まだ」 solo dice «no lo he hecho». Con 「まだ」 se sobrentiende «pero lo haré o debería hacerlo»."
+        "title": "なかなか〜ない",
+        "explanation": "「なかなか〜ない」 indica que algo que se espera «no acaba de ocurrir», con un matiz de impaciencia (「バスがなかなか来ない」); 「まだ〜ていない」 solo constata objetivamente que hasta ahora no se ha hecho."
+      },
+      {
+        "title": "〜たことがある",
+        "explanation": "Su negativo 「〜たことがない」 significa «nunca he ...» y habla de la experiencia vital; 「まだ〜ていない」 habla de algo previsto que aún no se ha hecho. 「まだ見ていない」 implica que lo verás más adelante; 「見たことがない」 solo dice que no tienes esa experiencia."
       }
     ]
   },
   {
     "id": "mou-ta-already",
-    "title": "〜もう〜た (ya)",
     "meaning": "El adverbio 「もう」 con el pasado 「〜た／〜ました」 significa «ya»: una acción está terminada o un estado ha cambiado.",
     "connection": "もう + verbo en forma た／〜ました",
     "senses": [
@@ -898,9 +1028,10 @@
       }
     ],
     "notes": [
-      "「もう〜ない」 significa «ya no...», como en 「もう痛くない」 (ya no duele). Va en otra dirección.",
-      "En 「もう少し」 (un poco más), 「もう一度」 (otra vez) y 「もうすぐ」 (enseguida), 「もう」 significa «más» o «pronto», no «ya».",
-      "Para responder que no, no se dice 「✕いいえ、まだ食べませんでした」, sino 「いいえ、まだです／まだ食べていません」."
+      "「もう」 con negación significa «ya no», no «todavía no»: 「もう食べない」 = ya no voy a comer más, 「まだ食べていない」 = todavía no he comido. Si los confundes, el sentido cambia por completo.",
+      "Para responder en negativo no digas ✕「いいえ、まだ食べませんでした」; di 「いいえ、まだです」 o 「まだ食べていません」.",
+      "Responder 「もう送りました」 cuando alguien te vuelve a preguntar puede sonar molesto; con clientes es más adecuado 「すでにお送りしております」. Preguntas del tipo 「もう〜の？」, como 「もう帰るの？」, también suelen llevar sorpresa o reproche.",
+      "El 「もう」 de 「もう少し」, 「もう一度」 y 「もう一つ」 significa «más, otra vez», y 「もうすぐ」 significa «pronto»; ninguno significa «ya»."
     ],
     "scenes": {
       "daily": [
@@ -934,24 +1065,24 @@
       ]
     },
     "etymology": "Se suele pensar que 「もう」 procede de una variante del antiguo adverbio 「いま」 (今, ahora), con el sentido de «ya, aún más». Con el pasado significa «ya»; con una cantidad, «más, otro».",
+    "formation": "「もう」 expresa que «las cosas ya han cruzado cierta línea y han avanzado», y 「〜た」 marca la conclusión. Juntos: «antes del momento en que hablo, las cosas ya han pasado al lado de lo terminado» → «ya ...». Como el núcleo de 「もう」 es «cruzar una línea, un paso más allá», con números significa «más» (「もう一つ」) y con negación «ya no» (「もう〜ない」); solo cambia la línea que se cruza. Y como implica «haber pasado el momento previsto», 「もう〜た」 suele dar la sensación de «antes de lo que pensaba».",
     "similar": [
       {
-        "title": "〜まだ〜ていない",
-        "explanation": "「まだ〜ていない」 significa «todavía no...». Es la respuesta negativa a 「もう〜た」."
-      },
-      {
-        "title": "すでに〜た",
-        "explanation": "「すでに」 (既に) también significa «ya». Es más escrito y formal que 「もう」, típico de noticias y documentos de empresa, y no tiene el tono emotivo de 「もう」."
-      },
-      {
         "title": "〜たばかり",
-        "explanation": "「〜たばかり」 subraya «acabar de...», muy poco después. 「もう〜た」 solo dice que ya está hecho, sin indicar cuánto hace."
+        "explanation": "「〜たばかり」 subraya «acabo de ...», muy cerca del momento en que se terminó (「来たばかり」); 「もう〜た」 solo dice que ya está hecho, a menudo con el matiz de «antes de lo esperado»."
+      },
+      {
+        "title": "〜ところだ",
+        "explanation": "「〜たところだ」 significa «acabo de terminar (justo en este momento)» y se fija en la fase de la acción; 「もう〜た」 se fija en el hecho de que ya está terminado, sea reciente o no."
+      },
+      {
+        "title": "〜てしまう",
+        "explanation": "「〜てしまった」 indica que la acción se ha completado del todo o expresa pesar; suele combinarse con 「もう」: 「もう全部食べてしまった」. 「もう〜た」 por sí solo no expresa pesar."
       }
     ]
   },
   {
     "id": "question-word-ka",
-    "title": "〜palabra interrogativa + か (indefinido)",
     "meaning": "Una palabra interrogativa + 「か」 expresa algo indeterminado: «algo, alguien, algún sitio, algún día».",
     "connection": "Palabra interrogativa (何・誰・どこ・いつ・どれ, etc.) + か",
     "senses": [
@@ -985,10 +1116,9 @@
       }
     ],
     "notes": [
-      "「何か」 es el afirmativo «algo». 「何も〜ない」 es la negación total, «nada». No los confundas.",
-      "「どこか」 y 「いつか」 admiten 「へ」, 「に」 y 「で」, pero 「が」 y 「を」 suelen omitirse: 「何か食べたい」.",
-      "El 「〜か」 al final de la oración es la partícula interrogativa (「どこですか」). Es distinto.",
-      "「何か月」 se lee 「なんかげつ」 y significa «cuántos meses». No es esta gramática."
+      "「どこかへ行きましたか」 pregunta «¿fuiste a algún sitio?», así que primero se responde 「はい／いいえ」; 「どこへ行きましたか」 pregunta «¿adónde fuiste?». Si los confundes, acabarás respondiendo a otra pregunta.",
+      "En frases negativas normalmente no se usa 「何か」, sino 「何も〜ない」: ✕「何か食べませんでした」→ ○「何も食べませんでした」. En cambio, 「何か食べませんか」 es una invitación: «¿comemos algo?».",
+      "Con superiores o clientes no se dice 「誰か」, sino 「どなたか」: 「どなたかいらっしゃいますか」. El coloquial 「なんか」 también suena informal; en el trabajo di 「何かご質問はございますか」."
     ],
     "scenes": {
       "daily": [
@@ -1022,24 +1152,24 @@
       ]
     },
     "etymology": "「か」 era originalmente una partícula de pregunta e incertidumbre. Detrás de una palabra interrogativa, convierte «¿qué será?» en «algo indeterminado». Este uso ya existía en el japonés antiguo.",
+    "formation": "El interrogativo representa «el elemento desconocido», y 「か」 expresa incertidumbre. Interrogativo + 「か」 = «uno, no sé cuál», lo que convierte el interrogativo de pregunta en una forma de señalar algo no determinado. Por eso 「何か」 y 「誰か」 funcionan como un solo sustantivo y pueden ser sujeto u objeto (「が」 y 「を」 se omiten a menudo), y la frase no tiene por qué ser una pregunta. Con los mismos interrogativos, 「も」 da «todos / ninguno» y 「でも」 da «cualquiera vale»: el significado lo decide la partícula que sigue.",
     "similar": [
       {
-        "title": "〜palabra interrogativa + も〜ない",
-        "explanation": "「何も〜ない」 es negación total, «nada». 「何か」 significa «algo» y sirve en oraciones afirmativas y negativas."
+        "title": "〜でも (interrogativo + でも)",
+        "explanation": "Los mismos interrogativos + 「でも」 significan «cualquier cosa / cualquiera, da igual» (「何でもいい」); + 「か」 solo significan «alguno» (「何かほしい」). Lo primero es una afirmación total; lo segundo, indefinido."
       },
       {
-        "title": "〜palabra interrogativa + でも",
-        "explanation": "「何でも」 y 「誰でも」 significan «cualquier cosa, cualquiera»: afirmación total. 「何か」 y 「誰か」 solo indican uno indeterminado."
+        "title": "〜interrogativo + も〜ない (negación total)",
+        "explanation": "Los mismos interrogativos + 「も」 con negación significan «nada, nadie» (「何もない」). Si te preguntan 「何かありますか」, la respuesta negativa es 「何もありません」."
       },
       {
-        "title": "〜か (pregunta)",
-        "explanation": "El 「か」 final convierte la oración en pregunta. Justo detrás de una palabra interrogativa, 「か」 significa «algún...», y la oración no tiene por qué ser una pregunta."
+        "title": "〜か何か",
+        "explanation": "「〜か何か」 se forma con 「か」 + 「何か」 y significa «... o algo así», como en 「コーヒーか何か飲みませんか」. Da un ejemplo dejando margen para otras opciones, mientras que 「何か」 solo no especifica nada."
       }
     ]
   },
   {
     "id": "question-word-mo-nai",
-    "title": "〜palabra interrogativa + も〜ない (negación total)",
     "meaning": "Una palabra interrogativa + 「も」 con negación expresa una negación total: «nada, nadie, ningún sitio».",
     "connection": "Palabra interrogativa (+ partícula) + も + forma negativa de verbo / adjetivo",
     "senses": [
@@ -1074,9 +1204,9 @@
       }
     ],
     "notes": [
-      "「何も」 se lee 「なにも」. 「何でも」 se lee 「なんでも」 y significa «cualquier cosa, todo» (afirmativo).",
-      "Con afirmación, 「どれも」 y 「誰も」 significan «todos», como en 「どれもおいしい」 (todos están ricos). 「いつも」 significa «siempre» y no es negación total.",
-      "A 「何も」 y 「誰も」 no se les añade 「が」 ni 「を」: 「✕誰がも」, 「✕何をも」."
+      "Las partículas van entre el interrogativo y 「も」: ✕「どこもに行かない」→ ○「どこにも行かない」; ✕「誰もと話さない」→ ○「誰とも話さない」. 「が」 y 「を」 simplemente desaparecen: ✕「誰がも」.",
+      "「何も」 y 「何でも」 son opuestos: 「何も食べません」 = no como nada, 「何でも食べます」 = como de todo.",
+      "Cuando el anfitrión sirve la comida diciendo 「何もありませんが、どうぞ」, es una fórmula de modestia («no es gran cosa, pero sírvete»), no una afirmación literal; no lo tomes al pie de la letra ni le des la razón."
     ],
     "scenes": {
       "daily": [
@@ -1110,18 +1240,19 @@
       ]
     },
     "etymology": "「も」 significa originalmente «también». Detrás de una palabra interrogativa expresa «sea lo que sea, también...», y con negación se convierte en negación total: «nada». Este uso ya existía en el japonés antiguo.",
+    "formation": "El interrogativo se refiere a «cualquier elemento posible», y 「も」 significa «también, todo incluido», así que juntos dicen «sea cuál sea, también ...». Combinado con la negación, pasa a ser «sea cuál sea, no ...»: negación total. Como 「も」 por sí solo significa «todo incluido» y no contiene negación, 「どれも」 y 「誰も」 con afirmación significan «todos ...» (「どれもおいしい」). Partículas como 「に」, 「と」 y 「へ」 se conservan y se colocan entre el interrogativo y 「も」 (「誰にも」), porque 「も」 se añade al conjunto «interrogativo + partícula».",
     "similar": [
       {
-        "title": "〜palabra interrogativa + か",
-        "explanation": "「何か」 y 「誰か」 significan «algo, alguien» y no son negativos. 「何も〜ない」 y 「誰も〜ない」 son negación total."
+        "title": "〜interrogativo + か (indefinido)",
+        "explanation": "Los mismos interrogativos + 「か」 significan «algo, alguien» (「誰か来た」) y no son negativos; + 「も」 con negación expresan negación total (「誰も来ない」)."
       },
       {
-        "title": "〜palabra interrogativa + でも",
-        "explanation": "「何でも」 y 「誰でも」 son afirmación total: «cualquier cosa, cualquiera». 「何も〜ない」 es negación total."
+        "title": "〜でも (interrogativo + でも)",
+        "explanation": "「何でも」 y 「誰でも」 son afirmaciones totales, «cualquier cosa / cualquiera»; 「何も〜ない」 es una negación total. Ojo con la lectura: 「何でも」 se lee 「なんでも」 y 「何も」, 「なにも」."
       },
       {
         "title": "〜ぜんぜん〜ない",
-        "explanation": "「全然〜ない」 niega el grado («nada en absoluto»). 「何も〜ない」 niega el objeto («ninguna cosa»)."
+        "explanation": "「全然〜ない」 niega el grado («nada en absoluto»); 「何も〜ない」 niega el objeto («ni una sola cosa»). 「全然食べない」 subraya «no como en absoluto»; 「何も食べない」, «no como ni una sola cosa»."
       }
     ]
   },
@@ -1160,9 +1291,10 @@
       }
     ],
     "notes": [
-      "「〜をください」 sirve para pedir cosas. Para pedir que alguien haga algo, se usa 「〜てください」.",
-      "Formas más corteses son 「〜をお願いします」 y 「〜をいただけますか」.",
-      "「ご注意ください」 y 「お待ちください」 siguen el patrón 「お／ご〜ください」, una petición respetuosa. No son esta gramática."
+      "Decirle 「資料をください」 a un superior o a un cliente suena a orden; di 「資料をいただけますか」 o 「資料をお願いできますか」.",
+      "「〜をください」 solo sirve para pedir cosas; para pedir que alguien haga algo se usa la forma て, y si te equivocas el sentido cambia por completo: 「お茶をください」 = deme té, 「お茶を入れてください」 = prepáreme un té, por favor.",
+      "El número va detrás de 「を」: 「りんごを三つください」; ✕「三つのりんごをください」 suena muy poco natural.",
+      "「ちょうだい」 es solo para la familia y amigos muy cercanos; con otras personas suena infantil y maleducado."
     ],
     "scenes": {
       "daily": [
@@ -1196,18 +1328,19 @@
       ]
     },
     "etymology": "「ください」 viene de 「くだされ」, el imperativo del verbo 「くださる」 (下さる, «conceder»). 「くださる」 significaba «(un superior) da a (un inferior)», así que 「〜をください」 equivale literalmente a «concédame...».",
+    "formation": "「を」 marca lo que quieres recibir, y 「ください」 es el imperativo de 「くださる」 («alguien superior me da»). La frase entera significa «concédame (esta cosa)», así que la dirección de la entrega es fija, «tú → yo», y solo sirve para pedirle algo al otro. Como 「くださる」 ya es lenguaje respetuoso, 「ください」 tiene una cortesía básica; pero sigue siendo un imperativo y a superiores y clientes les suena directo, por eso para ser más cortés se pasa a la forma interrogativa 「いただけますか」.",
     "similar": [
       {
         "title": "〜をお願いします",
-        "explanation": "「〜をお願いします」 es más cortés y suave que 「〜をください」, y también sirve para servicios (「タクシーをお願いします」). 「ください」 se usa sobre todo para cosas concretas."
+        "explanation": "「〜をお願いします」 es más suave y cortés que 「〜をください」 y también sirve para servicios y acciones (「タクシーをお願いします」); 「ください」 se usa sobre todo para cosas y suena más directo. Para pedir en una tienda valen los dos."
       },
       {
         "title": "〜てください",
-        "explanation": "「〜てください」 pide que alguien haga una acción. 「〜をください」 pide que te den una cosa."
+        "explanation": "Mismo origen: 「ください」 detrás de la forma て de un verbo pide al otro que haga una acción (「見てください」); detrás de sustantivo + 「を」 pide que te dé una cosa (「水をください」)."
       },
       {
         "title": "〜がほしい",
-        "explanation": "「〜がほしい」 solo dice que uno quiere algo. 「〜をください」 se lo pide directamente a la otra persona."
+        "explanation": "「〜がほしい」 solo expresa tu deseo y no se lo pide directamente a nadie (「新しい靴がほしい」); 「〜をください」 es pedirlo cara a cara. Decirle 「水がほしい」 a un camarero no es natural; hay que decir 「水をください」."
       }
     ]
   },
@@ -1246,9 +1379,9 @@
       }
     ],
     "notes": [
-      "「お願いします」 sirve para muchas cosas: objetos, servicios y acciones. 「ください」 se usa sobre todo para objetos.",
-      "Una forma más formal es 「お願いいたします」, muy común en correos de empresa.",
-      "「よろしくお願いします」 es una fórmula de saludo (aprox. «cuento con usted»). No es esta gramática."
+      "Al pedir a un cliente que haga algo, pon 「ご／お」 delante del sustantivo de acción: 「確認をお願いします」→「ご確認をお願いいたします」, 「ご連絡をお願いいたします」.",
+      "Al llamar a otra empresa para preguntar por alguien, di 「営業部の田中様をお願いいたします」. Al revés, cuando mencionas a un compañero de tu propia empresa ante alguien de fuera, aunque sea tu jefe, no uses tratamientos como 「さん」 o 「部長」: ✕「田中部長は外出中です」→ ○「田中は外出しております」.",
+      "「〜をお願いします」 formula la petición con un sustantivo, así que no puede llevar un verbo delante: ✕「確認するをお願いします」→ ○「確認をお願いします」 o 「確認してください」."
     ],
     "scenes": {
       "daily": [
@@ -1287,18 +1420,19 @@
       ]
     },
     "etymology": "「お願い」 es el sustantivo del verbo 「願う」 (desear, pedir) con el prefijo de cortesía 「お」. 「します」 es la forma cortés de 「する」. Literalmente: «le hago una petición».",
+    "formation": "「お願い」 se forma con el prefijo embellecedor 「お」 + la raíz del verbo 「願う」 (desear, pedir), y es el sustantivo «petición»; 「します」 es la forma cortés de 「する」. La estructura es «presento (este sustantivo) como petición», es decir, «le pido que me dé / que haga ...». Como el objeto es solo «el contenido de la petición», puede ser una cosa (「コーヒー」) o un servicio o acción (「確認」, 「説明」), por lo que abarca más que 「ください」. 「お＋raíz＋する」 es en sí un patrón de humildad en el que el hablante se rebaja, por eso suena más suave que el imperativo 「ください」; si se cambia 「する」 por el humilde 「いたす」, se obtiene el aún más formal 「お願いいたします」.",
     "similar": [
       {
         "title": "〜をください",
-        "explanation": "「ください」 pide una cosa directamente y suena más directo. 「お願いします」 es más cortés y también sirve para servicios y acciones (「説明をお願いします」)."
+        "explanation": "「〜をください」 pide una cosa directamente y suena algo seco; 「〜をお願いします」 es más cortés y también sirve para servicios y acciones (「説明をお願いします」). Con el personal de una tienda valen los dos; con clientes y superiores usa 「お願いします」."
       },
       {
-        "title": "〜てください",
-        "explanation": "「〜てください」 usa un verbo para pedir que alguien haga algo. 「〜をお願いします」 usa un sustantivo, más breve y más cortés: 「確認してください」 ≈ 「確認をお願いします」."
+        "title": "〜ていただけませんか",
+        "explanation": "「〜ていただけませんか」 pide que alguien haga algo en forma de pregunta y es aún más suave y atento que 「〜をお願いします」, adecuado para pedir un favor que va más allá de lo habitual. 「確認をお願いします」 ≈ 「確認していただけませんか」; lo segundo es más deferente."
       },
       {
-        "title": "〜をいただけますか",
-        "explanation": "「〜をいただけますか」 significa «¿podría darme...?». Al ser una pregunta, es aún más suave que 「お願いします」."
+        "title": "お〜ください",
+        "explanation": "「ご確認ください」 y 「お待ちください」 también piden con cortesía que alguien haga algo, pero siguen siendo imperativos y se usan sobre todo en avisos, megafonía y atención al cliente. En los correos, para pedir algo se suele usar 「ご確認をお願いいたします」, que suena más suave."
       }
     ]
   }

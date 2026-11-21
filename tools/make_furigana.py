@@ -77,7 +77,7 @@ def japanese_texts():
     def walk(obj):
         if isinstance(obj, dict):
             for k, v in obj.items():
-                if k == "ja" and isinstance(v, str):
+                if k in ("ja", "kanji") and isinstance(v, str):
                     texts.add(v)
                 elif k in ("patterns", "negativeExamples", "id", "subsumes"):
                     continue

@@ -1,0 +1,61 @@
+# 识别准确度评测：对 tests/ocr/samples 的真实照片跑 Vision 文字识别，导出原始结果（JSON）供离线分析。
+name: OCR Eval
+
+on:
+  workflow_dispatch:
+    inputs:
+      configs:
+        description: "要评测的方案（逗号分隔）：base（与 App 相同）, first（只跑第一步，不分条重新定位）, lc, strips3, strips5"
+        required: false
+        default: "base"
+  push:
+    branches: ["claude/**"]
+    paths:
+      - "tests/ocr/**"
+      - "JapaneseGrammarScannerTests/OCREvalTests.swift"
+      - "JapaneseGrammarScanner/Services/TextRecognizer.swift"
+      - "JapaneseGrammarScanner/Services/DocumentCorrector.swift"
+      - "JapaneseGrammarScanner/Services/ScanAnalyzer.swift"
+      - "JapaneseGrammarScanner/Services/StripLocator.swift"
+      - "JapaneseGrammarScanner/Services/TextBand.swift"
+      - ".github/workflows/ocr-eval.yml"
+
+jobs:
+  eval:
+    runs-on: xcode-27
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode and simulator
+        id: sim
+        run: |
+          sudo xcode-select -s "$(ls -d /Applications/Xcode_27*.app | sort -V | tail -1)"
+          UDID=$(xcrun simctl list devices available -j | python3 -c "
+          import json,sys
+          d=json.load(sys.stdin)['devices']
+          c=[(k,x) for k,v in d.items() if 'iOS' in k for x in v if x['name'].startswith('iPhone')]
+          c.sort(key=lambda t:(t[0], t[1]['name'].endswith('Pro Max')))
+          print(c[-1][1]['udid'])")
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+      - name: Run recognition on samples
+        env:
+          TEST_RUNNER_OCR_SAMPLES: ${{ github.workspace }}/tests/ocr/samples
+          TEST_RUNNER_OCR_OUT: ${{ github.workspace }}/ocr-out
+          TEST_RUNNER_OCR_CONFIGS: ${{ inputs.configs || 'base' }}
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project JapaneseGrammarScanner.xcodeproj \
+            -scheme JapaneseGrammarScanner \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -only-testing:JapaneseGrammarScannerTests/OCREvalTests \
+            CODE_SIGNING_ALLOWED=NO \
+            | tee eval.log | grep -E "error:|Test Case|Executed|\*\* TEST" || true
+          ls ocr-out | wc -l
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ocr-out
+          path: |
+            ocr-out
+            eval.log

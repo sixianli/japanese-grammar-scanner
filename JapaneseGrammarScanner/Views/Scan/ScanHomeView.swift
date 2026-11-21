@@ -24,10 +24,11 @@ struct ScanHomeView: View {
             }
             .toolbar(.hidden, for: .navigationBar)
             .withAppRoutes()
-            .grammarChooser(cluster: $tappedCluster, library: library) { id in
-                path.append(.grammar(id))
+            .grammarChooser(cluster: $tappedCluster, library: library) { id, matched in
+                path.append(.grammarMatch(id, matched ?? ""))
             }
         }
+        .environment(\.pushRoute, { path.append($0) })
         .onAppear {
             applyDemoMode()
             updateCameraState()
@@ -35,6 +36,9 @@ struct ScanHomeView: View {
         .onDisappear { camera.stop() }
         .onChange(of: path) { _, _ in updateCameraState() }
         .onChange(of: scenePhase) { _, _ in updateCameraState() }
+        .onReceive(NotificationCenter.default.publisher(for: .popToRoot)) { note in
+            if note.object as? Int == AppTab.scan { path = [] }
+        }
         .onReceive(NotificationCenter.default.publisher(for: .openSamplePage)) { _ in
             path = []
             openSample()
@@ -59,7 +63,12 @@ struct ScanHomeView: View {
                         fit: .fill,
                         library: library
                     ) { tappedCluster = $0 }
+                    // 框跟随画面平滑移动、淡入淡出，而不是每次识别都整体闪一下
+                    .animation(.easeOut(duration: 0.3), value: camera.liveResult.boxes)
                 }
+                // 新画面到达前不显示（避免旧画面一闪），到达后快速淡入
+                .opacity(camera.hasLiveFrame ? 1 : 0)
+                .animation(.easeOut(duration: 0.2), value: camera.hasLiveFrame)
         case .denied:
             messageView(icon: "camera.fill", text: "没有相机权限。\n请在「设置」中允许访问相机，或从相册选择图片。", showSettings: true)
         case .unavailable:
@@ -70,12 +79,13 @@ struct ScanHomeView: View {
     private func messageView(icon: String, text: LocalizedStringKey, showSettings: Bool) -> some View {
         VStack(spacing: 16) {
             Image(systemName: icon).font(.system(size: 44))
-            Text(text).multilineTextAlignment(.center)
+            Text(localized: text).multilineTextAlignment(.center)
             if showSettings, let url = URL(string: UIApplication.openSettingsURLString) {
-                Button("打开设置") { UIApplication.shared.open(url) }
+                Button(tr("打开设置")) { UIApplication.shared.open(url) }
                     .buttonStyle(.borderedProminent)
             }
-            Button("试试示例书页", action: openSample)
+            Button(tr("试试示例书页"), action: openSample)
+                .accessibilityIdentifier("scan.trySample")
                 .buttonStyle(.bordered)
                 .tint(.white)
         }
@@ -86,19 +96,20 @@ struct ScanHomeView: View {
     // MARK: - 顶部：实时识别到的语法点
 
     private var livePanel: some View {
-        let ids = camera.liveResult.orderedGrammarIDs
+        let ids = library.displayableIDs(camera.liveResult.orderedGrammarIDs)
         return VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Image(systemName: "text.viewfinder")
-                (ids.isEmpty ? Text("将相机对准书本上的日文") : Text("识别到 \(ids.count) 个语法点，点击高亮或下方标签查看"))
+                (ids.isEmpty ? Text(localized: "将相机对准书本上的日文") : Text(localized: "识别到 \(ids.count) 个语法点，点击高亮或下方标签查看"))
                     .font(.subheadline.weight(.medium))
                 Spacer()
                 if ids.isEmpty {
-                    Button("试试示例", action: openSample)
+                    Button(tr("试试示例"), action: openSample)
+                        .accessibilityIdentifier("scan.trySample")
                         .font(.caption.weight(.semibold))
                         .padding(.horizontal, 10)
                         .padding(.vertical, 5)
-                        .background(.white.opacity(0.2), in: Capsule())
+                        .glassBackground(in: Capsule(), interactive: true)
                 }
             }
             if !ids.isEmpty {
@@ -110,7 +121,7 @@ struct ScanHomeView: View {
                                     path.append(.grammar(id))
                                 } label: {
                                     HStack(spacing: 4) {
-                                        Text(p.title)
+                                        Text(p.displayTitle)
                                         Text(p.level.rawValue).font(.caption2.bold())
                                     }
                                     .font(.subheadline)
@@ -127,7 +138,7 @@ struct ScanHomeView: View {
         }
         .foregroundStyle(.white)
         .padding(12)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 14))
+        .glassBackground(in: RoundedRectangle(cornerRadius: 18, style: .continuous))
         .environment(\.colorScheme, .dark)
         .padding(.horizontal)
         .padding(.top, 8)
@@ -141,6 +152,7 @@ struct ScanHomeView: View {
             PhotosPicker(selection: $photoItem, matching: .images) {
                 controlIcon(isLoadingPhoto ? "hourglass" : "photo.on.rectangle", label: "相册")
             }
+            .accessibilityIdentifier("scan.photos")
             Spacer()
             Button {
                 if let image = camera.captureStill() {
@@ -154,7 +166,8 @@ struct ScanHomeView: View {
             }
             .disabled(camera.status != .running)
             .opacity(camera.status == .running ? 1 : 0.4)
-            .accessibilityLabel("定格并精细识别")
+            .accessibilityLabel(tr("定格并精细识别"))
+            .accessibilityIdentifier("scan.shutter")
             Spacer()
             Button {
                 camera.torchOn.toggle()
@@ -172,8 +185,8 @@ struct ScanHomeView: View {
             Image(systemName: name)
                 .font(.title2)
                 .frame(width: 52, height: 52)
-                .background(.black.opacity(0.45), in: Circle())
-            Text(label).font(.caption)
+                .glassBackground(in: Circle(), interactive: true)
+            Text(localized: label).font(.caption)
         }
         .foregroundStyle(.white)
     }
@@ -190,7 +203,7 @@ struct ScanHomeView: View {
 
     private func openSample() {
         if let image = UIImage(named: "SamplePage") {
-            path.append(.scan(ScanImage(image: image.normalizedForOCR())))
+            path.append(.scan(ScanImage(image: image.normalizedForOCR(), isSample: true)))
         }
     }
 

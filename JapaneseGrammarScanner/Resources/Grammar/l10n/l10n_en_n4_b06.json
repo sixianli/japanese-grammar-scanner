@@ -1,93 +1,5 @@
 [
   {
-    "id": "te-de-reason",
-    "title": "〜て・〜で (cause)",
-    "meaning": "Links a cause and its result with the te-form. The second clause is usually a feeling, an evaluation, or a result nobody can control.",
-    "connection": "Verb te-form / i-adjective くて / na-adjective or noun + で + result",
-    "senses": [
-      {
-        "label": "Verb te-form",
-        "meaning": "The first clause is the cause; the second is the feeling or state it leads to. The second clause is often 「うれしい」, 「びっくりした」, 「すみません」, etc. It sounds natural and soft, and doesn't stress the reason the way 「から」 does.",
-        "connection": "Verb te-form + feeling / evaluation (〜て、うれしい／〜て、すみません)",
-        "examples": [
-          "I was surprised to hear the news.",
-          "I'm happy I was able to pass the exam.",
-          "Sorry I'm late."
-        ]
-      },
-      {
-        "label": "Adjective くて",
-        "meaning": "A quality or state described by an adjective causes the result. The second clause is often a potential or state expression such as 「できない」 or 「わからない」.",
-        "connection": "i-adjective stem + くて / negative 「〜なくて」",
-        "examples": [
-          "This question is too hard. I don't understand it.",
-          "It was so hot I couldn't sleep."
-        ]
-      },
-      {
-        "label": "Noun / na-adjective + で",
-        "meaning": "A noun or na-adjective + 「で」 gives the cause. The noun is often an accident, illness, weather, or disaster. The second clause is usually something that happened on its own.",
-        "connection": "Noun / na-adjective stem + で (風邪で・地震で・心配で)",
-        "examples": [
-          "I stayed home from school because of a cold.",
-          "The trains stopped because of the earthquake.",
-          "I'm so worried I can't sleep."
-        ]
-      }
-    ],
-    "notes": [
-      "The second clause can't be a volitional expression, command, request, or invitation. ✕「時間がなくて、タクシーに乗りましょう」. Use 「ので／から」 instead.",
-      "The second clause is usually non-volitional: emotion adjectives, negative potential verbs, 「すみません」, 「ありがとう」, etc.",
-      "「Noun + で」 can also mark a place or means. Check whether the second clause is a “result” to tell them apart."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "Apologizing for being late",
-          "description": "When you're late to meet a friend, give the reason, then apologize.",
-          "example": "Sorry to keep you waiting."
-        },
-        {
-          "title": "Explaining an absence",
-          "description": "Telling a teacher or family member why you missed school.",
-          "example": "I had a fever, so I stayed home from school."
-        },
-        {
-          "title": "Getting a present",
-          "description": "Saying how you feel about a friend's gift.",
-          "example": "I was really happy to get the present."
-        }
-      ],
-      "work": [
-        {
-          "title": "Thanking a client",
-          "description": "Thanking someone for their help in a business email.",
-          "example": "Thank you for your cooperation. It was a great help."
-        },
-        {
-          "title": "Reporting a delay",
-          "description": "Telling your boss you were late because of an accident.",
-          "example": "The train was delayed by an accident, so I was late."
-        }
-      ]
-    },
-    "etymology": "The connecting particle 「て」 is generally thought to come from the continuative form of the old perfective auxiliary 「つ」. It first showed actions happening one after another. From “A happened, then B” came the natural cause-and-effect reading “B because of A”. 「で」 is the voiced form of 「て」 after ん or voiced sounds; the 「で」 after nouns comes from the copula form 「にて」.",
-    "similar": [
-      {
-        "title": "〜から (cause / reason)",
-        "explanation": "「から」 gives a reason subjectively, and the second clause can be a volitional expression, command, or request. 「〜て」 only loosely links cause and result, and its second clause can't be volitional."
-      },
-      {
-        "title": "〜ので",
-        "explanation": "「ので」 explains a cause objectively, and the second clause can be a request (〜ので、待ってください). 「〜て」 can't be used this way."
-      },
-      {
-        "title": "〜なくて (cause)",
-        "explanation": "「なくて」 is the negative of this pattern: “because (something) isn't / doesn't ...”, as in 「お金がなくて、買えない」."
-      }
-    ]
-  },
-  {
     "id": "toori-ni",
     "meaning": "“Just as ...”: doing something, or something happening, exactly the way it was said, written, thought, or planned.",
     "connection": "Verb dictionary form / ta-form + とおりに; noun + の + とおりに; noun + どおりに",
@@ -124,9 +36,10 @@
       }
     ],
     "notes": [
-      "「とおり」 is written 「通り」 in kanji, but in this grammar it is often written in kana. Directly after a noun, it is read 「どおり」.",
-      "To modify a noun, use 「〜とおりの」: 「思ったとおりの結果」.",
-      "「通り」 also means “street” (大通り・この通りは車が多い). That is not this grammar point."
+      "Directly after a noun it's read 「どおり」; after 「の」 it's 「とおり」: ✕「予定とおり」→ ○「予定どおり」 or 「予定のとおり」.",
+      "The verb's tense decides which words you're following: 「先生が言ったとおりに」 = as the teacher has (already) said; 「私が言うとおりに」 = as I'm (about to) tell you.",
+      "To agree with a superior or client, say 「おっしゃるとおりです」. 「あなたの言うとおりです」 sounds rude because of 「あなた」 and the plain form.",
+      "「思ったとおり」 means “just as I expected”, while 「思いどおりにならない」 means “things don't go the way you want” — don't mix them up."
     ],
     "scenes": {
       "daily": [
@@ -160,25 +73,30 @@
       ]
     },
     "etymology": "「とおり」 is written 「通り」, the noun form of the verb 「通る」 (to pass through). It first meant “a road people pass along”, then “the same route or way of doing things”, which gave the meaning “just as ...”. After a noun, the first sound becomes voiced: 「どおり」.",
+    "formation": "「〜とおりに」 = the noun 「とおり（通り）」 + the case particle 「に」. 「通り」 is the nominalized masu-stem of the verb 「通る」; its basic meaning is “the road people walk along”, extended to “the way of going, the manner”. The verb or noun before it specifies “which road” (「言ったとおり」 = the road that was described), and adding 「に」 makes it modify the following action: “do it along that road” → “do it the way ...”. Ending with 「だ」 means “matching that road” → “just as ...”. When it attaches directly to a noun, the two form a compound and the first sound of the second element becomes voiced (rendaku), giving 「どおり」.",
     "similar": [
       {
         "title": "〜ように (as stated)",
-        "explanation": "「〜ように」 is mostly used to introduce an explanation, as in “as mentioned above” or “as you all know”. 「〜とおりに」 stresses doing something exactly like a model, with no difference."
+        "explanation": "Close in meaning — both can be translated as “as ...”. 「ように」 is mostly used to introduce an explanation (「前に述べたように」); 「とおりに」 stresses doing something exactly the same way, matching the model precisely (「言われたとおりに書く」)."
       },
       {
-        "title": "〜まま",
-        "explanation": "「まま」 means leaving something as it is (靴のまま入る). 「とおりに」 means following a model or instruction."
+        "title": "〜にしたがって",
+        "explanation": "「〜に従って」 also means “in accordance with”, but it's more formal and mostly follows nouns like rules, instructions, or orders (「指示に従って避難する」), emphasizing obedience. 「とおりに」 can attach directly to verbs like 「言った」 or 「書いてある」 and is more conversational."
       },
       {
-        "title": "〜に従って",
-        "explanation": "「〜に従って」 is more formal and usually follows rules or instructions (ルールに従って). 「とおりに」 is more conversational and can follow verbs like 「言った」 and 「見た」."
+        "title": "〜に沿って",
+        "explanation": "「〜に沿って」 (N2) means “in line with” a policy, plan, or expectation (「方針に沿って進める」) and is fairly formal. 「とおりに」 emphasizes that the result is identical to the model."
+      },
+      {
+        "title": "〜通す",
+        "explanation": "Same origin: both come from the verbs 「通る／通す」. 「通り」 extended from “the road one passes along” to “the same way”, while 「〜通す」 (「読み通す」) keeps the sense of “going all the way through”, meaning to carry something through to the end."
       }
     ]
   },
   {
     "id": "aida-during",
-    "meaning": "「〜間」 means something continues throughout a period. 「〜間に」 means something happens at some point within that period.",
-    "connection": "Verb ている-form / dictionary form, i-adjective, na-adjective + な, noun + の + 間 (に)",
+    "meaning": "「〜間」 means the main clause continues throughout the whole period; 「〜間に」 means something happens at one point within that period; 「AとBの間」 means “between” in space or among people.",
+    "connection": "Verb ている form / dictionary form / ない form, い-adjective, な-adjective + な, noun + の + 間(に); noun A と noun B の 間",
     "senses": [
       {
         "label": "Throughout the period",
@@ -199,12 +117,23 @@
           "I did the laundry while the kids were asleep.",
           "I want to climb Mt. Fuji while I'm in Japan."
         ]
+      },
+      {
+        "label": "Between",
+        "meaning": "Shows space, time, or relationships between things or people: “between ..., among ...”. 「AとBの間」 is common.",
+        "connection": "Noun A + と + noun B + の + 間 (に)",
+        "examples": [
+          "There's a bank between the station and the post office.",
+          "This app is popular among young people."
+        ]
       }
     ],
     "notes": [
-      "With 「間」, the second clause is a continuing state; with 「間に」, it is a one-time action. ✕「寝ている間、電話が来た」. Say 「寝ている間に」.",
-      "「間」 is read 「あいだ」. 「この間」 usually means “the other day”, which is not this grammar point.",
-      "「AとBの間」 means “between A and B” in space. That is not this grammar point either."
+      "With 「間」 the second clause is a state that lasts through the whole period; with 「間に」 it's a one-time event within it. Mixing them up makes the sentence nonsensical: ✕「寝ている間、電話が来た」→ ○「寝ている間に、電話が来た」.",
+      "Verbs usually come in the 「ている」 form to show duration: ✕「電車に乗る間、本を読んだ」→ ○「電車に乗っている間、本を読んだ」.",
+      "「この間」 usually means “the other day”, not “during this time”: 「この間、田中さんに会った」 = I met Tanaka the other day.",
+      "To stress “while ... still holds (before it's too late)”, use 「うちに」: 「熱い間に食べて」 is unnatural →○「熱いうちに食べて」.",
+      "「間に合う」 is read 「まにあう」 and means “to make it in time” — it has nothing to do with this pattern: 「電車に間に合った」 = I caught the train."
     ],
     "scenes": {
       "daily": [
@@ -222,6 +151,11 @@
           "title": "Remembering a trip",
           "description": "Telling a friend about your time studying abroad.",
           "example": "While I was studying abroad, I kept a diary in Japanese every day."
+        },
+        {
+          "title": "Watching a child grow",
+          "description": "Being amazed at how fast a child grows.",
+          "example": "You've grown so much since I last saw you!"
         }
       ],
       "work": [
@@ -234,22 +168,32 @@
           "title": "Meeting preparations",
           "description": "Explaining what should be done during the meeting.",
           "example": "Please print out the materials while we're in the meeting."
+        },
+        {
+          "title": "Assigning tasks",
+          "description": "A boss asks you to prepare materials during a meeting.",
+          "example": "While the meeting is going on, please make copies of the materials."
         }
       ]
     },
     "etymology": "「間 (あいだ)」 first meant the gap between two things, that is, “between” in space. It was later used for time, meaning the period between two points. Adding 「に」 places an action at one point within that period.",
+    "formation": "「〜間（に）」 = the noun 「間（あいだ）」 (the gap between two things) + (the case particle 「に」). Think of time as a line: the preceding action or state marks off a stretch “between two ends”. With 「間」 alone, the second clause covers that whole stretch, so it must be a state or action that lasts from start to finish. Adding 「に」, which marks a point in time, places the second clause at one point inside the stretch, so it's a one-time event. Because you're marking off a stretch, the preceding verb usually takes the continuous 「ている」 form. If this “stretch between two ends” is placed in space or among people, it gives the original meaning, as in 「AとBの間」 and 「若者の間で」.",
     "similar": [
       {
         "title": "〜うちに",
-        "explanation": "「うちに」 stresses “while you still can, before things change”, with a feeling that it might be too late later (若いうちに). 「間に」 just states the time span objectively."
+        "explanation": "「うちに」 also means “while ...”, but carries urgency: “while the situation hasn't changed yet, before it's too late” (「若いうちに旅行しよう」). 「間に」 just objectively marks a time span with a clear start and end."
       },
       {
         "title": "〜ながら",
-        "explanation": "「ながら」 is one person doing two things at once. With 「間」, the two clauses can have different subjects (母が料理を作っている間、私は掃除した)."
+        "explanation": "Both can express two things happening at the same time. 「ながら」 requires the same subject doing two actions at once (「音楽を聞きながら勉強する」); with 「間」 the subjects can differ (「母が料理を作っている間、私は掃除した」)."
       },
       {
-        "title": "〜とき",
-        "explanation": "「とき」 refers to a point or period in time without stressing its length. 「間」 stresses the whole span from start to finish."
+        "title": "〜中 (じゅう / ちゅう)",
+        "explanation": "「〜中（じゅう）」 after a time noun also means “throughout the period” (「夏休み中、ずっと田舎にいた」) and is more concise than 「〜の間」. But it can't follow a verb clause — with verbs you need 「〜間」."
+      },
+      {
+        "title": "〜最中に",
+        "explanation": "「最中に」 (N3) means “right in the middle of ...”, usually followed by an unexpected interruption (「会議の最中に電話が鳴った」). 「間に」 is just an objective time span, without the “of all times” nuance."
       }
     ]
   },
@@ -288,9 +232,10 @@
       }
     ],
     "notes": [
-      "「まで」 means an action continues until a time (5時まで働く). 「までに」 means something is done once before a time (5時までに帰る). Mixing these up is the most common mistake.",
-      "「今までに」 and 「これまでに」 mean “so far”, not a deadline.",
-      "「参考までに」 is a set phrase meaning “just for reference”."
+      "「まで」 is followed by a continuing action, 「までに」 by a one-time action; mix them up and the meaning changes: ✕「5時までに働く」→ ○「5時まで働く」. 「5時まで待つ」 = wait until 5; 「5時までに来る」 = come by 5.",
+      "The verb before it is always in the dictionary form, even when talking about the past: ✕「彼が来たまでに」→ ○「彼が来るまでに、部屋を片付けた」.",
+      "In business, setting a deadline with a blunt 「金曜日までに出してください」 sounds like an order. To clients or superiors, 「金曜日までにご提出いただけますと幸いです」 is more appropriate.",
+      "「今までに」 and 「これまでに」 mean “so far”, not a deadline: 「今までに三回行った」 = I've been there three times so far."
     ],
     "scenes": {
       "daily": [
@@ -324,26 +269,26 @@
       ]
     },
     "etymology": "「まで」 is generally thought to come from 「真手 (まて)」, a limit you reach. Adding the time particle 「に」 shrinks “up to that limit” into “at some point before the limit”, which gives the deadline meaning.",
+    "formation": "「〜までに」 = the adverbial particle 「まで」 (the limit “up to”) + the case particle 「に」 (a point in time). 「まで」 marks an end point, and 「に」 pins the action to a single point; together they mean “(completed) at some point before reaching that limit”. That's why it's followed by a one-time action, not a continuing one; without 「に」, 「まで」 means the action keeps going up to the end point. Since the end point is a limit not yet reached, the verb before it is in the dictionary form.",
     "similar": [
       {
         "title": "〜まで (end point)",
-        "explanation": "「まで」 is followed by a continuing action: you keep doing it until a time (3時まで寝た). 「までに」 is followed by a one-time action done before a deadline (3時までに起きる)."
+        "explanation": "Same origin, and the easiest to confuse. 「まで」 means something continues until a time (「3時まで寝た」); 「までに」 means something is completed at some point before that time (「3時までに起きる」), with a sense of a deadline."
       },
       {
         "title": "〜まえに",
-        "explanation": "「まえに」 only shows order (寝る前に歯を磨く). 「までに」 stresses a deadline you must not go past."
+        "explanation": "Both relate to “before a time”. 「前に」 only states the order of two events (「寝る前に歯を磨く」); 「までに」 draws a deadline that must not be passed (「寝るまでに宿題を終わらせる」)."
       },
       {
         "title": "〜うちに",
-        "explanation": "「うちに」 means doing something while a state still lasts. 「までに」 takes a clear point in time as the deadline."
+        "explanation": "「〜ないうちに」 can also be translated “before ...” (「暗くならないうちに帰ろう」), but it stresses “hurry and do it before things change”. 「までに」 uses a clear point in time as the deadline, without that emotional urgency."
       }
     ]
   },
   {
     "id": "ni-wa-purpose",
-    "title": "〜には (purpose)",
-    "meaning": "“To do ...”, “If you want to ...”: states a purpose, and the second clause says what is needed or what works best.",
-    "connection": "Verb dictionary form + には; some suru-nouns + には",
+    "meaning": "After a dictionary-form verb it sets out a purpose, and the main clause says what is needed or what method is best. After a noun for a person it gives an evaluation or ability from that person's standpoint, “for ..., to ...”; in letters it can also mark a respected person.",
+    "connection": "Dictionary-form verb / some suru-nouns + には (purpose); noun for a person + には (evaluation, ability, respect)",
     "senses": [
       {
         "label": "What it takes",
@@ -372,12 +317,40 @@
           "Passing takes daily effort.",
           "Improving takes time."
         ]
+      },
+      {
+        "label": "For ... (evaluation)",
+        "meaning": "Evaluates something from a certain person's standpoint. Like “for ...” or “too ... for ...”. Usually followed by evaluative words like 「難しい」, 「大きすぎる」, or 「無理だ」.",
+        "connection": "Person + には + adjective (難しい, 大きい, 無理だ, etc.)",
+        "examples": [
+          "This problem is hard for children.",
+          "These clothes are too big for me."
+        ]
+      },
+      {
+        "label": "... can / can't",
+        "meaning": "Marks who has (or lacks) the ability or perception. Often used with 「できる」, 「分かる」, and 「見える」, with a contrastive feel: “I, for one, can't ...”.",
+        "connection": "Person + には + できる／分かる／見える, etc.",
+        "examples": [
+          "I could never do something like that.",
+          "I can't understand how he feels."
+        ]
+      },
+      {
+        "label": "Letters: a respected person",
+        "meaning": "In letters and speeches, 「〜には」 is used instead of 「〜は」 to mark the other person respectfully. It is written and formal.",
+        "connection": "Respected person + には + お元気で／お変わりなく, etc.",
+        "examples": [
+          "I trust that you are all doing well."
+        ]
       }
     ],
     "notes": [
-      "The second clause explains or evaluates what the purpose needs. It can't be the speaker's own specific action. ✕「駅へ行くには、バスに乗ります」. Use 「ために」 there.",
-      "「Noun + には」 often means “for (someone)” (子どもには難しい), which is different. Check whether what comes before is a purpose.",
-      "「行くには行ったが」 (“I did go, but ...”) is a concessive use, not this grammar point."
+      "The second clause should say what's needed or what's best — not a specific action the speaker has already decided on: ✕「駅へ行くには、バスに乗ります」→ ○「駅へ行くには、バスに乗るといい」. For your own actions, use 「ために」.",
+      "After a person or a noun, it usually means “for (someone), to (someone)” — a completely different meaning: 「子どもには難しい」 = difficult for children, not “in order to (benefit) children”.",
+      "「〜にとって」 cannot be used for ability: ✕「私にとってそんなことはできない」→ ○「私にはそんなことはできない」.",
+      "Saying 「私にはできません」 or 「私には無理です」 to a superior or client sounds like a flat refusal, or even like dodging responsibility. Soften it: 「私では力不足かもしれませんが…」 or 「少し難しいかと存じます」.",
+      "In letters, 「〜には」 (「皆様にはお元気で…」) shows respect toward the reader. It is only used for the other person, never for yourself: ✕「私にはお元気で過ごしております」."
     ],
     "scenes": {
       "daily": [
@@ -392,9 +365,14 @@
           "example": "If you want to lose weight, exercise is the best way."
         },
         {
-          "title": "Paperwork",
-          "description": "A friend asks how to get a membership card.",
-          "example": "You need ID to get a card."
+          "title": "Trying on clothes ordered online",
+          "description": "Finding that the size doesn't fit.",
+          "example": "This size might be a little small for me."
+        },
+        {
+          "title": "Can't see far away",
+          "description": "Looking at a distant sign with a friend.",
+          "example": "I can't really see those letters."
         }
       ],
       "work": [
@@ -407,28 +385,42 @@
           "title": "Job requirements",
           "description": "A job listing states how to apply.",
           "example": "To apply, you need to submit a résumé."
+        },
+        {
+          "title": "Politely turning down a task",
+          "description": "Telling your boss it's beyond your ability.",
+          "example": "This job is too much of a burden for me."
+        },
+        {
+          "title": "Writing a greeting letter",
+          "description": "The opening of a seasonal greeting letter from a company to a client.",
+          "example": "We are delighted to hear of your company's continued prosperity."
         }
       ]
     },
-    "etymology": "The particle 「に」 marks a goal or destination, and 「は」 makes it the topic. 「〜するには」 literally means “as for the goal of doing ...”, which became “if you want to do ...”.",
+    "etymology": "The particle 「に」 marks a goal or destination, and 「は」 makes it the topic. 「〜するには」 literally means “as for the goal of doing ...”, which became “if you want to do ...”. The other use of 「〜には」 follows a noun for a person: 「に」 points out “for whom” (the person whose evaluation or ability is in question) and 「は」 makes it the topic with a contrastive tone, giving “for ..., as far as ... is concerned”.",
+    "formation": "「〜には」 = verb dictionary form + the case particle 「に」 (goal, destination) + the topic particle 「は」. 「に」 first sets up the action as “the goal to be reached”, then 「は」 brings that goal up as the topic: “as for the goal of doing ...”. So the second clause explains or evaluates that goal — what it takes, how much it costs, what method is best. Because the whole sentence is commenting on a goal rather than narrating an action, the second clause doesn't contain the speaker's own specific volitional act. After a noun for a person, 「に」 marks the person to whom an evaluation, ability or feeling belongs and 「は」 raises that person as the topic with a contrastive sense, “as far as this person goes”, as in 「私には無理だ」. The honorific use in letters borrows the indirectness of 「に」 to avoid addressing the reader directly with 「は」, which sounds more formal. Both uses are 「に」 (point of arrival) + 「は」 (topic); the only difference is whether what precedes is “a goal to be reached” or “the person to whom an evaluation belongs”.",
     "similar": [
       {
         "title": "〜ために",
-        "explanation": "After 「ために」, the second clause is an action taken to reach the goal (合格するために勉強する). After 「には」, it is usually a requirement or evaluation (合格するには勉強が必要だ)."
+        "explanation": "Both express purpose. After 「ために」 comes a specific action taken to reach the goal (「合格するために勉強する」); after 「には」 comes a requirement or evaluation (「合格するには勉強が必要だ」)."
       },
       {
-        "title": "〜には (for someone)",
-        "explanation": "「Noun + には」 means “for ...” (私には難しい) and shows whose point of view an evaluation comes from. In this grammar point, what comes before is a purpose."
+        "title": "〜のに (use / purpose)",
+        "explanation": "「のに」 is usually followed by 「使う・便利だ・役に立つ」 to describe a use (「料理するのに使う」); 「には」 is usually followed by 「必要だ・いい・かかる」, with a stronger sense of setting up a goal. The two are often interchangeable in 「〜には／〜のに時間がかかる」."
       },
       {
-        "title": "〜のに (use)",
-        "explanation": "「のに」 often goes with 「使う・便利だ・必要だ」 and shows what something is used for (料理するのに使う). 「には」 more often goes with 「必要だ・いい」 and feels more like stating a goal."
+        "title": "〜にとって",
+        "explanation": "Both translate as “for ...”. 「〜にとって」 makes a value judgment from someone's standpoint and is often followed by 「大切だ」 or 「問題だ」. 「〜には」 is more conversational, usually followed by direct evaluations like easy/hard or big/small, and can also express ability (「私にはできない」), which 「〜にとって」 cannot."
+      },
+      {
+        "title": "〜にしたら・〜にすれば",
+        "explanation": "Also means “from ...'s standpoint”, but focuses on putting yourself in someone else's shoes and guessing their feelings: 「母にしたら、心配なのだろう」. With 「〜には」, the speaker directly makes an evaluation or judgment."
       }
     ]
   },
   {
     "id": "de-kara-tsukuru",
-    "title": "〜で作る・〜から作る (materials)",
     "meaning": "Shows what something is made from. Use 「で」 when you can still see the original material, and 「から」 when you can't.",
     "connection": "Noun + で／から + 作る (作られる・できている)",
     "senses": [
@@ -463,9 +455,10 @@
       }
     ],
     "notes": [
-      "The rule: if you can see the material in the product, use 「で」; if not, use 「から」. Sometimes either works; the line isn't absolute.",
-      "The passive 「〜で／から作られる」 is common when describing what products or local specialties are made from.",
-      "In 「台所で作る」 and 「自分で作る」, 「で」 marks a place or a way of doing something, not a material."
+      "Use 「で」 when the raw material is still recognizable in the product, and 「から」 when it's been chemically transformed: 「ワインはぶどうから作る」 is more natural than 「ぶどうで作る」, while 「木で作った机」 uses 「で」.",
+      "Don't map “make A into B” word for word: ✕「牛乳パックを箱に作った」→ ○「牛乳パックで箱を作った」.",
+      "The 「で」 in 「台所で作る」「自分で作る」「三人で作る」 marks place, manner, or number of people — not material. Check whether the noun before 「で」 is actually a material of the product.",
+      "「〜からできている」 can also mean “consist of”: 「委員会は五人からできている」 — what comes before it doesn't have to be a physical material."
     ],
     "scenes": {
       "daily": [
@@ -499,109 +492,15 @@
       ]
     },
     "etymology": "「で」 is the particle for means and materials, from the classical 「にて」. 「から」 originally marks a starting point: the raw material is where the change starts on the way to becoming a product. That is why it's used when the original form can't be seen.",
+    "formation": "「で作る」 = noun + the case particle 「で」 (means, what you rely on) + 「作る」; 「から作る」 = noun + the case particle 「から」 (starting point) + 「作る」. 「で」 treats the material as “what you use” to make something, and the material stays as it is in the product, so it's used when the original form is visible. 「から」 treats the raw material as a “point of departure” that changes into something else, so it's used when the original form can't be seen. By the same logic, 「〜でできている」 and 「〜からできている」 are chosen according to whether the material keeps its original form.",
     "similar": [
       {
         "title": "〜で (means / method)",
-        "explanation": "The material 「で」 is a kind of “means” 「で」. A means is a tool (はしで食べる); a material is part of the finished product itself (木で作る)."
+        "explanation": "Same origin: material 「で」 is a kind of means 「で」. A means is an external tool (「はしで食べる」), while a material becomes part of the product (「木で作る」). Check whether the thing remains in the finished product."
       },
       {
         "title": "〜から (starting point)",
-        "explanation": "「から」 basically marks a starting point in time or space. For raw materials, think of it as “the starting point of a change”."
-      },
-      {
-        "title": "〜で (place of action)",
-        "explanation": "In 「工場で作る」 and 「台所で作る」, 「で」 marks a place. Keep it separate from the material 「で」."
-      }
-    ]
-  },
-  {
-    "id": "to-conditional",
-    "title": "〜と (condition)",
-    "meaning": "“When A, B (always) happens”: once A is true, B follows naturally and inevitably. Used for natural laws, habits, how machines work, and so on.",
-    "connection": "Verb dictionary form / nai-form, i-adjective, na-adjective + だ, noun + だ + と",
-    "senses": [
-      {
-        "label": "Natural result",
-        "meaning": "Once A happens, B always follows. Used for natural laws, operating machines, giving directions, etc. Like “when / whenever ...”.",
-        "connection": "Verb dictionary form / nai-form + と (〜になると・〜を押すと・まっすぐ行くと)",
-        "examples": [
-          "When spring comes, the cherry blossoms bloom.",
-          "If you press this button, water comes out.",
-          "Go straight, and you'll see a bank on the right."
-        ]
-      },
-      {
-        "label": "Habit / repetition",
-        "meaning": "Every time someone does A, they do B. Used to describe habits. Like “whenever ...”.",
-        "connection": "Verb dictionary form + と、〜 (usually a third person, or your own habit)",
-        "examples": [
-          "My dad turns on the TV as soon as he gets home.",
-          "I drink coffee as soon as I get up in the morning."
-        ]
-      },
-      {
-        "label": "Discovery",
-        "meaning": "「〜と、〜た」 means that after doing A, you found B. The second clause is in the past and is often something unexpected.",
-        "connection": "Verb dictionary form + と、〜た (窓を開けると、〜ていた)",
-        "examples": [
-          "When I opened the window, it was snowing.",
-          "When I got home, my mother was there."
-        ]
-      }
-    ],
-    "notes": [
-      "The second clause can't be a volitional expression, wish, command, or request. ✕「駅に着くと、電話してください」. Say 「着いたら」.",
-      "Only the dictionary form or nai-form comes before 「と」, never the ta-form.",
-      "The 「と」 in 「〜と思う」 and 「〜と言う」 is for quoting, and the 「と」 in 「友達と」 means “with”. Neither is a condition."
-    ],
-    "scenes": {
-      "daily": [
-        {
-          "title": "Giving directions",
-          "description": "A local explains the way to a tourist.",
-          "example": "Turn right at the second corner, and you'll see the station."
-        },
-        {
-          "title": "Explaining an appliance",
-          "description": "Showing a family member how to use a new rice cooker.",
-          "example": "Just press this button and it cooks the rice."
-        },
-        {
-          "title": "Talking about yourself",
-          "description": "Chatting with a friend about your habits.",
-          "example": "Whenever I drink, my face turns red right away."
-        }
-      ],
-      "work": [
-        {
-          "title": "Instruction manual",
-          "description": "A manual describes what happens when you operate a device.",
-          "example": "When you turn on the power, the lamp lights up."
-        },
-        {
-          "title": "Reporting a trend",
-          "description": "Explaining a market pattern in a report.",
-          "example": "When temperatures rise, drink sales go up."
-        }
-      ]
-    },
-    "etymology": "Conditional 「と」 is generally thought to have developed from the 「と」 used for listing and quoting, and it became common from the early modern period. It ties two events tightly together, so it means “once A happens, B follows”.",
-    "similar": [
-      {
-        "title": "〜ば (hypothetical)",
-        "explanation": "「ば」 focuses on the condition itself (“as long as ...”), and the second clause can be a volitional expression or wish. 「と」 focuses on the inevitable result, and its second clause can't be volitional."
-      },
-      {
-        "title": "〜たら",
-        "explanation": "「たら」 has the widest range: the second clause can be a request or volitional expression. 「と」 is only for natural results, habits, and discoveries."
-      },
-      {
-        "title": "〜なら",
-        "explanation": "「なら」 picks up what the other person said and gives advice (京都へ行くなら、新幹線がいい). It doesn't express an inevitable result."
-      },
-      {
-        "title": "〜たら〜た・〜と〜た (discovery)",
-        "explanation": "For “discovering” something, both 「と」 and 「たら」 work. 「と」 is a bit more literary and is common in narration in novels."
+        "explanation": "Same origin: the basic meaning of 「から」 is a starting point in time or space (「駅から歩く」). For raw materials it's “the starting point of a change” — the material is processed into something else, so it's mostly used when the original form can't be seen."
       }
     ]
   },
@@ -631,9 +530,10 @@
       }
     ],
     "notes": [
-      "「場合」 is for hypothetical cases, not for a one-time event that already happened. ✕「昨日雨が降った場合は」.",
-      "It's more formal than 「〜とき」 and common in notices, contracts, and manuals.",
-      "「場合によっては」 means “depending on the situation”, and 「〜場合が多い」 means “in many cases”. These are different."
+      "「場合」 is used for hypotheticals or general rules, not for narrating a specific one-time event that actually happened: ✕「昨日財布をなくした場合、交番に行きました」→ ○「なくしたとき、交番に行きました」.",
+      "The tense before it changes the meaning: 「遅れる場合は連絡してください」 = contact us (in advance) if you expect to be late; 「遅れた場合は」 = in case you've already been late.",
+      "「場合」 is read 「ばあい」, not 「ばごう」 — both kanji use their native Japanese (kun) readings.",
+      "「場合によっては」 means “depending on the situation, possibly even”, and 「〜場合が多い」 means “in many cases” — neither is a hypothetical condition."
     ],
     "scenes": {
       "daily": [
@@ -667,18 +567,19 @@
       ]
     },
     "etymology": "「場合」 is made of 「場」 (place) and 「合い」 (meeting). It first meant “the place where a situation comes up”, that is, “occasion, case”. With 「は」 as the topic marker, it introduces a hypothetical case.",
+    "formation": "「場合」 = 「場（ば: place）」 + 「合い（あい: meeting, coming together）」; its basic meaning is “the scene where things come together”, i.e. “a situation, a case”. The preceding clause specifies “which situation”, and the topic particle 「は」 sets it up as the topic: “in the case of ... (here's what to do)”. Because it sets up a situation as a “scene” rather than narrating something that happened, it's naturally suited to hypotheticals, rules, and explaining countermeasures.",
     "similar": [
       {
-        "title": "〜たら",
-        "explanation": "「たら」 is conversational and very versatile. 「場合は」 is more formal, common in rules and explanations, and usually refers to situations that could happen again."
-      },
-      {
         "title": "〜とき",
-        "explanation": "「とき」 can refer to a time that actually happened (昨日帰ったとき). 「場合」 is only for hypothetical cases, not specific past events."
+        "explanation": "「とき」 can refer to a moment that actually happened (「昨日帰ったとき」); 「場合」 is only for hypotheticals or general rules, sounds more formal, and is common in notices, regulations, and manuals."
       },
       {
-        "title": "〜なら",
-        "explanation": "「なら」 usually picks up something the other person mentioned and gives advice. 「場合は」 objectively sets up a situation and then explains how to handle it."
+        "title": "〜たら",
+        "explanation": "「たら」 is conversational and widely used; 「場合は」 is more formal and often sets up “a situation that might arise” before explaining what to do (「火事の場合は、エレベーターを使わないでください」)."
+      },
+      {
+        "title": "〜際（に）",
+        "explanation": "「際（に）」 (N3) is a formal version of 「とき」, usually referring to the actual time you do something (「ご利用の際は」). 「場合」 focuses on “if this situation should arise” and is more hypothetical."
       }
     ]
   },
@@ -717,9 +618,10 @@
       }
     ],
     "notes": [
-      "「〜ばいい」 and 「〜たらいい」 are mostly interchangeable. 「〜ばいい」 focuses on the condition itself, with a feeling of “that's all it takes”.",
-      "In writing, 「〜ばよい」 is common.",
-      "When said about someone else, 「〜ばいいのに」 can sound critical (言えばいいのに = “You could have just said so”)."
+      "Saying 「〜ばいいじゃない」 or 「〜ばいいでしょ」 to someone sounds impatient and cold — “well, just do ..., then”: 「自分でやればいいじゃない」. Getting this answer when asking for help will annoy the asker.",
+      "「〜ばいいのに」 aimed at someone else is a reproach — “you could have just ... (why didn't you?)”: 「言えばいいのに」. Don't use it to superiors or clients.",
+      "The ba-form conjugation is the most common mistake: ✕「行くばいい」→ ○「行けばいい」; ✕「安いばいい」→ ○「安ければいい」; する becomes 「すれば」: ✕「どうしればいい」→ ○「どうすればいい」.",
+      "When suggesting something to a superior, avoid 「〜ばいいですよ」 and use 「〜てはいかがでしょうか」 instead."
     ],
     "scenes": {
       "daily": [
@@ -753,25 +655,26 @@
       ]
     },
     "etymology": "Made of the conditional 「ば」 and the adjective 「いい (良い)」: literally “it's good if ...”. From “it's fine once the condition is met” came the uses for advice, asking what to do, and wishes.",
+    "formation": "「〜ばいい」 = the hypothetical 「ば」 + the adjective 「いい（良い）」, literally “if ..., (it's) good”. The speaker simply puts forward one condition and says meeting it is “good”, so it becomes advice: “all you need to do is ...”. As a question, 「どうすればいい？」 asks “what condition should be met for it to be good?”. When the condition hasn't come true and is out of one's control (「晴れれば」), “if ..., it'd be good” becomes a wish. Precisely because it only stresses “meeting the condition is enough”, using it in reply to someone can sound like “what's so hard about that?”.",
     "similar": [
       {
         "title": "〜たらいい",
-        "explanation": "Almost the same meaning; 「たらいい」 is more conversational. When asking what to do, both 「どうしたらいい」 and 「どうすればいい」 are very common."
+        "explanation": "Basically the same meaning; both 「どうすればいい」 and 「どうしたらいい」 are very common for asking how to do something. 「ばいい」 stresses “meeting this condition is enough”, while 「たらいい」 is more conversational."
       },
       {
         "title": "〜ほうがいい",
-        "explanation": "「ほうがいい」 is clear, firm advice after comparing options. 「ばいい」 just points out one way that works."
+        "explanation": "「ほうがいい」 is clear advice after a comparison, fairly strong, sometimes a warning (「行ったほうがいい」). 「ばいい」 just points out one workable method — “doing this will do”."
       },
       {
         "title": "〜ばよかった",
-        "explanation": "「ばよかった」 is past tense and expresses regret about something you didn't do. 「ばいい」 is about now and the future."
+        "explanation": "Same origin: changing 「いい」 to its past form 「よかった」 turns “doing this would be good” into “it would have been good if I'd done this”, expressing regret about the past."
       }
     ]
   },
   {
     "id": "tara-ii",
-    "meaning": "“It would be good to ...”: gives advice. As a question, it asks “What should I do?” It can also express a hope.",
-    "connection": "Verb / adjective ta-form + らいい (行ったらいい・休んだらいい)",
+    "meaning": "Means “it would be good if…”: said to another person it is gentle advice; in question form it asks “what should I do”; about things outside one's control it expresses a wish or good wishes, “I hope that…”.",
+    "connection": "Verb / adjective た-form + らいい (行ったらいい); verb / adjective plain present + といい (晴れるといいね); + な・ね・のに・けど",
     "senses": [
       {
         "label": "Advice",
@@ -797,14 +700,36 @@
         "connection": "Verb / adjective ta-form + らいいなあ／らいいのに",
         "examples": [
           "I hope the weather's good tomorrow.",
-          "I wish summer vacation would hurry up and come."
+          "It would be nice to live in Japan someday.",
+          "I can't wait for summer vacation. I hope I can go to the beach."
+        ]
+      },
+      {
+        "label": "Wishing someone well",
+        "meaning": "Expresses a kind hope about someone else's situation: “I hope ...”. Usually 「〜といいですね」 or 「〜といいね」. The tone is gentle and warm.",
+        "connection": "Verb dictionary form・nai-form + といいですね／といいね",
+        "examples": [
+          "I hope it's sunny tomorrow.",
+          "I hope you pass the exam."
+        ]
+      },
+      {
+        "label": "Unmet wish / worry",
+        "meaning": "「〜といいのに／たらいいのに」 expresses regret that reality differs from your wish. 「〜といいんだけど」 means “I hope so, but I'm a little worried”.",
+        "connection": "Plain form + といいのに／といいんだけど; verb ta-form + らいいのに",
+        "examples": [
+          "I wish the holidays were longer.",
+          "I hope he makes it in time, but I'm not sure.",
+          "I wish every day were Sunday."
         ]
       }
     ],
     "notes": [
-      "「〜たらいい」 and 「〜ばいい」 are interchangeable in most cases. 「たらいい」 is more conversational.",
-      "When advising a superior, 「〜たらいい」 can sound too casual. Use 「〜てはいかがでしょうか」 instead.",
-      "The question 「どうしたらいいですか」 is the basic pattern for asking someone for advice."
+      "「〜たらいいですか」 asks “what should I do?”, while 「〜てもいいですか」 asks for permission — different meanings: 「ここに座ったらいいですか」 = Should I sit here?; 「ここに座ってもいいですか」 = May I sit here?",
+      "Saying 「〜たらいいですよ」 to superiors or elders sounds like you're instructing them; use 「〜てはいかがでしょうか」 instead.",
+      "The sentence-final particle decides the meaning: 「早く寝るといいよ」 is advice (“you should go to bed early”), while 「早く寝られるといいね」 is a wish (“I hope you can get to bed early”). Change 「ね」 to 「よ」 and a good wish turns into instruction.",
+      "For something that has already happened but whose result is unknown, use 「〜ているといい」: ✕「無事に着いたといいね」→ ○「無事に着いているといいね」.",
+      "The sound changes of the ta-form are easy to get wrong: ✕「休みたらいい」→ ○「休んだらいい」; ✕「書きたらいい」→ ○「書いたらいい」."
     ],
     "scenes": {
       "daily": [
@@ -819,9 +744,14 @@
           "example": "Excuse me, how do I get to the station?"
         },
         {
-          "title": "Looking forward to the holidays",
-          "description": "Chatting with classmates about vacation.",
-          "example": "I wish every day were Sunday."
+          "title": "Cheering on a friend",
+          "description": "A friend is heading to a job interview, and you wish them luck as you part.",
+          "example": "I hope the interview goes well."
+        },
+        {
+          "title": "Visiting someone in the hospital",
+          "description": "What you say when visiting a sick friend.",
+          "example": "I hope you get well soon."
         }
       ],
       "work": [
@@ -834,22 +764,36 @@
           "title": "Advising a coworker",
           "description": "A coworker has a problem, and you casually suggest something.",
           "example": "I think you should ask Yamada-san in accounting."
+        },
+        {
+          "title": "Mid-project",
+          "description": "Talking with a colleague about a project's progress and sharing your hopes.",
+          "example": "I hope this project finishes on schedule, but..."
         }
       ]
     },
-    "etymology": "Made of the conditional 「たら」 and 「いい (良い)」: literally “it's good if you do ...”. 「たら」 comes from 「たら」, a form of the old perfective auxiliary 「たり」, plus 「ば」; the 「ば」 was later usually dropped.",
+    "etymology": "Built from the conditional 「たら」 or 「と」 plus the adjective 「いい（良い）」, literally “it would be good if…”. 「たら」 comes from the hypothetical form of the perfective 「た」, and 「と」 is a conditional particle; the sentence stops at the evaluation 「いい」, which gives rise to the advice, question and wish uses.",
+    "formation": "It combines the conditional 「たら」 (or 「と」) with 「いい（良い）」, literally “it would be good if…”. 「たら」 pictures an action as already done and then evaluates it as “that would be good”. Said to another person it is gentle advice (「休んだらいいよ」); turned into a question it asks “what should I do” (「どうしたらいいですか」); said about something outside one's control it is a wish, “I hope that…” (「晴れるといいね」, 「〜たらいいな」), and 「ね」, 「な」, 「のに」 or 「けど」 can add good wishes, musing, regret or worry. Because the sentence gives only the condition and the evaluation “good”, whether it is advice or a wish depends on the person addressed and the sentence-final particle.",
     "similar": [
       {
         "title": "〜ばいい",
-        "explanation": "Almost the same meaning. 「ばいい」 focuses on “just meeting the condition is enough”; 「たらいい」 is more conversational and more common in questions."
+        "explanation": "Almost the same meaning. 「ばいい」 stresses “meeting the condition is enough” and is slightly more formal; 「たらいい」 is more conversational and more common when asking for advice (「どうしたらいいですか」)."
       },
       {
         "title": "〜たらどうですか",
-        "explanation": "「たらどうですか」 directly urges the listener to do something and is more pushy. 「たらいい」 just offers a suggestion to consider."
+        "explanation": "「たらどうですか」 directly urges the listener to do something in question form and is more assertive; 「たらいい」 states “doing this will be good”, or asks what you yourself should do."
       },
       {
-        "title": "〜といい・〜たらいい (hope)",
-        "explanation": "For hopes, both 「〜といいね」 and 「〜たらいいね」 work. 「といい」 is often used for wishing others well."
+        "title": "〜てほしい・〜てもらいたい",
+        "explanation": "「〜てほしい」 says directly “I want someone to do ...”, so the desire is clear, and toward a superior it feels imposing. 「〜といいね」 only says “it'd be nice if ...”, without specifying who does it, so the tone is softer."
+      },
+      {
+        "title": "〜ないかな (wish)",
+        "explanation": "「〜ないかな」 is a wish said to oneself, with a feeling of eager waiting (「早く夏休みにならないかな」); 「〜といいな」 is calmer, just voicing “it'd be nice if ...”. The two are often used together."
+      },
+      {
+        "title": "〜ば〜のに",
+        "explanation": "Both 「〜ばいいのに」 and 「〜といいのに」 express regret, “it would be nice if ... (but it isn't)”. When about another person's behavior, 「〜ばいいのに」 often carries blame, “why don't you ...?”."
       }
     ]
   },
@@ -888,9 +832,10 @@
       }
     ],
     "notes": [
-      "「〜たらどうですか」 can sound rude to older people or superiors. In formal situations, use 「〜てはいかがでしょうか」.",
-      "「〜たらどうなる？」 asks about a result (“What happens if ...?”), and 「〜たらどうしよう」 expresses worry. Neither is a suggestion.",
-      "It's not used for the speaker's own actions. To invite someone to do something together, use 「〜ませんか」 or 「〜ましょう」."
+      "Using 「〜たらどうですか」 to superiors, elders, or clients sounds condescending, as if you're instructing them. In formal situations, say 「〜てはいかがでしょうか」.",
+      "「〜たらどう？」「〜たらどうなの」「〜たらどうだ」 with strong intonation are reproaches and show impatience: 「少しは手伝ったらどう？」 = Can't you help out a little?",
+      "It's only for suggesting the listener do something on their own. To invite someone to do something with you, use 「〜ませんか」: ✕「一緒に映画を見たらどうですか」→ ○「一緒に映画を見ませんか」.",
+      "「〜たらどうなる？」 asks about a result, and 「〜たらどうしよう」 expresses worry — “what if ...?” Neither is a suggestion."
     ],
     "scenes": {
       "daily": [
@@ -924,18 +869,19 @@
       ]
     },
     "etymology": "Made of the conditional 「たら」 and 「どうですか」, which asks for an opinion: literally “How would it be if you did ...?” By asking the listener's opinion, it makes a suggestion indirectly.",
+    "formation": "「〜たらどうですか」 = the conditional 「たら」 + the question word 「どう」 (how) + 「ですか」. Literally “if you did ..., how would it be?” — it puts an action into a hypothetical and asks the listener to judge the result themselves, making a suggestion indirectly in the form of a question. Because on the surface it leaves the decision to the listener, it's softer than a direct order; but when the speaker clearly thinks “of course you should”, the same question becomes a reproach: “why don't you?”. Using 「いかが」 instead of 「どう」 makes it more polite.",
     "similar": [
       {
         "title": "〜ほうがいい",
-        "explanation": "「ほうがいい」 is clear advice after comparing, sounds strong, and can be a warning. 「たらどうですか」 offers one option and lets the listener decide."
+        "explanation": "「ほうがいい」 is clear advice after a comparison, strong and sometimes a warning (「医者に行ったほうがいい」). 「たらどうですか」 just offers one option and leaves the decision to the listener."
       },
       {
         "title": "〜たらいい",
-        "explanation": "「たらいい」 states “it would be good to do this”. 「たらどうですか」 urges the listener directly in question form."
+        "explanation": "「たらいい」 states “doing this will be good”; 「たらどうですか」 directly urges the listener in question form, which is more assertive and more easily sounds impatient."
       },
       {
         "title": "〜はどうですか・〜はいかがですか",
-        "explanation": "「Noun + はどうですか」 recommends a thing or asks for impressions (コーヒーはどうですか). 「たらどうですか」 suggests taking an action."
+        "explanation": "Same origin: both ask for an opinion with 「どう／いかが」. 「Noun + はどうですか」 recommends something or asks for an impression (「コーヒーはいかがですか」); 「たらどうですか」 suggests taking an action."
       }
     ]
   },
@@ -973,9 +919,10 @@
       }
     ],
     "notes": [
-      "You can also say 「〜たらよかった」 with the same meaning. It's more conversational.",
-      "Said to others, 「〜ばよかったのに」 sounds critical, so be careful using it with superiors.",
-      "「〜てよかった」 means “I'm glad that ...” (合格してよかった). It shows relief, the opposite feeling."
+      "Mix up affirmative and negative and you regret the opposite thing: 「言えばよかった」 = I regret not saying it; 「言わなければよかった」 = I regret saying it.",
+      "Don't confuse it with 「〜てよかった」: 「来てよかった」 = I'm glad I came (relief); 「来ればよかった」 = I wish I had come (you didn't — regret).",
+      "「〜ばよかったのに」 aimed at others is a reproach: 「早く言ってくれればよかったのに」. Saying this to a superior or client is very rude — reflect on yourself instead: 「私から確認すればよかったです」.",
+      "Nouns and na-adjectives can't take 「ば」 directly: ✕「学生ばよかった」→ ○「学生ならよかった」「学生だったらよかった」."
     ],
     "scenes": {
       "daily": [
@@ -1009,18 +956,19 @@
       ]
     },
     "etymology": "Made of the conditional 「ば」 and 「よかった」, the past of 「よい (良い)」: literally “it would have been good if ...”. Because the condition is contrary to fact, it became a set phrase for regret.",
+    "formation": "「〜ばよかった」 = the hypothetical 「ば」 + 「よかった」, the past form of 「よい（良い）」; literally “if ..., it would have been good”. The condition is placed in the past and is contrary to fact (you didn't do it, or you did), so the sentence expresses regret: “the choice back then was wrong”. To regret not doing something, use the affirmative 「〜ば」; to regret doing it, use the negative 「〜なければ」. Aimed at someone else, “it would have been good if you had ...” naturally becomes a reproach.",
     "similar": [
       {
-        "title": "〜ばいい",
-        "explanation": "「ばいい」 offers a method or wish for now or the future. 「ばよかった」 looks back at the past with regret."
-      },
-      {
-        "title": "〜てよかった",
-        "explanation": "「てよかった」 is relief about something that happened. 「ばよかった」 is regret about something that didn't."
+        "title": "〜てしまう",
+        "explanation": "Both can express regret. 「〜てしまった」 means “I've already done something I shouldn't have” (「言ってしまった」); 「〜ばよかった」 means “I wish I had done that”, regretting the choice made back then."
       },
       {
         "title": "〜ば〜のに",
-        "explanation": "「〜ば〜のに」 is broader: a contrary-to-fact supposition with dissatisfaction. 「ばよかったのに」 is its most common fixed form."
+        "explanation": "「〜ば〜のに」 is broader: a hypothetical contrary to reality, with regret or dissatisfaction (「お金があれば買えるのに」), and can also refer to the present. 「ばよかった」 is specifically for past regret and is the most common set phrase of this type."
+      },
+      {
+        "title": "〜ばいい",
+        "explanation": "Same origin: 「ばいい」 is about the present or future, offering a method or a wish. Changing 「いい」 to its past form 「よかった」 turns it into regret about something past that can't be changed."
       }
     ]
   },
@@ -1060,9 +1008,10 @@
       }
     ],
     "notes": [
-      "Close in meaning to 「〜てもいい」, but 「かまわない」 is a bit more formal and also suggests “it doesn't bother me”.",
-      "In kanji it's 「構わない」, and the polite form is 「かまいません」.",
-      "To grant a request, you can simply say 「ええ、かまいませんよ」."
+      "Asking permission with 「〜てもかまいませんか」 is polite. But volunteering 「〜てもかまいませんよ」 to a superior or client amounts to “granting” them permission and sounds condescending — say 「どうぞ〜てください」 instead.",
+      "When answering 「〜てもかまいませんか」, you can't refuse with 「かまいます」; use a soft refusal such as 「すみません、ちょっと…」.",
+      "「かまわないで」 on its own means “leave me alone, don't bother about me”: 「私にかまわないで」 — it has nothing to do with permission.",
+      "Nouns and na-adjectives take 「でも」: ✕「明日もかまいません」→ ○「明日でもかまいません」."
     ],
     "scenes": {
       "daily": [
@@ -1096,25 +1045,30 @@
       ]
     },
     "etymology": "「かまう (構う)」 means “to mind, to care about”. Its negative 「かまわない」 means “not to mind”. 「〜てもかまわない」 literally means “even if ..., I don't mind”, which gives permission and concession.",
+    "formation": "「〜てもかまわない」 = the concessive 「ても」 (even if ...) + 「かまわない」, the negative of the verb 「かまう（構う: to mind, to care about）」. Literally “even if ..., (I) don't mind”. By saying they don't mind it happening, the speaker is effectively allowing the listener to do it, so it becomes permission; after adjectives or nouns (「狭くても」「明日でも」) it's the concession “even if ..., it doesn't matter”. Because the core is “I don't mind”, it carries the speaker's stance and sounds slightly more formal than 「てもいい」.",
     "similar": [
       {
         "title": "〜てもいい",
-        "explanation": "Same meaning. 「てもいい」 is more common and conversational; 「てもかまわない」 is a bit more formal and stresses “I don't mind”."
+        "explanation": "Same meaning. 「てもいい」 is more common and conversational; 「てもかまわない」 is slightly more formal, stresses “I don't mind”, and is often used to ask for or grant permission politely."
       },
       {
         "title": "〜なくてもいい",
-        "explanation": "「なくてもいい」 and 「なくてもかまわない」 mean the same; the latter is a bit more formal."
+        "explanation": "Both 「なくてもいい」 and 「なくてもかまわない」 mean “you don't have to ...”; the latter is slightly more formal. Don't confuse them with the prohibition 「〜てはいけない」."
+      },
+      {
+        "title": "〜もかまわず",
+        "explanation": "Same origin: both come from 「構う」 (to mind, to care about). 「〜もかまわず」 (N2) means “without regard for ...” (「人目もかまわず泣いた」), describing someone not caring about something they should, often critically."
       },
       {
         "title": "〜ても (even if)",
-        "explanation": "「ても」 alone just means “even if”. Only with 「かまわない」 does it become a permission expression, “it's OK to ...”."
+        "explanation": "Same origin: the first half of this pattern is the concessive 「ても」 (even if). 「ても」 alone only means “even if ...”; followed by 「かまわない」 it becomes a permission expression: “even if ..., I don't mind”."
       }
     ]
   },
   {
     "id": "nakucha-nakya",
-    "meaning": "Casual contractions of 「なくては」 and 「なければ」 meaning “have to ...”. The 「いけない」 after them is often dropped.",
-    "connection": "Verb nai-form + なくちゃ／なきゃ (+ いけない・だめ)",
+    "meaning": "Spoken contractions of 「〜なくては」 and 「〜なければ」, mostly meaning “must...” (the following 「いけない」 is often dropped), and also “if one doesn't... (it won't work)”.",
+    "connection": "Verb ない-form (drop 「い」) + なくちゃ / なきゃ (+ いけない / だめ); + a negative result (conditional)",
     "senses": [
       {
         "label": "Have to (shortened)",
@@ -1146,9 +1100,10 @@
       }
     ],
     "notes": [
-      "「なくちゃ」 comes from 「なくては」, and 「なきゃ」 comes from 「なければ」.",
-      "These are spoken forms. Don't use them in formal writing or formal situations with superiors; use 「〜なければなりません」 then.",
-      "「なきゃ」 is even more casual than 「なくちゃ」 and is popular with young people."
+      "This is casual speech. Saying 「〜なきゃ」 to superiors or clients, or using it in formal writing, sounds too casual; in formal situations use 「〜なければなりません」 or 「〜なくてはいけません」.",
+      "Don't confuse it with the prohibitive 「〜ちゃ」 — the meaning is the exact opposite: 「食べなくちゃ」 = I have to eat; 「食べちゃだめ」 = you mustn't eat.",
+      "It's formed from the nai-form minus 「い」: ✕「行かないちゃ」→ ○「行かなくちゃ」; ✕「行かないきゃ」→ ○「行かなきゃ」.",
+      "A bare 「〜なきゃ」 at the end of a sentence means “must”; when followed by a consequence it is a condition, “if not ...”: 「急がなきゃ、遅刻するよ」 = if you don't hurry, you'll be late. Check whether another clause follows."
     ],
     "scenes": {
       "daily": [
@@ -1166,6 +1121,11 @@
           "title": "Weekend plans",
           "description": "Telling your family what you need to do this weekend.",
           "example": "I've got to clean my room this weekend."
+        },
+        {
+          "title": "Getting up in the morning",
+          "description": "The alarm goes off, and you tell yourself to get up.",
+          "example": "Oh no, it's already seven. I've gotta get up."
         }
       ],
       "work": [
@@ -1181,25 +1141,25 @@
         }
       ]
     },
-    "etymology": "「なくちゃ」 is a sound change from 「なくては」: 「ては」 → 「ちゃ」. 「なきゃ」 comes from 「なければ」: 「ければ」 → 「けりゃ」 → 「きゃ」. Both are contractions that formed in speech to say things faster.",
+    "etymology": "「なくちゃ」 comes from 「なくては」 by sound change (「ては」→「ちゃ」). 「なきゃ」 comes from 「なければ」 (「ければ」→「けりゃ」→「きゃ」). Both are contractions that arose in speech for speed, and the following 「いけない」 / 「ならない」 is often dropped.",
+    "formation": "「〜なくちゃ」 comes from 「〜なくては（いけない）」: the continuative 「なく」 of the negative 「ない」 + 「ては」, with 「ては」 turning into 「ちゃ」 in speech. 「〜なきゃ」 comes from 「〜なければ（ならない）」: 「なければ」→「なけりゃ」→「なきゃ」. Both were originally the condition “if one doesn't...”, followed by an evaluation 「いけない／ならない」 (it's no good): “it's no good not to do...”, a double negative that yields “must...”. In speech the evaluation is easy for the listener to supply and is often dropped, leaving only the condition, so a sentence-final 「なきゃ」 / 「なくちゃ」 itself means “have to...” (the elliptical and full-form senses). If what follows is not 「いけない」 but a concrete negative result, the original conditional meaning is kept: “if one doesn't..., (it won't work)”.",
     "similar": [
       {
         "title": "〜なければならない",
-        "explanation": "The original form. It's more formal and can be used in writing and formal situations. 「なきゃ／なくちゃ」 are its spoken contractions."
+        "explanation": "The full form, more formal and usable in writing and polite situations. 「なきゃ」 is the casual contraction of 「なければ」, and 「なくちゃ」 of 「なくては」; the meaning is the same."
       },
       {
         "title": "〜ないといけない",
-        "explanation": "Also very common in speech, with a similar meaning. It can be shortened to end with 「〜ないと」 (もう行かないと)."
+        "explanation": "Also very common in speech, with a similar meaning; it too can drop its second half and end with 「〜ないと」 (「もう行かないと」)."
       },
       {
-        "title": "〜てはいけない",
-        "explanation": "「ちゃいけない」 (contraction of 「ては」) is a prohibition: “you must not”. 「なくちゃいけない」 is an obligation: “you must”. They mean the opposite."
+        "title": "〜ないと (if not ...)",
+        "explanation": "「〜ないと」 literally means “if (you) don't ... (something bad will happen)” (「急がないと遅れるよ」), and with the second half dropped it also means “must”. 「なきゃ／なくちゃ」 express obligation more directly."
       }
     ]
   },
   {
     "id": "koto-ga-aru-sometimes",
-    "title": "〜ることがある (sometimes)",
     "meaning": "Something doesn't always happen, but happens now and then: “sometimes ...”.",
     "connection": "Verb dictionary form / nai-form, i-adjective + ことがある",
     "senses": [
@@ -1233,9 +1193,9 @@
       }
     ],
     "notes": [
-      "Don't confuse this with 「〜たことがある」 (have done before). With the dictionary form, it means “sometimes”; with the ta-form, it's about experience.",
-      "「〜こともある」 sounds lighter: “there are also times when ...”.",
-      "In 「話したいことがある」 and 「やることがある」 (“I have something to tell you / to do”), 「こと」 is a real noun. That's not this grammar point."
+      "The verb form before it decides the meaning: 「日本へ行くことがある」 = I sometimes go to Japan; 「日本へ行ったことがある」 = I've been to Japan (experience).",
+      "It only means “occasionally” and can't describe daily habits: ✕「毎朝コーヒーを飲むことがある」→ ○「毎朝コーヒーを飲む」.",
+      "In 「話したいことがある」 and 「やることがある」 (“there's something I want to say / something I have to do”), 「こと」 is a real noun and doesn't express frequency."
     ],
     "scenes": {
       "daily": [
@@ -1264,18 +1224,19 @@
       ]
     },
     "etymology": "The formal noun 「こと」 means “matter, situation”, and 「ある」 means “exist”. 「〜ることがある」 literally means “there exist situations where ...”, so it came to mean “sometimes happens”. With the ta-form, it means “there exists such an experience”, the experience use.",
+    "formation": "「〜ることがある」 = verb dictionary form + the formal noun 「こと」 (matter, situation) + 「が」 + 「ある」 (exist). 「こと」 turns the action into a “situation”, and 「がある」 says that situation “exists” — literally “there exists such a thing as ...”. Saying a situation “exists” implies it isn't always the case, only that it does occur, so the meaning is “sometimes ...”. With the dictionary form, which describes general cases, it means something sometimes happens; switch to the ta-form and it means “such a thing has existed”, i.e. experience.",
     "similar": [
       {
         "title": "〜たことがある",
-        "explanation": "With the ta-form, it's past experience (日本へ行ったことがある). With the dictionary form, it means something sometimes happens (日本へ行くことがある)."
+        "explanation": "Same origin and exactly the same structure — only the verb form before it differs. With the ta-form it expresses past experience (「日本へ行ったことがある」); with the dictionary form it means something happens sometimes (「日本へ行くことがある」)."
       },
       {
-        "title": "〜こともある",
-        "explanation": "「も」 makes it softer and hints “it's not usual, but it does happen”."
+        "title": "めったに〜ない",
+        "explanation": "Both are about frequency. 「めったに〜ない」 means “hardly ever ...”, an even lower frequency than 「ことがある」, and is negative (「めったに映画を見ない」); 「ことがある」 says affirmatively “occasionally ...”."
       },
       {
-        "title": "ときどき〜する",
-        "explanation": "The adverb 「ときどき」 directly states frequency. 「ことがある」 is less frequent and stresses “occasionally, not always”."
+        "title": "〜ことにしている",
+        "explanation": "Same origin: it also nominalizes an action with 「こと」. 「ことにしている」 expresses a habit you decided on and keep up (「毎朝走ることにしている」); 「ことがある」 just says something happens occasionally, with no sense of deliberately sticking to it."
       }
     ]
   }

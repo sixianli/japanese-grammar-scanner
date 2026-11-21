@@ -36,8 +36,6 @@ def main():
         out = []
         for p in base:
             item = {"id": p["id"]}
-            if re.search(r"[（(][^）)]*[\u4e00-\u9fff]", p["title"]):
-                item["title"] = conv(p["title"])
             out.append({
                 **item,
                 "meaning": conv(p["meaning"]),
@@ -55,6 +53,7 @@ def main():
                     "example": conv(sc["example"]["zh"]),
                 } for sc in p["scenes"][k]] for k in ("daily", "work")},
                 "etymology": conv(p["etymology"]),
+                "formation": conv(p.get("formation", "")),
                 "similar": [{"title": conv(s["title"]), "explanation": conv(s["explanation"])} for s in p["similar"]],
             })
         dst = os.path.join(GRAMMAR_DIR, "l10n", f"l10n_zh-Hant_{level}.json")

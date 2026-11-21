@@ -8,6 +8,7 @@
 #   Variables:
 #     APPLE_TEAM_ID       Apple Developer Team ID（10 位）
 #     BUNDLE_ID           在 App Store Connect 中创建 App 时使用的 Bundle ID
+#     CLOUD_FEEDBACK      设为 true 后启用 App 内反馈提交（iCloud / CloudKit），见 docs/feedback/SETUP.md
 # API Key 需在 App Store Connect → 用户和访问 → 集成 → App Store Connect API 中创建，角色选 “App 管理”。
 name: Release to App Store Connect
 
@@ -18,16 +19,24 @@ on:
         description: "版本号 (MARKETING_VERSION)，如 1.0"
         required: true
         default: "1.0"
+      dry_run:
+        description: "只归档并检查，不上传"
+        type: boolean
+        default: false
+      cloud_feedback:
+        description: "强制打开 App 内反馈提交（测试用；正常由变量 CLOUD_FEEDBACK 控制）"
+        type: boolean
+        default: false
 
 jobs:
   upload:
-    runs-on: macos-15
+    runs-on: xcode-27
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - name: Select Xcode
         run: |
-          sudo xcode-select -s "$(ls -d /Applications/Xcode_26*.app | sort -V | tail -1)"
+          sudo xcode-select -s "$(ls -d /Applications/Xcode_27*.app | sort -V | tail -1)"
           xcodebuild -version
       - name: Check configuration
         env:
@@ -50,8 +59,20 @@ jobs:
           mkdir -p ~/.appstoreconnect/private_keys
           printf '%s' "$ASC_KEY_P8" > ~/.appstoreconnect/private_keys/AuthKey_${ASC_KEY_ID}.p8
       - name: Archive (unsigned; signed for App Store during export)
+        env:
+          # 打开后编译 App 内反馈提交（CloudKit），并给 App 加上 iCloud 能力；配置方法见 docs/feedback/SETUP.md
+          CLOUD_FEEDBACK: ${{ inputs.cloud_feedback && 'true' || vars.CLOUD_FEEDBACK }}
         run: |
           set -o pipefail
+          if [ "$CLOUD_FEEDBACK" = "true" ]; then
+            # 带 iCloud 权限做临时签名，导出时由 App Store 签名保留这些权限
+            SIGNING=(CODE_SIGN_ENTITLEMENTS=Config/CloudFeedback.entitlements
+                     "SWIFT_ACTIVE_COMPILATION_CONDITIONS=\$(inherited) CLOUD_FEEDBACK"
+                     CODE_SIGN_STYLE=Manual CODE_SIGN_IDENTITY=- AD_HOC_CODE_SIGNING_ALLOWED=YES
+                     CODE_SIGNING_ALLOWED=YES CODE_SIGNING_REQUIRED=NO PROVISIONING_PROFILE_SPECIFIER="")
+          else
+            SIGNING=(CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="")
+          fi
           xcodebuild archive \
             -project JapaneseGrammarScanner.xcodeproj \
             -scheme JapaneseGrammarScanner \
@@ -62,11 +83,18 @@ jobs:
             PRODUCT_BUNDLE_IDENTIFIER=${{ vars.BUNDLE_ID }} \
             MARKETING_VERSION=${{ inputs.version }} \
             CURRENT_PROJECT_VERSION=${{ github.run_number }} \
-            CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_IDENTITY="" \
+            "${SIGNING[@]}" \
             | tail -20
+          if [ "$CLOUD_FEEDBACK" = "true" ]; then
+            ENT=$(codesign -d --entitlements - build/App.xcarchive/Products/Applications/*.app 2>&1 || true)
+            echo "$ENT"
+            echo "$ENT" | grep -q "iCloud.${{ vars.BUNDLE_ID }}" || { echo "::error::归档中没有 iCloud 权限，停止上传（否则提交反馈会闪退）"; exit 1; }
+          fi
+      - name: Stop here (dry run)
+        if: inputs.dry_run
+        run: echo "dry run：只检查归档，不上传。"
       - name: Upload to App Store Connect
+        if: ${{ !inputs.dry_run }}
         env:
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}

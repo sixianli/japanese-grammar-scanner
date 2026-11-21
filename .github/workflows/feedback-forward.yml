@@ -1,0 +1,70 @@
+# 把用户在 App 内提交的反馈（存放在 CloudKit 公共数据库）转发到开发者邮箱。
+# 配置方法见 docs/feedback/SETUP.md。定时任务只在默认分支（main）上运行；也可在 Actions 页面手动运行。
+name: Feedback Forward
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      test:
+        description: "只发一封测试邮件（检查邮箱配置）"
+        type: boolean
+        default: false
+
+concurrency:
+  group: feedback-forward
+  cancel-in-progress: false
+
+jobs:
+  forward:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check configuration
+        id: cfg
+        env:
+          KEY_ID: ${{ secrets.CLOUDKIT_KEY_ID }}
+          SMTP_USER: ${{ secrets.FEEDBACK_SMTP_USER }}
+        run: |
+          if [ -z "$KEY_ID" ] || [ -z "$SMTP_USER" ]; then
+            echo "尚未配置反馈转发（见 docs/feedback/SETUP.md），跳过。"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Restore state
+        if: steps.cfg.outputs.ready == 'true'
+        uses: actions/cache/restore@v4
+        with:
+          path: .feedback-state
+          key: feedback-state-${{ github.run_id }}
+          restore-keys: feedback-state-
+      - name: Install dependencies
+        if: steps.cfg.outputs.ready == 'true'
+        run: pip install --quiet cryptography
+      - name: Forward
+        if: steps.cfg.outputs.ready == 'true'
+        env:
+          CLOUDKIT_CONTAINER: iCloud.${{ vars.BUNDLE_ID }}
+          CLOUDKIT_KEY_ID: ${{ secrets.CLOUDKIT_KEY_ID }}
+          CLOUDKIT_PRIVATE_KEY: ${{ secrets.CLOUDKIT_PRIVATE_KEY }}
+          FEEDBACK_SMTP_HOST: ${{ secrets.FEEDBACK_SMTP_HOST }}
+          FEEDBACK_SMTP_PORT: ${{ secrets.FEEDBACK_SMTP_PORT }}
+          FEEDBACK_SMTP_USER: ${{ secrets.FEEDBACK_SMTP_USER }}
+          FEEDBACK_SMTP_PASSWORD: ${{ secrets.FEEDBACK_SMTP_PASSWORD }}
+          FEEDBACK_TO: ${{ secrets.FEEDBACK_TO }}
+          STATE_FILE: .feedback-state/last.txt
+        run: |
+          if [ "${{ inputs.test }}" = "true" ]; then
+            python3 tools/feedback_forward.py --test
+          else
+            python3 tools/feedback_forward.py
+          fi
+      - name: Save state
+        if: steps.cfg.outputs.ready == 'true' && always()
+        uses: actions/cache/save@v4
+        with:
+          path: .feedback-state
+          key: feedback-state-${{ github.run_id }}
