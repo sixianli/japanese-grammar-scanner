@@ -38053,65 +38053,80 @@
       "id": "houdai",
       "groups": [
         {
-          "kind": "look",
-          "note": "〜放題 (ほうだい) ↔ 〜っ放し (ぱなし): las dos se escriben con 「放」, van con la raíz ます y tienen un aire de «dejar las cosas a su aire»",
+          "kind": "meaning",
+          "sense": 1,
+          "note": "Ambas significan «todo lo que quieras»",
           "items": [
             {
-              "id": "ppanashi",
-              "diff": "放題 es hacer algo sin control, a capricho, o dejar que algo malo se extienda; っ放し es hacer algo y no rematarlo, de modo que el estado se mantiene.",
+              "id": "dake-only",
+              "title": "〜だけ (todo lo que quieras)",
+              "diff": "Las dos dicen «todo lo que quieras»; 放題 es un sustantivo y suele referirse a un servicio que un local ofrece a precio fijo; 好きなだけ es una frase verbal normal, que se suele decir al invitar o atender a alguien.",
               "this": [
                 {
-                  "tag": "Se deja empeorar",
-                  "tr": "Desde que no vive nadie, el jardín está completamente abandonado."
+                  "tag": "Servicio del local · precio fijo",
+                  "tr": "Con este menú, la cerveza es libre por 3000 yenes."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sin rematar · se queda abierto",
-                  "tr": "Otra vez me fui dejando la ventana abierta."
+                  "tag": "Invitando · dicho a alguien",
+                  "tr": "Hoy invito yo, así que bebe toda la cerveza que quieras."
                 }
               ],
-              "explain": "Las dos se escriben con 「放」 y tienen el sentido de «desentenderse», pero de cosas distintas: っ放し es hacer algo y dejarlo así sin más (開けっ放し, 出しっ放し, つけっ放し); 放題 es hacer lo que a uno le da la gana (食べ放題, 言いたい放題) o dejar que algo malo avance sin control (荒れ放題, 伸び放題)."
+              "explain": "Fíjate en quién te deja beber sin límite: un menú que el local ofrece a precio fijo (三千円で) → 飲み放題; es un sustantivo, así que también se dice 「飲み放題のプラン」 o 「食べ放題の店」. Un amigo que invita o un anfitrión que dice «bebe lo que quieras» (今日は僕のおごり) → 好きなだけ / 飲みたいだけ + verbo."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan «hacer algo sin freno, a placer»",
+          "sense": 2,
+          "note": "Ambas significan «hacer lo que se quiere sin ningún freno»",
           "items": [
             {
-              "id": "makuru",
-              "diff": "放題 describe un estado en el que «se puede hacer sin límite»; まくる describe que alguien de hecho «lo hace sin parar, a lo bestia», con un fuerte tono coloquial.",
-              "this": [
-                {
-                  "tag": "Sin límite · regla",
-                  "tr": "En este restaurante puedes comer todo lo que quieras durante dos horas por 3000 yenes."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Comer a lo bestia · hecho real",
-                  "tr": "Durante el viaje me harté de comer cosas ricas."
-                }
-              ],
-              "explain": "Mira la categoría: 放題 tras la raíz ます forma un sustantivo, como en 「食べ放題の店」 o 「言いたい放題だ」, y describe la regla de que se puede hacer a placer o un estado sin control; まくる es un verbo (食べまくる, 遊びまくった) y describe que alguien realmente lo hace en exceso y sin parar."
-            },
-            {
               "id": "zanmai",
-              "diff": "三昧 es estar inmerso en algo, disfrutándolo a fondo; 放題 subraya hacer lo que uno quiere sin restricciones, a menudo con crítica.",
+              "title": "〜三昧 (desenfreno)",
+              "diff": "Las dos hablan de hacer lo que uno quiere sin freno; 放題 subraya que nadie puede pararle y hace lo que le da la gana; 三昧 subraya que vive todo el día entregado a ello, que lleva ese tipo de vida.",
               "this": [
                 {
-                  "tag": "A su antojo · con crítica",
-                  "tr": "Mientras los padres estaban fuera, los niños hicieron lo que les dio la gana."
+                  "tag": "Con los demás · nadie lo frena",
+                  "tr": "En el trabajo hace lo que le da la gana y nadie lo frena."
                 }
               ],
               "that": [
                 {
-                  "tag": "Inmersión · disfrute",
-                  "tr": "Desde que se jubiló, vive dedicado a pescar todos los días."
+                  "tag": "Modo de vida · entregado a ello",
+                  "tr": "Vive cada día entregado al lujo sin medida."
                 }
               ],
-              "explain": "Mira la actitud del hablante: entregado por completo a algo que le gusta, como 読書三昧 o ゴルフ三昧, casi siempre disfrutando → 三昧; sin freno, haciendo lo que quiere, como やりたい放題 o 言いたい放題, casi siempre como crítica → 放題. Además, 三昧 va tras un sustantivo y 放題 tras la raíz ます o 「〜たい」."
+              "wrong": {
+                "why": "三昧 solo va detrás de sustantivos como 贅沢 o わがまま, no de un verbo en 「〜たい」; hay que decir 言いたい放題."
+              },
+              "explain": "Fíjate en qué se describe: decir o hacer lo que uno quiere con los demás en sitios como 職場で o 会議で, sin que nadie lo pare → 放題 (わがまま放題, やりたい放題, 言いたい放題); vivir 毎日 entregado al lujo o a la diversión, como estilo de vida → 三昧 (贅沢三昧, わがまま三昧), y delante solo puede ir un sustantivo."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Ambas significan «dejar algo sin atender»",
+          "items": [
+            {
+              "id": "ppanashi",
+              "title": "〜っぱなし (dejar sin atender)",
+              "diff": "Las dos dicen que algo se ha dejado sin atender; 放題 subraya que, sin nadie que se ocupe, se ha descontrolado; っぱなし subraya que sigue así, sin que nadie haga lo que habría que hacer.",
+              "this": [
+                {
+                  "tag": "Resultado: un descontrol",
+                  "tr": "La hierba del solar ha crecido sin control; parece una selva."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Sigue sin que nadie lo atienda",
+                  "tr": "La hierba del solar sigue creciendo sin que nadie la toque; hace medio año que nadie la corta."
+                }
+              ],
+              "explain": "En ambos casos nadie cuida la hierba; mira qué quiere decir la segunda mitad. Si describe lo descontrolada que está (ジャングルのようだ) → 伸び放題, que subraya que, sin control, va a peor; si describe cuánto tiempo lleva sin que nadie la toque (半年も誰も刈っていない) → 伸びっぱなし, que subraya que nadie se ha ocupado. Además, っぱなし va mucho con verbos transitivos para decir que alguien hizo algo y no lo recogió (開けっぱなし, 出しっぱなし); ahí no se puede cambiar por 放題."
             }
           ]
         }
@@ -38126,20 +38141,21 @@
           "items": [
             {
               "id": "hazumi-de",
-              "diff": "Muchas veces son intercambiables; 拍子 se centra en el desencadenante casual de ese instante; はずみ, en el impulso de la acción o en un arrebato momentáneo.",
+              "title": "〜はずみで (impulso de un movimiento)",
+              "diff": "A menudo son intercambiables; 拍子に se centra en el instante justo en que ocurre la acción, はずみで en el impulso o la inercia que produce la acción.",
               "this": [
                 {
-                  "tag": "Desencadenante casual",
-                  "tr": "De repente, sin saber por qué, me acordé del pasado."
+                  "tag": "Ese instante",
+                  "tr": "Justo al estornudar, se me cayó el vaso que tenía en la mano."
                 }
               ],
               "that": [
                 {
-                  "tag": "Arrebato momentáneo",
-                  "tr": "En un arrebato, le dije algo muy hiriente a un amigo."
+                  "tag": "Impulso, inercia",
+                  "tr": "Con el frenazo del coche, se me cayó el vaso que tenía en la mano."
                 }
               ],
-              "explain": "Para hablar del impacto de un movimiento, como 「転んだ拍子に／転んだはずみで」, valen las dos. La diferencia está en las frases hechas: recordar o descubrir algo en un instante casual → 「ふとした拍子に」, 「何かの拍子に」; hacer algo indebido en un arrebato → 「ものの弾みで」, 「その場のはずみで」."
+              "explain": "Las dos frases siguen valiendo si las intercambias; cambia el enfoque. 拍子に subraya «justo en ese instante», y delante suele ir una pequeña acción propia (くしゃみをした, 立ち上がった); はずみで subraya el impulso o la inercia de la acción, y delante suele ir algo con fuerza (急停車した, ぶつかった); además puede ir directamente tras un sustantivo, como en 「衝突のはずみで」."
             },
             {
               "id": "ta-totan",
@@ -38197,6 +38213,7 @@
         },
         {
           "kind": "meaning",
+          "sense": 1,
           "note": "Ambas significan «depender de… / según…»",
           "items": [
             {
@@ -38224,9 +38241,17 @@
                 }
               ],
               "explain": "Mira el registro: al hablar con amigos o en el día a día → 次第で (天気次第で); en avisos de empresa, contratos, noticias y otros textos formales → いかんで / いかんによっては, a menudo tras sustantivos como 「結果」, 「審査」 o 「対応」."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Ambas significan «según cómo vaya, puede que incluso…»",
+          "items": [
             {
               "id": "ni-yotte-wa",
+              "title": "〜によっては (según el caso, posiblemente)",
               "thisTitle": "〜いかんによっては",
               "diff": "Significan lo mismo, «según el caso, puede que…»; によっては es la forma general; いかんによっては es más formal y subraya que depende del contenido o grado concreto de A.",
               "this": [
@@ -38241,7 +38266,7 @@
                   "tr": "Según el caso, a veces también se cancelan reservas."
                 }
               ],
-              "explain": "Mira el sustantivo de delante y la situación: «casos distintos» en general, como 場合, 人 o 国 → によっては (人によっては, 場合によっては); cómo sea concretamente el 「対応」, 「回答」 o 「結果」 del otro, en notificaciones o advertencias formales → いかんによっては, con un tono más duro."
+              "explain": "Fíjate en el sustantivo de delante y en la situación: una palabra general de «circunstancias» como 場合 o 状況 → によっては (場合によっては), válido tanto en lo cotidiano como en lo formal; cómo resulte concretamente 「対応」, 「回答」 o 「結果」 de la otra parte, en avisos y advertencias formales → いかんによっては, de tono más duro, con el mensaje implícito «depende de lo que hagas»."
             }
           ]
         }
@@ -38324,28 +38349,38 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "以前 tiene dos usos, y cada uno tiene un equivalente: «antes de…» ≈ 前に; «ni siquiera se llega a…» ≈ どころか",
+          "sense": 1,
+          "note": "Ambas significan «antes de…»",
           "items": [
             {
               "id": "mae-ni",
+              "title": "〜まえに (antes de una acción)",
               "thisTitle": "〜以前 (antes de…)",
-              "diff": "前に dice «antes de hacer algo», seguido de otra acción; 以前 se refiere a todo el periodo anterior a cierto momento y es más escrito.",
+              "diff": "Mismo significado, «antes de…»; 以前に es escrito y formal, frecuente en documentos y avisos; 前に es la forma cotidiana.",
               "this": [
                 {
-                  "tag": "Periodo entero · escrito",
-                  "tr": "En el Japón anterior a la era Meiji, poca gente comía carne."
+                  "tag": "Escrito · documento formal",
+                  "tr": "Antes de firmar el contrato, compruebe bien su contenido."
                 }
               ],
               "that": [
                 {
-                  "tag": "Antes de una acción",
-                  "tr": "Me lavo los dientes antes de dormir."
+                  "tag": "Cotidiano · hablado",
+                  "tr": "Léete bien el contrato antes de firmarlo, ¿vale?"
                 }
               ],
-              "explain": "Mira lo que va delante y lo que se dice después: acción + 前に, seguida de otra acción hecha antes (寝る前に歯を磨く); época o momento + 以前, para hablar de la situación de todo el periodo anterior (明治以前の日本)."
-            },
+              "explain": "Fíjate en la situación: en documentos y avisos formales (ご確認ください) → 以前に, que suena cuidado; al hablar normalmente (読んでね) → 前に, porque 以前に suena rígido en la conversación. Además, 以前 puede ir tras una época o un año para hablar de todo el periodo anterior (明治以前, 2000年以前); en ese caso normalmente no se usa 前に."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Ambas significan «ni siquiera lo más básico, y mucho menos…»",
+          "items": [
             {
               "id": "dokoro-ka",
+              "title": "〜どころか (ni mucho menos / ni siquiera)",
               "thisTitle": "〜以前 (ni siquiera se llega a…)",
               "diff": "以前 señala que el problema está en un nivel más básico: «ni siquiera se llega a…»; どころか primero niega A y luego presenta algo más extremo: «no ya A, ni siquiera B…».",
               "this": [
@@ -38371,28 +38406,9 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas significan «tener aire de…»",
+          "sense": 1,
+          "note": "Ambas significan «como si fuera…»",
           "items": [
-            {
-              "id": "gamashii",
-              "diff": "じみる se une a personas o cosas y dice «como si fuera ese tipo de persona o cosa»; がましい se une a palabras o actos y dice que «se nota una intención desagradable».",
-              "this": [
-                {
-                  "tag": "Como cierto tipo de persona",
-                  "tr": "Siempre pone excusas infantiles."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Los actos dejan ver una intención",
-                  "tr": "Siempre habla como si te estuviera haciendo un favor."
-                }
-              ],
-              "wrong": {
-                "why": "がましい solo va con unas pocas palabras como 恩着せ, 押し付け o 言い訳; 「子供がましい」 no existe: hay que decir 子供じみた"
-              },
-              "explain": "Mira lo que va delante: personas o cosas como 子供, 年寄り o 芝居 → じみる, «como si fuera…»; actos como 恩着せ (echar en cara un favor), 押し付け (imponer) o 言い訳 (excusarse) → がましい, «con aire de…, resulta molesto»."
-            },
             {
               "id": "ppoi",
               "diff": "Las dos significan «como si fuera…»; じみる es más escrita, de tono fuerte y casi solo crítica; っぽい es coloquial, más suave y combina con libertad.",
@@ -38409,40 +38425,31 @@
                 }
               ],
               "explain": "Las dos dicen «infantil», pero 子供じみた tiene un tono fuerte, claramente crítico, propio de textos escritos o regañinas; 子供っぽい es coloquial y más suave. Además, っぽい también da 白っぽい o 忘れっぽい, mientras que じみる solo va con unas pocas palabras como 子供, 年寄り, 芝居 o 狂気."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Ambas significan «con un aire de…»",
+          "items": [
             {
               "id": "meku",
-              "diff": "じみる es casi siempre negativo; めく suele ser neutro, y 「春めく」 tiene incluso un toque poético.",
+              "title": "〜めく (con aire de)",
+              "diff": "Las dos describen algo con aire teatral; じみる lleva un claro rechazo y crítica; めく solo describe que tiene algo de eso, con un tono más suave y algo literario.",
               "this": [
                 {
-                  "tag": "Negativo",
-                  "tr": "Solo tiene treinta años, pero no para de decir cosas de viejo."
+                  "tag": "Rechazo · crítica",
+                  "tr": "Estoy harto de su forma teatrera de hablar."
                 }
               ],
               "that": [
                 {
-                  "tag": "Neutro · aire de…",
-                  "tr": "El viento se ha templado y ya se nota de lleno la primavera."
+                  "tag": "Solo un aire · tono suave",
+                  "tr": "Hizo una broma con un tono algo teatral."
                 }
               ],
-              "explain": "Mira la actitud del hablante: decir que alguien «parece un viejo» o «parece un niño», con desagrado → じみる; describir que una estación o un ambiente «tiene ya cierto aire de…», sin juicio de valor → めく (春めく, 謎めいた)."
-            },
-            {
-              "id": "biru",
-              "diff": "びる es mostrar de forma natural cierto aspecto, neutro o incluso elogioso (大人びた); じみる es «parecerse a lo que no se debería», con crítica (子供じみた).",
-              "this": [
-                {
-                  "tag": "No debería parecerse · crítica",
-                  "tr": "Ya es adulto y aún hace cosas infantiles."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Aspecto natural · neutro",
-                  "tr": "Ese niño parece maduro para su edad."
-                }
-              ],
-              "explain": "Mira de quién se habla y a qué se parece: un adulto que parece un niño o un joven que parece un viejo, algo que no encaja con lo que es → じみる, con crítica; un niño que parece maduro o un objeto que parece viejo, que adquiere ese aspecto de forma natural → びる (大人びる, 古びる), no necesariamente algo malo."
+              "explain": "Las dos usan 「芝居」; fíjate en la reacción del hablante: si le parece fingido y molesto (うんざりだ) → 芝居じみた, muy crítico; si solo describe un tono algo teatral, sin que sea necesariamente un reproche, por ejemplo al contar una broma (冗談) en ese tono → 芝居めいた. めく también suele llevar un matiz sutil, como en 謎めいた, 皮肉めいた o 言い訳めいた."
             }
           ]
         }
@@ -38471,33 +38478,33 @@
                   "tr": "Mientras el cuerpo me responda, quiero seguir trabajando."
                 }
               ],
-              "explain": "限り significa originalmente «límite». Mira lo que va delante y detrás: adjetivos de sentimiento como 嬉しい, 心強い o 寂しい, cerrando la oración con 「です／だ」 → el sentimiento llega al máximo (限りだ); un verbo (動く, 生きている) seguido de otra parte → dentro de ese ámbito, siempre igual (限り)."
+              "explain": "El sentido original de 限り es «límite, final». Un sentimiento que llega a su límite → «sumamente…»: delante van palabras de emoción como 嬉しい, 心強い o 寂しい, la frase termina en 「限りです／だ」 y solo se habla de los propios sentimientos (限りだ). Un estado tomado como límite, dentro del cual algo se mantiene → «mientras…»: delante van expresiones de estado como 動く, 若い o 学生である, y después sigue la oración principal (限り). En ambos casos puede ir un adjetivo delante, así que mira si la frase termina en 「限り」 o continúa con una segunda parte."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan un grado máximo",
+          "note": "Ambas significan «un sentimiento en su punto máximo»",
           "items": [
             {
               "id": "no-kiwami",
-              "diff": "限りだ va con adjetivos de sentimiento (嬉しい限り); の極み va con sustantivos (感激の極み), es más solemne y se usa sobre todo en discursos.",
+              "diff": "Las dos dicen que un sentimiento está en su punto máximo; の極み va tras un sustantivo, es más solemne, se usa sobre todo en discursos y también describe estados (贅沢の極み); 限りだ suele ir tras un adjetivo, sirve en discursos, cartas y en la conversación normal, y solo expresa los propios sentimientos.",
               "this": [
                 {
-                  "tag": "Adjetivo · situación corriente",
+                  "tag": "Adjetivo · cualquier situación",
                   "tr": "Recibir un premio así me hace felicísimo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sustantivo · discurso formal",
-                  "tr": "Es para mí el mayor de los honores recibir este premio."
+                  "tag": "Sustantivo · más solemne",
+                  "tr": "Recibir un premio así me emociona profundamente."
                 }
               ],
               "wrong": {
                 "why": "Delante de の極み va un sustantivo: 感激の極み, 光栄の極み"
               },
-              "explain": "Mira primero la palabra de delante: adjetivo-い (嬉しい, 寂しい) o 「残念な」 → 限りだ; sustantivo (光栄, 感激, 贅沢) + の → の極み. En cuanto a la situación, の極み es más solemne, frecuente en discursos de entrega de premios o agradecimiento, y también sirve para estados: 「贅沢の極み」."
+              "explain": "En la misma frase valen las dos; mira primero la palabra de delante: un adjetivo (嬉しい, 寂しい, 残念な) → 限りです; un sustantivo (感激, 光栄) + の → の極みです. En el tono, の極み es más solemne, propio de un discurso en una entrega de premios o de agradecimiento; 限りだ también suena natural en cartas y en la conversación normal. Además, の極み puede describir un estado objetivo (贅沢の極み, 疲労の極み), mientras que 限りだ solo expresa los sentimientos del hablante."
             },
             {
               "id": "to-ittara-nai",
@@ -38563,52 +38570,38 @@
                   "tr": "Este trabajo es duro, pero muy gratificante."
                 }
               ],
+              "wrong": {
+                "why": "がい solo se une a la ます形 para formar un sustantivo (やりがい, 教えがい); tras la た形 de un verbo hay que usar かい."
+              },
               "explain": "Las dos son 「甲斐」 (recompensa). Mira la posición: suelta, tras la forma た de un verbo o «sustantivo + の» → かい, para decir que un esfuerzo concreto dio resultado (かいがある) o fue en vano (かいもなく); pegada directamente a la raíz ます formando una sola palabra, con sonido sonoro → がい (やりがい, 生きがい, 教えがい), para decir que hacer eso merece la pena y tiene sentido."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "かいがある / かいもなく tienen cada una un equivalente: «no fue en vano» ≈ だけのことはある; «fue en vano» ≈ にもかかわらず",
+          "note": "Ambas significan «no fue en vano»",
           "items": [
             {
               "id": "dake-no-koto-wa-aru",
+              "title": "〜だけのことはある (valió la pena)",
               "thisTitle": "〜かいがある",
-              "diff": "かいがあって dice que el esfuerzo trajo un resultado; だけのことはある valora, al ver el resultado, que «está a la altura del esfuerzo o de la fama», a menudo como «no en vano…».",
+              "diff": "Las dos dicen que el esfuerzo no fue en vano; かいがある subraya «mi esfuerzo tuvo su recompensa»; だけのことはある subraya la valoración de que «el resultado está a la altura de ese esfuerzo».",
               "this": [
                 {
                   "tag": "Esfuerzo → recompensa",
-                  "tr": "Hacer tres horas de cola valió la pena: conseguí un buen sitio."
+                  "tr": "Hacer tres horas de cola valió la pena: estaba buenísimo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Ver el resultado · valorarlo",
-                  "tr": "Este ramen está buenísimo. No en vano hice tres horas de cola."
-                }
-              ],
-              "explain": "Mira el orden y la función: 「並んだかいがあって、いい席が取れた」 cuenta primero el esfuerzo y luego el resultado obtenido; 「本当においしい。並んだだけのことはある」 primero ve el resultado y luego valora que «está a la altura» del esfuerzo, a menudo junto a 「さすが」, en el sentido de «como era de esperar»."
-            },
-            {
-              "id": "ni-mo-kakawarazu",
-              "thisTitle": "〜かいもなく",
-              "diff": "Delante de かいもなく tiene que haber un esfuerzo hecho para lograr un resultado, y detrás, el resultado frustrado; にもかかわらず es una concesión general, y antes y después puede ir cualquier cosa.",
-              "this": [
-                {
-                  "tag": "Esfuerzo frustrado",
-                  "tr": "A pesar de los desvelos de la familia al cuidarlo, mi abuelo falleció."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Concesión general",
-                  "tr": "Pese a la lluvia, se reunió mucha gente."
+                  "tag": "Resultado a la altura",
+                  "tr": "Estaba buenísimo; no en vano hicimos tres horas de cola."
                 }
               ],
               "wrong": {
-                "why": "La lluvia no es un esfuerzo; no se puede usar かいもなく"
+                "why": "Delante de かい debe ir un esfuerzo o una acción hecha para lograr algo; un precio alto no es un esfuerzo, así que se dice 値段が高いだけのことはある."
               },
-              "explain": "Mira si la primera parte es un «esfuerzo»: acciones hechas para lograr algo, como 看病, 練習 o 治療, sin conseguirlo → かいもなく, con pesar; hechos corrientes como la lluvia o una oposición, seguidos de algo contrario a lo esperado → にもかかわらず."
+              "explain": "En esta frase valen las dos, con distinto enfoque: decir que tu propio esfuerzo dio buen resultado y que mereció la pena → かいがあって; valorar que el resultado está a la altura del coste y hace honor a su fama → だけのことはあって, a menudo con 「さすが」. Si lo de delante no es un esfuerzo sino un precio o una posición (値段が高い, 有名店), solo sirve だけのことはある; si el resultado es simplemente haber conseguido algo (合格できた, いい席が取れた), lo normal es かいがある."
             }
           ]
         }
@@ -38643,11 +38636,11 @@
             },
             {
               "id": "kamoshirenai",
-              "diff": "かもしれない es una conjetura subjetiva del hablante, muy usada al hablar; 可能性がある es más objetiva y formal, y además puede medirse con 「高い／低い」.",
+              "diff": "かもしれない es una suposición subjetiva del hablante, frecuente al hablar; 可能性がある es más objetivo y formal, y se usa sobre todo en informes y noticias.",
               "this": [
                 {
-                  "tag": "Objetivo · medible",
-                  "tr": "Según el estudio, este medicamento tiene una alta probabilidad de causar efectos secundarios."
+                  "tag": "Objetivo · con fundamento",
+                  "tr": "Según el estudio, este medicamento puede producir efectos secundarios."
                 }
               ],
               "that": [
@@ -38656,7 +38649,7 @@
                   "tr": "A lo mejor mañana no puedo ir."
                 }
               ],
-              "explain": "Mira la situación y en qué se basa: juicios basados en datos o estudios, en informes o noticias, que admiten 「高い／低い」 → 可能性がある; una conjetura propia dicha a la ligera, a menudo con 「もしかしたら」 → かもしれない."
+              "explain": "Fíjate en la situación y en el fundamento: un juicio basado en datos o estudios, como 「調査の結果」, en informes y noticias → 可能性がある, de tono objetivo; una suposición propia dicha a la ligera, a menudo con 「もしかしたら」 → かもしれない, frecuente al hablar."
             },
             {
               "id": "kanenai",
@@ -38684,32 +38677,26 @@
       "groups": [
         {
           "kind": "look",
-          "note": "Las dos son «cantidad + から»: una dice «nada menos que», la otra «a partir de…»",
+          "note": "からする ↔ からすると: solo cambia un 「と」",
           "items": [
             {
-              "id": "kara-from",
-              "diff": "からある / からする / からの subrayan lo grande de una cantidad: «nada menos que, ni más ni menos que»; el から normal solo marca un punto de partida: «a partir de…».",
+              "id": "kara-miru-to",
+              "title": "〜からすると (a juzgar por)",
+              "thisTitle": "〜からする",
+              "diff": "からする va tras un precio y significa «llega a costar…»; からすると va tras el fundamento de un juicio y significa «a juzgar por…», seguido de una suposición.",
               "this": [
                 {
-                  "tag": "からある · nada menos que (tamaño)",
-                  "tr": "Pesqué un pez de nada menos que diez kilos."
-                },
-                {
-                  "tag": "からする · nada menos que (precio)",
-                  "tr": "Me compré un reloj de nada menos que un millón de yenes."
-                },
-                {
-                  "tag": "からの · nada menos que (personas)",
-                  "tr": "Se reunieron nada menos que diez mil personas."
+                  "tag": "Precio · llega a",
+                  "tr": "Este reloj cuesta nada menos que un millón de yenes."
                 }
               ],
               "that": [
                 {
-                  "tag": "Punto de partida · desde…",
-                  "tr": "En esta tienda hay relojes desde diez mil yenes."
+                  "tag": "Fundamento · a juzgar por",
+                  "tr": "A juzgar por el precio, este reloj debe de ser bastante bueno."
                 }
               ],
-              "explain": "Mira qué va después de «cantidad + から»: ある, する o の, modificando luego a un sustantivo → subraya «nada menos que, como mínimo esa cantidad»: se habla de mucho; un verbo corriente o 「です」 (1万円から買える, 1万円からです) → solo es un punto de partida, y en realidad se dice que «basta con esa cantidad como mínimo»."
+              "explain": "Solo cambia un 「と」; mira qué hay antes y después de 「から」: delante una cantidad concreta (百万円), con 「からする」 cerrando la frase o modificando directamente un sustantivo → «llega a costar…»; delante el fundamento de un juicio (値段, 話し方), con 「と」 detrás y luego una suposición como 「だろう」 o 「らしい」 → «a juzgar por…»."
             }
           ]
         },
