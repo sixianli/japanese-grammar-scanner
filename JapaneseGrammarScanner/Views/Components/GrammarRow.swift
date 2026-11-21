@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// 语法点列表行：标题（等级标签贴在标题右上角）、出题频率、意思摘要、收藏按钮。
+/// 语法点列表行：标题、等级标签、「必考」（只有必考的语法显示）、意思摘要、收藏按钮。
 struct GrammarRow: View {
     let point: GrammarPoint
     var occurrences: Int? = nil
@@ -17,12 +17,10 @@ struct GrammarRow: View {
         HStack(alignment: .top, spacing: 12) {
             VStack(alignment: .leading, spacing: 4) {
                 HStack(alignment: .center, spacing: 6) {
-                    HStack(alignment: .top, spacing: 3) {
-                        Text(point.displayTitle).font(.headline)
-                        LevelBadge(level: badgeLevel, small: true)
-                    }
-                    if let f = point.frequency {
-                        FrequencyBadge(frequency: f, compact: true)
+                    Text(point.displayTitle).font(.headline)
+                    LevelBadge(level: badgeLevel)
+                    if point.frequency == .high {
+                        MustKnowBadge()
                     }
                     if let occurrences, occurrences > 1 {
                         Text(verbatim: "×\(occurrences)").font(.caption).foregroundStyle(.secondary)

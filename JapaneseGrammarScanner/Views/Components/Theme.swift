@@ -113,7 +113,7 @@ enum Theme {
         case .kaki, .sakura, .orange: dynamic(0x3D5F99, 0x9DB8E8)
         }
     }
-    /// 主题色浅底：目标语法底色、「常考」标签底色。
+    /// 主题色浅底：目标语法底色、浅色填充。
     static var accentFill: Color { accent.opacity(0.18) }
     /// 页面背景
     static var background: Color { dynamic(store.light.hex.0, store.dark.hex.0) }

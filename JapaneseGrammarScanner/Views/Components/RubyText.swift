@@ -104,6 +104,7 @@ struct RubyText: View {
         var highlightColor: Color = .accentColor
         var lineSpacing: CGFloat = 6
         var weight: Font.Weight = .regular
+        var alignment: TextAlignment = .leading
     }
 
     private static let quoteRegex = try! NSRegularExpression(pattern: "「([^」]+)」|『([^』]+)』")
@@ -167,13 +168,14 @@ struct RubyText: View {
                 .fontWeight(style.weight)
                 .foregroundStyle(style.color)
                 .lineSpacing(style.lineSpacing)
+                .multilineTextAlignment(style.alignment)
                 .fixedSize(horizontal: false, vertical: true)
         }
     }
 
     private var flow: some View {
         // 注音行本身已经占了一定高度，这里把行距收紧，避免段落显得松散
-        return FlowLayout(lineSpacing: max(2, style.lineSpacing - 4)) {
+        return FlowLayout(lineSpacing: max(2, style.lineSpacing - 4), centered: style.alignment == .center) {
             ForEach(Array(groups.enumerated()), id: \.offset) { _, group in
                 if group.first?.isLineBreak == true {
                     Color.clear.frame(width: 0, height: 0).layoutValue(key: LineBreakKey.self, value: true)

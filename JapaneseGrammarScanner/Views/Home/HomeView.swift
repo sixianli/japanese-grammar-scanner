@@ -368,9 +368,9 @@ struct CompactGrammarList: View {
                 NavigationLink(value: Route.grammar(p.id)) {
                     HStack(spacing: 8) {
                         VStack(alignment: .leading, spacing: 3) {
-                            HStack(alignment: .top, spacing: 3) {
+                            HStack(alignment: .center, spacing: 6) {
                                 Text(p.displayTitle).font(.body.weight(.medium)).foregroundStyle(Color.primary).lineLimit(1)
-                                LevelBadge(level: p.level, small: true)
+                                LevelBadge(level: p.level)
                             }
                             if showsMeaning {
                                 Text(p.meaning).font(.subheadline).foregroundStyle(.secondary).lineLimit(2)
@@ -530,9 +530,9 @@ struct ReviewCard: View {
                     NavigationLink(value: Route.review(p.id, ids.filter { $0 != p.id })) {
                         HStack(spacing: 8) {
                             VStack(alignment: .leading, spacing: 3) {
-                                HStack(alignment: .top, spacing: 3) {
+                                HStack(alignment: .center, spacing: 6) {
                                     Text(p.displayTitle).font(.body.weight(.semibold)).foregroundStyle(Color.primary).lineLimit(1)
-                                    LevelBadge(level: p.level, small: true)
+                                    LevelBadge(level: p.level)
                                 }
                                 Text(p.meaning).font(.footnote).foregroundStyle(.secondary).lineLimit(1)
                             }

@@ -100,7 +100,7 @@ struct ContrastSection: View {
                 .font(.headline)
                 .foregroundStyle(Color.primary)
                 .multilineTextAlignment(.leading)
-            if let target { LevelBadge(level: target.level, small: true) }
+            if let target { LevelBadge(level: target.level) }
             Spacer(minLength: 8)
             if target != nil {
                 Image(systemName: "chevron.right")

@@ -44,6 +44,33 @@ final class DetailTests: E2ETestCase {
         wait(id("detail.contrast.toggle"), "返回后应回到原来的讲解页")
     }
 
+    /// Build 17 反馈 1：往上滑后，标题栏正中出现同一个标题和等级；回到顶部后标题栏里的标题藏起来
+    func testTitleBarShowsCenteredTitleAfterScrolling() {
+        openDetailBySearch("ようになる")
+        let pageTitle = id("detail.title")
+        wait(pageTitle, "讲解页顶部应有标题")
+        let title = pageTitle.label
+        let barTitle = id("detail.barTitle")
+        XCTAssertFalse(barTitle.exists, "没滚动时标题栏里不应显示标题（页面上已经有大标题）")
+
+        app.swipeUp()
+        app.swipeUp()
+        wait(barTitle, "往上滑后标题栏应显示标题")
+        XCTAssertEqual(barTitle.label, title, "标题栏显示的应是本页语法的完整标题")
+        let screen = app.windows.firstMatch.frame
+        XCTAssertEqual(barTitle.frame.midX, screen.midX, accuracy: 2, "标题应在屏幕水平正中")
+        XCTAssertLessThan(barTitle.frame.maxY, 200, "标题应在屏幕顶部的标题栏里")
+        let level = id("detail.barLevel")
+        XCTAssertTrue(level.exists, "标题栏里标题下方应有等级")
+        XCTAssertTrue(level.label.hasPrefix("JLPT N"), "等级应写成「JLPT N…」")
+        XCTAssertGreaterThan(level.frame.minY, barTitle.frame.minY, "等级应在标题下方")
+        XCTAssertEqual(level.frame.midX, screen.midX, accuracy: 2, "等级应居中")
+
+        scrollToTop()
+        XCTAssertTrue(pageTitle.isHittable, "回到顶部后页面大标题可见")
+        waitGone(barTitle, "回到顶部后标题栏里的标题应藏起来")
+    }
+
     func testDetailFeedbackLink() {
         openDetailBySearch("ように")
         let link = id("detail.feedback")
