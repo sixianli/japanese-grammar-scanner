@@ -13896,7 +13896,7 @@
               "this": [
                 {
                   "tag": "Both sides · mutual",
-                  "tr": "The two of them danced holding hands."
+                  "tr": "The two of them took each other's hands and danced."
                 }
               ],
               "that": [
@@ -13921,11 +13921,11 @@
             {
               "id": "noni-usage",
               "title": "〜のに (even though)",
-              "diff": "〜のに states that “the reality turned out the opposite”; with 〜ば〜のに it's a hypothesis, and the sentence-final のに drops the second half, leaving only regret.",
+              "diff": "〜のに states that “the fact turned out the opposite”; in 〜ば〜のに the first half is hypothetical, and the sentence-final のに drops the second half, leaving only regret.",
               "this": [
                 {
-                  "tag": "Hypothesis · didn't actually happen",
-                  "tr": "If I'd gotten up a bit earlier, I would have made it."
+                  "tag": "Hypothetical · didn't actually happen",
+                  "tr": "If I had gotten up a bit earlier, I would have made it."
                 }
               ],
               "that": [
@@ -13934,7 +13934,7 @@
                   "tr": "Even though I got up early, I still didn't make it."
                 }
               ],
-              "explain": "Look at whether the first half is a fact or a hypothesis: 「起きたのに」 — you really did get up → even though… still…; 「起きれば」 is a hypothesis and you didn't actually get up early → the sentence-final のに brings out regret that “it sadly didn't happen”."
+              "explain": "Both sides use the contrastive 「のに」: you say one thing, and reality turns out the opposite. When the first half is something that actually happened (起きたのに), the second half states the opposite result (間に合わなかった) → “even though…, still…”. When the first half becomes the hypothetical 「〜ば」 (起きれば、間に合った), のに contrasts “the good result that should have followed” with reality, and the half saying “I didn't actually get up early and didn't make it” is left unsaid. The sentence stops at のに, leaving only the regret “if only…”. So look at the first half: a fact → “even though…, still…”; a 「〜ば」 hypothetical → regret."
             }
           ]
         },
@@ -13968,81 +13968,88 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from ばかり — originally “only about this much”",
+          "note": "All come from 「ばかり」 — derived from 「計る」 (to measure); its core meaning is a measured “amount, limit”",
           "items": [
             {
-              "id": "te-bakari-iru",
-              "diff": "ばかりで sits mid-sentence and is followed by “so (they) don't do…”; てばかりいる ends the sentence and only says “always doing”.",
-              "this": [
-                {
-                  "tag": "Mid-sentence · followed by what's not done",
-                  "tr": "My little brother does nothing but play and doesn't study at all."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "End · always",
-                  "tr": "My little brother does nothing but play every day."
-                }
-              ],
-              "explain": "Look at what follows ばかり: 「で、」 followed by something that should be done but isn't, or a bad result (勉強しない、何もしない) → ばかりで; 「いる」 closing the sentence → てばかりいる, which just describes always doing it."
-            },
-            {
               "id": "bakari-only",
-              "diff": "ばかりで means “only has this, lacks what it should have”; noun + ばかり means “nothing but this one thing”.",
+              "title": "〜ばかり (about)",
+              "diff": "ばかりで means “only this, and not what there should be”; quantity + ばかり means “about, around”.",
               "this": [
                 {
-                  "tag": "Only… and not…",
-                  "tr": "This restaurant is just expensive; the taste is nothing special."
+                  "tag": "Only… · lacking what should be there",
+                  "tr": "The president's speech was merely long, with no real substance."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nothing but",
-                  "tr": "This shop has nothing but expensive things."
+                  "tag": "Quantity · about",
+                  "tr": "The president's speech went on for about thirty minutes."
                 }
               ],
-              "explain": "Look around ばかり: adjective or verb + ばかりで, followed by another clause saying “what it should have is missing” (味は普通だ) → it only has this, nothing else good about it; noun (物、肉) + ばかりだ → everything is of this one kind. (In speech, ばっかり works the same way.)"
+              "explain": "ばかり comes from the verb 「計る」 (to measure); its core meaning is a measured amount or limit. After a quantity (三十分、一週間), it means “measured out, roughly this much” → about, around. After an adjective or an action, it fixes the scope on just this one point → only this, followed by what should be there but isn't (中身がない) → “nothing but…, without…”. Check whether ばかり follows a quantity word to tell them apart."
             }
           ]
         },
         {
           "kind": "look",
-          "note": "ばかりで ↔ ばかりでなく ↔ ばかりに — only the last kana or two differ",
+          "note": "Only a character or two differs after ばかり: ばかりで ↔ ばかりでなく (adds 「なく」), ばかりで ↔ ばかりに (で / に)",
           "items": [
             {
               "id": "bakari-de-naku",
-              "diff": "ばかりで is “only… and doesn't…”, with criticism; ばかりでなく is “not only… but also…”, adding on top.",
+              "diff": "ばかりで means “only…, not…” and is critical; ばかりでなく means “not only… but also…” and adds something on top.",
               "this": [
                 {
                   "tag": "Only… · criticism",
-                  "tr": "He does nothing but complain and doesn't help at all."
+                  "tr": "All he does is complain; he doesn't help with anything."
                 }
               ],
               "that": [
                 {
                   "tag": "Not only… but also",
-                  "tr": "Not only does he complain a lot, he often takes days off work too."
+                  "tr": "Not only does he complain, he also often takes days off work."
                 }
               ],
-              "explain": "Only 「なく」 is different: ばかりで is followed by something that should be done but isn't (何も手伝わない); ばかりでなく adds one more thing with 「も」 or 「まで」 (仕事も休む). Check whether the second half has 「も」 and you can tell them apart."
+              "explain": "Only 「なく」 differs, so look at the second half too: after ばかりで comes something that should be done but isn't, in the negative (手伝わない), and the whole sentence criticizes: “only…, not…”. After ばかりでなく, 「も」 or 「まで」 adds one more thing (仕事も休む): “not only… but also…”. Note that the 「も」 in 「何も…ない」 is part of the negation, not “in addition”, so don't take it as a sign of ばかりでなく."
             },
             {
               "id": "bakari-ni",
-              "diff": "ばかりで is “only… and doesn't…”; ばかりに is “just because…, it ended badly”.",
+              "diff": "ばかりで means “only… and not…”; ばかりに means “just because of…, it ended badly”.",
               "this": [
                 {
                   "tag": "All talk · no action",
-                  "tr": "My older brother is all talk and never actually does anything."
+                  "tr": "My older brother is all talk; he never actually does anything."
                 }
               ],
               "that": [
                 {
                   "tag": "Just because → bad result",
-                  "tr": "Just because I told one lie, I lost my friend's trust."
+                  "tr": "Just because I told a lie, I lost my friend's trust."
                 }
               ],
-              "explain": "Look at 「で」 vs. 「に」, then at the second half: ばかりで is followed by “what should be done isn't”, criticizing how things have been all along; ばかりに is mostly preceded by the ta-form (ついた、言った) and followed by an irreversible bad result caused by it, often with regret."
+              "explain": "Look at 「で」 vs. 「に」, then at the second half: after ばかりで comes “what should be done isn't” (実際には何もしない), criticizing how someone always behaves. ばかりに is usually preceded by the ta-form (ついた、言った) and followed by a bad result that came from it and can't be undone (友達の信用を失った), often with a sense of regret."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "All mean “doing nothing but…”",
+          "items": [
+            {
+              "id": "te-bakari-iru",
+              "diff": "Same meaning; ばかりで sits mid-sentence and must be followed by something not done or a bad result; てばかりいる can end the sentence and just says “always doing”.",
+              "this": [
+                {
+                  "tag": "Mid-sentence · followed by what isn't done",
+                  "tr": "Even on his days off, my younger brother does nothing but play and doesn't do his homework."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Sentence-final · always doing",
+                  "tr": "Even on his days off, my younger brother is always playing."
+                }
+              ],
+              "explain": "Both mean “doing only this one thing”, and both are critical. Look at where the sentence ends: ばかりで can't end a sentence — another clause must follow, saying what should be done but isn't, or a bad result (宿題をしない), and the criticism falls on that second half. てばかりいる can end the sentence and simply describes “always doing”. To go on and say what isn't done, てばかりいる changes to 「遊んでばかりいて、宿題をしない」."
             }
           ]
         }
@@ -14057,20 +14064,20 @@
           "items": [
             {
               "id": "bakari-de",
-              "diff": "ばかりでなく is “not only… but also…”, adding on top; ばかりで is “only… and doesn't…”, with criticism.",
+              "diff": "ばかりでなく means “not only… but also…” and adds something on top; ばかりで means “only…, not…” and is critical.",
               "this": [
                 {
                   "tag": "Not only… but also",
-                  "tr": "Not only does he complain a lot, he often takes days off work too."
+                  "tr": "Not only does he complain, he also often takes days off work."
                 }
               ],
               "that": [
                 {
                   "tag": "Only… · criticism",
-                  "tr": "He does nothing but complain and doesn't help at all."
+                  "tr": "All he does is complain; he doesn't help with anything."
                 }
               ],
-              "explain": "Only 「なく」 is different: ばかりでなく adds one more thing with 「も」 or 「まで」 (仕事も休む); ばかりで is followed by something that should be done but isn't (何も手伝わない). Check whether the second half has 「も」 and you can tell them apart."
+              "explain": "Only 「なく」 differs, so look at the second half too: after ばかりでなく, 「も」 or 「まで」 adds one more thing (仕事も休む): “not only… but also…”. After ばかりで comes something that should be done but isn't, in the negative (手伝わない), and the whole sentence criticizes: “only…, not…”. Note that the 「も」 in 「何も…ない」 is part of the negation, not “in addition”, so don't take it as a sign of ばかりでなく."
             }
           ]
         },
@@ -14080,40 +14087,38 @@
           "items": [
             {
               "id": "dake-de-naku",
-              "diff": "Same meaning; だけでなく is the most common, often said as 「だけじゃなくて」 in speech; ばかりでなく is slightly more formal.",
+              "diff": "Same meaning; だけでなく is the most common, and in speech people often say 「だけじゃなくて」; ばかりでなく is slightly more formal.",
               "this": [
                 {
                   "tag": "Slightly formal",
-                  "tr": "This restaurant is not only cheap but tasty too."
+                  "tr": "This restaurant's lunch is not only cheap but also tasty."
                 }
               ],
               "that": [
                 {
                   "tag": "Spoken · chatting",
-                  "tr": "This place isn't just cheap, the food's good too."
+                  "tr": "This place isn't just cheap — the food's good too."
                 }
               ],
-              "explain": "The two are basically interchangeable. Look at the register: chatting with friends, people usually say 「だけじゃなくて」; in writing and formal speech, both ばかりでなく and だけでなく work. In speech, ばかりでなく also becomes 「ばかりじゃなく」."
+              "explain": "The two are basically interchangeable. Look at the style: chatting with friends, people mostly say 「だけじゃなくて」; in writing or formal speech, both ばかりでなく and だけでなく work. In speech, ばかりでなく also becomes 「ばかりじゃなく」."
             },
             {
               "id": "ba-kari-ka",
-              "diff": "ばかりでなく can be followed by a command or advice; ばかりか cannot, and it often carries a surprised “on top of that, even…”.",
+              "title": "〜ばかりか (not only… even)",
+              "diff": "Same meaning; ばかりでなく plainly adds one more item; ばかりか carries admiration or surprise, “on top of that, even…”, with the second item going further.",
               "this": [
                 {
-                  "tag": "Can take a command",
-                  "tr": "Don't just eat vegetables — eat meat too."
+                  "tag": "Plain · adds one item",
+                  "tr": "She can play not only the piano but also the violin."
                 }
               ],
               "that": [
                 {
-                  "tag": "Surprise · even",
-                  "tr": "Not only did he not apologize, he even came to complain."
+                  "tag": "Admiration · even",
+                  "tr": "She can play not only the piano — she can even play the violin."
                 }
               ],
-              "wrong": {
-                "why": "ばかりか cannot be followed by a command or advice"
-              },
-              "explain": "Look at the second half: a command or advice like 「〜なさい」「〜てください」「〜ましょう」 → only ばかりでなく works; stating a surprising fact that goes even further, often paired with 「まで」 or 「さえ」 → ばかりか is more forceful."
+              "explain": "Both sentences mean “not only… but also…”. Look at whether the second half uses 「も」 or 「まで」: plainly adding one more item with 「も」 → ばかりでなく is more natural; feeling the second item goes further, “even…”, often paired with 「まで」 or 「さえ」 → ばかりか, with a stronger tone. Also, when the second half is a command or request such as 「〜なさい」 or 「〜てください」, only ばかりでなく can be used."
             },
             {
               "id": "nomi-narazu",
@@ -14146,11 +14151,11 @@
             {
               "id": "bekarazu",
               "title": "〜べからず (prohibition)",
-              "diff": "べきだ is “should do”; べからず is the classical “must not do”, found only on notices and in sayings.",
+              "diff": "べきだ means “should do”; べからず is classical for “must not do” and appears only on notices and in sayings.",
               "this": [
                 {
                   "tag": "Should",
-                  "tr": "Promises should be kept."
+                  "tr": "Rules ought to be followed."
                 }
               ],
               "that": [
@@ -14159,24 +14164,24 @@
                   "tr": "Keep off the grass."
                 }
               ],
-              "explain": "べき and べからず are both forms of the classical 「べし」 (ought to): べき = ought to do; べからず = べし + the classical negative 「ず」, ought not to do = must not. Look at where it appears: stating an opinion in everyday life → べきだ; park notices and sayings (働かざる者食うべからず) → べからず."
+              "explain": "べき and べからず are both forms of the classical 「べし」 (as it should be): べき = should do; べからず = べし + the classical negative 「ず」, should not do = must not. Look at where it appears: stating an opinion in everyday life → べきだ; park notices and sayings (働かざる者食うべからず) → べからず."
             },
             {
               "id": "beku",
-              "diff": "べき is “should”; べく is the written “in order to…”, followed by the action you take.",
+              "diff": "べき means “should”; べく is a written “in order to…”, followed by the action you take.",
               "this": [
                 {
                   "tag": "Should",
-                  "tr": "I should study Japanese more."
+                  "tr": "You should study Japanese more."
                 }
               ],
               "that": [
                 {
                   "tag": "In order to · written",
-                  "tr": "I study every day in order to pass the exam."
+                  "tr": "In order to pass the exam, I study every day."
                 }
               ],
-              "explain": "Only the last kana is different: べき is followed by 「だ」 or a noun (すべきこと), meaning should; べく is followed by a comma and the action you take for that purpose, equivalent to 「ために」, and common in news and writing. Both come from 「べし」."
+              "explain": "Both are forms of the classical 「べし」 (should, ought to); the difference is the last kana. べき is the attributive form, followed by 「だ」 or a noun (すべきこと), and says directly “this ought to be done” → should. べく is the continuative form, followed by the next action, meaning “working toward what ought to be achieved…” → in order to…; what follows is the action you take for that purpose (毎日勉強している). It's equivalent to 「ために」 and is mostly seen in news and writing. Check whether べき / べく is followed by 「だ」 or by a comma and an action."
             }
           ]
         },
@@ -14186,20 +14191,20 @@
           "items": [
             {
               "id": "hou-ga-ii",
-              "diff": "べきだ says “that's how it ought to be” from principle or duty; ほうがいい is advice given with the other person's interest in mind, and softer.",
+              "diff": "べきだ says “it ought to be so” from principle or duty; ほうがいい is advice given with the other person in mind, with a softer tone.",
               "this": [
                 {
                   "tag": "Principle · should",
-                  "tr": "If you've caused someone trouble, you should apologize."
+                  "tr": "If you cause trouble for others, you should apologize."
                 }
               ],
               "that": [
                 {
-                  "tag": "For your own good · advice",
-                  "tr": "If you have a cold, you'd better go to bed early."
+                  "tag": "For your sake · advice",
+                  "tr": "If you've got a cold, you'd better go to bed early."
                 }
               ],
-              "explain": "Look at whether it's a general principle or the listener's specific situation: what's right for people in general, responsibilities → べきだ; “this would be good for you”, aimed at the person in front of you → ほうがいい. Using べきだ about someone else's private affairs sounds preachy."
+              "explain": "Look at whether it's about a general principle or the other person's specific situation: principles of conduct or responsibilities (人に迷惑をかけたら) → べきだ; “this is good for you”, aimed at the person in front of you (風邪なら) → ほうがいい. Using べきだ about someone else's private matters sounds like a lecture."
             },
             {
               "id": "nakereba-naranai",
@@ -14216,7 +14221,7 @@
                   "tr": "In Japan, cars must drive on the left."
                 }
               ],
-              "explain": "Look at whether it's an opinion or a rule: the speaker's own position, often with 「と思う」 → べきだ; laws, rules, things you can't not do → なければならない. English “should” usually corresponds to べきだ, and “must / have to” to なければならない."
+              "explain": "Look at whether it's an opinion or a rule: the speaker's own view, often with 「と思う」 → べきだ; laws, rules, things you have no choice about (日本では…) → なければならない. English “should” usually corresponds to べきだ, and “must / have to” to なければならない."
             },
             {
               "id": "mono-da",
@@ -14238,7 +14243,7 @@
             },
             {
               "id": "koto-da-advice",
-              "diff": "べきだ mostly states a general principle; ことだ is advice to a specific person in front of you: “the best thing is to…”.",
+              "diff": "べきだ mostly states a general principle; ことだ is advice to the specific person in front of you: “the best thing is to…”.",
               "this": [
                 {
                   "tag": "General principle",
@@ -14247,11 +14252,11 @@
               ],
               "that": [
                 {
-                  "tag": "Advice to you",
-                  "tr": "If you want to get good at Japanese, the best thing is to speak it every day."
+                  "tag": "Advice for you",
+                  "tr": "If you want to get good at Japanese, the thing to do is speak it every day."
                 }
               ],
-              "explain": "Look at who it's said to: how a group of people or society should behave → べきだ; to the person in front of you, about their specific goal (〜たいなら、〜ためには) → ことだ, like advice from a senior, and not used toward superiors."
+              "explain": "Look at who it's said to: what a group of people or society should do (政治家は) → べきだ; to the person in front of you, about their specific goal (日本語が上手になりたいなら、〜ためには) → ことだ. It sounds like advice from a senior, and isn't used toward superiors."
             }
           ]
         }
@@ -14261,39 +14266,15 @@
       "id": "beki-dewa-nai",
       "groups": [
         {
-          "kind": "root",
-          "note": "All come from the classical べし — meaning “naturally, as it should be”",
-          "items": [
-            {
-              "id": "bekarazu",
-              "title": "〜べからず (prohibition)",
-              "diff": "べきではない is a reasoned “should not”; べからず is the classical “must not”, used on notices and in sayings.",
-              "this": [
-                {
-                  "tag": "Reasoned · shouldn't",
-                  "tr": "You shouldn't smoke in front of children."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Classical notice · must not",
-                  "tr": "Keep off the grass."
-                }
-              ],
-              "explain": "べからず is 「べし」 + the classical negative 「ず」 and, like べきではない, means “ought not to do”, but it's much stiffer and appears almost only on notices, signs and in sayings (働かざる者食うべからず). Look at where it appears: stating your own view → べきではない; a posted prohibition or old-style sign → べからず."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "All mean “shouldn't do, mustn't do”",
           "items": [
             {
               "id": "te-wa-ikenai",
-              "diff": "べきではない is “shouldn't” on principle, not necessarily backed by a rule; てはいけない is an explicit prohibition.",
+              "diff": "べきではない means “shouldn't” in principle, with no rule necessarily behind it; てはいけない is a clear prohibition.",
               "this": [
                 {
-                  "tag": "On principle · shouldn't",
+                  "tag": "In principle · shouldn't",
                   "tr": "It's not against the law, but you shouldn't make loud noise in the middle of the night."
                 }
               ],
@@ -14303,16 +14284,16 @@
                   "tr": "Diving is not allowed in this pool."
                 }
               ],
-              "explain": "Look at whether there's a rule behind it: an explicit ban such as a law, school rule or pool rule → てはいけない; no rule, but inappropriate in terms of morals or common sense → べきではない, often carrying an “I think” stance."
+              "explain": "Look at whether there is a rule behind it: an explicit ban such as a law, school rule, or pool rule (このプールでは) → てはいけない; no rule (法律違反ではないが), but inappropriate by morals or common sense → べきではない, often as a personal view (“I think”)."
             },
             {
               "id": "mono-dewa-nai",
               "title": "〜ものではない (admonition)",
-              "diff": "べきではない is the speaker's own judgment; ものではない lectures people based on common sense: “(people) just shouldn't do that”.",
+              "diff": "べきではない is the speaker's own judgment; ものではない lectures someone based on common sense: “(people in general) shouldn't do that”.",
               "this": [
                 {
                   "tag": "Personal judgment",
-                  "tr": "I don't think we should push this plan forward now."
+                  "tr": "I don't think we should push ahead with this plan now."
                 }
               ],
               "that": [
@@ -14321,7 +14302,25 @@
                   "tr": "You shouldn't speak ill of others."
                 }
               ],
-              "explain": "Look at whether it's a specific matter or general decency: a specific plan or method, judged by the speaker from their own analysis (〜と思う) → べきではない; rules of decent behavior (人の悪口、目上の人に), like an elder lecturing → ものではない."
+              "explain": "Look at whether it's a specific matter or basic common sense: for a specific plan or approach, where the speaker judges from their own analysis (私は〜と思う) → べきではない; for basic rules of behavior (人の悪口を言う、目上の人に), like an elder lecturing → ものではない."
+            },
+            {
+              "id": "bekarazu",
+              "title": "〜べからず (prohibition)",
+              "diff": "Same meaning; べきではない is the modern form, used to reason or advise; べからず is classical, used only on notices, slogans, and in sayings, with a stiff, non-negotiable tone.",
+              "this": [
+                {
+                  "tag": "Reasoning · advising",
+                  "tr": "You shouldn't smoke in front of children."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Classical notice · must not",
+                  "tr": "Keep off the grass."
+                }
+              ],
+              "explain": "Both mean “ought not to be done”: べからず is 「べし」 + the classical negative 「ず」, and べきではない is the modern way of saying it. Look at where it's used: giving your own view or advising someone → べきではない; a sign next to a lawn, a posted ban, a saying (働かざる者食うべからず) → べからず. べからず isn't used in everyday speech, except when imitating it as a joke."
             }
           ]
         }
@@ -14336,60 +14335,45 @@
           "items": [
             {
               "id": "wa-betsu-to-shite",
-              "diff": "別に〜ない is “not particularly…”; 〜は別として is “setting… aside for now”.",
+              "diff": "別に〜ない means “not particularly…”; 〜は別として means “setting… aside for now”.",
               "this": [
                 {
                   "tag": "Not particularly",
-                  "tr": "These clothes aren't particularly expensive."
+                  "tr": "These clothes aren't really that expensive."
                 }
               ],
               "that": [
                 {
                   "tag": "Setting aside",
-                  "tr": "Price aside, the design is nice."
+                  "tr": "Price aside, the design is good."
                 }
               ],
-              "explain": "Look at what follows 「別」: 「別に」 + a sentence-final negative → nothing “separately worth mentioning” = not particularly; 「noun + は別として」, followed by another aspect → put this matter “separately to one side” = setting aside."
+              "explain": "Look at what follows 「別」: 「別に」 + a negative at the end → nothing “separately worth mentioning” = not particularly; 「noun + は別として」, followed by another aspect (デザインはいい) → putting that matter “separately to one side” = setting it aside."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both pair with a negative, expressing the degree or tone of the negation",
+          "note": "Both mean “there's no need to…”",
           "items": [
             {
-              "id": "amari-nai",
-              "diff": "あまり〜ない only states the degree, “not very”; 別に〜ない is “not really, nothing special”, with an indifferent tone.",
+              "id": "koto-wa-nai",
+              "title": "〜ことはない (no need to)",
+              "thisTitle": "別に〜なくてもいい (no particular need to)",
+              "diff": "Same meaning; 別に〜なくてもいい is casual, “it's fine not to”; ことはない earnestly tells the other person “there's no need”, often to comfort or encourage.",
               "this": [
                 {
-                  "tag": "Indifferent · don't care",
-                  "tr": "Do you like fish? — Not especially, but I can eat it."
+                  "tag": "Casual · fine not to",
+                  "tr": "You don't really have to apologize that much."
                 }
               ],
               "that": [
                 {
-                  "tag": "Degree · not very",
-                  "tr": "I don't like fish very much."
+                  "tag": "Comfort · no need",
+                  "tr": "There's no need to apologize like that. I'm the one at fault."
                 }
               ],
-              "explain": "Look at whether the speaker cares: あまり just says the degree is low; 別に means “no particular feeling about it”, often used to reply to someone and show indifference. Asked 「怒ってる？」, answering with just 「別に。」 means “it's nothing”, which sounds a bit cold."
-            },
-            {
-              "id": "zenzen-nai",
-              "diff": "全然〜ない is “not at all”, a strong negation; 別に〜ない is “not really…”, a light negation.",
-              "this": [
-                {
-                  "tag": "Light negation",
-                  "tr": "Are you tired? — Not really."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Strong negation",
-                  "tr": "Are you tired? — Not at all."
-                }
-              ],
-              "explain": "The two sentences differ only in the adverb. Look at the strength of the negation: 全然 is a complete denial, “not at all”; 別に just says “nothing special”, a flat tone that sometimes sounds like not wanting to talk about it."
+              "explain": "Both mean “there's no need to…”, and these two sentences are interchangeable. Look at the tone: 別に〜なくてもいい is light, “it doesn't matter if you don't”, and can sometimes sound a little indifferent; ことはない earnestly tells the other person “you don't need to do that”, often to comfort or encourage, and is often followed by a reason (悪いのは僕だから)."
             }
           ]
         }
@@ -14400,30 +14384,30 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 振る — originally “to wave”, extended to body movements and outward appearance",
+          "note": "Both come from 「振る」 — originally “to wave”, extended to making a movement, a way of behaving",
           "items": [
             {
               "id": "furi-wo-suru",
               "thisTitle": "〜ぶり (manner)",
-              "diff": "ぶり is how someone actually comes across; ふりをする is a deliberately put-on appearance that isn't really true.",
+              "diff": "ぶり is the manner someone actually shows; ふりをする is a manner put on deliberately, which isn't really the case.",
               "this": [
                 {
                   "tag": "Real behavior",
-                  "tr": "He works very conscientiously."
+                  "tr": "He is very diligent in how he works."
                 }
               ],
               "that": [
                 {
                   "tag": "Put-on appearance",
-                  "tr": "He pretends to be diligent, but he's actually slacking off."
+                  "tr": "He acts like he's serious, but actually he's slacking off."
                 }
               ],
-              "explain": "Both come from 「振り」 (behavior, appearance). Look at whether a “but actually…” follows: ぶり describes real behavior and is often followed by an evaluation (真面目だ、見事だ); ふりをする is often followed by 「本当は」 or 「実は」, which overturns it."
+              "explain": "Both come from 「振る」 (to wave → to make a movement, behave): the noun 「振り」 is the behavior or manner one shows. 〜ぶり refers to how a person actually comes across, often followed by an evaluation (真面目だ、見事だ). 「振りをする」 means deliberately putting on a certain appearance for others; the appearance doesn't match reality, hence “pretend”, and it's often overturned by 「本当は」 or 「実は」 (本当は怠けている). Check whether such a reversal follows to tell them apart."
             },
             {
               "id": "buru",
               "thisTitle": "〜ぶり (manner)",
-              "diff": "ぶり is a noun for how someone actually comes across; ぶる is a verb meaning to deliberately put on airs, and is negative.",
+              "diff": "ぶり is a noun for the manner someone actually shows; ぶる is a verb meaning to deliberately put on airs of…, with a negative nuance.",
               "this": [
                 {
                   "tag": "Actual manner",
@@ -14433,34 +14417,35 @@
               "that": [
                 {
                   "tag": "Putting on airs · negative",
-                  "tr": "He's always acting the senior and talking as if he's so important."
+                  "tr": "He always acts the senior and talks as if he were important."
                 }
               ],
-              "explain": "Look at the part of speech: 「〜ぶり」 is followed by particles (から、は、を) and used as a noun; 「〜ぶる」 conjugates (ぶって、ぶらないで) and is a verb meaning “to put on the air of…”, almost always critical (先輩ぶる、上品ぶる、偉ぶる)."
+              "explain": "Both come from 「振る」 (to wave → to make a movement, behave). The noun form 「振り」 → 〜ぶり is the manner that actually shows when someone speaks or acts (話しぶり). 「ぶる」 after a noun or adjective means “behaving like…” → deliberately putting on that air, and is almost always critical (先輩ぶる、偉ぶる、上品ぶる). Look at the part of speech: 〜ぶり is followed by particles (から、は、を) and works as a noun; 〜ぶる conjugates (ぶって、ぶらないで) and is a verb."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both describe the “manner, way” of doing something",
+          "note": "Both mean the “way” someone does something",
           "items": [
             {
               "id": "kata-way-of-doing",
+              "title": "〜方 (way, manner)",
               "thisTitle": "〜ぶり (manner)",
-              "diff": "ぶり is the “performance, manner” you actually observe, usually with an evaluation; 方 is a “way of doing” that can be taught and learned.",
+              "diff": "Same meaning; 〜ぶり leans formal and is mostly used to describe or evaluate how someone performs; 〜方 is the everyday word and sounds more natural in conversation.",
               "this": [
                 {
-                  "tag": "Actual performance",
-                  "tr": "I was impressed by the way Tanaka works."
+                  "tag": "Formal · describing performance",
+                  "tr": "The new department head spoke with real poise and confidence."
                 }
               ],
               "that": [
                 {
-                  "tag": "Method",
-                  "tr": "Tanaka taught me how to do the job."
+                  "tag": "Spoken · chatting",
+                  "tr": "The new department head speaks with real poise, doesn't he?"
                 }
               ],
-              "explain": "Look at the verb that follows: evaluations like 感心する、驚く、すばらしい → 〜ぶり; words related to “method” like 教える、習う、分からない → 〜方. Likewise, 話し方 is how you speak (wording, accent), while 話しぶり is your manner while speaking."
+              "explain": "Here both refer to how a person talks or acts, and 話しぶり and 話し方 are interchangeable. Look at the setting: describing or evaluating someone's performance in writing or reports → 〜ぶり (仕事ぶり、暮らしぶり), somewhat formal; chatting with friends → 〜方 is more natural. Also, 〜方 can mean “method” (話し方を習う), which 〜ぶり cannot."
             }
           ]
         }
@@ -14474,38 +14459,21 @@
           "note": "Both come from ては (said ちゃ in speech) — “if you do / don't do it, (it's no good)”",
           "items": [
             {
-              "id": "te-wa-negative-condition",
-              "diff": "〜ちゃだめ directly says “don't do it”; 〜ちゃ、+ second half says “if you do that, …”, stating the consequence.",
-              "this": [
-                {
-                  "tag": "Not allowed",
-                  "tr": "Don't eat that much."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "If… then…",
-                  "tr": "If you eat that much, you'll get fat."
-                }
-              ],
-              "explain": "ちゃ = ては, meaning “if you do it”. Look at what follows: directly 「だめ」 or 「いけない」 → doing that is no good = prohibition (ちゃいけない works the same); a bad result (太る、遅れる、困る) → just a warning about the consequence. After a noun or an 「ん」 sound it becomes では／じゃ (飲んじゃ = 飲んでは), on the same principle."
-            },
-            {
               "id": "nakucha-nakya",
-              "diff": "〜ちゃだめ is “doing it is no good” = prohibition; 〜なくちゃ is “not doing it is no good” = must.",
+              "diff": "〜ちゃだめ means “doing it is not OK” = prohibition; 〜なくちゃ means “not doing it is not OK” = must.",
               "this": [
                 {
-                  "tag": "Doing it is no good · prohibition",
+                  "tag": "Doing it isn't OK · prohibition",
                   "tr": "It's already late, so no video games."
                 }
               ],
               "that": [
                 {
-                  "tag": "Not doing it is no good · must",
-                  "tr": "It's already late, I've got to go to bed."
+                  "tag": "Not doing it isn't OK · must",
+                  "tr": "It's already late, so I've got to go to bed."
                 }
               ],
-              "explain": "Both are contractions of ては: ちゃ = ては, なくちゃ = なくては. Look at whether 「なく」 comes before 「ちゃ」: しちゃだめ → doing it is no good = prohibition; 寝なくちゃ(いけない) → not doing it is no good = must, and the 「いけない」 at the end is often dropped. In speech people also say なきゃ (寝なきゃ), with the same meaning."
+              "explain": "Both are contractions of ては: ちゃ = ては, なくちゃ = なくては. Check whether 「なく」 comes before 「ちゃ」: しちゃだめ → doing it is not OK = prohibition; 寝なくちゃ(いけない) → not doing it is not OK = must, with the following 「いけない」 often omitted. In speech people also say なきゃ (寝なきゃ) with the same meaning."
             }
           ]
         },
@@ -14538,24 +14506,24 @@
           "items": [
             {
               "id": "te-wa-ikenai",
-              "diff": "Same meaning; ちゃだめ／ちゃいけない are casual contractions, while てはいけない is the full form and can be used in formal settings.",
+              "diff": "Same meaning; ちゃだめ / ちゃいけない are spoken contractions, while てはいけない is the full form and can be used in formal settings.",
               "this": [
                 {
-                  "tag": "Casual · to a child",
+                  "tag": "Spoken · to a child",
                   "tr": "Hey, no running there!"
                 }
               ],
               "that": [
                 {
                   "tag": "Full form · rule",
-                  "tr": "Running in the corridors is not allowed."
+                  "tr": "Running in the hallways is not allowed."
                 }
               ],
-              "explain": "Look at who's being addressed and the setting: parents to children or a casual reminder between friends → ちゃだめ (ちゃいけない works the same); school rules, notices, explaining to many people → てはいけません. Don't use ちゃ in essays."
+              "explain": "Look at who is being addressed and the setting: a parent to a child, or a casual reminder between friends → ちゃだめ (ちゃいけない works the same); school rules, notices, explanations to many people → てはいけません. Don't use ちゃ in essays."
             },
             {
               "id": "naide-kudasai",
-              "diff": "ちゃだめ is a direct prohibition, only for children or people you're close to; ないでください is a polite request that can be used with anyone.",
+              "diff": "ちゃだめ is a direct prohibition, only for children or people you're close to; ないでください is a polite request that works with anyone.",
               "this": [
                 {
                   "tag": "Direct · to a child",
@@ -14564,11 +14532,11 @@
               ],
               "that": [
                 {
-                  "tag": "Polite · to a visitor",
-                  "tr": "Excuse me, please don't touch the exhibits."
+                  "tag": "Polite · to visitors",
+                  "tr": "Excuse me, please do not touch the exhibits."
                 }
               ],
-              "explain": "Look at who you're talking to: your own child, people close to you → ちゃだめ; visitors, strangers, superiors → ないでください. Saying 「触っちゃだめ」 to a visitor would be very rude."
+              "explain": "Look at who you're talking to: your own child or someone close → ちゃだめ; visitors, strangers, superiors → ないでください. Saying 「触っちゃだめ」 to a visitor would be very rude."
             }
           ]
         }
@@ -14593,10 +14561,10 @@
               "that": [
                 {
                   "tag": "Slightly formal",
-                  "tr": "This study is useful not only in medicine but also in engineering."
+                  "tr": "This research is useful not only in medicine but also in the field of engineering."
                 }
               ],
-              "explain": "The two mean basically the same and are mostly interchangeable. Look at the setting: chatting and everyday explanations → だけでなく (often 「だけじゃなくて」 in speech); ばかりでなく is also common in reports and writing."
+              "explain": "The two mean basically the same and are mostly interchangeable. Look at the setting: chatting or everyday explanations → だけでなく (in speech, often 「だけじゃなくて」); in reports and writing, ばかりでなく is also common."
             },
             {
               "id": "nomi-narazu",
@@ -14638,19 +14606,19 @@
               "this": [
                 {
                   "tag": "Can take a request",
-                  "tr": "Don't just eat vegetables — please eat fruit too."
+                  "tr": "Don't eat only vegetables; please eat fruit too."
                 }
               ],
               "that": [
                 {
                   "tag": "Statement · bad on top of bad",
-                  "tr": "This room is not only small but also gets little sunlight."
+                  "tr": "This room is not only small, it also gets poor sunlight."
                 }
               ],
               "wrong": {
-                "why": "上に cannot be followed by a request or command"
+                "why": "上に can't be followed by a request or command"
               },
-              "explain": "Look at the second half: a request or advice like 「〜てください」「〜なさい」 → only だけでなく works; stating two features in the same direction (狭い + 日当たりが悪い), often with a tone of “to make matters worse” or “even better” → 上に."
+              "explain": "Look at the second half: a request or advice like 「果物も食べてください」 (〜てください、〜なさい) → only だけでなく works; stating two features pointing the same way (狭い + 日当たりも悪い), often with a tone of “to make matters worse” or “even better” → 上に."
             }
           ]
         }
