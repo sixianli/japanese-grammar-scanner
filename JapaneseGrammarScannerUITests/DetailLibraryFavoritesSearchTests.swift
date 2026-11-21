@@ -85,8 +85,10 @@ final class DetailTests: E2ETestCase {
         app.swipeUp()
         wait(barTitle, "往上滑后标题栏应显示标题")
         XCTAssertEqual(barTitle.label, title, "标题栏显示的应是本页语法的完整标题")
-        let screen = app.windows.firstMatch.frame
-        XCTAssertEqual(barTitle.frame.midX, screen.midX, accuracy: 2, "标题应在屏幕水平正中")
+        // 以讲解页所在的导航栏为准：大屏 iPhone 上页面右侧可能还有系统的标签栏，页面不等于整块屏幕
+        let navBar = app.navigationBars.firstMatch
+        let screen = navBar.exists ? navBar.frame : app.windows.firstMatch.frame
+        XCTAssertEqual(barTitle.frame.midX, screen.midX, accuracy: 2, "标题应在页面水平正中（页面 \(screen)）")
         XCTAssertLessThan(barTitle.frame.maxY, 200, "标题应在屏幕顶部的标题栏里")
         let level = id("detail.barLevel")
         XCTAssertTrue(level.exists, "标题栏里标题下方应有等级")
