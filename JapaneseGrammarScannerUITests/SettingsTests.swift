@@ -134,37 +134,22 @@ final class SettingsTests: E2ETestCase {
         navBar("反馈").buttons["取消"].tap()
     }
 
-    /// 入门引导现在从「设置 → 使用指南 → 再看一遍入门引导」打开
-    func testOnboardingFromSettings() {
+    /// 使用指南只有一页：核心功能 5 张图文卡片，没有二级入口、没有「再看一遍入门引导」（Build 17 反馈 3）
+    func testGuideIsOnePageOfCoreCards() {
         openSettings()
         scrollTo(id("settings.guide"))
         id("settings.guide").tap()
         wait(navBar("使用指南"), "应打开使用指南")
-        scrollTo(id("guide.onboarding"))
-        id("guide.onboarding").tap()
-        wait(app.buttons["跳过"], "应打开入门引导", timeout: 10)
-        app.buttons["跳过"].tap()
-        button(startingWith: "开始使用").tap()
-        wait(id("home.search"), "引导结束回到首页")
-    }
-
-    /// 使用指南覆盖每个主要功能：逐个点开都有分步说明，并能返回
-    func testGuideCoversEveryFeature() {
-        openSettings()
-        scrollTo(id("settings.guide"))
-        id("settings.guide").tap()
-        wait(navBar("使用指南"), "应打开使用指南")
-        let features = ["scan", "scanResult", "detail", "contrast", "review", "library", "search", "history", "appearance", "feedback"]
-        for f in features {
-            let row = id("guide.topic.\(f)")
-            scrollTo(row)
-            wait(row, "使用指南应有「\(f)」")
-            row.tap()
-            wait(id("guide.step"), "「\(f)」应有分步说明")
-            XCTAssertGreaterThanOrEqual(ids("guide.step").count, 2, "「\(f)」至少两步")
-            back()
-            wait(navBar("使用指南"), "应回到使用指南")
+        wait(id("guide.card"), "使用指南应显示图文卡片")
+        for title in ["扫描日语", "点橙色框", "看语法讲解", "相近语法", "复习「快要忘了」"] {
+            let card = app.descendants(matching: .any).matching(NSPredicate(format: "identifier == 'guide.card' AND label CONTAINS %@", title)).firstMatch
+            scrollTo(card)
+            XCTAssertTrue(card.exists, "使用指南应有「\(title)」卡片")
         }
+        XCTAssertEqual(ids("guide.card").count, 5, "只讲 5 个核心功能")
+        XCTAssertFalse(app.descendants(matching: .any).matching(NSPredicate(format: "identifier BEGINSWITH 'guide.topic.'")).firstMatch.exists, "不再有分功能的二级入口")
+        XCTAssertFalse(id("guide.onboarding").exists, "不再有「再看一遍入门引导」")
+        back()
         closeSettings()
     }
 

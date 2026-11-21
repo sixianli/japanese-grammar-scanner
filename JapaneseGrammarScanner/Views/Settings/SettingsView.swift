@@ -18,8 +18,7 @@ struct SettingsSheet: View {
                     case .appearance: AppearanceView()
                     case .language: LanguagePickerView()
                     case .privacy: PrivacyView()
-                    case .guide: GuideView(close: { dismiss() })
-                    case .guideTopic(let feature): GuideTopicView(feature: feature)
+                    case .guide: GuideView()
                     case .terms: TermsView()
                     case .licenses: LicensesView()
                     }
@@ -31,7 +30,6 @@ struct SettingsSheet: View {
 /// 设置里的子页面（同一导航栈内统一用按值跳转）
 enum SettingsPage: Hashable {
     case appearance, language, privacy, terms, licenses, guide
-    case guideTopic(AppFeature)
 }
 
 /// 设置：外观、语言、反馈、帮助、关于（收费开启时还有购买）。

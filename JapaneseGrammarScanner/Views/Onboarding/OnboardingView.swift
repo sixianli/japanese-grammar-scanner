@@ -226,7 +226,7 @@ private struct WelcomeIllustration: View {
     }
 }
 
-private struct ScanIllustration: View {
+struct ScanIllustration: View {
     @State private var scanY: CGFloat = -70
 
     var body: some View {
@@ -247,7 +247,7 @@ private struct ScanIllustration: View {
     }
 }
 
-private struct DetailIllustration: View {
+struct DetailIllustration: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 8) {
@@ -272,7 +272,7 @@ private struct DetailIllustration: View {
     }
 }
 
-private struct ReviewIllustration: View {
+struct ReviewIllustration: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text(localized: "有 \(3) 个快要忘了").font(.headline)
@@ -296,7 +296,7 @@ private struct ReviewIllustration: View {
     }
 }
 
-private struct ReadyIllustration: View {
+struct ReadyIllustration: View {
     var body: some View {
         ZStack {
             BookPage().rotationEffect(.degrees(-4))
