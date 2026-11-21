@@ -38807,42 +38807,49 @@
       "id": "kara-ii-you-na-mono-no",
       "groups": [
         {
+          "kind": "root",
+          "note": "Đều bắt nguồn từ trợ từ nghịch tiếp 「ものの」 — nghĩa gốc “tuy… nhưng…”",
+          "items": [
+            {
+              "id": "mono-no",
+              "diff": "ものの đứng một mình là “tuy… nhưng…”; からいいようなものの là から＋いいような＋ものの: trước thì thấy may, sau đó nhắc nhở.",
+              "this": [
+                {
+                  "tag": "May mà ＋ nhắc nhở",
+                  "tr": "May mà con mang ô, nhưng ít ra cũng phải xem dự báo thời tiết chứ."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Tuy… nhưng",
+                  "tr": "Tuy đã mang ô, nhưng rốt cuộc vẫn bị ướt."
+                }
+              ],
+              "explain": "Nghĩa gốc của 「ものの」 là “tuy… nhưng…”: thừa nhận một sự thật rồi chuyển sang điều không như ý. ものの đứng một mình chính là nghĩa này: mang ô rồi mà vẫn bị ướt (結局濡れてしまった). からいいようなものの là から (vì) ＋ いいような (coi như ổn) ＋ ものの: “vì đã mang ô nên coi như ổn, nhưng…”, từ đó thành cách nói thấy may rồi chuyển sang nhắc nhở hoặc “suýt nữa thì gay” (天気予報くらい見ておきなさい). Phân biệt bằng cách xem phía trước ものの: một sự thật bình thường đi thẳng vào → ものの; phía trước có 「から＋いいような」 → からいいようなものの."
+            }
+          ]
+        },
+        {
           "kind": "meaning",
-          "note": "からいいようなものの một nửa là “may mà”, một nửa là “tuy… nhưng”: nửa trước gần với てよかった, nửa sau gần với ものの",
+          "note": "Đều mang nghĩa “may mà…”",
           "items": [
             {
               "id": "te-yokatta",
-              "diff": "てよかった đơn thuần diễn tả sự may mắn, yên tâm; からいいようなものの sau khi thấy may mắn nhất định còn thêm lời trách móc hoặc cảnh báo.",
+              "title": "〜てよかった (may mà…)",
+              "diff": "てよかった chỉ đơn thuần nhẹ nhõm, câu kết thúc ở đó; からいいようなものの sau khi thấy may còn thêm lời nhắc nhở, người nói thật ra không hài lòng.",
               "this": [
                 {
-                  "tag": "May mắn ＋ trách móc",
-                  "tr": "May mà không ai bị thương, chứ suýt chút nữa là thành tai nạn lớn rồi đấy."
+                  "tag": "May mà ＋ nhắc nhở",
+                  "tr": "May mà tìm được chìa khóa, nhưng từ nay phải cẩn thận hơn đấy."
                 }
               ],
               "that": [
                 {
-                  "tag": "Đơn thuần may mắn",
-                  "tr": "Không bị thương thật là may quá."
+                  "tag": "Chỉ nhẹ nhõm",
+                  "tr": "May quá, tìm được chìa khóa rồi."
                 }
               ],
-              "explain": "Xem câu đã nói hết chưa: kết thúc ở 「よかった」, chỉ bày tỏ sự yên tâm → てよかった; sau 「からいいようなものの」 nhất định còn nửa câu nữa, chỉ ra “lẽ ra có thể rất tệ” hoặc “lần sau chú ý”, thực ra người nói không hài lòng."
-            },
-            {
-              "id": "mono-no",
-              "diff": "ものの chỉ là “tuy… nhưng…” thông thường; vế trước của からいいようなものの bắt buộc phải là kết quả tốt nhờ may mắn, vế sau là lời phê bình hoặc “suýt nữa thì có chuyện”.",
-              "this": [
-                {
-                  "tag": "May mắn ＋ cảnh báo",
-                  "tr": "May mà đã mua bảo hiểm, chứ không thì khổ to rồi."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nghịch thông thường",
-                  "tr": "Tuy đã đăng ký hội viên phòng gym nhưng chưa đi lần nào."
-                }
-              ],
-              "explain": "Xem nửa câu đầu có phải là “may mà” không: những việc may mắn tránh được kết quả xấu như 保険に入っていた、間に合った → からいいようなものの, phía sau là “nếu không thì…” hoặc lời trách móc; nửa câu đầu chỉ là một sự thật bình thường, phía sau không như mong đợi → ものの. 「ものの」 ở cuối からいいようなものの chính là quan hệ nghịch này."
+              "explain": "Xem câu đã nói hết chưa: 「鍵が見つかってよかった」 dừng ở đó, chỉ là thở phào → てよかった; sau 「からいいようなものの」 nhất định còn nửa câu như 「今度から気をつけなさい」, nhắc nhở người nghe hoặc chỉ ra lẽ ra đã có thể tệ hơn, kèm ý không hài lòng → からいいようなものの."
             }
           ]
         }
@@ -38876,41 +38883,25 @@
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “dù là A hay B thì cũng…”",
+          "note": "Đều mang nghĩa “dù tốt hay xấu”",
           "items": [
             {
               "id": "ni-shiro-ni-shiro",
-              "diff": "にしろ〜にしろ có thể đi với đủ loại danh từ, động từ, tự do đặt câu; かれ〜かれ là thành ngữ chỉ giới hạn ở vài cặp tính từ trái nghĩa.",
+              "thisTitle": "善かれ悪しかれ (dù tốt hay xấu)",
+              "diff": "善かれ悪しかれ là thành ngữ cố định, mang tính văn viết, giọng điềm tĩnh; 良いにしろ悪いにしろ là mẫu câu thông thường, hai vế có thể thay tự do, khi nói cũng hay dùng.",
               "this": [
                 {
-                  "tag": "Thành ngữ cố định",
-                  "tr": "Dù là ai thì ít nhiều cũng có những nỗi phiền muộn."
+                  "tag": "Thành ngữ cố định · văn viết",
+                  "tr": "Dù tốt hay xấu, cuộc cải cách này đã làm thị trấn thay đổi rất nhiều."
                 }
               ],
               "that": [
                 {
-                  "tag": "Đặt câu tự do",
-                  "tr": "Dù tán thành hay phản đối, xin hãy nói ra ý kiến của mình."
+                  "tag": "Mẫu câu thông thường · thay được",
+                  "tr": "Dù là tốt hay xấu, cuộc cải cách này đã làm thị trấn thay đổi rất nhiều."
                 }
               ],
-              "explain": "Xem phía trước có phải mấy cặp từ cố định đó không: 遅かれ早かれ、多かれ少なかれ、善かれ悪しかれ → かれ〜かれ, không thể tự đổi sang tính từ khác; mọi trường hợp “A hay B” khác (賛成／反対、行く／行かない) → にしろ〜にしろ (にしても〜にしても cũng vậy)."
-            },
-            {
-              "id": "you-ga-mai-ga",
-              "diff": "(よ)うが〜まいが dùng “làm／không làm” của cùng một động từ đặt đối nhau, có thể tự do đặt câu; かれ〜かれ là cách nói cố định gồm một cặp tính từ trái nghĩa.",
-              "this": [
-                {
-                  "tag": "Cặp từ trái nghĩa cố định",
-                  "tr": "Dù tốt hay xấu, điện thoại thông minh đã làm thay đổi lớn cuộc sống của chúng ta."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Cùng động từ · làm hay không",
-                  "tr": "Dù cậu có đến hay không, bữa tiệc vẫn diễn ra theo kế hoạch."
-                }
-              ],
-              "explain": "Xem thứ đặt đối nhau là gì: khẳng định và phủ định của cùng một động từ (来ようが来るまいが、行こうが行くまいが) → (よ)うが〜まいが, nhấn mạnh “làm hay không cũng như nhau”; những cặp tính từ cố định như 遅かれ早かれ、善かれ悪しかれ → かれ〜かれ. ((よ)うと〜まいと cũng vậy)"
+              "explain": "Hai câu cùng nghĩa: “dù tốt hay xấu thì sự thật là vậy”. Chọn theo văn phong và việc có thay từ được hay không: 善かれ悪しかれ là thành ngữ cố định, chỉ nói được như vậy, thường gặp trong bài viết, bình luận, giọng điềm tĩnh; にしろ〜にしろ là mẫu câu thông thường, hai vế đặt gì vào cũng được (行くにしろ行かないにしろ, 賛成にしろ反対にしろ), trong hội thoại cũng hay dùng."
             }
           ]
         }
@@ -38921,24 +38912,27 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “nhân tiện, kiêm luôn”",
+          "note": "Đều mang nghĩa “nhân tiện làm thêm một việc khác”",
           "items": [
             {
               "id": "gatera",
-              "diff": "かたがた chỉ đi với danh từ, thường dùng trong những dịp trang trọng như công việc, thư từ; がてら thoải mái, còn đi được với thể ます của động từ.",
+              "diff": "かたがた chỉ đi sau danh từ, dùng trong tình huống trang trọng như công việc, thư từ; がてら thoải mái, dùng trong lời nói hằng ngày, còn đi được sau ます形 của động từ.",
               "this": [
                 {
-                  "tag": "Trang trọng · thư từ",
-                  "tr": "Trong ít ngày tới, tôi xin đến thăm để chào hỏi, nhân tiện bày tỏ lòng cảm ơn."
+                  "tag": "Trang trọng · công việc",
+                  "tr": "Nhân chuyến công tác, tôi xin ghé quý công ty để chào hỏi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Thường ngày · thoải mái",
-                  "tr": "Đi dạo, nhân tiện tôi ghé qua cửa hàng tiện lợi."
+                  "tag": "Thoải mái · hằng ngày",
+                  "tr": "Nhân tiện đi công tác, tôi ghé nhà bạn chơi."
                 }
               ],
-              "explain": "Xem hoàn cảnh và từ đứng trước: danh từ mang tính lễ nghi như お礼、ご挨拶、ご報告, phía sau đi với 「伺う」, 「参上する」 → かたがた; hoạt động thường ngày như 散歩、買い物, hoặc thể ます của động từ (送り、遊び) → がてら."
+              "wrong": {
+                "why": "かたがた chỉ đi sau danh từ, không đi sau ます形 của động từ; ở đây phải nói 「送りがてら」"
+              },
+              "explain": "Phía trước đều là 「出張」, nên xem giọng điệu nửa sau: câu trang trọng trong công việc, thư từ như 「御社にご挨拶に伺います」 → かたがた; câu nói thoải mái hằng ngày như 「友達の家に寄ってきた」 → がてら. Xem thêm cách nối: がてら đi được sau ます形 của động từ (送りがてら), còn かたがた chỉ đi sau danh từ."
             },
             {
               "id": "wo-kanete",
@@ -38959,37 +38953,21 @@
             },
             {
               "id": "tsuide-ni",
-              "diff": "ついでに vế trước là việc chính, vế sau là việc nhỏ làm tiện tay; かたがた hai mục đích có tầm quan trọng ngang nhau, và trang trọng hơn.",
+              "title": "〜ついでに (nhân tiện…)",
+              "diff": "かたがた trang trọng, coi cả hai việc đều là mục đích chính; のついでに mang tính khẩu ngữ, khiến việc sau nghe như chuyện tiện tay.",
               "this": [
                 {
-                  "tag": "Hai mục đích · khá trang trọng",
-                  "tr": "Về quê thăm nhà, nhân dịp đó tôi cũng ghé thăm thầy cũ."
+                  "tag": "Cả hai là việc chính · trang trọng",
+                  "tr": "Nhân dịp về quê, tôi đến thăm thầy cũ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Việc chính ＋ tiện tay",
-                  "tr": "Lúc cậu đi bưu điện, tiện thể gửi giúp tớ lá thư này luôn nhé?"
+                  "tag": "Việc sau là tiện tay · khẩu ngữ",
+                  "tr": "Tiện lúc về quê, tôi ghé thăm thầy cũ."
                 }
               ],
-              "explain": "Xem tầm quan trọng của hai việc và hoàn cảnh: vế trước của ついでに là việc chính vốn dĩ phải làm, vế sau là việc nhỏ làm tiện tay, hay dùng trong văn nói, còn đi được sau động từ (行くついでに); かたがた chỉ đi sau danh từ, hai mục đích quan trọng như nhau, thường dùng trong những dịp trang trọng như thăm hỏi, thư từ."
-            },
-            {
-              "id": "katawara",
-              "diff": "かたがた là một lần hành động “nhân tiện kiêm luôn”; かたわら là ngoài công việc chính thì “kiêm thêm lâu dài” một việc khác.",
-              "this": [
-                {
-                  "tag": "Một lần hành động · nhân tiện",
-                  "tr": "Tình cờ có việc qua gần đây, nên tôi tiện thể ghé đến chào hỏi."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Lâu dài · ngoài việc chính",
-                  "tr": "Bố tôi vừa đi làm ở công ty, vừa viết tiểu thuyết."
-                }
-              ],
-              "explain": "Xem thời gian dài hay ngắn và từ phía trước: danh từ mang tính lễ nghi như お礼、ご挨拶, phía sau là một lần thăm hỏi như 「伺う」 → かたがた; công việc chính như 勤める、教える, phía sau là nghề phụ, sở thích làm lâu dài (〜ている) → かたわら."
+              "explain": "Cả hai câu đều được, nhưng sắc thái khác nhau: かたがた trang trọng, việc về quê và việc thăm thầy đều là việc chính; のついでに là khẩu ngữ, nghe như “tiện đường nên mới ghé”, dùng cho việc đến thăm thầy, thăm khách hàng thì chưa đủ lịch sự. Vì vậy các cuộc thăm hỏi, chào hỏi trang trọng thường dùng かたがた, còn việc vặt như mua đồ, gửi thư thì dùng ついでに. Cách nối cũng khác: ついでに đi được sau động từ (行くついでに), còn かたがた chỉ đi sau danh từ."
             }
           ]
         }
@@ -39000,62 +38978,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “trong khi làm một việc, còn kiêm thêm một việc khác”",
+          "note": "Đều mang nghĩa “trong một thời gian, làm song song hai việc”",
           "items": [
             {
               "id": "nagara",
-              "title": "〜ながら (vừa… vừa…)",
-              "diff": "ながら nói được việc vừa làm cái này vừa làm cái kia trong cùng một lúc; かたわら chỉ nói “ngoài công việc chính, còn kiêm thêm lâu dài một việc khác”.",
+              "title": "〜ながら (song song trong thời gian dài)",
+              "diff": "Cả hai đều nói trong một thời gian làm song song hai việc; かたわら mang tính văn viết, vế trước là công việc chính hay thân phận, hay dùng khi giới thiệu một người; ながら dùng phổ biến cả khi nói lẫn khi viết.",
               "this": [
                 {
-                  "tag": "Ngoài việc chính · lâu dài",
-                  "tr": "Ngoài công việc ở ngân hàng, anh ấy còn viết tiểu thuyết."
+                  "tag": "Văn viết · ngoài công việc chính",
+                  "tr": "Ngoài công việc ở ngân hàng, cô ấy còn làm dịch thuật."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cùng một lúc",
-                  "tr": "Vừa nghe nhạc vừa làm bài tập."
+                  "tag": "Khi nói cũng hay dùng",
+                  "tr": "Cô ấy vừa làm ở ngân hàng vừa làm dịch thuật."
                 }
               ],
-              "wrong": {
-                "why": "Những hành động làm cùng lúc ngay lúc này thì không dùng かたわら được"
-              },
-              "explain": "Xem hai việc có phải “làm cùng lúc ngay lúc này” không: vừa nghe nhạc vừa làm bài tập → chỉ dùng được ながら; “làm ở ngân hàng” là công việc chính lâu dài, “viết tiểu thuyết” là việc kiêm thêm → かたわら, là văn viết, hay dùng khi giới thiệu tiểu sử một người. Song song lâu dài thì nói ながら cũng được (働きながら大学に通う), nhưng mang tính văn nói hơn."
-            },
-            {
-              "id": "gatera",
-              "diff": "がてら là một lần ra ngoài “nhân tiện” làm thêm việc khác; かたわら là ngoài công việc chính còn kiêm thêm lâu dài một việc khác.",
-              "this": [
-                {
-                  "tag": "Lâu dài · ngoài việc chính",
-                  "tr": "Ngoài việc dạy ở trường đại học, tôi còn làm công việc dịch thuật."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Một lần · nhân tiện",
-                  "tr": "Đi dạo, nhân tiện tôi ghé hiệu sách trước ga."
-                }
-              ],
-              "explain": "Xem phía trước là gì: một lần ra ngoài như 「散歩」, 「買い物」, nhân tiện làm xong việc khác → がてら; công việc, thân phận lâu dài như 「教える」, 「勤める」, ngoài ra còn làm việc khác → かたわら."
-            },
-            {
-              "id": "katagata",
-              "diff": "かたがた là một lần đến thăm kiêm hai mục đích, hay dùng trong thư từ, công việc; かたわら là hai hoạt động diễn ra song song trong một thời kỳ.",
-              "this": [
-                {
-                  "tag": "Lâu dài · ngoài nghề chính",
-                  "tr": "Ngoài việc làm nông, bố tôi còn nghiên cứu lịch sử địa phương."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Một lần thăm · kiêm luôn",
-                  "tr": "Tôi đến để chào hỏi, nhân tiện cảm ơn về sự giúp đỡ hôm trước."
-                }
-              ],
-              "explain": "Hai cái trông cũng giống nhau, hãy xem trước sau: trước かたがた thường là danh từ như 「お礼」, 「ご挨拶」, 「お見舞い」, phía sau là 「伺う」, 「訪ねる」, một lần đến thăm đạt hai mục đích, là câu khách sáo trong thư từ, công việc; trước かたわら là công việc lâu dài (営む、勤める), nói về trạng thái cuộc sống trong một thời kỳ."
+              "explain": "Hai câu cùng nghĩa. Chọn theo văn phong và vế trước: かたわら mang tính văn viết, vế trước là công việc chính hay thân phận (勤める, 教える, 研究), kiểu viết trong phần giới thiệu nhân vật, tin tức; ながら dùng được cả khi nói lẫn khi viết, vế trước không cần là công việc chính (アルバイトをしながら学校に通う). Trong hội thoại hằng ngày, ながら tự nhiên hơn."
             }
           ]
         }
@@ -39087,7 +39028,7 @@
               "wrong": {
                 "why": "きらいがある chỉ dùng cho khuynh hướng không tốt"
               },
-              "explain": "Xem có phải nói về khuyết điểm, có phê phán không: “chuyện gì cũng một mình quyết định” là tật mà người nói thấy chướng mắt → きらいがある; miêu tả khách quan dựa trên số liệu như “theo điều tra” (調査によると), việc tốt cũng được → 傾向がある."
+              "explain": "Xem có phải nói về khuyết điểm, có phê phán không: “chuyện gì cũng một mình quyết định” là tật mà người nói thấy chướng mắt → きらいがある; miêu tả khách quan dựa trên số liệu như 「調査によると」 (theo điều tra), việc tốt cũng được → 傾向がある."
             },
             {
               "id": "gachi",
@@ -39105,24 +39046,6 @@
                 }
               ],
               "explain": "Xem cách nối và đối tượng được nói đến: がち đi sau thể ます hoặc danh từ (ひきがち、病気がち), những hiện tượng thường ngày như “dễ bị cảm”, “hay đi muộn” đều dùng nó; きらいがある đi sau thể từ điển, thường dùng để bình luận bằng văn viết về suy nghĩ, tác phong của người hay tập thể, mang ý phê phán rõ ràng."
-            },
-            {
-              "id": "ppoi",
-              "title": "〜っぽい (hở ra là…)",
-              "diff": "っぽい là văn nói, chỉ đi với một số ít động từ (忘れっぽい、怒りっぽい); きらいがある là lời bình luận văn viết, phía trước có thể là cả một câu.",
-              "this": [
-                {
-                  "tag": "Văn viết · bình luận tác phong",
-                  "tr": "Vị chính trị gia đó có tật né tránh những câu hỏi bất lợi."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Văn nói · tính cách",
-                  "tr": "Dạo này bố tôi hay quên lắm."
-                }
-              ],
-              "explain": "っぽい gắn sau thể ます (忘れ＋っぽい) thành tính từ đuôi い, chỉ dùng với một số ít động từ chỉ tính cách như 「忘れる」, 「怒る」, 「飽きる」, dùng khi tán gẫu; きらいがある là lời phê phán văn viết về tác phong của người khác trong tin tức, bình luận, phía trước có thể là cả một câu (都合の悪い質問を避ける)."
             }
           ]
         }
@@ -39133,44 +39056,28 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “xuất sắc nhất trong một phạm vi nào đó”",
+          "note": "Đều mang nghĩa “đứng đầu trong một phạm vi nào đó”",
           "items": [
             {
               "id": "no-naka-de-ichiban",
-              "diff": "の中で〜がいちばん là cách nói thường ngày, so sánh gì cũng được; きっての là văn viết, trang trọng, chỉ bổ nghĩa cho danh từ, mang ý khen ngợi cao.",
+              "title": "〜でいちばん",
+              "diff": "きっての mang tính văn viết, trang trọng, hàm ý khen ngợi cao, phía sau chỉ đi với danh từ; でいちばん là cách nói hằng ngày, so sánh gì cũng được, còn làm vị ngữ được.",
               "this": [
                 {
-                  "tag": "Văn viết · khen ngợi · đi với danh từ",
-                  "tr": "Cô ấy là người tài giỏi bậc nhất trong trường."
+                  "tag": "Văn viết · khen ngợi",
+                  "tr": "Cô ấy là sinh viên xuất sắc bậc nhất trong trường."
                 }
               ],
               "that": [
                 {
-                  "tag": "Thường ngày · so sánh gì cũng được",
-                  "tr": "Trong lớp, cô ấy cao nhất."
+                  "tag": "Cách nói hằng ngày",
+                  "tr": "Cô ấy là sinh viên giỏi nhất trường."
                 }
               ],
               "wrong": {
-                "why": "Sau きっての bắt buộc phải là danh từ"
+                "why": "Sau きっての bắt buộc phải là danh từ, không thể đi với tính từ làm vị ngữ"
               },
-              "explain": "Xem sau “nhất” là gì: những so sánh thông thường như 背が高い、足が速い → の中でいちばん; phía sau là danh từ thể hiện sự đánh giá cao như 「秀才」, 「名門」, 「実力者」 → きっての, phía trước là phạm vi như 「学内」, 「当代」, hay dùng khi giới thiệu nhân vật trong văn viết."
-            },
-            {
-              "id": "wo-oite",
-              "diff": "きっての nói “đứng đầu trong phạm vi này”; をおいて〜ない nói “ngoài người đó ra không còn ai khác”, nhấn mạnh đó là người phù hợp duy nhất.",
-              "this": [
-                {
-                  "tag": "Đứng đầu trong phạm vi",
-                  "tr": "Anh ấy là người có thực lực hàng đầu trong ngành."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Ứng viên duy nhất",
-                  "tr": "Người có thể giao phó công việc này, ngoài anh ấy ra không còn ai khác."
-                }
-              ],
-              "explain": "Xem cấu trúc câu: trước きっての là phạm vi (業界、社内、当代), phía sau là danh từ, đơn thuần khen ngợi; trước をおいて là chính con người đó, phía sau nhất định là 「ほかにいない／ない」, hay đi cùng 「〜できるのは」, nhấn mạnh “việc này chỉ người đó làm được”."
+              "explain": "Hai câu cùng nghĩa, khác nhau ở văn phong và cách dùng: きっての mang tính văn viết, trang trọng, hàm ý khen ngợi cao, chủ yếu dùng khi giới thiệu người (学内きっての秀才, 業界きっての実力者), phía sau chỉ đi với danh từ; でいちばん là cách nói hằng ngày, không nhất thiết là khen, so sánh gì cũng được (背が高い, 安い), còn làm vị ngữ được (クラスでいちばん背が高い)."
             }
           ]
         }
@@ -39198,7 +39105,7 @@
                   "tr": "Được gặp người thầy mà mình hằng ngưỡng mộ, tôi xúc động tột cùng."
                 }
               ],
-              "explain": "「ない」 trong 「極まりない」 không phải là phủ định, mà là “không có giới hạn”. Nhìn phía trước: gốc tính từ đuôi な như 非常識、失礼、危険 → 極まりない, dùng để lên án lời nói, hành động của người khác; danh từ như 感激、贅沢、疲労 thêm 「の」 → の極み, hay nói về cảm xúc hoặc trạng thái của bản thân. 極まる (非常識極まる) nghĩa giống vậy, cứng hơn."
+              "explain": "Đều từ 「極（きわ）」 = tận cùng, giới hạn mà ra. Động từ 「極まる」 là “đi đến tận cùng” → “… đến cực điểm”; thêm 「ない」 thành 「極まりない」 là “không có tận cùng” (ない không phải phủ định) → “vô cùng …”. Cả hai gắn thẳng vào gốc tính từ đuôi な như 非常識, 失礼 để đánh giá sự việc, hầu như chỉ dùng để phê phán. 「極み」 là danh từ, chỉ “điểm giới hạn”, đi sau danh từ ＋ の → “… tột độ”, thường nói về cảm xúc hay trạng thái của bản thân, việc tốt cũng hay dùng (感激の極み). Phân biệt bằng cách xem phía trước: gốc từ gắn thẳng → 極まりない; danh từ thêm 「の」 → の極み."
             }
           ]
         },
@@ -39212,7 +39119,7 @@
               "this": [
                 {
                   "tag": "Phê phán · gắn thẳng gốc từ",
-                  "tr": "Thái độ của nhân viên đó vô lễ hết mức."
+                  "tr": "Cách ăn nói của nhân viên đó vô lễ hết mức."
                 }
               ],
               "that": [
@@ -39269,7 +39176,7 @@
                   "tr": "Hương vị mới chính là niềm tự hào của quán này."
                 }
               ],
-              "explain": "Xem sau こそ có 「が／けれど」 chuyển ý không: 「値段こそ高いが、……」 trước hết thừa nhận một khuyết điểm, rồi dùng が chuyển sang ưu điểm thực sự muốn nói → nhượng bộ; không có chuyển ý → nhấn mạnh “chính là nó”. こそ〜が hay gặp trong văn viết."
+              "explain": "Nghĩa gốc của 「こそ」 là tách riêng một điểm ra. Khi đứng một mình, tách ra là để nhấn mạnh nó → “chính là” (味こそ、この店の自慢だ). 「こそ〜が」 trước dùng こそ tách ra một điểm và thừa nhận nó (値段こそ高い), rồi dùng 「が」 chuyển sang điểm khác (味は最高) → nhượng bộ “… thì đúng là …, nhưng …”, trọng tâm ở phía sau. Phân biệt bằng cách xem sau こそ có chuyển ý bằng 「が／けれど」 không: có → nhượng bộ; không → nhấn mạnh “chính là nó”."
             },
             {
               "id": "koso-sure",
@@ -39366,7 +39273,7 @@
                   "tr": "Anh ấy miệng thì đúng là độc, nhưng bản chất rất tốt bụng."
                 }
               ],
-              "explain": "Nhìn nửa câu sau: sau こそすれ là việc trái ngược với vế trước, bị phủ định hoàn toàn (下がるはずがない); こそあれ thừa nhận có khác biệt, phía sau nói điểm giống nhau (目指すところは同じ); vế trước 「口が悪い」 của こそ〜が là thật, vế sau 「根は優しい」 cũng là thật, chỉ là trọng tâm ở phía sau."
+              "explain": "Cả ba đều dùng 「こそ」 để tách riêng một điểm, khác nhau ở phần nối sau đó. こそすれ = こそ ＋ thể 已然形 cổ của 「する」: tách A ra, nói “A thì có thể”, rồi nửa sau phủ định điều ngược lại là B → “chỉ A, chứ không bao giờ B” (上がりこそすれ、下がるはずがない); こそあれ = こそ ＋ thể 已然形 của 「ある」: tách “sự khác biệt” ra và thừa nhận nó có, rồi nửa sau nói điểm giống nhau → “tuy có khác biệt nhưng…” (目指すところは同じだ); こそ〜が tách một điểm ra và thừa nhận (口こそ悪い), rồi dùng が chuyển sang điểm khác (根は優しい), cả hai đều là sự thật, trọng tâm ở phía sau."
             }
           ]
         }
@@ -39414,7 +39321,7 @@
                   "tr": "Được nhận giải thưởng như thế này, tôi thật vinh hạnh tột bậc."
                 }
               ],
-              "explain": "Xem phía trước là tính từ hay danh từ: tính từ như 危険な、うれしい thêm 「こと」 → ことこの上ない; danh từ như 光栄、贅沢、疲労 thêm 「の」 → の極み, hay xuất hiện trong những dịp trang trọng như phát biểu, chào hỏi."
+              "explain": "Xem phía trước là tính từ hay danh từ: tính từ như 危険な, うれしい thêm 「こと」 → ことこの上ない; danh từ như 光栄, 贅沢, 疲労 thêm 「の」 → の極み. Khi の極み đi sau danh từ cảm xúc như 「光栄」, 「感激」, thường dùng trong phát biểu, lời cảm ơn trang trọng; khi đi sau danh từ trạng thái như 「贅沢」, 「疲労」, thì ngày thường cũng nói, nghĩa tốt hay xấu đều được."
             },
             {
               "id": "kagiri-da",

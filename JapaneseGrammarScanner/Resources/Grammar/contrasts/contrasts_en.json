@@ -38807,42 +38807,49 @@
       "id": "kara-ii-you-na-mono-no",
       "groups": [
         {
+          "kind": "root",
+          "note": "Both come from the concessive particle 「ものの」 — originally “although …, still …”",
+          "items": [
+            {
+              "id": "mono-no",
+              "diff": "ものの on its own means “although …, still …”; からいいようなものの is から + いいような + ものの: relief first, then a warning.",
+              "this": [
+                {
+                  "tag": "Relief + warning",
+                  "tr": "Good thing you took an umbrella, but you should at least check the weather forecast."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Although … still",
+                  "tr": "I took an umbrella, but I ended up getting wet anyway."
+                }
+              ],
+              "explain": "The original meaning of 「ものの」 is “although …, still …”: it admits a fact, then turns to something disappointing. ものの on its own means exactly that: you took an umbrella yet still got wet (結局濡れてしまった). からいいようなものの is から (because) + いいような (more or less fine) + ものの: “because you took an umbrella, things are fine, but …”, so it becomes relief followed by a warning or a “this could have gone badly” remark (天気予報くらい見ておきなさい). To tell them apart, look at what comes before ものの: a plain fact directly → ものの; 「から＋いいような」 in front → からいいようなものの."
+            }
+          ]
+        },
+        {
           "kind": "meaning",
-          "note": "からいいようなものの is half “luckily” and half “although … but”: the first half is close to てよかった, the second to ものの",
+          "note": "Both mean “luckily …”",
           "items": [
             {
               "id": "te-yokatta",
-              "diff": "てよかった simply expresses relief; からいいようなものの always adds a reproach or warning after the relief.",
+              "title": "〜てよかった (luckily …)",
+              "diff": "てよかった simply expresses relief, and the sentence ends there; からいいようなものの follows the relief with a warning — the speaker isn't really satisfied.",
               "this": [
                 {
-                  "tag": "Relief + reproach",
-                  "tr": "Luckily no one was hurt, but it nearly turned into a serious accident."
+                  "tag": "Relief + warning",
+                  "tr": "Luckily the key turned up, but be more careful from now on."
                 }
               ],
               "that": [
                 {
                   "tag": "Simple relief",
-                  "tr": "I'm so glad nobody was hurt."
+                  "tr": "Luckily the key turned up."
                 }
               ],
-              "explain": "Check whether the sentence is finished: ending at 「よかった」, just expressing relief → てよかった; 「からいいようなものの」 is always followed by another half-sentence pointing out that “it could have been bad” or “be careful next time” — the speaker isn't actually satisfied."
-            },
-            {
-              "id": "mono-no",
-              "diff": "ものの is just a general “although … but”; with からいいようなものの the first part must be a lucky good outcome, and the second part is criticism or “it nearly went wrong.”",
-              "this": [
-                {
-                  "tag": "Lucky escape + warning",
-                  "tr": "Good thing I had insurance — otherwise I'd have been in real trouble."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "General contrast",
-                  "tr": "I signed up for the gym, but I haven't been even once."
-                }
-              ],
-              "explain": "Check whether the first half is “thank goodness”: something that luckily avoided a bad outcome, like 保険に入っていた or 間に合った → からいいようなものの, followed by “otherwise …” or a reproach; the first half is just an ordinary fact, and what follows falls short of expectations → ものの. The 「ものの」 at the end of からいいようなものの is this same contrast."
+              "explain": "Check whether the sentence stops there: 「鍵が見つかってよかった」 ends right there, just a sigh of relief → てよかった; 「からいいようなものの」 is always followed by another clause such as 「今度から気をつけなさい」, warning the listener or pointing out that it could have been bad, with a note of dissatisfaction → からいいようなものの."
             }
           ]
         }
@@ -38876,41 +38883,25 @@
         },
         {
           "kind": "meaning",
-          "note": "Both mean “whether A or B, …”",
+          "note": "Both mean “for better or worse”",
           "items": [
             {
               "id": "ni-shiro-ni-shiro",
-              "diff": "にしろ〜にしろ can follow all kinds of nouns and verbs, so you can build sentences freely; かれ〜かれ is an idiom limited to a few pairs of opposite adjectives.",
+              "thisTitle": "善かれ悪しかれ (for better or worse)",
+              "diff": "善かれ悪しかれ is a set idiom, written and calm in tone; 良いにしろ悪いにしろ is an ordinary pattern whose two items can be swapped freely, and it's common in speech too.",
               "this": [
                 {
-                  "tag": "Set idiom",
-                  "tr": "Everyone has worries, to a greater or lesser degree."
+                  "tag": "Set idiom · written",
+                  "tr": "For better or worse, the reform changed the town dramatically."
                 }
               ],
               "that": [
                 {
-                  "tag": "Free construction",
-                  "tr": "Whether you're for or against it, please give your own opinion."
+                  "tag": "Ordinary pattern · swappable",
+                  "tr": "Whether good or bad, the reform changed the town dramatically."
                 }
               ],
-              "explain": "Check whether it's one of the set pairs: 遅かれ早かれ, 多かれ少なかれ, 善かれ悪しかれ → かれ〜かれ, and you can't swap in other adjectives yourself; any other “A or B” (賛成／反対, 行く／行かない) → にしろ〜にしろ (にしても〜にしても is the same)."
-            },
-            {
-              "id": "you-ga-mai-ga",
-              "diff": "(よ)うが〜まいが pairs “doing / not doing” of the same verb and can be built freely; かれ〜かれ is a set expression made from a pair of opposite adjectives.",
-              "this": [
-                {
-                  "tag": "Set opposites",
-                  "tr": "For better or worse, smartphones have greatly changed our lives."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Same verb · do or not",
-                  "tr": "Whether you come or not, the party will go ahead as planned."
-                }
-              ],
-              "explain": "Look at what's being paired: the affirmative and negative of the same verb (来ようが来るまいが, 行こうが行くまいが) → (よ)うが〜まいが, stressing “it's the same whether you do it or not”; set adjective pairs like 遅かれ早かれ or 善かれ悪しかれ → かれ〜かれ. ((よ)うと〜まいと is the same.)"
+              "explain": "The two sentences mean the same: “good or bad, this is how it is.” Choose by style and by whether the words can be swapped: 善かれ悪しかれ is a set idiom that can only be said this way, found mostly in essays and commentary, with a calm tone; にしろ〜にしろ is an ordinary pattern whose two items can be anything (行くにしろ行かないにしろ, 賛成にしろ反対にしろ), and it's common in conversation too."
             }
           ]
         }
@@ -38921,24 +38912,27 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean “while at it, doubling as”",
+          "note": "Both mean “doing one more thing along the way”",
           "items": [
             {
               "id": "gatera",
-              "diff": "かたがた only follows nouns and is mostly used in formal situations like business and letters; がてら is casual and can also follow a verb's masu-stem.",
+              "diff": "かたがた only follows nouns and is used in formal settings such as business and letters; がてら is casual, used in everyday speech, and can also follow the verb ます形.",
               "this": [
                 {
-                  "tag": "Formal · letters",
-                  "tr": "I will call on you soon, both to pay my respects and to thank you."
+                  "tag": "Formal · business",
+                  "tr": "I will take the opportunity of my business trip to call on your company and pay my respects."
                 }
               ],
               "that": [
                 {
-                  "tag": "Everyday · casual",
-                  "tr": "While out for a walk, I stopped by the convenience store."
+                  "tag": "Casual · everyday",
+                  "tr": "While on a business trip, I dropped by a friend's place."
                 }
               ],
-              "explain": "Look at the situation and the word before it: courtesy nouns like お礼, ご挨拶, ご報告, followed by 「伺う」 or 「参上する」 → かたがた; everyday activities like 散歩 or 買い物, or a verb's masu-stem (送り, 遊び) → がてら."
+              "wrong": {
+                "why": "かたがた only follows nouns, not the verb ます形; here you need 「送りがてら」"
+              },
+              "explain": "Both start with 「出張」, so look at the tone of the second half: a formal business-letter phrase like 「御社にご挨拶に伺います」 → かたがた; a casual everyday remark like 「友達の家に寄ってきた」 → がてら. Also check what it attaches to: がてら can follow the verb ます形 (送りがてら), but かたがた only follows nouns."
             },
             {
               "id": "wo-kanete",
@@ -38959,37 +38953,21 @@
             },
             {
               "id": "tsuide-ni",
-              "diff": "With ついでに the first part is the main thing and the second is a small extra; with かたがた the two purposes carry equal weight, and it's more formal.",
+              "title": "〜ついでに (taking the opportunity of …)",
+              "diff": "かたがた is formal and treats both things as real purposes; のついでに is colloquial and makes the second thing sound like a small extra.",
               "this": [
                 {
-                  "tag": "Two purposes · more formal",
-                  "tr": "While visiting my hometown, I also called on my old teacher."
+                  "tag": "Both real purposes · formal",
+                  "tr": "I went home for a visit and also took the chance to call on my old teacher."
                 }
               ],
               "that": [
                 {
-                  "tag": "Main thing + side task",
-                  "tr": "When you go to the post office, could you mail this letter for me too?"
+                  "tag": "Second thing on the side · colloquial",
+                  "tr": "While I was home, I stopped by to see my old teacher."
                 }
               ],
-              "explain": "Look at the weight of the two things and the setting: with ついでに the first part is the main thing you were going to do anyway and the second is a small side task, common in speech, and it can follow verbs (行くついでに); かたがた only follows nouns, both purposes matter equally, and it's mostly used in formal settings like visits and letters."
-            },
-            {
-              "id": "katawara",
-              "diff": "かたがた is “doubling as” on a single occasion; かたわら is “also doing” something else long-term alongside your main job.",
-              "this": [
-                {
-                  "tag": "Single occasion · while at it",
-                  "tr": "Since I was in the neighborhood, I dropped by to say hello."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Long-term · alongside the main job",
-                  "tr": "My father writes novels while working at a company."
-                }
-              ],
-              "explain": "Look at the time span and the word before it: courtesy nouns like お礼 or ご挨拶, followed by a one-time visit like 「伺う」 → かたがた; main work like 勤める or 教える, followed by a long-term side job or hobby (〜ている) → かたわら."
+              "explain": "Both sentences work, but the feel differs: かたがた is formal, treating both going home and visiting the teacher as real purposes; のついでに is colloquial and sounds like “I only went because it was on the way,” which isn't respectful enough for visiting a teacher or a client. So formal visits and greetings usually take かたがた, while small errands like shopping or mailing a letter take ついでに. They also attach differently: ついでに can follow verbs (行くついでに), but かたがた only follows nouns."
             }
           ]
         }
@@ -39000,62 +38978,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean “while doing one thing, also doing another”",
+          "note": "Both mean “doing two things in parallel over a period of time”",
           "items": [
             {
               "id": "nagara",
-              "title": "〜ながら (while …)",
-              "diff": "ながら can describe doing two things at the same moment; かたわら only means “alongside the main job, also doing something else long-term.”",
+              "title": "〜ながら (in parallel over time)",
+              "diff": "Both describe doing two things in parallel over a period; かたわら is written, its first part is one's main job or role, and it's often used to introduce a person; ながら is common in both speech and writing.",
               "this": [
                 {
-                  "tag": "Alongside the main job · long-term",
-                  "tr": "Besides working at a bank, he also writes novels."
+                  "tag": "Written · besides the main job",
+                  "tr": "Besides her job at a bank, she also does translation work."
                 }
               ],
               "that": [
                 {
-                  "tag": "Same moment",
-                  "tr": "I do my homework while listening to music."
+                  "tag": "Common in speech too",
+                  "tr": "She works at a bank while also doing translation work."
                 }
               ],
-              "wrong": {
-                "why": "Actions done at the same moment can't use かたわら"
-              },
-              "explain": "Check whether the two things are being done “at this same moment”: doing homework while listening to music → only ながら; “working at a bank” is a long-term main job, and “writing novels” is something done on the side → かたわら, written style, mostly used to describe someone's career. ながら also works for long-term parallel activities (働きながら大学に通う), but is more colloquial."
-            },
-            {
-              "id": "gatera",
-              "diff": "がてら is doing something else “while at it” on a single outing; かたわら is doing something else long-term alongside your main job.",
-              "this": [
-                {
-                  "tag": "Long-term · alongside the main job",
-                  "tr": "Besides teaching at a university, I also do translation work."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Once · while at it",
-                  "tr": "While out for a walk, I stopped by the bookstore in front of the station."
-                }
-              ],
-              "explain": "Look at what comes before: a one-time outing like 「散歩」 or 「買い物」, getting something else done along the way → がてら; a long-term job or role like 「教える」 or 「勤める」, plus something else on the side → かたわら."
-            },
-            {
-              "id": "katagata",
-              "diff": "かたがた is one visit serving two purposes, mostly in letters and business; かたわら is two activities carried on in parallel over a period of time.",
-              "this": [
-                {
-                  "tag": "Long-term · alongside the main work",
-                  "tr": "Besides farming, my father also researches local history."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "One visit · two purposes",
-                  "tr": "I've come to thank you for the other day and to pay my respects."
-                }
-              ],
-              "explain": "The two look alike too; look at what's before and after: かたがた is usually preceded by nouns like 「お礼」, 「ご挨拶」, 「お見舞い」 and followed by 「伺う」 or 「訪ねる」 — one visit achieving two purposes, a stock phrase in letters and business; かたわら is preceded by long-term work (営む, 勤める) and describes a way of life over a period of time."
+              "explain": "The two sentences mean the same. Choose by style and by the first part: かたわら is written, and the first part is one's main job or role (勤める, 教える, 研究) — the wording of profiles and news articles; ながら works in both speech and writing, and the first part needn't be a main job (アルバイトをしながら学校に通う). In everyday conversation ながら sounds more natural."
             }
           ]
         }
@@ -39087,7 +39028,7 @@
               "wrong": {
                 "why": "きらいがある is only used for bad tendencies"
               },
-              "explain": "Check whether it's a flaw and whether there's criticism: “deciding everything on his own” is a habit the speaker dislikes → きらいがある; an objective description based on data, like “according to research”, which can also be positive → 傾向がある."
+              "explain": "Check whether it's a flaw and whether there's criticism: “deciding everything on his own” is a habit the speaker dislikes → きらいがある; an objective, data-based statement like 「調査によると」 (according to a survey), even about something good → 傾向がある."
             },
             {
               "id": "gachi",
@@ -39105,24 +39046,6 @@
                 }
               ],
               "explain": "Look at the connection and the subject: がち follows the masu-stem or a noun (ひきがち, 病気がち) and is used for everyday things like “catching colds easily” or “often being late”; きらいがある follows the dictionary form and is mostly used in writing to comment on the thinking or style of a person or group, with clear criticism."
-            },
-            {
-              "id": "ppoi",
-              "title": "〜っぽい (quick to …)",
-              "diff": "っぽい is colloquial and only follows a few verbs (忘れっぽい, 怒りっぽい); きらいがある is written commentary and can be preceded by a whole clause.",
-              "this": [
-                {
-                  "tag": "Written · commenting on a style",
-                  "tr": "That politician has a habit of dodging awkward questions."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Colloquial · personality",
-                  "tr": "My dad's been really forgetful lately."
-                }
-              ],
-              "explain": "っぽい attaches to the masu-stem (忘れ + っぽい) to form an i-adjective, only with a few personality verbs like 「忘れる」, 「怒る」, 「飽きる」, and is used in chat; きらいがある is written criticism of someone's style in news and commentary, and can be preceded by a whole clause (都合の悪い質問を避ける)."
             }
           ]
         }
@@ -39133,44 +39056,28 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean “the best within a certain range”",
+          "note": "Both mean “the very best within a certain group”",
           "items": [
             {
               "id": "no-naka-de-ichiban",
-              "diff": "の中で〜がいちばん is everyday language and can compare anything; きっての is written and formal, only modifies nouns, and carries high praise.",
+              "title": "〜でいちばん",
+              "diff": "きっての is written and formal, carries high praise, and can only be followed by a noun; でいちばん is everyday language, can compare anything, and can also be the predicate.",
               "this": [
                 {
-                  "tag": "Written · praise · before nouns",
-                  "tr": "She is the brightest student in the whole school."
+                  "tag": "Written · praise",
+                  "tr": "She is the most brilliant student in the school, bar none."
                 }
               ],
               "that": [
                 {
-                  "tag": "Everyday · compares anything",
-                  "tr": "She's the tallest in the class."
+                  "tag": "Everyday",
+                  "tr": "She's the best student in the school."
                 }
               ],
               "wrong": {
-                "why": "きっての must be followed by a noun"
+                "why": "きっての must be followed by a noun; it can't take an adjective as the predicate"
               },
-              "explain": "Look at what follows “the most”: ordinary comparisons like 背が高い or 足が速い → の中でいちばん; followed by nouns expressing high praise like 「秀才」, 「名門」, 「実力者」 → きっての, preceded by a range like 「学内」 or 「当代」, mostly used in written profiles of people."
-            },
-            {
-              "id": "wo-oite",
-              "diff": "きっての says “the foremost within this range”; をおいて〜ない says “there's no one else but him,” stressing he's the only suitable one.",
-              "this": [
-                {
-                  "tag": "Top of the range",
-                  "tr": "He's one of the most capable people in the industry."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "The only choice",
-                  "tr": "There's no one but him we can entrust this job to."
-                }
-              ],
-              "explain": "Look at the sentence structure: きっての is preceded by a range (業界, 社内, 当代) and followed by a noun, simple praise; をおいて is preceded by the person themselves and always followed by 「ほかにいない／ない」, often with 「〜できるのは」, stressing “only he can do this.”"
+              "explain": "The two sentences mean the same; the difference is style and usage: きっての is written and formal, carries high praise, and is mostly used to introduce people (学内きっての秀才, 業界きっての実力者), and it can only be followed by a noun; でいちばん is everyday language, not necessarily praise, can compare anything (背が高い, 安い), and can serve as the predicate (クラスでいちばん背が高い)."
             }
           ]
         }
@@ -39198,7 +39105,7 @@
                   "tr": "Getting to meet the teacher I've always admired — I'm overwhelmed with emotion."
                 }
               ],
-              "explain": "The 「ない」 in 「極まりない」 is not a negation; it means “no end.” Look at what comes before: na-adjective stems like 非常識, 失礼, 危険 → 極まりない, used to condemn others' words and actions; nouns like 感激, 贅沢, 疲労 + 「の」 → の極み, usually about your own feelings or state. 極まる (非常識極まる) means the same and is stiffer."
+              "explain": "Both come from 「極（きわ）」 = the end, the limit. The verb 「極まる」 means “to reach the end” → “… to the extreme”; adding 「ない」 gives 「極まりない」, “without end” (the ない is not a negation) → “utterly …”. Both attach directly to な-adjective stems like 非常識 and 失礼 to judge something, almost always critically. 「極み」 is a noun meaning “the very limit”, used as noun + の → “the height of …”, often for one's own feelings or state, and common with good things too (感激の極み). To tell them apart, look at what comes before: a stem attached directly → 極まりない; a noun plus 「の」 → の極み."
             }
           ]
         },
@@ -39212,7 +39119,7 @@
               "this": [
                 {
                   "tag": "Criticism · directly on the stem",
-                  "tr": "That clerk's attitude is extremely rude."
+                  "tr": "That clerk's way of speaking is extremely rude."
                 }
               ],
               "that": [
@@ -39269,7 +39176,7 @@
                   "tr": "It's the taste that this place takes pride in."
                 }
               ],
-              "explain": "Check whether こそ is followed by a turn with 「が／けれど」: 「値段こそ高いが、……」 first admits a drawback, then uses が to turn to the strength you really want to talk about → concession; no turn → emphasis, “it's exactly this.” こそ〜が is mostly found in writing."
+              "explain": "The original meaning of 「こそ」 is singling out one point. Used alone, it singles something out to emphasize it → “precisely; it's … that” (味こそ、この店の自慢だ). 「こそ〜が」 first uses こそ to single out and concede one point (値段こそ高い), then turns to another point with 「が」 (味は最高) → the concession “admittedly …, but …”, with the weight on the second half. To tell them apart, check whether こそ is followed by a turn with 「が／けれど」: if so → concession; if not → emphasis, “this is the one.”"
             },
             {
               "id": "koso-sure",
@@ -39366,7 +39273,7 @@
                   "tr": "He may have a sharp tongue, but he's kind at heart."
                 }
               ],
-              "explain": "Look at the second half: with こそすれ it's the opposite of the first part, flatly denied (下がるはずがない); こそあれ admits differences, then states what's the same (目指すところは同じ); with こそ〜が the first part 「口が悪い」 is true and the second 「根は優しい」 is true too, but the focus is on the second."
+              "explain": "All three use 「こそ」 to single out one point; the difference is what follows. こそすれ = こそ + the classical realis form (已然形) of 「する」: it singles out A, saying “A may well happen,” and the second half denies the opposite B → “only A, never B” (上がりこそすれ、下がるはずがない); こそあれ = こそ + the realis form of 「ある」: it singles out the difference and admits it exists, and the second half states what is the same → “there are differences, but …” (目指すところは同じだ); こそ〜が singles out a point and concedes it (口こそ悪い), then turns to another point with が (根は優しい) — both are true, with the weight on the second."
             }
           ]
         }
@@ -39414,7 +39321,7 @@
                   "tr": "To receive such an award is the greatest of honors."
                 }
               ],
-              "explain": "Check whether what comes before is an adjective or a noun: adjectives like 危険な or うれしい + 「こと」 → ことこの上ない; nouns like 光栄, 贅沢, 疲労 + 「の」 → の極み, mostly found in formal settings like speeches and greetings."
+              "explain": "Look at whether an adjective or a noun comes before: adjectives like 危険な or うれしい plus 「こと」 → ことこの上ない; nouns like 光栄, 贅沢 or 疲労 plus 「の」 → の極み. When の極み follows emotion nouns like 「光栄」 or 「感激」, it's mostly used in formal speeches and thanks; with state nouns like 「贅沢」 or 「疲労」, it's also used in everyday speech, positively or negatively."
             },
             {
               "id": "kagiri-da",
