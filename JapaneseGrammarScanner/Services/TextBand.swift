@@ -219,6 +219,22 @@ final class GrayPage {
         guard threshold > 0 else { return }
         var dark = [UInt8](repeating: 0, count: w * h)
         for i in 0..<(w * h) where Int(data[i]) < threshold { dark[i] = 1 }
+        // 每个深色像素所在的「同一行里连续深色」的长度：横线本身很长，字的笔画很短。
+        // 抹横线时只抹这一行里本身连成长段的像素，不抹紧贴在横线上方的字的下沿
+        // （以前按上下 ±2 行整块抹掉，字的底部被削掉，文字带和高亮框就往上偏）。
+        var rowRun = [Int32](repeating: 0, count: w * h)
+        for y in 0..<h {
+            var x = 0
+            while x < w {
+                guard dark[y * w + x] == 1 else { x += 1; continue }
+                var end = x
+                while end < w, dark[y * w + end] == 1 { end += 1 }
+                for xx in x..<end { rowRun[y * w + xx] = Int32(end - x) }
+                x = end
+            }
+        }
+        // 阈值要比一个字的宽度长（字的一横是一段十几到几十像素的连续深色），又要容得下略微倾斜的横线被拆成的几段
+        let longStroke = Int32(max(minRun * 3 / 4, 16))
         // count[x]：第 y-2…y+2 行里第 x 列的深色像素数（逐行滑动更新）
         var count = [Int](repeating: 0, count: w)
         for yy in 0..<5 { for x in 0..<w { count[x] += Int(dark[yy * w + x]) } }
@@ -234,7 +250,7 @@ final class GrayPage {
                 while end < w, count[end] > 0 { end += 1 }
                 if end - x >= minRun {
                     for xx in x..<end {
-                        for yy in (y - 2)...(y + 2) where dark[yy * w + xx] == 1 {
+                        for yy in (y - 2)...(y + 2) where dark[yy * w + xx] == 1 && rowRun[yy * w + xx] >= longStroke {
                             data[yy * w + xx] = background
                             dark[yy * w + xx] = 0
                             count[xx] -= 1

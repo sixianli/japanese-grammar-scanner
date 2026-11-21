@@ -8,9 +8,19 @@ final class SettingsTests: E2ETestCase {
         wait(navBar("设置"), "应打开设置")
     }
 
-    private func closeSettings() {
-        navBar("设置").buttons["完成"].tap()
-        wait(id("home.search"), "关闭设置应回到首页")
+    /// 关闭设置面板。「完成」（settings.done）只在设置首页的导航栏上；停在二级页（隐私、使用指南、指南条目…）时
+    /// 那里只有返回按钮，先逐级返回到设置首页再点「完成」。
+    private func closeSettings(file: StaticString = #filePath, line: UInt = #line) {
+        let done = id("settings.done")
+        var levels = 0
+        while !done.waitForExistence(timeout: 2) && levels < 3 {
+            back(file: file, line: line)
+            levels += 1
+        }
+        wait(done, "返回到设置首页后应有「完成」", timeout: 5, file: file, line: line)
+        done.tap()
+        waitGone(done, "点「完成」应关闭设置面板", file: file, line: line)
+        wait(id("home.search"), "关闭设置应回到首页", file: file, line: line)
     }
 
     func testAppearanceAllSwatches() {
@@ -43,7 +53,11 @@ final class SettingsTests: E2ETestCase {
         let footers = ["English": "switch together", "한국어": "함께 바뀝니다", "Español": "cambian juntos", "Tiếng Việt": "cùng lúc",
                        "မြန်မာဘာသာ": "ပူးတွဲ", "繁體中文": "一起切換", "简体中文": "一起切换"]
         for (name, title) in expected {
-            button(startingWith: name).tap()
+            let row = button(startingWith: name)
+            row.tap()
+            // 切换语言时不能关掉设置面板、跳回首页再弹回来：语言列表要一直在屏幕上
+            assertStays(app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", name)).firstMatch,
+                        "切换到 \(name) 时语言页不应消失（不应先跳回首页再弹回）")
             wait(navBar(title), "切换到 \(name) 后页面标题应变成「\(title)」")
             if let f = footers[name], !f.isEmpty {
                 wait(text(containing: f), "切换到 \(name) 后页面上的普通文字也应换成该语言")
@@ -60,7 +74,11 @@ final class SettingsTests: E2ETestCase {
         button(startingWith: "English").tap()
         wait(navBar("Language"), "英文")
         back()
+        // 返回设置页：设置页本身也已经是英文（就地刷新，不需要重新打开）
+        wait(navBar("Settings"), "返回后设置页标题应是英文")
         navBar("Settings").buttons["Done"].tap()
+        // 关掉设置后仍在首页（切换语言不改变当前标签）
+        wait(id("home.search"), "关闭设置后应仍在首页")
         tab("Grammar").tap()
         wait(id("library.row"), "语法库")
         id("library.row").tap()
@@ -116,47 +134,100 @@ final class SettingsTests: E2ETestCase {
         navBar("反馈").buttons["取消"].tap()
     }
 
+    /// 入门引导现在从「设置 → 使用指南 → 再看一遍入门引导」打开
     func testOnboardingFromSettings() {
         openSettings()
-        scrollTo(app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", "使用引导")).firstMatch)
-        button(startingWith: "使用引导").tap()
-        wait(app.buttons["跳过"], "应打开使用引导", timeout: 10)
+        scrollTo(id("settings.guide"))
+        id("settings.guide").tap()
+        wait(navBar("使用指南"), "应打开使用指南")
+        scrollTo(id("guide.onboarding"))
+        id("guide.onboarding").tap()
+        wait(app.buttons["跳过"], "应打开入门引导", timeout: 10)
         app.buttons["跳过"].tap()
         button(startingWith: "开始使用").tap()
         wait(id("home.search"), "引导结束回到首页")
     }
 
+    /// 使用指南覆盖每个主要功能：逐个点开都有分步说明，并能返回
+    func testGuideCoversEveryFeature() {
+        openSettings()
+        scrollTo(id("settings.guide"))
+        id("settings.guide").tap()
+        wait(navBar("使用指南"), "应打开使用指南")
+        let features = ["scan", "scanResult", "detail", "contrast", "review", "library", "search", "history", "appearance", "feedback"]
+        for f in features {
+            let row = id("guide.topic.\(f)")
+            scrollTo(row)
+            wait(row, "使用指南应有「\(f)」")
+            row.tap()
+            wait(id("guide.step"), "「\(f)」应有分步说明")
+            XCTAssertGreaterThanOrEqual(ids("guide.step").count, 2, "「\(f)」至少两步")
+            back()
+            wait(navBar("使用指南"), "应回到使用指南")
+        }
+        closeSettings()
+    }
+
     func testAboutPages() {
         openSettings()
-        scrollTo(app.buttons["开源许可"].firstMatch)
-        button(startingWith: "隐私政策").tap()
-        wait(text(containing: "一句话说明"), "隐私政策页应显示内容")
+        scrollTo(id("settings.privacy"))
+        id("settings.privacy").tap()
+        wait(id("legal.summary"), "隐私页应显示隐私政策")
+        XCTAssertTrue(id("legal.camera").exists, "隐私政策应有「相机与照片」")
+        // 「联系我们」是政策的最后一节，在屏幕下方；列表只把屏幕上的行放进界面层级，要滑到它出现
+        scrollTo(id("legal.contact"))
+        XCTAssertTrue(id("legal.contact").exists, "隐私政策最后应有「联系我们」")
         back()
         scrollTo(app.buttons["开源许可"].firstMatch)
         button(startingWith: "使用条款").tap()
-        wait(app.links.firstMatch, "使用条款页应有 Apple 许可协议链接")
+        wait(id("legal.eula"), "使用条款页应显示内容")
+        XCTAssertTrue(app.links.firstMatch.exists, "使用条款页应有 Apple 许可协议链接")
         back()
         scrollTo(app.buttons["开源许可"].firstMatch)
         button(startingWith: "开源许可").tap()
         wait(text(containing: "SudachiPy"), "开源许可页应显示内容")
+        XCTAssertGreaterThanOrEqual(ids("licenses.item").count, 4)
         back()
         scrollTo(text(containing: "版本"))
         wait(text(containing: "版本"), "设置应显示版本")
         closeSettings()
     }
 
-    /// 匿名使用统计开关：默认打开，关掉后重新打开设置仍是关闭
+    /// Build 16 反馈：隐私那一块不要放在设置首页（吓退用户）。现在在「关于 → 隐私」二级页里。
+    func testPrivacyMovedIntoSubpage() {
+        openSettings()
+        XCTAssertFalse(id("settings.usageStats").exists, "设置首页不应直接出现匿名统计开关")
+        XCTAssertFalse(text(containing: "帮助我们了解有多少人在用").exists, "设置首页不应出现统计说明")
+        scrollTo(id("settings.privacy"))
+        id("settings.privacy").tap()
+        wait(id("legal.summary"), "隐私页应显示隐私政策")
+        // 说的和做的一致：有统计开关的版本，政策里一定写了匿名使用统计；没有开关的版本，政策里也不写
+        let hasToggle = id("settings.usageStats").waitForExistence(timeout: 2)
+        XCTAssertEqual(hasToggle, id("legal.usage-stats").exists, "统计开关和政策里的「匿名使用统计」必须同时有或同时没有")
+        XCTAssertNotEqual(id("legal.feedback").exists, id("legal.feedback-offline").exists, "反馈说明只能出现与当前版本相符的一种")
+        closeSettings()
+    }
+
+    /// 匿名使用统计开关（只在会上报的版本里有）：默认打开，关掉后重新打开设置仍是关闭
     func testUsageStatsToggle() {
         openSettings()
+        scrollTo(id("settings.privacy"))
+        id("settings.privacy").tap()
         let toggle = id("settings.usageStats")
-        scrollTo(toggle)
-        wait(toggle, "设置里应有匿名使用统计开关")
+        guard toggle.waitForExistence(timeout: 3) else {
+            // 没有开通 iCloud 上报的版本：不显示开关，政策里也不能写「匿名使用统计」
+            XCTAssertFalse(id("legal.usage-stats").exists, "不上报的版本，隐私政策里不应写匿名使用统计")
+            closeSettings()
+            return
+        }
         XCTAssertEqual(toggle.value as? String, "1", "默认应打开")
         toggle.switches.firstMatch.exists ? toggle.switches.firstMatch.tap() : toggle.tap()
         XCTAssertEqual(toggle.value as? String, "0")
         closeSettings()
         openSettings()
-        scrollTo(id("settings.usageStats"))
+        scrollTo(id("settings.privacy"))
+        id("settings.privacy").tap()
+        wait(id("settings.usageStats"), "隐私页应有统计开关")
         XCTAssertEqual(id("settings.usageStats").value as? String, "0", "关闭状态应保存下来")
         let again = id("settings.usageStats")
         again.switches.firstMatch.exists ? again.switches.firstMatch.tap() : again.tap()

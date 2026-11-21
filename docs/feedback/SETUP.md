@@ -23,13 +23,21 @@ GitHub 上的定时任务每 15 分钟检查一次，把新反馈连同截图发
 ## 第 2 步：导入反馈的数据结构，并发布（约 3 分钟）
 
 1. 打开 <https://icloud.developer.apple.com>（CloudKit Console），登录同一个开发者账号
-2. 左上角选中第 1 步的容器 → 进入 **Settings**（齿轮）→ **Tokens & Keys** → **Management Tokens** → **＋** 新建一个，复制 token
-   （只显示一次）
+2. 管理令牌（Management Token）**不在**容器的 Settings → Tokens & Keys 里（那里只有 API Tokens 和 Server-to-Server Keys，第 3 步才用）。
+   点 CloudKit Console **右上角的头像（你的名字）** → **Settings**（账号设置）→ 里面的 **Tokens**（Management Tokens）→ **＋** 新建一个，复制 token（只显示一次，有效期一年）
 3. GitHub 仓库 → Settings → Secrets and variables → Actions → **New repository secret**：
    名称 `CLOUDKIT_MANAGEMENT_TOKEN`，值粘贴上一步的 token
 4. 告诉我「token 填好了」，我来运行导入任务（也可以自己在 Actions → **CloudKit Schema** → Run workflow）
 5. 导入成功后，在 CloudKit Console → 这个容器 → **Schema** → 右上角 **Deploy Schema Changes…** → Deploy
    （把数据结构发布到正式环境；TestFlight 和 App Store 版本用的都是正式环境）
+
+## 第 3、4 步（可选，目前不启用）：让 GitHub 把反馈转发到邮箱
+
+**默认不做这两步。** 反馈和使用统计只存在 Apple 的 iCloud 里，开发者在 CloudKit Console → **Production** → Records →
+Public Database 查看（记录类型选 `Feedback` / `UsageDay`）。这样数据不经过任何第三方，和隐私政策一致。
+
+做了这两步，反馈会多经过 GitHub 的运行环境和邮箱服务商，服务器密钥也存在 GitHub 上。
+**启用前要先更新隐私政策**（写明这些服务），并确认收紧读取权限后（见下方「数据权限」）服务器密钥仍能读到记录。
 
 ## 第 3 步：生成「服务器访问密钥」，让 GitHub 能读取反馈（约 3 分钟）
 
@@ -41,7 +49,7 @@ GitHub 上的定时任务每 15 分钟检查一次，把新反馈连同截图发
    openssl ec -in cloudkit_private.pem -pubout -out cloudkit_public.pem
    ```
 
-2. CloudKit Console → 这个容器 → **Settings** → **Tokens & Keys** → **Server-to-Server Keys** → **＋**
+2. CloudKit Console → 这个容器 → 切到 **Production**（读取脚本读的是正式环境，密钥按环境分开）→ **Tokens & Keys** → **Server-to-Server Keys** → **＋**
    - Name 随便填（例如 `feedback-forward`）
    - Public Key：用「文本编辑」打开桌面上的 `cloudkit_public.pem`，复制全部内容粘贴进去（含 BEGIN / END 两行）
    - 保存后页面会显示 **Key ID**
@@ -71,6 +79,12 @@ GitHub 仓库 → Secrets 中新建：
 | `FEEDBACK_TO` | 收反馈的邮箱地址（和上面相同也可以） |
 
 填好后告诉我，我会运行一次「测试邮件」，你收到就说明邮箱配置好了。
+
+## 数据权限
+
+`cloudkit/schema.ckdb` 里，`Feedback` 和 `UsageDay` 只允许已登录 iCloud 的用户创建、提交者本人读写，**不对所有人（`_world`）开放**。
+`tools/validate_compliance.py` 会检查这一点。改了数据结构后：PR 上会自动导入开发环境，再到 CloudKit Console → **Development** →
+左下角 **Deploy Schema Changes…** 发布到正式环境。
 
 ## 第 5 步：打开开关
 

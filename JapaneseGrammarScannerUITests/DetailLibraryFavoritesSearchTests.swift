@@ -12,15 +12,31 @@ final class DetailTests: E2ETestCase {
 
     func testSimilarGrammarPushesAndBackReturns() {
         openDetailBySearch("だけに")
-        let similar = id("detail.similar")
-        scrollTo(similar, maxSwipes: 25)
-        XCTAssertTrue(similar.exists, "讲解页应有相近语法")
-        similar.tap()
-        wait(detailScreen, "点相近语法应打开另一个讲解页")
+        let pages = openSimilarGrammar(id("detail.similar"))
         back()
-        wait(detailScreen, "返回应回到原来的讲解页")
+        wait(detailTitle(pages.from), "返回应回到原来的讲解页「\(pages.from)」")
+        waitGone(detailTitle(pages.to), "返回后不应还停在「\(pages.to)」")
         back()
         XCTAssertTrue(app.searchFields.firstMatch.waitForExistence(timeout: 8), "再返回应回到搜索页")
+    }
+
+    /// 新版相近语法：默认收起只显示差别；点「看例句对比」展开例句和「怎么分辨」，再点收起；点语法名跳到对方讲解页
+    func testContrastSectionExpandCollapseAndNavigate() {
+        openDetailBySearch("ようになる")
+        let toggle = id("detail.contrast.toggle")
+        scrollTo(toggle)
+        wait(toggle, "相近语法应有「看例句对比」按钮")
+        XCTAssertFalse(text(containing: "怎么分辨").exists, "默认收起，不显示讲解")
+        toggle.tap()
+        wait(text(containing: "怎么分辨"), "展开后应显示「怎么分辨」讲解")
+        XCTAssertTrue(button(startingWith: "收起").exists, "展开后按钮变成「收起」")
+        button(startingWith: "收起").tap()
+        waitGone(text(containing: "怎么分辨"), "收起后讲解应隐藏")
+
+        let pages = openSimilarGrammar(id("detail.similar"))
+        back()
+        wait(detailTitle(pages.from), "返回后应回到原来的讲解页「\(pages.from)」")
+        waitGone(detailTitle(pages.to), "返回后不应还停在「\(pages.to)」")
     }
 
     func testDetailFeedbackLink() {

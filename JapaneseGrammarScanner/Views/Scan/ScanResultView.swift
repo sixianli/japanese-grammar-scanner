@@ -18,7 +18,6 @@ struct ScanResultView: View {
     /// 放大查看（手势中的缩放、位置都在这个模型里，结果页本身不随手势重绘）
     @State private var zoom = ScanZoomModel()
     /// 照片里笔画的分布（荧光笔样式把语法所在的字染成主题色时用）
-    @State private var ink: CGImage?
 
     enum Phase {
         case loading
@@ -61,7 +60,11 @@ struct ScanResultView: View {
         .overlay { zoomStage }
         .toolbar(zoom.isOpen ? .hidden : .automatic, for: .navigationBar, .tabBar)
         .statusBarHidden(zoom.isOpen)
-        .onAppear { zoom.imageSize = scanImage.image.size }
+        .onAppear {
+            zoom.imageSize = scanImage.image.size
+            // 点中框时底色加深只是按下那一下的反馈：从讲解页回来后恢复，所有框样式一致
+            selectedClusterID = nil
+        }
         .navigationTitle(tr("识别结果"))
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(item: $pushedGrammarID) { id in
@@ -92,8 +95,7 @@ struct ScanResultView: View {
                         imageSize: scanImage.image.size,
                         fit: .fit,
                         library: library,
-                        selectedClusterID: selectedClusterID,
-                        style: .marker(ink: ink)
+                        selectedClusterID: selectedClusterID
                     ) { cluster in
                         selectedClusterID = cluster.id
                         tappedCluster = cluster
@@ -151,7 +153,6 @@ struct ScanResultView: View {
                 result: result,
                 library: library,
                 selectedClusterID: selectedClusterID,
-                ink: ink,
                 onClosed: {}
             ) { cluster in
                 selectedClusterID = cluster.id
@@ -276,9 +277,6 @@ struct ScanResultView: View {
         switch outcome {
         case .success(let (r, lines)):
             phase = .done(r)
-            if let cg = image.cgImage {
-                ink = await Task.detached(priority: .userInitiated) { InkMask.make(from: cg) }.value
-            }
             if DemoMode.opensZoom {
                 try? await Task.sleep(for: .milliseconds(600))
                 zoom.open()

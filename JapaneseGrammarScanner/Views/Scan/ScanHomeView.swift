@@ -212,6 +212,8 @@ struct ScanHomeView: View {
         switch DemoMode.screen {
         case "result": openSample()
         case "detail": path.append(.grammar(DemoMode.grammarID))
+        // 复习页（QA 截图）：从「快要忘了」进来的样子，底部自评条、标签栏隐藏
+        case "review": path.append(.review(DemoMode.grammarID, ["okage-de", "te-shimau"]))
         default: break
         }
     }

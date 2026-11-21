@@ -12,6 +12,8 @@ enum DemoMode {
     static var search: String? { value(for: "-demoSearch") }
     /// 详情页截图时滚动到的位置（如 sense-0、section-notes）
     static var scrollAnchor: String? { value(for: "-demoScroll") }
+    /// 讲解页往下滚动的距离（QA 截图：检查标题飞进导航栏途中的样子）
+    static var scrollY: CGFloat? { value(for: "-demoScrollY").flatMap(Double.init).map { CGFloat($0) } }
     /// 预置浏览记录（让首页出现「快要忘了」「最近查看」）
     static var seedsHistory: Bool { value(for: "-demoHistory") != nil }
     /// 端到端（UI）测试：清空并放入固定数据
@@ -20,6 +22,8 @@ enum DemoMode {
     static var e2eFresh: Bool { ProcessInfo.processInfo.arguments.contains("-e2eFresh") }
     /// 识别结果页截图时自动打开全屏放大查看
     static var opensZoom: Bool { value(for: "-demoZoom") != nil }
+    /// 详情页截图时把「相近语法」的每一条都展开
+    static var opensContrasts: Bool { value(for: "-demoContrastOpen") != nil }
     /// 截图时指定 App 内语言（覆盖「设置 → 语言」）
     static var appLanguage: String? { value(for: "-demoAppLanguage") }
 

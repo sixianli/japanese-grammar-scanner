@@ -82,6 +82,38 @@
 			<string>%lld veces</string>
 		</dict>
 	</dict>
+	<key>前 %lld 天免费使用全部功能。之后可一次性购买，永久解锁完整讲解；不是订阅，不会自动扣费。购买在同一 Apple ID 的设备间通用，可以在「设置 → 购买」中恢复。</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@n@</string>
+		<key>n</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>Todas las funciones son gratis durante el primer %lld día. Después, puedes hacer una compra única para desbloquear las explicaciones completas para siempre; no es una suscripción y no se te cobrará automáticamente. La compra sirve en todos los dispositivos con el mismo ID de Apple y puedes restaurarla en «Ajustes → Compra».</string>
+			<key>other</key>
+			<string>Todas las funciones son gratis durante los primeros %lld días. Después, puedes hacer una compra única para desbloquear las explicaciones completas para siempre; no es una suscripción y no se te cobrará automáticamente. La compra sirve en todos los dispositivos con el mismo ID de Apple y puedes restaurarla en «Ajustes → Compra».</string>
+		</dict>
+	</dict>
+	<key>有 %lld 个快要忘了</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@n@</string>
+		<key>n</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld punto se te está olvidando</string>
+			<key>other</key>
+			<string>%lld puntos se te están olvidando</string>
+		</dict>
+	</dict>
 	<key>识别到 %lld 个语法点</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -112,6 +144,22 @@
 			<string>%lld punto gramatical — toca un resaltado o etiqueta</string>
 			<key>other</key>
 			<string>%lld puntos gramaticales — toca un resaltado o etiqueta</string>
+		</dict>
+	</dict>
+	<key>还剩 %lld 个要复习</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@n@</string>
+		<key>n</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>Queda %lld por repasar</string>
+			<key>other</key>
+			<string>Quedan %lld por repasar</string>
 		</dict>
 	</dict>
 	<key>还有 %lld 个没看过</key>

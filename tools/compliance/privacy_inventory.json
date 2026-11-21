@@ -1,0 +1,36 @@
+{
+  "_doc": "App 实际用到的、和隐私有关的一切：框架、权限、iCloud 上报字段、本机存储、打开的网址。tools/validate_compliance.py 扫描代码与这里逐项核对，并检查 LegalContent.swift 的隐私政策每一项都写到（mentions 里的词必须出现在对应小节）。这里一变，LegalContent.privacyInventoryHash 和 privacyUpdated 必须一起更新。",
+  "frameworks": {
+    "AVFoundation": {"section": "camera", "mentions": ["相机"]},
+    "PhotosUI": {"section": "camera", "mentions": ["相册"]},
+    "Vision": {"section": "camera", "mentions": ["Apple Vision", "在你的设备上"]},
+    "CloudKit": {"sections": ["usage-stats", "feedback"], "mentions": ["iCloud（CloudKit）"]},
+    "StoreKit": {"section": "purchase", "mentions": ["App Store", "付款信息"]},
+    "MessageUI": {"sections": ["feedback", "feedback-offline"], "mentions": ["邮件"]},
+    "CoreGraphics": null,
+    "CoreImage": null,
+    "Foundation": null,
+    "ImageIO": null,
+    "ObjectiveC": null,
+    "SwiftUI": null,
+    "UIKit": null
+  },
+  "permissions": {
+    "NSCameraUsageDescription": {"section": "camera", "mentions": ["相机画面"]}
+  },
+  "local_storage": {"section": "local", "mentions": ["只保存在本机", "复习记录"]},
+  "cloudkit_records": {
+    "UsageDay": {"section": "usage-stats", "fields": {
+      "day": "日期", "week": "日期", "month": "日期",
+      "newInstall": "是否新安装", "firstInWeek": "本周", "firstInMonth": "本月",
+      "sessions": "打开次数", "hours": "按小时的使用分布", "grammar": "查看过的语法点", "levels": "等级",
+      "country": "国家或地区", "language": "界面语言", "appVersion": "App 版本"}},
+    "Feedback": {"section": "feedback", "fields": {
+      "kind": "反馈类型", "message": "描述", "context": "所在的页面", "appVersion": "App 版本",
+      "osVersion": "系统版本", "device": "设备型号", "language": "界面语言", "screenshots": "截图"}}
+  },
+  "web_hosts": {
+    "sixianli.github.io": "隐私政策与支持网页，只在浏览器里打开",
+    "www.apple.com": "Apple 标准最终用户许可协议，只在浏览器里打开"
+  }
+}

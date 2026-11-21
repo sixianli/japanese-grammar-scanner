@@ -335,7 +335,6 @@ struct ScanZoomStage: View {
     let result: ScanResult
     let library: GrammarLibrary
     let selectedClusterID: Int?
-    var ink: CGImage? = nil
     let onClosed: () -> Void
     let onSelect: (HighlightCluster) -> Void
 
@@ -348,7 +347,6 @@ struct ScanZoomStage: View {
                 image: image, result: result, library: library,
                 selectedClusterID: selectedClusterID,
                 settledScale: model.settledScale,
-                ink: ink,
                 onSelect: { cluster in
                     guard model.isOpen else { return }
                     model.close { onSelect(cluster) }
@@ -418,11 +416,10 @@ private struct ScanZoomContent: View, Equatable {
     let library: GrammarLibrary
     let selectedClusterID: Int?
     let settledScale: CGFloat
-    let ink: CGImage?
     let onSelect: (HighlightCluster) -> Void
 
     static func == (a: Self, b: Self) -> Bool {
-        a.image === b.image && a.ink === b.ink && a.selectedClusterID == b.selectedClusterID
+        a.image === b.image && a.selectedClusterID == b.selectedClusterID
             && a.settledScale == b.settledScale && a.result.boxes == b.result.boxes
             && a.result.text == b.result.text
     }
@@ -437,9 +434,7 @@ private struct ScanZoomContent: View, Equatable {
                     fit: .fit,
                     library: library,
                     selectedClusterID: selectedClusterID,
-                    lineWidth: 1.5 / max(settledScale, 1),
-                    showsCountBadge: settledScale < 2.5,
-                    style: .marker(ink: ink)
+                    lineWidth: 1.2 / max(settledScale, 1)
                 ) { onSelect($0) }
             }
     }

@@ -34,8 +34,14 @@ class E2ETestCase: XCTestCase {
     func tab(_ title: String) -> XCUIElement {
         let icon = ["首页": "house", "扫描": "text.viewfinder", "语法库": "books.vertical", "收藏": "star", "搜索": "magnifyingglass",
                     "Home": "house", "Scan": "text.viewfinder", "Grammar": "books.vertical", "Favorites": "star", "Search": "magnifyingglass"][title] ?? ""
-        // 标签按钮的 identifier 就是标签图标名（如 books.vertical），页面里同名按钮（如「收藏」）的 identifier 不同
-        return app.buttons.matching(NSPredicate(format: "label == %@ AND identifier BEGINSWITH %@", title, icon)).firstMatch
+        // 标签按钮的 identifier 是系统按图标名自动给的（如 books.vertical），但刚启动时有时还是空的（CI 上「扫描」标签
+        // 三次重试都没有 identifier，No matches）。按钮里的图标（Image，identifier 如 text.viewfinder、选中时 house.fill）
+        // 一直都有，所以按「按钮名 == 标签名、按钮里有这个图标」找：按钮自己的 identifier 是图标名或还没给（空）都算。
+        // 页面里同名按钮（如讲解页的「收藏」detail.favorite）有自己的 identifier，排除在外。
+        return app.buttons
+            .matching(NSPredicate(format: "label == %@ AND (identifier BEGINSWITH %@ OR identifier == '')", title, icon))
+            .containing(NSPredicate(format: "identifier BEGINSWITH %@", icon))
+            .firstMatch
     }
 
     /// 讲解页（右上角的收藏按钮只在讲解页出现）
@@ -64,6 +70,17 @@ class E2ETestCase: XCTestCase {
                   file: StaticString = #filePath, line: UInt = #line) {
         let p = expectation(for: NSPredicate(format: "exists == false"), evaluatedWith: element)
         XCTAssertEqual(XCTWaiter().wait(for: [p], timeout: timeout), .completed, message, file: file, line: line)
+    }
+
+    /// 在一段时间内持续检查元素一直存在（用来发现「先消失再出现」的跳动，例如面板被关掉又重新打开）
+    func assertStays(_ element: XCUIElement, for seconds: TimeInterval = 1.5, _ message: String,
+                     file: StaticString = #filePath, line: UInt = #line) {
+        let end = Date().addingTimeInterval(seconds)
+        while Date() < end {
+            XCTAssertTrue(element.exists, message, file: file, line: line)
+            if !element.exists { return }
+            Thread.sleep(forTimeInterval: 0.1)
+        }
     }
 
     func back(file: StaticString = #filePath, line: UInt = #line) {
@@ -104,6 +121,34 @@ class E2ETestCase: XCTestCase {
 
     func scrollToTop() {
         for _ in 0..<4 { app.swipeDown() }
+    }
+
+    func scrollClearOfTopBar(_ element: XCUIElement, maxSwipes: Int = 15) {
+        scrollTo(element, maxSwipes: maxSwipes)
+        let window = app.windows.firstMatch.frame
+        var n = 0
+        while element.exists && element.frame.minY < window.minY + window.height * 0.25 && n < 5 {
+            app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.4))
+                .press(forDuration: 0.1, thenDragTo: app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.65)))
+            n += 1
+        }
+        XCTAssertTrue(element.isHittable, "要点的元素应完整露在顶部导航栏下面")
+    }
+
+    func detailTitle(_ title: String) -> XCUIElement {
+        app.descendants(matching: .any)
+            .matching(NSPredicate(format: "identifier == 'detail.title' AND label == %@", title)).firstMatch
+    }
+
+    func openSimilarGrammar(_ similar: XCUIElement, file: StaticString = #filePath, line: UInt = #line) -> (from: String, to: String) {
+        wait(id("detail.title"), "讲解页应有标题", file: file, line: line)
+        let from = id("detail.title").label
+        scrollClearOfTopBar(similar, maxSwipes: 25)
+        similar.tap()
+        let other = app.descendants(matching: .any)
+            .matching(NSPredicate(format: "identifier == 'detail.title' AND label != %@", from)).firstMatch
+        wait(other, "点相近语法应打开另一个语法的讲解页，而不是停在「\(from)」", file: file, line: line)
+        return (from, other.label)
     }
 
     /// 打开某个语法点的讲解页（通过搜索标签）

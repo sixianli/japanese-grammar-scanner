@@ -12,6 +12,8 @@ final class GrammarLibrary: ObservableObject {
     let matcher: GrammarMatcher
     /// 旧 id → 新 id（同形语法合并后，被合并条目的 id 指向合并后的语法点）。
     let aliases: [String: String]
+    /// 新版「相近语法」对比资料（只有部分语法点有）。
+    private let contrastsByID: [String: GrammarContrasts]
 
     let language: ContentLanguage
 
@@ -32,7 +34,11 @@ final class GrammarLibrary: ObservableObject {
         byID = Dictionary(loaded.map { ($0.id, $0) }, uniquingKeysWith: { first, _ in first })
         matcher = GrammarMatcher(points: loaded)
         aliases = GrammarLibrary.loadAliases(from: bundle)
+        contrastsByID = GrammarLibrary.loadContrasts(language, from: bundle)
     }
+
+    /// 某个语法点的新版「相近语法」对比（没有时返回 nil，显示旧版列表）。
+    func contrasts(for id: String) -> GrammarContrasts? { contrastsByID[resolve(id)] }
 
     /// 把可能已被合并的旧 id 换成现在的 id。
     func resolve(_ id: String) -> String { byID[id] != nil ? id : (aliases[id] ?? id) }
@@ -210,6 +216,28 @@ final class GrammarLibrary: ObservableObject {
             urls += bundle.urls(forResourcesWithExtension: "json", subdirectory: sub) ?? []
         }
         return Array(Set(urls.filter { $0.lastPathComponent.hasPrefix(prefix) }))
+    }
+
+    private static func loadContrasts(_ language: ContentLanguage, from bundle: Bundle) -> [String: GrammarContrasts] {
+        func load(_ name: String) -> [GrammarContrasts] {
+            var urls: [URL] = []
+            for sub in [nil, "Grammar", "Grammar/contrasts", "contrasts"] as [String?] {
+                if let u = bundle.url(forResource: name, withExtension: "json", subdirectory: sub) { urls.append(u) }
+            }
+            guard let url = urls.first else { return [] }
+            do {
+                return try JSONDecoder().decode(GrammarContrasts.File.self, from: Data(contentsOf: url)).points
+            } catch {
+                assertionFailure("无法解析 \(name).json: \(error)")
+                return []
+            }
+        }
+        var result: [String: GrammarContrasts] = [:]
+        for c in load("contrasts") { result[c.id] = c }
+        if language != .zhHans {
+            for l in load("contrasts_\(language.rawValue)") { result[l.id]?.apply(l) }
+        }
+        return result
     }
 
     private static func loadAliases(from bundle: Bundle) -> [String: String] {

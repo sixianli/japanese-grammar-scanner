@@ -11,8 +11,6 @@ struct JapaneseGrammarScannerApp: App {
     var body: some Scene {
         WindowGroup {
             RootTabView()
-                // 切换语言时整体重建，系统控件（导航标题、标签栏、搜索框）也随之换语言
-                .id(languages.language)
                 .environmentObject(appearance)
                 .environmentObject(languages)
                 .environmentObject(languages.library)
@@ -103,6 +101,7 @@ struct RootTabView: View {
     @State private var showOnboarding = false
 
     @EnvironmentObject private var appearance: AppearanceStore
+    @EnvironmentObject private var languages: LanguageStore
     @State private var showSettings = false
     @State private var feedbackContext: FeedbackContext?
 
@@ -125,8 +124,9 @@ struct RootTabView: View {
 
     var body: some View {
         tabs
-            // 外观（主题色、背景色）变化时整体刷新配色
-            .id(appearance.key)
+            // 外观（主题色、背景色）或语言变化时，标签页内容整体刷新（导航标题、标签栏等系统控件也随之换语言）。
+            // 只刷新标签页，不刷新 RootTabView 本身：设置面板保持打开、停在原来的页面，当前标签也不变
+            .id("\(appearance.key)-\(languages.language.rawValue)")
             .tint(Theme.accent)
             .sheet(isPresented: $showSettings) {
                 SettingsSheet().tint(Theme.accent)
@@ -169,12 +169,6 @@ struct RootTabView: View {
         }
         .onAppear {
             KeyboardDismisser.shared.install()
-            if LanguageStore.reopenLanguagePage {
-                // 刚切换完语言：界面已重建，旧的设置面板正在收起；等它收完再重新打开到语言页，
-                // 否则新的面板会因为「上一个还在动画中」被系统忽略
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) { showSettings = true }
-                return
-            }
             guard !Self.didLaunchSetup else { return }
             Self.didLaunchSetup = true
             favorites.migrate(aliases: library.aliases)

@@ -6,12 +6,16 @@ struct GrammarDetailView: View {
     let grammarID: String
     /// 从扫描结果打开时，原文里命中的文字（用于显示「你扫到的」并找出对应的用法）
     var matchedText: String? = nil
+    /// 从首页「快要忘了」进来复习时，之后还要复习的语法（nil = 不是从复习进来的）
+    var reviewQueue: [String]? = nil
     @EnvironmentObject private var library: GrammarLibrary
     @EnvironmentObject private var favorites: FavoritesStore
     @EnvironmentObject private var entitlements: EntitlementStore
     @EnvironmentObject private var history: HistoryStore
     /// 滚动相关的状态放在单独的对象里：只有标题浮层读取它，滚动时不会让整页内容重新排版（否则会卡顿、闪烁）。
     @State private var scroll = DetailScrollModel()
+    /// iOS 26+：标题在没滚动时、在滚动视图里的位置（导航栏下沿 + 上边距）
+    @State private var titleRestY: CGFloat?
 
     /// iOS 26+ 导航栏透明（Liquid Glass），标题可以直接“飞”进导航栏；更早的系统用淡入方式。
     private var usesFlyingTitle: Bool {
@@ -22,6 +26,14 @@ struct GrammarDetailView: View {
     var body: some View {
         if let point = library.point(id: grammarID) {
             content(point)
+                // 复习自评条只在从首页「快要忘了」进来时出现；从语法库、搜索、扫描结果等打开都不出现。
+                // 复习时隐藏底部标签栏，自评条独占底部。
+                .safeAreaInset(edge: .bottom, spacing: 0) {
+                    if let reviewQueue {
+                        ReviewBar(grammarID: point.id, queue: reviewQueue)
+                    }
+                }
+                .toolbar(reviewQueue != nil ? .hidden : .automatic, for: .tabBar)
                 .onAppear {
                     history.recordViewed(point.id)
                     UsageStats.shared.grammarViewed(point.id, level: point.level)
@@ -36,11 +48,16 @@ struct GrammarDetailView: View {
         let showsSenseLevels = p.levels.count > 1
         return ScrollViewReader { proxy in
             ScrollView {
+                if usesFlyingTitle {
+                    // 标题放在滚动内容里（不放进 LazyVStack，滚远了也不会被回收），随滚动在渲染阶段直接计算位置：
+                    // 上移、缩小、移到导航栏正中并停住。始终只有这一个标题，不再和另一个小标题交叉淡入（Build 16：有重影）。
+                    flyingHeader(p)
+                        .padding(.horizontal, Theme.margin)
+                        .padding(.top, FlyingTitleLayout.topPadding)
+                        .zIndex(1)
+                }
                 LazyVStack(alignment: .leading, spacing: 0) {
-                    if usesFlyingTitle {
-                        // 标题由浮层绘制（跟手移动到导航栏）；这里只占位并测量大小
-                        header(p, titleHidden: true)
-                    } else {
+                    if !usesFlyingTitle {
                         FadingHeader(scroll: scroll) { header(p) }
                             .background(GeometryReader { g in
                                 Color.clear.preference(key: HeaderFrameKey.self, value: g.frame(in: .named("detailScroll")))
@@ -108,7 +125,14 @@ struct GrammarDetailView: View {
                             }
                         }
 
-                        if !p.similar.isEmpty {
+                        if let contrasts = library.contrasts(for: p.id) {
+                            // 新版：分三组 + 对比例句。新版资料里没有合格内容（groups 为空）时整节不显示，不退回旧版列表
+                            if !contrasts.groups.isEmpty {
+                                DocSection("相近语法", icon: "arrow.triangle.branch", anchor: "section-similar") {
+                                    ContrastSection(contrasts: contrasts, currentTitle: p.titleForm)
+                                }
+                            }
+                        } else if !p.similar.isEmpty {
                             DocSection("相近语法", icon: "arrow.triangle.branch", anchor: "section-similar") {
                                 VStack(alignment: .leading, spacing: 0) {
                                     ForEach(Array(p.similar.enumerated()), id: \.offset) { index, s in
@@ -121,7 +145,7 @@ struct GrammarDetailView: View {
                     }
                 }
                 .padding(.horizontal, Theme.margin)
-                .padding(.top, 8)
+                .padding(.top, usesFlyingTitle ? 0 : 8)
                 .padding(.bottom, 16)
 
                 // 讲解有误时的反馈入口
@@ -142,6 +166,7 @@ struct GrammarDetailView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             .coordinateSpace(name: "detailScroll")
+            .modifier(DemoScrollOffset())
             .onAppear {
                 // CI 截图：滚动到指定位置
                 if let anchor = DemoMode.scrollAnchor {
@@ -155,28 +180,8 @@ struct GrammarDetailView: View {
                 let progress = min(1, max(0, moved / max(frame.height, 1)))
                 if abs(progress - scroll.progress) > 0.005 { scroll.progress = progress }
             }
-            .onPreferenceChange(TitleSizeKey.self) { [scroll] size in
-                if size != .zero, size != scroll.titleSize { scroll.titleSize = size }
-            }
-            .trackScrollOffset(scroll)
         }
         .background(Theme.background)
-        .overlay(alignment: .topLeading) {
-            if usesFlyingTitle {
-                FlyingTitle(scroll: scroll, topPadding: 8) {
-                    titleRow(p)
-                } compact: {
-                    // 导航栏里的标题：单行、标准导航栏字号，长标题自动略缩小；等级标签用正常大小
-                    HStack(alignment: .top, spacing: 4) {
-                        Text(verbatim: p.titleForm)
-                            .font(.headline)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.75)
-                        LevelBadge(level: p.level)
-                    }
-                }
-            }
-        }
         .navigationTitle(p.displayTitle)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -229,13 +234,64 @@ struct GrammarDetailView: View {
             titleRow(p)
                 .opacity(titleHidden ? 0 : 1)
                 .accessibilityHidden(titleHidden)
-                .background(GeometryReader { g in
-                    Color.clear.preference(key: TitleSizeKey.self, value: g.size)
-                })
             if let f = p.frequency, f != .low {
                 FrequencyBadge(frequency: f)
             }
         }
+        // 端到端测试用：页面最顶部的标记（label 是语法标题），用来确认打开的是哪个语法、页面是否在顶部
+        .overlay(alignment: .topLeading) {
+            Color.clear.frame(width: 2, height: 2)
+                .accessibilityElement()
+                .accessibilityLabel(Text(verbatim: p.titleForm))
+                .accessibilityIdentifier("detail.title")
+        }
+    }
+
+    /// iOS 26+：会「飞」进导航栏的标题。页面里原位置的标题只占位（透明），可见的标题叠在上面，
+    /// 用 visualEffect 按自己在滚动视图里的位置逐帧变换（与滚动同一帧计算，跟手、不滞后）。
+    /// 导航栏的底色也一起画：标题进入导航栏时淡入，正文从下面滚过去时不会和标题叠在一起。
+    private func flyingHeader(_ p: GrammarPoint) -> some View {
+        header(p, titleHidden: true)
+            .overlay(alignment: .topLeading) {
+                ZStack(alignment: .topLeading) {
+                    if let restY = titleRestY {
+                        let barHeight = max(restY - FlyingTitleLayout.topPadding, 0)
+                        // 导航栏底色：铺满宽度，固定在屏幕顶部，随进度淡入
+                        ZStack(alignment: .bottom) {
+                            Rectangle().fill(.regularMaterial)
+                            Rectangle().fill(Theme.background.opacity(0.72))
+                            Rectangle().fill(Color.primary.opacity(0.08)).frame(height: 0.5)
+                        }
+                        .frame(height: barHeight)
+                        .padding(.horizontal, -Theme.margin)
+                        .visualEffect { content, proxy in
+                            let minY = proxy.frame(in: .scrollView(axis: .vertical)).minY
+                            let t = FlyingTitleLayout.barTransform(minY: minY, restY: restY)
+                            return content.offset(y: t.offsetY).opacity(t.opacity)
+                        }
+                        .allowsHitTesting(false)
+                        .accessibilityHidden(true)
+
+                        titleRow(p)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .visualEffect { content, proxy in
+                                let minY = proxy.frame(in: .scrollView(axis: .vertical)).minY
+                                let width = proxy.bounds(of: .scrollView(axis: .vertical))?.width ?? proxy.size.width + 2 * Theme.margin
+                                let t = FlyingTitleLayout.titleTransform(minY: minY, restY: restY, size: proxy.size,
+                                                                         width: width, margin: Theme.margin)
+                                return content
+                                    .scaleEffect(t.scale, anchor: .topLeading)
+                                    .offset(x: t.offsetX, y: t.offsetY)
+                            }
+                            .allowsHitTesting(false)
+                            .accessibilityHidden(true)
+                    }
+                }
+            }
+            // 记下标题在没滚动时的位置（只记一次；之后的位置变化全在 visualEffect 里算，不经过状态，不会慢一帧）
+            .onGeometryChange(for: CGFloat.self) { $0.frame(in: .scrollView(axis: .vertical)).minY } action: { y in
+                if titleRestY == nil, y > 0 { titleRestY = y }
+            }
     }
 
     @ViewBuilder
@@ -581,89 +637,74 @@ private struct DocSectionTitle: View {
 /// 整页讲解不会因为滚动而重新排版。
 @Observable
 final class DetailScrollModel {
-    /// 已向上滚动的距离（内容顶部为 0，下拉回弹时为负）
-    var offset: CGFloat = 0
-    /// 大标题行的尺寸
-    var titleSize: CGSize = .zero
     /// 旧系统：大标题滚出的进度 0~1
     var progress: CGFloat = 0
     @ObservationIgnored var headerBaseline: CGFloat?
 }
 
-private struct TitleSizeKey: PreferenceKey {
-    static var defaultValue: CGSize = .zero
-    static func reduce(value: inout CGSize, nextValue: () -> CGSize) {
-        let next = nextValue()
-        if next != .zero { value = next }
-    }
-}
-
-extension View {
-    /// 直接读取滚动偏移（iOS 18+），与内容同一帧更新，标题不会滞后一帧。
-    @ViewBuilder
-    func trackScrollOffset(_ model: DetailScrollModel) -> some View {
-        if #available(iOS 18.0, *) {
-            self.onScrollGeometryChange(for: CGFloat.self) { geo in
-                geo.contentOffset.y + geo.contentInsets.top
-            } action: { _, new in
-                model.offset = new
-            }
+/// QA 截图：按启动参数 -demoScrollY 把讲解页滚到指定位置（iOS 18+）
+private struct DemoScrollOffset: ViewModifier {
+    func body(content: Content) -> some View {
+        if #available(iOS 18.0, *), let y = DemoMode.scrollY {
+            Scrolled(content: content, y: y)
         } else {
-            self
+            content
+        }
+    }
+
+    @available(iOS 18.0, *)
+    private struct Scrolled: View {
+        let content: Content
+        let y: CGFloat
+        @State private var position = ScrollPosition(edge: .top)
+        var body: some View {
+            content
+                .scrollPosition($position)
+                .task {
+                    try? await Task.sleep(for: .milliseconds(800))
+                    position.scrollTo(y: y)
+                }
         }
     }
 }
 
-/// 大标题浮层：跟着滚动上移，同时缩小并移到导航栏正中；下拉回顶部时还原成大标题。
-/// 位置完全由滚动偏移计算（不依赖上一帧测量到的位置），所以惯性滚动时不会闪烁或滞后。
-private struct FlyingTitle<Title: View, Compact: View>: View {
-    let scroll: DetailScrollModel
-    /// 标题在内容中的上边距（与页面内容的 top padding 一致）
-    let topPadding: CGFloat
-    @ViewBuilder let title: Title
-    /// 到达导航栏后显示的单行标题（大标题缩小后字太小、换行的长标题放不下，所以最后交叉淡入这个）
-    @ViewBuilder let compact: Compact
+/// 飞行标题的几何（纯计算，单元测试覆盖）：标题从原位置上移、缩小、横向移到正中，停在导航栏中线。
+/// 坐标都是滚动视图坐标（顶端 = 屏幕顶端，导航栏在 0…restY-topPadding 之间）。
+enum FlyingTitleLayout {
+    /// 标题在内容里的上边距
+    static let topPadding: CGFloat = 8
+    /// 导航栏高度（中线在导航栏下沿往上 22）
+    static let barHeight: CGFloat = 44
 
-    var body: some View {
-        let size = scroll.titleSize
-        GeometryReader { geo in
-            if size != .zero {
-                let width = geo.size.width
-                let barCenterY: CGFloat = -22   // 导航栏中线（浮层坐标原点在导航栏下沿）
-                let endScale = min(0.55, 34 / max(size.height, 1), (width - 150) / max(size.width, 1))
-                let targetY = barCenterY - size.height * endScale / 2
-                let restY = topPadding
-                let travel = max(restY - targetY, 1)
-                let progress = min(1, max(0, scroll.offset / travel))
-                let y = max(restY - scroll.offset, targetY)
-                let x = Theme.margin + ((width - size.width * endScale) / 2 - Theme.margin) * progress
-                let scale = 1 - (1 - endScale) * progress
-                ZStack(alignment: .topLeading) {
-                    // 标题进入导航栏时，顶部出现几乎不透明的毛玻璃底，正文不会透出来和标题叠在一起
-                    ZStack(alignment: .bottom) {
-                        Rectangle().fill(.regularMaterial)
-                        Rectangle().fill(Theme.background.opacity(0.72))
-                        Rectangle().fill(Color.primary.opacity(0.08)).frame(height: 0.5)
-                    }
-                    .frame(width: width, height: 120)
-                    .offset(y: -120)
-                    .opacity(Double(min(1, progress * 1.4)))
-                    let swap = Double(min(1, max(0, (progress - 0.72) / 0.28)))
-                    title
-                        .frame(width: size.width, height: size.height, alignment: .topLeading)
-                        .scaleEffect(scale, anchor: .topLeading)
-                        .offset(x: x, y: y)
-                        .opacity(1 - swap)
-                    compact
-                        .frame(maxWidth: width - 150)
-                        .frame(width: width, height: 44)
-                        .offset(y: barCenterY - 22 + (1 - swap) * 6)
-                        .opacity(swap)
-                }
-            }
-        }
-        .allowsHitTesting(false)
-        .accessibilityHidden(true)
+    struct TitleTransform: Equatable {
+        var offsetX: CGFloat
+        var offsetY: CGFloat
+        var scale: CGFloat
+        var progress: CGFloat
+    }
+
+    /// 缩到导航栏里的比例：大约导航栏标题字号；太宽的标题再缩小，给左右按钮留位置
+    static func endScale(size: CGSize, width: CGFloat) -> CGFloat {
+        min(0.55, 34 / max(size.height, 1), (width - 150) / max(size.width, 1))
+    }
+
+    static func titleTransform(minY: CGFloat, restY: CGFloat, size: CGSize, width: CGFloat, margin: CGFloat) -> TitleTransform {
+        let endScale = endScale(size: size, width: width)
+        let barCenterY = restY - topPadding - barHeight / 2
+        let targetY = barCenterY - size.height * endScale / 2
+        let travel = max(restY - targetY, 1)
+        let progress = min(1, max(0, (restY - minY) / travel))
+        // 跟着内容走，到导航栏中线后停住（往回滚时跟着回来）
+        let offsetY = max(targetY - minY, 0)
+        let offsetX = ((width - size.width * endScale) / 2 - margin) * progress
+        let scale = 1 - (1 - endScale) * progress
+        return TitleTransform(offsetX: offsetX, offsetY: offsetY, scale: scale, progress: progress)
+    }
+
+    /// 导航栏底色：固定在屏幕顶端（抵消滚动），标题开始进入导航栏时淡入
+    static func barTransform(minY: CGFloat, restY: CGFloat) -> (offsetY: CGFloat, opacity: Double) {
+        let scrolled = restY - minY
+        return (offsetY: -minY, opacity: Double(min(1, max(0, scrolled / 40))))
     }
 }
 
