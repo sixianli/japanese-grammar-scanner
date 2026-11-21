@@ -21228,33 +21228,16 @@
               "this": [
                 {
                   "tag": "Coloquial · relajado",
-                  "tr": "Aunque corras ahora, ya no llegas, ¿eh?"
+                  "tr": "Aunque cojas un taxi ahora, no llegas a tiempo."
                 }
               ],
               "that": [
                 {
                   "tag": "Normal · cortés",
-                  "tr": "Aunque corra ahora, ya no llegará a tiempo."
+                  "tr": "Aunque tome un taxi ahora, no llegará a tiempo."
                 }
               ],
               "explain": "Significan exactamente lo mismo; mira con quién se habla: entre amigos o en familia, de forma relajada → たって (読んだって, 急いだって son cambios eufónicos y se escriben 「だって」); con superiores, clientes o por escrito → ても. Con adjetivos-い se dice 「高くたって」, equivalente a 「高くても」."
-            },
-            {
-              "id": "datte-even",
-              "diff": "Ambas son concesiones coloquiales; tras verbos y adjetivos va たって, tras sustantivos va だって.",
-              "this": [
-                {
-                  "tag": "Verbo → たって",
-                  "tr": "Aunque mañana llueva, yo voy."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Sustantivo → だって",
-                  "tr": "Aunque mañana sea un día de lluvia, yo voy."
-                }
-              ],
-              "explain": "Mira primero qué palabra va delante: verbos y adjetivos como 降った, 高く → たって (con cambio eufónico, como 読んだ + って, también se escribe 「だって」); sustantivos como 雨, 子ども → だって directamente, equivalente a 「でも」 (子どもだって知ってる = hasta un niño lo sabe)."
             },
             {
               "id": "ta-tokoro-de",
@@ -21286,63 +21269,20 @@
           "items": [
             {
               "id": "te-miru",
-              "diff": "てごらん anima al otro a «prueba a…», y solo se dice a niños o a gente de menor rango; てみる es «probar a hacer» uno mismo.",
+              "diff": "Las dos son «hacer y ver qué pasa»: てみる es probar uno mismo; てごらん es decirle al otro «prueba a…», sobre todo a niños o a personas de menor rango.",
               "this": [
                 {
-                  "tag": "Animar a otro · a un niño",
-                  "tr": "Está muy rico, pruébalo."
+                  "tag": "Animar al otro · a un niño",
+                  "tr": "Prueba este pastel."
                 }
               ],
               "that": [
                 {
                   "tag": "Probar uno mismo",
-                  "tr": "Probé el natto por primera vez."
+                  "tr": "Probé este pastel."
                 }
               ],
-              "explain": "てごらん es la abreviación de 「〜てご覧なさい」 y, como 「〜てみなさい」, invita al otro a probar; suelen decirlo padres o profesores a niños. てみる es el propio hablante quien prueba, y se usa en cualquier tiempo (食べてみた, 行ってみたい)."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Ambas sirven para que el otro haga algo",
-          "items": [
-            {
-              "id": "nasai",
-              "diff": "てごらん anima al otro a «probar»; なさい le ordena «hazlo».",
-              "this": [
-                {
-                  "tag": "Ánimo · prueba",
-                  "tr": "Tranquilo, tú puedes. Inténtalo tú solo."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Orden · hazlo",
-                  "tr": "Haz los deberes ya."
-                }
-              ],
-              "explain": "Las dos las dice alguien mayor a alguien menor. Mira lo que hay alrededor: palabras de ánimo como 「大丈夫」, 「できるよ」, invitando al niño a intentarlo → てごらん, con tono suave; prisas como 「早く」, exigiendo que haga lo que debe → なさい."
-            },
-            {
-              "id": "te-kudasai",
-              "diff": "てください es una petición cortés que vale con cualquiera; てごらん tiene un tono de persona mayor y no se puede decir a superiores ni a mayores.",
-              "this": [
-                {
-                  "tag": "A un niño · cercano",
-                  "tr": "Mira, mira este cuadro."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "A un superior · cortés",
-                  "tr": "Profesor, mire este cuadro, por favor."
-                }
-              ],
-              "wrong": {
-                "why": "てごらん no se puede decir a profesores ni a superiores"
-              },
-              "explain": "Mira a quién te diriges: a niños, alumnos o gente de menor rango → てごらん; a profesores, jefes o clientes → てください, y para decir «por favor, pruebe a…» se usa 「〜てみてください」."
+              "explain": "「見る」 significa en origen «mirar». てみる = て + 見る: hacer algo y luego mirar cómo sale → intentar hacerlo. てごらん = て + ご覧（なさい）; 「ご覧」 es la forma respetuosa de 「見る」, así que «hazlo y mira» → animar al otro a probar, igual que 「〜てみなさい」. Fíjate en quién lo prueba: uno mismo → てみる (食べてみた, 行ってみたい); decirle al otro que lo pruebe → てごらん, lo dicen sobre todo padres o maestros a niños."
             }
           ]
         }
@@ -21376,42 +21316,24 @@
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan «primero A, y solo entonces B»",
+          "note": "Ambas expresan «solo cuando uno…, entonces…»",
           "items": [
             {
-              "id": "te-kara-de-nai-to",
-              "diff": "て初めて lo dice en positivo: «solo después de… entendí»; てからでないと lo dice en negativo: «si no… primero, no se puede».",
+              "id": "te-koso",
+              "diff": "Las dos pueden decir «solo cuando uno hace esto, …»; て初めて pone el foco en «antes no lo sabía y solo entonces lo entendí por primera vez», y puede contar una experiencia concreta propia; てこそ pone el foco en «solo así funciona», y se usa sobre todo para enunciar una verdad general o una opinión.",
               "this": [
                 {
-                  "tag": "Positivo · seguido de afirmación",
-                  "tr": "Solo al ser padre entendí lo duro que fue para mis padres."
+                  "tag": "Experiencia propia · entonces lo entendí",
+                  "tr": "Solo cuando crié a un hijo entendí lo mucho que les debo a mis padres."
                 }
               ],
               "that": [
                 {
-                  "tag": "Negativo · seguido de negación",
-                  "tr": "Hasta que no eres padre, no entiendes lo duro que es para los padres."
+                  "tag": "Verdad general · solo así",
+                  "tr": "Solo criando a un hijo uno entiende lo mucho que les debe a sus padres."
                 }
               ],
-              "explain": "Mira la segunda mitad: afirmativa y normalmente en pasado (分かった, 気づいた), «solo en ese momento lo entendí por primera vez» → て初めて; negativa (分からない, できない), «si no haces A primero, no se puede» → てからでないと. Las dos oraciones expresan la misma idea."
-            },
-            {
-              "id": "te-kara",
-              "title": "〜てから（orden）",
-              "diff": "てから solo indica el orden de las acciones; て初めて subraya «nunca antes…, y solo después de eso, por primera vez…».",
-              "this": [
-                {
-                  "tag": "Primera vez · revelación",
-                  "tr": "Solo al venir a Japón vi nieve de verdad por primera vez."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Orden · normal",
-                  "tr": "Desde que vine a Japón, estudio japonés todos los días."
-                }
-              ],
-              "explain": "Mira si la segunda mitad es una «primera vez»: experiencias o revelaciones que nunca se habían tenido y solo entonces llegan, como 本物の雪を見た, 大切さが分かった → て初めて; si solo se ordena en el tiempo o se habla de algo que se hace desde entonces → てから."
+              "explain": "Para una verdad general valen las dos: 「子どもを育てて初めて／育ててこそ、親のありがたさが分かる」. Mira la segunda mitad: si cuentas una experiencia concreta tuya con el pasado 「分かった」 → て初めて; si enuncias una verdad u opinión con 「分かる」 → てこそ, que suena más enfático y subraya «tiene que ser así». てこそ normalmente no se usa para narrar una experiencia puntual del pasado."
             }
           ]
         }
@@ -21427,23 +21349,20 @@
             {
               "id": "te-kara",
               "title": "〜てから（desde que）",
-              "diff": "て以来 solo dice «desde cierto momento del pasado hasta ahora»; てから también sirve para el orden de cosas futuras.",
+              "diff": "Para decir «desde entonces, siempre…» significan lo mismo; て以来 es formal y algo escrito, てから es lenguaje coloquial.",
               "this": [
                 {
-                  "tag": "Pasado → presente",
-                  "tr": "Desde que vine a Japón el año pasado, vivo en Tokio."
+                  "tag": "Formal · presentación",
+                  "tr": "Desde que entré en esta empresa, me encargo de las ventas."
                 }
               ],
               "that": [
                 {
-                  "tag": "También futuro",
-                  "tr": "Pienso ir a Japón después de graduarme de la universidad el año que viene."
+                  "tag": "Coloquial · charla",
+                  "tr": "Desde que entré en esta empresa, siempre he estado en ventas."
                 }
               ],
-              "wrong": {
-                "why": "て以来 no se puede usar para cosas futuras"
-              },
-              "explain": "Mira las palabras de tiempo y la segunda mitad: 「去年」, 「ずっと〜ている」, algo que continúa desde el pasado hasta ahora → て以来 (también vale てから); planes futuros como 「来年」, 「〜つもりだ」 → solo てから. て以来 es algo más formal que てから."
+              "explain": "Las dos frases dicen lo mismo: algo que sigue desde que se entró en la empresa hasta ahora. Fíjate en la situación: presentaciones, contextos de trabajo y textos escritos (〜しております) → て以来, que suena formal; charlando con amigos (〜てるんだ) → てから es más natural."
             },
             {
               "id": "te-kara-to-iu-mono",
@@ -21464,20 +21383,20 @@
             },
             {
               "id": "te-kono-kata",
-              "diff": "Ambas significan «desde…, siempre»; てこのかた es más escrito y anticuado, y se usa sobre todo para periodos muy largos, como 「生まれてこのかた」.",
+              "diff": "Significan lo mismo, «desde… hasta ahora»; てこのかた es más literario y anticuado, con un tono de mirar atrás con emoción.",
               "this": [
                 {
-                  "tag": "Normal · formal",
-                  "tr": "Desde que vine a Japón, no me he resfriado ni una vez."
+                  "tag": "Estándar · formal",
+                  "tr": "Desde que nací, nunca he estado hospitalizado."
                 }
               ],
               "that": [
                 {
-                  "tag": "Mucho tiempo · anticuado",
-                  "tr": "En toda mi vida no me he resfriado ni una vez."
+                  "tag": "Literario · anticuado · nostálgico",
+                  "tr": "En toda mi vida, desde que nací, jamás he estado hospitalizado."
                 }
               ],
-              "explain": "Mira el punto de partida: un periodo muy largo contado desde el nacimiento, como 「生まれて」, con algo de emoción → てこのかた, poco usado en la conversación diaria; lo normal, «desde que vine a Japón, desde que entré en la empresa» → て以来."
+              "explain": "Las dos frases significan lo mismo y cambiarlas no altera el sentido; la diferencia es de estilo: て以来 es la expresión formal normal, válida al hablar y al escribir; てこのかた es más literaria y anticuada, casi no se usa en la conversación diaria y aparece sobre todo en expresiones como 「生まれてこのかた」, al repasar la propia vida con emoción. Si dudas, usa て以来."
             }
           ]
         }
@@ -21556,24 +21475,24 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas expresan «primero A, y solo entonces B»",
+          "note": "Ambas expresan «no se puede… sin antes…»",
           "items": [
             {
-              "id": "te-hajimete",
-              "diff": "てからでないと lo dice en negativo: «si no… primero, no se puede»; て初めて lo dice en positivo: «solo después de… entendí».",
+              "id": "nai-koto-ni-wa",
+              "diff": "Significan básicamente lo mismo; てからでないと se fija en el orden, ないことには en si el primer paso se cumple o no, y suena más formal.",
               "this": [
                 {
-                  "tag": "Negativo · seguido de negación",
-                  "tr": "Hasta que no eres padre, no entiendes lo duro que es para los padres."
+                  "tag": "Orden · primero conocerla",
+                  "tr": "Hasta que no la conozcas en persona, no sabrás qué clase de persona es."
                 }
               ],
               "that": [
                 {
-                  "tag": "Positivo · seguido de afirmación",
-                  "tr": "Solo al ser padre entendí lo duro que fue para mis padres."
+                  "tag": "Condición · formal",
+                  "tr": "Si no la conoces en persona, no puedes saber qué clase de persona es."
                 }
               ],
-              "explain": "Mira la segunda mitad: negativa (分からない, できない), «si no haces A primero, no se puede» → てからでないと; afirmativa y normalmente en pasado (分かった, 気づいた), «solo en ese momento lo entendí por primera vez» → て初めて. Las dos oraciones expresan la misma idea."
+              "explain": "En esta frase valen las dos, y en ambas la segunda mitad es negativa. Para decir «primero A, y solo después B», subrayando el orden → てからでないと (en coloquial también 「てからじゃないと」); para decir «si no se cumple el paso A, B es imposible», subrayando una condición previa → ないことには, más formal y frecuente en conversaciones y debates."
             }
           ]
         }
@@ -21624,37 +21543,20 @@
           "items": [
             {
               "id": "te-mo-shikata-ga-nai",
-              "diff": "Las dos pueden decir «… no sirve de nada»; ても仕方がない también puede significar «no es de extrañar que…», ても始まらない no.",
+              "diff": "Las dos pueden decir «… no sirve de nada», y cambiarlas no altera el sentido; ても仕方がない es la forma más común, y ても始まらない subraya más que «no se avanza nada».",
               "this": [
                 {
-                  "tag": "Inútil · en vano",
-                  "tr": "A estas alturas, arrepentirse no sirve de nada."
+                  "tag": "Subraya que no se avanza",
+                  "tr": "Arrepentirse de lo que ya pasó no lleva a ninguna parte."
                 }
               ],
               "that": [
                 {
-                  "tag": "No es de extrañar",
-                  "tr": "Fuiste tú quien no cumplió lo prometido, así que es normal que te regañen."
+                  "tag": "La forma más común",
+                  "tr": "No sirve de nada arrepentirse de lo que ya pasó."
                 }
               ],
-              "explain": "Mira la causa de delante: si uno tiene la culpa primero, como 「約束を破った」, y lo que sigue es un resultado como que te regañen o te odien → «no es de extrañar», y solo vale ても仕方がない (igual con しょうがない); si tras 「今さら」 se dice que hacer algo no cambiará la situación → valen las dos, y ても始まらない subraya más que «no se avanza nada»."
-            },
-            {
-              "id": "ta-tokoro-de",
-              "diff": "ても始まらない es en sí la conclusión «no sirve de nada» y va al final; たところで es la primera mitad, y detrás aún hay que decir el resultado concreto.",
-              "this": [
-                {
-                  "tag": "Final · conclusión",
-                  "tr": "Pedir perdón ahora no sirve de nada. Mejor arreglémoslo cuanto antes."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "En medio · resultado concreto",
-                  "tr": "Aunque pidas perdón a estas alturas, seguramente no te perdonarán."
-                }
-              ],
-              "explain": "Mira la estructura de la oración: ても始まらない concluye directamente «no sirve de nada», y suele seguir una propuesta como 「それより〜しよう」; detrás de たところで hay que decir el resultado concreto (許してもらえない, 何も変わらない), con un tono más bien escrito."
+              "explain": "Las dos frases significan lo mismo; depende de qué quieras subrayar: si solo dices «hacer esto no tiene sentido» → ても仕方がない, la más usada (en coloquial, a menudo 「しょうがない」); si quieres subrayar «así no se avanza ni un paso, hay que mirar adelante» → ても始まらない (literalmente «aunque…, nada empieza»), que se usa a menudo para animar a alguien a dejar de lamentarse o preocuparse."
             }
           ]
         }
@@ -21692,20 +21594,20 @@
           "items": [
             {
               "id": "te-mo-hajimaranai",
-              "diff": "Las dos pueden decir «… no sirve de nada»; ても仕方がない también puede significar «no es de extrañar que…», ても始まらない no.",
+              "diff": "Las dos pueden decir «… no sirve de nada», y cambiarlas no altera el sentido; ても仕方がない es la forma más común, y ても始まらない subraya más que «no se avanza nada».",
               "this": [
                 {
-                  "tag": "No es de extrañar",
-                  "tr": "Fuiste tú quien no cumplió lo prometido, así que es normal que te regañen."
+                  "tag": "La forma más común",
+                  "tr": "No sirve de nada arrepentirse de lo que ya pasó."
                 }
               ],
               "that": [
                 {
-                  "tag": "Inútil · en vano",
-                  "tr": "A estas alturas, arrepentirse no sirve de nada."
+                  "tag": "Subraya que no se avanza",
+                  "tr": "Arrepentirse de lo que ya pasó no lleva a ninguna parte."
                 }
               ],
-              "explain": "Mira la causa de delante: si uno tiene la culpa primero, como 「約束を破った」, y lo que sigue es un resultado como que te regañen o te odien → «no es de extrañar», y solo vale ても仕方がない; si tras 「今さら」 se dice que hacer algo no cambiará la situación → valen las dos, y ても始まらない subraya más que «no se avanza nada», y suele seguir 「それより〜しよう」."
+              "explain": "Las dos frases significan lo mismo; depende de qué quieras subrayar: si solo dices «hacer esto no tiene sentido» → ても仕方がない, la más usada (en coloquial, a menudo 「しょうがない」); si quieres subrayar «así no se avanza ni un paso, hay que mirar adelante» → ても始まらない (literalmente «aunque…, nada empieza»), que se usa a menudo para animar a alguien a dejar de lamentarse o preocuparse."
             }
           ]
         }
@@ -21743,20 +21645,20 @@
           "items": [
             {
               "id": "te-naranai",
-              "diff": "Significan lo mismo; てならない es más escrito y suele ir con 「気がする」, 「思える」; en la charla diaria se dice más てしょうがない.",
+              "diff": "Significan lo mismo, un sentimiento fuerte, «muchísimo, no puedo evitarlo»; てしょうがない es coloquial, てならない es más escrito y formal.",
               "this": [
                 {
                   "tag": "Coloquial · charla",
-                  "tr": "Vivir solo me hace sentir solísimo, ¿sabes?"
+                  "tr": "Me preocupa muchísimo el futuro de mi hijo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Escrito · surge solo",
-                  "tr": "No puedo quitarme la sensación de que va a pasar algo malo."
+                  "tag": "Escrito · formal",
+                  "tr": "El futuro de mi hijo me inquieta profundamente."
                 }
               ],
-              "explain": "Mira la situación y la palabra de delante: charlando, con 寂しい, 眠い, 気になる → てしょうがない es lo más natural; en textos, con sensaciones que surgen sin querer como 「〜気がする」, 「〜と思えて」 → てならない es muy frecuente."
+              "explain": "Las dos frases significan lo mismo; fíjate en la situación: hablando con familia o amigos → てしょうがない (o て仕方がない) es lo más natural; en contextos formales como textos, cartas o discursos → てならない, normalmente tras palabras de sentimiento como 心配, 残念, 悔しい."
             }
           ]
         }
@@ -21772,7 +21674,7 @@
             {
               "id": "zu-ni-wa-sumanai",
               "thisTitle": "〜ずに済む",
-              "diff": "ずに済む es «se resolvió sin hacerlo» = por suerte me libré; ずにはすまない es «no se resuelve sin hacerlo» = hay que hacerlo sí o sí. Solo cambia un 「は」.",
+              "diff": "ずに済む es «se resolvió sin hacerlo» = por suerte me libré; ずにはすまない es «no se resuelve sin hacerlo» = hay que hacerlo — tras 「ずに」 se añade 「は」, y 「済む」 pasa además a la forma negativa 「すまない」.",
               "this": [
                 {
                   "tag": "Por suerte me libré",
@@ -21785,7 +21687,7 @@
                   "tr": "Como rompí el paraguas de mi amigo, no me queda otra que comprarle uno nuevo."
                 }
               ],
-              "explain": "「済む」 = el asunto queda resuelto. ずに済む: se resolvió sin hacerlo → por suerte me libré, y delante suele ir una causa afortunada con 「〜ので」; ずにはすまない: no se resuelve sin hacerlo → moralmente hay que hacerlo, y delante suele ir una causa de la que uno es responsable, con 「〜のだから」. Solo cambia un 「は」 y el significado es justo el contrario."
+              "explain": "「済む」 = un asunto queda resuelto. ずに済む: se resolvió sin hacerlo → por suerte me libré; suele ir tras una causa afortunada con 「ので」. ずにはすまない: no se resuelve sin hacerlo → moralmente hay que hacerlo; suele ir tras una causa de la que uno es responsable, con 「のだから」. Mira lo que va tras 「ずに」: el afirmativo 「済んだ」 directamente → me libré; 「は」 y luego el negativo 「すまない」 → hay que hacerlo."
             },
             {
               "id": "te-sumimasen",
