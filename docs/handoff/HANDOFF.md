@@ -62,6 +62,22 @@ Build 17 包含的内容（详见 PR #6 描述）：Build 16 的全部反馈修�
 - 另外，标签只在页面顶部标题下方，往上滑之后就跟着滚走了，标题栏里没有。
 - 待用户确认：要不要显示「不常考」；频率标签要不要也放进标题栏。
 
+### 反馈 4：「常考」标签和 JLPT 等级标签很丑（截图 `docs/handoff/b17_fb04_tags.png`，语法「〜ている」N5，2026-11-21）
+
+用户原话：这两个标签很丑，不知道什么叫美就去参考别的 iOS 应用怎么做。和反馈 1（标题栏）一起出设计图。
+
+现状（`Views/Components/LevelBadge.swift`）：
+- `LevelBadge`：`caption2` 粗体（默认约 11pt；`small` 版写死 9pt），彩色字 + 同色 14% 透明度的胶囊底，贴在标题右上角当上标。字太小，Apple 人机界面指南规定 iOS 文字最小 11pt（https://developer.apple.com/design/human-interface-guidelines/typography ），9pt 的版本低于这个下限。
+- `FrequencyBadge`：「常考」主色浅底胶囊 / 「考过」灰底，单独一行放在标题下方靠左；标题本身居中，两者不对齐，看起来是散落的两个小块。
+- 两个标签字号、高度、圆角、颜色规则都不一样，放在一起不像一套。
+
+参考方向（设计图里各出一版给用户选；参考的是 Apple 自带 App 的界面，属于观察，不是文档规定）：
+- A. 信息行（App Store 应用详情页、Apple Music 专辑页标题下那行灰色小字的做法）：标题下居中一行普通文字「JLPT N3 · 常考」，次要文字颜色，`subheadline` 字号，不用胶囊底。最安静、最好读，长标题也不受影响。
+- B. 同一套小标签并排：等级和频率做成同高、同字号（不小于 12pt）、同圆角的标签，居中放在标题下方一行；等级用颜色区分，频率用中性灰。
+- C. 行内小方块（Apple Music「E」限制级标记的做法）：等级做成和标题文字等高的小圆角方块，紧跟在标题后面、和文字垂直居中对齐；频率放到下方信息行。标题栏里也用同一个小方块，保证居中时等级清楚可见。
+- 倾向：页面里用 A（或 A + C 的等级方块），标题栏里用 C。最终由用户看设计图决定。
+- 改的时候所有用到 `LevelBadge` / `FrequencyBadge` 的地方（语法列表行、搜索、收藏等）一起统一，不要只改详情页。
+
 ### 反馈 2：CloudKit 后台下载反馈截图报错（2026-11-21）
 
 现象：Build 17（1.3 (17)，iPhone15,2，iOS 27.2.1）在 App 里提交「体验与建议」反馈，CloudKit Console → Production → Public Database → Feedback 能看到记录，`screenshots`（Asset 列表）显示 `Binary file (922.05KB)`，但点下载按钮打开的 `cvws.icloud-content.com/...` 页面只返回 `Internal Server Error`。
