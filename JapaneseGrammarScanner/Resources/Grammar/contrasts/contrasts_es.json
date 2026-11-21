@@ -18406,115 +18406,97 @@
       ]
     },
     {
-      "id": "ni-nareru",
-      "groups": [
-        {
-          "kind": "look",
-          "note": "慣れる ↔ なれる (forma potencial de なる): se pronuncian exactamente igual",
-          "items": [
-            {
-              "id": "ku-naru-ni-naru",
-              "title": "〜になる (になれる: poder llegar a ser)",
-              "diff": "先生に慣れた es «me he acostumbrado al profesor»; 先生になれた es «he llegado a ser profesor».",
-              "this": [
-                {
-                  "tag": "慣れる · acostumbrarse",
-                  "tr": "Por fin me he acostumbrado al nuevo profesor."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "なれる · llegar a ser",
-                  "tr": "Por fin he llegado a ser profesor, como siempre soñé."
-                }
-              ],
-              "explain": "Las dos se leen 「せんせいになれた」. Escrito con kanji, 「慣れる」 es acostumbrarse; escrito en kana, 「なれる」 suele ser la forma potencial de 「なる」, «poder llegar a ser». Al escuchar, fíjate en lo que va delante: un entorno o una persona nuevos (新しい先生、新しい生活) → acostumbrarse; una posición o un sueño (夢だった) → llegar a ser."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "ni-shitagatte",
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas significan «a medida que…» o «según, siguiendo…»",
+          "sense": 1,
+          "note": "Ambas significan «a medida que…»",
           "items": [
             {
               "id": "ni-tsurete",
-              "diff": "Con el sentido de «a medida que» son intercambiables; にしたがって también puede significar «siguiendo (normas, instrucciones)», y につれて no.",
+              "thisTitle": "〜にしたがって(a medida que…)",
+              "diff": "Con el sentido de «a medida que…» significan lo mismo; にしたがって es algo más rígida y frecuente en explicaciones e informes; につれて suena más natural y se usa también en la narración cotidiana.",
               "this": [
                 {
-                  "tag": "A medida que · intercambiable",
-                  "tr": "Cuanto más al norte vas, más bajan las temperaturas."
-                },
-                {
-                  "tag": "Siguiendo · solo esta",
-                  "tr": "Evacúen siguiendo las instrucciones del personal."
+                  "tag": "Más rígida · explicaciones, informes",
+                  "tr": "A medida que avanzan las obras, el ruido ha ido empeorando."
                 }
               ],
               "that": [
                 {
-                  "tag": "A medida que",
-                  "tr": "Cuanto más al norte vas, más bajan las temperaturas."
+                  "tag": "Natural · frecuente a diario",
+                  "tr": "A medida que avanzan las obras, el ruido ha ido empeorando."
                 }
               ],
-              "wrong": {
-                "why": "につれて no tiene el sentido de «siguiendo, conforme a»"
-              },
-              "explain": "Mira lo que va delante de にしたがって: un cambio como 「行く」 o 「年をとる」 → «a medida que», y también vale につれて; una norma o instrucción como 「指示」, 「規則」 o 「矢印」 → «siguiendo», y solo sirve にしたがって."
+              "explain": "Las dos oraciones significan lo mismo y ambas partes son cambios (進む → ひどくなってきた); la diferencia está en el matiz: につれて suena a describir un proceso natural que avanza poco a poco y es frecuente tanto al hablar como al escribir; にしたがって es algo más rígida y se ve sobre todo en textos explicativos e informes."
             },
             {
               "id": "ni-tomonatte",
-              "diff": "にしたがって habla de un cambio proporcional y poco a poco; に伴って es más escrito y también sirve para el resultado de un hecho puntual.",
+              "title": "〜に伴って(a medida que…)",
+              "thisTitle": "〜にしたがって(a medida que…)",
+              "diff": "Con el sentido de «a medida que…» significan lo mismo; に伴って es más formal y rígida que にしたがって, frecuente en noticias y avisos oficiales.",
               "this": [
                 {
-                  "tag": "Cambio gradual",
-                  "tr": "A medida que te haces mayor, pierdes fuerza física."
+                  "tag": "Más rígida · explicación, narración",
+                  "tr": "A medida que crece la población del pueblo, también ha ido aumentando la cantidad de basura."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hecho puntual · escrito",
-                  "tr": "Con el traslado de la empresa, ha cambiado el número de teléfono."
+                  "tag": "La más rígida · noticias, avisos",
+                  "tr": "Con el crecimiento de la población del pueblo, la cantidad de basura también ha aumentado."
                 }
               ],
-              "explain": "Mira si lo de delante «va cambiando poco a poco»: 年を取る es un cambio continuo → sirven las dos; 会社の移転 es un hecho puntual y lo que sigue es su consecuencia → に伴って; con にしたがって suena poco natural. に伴って es frecuente en avisos y noticias."
-            },
+              "explain": "Las dos oraciones significan lo mismo; la diferencia es de registro: に伴って es la más rígida, frecuente en noticias, avisos oficiales y artículos, y a menudo va directamente tras un sustantivo sinojaponés (人口の増加に伴って); にしたがって es un poco más suave y sirve tanto para explicar como para narrar. En una charla informal ambas suenan formales, y lo habitual es decir につれて."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Ambas significan «(actuar) siguiendo…»",
+          "items": [
             {
               "id": "toori-ni",
-              "diff": "にしたがって es «obedecer» una norma o instrucción; とおりに es «tal cual», hacerlo exactamente como se dijo o se escribió.",
+              "title": "〜とおりに(tal como se dijo / hizo)",
+              "thisTitle": "〜にしたがって(siguiendo…)",
+              "diff": "にしたがって va tras sustantivos como 「指示」「規則」 y destaca la obediencia; とおりに puede ir directamente tras un verbo (言われた, 書いてある) y destaca hacerlo exactamente así.",
               "this": [
                 {
-                  "tag": "Obedecer una norma",
-                  "tr": "Saco la basura separada según las normas."
+                  "tag": "Tras sustantivo · obedecer",
+                  "tr": "Tomo la medicina siguiendo las instrucciones del médico."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tal cual",
-                  "tr": "Lo monté tal como decían las instrucciones."
+                  "tag": "Tras verbo · tal cual",
+                  "tr": "Tomo la medicina tal como me dijo el médico."
                 }
               ],
-              "explain": "Mira lo que va delante: «algo que hay que cumplir», como normas, instrucciones u órdenes → にしたがって; un contenido concreto como 「言った」, 「書いてある」 o 「見た」, que hay que reproducir exactamente → とおりに, que puede ir directamente tras un verbo (言ったとおりに)."
+              "wrong": {
+                "why": "Con el sentido de «siguiendo…», にしたがって debe ir tras un sustantivo (指示, 規則); no puede unirse directamente a un verbo"
+              },
+              "explain": "Mira primero lo que va delante: un sustantivo como 「指示」「規則」 → にしたがって, con matiz de «obedecer» y algo formal; un verbo como 「言われた」「書いてある」 → とおりに, que significa hacerlo tal cual, lo más habitual en el día a día. Con sustantivos también se puede decir 「指示どおりに」, pero にしたがって no puede ir directamente tras un verbo."
             },
             {
               "id": "ni-motozuite",
-              "diff": "にしたがって es «actuar» según normas o instrucciones; に基づいて es tomar datos o hechos como «base» para juzgar o elaborar algo.",
+              "title": "〜に基づいて(basándose en…)",
+              "thisTitle": "〜にしたがって(siguiendo…)",
+              "diff": "Con reglas delante, sirven las dos; にしたがって destaca cumplir las reglas, に基づいて destaca tomarlas como base legítima.",
               "this": [
                 {
-                  "tag": "Obedecer → actuar",
-                  "tr": "Actuamos siguiendo las instrucciones del profesor."
+                  "tag": "Cumplir lo que dicen",
+                  "tr": "La evaluación se realiza siguiendo el reglamento del torneo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Basarse → juzgar, elaborar",
-                  "tr": "Escribí el informe basándome en los datos de la encuesta."
+                  "tag": "Tomarlo como base · más formal",
+                  "tr": "La evaluación se realiza con base en el reglamento del torneo."
                 }
               ],
-              "explain": "Mira la acción que sigue y el sustantivo de delante: seguir una orden para 「行動する」, 「避難する」 o 「進む」 → にしたがって; partir de 「データ」, 「事実」 o 「経験」 para 「書く」, 「判断する」 o 「作る」 → に基づいて."
+              "explain": "Las dos oraciones funcionan; depende de lo que quieras destacar: にしたがって es «obedecer», hacer las cosas paso a paso según las reglas o instrucciones; に基づいて es «con base en…», indica que un juicio o una forma de actuar tiene un fundamento legítimo, y es más formal. Si lo que va delante es 「データ」「調査結果」「事実」, algo que solo puede servir de base y no se puede «obedecer», usa に基づいて (データに基づいて判断する)."
             }
           ]
         }
@@ -18615,20 +18597,20 @@
           "items": [
             {
               "id": "ni-shite-mo",
-              "diff": "にしては es «para ser…, (resulta que)»; にしても es «aunque sea…, igualmente».",
+              "diff": "冗談にしては es «demasiado para ser una broma», sospechando que es algo más que una broma; 冗談にしても es «aunque sea una broma, es demasiado», aceptando que es broma y criticando igualmente.",
               "this": [
                 {
-                  "tag": "Para ser… · inesperado",
-                  "tr": "Para ser la primera vez, lo ha hecho bastante bien."
+                  "tag": "La broma como medida · no parece broma",
+                  "tr": "Para ser una broma, se pasa de la raya (no parece que estuvieras bromeando)."
                 }
               ],
               "that": [
                 {
-                  "tag": "Aunque… · crítica",
-                  "tr": "Aunque sea la primera vez, esto es demasiado malo."
+                  "tag": "Acepta que es broma · critica igual",
+                  "tr": "Aunque sea una broma, se pasa de la raya."
                 }
               ],
-              "explain": "Solo cambia 「は」 por 「も」; mira la segunda mitad: にしては toma «la primera vez» como vara de medir y le sigue una valoración inesperada (上手だ); にしても primero admite que «es la primera vez» y luego dice «aun así es demasiado…», casi siempre una crítica o exigencia (ひどすぎる). Las dos vienen de 「に＋する (considerar como)」."
+              "explain": "Las dos oraciones solo difieren en 「は」 y 「も」, y la segunda parte es igual, así que fíjate en cómo ve el hablante 「冗談」: にしては toma «una broma» como medida y ve que sobrepasa lo que debería ser una broma, insinuando «esto no parece una broma»; にしても primero acepta que «es una broma» y luego dice «aun así no está bien», centrado en la crítica y el disgusto."
             }
           ]
         },
@@ -18655,20 +18637,23 @@
             },
             {
               "id": "kuse-ni",
-              "diff": "にしては es una valoración neutral, puede ser positiva o negativa; くせに lleva un fuerte reproche o desprecio.",
+              "diff": "Ambas dicen «no encaja con ser un novato»; にしては solo toma la condición como medida, a menudo con admiración; くせに lleva un fuerte reproche o desprecio: el hablante cree que no debería actuar así.",
               "this": [
                 {
-                  "tag": "Neutral · puede ser elogio",
-                  "tr": "Para ser un niño, es muy responsable."
+                  "tag": "Neutral · a menudo admiración",
+                  "tr": "Para ser un novato, da su opinión con mucha seguridad."
                 }
               ],
               "that": [
                 {
-                  "tag": "Reproche · desprecio",
-                  "tr": "Siendo solo un niño, mira qué impertinente es."
+                  "tag": "Reproche · disgusto",
+                  "tr": "Siendo un simple novato, va y da su opinión con todo descaro."
                 }
               ],
-              "explain": "Mira la valoración de la segunda mitad: 「しっかりしている」 puede ser un elogio → にしては; un reproche como 「生意気だ」 o 「偉そうに」 → くせに. Además, くせに necesita 「の」 tras un sustantivo, mientras que にしては va directamente tras el sustantivo."
+              "wrong": {
+                "why": "くせに necesita 「の」 tras un sustantivo: 新人のくせに"
+              },
+              "explain": "La segunda parte de las dos oraciones es idéntica; solo cambia にしては / のくせに, y con ello cambia la actitud del hablante: にしては lo mide tomando 「新人」 como referencia y le parece inesperado, normalmente como elogio; くせに indica que al hablante le molesta que no se comporte según su posición, con disgusto y reproche. Por eso, para elogiar sin más, usa にしては. Tras un sustantivo, にしては se une directamente, mientras que くせに necesita 「の」 (新人のくせに)."
             }
           ]
         }
@@ -18679,25 +18664,30 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas sirven para poner dos cosas juntas y compararlas o contrastarlas",
+          "note": "Ambas expresan un contraste: «A…, mientras que B…»",
           "items": [
             {
-              "id": "ni-kurabete",
-              "thisTitle": "〜のに対して (contraste)",
-              "diff": "のに対して pone una al lado de otra dos situaciones opuestas para contrastarlas; に比べて compara cuál es mayor o menor en la misma escala.",
+              "id": "ippou-de",
+              "title": "〜一方で(contraste de dos aspectos)",
+              "thisTitle": "〜のに対して(contraste)",
+              "diff": "Cuando se comparan dos cosas distintas, sirven las dos, y のに対して destaca que son opuestas; para dos aspectos de una misma cosa solo sirve 一方で.",
               "this": [
                 {
-                  "tag": "Contrastar dos lados",
-                  "tr": "El hermano mayor es alto, mientras que el menor es bajito."
+                  "tag": "Dos cosas · destaca la oposición",
+                  "tr": "Mi hermano mayor es alto, mientras que mi hermano menor es bajito."
                 }
               ],
               "that": [
                 {
-                  "tag": "Más o menos",
-                  "tr": "Comparado con su hermano mayor, el menor es más alto."
+                  "tag": "Dos cosas · también vale",
+                  "tr": "Mi hermano mayor es alto; en cambio, mi hermano menor es bajito."
+                },
+                {
+                  "tag": "Dos aspectos de una cosa · solo esta",
+                  "tr": "Este piso está cerca de la estación, pero el alquiler es caro."
                 }
               ],
-              "explain": "Mira la segunda mitad: con のに対して cada parte habla de uno (兄は背が高い／弟は小柄だ) y los dos lados son opuestos; tras に比べて solo se describe uno de los dos, «más…» (弟は背が高い): es una comparación de grado. Detrás de una oración, に対して necesita 「の」 delante."
+              "explain": "Mira primero si se comparan dos cosas distintas: 「兄」 y 「弟」, cada uno en una mitad → sirven las dos; のに対して destaca que son justo opuestos y se usa mucho en descripciones objetivas; si son dos aspectos de una misma cosa (「この部屋」 está cerca de la estación pero el alquiler es caro) → usa 一方で; のに対して suena raro. En cuanto a la unión, のに対して necesita 「の」 delante (高いのに対して), mientras que 一方で se une directamente (高い一方で)."
             }
           ]
         }
@@ -18750,20 +18740,20 @@
             },
             {
               "id": "kara-miru-to",
-              "diff": "にとって dice «qué significa esto para esa persona»; から見ると dice «visto con los ojos de esa persona, qué impresión da».",
+              "diff": "にとって dice qué significa esto para esa persona, cómo le afecta; から見ると es mirar con los ojos de esa persona y decir la impresión que da.",
               "this": [
                 {
-                  "tag": "Qué significa para él",
-                  "tr": "Para los estudiantes extranjeros, el trabajo a tiempo parcial es una fuente de ingresos importante."
+                  "tag": "Lo que significa para ella",
+                  "tr": "Para los extranjeros, el lenguaje honorífico japonés es complicado."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cómo lo ve",
-                  "tr": "Vistas desde los ojos de un extranjero, las costumbres japonesas resultan curiosas."
+                  "tag": "La impresión a sus ojos",
+                  "tr": "Visto desde los extranjeros, el lenguaje honorífico japonés es complicado."
                 }
               ],
-              "explain": "Mira lo que sigue: 「大切だ」, 「必要だ」 o 「ありがたい」 hablan de lo que eso significa para esa persona → にとって; 「不思議だ」, 「おかしい」 o 「〜ように見える」 hablan de la impresión que se saca mirándolo con sus ojos → から見ると (igual que からすると)."
+              "explain": "Las dos oraciones funcionan y significan casi lo mismo: にとって se centra en la dificultad o el valor que esto supone para esa persona, y suele ir seguido de valoraciones como 「大切だ」「難しい」「ありがたい」; から見ると se centra en mirar con los ojos de esa persona y también admite impresiones de apariencia como 「〜そうだ」「〜ように見える」 (子どもから見ると、大人はいつも忙しそうだ), caso en que normalmente no se usa にとって."
             }
           ]
         }
@@ -18772,29 +18762,6 @@
     {
       "id": "ni-tsuite",
       "groups": [
-        {
-          "kind": "root",
-          "note": "Ambas vienen de 「就く（つく）」: «adherirse, acompañar»",
-          "items": [
-            {
-              "id": "ni-tsuki",
-              "diff": "について es «sobre, acerca de»; につき, en carteles y avisos, suele ser «debido a» o «por cada…», una forma escrita y antigua.",
-              "this": [
-                {
-                  "tag": "Acerca de",
-                  "tr": "Voy a dar una explicación sobre las obras."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Debido a · cartel",
-                  "tr": "Paso cortado por obras."
-                }
-              ],
-              "explain": "Las dos son 「に＋就く」: について es 「就いて」, pegarse a un tema para hablar de él; につき conserva la antigua forma continuativa y es frecuente en carteles y avisos. Mira lo que sigue: 「話す」 o 「説明する」 → acerca de; un resultado (通行止め) o una cantidad (一人につき三枚) → debido a / por cada."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Ambas introducen el tema del que se habla: «acerca de…»",
@@ -18817,21 +18784,42 @@
               "explain": "Mira la situación: para charlar con amigos o escribir un diario, について; en informes, documentos oficiales o intervenciones formales, sobre todo に関して. Para modificar un sustantivo, に関する + sustantivo (環境に関する問題) es más escrito y conciso que についての + sustantivo."
             },
             {
-              "id": "wo-megutte",
-              "diff": "について solo indica el tema; をめぐって se usa para discusiones o enfrentamientos en torno a un asunto.",
+              "id": "ni-tsuki",
+              "title": "〜につき(acerca de)",
+              "diff": "Mismo significado; につき es la versión escrita y formal de について, frecuente en reuniones y documentos oficiales.",
               "this": [
                 {
-                  "tag": "Simple tema",
-                  "tr": "Consulté a un abogado sobre la herencia."
+                  "tag": "Uso corriente",
+                  "tr": "Vamos a estudiar el presupuesto del próximo año fiscal."
                 }
               ],
               "that": [
                 {
-                  "tag": "En torno a · disputa",
-                  "tr": "Los hermanos andan peleándose por la herencia."
+                  "tag": "Escrito · formal",
+                  "tr": "En lo relativo al presupuesto del próximo año fiscal, procederemos a su examen."
                 }
               ],
-              "explain": "Mira el verbo que sigue: 「話す」, 「相談する」 o 「調べる」 → について; 「争う」, 「対立する」 o 「議論が起きる」, choques de opiniones entre varias partes → をめぐって."
+              "explain": "Las dos oraciones significan lo mismo; depende del contexto: al hablar a diario y en textos corrientes se usa について; en documentos formales como actas, escritos oficiales o avisos se usa につき, y para hablar con aún más cortesía se dice につきまして."
+            },
+            {
+              "id": "wo-megutte",
+              "diff": "Ambas pueden introducir un tema de disputa; をめぐって da la sensación de que varias partes discuten en torno al asunto, frecuente en noticias; について solo menciona el tema de forma neutra.",
+              "this": [
+                {
+                  "tag": "Neutro · menciona el tema",
+                  "tr": "Las opiniones de los vecinos están divididas sobre la ubicación de la nueva estación."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Foco de una disputa",
+                  "tr": "Las opiniones de los vecinos están divididas en torno a la ubicación de la nueva estación."
+                }
+              ],
+              "wrong": {
+                "why": "をめぐって debe ir seguido de una disputa o enfrentamiento; para una simple investigación o explicación se usa について"
+              },
+              "explain": "Las dos oraciones funcionan. をめぐって significa originalmente «en torno a»; al usarlo, el asunto se convierte en el foco de una disputa y suena a que las partes están enfrentadas, por eso suele ir seguido de 「意見が分かれる」「争う」「対立する」; について solo menciona el tema, sin ese matiz. Si el verbo es una acción corriente como 「話す」「調べる」「説明する」, solo sirve について."
             }
           ]
         }
@@ -18846,64 +18834,59 @@
           "items": [
             {
               "id": "ni-shitagatte",
-              "diff": "Con el sentido de «a medida que» son intercambiables; にしたがって también puede significar «siguiendo (normas, instrucciones)», y につれて no.",
+              "title": "〜にしたがって(a medida que…)",
+              "diff": "Con el sentido de «a medida que…» significan lo mismo; につれて suena más natural y es frecuente en la narración cotidiana; にしたがって es algo más rígida, frecuente en explicaciones e informes.",
               "this": [
                 {
-                  "tag": "A medida que",
-                  "tr": "Cuanto más al norte vas, más bajan las temperaturas."
+                  "tag": "Natural · frecuente a diario",
+                  "tr": "A medida que se pone el sol, el viento se ha vuelto frío."
                 }
               ],
               "that": [
                 {
-                  "tag": "A medida que · intercambiable",
-                  "tr": "Cuanto más al norte vas, más bajan las temperaturas."
-                },
-                {
-                  "tag": "Siguiendo · solo esta",
-                  "tr": "Evacúen siguiendo las instrucciones del personal."
+                  "tag": "Más rígida · explicaciones, informes",
+                  "tr": "Conforme se pone el sol, el viento se ha ido enfriando."
                 }
               ],
-              "wrong": {
-                "why": "につれて no tiene el sentido de «siguiendo, conforme a»"
-              },
-              "explain": "Con el sentido de «a medida que» las dos son intercambiables (北へ行くにつれて／にしたがって); にしたがって además significa «siguiendo», y cuando delante hay una instrucción o una norma solo sirve ella: no se puede cambiar por につれて."
+              "explain": "Las dos oraciones significan lo mismo y ambas partes son cambios (沈む → 冷たくなってきた); la diferencia está en el matiz: につれて suena a describir un proceso natural que avanza poco a poco y es frecuente tanto al hablar como al escribir; にしたがって es algo más rígida y se ve sobre todo en textos explicativos e informes."
             },
             {
               "id": "to-tomo-ni",
-              "diff": "につれて solo habla de un cambio proporcional y gradual; とともに es más escrita, sirve también para hechos puntuales y expresa «al mismo tiempo que…».",
+              "title": "〜とともに(a medida que…)",
+              "diff": "Con el sentido de «a medida que…» significan lo mismo; とともに es más formal y rígida, frecuente en noticias y textos escritos.",
               "this": [
                 {
-                  "tag": "Cambio gradual",
-                  "tr": "A medida que me hago mayor, ha ido empeorando mi memoria."
+                  "tag": "Frecuente al hablar y escribir",
+                  "tr": "A medida que el pueblo se desarrollaba, quedaban cada vez menos edificios antiguos."
                 }
               ],
               "that": [
                 {
-                  "tag": "Puntual · al mismo tiempo",
-                  "tr": "Al graduarme, me mudé a Tokio."
+                  "tag": "Escrito · noticias, artículos",
+                  "tr": "Con el desarrollo del pueblo, los edificios antiguos fueron disminuyendo."
                 }
               ],
-              "wrong": {
-                "why": "卒業 es un hecho puntual; no se puede usar につれて"
-              },
-              "explain": "Mira si lo de delante es un cambio continuo: 年を取る o 時間が経つ cambian poco a poco → sirven につれて y とともに; 卒業 o 結婚, cosas que ocurren de golpe → solo とともに (al mismo tiempo); につれて no vale."
+              "explain": "Las dos oraciones significan lo mismo; la diferencia es de registro: につれて es frecuente tanto al hablar como al escribir y resalta un proceso que cambia poco a poco; とともに es una expresión escrita, frecuente en noticias y artículos, y casi no se usa en una charla informal."
             },
             {
               "id": "ba-hodo",
-              "diff": "につれて narra un cambio real que se produce a lo largo de un tiempo; ば〜ほど es «cuanto más…, más…», repite la misma palabra dos veces y suele expresar una verdad general.",
+              "diff": "Ambas dicen «a medida que…»; ば〜ほど repite la misma palabra, es frecuente al hablar y destaca que los dos grados aumentan a la vez; につれて la dice una sola vez, como un relato objetivo de un cambio gradual.",
               "this": [
                 {
-                  "tag": "Proceso de cambio real",
-                  "tr": "Con el paso del tiempo, la tristeza fue desvaneciéndose."
+                  "tag": "Una sola vez · tono sereno y objetivo",
+                  "tr": "A medida que uno envejece, el cuerpo se vuelve más rígido."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cuanto más… · verdad general",
-                  "tr": "Cuanto más practicas, mejor lo haces."
+                  "tag": "Dos veces · cuanto más…, más…",
+                  "tr": "Cuanto más mayor te haces, más rígido se vuelve el cuerpo."
                 }
               ],
-              "explain": "Mira primero la forma: ば〜ほど repite la misma palabra delante y detrás (練習すれば練習するほど) y suena a máxima; につれて solo menciona el cambio una vez y suele describir un cambio real ocurrido durante un período, a menudo con 「〜ていく」 o 「〜てきた」."
+              "wrong": {
+                "why": "ば〜ほど necesita repetir la misma palabra: 取れば取るほど"
+              },
+              "explain": "Las dos oraciones funcionan. ば〜ほど dice 「取る」 dos veces (年を取れば取るほど) y destaca «cuanto más mayor, más rígido»; es muy frecuente al hablar. につれて lo dice una sola vez (年を取るにつれて), con un tono sereno y objetivo. Si la segunda parte no es un cambio sino una valoración como 「いい」, solo sirve ば〜ほど (早ければ早いほどいい)."
             }
           ]
         }
@@ -18914,107 +18897,97 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「よる（因る・依る）」: «depender de, valerse de»; によると es «según (una fuente de información)»",
+          "note": "Ambas vienen de 「よる（因る・依る）」, cuyo sentido original es «apoyarse en, valerse de»",
           "items": [
             {
               "id": "ni-yoru-to",
               "thisTitle": "〜によって (causa)",
-              "diff": "によって expresa causa, medio o «varía según…»; によると se usa solo para la fuente de información: «según…».",
+              "diff": "によって dice por qué causa o medio ocurrió algo; によると dice en qué fuente se basa una información: «según…».",
               "this": [
                 {
                   "tag": "Causa · debido a",
-                  "tr": "El tifón destruyó muchas casas."
+                  "tr": "Muchas casas quedaron destruidas por el tifón."
                 }
               ],
               "that": [
                 {
-                  "tag": "Fuente · según",
+                  "tag": "Fuente · según dicen",
                   "tr": "Según las noticias, viene un tifón."
                 }
               ],
-              "explain": "Mira el final de la oración: によると suele ir acompañado de 「そうだ」, 「らしい」 o 「ということだ」 y transmite algo que se ha oído (によれば es igual); a によって le sigue un resultado o cambio que ocurrió realmente (壊れた)."
+              "explain": "El sentido original de 「よる」 es «apoyarse en, valerse de». Algo ocurre apoyándose en una causa o medio → によって «debido a / mediante», y la oración termina con el resultado real (壊れた); una afirmación se apoya en una fuente → によると «según…», precedida de una fuente de información como 「ニュース」「天気予報」, y la oración suele terminar con 「そうだ」「らしい」 (によれば funciona igual)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Todas introducen una causa, un medio, una base o el agente de una acción (debido a / mediante / según…)",
+          "sense": 2,
+          "note": "Ambas expresan un medio: «mediante…»",
+          "items": [
+            {
+              "id": "de-means",
+              "title": "〜で(herramienta / método)",
+              "thisTitle": "〜によって (medio)",
+              "diff": "Mismo significado; によって es escrito y formal, frecuente en informes y noticias; で es la forma cotidiana.",
+              "this": [
+                {
+                  "tag": "Escrito · formal",
+                  "tr": "El representante de la clase fue elegido mediante votación."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Cotidiano",
+                  "tr": "Elegimos al representante de la clase por votación."
+                }
+              ],
+              "explain": "Las dos oraciones significan lo mismo; depende del contexto: al hablar a diario lo más natural es で; en informes, noticias y explicaciones formales se usa によって (por escrito también により). Con herramientas y medios de transporte cotidianos (箸で, バスで) solo se usa で, no によって."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Ambas significan «varía según…»",
           "items": [
             {
               "id": "ni-yotte-wa",
               "thisTitle": "〜によって (varía según…)",
-              "diff": "によって dice «varía según…»; によっては dice «según el caso, en algunos…».",
+              "diff": "Dicen lo mismo; によっては añade 「は」 para destacar «algunas tiendas», lo que deja más claro que se habla solo de una parte.",
               "this": [
                 {
-                  "tag": "Cada uno distinto",
-                  "tr": "Las costumbres varían según el país."
+                  "tag": "Varía según la tienda",
+                  "tr": "Depende de la tienda; también hay algunas que cierran los domingos."
                 }
               ],
               "that": [
                 {
-                  "tag": "En algunos casos",
-                  "tr": "En algunos países hay que dar propina."
+                  "tag": "Destaca una parte",
+                  "tr": "Algunas tiendas cierran los domingos."
                 }
               ],
-              "explain": "Mira el final de la oración: tras によって suele venir 「違う」, 「異なる」 o 「さまざまだ」, y dice que en conjunto todo es distinto; によっては solo destaca una parte, y suele seguirle 「〜もある」 o 「〜こともある」."
-            },
-            {
-              "id": "de-means",
-              "thisTitle": "〜によって (medio)",
-              "diff": "で es el medio o la causa más común del día a día; によって es más escrito, frecuente en noticias e informes, y no se usa para los medios de transporte cotidianos.",
-              "this": [
-                {
-                  "tag": "Medio · escrito",
-                  "tr": "Resolvimos el problema mediante el diálogo."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Cotidiano · transporte",
-                  "tr": "Voy al colegio en autobús."
-                }
-              ],
-              "wrong": {
-                "why": "Para medios cotidianos como el transporte hay que usar 「で」"
-              },
-              "explain": "Mira la situación y el contenido: herramientas o medios de transporte cotidianos (バスで、ペンで) → で; en informes o noticias, para explicar con qué método se logra algo de cierta envergadura (話し合いによって解決した) → によって."
+              "explain": "Si la segunda parte habla solo de algunos casos, como con 「〜ところもある」「〜こともある」, sirven las dos, y によっては usa 「は」 para destacar «algunas tiendas», que es lo más habitual; si la segunda parte es 「違う」「異なる」「さまざまだ」 y dice que todo varía en conjunto, usa によって (店によって休みの日が違う)."
             },
             {
               "id": "ni-oujite",
               "thisTitle": "〜によって (varía según…)",
-              "diff": "によって solo dice «es distinto según A»; に応じて dice «se ajusta en función de cómo sea A».",
+              "diff": "によって solo constata de forma objetiva que «el precio cambia con la edad»; に応じて destaca que se ajusta en función de la edad, como algo dispuesto a propósito.",
               "this": [
                 {
-                  "tag": "Solo la diferencia",
-                  "tr": "Los gustos varían según la persona."
+                  "tag": "Constata una diferencia",
+                  "tr": "La tarifa varía según la edad."
                 }
               ],
               "that": [
                 {
-                  "tag": "Ajuste en consecuencia",
-                  "tr": "El importe de los impuestos se fija en función de los ingresos."
+                  "tag": "Ajustado en consecuencia",
+                  "tr": "La tarifa se ajusta en función de la edad."
                 }
               ],
-              "explain": "Mira lo que sigue: 「違う」 o 「異なる」 solo constatan una diferencia → によって; 「決める」, 「変える」 o 「選ぶ」 indican que alguien se adapta o ajusta según el caso → に応じて."
-            },
-            {
-              "id": "passive",
-              "title": "〜に〜（ら）れる (pasiva)",
-              "thisTitle": "〜によって (pasiva: por…)",
-              "diff": "En la pasiva normal, el que hace la acción se introduce con 「に」; en la pasiva de acciones que «crean algo», como escribir, inventar o construir, hay que usar によって.",
-              "this": [
-                {
-                  "tag": "Creación · por…",
-                  "tr": "Esta novela fue escrita por Natsume Sōseki."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Pasiva normal · に",
-                  "tr": "A mi hermano menor le regañó el profesor."
-                }
-              ],
-              "explain": "Mira el verbo: con acciones que crean algo nuevo, como 「書く」, 「建てる」, 「発明する」 o 「発見する」, el agente de la pasiva va con によって; con acciones que recaen directamente sobre una persona, como 「叱る」, 「ほめる」 o 「頼む」, va con に."
+              "wrong": {
+                "why": "Tras に応じて debe ir algo que se ajusta o adapta a la situación; para decir simplemente que algo varía, usa によって"
+              },
+              "explain": "Las dos oraciones funcionan. によって solo constata que «varía según la edad»; に応じて significa «ajustado a la edad», y suena a que se ha establecido a propósito según alguna regla. Si la segunda parte solo dice que las cosas son distintas, como 「違う」「さまざまだ」, solo sirve によって (人によって好みが違う)."
             }
           ]
         }
@@ -19025,42 +18998,42 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas significan «ya que…, puesto que…» y sirven para dar una razón",
+          "note": "Ambas significan «ya que…, entonces…»",
           "items": [
             {
               "id": "kara-ni-wa",
-              "diff": "のだから usa un hecho que ambos conocen para convencer o reprochar al otro; tras からには suele venir una decisión u obligación propia: «ya que…, hay que llegar hasta el final».",
+              "diff": "Mismo significado; のだから expone un hecho que ambos conocen para persuadir o reprochar, y al hablar se dice んだから; からには es más formal y destaca que, una vez tomada la decisión, uno tiene la responsabilidad y la determinación de llegar hasta el final.",
               "this": [
                 {
-                  "tag": "Convencer o reprochar",
-                  "tr": "Ya que lo prometiste, ven sin falta, ¿eh?"
+                  "tag": "Expone el hecho · persuadir, reprochar",
+                  "tr": "Ya que lo aceptaste, termínalo hasta el final."
                 }
               ],
               "that": [
                 {
-                  "tag": "Decisión propia",
-                  "tr": "Ya que lo he aceptado, lo haré hasta el final."
+                  "tag": "Formal · responsabilidad, determinación",
+                  "tr": "Una vez que lo has aceptado, tienes que llevarlo hasta el final."
                 }
               ],
-              "explain": "Mira a quién va dirigida la segunda mitad: para exigirle algo al otro (来てよ、早くしなさい) o reprochárselo, sobre todo のだから; para expresar una decisión o responsabilidad propia (最後までやる、〜なければならない), sobre todo からには, de tono más solemne."
+              "explain": "Las dos oraciones funcionan. のだから expone el hecho que ambos conocen («lo aceptaste») para presionar al otro, con algo de reproche, y al hablar suele decirse んだから; からには es más formal y se centra en «habiendo llegado hasta aquí, tienes la responsabilidad y la determinación de llegar hasta el final», y suele ir seguido de 「〜なければならない」「〜つもりだ」."
             },
             {
-              "id": "kara-from",
-              "title": "〜から (causa)",
-              "diff": "から puede dar una razón nueva que el otro no conoce; la razón de のだから es un hecho que el otro también conoce, con tono de convencer o reprochar.",
+              "id": "ijou-wa",
+              "title": "〜以上（は） (ya que…, se debe)",
+              "diff": "Mismo significado; 以上（は） es sereno y formal, como quien razona; のだから tiene un tono de persuasión o reproche, y al hablar se dice んだから.",
               "this": [
                 {
-                  "tag": "Hecho conocido · convencer",
-                  "tr": "Fuiste tú quien lo propuso, así que hazlo tú."
+                  "tag": "Persuasión · más emotivo",
+                  "tr": "Has venido en representación de la empresa, así que deberías cuidar lo que dices."
                 }
               ],
               "that": [
                 {
-                  "tag": "Información nueva · razón",
-                  "tr": "Me duele la cabeza, así que hoy me tomo el día libre."
+                  "tag": "Razonamiento · sereno, formal",
+                  "tr": "Puesto que asiste como representante de la empresa, debe ser prudente con sus palabras."
                 }
               ],
-              "explain": "Mira si el otro ya conocía la razón: «fuiste tú quien lo propuso» lo saben los dos, y se usa para presionarle → んだから; «me duele la cabeza» es información nueva para el otro → から. Si le explicas tus razones a un superior con んだから, sonarás brusco y maleducado."
+              "explain": "Las dos oraciones funcionan; la diferencia está en el tono: 以上（は） saca con calma una conclusión de una premisa, suele ir con 「〜べきだ」「〜わけにはいかない」 y es frecuente en contextos formales y por escrito; のだから pone el hecho delante de la persona con la que hablas para convencerla o reñirla, con más carga emocional, y al hablar suele decirse んだから."
             }
           ]
         }

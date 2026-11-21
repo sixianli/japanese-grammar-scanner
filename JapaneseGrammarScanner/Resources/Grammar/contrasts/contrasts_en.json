@@ -18406,115 +18406,97 @@
       ]
     },
     {
-      "id": "ni-nareru",
-      "groups": [
-        {
-          "kind": "look",
-          "note": "慣れる ↔ なれる (potential form of なる) — pronounced exactly the same",
-          "items": [
-            {
-              "id": "ku-naru-ni-naru",
-              "title": "〜になる (になれる: can become)",
-              "diff": "先生に慣れた means “got used to the teacher”; 先生になれた means “managed to become a teacher”.",
-              "this": [
-                {
-                  "tag": "慣れる · get used to",
-                  "tr": "I've finally gotten used to the new teacher."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "なれる · can become",
-                  "tr": "I finally became a teacher, just as I'd dreamed."
-                }
-              ],
-              "explain": "Both are read 「せんせいになれた」. Written with the kanji 「慣れる」, it means getting used to; written in kana 「なれる」, it's usually the potential form of 「なる」, “can become”. When listening, look at what comes before: a new environment or new person (新しい先生, 新しい生活) → getting used to; a role or a dream (夢だった) → becoming."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "ni-shitagatte",
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean “as… (changes)” or “in accordance with…”",
+          "sense": 1,
+          "note": "Both mean “as… (changes)”",
           "items": [
             {
               "id": "ni-tsurete",
-              "diff": "In the sense of “as…”, the two are interchangeable; にしたがって can also mean “in accordance with (rules, instructions)”, and につれて can't.",
+              "thisTitle": "〜にしたがって(as… changes)",
+              "diff": "In the “as…” sense they mean the same; にしたがって is a bit stiffer, common in explanations and reports; につれて sounds more natural and is common in everyday narration too.",
               "this": [
                 {
-                  "tag": "As… · interchangeable",
-                  "tr": "The farther north you go, the lower the temperature gets."
-                },
-                {
-                  "tag": "In accordance with · only this one",
-                  "tr": "Please evacuate following the staff's instructions."
+                  "tag": "Stiffer · explanations, reports",
+                  "tr": "As the construction progresses, the noise has been getting worse."
                 }
               ],
               "that": [
                 {
-                  "tag": "As…",
-                  "tr": "The farther north you go, the lower the temperature gets."
+                  "tag": "Natural · common in daily use",
+                  "tr": "As the construction progresses, the noise has been getting worse."
                 }
               ],
-              "wrong": {
-                "why": "につれて doesn't have the meaning “in accordance with”"
-              },
-              "explain": "Look at what comes before にしたがって: changes like 「行く」 or 「年をとる」 → “as…”, and につれて works too; rules and instructions like 「指示」, 「規則」 or 「矢印」 → “in accordance with”, and only にしたがって works."
+              "explain": "The two sentences mean the same, and both halves are changes (進む → ひどくなってきた); the difference is in feel: につれて sounds like describing a natural process moving forward bit by bit, and is common in both speech and writing; にしたがって is a bit stiffer and is mostly seen in explanatory texts and reports."
             },
             {
               "id": "ni-tomonatte",
-              "diff": "にしたがって describes proportional, step-by-step change; に伴って is more formal and can also be used for the result of a one-time event.",
+              "title": "〜に伴って(as… changes)",
+              "thisTitle": "〜にしたがって(as… changes)",
+              "diff": "In the “as…” sense they mean the same; に伴って is more formal and stiffer than にしたがって, common in news and official notices.",
               "this": [
                 {
-                  "tag": "Gradual change",
-                  "tr": "As you get older, your stamina declines."
+                  "tag": "Stiffer · explanation, narration",
+                  "tr": "As the town's population grows, the amount of garbage has been increasing too."
                 }
               ],
               "that": [
                 {
-                  "tag": "One-time event · formal",
-                  "tr": "With the company's relocation, the phone number changed."
+                  "tag": "Stiffest · news, notices",
+                  "tr": "Along with the growth of the town's population, the amount of garbage has also increased."
                 }
               ],
-              "explain": "Check whether what comes before is “changing gradually”: 年を取る is an ongoing change → both work; 会社の移転 is a one-time event, followed by the result it brought → use に伴って, and にしたがって sounds unnatural. に伴って is common in notices and the news."
-            },
+              "explain": "The two sentences mean the same; the difference is register: に伴って is the stiffest, common in news, official notices and papers, and often attaches directly to a Sino-Japanese noun (人口の増加に伴って); にしたがって is a little softer and works in both explanation and narration. In casual conversation both sound formal, and people usually say につれて."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “(do something) following…”",
+          "items": [
             {
               "id": "toori-ni",
-              "diff": "にしたがって means acting in “obedience” to rules or instructions; とおりに means “exactly as”, doing it identically to what was said or written.",
+              "title": "〜とおりに(just as said / done)",
+              "thisTitle": "〜にしたがって(following…)",
+              "diff": "にしたがって follows nouns like 「指示」「規則」 and stresses obeying; とおりに can follow a verb directly (言われた, 書いてある) and stresses doing it exactly that way.",
               "this": [
                 {
-                  "tag": "Following rules",
-                  "tr": "Sort and put out the garbage according to the rules."
+                  "tag": "After a noun · obey",
+                  "tr": "I take my medicine following the doctor's instructions."
                 }
               ],
               "that": [
                 {
-                  "tag": "Exactly as",
-                  "tr": "I assembled it exactly as the manual said."
+                  "tag": "After a verb · exactly as",
+                  "tr": "I take my medicine exactly as the doctor told me."
                 }
               ],
-              "explain": "Look at what comes before: rules, instructions, orders — “things to obey” → にしたがって; specific content like 「言った」, 「書いてある」 or 「見た」 that you copy exactly → とおりに, which can attach directly to a verb (言ったとおりに)."
+              "wrong": {
+                "why": "In the “following…” sense, にしたがって must follow a noun (指示, 規則); it can't attach directly to a verb"
+              },
+              "explain": "First look at what comes before: a noun such as 「指示」「規則」 → にしたがって, with a sense of “obeying”, leaning formal; a verb such as 「言われた」「書いてある」 → とおりに, meaning doing it exactly as is, the most common everyday choice. With a noun you can also say 「指示どおりに」, but にしたがって cannot attach directly to a verb."
             },
             {
               "id": "ni-motozuite",
-              "diff": "にしたがって means “acting” according to rules or instructions; に基づいて means using data or facts as the “basis” for making a judgment or creating something.",
+              "title": "〜に基づいて(based on…)",
+              "thisTitle": "〜にしたがって(following…)",
+              "diff": "With rules before them, both work; にしたがって stresses carrying out the rules, に基づいて stresses using them as a legitimate basis.",
               "this": [
                 {
-                  "tag": "Obey → act",
-                  "tr": "Act according to the teacher's instructions."
+                  "tag": "Carrying it out",
+                  "tr": "Judging is carried out following the tournament rules."
                 }
               ],
               "that": [
                 {
-                  "tag": "Basis → judge, create",
-                  "tr": "I wrote the report based on the survey data."
+                  "tag": "As the basis · more formal",
+                  "tr": "Judging is carried out based on the tournament rules."
                 }
               ],
-              "explain": "Look at the verb after it and the noun before it: following orders to 「行動する」, 「避難する」, 「進む」 → にしたがって; using 「データ」, 「事実」 or 「経験」 as a foundation to 「書く」, 「判断する」, 「作る」 → に基づいて."
+              "explain": "Both sentences work; it depends on what you want to stress: にしたがって means “obeying”, doing things step by step as the rules or instructions say; に基づいて means “on the basis of…”, showing that a judgment or a way of doing things has a legitimate basis, and is more formal. When the thing before it is 「データ」「調査結果」「事実」, something that can only serve as a basis and can't be “obeyed”, use に基づいて (データに基づいて判断する)."
             }
           ]
         }
@@ -18615,20 +18597,20 @@
           "items": [
             {
               "id": "ni-shite-mo",
-              "diff": "にしては means “for a…, (surprisingly)”; にしても means “even if… still”.",
+              "diff": "冗談にしては means “too much for a joke”, suspecting it's more than a joke; 冗談にしても means “even if it's a joke, it's too much”, accepting it's a joke and criticizing anyway.",
               "this": [
                 {
-                  "tag": "For a… · unexpected",
-                  "tr": "For a first time, that's pretty good."
+                  "tag": "A joke as the yardstick · doesn't seem like a joke",
+                  "tr": "For a joke, that's going too far (it doesn't sound like you were joking)."
                 }
               ],
               "that": [
                 {
-                  "tag": "Even if… · criticism",
-                  "tr": "Even if it's your first time, that's just too awful."
+                  "tag": "Accepts it's a joke · criticizes anyway",
+                  "tr": "Even if it was a joke, that's going too far."
                 }
               ],
-              "explain": "Only 「は」 vs 「も」 differs; look at the second half: にしては uses “the first time” as a yardstick, followed by an unexpected evaluation (上手だ); にしても first concedes “it's the first time”, then says “it's still too…”, usually criticism or a demand (ひどすぎる). Both come from 「に＋する (treat as)」."
+              "explain": "The two sentences differ only in 「は」 vs 「も」, and the second half is the same, so look at how the speaker treats 「冗談」: にしては uses “a joke” as the yardstick and finds it goes beyond what a joke should be, implying “this doesn't seem like a joke”; にしても first accepts “it's a joke”, then says “it's still not OK”, focusing on criticism and displeasure."
             }
           ]
         },
@@ -18655,20 +18637,23 @@
             },
             {
               "id": "kuse-ni",
-              "diff": "にしては is a neutral evaluation, positive or negative; くせに carries strong blame and contempt.",
+              "diff": "Both say “doesn't fit being a newcomer”; にしては simply uses the status as a yardstick, often with admiration; くせに carries strong blame or contempt — the speaker feels he shouldn't act that way.",
               "this": [
                 {
-                  "tag": "Neutral · can be praise",
-                  "tr": "For a kid, he's quite mature."
+                  "tag": "Neutral · often admiring",
+                  "tr": "For a newcomer, he confidently speaks his mind."
                 }
               ],
               "that": [
                 {
-                  "tag": "Blame · contempt",
-                  "tr": "He's just a kid, yet he's so cheeky."
+                  "tag": "Blame · displeasure",
+                  "tr": "He's just a newcomer, yet he brazenly speaks his mind."
                 }
               ],
-              "explain": "Look at the evaluation in the second half: 「しっかりしている」 can be praise → にしては; accusations like 「生意気だ」 or 「偉そうに」 → くせに. Also, くせに needs 「の」 after a noun, while にしては attaches directly to the noun."
+              "wrong": {
+                "why": "くせに needs 「の」 after a noun: 新人のくせに"
+              },
+              "explain": "The second half of both sentences is exactly the same; only にしては / のくせに changes, and the speaker's attitude changes with it: にしては measures him against 「新人」 and finds it unexpected, usually as praise; くせに means the speaker resents him for not acting his place, with displeasure and blame. So for plain praise, use にしては. After a noun, にしては attaches directly, while くせに needs 「の」 (新人のくせに)."
             }
           ]
         }
@@ -18679,25 +18664,30 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both put two things side by side to compare or contrast them",
+          "note": "Both express a contrast: “A…, whereas B…”",
           "items": [
             {
-              "id": "ni-kurabete",
-              "thisTitle": "〜のに対して (contrast)",
-              "diff": "のに対して places two opposite facts side by side for contrast; に比べて measures higher or lower on the same scale.",
+              "id": "ippou-de",
+              "title": "〜一方で(contrasting two sides)",
+              "thisTitle": "〜のに対して(contrast)",
+              "diff": "When two different things are set side by side, both work, and のに対して stresses that they are opposite; for two sides of the same thing, only 一方で works.",
               "this": [
                 {
-                  "tag": "Two sides contrasted",
-                  "tr": "The older brother is tall, whereas the younger brother is small."
+                  "tag": "Two things · stresses the opposition",
+                  "tr": "My older brother is tall, whereas my younger brother is small."
                 }
               ],
               "that": [
                 {
-                  "tag": "Higher or lower",
-                  "tr": "Compared with his older brother, the younger brother is taller."
+                  "tag": "Two things · also fine",
+                  "tr": "My older brother is tall; on the other hand, my younger brother is small."
+                },
+                {
+                  "tag": "Two sides of one thing · only this one",
+                  "tr": "This room is close to the station, but the rent is high."
                 }
               ],
-              "explain": "Look at the second half: with のに対して, each half describes one side (兄は背が高い／弟は小柄だ), with opposite meanings; に比べて is followed by a description of just one side being “more…” (弟は背が高い) — a comparison of degree. When attached to a clause, に対して needs 「の」 before it."
+              "explain": "First check whether two different things are being compared: 「兄」 and 「弟」 each get one half → both work, with のに対して stressing that the two are exactly opposite, often in objective descriptions; when it's two sides of the same thing (「この部屋」 is close to the station but the rent is high) → use 一方で; のに対して sounds unnatural. As for connection, のに対して needs 「の」 before it (高いのに対して), while 一方で attaches directly (高い一方で)."
             }
           ]
         }
@@ -18750,20 +18740,20 @@
             },
             {
               "id": "kara-miru-to",
-              "diff": "にとって says what this matter “means to that person”; から見ると says “how it looks through that person's eyes”.",
+              "diff": "にとって says what this means for that person, how it affects them; から見ると means looking through that person's eyes and describing the impression.",
               "this": [
                 {
-                  "tag": "What it means to them",
-                  "tr": "For international students, part-time work is an important source of income."
+                  "tag": "What it means for them",
+                  "tr": "For foreigners, Japanese honorific language is complicated."
                 }
               ],
               "that": [
                 {
-                  "tag": "How they see it",
-                  "tr": "To foreigners, Japanese customs seem strange."
+                  "tag": "The impression in their eyes",
+                  "tr": "From a foreigner's point of view, Japanese honorific language is complicated."
                 }
               ],
-              "explain": "Look at what follows: 「大切だ」, 「必要だ」 or 「ありがたい」 say what the matter means to that person → にとって; 「不思議だ」, 「おかしい」 or 「〜ように見える」 describe the impression you get looking through that person's eyes → から見ると (also からすると)."
+              "explain": "Both sentences work and mean almost the same: にとって focuses on the difficulty or value this brings to that person, usually followed by evaluations like 「大切だ」「難しい」「ありがたい」; から見ると focuses on looking through that person's eyes, and can also be followed by appearance-type impressions like 「〜そうだ」「〜ように見える」 (子どもから見ると、大人はいつも忙しそうだ), where にとって is normally not used."
             }
           ]
         }
@@ -18772,29 +18762,6 @@
     {
       "id": "ni-tsuite",
       "groups": [
-        {
-          "kind": "root",
-          "note": "Both come from 「就く（つく）」 — “to attach to, to follow”",
-          "items": [
-            {
-              "id": "ni-tsuki",
-              "diff": "について means “about”; につき, in signs and notices, usually means “due to” or “per…” — an old, formal expression.",
-              "this": [
-                {
-                  "tag": "About",
-                  "tr": "I'll explain about the construction work."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Due to · notice",
-                  "tr": "Road closed due to construction."
-                }
-              ],
-              "explain": "Both are 「に＋就く」: について is 「就いて」, attaching to a topic to talk about it; につき keeps the old continuative form and is common in signs and notices. Look at what follows: 「話す」 or 「説明する」 → “about”; a result (通行止め) or a quantity (一人につき三枚) → “due to” / “per”."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Both introduce the topic being discussed: “about…”",
@@ -18817,21 +18784,42 @@
               "explain": "Look at the setting: chatting with friends or writing a diary → について; reports, official documents and formal remarks mostly use に関して. When modifying a noun, に関する＋noun (環境に関する問題) is more formal and concise than についての＋noun."
             },
             {
-              "id": "wo-megutte",
-              "diff": "について simply states the topic; をめぐって is used for disputes and conflicts surrounding that matter.",
+              "id": "ni-tsuki",
+              "title": "〜につき(about)",
+              "diff": "Same meaning; につき is the written, formal version of について, common in meetings and official documents.",
               "this": [
                 {
-                  "tag": "Just a topic",
-                  "tr": "I consulted a lawyer about the inheritance."
+                  "tag": "Ordinary",
+                  "tr": "We will discuss next fiscal year's budget."
                 }
               ],
               "that": [
                 {
-                  "tag": "Surrounding · dispute",
-                  "tr": "The siblings are fighting over the inheritance."
+                  "tag": "Written · formal",
+                  "tr": "Regarding next fiscal year's budget, we will deliberate."
                 }
               ],
-              "explain": "Look at the verb after it: 「話す」, 「相談する」, 「調べる」 → について; clashes between parties like 「争う」, 「対立する」, 「議論が起きる」 → をめぐって."
+              "explain": "The two sentences mean the same; it depends on the setting: in everyday speech and ordinary writing use について; in formal documents such as meeting minutes, official papers and notices use につき, and when speaking even more politely say につきまして."
+            },
+            {
+              "id": "wo-megutte",
+              "diff": "Both can introduce a topic of dispute; をめぐって makes it feel like several sides are arguing around the issue, common in news; について just names the topic neutrally.",
+              "this": [
+                {
+                  "tag": "Neutral · names the topic",
+                  "tr": "Residents' opinions are divided about the location of the new station."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Focus of a dispute",
+                  "tr": "Residents' opinions are divided over the location of the new station."
+                }
+              ],
+              "wrong": {
+                "why": "をめぐって must be followed by a dispute or conflict; for plain research or explanation use について"
+              },
+              "explain": "Both sentences work. をめぐって originally means “around”; using it turns the issue into the focus of a dispute, so it sounds like the sides are opposed, and it is usually followed by 「意見が分かれる」「争う」「対立する」; について just names the topic without that nuance. When the verb is an ordinary action like 「話す」「調べる」「説明する」, only について works."
             }
           ]
         }
@@ -18846,64 +18834,59 @@
           "items": [
             {
               "id": "ni-shitagatte",
-              "diff": "In the sense of “as…”, the two are interchangeable; にしたがって can also mean “in accordance with (rules, instructions)”, and につれて can't.",
+              "title": "〜にしたがって(as… changes)",
+              "diff": "In the “as…” sense they mean the same; につれて sounds more natural and is common in everyday narration; にしたがって is a bit stiffer, common in explanations and reports.",
               "this": [
                 {
-                  "tag": "As…",
-                  "tr": "The farther north you go, the lower the temperature gets."
+                  "tag": "Natural · common in daily use",
+                  "tr": "As the sun sets, the wind has turned cold."
                 }
               ],
               "that": [
                 {
-                  "tag": "As… · interchangeable",
-                  "tr": "The farther north you go, the lower the temperature gets."
-                },
-                {
-                  "tag": "In accordance with · only this one",
-                  "tr": "Please evacuate following the staff's instructions."
+                  "tag": "Stiffer · explanations, reports",
+                  "tr": "As the sun goes down, the wind has gradually grown cold."
                 }
               ],
-              "wrong": {
-                "why": "につれて doesn't have the meaning “in accordance with”"
-              },
-              "explain": "In the sense of “as…”, the two are interchangeable (北へ行くにつれて／にしたがって); にしたがって also means “in accordance with”, and when what comes before is an instruction or rule, only it works — it can't be swapped for につれて."
+              "explain": "The two sentences mean the same, and both halves are changes (沈む → 冷たくなってきた); the difference is in feel: につれて sounds like describing a natural process moving forward bit by bit, and is common in both speech and writing; にしたがって is a bit stiffer and is mostly seen in explanatory texts and reports."
             },
             {
               "id": "to-tomo-ni",
-              "diff": "につれて only describes gradual, proportional change; とともに is more formal, works with one-time events too, and means “at the same time as…”.",
+              "title": "〜とともに(as… changes)",
+              "diff": "In the “as…” sense they mean the same; とともに is more formal and stiffer, common in news and written texts.",
               "this": [
                 {
-                  "tag": "Gradual change",
-                  "tr": "As I've gotten older, my memory has declined."
+                  "tag": "Common in speech and writing",
+                  "tr": "As the town developed, the old buildings became fewer and fewer."
                 }
               ],
               "that": [
                 {
-                  "tag": "One-time · at the same time",
-                  "tr": "Upon graduating, I moved to Tokyo."
+                  "tag": "Written · news, articles",
+                  "tr": "With the development of the town, the old buildings gradually decreased."
                 }
               ],
-              "wrong": {
-                "why": "卒業 is a one-time event, so につれて can't be used"
-              },
-              "explain": "Check whether what comes before is an ongoing change: 年を取る or 時間が経つ change little by little → both につれて and とともに work; events that happen all at once, like 卒業 or 結婚 → only とともに (at the same time) works, not につれて."
+              "explain": "The two sentences mean the same; the difference is register: につれて is common in both speech and writing and highlights a process that changes bit by bit; とともに is a written expression, common in news and papers, and rarely used in casual conversation."
             },
             {
               "id": "ba-hodo",
-              "diff": "につれて describes a change that actually happened over a period of time; ば〜ほど means “the more…, the more…”, says the same word twice, and often states a general truth.",
+              "diff": "Both say “as…”; ば〜ほど says the same word twice, common in speech, stressing that both degrees rise together; につれて says it once, like an objective account of a gradual change.",
               "this": [
                 {
-                  "tag": "An actual process of change",
-                  "tr": "As time passed, the sadness gradually faded."
+                  "tag": "Said once · calm, objective",
+                  "tr": "As you get older, your body gets stiffer."
                 }
               ],
               "that": [
                 {
-                  "tag": "The more… · general truth",
-                  "tr": "The more you practice, the better you get."
+                  "tag": "Said twice · the more…, the more…",
+                  "tr": "The older you get, the stiffer your body gets."
                 }
               ],
-              "explain": "First look at the form: ば〜ほど repeats the same word (練習すれば練習するほど) and sounds like a general truth; につれて mentions the change only once, usually describes a change that really happened over some period, and often goes with 「〜ていく」 or 「〜てきた」."
+              "wrong": {
+                "why": "ば〜ほど needs the same word said twice: 取れば取るほど"
+              },
+              "explain": "Both sentences work. ば〜ほど says 「取る」 twice (年を取れば取るほど), stressing “the older, the stiffer”, and is very common in speech; につれて says it only once (年を取るにつれて), with a calm, objective tone. When the second half is not a change but an evaluation like 「いい」, only ば〜ほど works (早ければ早いほどいい)."
             }
           ]
         }
@@ -18914,12 +18897,12 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「よる（因る・依る）」 — “to rely on, to depend on”; によると means “according to (a source)”",
+          "note": "Both come from 「よる（因る・依る）」 — original meaning “to rely on, to depend on”",
           "items": [
             {
               "id": "ni-yoru-to",
               "thisTitle": "〜によって (cause)",
-              "diff": "によって expresses a cause, a means, or “varies depending on…”; によると is only for an information source: “according to…”.",
+              "diff": "によって says what cause or means made something happen; によると says what source a piece of information is based on: “according to…”.",
               "this": [
                 {
                   "tag": "Cause · due to",
@@ -18928,93 +18911,83 @@
               ],
               "that": [
                 {
-                  "tag": "Source · I hear",
+                  "tag": "Source · reportedly",
                   "tr": "According to the news, a typhoon is coming."
                 }
               ],
-              "explain": "Look at the end of the sentence: によると usually pairs with 「そうだ」, 「らしい」 or 「ということだ」 and conveys something you heard (によれば works the same way); によって is followed by an actual result or change (壊れた)."
+              "explain": "The original meaning of 「よる」 is “to rely on, to depend on”. Something happens by relying on a cause or means → によって “due to / by means of”, and the sentence ends with the actual result (壊れた); a statement relies on a source for its grounds → によると “according to…”, preceded by an information source such as 「ニュース」「天気予報」, and the sentence often ends with 「そうだ」「らしい」 (によれば works the same way)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "All introduce a cause, means, basis or agent (due to / by means of / based on…)",
+          "sense": 2,
+          "note": "Both express a means: “by (means of)…”",
+          "items": [
+            {
+              "id": "de-means",
+              "title": "〜で(tool / method)",
+              "thisTitle": "〜によって (means)",
+              "diff": "Same meaning; によって is written and formal, common in reports and news; で is the everyday way to say it.",
+              "this": [
+                {
+                  "tag": "Written · formal",
+                  "tr": "The class representative was decided by vote."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Everyday",
+                  "tr": "We chose the class representative by vote."
+                }
+              ],
+              "explain": "The two sentences mean the same; it depends on the setting: in everyday speech で is the most natural; in reports, news and formal explanations use によって (in writing also により). For everyday tools and transport (箸で, バスで) only で is used, not によって."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Both mean “differs depending on…”",
           "items": [
             {
               "id": "ni-yotte-wa",
               "thisTitle": "〜によって (varies by…)",
-              "diff": "によって says “differs depending on…”; によっては says “depending on the case, some…”.",
+              "diff": "They say the same thing; によっては adds 「は」 to single out “some shops”, making it clearer that only some of them are meant.",
               "this": [
                 {
-                  "tag": "All different",
-                  "tr": "Customs differ from country to country."
+                  "tag": "Varies by shop",
+                  "tr": "It depends on the shop; some are closed on Sundays."
                 }
               ],
               "that": [
                 {
-                  "tag": "In some cases",
-                  "tr": "In some countries, tipping is expected."
+                  "tag": "Singles out some",
+                  "tr": "Some shops are closed on Sundays."
                 }
               ],
-              "explain": "Look at the end of the sentence: によって is usually followed by 「違う」, 「異なる」 or 「さまざまだ」, saying things vary overall; によっては singles out just some of them, often followed by 「〜もある」 or 「〜こともある」."
-            },
-            {
-              "id": "de-means",
-              "thisTitle": "〜によって (means)",
-              "diff": "で is the most ordinary everyday marker of means or cause; によって is more formal, common in the news and reports, and isn't used for everyday transport.",
-              "this": [
-                {
-                  "tag": "Means · formal",
-                  "tr": "The problem was solved through discussion."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Everyday · transport",
-                  "tr": "I go to school by bus."
-                }
-              ],
-              "wrong": {
-                "why": "Everyday means like transport take 「で」"
-              },
-              "explain": "Look at the setting and content: everyday tools and ways of getting around (バスで, ペンで) → で; in reports and the news, explaining by what method something major was achieved (話し合いによって解決した) → によって."
+              "explain": "When the second half talks about only some cases, as with 「〜ところもある」「〜こともある」, both work, and によっては uses 「は」 to pick out “some shops”, which is the more common choice; when the second half is 「違う」「異なる」「さまざまだ」, saying that things differ overall, use によって (店によって休みの日が違う)."
             },
             {
               "id": "ni-oujite",
               "thisTitle": "〜によって (varies by…)",
-              "diff": "によって only says “differs according to A”; に応じて says “adjusted to match A”.",
+              "diff": "によって just states objectively that “the price differs with age”; に応じて stresses adjusting the price to age, as something deliberately arranged.",
               "this": [
                 {
-                  "tag": "Just differs",
-                  "tr": "Everyone's tastes are different."
+                  "tag": "Objectively states a difference",
+                  "tr": "The fee varies by age."
                 }
               ],
               "that": [
                 {
-                  "tag": "Adjusted to match",
-                  "tr": "The amount of tax is set according to income."
+                  "tag": "Adjusted accordingly",
+                  "tr": "The fee is adjusted according to age."
                 }
               ],
-              "explain": "Look at what follows: 「違う」 or 「異なる」 just state a difference → によって; 「決める」, 「変える」 or 「選ぶ」 mean someone adapts or adjusts to the situation → に応じて."
-            },
-            {
-              "id": "passive",
-              "title": "〜に〜（ら）れる (passive)",
-              "thisTitle": "〜によって (passive: by…)",
-              "diff": "Ordinary passive sentences use 「に」 for the doer; passives of “creating something” — writing, inventing, building — need によって.",
-              "this": [
-                {
-                  "tag": "Creation · by…",
-                  "tr": "This novel was written by Natsume Soseki."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Ordinary passive · に",
-                  "tr": "My little brother was scolded by the teacher."
-                }
-              ],
-              "explain": "Look at the verb: for actions that create something new, like 「書く」, 「建てる」, 「発明する」, 「発見する」, the doer in a passive sentence takes によって; for actions done directly to a person, like 「叱る」, 「ほめる」, 「頼む」, use に."
+              "wrong": {
+                "why": "に応じて must be followed by something adjusted or matched to the situation; to simply say things differ, use によって"
+              },
+              "explain": "Both sentences work. によって just states that it “differs by age”; に応じて means “adjusted to match age”, sounding like it's deliberately set by some rule. When the second half only says things differ, as with 「違う」「さまざまだ」, only によって works (人によって好みが違う)."
             }
           ]
         }
@@ -19025,42 +18998,42 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean “since… / because…”, giving a reason",
+          "note": "Both mean “since (that is the case)…, then…”",
           "items": [
             {
               "id": "kara-ni-wa",
-              "diff": "のだから uses a fact both sides know to persuade or reproach the listener; からには is usually followed by your own resolve or duty: “now that…, I'll see it through”.",
+              "diff": "Same meaning; のだから lays out a fact both sides know to persuade or reproach, and in speech becomes んだから; からには is more formal, stressing that having made the decision, you are responsible and determined to see it through.",
               "this": [
                 {
-                  "tag": "Persuading, reproaching",
-                  "tr": "We made a promise, so you'd better show up."
+                  "tag": "Lays out the fact · persuade, reproach",
+                  "tr": "You took it on, so see it through to the end."
                 }
               ],
               "that": [
                 {
-                  "tag": "Own resolve",
-                  "tr": "Now that I've taken it on, I'll see it through to the end."
+                  "tag": "Formal · responsibility, resolve",
+                  "tr": "Now that you've taken it on, you must see it through to the end."
                 }
               ],
-              "explain": "Look at who the second half is aimed at: demanding something of the listener (来てよ, 早くしなさい) or blaming them → usually のだから; expressing your own resolve or responsibility (最後までやる, 〜なければならない) → usually からには, which sounds more serious."
+              "explain": "Both sentences work. のだから lays out the fact both sides know (“you took it on”) to press the other person, with a touch of reproach, and in speech is often んだから; からには is more formal and focuses on “having come this far, you have the responsibility and resolve to see it through”, often followed by 「〜なければならない」「〜つもりだ」."
             },
             {
-              "id": "kara-from",
-              "title": "〜から (reason)",
-              "diff": "から can give a new reason the listener doesn't know; with のだから, the reason is a fact the listener also knows, with a persuading or reproachful tone.",
+              "id": "ijou-wa",
+              "title": "〜以上（は） (since…, should)",
+              "diff": "Same meaning; 以上（は） is calm and formal, like reasoning things out; のだから has a persuading or reproachful tone, and in speech becomes んだから.",
               "this": [
                 {
-                  "tag": "Known fact · persuading",
-                  "tr": "You're the one who suggested it, so you do it."
+                  "tag": "Persuading · more emotional",
+                  "tr": "You're here representing the company, so you should watch what you say."
                 }
               ],
               "that": [
                 {
-                  "tag": "New info · reason",
-                  "tr": "I have a headache, so I'll take today off."
+                  "tag": "Reasoning · calm, formal",
+                  "tr": "As long as you are here as a company representative, you should be careful about what you say."
                 }
               ],
-              "explain": "Check whether the listener already knows the reason: “you suggested it” is clear to both, and is used to pressure them → んだから; “I have a headache” is new information for the listener → から. Using んだから to explain your own reasons to a superior sounds pushy and rude."
+              "explain": "Both sentences work; the difference is tone: 以上（は） calmly draws a conclusion from a premise, often paired with 「〜べきだ」「〜わけにはいかない」, and is common in formal settings and writing; のだから lays the fact out in front of the person you're talking to in order to persuade or scold them, with stronger feeling, and in speech is often んだから."
             }
           ]
         }
