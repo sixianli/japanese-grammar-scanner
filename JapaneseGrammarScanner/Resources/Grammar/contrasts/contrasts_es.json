@@ -27600,58 +27600,64 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「と言う」: literalmente «aunque se diga eso», por eso las dos expresan concesión",
+          "note": "Las dos vienen de 「言う」 — significado original: «decir»",
           "items": [
             {
-              "id": "ka-to-itte",
-              "diff": "からといって va tras un motivo y dice «no por… hay que…»; かといって va al principio de la oración y dice «pero tampoco sirve lo contrario».",
-              "this": [
-                {
-                  "tag": "Tras un motivo · no por eso",
-                  "tr": "No está bien dejar el trabajo enseguida solo porque sea duro."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Al inicio · entre dos males",
-                  "tr": "El trabajo es duro. Pero aun así, tampoco puedo dejarlo."
-                }
-              ],
-              "explain": "Fíjate en lo que va delante de 「といって」: si va justo tras un motivo (辛い + からといって) → se niega la idea de que «por ese motivo habría que…»; si empieza una oración nueva tras un punto (かといって) → se admite la situación anterior, pero el otro camino tampoco sirve, y detrás suele ir 「〜わけにもいかない」「〜もない」."
-            },
-            {
               "id": "to-ittemo",
-              "diff": "からといって niega la conclusión que se deduce de un motivo; といっても corrige lo dicho antes y rebaja las expectativas del otro.",
+              "diff": "からといって es «decir “porque…”»: niega la conclusión que se saca de ese motivo; といっても es «aunque se diga eso»: admite lo dicho y luego rebaja el grado real.",
               "this": [
                 {
-                  "tag": "Niega la deducción",
+                  "tag": "Niega una deducción",
                   "tr": "Saber cocinar no significa que puedas abrir un restaurante."
                 }
               ],
               "that": [
                 {
-                  "tag": "Rebajar expectativas",
-                  "tr": "Aunque sé cocinar, solo hago cosas sencillas."
+                  "tag": "Rebaja expectativas",
+                  "tr": "Sé cocinar, pero solo cosas sencillas."
                 }
               ],
-              "explain": "La primera parte es igual; fíjate en la segunda: tras からといって se niega la deducción «así que se puede…» (わけではない、とは限らない); tras といっても se añade la situación real, rebajando el grado (〜だけだ、〜くらいだ)."
+              "explain": "Las dos contienen 「言う」 (decir). からといって = 「〜から」と言って, literalmente «decir “porque…”», lo que lleva a la deducción «solo por este motivo, …», y la segunda parte niega esa deducción (わけではない、とは限らない). といっても = 「〜と」言っても, literalmente «aunque se diga eso»: primero admite lo dicho y luego añade la situación real, rebajando el grado (〜だけだ、〜しかない). Si la primera parte es igual, fíjate en la segunda: si niega una deducción → からといって; si añade «en realidad solo es…» → といっても."
             },
             {
               "id": "to-wa-ie",
-              "diff": "Tras からといって va una negación; とはいえ es el «aunque…, sin embargo…» escrito, y detrás se dice directamente la realidad contraria a lo esperado.",
+              "diff": "からといって es «decir “porque…”»: niega la conclusión que se saca de un motivo; とはいえ es «aunque se pueda decir eso»: admite un hecho y luego expone la realidad contraria; es más formal.",
               "this": [
                 {
-                  "tag": "Niega la deducción",
-                  "tr": "Que haya llegado la primavera no significa que vaya a hacer calor enseguida."
+                  "tag": "Niega una deducción",
+                  "tr": "Que estemos en abril no significa que vaya a hacer calor enseguida."
                 }
               ],
               "that": [
                 {
-                  "tag": "Dice la realidad directamente",
-                  "tr": "Aunque es primavera, todavía hace frío."
+                  "tag": "Admite un hecho · realidad contraria",
+                  "tr": "Aunque estemos en abril, por la mañana y por la noche todavía hace frío."
                 }
               ],
-              "explain": "Fíjate en la segunda parte: con からといって, al final suele haber negaciones como 「わけではない」「とは限らない」「〜てはいけない」; tras とはいえ se dice directamente un hecho contrario a lo esperado (まだ寒い), que no tiene por qué ser negativo; es más bien escrito y también puede ir sola al principio de la oración."
+              "explain": "Las dos contienen 「言う」 (decir). からといって = 「〜から」と言って, literalmente «decir “porque…”», así que la segunda parte niega la conclusión que se saca de ese motivo (わけではない). とはいえ viene del clásico 「とは言えども」 («aunque se pueda decir…»), así que primero admite el hecho anterior y luego expone directamente una realidad contraria a lo esperado (まだ寒い); la segunda parte no tiene por qué ser negativa. Para distinguirlas, mira las dos partes: un motivo delante y, detrás, la negación de «así que…» → からといって; un hecho que se admite delante y, detrás, palabras como 「まだ」「やはり」 con la realidad contraria → とはいえ, que es más formal y también puede ir sola al principio de la oración."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "からといって ↔ かといって: solo las separa una 「ら」",
+          "items": [
+            {
+              "id": "ka-to-itte",
+              "diff": "からといって va tras un motivo: «que…, no significa que…»; かといって abre una oración nueva tras el punto: «aun así, … tampoco».",
+              "this": [
+                {
+                  "tag": "Tras un motivo · no por eso…",
+                  "tr": "Que el trabajo sea duro no significa que esté bien dejarlo enseguida."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Inicio de oración · entre la espada y la pared",
+                  "tr": "El trabajo es duro. Aun así, tampoco puedo dejarlo."
+                }
+              ],
+              "explain": "Solo las separa una 「ら」, así que fíjate en lo que va antes de 「といって」: con 「ら」, justo después de un motivo (辛い＋からといって) → rechaza la idea «por este motivo, hay que…»; sin 「ら」, abriendo una oración nueva tras el punto (。かといって) → aceptas la situación, pero el otro camino también está cerrado; suele ir seguida de 「〜わけにもいかない」「〜もない」 y expresa no saber qué hacer."
             }
           ]
         }
@@ -27662,44 +27668,52 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas expresan «tener tendencia a…»",
+          "sense": 1,
+          "note": "Las dos significan «tener tendencia a…»",
           "items": [
             {
               "id": "gachi",
               "thisTitle": "〜傾向がある",
-              "diff": "傾向がある es objetivo y neutro, frecuente en estudios e informes; がち es más hablado y suele referirse a situaciones malas que se repiten con facilidad.",
+              "diff": "傾向がある es objetivo y neutro, frecuente en encuestas e informes; がち lleva la valoración del hablante y sobre todo habla de cosas malas que suelen repetirse.",
               "this": [
                 {
                   "tag": "Objetivo · informe",
-                  "tr": "Según un estudio, en invierno la gente tiende a hacer poco ejercicio."
+                  "tr": "Según una encuesta, en invierno la gente tiende a hacer poco ejercicio."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hablado · algo malo",
-                  "tr": "En invierno siempre acabo haciendo poco ejercicio."
+                  "tag": "Algo malo · con valoración",
+                  "tr": "En invierno, sin querer, uno tiende a hacer poco ejercicio."
                 }
               ],
-              "explain": "Fíjate en el tono y en la unión: descripciones objetivas en estudios o noticias → 傾向がある (con forma diccionario o «sustantivo + の»); cosas de uno mismo o de su entorno, con cierta sensación de «no está bien», a menudo con 「つい」 → がち (con raíz ます: なり + がち, o con sustantivo: 病気がち)."
+              "explain": "Fíjate en el tono: si se cita una encuesta o noticia con 「調査によると」 y se describe un fenómeno de forma objetiva → 傾向がある (tras la forma diccionario: なる＋傾向がある); si se habla de cosas poco deseables que te pasan a menudo a ti o a tu entorno, a menudo con 「つい」「どうしても」 → がち (tras la raíz ます: なり＋がち)."
             },
             {
               "id": "kirai-ga-aru",
               "thisTitle": "〜傾向がある",
-              "diff": "傾向がある es neutro y objetivo; きらいがある solo habla de tendencias malas, con crítica, y es muy escrito.",
+              "diff": "傾向がある solo describe de forma objetiva y vale para lo bueno y lo malo; きらいがある solo se usa para tendencias malas, lleva crítica y es más formal.",
               "this": [
                 {
-                  "tag": "Neutro · un grupo",
-                  "tr": "Los estudiantes de hoy tienden a buscarlo todo en internet."
+                  "tag": "Neutro · descripción objetiva",
+                  "tr": "Nuestro jefe de departamento tiende a decidirlo todo él solo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Crítica · defecto personal",
-                  "tr": "Él tiene la manía de decidirlo todo él solo."
+                  "tag": "Crítica · mala costumbre",
+                  "tr": "Nuestro jefe de departamento tiene la mala costumbre de decidirlo todo él solo."
                 }
               ],
-              "explain": "Fíjate en la actitud del hablante: si solo describe un fenómeno o una estadística → 傾向がある; si está descontento con la forma de ser de alguien y lo critica → きらいがある (frecuente en textos, y el sujeto suele ser una persona concreta)."
-            },
+              "explain": "Ante el mismo hecho, fíjate en la actitud del hablante: si solo describe un fenómeno de forma objetiva, sin juzgar si es bueno o malo → 傾向がある; si lo ve como un defecto, con crítica o descontento → きらいがある, que suele ir con 「〜てしまう」 y aparece sobre todo en textos o en un registro formal. きらいがある no se usa para tendencias buenas."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Las dos significan «mostrar una tendencia de cambio»",
+          "items": [
             {
               "id": "ippou-da",
               "thisTitle": "〜傾向にある",
@@ -27774,59 +27788,25 @@
       "id": "koto-dakara",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Ambas indican un motivo o la base de un juicio",
+          "kind": "look",
+          "note": "ことだから ↔ ことから: solo las separa un 「だ」",
           "items": [
             {
-              "id": "dake-atte",
-              "diff": "ことだから conjetura algo que aún no ha pasado a partir de la forma de ser habitual de alguien; だけあって dice «como era de esperar de…» ante un resultado ya visto.",
-              "this": [
-                {
-                  "tag": "Conjetura · aún no ha pasado",
-                  "tr": "Siendo él tan serio, seguro que no llega tarde."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Valoración · ya visto",
-                  "tr": "Como era de esperar de un cocinero profesional, la comida está riquísima."
-                }
-              ],
-              "explain": "Fíjate en la segunda parte: tras ことだから suele ir una conjetura sobre algo que aún no ha pasado, como 「きっと〜だろう」「〜に違いない」; tras だけあって va un resultado ya visto, a menudo con 「さすが」, expresando admiración. La unión también es distinta: ことだから va con «persona + の»; だけあって va directamente tras un sustantivo (プロだけあって)."
-            },
-            {
-              "id": "koto-dashi",
-              "diff": "ことだから va con «persona + の», y detrás va una conjetura; ことだし toma la situación del momento como motivo, y detrás va una propuesta o una decisión.",
-              "this": [
-                {
-                  "tag": "Forma de ser → conjetura",
-                  "tr": "Conociéndola, seguro que ya lo tiene todo preparado."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Situación actual → propuesta",
-                  "tr": "Ya que ha dejado de llover, vamos saliendo."
-                }
-              ],
-              "explain": "Fíjate en lo que va delante y al final: «persona + の» (彼女の) + ことだから, y detrás una conjetura sobre esa persona (きっと〜だろう); forma simple (やんだ) + ことだし, y detrás una propuesta o decisión como 「〜よう」「〜ましょう」."
-            },
-            {
               "id": "koto-kara",
-              "diff": "ことだから conjetura a partir de los rasgos habituales de una persona o cosa; ことから toma un hecho concreto como base para explicar el origen de un nombre o de un juicio, y es más bien escrito.",
+              "diff": "Persona＋の＋ことだから hace una suposición basada en el carácter conocido de esa persona; forma simple＋ことから toma un hecho concreto como base para explicar una causa, un origen o una conclusión.",
               "this": [
                 {
-                  "tag": "Rasgo de alguien → conjetura",
-                  "tr": "Siendo el jefe tan prudente, no lo decidirá enseguida."
+                  "tag": "Persona＋の → suposición",
+                  "tr": "Con lo estricto que es mi hermano con la hora, seguro que ya está en la estación."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hecho concreto → origen",
-                  "tr": "Como su forma se parece a la del monte Fuji, esta montaña se llama «Kofuji»."
+                  "tag": "Hecho → base para juzgar",
+                  "tr": "Como la luz de su cuarto estaba encendida, supe que mi hermano ya había vuelto."
                 }
               ],
-              "explain": "Solo se diferencian en un 「だ」; fíjate en lo que va delante: «persona + の» + ことだから, que se apoya en un carácter o una naturaleza que todos conocen; un hecho en forma simple (似ている) + ことから, que se usa a menudo para explicar el origen de un nombre o la base de una deducción (〜と呼ばれている、〜とわかった)."
+              "explain": "Solo las separa un 「だ」, así que fíjate en lo que va antes de 「こと」 y en el final de la oración: 「persona＋の」 (兄の)＋ことだから → una suposición basada en el carácter que todos conocen de esa persona, normalmente seguida de 「きっと」「だろう」; un hecho en forma simple (ついている)＋ことから → ese hecho concreto sirve de base, normalmente seguido de una conclusión o de la explicación de un origen, como 「〜とわかった」「〜と呼ばれている」; es más formal."
             }
           ]
         }
@@ -27837,24 +27817,24 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas indican un motivo o la base de un juicio",
+          "note": "Las dos significan «dar un motivo y pasar con naturalidad a una propuesta»",
           "items": [
             {
-              "id": "koto-dakara",
-              "diff": "ことだし toma la situación del momento como motivo, y detrás va una propuesta o una decisión; ことだから va con «persona + の», y detrás va una conjetura.",
+              "id": "no-dakara",
+              "diff": "ことだし da un motivo de forma ligera e insinúa que hay más; のだから presenta el motivo como un hecho que ambos aceptan, con un tono fuerte de convencer o meter prisa.",
               "this": [
                 {
-                  "tag": "Situación actual → propuesta",
-                  "tr": "Ya que ha dejado de llover, vamos saliendo."
+                  "tag": "Ligero · consultando",
+                  "tr": "Ya que por fin me he tomado unos días libres, ¿vamos a unas termas?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Forma de ser → conjetura",
-                  "tr": "Conociéndola, seguro que ya lo tiene todo preparado."
+                  "tag": "Tono fuerte · insistiendo",
+                  "tr": "¡Si por fin me he tomado unos días libres, vamos a unas termas!"
                 }
               ],
-              "explain": "Fíjate en lo que va delante y al final: forma simple (やんだ) + ことだし, y detrás una propuesta o decisión como 「〜よう」「〜ましょう」; «persona + の» (彼女の) + ことだから, y detrás una conjetura sobre esa persona (きっと〜だろう)."
+              "explain": "Con el mismo motivo, fíjate en el tono: ことだし solo menciona un motivo de pasada (insinuando que hay otros) y suele ir seguida de una propuesta en tono de consulta, como 「〜ようか」「〜ましょう」; のだから (en lengua hablada, んだから) presenta el motivo como un hecho que el oyente también acepta y no puede discutir, así que el tono es más fuerte, con intención de convencer o meter prisa, y suele ir seguida de una afirmación o una petición como 「〜よ」「〜なさい」「〜てよ」."
             },
             {
               "id": "shi",
@@ -27871,7 +27851,7 @@
                   "tr": "Ha dejado de llover y además hace un aire agradable, ¿vamos a dar un paseo?"
                 }
               ],
-              "explain": "El final de ことだし es precisamente ese 「し」 que enumera motivos, así que también insinúa «y hay más motivos». Fíjate en cuántos motivos hay: dos o tres en paralelo (〜し、〜し) → し; un solo motivo, una situación ya dada, seguido de una propuesta → ことだし, a menudo con 「も」 delante (雨もやんだことだし)."
+              "explain": "El final de ことだし es precisamente ese 「し」 que enumera motivos, así que también insinúa «y hay más motivos». Fíjate en cuántos motivos hay: dos o tres en paralelo (雨もやんだし、風も気持ちいいし) → し; un solo motivo, una situación ya dada, seguido de una propuesta → ことだし, a menudo con 「も」 delante (雨もやんだことだし)."
             }
           ]
         }
@@ -27882,42 +27862,45 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas sirven para expresar una emoción intensa",
+          "note": "Las dos expresan la exclamación «¡qué…!»",
           "items": [
             {
               "id": "mono-da",
-              "title": "〜ものだ（emoción）",
-              "diff": "ことか exclama el grado o la cantidad de veces de una experiencia propia, a menudo con 「どんなに」「何度」; ものだ exclama algo propio de la naturaleza humana o una verdad general.",
+              "title": "〜ものだ (exclamación)",
+              "diff": "ことか exclama en forma de pregunta retórica y debe ir con 「なんと」「どんなに」「何度」, con un sentimiento más fuerte y un tono más formal; ものだ exclama directamente, a menudo con 「本当に」「なあ」, y es frecuente también en la lengua hablada.",
               "this": [
                 {
-                  "tag": "Experiencia propia · grado",
-                  "tr": "¡No sabes lo contento que me puse al enterarme de que había aprobado!"
+                  "tag": "Pregunta retórica · sentimiento fuerte",
+                  "tr": "¡Qué rápido crecen los niños!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Sentimiento universal",
-                  "tr": "¡Qué rápido pasa el tiempo!"
+                  "tag": "Exclamación directa · tono sereno",
+                  "tr": "Los niños sí que crecen rápido."
                 }
               ],
-              "explain": "Mira si hay un interrogativo: ことか es una exclamación en forma de pregunta retórica, y delante casi siempre va 「どんなに」「どれほど」「何度」; habla de un sentimiento o un número de veces concreto que uno vivió; ものだ no lleva interrogativo y exclama algo que siente todo el mundo (時間が経つのは早い)."
+              "explain": "Dos formas de exclamar sobre lo mismo; fíjate en si hay una palabra interrogativa: ことか tiene forma de pregunta retórica y necesita delante 「なんと」「どんなに」「どれほど」 (o 「何度」 para resaltar cuántas veces); el sentimiento es más fuerte y el estilo más formal. ものだ no lleva palabra interrogativa y exclama directamente, a menudo con 「本当に」「なあ」, en un tono más sereno. Para resaltar «no sé cuántas veces», solo sirve ことか (何度思ったことか)."
             },
             {
               "id": "to-ittara-nai",
-              "diff": "ことか usa la pregunta retórica «¡cuánto…!» y necesita un interrogativo; といったらない va directamente tras un sustantivo o un adjetivo y dice «tan… que no hay palabras».",
+              "diff": "ことか necesita una palabra interrogativa como 「どんなに」 y va tras la forma simple de adjetivos, etc.; といったらない no lleva palabra interrogativa y va tras un sustantivo (los adjetivos pasan a 「〜さ」), con el sentido de «indescriptible».",
               "this": [
                 {
-                  "tag": "Con interrogativo · retórica",
-                  "tr": "¡No sabes la rabia que me dio perder!"
+                  "tag": "Con interrogativo · pregunta retórica",
+                  "tr": "¡Qué angustia pasé cuando me perdí en el camino de montaña!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Tras un sustantivo · al máximo",
-                  "tr": "La rabia que sentí al perder fue indescriptible."
+                  "tag": "Sustantivo en 「〜さ」 · al máximo",
+                  "tr": "La angustia que sentí cuando me perdí en el camino de montaña fue indescriptible."
                 }
               ],
-              "explain": "Fíjate en la estructura: delante de ことか va 「どんなに／どれほど」, y la oración tiene forma de pregunta; delante de といったらない va un sustantivo o un adjetivo como 「悔しさ」「寒さ」, sin interrogativo, para decir directamente que el grado llegó al máximo."
+              "wrong": {
+                "why": "といったらない no se usa con 「どんなに」; si usas 「どんなに」, hay que decir 「どんなに心細かったことか」"
+              },
+              "explain": "Las dos exclaman ante un grado muy alto; la diferencia está en la forma de la oración. ことか necesita delante 「どんなに」「どれほど」 y va tras la forma simple del adjetivo (心細かった＋ことか), como una pregunta retórica llena de emoción. といったらない va tras un sustantivo, así que el adjetivo debe convertirse antes en sustantivo (心細さ＋といったらなかった); no lleva palabra interrogativa y dice directamente que el grado es extremo; en lengua hablada también se dice 「〜ったらありゃしない」. Si quieres usar 「どんなに」, elige ことか; si expresas el sentimiento como 「〜さ」, elige といったらない."
             }
           ]
         }
@@ -27928,15 +27911,15 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「こと＋ない」: «sin que se dé el hecho de…»",
+          "note": "Las dos vienen de 「ない」 (en clásico, 「なし」) — significado original: «no haber»",
           "items": [
             {
               "id": "koto-nashi-ni",
-              "diff": "ことなく solo describe «hizo lo segundo sin…»; tras ことなしに suele venir una negación: «sin…, no se puede…».",
+              "diff": "ことなく describe sin más «hizo lo siguiente sin…»; ことなしに suele ir seguida de una negación: «sin…, no se puede…».",
               "this": [
                 {
-                  "tag": "Describe lo que realmente hizo",
-                  "tr": "Abrió su tienda por sus propios medios, sin depender de nadie."
+                  "tag": "Describe lo que pasó",
+                  "tr": "Abrió su tienda con sus propias fuerzas, sin depender de nadie."
                 }
               ],
               "that": [
@@ -27945,30 +27928,33 @@
                   "tr": "Sin esforzarse, es imposible tener éxito."
                 }
               ],
-              "explain": "Mira la segunda parte: tras ことなしに suelen venir negaciones como 「ありえない」 o 「できない」, y la frase entera significa «si no se hace lo primero, lo segundo no se cumple»; tras ことなく va algo que realmente se hizo (店を開いた), y solo describe «en ausencia de…»."
+              "explain": "Las dos son 「こと (el hecho)」＋«no haber». ことなく usa 「なく」, la forma conjuntiva del 「ない」 moderno: literalmente «en un estado en que no hay…», modifica directamente la acción siguiente → «sin hacer…, hizo…», y describe lo que pasó de verdad (店を開いた); por eso 「休むことなく」 llega a significar «sin parar». ことなしに usa el adjetivo clásico 「なし」＋に: literalmente «si no hay…», y suele ir seguida de una negación como 「ありえない」「できない」 → «sin…, no se puede…», recalcando que lo primero es una condición necesaria. Fíjate en la segunda parte: si es negativa → ことなしに; si es algo que ocurrió de verdad → ことなく."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas significan «sin hacer… (y…)»",
+          "note": "Las dos significan «sin hacer… (y…)»",
           "items": [
             {
               "id": "zuni-without",
-              "diff": "ことなく es más formal y suele recalcar «ni una sola vez» durante mucho tiempo; ずに se usa para el «sin… hizo…» cotidiano.",
+              "diff": "Mismo significado; ことなく es escrito y formal, mientras que ずに es frecuente tanto en el habla cotidiana como por escrito.",
               "this": [
                 {
-                  "tag": "Formal · ni una sola vez",
-                  "tr": "Durante diez años trabajó sin descansar ni un solo día."
+                  "tag": "Escrito · formal",
+                  "tr": "Decidió estudiar en el extranjero sin consultarlo con nadie."
                 }
               ],
               "that": [
                 {
-                  "tag": "Detalle cotidiano",
-                  "tr": "Fui a la escuela sin desayunar."
+                  "tag": "Cotidiano · frecuente",
+                  "tr": "Decidió estudiar en el extranjero sin consultarlo con nadie."
                 }
               ],
-              "explain": "Mira el contexto y el tono: en textos o discursos que recalcan «ni una vez en mucho tiempo» (一日も、一度も) → ことなく; cuando en la vida diaria no se hace algo → ずに, y más coloquial aún, ないで. También cambia la conexión: ことなく va con la forma diccionario (休む＋ことなく) y ずに con la forma ない (食べ＋ずに)."
+              "wrong": {
+                "why": "ことなく va tras la forma diccionario (相談する＋ことなく); la que va tras la forma ない sin ない es ずに (相談せ＋ずに)"
+              },
+              "explain": "Las dos sirven en la misma oración; fíjate en el contexto: en noticias, discursos o textos, con un tono formal → ことなく; en la conversación diaria o en textos corrientes → ずに, y en un registro más informal, ないで. La unión es distinta: ことなく va tras la forma diccionario (相談する＋ことなく), mientras que ずに va tras la forma ない sin ない (相談せ＋ずに; する pasa a せ)."
             }
           ]
         }
@@ -27978,25 +27964,25 @@
       "id": "koto-ni-wa",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Ambas pueden adelantar el sentimiento y luego decir el hecho que lo provoca: «lo sorprendente es que…»",
+          "kind": "look",
+          "note": "Misma escritura 「ことには」; solo cambia lo de delante: palabra de emoción ↔ forma ない",
           "items": [
             {
-              "id": "no-wa-emphasis",
-              "diff": "ことに es más formal: primero da la valoración y luego una frase completa con el hecho; 〜のは〜だ es habitual al hablar y deja el hecho al final como foco.",
+              "id": "nai-koto-ni-wa",
+              "diff": "Palabra de emoción＋ことには significa «lo… es que»; forma ない＋ことには significa «si no…, no hay manera», y la segunda parte siempre es negativa.",
               "this": [
                 {
-                  "tag": "Formal · valoración primero",
-                  "tr": "Para mi sorpresa, él leyó ese libro entero en una sola noche."
+                  "tag": "Emoción → lo… es que",
+                  "tr": "Lo que agradezco es que los vecinos vinieron a ayudar todos los días."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hablado · el hecho como foco",
-                  "tr": "Lo que me sorprendió fue que él leyó ese libro en una sola noche."
+                  "tag": "Forma ない → si no…",
+                  "tr": "Si los vecinos no ayudan, la mudanza no se terminará."
                 }
               ],
-              "explain": "Mira la forma de la segunda parte: tras ことに va una frase completa normal (彼は〜読み終えた) con el sujeto marcado con 「は」; tras 〜のは hay que cerrar el hecho como sustantivo con 「〜ことだ」, y el sujeto pasa a 「が」. El significado es casi el mismo; ことに suena más a lengua escrita."
+              "explain": "「ことには」 se ve igual, así que fíjate en lo que va delante: un adjetivo de emoción o una palabra que expresa un sentimiento (ありがたい、残念な、驚いた)＋ことには → «lo… es que»: primero se dice el sentimiento y luego se cuenta directamente un hecho ya ocurrido; un verbo en forma ない (手伝ってくれない)＋ことには → «si no…, no hay manera»: lo primero es una condición necesaria y la segunda parte siempre es negativa (終わらない、分からない)."
             }
           ]
         }
@@ -28006,65 +27992,25 @@
       "id": "koto-niwa-naranai",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambas vienen de 「ことになる」: «la cosa acaba siendo…»",
-          "items": [
-            {
-              "id": "koto-ni-naru",
-              "diff": "forma た＋ことにはならない es «no cuenta como…»; forma diccionario＋ことになる suele indicar «se ha decidido que…».",
-              "this": [
-                {
-                  "tag": "Forma た → no cuenta",
-                  "tr": "Pedir perdón una sola vez no significa haber reflexionado."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Forma diccionario → decisión",
-                  "tr": "A partir del mes que viene me trasladan a Osaka."
-                }
-              ],
-              "explain": "Mira la forma del verbo delante de 「こと」: forma た (謝った、理解した)＋ことにはならない → se juzga si esa acción cuenta o no; forma diccionario (転勤する)＋ことになった → algo ha quedado decidido, sin relación con si «cuenta» o no."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Ambas niegan una deducción que parecería «lógica»",
+          "note": "Las dos significan «no equivale a…»",
           "items": [
             {
               "id": "wake-dewa-nai",
-              "diff": "ことにはならない juzga si una acción «está a la altura» de algo; わけではない corrige un posible malentendido: «no es que…».",
+              "diff": "Las dos niegan «de esto se deduce que…»; ことにはならない es un veredicto razonado, «solo con esto no se puede concluir», y わけではない es más suave y sobre todo corrige lo que alguien supone.",
               "this": [
                 {
-                  "tag": "Acción → no cuenta",
-                  "tr": "Haber ido solo una vez no significa conocer ese país."
+                  "tag": "Veredicto · no se puede concluir",
+                  "tr": "Tomar un medicamento caro no equivale a estar curado."
                 }
               ],
               "that": [
                 {
-                  "tag": "Corrige un malentendido",
-                  "tr": "No es que no me guste la carne; es que hoy no me apetece."
+                  "tag": "Suave · corrige una idea",
+                  "tr": "Tomar un medicamento caro no quiere decir que la enfermedad esté curada."
                 }
               ],
-              "explain": "Mira qué va delante: una acción concreta (行った、読んだ)＋だけでは〜ことにはならない → esa acción todavía no llega al nivel; un sentimiento o estado (嫌いな、知らない)＋わけではない → corrige un posible malentendido del otro, y a menudo se añade la realidad después (〜だけだ)."
-            },
-            {
-              "id": "to-wa-kagiranai",
-              "diff": "とは限らない dice «no necesariamente» y deja margen; ことにはならない dictamina directamente «no cuenta», con un tono más tajante.",
-              "this": [
-                {
-                  "tag": "Dictamen · no cuenta",
-                  "tr": "Sacar la nota máxima en un examen no basta para decir que sabes inglés."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Posibilidad · no necesariamente",
-                  "tr": "Aunque saques la nota máxima en el examen, no necesariamente sabrás hablar inglés."
-                }
-              ],
-              "explain": "Mira qué juzga el hablante: si algo «es posible o no» → とは限らない, es decir, «puede que sí, puede que no»; si una acción «está a la altura» → ことにはならない, una negación directa."
+              "explain": "Las dos sirven en la misma oración y significan «lo segundo no se deduce de lo primero». Fíjate en el tono y el contexto: como quien da un veredicto, juzgando por lógica o por normas que «solo con esto no cuenta / no se puede concluir» → ことにはならない, frecuente en argumentaciones y explicaciones; si solo se corrige con suavidad una idea que el oyente o la gente en general podría tener, «no es que…» → わけではない, más común en la conversación diaria, y a menudo seguida de 「が」「けど」 y de lo que de verdad pasa."
             }
           ]
         }
@@ -28074,25 +28020,26 @@
       "id": "koto-to-naru-to",
       "groups": [
         {
-          "kind": "look",
-          "note": "のことになると ↔ ことになる: solo cambia un 「と」",
+          "kind": "meaning",
+          "note": "Las dos significan «en cuanto se trata de… (entonces…)»",
           "items": [
             {
-              "id": "koto-ni-naru",
-              "diff": "のことになると es «en cuanto se trata de…, …»; ことになる es «se decide / resulta que…».",
+              "id": "to-naru-to",
+              "title": "〜となると (en cuanto se trata de…)",
+              "diff": "Para decir que alguien cambia en cuanto sale un tema, sirven las dos; のこととなると abarca «todo lo relacionado con…» y va seguida de la reacción de una persona; となると va directamente tras un sustantivo y también puede ir seguida de un juicio general.",
               "this": [
                 {
-                  "tag": "Sustantivo＋の → tema",
-                  "tr": "En cuanto se habla de coches, mi hermano mayor no para de hablar."
+                  "tag": "Todo lo relacionado · reacción de alguien",
+                  "tr": "En cuanto se trata de videojuegos, mi hermano se engancha tanto que ni duerme por la noche."
                 }
               ],
               "that": [
                 {
-                  "tag": "Verbo → decisión",
-                  "tr": "A partir del mes que viene, a mi hermano mayor lo trasladan a Osaka."
+                  "tag": "Directo tras sustantivo · más conciso",
+                  "tr": "Cuando hay videojuegos de por medio, mi hermano se engancha tanto que ni duerme por la noche."
                 }
               ],
-              "explain": "Mira lo que va delante de 「こと」: «sustantivo＋の» (車の)＋ことになると, donde 「こと」 es «el asunto de…» y detrás va cómo reacciona la persona; forma diccionario del verbo (転勤する)＋ことになる indica una decisión o un resultado natural. Con ese 「と」 de más, la frase sigue con otra parte. こととなると también significa «en cuanto se trata de»."
+              "explain": "Para decir que alguien se vuelve distinto de lo habitual en cuanto sale cierto tema, sirven las dos: 「sustantivo＋の＋こととなると」 plantea el alcance como «todo lo relacionado con…», resalta lo inusual de la persona y casi siempre va seguida de una reacción suya (夢中になる、人が変わる); 「sustantivo＋となると」 va directamente tras el sustantivo, es más concisa y también puede ir seguida de un juicio general sobre el asunto en sí (引っ越しとなると準備が大変だ); en ese caso no se suele usar こととなると."
             }
           ]
         }

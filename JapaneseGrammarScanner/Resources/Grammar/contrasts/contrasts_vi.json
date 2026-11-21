@@ -27600,11 +27600,51 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「と言う」 — nghĩa đen là “dù có nói vậy”, nên đều diễn tả sự nhượng bộ",
+          "note": "Đều bắt nguồn từ 「言う」 — nghĩa gốc là “nói”",
+          "items": [
+            {
+              "id": "to-ittemo",
+              "diff": "からといって là “lấy ‘vì…’ ra mà nói”, phủ định kết luận suy ra từ lý do đó; といっても là “dù nói vậy”, thừa nhận lời nói rồi hạ mức độ thực tế xuống.",
+              "this": [
+                {
+                  "tag": "Phủ định suy luận",
+                  "tr": "Biết nấu ăn không có nghĩa là mở được quán."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Hạ kỳ vọng",
+                  "tr": "Nói là biết nấu ăn, nhưng cũng chỉ là món đơn giản thôi."
+                }
+              ],
+              "explain": "Cả hai đều chứa 「言う」 (nói). からといって = 「〜から」と言って, nghĩa đen là “lấy ‘vì…’ làm lý do mà nói”, từ đó dẫn tới suy luận “chỉ vì lý do này mà…”, và vế sau phủ định suy luận ấy (わけではない、とは限らない). といっても = 「〜と」言っても, nghĩa đen là “dù nói vậy”: trước hết thừa nhận lời nói, rồi bổ sung tình hình thực tế, kéo mức độ xuống (〜だけだ、〜しかない). Khi vế trước giống nhau, hãy xem vế sau: phủ định suy luận → からといって; bổ sung “thật ra chỉ là…” → といっても."
+            },
+            {
+              "id": "to-wa-ie",
+              "diff": "からといって là “lấy ‘vì…’ ra mà nói”, phủ định kết luận suy ra từ lý do; とはいえ là “tuy có thể nói vậy”, thừa nhận sự thật rồi nói ra thực tế trái ngược, thiên về văn viết.",
+              "this": [
+                {
+                  "tag": "Phủ định suy luận",
+                  "tr": "Sang tháng Tư rồi cũng không có nghĩa là trời sẽ ấm lên ngay."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Thừa nhận sự thật · thực tế trái ngược",
+                  "tr": "Tuy đã là tháng Tư, sáng tối vẫn còn lạnh."
+                }
+              ],
+              "explain": "Cả hai đều chứa 「言う」 (nói). からといって = 「〜から」と言って, nghĩa đen là “lấy ‘vì…’ làm lý do mà nói”, nên vế sau phủ định kết luận suy ra từ lý do đó (わけではない). とはいえ bắt nguồn từ văn ngữ 「とは言えども」 (“tuy có thể nói là…”), nên trước hết thừa nhận sự thật ở vế trước, rồi nói thẳng ra thực tế trái với dự đoán (まだ寒い); vế sau không nhất thiết là phủ định. Để phân biệt, hãy xem hai vế: vế trước là lý do, vế sau phủ định “nên là…” → からといって; vế trước là sự thật được thừa nhận, vế sau có những từ như 「まだ」「やはり」 nói ra thực tế trái ngược → とはいえ, thiên về văn viết và còn có thể đứng riêng ở đầu câu."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "からといって ↔ かといって, chỉ khác một chữ 「ら」",
           "items": [
             {
               "id": "ka-to-itte",
-              "diff": "からといって đi sau lý do, nói “không thể vì… mà…”; かといって đặt đầu câu, nói “nhưng làm ngược lại cũng không được”.",
+              "diff": "からといって đi sau lý do, nói “không thể vì… mà…”; かといって mở đầu câu mới sau dấu chấm, nói “nói vậy chứ… cũng không được”.",
               "this": [
                 {
                   "tag": "Sau lý do · không thể vì thế mà…",
@@ -27614,44 +27654,10 @@
               "that": [
                 {
                   "tag": "Đầu câu · tiến thoái lưỡng nan",
-                  "tr": "Công việc vất vả. Nhưng nói vậy thì cũng không thể nghỉ việc."
+                  "tr": "Công việc thì vất vả. Nhưng nói vậy chứ cũng không thể nghỉ được."
                 }
               ],
-              "explain": "Xem phía trước 「といって」: đi liền sau lý do (辛い＋からといって) → phủ định suy nghĩ “vì lý do này mà nên…”; đứng riêng làm câu mới sau dấu chấm (かといって) → thừa nhận tình hình phía trước, nhưng con đường kia cũng không đi được, phía sau phần nhiều là 「〜わけにもいかない」「〜もない」."
-            },
-            {
-              "id": "to-ittemo",
-              "diff": "からといって phủ định kết luận suy ra từ lý do; といっても điều chỉnh lại cách nói phía trước, hạ thấp kỳ vọng của đối phương.",
-              "this": [
-                {
-                  "tag": "Phủ định suy luận",
-                  "tr": "Biết nấu ăn không có nghĩa là mở được quán."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Hạ thấp kỳ vọng",
-                  "tr": "Nói là biết nấu ăn, chứ cũng chỉ làm được mấy món đơn giản."
-                }
-              ],
-              "explain": "Nửa đầu giống nhau, hãy xem nửa sau: sau からといって là phủ định suy luận “vậy nên sẽ…” (わけではない、とは限らない); sau といっても là bổ sung tình hình thực tế, kéo mức độ xuống (〜だけだ、〜くらいだ)."
-            },
-            {
-              "id": "to-wa-ie",
-              "diff": "Sau からといって là phủ định; とはいえ là “tuy nói… nhưng…” trong văn viết, phía sau nói thẳng thực tế trái với dự đoán.",
-              "this": [
-                {
-                  "tag": "Phủ định suy luận",
-                  "tr": "Đến mùa xuân rồi cũng không có nghĩa là trời sẽ ấm lên ngay."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nói thẳng thực tế",
-                  "tr": "Tuy nói là mùa xuân nhưng trời vẫn còn lạnh."
-                }
-              ],
-              "explain": "Xem nửa sau: cuối câu của からといって phần nhiều là phủ định kiểu 「わけではない」「とは限らない」「〜てはいけない」; sau とはいえ nói thẳng sự thật trái với dự đoán (まだ寒い), không nhất thiết phủ định, thiên về văn viết, còn có thể đứng riêng ở đầu câu."
+              "explain": "Chỉ khác một chữ 「ら」, hãy xem phía trước 「といって」: có 「ら」, đi ngay sau lý do (辛い＋からといって) → phủ định ý nghĩ “vì lý do này nên phải…”; không có 「ら」, mở đầu câu mới sau dấu chấm (。かといって) → thừa nhận tình hình phía trước, nhưng con đường kia cũng không đi được, phía sau thường là 「〜わけにもいかない」「〜もない」, diễn tả tâm trạng tiến thoái lưỡng nan."
             }
           ]
         }
@@ -27662,44 +27668,52 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “có khuynh hướng／xu hướng…”",
+          "sense": 1,
+          "note": "Đều diễn tả “có khuynh hướng…”",
           "items": [
             {
               "id": "gachi",
               "thisTitle": "〜傾向がある",
-              "diff": "傾向がある khách quan, trung tính, hay dùng trong khảo sát, báo cáo; がち thiên về văn nói, phần nhiều nói tình trạng không tốt, dễ lặp lại.",
+              "diff": "傾向がある khách quan, trung tính, hay dùng trong khảo sát, báo cáo; がち mang đánh giá của người nói, phần nhiều nói chuyện không tốt, dễ lặp đi lặp lại.",
               "this": [
                 {
                   "tag": "Khách quan · báo cáo",
-                  "tr": "Theo khảo sát, vào mùa đông mọi người có khuynh hướng thiếu vận động."
+                  "tr": "Theo khảo sát, mùa đông người ta có khuynh hướng thiếu vận động."
                 }
               ],
               "that": [
                 {
-                  "tag": "Văn nói · chuyện không tốt",
-                  "tr": "Mùa đông là cứ dễ thiếu vận động."
+                  "tag": "Chuyện không tốt · có đánh giá",
+                  "tr": "Mùa đông cứ hay bị thiếu vận động."
                 }
               ],
-              "explain": "Xem sắc thái và cách nối: miêu tả khách quan trong khảo sát, tin tức → 傾向がある (đi với thể từ điển hoặc “danh từ＋の”); nói chuyện của mình hay người xung quanh, có chút cảm giác “không tốt”, hay đi cùng 「つい」 → がち (đi với thể ます bỏ ます: なり＋がち, hoặc danh từ: 病気がち)."
+              "explain": "Xem sắc thái: dẫn khảo sát, tin tức như 「調査によると」 và miêu tả khách quan một hiện tượng → 傾向がある (đi sau thể từ điển: なる＋傾向がある); nói chuyện không hay thường xảy ra với mình hay người xung quanh, hay đi với 「つい」「どうしても」 → がち (đi sau thể ます bỏ ます: なり＋がち)."
             },
             {
               "id": "kirai-ga-aru",
               "thisTitle": "〜傾向がある",
-              "diff": "傾向がある trung tính, khách quan; きらいがある chỉ nói khuynh hướng không tốt, mang ý phê bình, rất văn viết.",
+              "diff": "傾向がある chỉ miêu tả khách quan, tốt xấu đều dùng được; きらいがある chỉ nói khuynh hướng xấu, mang ý phê phán, thiên về văn viết.",
               "this": [
                 {
-                  "tag": "Trung tính · nhóm người",
-                  "tr": "Sinh viên gần đây có khuynh hướng chuyện gì cũng tra trên mạng."
+                  "tag": "Trung tính · miêu tả khách quan",
+                  "tr": "Trưởng phòng của chúng tôi có khuynh hướng chuyện gì cũng tự quyết một mình."
                 }
               ],
               "that": [
                 {
-                  "tag": "Phê bình · tật cá nhân",
-                  "tr": "Anh ấy có tật chuyện gì cũng tự mình quyết định."
+                  "tag": "Phê phán · tật xấu",
+                  "tr": "Trưởng phòng của chúng tôi có cái tật chuyện gì cũng tự mình quyết luôn."
                 }
               ],
-              "explain": "Xem thái độ người nói: chỉ miêu tả hiện tượng, thống kê → 傾向がある; không hài lòng với tác phong của ai đó, mang ý phê bình → きらいがある (hay gặp trong bài viết, chủ ngữ phần nhiều là một người cụ thể)."
-            },
+              "explain": "Cùng một chuyện, hãy xem thái độ người nói: chỉ miêu tả khách quan hiện tượng, không đánh giá tốt xấu → 傾向がある; coi đó là tật xấu, mang ý phê phán, bất mãn → きらいがある, hay đi với 「〜てしまう」, phần nhiều gặp trong văn viết hoặc lời nói trang trọng. きらいがある không dùng cho khuynh hướng tốt."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều diễn tả “có xu hướng thay đổi theo một chiều”",
+          "items": [
             {
               "id": "ippou-da",
               "thisTitle": "〜傾向にある",
@@ -27774,59 +27788,25 @@
       "id": "koto-dakara",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Đều diễn tả lý do hay căn cứ của phán đoán",
+          "kind": "look",
+          "note": "ことだから ↔ ことから, chỉ khác một chữ 「だ」",
           "items": [
             {
-              "id": "dake-atte",
-              "diff": "ことだから dựa vào tác phong nhất quán của một người để suy đoán việc chưa xảy ra; だけあって nói “đúng là… có khác” về kết quả đã thấy.",
-              "this": [
-                {
-                  "tag": "Suy đoán · chưa xảy ra",
-                  "tr": "Anh ấy vốn nghiêm túc, chắc chắn sẽ không đến muộn đâu."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Đánh giá · đã thấy",
-                  "tr": "Đúng là đầu bếp chuyên nghiệp có khác, món ăn ngon thật."
-                }
-              ],
-              "explain": "Xem nửa sau: sau ことだから phần nhiều là suy đoán về việc chưa xảy ra kiểu 「きっと〜だろう」「〜に違いない」; sau だけあって là kết quả đã thấy, hay đi cùng 「さすが」, thể hiện sự thán phục. Cách nối cũng khác: ことだから đi với “người＋の”, だけあって đi thẳng với danh từ (プロだけあって)."
-            },
-            {
-              "id": "koto-dashi",
-              "diff": "ことだから đi với “người＋の”, phía sau là suy đoán; ことだし lấy tình hình trước mắt làm lý do, phía sau là đề nghị hay quyết định.",
-              "this": [
-                {
-                  "tag": "Tác phong của người → suy đoán",
-                  "tr": "Tính cô ấy thế, chắc chắn đã chuẩn bị xong rồi."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tình hình trước mắt → đề nghị",
-                  "tr": "Mưa cũng tạnh rồi, chắc đến lúc ra ngoài thôi."
-                }
-              ],
-              "explain": "Xem phía trước là gì và cuối câu: “người＋の” (彼女の)＋ことだから, phía sau là suy đoán về người này (きっと〜だろう); thể thông thường (やんだ)＋ことだし, phía sau là đề nghị hay quyết định kiểu 「〜よう」「〜ましょう」."
-            },
-            {
               "id": "koto-kara",
-              "diff": "ことだから suy đoán dựa vào đặc điểm nhất quán của người hay sự vật; ことから lấy một sự thật cụ thể làm căn cứ, giải thích nguồn gốc của tên gọi hay phán đoán, thiên về văn viết.",
+              "diff": "Người＋の＋ことだから suy đoán dựa vào tính cách xưa nay của người đó; thể thông thường＋ことから lấy một sự thật cụ thể làm căn cứ để giải thích nguyên nhân, nguồn gốc hay rút ra phán đoán.",
               "this": [
                 {
-                  "tag": "Đặc điểm của người → suy đoán",
-                  "tr": "Trưởng phòng vốn thận trọng, chắc sẽ không quyết định ngay đâu."
+                  "tag": "Người＋の → suy đoán",
+                  "tr": "Anh trai tôi vốn rất nghiêm về giờ giấc, chắc chắn đã đến ga rồi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sự thật cụ thể → nguồn gốc",
-                  "tr": "Vì hình dáng giống núi Phú Sĩ nên ngọn núi này được gọi là “Tiểu Phú Sĩ”."
+                  "tag": "Sự thật → căn cứ phán đoán",
+                  "tr": "Từ việc đèn trong phòng đang sáng, tôi biết anh trai đã về rồi."
                 }
               ],
-              "explain": "Chỉ khác một chữ 「だ」, hãy xem phía trước là gì: “người＋の”＋ことだから, dựa vào tính cách, tính chất ai cũng biết; một sự thật ở thể thông thường (似ている)＋ことから, hay dùng để giải thích nguồn gốc tên gọi hay căn cứ suy luận (〜と呼ばれている、〜とわかった)."
+              "explain": "Chỉ khác một chữ 「だ」, hãy xem phía trước 「こと」 và cuối câu: 「người＋の」 (兄の)＋ことだから → suy đoán dựa vào tính cách mà ai cũng biết của người đó, phía sau thường là 「きっと」「だろう」; một sự thật ở thể thông thường (ついている)＋ことから → lấy sự thật cụ thể đó làm căn cứ, phía sau thường là phán đoán hay giải thích nguồn gốc như 「〜とわかった」「〜と呼ばれている」, thiên về văn viết."
             }
           ]
         }
@@ -27837,24 +27817,24 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả lý do hay căn cứ của phán đoán",
+          "note": "Đều diễn tả “nêu lý do rồi thuận đà đưa ra đề nghị”",
           "items": [
             {
-              "id": "koto-dakara",
-              "diff": "ことだし lấy tình hình trước mắt làm lý do, phía sau là đề nghị hay quyết định; ことだから đi với “người＋の”, phía sau là suy đoán.",
+              "id": "no-dakara",
+              "diff": "ことだし nêu nhẹ nhàng một lý do, ngầm ý còn lý do khác; のだから coi lý do là sự thật cả hai bên đều thừa nhận, giọng mạnh, mang ý thuyết phục, giục giã.",
               "this": [
                 {
-                  "tag": "Tình hình trước mắt → đề nghị",
-                  "tr": "Mưa cũng tạnh rồi, chắc đến lúc ra ngoài thôi."
+                  "tag": "Nhẹ nhàng · bàn bạc",
+                  "tr": "Khó khăn lắm mới xin nghỉ được, hay mình đi suối nước nóng nhé?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Tác phong của người → suy đoán",
-                  "tr": "Tính cô ấy thế, chắc chắn đã chuẩn bị xong rồi."
+                  "tag": "Giọng mạnh · giục giã",
+                  "tr": "Đã khó khăn lắm mới xin nghỉ được rồi, đi suối nước nóng đi mà."
                 }
               ],
-              "explain": "Xem phía trước là gì và cuối câu: thể thông thường (やんだ)＋ことだし, phía sau là đề nghị hay quyết định kiểu 「〜よう」「〜ましょう」; “người＋の” (彼女の)＋ことだから, phía sau là suy đoán về người này (きっと〜だろう)."
+              "explain": "Cùng một lý do, hãy xem giọng điệu: ことだし chỉ tiện miệng đưa ra một lý do (còn ngầm ý có lý do khác), phía sau thường là đề nghị mang giọng bàn bạc như 「〜ようか」「〜ましょう」; のだから (văn nói là んだから) đưa lý do ra như một sự thật mà người nghe cũng thừa nhận, không cãi được, nên giọng mạnh hơn, có ý thuyết phục, giục giã đối phương, phía sau thường là chủ trương hay yêu cầu như 「〜よ」「〜なさい」「〜てよ」."
             },
             {
               "id": "shi",
@@ -27871,7 +27851,7 @@
                   "tr": "Mưa tạnh rồi, gió cũng dễ chịu, đi dạo một chút nhé?"
                 }
               ],
-              "explain": "Cuối ことだし chính là 「し」 dùng để liệt kê lý do này, nên cũng ngầm ý “còn có lý do khác nữa”. Xem có mấy lý do: đặt song song hai ba lý do (〜し、〜し) → し; chỉ lấy một tình hình có sẵn làm lý do rồi thuận đà đề nghị → ことだし, phía trước thường có 「も」 (雨もやんだことだし)."
+              "explain": "Cuối ことだし chính là 「し」 dùng để liệt kê lý do này, nên cũng ngầm ý “còn có lý do khác nữa”. Xem có mấy lý do: đặt song song hai ba lý do (雨もやんだし、風も気持ちいいし) → し; chỉ lấy một tình hình có sẵn làm lý do rồi thuận đà đề nghị → ことだし, phía trước thường có 「も」 (雨もやんだことだし)."
             }
           ]
         }
@@ -27882,42 +27862,45 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều dùng để bày tỏ cảm xúc mạnh mẽ",
+          "note": "Đều diễn tả cảm thán “… biết bao!”",
           "items": [
             {
               "id": "mono-da",
-              "title": "〜ものだ（Cảm thán）",
-              "diff": "ことか cảm thán mức độ, số lần trong trải nghiệm của mình, hay đi với 「どんなに」「何度」; ものだ cảm thán lẽ thường tình của con người, đạo lý chung.",
+              "title": "〜ものだ (cảm thán)",
+              "diff": "ことか cảm thán bằng hình thức câu hỏi tu từ, phải hô ứng với 「なんと」「どんなに」「何度」, cảm xúc mạnh hơn, thiên về văn viết; ものだ cảm thán trực tiếp, hay đi với 「本当に」「なあ」, văn nói cũng dùng nhiều.",
               "this": [
                 {
-                  "tag": "Trải nghiệm của mình · mức độ",
-                  "tr": "Khi nghe tin thi đỗ, tôi đã vui biết bao nhiêu."
+                  "tag": "Hỏi tu từ · cảm xúc mạnh",
+                  "tr": "Trẻ con lớn nhanh biết bao!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Lẽ thường tình",
-                  "tr": "Thời gian trôi qua thật nhanh."
+                  "tag": "Cảm thán trực tiếp · điềm đạm",
+                  "tr": "Trẻ con lớn nhanh thật đấy."
                 }
               ],
-              "explain": "Xem có từ để hỏi không: ことか là cảm thán theo kiểu phản vấn, phía trước hầu như luôn có 「どんなに」「どれほど」「何度」, nói cảm nhận hay số lần cụ thể của mình; ものだ không đi với từ để hỏi, cảm thán điều ai cũng cảm nhận (時間が経つのは早い)."
+              "explain": "Hai cách cảm thán về cùng một chuyện, hãy xem có từ để hỏi hay không: ことか là hình thức câu hỏi tu từ, phía trước phải có 「なんと」「どんなに」「どれほど」 (nhấn mạnh số lần thì dùng 「何度」), cảm xúc mạnh hơn, thiên về văn viết; ものだ không dùng từ để hỏi, hay đi với 「本当に」「なあ」 để cảm thán trực tiếp, giọng điềm đạm. Khi nhấn mạnh “không biết bao nhiêu lần” thì chỉ dùng được ことか (何度思ったことか)."
             },
             {
               "id": "to-ittara-nai",
-              "diff": "ことか dùng phản vấn “… biết bao”, phải đi với từ để hỏi; といったらない đi thẳng sau danh từ, tính từ, nói “… không sao tả xiết”.",
+              "diff": "ことか phải đi với từ để hỏi như 「どんなに」, nối sau thể thông thường của tính từ v.v.; といったらない không dùng từ để hỏi, nối sau danh từ (tính từ đổi thành 「〜さ」), nói “… không sao tả xiết”.",
               "this": [
                 {
-                  "tag": "Đi với từ để hỏi · phản vấn",
-                  "tr": "Lúc thua, tôi đã tiếc nuối biết bao nhiêu."
+                  "tag": "Có từ để hỏi · hỏi tu từ",
+                  "tr": "Lúc lạc đường trên núi, tôi đã hoang mang biết bao."
                 }
               ],
               "that": [
                 {
-                  "tag": "Đi thẳng với danh từ · cực điểm",
-                  "tr": "Nỗi tiếc nuối lúc thua thật không sao tả xiết."
+                  "tag": "Danh từ 「〜さ」 · tột độ",
+                  "tr": "Nỗi hoang mang lúc lạc đường trên núi thật không sao tả xiết."
                 }
               ],
-              "explain": "Xem cấu trúc: trước ことか có 「どんなに／どれほど」, câu ở dạng nghi vấn; trước といったらない là danh từ hay tính từ như 「悔しさ」「寒さ」, không dùng từ để hỏi, nói thẳng mức độ đã lên đến cực điểm."
+              "wrong": {
+                "why": "といったらない không dùng với 「どんなに」; đã dùng 「どんなに」 thì phải nói 「どんなに心細かったことか」"
+              },
+              "explain": "Cả hai đều cảm thán mức độ sâu sắc, khác nhau ở hình thức câu: ことか phía trước phải có 「どんなに」「どれほど」, nối sau thể thông thường của tính từ (心細かった＋ことか), là câu hỏi tu từ đầy cảm khái; といったらない nối sau danh từ, tính từ phải đổi thành danh từ trước (心細さ＋といったらなかった), không dùng từ để hỏi, nói thẳng mức độ đã lên đến tột cùng, văn nói còn có thể nói 「〜ったらありゃしない」. Muốn dùng 「どんなに」 thì chọn ことか; muốn nói cảm xúc dưới dạng 「〜さ」 thì chọn といったらない."
             }
           ]
         }
@@ -27928,24 +27911,24 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「こと＋ない」 — “không có việc…”",
+          "note": "Đều bắt nguồn từ 「ない」 (văn ngữ là 「なし」) — nghĩa gốc là “không có”",
           "items": [
             {
               "id": "koto-nashi-ni",
-              "diff": "ことなく chỉ miêu tả “không… mà vẫn làm vế sau”; sau ことなしに thường là phủ định, nghĩa là “không… thì không thể…”.",
+              "diff": "ことなく chỉ miêu tả “không… mà đã làm việc sau”; ことなしに phía sau thường là phủ định, diễn tả “không… thì không thể…”.",
               "this": [
                 {
                   "tag": "Miêu tả việc đã thực sự làm",
-                  "tr": "Anh ấy không dựa dẫm vào ai, đã tự sức mình mở được cửa hàng."
+                  "tr": "Anh ấy không dựa vào ai, tự sức mình mở được cửa hàng."
                 }
               ],
               "that": [
                 {
                   "tag": "Điều kiện · sau là phủ định",
-                  "tr": "Không nỗ lực thì không thể thành công."
+                  "tr": "Không nỗ lực thì không thể nào thành công."
                 }
               ],
-              "explain": "Nhìn nửa câu sau: sau ことなしに thường là phủ định kiểu 「ありえない」, 「できない」, cả câu nghĩa là “không làm vế trước thì vế sau không thành”; sau ことなく là việc đã thực sự làm (店を開いた), chỉ miêu tả “trong tình trạng không…”."
+              "explain": "Cả hai đều là 「こと (việc đó)」＋“không có”. ことなく dùng 「なく」, thể liên dụng của 「ない」 hiện đại, nghĩa đen là “trong trạng thái không có việc…”, bổ nghĩa thẳng cho hành động phía sau → “không… mà…”, nói việc đã thực sự xảy ra (店を開いた); vì thế 「休むことなく」 thành “không ngừng”. ことなしに dùng tính từ văn ngữ 「なし」＋に, nghĩa đen là “nếu không có…”, phía sau thường là phủ định như 「ありえない」「できない」 → “không… thì không thể…”, nhấn mạnh vế trước là điều kiện cần. Xem vế sau: là phủ định → ことなしに; là việc đã thực sự làm → ことなく."
             }
           ]
         },
@@ -27955,20 +27938,23 @@
           "items": [
             {
               "id": "zuni-without",
-              "diff": "ことなく trang trọng hơn, thường nhấn mạnh suốt thời gian dài “không một lần nào…”; ずに dùng cho “không… mà…” trong đời thường.",
+              "diff": "Nghĩa giống nhau; ことなく thiên về văn viết, trang trọng; ずに dùng nhiều cả trong đời thường lẫn văn viết.",
               "this": [
                 {
-                  "tag": "Văn viết · không một lần nào",
-                  "tr": "Suốt mười năm không nghỉ một ngày nào, cứ làm việc liên tục."
+                  "tag": "Văn viết · trang trọng",
+                  "tr": "Anh ấy không bàn với ai mà đã quyết định đi du học."
                 }
               ],
               "that": [
                 {
-                  "tag": "Chuyện nhỏ thường ngày",
-                  "tr": "Không ăn sáng mà đi học luôn."
+                  "tag": "Đời thường · dùng nhiều",
+                  "tr": "Anh ấy không bàn với ai mà đã quyết định đi du học."
                 }
               ],
-              "explain": "Nhìn hoàn cảnh và giọng điệu: trong văn viết, diễn văn, nhấn mạnh “suốt thời gian dài không một lần nào” (一日も, 一度も) → ことなく; trong đời thường không làm việc gì đó → ずに, khẩu ngữ hơn thì nói ないで. Cách nối cũng khác: ことなく nối với thể từ điển (休む＋ことなく), ずに nối với thể ない (食べ＋ずに)."
+              "wrong": {
+                "why": "ことなく đi sau thể từ điển (相談する＋ことなく); đi sau thể ない bỏ ない là ずに (相談せ＋ずに)"
+              },
+              "explain": "Cùng một câu đều dùng được cả hai, hãy xem hoàn cảnh: nói trang trọng trong tin tức, diễn văn, bài viết → ことなく; hội thoại hằng ngày, bài viết thông thường → ずに, nói suồng sã hơn thì dùng ないで. Cách nối cũng khác: ことなく đi sau thể từ điển (相談する＋ことなく), ずに đi sau thể ない bỏ ない (相談せ＋ずに, する đổi thành せ)."
             }
           ]
         }
@@ -27978,25 +27964,25 @@
       "id": "koto-ni-wa",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Đều có thể nêu cảm xúc trước, rồi mới nói sự việc gây ra nó: “điều khiến… là”",
+          "kind": "look",
+          "note": "Cách viết 「ことには」 giống nhau, chỉ khác phía trước: từ chỉ cảm xúc ↔ thể ない",
           "items": [
             {
-              "id": "no-wa-emphasis",
-              "diff": "ことに trang trọng hơn, đưa ra đánh giá trước, sau là một câu sự việc hoàn chỉnh; 〜のは〜だ hay dùng trong khẩu ngữ, đặt sự việc ở cuối câu làm tiêu điểm.",
+              "id": "nai-koto-ni-wa",
+              "diff": "Từ chỉ cảm xúc＋ことには là “điều… là”; thể ない＋ことには là “nếu không… thì không được”, vế sau nhất định là phủ định.",
               "this": [
                 {
-                  "tag": "Văn viết · đánh giá trước",
-                  "tr": "Thật đáng ngạc nhiên, anh ấy đã đọc xong cuốn sách đó chỉ trong một đêm."
+                  "tag": "Từ cảm xúc → điều… là",
+                  "tr": "Điều đáng biết ơn là hàng xóm ngày nào cũng đến giúp."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khẩu ngữ · sự việc làm tiêu điểm",
-                  "tr": "Điều làm tôi ngạc nhiên là anh ấy đã đọc xong cuốn sách đó chỉ trong một đêm."
+                  "tag": "Thể ない → nếu không…",
+                  "tr": "Nếu hàng xóm không giúp thì việc chuyển nhà sẽ không xong được."
                 }
               ],
-              "explain": "Nhìn hình thức nửa câu sau: sau ことに là một câu hoàn chỉnh bình thường (彼は〜読み終えた), chủ ngữ dùng 「は」; sau 〜のは phải dùng 「〜ことだ」 để gói sự việc thành danh từ, chủ ngữ đổi thành 「が」. Nghĩa gần như giống nhau, ことに mang phong cách văn viết hơn."
+              "explain": "「ことには」 trông giống nhau, hãy xem phía trước là gì: tính từ cảm xúc hoặc từ chỉ tâm trạng (ありがたい、残念な、驚いた)＋ことには → “điều… là”, nói cảm xúc trước, rồi kể thẳng sự việc đã xảy ra; động từ thể ない (手伝ってくれない)＋ことには → “nếu không… thì không được”, vế trước là điều kiện cần, vế sau nhất định là phủ định (終わらない、分からない)."
             }
           ]
         }
@@ -28006,65 +27992,25 @@
       "id": "koto-niwa-naranai",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「ことになる」 — “rốt cuộc thành ra…”",
-          "items": [
-            {
-              "id": "koto-ni-naru",
-              "diff": "Thể た＋ことにはならない là “không thể coi là”; thể từ điển＋ことになる thường diễn tả “(được) quyết định”.",
-              "this": [
-                {
-                  "tag": "Thể た → không thể coi là",
-                  "tr": "Chỉ xin lỗi một lần thì chưa thể coi là đã hối lỗi."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Thể từ điển → quyết định",
-                  "tr": "Từ tháng sau tôi sẽ chuyển công tác đến Osaka."
-                }
-              ],
-              "explain": "Nhìn dạng động từ trước 「こと」: thể た (謝った, 理解した)＋ことにはならない → phán đoán hành động đó có được tính hay không; thể từ điển (転勤する)＋ことになった → sự việc đã được quyết định, không liên quan đến chuyện “có được tính không”."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Đều dùng để phủ định một suy luận “đương nhiên”",
+          "note": "Đều diễn tả “không có nghĩa là…”",
           "items": [
             {
               "id": "wake-dewa-nai",
-              "diff": "ことにはならない phán đoán một hành động “có đủ tư cách để coi là…” không; わけではない sửa lại hiểu lầm mà người khác có thể có, “không phải là…”.",
+              "diff": "Cả hai đều phủ định “từ đó suy ra được…”; ことにはならない là phán định theo lý lẽ “chỉ dựa vào điểm này thì không thể kết luận”, わけではない giọng mềm hơn, phần nhiều là đính chính suy nghĩ của người khác.",
               "this": [
                 {
-                  "tag": "Hành động → không thể coi là",
-                  "tr": "Chỉ đi một lần thì chưa thể coi là hiểu đất nước đó."
+                  "tag": "Phán định · không thể kết luận",
+                  "tr": "Uống thuốc đắt tiền không có nghĩa là đã khỏi bệnh."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sửa hiểu lầm",
-                  "tr": "Không phải là tôi ghét thịt, chỉ là hôm nay không muốn ăn thôi."
+                  "tag": "Nhẹ nhàng · đính chính suy nghĩ",
+                  "tr": "Uống thuốc đắt tiền cũng không phải là đã khỏi bệnh."
                 }
               ],
-              "explain": "Nhìn phía trước là gì: một hành động cụ thể (行った, 読んだ)＋だけでは〜ことにはならない → hành động này chưa đạt chuẩn; cảm xúc, trạng thái (嫌いな, 知らない)＋わけではない → sửa hiểu lầm có thể có của đối phương, phía sau thường bổ sung tình hình thật (〜だけだ)."
-            },
-            {
-              "id": "to-wa-kagiranai",
-              "diff": "とは限らない nói “chưa chắc”, chừa khoảng trống; ことにはならない phán định thẳng “không thể coi là”, giọng dứt khoát hơn.",
-              "this": [
-                {
-                  "tag": "Phán định · không thể coi là",
-                  "tr": "Chỉ được điểm tuyệt đối thôi thì chưa thể coi là giỏi tiếng Anh."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Khả năng · chưa chắc",
-                  "tr": "Dù thi được điểm tuyệt đối thì cũng chưa chắc nói được tiếng Anh."
-                }
-              ],
-              "explain": "Nhìn người nói đang phán đoán điều gì: một việc “có khả năng hay không” → とは限らない, nghĩa là “có thể, mà cũng có thể không”; một hành động “có đủ tư cách hay không” → ことにはならない, phủ định thẳng."
+              "explain": "Cùng một câu đều dùng được cả hai, nghĩa đều là “không thể từ vế trước suy ra vế sau”. Hãy xem giọng điệu và hoàn cảnh: như đưa ra kết luận, dựa vào lý lẽ, quy tắc mà phán định “chỉ dựa vào điểm này thì không tính được, không thể kết luận” → ことにはならない, hay gặp khi nghị luận, giải thích; chỉ nhẹ nhàng đính chính suy nghĩ mà người nghe hoặc người ta nói chung có thể có, “không phải là…” → わけではない, dùng nhiều hơn trong hội thoại hằng ngày, phía sau thường thêm 「が」「けど」 rồi nói tình hình thật."
             }
           ]
         }
@@ -28074,25 +28020,26 @@
       "id": "koto-to-naru-to",
       "groups": [
         {
-          "kind": "look",
-          "note": "のことになると ↔ ことになる, chỉ khác một chữ 「と」",
+          "kind": "meaning",
+          "note": "Đều diễn tả “hễ nói đến… là (…)”",
           "items": [
             {
-              "id": "koto-ni-naru",
-              "diff": "のことになると là “hễ nói đến… là…”; ことになる là “quyết định, kết quả là…”.",
+              "id": "to-naru-to",
+              "title": "〜となると (hễ nói đến…)",
+              "diff": "Khi nói ai đó hễ gặp chủ đề nào là thay đổi thì cả hai đều dùng được; のこととなると có phạm vi là “mọi chuyện liên quan đến…”, phía sau là phản ứng của người; となると nối thẳng sau danh từ, phía sau còn có thể là phán đoán chung.",
               "this": [
                 {
-                  "tag": "Danh từ の → chủ đề",
-                  "tr": "Anh trai tôi hễ nói đến xe là nói mãi không dừng."
+                  "tag": "Mọi chuyện về… · phản ứng của người",
+                  "tr": "Anh trai tôi hễ nói đến chuyện game là mải mê đến mức đêm cũng không ngủ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Động từ → quyết định",
-                  "tr": "Từ tháng sau anh trai tôi sẽ chuyển công tác đến Osaka."
+                  "tag": "Nối thẳng sau danh từ · gọn hơn",
+                  "tr": "Anh trai tôi hễ đến game là mải mê đến mức đêm cũng không ngủ."
                 }
               ],
-              "explain": "Nhìn phía trước 「こと」: 「danh từ＋の」 (車の)＋ことになると, 「こと」 chỉ “chuyện liên quan đến…”, phía sau là biểu hiện của người đó; động từ thể từ điển (転勤する)＋ことになる, diễn tả việc được quyết định hoặc kết quả tự nhiên. Có thêm 「と」 nên phía sau vẫn còn nửa câu. こととなると cũng là “hễ nói đến”."
+              "explain": "Khi nói ai đó hễ gặp một chủ đề nào đó là trở nên khác hẳn ngày thường, cả hai đều dùng được: 「danh từ＋の＋こととなると」 coi phạm vi là “mọi chuyện liên quan đến…”, làm nổi bật sự khác thường của người đó, phía sau hầu như là phản ứng của người (夢中になる、人が変わる); 「danh từ＋となると」 nối thẳng sau danh từ, gọn hơn, phía sau còn có thể là phán đoán chung về bản thân sự việc (引っ越しとなると準備が大変だ), lúc này thường không dùng こととなると."
             }
           ]
         }
