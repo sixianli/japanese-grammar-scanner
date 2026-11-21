@@ -877,8 +877,8 @@
       "id": "adj-adverbial",
       "groups": [
         {
-          "kind": "root",
-          "note": "Todas vienen de la forma conjuntiva de los adjetivos, 「く／に」, cuyo papel es «enlazar con lo que sigue»: くて＝く＋て, y で viene del antiguo 「にて」＝に＋て",
+          "kind": "look",
+          "note": "安く ↔ 安くて, 静かに ↔ 静かで: solo cambia un 「て」, o un único kana (に／で)",
           "items": [
             {
               "id": "adj-te-connect",
@@ -903,7 +903,7 @@
                   "tr": "Esta habitación es limpia y luminosa."
                 }
               ],
-              "explain": "Mira lo que sigue: si va pegado un verbo (買える, 掃除する) → describe cómo se hace la acción; si hay un 「て」 y luego otra cualidad (新しい, 明るい) → encadena cualidades. Los adjetivos-な también forman pareja: きれいに／きれいで; で es la contracción del antiguo 「にて」, exactamente igual que くて＝く＋て."
+              "explain": "Mira lo que va después de 「く」 o 「に」: si va pegado un verbo (買える, 掃除する) → indica directamente cómo se hace la acción; si se añade 「て」 o に pasa a ser で, y luego viene otra cualidad (新しい, 明るい) → se encadenan las dos cualidades. 安く／安くて y きれいに／きれいで solo se diferencian en un kana, pero una forma modifica la acción y la otra enlaza cualidades."
             }
           ]
         }
@@ -913,8 +913,8 @@
       "id": "adj-te-connect",
       "groups": [
         {
-          "kind": "root",
-          "note": "Todas vienen de la forma conjuntiva de los adjetivos, 「く／に」, cuyo papel es «enlazar con lo que sigue»: くて＝く＋て, y で viene del antiguo 「にて」＝に＋て",
+          "kind": "look",
+          "note": "安く ↔ 安くて, 静かに ↔ 静かで: solo cambia un 「て」, o un único kana (に／で)",
           "items": [
             {
               "id": "adj-adverbial",
@@ -942,13 +942,39 @@
               "wrong": {
                 "why": "Para modificar el verbo 「起きる」 hace falta く"
               },
-              "explain": "Mira lo que sigue: si hay un 「て」 y luego otra cualidad (おいしい, きれいだ) → encadena; si va pegado un verbo (起きる, 話す) → describe cómo se hace la acción. Con los adjetivos-な es igual: 静かで encadena (で viene del antiguo 「にて」＝に＋て) y 静かに modifica al verbo; ✗静かで話す también es incorrecto."
+              "explain": "Mira lo que sigue: si se añade 「て」 (o に pasa a ser で) y luego viene otra cualidad (おいしい, きれいだ) → se encadenan cualidades; si no hay 「て」 y va pegado un verbo (起きる, 話してください) → indica cómo se hace la acción. 安くて／安く y 静かで／静かに solo se diferencian en un kana; ✗静かで話してください también es incorrecto."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas unen dos cosas: encadenan varias cualidades o dan una causa",
+          "sense": 1,
+          "note": "Ambas significan «… y además …»",
+          "items": [
+            {
+              "id": "shi",
+              "thisTitle": "〜くて（enlace de adjetivos-い）",
+              "diff": "Las dos significan «… y además …»; くて une dos cualidades sin más en una sola frase, mientras que し las enumera una a una e insinúa «y no solo eso».",
+              "this": [
+                {
+                  "tag": "くて · todo en una frase",
+                  "tr": "Esa panadería es barata y buena."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "し · punto por punto",
+                  "tr": "Esa panadería es barata, el pan está bueno y, encima, los dependientes son amables."
+                }
+              ],
+              "explain": "Las dos frases significan «… y además …». くて une las dos cualidades estrechamente en una sola frase y las expone sin más; し las va contando una a una, suele ir con 「も」 (店員さんも親切だ) y transmite «y no solo eso, hay más», por eso también se usa a menudo para enumerar razones. La conexión también cambia: くて es una forma conjugada del adjetivo (安くて); delante de し va la forma simple (安いし, 親切だし)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Ambas expresan causa: «porque…»",
           "items": [
             {
               "id": "kara-from",
@@ -973,28 +999,7 @@
               "wrong": {
                 "why": "くて no puede ir seguido de una petición ni de una orden"
               },
-              "explain": "Mira la segunda parte: un resultado que no controlas, como 「眠れない」「困る」 → basta con くて (con sustantivos y adjetivos な se usa で: 心配で); una petición o intención, como 「〜てください」「〜ましょう」 → solo から (o ので)."
-            },
-            {
-              "id": "shi",
-              "diff": "くて／で solo enumeran sin más; し presenta varios puntos como razones, sugiere que «hay más» y suele llevar a una conclusión.",
-              "this": [
-                {
-                  "tag": "くて · Enumeración simple",
-                  "tr": "Esta tienda es barata y buena."
-                },
-                {
-                  "tag": "で · Enumeración simple",
-                  "tr": "Esta tienda es tranquila y limpia."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Razones → conclusión",
-                  "tr": "Esta tienda es barata y además buena, por eso vengo a menudo."
-                }
-              ],
-              "explain": "Mira si después hay una conclusión del tipo «por eso…»: si solo describe cómo es algo → くて／で; si presenta varias ventajas como razones que llevan a un juicio como «por eso vengo a menudo» → し. También cambia la conexión: くて／で son formas conjugadas del adjetivo; delante de し va la forma simple (安いし, 静かだし)."
+              "explain": "Las dos pueden expresar causa. Mira la segunda parte: un resultado que no controlas, como 「眠れない」 → basta con くて (con sustantivos y adjetivos-な se usa で: 心配で); una petición o intención, como 「窓を開けてください」 o 「〜ましょう」 → solo から (o ので)."
             }
           ]
         }
@@ -1030,47 +1035,7 @@
                   "tr": "Estaba tan nervioso que no pude decir nada."
                 }
               ],
-              "explain": "Mira si lo que sigue es una negación o una consecuencia: 「高くない」 → あまり＝«no muy»; si sigue algo del tipo «es excesivo, así que…» como 「買えない」 o 「何も言えなかった」 → あまりに (＋adjetivo), あまりの (＋sustantivo), 〜のあまり (tras sustantivo＋の o tras un verbo). Se escribe igual, 「あまり」: delante de un adjetivo y con negación es «no muy»; detrás de 「緊張の」 es «por exceso de…»."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Todas acompañan a una negación y expresan el grado o la frecuencia del «no…»",
-          "items": [
-            {
-              "id": "zenzen-nai",
-              "diff": "あまり〜ない es «no mucho» y deja algo de margen; 全然〜ない es «nada en absoluto».",
-              "this": [
-                {
-                  "tag": "No mucho · algo sí",
-                  "tr": "No bebo mucho alcohol; solo un poco de vez en cuando."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nada · ni un poco",
-                  "tr": "No bebo nada de alcohol; no puedo tomar ni un sorbo."
-                }
-              ],
-              "explain": "Mira lo que se añade después: si aún dice «bebo un poco de vez en cuando» → あまり; si dice «ni un…», sin ningún margen → 全然."
-            },
-            {
-              "id": "metta-ni-nai",
-              "diff": "あまり puede hablar de grado o de frecuencia; めったに solo habla de frecuencia: «rara vez».",
-              "this": [
-                {
-                  "tag": "Grado · no muy",
-                  "tr": "Esta manzana no es muy dulce."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Frecuencia · rara vez",
-                  "tr": "Mi padre rara vez se enfada."
-                }
-              ],
-              "explain": "Mira si se habla de «cuántas veces» o de «qué grado»: si una acción ocurre poco (怒らない, 行かない) → sirven あまり y めったに, y めったに indica aún menos; si es el grado de un adjetivo (甘くない, 高くない) → solo あまり."
+              "explain": "あまり viene del verbo 「余る」, cuyo sentido básico es «exceder, sobrar». Usado en el sentido de «pasarse»: あまりに高くて＝tan caro que supera el límite → demasiado; あまりの値段 y 緊張のあまり también son «… que supera el límite» → por ser demasiado…, y les sigue la consecuencia. Con negación: あまり高くない＝no tan caro como para salirse de lo normal → no muy. Así que mira lo que sigue: una negación (高くない) → no muy; una consecuencia (買えない, 何も言えなかった) → demasiado."
             }
           ]
         }
@@ -1126,7 +1091,7 @@
                   "tr": "Solo con mirar ya me divierto."
                 }
               ],
-              "explain": "Mira lo que sigue: si la oración termina en 「だけです」 o aclara que «no se hace nada más» → «solo»; si tras 「だけで」 viene un resultado (楽しい, 疲れる, 分かる) → eso basta por sí solo para producir ese resultado."
+              "explain": "だけ viene de 「丈（たけ）」, que originalmente significa longitud o altura y pasó a significar «el límite hasta aquí» → solo esto. 見るだけです: la acción se queda en «mirar» y no va más allá (買いません) → solo; 見るだけで: で significa «por medio de», así que basta con «mirar», y enseguida aparece un resultado (楽しい) → solo con … ya …. Así que mira lo que sigue a だけ: si la frase termina con 「です」 y explica que no se hizo nada más → solo; si viene 「で、」 y luego un resultado → solo con … ya …."
             }
           ]
         },
@@ -1156,20 +1121,20 @@
             },
             {
               "id": "bakari-only",
-              "diff": "だけ es «solo esto y nada más»; ばかり es «nada más que esto, siempre esto», a menudo con queja.",
+              "diff": "Las dos significan «solo»; だけ delimita el alcance de forma objetiva, mientras que ばかり recalca «nada más que esto», a menudo con descontento.",
               "this": [
                 {
-                  "tag": "Solo · alcance limitado",
-                  "tr": "Esta mañana no tenía tiempo y solo comí pan."
+                  "tag": "Solo esto · lo demás ni lo tocó",
+                  "tr": "Mi hermano pequeño solo se comió la carne y dejó las verduras."
                 }
               ],
               "that": [
                 {
-                  "tag": "Siempre lo mismo · queja",
-                  "tr": "Mi hermano pequeño no come más que carne."
+                  "tag": "Nada más que esto · con queja",
+                  "tr": "Mi hermano pequeño no come más que carne, y eso es un problema."
                 }
               ],
-              "explain": "Mira si hay sensación de repetición, como 「いつも」: si solo dices que esta vez el alcance fue pequeño → だけ; si te quejas de que algo es excesivo o siempre igual → ばかり. En español ambos pueden traducirse como «solo», por eso se confunden. En la lengua hablada se dice también ばっかり, con el mismo uso."
+              "explain": "Las dos frases significan «solo». だけ delimita el alcance de forma objetiva: solo la carne, nada más (野菜は残した); ばかり dice «tanto que casi todo es esto», y el hablante lo ve demasiado desequilibrado y no le gusta, por eso suele seguirle una queja como 「困る」. Así que fíjate en la actitud del hablante: si solo expone el alcance → だけ; si se queja de que es «nada más que esto» → ばかり. En la lengua hablada también se dice ばっかり."
             }
           ]
         }
@@ -1198,54 +1163,6 @@
                 }
               ],
               "explain": "Mira a quién se habla: hablando solo, en un diario o un texto escrito, o con alguien de confianza (sobre todo hombres) → だろう; a clientes, superiores o un público (como en el parte meteorológico) → でしょう. Decirle 「だろう」 a tu jefe es muy descortés."
-            },
-            {
-              "id": "kamoshirenai",
-              "diff": "だろう indica que en el fondo lo das más o menos por hecho; かもしれない solo dice «también es posible», con poca seguridad.",
-              "this": [
-                {
-                  "tag": "Probablemente · bastante seguro",
-                  "tr": "Con el cielo tan oscuro, seguro que va a llover."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Quizá · poco seguro",
-                  "tr": "Puede que llueva."
-                }
-              ],
-              "explain": "Mira el adverbio de delante: 「きっと」「たぶん」 → だろう; 「もしかしたら」 → かもしれない. Cuando solo planteas una posibilidad sin mucha seguridad, usa かもしれない."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "datta-deshita",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Todas expresan pasado",
-          "items": [
-            {
-              "id": "i-adj-past",
-              "diff": "El pasado de sustantivos y adjetivos-な es でした; los adjetivos-い cambian 「い」 por 「かった」 y añaden 「です」.",
-              "this": [
-                {
-                  "tag": "Adjetivo-な → でした",
-                  "tr": "El examen de ayer fue fácil."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Adjetivo-い → かったです",
-                  "tr": "El examen de ayer fue difícil."
-                }
-              ],
-              "wrong": {
-                "why": "Un adjetivo-い no puede ir seguido de 「でした」"
-              },
-              "explain": "Mira el tipo de adjetivo: 簡単, 静か, きれい son adjetivos-な → でした; 難しい, 寒い son adjetivos-い → かったです. Ojo: きれい termina en 「い」 pero es un adjetivo-な: きれいでした. En estilo llano es igual: 簡単だった／難しかった; la negación también tiene dos series: 簡単じゃなかった／難しくなかった."
             }
           ]
         }
@@ -1288,7 +1205,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de で + も, cuyo sentido original es «aunque sea…, también»",
+          "note": "Ambas vienen de 「で＋も」: で es la cópula «ser» y も significa «también»; el sentido original es «aunque sea…»",
           "items": [
             {
               "id": "question-word-temo",
@@ -1306,7 +1223,7 @@
                   "tr": "Aunque llueva, el partido se jugará igualmente."
                 }
               ],
-              "explain": "Mira la segunda parte: una invitación o sugerencia, como 「〜ませんか」「〜ましょう」 → pones un ejemplo cualquiera para suavizar el tono; algo que ocurre igualmente, sin verse afectado → «aunque»."
+              "explain": "でも es la cópula 「で」 («ser») más 「も」 («también»), y su sentido original es «aunque sea…». El uso concesivo conserva ese sentido: 雨でも＝aunque sea lluvia, lo que sigue ocurre igual (試合はあります) → aunque. El uso de ejemplo es ese sentido suavizado: お茶でも＝«aunque sea un té, ya está bien»; no concreta nada, solo pone un ejemplo cualquiera y el tono se vuelve más suave, por eso suele seguirle una invitación o sugerencia (飲みませんか, 〜ましょう). Mira la segunda parte: invitación o sugerencia → ejemplo; algo que ocurre igual, sin verse afectado → aunque."
             }
           ]
         },
@@ -1424,23 +1341,6 @@
                 }
               ],
               "explain": "Mira a quién se habla: a clientes, superiores o un público (como en el parte meteorológico) → でしょう; hablando solo, en un diario o un texto escrito, o con alguien de confianza (sobre todo hombres) → だろう."
-            },
-            {
-              "id": "kamoshirenai",
-              "diff": "でしょう indica que crees que probablemente es así; かもしれません solo dice que es posible, con menos seguridad.",
-              "this": [
-                {
-                  "tag": "Probablemente · bastante seguro",
-                  "tr": "Seguro que Tanaka también viene."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Quizá · poco seguro",
-                  "tr": "Puede que Tanaka también venga."
-                }
-              ],
-              "explain": "Mira el adverbio de delante: 「きっと」「たぶん」 → でしょう; 「もしかしたら」 → かもしれません. Cuando solo planteas una posibilidad sin mucha seguridad, usa かもしれません."
             }
           ]
         }

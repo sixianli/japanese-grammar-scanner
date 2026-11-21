@@ -1322,6 +1322,585 @@
           "explain": "ことにした တွင် “ချီတုံချတုံ ဖြစ်ပြီးမှ နောက်ဆုံး ဆုံးဖြတ်လိုက်တယ်” ဆိုသော ဖြစ်စဉ် ခံစားချက် မကြာခဏ ပါသည် (迷ったけど、いろいろ考えて)။ つもりだ သည် အစီအစဉ်ကိုသာ ဖော်ပြပြီး ဆုံးဖြတ်သည့် အခိုက်ကို အလေးမပေးပါ၊ နောက်ဆုံးတွင် မသွားဖြစ်လည်း ဖြစ်နိုင်သည်။"
         }
       }
+    },
+    {
+      "point": "amari-nai",
+      "kind": "meaning",
+      "reason": "程度不同不收：あまり〜ない（不太）和 全然〜ない（完全不）是同一类否定里程度强弱的差别，正是标准「意思差不多的」不收一节点名的例子；组说明「和否定呼应」也是标准点名不算的大类",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "zenzen-nai",
+          "diff": "あまり〜ない 是「不太」，还留有余地；全然〜ない 是「完全不」。",
+          "this": [
+            {
+              "ja": "お|酒:さけ|は|*あまり|飲:の|*まない|。|~たまに|~少:すこ|~し|~飲:の|~む|~くらいだ|。",
+              "tag": "不太 · 还有一点",
+              "tr": "我不太喝酒，偶尔喝一点而已。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "お|酒:さけ|は|*全然:ぜんぜん|飲:の|*まない|。|~一口:ひとくち|~も|~飲:の|~めない|。",
+              "tag": "完全不 · 一点没有",
+              "tr": "我完全不喝酒，一口也喝不了。"
+            }
+          ],
+          "explain": "看后面补充的话：还说「偶尔喝一点」→ あまり；说「一口也……」，一点余地都没有 → 全然。"
+        },
+        "en": {
+          "id": "zenzen-nai",
+          "diff": "あまり〜ない means “not very”, leaving some room; 全然〜ない means “not at all”.",
+          "this": [
+            {
+              "tag": "Not much · a little",
+              "tr": "I don't drink much — just a little now and then."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Not at all · none",
+              "tr": "I don't drink at all — I can't have even a sip."
+            }
+          ],
+          "explain": "Look at what's added afterwards: “I drink a little now and then” → あまり; “not even a sip…”, with no room at all → 全然."
+        },
+        "ko": {
+          "id": "zenzen-nai",
+          "diff": "あまり〜ない는 ‘별로 ~지 않다’로 여지가 남아 있다. 全然〜ない는 ‘전혀 ~지 않다’.",
+          "this": [
+            {
+              "tag": "별로 · 조금은 함",
+              "tr": "술은 별로 안 마신다. 가끔 조금 마시는 정도다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "전혀 · 하나도 안 함",
+              "tr": "술은 전혀 안 마신다. 한 모금도 못 마신다."
+            }
+          ],
+          "explain": "뒤에 덧붙인 말을 보자. ‘가끔 조금 마신다’는 말이 이어지면 → あまり. ‘한 모금도…’처럼 여지가 전혀 없으면 → 全然."
+        },
+        "es": {
+          "id": "zenzen-nai",
+          "diff": "あまり〜ない es «no mucho» y deja algo de margen; 全然〜ない es «nada en absoluto».",
+          "this": [
+            {
+              "tag": "No mucho · algo sí",
+              "tr": "No bebo mucho alcohol; solo un poco de vez en cuando."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Nada · ni un poco",
+              "tr": "No bebo nada de alcohol; no puedo tomar ni un sorbo."
+            }
+          ],
+          "explain": "Mira lo que se añade después: si aún dice «bebo un poco de vez en cuando» → あまり; si dice «ni un…», sin ningún margen → 全然."
+        },
+        "vi": {
+          "id": "zenzen-nai",
+          "diff": "あまり〜ない là “không… lắm”, vẫn còn chừa chỗ; 全然〜ない là “hoàn toàn không”.",
+          "this": [
+            {
+              "tag": "Không lắm · vẫn có chút",
+              "tr": "Tôi không uống rượu mấy, thỉnh thoảng uống một chút thôi."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Hoàn toàn không · chẳng chút nào",
+              "tr": "Tôi hoàn toàn không uống rượu, một ngụm cũng không uống được."
+            }
+          ],
+          "explain": "Xem câu bổ sung phía sau: còn nói “thỉnh thoảng uống một chút” → あまり; nói “một ngụm cũng…”, không chừa chút nào → 全然."
+        },
+        "my": {
+          "id": "zenzen-nai",
+          "diff": "あまり〜ない သည် “သိပ်မ...” ဖြစ်ပြီး နေရာလွတ် ကျန်သေးသည်။ 全然〜ない သည် “လုံးဝ မ...” ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "သိပ်မ... · နည်းနည်းရှိသေး",
+              "tr": "အရက် သိပ်မသောက်ဘူး၊ တစ်ခါတလေ နည်းနည်းလောက်ပဲ သောက်တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "လုံးဝမ... · လုံးဝမရှိ",
+              "tr": "အရက် လုံးဝ မသောက်ဘူး၊ တစ်ငုံတောင် မသောက်နိုင်ဘူး။"
+            }
+          ],
+          "explain": "နောက်က ထပ်ဖြည့်ပြောသော စကားကို ကြည့်ပါ - “တစ်ခါတလေ နည်းနည်းသောက်တယ်” ဟု ပြောသေးလျှင် → あまり။ “တစ်ငုံတောင် ...” ဟု ပြောပြီး နေရာလွတ် လုံးဝ မကျန်လျှင် → 全然။"
+        }
+      }
+    },
+    {
+      "point": "amari-nai",
+      "kind": "meaning",
+      "reason": "两句比的不是同一个意思（一句程度、一句频率）；只取「不常」义项时，あまり〜ない 和 めったに〜ない 的差别只是频率高低，属于标准「意思差不多的」不收的「同一类意思里程度不同」；catalog 里没有其他表示「不太」的语法点可换",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "metta-ni-nai",
+          "diff": "あまり 既能说程度也能说次数；めったに 只说次数，「很少、难得」。",
+          "this": [
+            {
+              "ja": "この|りんごは|*あまり|~甘:あま|*くない|。",
+              "tag": "程度 · 不太",
+              "tr": "这个苹果不太甜。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "父:ちち|は|*めったに|~怒:おこ|*らない|。",
+              "tag": "次数 · 很少",
+              "tr": "父亲很少发火。"
+            }
+          ],
+          "explain": "看后面说的是「多少次」还是「什么程度」：动作发生得少（怒らない、行かない）→ あまり、めったに 都行，めったに 更少；形容词的程度（甘くない、高くない）→ 只能用 あまり。"
+        },
+        "en": {
+          "id": "metta-ni-nai",
+          "diff": "あまり can describe both degree and frequency; めったに only describes frequency — “rarely, seldom”.",
+          "this": [
+            {
+              "tag": "Degree · not very",
+              "tr": "This apple isn't very sweet."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Frequency · rarely",
+              "tr": "My father rarely gets angry."
+            }
+          ],
+          "explain": "Check whether it's about “how often” or “to what degree”: an action that seldom happens (怒らない、行かない) → both あまり and めったに work, with めったに being rarer; the degree of an adjective (甘くない、高くない) → only あまり."
+        },
+        "ko": {
+          "id": "metta-ni-nai",
+          "diff": "あまり는 정도와 횟수를 모두 말할 수 있다. めったに는 횟수만 말하며 ‘좀처럼 ~하지 않다’는 뜻이다.",
+          "this": [
+            {
+              "tag": "정도 · 별로",
+              "tr": "이 사과는 별로 달지 않다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "횟수 · 좀처럼",
+              "tr": "아버지는 좀처럼 화를 내지 않는다."
+            }
+          ],
+          "explain": "‘몇 번’을 말하는지 ‘어느 정도’를 말하는지 보자. 동작이 드물게 일어나면(怒らない、行かない) → あまり、めったに 둘 다 되고, めったに가 더 드물다. 형용사의 정도(甘くない、高くない) → あまり만 쓸 수 있다."
+        },
+        "es": {
+          "id": "metta-ni-nai",
+          "diff": "あまり puede hablar de grado o de frecuencia; めったに solo habla de frecuencia: «rara vez».",
+          "this": [
+            {
+              "tag": "Grado · no muy",
+              "tr": "Esta manzana no es muy dulce."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Frecuencia · rara vez",
+              "tr": "Mi padre rara vez se enfada."
+            }
+          ],
+          "explain": "Mira si se habla de «cuántas veces» o de «qué grado»: si una acción ocurre poco (怒らない, 行かない) → sirven あまり y めったに, y めったに indica aún menos; si es el grado de un adjetivo (甘くない, 高くない) → solo あまり."
+        },
+        "vi": {
+          "id": "metta-ni-nai",
+          "diff": "あまり nói được cả mức độ lẫn tần suất; めったに chỉ nói tần suất: “hiếm khi, ít khi”.",
+          "this": [
+            {
+              "tag": "Mức độ · không lắm",
+              "tr": "Quả táo này không ngọt lắm."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Tần suất · hiếm khi",
+              "tr": "Bố tôi hiếm khi nổi giận."
+            }
+          ],
+          "explain": "Xem phía sau nói “bao nhiêu lần” hay “mức độ nào”: hành động ít xảy ra (怒らない、行かない) → あまり、めったに đều được, めったに còn ít hơn; mức độ của tính từ (甘くない、高くない) → chỉ dùng あまり."
+        },
+        "my": {
+          "id": "metta-ni-nai",
+          "diff": "あまり သည် အတိုင်းအတာကိုလည်း အကြိမ်ရေကိုလည်း ပြောနိုင်သည်။ めったに သည် အကြိမ်ရေကိုသာ ပြောပြီး “ရှားရှားပါးပါး၊ ခဲခဲယဉ်းယဉ်း” ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "အတိုင်းအတာ · သိပ်မ...",
+              "tr": "ဒီပန်းသီးက သိပ်မချိုဘူး။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "အကြိမ်ရေ · ရှားရှားပါးပါး",
+              "tr": "အဖေက စိတ်ဆိုးခဲတယ်။"
+            }
+          ],
+          "explain": "နောက်က ပြောသည်မှာ “ဘယ်နှစ်ကြိမ်” လား “ဘယ်လောက်အတိုင်းအတာ” လား ကြည့်ပါ - လုပ်ဆောင်ချက် ဖြစ်ခဲလျှင် (怒らない、行かない) → あまり、めったに နှစ်ခုလုံး ရပြီး めったに က ပိုနည်းသည်။ နာမဝိသေသန၏ အတိုင်းအတာ (甘くない、高くない) ဆိုလျှင် → あまり ကိုသာ သုံးနိုင်သည်။"
+        }
+      }
+    },
+    {
+      "point": "darou-guess",
+      "kind": "meaning",
+      "reason": "程度不同不收：だろう（大致认定）和 かもしれない（也有可能）的差别只是推测把握的大小，属于标准「意思差不多的」不收的「同一类意思里程度不同」；这一组保留 だろう ↔ でしょう",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "kamoshirenai",
+          "diff": "だろう 是心里大致认定；かもしれない 只是说「也有可能」，把握小。",
+          "this": [
+            {
+              "ja": "空:そら|が|暗:くら|い|から|、|~きっと|雨:あめ|が|降:ふ|る|*だろう|。",
+              "tag": "大概会 · 把握大",
+              "tr": "天这么暗，肯定会下雨吧。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~もしかしたら|、|雨:あめ|が|降:ふ|る|*かもしれない|。",
+              "tag": "说不定 · 把握小",
+              "tr": "说不定会下雨。"
+            }
+          ],
+          "explain": "看前面的副词：「きっと」「たぶん」→ だろう；「もしかしたら」→ かもしれない。只是提出一种可能、自己也没什么把握时，用 かもしれない。"
+        },
+        "en": {
+          "id": "kamoshirenai",
+          "diff": "だろう means you're fairly convinced; かもしれない only says “it's possible”, with little confidence.",
+          "this": [
+            {
+              "tag": "Probably · confident",
+              "tr": "The sky is so dark — it'll surely rain."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Maybe · not confident",
+              "tr": "It might rain."
+            }
+          ],
+          "explain": "Look at the adverb before it: 「きっと」 or 「たぶん」 → だろう; 「もしかしたら」 → かもしれない. When you're just raising a possibility without much confidence, use かもしれない."
+        },
+        "ko": {
+          "id": "kamoshirenai",
+          "diff": "だろう는 마음속으로 대체로 그렇다고 보는 것이고, かもしれない는 ‘그럴 수도 있다’ 정도로 확신이 약하다.",
+          "this": [
+            {
+              "tag": "아마 · 확신 강함",
+              "tr": "하늘이 어두우니까 분명 비가 오겠지."
+            }
+          ],
+          "that": [
+            {
+              "tag": "어쩌면 · 확신 약함",
+              "tr": "어쩌면 비가 올지도 모른다."
+            }
+          ],
+          "explain": "앞의 부사를 보자. 「きっと」「たぶん」 → だろう. 「もしかしたら」 → かもしれない. 가능성 하나를 내놓을 뿐 자신도 별로 확신이 없을 때는 かもしれない를 쓴다."
+        },
+        "es": {
+          "id": "kamoshirenai",
+          "diff": "だろう indica que en el fondo lo das más o menos por hecho; かもしれない solo dice «también es posible», con poca seguridad.",
+          "this": [
+            {
+              "tag": "Probablemente · bastante seguro",
+              "tr": "Con el cielo tan oscuro, seguro que va a llover."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Quizá · poco seguro",
+              "tr": "Puede que llueva."
+            }
+          ],
+          "explain": "Mira el adverbio de delante: 「きっと」「たぶん」 → だろう; 「もしかしたら」 → かもしれない. Cuando solo planteas una posibilidad sin mucha seguridad, usa かもしれない."
+        },
+        "vi": {
+          "id": "kamoshirenai",
+          "diff": "だろう là trong lòng đã gần như chắc chắn; かもしれない chỉ nói “cũng có thể”, độ chắc thấp.",
+          "this": [
+            {
+              "tag": "Chắc là · khá chắc",
+              "tr": "Trời tối thế này, chắc chắn sẽ mưa thôi."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Không chừng · ít chắc",
+              "tr": "Không chừng trời sẽ mưa."
+            }
+          ],
+          "explain": "Xem phó từ phía trước: 「きっと」, 「たぶん」 → だろう; 「もしかしたら」 → かもしれない. Khi chỉ đưa ra một khả năng mà bản thân cũng không mấy chắc chắn thì dùng かもしれない."
+        },
+        "my": {
+          "id": "kamoshirenai",
+          "diff": "だろう သည် စိတ်ထဲတွင် အကြမ်းဖျင်း ယုံကြည်ထားခြင်း ဖြစ်သည်။ かもしれない သည် “ဖြစ်နိုင်ချေလည်း ရှိတယ်” ဟုသာ ပြောပြီး သေချာမှု နည်းသည်။",
+          "this": [
+            {
+              "tag": "ဖြစ်မှာပါ · သေချာမှုများ",
+              "tr": "ကောင်းကင်က ဒီလောက်မှောင်နေတော့ မိုးရွာမှာ သေချာတယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ဖြစ်ချင်ဖြစ်မယ် · သေချာမှုနည်း",
+              "tr": "မိုးရွာချင် ရွာမယ်။"
+            }
+          ],
+          "explain": "ရှေ့က ကြိယာဝိသေသနကို ကြည့်ပါ - 「きっと」「たぶん」 → だろう။ 「もしかしたら」 → かもしれない။ ဖြစ်နိုင်ချေ တစ်ခုကို တင်ပြရုံသာဖြစ်ပြီး ကိုယ်တိုင်လည်း သိပ်မသေချာလျှင် かもしれない ကို သုံးသည်။"
+        }
+      }
+    },
+    {
+      "point": "datta-deshita",
+      "kind": "meaning",
+      "reason": "でした 和 かったです 按词类分工（な形容词、名词／い形容词），同一句不能互换，替换测试不成立，差别是活用规则而不是同一意思下的语感（标准「意思差不多的」收录条件 3、4）；写法差一整截，也不合「长得像的」；catalog 里没有可换的同义对象",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "i-adj-past",
+          "diff": "名词、な形容词的过去用 でした；い形容词把「い」变成「かった」再加「です」。",
+          "this": [
+            {
+              "ja": "昨日:きのう|の|テストは|~簡単:かんたん|*でした|。",
+              "tag": "な形容词 → でした",
+              "tr": "昨天的考试很简单。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "昨日:きのう|の|テストは|~難:むずか|~し|*かったです|。",
+              "tag": "い形容词 → かったです",
+              "tr": "昨天的考试很难。"
+            }
+          ],
+          "wrong": {
+            "ja": "昨日のテストは難しいでした",
+            "why": "い形容词不能接「でした」"
+          },
+          "explain": "看形容词的种类：簡単、静か、きれい 是な形容词 → でした；難しい、寒い 是い形容词 → かったです。注意 きれい 虽然以「い」结尾，却是な形容词：きれいでした。简体也一样：簡単だった／難しかった；否定同样分两套：簡単じゃなかった／難しくなかった。"
+        },
+        "en": {
+          "id": "i-adj-past",
+          "diff": "Nouns and na-adjectives take でした in the past; i-adjectives change 「い」 to 「かった」 and add 「です」.",
+          "this": [
+            {
+              "tag": "na-adjective → でした",
+              "tr": "Yesterday's test was easy."
+            }
+          ],
+          "that": [
+            {
+              "tag": "i-adjective → かったです",
+              "tr": "Yesterday's test was difficult."
+            }
+          ],
+          "wrong": {
+            "why": "i-adjectives can't take 「でした」"
+          },
+          "explain": "Check the type of adjective: 簡単, 静か and きれい are na-adjectives → でした; 難しい and 寒い are i-adjectives → かったです. Note that きれい ends in 「い」 but is a na-adjective: きれいでした. The plain style works the same way: 簡単だった／難しかった; the negatives also split into two sets: 簡単じゃなかった／難しくなかった."
+        },
+        "ko": {
+          "id": "i-adj-past",
+          "diff": "명사·な형용사의 과거는 でした. い형용사는 「い」를 「かった」로 바꾸고 「です」를 붙인다.",
+          "this": [
+            {
+              "tag": "な형용사 → でした",
+              "tr": "어제 시험은 쉬웠습니다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "い형용사 → かったです",
+              "tr": "어제 시험은 어려웠습니다."
+            }
+          ],
+          "wrong": {
+            "why": "い형용사에는 「でした」를 붙일 수 없다"
+          },
+          "explain": "형용사의 종류를 보자. 簡単、静か、きれい는 な형용사 → でした. 難しい、寒い는 い형용사 → かったです. きれい는 「い」로 끝나지만 な형용사라서 きれいでした라고 한다. 보통체도 마찬가지다: 簡単だった／難しかった. 부정도 똑같이 두 가지로 나뉜다: 簡単じゃなかった／難しくなかった."
+        },
+        "es": {
+          "id": "i-adj-past",
+          "diff": "El pasado de sustantivos y adjetivos-な es でした; los adjetivos-い cambian 「い」 por 「かった」 y añaden 「です」.",
+          "this": [
+            {
+              "tag": "Adjetivo-な → でした",
+              "tr": "El examen de ayer fue fácil."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Adjetivo-い → かったです",
+              "tr": "El examen de ayer fue difícil."
+            }
+          ],
+          "wrong": {
+            "why": "Un adjetivo-い no puede ir seguido de 「でした」"
+          },
+          "explain": "Mira el tipo de adjetivo: 簡単, 静か, きれい son adjetivos-な → でした; 難しい, 寒い son adjetivos-い → かったです. Ojo: きれい termina en 「い」 pero es un adjetivo-な: きれいでした. En estilo llano es igual: 簡単だった／難しかった; la negación también tiene dos series: 簡単じゃなかった／難しくなかった."
+        },
+        "vi": {
+          "id": "i-adj-past",
+          "diff": "Quá khứ của danh từ, tính từ đuôi な dùng でした; tính từ đuôi い đổi 「い」 thành 「かった」 rồi thêm 「です」.",
+          "this": [
+            {
+              "tag": "Tính từ đuôi な → でした",
+              "tr": "Bài kiểm tra hôm qua rất dễ."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Tính từ đuôi い → かったです",
+              "tr": "Bài kiểm tra hôm qua rất khó."
+            }
+          ],
+          "wrong": {
+            "why": "Tính từ đuôi い không đi với 「でした」"
+          },
+          "explain": "Xem loại tính từ: 簡単、静か、きれい là tính từ đuôi な → でした; 難しい、寒い là tính từ đuôi い → かったです. Chú ý きれい tuy kết thúc bằng 「い」 nhưng là tính từ đuôi な: きれいでした. Thể thường cũng vậy: 簡単だった／難しかった; phủ định cũng chia thành hai kiểu: 簡単じゃなかった／難しくなかった."
+        },
+        "my": {
+          "id": "i-adj-past",
+          "diff": "နာမ်၊ な-နာမဝိသေသန၏ အတိတ်ပုံစံတွင် でした ကို သုံးသည်။ い-နာမဝိသေသနတွင် 「い」 ကို 「かった」 ပြောင်းပြီး 「です」 ထပ်ပေါင်းသည်။",
+          "this": [
+            {
+              "tag": "な-နာမဝိသေသန → でした",
+              "tr": "မနေ့က စာမေးပွဲက လွယ်ပါတယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "い-နာမဝိသေသန → かったです",
+              "tr": "မနေ့က စာမေးပွဲက ခက်ပါတယ်။"
+            }
+          ],
+          "wrong": {
+            "why": "い-နာမဝိသေသနကို 「でした」 နှင့် မတွဲနိုင်ပါ"
+          },
+          "explain": "နာမဝိသေသန အမျိုးအစားကို ကြည့်ပါ - 簡単、静か、きれい သည် な-နာမဝိသေသန → でした။ 難しい、寒い သည် い-နာမဝိသေသန → かったです။ သတိပြုရန် - きれい သည် 「い」 ဖြင့် ဆုံးသော်လည်း な-နာမဝိသေသန ဖြစ်သည် - きれいでした။ ရိုးရိုးပုံစံတွင်လည်း ထိုနည်းတူ - 簡単だった／難しかった။ ငြင်းဆိုလည်း နှစ်မျိုး ခွဲသည် - 簡単じゃなかった／難しくなかった။"
+        }
+      }
+    },
+    {
+      "point": "deshou-guess",
+      "kind": "meaning",
+      "reason": "程度不同不收：でしょう（大概如此）和 かもしれません（有这种可能）的差别只是推测把握的大小，属于标准「意思差不多的」不收的「同一类意思里程度不同」；这一组保留 でしょう ↔ だろう",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "kamoshirenai",
+          "diff": "でしょう 是觉得大概如此；かもしれません 只说有这种可能，把握较小。",
+          "this": [
+            {
+              "ja": "~きっと|、|田中:たなか|さん|も|来:く|る|*でしょう|。",
+              "tag": "大概会 · 把握大",
+              "tr": "田中肯定也会来吧。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~もしかしたら|、|田中:たなか|さん|も|来:く|る|*かもしれません|。",
+              "tag": "说不定 · 把握小",
+              "tr": "说不定田中也会来。"
+            }
+          ],
+          "explain": "看前面的副词：「きっと」「たぶん」→ でしょう；「もしかしたら」→ かもしれません。只是提出一种可能、自己也没什么把握时，用 かもしれません。"
+        },
+        "en": {
+          "id": "kamoshirenai",
+          "diff": "でしょう means you think it's probably so; かもしれません only says it's possible, with less confidence.",
+          "this": [
+            {
+              "tag": "Probably · confident",
+              "tr": "I'm sure Mr. Tanaka will come too."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Maybe · not confident",
+              "tr": "Mr. Tanaka might come too."
+            }
+          ],
+          "explain": "Look at the adverb before it: 「きっと」 or 「たぶん」 → でしょう; 「もしかしたら」 → かもしれません. When you're just raising a possibility without much confidence, use かもしれません."
+        },
+        "ko": {
+          "id": "kamoshirenai",
+          "diff": "でしょう는 대체로 그럴 거라고 보는 것이고, かもしれません은 그럴 가능성이 있다고만 말해서 확신이 약하다.",
+          "this": [
+            {
+              "tag": "아마 · 확신 강함",
+              "tr": "분명 다나카 씨도 오겠지요."
+            }
+          ],
+          "that": [
+            {
+              "tag": "어쩌면 · 확신 약함",
+              "tr": "어쩌면 다나카 씨도 올지도 몰라요."
+            }
+          ],
+          "explain": "앞의 부사를 보자. 「きっと」「たぶん」 → でしょう. 「もしかしたら」 → かもしれません. 가능성 하나를 내놓을 뿐 자신도 별로 확신이 없을 때는 かもしれません을 쓴다."
+        },
+        "es": {
+          "id": "kamoshirenai",
+          "diff": "でしょう indica que crees que probablemente es así; かもしれません solo dice que es posible, con menos seguridad.",
+          "this": [
+            {
+              "tag": "Probablemente · bastante seguro",
+              "tr": "Seguro que Tanaka también viene."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Quizá · poco seguro",
+              "tr": "Puede que Tanaka también venga."
+            }
+          ],
+          "explain": "Mira el adverbio de delante: 「きっと」「たぶん」 → でしょう; 「もしかしたら」 → かもしれません. Cuando solo planteas una posibilidad sin mucha seguridad, usa かもしれません."
+        },
+        "vi": {
+          "id": "kamoshirenai",
+          "diff": "でしょう là thấy có lẽ là vậy; かもしれません chỉ nói có khả năng đó, độ chắc thấp hơn.",
+          "this": [
+            {
+              "tag": "Chắc là · khá chắc",
+              "tr": "Chắc chắn anh Tanaka cũng sẽ đến."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Không chừng · ít chắc",
+              "tr": "Không chừng anh Tanaka cũng sẽ đến."
+            }
+          ],
+          "explain": "Xem phó từ phía trước: 「きっと」, 「たぶん」 → でしょう; 「もしかしたら」 → かもしれません. Khi chỉ đưa ra một khả năng mà bản thân cũng không mấy chắc chắn thì dùng かもしれません."
+        },
+        "my": {
+          "id": "kamoshirenai",
+          "diff": "でしょう သည် ဒီလိုဖြစ်မှာပါဟု ထင်ခြင်း ဖြစ်သည်။ かもしれません သည် ဒီလို ဖြစ်နိုင်ချေ ရှိကြောင်းကိုသာ ပြောပြီး သေချာမှု နည်းသည်။",
+          "this": [
+            {
+              "tag": "ဖြစ်မှာပါ · သေချာမှုများ",
+              "tr": "တာနာကာလည်း လာမှာ သေချာပါတယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ဖြစ်ချင်ဖြစ်မယ် · သေချာမှုနည်း",
+              "tr": "တာနာကာလည်း လာချင် လာနိုင်ပါတယ်။"
+            }
+          ],
+          "explain": "ရှေ့က ကြိယာဝိသေသနကို ကြည့်ပါ - 「きっと」「たぶん」 → でしょう။ 「もしかしたら」 → かもしれません။ ဖြစ်နိုင်ချေ တစ်ခုကို တင်ပြရုံသာဖြစ်ပြီး ကိုယ်တိုင်လည်း သိပ်မသေချာလျှင် かもしれません ကို သုံးသည်။"
+        }
+      }
     }
   ]
 }

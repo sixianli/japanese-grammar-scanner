@@ -877,8 +877,8 @@
       "id": "adj-adverbial",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ dạng liên dụng 「く／に」 của tính từ — nhiệm vụ chính là “nối với từ phía sau”: くて＝く＋て, で bắt nguồn từ 「にて」＝に＋て trong tiếng Nhật cổ",
+          "kind": "look",
+          "note": "安く ↔ 安くて、静かに ↔ 静かで — chỉ khác nhau một chữ 「て」 hoặc một chữ kana に／で",
           "items": [
             {
               "id": "adj-te-connect",
@@ -903,7 +903,7 @@
                   "tr": "Căn phòng này vừa sạch sẽ vừa sáng sủa."
                 }
               ],
-              "explain": "Hãy nhìn phía sau: liền sau là một động từ (買える、掃除する) → nói hành động được làm như thế nào; có thêm 「て」 và phía sau nói tiếp một tính chất khác (新しい、明るい) → liệt kê các tính chất. Tính từ đuôi な cũng có một cặp như vậy: きれいに／きれいで — で chính là 「にて」 trong tiếng Nhật cổ rút gọn lại, giống hệt くて＝く＋て."
+              "explain": "Hãy nhìn phía sau 「く」「に」: liền sau là một động từ (買える、掃除する) → nói trực tiếp hành động được làm như thế nào; có thêm 「て」 hoặc に đổi thành で, phía sau nói tiếp một tính chất khác (新しい、明るい) → liệt kê hai tính chất song song. 安く／安くて、きれいに／きれいで chỉ khác nhau một chữ kana, nhưng một bên bổ nghĩa cho hành động, một bên nối các tính chất."
             }
           ]
         }
@@ -913,8 +913,8 @@
       "id": "adj-te-connect",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ dạng liên dụng 「く／に」 của tính từ — nhiệm vụ chính là “nối với từ phía sau”: くて＝く＋て, で bắt nguồn từ 「にて」＝に＋て trong tiếng Nhật cổ",
+          "kind": "look",
+          "note": "安く ↔ 安くて、静かに ↔ 静かで — chỉ khác nhau một chữ 「て」 hoặc một chữ kana に／で",
           "items": [
             {
               "id": "adj-adverbial",
@@ -942,13 +942,39 @@
               "wrong": {
                 "why": "Bổ nghĩa cho động từ 「起きる」 phải dùng く"
               },
-              "explain": "Hãy nhìn phía sau: có thêm 「て」 và phía sau là một tính chất khác (おいしい、きれいだ) → liệt kê tiếp; liền sau là một động từ (起きる、話す) → nói hành động được làm như thế nào. Tính từ đuôi な cũng vậy: 静かで là liệt kê (で bắt nguồn từ 「にて」＝に＋て trong tiếng Nhật cổ), 静かに bổ nghĩa cho động từ; ✗静かで話す cũng sai."
+              "explain": "Hãy nhìn phía sau: có thêm 「て」 (hoặc に đổi thành で) và phía sau là một tính chất khác (おいしい、きれいだ) → liệt kê các tính chất; không có 「て」, liền sau là một động từ (起きる、話してください) → nói hành động được làm như thế nào. 安くて／安く、静かで／静かに chỉ khác nhau một chữ kana; ✗静かで話してください cũng sai."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều nối được hai vế trước sau: liệt kê vài tính chất, hoặc nêu nguyên nhân",
+          "sense": 1,
+          "note": "Đều mang nghĩa “vừa… vừa…”",
+          "items": [
+            {
+              "id": "shi",
+              "thisTitle": "〜くて（nối tính từ đuôi い）",
+              "diff": "Đều là “vừa… vừa…”; くて nối hai tính chất thành một câu một cách đơn giản, し liệt kê từng điểm một, ngụ ý “không chỉ có vậy”.",
+              "this": [
+                {
+                  "tag": "くて · nối liền thành một câu",
+                  "tr": "Tiệm bánh mì đó vừa rẻ vừa ngon."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "し · liệt kê từng điểm",
+                  "tr": "Tiệm bánh mì đó vừa rẻ, vừa ngon, nhân viên lại còn thân thiện."
+                }
+              ],
+              "explain": "Cả hai câu đều là “vừa… vừa…”. くて nối chặt hai tính chất thành một câu, kể một cách bình thường; し đếm ra từng điểm một, hay đi cùng 「も」 (店員さんも親切だ), mang sắc thái “không chỉ có vậy, còn nữa”, nên cũng hay được dùng để nêu lý do. Cách nối cũng khác: くて là dạng biến đổi của tính từ (安くて), còn trước し dùng thể thường (安いし、親切だし)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Đều chỉ nguyên nhân “vì…”",
           "items": [
             {
               "id": "kara-from",
@@ -973,28 +999,7 @@
               "wrong": {
                 "why": "Sau くて không thể là yêu cầu, mệnh lệnh"
               },
-              "explain": "Nhìn nửa câu sau: kết quả bản thân không kiểm soát được như 「眠れない」「困る」 → dùng くて là được (danh từ, tính từ đuôi な dùng で: 心配で); lời nhờ, ý chí như 「〜てください」「〜ましょう」 → chỉ dùng được から (hoặc ので)."
-            },
-            {
-              "id": "shi",
-              "diff": "くて／で chỉ liệt kê ngang hàng; し liệt kê từng điểm như những lý do, ngụ ý “còn nữa”, phía sau thường là kết luận.",
-              "this": [
-                {
-                  "tag": "くて · Liệt kê ngang hàng",
-                  "tr": "Cửa hàng này vừa rẻ vừa ngon."
-                },
-                {
-                  "tag": "で · Liệt kê ngang hàng",
-                  "tr": "Cửa hàng này vừa yên tĩnh vừa sạch sẽ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nêu lý do → kết luận",
-                  "tr": "Cửa hàng này vừa rẻ lại vừa ngon, nên tôi hay đến."
-                }
-              ],
-              "explain": "Xem phía sau có kết luận kiểu “nên…” hay không: chỉ miêu tả đồ vật thế nào → くて／で; đưa các ưu điểm ra làm lý do, dẫn tới nhận định như “nên hay đến” → し. Cách nối cũng khác: くて／で là dạng biến đổi của tính từ, còn trước し dùng thể thường (安いし、静かだし)."
+              "explain": "Cả hai đều nói được nguyên nhân. Nhìn nửa câu sau: kết quả bản thân không kiểm soát được như 「眠れない」 → dùng くて là được (danh từ, tính từ đuôi な dùng で: 心配で); lời nhờ, ý chí như 「窓を開けてください」「〜ましょう」 → chỉ dùng được から (hoặc ので)."
             }
           ]
         }
@@ -1030,47 +1035,7 @@
                   "tr": "Vì quá căng thẳng nên tôi không nói được gì."
                 }
               ],
-              "explain": "Xem phía sau là phủ định hay kết quả: 「高くない」 → あまり＝không… lắm; kết quả kiểu “quá mức nên…” như 「買えない」, 「何も言えなかった」 → あまりに (＋tính từ), あまりの (＋danh từ), 〜のあまり (sau danh từ＋の hoặc động từ). Cùng viết là 「あまり」, đặt trước tính từ và đi với phủ định thì là “không… lắm”, đặt sau 「緊張の」 thì là “do quá…”."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Đều đi kèm phủ định, nói mức độ hoặc tần suất của “không…”",
-          "items": [
-            {
-              "id": "zenzen-nai",
-              "diff": "あまり〜ない là “không… lắm”, vẫn còn chừa chỗ; 全然〜ない là “hoàn toàn không”.",
-              "this": [
-                {
-                  "tag": "Không lắm · vẫn có chút",
-                  "tr": "Tôi không uống rượu mấy, thỉnh thoảng uống một chút thôi."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Hoàn toàn không · chẳng chút nào",
-                  "tr": "Tôi hoàn toàn không uống rượu, một ngụm cũng không uống được."
-                }
-              ],
-              "explain": "Xem câu bổ sung phía sau: còn nói “thỉnh thoảng uống một chút” → あまり; nói “một ngụm cũng…”, không chừa chút nào → 全然."
-            },
-            {
-              "id": "metta-ni-nai",
-              "diff": "あまり nói được cả mức độ lẫn tần suất; めったに chỉ nói tần suất: “hiếm khi, ít khi”.",
-              "this": [
-                {
-                  "tag": "Mức độ · không lắm",
-                  "tr": "Quả táo này không ngọt lắm."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tần suất · hiếm khi",
-                  "tr": "Bố tôi hiếm khi nổi giận."
-                }
-              ],
-              "explain": "Xem phía sau nói “bao nhiêu lần” hay “mức độ nào”: hành động ít xảy ra (怒らない、行かない) → あまり、めったに đều được, めったに còn ít hơn; mức độ của tính từ (甘くない、高くない) → chỉ dùng あまり."
+              "explain": "あまり bắt nguồn từ động từ 「余る」, nghĩa gốc là “vượt quá, thừa ra”. Dùng theo hướng “quá mức”: あまりに高くて＝đắt vượt quá giới hạn → quá; あまりの値段、緊張のあまり cũng là “… vượt quá giới hạn” → do quá…, phía sau là kết quả do nó gây ra. Dùng với phủ định: あまり高くない＝không đắt đến mức vượt mức bình thường → không… lắm. Vì vậy hãy nhìn phía sau: đi với phủ định (高くない) → không… lắm; phía sau là một kết quả (買えない、何も言えなかった) → quá."
             }
           ]
         }
@@ -1126,7 +1091,7 @@
                   "tr": "Chỉ ngắm thôi cũng đã thấy vui."
                 }
               ],
-              "explain": "Nhìn phía sau: câu kết thúc ở 「だけです」, hoặc giải thích “không làm gì khác” → chỉ; sau 「だけで」 là một kết quả (楽しい、疲れる、分かる) → chỉ riêng điều đó đã đủ gây ra kết quả ấy."
+              "explain": "だけ bắt nguồn từ 「丈（たけ）」, nghĩa gốc là chiều dài, chiều cao, mở rộng thành “giới hạn đến đây” → chỉ chừng này. 見るだけです: hành động dừng ở “xem”, không làm gì tiếp (買いません) → chỉ; 見るだけで: で mang nghĩa “dựa vào”, chỉ riêng việc “xem” là đủ, phía sau là kết quả ngay (楽しい) → chỉ cần… là đã…. Vì vậy hãy nhìn sau だけ: kết câu bằng 「です」, nói rõ không làm gì khác → chỉ; 「で、」 rồi tiếp một kết quả → chỉ cần… là đã…."
             }
           ]
         },
@@ -1156,20 +1121,20 @@
             },
             {
               "id": "bakari-only",
-              "diff": "だけ là “chỉ có cái này, không có cái khác”; ばかり là “toàn là, lúc nào cũng cái này”, thường mang ý bất mãn.",
+              "diff": "Đều là “chỉ”; だけ khoanh phạm vi một cách khách quan, ばかり nhấn mạnh “toàn là cái này”, thường kèm sự bất mãn.",
               "this": [
                 {
-                  "tag": "Chỉ có · phạm vi hẹp",
-                  "tr": "Sáng nay không có thời gian nên tôi chỉ ăn bánh mì."
+                  "tag": "Chỉ cái này · không đụng cái khác",
+                  "tr": "Em trai tôi chỉ ăn thịt, còn rau thì để thừa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Toàn là · bất mãn",
-                  "tr": "Em trai tôi lúc nào cũng chỉ toàn ăn thịt."
+                  "tag": "Toàn là cái này · bất mãn",
+                  "tr": "Em trai tôi toàn ăn thịt, thật là đau đầu."
                 }
               ],
-              "explain": "Xem có cảm giác lặp đi lặp lại như 「いつも」 không: chỉ nói lần này phạm vi hẹp → だけ; phàn nàn một thứ gì đó quá nhiều, lúc nào cũng thế → ばかり. Tiếng Việt đều có thể nói “chỉ”, nên dễ nhầm. Trong văn nói, nói ばっかり cũng như vậy."
+              "explain": "Cả hai câu đều là “chỉ”. だけ khoanh phạm vi một cách khách quan: chỉ có thịt, ngoài ra không có gì khác (野菜は残した); ばかり nói “nhiều đến mức gần như toàn là cái này”, người nói thấy quá lệch, không hài lòng, nên phía sau hay có lời than như 「困る」. Vì vậy hãy xem thái độ của người nói: chỉ trình bày phạm vi → だけ; đang than phiền “toàn là cái này” → ばかり. Trong văn nói cũng dùng ばっかり."
             }
           ]
         }
@@ -1198,54 +1163,6 @@
                 }
               ],
               "explain": "Xem nói với ai: tự nói một mình, nhật ký, văn viết, hoặc với người thân quen (thường là nam giới) → だろう; với khách, người trên, người nghe (ví dụ dự báo thời tiết) → でしょう. Nói 「だろう」 với cấp trên sẽ rất bất lịch sự."
-            },
-            {
-              "id": "kamoshirenai",
-              "diff": "だろう là trong lòng đã gần như chắc chắn; かもしれない chỉ nói “cũng có thể”, độ chắc thấp.",
-              "this": [
-                {
-                  "tag": "Chắc là · khá chắc",
-                  "tr": "Trời tối thế này, chắc chắn sẽ mưa thôi."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Không chừng · ít chắc",
-                  "tr": "Không chừng trời sẽ mưa."
-                }
-              ],
-              "explain": "Xem phó từ phía trước: 「きっと」, 「たぶん」 → だろう; 「もしかしたら」 → かもしれない. Khi chỉ đưa ra một khả năng mà bản thân cũng không mấy chắc chắn thì dùng かもしれない."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "datta-deshita",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Đều chỉ quá khứ",
-          "items": [
-            {
-              "id": "i-adj-past",
-              "diff": "Quá khứ của danh từ, tính từ đuôi な dùng でした; tính từ đuôi い đổi 「い」 thành 「かった」 rồi thêm 「です」.",
-              "this": [
-                {
-                  "tag": "Tính từ đuôi な → でした",
-                  "tr": "Bài kiểm tra hôm qua rất dễ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tính từ đuôi い → かったです",
-                  "tr": "Bài kiểm tra hôm qua rất khó."
-                }
-              ],
-              "wrong": {
-                "why": "Tính từ đuôi い không đi với 「でした」"
-              },
-              "explain": "Xem loại tính từ: 簡単、静か、きれい là tính từ đuôi な → でした; 難しい、寒い là tính từ đuôi い → かったです. Chú ý きれい tuy kết thúc bằng 「い」 nhưng là tính từ đuôi な: きれいでした. Thể thường cũng vậy: 簡単だった／難しかった; phủ định cũng chia thành hai kiểu: 簡単じゃなかった／難しくなかった."
             }
           ]
         }
@@ -1288,7 +1205,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「で＋も」 — nghĩa gốc là “dù là… cũng”",
+          "note": "Đều bắt nguồn từ 「で＋も」 — で là “là” mang tính khẳng định, も là “cũng”, nghĩa gốc là “dù là… cũng”",
           "items": [
             {
               "id": "question-word-temo",
@@ -1306,7 +1223,7 @@
                   "tr": "Dù trời mưa, trận đấu vẫn diễn ra."
                 }
               ],
-              "explain": "Xem nửa câu sau: lời mời, gợi ý như 「〜ませんか」, 「〜ましょう」 → chỉ nêu đại một ví dụ để giọng nói nhẹ nhàng hơn; phía sau nói việc không bị ảnh hưởng, vẫn xảy ra → dù."
+              "explain": "でも là 「で」 khẳng định (“là”) cộng với 「も」 (“cũng”), nghĩa gốc là “dù là… cũng”. Cách dùng nhượng bộ giữ nguyên nghĩa gốc: 雨でも＝dù là mưa, phía sau vẫn diễn ra như thường (試合はあります) → dù. Cách dùng nêu ví dụ là nghĩa gốc nhẹ đi: お茶でも＝“dù chỉ là trà cũng được”, không nói chắc là thứ gì, chỉ tiện nêu một ví dụ nên giọng điệu trở nên nhẹ nhàng, vì vậy phía sau hay là lời mời, lời đề nghị (飲みませんか、〜ましょう). Nhìn nửa câu sau: lời mời, đề nghị → nêu ví dụ; việc vẫn xảy ra như thường, không bị ảnh hưởng → dù."
             }
           ]
         },
@@ -1424,23 +1341,6 @@
                 }
               ],
               "explain": "Xem nói với ai: với khách, người trên, người nghe (ví dụ dự báo thời tiết) → でしょう; tự nói một mình, nhật ký, văn viết, hoặc với người thân quen (thường là nam giới) → だろう."
-            },
-            {
-              "id": "kamoshirenai",
-              "diff": "でしょう là thấy có lẽ là vậy; かもしれません chỉ nói có khả năng đó, độ chắc thấp hơn.",
-              "this": [
-                {
-                  "tag": "Chắc là · khá chắc",
-                  "tr": "Chắc chắn anh Tanaka cũng sẽ đến."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Không chừng · ít chắc",
-                  "tr": "Không chừng anh Tanaka cũng sẽ đến."
-                }
-              ],
-              "explain": "Xem phó từ phía trước: 「きっと」, 「たぶん」 → でしょう; 「もしかしたら」 → かもしれません. Khi chỉ đưa ra một khả năng mà bản thân cũng không mấy chắc chắn thì dùng かもしれません."
             }
           ]
         }
