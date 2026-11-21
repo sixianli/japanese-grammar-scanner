@@ -1,12 +1,4 @@
 #!/usr/bin/env python3
-"""生成界面文字的多语言文件。
-- 界面文字：每种语言一个 xx.lproj/Localizable.strings（带复数的写进 Localizable.stringsdict）。
-  不用 String Catalog（.xcstrings）：新版 Xcode 把它编译成整包的语言表，App 内切换语言时
-  SwiftUI 按所选语言去 xx.lproj 里找普通文字会找不到，只有带复数的文字能切换。
-- InfoPlist.xcstrings（App 名称、相机权限说明）：由系统读取，仍用 String Catalog。
-源语言为简体中文（代码中的字符串即 key）；繁体中文由 OpenCC 自动转换。
-用法: python3 tools/make_strings.py
-"""
 import json
 import os
 import re
@@ -17,7 +9,6 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = os.path.join(ROOT, "JapaneseGrammarScanner")
 cc = OpenCC("s2twp")
 
-# key(简体中文) : (en, ko, es, vi)
 S = {
     "你扫到的：": ("You scanned: ", "스캔한 문장: ", "Escaneaste: ", "Bạn đã quét: "),
     "对应 用法 ": ("Matches usage ", "해당 용법 ", "Corresponde al uso ", "Ứng với cách dùng "),
@@ -36,6 +27,7 @@ S = {
     "收起": ("Hide", "접기", "Ocultar", "Thu gọn"),
     "怎么分辨": ("How to tell them apart", "구별하는 법", "Cómo distinguirlos", "Cách phân biệt"),
     "本页": ("This page", "이 문법", "Esta página", "Trang này"),
+    "本页第 %lld 个意思：%@": ("Meaning %lld on this page: %@", "이 문법의 %lld번째 뜻: %@", "Significado %lld de esta página: %@", "Nghĩa thứ %lld của trang này: %@"),
     "有 %lld 个快要忘了": ({"one": "%lld grammar point fading", "other": "%lld grammar points fading"}, "잊어버릴 것 같은 문법 %lld개", {"one": "%lld punto se te está olvidando", "other": "%lld puntos se te están olvidando"}, "%lld mẫu sắp quên"),
     "趁还记得，花 1 分钟复习一下": ("Take a minute to review while you still remember.", "아직 기억날 때 1분만 복습해 보세요.", "Repásalos un minuto mientras aún los recuerdas.", "Dành 1 phút ôn lại khi bạn vẫn còn nhớ."),
     "开始复习": ("Start Review", "복습 시작", "Empezar a repasar", "Bắt đầu ôn tập"),
@@ -352,7 +344,6 @@ S = {
     "帮助我们了解有多少人在用、来自哪些地区、哪些语法最常被查，以便改进。不包含任何能识别你或你设备的信息。": ("Helps us learn how many people use the app, where they are and which grammar is looked up most, so we can improve it. Contains nothing that identifies you or your device.", "몇 명이 사용하는지, 어느 지역에서 쓰는지, 어떤 문법을 가장 많이 찾는지 파악해 앱을 개선하는 데 도움이 됩니다. 사용자나 기기를 식별할 수 있는 정보는 포함되지 않습니다.", "Nos ayuda a saber cuántas personas usan la app, desde dónde y qué gramática se consulta más, para mejorarla. No contiene nada que te identifique a ti ni a tu dispositivo.", "Giúp chúng tôi biết có bao nhiêu người dùng, đến từ đâu và ngữ pháp nào được tra nhiều nhất để cải thiện ứng dụng. Không chứa thông tin nào nhận dạng bạn hoặc thiết bị của bạn."),
     "为了解有多少人在用、来自哪些国家或地区、在什么时段使用、哪些语法点最常被查，App 每天会匿名上报一条使用汇总：当天打开次数、按小时的使用分布、查看过的语法点及其等级、App Store 所在的国家或地区、界面语言和 App 版本。不包含姓名、账号、设备编号或任何能识别你的信息，通过 Apple 的 iCloud（CloudKit）保存，只用于改进 App。可以随时在「设置 → 匿名使用统计」中关闭。": ("To learn how many people use the app, which countries or regions they are in, when they use it and which grammar points are looked up most, the app sends one anonymous daily summary: how many times it was opened that day, usage by hour, the grammar points viewed and their levels, the App Store country or region, the interface language and the app version. It contains no name, account, device ID or anything that identifies you, is stored via Apple's iCloud (CloudKit) and is used only to improve the app. You can turn it off at any time in Settings → Anonymous Usage Statistics.", "얼마나 많은 사람이 쓰는지, 어느 국가·지역에서 쓰는지, 언제 쓰는지, 어떤 문법을 가장 많이 찾는지 알기 위해 앱은 하루에 한 번 익명 사용 요약을 보냅니다. 그날 앱을 연 횟수, 시간대별 사용량, 본 문법과 그 급수, App Store 국가·지역, 화면 언어, 앱 버전이 포함됩니다. 이름, 계정, 기기 ID 등 사용자를 식별할 수 있는 정보는 포함되지 않으며, Apple iCloud(CloudKit)에 저장되어 앱 개선에만 사용됩니다. 「설정 → 익명 사용 통계」에서 언제든 끌 수 있습니다.", "Para saber cuántas personas usan la app, en qué países o regiones están, cuándo la usan y qué puntos gramaticales se consultan más, la app envía un resumen diario anónimo: cuántas veces se abrió ese día, el uso por horas, los puntos gramaticales vistos y su nivel, el país o región de la App Store, el idioma de la interfaz y la versión de la app. No contiene nombre, cuenta, identificador del dispositivo ni nada que te identifique; se guarda mediante iCloud (CloudKit) de Apple y solo se usa para mejorar la app. Puedes desactivarlo en cualquier momento en Ajustes → Estadísticas de uso anónimas.", "Để biết có bao nhiêu người dùng, họ ở quốc gia hoặc khu vực nào, dùng vào lúc nào và ngữ pháp nào được tra nhiều nhất, ứng dụng gửi một bản tóm tắt ẩn danh mỗi ngày: số lần mở trong ngày, mức sử dụng theo giờ, các điểm ngữ pháp đã xem và cấp độ, quốc gia hoặc khu vực của App Store, ngôn ngữ giao diện và phiên bản ứng dụng. Không có tên, tài khoản, mã thiết bị hay thông tin nào nhận dạng bạn; dữ liệu được lưu qua iCloud (CloudKit) của Apple và chỉ dùng để cải thiện ứng dụng. Bạn có thể tắt bất cứ lúc nào trong Cài đặt → Thống kê sử dụng ẩn danh."),
     "书页弯曲较大，个别高亮可能落在相邻的行。把书页压平、正对拍摄，效果更好。": ("The page is strongly curved, so a few highlights may land on a neighboring line. Flatten the page and shoot straight on for better results.", "페이지가 많이 휘어 있어 일부 하이라이트가 옆 줄에 표시될 수 있습니다. 페이지를 펴고 정면에서 찍으면 더 정확합니다.", "La página está muy curvada, así que algún resaltado puede caer en la línea vecina. Aplana la página y fotografíala de frente para mejores resultados.", "Trang sách bị cong nhiều nên một vài chỗ tô sáng có thể rơi vào dòng bên cạnh. Hãy ép phẳng trang và chụp thẳng để có kết quả tốt hơn."),
-    # ── 使用指南（AppFeature.card）、入门引导、法律文本 ──
     "扫描日语": ("Scan Japanese", "일본어 스캔", "Escanear japonés", "Quét tiếng Nhật"),
     "相机取景、拍照定格、从相册选图": ("Live camera view, capture a shot, or pick from Photos", "카메라로 비추기, 촬영해서 고정, 사진에서 선택", "Vista de cámara, captura fija o imagen de Fotos", "Ngắm bằng camera, chụp cố định, chọn từ thư viện ảnh"),
     "手边没有日语书时，在首页点「试试示例」，用内置的示例书页体验一下。": (
@@ -618,7 +609,6 @@ S = {
     ),
 }
 
-# 缅甸语（my，Myanmar Unicode）。缅甸语没有复数变化，统一用普通字符串。
 MY = {
     "你扫到的：": "စကင်ဖတ်ထားသည်- ",
     "对应 用法 ": "သက်ဆိုင်သော အသုံး ",
@@ -637,6 +627,7 @@ MY = {
     "收起": "ပိတ်ရန်",
     "怎么分辨": "ခွဲခြားနည်း",
     "本页": "ဤသဒ္ဒါ",
+    "本页第 %lld 个意思：%@": "ဤသဒ္ဒါ၏ အဓိပ္ပာယ် %lld: %@",
     "有 %lld 个快要忘了": "မေ့တော့မည့် သဒ္ဒါ %lld ခု",
     "趁还记得，花 1 分钟复习一下": "မှတ်မိနေတုန်း ၁ မိနစ်လောက် ပြန်လေ့လာလိုက်ပါ။",
     "开始复习": "ပြန်လေ့လာမည်",

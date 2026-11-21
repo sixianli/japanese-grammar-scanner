@@ -1,43 +1,34 @@
 import Foundation
 
-/// 「相近语法」新版对比资料（Resources/Grammar/contrasts/contrasts.json，简体中文基础文件；
-/// contrasts_<语言>.json 为翻译，结构一一对应，只含需要翻译的文字）。
-/// 只有部分语法点有这份资料；没有的语法点仍显示旧版的 `GrammarPoint.similar`。
 struct GrammarContrasts: Decodable {
     let id: String
     var groups: [Group]
 
     struct Group: Decodable {
         enum Kind: String, Decodable {
-            /// 同一个词变来的
             case root
-            /// 长得像的
             case look
-            /// 意思差不多的
             case meaning
         }
 
         let kind: Kind
-        /// 组名旁的一句说明（如「都来自『ところ（所）』」）
         var note: String
+        let sense: Int?
         var items: [Item]
     }
 
+    var splitsMeaningBySense: Bool {
+        groups.filter { $0.kind == .meaning }.count > 1
+    }
+
     struct Item: Decodable {
-        /// 对比对象的语法点 id
         let id: String
-        /// 显示用的标题（只对比对方的某一种形式 / 用法时，如「〜ように（目的）」）；缺省用对方的标题
         var title: String?
-        /// 只用本页的某一种形式 / 用法时，点明是哪一种
         var thisTitle: String?
-        /// 一句话的差别（收起时也显示）
         var diff: String
-        /// 本页语法的例句：通常 1 句；本页有几种用法不同的形式时，每种形式一句
         var current: [Sentence]
-        /// 对方语法的例句（同上）
         var other: [Sentence]
         var wrong: Wrong?
-        /// 「怎么分辨」讲解
         var explain: String
 
         enum CodingKeys: String, CodingKey {
@@ -58,8 +49,6 @@ struct GrammarContrasts: Decodable {
             other = try Self.sentences(c, .other)
         }
 
-        /// 例句里标成线索（虚线）的词：相邻的线索片段连成一个词（如「間に合わない」）。
-        /// 「怎么分辨」里出现这些词时用同样的虚线标出，两边对应（Build 17 反馈 9）。
         var cues: [String] {
             var out: [String] = []
             for s in current + other {
@@ -73,20 +62,17 @@ struct GrammarContrasts: Decodable {
             return out.filter { seen.insert($0).inserted }
         }
 
-        /// 例句数组（也兼容旧格式的单个对象）
         private static func sentences(_ c: KeyedDecodingContainer<CodingKeys>, _ key: CodingKeys) throws -> [Sentence] {
             if let list = try? c.decode([Sentence].self, forKey: key) { return list }
             return [try c.decode(Sentence.self, forKey: key)]
         }
     }
 
-    /// 对比例句。`ja` 的写法：用 | 分段；「漢字:かな」= 带注音；* 开头 = 语法本体；~ 开头 = 线索。
     struct Sentence: Decodable {
         var ja: String?
         var tag: String
         var tr: String
 
-        /// 拆成可排版的片段（语法本体高亮，线索加虚线）
         var segments: [RubySegment] {
             guard let ja else { return [] }
             return ja.split(separator: "|", omittingEmptySubsequences: true).map { raw in
@@ -101,7 +87,6 @@ struct GrammarContrasts: Decodable {
             }
         }
 
-        /// 去掉标记后的整句（无障碍朗读用）
         var plain: String { segments.map(\.text).joined() }
     }
 
@@ -110,7 +95,6 @@ struct GrammarContrasts: Decodable {
         var why: String
     }
 
-    /// 用某种语言的翻译覆盖文字（结构不一致的部分保留简体中文）。
     mutating func apply(_ l: GrammarContrasts) {
         guard l.groups.count == groups.count else { return }
         for g in groups.indices {
@@ -131,7 +115,6 @@ struct GrammarContrasts: Decodable {
         }
     }
 
-    /// 按位置覆盖例句的标签和翻译（句数不一致时保留简体中文）
     private static func apply(_ l: [Sentence], to s: inout [Sentence]) {
         guard l.count == s.count else { return }
         for n in s.indices {

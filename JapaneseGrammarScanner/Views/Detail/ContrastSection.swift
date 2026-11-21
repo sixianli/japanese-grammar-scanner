@@ -1,11 +1,7 @@
 import SwiftUI
 
-/// 新版「相近语法」：分成「同一个词变来的 / 长得像的 / 意思差不多的」三组（没有内容的组不显示）。
-/// 每一条默认收起，只显示语法名 + 一句话差别；展开后是两句对比例句（本页语法 vs 对方语法）、
-/// 常见错误（有时）和「怎么分辨」讲解。点语法名跳到对方的讲解页，点「看例句对比」展开，两个按钮分开。
 struct ContrastSection: View {
     let contrasts: GrammarContrasts
-    /// 本页语法的标题（例句标签「本页 · 〜たところだ」）
     let currentTitle: String
     @EnvironmentObject private var library: GrammarLibrary
     @State private var expanded: Set<String> = []
@@ -14,7 +10,14 @@ struct ContrastSection: View {
         VStack(alignment: .leading, spacing: 28) {
             ForEach(Array(contrasts.groups.enumerated()), id: \.offset) { g, group in
                 VStack(alignment: .leading, spacing: 10) {
-                    groupHeader(group)
+                    if isSenseSubsection(group) {
+                        if g == 0 || contrasts.groups[g - 1].kind != group.kind {
+                            kindTitle(group.kind)
+                        }
+                        senseHeader(group)
+                    } else {
+                        groupHeader(group)
+                    }
                     ForEach(Array(group.items.enumerated()), id: \.offset) { i, item in
                         card(item, key: "\(g)-\(i)")
                     }
@@ -22,7 +25,6 @@ struct ContrastSection: View {
             }
         }
         .onAppear {
-            // CI 截图：全部展开
             if DemoMode.opensContrasts {
                 for (g, group) in contrasts.groups.enumerated() {
                     for i in group.items.indices { expanded.insert("\(g)-\(i)") }
@@ -40,6 +42,40 @@ struct ContrastSection: View {
         }
         .accessibilityElement(children: .combine)
         .accessibilityAddTraits(.isHeader)
+    }
+
+    private func isSenseSubsection(_ group: GrammarContrasts.Group) -> Bool {
+        group.kind == .meaning && contrasts.splitsMeaningBySense
+    }
+
+    private func kindTitle(_ kind: GrammarContrasts.Group.Kind) -> some View {
+        Text(localized: Self.name(of: kind))
+            .font(.headline)
+            .foregroundStyle(Color.primary)
+            .accessibilityAddTraits(.isHeader)
+    }
+
+    private func senseHeader(_ group: GrammarContrasts.Group) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            RubyText(explanation: group.note, style: .init(font: .subheadline, lineSpacing: 3, weight: .semibold))
+            if let n = group.sense, let label = senseLabel(n) {
+                Text(localized: "本页第 \(n) 个意思：\(label)")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .padding(.leading, 9)
+        .overlay(alignment: .leading) {
+            Rectangle().fill(Theme.accentText.opacity(0.5)).frame(width: 3)
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isHeader)
+        .accessibilityIdentifier("detail.contrast.senseHeader")
+    }
+
+    private func senseLabel(_ n: Int) -> String? {
+        guard let senses = library.point(id: contrasts.id)?.senses, senses.indices.contains(n - 1) else { return nil }
+        return senses[n - 1].label
     }
 
     static func name(of kind: GrammarContrasts.Group.Kind) -> LocalizedStringKey {
@@ -120,7 +156,6 @@ struct ContrastSection: View {
         }
     }
 
-    /// 一侧的例句：通常一句；这一侧有几种用法不同的形式时，名字只写一次，每种形式一句（标签写明是哪种形式）
     @ViewBuilder
     private func side(_ list: [GrammarContrasts.Sentence], label: Text, isCurrent: Bool) -> some View {
         if list.count == 1, let s = list.first {
@@ -182,7 +217,6 @@ struct ContrastSection: View {
         .accessibilityElement(children: .combine)
     }
 
-    /// 「怎么分辨」：例句里虚线标出的线索词，在这里出现时也画同样的虚线，两边对应（Build 17 反馈 9）
     private func explainBox(_ text: String, cues: [String]) -> some View {
         VStack(alignment: .leading, spacing: 6) {
             Label {

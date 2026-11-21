@@ -840,29 +840,32 @@
         },
         {
           "kind": "meaning",
-          "note": "All mean “in order to” or “because”",
+          "note": "Both mean “in order to”",
           "items": [
             {
-              "id": "you-na-example",
-              "title": "〜ように (purpose)",
-              "diff": "ために follows an action you can control; ように follows a state, such as the potential or negative form.",
+              "id": "ni-wa-purpose",
+              "title": "〜には (purpose)",
+              "diff": "ために is followed by “what you do”; には is followed by “what's needed, or how much it takes”.",
               "this": [
                 {
-                  "tag": "Volitional action",
-                  "tr": "I study every day in order to pass N1."
+                  "tag": "Action follows",
+                  "tr": "I'm saving money to buy a house."
                 }
               ],
               "that": [
                 {
-                  "tag": "Potential form · state",
-                  "tr": "I study every day so that I can speak Japanese."
+                  "tag": "Requirement follows",
+                  "tr": "To buy a house, you need a lot of money."
                 }
               ],
-              "wrong": {
-                "why": "After the potential form, use ように"
-              },
-              "explain": "Look at the verb before ため／ように: 「合格する」 is an action you decide to do → ために; potential forms, negative forms and things that happen on their own, like 「話せる」「忘れない」「見える」 → ように."
-            },
+              "explain": "Look at the second half: an action you take (貯金している) → ために; a requirement or evaluation, like 「必要だ」「〜がかかる」「〜がいい」 → には."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Both mean “because”",
+          "items": [
             {
               "id": "kara-from",
               "title": "〜から (reason)",
@@ -883,24 +886,6 @@
                 "why": "ために expressing a reason can't be followed by an invitation or command"
               },
               "explain": "Look at the second half: stating a result that has already happened, like a station announcement or the news → ために; your own invitation or request, like 「〜よう」「〜てください」 → only から (or ので)."
-            },
-            {
-              "id": "ni-wa-purpose",
-              "title": "〜には (purpose)",
-              "diff": "ために is followed by “what you do”; には is followed by “what's needed, or how much it takes”.",
-              "this": [
-                {
-                  "tag": "Action follows",
-                  "tr": "I'm saving money to buy a house."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Requirement follows",
-                  "tr": "To buy a house, you need a lot of money."
-                }
-              ],
-              "explain": "Look at the second half: an action you take (貯金している) → ために; a requirement or evaluation, like 「必要だ」「〜がかかる」「〜がいい」 → には."
             }
           ]
         }

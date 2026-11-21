@@ -66,6 +66,25 @@ def note_problem(kind, note):
     return None
 
 
+def check_senses(pid, groups, sense_count, errors):
+    meaning = [g for g in groups if g["kind"] == "meaning"]
+    for g in groups:
+        if "sense" in g and g["kind"] != "meaning":
+            errors.append(f"contrasts.json: {pid}/{g['kind']} 只有「意思差不多的」组能写 sense")
+    if len(meaning) < 2 and all("sense" not in g for g in meaning):
+        return
+    senses = [g.get("sense") for g in meaning]
+    if any(not isinstance(n, int) or not 1 <= n <= sense_count for n in senses):
+        errors.append(f"contrasts.json: {pid} 有多组「意思差不多的」时，每组都要用 sense 写明对应本页第几个意思"
+                      f"（1–{sense_count}）：{senses}")
+    elif len(set(senses)) != len(senses):
+        errors.append(f"contrasts.json: {pid} 同一个意思只能有一组「意思差不多的」：{senses}")
+
+
+def group_key(pid, group):
+    return f"{pid}/{group['kind']}" + (f"{group['sense']}" if "sense" in group else "")
+
+
 def plain(ja):
     return "".join((seg[1:] if seg[:1] in "*~" else seg).split(":", 1)[0] for seg in ja.split("|"))
 
@@ -221,8 +240,10 @@ def main():
             errors.append(f"contrasts.json: 语法点 {pid} 重复")
         seen_points.add(pid)
         kinds = [g["kind"] for g in p["groups"]]
-        if any(k not in KINDS for k in kinds) or kinds != sorted(set(kinds), key=KINDS.index):
-            errors.append(f"contrasts.json: {pid} 的分组必须按 root/look/meaning 顺序且不重复：{kinds}")
+        if any(k not in KINDS for k in kinds) or kinds != sorted(kinds, key=KINDS.index) \
+                or kinds.count("root") > 1 or kinds.count("look") > 1:
+            errors.append(f"contrasts.json: {pid} 的分组必须按 root/look/meaning 顺序，root、look 各最多一组：{kinds}")
+        check_senses(pid, p["groups"], len(points[pid]["senses"]) if pid in points else 0, errors)
         targets = set()
         for g in p["groups"]:
             if not g["items"]:
@@ -232,7 +253,7 @@ def main():
             else:
                 problem = note_problem(g["kind"], g["note"])
                 if problem:
-                    report("note", f"{pid}/{g['kind']}", f"contrasts.json: {pid}/{g['kind']} {problem}：{g['note']}")
+                    report("note", group_key(pid, g), f"contrasts.json: {group_key(pid, g)} {problem}：{g['note']}")
             for it in g["items"]:
                 where = f"contrasts.json: {pid} → {it['id']}"
                 if it["id"] not in ids:

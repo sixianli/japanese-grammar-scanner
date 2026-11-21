@@ -840,29 +840,32 @@
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “để” hoặc “vì”",
+          "note": "Đều diễn tả “để”",
           "items": [
             {
-              "id": "you-na-example",
-              "title": "〜ように (mục đích)",
-              "diff": "Trước ために là hành động mình kiểm soát được; trước ように là trạng thái như thể khả năng, thể phủ định.",
+              "id": "ni-wa-purpose",
+              "title": "〜には (mục đích)",
+              "diff": "Sau ために là “làm gì”; sau には là “cần gì, tốn bao nhiêu”.",
               "this": [
                 {
-                  "tag": "Hành động có ý chí",
-                  "tr": "Để đỗ N1, ngày nào tôi cũng học."
+                  "tag": "Sau là hành động",
+                  "tr": "Để mua nhà, tôi đang tiết kiệm tiền."
                 }
               ],
               "that": [
                 {
-                  "tag": "Thể khả năng · trạng thái",
-                  "tr": "Để nói được tiếng Nhật, ngày nào tôi cũng học."
+                  "tag": "Sau là nhu cầu",
+                  "tr": "Muốn mua nhà thì cần rất nhiều tiền."
                 }
               ],
-              "wrong": {
-                "why": "Sau thể khả năng phải dùng ように"
-              },
-              "explain": "Nhìn động từ đứng trước ため／ように: 「合格する」 là hành động bản thân quyết định làm → ために; 「話せる」, 「忘れない」, 「見える」 — thể khả năng, thể phủ định, trạng thái tự nhiên xảy ra → ように."
-            },
+              "explain": "Nhìn nửa câu sau: hành động bản thân thực hiện (貯金している) → ために; nhu cầu hoặc đánh giá như 「必要だ」, 「〜がかかる」, 「〜がいい」 → には."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Đều diễn tả “vì”",
+          "items": [
             {
               "id": "kara-from",
               "title": "〜から (nguyên nhân)",
@@ -883,24 +886,6 @@
                 "why": "ために chỉ nguyên nhân không đi với lời rủ, mệnh lệnh"
               },
               "explain": "Nhìn nửa câu sau: trình bày kết quả đã xảy ra như thông báo ở ga, tin tức → ために; lời rủ, lời nhờ của bản thân như 「〜よう」, 「〜てください」 → chỉ dùng được から (hoặc ので)."
-            },
-            {
-              "id": "ni-wa-purpose",
-              "title": "〜には (mục đích)",
-              "diff": "Sau ために là “làm gì”; sau には là “cần gì, tốn bao nhiêu”.",
-              "this": [
-                {
-                  "tag": "Sau là hành động",
-                  "tr": "Để mua nhà, tôi đang tiết kiệm tiền."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Sau là nhu cầu",
-                  "tr": "Muốn mua nhà thì cần rất nhiều tiền."
-                }
-              ],
-              "explain": "Nhìn nửa câu sau: hành động bản thân thực hiện (貯金している) → ために; nhu cầu hoặc đánh giá như 「必要だ」, 「〜がかかる」, 「〜がいい」 → には."
             }
           ]
         }

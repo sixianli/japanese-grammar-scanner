@@ -1,6 +1,5 @@
 import XCTest
 
-/// 讲解页：义项跳转、相近语法、反馈入口、收藏
 final class DetailTests: E2ETestCase {
     func testSenseRowsJumpWithinPage() {
         openDetailBySearch("ように")
@@ -23,7 +22,6 @@ final class DetailTests: E2ETestCase {
         XCTAssertTrue(app.searchFields.firstMatch.waitForExistence(timeout: 8), "再返回应回到搜索页")
     }
 
-    /// 新版相近语法：默认收起只显示差别；点「看例句对比」展开例句和「怎么分辨」，再点收起；点语法名跳到对方讲解页
     func testContrastSectionExpandCollapseAndNavigate() {
         openDetailBySearch("ようになる")
         let toggle = id("detail.contrast.toggle")
@@ -44,8 +42,28 @@ final class DetailTests: E2ETestCase {
         wait(id("detail.contrast.toggle"), "返回后应回到原来的讲解页")
     }
 
-    /// Build 17 反馈 1：往上滑后，标题栏正中出现同一个标题和等级；回到顶部后标题栏里的标题藏起来
-    /// 「必考」只给出题频率最高的语法显示（Build 17 反馈 4）：について 有，〜たち 没有
+    func testMeaningGroupSplitsBySenseOnTameNi() {
+        openDetailBySearch("ために")
+        let headers = ids("detail.contrast.senseHeader")
+        let purpose = headers.matching(NSPredicate(format: "label CONTAINS %@", "为了")).firstMatch
+        scrollTo(purpose, maxSwipes: 25)
+        wait(purpose, "ために 的「意思差不多的」应有「为了」小节")
+        XCTAssertTrue(purpose.label.contains("本页第 1 个意思"), "「为了」小节应写明对应本页第 1 个意思：\(purpose.label)")
+        let cause = headers.matching(NSPredicate(format: "label CONTAINS %@", "因为")).firstMatch
+        scrollTo(cause, maxSwipes: 10)
+        wait(cause, "ために 的「意思差不多的」应有「因为」小节")
+        XCTAssertTrue(cause.label.contains("本页第 2 个意思"), "「因为」小节应写明对应本页第 2 个意思：\(cause.label)")
+        XCTAssertEqual(headers.count, 2, "两个意思各一个小节")
+    }
+
+    func testSingleMeaningPageHasNoSenseSubsections() {
+        openDetailBySearch("ようになる")
+        let toggle = id("detail.contrast.toggle")
+        scrollTo(toggle)
+        wait(toggle, "相近语法应有对比卡片")
+        XCTAssertEqual(ids("detail.contrast.senseHeader").count, 0, "只有一个意思的语法点不按意思分小节")
+    }
+
     func testMustKnowTagOnlyOnHighFrequencyGrammar() {
         openDetailBySearch("について")
         wait(id("detail.level"), "标题下方应有等级标签")
@@ -105,7 +123,6 @@ final class DetailTests: E2ETestCase {
     }
 }
 
-/// 语法库：等级筛选、搜索、例句中出现、无结果
 final class LibraryTests: E2ETestCase {
     func testLevelFilters() {
         tab("语法库").tap()
@@ -151,7 +168,6 @@ final class LibraryTests: E2ETestCase {
     }
 }
 
-/// 收藏：排序、左滑删除、打开讲解、再次点标签回到列表
 final class FavoritesTests: E2ETestCase {
     private func favoriteThreeFromLibrary() {
         tab("语法库").tap()
@@ -191,7 +207,6 @@ final class FavoritesTests: E2ETestCase {
     }
 }
 
-/// 搜索：最近查看、无结果、例句中出现、中文意思搜索
 final class SearchTests: E2ETestCase {
     private var field: XCUIElement { app.searchFields.firstMatch }
 
@@ -229,7 +244,6 @@ final class SearchTests: E2ETestCase {
         wait(id("search.result"), "按中文意思搜索应有结果")
     }
 
-    /// 输入后点键盘以外的空白处，键盘收起，输入的文字保留（无结果和有结果两种页面）
     func testTapOutsideDismissesKeyboard() {
         tab("搜索").tap()
         wait(field, "搜索框")
@@ -241,7 +255,6 @@ final class SearchTests: E2ETestCase {
 
         field.tap()
         XCTAssertTrue(waitForFocus(field), "再点搜索框应重新弹出键盘")
-        // 有结果时：点结果以外的空白处也收起键盘，结果仍可点开
         field.typeText(XCUIKeyboardKey.delete.rawValue + XCUIKeyboardKey.delete.rawValue + XCUIKeyboardKey.delete.rawValue + XCUIKeyboardKey.delete.rawValue + "ように")
         wait(id("search.result"), "应有结果")
         app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.03)).tap()

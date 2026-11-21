@@ -224,6 +224,164 @@
           "explain": "အချိန်ပြစကားလုံးကို ကြည့်ပါ -「去年」က ကိစ္စ ဖြစ်ခဲ့သည့်အချိန်ကို ဖော်ပြသည် → た။ တိကျသော အချိန် မပါဘဲ ယခု အခြေအနေ (အိမ်ထောင်ရှိ၊ ဘယ်မှာ နေသလဲ၊ ဘယ်သူ့ကို သိသလဲ) ကို ပြောလျှင် → ている။ မြန်မာလို နှစ်ခုစလုံး “လက်ထပ်ပြီ” ဟု ပြောနိုင်သော်လည်း ဂျပန်လိုတွင် “ထိုကိစ္စ” လား “ယခု အခြေအနေ” လား ခွဲခြားရမည်။"
         }
       }
+    },
+    {
+      "point": "tame-ni",
+      "kind": "meaning",
+      "reason": "对方语法点（〜ような・〜ように・〜みたいな）讲的是比喻和举例，没有「为了」这个意思；语法库里还没有表示目的的「〜ように」，新增后再用这条",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "you-na-example",
+          "title": "〜ように（目的）",
+          "diff": "ために 前面接自己能控制的动作；ように 前面接可能形、否定形等状态。",
+          "this": [
+            {
+              "ja": "N1に|~合格:ごうかく|~する|*ために|、|毎日:まいにち|勉強:べんきょう|している。",
+              "tag": "意志动作",
+              "tr": "为了考过 N1，每天都在学习。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "日本語:にほんご|が|~話:はな|~せる|*ように|、|毎日:まいにち|勉強:べんきょう|している。",
+              "tag": "可能形 · 状态",
+              "tr": "为了能说日语，每天都在学习。"
+            }
+          ],
+          "wrong": {
+            "ja": "日本語が話せるために勉強している",
+            "why": "可能形后面要用 ように"
+          },
+          "explain": "看 ため／ように 前面的动词：「合格する」是自己决定去做的动作 → ために；「話せる」「忘れない」「見える」这类可能形、否定形、自然发生的状态 → ように。"
+        },
+        "zh-Hant": {
+          "id": "you-na-example",
+          "title": "〜ように（目的）",
+          "diff": "ために 前面接自己能控制的動作；ように 前面接可能形、否定形等狀態。",
+          "this": [
+            {
+              "tag": "意志動作",
+              "tr": "為了考過 N1，每天都在學習。"
+            }
+          ],
+          "that": [
+            {
+              "tag": "可能形 · 狀態",
+              "tr": "為了能說日語，每天都在學習。"
+            }
+          ],
+          "wrong": {
+            "why": "可能形後面要用 ように"
+          },
+          "explain": "看 ため／ように 前面的動詞：「合格する」是自己決定去做的動作 → ために；「話せる」「忘れない」「見える」這類可能形、否定形、自然發生的狀態 → ように。"
+        },
+        "en": {
+          "id": "you-na-example",
+          "title": "〜ように (purpose)",
+          "diff": "ために follows an action you can control; ように follows a state, such as the potential or negative form.",
+          "this": [
+            {
+              "tag": "Volitional action",
+              "tr": "I study every day in order to pass N1."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Potential form · state",
+              "tr": "I study every day so that I can speak Japanese."
+            }
+          ],
+          "wrong": {
+            "why": "After the potential form, use ように"
+          },
+          "explain": "Look at the verb before ため／ように: 「合格する」 is an action you decide to do → ために; potential forms, negative forms and things that happen on their own, like 「話せる」「忘れない」「見える」 → ように."
+        },
+        "ko": {
+          "id": "you-na-example",
+          "title": "〜ように（목적）",
+          "diff": "ために 앞에는 스스로 조절할 수 있는 동작이 오고, ように 앞에는 가능형·부정형 같은 상태가 온다.",
+          "this": [
+            {
+              "tag": "의지 동작",
+              "tr": "N1에 합격하기 위해 매일 공부하고 있다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "가능형 · 상태",
+              "tr": "일본어를 말할 수 있도록 매일 공부하고 있다."
+            }
+          ],
+          "wrong": {
+            "why": "가능형 뒤에는 ように를 써야 한다"
+          },
+          "explain": "ため／ように 앞의 동사를 보자. 「合格する」는 스스로 하기로 정한 동작 → ために. 「話せる」 「忘れない」 「見える」 같은 가능형, 부정형, 저절로 일어나는 상태 → ように."
+        },
+        "es": {
+          "id": "you-na-example",
+          "title": "〜ように（finalidad）",
+          "diff": "Delante de ために va una acción que tú controlas; delante de ように van estados, como la forma potencial o la negativa.",
+          "this": [
+            {
+              "tag": "Acción voluntaria",
+              "tr": "Estudio todos los días para aprobar el N1."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Forma potencial · estado",
+              "tr": "Estudio todos los días para poder hablar japonés."
+            }
+          ],
+          "wrong": {
+            "why": "Detrás de la forma potencial hay que usar ように"
+          },
+          "explain": "Mira el verbo que va delante de ため／ように: 「合格する」 es una acción que decides hacer tú → ために; formas potenciales, negativas o estados que ocurren solos, como 「話せる」「忘れない」「見える」 → ように."
+        },
+        "vi": {
+          "id": "you-na-example",
+          "title": "〜ように (mục đích)",
+          "diff": "Trước ために là hành động mình kiểm soát được; trước ように là trạng thái như thể khả năng, thể phủ định.",
+          "this": [
+            {
+              "tag": "Hành động có ý chí",
+              "tr": "Để đỗ N1, ngày nào tôi cũng học."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Thể khả năng · trạng thái",
+              "tr": "Để nói được tiếng Nhật, ngày nào tôi cũng học."
+            }
+          ],
+          "wrong": {
+            "why": "Sau thể khả năng phải dùng ように"
+          },
+          "explain": "Nhìn động từ đứng trước ため／ように: 「合格する」 là hành động bản thân quyết định làm → ために; 「話せる」, 「忘れない」, 「見える」 — thể khả năng, thể phủ định, trạng thái tự nhiên xảy ra → ように."
+        },
+        "my": {
+          "id": "you-na-example",
+          "title": "〜ように（ရည်ရွယ်ချက်）",
+          "diff": "ために ၏ ရှေ့တွင် ကိုယ်တိုင် ထိန်းချုပ်နိုင်သော လုပ်ဆောင်ချက် လာသည်။ ように ၏ ရှေ့တွင် 可能形၊ ငြင်းပုံစံ စသည့် အခြေအနေ လာသည်။",
+          "this": [
+            {
+              "tag": "ဆန္ဒပါ လုပ်ဆောင်ချက်",
+              "tr": "N1 အောင်ဖို့ နေ့တိုင်း စာကျက်နေတယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "可能形 · အခြေအနေ",
+              "tr": "ဂျပန်စကား ပြောတတ်အောင် နေ့တိုင်း စာကျက်နေတယ်။"
+            }
+          ],
+          "wrong": {
+            "why": "可能形 ၏ နောက်တွင် ように ကို သုံးရမည်"
+          },
+          "explain": "ため／ように ၏ ရှေ့ရှိ ကြိယာကို ကြည့်ပါ - 「合格する」သည် ကိုယ်တိုင် ဆုံးဖြတ်ပြီး လုပ်သော လုပ်ဆောင်ချက် → ために။ 「話せる」「忘れない」「見える」ကဲ့သို့ 可能形၊ ငြင်းပုံစံ၊ သဘာဝအလျောက် ဖြစ်သော အခြေအနေ → ように။"
+        }
+      }
     }
   ]
 }

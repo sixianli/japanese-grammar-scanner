@@ -840,29 +840,32 @@
         },
         {
           "kind": "meaning",
-          "note": "Todas expresan «para» o «porque»",
+          "note": "Ambas expresan «para»",
           "items": [
             {
-              "id": "you-na-example",
-              "title": "〜ように（finalidad）",
-              "diff": "Delante de ために va una acción que tú controlas; delante de ように van estados, como la forma potencial o la negativa.",
+              "id": "ni-wa-purpose",
+              "title": "〜には（finalidad）",
+              "diff": "Después de ために va «qué haces»; después de には va «qué hace falta, cuánto cuesta».",
               "this": [
                 {
-                  "tag": "Acción voluntaria",
-                  "tr": "Estudio todos los días para aprobar el N1."
+                  "tag": "Seguido de una acción",
+                  "tr": "Estoy ahorrando para comprar una casa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Forma potencial · estado",
-                  "tr": "Estudio todos los días para poder hablar japonés."
+                  "tag": "Seguido de una necesidad",
+                  "tr": "Para comprar una casa, hace falta mucho dinero."
                 }
               ],
-              "wrong": {
-                "why": "Detrás de la forma potencial hay que usar ように"
-              },
-              "explain": "Mira el verbo que va delante de ため／ように: 「合格する」 es una acción que decides hacer tú → ために; formas potenciales, negativas o estados que ocurren solos, como 「話せる」「忘れない」「見える」 → ように."
-            },
+              "explain": "Mira la segunda parte: una acción que haces tú (貯金している) → ために; una necesidad o valoración, como 「必要だ」「〜がかかる」「〜がいい」 → には."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Ambas expresan «porque»",
+          "items": [
             {
               "id": "kara-from",
               "title": "〜から（causa）",
@@ -883,24 +886,6 @@
                 "why": "ために de causa no puede ir seguido de una invitación ni de una orden"
               },
               "explain": "Mira la segunda parte: si informa de un resultado ya ocurrido, como en un aviso de la estación o en las noticias → ために; si es tu propia invitación o petición, como 「〜よう」「〜てください」 → solo から (o ので)."
-            },
-            {
-              "id": "ni-wa-purpose",
-              "title": "〜には（finalidad）",
-              "diff": "Después de ために va «qué haces»; después de には va «qué hace falta, cuánto cuesta».",
-              "this": [
-                {
-                  "tag": "Seguido de una acción",
-                  "tr": "Estoy ahorrando para comprar una casa."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Seguido de una necesidad",
-                  "tr": "Para comprar una casa, hace falta mucho dinero."
-                }
-              ],
-              "explain": "Mira la segunda parte: una acción que haces tú (貯金している) → ために; una necesidad o valoración, como 「必要だ」「〜がかかる」「〜がいい」 → には."
             }
           ]
         }
