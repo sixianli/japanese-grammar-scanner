@@ -290,6 +290,9 @@ def main():
                 if "wrong" in it and not it["wrong"].get("ja", "").strip():
                     errors.append(f"{where}: wrong.ja 为空")
 
+    for pid in ([] if only_base else sorted(ids - seen_points)):
+        errors.append(f"contrasts.json: 语法点 {pid} 没有相近语法条目（没有合格对比时写 \"groups\": []）")
+
     groups_by_point = {p["id"]: p["groups"] for p in base}
     for pid, point in ([] if only_base else sorted(points.items())):
         seen = {}
@@ -336,6 +339,10 @@ def main():
                     if "title" in bi and "title" not in li:
                         errors.append(f"{name}: {bp['id']} → {bi['id']} 缺少 title")
                     texts += [(f"{bi['id']}.{n}", v) for n, v in text_fields(li)]
+                    cues = [w for key in ("this", "that") for sent in sentences(bi, key) for w in cue_words(sent.get("ja", ""))]
+                    missing = [w for w in dict.fromkeys(cues) if not cue_named(w, li.get("explain") or "")]
+                    if missing:
+                        errors.append(f"{name}: {bp['id']} → {bi['id']} 讲解没有写出虚线线索：{'、'.join(missing)}（日语原样保留）")
                 for n, v in texts:
                     where = f"{name}: {bp['id']} {n}"
                     if not isinstance(v, str) or not v.strip():
@@ -358,6 +365,11 @@ def main():
                 errors.append(f"tools/contrast_debt.json 的 {kind} 里有 {len(stale)} 条已经改好（或已删除），"
                               f"请运行 --update-debt 把它们移出清单：{'、'.join(stale[:5])}")
             print(f"{label}的旧条目（待改）：{len(failing[kind] & debt[kind])} 条")
+        if "--release" in sys.argv:
+            left = {k: len(v) for k, v in failing.items() if v}
+            if left:
+                errors.append("发版前 tools/contrast_debt.json 必须清空，还有："
+                              + "、".join(f"{DEBT_KINDS[k]} {n} 条" for k, n in left.items()))
 
     n_items = sum(len(g["items"]) for p in base for g in p["groups"])
     print(f"相近语法对比：{len(base)} 个语法点，{n_items} 条对比")

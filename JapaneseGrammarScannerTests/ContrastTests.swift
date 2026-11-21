@@ -155,14 +155,14 @@ final class ContrastTests: XCTestCase {
         XCTAssertEqual(out.last?.ruby, "いま")
     }
 
-    func testKosoadoCuesAreNamedInExplainInEveryLanguage() throws {
+    func testEveryCueIsNamedInExplainInEveryLanguage() {
         for lang in ContentLanguage.allCases {
             let lib = GrammarLibrary(language: lang)
-            for (page, target) in [("kosoado-konna", "kosoado-determiners"), ("kosoado-determiners", "kosoado-konna")] {
-                let item = try XCTUnwrap(lib.contrasts(for: page)?.groups.flatMap(\.items).first { $0.id == target }, "\(lang.rawValue) \(page)")
-                XCTAssertEqual(Set(item.cues), ["いつか", "ください"], "\(page) 的线索应是 いつか 和 ください")
-                for cue in item.cues {
-                    XCTAssertFalse(RubyText.cueRanges(in: item.explain, cues: [cue]).isEmpty, "\(lang.rawValue) \(page)：「怎么分辨」没有点名线索 \(cue)")
+            for p in lib.points {
+                for item in lib.contrasts(for: p.id)?.groups.flatMap(\.items) ?? [] {
+                    for cue in item.cues where RubyText.cueRanges(in: item.explain, cues: [cue]).isEmpty {
+                        XCTFail("\(lang.rawValue) \(p.id) → \(item.id)：「怎么分辨」没有点名线索 \(cue)")
+                    }
                 }
             }
         }
