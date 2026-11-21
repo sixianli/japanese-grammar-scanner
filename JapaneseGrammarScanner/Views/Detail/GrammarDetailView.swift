@@ -204,8 +204,14 @@ struct GrammarDetailView: View {
                 }
             }
             ToolbarItem(placement: .topBarTrailing) {
-                FavoriteSakuraButton(id: p.id, size: 22)
-                    .accessibilityIdentifier("detail.favorite")
+                Button {
+                    favorites.toggle(p.id)
+                } label: {
+                    Image(systemName: favorites.isFavorite(p.id) ? "star.fill" : "star")
+                        .foregroundStyle(Theme.accent)
+                }
+                .accessibilityLabel(favorites.isFavorite(p.id) ? Text(localized: "取消收藏") : Text(localized: "收藏"))
+                .accessibilityIdentifier("detail.favorite")
             }
         }
     }
