@@ -43,28 +43,37 @@ struct LevelText: View {
 }
 
 /// 「必考」标签：只给出题频率最高一档（frequency == .high）的语法显示，实心主题色，最醒目。
-/// 其它语法不显示任何频率标签（Build 17 反馈：只为告诉用户这个语法很重要）。点击显示数据来源说明。
+/// 其它语法不显示任何频率标签（Build 17 反馈：只为告诉用户这个语法很重要）。
+/// 详情页上可点（显示数据来源说明）；列表行里只是标签，不能点，否则会抢走整行的点击（点行没进讲解页，反而弹出说明）。
 struct MustKnowBadge: View {
     var large = false
+    var showsInfo = false
     @State private var showInfo = false
 
     var body: some View {
-        Button { showInfo = true } label: {
-            Text(localized: "必考")
-                .font(large ? TagMetrics.largeFont : TagMetrics.font)
-                .foregroundStyle(Color.white)
-                .padding(.horizontal, large ? TagMetrics.horizontalPadding + 4 : TagMetrics.horizontalPadding)
-                .padding(.vertical, large ? TagMetrics.verticalPadding + 2 : TagMetrics.verticalPadding)
-                .background(Theme.accent, in: RoundedRectangle(cornerRadius: TagMetrics.cornerRadius, style: .continuous))
-                .fixedSize()
+        if showsInfo {
+            Button { showInfo = true } label: { label }
+                .buttonStyle(.plain)
+                .accessibilityIdentifier("tag.mustKnow")
+                .alert(tr("出题频率"), isPresented: $showInfo) {
+                    Button(tr("好")) {}
+                } message: {
+                    Text(localized: "根据公开的考试复原资料与教材整理，仅供参考。")
+                }
+        } else {
+            label
+                .accessibilityIdentifier("tag.mustKnow")
         }
-        .buttonStyle(.plain)
-        .accessibilityIdentifier("tag.mustKnow")
-        .alert(tr("出题频率"), isPresented: $showInfo) {
-            Button(tr("好")) {}
-        } message: {
-            Text(localized: "根据公开的考试复原资料与教材整理，仅供参考。")
-        }
+    }
+
+    private var label: some View {
+        Text(localized: "必考")
+            .font(large ? TagMetrics.largeFont : TagMetrics.font)
+            .foregroundStyle(Color.white)
+            .padding(.horizontal, large ? TagMetrics.horizontalPadding + 4 : TagMetrics.horizontalPadding)
+            .padding(.vertical, large ? TagMetrics.verticalPadding + 2 : TagMetrics.verticalPadding)
+            .background(Theme.accent, in: RoundedRectangle(cornerRadius: TagMetrics.cornerRadius, style: .continuous))
+            .fixedSize()
     }
 }
 
@@ -77,7 +86,7 @@ struct DetailTags: View {
         HStack(spacing: 8) {
             LevelBadge(level: level, large: true)
                 .accessibilityIdentifier("detail.level")
-            if mustKnow { MustKnowBadge(large: true) }
+            if mustKnow { MustKnowBadge(large: true, showsInfo: true) }
         }
     }
 }
