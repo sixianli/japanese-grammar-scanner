@@ -1,7 +1,7 @@
 <a id="owners-global-instructions"></a>
 # Andy 的全局指令
 
-这些是 Andy 给每个代理的全局指令，由 Andy 的 `~/.agents/AGENTS.md` 和 `~/.claude/CLAUDE.md` 合并而来，复制自 `sixianli/himawari-agent` 仓库（只改了指向那个项目文件的两处说法），好让读不到 Andy 机器的云端会话遵守同样的规则。Claude Code 会自动加载 `.claude/rules/` 下的文件；其他代理在开始工作前要先读本文件。这里提到的技能，在 Skill 工具（加载技能的工具）列出它时通过 Skill 工具使用，否则在计划或回复里说明它没有加载，只在指令自身文字所及的范围内照做，不得猜测这个技能的内容。仓库根目录的 `CLAUDE.md` 是本项目专用的规则（测试、使用引导、合规硬门槛、内容质量等）；两者冲突时，以项目规则为准。同一个错误第三次出现时怎么办，以 [incident-gates.md](incident-gates.md) 为准。
+这些是 Andy 给每个代理的全局指令，由 Andy 的 `~/.agents/AGENTS.md` 和 `~/.claude/CLAUDE.md` 合并而来，复制自 `sixianli/himawari-agent` 仓库（按本项目改了三处：这段开头说明、去掉指向那个项目教训文档的链接、界面测试框架改为本项目用的 XCUITest），好让读不到 Andy 机器的云端会话遵守同样的规则。Claude Code 会自动加载 `.claude/rules/` 下的文件；其他代理在开始工作前要先读本文件。这里提到的技能，在 Skill 工具（加载技能的工具）列出它时通过 Skill 工具使用，否则在计划或回复里说明它没有加载，只在指令自身文字所及的范围内照做，不得猜测这个技能的内容。仓库根目录的 `CLAUDE.md` 是本项目专用的规则（测试、使用引导、合规硬门槛、内容质量等）；两者冲突时，以项目规则为准。同一个错误第三次出现时怎么办，以 [incident-gates.md](incident-gates.md) 为准。
 
 <a id="communication"></a>
 ## 沟通
