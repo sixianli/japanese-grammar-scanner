@@ -100,6 +100,14 @@ Build 17 包含的内容（详见 PR #6 描述）：Build 16 的全部反馈修�
 2. 像「ている／た」这种意思不同、但学习者确实常用混的对比，有教学价值。两个选择：(a) 按现有三组规则直接删掉；(b) 新增第四组「容易用混的」（要改 CLAUDE.md 的三组规则、App 里的组名和 6 种语言翻译、校验脚本）。需要用户决定；这个问题和三组的质量标准一起，在单独的「相近语法内容质量标准」线程里定，复核按定下来的标准做。
 3. 门槛：`tools/validate_contrasts.py` 加规则，meaning 组说明里出现「有关」「……或……」「这类」这种笼统说法就报错，迫使说明写出唯一的共同意思。这只能挡住笼统的说明，挡不住「说明写得对、收错了语法」，所以复核本身仍要人工（或用模型辅助复核，会花钱，先报价问用户）。
 
+### 反馈 6：义项编号小圆圈不够显眼（截图 `docs/handoff/b17_fb06_sense_numbers.png`，语法「か」，2026-11-21）
+
+用户要求二选一：给编号加主题色；或者圆圈线条和数字都改成黑色。
+
+现状：`GrammarDetailView.swift` 的 `NumberBadge`：`caption` 半粗、`.secondary` 灰色数字，22×22 圆圈，描边是 `secondary` 50% 透明度、1pt。用在义项目录（`SenseOutline`）和下面「用法」里每个义项的标题前，两处一起改。
+
+建议：用主题色（数字 `Theme.accentText`、圆圈 `Theme.accentFill` 浅底或主题色描边），和使用指南里的编号块、各段的绿色小标题是同一套颜色。黑色的话会和旁边加粗的黑色义项名抢视线。设计图里两种都画出来给用户选。
+
 ### 反馈 2：CloudKit 后台下载反馈截图报错（2026-11-21）
 
 现象：Build 17（1.3 (17)，iPhone15,2，iOS 27.2.1）在 App 里提交「体验与建议」反馈，CloudKit Console → Production → Public Database → Feedback 能看到记录，`screenshots`（Asset 列表）显示 `Binary file (922.05KB)`，但点下载按钮打开的 `cvws.icloud-content.com/...` 页面只返回 `Internal Server Error`。
