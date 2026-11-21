@@ -17804,51 +17804,8 @@
       "id": "nante",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from 「何（なに）」 — なんか ＝ 何か, なんて／なんと ＝ 何と, originally “…or something”",
-          "items": [
-            {
-              "id": "nanka",
-              "diff": "なんて can attach to a whole sentence to express surprise or shock; なんか only attaches to nouns, giving a casual example or belittling.",
-              "this": [
-                {
-                  "tag": "After a sentence · surprise",
-                  "tr": "Those two are getting married? I can't believe it."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "After a noun · casual example",
-                  "tr": "How about a hot spring or something for our next day off?"
-                }
-              ],
-              "wrong": {
-                "why": "To express surprise after a whole sentence, only なんて works"
-              },
-              "explain": "Look at what comes before: a whole sentence (結婚する) → なんて, “to think that…”; a noun (温泉, 私) → なんか, a casual example or belittling. Both work for belittling, but なんて sounds stronger."
-            },
-            {
-              "id": "nan-to-iu-exclamation",
-              "title": "なんと〜 (exclamation)",
-              "diff": "Same meaning when exclaiming “how…!”; なんて is spoken, なんと leans written.",
-              "this": [
-                {
-                  "tag": "Spoken · exclamation",
-                  "tr": "What a beautiful view!"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Written · exclamation",
-                  "tr": "What a truly beautiful view!"
-                }
-              ],
-              "explain": "Both come from 「何と」, placed at the start of the sentence and paired with sentence-final 「だろう」 to exclaim. Use なんて in everyday speech, なんと in writing and speeches. なんと can also stand alone to mean “believe it or not” (なんと100万円！), while なんて at the end of a sentence expresses surprise (合格するなんて)."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
+          "sense": 1,
           "note": "Both express surprise or shock, “I never thought that…”",
           "items": [
             {
@@ -17868,6 +17825,56 @@
                 }
               ],
               "explain": "The two sentences differ only in the last word: chatting with friends, showing emotion → なんて, often followed by 「信じられない」; news, writing and formal settings → とは, which sounds more composed."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both express contempt: “stuff like…”",
+          "items": [
+            {
+              "id": "nanka",
+              "title": "〜なんか (belittling)",
+              "diff": "Both express dislike or contempt; なんか is the most common everyday choice, なんて sounds more dismissive and more emotional.",
+              "this": [
+                {
+                  "tag": "More dismissive",
+                  "tr": "Homework? I don't even want to look at it anymore."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Everyday · casual tone",
+                  "tr": "Homework and stuff — I don't even want to look at it anymore."
+                }
+              ],
+              "explain": "Both sentences dismiss 「宿題」, and either word works. なんか is what people say most of the time and sounds fairly casual; なんて is more dismissive, with a strong feeling of “that kind of thing isn't even worth mentioning”. The same goes for self-deprecation (私なんか／私なんて): なんて sounds stronger."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Both express the exclamation “how…!”",
+          "items": [
+            {
+              "id": "nan-to-iu-exclamation",
+              "title": "なんと〜 (exclamation)",
+              "diff": "Same meaning when exclaiming “how…!”; なんて is spoken, なんと leans written and more formal.",
+              "this": [
+                {
+                  "tag": "Spoken · exclamation",
+                  "tr": "What a kind person!"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Written · exclamation",
+                  "tr": "What a truly kind person!"
+                }
+              ],
+              "explain": "The two sentences differ only in the first word; both open the sentence and pair with sentence-final 「だろう」 to exclaim “how…!”. Use なんて in everyday speech; なんと in writing, speeches and letters, where it sounds more formal and slightly literary."
             }
           ]
         }
@@ -17941,7 +17948,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「当（あ）たる」 — originally “to hit, to match up exactly”",
+          "note": "All come from 「当（あ）たる」 — originally “to hit, to land right on a spot”",
           "items": [
             {
               "id": "ni-atatte",
@@ -17958,7 +17965,7 @@
                   "tr": "On the occasion of the company's 50th anniversary, the president gave a speech."
                 }
               ],
-              "explain": "Look at what follows: if the sentence ends at 「に当たる」 (or it modifies a noun), it says something “matches up exactly” with a date or thing; 「にあたって、」 is followed by an action (挨拶した), meaning “at this occasion, (do…)”, used in formal settings like openings and speeches (in writing, 「にあたり」)."
+              "explain": "「当たる」 originally means to hit something, to land right on a spot. Landing on a certain date or position → に当たる “happens to be, is equivalent to”, and the sentence ends there. Hitting an important moment and doing something at that moment → にあたって “on the occasion of”, which must be followed by an action (挨拶した); it is used in formal settings such as openings and speeches (in writing, 「にあたり」)."
             },
             {
               "id": "ni-wa-ataranai",
@@ -17975,7 +17982,7 @@
                   "tr": "A mistake this small is nothing to be surprised about."
                 }
               ],
-              "explain": "Look at what comes before: a quantity or noun (30センチ, 兄) → に当たる, “is equivalent to”; verb dictionary form (驚く, 心配する, 非難する)＋には当たらない → “there's no need to…, it doesn't warrant…”, saying things haven't reached that point."
+              "explain": "Start from the original sense “to match exactly”: a quantity or noun matching a position in another system of measurement (30センチ) → に当たる “is equivalent to”. 「には当たらない」 says the matter doesn't reach the level that would justify that reaction → dictionary-form verb (驚く, 心配する, 非難する)＋には当たらない “there's no need to…, it isn't worth…”. To tell them apart, look at what comes before: a noun or quantity → equivalent to; dictionary-form verb＋には → no need to."
             },
             {
               "id": "atari-per",
@@ -17992,7 +17999,7 @@
                   "tr": "The membership fee is 3,000 yen per person."
                 }
               ],
-              "explain": "Check whether 「に」 comes before 「当たる」: with 「に」 → “is equivalent to”; attached directly to a number word like 「一人」「１時間」「１日」 → “per…”, used to work out averages."
+              "explain": "「当たる」 means to land on something. Landing on a position in another system → 「に当たる」 “is equivalent to” (３か月分に当たる); dividing a total into portions so that one lands on each unit → 「当たり」 “per…”, used to work out averages. Check whether 「に」 comes before it: with 「に」 → equivalent to; attached directly to a quantity such as 「一人」 or 「１時間」 → per…."
             }
           ]
         }
@@ -18030,28 +18037,31 @@
         },
         {
           "kind": "meaning",
-          "note": "Both mean “based on / fitting a certain standard” or “matching it”",
+          "sense": 1,
+          "note": "Both express “adjusting according to…”",
           "items": [
             {
               "id": "ni-oujite",
+              "title": "〜に応じて (according to)",
               "thisTitle": "〜に合わせて (fitting in with)",
-              "diff": "に合わせて means actively adjusting to fit one particular target; に応じて means the result changes correspondingly as the first item varies.",
+              "diff": "Both mean adjusting according to the first part; に合わせて is accommodating one particular target, に応じて means the result changes correspondingly as the first part varies.",
               "this": [
                 {
-                  "tag": "Fitting one target",
-                  "tr": "Change the way you talk to suit the other person's level."
+                  "tag": "Accommodating the person in front of you",
+                  "tr": "I change the way I speak to match the other person's level."
                 }
               ],
               "that": [
                 {
-                  "tag": "Varies accordingly",
-                  "tr": "The fee varies depending on age."
+                  "tag": "Varies correspondingly",
+                  "tr": "I change the way I speak depending on the other person's level."
                 }
               ],
-              "explain": "に応じて is preceded by something with several possible cases (年齢, 能力, 人数), each matched with a different result — common in rules and price lists; に合わせて means adjusting yourself to match a target (音楽, 相手, 予定), the focus being on “fitting in”."
+              "explain": "Both sentences work: you adjust to the other person's level. に合わせて treats the other person as the one target you fit yourself to — the focus is “I accommodate you”. With に応じて, what comes first can be higher or lower and can vary — the focus is “different levels, different ways of speaking”. That is why rules and price lists that match each grade to a result usually use に応じて (年齢に応じて料金が変わる)."
             },
             {
               "id": "ni-soutte",
+              "title": "〜に沿って (in line with)",
               "thisTitle": "〜に合わせて (fitting in with)",
               "diff": "に合わせて means adjusting yourself to a target; に沿って means following a policy or plan set in advance, without straying.",
               "this": [
@@ -18066,25 +18076,33 @@
                   "tr": "We push the project forward in line with company policy."
                 }
               ],
-              "explain": "Look at what comes before: a “route set in advance” such as a policy, plan, manual or expectations → に沿って, meaning not straying from it; a “target to accommodate” such as the other person's budget, height or schedule → に合わせて, meaning adjusting yourself to fit."
-            },
+              "explain": "Look at what comes before: a route set in advance, such as a 「方針」, a plan or a manual → に沿って, meaning you follow it without straying; something you need to fit, such as the other person's 「予算」, height or schedule → に合わせて, meaning you adjust yourself to match."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both express “suitable for…”",
+          "items": [
             {
               "id": "muki",
+              "title": "〜向き (suitable)",
               "thisTitle": "〜に合った (suited to)",
-              "diff": "に合った means matching a specific thing; 向き evaluates by group, season or use, “suited to this type”.",
+              "diff": "Both mean “suitable”; に合った says something matches the person's situation, 向き says the thing by its nature suits a certain type of person.",
               "this": [
                 {
-                  "tag": "Matches a specific thing",
-                  "tr": "I'm looking for a job that suits me."
+                  "tag": "Matches the person",
+                  "tr": "I'll choose a course that suits beginners."
                 }
               ],
               "that": [
                 {
-                  "tag": "Suited to a type of person",
-                  "tr": "This job is suited to young people with plenty of stamina."
+                  "tag": "Suits a type of person by nature",
+                  "tr": "I'll choose a course meant for beginners."
                 }
               ],
-              "explain": "「〜に合った」 is usually preceded by something specific like 「自分」「目的」「体質」, saying whether the two match; 向き is preceded by a type of person, a season or a use (初心者向き, 子ども向き, 夏向き), like sticking on a category label."
+              "explain": "Both sentences work and both mean “suitable for beginners”. 初心者向き labels the course: it is easy by nature and suits beginners as a group. 初心者に合った says the course matches beginners' level and needs. So when the first part is a specific person (自分, あなた), に合った is more natural (自分に合った仕事); when judging what type of person or use a thing suits, 向き is more common (子ども向き, 夏向き)."
             }
           ]
         }
@@ -18095,7 +18113,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both are used to guess or make a judgment",
+          "note": "Both express a confident guess: “must be…”",
           "items": [
             {
               "id": "ni-soui-nai",
@@ -18147,23 +18165,6 @@
                 }
               ],
               "explain": "Look at the tone: a calm inference from the clues at hand, mostly in writing and narration → に違いない; talking with friends with a “it goes without saying” feeling, often to push back, where the basis can be mere prejudice → に決まってる (に決まっている)."
-            },
-            {
-              "id": "kamoshirenai",
-              "diff": "に違いない is the most certain (it must be); かもしれない is the least certain (maybe).",
-              "this": [
-                {
-                  "tag": "Must be · very sure",
-                  "tr": "The fingerprints matched too. That person must be the culprit."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Maybe · just a suspicion",
-                  "tr": "That person might be the culprit."
-                }
-              ],
-              "explain": "Look at how much evidence the speaker has: plenty of evidence, total conviction (指紋も一致した) → に違いない; just a suspicion (もしかすると) → かもしれない. Literally they're opposites too: に違いない ＝ “there can be no mistake”, かもしれない ＝ “there's no way to know”."
             }
           ]
         }
@@ -18177,21 +18178,22 @@
           "note": "Both say the result was the opposite of what was expected",
           "items": [
             {
-              "id": "ni-mo-kakawarazu",
-              "diff": "に反して is preceded by the “expectation or hope” itself; にもかかわらず is preceded by a fact that already holds.",
+              "id": "to-wa-urahara-ni",
+              "title": "〜とは裏腹に (contrary to)",
+              "diff": "Same meaning after 「予想」 or 「期待」; に反して is the standard written form, とは裏腹に is more literary and carries some feeling.",
               "this": [
                 {
-                  "tag": "Expectation → opposite",
-                  "tr": "Contrary to expectations, the team lost."
+                  "tag": "Standard written",
+                  "tr": "Contrary to everyone's expectations, the film was a huge hit."
                 }
               ],
               "that": [
                 {
-                  "tag": "Fact → had no effect",
-                  "tr": "Despite practicing every day, the team lost."
+                  "tag": "More literary · with feeling",
+                  "tr": "Quite contrary to everyone's expectations, the film was a huge hit."
                 }
               ],
-              "explain": "Look at what comes before: a “prior idea” like 「予想」「期待」「予報」＋に反して → the result went against the idea; a fact that has already happened (練習した, 雨が降っている)＋にもかかわらず → that fact made no difference."
+              "explain": "Only the grammar differs, and both follow 「予想」; here either can be used with the same meaning. に反して is the standard written form, most common in news and reports; とは裏腹に is more literary and carries a touch of emotion. Also, when what comes before is an appearance or words, such as 「言葉」 or 「笑顔」, and you mean “the surface and the reality are opposite”, only とは裏腹に works."
             },
             {
               "id": "noni-usage",
@@ -18220,7 +18222,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both can be translated “toward… / about…”, marking the target or topic of an action",
+          "note": "Both express “about…, regarding…”",
           "items": [
             {
               "id": "ni-tsuite",
@@ -18240,39 +18242,40 @@
               "explain": "Look at the setting: everyday chat and ordinary writing → について; reports, news and business emails (本件に関して、ご説明いたします) → に関して. The same goes when modifying a noun: 「〜に関する＋noun」 is more formal than 「〜についての」."
             },
             {
-              "id": "wo-megutte",
-              "diff": "に関して just raises a topic neutrally; をめぐって is usually followed by dispute or conflict.",
+              "id": "ni-tsuki",
+              "title": "〜につき (regarding)",
+              "diff": "Both mean “regarding”; に関して is the standard formal choice, につき is stiffer, like the wording of official documents and notices.",
               "this": [
                 {
-                  "tag": "Neutral · topic",
-                  "tr": "I read a book on environmental issues."
+                  "tag": "Formal · general",
+                  "tr": "Please share your opinions about the new system."
                 }
               ],
               "that": [
                 {
-                  "tag": "Over · dispute",
-                  "tr": "The brothers are fighting over the inheritance."
+                  "tag": "Official · stiffer",
+                  "tr": "We invite your opinions regarding the new system."
                 }
               ],
-              "explain": "Look at the verb that follows: words for several parties arguing back and forth, like 争う, 議論する, 対立する, もめる → をめぐって; neutral actions like explaining, investigating or reading → に関して (に関する when modifying a noun)."
+              "explain": "Both sentences work and both mean “regarding”. に関して is the standard formal choice, common in business emails, reports and meetings; につき is stiffer, the wording of official documents and meeting papers, and is rarely used in speech. につき more often means “because of” (工事中につき) or “per” (一人につき), so look at what follows: only when it is followed by a request for opinions or a notice does it mean “regarding”."
             },
             {
-              "id": "ni-taishite",
-              "title": "〜に対して (target)",
-              "diff": "に関して points to the “content or topic” (about); に対して points to the “target” of an attitude or action (toward).",
+              "id": "ni-matsuwaru",
+              "title": "〜にまつわる (connected with)",
+              "diff": "Both mean “about…, related to…”; に関する is neutral, にまつわる has a storytelling feel and usually goes with legends and anecdotes.",
               "this": [
                 {
-                  "tag": "Topic · about",
-                  "tr": "Reporting on customer complaints."
+                  "tag": "Neutral · information",
+                  "tr": "I'm collecting things people say about this town."
                 }
               ],
               "that": [
                 {
-                  "tag": "Target · toward",
-                  "tr": "Speak politely to customers."
+                  "tag": "Storytelling feel",
+                  "tr": "I'm collecting stories handed down about this town."
                 }
               ],
-              "explain": "Look at the action that follows: the “content” of an explanation, report or investigation → に関して; an attitude or reaction toward that person or thing (丁寧に話す, 反対する, 怒る) → に対して. Saying 「お客さまに関して丁寧に話す」 doesn't make sense."
+              "explain": "Only the grammar differs, and both work. に関する is a neutral “related to…”, usually followed by formal things like 「資料」, 「調査」 or 「法律」; にまつわる has a storytelling feel and is usually followed by stories and anecdotes passed down, like 「伝説」, 「思い出」 or 「エピソード」. So 「この町にまつわる話」 suggests local legends, while 「この町に関する話」 is just information about the town."
             }
           ]
         }
@@ -18282,25 +18285,29 @@
       "id": "ni-kawatte",
       "groups": [
         {
-          "kind": "root",
-          "note": "All come from 「代（か）わる」 — “to replace, to take over for”",
+          "kind": "meaning",
+          "note": "Both express “in place of…”",
           "items": [
             {
               "id": "kawari-ni",
-              "diff": "に代わって only means “in place of, replacing”, and sounds formal; 代わりに is broader and can also mean “in exchange”.",
+              "title": "〜代わりに (instead of)",
+              "diff": "Both mean “in place of”; noun＋に代わって is formal and used on official occasions, noun＋の代わりに is the everyday form.",
               "this": [
                 {
-                  "tag": "In someone's place",
-                  "tr": "The department manager attended the meeting in place of the president."
+                  "tag": "Formal · official",
+                  "tr": "My older brother attended the meeting on behalf of our father."
                 }
               ],
               "that": [
                 {
-                  "tag": "In exchange",
-                  "tr": "Someone helped me move, so in return I treated them to lunch."
+                  "tag": "Everyday · general",
+                  "tr": "My older brother went to the meeting instead of our father."
                 }
               ],
-              "explain": "Look at what comes before it: noun ＋ に代わって → only “standing in for someone, replacing something”, common in speeches and the news (in writing, the mid-sentence form is 「に代わり」); verb ＋ 代わりに → can also mean “in exchange” or “doing B instead of A”, and に代わって can't be used for either of these."
+              "wrong": {
+                "why": "に代わって takes 「に」 before it; with 「の」 you must say 「の代わりに」"
+              },
+              "explain": "With a person, both sentences work and both mean “in place of”. First check the connection: noun＋に代わって, noun＋の代わりに. に代わって is formal, mostly used in speeches, news and other official settings (社長に代わりまして); の代わりに is the everyday form, and it is also what you use when one thing temporarily stands in for another (肉の代わりに豆腐を使う)."
             }
           ]
         }
@@ -18311,7 +18318,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both are built on 「決（き）まる」 — “to be decided, not going to change”",
+          "note": "Both come from 「決（き）まる」 — originally “to be settled, to stay fixed”",
           "items": [
             {
               "id": "to-kimatte",
@@ -18328,7 +18335,7 @@
                   "tr": "Whenever it rains, I always get a headache."
                 }
               ],
-              "explain": "Only 「に」 vs 「と」 differs: 「〜に決まってる」 comes at the end of the sentence as a strong judgment about one thing; in 「〜と決まって〜」, 「決まって」 is actually an adverb meaning “always, without fail”, preceded by the conditional 「と」, and describes something that happens every time."
+              "explain": "「決まる」 originally means that something is settled and won't change. The outcome is already settled, with no other possibility → 「〜に決まってる」 “it's bound to be…”, placed at the end of the sentence as a strong assertion about one matter. The て形 「決まって」 used as an adverb means “fixedly, every time” → preceded by the condition 「と」, it describes a pattern that is the same every time: “whenever…, always…”. To tell them apart: is it asserting one thing at the end of the sentence, or is 「〜と決まって」 followed by something that happens again and again?"
             }
           ]
         },
@@ -18396,13 +18403,13 @@
                   "tr": "This year's heat is nothing like last year's — there's no comparison."
                 }
               ],
-              "explain": "Look at what follows: に比べて is followed by the result of the comparison, often with 「少し」 or 「ずっと」 saying by how much; とは比べものにならない is itself the conclusion — the gap is too big to put them side by side — and no further comparison result follows."
+              "explain": "「比べる」 means putting two things side by side to compare them. に比べて is its て-form: the first item becomes the baseline, followed by the result of the comparison and how big the difference is (「少し」暑い, ずっと多い). とは比べものにならない is 「比べもの」 (something that can be compared) ＋ 「にならない」: it doesn't even count as something you can put side by side, so it is itself the conclusion “there's no comparison”. To tell them apart: if a concrete amount like 「少し」 or 「ずっと」 follows → に比べて; if the sentence simply ends at 「比べものにならない」 → the gap is too big to compare."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both are used to compare two things",
+          "note": "Both express “compared with…”",
           "items": [
             {
               "id": "wa-yori-comparison",
@@ -18420,41 +18427,6 @@
                 }
               ],
               "explain": "Both can compare: 「今日は昨日より寒い」 can also be said as 「昨日に比べて、今日は寒い」. The difference is in feel: より is everyday speech; に比べて is more objective and formal, especially suited to explaining “how much numbers or conditions have changed compared with the past”, and the baseline often comes at the start of the sentence."
-            },
-            {
-              "id": "ni-taishite",
-              "title": "〜のに対して (contrast)",
-              "diff": "に比べて measures higher or lower on the same scale; のに対して places two opposite facts side by side for contrast.",
-              "this": [
-                {
-                  "tag": "Higher or lower",
-                  "tr": "Compared with his older brother, the younger brother is taller."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Two sides contrasted",
-                  "tr": "The older brother is tall, whereas the younger brother is small."
-                }
-              ],
-              "explain": "Look at the second half: に比べて is followed by a description of just one side being “more…” (弟は背が高い) — a comparison of degree; with のに対して, each half describes one side (兄は背が高い／弟は小柄だ), with opposite meanings — a contrast. When attached to a clause, に対して needs 「の」 before it."
-            },
-            {
-              "id": "ni-hikikae",
-              "diff": "に比べて neutrally compares degree; にひきかえ says the two are exact opposites, and carries the speaker's praise, blame or feelings.",
-              "this": [
-                {
-                  "tag": "Neutral · degree",
-                  "tr": "Compared with his older brother, the younger brother studies harder."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Exact opposites · emotional",
-                  "tr": "In stark contrast to his serious older brother, the younger brother does nothing but play."
-                }
-              ],
-              "explain": "With にひきかえ, the two people are one good and one bad, exact opposites (真面目な兄／遊んでばかりの弟), and the sentence carries the speaker's dissatisfaction or exasperation — it's a written expression; に比べて just says who has more or less of something, with no judgment."
             }
           ]
         }

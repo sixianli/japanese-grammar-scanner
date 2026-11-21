@@ -17804,51 +17804,8 @@
       "id": "nante",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「何（なに）」 — なんか＝何か, なんて／なんと＝何と, nghĩa gốc là “… gì đó”",
-          "items": [
-            {
-              "id": "nanka",
-              "diff": "なんて đi sau được cả một câu, diễn tả bất ngờ, kinh ngạc; なんか chỉ đi sau danh từ, dùng để nêu ví dụ tùy ý hoặc xem nhẹ.",
-              "this": [
-                {
-                  "tag": "Sau câu · bất ngờ",
-                  "tr": "Hai người đó mà lại cưới nhau, thật không thể tin nổi."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Sau danh từ · nêu ví dụ tùy ý",
-                  "tr": "Kỳ nghỉ lần này, đi tắm suối nước nóng hay gì đó thì sao?"
-                }
-              ],
-              "wrong": {
-                "why": "Đi sau cả một câu để diễn tả bất ngờ thì chỉ dùng được なんて"
-              },
-              "explain": "Xem phía trước nối gì: cả một câu (結婚する) → なんて, “mà lại…”; danh từ (温泉, 私) → なんか, nêu ví dụ tùy ý hoặc xem nhẹ. Khi diễn tả sự xem nhẹ thì cả hai đều được, giọng của なんて mạnh hơn."
-            },
-            {
-              "id": "nan-to-iu-exclamation",
-              "title": "なんと〜（cảm thán）",
-              "diff": "Khi cảm thán “… biết bao” thì nghĩa giống nhau; なんて là văn nói, なんと thiên về văn viết.",
-              "this": [
-                {
-                  "tag": "Văn nói · cảm thán",
-                  "tr": "Cảnh đẹp quá đi!"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Văn viết · cảm thán",
-                  "tr": "Phong cảnh mới đẹp làm sao!"
-                }
-              ],
-              "explain": "Đều bắt nguồn từ 「何と」, đặt ở đầu câu, hô ứng với 「だろう」 cuối câu để cảm thán. Nói chuyện hằng ngày dùng なんて; bài viết, diễn thuyết dùng なんと. なんと đứng riêng còn diễn tả “thế mà, vậy mà” (なんと100万円！), còn なんて đặt ở cuối câu thì diễn tả bất ngờ (合格するなんて)."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
+          "sense": 1,
           "note": "Đều diễn tả bất ngờ, kinh ngạc “không ngờ lại…”",
           "items": [
             {
@@ -17868,6 +17825,56 @@
                 }
               ],
               "explain": "Hai câu chỉ khác từ cuối: trò chuyện với bạn bè, bộc lộ cảm xúc → なんて, phía sau hay nối 「信じられない」; tin tức, bài viết, nơi trang trọng → とは, giọng điềm tĩnh hơn."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều diễn tả sự xem thường “cái thứ… ấy”",
+          "items": [
+            {
+              "id": "nanka",
+              "title": "〜なんか（xem nhẹ）",
+              "diff": "Đều diễn tả sự chán ghét, xem thường; なんか là cách nói thông dụng nhất hằng ngày, なんて chê bai nặng hơn, cảm xúc mạnh hơn.",
+              "this": [
+                {
+                  "tag": "Chê nặng hơn",
+                  "tr": "Bài tập ấy à, tôi chẳng muốn nhìn nữa."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Hằng ngày · giọng tùy ý",
+                  "tr": "Bài tập gì đó, tôi chẳng muốn nhìn nữa."
+                }
+              ],
+              "explain": "Cả hai câu đều chê 「宿題」, dùng từ nào cũng được. なんか là cách nói hay dùng nhất, giọng khá tùy ý; なんて chê nặng hơn, mang cảm xúc mạnh kiểu “thứ đó chẳng đáng nhắc tới”. Khi nói khiêm tốn về bản thân (私なんか／私なんて) cũng vậy, なんて có giọng mạnh hơn."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Đều diễn tả cảm thán “… biết bao!”",
+          "items": [
+            {
+              "id": "nan-to-iu-exclamation",
+              "title": "なんと〜（cảm thán）",
+              "diff": "Khi cảm thán “… biết bao!” thì nghĩa như nhau; なんて là văn nói, なんと thiên về văn viết, trang trọng hơn.",
+              "this": [
+                {
+                  "tag": "Văn nói · cảm thán",
+                  "tr": "Người gì mà hiền thế!"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Văn viết · cảm thán",
+                  "tr": "Thật là một người hiền hậu biết bao!"
+                }
+              ],
+              "explain": "Hai câu chỉ khác từ đầu câu, đều đặt ở đầu câu và hô ứng với 「だろう」 cuối câu để cảm thán “… biết bao!”. Nói chuyện hằng ngày dùng なんて; bài viết, diễn văn, thư từ dùng なんと, giọng trang trọng hơn, hơi mang màu sắc văn chương."
             }
           ]
         }
@@ -17941,7 +17948,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「当（あ）たる」 — nghĩa gốc là “chạm phải, khớp đúng”",
+          "note": "Đều bắt nguồn từ 「当（あ）たる」 — nghĩa gốc là “chạm phải, rơi đúng vào một chỗ”",
           "items": [
             {
               "id": "ni-atatte",
@@ -17958,7 +17965,7 @@
                   "tr": "Nhân dịp kỷ niệm 50 năm thành lập, giám đốc đã phát biểu."
                 }
               ],
-              "explain": "Xem phía sau: câu kết thúc ở 「に当たる」 (hoặc bổ nghĩa cho danh từ), nói “khớp đúng” với một ngày, một thứ nào đó; sau 「にあたって、」 còn nối một hành động (挨拶した), chỉ “vào thời điểm… (làm)”, dùng ở những dịp trang trọng như khai mạc, phát biểu (văn viết nói 「にあたり」)."
+              "explain": "「当たる」 nghĩa gốc là chạm phải, rơi đúng vào một chỗ. Rơi vào một ngày hay một vị trí nào đó → に当たる “đúng vào, tương đương với”, câu kết thúc ở đây; gặp một thời điểm quan trọng và làm việc gì đó nhân dịp ấy → にあたって “nhân dịp…”, phía sau nhất định có một hành động (挨拶した), dùng ở dịp trang trọng như khai mạc, phát biểu (văn viết nói 「にあたり」)."
             },
             {
               "id": "ni-wa-ataranai",
@@ -17972,10 +17979,10 @@
               "that": [
                 {
                   "tag": "Động từ · không đáng",
-                  "tr": "Lỗi cỡ này thì không đáng phải làm ầm lên."
+                  "tr": "Lỗi cỡ này thì chẳng có gì phải ngạc nhiên."
                 }
               ],
-              "explain": "Xem phía trước nối gì: số lượng, danh từ (30センチ, 兄) → に当たる “tương đương với”; động từ thể từ điển (驚く, 心配する, 非難する)＋には当たらない → “không cần…, không đáng…”, ý là sự việc chưa đến mức đó."
+              "explain": "Xuất phát từ nghĩa gốc “khớp đúng”: số lượng, danh từ khớp với một vị trí trong hệ thống khác (30センチ) → に当たる “tương đương với”; 「には当たらない」 nói sự việc không đến mức đáng làm như thế, chưa tới mức ấy → động từ 辞書形 (驚く, 心配する, 非難する)＋には当たらない “không cần phải…, không đáng…”. Phân biệt bằng phía trước: danh từ, số lượng → tương đương; động từ 辞書形＋には → không cần phải."
             },
             {
               "id": "atari-per",
@@ -17992,7 +17999,7 @@
                   "tr": "Hội phí là 3.000 yên mỗi người."
                 }
               ],
-              "explain": "Xem trước 「当たる」 có 「に」 không: có 「に」 → “tương đương với”; đi thẳng sau số lượng từ như 「一人」「１時間」「１日」 → “mỗi…”, dùng để tính bình quân."
+              "explain": "「当たる」 là rơi vào một chỗ: rơi vào một vị trí trong hệ thống khác → 「に当たる」 tương đương với (３か月分に当たる); chia tổng số thành từng phần, rơi xuống mỗi đơn vị một phần → 「当たり」 mỗi…, dùng để tính bình quân. Xem phía trước có 「に」 không: có 「に」 → tương đương; gắn thẳng sau từ chỉ số lượng như 「一人」「１時間」 → mỗi…."
             }
           ]
         }
@@ -18030,28 +18037,31 @@
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “căn cứ vào, phối hợp với một tiêu chuẩn” hoặc “phù hợp với nó”",
+          "sense": 1,
+          "note": "Đều diễn tả “điều chỉnh theo…”",
           "items": [
             {
               "id": "ni-oujite",
+              "title": "〜に応じて（tùy theo）",
               "thisTitle": "〜に合わせて（phối hợp）",
-              "diff": "に合わせて là chủ động phối hợp với một đối tượng; に応じて là tùy theo vế trước khác nhau mà kết quả thay đổi tương ứng.",
+              "diff": "Đều là điều chỉnh theo vế trước; に合わせて là chiều theo một đối tượng, に応じて là vế trước khác đi thì vế sau thay đổi tương ứng.",
               "this": [
                 {
-                  "tag": "Phối hợp với một đối tượng",
-                  "tr": "Thay đổi cách nói cho phù hợp với trình độ của đối phương."
+                  "tag": "Chiều theo người trước mặt",
+                  "tr": "Thay đổi cách nói cho hợp với trình độ của đối phương."
                 }
               ],
               "that": [
                 {
-                  "tag": "Thay đổi theo",
-                  "tr": "Giá vé thay đổi tùy theo độ tuổi."
+                  "tag": "Thay đổi tương ứng",
+                  "tr": "Thay đổi cách nói tùy theo trình độ của đối phương."
                 }
               ],
-              "explain": "Phía trước に応じて là thứ có nhiều trường hợp (年齢, 能力, 人数), mỗi trường hợp ứng với một kết quả khác nhau, hay gặp trong quy định, bảng giá; に合わせて là tự điều chỉnh để khớp với một đối tượng (音楽, 相手, 予定), trọng tâm là “đi phối hợp”."
+              "explain": "Cả hai câu đều được, đều là điều chỉnh theo trình độ của đối phương. に合わせて coi đối phương là một đối tượng cần mình phối hợp, trọng tâm là “tôi chiều theo bạn”; vế trước của に応じて có cao có thấp, có thể thay đổi, trọng tâm là “trình độ khác thì cách nói cũng khác theo”. Vì vậy những câu kiểu quy định, bảng giá “mỗi mức ứng với một kết quả” thường dùng に応じて (年齢に応じて料金が変わる)."
             },
             {
               "id": "ni-soutte",
+              "title": "〜に沿って（theo）",
               "thisTitle": "〜に合わせて（phối hợp）",
               "diff": "に合わせて là điều chỉnh bản thân theo đối tượng; に沿って là đi theo phương châm, kế hoạch đã định sẵn, không chệch hướng.",
               "this": [
@@ -18066,25 +18076,33 @@
                   "tr": "Triển khai kế hoạch theo phương châm của công ty."
                 }
               ],
-              "explain": "Xem phía trước là gì: “lộ trình định sẵn” như phương châm, kế hoạch, sách hướng dẫn, kỳ vọng → に沿って, nghĩa là không chệch hướng; “đối tượng cần chiều theo” như ngân sách, chiều cao, lịch trình của đối phương → に合わせて, nghĩa là điều chỉnh bản thân để phối hợp."
-            },
+              "explain": "Xem phía trước là gì: lộ trình định sẵn như 「方針」, kế hoạch, sách hướng dẫn → に沿って, nghĩa là làm theo, không chệch hướng; đối tượng cần chiều theo như 「予算」, chiều cao, lịch trình của đối phương → に合わせて, nghĩa là tự điều chỉnh để phối hợp."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều diễn tả “phù hợp với…”",
+          "items": [
             {
               "id": "muki",
+              "title": "〜向き（phù hợp）",
               "thisTitle": "〜に合った（phù hợp）",
-              "diff": "に合った là hợp với một đối tượng cụ thể; 向き phân loại đánh giá theo nhóm người, mùa “phù hợp với loại này”.",
+              "diff": "Đều là phù hợp; に合った là khớp với tình trạng của đối tượng, 向き là bản chất của thứ đó hợp với một loại người.",
               "this": [
                 {
-                  "tag": "Hợp với đối tượng cụ thể",
-                  "tr": "Tôi đang tìm công việc phù hợp với bản thân."
+                  "tag": "Khớp với đối tượng",
+                  "tr": "Chọn một khóa học phù hợp với người mới học."
                 }
               ],
               "that": [
                 {
-                  "tag": "Phù hợp với một nhóm người",
-                  "tr": "Công việc này phù hợp với người trẻ có thể lực."
+                  "tag": "Bản chất hợp với một loại người",
+                  "tr": "Chọn một khóa học dành cho người mới học."
                 }
               ],
-              "explain": "Trước 「〜に合った」 thường là cá thể cụ thể như 「自分」「目的」「体質」, nói hai bên có hợp nhau không; trước 向き là một nhóm người hoặc mùa, công dụng (初心者向き, 子ども向き, 夏向き), như dán nhãn phân loại."
+              "explain": "Cả hai câu đều được, đều có nghĩa “phù hợp với người mới học”. 初心者向き là dán nhãn cho khóa học: bản thân khóa này dễ, hợp với nhóm người mới học; 初心者に合った là nói khóa học khớp với trình độ, nhu cầu của người mới học. Vì vậy khi phía trước là một người cụ thể (自分, あなた) thì thường dùng に合った (自分に合った仕事); khi đánh giá bản thân thứ đó hợp với loại người, công dụng nào thì thường dùng 向き (子ども向き, 夏向き)."
             }
           ]
         }
@@ -18095,7 +18113,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều dùng để suy đoán, đưa ra phán đoán",
+          "note": "Đều diễn tả suy đoán chắc chắn “nhất định là…”",
           "items": [
             {
               "id": "ni-soui-nai",
@@ -18147,23 +18165,6 @@
                 }
               ],
               "explain": "Xem giọng điệu: bình tĩnh suy luận từ manh mối trước mắt, hay dùng trong bài viết, tự sự → に違いない; nói chuyện với bạn bè, mang cảm xúc “còn phải nói”, hay dùng để phản bác, căn cứ có thể chỉ là định kiến → に決まってる (に決まっている)."
-            },
-            {
-              "id": "kamoshirenai",
-              "diff": "に違いない chắc chắn nhất (nhất định là); かもしれない ít chắc chắn nhất (có lẽ).",
-              "this": [
-                {
-                  "tag": "Nhất định là · rất chắc chắn",
-                  "tr": "Vân tay cũng khớp rồi. Người đó chắc chắn là thủ phạm."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Có lẽ · chỉ là nghi ngờ",
-                  "tr": "Không chừng người đó chính là thủ phạm."
-                }
-              ],
-              "explain": "Xem người nói nắm được bao nhiêu bằng chứng: bằng chứng đầy đủ, tin chắc không nghi ngờ (指紋も一致した) → に違いない; chỉ là nghi ngờ (もしかすると) → かもしれない. Nghĩa đen cũng vừa đúng ngược nhau: に違いない＝“không thể sai”, かもしれない＝“không thể biết được”."
             }
           ]
         }
@@ -18177,21 +18178,22 @@
           "note": "Đều diễn tả kết quả trái với dự đoán",
           "items": [
             {
-              "id": "ni-mo-kakawarazu",
-              "diff": "Trước に反して là bản thân “dự đoán, kỳ vọng”; trước にもかかわらず là sự thật đã xảy ra.",
+              "id": "to-wa-urahara-ni",
+              "title": "〜とは裏腹に（trái với）",
+              "diff": "Khi đi sau 「予想」「期待」 thì nghĩa như nhau; に反して là văn viết thông thường, とは裏腹に văn vẻ hơn, có chút cảm khái.",
               "this": [
                 {
-                  "tag": "Dự đoán → ngược lại",
-                  "tr": "Trái với dự đoán, đội đã thua."
+                  "tag": "Văn viết thông thường",
+                  "tr": "Trái với dự đoán của mọi người, bộ phim đã rất ăn khách."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sự thật → không có tác dụng",
-                  "tr": "Mặc dù ngày nào cũng luyện tập, đội vẫn thua."
+                  "tag": "Văn vẻ hơn · có cảm khái",
+                  "tr": "Hoàn toàn trái ngược với dự đoán của mọi người, bộ phim đã rất ăn khách."
                 }
               ],
-              "explain": "Xem phía trước: “suy nghĩ có từ trước” như 「予想」「期待」「予報」＋に反して → kết quả trái với suy nghĩ đó; sự thật đã xảy ra (練習した, 雨が降っている)＋にもかかわらず → sự thật đó đã không phát huy tác dụng."
+              "explain": "Hai câu chỉ khác ngữ pháp, phía trước đều là 「予想」; lúc này cả hai đều dùng được, nghĩa như nhau. に反して là văn viết thông thường, hay gặp nhất trong tin tức, báo cáo; とは裏腹に văn vẻ hơn, có chút cảm khái. Ngoài ra, khi phía trước là vẻ ngoài, lời nói như 「言葉」「笑顔」, muốn nói “bề ngoài và thực tế trái ngược nhau” thì chỉ dùng được とは裏腹に."
             },
             {
               "id": "noni-usage",
@@ -18220,7 +18222,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều có thể dịch là “đối với… / về…”, nêu đối tượng hoặc chủ đề mà hành động liên quan đến",
+          "note": "Đều diễn tả “về…, liên quan đến…”",
           "items": [
             {
               "id": "ni-tsuite",
@@ -18240,39 +18242,40 @@
               "explain": "Xem hoàn cảnh: trò chuyện hằng ngày, bài viết thông thường → について; báo cáo, tin tức, email công việc (本件に関して、ご説明いたします) → に関して. Khi bổ nghĩa cho danh từ, 「〜に関する＋danh từ」 cũng vậy, trang trọng hơn 「〜についての」."
             },
             {
-              "id": "wo-megutte",
-              "diff": "に関して chỉ nêu chủ đề một cách trung tính; をめぐって phía sau thường là tranh cãi, đối lập.",
+              "id": "ni-tsuki",
+              "title": "〜につき（về）",
+              "diff": "Đều có nghĩa “về”; に関して là cách nói thông dụng ở nơi trang trọng, につき cứng hơn, giống lời văn công văn, thông báo.",
               "this": [
                 {
-                  "tag": "Trung tính · chủ đề",
-                  "tr": "Đã đọc một cuốn sách về vấn đề môi trường."
+                  "tag": "Trang trọng · thông dụng",
+                  "tr": "Xin cho biết ý kiến của quý vị về chế độ mới."
                 }
               ],
               "that": [
                 {
-                  "tag": "Xoay quanh · tranh cãi",
-                  "tr": "Anh em tranh chấp không dứt xoay quanh chuyện thừa kế."
+                  "tag": "Công văn · cứng hơn",
+                  "tr": "Kính mong quý vị đóng góp ý kiến về việc chế độ mới."
                 }
               ],
-              "explain": "Xem động từ phía sau: những từ nhiều bên tranh qua cãi lại như 争う, 議論する, 対立する, もめる → をめぐって; hành động trung tính như giải thích, điều tra, đọc sách → に関して (bổ nghĩa cho danh từ thì dùng に関する)."
+              "explain": "Cả hai câu đều được, đều có nghĩa “về”. に関して là cách nói thông dụng ở nơi trang trọng, hay dùng trong email công việc, báo cáo, cuộc họp; につき cứng hơn, là lời văn của công văn, văn bản hội nghị, khi nói chuyện hầu như không dùng. につき còn hay mang nghĩa “vì” (工事中につき) và “mỗi” (一人につき) hơn, nên hãy xem phía sau: chỉ khi phía sau là xin ý kiến, liên lạc, thông báo thì mới là “về”."
             },
             {
-              "id": "ni-taishite",
-              "title": "〜に対して（đối tượng）",
-              "diff": "に関して chỉ “nội dung, chủ đề” (về); に対して chỉ “đối tượng” mà thái độ, hành động nhắm vào (đối với).",
+              "id": "ni-matsuwaru",
+              "title": "〜にまつわる（gắn với）",
+              "diff": "Đều có nghĩa “liên quan đến…”; に関する trung tính, にまつわる mang tính câu chuyện, hay đi với truyền thuyết, giai thoại.",
               "this": [
                 {
-                  "tag": "Chủ đề · về",
-                  "tr": "Báo cáo về khiếu nại của khách hàng."
+                  "tag": "Trung tính · thông tin",
+                  "tr": "Tôi đang thu thập những điều người ta kể về thị trấn này."
                 }
               ],
               "that": [
                 {
-                  "tag": "Đối tượng · đối với",
-                  "tr": "Nói chuyện với khách hàng phải lịch sự."
+                  "tag": "Mang tính câu chuyện",
+                  "tr": "Tôi đang thu thập những câu chuyện lưu truyền về thị trấn này."
                 }
               ],
-              "explain": "Xem hành động phía sau: “nội dung” của việc giải thích, báo cáo, điều tra → に関して; thái độ, phản ứng đối với người hay sự việc đó (丁寧に話す, 反対する, 怒る) → に対して. Nói 「お客さまに関して丁寧に話す」 là không thông."
+              "explain": "Hai câu chỉ khác ngữ pháp, đều nói được. に関する là “liên quan đến…” trung tính, phía sau thường là thứ trang trọng như 「資料」「調査」「法律」; にまつわる mang tính câu chuyện, phía sau thường là chuyện, giai thoại lưu truyền như 「伝説」「思い出」「エピソード」. Vì vậy 「この町にまつわる話」 gợi đến truyền thuyết địa phương, còn 「この町に関する話」 chỉ là thông tin về thị trấn này."
             }
           ]
         }
@@ -18282,25 +18285,29 @@
       "id": "ni-kawatte",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「代（か）わる」 — diễn tả “thay thế, tiếp nhận thay”",
+          "kind": "meaning",
+          "note": "Đều diễn tả “thay cho…”",
           "items": [
             {
               "id": "kawari-ni",
-              "diff": "に代わって chỉ diễn tả “thay cho, thay thế”, sắc thái trang trọng; 代わりに dùng rộng hơn, còn có thể diễn tả “để đổi lại”.",
+              "title": "〜代わりに（thay vì）",
+              "diff": "Đều có nghĩa “thay cho”; danh từ＋に代わって trang trọng, hay dùng ở dịp chính thức; danh từ＋の代わりに là cách nói hằng ngày.",
               "this": [
                 {
-                  "tag": "Thay cho ai đó",
-                  "tr": "Trưởng phòng đã thay giám đốc dự cuộc họp."
+                  "tag": "Trang trọng · chính thức",
+                  "tr": "Anh trai tôi thay mặt bố tham dự cuộc họp."
                 }
               ],
               "that": [
                 {
-                  "tag": "Để đổi lại",
-                  "tr": "Nhờ người ta giúp chuyển nhà, đổi lại tôi đã mời anh ấy bữa trưa."
+                  "tag": "Hằng ngày · thông dụng",
+                  "tr": "Anh trai tôi đi họp thay bố."
                 }
               ],
-              "explain": "Xem phía trước nối với gì: danh từ＋に代わって → chỉ có nghĩa “thế chỗ ai đó, thay thế cái gì đó”, thường dùng trong lời phát biểu, tin tức (trong văn viết khi ngắt câu giữa chừng thì nói 「に代わり」); động từ＋代わりに → còn có thể diễn tả “để đổi lại”, “không làm A mà làm B”, những nghĩa này に代わって đều không dùng được."
+              "wrong": {
+                "why": "Trước に代わって dùng 「に」; dùng 「の」 thì phải nói 「の代わりに」"
+              },
+              "explain": "Khi nói về người thì cả hai câu đều được, đều có nghĩa “thay cho”. Trước hết xem cách nối: danh từ＋に代わって, danh từ＋の代わりに. に代わって trang trọng, chủ yếu dùng trong phát biểu, tin tức và dịp chính thức (社長に代わりまして); の代わりに là cách nói hằng ngày, khi tạm lấy một thứ thay cho thứ khác (肉の代わりに豆腐を使う) cũng dùng nó."
             }
           ]
         }
@@ -18311,7 +18318,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều được tạo từ 「決（き）まる」 — “đã được định sẵn, không thay đổi”",
+          "note": "Đều bắt nguồn từ 「決（き）まる」 — nghĩa gốc “được định sẵn, không thay đổi nữa”",
           "items": [
             {
               "id": "to-kimatte",
@@ -18328,7 +18335,7 @@
                   "tr": "Hễ trời mưa là tôi lại bị đau đầu."
                 }
               ],
-              "explain": "Chỉ khác nhau ở 「に」 và 「と」: 「〜に決まってる」 đặt ở cuối câu, là sự khẳng định mạnh mẽ về một sự việc; còn 「決まって」 trong 「〜と決まって〜」 thực ra là phó từ “luôn luôn, nhất định”, phía trước là điều kiện 「と」, nói về quy luật lần nào cũng xảy ra."
+              "explain": "「決まる」 nghĩa gốc là sự việc được định sẵn, không thay đổi nữa. Kết quả đã định từ trước, không có khả năng khác → 「〜に決まってる」 “chắc chắn là…”, đặt cuối câu, khẳng định mạnh về một việc; thể て 「決まって」 dùng như phó từ, nghĩa là “cố định, lần nào cũng” → phía trước là điều kiện 「と」, nói về quy luật lần nào cũng giống nhau “hễ… là lại…”. Phân biệt: xem đó là khẳng định một việc ở cuối câu, hay sau 「〜と決まって」 còn nối một việc lặp đi lặp lại."
             }
           ]
         },
@@ -18396,13 +18403,13 @@
                   "tr": "Cái nóng năm nay thì năm ngoái không thể nào so được."
                 }
               ],
-              "explain": "Xem phía sau: sau に比べて là kết quả so sánh, thường đi với 「少し」, 「ずっと」 để nói chênh lệch bao nhiêu; とは比べものにならない tự nó đã là kết luận — chênh lệch lớn đến mức không thể đánh đồng, phía sau không nối thêm kết quả so sánh nào khác."
+              "explain": "「比べる」 là đặt hai thứ cạnh nhau để đối chiếu. に比べて là thể て của nó: lấy vế trước làm chuẩn đối chiếu, phía sau là kết quả so sánh, chênh lệch bao nhiêu (「少し」暑い, ずっと多い); とは比べものにならない là 「比べもの」 (thứ có thể đem ra so) ＋「にならない」: ngay cả đặt cạnh nhau để so cũng không đáng, bản thân nó đã là kết luận “không thể so được”. Phân biệt: phía sau còn nối mức chênh lệch cụ thể như 「少し」「ずっと」 → に比べて; câu kết thúc luôn ở 「比べものにならない」 → chênh lệch quá lớn, không thể đặt ngang hàng."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều dùng để so sánh hai thứ",
+          "note": "Đều diễn tả “so với…”",
           "items": [
             {
               "id": "wa-yori-comparison",
@@ -18420,41 +18427,6 @@
                 }
               ],
               "explain": "Cả hai đều so sánh được, 「今日は昨日より寒い」 cũng có thể nói thành 「昨日に比べて、今日は寒い」. Khác biệt nằm ở sắc thái: より là khẩu ngữ thường ngày; に比べて khách quan, trang trọng hơn, đặc biệt hợp để giải thích kiểu “so với trước đây, số lượng, tình hình đã thay đổi bao nhiêu”, mốc chuẩn thường đặt ở đầu câu."
-            },
-            {
-              "id": "ni-taishite",
-              "title": "〜のに対して（đối chiếu）",
-              "diff": "に比べて là so cao thấp trên cùng một thước đo; のに対して là đặt hai sự việc trái ngược nhau cạnh nhau để đối chiếu.",
-              "this": [
-                {
-                  "tag": "So cao thấp",
-                  "tr": "So với anh trai, em trai cao hơn."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Đối chiếu hai mặt",
-                  "tr": "Anh trai thì cao, còn em trai lại nhỏ người."
-                }
-              ],
-              "explain": "Xem nửa câu sau: sau に比べて chỉ mô tả một bên “… hơn” (弟は背が高い), là so sánh mức độ; のに対して thì trước và sau mỗi vế nói về tình trạng của một bên (兄は背が高い／弟は小柄だ), nghĩa hai bên trái ngược nhau, là đối chiếu. Khi nối với câu thì trước に対して phải thêm 「の」."
-            },
-            {
-              "id": "ni-hikikae",
-              "diff": "に比べて là so sánh mức độ một cách trung tính; にひきかえ là tình trạng hai bên hoàn toàn trái ngược, còn kèm sự khen chê, cảm thán của người nói.",
-              "this": [
-                {
-                  "tag": "Trung tính · so mức độ",
-                  "tr": "So với anh trai, em trai chăm học hơn."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Trái ngược hẳn · kèm cảm thán",
-                  "tr": "Trái ngược hẳn với người anh nghiêm túc, cậu em suốt ngày chỉ lo chơi."
-                }
-              ],
-              "explain": "Trước và sau にひきかえ là hai người một tốt một xấu, hoàn toàn trái ngược (真面目な兄／遊んでばかりの弟), câu mang sự bất mãn hoặc cảm thán của người nói, là cách nói văn viết; に比べて chỉ nói về mức độ ai hơn ai kém, không kèm đánh giá."
             }
           ]
         }
