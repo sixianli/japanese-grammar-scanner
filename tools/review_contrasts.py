@@ -260,9 +260,11 @@ def load_records(path=RECORDS):
 
 
 def save_records(records, path=RECORDS):
-    with open(path, "w", encoding="utf-8") as fh:
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as fh:
         json.dump({"model": MODEL, "records": dict(sorted(records.items()))}, fh, ensure_ascii=False, indent=1)
         fh.write("\n")
+    os.replace(tmp, path)
 
 
 def review_and_record(jobs, records, workers, path=RECORDS):
