@@ -4877,7 +4877,7 @@
           "items": [
             {
               "id": "to-iu-called",
-              "diff": "と言う funciona como predicado y significa «(alguien) dijo…»; という va seguido de un sustantivo y significa «(algo o alguien) llamado…».",
+              "diff": "と言う funciona como predicado y transmite «(alguien) dijo…»; という une un nombre al sustantivo siguiente: «un/una … llamado/a…».",
               "this": [
                 {
                   "tag": "Fin de oración · dijo",
@@ -4890,7 +4890,7 @@
                   "tr": "Esto es una comida llamada 「もち」 (pastel de arroz)."
                 }
               ],
-              "explain": "言う significa originalmente «decir». Cuando と marca lo que se dijo y la oración termina en 「言いました」 → se cita lo que alguien dijo (「もちが食べたい」と言いました); cuando se dice un nombre y se engancha al sustantivo siguiente → 「X という + sustantivo」 = un… llamado X (「もち」という食べ物). Fíjate en lo que sigue a と言う / という: la oración termina ahí → lo que alguien dijo, normalmente con el kanji 「言う」; un sustantivo → se presenta un nombre, normalmente en kana."
+              "explain": "El sentido básico de 言う es «decir», y 「と」 marca lo que se dice. Si marca una frase que alguien dijo (「もちが食べたい」) y detrás va 「言いました」 como predicado → se cita «alguien dijo…». Si marca un nombre que luego modifica al sustantivo siguiente —«la comida a la que la gente llama 『もち』»→ 「Xという + sustantivo」 = «un/una … llamado/a X». Para distinguirlos, mira primero si delante de 「と」 hay una frase o un nombre, y luego si detrás se cierra la oración como predicado o sigue un sustantivo. Ojo: tras un nombre también puede cerrarse la oración; 「私は王と言います」 y 「何と言いますか」 son el uso «llamarse» de esta página. Y cuando una frase va seguida de sustantivos como 「噂」 o 「考え」, という explica el contenido, no un nombre."
             }
           ]
         },
@@ -10756,20 +10756,20 @@
           "items": [
             {
               "id": "tara-dou",
-              "diff": "たらいい le dice al otro con calma «basta con hacer esto»; たらどう le devuelve la sugerencia con una pregunta retórica y puede sonar impaciente.",
+              "diff": "たらいい le dice con calma a la otra persona «basta con hacer esto»; たらどう le ofrece la sugerencia en forma de pregunta y anima de forma más activa.",
               "this": [
                 {
-                  "tag": "Decir cómo",
-                  "tr": "Cuando no entiendas algo, basta con preguntarle al profesor."
+                  "tag": "Afirmación · dar una solución",
+                  "tr": "Lo mejor es que hoy te vayas pronto a casa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Meter prisa · impaciente",
-                  "tr": "Deja de remolonear, ¿por qué no te decides ya?"
+                  "tag": "Pregunta · proponer activamente",
+                  "tr": "¿Y si hoy te vas pronto a casa?"
                 }
               ],
-              "explain": "Mira el tono: si, como en 「分からないときは」, el otro no sabe qué hacer y tú le explicas con calma cómo → たらいい (〜といい funciona igual); si antes hay una prisa como 「ぐずぐずしていないで」 y el otro no termina de actuar → たらどう, que le devuelve la sugerencia con una pregunta retórica y suena fácilmente molesto. Ante 「どうしたらいいですか」 sirven las dos, pero たらいい es más tranquilo y directo, y たらどう suena más a pregunta retórica."
+              "explain": "Las dos frases hacen la misma sugerencia; solo cambia la forma. たらいい es una afirmación (a menudo con 「よ」 o 「と思う」), como quien da una respuesta: con esto basta, en tono tranquilo. たらどう es una pregunta (「？」, 「ですか」) que pone la opción delante de la otra persona y le deja decidir, por eso anima de forma más activa. Para ser más cortés con superiores o clientes, se dice 「〜たらいかがですか」."
             }
           ]
         },
@@ -10780,21 +10780,21 @@
           "items": [
             {
               "id": "nai-kana",
-              "diff": "といいな dice con calma «ojalá…»; ないかな es esperar con ansia, con impaciencia: su forma es negativa, pero expresa un deseo.",
+              "title": "〜ないかな（anhelo）",
+              "diff": "といいな dice con calma «estaría bien que…»; ないかな es como murmurar para uno mismo «¿por qué no… ya?», con tono impaciente.",
               "this": [
                 {
-                  "tag": "Deseo tranquilo",
-                  "tr": "Ojalá haga sol el fin de semana."
+                  "tag": "Expresar un deseo con calma",
+                  "tr": "Ojalá llegue pronto la primavera."
                 }
               ],
               "that": [
                 {
-                  "tag": "Anhelo impaciente",
-                  "tr": "Ojalá llegara ya el fin de semana."
+                  "tag": "Impaciencia · hablar para sí",
+                  "tr": "¿Cuándo llegará de una vez la primavera?"
                 }
               ],
-              "explain": "Fíjate si hay una palabra de impaciencia como 「早く」: si se anhela que algo llegue pronto → 〜ないかな (es negativa, pero significa «cómo me gustaría que…»); si solo se expresa un deseo → 〜といいな (〜たらいいな funciona igual).",
-              "title": "〜ないかな（anhelo）"
+              "explain": "Las dos frases desean lo mismo, y 「早く」 sirve con ambas. 〜といいな solo expresa un deseo con calma (〜たらいいな igual). 〜ないかな usa una negación más una pregunta, como si murmuraras «¿por qué no… todavía?», y transmite que no puedes esperar. Elige ないかな para mostrar un anhelo impaciente y といいな para expresar simplemente un deseo."
             },
             {
               "id": "te-hoshii",
@@ -11568,50 +11568,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "sense": 2,
-          "note": "Ambas expresan «ir a hacer algo»",
-          "items": [
-            {
-              "id": "ni-iku-purpose",
-              "title": "〜に行く",
-              "diff": "てくる dice que vas a hacer algo y luego vuelves aquí; に行く solo dice a qué sales.",
-              "this": [
-                {
-                  "tag": "Vuelvo al terminar",
-                  "tr": "Voy a comprar algo de beber a la tienda. Vuelvo enseguida."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Propósito de salir",
-                  "tr": "Voy a la tienda a comprar algo de beber, ¿vienes conmigo?"
-                }
-              ],
-              "explain": "Las dos significan «ir a comprar»; fíjate en dónde está el foco: si sigue 「すぐ戻るから」, que subraya que volverás aquí al terminar → てくる; si sigue la pregunta 「一緒に行く」, el foco está en salir a hacerlo → に行く (igual con に来る)."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
           "sense": 3,
           "note": "Todas expresan «empieza a producirse un cambio»",
           "items": [
             {
               "id": "you-ni-naru",
-              "diff": "てくる mira el «proceso» del cambio (va cambiando poco a poco); ようになる mira el «punto final» (ahora ya se puede).",
+              "diff": "てくる dice que un cambio está en marcha y sigue hasta ahora; ようになる describe el nuevo estado al que se llega tras el cambio (ahora ya se puede).",
               "this": [
                 {
-                  "tag": "Proceso · aún cambiando",
-                  "tr": "Poco a poco he ido entendiendo el japonés."
+                  "tag": "Proceso · sigue hasta ahora",
+                  "tr": "Últimamente he ido entendiendo poco a poco el japonés."
                 }
               ],
               "that": [
                 {
-                  "tag": "Punto final · alcanzado",
-                  "tr": "En tres meses llegué a entender el japonés."
+                  "tag": "Nuevo estado alcanzado",
+                  "tr": "En solo tres meses llegué a entender el japonés."
                 }
               ],
-              "explain": "Fíjate en la expresión temporal: 「少しずつ」 describe el proceso del cambio, que sigue en marcha hasta ahora → normalmente てくる; 「３か月で」 marca un punto final y habla del nuevo estado al que se ha llegado → ようになる."
+              "explain": "「だんだん」 y 「少しずつ」 sirven con ambas formas, así que no las distinguen; lo que cuenta es si describes el proceso del cambio o el nuevo estado tras él. 「最近、だんだん分かってきた」 dice que el cambio está ocurriendo y continúa hasta ahora → てくる. 「３か月で」 marca el momento en que se llegó, así que la frase describe el nuevo estado alcanzado entonces (ya entiendes) → ようになる; aquí decir 「３か月で分かってきた」 suena poco natural."
             },
             {
               "id": "hajimeru-start",
@@ -12072,20 +12047,20 @@
           "items": [
             {
               "id": "owaru-finish",
-              "diff": "てしまう resalta que algo se hizo de un tirón y del todo, y el asunto queda zanjado; 終わる solo indica objetivamente que la acción terminó en el tiempo.",
+              "diff": "てしまう tiene el matiz subjetivo de «lo hice todo de un tirón, asunto terminado»; 終わる solo constata de forma objetiva que la acción terminó.",
               "this": [
                 {
-                  "tag": "Zanjado de una vez",
-                  "tr": "Me leí este libro entero en una sola noche."
+                  "tag": "Subjetivo · de un tirón",
+                  "tr": "Este libro me lo leí entero en una sola noche."
                 }
               ],
               "that": [
                 {
                   "tag": "Objetivo · terminar de leer",
-                  "tr": "Por fin terminé de leer este libro."
+                  "tr": "Este libro lo terminé de leer entero en una noche."
                 }
               ],
-              "explain": "Mira qué quiere resaltar el hablante: con 「一晩で」 y 「全部」, que subrayan que se hizo de un tirón y del todo, y el asunto ya está zanjado → てしまう; con 「やっと」, que solo cuenta que la acción de leer ha terminado → raíz ます + 終わる, sin carga emocional. Además, 終わる solo va con acciones que duran un tiempo, como leer, escribir o comer."
+              "explain": "Las dos frases cuentan lo mismo; solo cambia la gramática. てしまう lleva la sensación del hablante: lo hizo de un tirón y el asunto quedó cerrado, a veces incluso con sorpresa o pesar («acabé…»). ます形 + 終わる solo informa de que la lectura terminó, sin carga emocional. Además, 終わる solo va con acciones que duran cierto tiempo, como leer, escribir o comer; てしまう no tiene esa limitación (忘れてしまった)."
             }
           ]
         }
@@ -12257,11 +12232,11 @@
           "items": [
             {
               "id": "to-ieru",
-              "diff": "と言ってもいい tiene un tono valorativo de «no es exagerado decirlo»; と言える es un juicio objetivo al que se llega analizando hechos.",
+              "diff": "と言ってもいい tiene un tono valorativo de «no es exagerado decir»; と言える es un juicio objetivo al que se llega analizando los hechos.",
               "this": [
                 {
                   "tag": "Valoración algo exagerada",
-                  "tr": "Su japonés es tan bueno que no sería exagerado decir que es japonesa."
+                  "tr": "Se puede decir que su japonés ya está al nivel de un hablante nativo."
                 }
               ],
               "that": [
@@ -12270,7 +12245,7 @@
                   "tr": "A la vista de los resultados de este estudio, se puede decir que los jóvenes leen cada vez menos."
                 }
               ],
-              "explain": "Mira en qué se basa el juicio: la valoración del propio hablante, algo exagerada (もう日本人と言ってもいい) → と言ってもいい; si antes hay un fundamento como 「調査の結果から」「データによると」 y se saca una conclusión objetiva → と言える, más propio de textos escritos."
+              "explain": "Fíjate en qué se basa el juicio: si lleva la valoración personal del hablante, con algo de exageración (もうネイティブ並みと言ってもいい) → と言ってもいい. Si antes hay un fundamento como 「調査の結果から」 o 「データによると」 y se saca una conclusión objetiva → と言える, frecuente en textos escritos."
             }
           ]
         }
@@ -22094,24 +22069,6 @@
                 }
               ],
               "explain": "Las dos son 「言う」 (decir) más un condicional: «si hablamos de X». といったら toma una cualidad y cuenta hasta qué punto llega, por eso suele llevar delante sustantivos en 「〜さ」 como 「寒さ」「美しさ」 y detrás una descripción del grado (〜ほどだ); といえば sigue el tema y nombra lo primero que viene a la mente, a menudo con 「やっぱり」 detrás. といったら también puede introducir así una asociación (北海道といったらカニだ), pero といえば no sirve para exclamar sobre un grado."
-            },
-            {
-              "id": "ttara",
-              "title": "〜ったら（sacar a alguien a colación）",
-              "diff": "といったら es la forma completa y puede exclamar sobre un grado; ったら es su contracción coloquial y se usa sobre todo para mencionar a alguien cercano, con fastidio o cariño.",
-              "this": [
-                {
-                  "tag": "Forma completa · exclamación de grado",
-                  "tr": "Lo mono que es mi niño… es que no puedo con ello."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Contracción · queja",
-                  "tr": "Mi niño, de verdad… otra vez ha dejado los zapatos tirados."
-                }
-              ],
-              "explain": "ったら es simplemente 「と言ったら」 sin 「と言」; las dos significan «si hablamos de…». Al hablar de una cualidad como 「かわいさ」 y exclamar a continuación lo grande que es → といったら; al hablar de alguien cercano (うちの子, 母, あなた) y contar lo que ha vuelto a hacer, lo que en lenguaje coloquial se volvió un «… ¡qué cosas tiene!» con fastidio o reproche cariñoso → ったら, a menudo con 「また」 detrás."
             }
           ]
         },
@@ -22519,23 +22476,6 @@
                 }
               ],
               "explain": "Significan casi lo mismo; la diferencia está en el registro: en novelas y textos, con un tono de observador frío → とみえる, a menudo con 「よほど」; al hablar en el día a día → ようだ, y más coloquial aún みたいだ (出かけたみたいだ). Además, ようだ también sirve para comparaciones (氷のようだ); とみえる no."
-            },
-            {
-              "id": "you-ni-mieru",
-              "diff": "とみえる saca una conclusión de los indicios: «por lo visto…»; ように見える solo describe la impresión externa, «parece…», sin que tenga que ser cierto.",
-              "this": [
-                {
-                  "tag": "Deducción · por lo visto",
-                  "tr": "No para de bostezar. Por lo visto, está agotado."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Apariencia · parece",
-                  "tr": "Parece cansado, pero en realidad está lleno de energía."
-                }
-              ],
-              "explain": "ように見える solo habla de la impresión que da el aspecto, y a menudo sigue 「が、実は……」 para desmentirla; とみえる es un juicio basado en indicios (何度もあくびをしている) que el hablante básicamente cree, suele combinarse con 「よほど」 y es más bien escrito."
             }
           ]
         }
@@ -33074,20 +33014,23 @@
             {
               "id": "atte-no",
               "thisTitle": "〜あってこそ",
-              "diff": "Tras あってこそ sigue una oración; tras あっての va directamente un sustantivo, y es más escrito.",
+              "diff": "あってこそ va seguido de una oración completa y con 「こそ」 recalca lo anterior; あっての se une directamente a un sustantivo, es más formal y aparece sobre todo en expresiones fijas.",
               "this": [
                 {
-                  "tag": "Sigue una oración",
-                  "tr": "Ha sido precisamente gracias al apoyo de todos ustedes que esta tienda ha podido seguir abierta."
+                  "tag": "Sigue una oración · recalca lo anterior",
+                  "tr": "Precisamente porque hay clientes, el negocio funciona."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sigue un sustantivo · escrito",
+                  "tag": "Directo a un sustantivo · formal",
                   "tr": "Sin clientes no hay negocio."
                 }
               ],
-              "explain": "Mira lo que va tras 「あって」: si sigue 「こそ、」 y luego una oración completa → あってこそ; si va directamente un sustantivo (商売, 人生) y delante tampoco hay 「が」 → あっての, típico de expresiones fijas como 「お客様あっての商売」 o 「命あっての物種」."
+              "explain": "Las dos frases dicen «sin clientes no hay negocio». Fíjate en lo que sigue a 「あって」: si viene 「こそ、」 y luego una oración completa → あってこそ; 「こそ」 pone el foco en lo anterior y recalca «precisamente por tener esto». Si sigue directamente un sustantivo, sin 「が」 delante → あっての, que presenta lo anterior como condición para que exista el sustantivo siguiente; suena formal y escrito, y es frecuente en expresiones fijas como 「お客様あっての商売」 o 「命あっての物種」.",
+              "wrong": {
+                "why": "あっての debe ir seguido directamente de un sustantivo (あっての商売); no puede cortarse y continuar con una oración completa. Para seguir con una oración hay que decir 「お客様があってこそ、商売が成り立つ」."
+              }
             }
           ]
         }
@@ -33639,7 +33582,7 @@
           "items": [
             {
               "id": "to-iu-mono-dewa-nai",
-              "diff": "というものだ afirma «eso es…»; というものではない es «no basta con…»; no son simples contrarios.",
+              "diff": "というものだ afirma «eso es lo que es…»; というものではない significa «no basta con…», y no es un simple contrario.",
               "this": [
                 {
                   "tag": "Afirmar la esencia",
@@ -33652,7 +33595,7 @@
                   "tr": "No basta con tener dinero para ser feliz."
                 }
               ],
-              "explain": "Parte de というもの («eso que se llama...»). En afirmativo, 「それが幸せというものだ」 = «eso es lo que se llama felicidad» → afirma la esencia de algo. En negativo, 「お金さえあれば幸せになれるというものではない」 = «no existe la regla de 'basta con...'» → rechaza una idea simplista. Por eso no son simples opuestos. Mira lo que va delante: una condición del tipo «basta con...» como 「〜ばいい」 o 「〜さえあれば」 → というものではない; un sustantivo (幸せ, 人生) → というものだ."
+              "explain": "Se parte de 「というもの」 («eso que llamamos…»). En afirmativo, 「それが幸せというものだ」 = «eso es lo que llamamos felicidad» → afirma la esencia de algo. En negativo, 「お金さえあれば幸せになれるというものではない」 = «no existe la regla de que basta con…» → niega la idea simplista que va delante, no la felicidad en sí, por eso no son simples contrarios. Para distinguirlos, mira primero el final: 「だ」 afirma, 「ではない」 niega. Luego mira lo anterior: delante de というものではない suelen aparecer expresiones de «basta con…» como 「〜ばいい」, 「〜さえあれば」 o 「必ずしも」."
             }
           ]
         },
@@ -33693,7 +33636,7 @@
           "items": [
             {
               "id": "to-iu-mono-da",
-              "diff": "というものではない niega «basta con…»; というものだ afirma «eso es…»; no son simples contrarios.",
+              "diff": "というものではない niega «basta con…»; というものだ afirma «eso es lo que es…»; no son simples contrarios.",
               "this": [
                 {
                   "tag": "Negar una idea simplista",
@@ -33706,7 +33649,7 @@
                   "tr": "Poder reír junto a la familia: eso es la felicidad."
                 }
               ],
-              "explain": "Parte de というもの («eso que se llama...»). En negativo, 「お金さえあれば幸せになれるというものではない」 = «no existe la regla de 'basta con...'» → rechaza una idea simplista. En afirmativo, 「それが幸せというものだ」 = «eso es lo que se llama felicidad» → afirma la esencia de algo. Por eso no son simples opuestos. Mira lo que va delante: una condición del tipo «basta con...» como 「〜ばいい」 o 「〜さえあれば」 → というものではない; un sustantivo (幸せ, 人生) → というものだ."
+              "explain": "Se parte de 「というもの」 («eso que llamamos…»). En negativo, 「お金さえあれば幸せになれるというものではない」 = «no existe la regla de que basta con…» → niega la idea simplista que va delante, no la felicidad en sí. En afirmativo, 「それが幸せというものだ」 = «eso es lo que llamamos felicidad» → afirma la esencia de algo, por eso no son simples contrarios. Para distinguirlos, mira primero el final: 「ではない」 niega, 「だ」 afirma. Luego mira lo anterior: delante de というものではない suelen aparecer expresiones de «basta con…» como 「〜ばいい」, 「〜さえあれば」 o 「必ずしも」."
             }
           ]
         },
