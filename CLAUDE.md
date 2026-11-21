@@ -31,7 +31,8 @@
 2. **界面断言以被测元素所在的容器为准，不以屏幕为准。** CI 用的模拟器尺寸会变（屏幕更宽、右侧多一列系统按钮），所以：
    - 判断「居中」「在顶部」「被挡住」时，拿被测元素和它所在的容器比（给容器加 `accessibilityIdentifier`，例如讲解页标题栏 `detail.titleBar`），
      不拿 `app.windows.firstMatch.frame`、导航栏或屏幕中线比，也不写死像素（例如 `maxY < 200`）。
-   - 不用 `app.coordinate(withNormalizedOffset:)` 去点「屏幕上大概是空白的地方」；要点就点一个有 id 的具体元素。
+   - 不用 `app.coordinate(withNormalizedOffset:)` 去点「屏幕上大概是空白的地方」；要点就点一个具体元素（有 id 的，或按文字找到的）。
+     实在没有可点的元素时（例如搜索结果铺满屏幕时收键盘），只点屏幕最顶部的状态栏一带（`dy: 0.03`），那里在任何尺寸上都不会点到内容。
 3. **一个 Build 一个分支。** 下一个 Build 的改动从当前 Build 的分支另切新分支去做；当前 Build 发出去之前，不往它的分支上提交下一个 Build 的代码。
    提交前用 `git diff --cached --stat` 核对，只包含这个 Build 的改动。
 
