@@ -1,7 +1,8 @@
 import SwiftUI
 
 /// 语法点详细讲解：一整页连续阅读的讲义（不分卡片），铺满屏幕宽度，只保留标准阅读边距。
-/// 颜色只用在重点上：例句里的目标语法（主色）；其余为黑白灰。
+/// 文字颜色规则（Build 17 反馈 8，见 CLAUDE.md「界面文字颜色」）：要读懂必须读的字用主文字色；
+/// 翻译、小节标签、出处小字用一种灰（.secondary）；主题色只给能点的东西和例句里的语法高亮；.tertiary 只用于箭头图标。
 struct GrammarDetailView: View {
     let grammarID: String
     /// 从扫描结果打开时，原文里命中的文字（用于显示「你扫到的」并找出对应的用法）
@@ -255,7 +256,7 @@ struct GrammarDetailView: View {
                         .padding(.top, 3)
                 }
             }
-            RubyText(explanation: s.explanation, style: .init(font: .callout, color: .secondary, lineSpacing: 5))
+            RubyText(explanation: s.explanation, style: .init(font: .callout, lineSpacing: 5))
         }
         .padding(.vertical, 12)
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -348,7 +349,7 @@ private struct SenseOutline: View {
                                 if showsLevels { LevelBadge(level: point.level(of: sense)) }
                             }
                             ForEach(Array(GrammarDetailView.connectionLines(sense.connection).enumerated()), id: \.offset) { _, line in
-                                RubyText(explanation: line, style: .init(font: .subheadline, color: .secondary, lineSpacing: 4))
+                                RubyText(explanation: line, style: .init(font: .subheadline, lineSpacing: 4))
                             }
                         }
                         Spacer(minLength: 8)

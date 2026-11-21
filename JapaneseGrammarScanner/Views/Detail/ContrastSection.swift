@@ -35,8 +35,8 @@ struct ContrastSection: View {
         VStack(alignment: .leading, spacing: 2) {
             Text(localized: Self.name(of: group.kind))
                 .font(.headline)
-                .foregroundStyle(Theme.accentText)
-            RubyText(explanation: group.note, style: .init(font: .subheadline, color: .secondary, lineSpacing: 3))
+                .foregroundStyle(Color.primary)
+            RubyText(explanation: group.note, style: .init(font: .subheadline, lineSpacing: 3))
         }
         .accessibilityElement(children: .combine)
         .accessibilityAddTraits(.isHeader)
@@ -175,7 +175,7 @@ struct ContrastSection: View {
             Text(verbatim: "✗").font(.body.weight(.bold)).foregroundStyle(Color.red)
             VStack(alignment: .leading, spacing: 2) {
                 Text(verbatim: w.ja ?? "").strikethrough(true, color: .red)
-                Text(w.why).font(.subheadline).foregroundStyle(.secondary)
+                Text(w.why).font(.subheadline).foregroundStyle(Color.primary)
             }
         }
         .font(.callout)
