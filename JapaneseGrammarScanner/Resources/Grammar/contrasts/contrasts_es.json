@@ -46013,26 +46013,8 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「と思う」: «creer, pensar que…»; en 思いきや, 「き」 es un auxiliar de pasado clásico y 「や」 indica pregunta retórica: «¿creías que…? (pues no)»",
+          "note": "Ambos vienen de 「思う」: significado original «creer, pensar que algo es así»",
           "items": [
-            {
-              "id": "ka-to-omou-to",
-              "title": "〜かと思ったら (creía que…, pero)",
-              "diff": "Para decir «creía que…, pero…», かと思いきや es la forma escrita, frecuente en textos; かと思ったら es la coloquial.",
-              "this": [
-                {
-                  "tag": "Escrito · creía que",
-                  "tr": "Creía que el examen sería fácil, pero resultó bastante difícil."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Coloquial · creía que",
-                  "tr": "Creía que el examen sería fácil, pero resultó bastante difícil."
-                }
-              ],
-              "explain": "Las dos frases significan lo mismo; depende del contexto: かと思いきや es frecuente en textos como noticias o ensayos, con cierto toque literario (と思いきや funciona igual); al charlar se dice かと思ったら. Además, かと思ったら／かと思うと también pueden significar «nada más…, …», uso que かと思いきや no tiene."
-            },
             {
               "id": "ka-to-omou",
               "title": "〜かと思った (creía que…)",
@@ -46049,7 +46031,7 @@
                   "tr": "¡Anda, si eres tú! Creía que era un ladrón."
                 }
               ],
-              "explain": "Mira dónde termina la frase: tras かと思いきや siempre hay una coma y un resultado inesperado (会場は満員だった), y es frecuente en textos; かと思った suele ir al final de la frase y solo cuenta el malentendido de hace un momento; es coloquial, y la situación real se entiende por el contexto."
+              "explain": "Ambos vienen de 「思う」 (creer) más un elemento de pasado. 思いきや = 思い + el auxiliar de pasado clásico 「き」 + la 「や」 de pregunta retórica: «creía que sí, ¿no? (pero no)»; por eso siempre va seguido del resultado contrario y se convirtió en el escrito «creía que…, pero». かと思った es simplemente el pasado de 「思う」, «hace un momento creía que…»; suele cerrar la oración para expresar el propio malentendido, y la realidad se entiende por el contexto (何だ、君か). Así que fíjate dónde termina la oración: coma seguida de un resultado inesperado (会場は満員だった) → かと思いきや, sobre todo por escrito; termina ahí mismo → かと思った, coloquial."
             }
           ]
         },
@@ -46074,6 +46056,24 @@
                 }
               ],
               "explain": "Mira la primera mitad: una previsión que el hablante tenía en la cabeza (雨かと思った) → と思いきや, y el resultado puede ser bueno o malo; un hecho ya existente (天気予報は晴れだと言っていた), con un resultado que produce descontento → のに."
+            },
+            {
+              "id": "ka-to-omou-to",
+              "title": "〜かと思ったら (creía que…, pero)",
+              "diff": "Con el sentido «creía que…, pero…», かと思いきや es la forma escrita, propia de textos; かと思ったら es coloquial.",
+              "this": [
+                {
+                  "tag": "Escrito · creía que",
+                  "tr": "Creía que la reunión se alargaría, pero terminó en un momento."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Hablado · creía que",
+                  "tr": "Creía que la reunión se alargaría, pero terminó en un momento."
+                }
+              ],
+              "explain": "Las dos oraciones significan lo mismo; se elige según el contexto: かと思いきや es frecuente en noticias y ensayos y tiene un toque clásico; en la conversación se dice かと思ったら. Además, かと思ったら también puede significar «apenas…, cuando…» (空が暗くなったかと思ったら、雨が降り出した); かと思いきや no tiene ese uso."
             }
           ]
         }
@@ -46107,41 +46107,24 @@
         },
         {
           "kind": "meaning",
-          "note": "Ambas transmiten de forma objetiva, en lengua escrita, «se considera que…»",
+          "note": "Ambos significan «se considera que…»",
           "items": [
             {
               "id": "to-iwarete-iru",
-              "diff": "とされる suele ser un reconocimiento o una norma de investigaciones u organismos oficiales, formal; と言われている es lo que se dice en la sociedad o en la tradición popular, y también se usa mucho al hablar.",
+              "diff": "Mismo significado: ambos transmiten una opinión generalmente aceptada. とされる es más formal y se usa sobre todo en artículos académicos, noticias y textos expositivos; と言われている sirve tanto por escrito como al hablar.",
               "this": [
                 {
-                  "tag": "Reconocido por expertos · formal",
-                  "tr": "Entre los expertos, se considera que la causa principal de esta enfermedad es el estrés."
+                  "tag": "Escrito · formal",
+                  "tr": "Soñar con el monte Fuji se considera de buen augurio."
                 }
               ],
               "that": [
                 {
-                  "tag": "Dicho popular",
-                  "tr": "Desde antiguo se dice que soñar con el monte Fuji trae buena suerte."
+                  "tag": "Escrito y hablado",
+                  "tr": "Se dice que soñar con el monte Fuji es de buen augurio."
                 }
               ],
-              "explain": "Mira de dónde sale la afirmación: el reconocimiento de expertos, leyes u organismos oficiales (専門家の間では, 法律で) → とされる, frecuente en artículos académicos y noticias; lo que se transmite popularmente y todo el mundo dice (昔から) → と言われている, válido al hablar y por escrito."
-            },
-            {
-              "id": "to-mirareru",
-              "diff": "とされる es una opinión ya aceptada o un reconocimiento oficial; とみられる es una suposición basada en las señales que se tienen delante, aún no confirmada.",
-              "this": [
-                {
-                  "tag": "Aceptado · establecido",
-                  "tr": "En general, se considera que lo ideal es dormir 8 horas."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Por las señales · suposición",
-                  "tr": "Por la situación en el lugar, se supone que la causa del accidente fue el exceso de velocidad."
-                }
-              ],
-              "explain": "Mira de dónde sale el juicio: una opinión aceptada, como 「一般に」「古くから」, o lo que establece una ley o una norma → とされる; señales que se tienen delante, como 「現場の状況から」「調べによると」, con la conclusión aún sin confirmar → とみられる."
+              "explain": "Las dos oraciones significan lo mismo y en ninguna el hablante da su propia opinión. Fíjate en el contexto: とされる es habitual en artículos, noticias y textos expositivos, suena rígido y casi no se usa al hablar; と言われている sirve por escrito y oralmente, y en una charla informal suele decirse 「〜って言われてる」. Además, とされる puede expresar lo que establece una ley o norma (法律で違法とされる); と言われている no tiene ese uso."
             }
           ]
         }
@@ -46152,24 +46135,24 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas significan «¡con la posición o el nivel que tiene, y resulta que…!»",
+          "note": "Ambos significan «que alguien así llegue a…»",
           "items": [
             {
               "id": "tomo-arou",
-              "diff": "としたことが suele usarse sobre uno mismo (私としたことが), con arrepentimiento o autocrítica y tono ligero; ともあろう critica a alguien con cierta posición, con tono duro.",
+              "diff": "としたことが habla de una persona concreta normalmente fiable (o de uno mismo) que falla sin esperarlo, con pesar; ともあろう invoca un cargo social y reprocha no estar a su altura, con un tono más fuerte.",
               "this": [
                 {
-                  "tag": "Uno mismo · arrepentimiento",
-                  "tr": "¡Mira que soy despistado! Me he dejado en casa unos documentos importantes."
+                  "tag": "Alguien conocido · sorpresa, pesar",
+                  "tr": "Que el doctor Tanaka, siempre tan cuidadoso, se equivocara con la dosis…"
                 }
               ],
               "that": [
                 {
-                  "tag": "Alguien con posición · reproche",
-                  "tr": "¡Que todo un policía haya sido detenido por conducir borracho!"
+                  "tag": "Cargo social · reproche",
+                  "tr": "¡Que todo un médico se equivoque con la dosis!"
                 }
               ],
-              "explain": "Mira el sujeto y el tono: 「私」「僕」 o alguien normalmente muy fiable que comete un error inesperado, con arrepentimiento o lástima → としたことが; una posición social como 「教師」「警察官」「大臣」, seguida de 「者が／人が」, que ha hecho algo que no debía, con reproche → ともあろう."
+              "explain": "Las dos oraciones dicen «que alguien así cometiera semejante error». Fíjate en cómo se presenta a la persona: alguien concreto que el hablante conoce y en quien confía, como 「あの慎重な田中先生」 → としたことが, con sorpresa y pesar, y también sirve para uno mismo (私としたことが); un cargo social como 「医者」 o 「警察官」 seguido de 「者が」 o 「人が」 → ともあろう, que subraya que no estuvo a la altura del cargo, con reproche, y no se usa sobre uno mismo."
             }
           ]
         }
@@ -46179,71 +46162,80 @@
       "id": "to-shita-tokoro-de",
       "groups": [
         {
-          "kind": "root",
-          "note": "Todas vienen de 「とする／にする」 (tomar como, suponer) más las concesivas 「ても」「たところで」",
+          "kind": "meaning",
+          "sense": 1,
+          "note": "Ambos significan «incluso (cierta persona)…»",
           "items": [
             {
-              "id": "to-shite-mo",
-              "thisTitle": "〜としたところで",
-              "diff": "としたところで tiene un tono negativo y recalca «aunque sea así, no sirve de nada»; としても es una concesión hipotética neutra, y lo que sigue puede ser bueno o malo.",
-              "this": [
-                {
-                  "tag": "Negativo · no sirve de nada",
-                  "tr": "Aunque fuera ahora a pedir perdón, seguramente no me perdonarían."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Neutro · puede seguir algo bueno",
-                  "tr": "Aunque fracases, será una buena experiencia."
-                }
-              ],
-              "explain": "Mira la segunda mitad: una conclusión negativa de «no sirve, no cambia nada» (許してもらえない, 無駄だ) → としたところで, con matiz de «esfuerzo en vano»; el resultado puede ser bueno o malo (いい経験になる) → としても."
-            },
-            {
               "id": "ni-shite-mo",
+              "title": "〜にしても (incluso…)",
               "thisTitle": "〜にしたところで",
-              "diff": "Tras にしたところで casi siempre viene una negación: «sea quien sea, no hay nada que hacer»; tras にしても puede venir algo positivo o negativo.",
+              "diff": "にしたところで es más enfático, recalca «daría igual quién lo intentara» y casi siempre va seguido de un juicio negativo; にしても tiene un tono neutro y también admite juicios neutros o positivos.",
               "this": [
                 {
-                  "tag": "Seguido de negación · nadie podría",
-                  "tr": "Ni siquiera Tanaka, con toda su experiencia, podría despachar tanto trabajo en un día."
+                  "tag": "Más fuerte · nadie podría",
+                  "tr": "Ni siquiera Tanaka, con toda su experiencia, podría despachar tanto en un día."
                 }
               ],
               "that": [
                 {
-                  "tag": "Seguido de cualquier valoración",
-                  "tr": "En cuanto a Tanaka, seguro que él también está contento con el resultado de esta vez."
+                  "tag": "Tono neutro",
+                  "tr": "Incluso para Tanaka, con su experiencia, es imposible despachar tanto en un día."
+                },
+                {
+                  "tag": "Admite un juicio positivo",
+                  "tr": "Tanaka también debe de estar contento con el resultado esta vez."
                 }
               ],
-              "explain": "Las dos son 「persona + に + する」 y sacan a relucir la postura de alguien. Mira la segunda mitad: un juicio negativo de «no se puede», como 「無理だ」「分からない」 → lo más natural es にしたところで; una suposición neutra o positiva como 「うれしい」 → にしても."
+              "explain": "Si sigue un juicio negativo (無理だ), sirven los dos: にしたところで transmite resignación, «da igual quién lo intente», con un tono más fuerte y algo formal; にしても solo incluye también a esa persona, con tono neutro. Si sigue una suposición neutra o positiva (うれしいはずだ), solo resulta natural にしても."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Todas significan «aunque…, (no sirve de nada)»",
+          "sense": 2,
+          "note": "Ambos significan «aun suponiendo que…»",
           "items": [
             {
               "id": "ta-tokoro-de",
-              "diff": "たところで va directamente tras una acción: «aunque lo hagas, no sirve de nada»; delante de にしたところで va una persona, y delante de としたところで una situación hipotética.",
+              "thisTitle": "〜としたところで",
+              "diff": "としたところで primero plantea la situación como una suposición y suele ir con 「仮に」; たところで se une directamente a una acción, «aunque lo hicieras, no serviría de nada», y es más frecuente.",
               "this": [
                 {
-                  "tag": "にしたところで · delante una persona",
-                  "tr": "Ni siquiera un experto sabe cómo estará la bolsa mañana."
-                },
-                {
-                  "tag": "としたところで · situación hipotética",
+                  "tag": "Primero supone · suele ir con 仮に",
                   "tr": "Aun suponiendo que saliéramos ahora mismo, no llegaríamos a la hora acordada."
                 }
               ],
               "that": [
                 {
-                  "tag": "たところで · delante una acción",
-                  "tr": "Aunque vaya corriendo ahora, no llegaré a la hora acordada."
+                  "tag": "Se une directamente a la acción",
+                  "tr": "Aunque saliéramos ahora mismo, no llegaríamos a la hora acordada."
                 }
               ],
-              "explain": "Mira lo que va delante de 「ところで」: la forma た del verbo (走った) → たところで, «aunque lo hagas, es en vano»; persona (専門家) + にした → sea quien sea, da igual; oración + とした, a menudo con 「仮に」 delante → primero se supone una situación y luego se dice «ni aun así». Tras todas viene una negación o un resultado de «no sirve»."
+              "explain": "Las dos oraciones significan casi lo mismo y ambas terminan en una conclusión de «no sirve de nada». としたところで lleva además 「とした」 (dar por, suponer), como si primero planteara una situación para luego descartarla; suele ir con 「仮に」 o 「たとえ」 y suena más formal. たところで se une directamente a la た形 del verbo, «aunque lo hicieras, sería en vano», y es habitual tanto al hablar como al escribir."
+            },
+            {
+              "id": "to-shite-mo",
+              "title": "〜としても (aun suponiendo que…)",
+              "thisTitle": "〜としたところで",
+              "diff": "としたところで solo va seguido de una conclusión negativa del tipo «no sirve de nada, no cambiará nada»; としても es una concesión hipotética neutra y admite tanto resultados buenos como malos.",
+              "this": [
+                {
+                  "tag": "Solo conclusión negativa",
+                  "tr": "Aunque fuera a disculparme ahora, seguramente no me perdonarían."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Admite conclusión negativa",
+                  "tr": "Aun si me disculpara ahora, seguramente no me perdonarían."
+                },
+                {
+                  "tag": "Admite conclusión positiva",
+                  "tr": "Aunque fracase, será una buena experiencia."
+                }
+              ],
+              "explain": "Si sigue una conclusión negativa, sirven ambos: としたところで añade la idea de «esfuerzo inútil, no tiene sentido», mientras que としても es solo una suposición neutra. Si sigue un resultado bueno (いい経験になる), solo se puede usar としても."
             }
           ]
         }
@@ -46254,41 +46246,24 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「と言う」: «aunque se diga que…, (pero)»",
+          "note": "Ambos vienen de 「言う」: significado original «decir»",
           "items": [
             {
               "id": "to-ittemo",
-              "diff": "とはいえ es más escrito, y detrás puede venir cualquier cosa que no encaje con lo esperado; といっても es más coloquial, y el foco está en que «el grado real no es tan alto».",
+              "diff": "とはいえ primero admite un hecho y luego expone algo contrario a lo esperado; といっても rebaja lo que se acaba de decir: «en realidad no es para tanto».",
               "this": [
                 {
-                  "tag": "Escrito · no encaja con lo esperado",
-                  "tr": "Aunque ya es primavera, siguen los días de frío."
+                  "tag": "Contrario a lo esperado",
+                  "tr": "Aunque estudié en el extranjero, todavía no domino el keigo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Coloquial · en realidad no es para tanto",
-                  "tr": "Fue un viaje, sí, pero en realidad solo pasamos una noche en unas termas cercanas."
+                  "tag": "No es para tanto",
+                  "tr": "Sí, estudié en el extranjero, pero solo tres meses."
                 }
               ],
-              "explain": "Mira la segunda mitad: si solo señala otro lado distinto de lo esperado, frecuente en textos y noticias → とはいえ; si corrige la idea que el otro tiene sobre la escala o el grado (〜だけだ, 〜ぐらいだ) → といっても. Al hablar, para rebajar las expectativas del otro, lo normal es といっても."
-            },
-            {
-              "id": "to-iedomo",
-              "diff": "といえども es más clásica y rígida, y suele ir seguida de principios como «también hay que, tampoco se permite»; とはいえ vale al hablar y por escrito, y suele ir seguida de la situación real.",
-              "this": [
-                {
-                  "tag": "Situación real",
-                  "tr": "Aunque ya estamos en marzo, por la mañana y por la noche todavía hace frío."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Principio · tampoco se permite",
-                  "tr": "Sea cual sea el motivo, la violencia no está permitida."
-                }
-              ],
-              "explain": "Mira lo de antes y lo de después: expresiones de «sea lo que sea» como 「いかなる」「たとえ」, seguidas de principios u obligaciones como 「〜は許されない」「〜なければならない」 → といえども, frecuente en discursos y leyes; si solo se dice una realidad distinta de lo esperado (まだ冷える) → とはいえ."
+              "explain": "Ambos vienen de 「言う」 (decir). とはいえ = 「と＋は＋言え」, donde 「言え」 es una forma clásica equivalente a 「言うけれども」: primero admite «se puede decir así» y luego pasa a una realidad distinta de lo esperado → «aunque…». といっても = 「と言っても」, «aunque se diga…»: eso es lo que se dice, pero en realidad no es para tanto → corrige el peso de lo dicho. Así que fíjate en la segunda mitad: una situación contraria a lo esperado (敬語はまだ苦手だ) → とはいえ; rebajar lo dicho, a menudo con 「だけだ」 o 「しか〜ない」 → といっても."
             }
           ]
         },
@@ -46315,6 +46290,24 @@
                 "why": "ものの no puede ir directamente tras un sustantivo"
               },
               "explain": "Mira la palabra de delante: a un sustantivo (春, 子ども) se le puede añadir directamente とはいえ; delante de ものの tiene que ir un verbo, un adjetivo o «sustantivo + である» (春になった, 春であるものの). Además, ものの se usa mucho para «lo hice, pero no salió como quería» (買ったものの、まだ使っていない)."
+            },
+            {
+              "id": "to-iedomo",
+              "title": "〜といえども (aunque…)",
+              "diff": "Mismo significado; といえども es más clásico y rígido, casi solo se usa por escrito y en discursos; とはいえ sirve por escrito y en el habla formal.",
+              "this": [
+                {
+                  "tag": "Escrito y hablado",
+                  "tr": "Aunque según el calendario ya es primavera, por la mañana y por la noche todavía hace frío."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Más rígido · escrito",
+                  "tr": "Si bien según el calendario es primavera, por la mañana y por la noche aún hace frío."
+                }
+              ],
+              "explain": "Las dos oraciones significan lo mismo; se elige según el contexto: といえども es lenguaje escrito muy rígido, propio de textos, discursos y alocuciones, y casi no se usa en la conversación diaria; とはいえ sirve por escrito y en el habla formal, y suena natural al hablar con alguien. Además, といえども puede significar «incluso…, sin excepción» (子供といえども、責任は問われる); とはいえ no tiene ese uso."
             }
           ]
         }
@@ -46342,34 +46335,31 @@
                   "tr": "Comparado con el año pasado, este año hace un poco más de calor."
                 }
               ],
-              "explain": "Mira lo que sigue: とは比べものにならない ya es en sí la conclusión, que la diferencia es tan grande que no se pueden poner al mismo nivel, y no va seguido de un resultado de comparación; tras に比べて viene el resultado de la comparación, a menudo con 「少し」「ずっと」 para decir cuánta diferencia hay."
+              "explain": "Ambos vienen de 「比べる」 (poner dos cosas juntas para compararlas). に比べて toma lo anterior como punto de referencia y después viene el resultado de la comparación, a menudo con 「少し」 o 「ずっと」 para indicar cuánta diferencia hay. 比べもの es «algo que se puede comparar», así que 比べものにならない es «ni siquiera sirve como término de comparación», y de ahí «la diferencia es tan grande que no hay comparación»; es en sí la conclusión y no va seguido del resultado de una comparación."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan que una cosa «no está a la altura» de otra",
+          "note": "Ambos significan «quedarse muy por debajo de»",
           "items": [
             {
               "id": "ni-wa-oyobanai",
               "title": "〜には及ばない (no estar a la altura)",
-              "diff": "とは比べものにならない solo se usa con diferencias enormes; には及ばない solo dice «no llega», y también vale si falta muy poco.",
+              "diff": "Ambos dicen que la diferencia es enorme; con とは比べものにならない puede ser sujeto tanto la parte mejor como la peor; con 足元にも及ばない solo la peor, con un tono humilde o de admiración.",
               "this": [
                 {
-                  "tag": "Diferencia enorme",
-                  "tr": "Mi comida todavía no tiene ni punto de comparación con la de mi madre."
+                  "tag": "Cualquiera de los dos como sujeto",
+                  "tr": "Mi comida no tiene ni punto de comparación con la de mi madre."
                 }
               ],
               "that": [
                 {
-                  "tag": "No llega · puede faltar poco",
-                  "tr": "A mi comida todavía le falta un pelín para estar a la altura de la de mi madre."
+                  "tag": "La parte peor como sujeto · humildad",
+                  "tr": "Mi comida no le llega ni a los talones a la de mi madre."
                 }
               ],
-              "wrong": {
-                "why": "比べものにならない ya significa «tan distintos que ni se comparan»; no se puede decir «le falta poco»"
-              },
-              "explain": "Mira lo grande que es la diferencia: muy grande, de otro nivel → とは比べものにならない (también puede ser sujeto la parte mejor: 母の料理は私のとは比べものにならない); si solo se dice «no llega», y se puede añadir 「あと一歩」「少し」 para decir que falta poco → には及ばない."
+              "explain": "Las dos oraciones significan lo mismo: la diferencia es enorme. Fíjate en el sujeto: とは比べものにならない funciona en ambas direcciones, y la parte mejor también puede ser el sujeto (母の料理は、私のとは比べものにならない); 足元にも及ばない solo admite como sujeto a la parte peor, literalmente «no llegar ni a los pies del otro», y se usa a menudo por humildad o para expresar admiración."
             }
           ]
         }
@@ -46380,7 +46370,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas expresan que lo de antes y lo de después, la apariencia y el fondo, o dos cosas son «justo lo contrario»",
+          "note": "Ambos significan «al contrario de…»",
           "items": [
             {
               "id": "ni-hanshite",
@@ -46415,102 +46405,6 @@
                 }
               ],
               "explain": "Mira la forma de delante: sustantivos como 「見た目」「言葉」 + とは裏腹に; oraciones que describen un aspecto como 「のんびりしている」 + ようでいて. Las dos significan «en apariencia así, en realidad lo contrario»."
-            },
-            {
-              "id": "ni-hikikae",
-              "diff": "とは裏腹に habla de la apariencia y la realidad de una misma persona o cosa; にひきかえ compara dos personas o cosas distintas.",
-              "this": [
-                {
-                  "tag": "Una persona · apariencia y fondo",
-                  "tr": "Al contrario de lo que sugiere su aspecto amable, es un profesor muy estricto."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Dos personas · contraste",
-                  "tr": "A diferencia de su hermano mayor, tan serio, el pequeño no hace más que divertirse."
-                }
-              ],
-              "explain": "Mira cuántos elementos se comparan: la apariencia y la realidad de una misma persona → とは裏腹に; dos elementos distintos, como hermano mayor y menor, o este año y el pasado → にひきかえ, a menudo con una valoración del hablante."
-            },
-            {
-              "id": "to-wa-utte-kawatte",
-              "diff": "En とは裏腹に, la previsión o la apariencia son contrarias a la realidad; en とはうってかわって, una misma cosa cambia de golpe por completo de antes a después.",
-              "this": [
-                {
-                  "tag": "Previsión ↔ realidad",
-                  "tr": "Contra lo que anunciaba el pronóstico de lluvia, hoy ha hecho sol todo el día."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Antes y después · cambio repentino",
-                  "tr": "A diferencia de ayer, con aquel aguacero, hoy ha hecho sol todo el día."
-                }
-              ],
-              "explain": "Mira lo que va delante de 「とは」: previsiones o apariencias como 「予報」「期待」「見た目」 → とは裏腹に, para decir que las cosas salen al revés de lo esperado o que la apariencia no coincide con el fondo; un estado pasado como 「昨日」「以前」 → とは打って変わって, para decir lo mucho que ha cambiado una misma cosa."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "to-wa-utte-kawatte",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Ambas expresan un cambio o contraste: antes y después, apariencia y realidad, o entre dos cosas",
-          "items": [
-            {
-              "id": "to-wa-urahara-ni",
-              "diff": "とはうってかわって es que la misma cosa cambia por completo de repente; とは裏腹に es que lo esperado o la apariencia es lo contrario de la realidad.",
-              "this": [
-                {
-                  "tag": "Antes y después · cambio brusco",
-                  "tr": "A diferencia de ayer, con aquel aguacero, hoy ha hecho sol todo el día."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Lo esperado ↔ realidad",
-                  "tr": "En contra del pronóstico de lluvia, hoy ha hecho sol todo el día."
-                }
-              ],
-              "explain": "Mira qué va delante de 「とは」: un estado pasado como 「昨日」 o 「以前」 → とは打って変わって, para lo mucho que ha cambiado la misma cosa; algo esperado o aparente como 「予報」, 「期待」 o 「見た目」 → とは裏腹に, para «las cosas salen al revés de lo previsto» o «por fuera parece una cosa y es otra»."
-            },
-            {
-              "id": "ni-hikikae",
-              "diff": "とはうってかわって compara el antes y el después de la misma cosa; にひきかえ compara dos personas o cosas distintas.",
-              "this": [
-                {
-                  "tag": "La misma persona · antes y después",
-                  "tr": "Muy distinto de su mal año pasado, este año está en plena forma."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Dos personas · contraste",
-                  "tr": "A diferencia del hermano mayor, tan serio, el menor no hace más que jugar."
-                }
-              ],
-              "explain": "Mira si se compara el mismo objeto: la misma persona o el mismo lugar, comparando «antes, el año pasado» con «ahora» → とは打って変わって, que subraya lo drástico del cambio; dos objetos distintos, como el hermano mayor y el menor → にひきかえ."
-            },
-            {
-              "id": "wo-sakai-ni",
-              "diff": "Delante de とはうってかわって va «cómo era antes del cambio», y subraya que ahora es irreconocible; delante de を境に va «el punto de inflexión» (un suceso, un día).",
-              "this": [
-                {
-                  "tag": "Cómo era antes",
-                  "tr": "Muy distinto de antes, ahora se ha puesto a trabajar en serio."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Punto de inflexión",
-                  "tr": "A partir de su boda, se puso a trabajar en serio."
-                }
-              ],
-              "explain": "Mira qué va delante de 「とは／を」: un estado previo al cambio como 「以前」 o 「昨日」 → とは打って変わって, que resalta «nada que ver con entonces»; un suceso o momento que provoca el cambio como 「結婚」 o 「その日」 → を境に, que resalta «a partir de aquí cambió»."
             }
           ]
         }
@@ -46519,29 +46413,6 @@
     {
       "id": "tomo-arou",
       "groups": [
-        {
-          "kind": "look",
-          "note": "Las dos son «sustantivo de posición o cargo + とも + …»; solo cambia lo que sigue: あろう／なると",
-          "items": [
-            {
-              "id": "tomo-naru-to",
-              "diff": "ともあろう es «todo un… y resulta que…», solo para reprochar; ともなると es «al llegar a ser…, naturalmente…», un juicio neutro.",
-              "this": [
-                {
-                  "tag": "Reproche · algo que no debía hacer",
-                  "tr": "¡Todo un director de escuela, pegando a un alumno!"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Neutro · es lo natural",
-                  "tr": "Cuando llegas a director, el trabajo te persigue hasta en los días libres."
-                }
-              ],
-              "explain": "Mira lo que sigue a 「とも」: 「あろう者が／人が」 y luego algo malo e impropio de ese cargo que sorprende → ともあろう, con reproche; 「なると／なれば」 y luego lo que naturalmente conlleva ese cargo (忙しい, 責任が重い) → ともなると, sin crítica."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Ambas expresan «impropio de su posición»",
@@ -46562,23 +46433,6 @@
                 }
               ],
               "explain": "Mira el sujeto y el tono: un cargo con estatus social como 「教師」, 「警察官」 o 「大臣」, seguido de 「者が／人が」, que hizo lo que no debía, con reproche → ともあろう; 「私」, 「僕」 o alguien normalmente muy fiable que se equivoca de forma inesperada, con pesar → としたことが."
-            },
-            {
-              "id": "majiki",
-              "diff": "ともあろう modifica a una «persona» y subraya el desfase entre su posición y lo que hace; まじき modifica una «acción» y dice que esa acción en sí no debería darse.",
-              "this": [
-                {
-                  "tag": "Modifica a la persona · 者が",
-                  "tr": "¡Todo un policía, conduciendo borracho!"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Modifica la acción · 行為",
-                  "tr": "Conducir borracho es un acto impropio de un policía."
-                }
-              ],
-              "explain": "Mira el sustantivo que sigue: 「者が」 o 「人が」 → ともあろう, y después se dice qué hizo; 「行為」, 「発言」 o 「態度」 → まじき, que juzga directamente la acción. A menudo van juntas: 教師ともあろう者が、教師にあるまじき行為をした。"
             }
           ]
         }
