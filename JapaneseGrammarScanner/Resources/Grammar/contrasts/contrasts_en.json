@@ -1606,20 +1606,20 @@
               "id": "deshou-guess",
               "title": "〜でしょう (confirming)",
               "thisTitle": "〜じゃない (confirming)",
-              "diff": "じゃないですか brings up something the listener also knows as a premise, usually to lead into what comes next; でしょう？ really asks “right?” and waits for an answer.",
+              "diff": "Both check “…, right?” with the listener. じゃないですか is literally a rhetorical “isn't it…?”, treating the fact as something the listener obviously knows, so it sounds more certain; でしょう？ is a guess followed by a request for agreement, so it sounds softer.",
+              "explain": "Only the sentence ending changes. Both confirm something both people know, and swapping them only changes the feel. じゃないですか is literally a rhetorical “isn't it…?”: it treats the fact as something the listener obviously ought to know, so the speaker sounds sure and the tone is stronger. でしょう？ is the speaker's guess followed by a request for agreement, so it is softer. Using じゃないですか for something the listener may not know (for example, telling someone you have just met about yourself) can sound pushy; でしょう？ or a plain explanation is safer there.",
               "this": [
                 {
-                  "tag": "Shared knowledge → go on",
-                  "tr": "You know that convenience store near the station? Please wait for me there."
+                  "tag": "Rhetorical · more certain",
+                  "tr": "Isn't that bakery closed on Mondays?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Confirming · waits for an answer",
-                  "tr": "There's a convenience store near the station, right?"
+                  "tag": "Asking agreement · softer",
+                  "tr": "That bakery is closed on Mondays, right?"
                 }
-              ],
-              "explain": "Check whether you are waiting for an answer: if you just bring up something both of you know as a premise and go straight on (あそこで待っていてください) → じゃないですか, and the listener doesn't need to reply; if you are really asking “right?” and waiting for them to say 「うん」 → でしょう？. Using じゃないですか for something the listener may not know sounds pushy."
+              ]
             }
           ]
         }
@@ -7944,19 +7944,19 @@
             {
               "id": "kosoado-determiners",
               "diff": "こんな means “this kind of, like this”, focusing on type and nature; この points to this specific one.",
+              "explain": "この = 「こ」 + 「の」, “of this side” → the specific one right here; こんな is equivalent to 「このような」, “like what's on this side” → this kind, this nature. The two sentences differ by one word, and what you want is different: 「このかばんがほしい」 means you want exactly this bag in front of you; 「こんなかばんがほしい」 means you want a bag like this, one of a similar look or style, not necessarily this one. そんな／その, あんな／あの and どんな／どの differ in the same way.",
               "this": [
                 {
                   "tag": "This kind",
-                  "tr": "I'd love to have a bag like this someday."
+                  "tr": "I really want a bag like this."
                 }
               ],
               "that": [
                 {
                   "tag": "This specific one",
-                  "tr": "Excuse me, I'll take this bag, please."
+                  "tr": "I really want this bag."
                 }
-              ],
-              "explain": "この = 「こ」 + 「の」, “of this side” → points to the specific one in front of you; こんな is contracted from 「このような」, “like this side” → refers to this type, this kind of nature. So look at 「いつか」: wanting one someday means you want not this exact one but one of the same kind → こんな; saying 「ください」 in a shop means you want the one right in front of you → この. そんな／その, あんな／あの, どんな／どの differ in the same way."
+              ]
             },
             {
               "id": "kosoado-pronouns",
@@ -15566,7 +15566,10 @@
           "items": [
             {
               "id": "ka-to-omou-to",
-              "diff": "かと思った ends the sentence and means “I thought…”; かと思ったら sits mid-sentence and means “no sooner… than…”.",
+              "title": "〜かと思ったら (no sooner… than)",
+              "thisTitle": "〜かと思った (I thought…)",
+              "diff": "かと思った stops at the end of the sentence and tells what you wrongly thought: “I thought…”. The かと思ったら here follows something that has just really happened, with an opposite change right after: “no sooner… than…”.",
+              "explain": "The two differ by just 「ら」, but the 「ら」 alone is not enough: かと思ったら also has an “I thought…, but actually…” use (誰もいないかと思ったら、田中さんがいた), which is close to かと思った. To spot “no sooner… than…”, check two places: before 「かと思ったら」 there is an action that really just happened (雨が降り出した), and right after it comes an opposite change that followed at once (すぐやんだ). If what comes before is your own guess (誰もいない) and the sentence stops there, it is the misunderstanding “I thought…” (actually someone was there) → かと思った.",
               "this": [
                 {
                   "tag": "End · I thought",
@@ -15578,17 +15581,14 @@
                   "tag": "Mid-sentence · no sooner… than",
                   "tr": "No sooner had it started raining than it stopped."
                 }
-              ],
-              "explain": "The two differ only by 「ら」. Look at what follows 「思った」: if a period ends it → it's a misunderstanding at the time, “I thought…” (someone was actually there); if 「ら」 follows and the sentence goes on to something that happened right after (すぐやんだ) → two things in quick succession, “no sooner… than…”. かと思ったら always has to continue; it can't end the sentence the way かと思った can.",
-              "title": "〜かと思ったら (no sooner… than)",
-              "thisTitle": "〜かと思った (I thought…)"
+              ]
             }
           ]
         },
         {
           "kind": "meaning",
-          "sense": 1,
           "note": "Both mean stating your own view: “I think…”",
+          "sense": 1,
           "items": [
             {
               "id": "to-omou",
@@ -15630,8 +15630,8 @@
         },
         {
           "kind": "meaning",
-          "sense": 2,
           "note": "Both mean “I thought… (but it wasn't so)”",
+          "sense": 2,
           "items": [
             {
               "id": "to-omoikiya",
@@ -16008,11 +16008,12 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「切る（きる）」 — “to cut off, to stop there”",
+          "note": "Both come from 「切る（きる）」 — original meaning “to cut”",
           "items": [
             {
               "id": "kiru-complete",
-              "diff": "きり means “cut off, stop there” → only, and nothing after that; 切る means “cut all the way through” → do completely.",
+              "diff": "きり is “cut off and stop there” → only, or nothing further after; it does not conjugate. 切る is “cut all the way through” → do completely; it conjugates like a verb.",
+              "explain": "The same 「切る」 (to cut) developed in two directions. Cut off and stop there → きり, “up to here and no further”: only this much (二人きり), or something stopped at that moment with nothing after (出かけたきり). Cut all the way through → 切る added after a verb as a compound verb, meaning to do something to the end, completely (使い切る、疲れ切る); 「〜切れない」 means you can't cut all the way through, i.e. can't finish. To tell them apart, check whether it conjugates like a verb: 切る is a verb, so you can say 使い切った or 使い切れない; きり never changes form and is followed by だ／で／の (二人きりだ、付ききりで看病する) or runs straight into the rest of the sentence (出かけたきり、まだ帰ってこない).",
               "this": [
                 {
                   "tag": "きり · only",
@@ -16028,40 +16029,43 @@
                   "tag": "切る · do completely",
                   "tr": "I spent my whole paycheck."
                 }
-              ],
-              "explain": "The same 「切る」 developed in two directions: “cut off, stop there” → 二人きり (stops at just two people), 出かけたきり (after going out, all news was cut off); “cut all the way through” → 使い切る, 疲れ切る (completely, to the extreme). Look at the position: after a number word or the ta-form it's きり; after the masu-stem, as a compound verb, it's 切る. 「〜切れない」 (can't finish eating, too many to count) also comes from “cut all the way through” — just not managing to get to the end."
+              ]
             }
           ]
         },
         {
           "kind": "meaning",
-          "sense": 1,
           "note": "Both mean “only, just”",
+          "sense": 1,
           "items": [
             {
               "id": "dake-only",
+              "title": "〜だけ (limiting a quantity)",
               "thisTitle": "〜きり (only)",
-              "diff": "だけ is the everyday “only”; きり stresses “just this, nothing more”, often with feeling, and attaches only to number words and a few words like これ・それ.",
+              "diff": "Both mean “only”. だけ is a neutral limit; きり stresses “just this much, and never again”, often with nostalgia or regret, and only follows counters and a few words such as これ・それ.",
+              "explain": "Only one word changes, and both sentences work. だけ just states the number of times objectively; きり carries the feeling “just that once, then it was cut off and never again”, sounding stronger and often nostalgic or regretful. Also check what comes before: きり normally follows only counters (一度、二人) and a few words such as これ・それ; after ordinary nouns use だけ (野菜だけ食べる).",
               "this": [
                 {
-                  "tag": "Just once · emotional",
-                  "tr": "You only live once."
+                  "tag": "Just that once · never again",
+                  "tr": "I met him just that once, and never again."
                 }
               ],
               "that": [
                 {
-                  "tag": "Objective limit",
-                  "tr": "You can only take this test once."
+                  "tag": "Neutral limit",
+                  "tr": "I've met him only once."
                 }
               ],
-              "explain": "Listen to the tone: 「人生は一度きり」 carries the feeling “just this once, never again”; 「一度だけ受けられる」 just states a rule objectively. Also, だけ attaches to any noun (野菜だけ, 私だけ), while きり generally attaches only to number words (一度, 二人) and これ・それ."
+              "wrong": {
+                "why": "きり doesn't follow ordinary nouns; to say “eat only vegetables”, use だけ: 野菜だけ食べる"
+              }
             }
           ]
         },
         {
           "kind": "meaning",
-          "sense": 2,
           "note": "Both mean “ever since…”",
+          "sense": 2,
           "items": [
             {
               "id": "te-irai",
@@ -16090,11 +16094,12 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「切る（きる）」 — “to cut off, to stop there”",
+          "note": "Both come from 「切る（きる）」 — original meaning “to cut”",
           "items": [
             {
               "id": "kiri-only",
-              "diff": "切る means “cut all the way through” → do completely; きり means “cut off, stop there” → only, and nothing after that.",
+              "diff": "切る is “cut all the way through” → do completely; it conjugates like a verb. きり is “cut off and stop there” → only, or nothing further after; it does not conjugate.",
+              "explain": "The same 「切る」 (to cut) developed in two directions. Cut all the way through → 切る added after a verb as a compound verb, meaning to do something to the end, completely (使い切る、疲れ切る); 「〜切れない」 means you can't cut all the way through, i.e. can't finish. Cut off and stop there → きり, “up to here and no further”: only this much (二人きり), or something stopped at that moment with nothing after (出かけたきり). To tell them apart, check whether it conjugates like a verb: 切る is a verb, so you can say 使い切った or 使い切れない; きり never changes form and is followed by だ／で／の (二人きりだ、付ききりで看病する) or runs straight into the rest of the sentence (出かけたきり、まだ帰ってこない).",
               "this": [
                 {
                   "tag": "切る · do completely",
@@ -16110,8 +16115,7 @@
                   "tag": "たきり · never since",
                   "tr": "My brother went out this morning and still hasn't come back."
                 }
-              ],
-              "explain": "The same 「切る」 developed in two directions: “cut all the way through” → 使い切る, 疲れ切る (completely, to the extreme); “cut off, stop there” → 二人きり (stops at just two people), 出かけたきり (after going out, all news was cut off). Look at the position: after the masu-stem, as a compound verb, it's 切る; after a number word or the ta-form it's きり. 「〜切れない」 works the same way: can't cut all the way through → can't finish."
+              ]
             }
           ]
         },
@@ -26535,6 +26539,7 @@
         {
           "kind": "meaning",
           "note": "Both mean “it isn't really so, but it looks as if…”",
+          "sense": 1,
           "items": [
             {
               "id": "you-da",
@@ -26572,23 +26577,32 @@
                 "why": "んばかり only attaches to the ない形 for an action about to happen; it can't take something that already happened"
               },
               "explain": "Both are exaggerated comparisons — the stadium didn't actually split — and they're interchangeable here. The difference is what comes before: んばかり takes the ない形 with 「ない」 replaced by 「ん」 (割れ + ん), can only compare to an action that is about to happen, and mostly appears in set phrases like 「割れんばかり」 or 「あふれんばかり」; it's more formal. かのような follows the plain form and can take any situation, including something already past (何もなかったかのような顔); in that case it can't be replaced by んばかり."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Both mean “acting as if… (when it isn't so)”",
+          "sense": 2,
+          "items": [
             {
               "id": "furi-wo-suru",
-              "diff": "ふりをする directly says someone is “deliberately pretending”; かのように＋verb describes from outside how something “looks as if…”, often critically.",
+              "title": "〜ふりをする (pretend)",
+              "thisTitle": "〜かのようだ (pretending)",
+              "diff": "Both mean “acting as if… (when it isn't so)”. かのように describes from the outside, “as if…”, is rather literary and doesn't say outright whether it was deliberate; ふりをする says plainly that it was put on on purpose and is common in both speech and writing.",
+              "explain": "Only the middle expression changes; both say she actually saw me but behaved as if she hadn't. かのように is an onlooker's description, “as if she hadn't noticed”: rather literary, a little critical, and it leaves it to the reader whether it was on purpose. ふりをする states clearly that she was faking it, is very common in conversation, and can also end a sentence by itself (気づかないふりをした). To say plainly “pretended on purpose”, use ふりをする; to describe from the outside how someone behaved, use かのように.",
               "this": [
                 {
-                  "tag": "Outside view · Looks as if",
-                  "tr": "He kept walking as if he hadn't heard a thing."
+                  "tag": "Outside description · literary",
+                  "tr": "She walked past me as if she hadn't noticed me."
                 }
               ],
               "that": [
                 {
-                  "tag": "Deliberate · Pretend",
-                  "tr": "He deliberately pretended not to hear."
+                  "tag": "Says it's deliberate · common",
+                  "tr": "She pretended not to notice me and walked past."
                 }
-              ],
-              "explain": "Look at the sentence structure: ふりをする is itself the predicate (〜ふりをした), often with 「わざと」, stating outright that it's deliberate; かのように must be followed by another action (歩き続けた) and only describes how things looked, leaving the reader to judge whether it was on purpose."
+              ]
             }
           ]
         }
@@ -27639,7 +27653,8 @@
             },
             {
               "id": "to-ittara-nai",
-              "diff": "ことか needs a question word such as 「どんなに」 and follows the plain form of adjectives etc.; といったらない takes no question word and follows a noun (adjectives turn into 「〜さ」), meaning “beyond words”.",
+              "diff": "ことか needs a question word such as 「どんなに」 and is an exclamation in the form of a rhetorical question; といったらない uses no question word and simply says “… beyond words”, often after a 「〜さ」 noun.",
+              "explain": "Both exclaim how intense something is; the difference is the sentence form. ことか needs a question word such as 「どんなに」 or 「どれほど」 before it and is an emotional rhetorical question (どんなに心細かったことか). といったらない uses no question word and says directly that it reached the extreme; it often follows a noun or the 「〜さ」 form of an adjective (心細さといったらなかった), can also follow the adjective itself (心細いといったらなかった), and in speech becomes 「〜ったらありゃしない」. If the sentence has 「どんなに」, choose ことか; with no question word, saying it reached the extreme, choose といったらない.",
               "this": [
                 {
                   "tag": "With a question word · Rhetorical",
@@ -27654,8 +27669,7 @@
               ],
               "wrong": {
                 "why": "といったらない is not used with 「どんなに」; if you use 「どんなに」, say 「どんなに心細かったことか」"
-              },
-              "explain": "Both exclaim over a high degree; the difference is the sentence form. ことか needs 「どんなに」「どれほど」 before it and follows the plain form of the adjective (心細かった＋ことか), as an emotional rhetorical question. といったらない follows a noun, so an adjective must first become a noun (心細さ＋といったらなかった); it takes no question word and states directly that the degree is extreme; in casual speech you can also say 「〜ったらありゃしない」. If you want to use 「どんなに」, choose ことか; if you put the feeling as 「〜さ」, choose といったらない."
+              }
             }
           ]
         }
@@ -38452,20 +38466,23 @@
             },
             {
               "id": "to-ittara-nai",
-              "diff": "限りだ can only express your own feelings; といったらない can also judge others or things as “incredibly ….”",
+              "diff": "Both say a feeling has reached its peak. 限りだ is a calm, formal reflection on your own present feelings and follows an adjective; といったらない is an excited exclamation, “… beyond words”, often follows a 「〜さ」 noun, and can also judge people and things.",
+              "explain": "Both sentences work and both say you are lonely to the extreme; swapping only changes the feel. 限りだ is a reflection on your own present feelings: formal and calm, common in speeches and letters too, and only for the speaker's own feelings. といったらない is a more excited exclamation, “lonely beyond words”; it often takes a 「〜さ」 noun (寂しさといったらない) and can also be used to judge people and things (店員の態度の悪さといったらない). Look at the word before it: a 「〜さ」 noun can only take といったらない, never 限りだ.",
               "this": [
                 {
-                  "tag": "Own feelings",
-                  "tr": "All my friends have gone back to their home countries, and I'm terribly lonely."
+                  "tag": "Reflection · formal, calm",
+                  "tr": "All my friends have gone back to their home countries; I feel terribly lonely."
                 }
               ],
               "that": [
                 {
-                  "tag": "Judging others",
-                  "tr": "That clerk's attitude is unbelievably bad."
+                  "tag": "Exclamation · beyond words",
+                  "tr": "All my friends have gone back to their home countries; I'm lonelier than words can say."
                 }
               ],
-              "explain": "Look at who it's about: the speaker's own inner joy or loneliness → 限りだ; judging a trait of someone or something (態度の悪さ, 景色の美しさ) → といったらない, usually preceded by a 「〜さ」 noun."
+              "wrong": {
+                "why": "限りだ follows an adjective (寂しい限りだ), not a 「〜さ」 noun; with 寂しさ, say 寂しさといったらない."
+              }
             },
             {
               "id": "te-tamaranai",
@@ -38646,7 +38663,7 @@
         },
         {
           "kind": "meaning",
-          "note": "Both stress a large quantity",
+          "note": "Both mean “as many as…”",
           "items": [
             {
               "id": "mo-also",
@@ -38681,20 +38698,20 @@
             {
               "id": "ni-noboru",
               "thisTitle": "〜からの",
-              "diff": "からの goes before a noun as a modifier, “as many as … N”; にのぼる goes at the end of the sentence as the predicate, reporting a statistical total that “reached ….”",
+              "diff": "Both say “as many as…”. からの stresses “a full…, if not more” and carries the speaker's sense that it's a lot; にのぼる is news and report language that objectively states a total reaches that figure.",
+              "explain": "Only the expression after the number changes, and both mean “as many as 1,000”; the difference is tone. からの treats the number as a minimum, stressing “a full this many, maybe more”, with the speaker's surprise; にのぼる states a counted total objectively, the way news and reports do: “reaches…”. Use からの for “a full…, if not more”; use にのぼる to report a statistical result.",
               "this": [
                 {
-                  "tag": "Modifier · before a noun",
-                  "tr": "After the accident, as many as 1,000 residents evacuated."
+                  "tag": "A full… · if not more",
+                  "tr": "After the accident, a full 1,000 residents evacuated."
                 }
               ],
               "that": [
                 {
-                  "tag": "Predicate · statistical total",
-                  "tr": "The number of residents who evacuated due to the accident reached 1,000."
+                  "tag": "Statistical total · report style",
+                  "tr": "After the accident, residents totaling 1,000 evacuated."
                 }
-              ],
-              "explain": "The numbers in both sentences are the same; look at the position: the quantity comes before a noun and modifies it (1000人からの住民) → からの; the quantity comes at the end, reporting a statistic (住民は1000人にのぼった) → にのぼる, common in the news."
+              ]
             }
           ]
         }
@@ -39133,6 +39150,7 @@
             {
               "id": "koso",
               "diff": "こそ on its own just emphasizes “precisely”; こそすれ is “only A, never B,” and こそあれ is “though there's …, still,” both followed by another half-sentence.",
+              "explain": "「こそ」 picks out one thing and stresses it. In classical Japanese, a sentence with 「こそ」 had to end in the realis form (する→すれ, ある→あれ); when such a sentence did not stop but carried on, it produced a contrast: “A, certainly…, but…”. こそすれ = “A, certainly, one would do”, then a negative → only A, never B (感謝こそすれ、恨んだことはない); こそあれ = “A, certainly, there is”, then a contrast → there are differences, but it's the same in the end (程度の差こそあれ、誰にでも悩みはある). Modern こそ on its own no longer takes the realis form, and only the emphasis “precisely, this time for sure” remains; the meaning is complete right there (今度こそ合格したい). Check whether こそ is followed by 「すれ」 or 「あれ」 plus another half-sentence.",
               "this": [
                 {
                   "tag": "こそすれ · only … never",
@@ -39148,8 +39166,7 @@
                   "tag": "Emphasis · this time for sure",
                   "tr": "This time I really want to pass the exam."
                 }
-              ],
-              "explain": "Look after こそ: the meaning is complete right there (今度こそ合格したい) → simple emphasis, “this time for sure”; こそ followed by 「すれ」 or 「あれ」, then another half-sentence with a negation or a turn → こそすれ (only grateful, never resentful)／こそあれ (there are differences, but everyone has worries). 「すれ」 and 「あれ」 are the classical realis forms of 「する」 and 「ある」, a remnant of the 「こそ + realis form」 pattern."
+              ]
             },
             {
               "id": "koso-ga-concession",
