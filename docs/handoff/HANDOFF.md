@@ -70,6 +70,27 @@ Build 17 包含的内容（详见 PR #6 描述）：Build 16 的全部反馈修�
 4. 隐私政策（`LegalContent.swift` 的 feedback 段）写的是「发送给开发者……不会提供给任何第三方」，放开读取后仍成立，按用户意见可不改；改的时候再核对一次 `validate_compliance.py` 是否要求更新 `privacyUpdated` / `privacyInventoryHash`。
 5. 部署：schema 改动推上 PR 后由 `cloudkit-schema.yml` 自动导入 Development；先在 Development 用开发版提交一条带截图的反馈，确认后台（不用 Act As）能直接下载截图、能查询 UsageDay；然后在 CloudKit Console 把 schema 部署到 Production（不可撤销的生产变更，部署前问用户）。不涉及 App 代码，不需要新 Build。
 
+### 反馈 3：使用指南文字太多、入口太多（截图 `docs/handoff/b17_fb03_guide.png`，2026-11-21）
+
+用户原话要点：
+1. 指南里文字太多，用户读着是负担。每个功能用图文并茂的方式展示，能用图讲清楚的就用图。
+2. 不要在使用指南里搞这么多入口。现在是一个列表：「核心功能」5 个、「更多功能」5 个（语法库与收藏、搜索、扫描记录、外观与语言、反馈），每个再点进去看分步文字，加上「再看一遍入门引导」，一共 11 个入口。
+3. 系统设置类的内容（外观与语言、反馈等）不用教，用户不是傻子。只把核心功能怎么用讲清楚。
+
+相关代码（未改动）：
+- `JapaneseGrammarScanner/Views/Settings/GuideView.swift`：目录列表 + 每个功能的分步说明页（内容来自 `AppFeature.guide`）。
+- `JapaneseGrammarScanner/Models/AppFeature.swift`：功能清单，`core` = 扫描、看扫描结果、看语法讲解、相近语法、复习；其余归 `more`。
+- `JapaneseGrammarScanner/Views/Onboarding/OnboardingView.swift`：首次打开的入门引导，和指南内容有重叠，改的时候考虑合并或共用图片。
+- 单元测试 `JapaneseGrammarScannerTests/GuideAndLegalTests.swift`（`testEveryFeatureHasGuide`、`testGuideIsTranslatedIntoEveryLanguage`、`testEveryTabBelongsToAFeature`）。
+
+要注意的冲突：`CLAUDE.md`「使用引导随功能同步更新」第 4 条要求 `AppFeature` 里**每一项**都有指南条目，测试也按这条把关。按用户这次的意见，非核心功能（外观与语言、反馈，可能还有搜索、扫描记录、语法库）不再写指南，所以改的时候要同步改 CLAUDE.md 这条规则和对应测试（例如改成「每个核心功能必须有图文指南、每张图都存在且有全部语言的说明」），并先和用户确认哪些算核心功能。
+
+改法方向（较大界面改动，按约定先出设计图给用户确认再写代码）：
+- 一个入口：使用指南只有一页，按核心流程（扫描 → 看结果 → 看讲解 → 相近语法 → 复习）往下排或左右翻页，不再是两级列表。
+- 每一步以一张带标注的真实界面截图为主，配一句话说明，去掉长段文字。截图可以由 CI 的 `screenshots` 任务自动生成（已有截图流程），保证界面改了图也跟着更新。
+- 删掉外观与语言、反馈这类设置说明。
+- 文字仍要翻译成全部界面语言（`tools/check_strings.py` 把关）；如果图里带文字，要按语言分别截图。
+
 ---
 
 ## 3. 待用户确认 / 后续
