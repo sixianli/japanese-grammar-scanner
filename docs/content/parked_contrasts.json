@@ -9203,6 +9203,236 @@
           "explain": "がする ၏ ရှေ့ကို ကြည့်ပါ - 音、匂い、味、寒気 → ခန္ဓာကိုယ်၏ အာရုံဖြင့် ခံစားရသောအရာ။ 「気」→ စိတ်ထဲက ခံစားချက်ဖြစ်ပြီး ရှေ့တွင်「〜ような」ထည့်လျှင် “...လိုလို ထင်မိတယ်” ဖြစ်ကာ မသေချာသော အရာကို ပြောသည်။"
         }
       }
+    },
+    {
+      "point": "nakute-reason",
+      "kind": "root",
+      "reason": "同源组不收只共用「て」这种到处都有的小成分的对比（标准「同一个词变来的」不收第1条）；放意思组也不行：〜て是「因为做了」、〜なくて是「因为没做」，替换后核心意思相反。看过的替换候选：nakute-mo-ii（都含「ない」的て形，但意思差别来自后面的「もいい」，讲不出从本义分化的路径）、ja-nakute（「不是A而是B」，和否定原因既不同源也不同义，形状差一整个「じゃ」）、te-form-sequence 改放 meaning（意思相反，不收），都不合格",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "te-form-sequence",
+          "title": "〜て（原因）",
+          "diff": "なくて 就是表示原因的「て」的否定形：「降って」是因为下了，「降らなくて」是因为没下。",
+          "this": [
+            {
+              "ja": "雨:あめ|が|降:ふ|ら|*なくて|、|~野菜:やさい|~が|~育:そだ|~たない|。",
+              "tag": "因为没…",
+              "tr": "因为不下雨，蔬菜长不起来。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "雨:あめ|が|降:ふ|*って|、|~試合:しあい|~が|~中止:ちゅうし|~になった|。",
+              "tag": "因为…",
+              "tr": "因为下雨，比赛取消了。"
+            }
+          ],
+          "explain": "把「〜て」换成「〜なくて」，原因就从「做了、有」变成「没做、没有」。两者后半句都只能是自然产生的结果或心情，不能接请求、命令。"
+        },
+        "en": {
+          "id": "te-form-sequence",
+          "title": "〜て（reason）",
+          "diff": "なくて is simply the negative of the reason-marking 「て」: 「降って」 is “because it rained”, 「降らなくて」 is “because it didn't rain”.",
+          "this": [
+            {
+              "tag": "Because not…",
+              "tr": "It hasn't rained, so the vegetables aren't growing."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Because…",
+              "tr": "It rained, so the game was canceled."
+            }
+          ],
+          "explain": "Change 「〜て」 to 「〜なくて」 and the reason flips from “did / there is” to “didn't / there isn't”. In both, the second half can only be a natural result or a feeling, not a request or command."
+        },
+        "ko": {
+          "id": "te-form-sequence",
+          "title": "〜て（원인）",
+          "diff": "なくて는 원인을 나타내는 「て」의 부정형이다: 「降って」는 비가 와서, 「降らなくて」는 비가 안 와서.",
+          "this": [
+            {
+              "tag": "~하지 않아서",
+              "tr": "비가 안 와서 채소가 자라지 않는다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "~해서",
+              "tr": "비가 와서 시합이 취소되었다."
+            }
+          ],
+          "explain": "「〜て」를 「〜なくて」로 바꾸면 원인이 ‘했다, 있다’에서 ‘안 했다, 없다’로 바뀐다. 둘 다 뒷부분에는 저절로 생긴 결과나 감정만 올 수 있고, 부탁·명령은 올 수 없다."
+        },
+        "es": {
+          "id": "te-form-sequence",
+          "title": "〜て（causa）",
+          "diff": "なくて es simplemente la negación del 「て」 causal: 「降って」 es porque llovió; 「降らなくて」 es porque no llovió.",
+          "this": [
+            {
+              "tag": "Porque no…",
+              "tr": "Como no llueve, las verduras no crecen."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Porque…",
+              "tr": "Como llovió, se suspendió el partido."
+            }
+          ],
+          "explain": "Si cambias 「〜て」 por 「〜なくて」, la causa pasa de «hacer, haber» a «no hacer, no haber». En ambos casos la segunda parte solo puede ser un resultado o sentimiento natural, no una petición ni una orden."
+        },
+        "vi": {
+          "id": "te-form-sequence",
+          "title": "〜て（nguyên nhân）",
+          "diff": "なくて chính là dạng phủ định của 「て」 chỉ nguyên nhân: 「降って」 là vì đã mưa, 「降らなくて」 là vì không mưa.",
+          "this": [
+            {
+              "tag": "Vì không…",
+              "tr": "Vì trời không mưa nên rau không lớn được."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Vì…",
+              "tr": "Vì trời mưa nên trận đấu bị hủy."
+            }
+          ],
+          "explain": "Đổi 「〜て」 thành 「〜なくて」, nguyên nhân sẽ chuyển từ “đã làm, có” thành “không làm, không có”. Vế sau của cả hai chỉ có thể là kết quả hoặc cảm xúc tự nhiên nảy sinh, không thể nối lời nhờ, mệnh lệnh."
+        },
+        "my": {
+          "id": "te-form-sequence",
+          "title": "〜て（အကြောင်းရင်း）",
+          "diff": "なくて သည် အကြောင်းရင်းပြ「て」၏ ငြင်းပုံစံ ဖြစ်သည် -「降って」သည် ရွာလို့၊「降らなくて」သည် မရွာလို့ ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "မ...လို့",
+              "tr": "မိုးမရွာလို့ ဟင်းသီးဟင်းရွက်တွေ မကြီးထွားဘူး။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "...လို့",
+              "tr": "မိုးရွာလို့ ပွဲ ဖျက်သိမ်းလိုက်ရတယ်။"
+            }
+          ],
+          "explain": "「〜て」ကို「〜なくて」အဖြစ် ပြောင်းလိုက်လျှင် အကြောင်းရင်းက “လုပ်ခဲ့၊ ရှိခဲ့” မှ “မလုပ်ခဲ့၊ မရှိခဲ့” ဖြစ်သွားသည်။ နှစ်ခုစလုံး နောက်ပိုင်းတွင် သဘာဝအလျောက် ဖြစ်လာသော ရလဒ် သို့မဟုတ် ခံစားချက်သာ လိုက်နိုင်ပြီး တောင်းဆိုချက်၊ အမိန့်ကို မတွဲနိုင်ပါ။"
+        }
+      }
+    },
+    {
+      "point": "nikui",
+      "kind": "meaning",
+      "reason": "かねる 的「礼貌拒绝」实际是「不能」，和 にくい 的「难以做到」不是同一个意思（标准「意思差不多的」第4条）。看过的候选：kaneru 第2义项「心理上难以接受」（理解しかねる＝不认同，和 理解しにくい＝不好懂 意思不同）、kaneru 第1义项改写（仍是拒绝，不同义），均不合格；本组已有 づらい、がたい 两条合格对比，不需要另找对象",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "kaneru",
+          "diff": "にくい 只是做起来费劲；かねます 是店员、公司礼貌地表示「不能做」，其实是拒绝。",
+          "this": [
+            {
+              "ja": "~その|~質問:しつもん|~は|、|ちょっと|答:こた|え|*にくい|な|。",
+              "tag": "有点难回答",
+              "tr": "这个问题有点不好回答啊。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~申:もう|~し|~訳:わけ|~ございませんが|、|その|ご|質問:しつもん|には|お|答:こた|え|し|*かねます|。",
+              "tag": "礼貌拒绝",
+              "tr": "非常抱歉，这个问题我们无法回答。"
+            }
+          ],
+          "explain": "看场合和意思：自己觉得难、但还是可能回答 → にくい；对客人说「申し訳ございませんが、〜かねます」，意思是「不能」，是委婉的拒绝。注意 かねます 是肯定形，却表示「不能」。"
+        },
+        "en": {
+          "id": "kaneru",
+          "diff": "にくい simply means something is hard to do; かねます is how staff or companies politely say “we can't do that” — it's actually a refusal.",
+          "this": [
+            {
+              "tag": "A bit hard to answer",
+              "tr": "That question is a little hard to answer."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Polite refusal",
+              "tr": "We're very sorry, but we are unable to answer that question."
+            }
+          ],
+          "explain": "Look at the setting and meaning: you find it hard but could still answer → にくい; saying 「申し訳ございませんが、〜かねます」 to a customer means “we can't” — a polite refusal. Note that かねます is an affirmative form, yet it means “cannot”."
+        },
+        "ko": {
+          "id": "kaneru",
+          "diff": "にくい는 그저 하기 힘들다는 뜻이고, かねます는 점원이나 회사가 정중하게 ‘할 수 없다’고 말하는 것으로 사실상 거절이다.",
+          "this": [
+            {
+              "tag": "좀 대답하기 곤란",
+              "tr": "그 질문은 좀 대답하기 곤란하네."
+            }
+          ],
+          "that": [
+            {
+              "tag": "정중한 거절",
+              "tr": "대단히 죄송하지만, 그 질문에는 답변드릴 수 없습니다."
+            }
+          ],
+          "explain": "상황과 뜻을 보자. 스스로 어렵다고 느끼지만 대답할 수도 있음 → にくい. 손님에게 「申し訳ございませんが、〜かねます」라고 하면 ‘할 수 없다’는 뜻의 완곡한 거절이다. かねます는 긍정형인데도 ‘할 수 없다’를 나타낸다는 점에 주의하자."
+        },
+        "es": {
+          "id": "kaneru",
+          "diff": "にくい solo indica que algo cuesta hacerlo; かねます es la forma educada con que un dependiente o una empresa dice «no podemos», en realidad es una negativa.",
+          "this": [
+            {
+              "tag": "Algo difícil de responder",
+              "tr": "Esa pregunta es un poco difícil de responder, ¿eh?"
+            }
+          ],
+          "that": [
+            {
+              "tag": "Rechazo cortés",
+              "tr": "Lo sentimos mucho, pero no podemos responder a esa pregunta."
+            }
+          ],
+          "explain": "Mira la situación y el sentido: te parece difícil, pero aún podrías responder → にくい; decirle a un cliente 「申し訳ございませんが、〜かねます」 significa «no podemos», es un rechazo cortés. Ojo: かねます es una forma afirmativa, pero significa «no poder»."
+        },
+        "vi": {
+          "id": "kaneru",
+          "diff": "にくい chỉ là làm thấy vất vả; かねます là nhân viên cửa hàng, công ty lịch sự nói “không thể làm”, thực chất là từ chối.",
+          "this": [
+            {
+              "tag": "Hơi khó trả lời",
+              "tr": "Câu hỏi đó hơi khó trả lời nhỉ."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Từ chối lịch sự",
+              "tr": "Thành thật xin lỗi, chúng tôi không thể trả lời câu hỏi đó."
+            }
+          ],
+          "explain": "Nhìn bối cảnh và ý nghĩa: bản thân thấy khó nhưng vẫn có thể trả lời → にくい; nói với khách 「申し訳ございませんが、〜かねます」 nghĩa là “không thể”, là lời từ chối khéo. Lưu ý かねます là thể khẳng định nhưng lại mang nghĩa “không thể”."
+        },
+        "my": {
+          "id": "kaneru",
+          "diff": "にくい သည် လုပ်ရ ခက်ခဲခြင်းသာ ဖြစ်သည်။ かねます သည် ဆိုင်ဝန်ထမ်း၊ ကုမ္ပဏီက “မလုပ်ပေးနိုင်ပါ” ဟု ယဉ်ကျေးစွာ ပြောခြင်းဖြစ်ပြီး တကယ်တော့ ငြင်းဆိုခြင်း ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "ဖြေရ နည်းနည်းခက်",
+              "tr": "ဒီမေးခွန်းက ဖြေရတာ နည်းနည်း ခက်တယ်နော်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ယဉ်ကျေးစွာ ငြင်းဆို",
+              "tr": "အလွန် တောင်းပန်ပါတယ်၊ ဒီမေးခွန်းကို ကျွန်ုပ်တို့ ဖြေကြားပေးနိုင်ခြင်း မရှိပါ။"
+            }
+          ],
+          "explain": "အခြေအနေနှင့် အဓိပ္ပာယ်ကို ကြည့်ပါ - ကိုယ်တိုင် ခက်တယ်လို့ ခံစားရပေမယ့် ဖြေနိုင်ခြေ ရှိသေးလျှင် → にくい။ ဧည့်သည်ကို 「申し訳ございませんが、〜かねます」ဟု ပြောလျှင် “မလုပ်နိုင်ပါ” ဟု ဆိုလိုပြီး သွယ်ဝိုက်သော ငြင်းဆိုချက် ဖြစ်သည်။ かねます သည် အဟုတ်ပုံစံ ဖြစ်သော်လည်း “မလုပ်နိုင်” ဟု ဆိုလိုကြောင်း သတိပြုပါ။"
+        }
+      }
     }
   ]
 }

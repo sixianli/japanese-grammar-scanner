@@ -8955,30 +8955,6 @@
       "id": "nakute-reason",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ thể て — bản thân 「て」 đã có thể diễn tả nguyên nhân",
-          "items": [
-            {
-              "id": "te-form-sequence",
-              "title": "〜て（nguyên nhân）",
-              "diff": "なくて chính là dạng phủ định của 「て」 chỉ nguyên nhân: 「降って」 là vì đã mưa, 「降らなくて」 là vì không mưa.",
-              "this": [
-                {
-                  "tag": "Vì không…",
-                  "tr": "Vì trời không mưa nên rau không lớn được."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Vì…",
-                  "tr": "Vì trời mưa nên trận đấu bị hủy."
-                }
-              ],
-              "explain": "Đổi 「〜て」 thành 「〜なくて」, nguyên nhân sẽ chuyển từ “đã làm, có” thành “không làm, không có”. Vế sau của cả hai chỉ có thể là kết quả hoặc cảm xúc tự nhiên nảy sinh, không thể nối lời nhờ, mệnh lệnh."
-            }
-          ]
-        },
-        {
           "kind": "look",
           "note": "なくて ↔ ないで, đều là 「ない」 nối với thể て, chỉ khác một hai chữ kana",
           "items": [
@@ -9007,23 +8983,23 @@
           "items": [
             {
               "id": "node",
-              "diff": "Sau なくて chỉ nối được kết quả, cảm xúc tự nhiên; sau ないので còn nối được lời nhờ, ý chí.",
+              "diff": "Sau なくて chỉ có thể là kết quả hoặc cảm xúc tự nhiên; sau ないので còn có thể là lời nhờ vả hoặc ý chí.",
               "this": [
                 {
                   "tag": "Kết quả · cảm xúc",
-                  "tr": "Vì không có thời gian nên tôi không ăn sáng được."
+                  "tr": "Vì không có thời gian nên đã không kịp."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nối được lời nhờ",
-                  "tr": "Không có thời gian, xin hãy nhanh lên."
+                  "tag": "Có thể đi với lời nhờ vả",
+                  "tr": "Không còn thời gian nữa, xin hãy nhanh lên."
                 }
               ],
               "wrong": {
-                "why": "Sau なくて không thể nối lời nhờ, mệnh lệnh"
+                "why": "Sau なくて không thể đi với lời nhờ vả hay mệnh lệnh"
               },
-              "explain": "Xem vế sau: lời nhờ, lời rủ, ý chí như 「〜てください」, 「〜ましょう」 → phải dùng ないので (hoặc ないから); kết quả, cảm xúc không kiểm soát được (食べられなかった、困った、残念だ) → なくて rất tự nhiên."
+              "explain": "Nhìn vế sau: là lời nhờ vả, rủ rê hay ý chí như 「〜てください」「〜ましょう」 → dùng ないので (hoặc ないから); là kết quả, cảm xúc không kiểm soát được (間に合わなかった、困った、残念だ) → なくて rất tự nhiên."
             }
           ]
         }
@@ -9055,20 +9031,20 @@
             },
             {
               "id": "ba-conditional",
-              "diff": "なら tiếp lời dự định của đối phương để đưa ra lời khuyên; ば nói “chỉ cần làm như vậy thì sẽ có kết quả như kia”.",
+              "diff": "なら lấy điều đối phương vừa nói làm tiền đề để bày tỏ thái độ; ば là tự mình đặt ra một điều kiện, nói “nếu thỏa mãn thì…”.",
               "this": [
                 {
-                  "tag": "Tiếp lời dự định · khuyên",
-                  "tr": "Nếu định học tiếng Nhật thì quyển sách này hay lắm đấy."
+                  "tag": "Tiếp lời đối phương · bày tỏ thái độ",
+                  "tr": "Rẻ đến thế thì tôi cũng mua thôi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Điều kiện → kết quả",
-                  "tr": "Học tiếng Nhật thì cơ hội việc làm sẽ tăng lên."
+                  "tag": "Tự đặt điều kiện · thỏa mãn thì…",
+                  "tr": "Giá mà rẻ hơn một chút thì tôi đã mua rồi."
                 }
               ],
-              "explain": "Xem vế sau: lời khuyên nhắm vào dự định của đối phương như 「〜がいいですよ」, 「〜たほうがいい」 → なら; “làm như vậy thì tự nhiên sẽ có kết quả như kia” (チャンスが増える) → ば."
+              "explain": "Cả hai đều là “nếu…”, hãy xem vế trước từ đâu mà ra: 「そんなに」 chỉ vào tình huống đối phương vừa nói, người nói coi đó là tiền đề để bày tỏ thái độ → なら; tự mình đưa ra một điều kiện chưa được thỏa mãn (もう少し安ければ), nói “nếu thỏa mãn thì sẽ…” → ば, trọng tâm là vế trước là điều kiện cần của vế sau."
             }
           ]
         }
@@ -9084,20 +9060,20 @@
             {
               "id": "sonkeigo-special-verbs",
               "title": "なさる",
-              "diff": "なさる là tôn kính ngữ “ngài làm”; nhưng thể mệnh lệnh của nó là なさい lại thành mệnh lệnh của người trên với người dưới.",
+              "diff": "なさる là tôn kính ngữ “(ngài) làm”; nhưng thể mệnh lệnh của nó là なさい lại trở thành mệnh lệnh của người trên với người dưới.",
               "this": [
                 {
-                  "tag": "Trên với dưới · mệnh lệnh",
+                  "tag": "Trên → dưới · mệnh lệnh",
                   "tr": "Mau làm bài tập đi!"
                 }
               ],
               "that": [
                 {
                   "tag": "Tôn kính · ngài làm",
-                  "tr": "Cuối tuần thầy thường làm gì ạ?"
+                  "tr": "Thưa thầy, cuối tuần thầy làm gì ạ?"
                 }
               ],
-              "explain": "「なさい」 vốn là thể mệnh lệnh của kính ngữ 「なさる」, mang sự khách sáo; dùng lâu thành ra sự kính trọng phai nhạt, trở thành mệnh lệnh của bố mẹ, thầy cô với trẻ con. Xem câu: hỏi đối phương 「なさいますか」 → tôn kính; đi sau thể ます của động từ để bảo người khác làm 「〜しなさい」 → mệnh lệnh."
+              "explain": "「なさい」 vốn là thể mệnh lệnh của tôn kính ngữ 「なさる」, mang sự lịch sự; dùng lâu ngày thì sự kính trọng nhạt đi, trở thành mệnh lệnh của cha mẹ, thầy cô với trẻ con. Nhìn câu: hỏi đối phương 「なさいますか」 → tôn kính; gắn sau thể ます của động từ để bảo người khác làm 「〜しなさい」 → mệnh lệnh."
             }
           ]
         },
@@ -9107,11 +9083,11 @@
           "items": [
             {
               "id": "imperative-form",
-              "diff": "なさい là mệnh lệnh của người trên với người dưới, ôn hòa, có giáo dục; thể mệnh lệnh thô lỗ, cứng rắn.",
+              "diff": "なさい là mệnh lệnh của người lớn với người nhỏ, nhẹ nhàng, có giáo dục; thể mệnh lệnh thì thô lỗ, cứng rắn.",
               "this": [
                 {
-                  "tag": "Người trên · ôn hòa",
-                  "tr": "Bảy giờ rồi đấy. Dậy mau đi con."
+                  "tag": "Người lớn · nhẹ nhàng",
+                  "tr": "Bảy giờ rồi đấy. Mau dậy đi."
                 }
               ],
               "that": [
@@ -9120,41 +9096,41 @@
                   "tr": "Này, dậy mau!"
                 }
               ],
-              "explain": "Xem người nói và trợ từ cuối câu: mẹ nói với con, thầy cô nói với học sinh, thường kèm 「〜よ」 → なさい; nam giới nói với người dưới, cãi nhau, tình huống khẩn cấp (おい) → thể mệnh lệnh (起きろ、書け、来い)."
+              "explain": "Nhìn người nói và trợ từ cuối câu: mẹ nói với con, thầy cô nói với học sinh, thường kèm 「〜よ」 → なさい; đàn ông nói với người dưới, khi cãi nhau, khi tình huống gấp (おい) → thể mệnh lệnh (起きろ、書け、来い)."
             },
             {
               "id": "te-kudasai",
               "diff": "なさい là mệnh lệnh của người trên với người dưới; てください là lời nhờ vả lịch sự.",
               "this": [
                 {
-                  "tag": "Trên với dưới · mệnh lệnh",
-                  "tr": "Mười giờ rồi đấy, mau đi ngủ đi!"
+                  "tag": "Trên → dưới · mệnh lệnh",
+                  "tr": "Mười giờ rồi đấy. Mau đi ngủ!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Lịch sự · với ai cũng được",
-                  "tr": "Đã muộn rồi, anh nghỉ sớm nhé."
+                  "tag": "Lịch sự · nói với ai cũng được",
+                  "tr": "Đã muộn rồi, anh/chị nghỉ sớm nhé."
                 }
               ],
-              "explain": "Xem quan hệ giữa hai người: bố mẹ với con, thầy cô với học sinh → なさい, không được dùng với người ngang hàng hay cấp trên; nhờ người bình thường một cách lịch sự → てください."
+              "explain": "Nhìn quan hệ giữa hai người: cha mẹ với con, thầy cô với học sinh → なさい, không dùng với người ngang hàng hay cấp trên; nhờ vả lịch sự với người bình thường → てください."
             },
             {
               "id": "o-kudasai",
-              "diff": "お〜なさい là người trên nói với người dưới; お〜ください là lời nhờ tôn kính với khách, cấp trên.",
+              "diff": "お〜なさい là người lớn nói với người nhỏ; お〜ください là lời nhờ vả tôn kính với khách hoặc cấp trên.",
               "this": [
                 {
-                  "tag": "Người trên → người dưới",
-                  "tr": "Nào, lại đây ngồi đi con."
+                  "tag": "Người lớn → người nhỏ",
+                  "tr": "Nào, lại đây ngồi đi."
                 }
               ],
               "that": [
                 {
                   "tag": "Với khách · tôn kính",
-                  "tr": "Thưa quý khách, mời ngồi ở đây ạ."
+                  "tr": "Thưa quý khách, mời quý khách ngồi bên này."
                 }
               ],
-              "explain": "Xem nói với ai: nhân viên nói với khách, nói với cấp trên → お〜ください; bà nói với cháu, thầy cô nói với học sinh → お〜なさい. Chỉ khác 「なさい」 và 「ください」, hướng lịch sự lại hoàn toàn khác nhau."
+              "explain": "Nhìn xem nói với ai: nhân viên nói với khách, nói với cấp trên → お〜ください; bà nói với cháu, thầy cô nói với học sinh → お〜なさい. Chỉ khác 「なさい」 và 「ください」 nhưng chiều hướng lịch sự hoàn toàn khác nhau."
             }
           ]
         }
@@ -9170,52 +9146,44 @@
             {
               "id": "sou-mo-nai",
               "thisTitle": "〜なさそう",
-              "diff": "なさそう đi sau dạng phủ định của tính từ, danh từ, nói “trông có vẻ không…”; với động từ, nói “xem chừng sẽ không…” thì cách nói chuẩn là thể ます＋そうもない.",
+              "diff": "Đều là そう chỉ dáng vẻ cộng với phủ định: なさそう là dáng vẻ “không…” = trông có vẻ không…; そうもない là ngay cả dấu hiệu “sắp…” cũng không có = xem chừng sẽ không….",
               "this": [
                 {
-                  "tag": "Phủ định tính từ · trông không",
-                  "tr": "Xem đề rồi thì bài kiểm tra có vẻ không khó."
+                  "tag": "Phủ định tính từ · trông có vẻ không",
+                  "tr": "Xem đề rồi thì bài thi có vẻ không khó."
                 }
               ],
               "that": [
                 {
-                  "tag": "Động từ · xem chừng sẽ không",
-                  "tr": "Trời tối đen như mực, mưa xem chừng chưa tạnh được."
+                  "tag": "Động từ · xem chừng không",
+                  "tr": "Trời tối đen. Mưa xem chừng chưa tạnh được."
                 }
               ],
-              "explain": "Xem trước そう là từ gì: dạng phủ định của tính từ, danh từ (難しくない、学生じゃない) → なさそう (難しくなさそう、学生じゃなさそう); động từ nói “xem chừng sẽ không xảy ra” → thể ます＋そうもない／そうにない (やみそうもない), giọng điệu là “gần như không thể”. Trong văn nói cũng có người nói 「やまなさそう」, nhưng trong bài viết và bài thi thì dùng そうもない."
+              "explain": "Cả hai đều là 「そう」 chỉ dáng vẻ (vẻ bề ngoài) cộng với phủ định, chỉ khác vị trí phủ định. なさそう phủ định trước rồi mới thêm そう — dáng vẻ 「難しくない」 → “trông không khó”, nói về tính chất. そうもない thêm そう trước rồi mới phủ định — ngay cả dáng vẻ “sắp tạnh” (やみそう) cũng không có → “xem chừng không tạnh”, phán đoán việc có xảy ra hay không. Vì vậy hãy nhìn phía trước そう: phủ định của tính từ, danh từ (難しくない、学生じゃない) → なさそう; thể ます của động từ (やみ) → そうもない."
             }
           ]
         },
         {
           "kind": "look",
-          "note": "よさそう／なさそう ↔ いいそう／ないそう, đều là 「いい・ない＋そう」, chỉ khác một chữ 「さ」",
+          "note": "なさそう ↔ ないそう — chỉ khác một chữ kana: 「さ」 và 「い」",
           "items": [
             {
               "id": "sou-da-appearance",
               "title": "〜そうだ（nghe nói）",
-              "diff": "いい／ない khi nối với そう “trông có vẻ” phải đổi thành よさそう／なさそう; nói thẳng いいそう／ないそう thì thành “nghe nói”.",
+              "diff": "「ない」 đi với そう “trông có vẻ” thì phải đổi thành なさそう; nói thẳng ないそう thì thành “nghe nói không có”.",
               "this": [
                 {
-                  "tag": "よさそう · trông có vẻ tốt",
-                  "tr": "Nhìn từ bên ngoài thì quán này có vẻ được."
-                },
-                {
                   "tag": "なさそう · trông có vẻ không có",
-                  "tr": "Trưởng phòng gọi điện suốt từ sáng, có vẻ không có thời gian."
+                  "tr": "Trưởng phòng gọi điện suốt từ sáng. Có vẻ anh ấy không có thời gian."
                 }
               ],
               "that": [
                 {
-                  "tag": "いいそう · nghe nói tốt",
-                  "tr": "Nghe bạn tôi kể thì quán này tốt lắm."
-                },
-                {
                   "tag": "ないそう · nghe nói không có",
-                  "tr": "Nghe trưởng phòng nói thì hôm nay anh ấy không có thời gian."
+                  "tr": "Theo lời trưởng phòng, hôm nay anh ấy không có thời gian."
                 }
               ],
-              "explain": "Xem phía trước そう: sau いい、ない có chèn 「さ」 (よさそう、なさそう) → “trông có vẻ”; phía trước là いい／ない nguyên vẹn (いいそうだ、ないそうだ), thường đi cùng 「〜の話では」, 「〜によると」 → thuật lại tin nghe được “nghe nói”."
+              "explain": "Nhìn trước そう là 「なさ」 hay 「ない」: なさそうだ → dựa vào những gì nhìn thấy để phán đoán “trông có vẻ không có”, phía trước thường nói rõ tình huống nhìn thấy (部長は朝からずっと電話している); ないそうだ → truyền đạt tin nghe được “nghe nói không có”, thường đi cùng 「〜の話では」「〜によると」."
             }
           ]
         }
@@ -9230,20 +9198,20 @@
           "items": [
             {
               "id": "you-na-ki-ga-suru",
-              "diff": "に気がつく là thật sự “phát hiện ra” một sự thật; ような気がする chỉ là “không hiểu sao cứ thấy hình như…”, không chắc chắn.",
+              "diff": "に気がつく là thật sự “nhận ra” một sự thật; ような気がする chỉ là “cứ thấy hình như…”, không chắc chắn.",
               "this": [
                 {
-                  "tag": "Thật sự phát hiện",
-                  "tr": "Ra khỏi quán rồi tôi mới phát hiện ra mình đã quên ô."
+                  "tag": "Thật sự nhận ra",
+                  "tr": "Ra khỏi quán rồi mới nhận ra mình quên ô."
                 }
               ],
               "that": [
                 {
                   "tag": "Cứ thấy · không chắc",
-                  "tr": "Không hiểu sao tôi cứ thấy hình như mình đã để quên ô ở đâu đó."
+                  "tr": "Không hiểu sao cứ thấy hình như mình để quên ô ở đâu đó."
                 }
               ],
-              "explain": "Xem người nói có chắc chắn không: 「なんだか」, 「どうも」＋ ような気がする → chỉ là một cảm giác, có thể sai; 〜ことに気がついた → đã xác nhận việc đó (thật sự đã quên ô). Cả hai đều được tạo từ 「気 (tâm trí)」: 気がつく là tâm trí “bám vào” một việc ＝ nhận ra, 気がする là trong lòng “có một cảm giác nào đó”."
+              "explain": "Nhìn xem người nói có chắc chắn không: 「なんだか」「どうも」 + ような気がする → chỉ là cảm giác, có thể sai; 〜ことに気がついた → đã xác nhận được sự việc (ô thật sự bị quên). Cả hai đều cấu tạo từ 「気」 (tâm trí): 気がつく là tâm trí “bám” vào một việc = nhận ra, 気がする là trong lòng “có một cảm giác nào đó”."
             }
           ]
         }
@@ -9254,62 +9222,73 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "には chỉ mục đích gần với ために、のに; には mang nghĩa “đối với…” gần với にとって",
+          "sense": 1,
+          "note": "Đều diễn tả mục đích “để…”",
           "items": [
             {
               "id": "tame-ni",
-              "thisTitle": "〜には（mục đích）",
-              "diff": "Sau には là “cần gì, tốn bao nhiêu”; sau ために là “đi làm gì”.",
+              "diff": "には nói “muốn đạt được… thì phải…”, phía sau là điều kiện cần thiết; ために nói “để… mà làm”, phía sau là hành động của bản thân.",
               "this": [
                 {
-                  "tag": "Sau là nhu cầu",
-                  "tr": "Muốn mua nhà thì cần rất nhiều tiền."
+                  "tag": "Sau là điều kiện cần thiết",
+                  "tr": "Muốn mua nhà thì phải tiết kiệm tiền."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sau là hành động",
-                  "tr": "Tôi đang tiết kiệm tiền để mua nhà."
+                  "tag": "Sau là hành động của bản thân",
+                  "tr": "Để mua nhà, tháng nào tôi cũng để dành tiền."
                 }
               ],
-              "explain": "Xem vế sau: nhu cầu hoặc đánh giá như 「必要だ」, 「〜がかかる」, 「〜がいい」 → には; hành động mình thực hiện (貯金している) → ために."
+              "wrong": {
+                "why": "Sau には phải là điều kiện cần để đạt mục đích (必要だ、なければならない), không thể là hành động cụ thể đang làm"
+              },
+              "explain": "Khi vế sau là điều kiện cần để đạt mục đích như 「必要だ」「なければならない」 thì cả hai đều dùng được: には nói về điều kiện “muốn… thì phải…”, ために nói về mục đích “để…”. Khi vế sau là hành động cụ thể mình đang làm hoặc đã làm (貯めている) thì chỉ dùng được ために."
             },
             {
               "id": "noni-usage",
-              "title": "〜のに（công dụng）",
-              "thisTitle": "〜には（mục đích）",
-              "diff": "には mang điều kiện “muốn làm được…”, phía sau có thể nối 「なければならない」; のに giải thích công dụng một cách khách quan, phía sau thường là 「使う・便利だ」.",
+              "title": "〜のに（để làm… thì cần）",
+              "diff": "Khi nói làm việc gì đó cần bao nhiêu thời gian, tiền bạc thì cả hai đều dùng được; sau のに về cơ bản chỉ đi với 「かかる・必要だ・使う」, còn には còn đi được với yêu cầu như 「なければならない」.",
               "this": [
                 {
-                  "tag": "Muốn làm được → phải",
-                  "tr": "Muốn đỗ N2 thì phải học chăm chỉ hơn nữa."
+                  "tag": "Sau là yêu cầu",
+                  "tr": "Muốn đỗ N2 thì ngày nào cũng phải học."
                 }
               ],
               "that": [
                 {
-                  "tag": "Công dụng · dùng để…",
-                  "tr": "Cái kéo này dùng để cắt hoa."
+                  "tag": "Sau là chi phí",
+                  "tr": "Tôi mất một năm để đỗ N2."
                 }
               ],
-              "explain": "Xem vế sau: điều kiện phải thỏa mãn để đạt mục tiêu như 「〜なければならない」 → には; nói về công dụng của đồ vật như 「使う」, 「便利だ」, 「役に立つ」 → のに. 「〜のに、〜なければならない」 dễ bị hiểu thành “vậy mà…”, nên khi nói điều kiện thì dùng には."
-            },
+              "wrong": {
+                "why": "Sau のに mà là 「しなければならない」 thì sẽ bị hiểu thành “rõ ràng… vậy mà…”; nói về yêu cầu cần đáp ứng thì dùng には"
+              },
+              "explain": "Khi vế sau là 「かかる」「必要だ」 thì cả hai đều dùng được (合格するには一年かかる／合格するのに一年かかった), のに nghe giống nói một cách khách quan tốn bao nhiêu thời gian, tiền bạc; khi vế sau là yêu cầu như 「しなければならない」 thì chỉ dùng được には, vì 「〜のに、〜しなければならない」 sẽ bị hiểu thành “rõ ràng… vậy mà…”."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Đều diễn tả “đối với…”",
+          "items": [
             {
               "id": "ni-totte",
-              "thisTitle": "〜には（đối với…）",
-              "diff": "には thường đi với phán đoán trực tiếp như khó hay dễ, có làm được không; にとって thường nói về giá trị, ý nghĩa đối với ai đó.",
+              "diff": "Đều có thể nói “đối với…”: には thường đi với phán đoán trực tiếp lấy một người làm chuẩn, như khó dễ, lớn nhỏ; にとって thường nói về giá trị, ý nghĩa đối với ai đó.",
               "this": [
                 {
-                  "tag": "Có làm được không",
-                  "tr": "Chữ Hán này trẻ con không đọc được."
+                  "tag": "Phán đoán trực tiếp · khó dễ",
+                  "tr": "Cuốn sách này quá khó đối với học sinh tiểu học."
                 }
               ],
               "that": [
                 {
                   "tag": "Giá trị · ý nghĩa",
-                  "tr": "Gia đình là điều quan trọng nhất đối với tôi."
+                  "tr": "Cuốn sách này là một cuốn quan trọng đối với học sinh tiểu học."
                 }
               ],
-              "explain": "Xem vế sau: có làm được không, khó hay dễ như 「読めない」, 「無理だ」 → には tự nhiên hơn; giá trị, ý nghĩa đối với ai đó như 「大切だ」, 「問題だ」, 「ありがたい」 → にとって."
+              "explain": "Nhìn vế sau: khó hay không, lớn hay không, được hay không (難しすぎる、無理だ) → には tự nhiên hơn, にとって cũng được; có giá trị, ý nghĩa gì đối với ai (大切な、ありがたい、問題だ) → にとって tự nhiên hơn, dùng には thì nghe gượng."
             }
           ]
         }
@@ -9325,7 +9304,7 @@
             {
               "id": "ni-yotte",
               "title": "〜によって（nguyên nhân・phương tiện）",
-              "diff": "によると nói nguồn của tin tức, cuối câu đi với 「そうだ」; によって nói nguyên nhân, phương tiện, cuối câu là thẳng kết quả.",
+              "diff": "によると nói nguồn của thông tin, cuối câu đi với 「そうだ」; によって nói nguyên nhân, phương tiện, cuối câu là kết quả luôn.",
               "this": [
                 {
                   "tag": "Nguồn tin · nghe nói",
@@ -9338,30 +9317,30 @@
                   "tr": "Do bão, nhiều ngôi nhà đã bị phá hủy."
                 }
               ],
-              "explain": "Xem cuối câu: có 「そうだ」, 「らしい」, 「ということだ」, phía trước là tin tức, dự báo thời tiết, một người nào đó → によると (によれば cũng vậy), diễn tả “theo… thì”; cuối câu nói thẳng điều đã xảy ra, phía trước là nguyên nhân hoặc phương tiện → によって. Cả hai đều bắt nguồn từ 「よる (căn cứ)」: căn cứ vào tin tức → nghe nói; căn cứ vào nguyên nhân → do."
+              "explain": "Nhìn cuối câu: có 「そうだ」「らしい」「ということだ」, phía trước là tin tức, dự báo thời tiết, một người nào đó → によると (によれば cũng vậy), nghĩa là “theo…”; cuối câu nói thẳng chuyện gì đã xảy ra, phía trước là nguyên nhân hoặc phương tiện → によって. Cả hai đều bắt nguồn từ 「よる」 (dựa vào): dựa vào thông tin → nghe nói; dựa vào nguyên nhân → do."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều dùng để cho biết tin tức từ đâu mà có",
+          "note": "Đều diễn tả “theo…”",
           "items": [
             {
-              "id": "to-kiita",
-              "diff": "によると chỉ cho biết nguồn, cuối câu còn phải đi với 「そうだ」; bản thân と聞いた đã là “nghe nói”, cuối câu không cần thêm.",
+              "id": "kagiri-dewa",
+              "diff": "によると thuật lại tài liệu, lời người khác, cuối câu thường đi với 「そうだ」; 限りでは là người nói tự phán đoán trong phạm vi đó, ngụ ý ngoài phạm vi thì chưa chắc.",
               "this": [
                 {
-                  "tag": "Nguồn ＋ そうだ",
-                  "tr": "Theo anh Tanaka thì tuần sau có bài kiểm tra."
+                  "tag": "Thuật lại · nghe nói",
+                  "tr": "Theo cuộc khảo sát này, số người dùng đang tăng."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nghe từ ai đó",
-                  "tr": "Tôi nghe anh Tanaka nói tuần sau có bài kiểm tra."
+                  "tag": "Tự phán đoán · chỉ xét điều này",
+                  "tr": "Chỉ xét cuộc khảo sát này thì số người dùng đang tăng."
                 }
               ],
-              "explain": "Xem câu kết thúc thế nào: によると (によれば cũng vậy) đặt ở đầu câu, phía sau phải dùng 「そうだ」, 「らしい」 để hô ứng; と聞いた đặt ở cuối câu, hành động “nghe” đã được nói ra rồi, nguồn được chỉ bằng 「〜から」. Nguồn không phải tự tai “nghe” như tin tức, khảo sát thì thường dùng によると."
+              "explain": "Hai câu đều là “theo cuộc khảo sát này”, hãy nhìn lập trường của người nói và cuối câu: によると là thuật lại nội dung tài liệu, cuối câu thường đi với 「そうだ」「らしい」, bản thân không kết luận; 限りでは là người nói tự phán đoán dựa trên tài liệu, đồng thời chừa khoảng trống “chỉ trong phạm vi này, ngoài ra thì khó nói”, cuối câu không thêm 「そうだ」."
             }
           ]
         }
@@ -9372,58 +9351,41 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “khó…, không dễ…”",
+          "note": "Đều diễn tả “khó…”",
           "items": [
             {
               "id": "zurai",
-              "diff": "にくい nói về sự không dễ một cách khách quan, dùng được cả cho tính chất của đồ vật; づらい nhấn mạnh việc con người làm thấy khó chịu về thể xác hoặc tâm lý.",
+              "diff": "Đều có thể nói “… thấy vất vả”: にくい khách quan nói bản thân sự vật khó dùng; づらい thiên về gánh nặng thể chất, tâm lý của chính người nói, khẩu ngữ hơn.",
               "this": [
                 {
-                  "tag": "Tính chất của đồ vật",
-                  "tr": "Cái cốc này có rơi cũng khó vỡ."
+                  "tag": "Bản thân sự vật · khách quan",
+                  "tr": "Con đường này nhiều đá, khó đi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Con người thấy khó chịu",
-                  "tr": "Chân đau nên đi lại rất khó khăn."
+                  "tag": "Gánh nặng của bản thân · chủ quan",
+                  "tr": "Bị thương ở chân nên đi lại rất vất vả."
                 }
               ],
-              "explain": "Nhìn chủ ngữ và nguyên nhân: nói về đồ vật như cái cốc, vải vóc “khó vỡ, khó bẩn” → にくい; nói về con người vì đau chân, ngại ngùng… mà “làm thấy khó chịu” → づらい hợp hơn (言いづらい、聞きづらい). Khi con người làm việc gì đó vất vả thì hai cách thường thay cho nhau được, にくい khách quan hơn."
+              "explain": "Nhìn xem nguyên nhân ở đâu: bản thân con đường, chữ viết, dụng cụ khó dùng (石が多くて) → にくい, miêu tả khách quan; gánh nặng do cơ thể, tâm trạng của bản thân (足をけがして) → づらい hợp hơn, mang tính khẩu ngữ hơn. Hai câu này đổi cho nhau cũng được, chỉ là sắc thái thay đổi."
             },
             {
               "id": "gatai",
-              "diff": "にくい là làm thấy vất vả; がたい là về mặt tâm lý “khó chấp nhận, khó tin”, mang tính văn viết.",
+              "diff": "Với việc chấp nhận về mặt tâm lý như 「信じる」「理解する」 thì cả hai đều dùng được: にくい là khẩu ngữ, giọng nhẹ; がたい là văn viết, giọng nặng.",
               "this": [
                 {
-                  "tag": "Làm thấy vất vả",
-                  "tr": "Chữ nhỏ quá, rất khó đọc."
+                  "tag": "Khẩu ngữ · giọng nhẹ",
+                  "tr": "Chuyện đó hơi khó tin nhỉ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khó về tâm lý · văn viết",
-                  "tr": "Người nghiêm túc như anh ấy mà lại nói dối, thật khó tin."
+                  "tag": "Văn viết · giọng nặng",
+                  "tr": "Chuyện đó thật sự không thể tin nổi."
                 }
               ],
-              "explain": "Nhìn động từ phía trước: các hành động như 読む、使う、歩く làm thấy bất tiện → にくい; các sự chấp nhận về tâm lý như 信じる、許す、忘れる、理解する → がたい, hay gặp trong văn viết, bối cảnh trang trọng (信じがたい、許しがたい)."
-            },
-            {
-              "id": "kaneru",
-              "diff": "にくい chỉ là làm thấy vất vả; かねます là nhân viên cửa hàng, công ty lịch sự nói “không thể làm”, thực chất là từ chối.",
-              "this": [
-                {
-                  "tag": "Hơi khó trả lời",
-                  "tr": "Câu hỏi đó hơi khó trả lời nhỉ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Từ chối lịch sự",
-                  "tr": "Thành thật xin lỗi, chúng tôi không thể trả lời câu hỏi đó."
-                }
-              ],
-              "explain": "Nhìn bối cảnh và ý nghĩa: bản thân thấy khó nhưng vẫn có thể trả lời → にくい; nói với khách 「申し訳ございませんが、〜かねます」 nghĩa là “không thể”, là lời từ chối khéo. Lưu ý かねます là thể khẳng định nhưng lại mang nghĩa “không thể”."
+              "explain": "Cùng một động từ 「信じる」 đi được với cả hai, hãy nhìn giọng điệu và hoàn cảnh: khi nói chuyện, “hơi khó tin”, thường kèm 「ちょっと」 → にくい; trong văn bản, phát biểu trang trọng, “dù thế nào cũng khó…”, thường đi với 「到底」 → がたい (信じがたい、許しがたい、理解しがたい)."
             }
           ]
         }
@@ -9434,47 +9396,24 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「だろう」 chỉ phỏng đoán — diễn tả “chắc là… nhỉ”",
-          "items": [
-            {
-              "id": "darou-guess",
-              "diff": "だろう là phỏng đoán có cơ sở của người nói; thêm 「の」 và 「か」 thành のだろうか là tự hỏi khi không chắc chắn.",
-              "this": [
-                {
-                  "tag": "Tự hỏi · không chắc",
-                  "tr": "Anh ấy thật sự sẽ đến sao?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Phỏng đoán · có cơ sở",
-                  "tr": "Đã hẹn rồi nên chắc anh ấy sẽ đến."
-                }
-              ],
-              "explain": "Nhìn cuối câu có 「か」 không và manh mối phía trước: có lý do làm chỗ dựa (約束したから) → だろう, người nói nghiêng về “sẽ”; のだろうか đi kèm 「本当に」「なぜ」 → trong lòng không chắc, đang tự hỏi mình, thậm chí ngầm ý “e là không”."
-            }
-          ]
-        },
-        {
-          "kind": "look",
-          "note": "のだろうか ↔ のではないだろうか, chỉ thêm 「ではない」",
+          "note": "Đều bắt nguồn từ 「だろう」 — nghĩa gốc là phỏng đoán “chắc là…”",
           "items": [
             {
               "id": "no-dewa-nai-darou-ka",
-              "diff": "のだろうか là hoài nghi “thật sự… sao”; のではないだろうか là khéo léo đưa ra chủ kiến “chẳng phải là… sao (tôi cho là vậy)”.",
+              "diff": "のだろうか là tự hỏi, nghi ngờ; のではないだろうか là nói một cách uyển chuyển “tôi thấy là…”.",
               "this": [
                 {
-                  "tag": "Hoài nghi · nghiêng về không được",
-                  "tr": "Làm theo cách này thật sự có ổn không?"
+                  "tag": "Nghi ngờ · e là không ổn",
+                  "tr": "Cứ thế này thật sự có ổn không?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Chủ kiến · nghiêng về được",
-                  "tr": "Ngược lại, chẳng phải cách này tốt hơn sao?"
+                  "tag": "Khẳng định uyển chuyển · tôi thấy ổn",
+                  "tr": "Cứ thế này chẳng phải cũng ổn sao?"
                 }
               ],
-              "explain": "Trông gần như y hệt, nhưng ý nghĩa lại gần như ngược nhau. のだろうか hay đi với 「本当に」, diễn tả hoài nghi, hàm ý “e là không được”; のではないだろうか có thêm 「ではない」 nhưng không phải phủ định, mà dùng câu hỏi tu từ để khéo léo nói ra ý kiến của mình “tôi nghĩ là…”, hay gặp trong các bài bình luận."
+              "explain": "Cả hai đều bắt nguồn từ 「だろう」 phỏng đoán (chắc là…). のだろうか là thêm 「か」 sau phỏng đoán, đặt dấu hỏi cho “có phải vậy không” → tự hỏi; thêm 「本当に」 thì thành nghi ngờ, ngụ ý “e là không ổn”. のではないだろうか là trước tiên phỏng đoán “không phải vậy”, rồi đặt dấu hỏi cho phủ định ấy → “chẳng phải là vậy sao” → vòng lại để nói uyển chuyển ý kiến của mình “tôi thấy là vậy”. Vì vậy hãy xem có 「ではない」 không: có → nghiêng về “được”; không có, lại kèm 「本当に」 → nghiêng về “không được”."
             }
           ]
         },
@@ -9484,20 +9423,38 @@
           "items": [
             {
               "id": "kana-wonder",
-              "diff": "かな là tự nói một mình thoải mái trong khẩu ngữ; のだろうか trang trọng, nghiêm túc hơn, hay gặp trong văn viết.",
+              "diff": "かな là tự nói một mình một cách thoải mái trong khẩu ngữ; のだろうか trang trọng, nghiêm túc hơn, hay gặp trong văn viết.",
               "this": [
                 {
                   "tag": "Văn viết · suy nghĩ nghiêm túc",
-                  "tr": "Vì sao con người lại nằm mơ nhỉ?"
+                  "tr": "Con người làm việc để làm gì?"
                 }
               ],
               "that": [
                 {
                   "tag": "Khẩu ngữ · thoải mái",
-                  "tr": "Chuyến dã ngoại ngày mai, liệu trời có nắng không nhỉ?"
+                  "tr": "Chuyến dã ngoại ngày mai không biết có nắng không nhỉ."
                 }
               ],
-              "explain": "Nhìn văn phong: nói chuyện với bạn bè, tự nói một mình, câu ngắn và tùy ý → かな (phụ nữ cũng hay nói かしら); trong văn viết, diễn thuyết, nghiêm túc suy nghĩ về một vấn đề, thường đi với 「なぜ」「本当に」 → のだろうか."
+              "explain": "Nhìn văn phong: nói chuyện với bạn bè, tự nói một mình, câu ngắn và tùy ý → かな (nữ giới cũng hay nói かしら); trong bài viết, bài diễn thuyết, suy nghĩ nghiêm túc về một vấn đề, thường đi với 「なぜ」「本当に」 → のだろうか."
+            },
+            {
+              "id": "darou-guess",
+              "title": "〜だろうか（tự hỏi）",
+              "diff": "Đều dùng để tự hỏi được; のだろうか thường là khi thấy một tình huống, muốn biết đằng sau là chuyện gì; だろうか chỉ đơn thuần muốn biết sẽ ra sao.",
+              "this": [
+                {
+                  "tag": "Thấy tình huống · muốn biết nguyên do",
+                  "tr": "Đèn tắt rồi. Chắc anh ấy ngủ rồi chăng?"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Đơn thuần muốn biết",
+                  "tr": "Trận đấu ngày mai liệu có thắng được không?"
+                }
+              ],
+              "explain": "Cả hai đều là tự hỏi “… nhỉ?”, hãy xem có tình huống trước mắt làm căn cứ không: thấy tình huống như 「電気が消えている」, muốn biết là chuyện gì → のだろうか, 「の」 mang nghĩa “giải thích tình huống”; không có căn cứ cụ thể, chỉ nghĩ xem 「明日の試合」 sẽ ra sao → だろうか là đủ. Trường hợp sau cũng có thể nói のだろうか, chỉ là thêm sắc thái “rốt cuộc là thế nào”."
             }
           ]
         }
@@ -9508,24 +9465,24 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều dùng để làm nổi bật một phần trong câu",
+          "note": "Đều nhấn mạnh “chính là…”",
           "items": [
             {
               "id": "koso",
-              "diff": "のは〜だ dời trọng tâm về cuối câu, giọng điệu bình ổn; こそ gắn trực tiếp sau từ cần nhấn mạnh, mang sắc thái mạnh “chính là cái này”.",
+              "diff": "Đều có thể nói “chính là…”: のは〜だ đặt câu trả lời ở cuối câu, như đang bình thản giải thích; こそ gắn ngay sau từ được nhấn mạnh, mang giọng mạnh “không phải cái gì khác, chính là nó”.",
               "this": [
                 {
-                  "tag": "Trọng tâm ở cuối câu",
-                  "tr": "Điều quan trọng là kiên trì mỗi ngày."
+                  "tag": "Giải thích bình thản",
+                  "tr": "Thứ tôi tìm bấy lâu nay là cuốn sách này."
                 }
               ],
               "that": [
                 {
-                  "tag": "Chính là · giọng mạnh",
-                  "tr": "Kiên trì mỗi ngày, đó mới chính là điều quan trọng nhất."
+                  "tag": "Khẳng định mạnh",
+                  "tr": "Đây chính là cuốn sách tôi tìm bấy lâu nay!"
                 }
               ],
-              "explain": "Hai câu cùng nghĩa, hãy nhìn cách nhấn mạnh: 「〜のは」 nói trước phần đã biết, đưa nội dung cần nhấn mạnh xuống cuối, trước 「〜だ」; こそ không đổi trật tự từ, gắn thẳng sau từ được nhấn mạnh, mang cảm xúc “không phải cái gì khác, mà chính là cái này”, hay gặp 「今度こそ」「こちらこそ」."
+              "explain": "Hai câu đều nói “thứ tôi tìm bấy lâu chính là cuốn sách này”, hãy nhìn giọng điệu: のは〜だ đưa phần đã biết (ずっと探していた) lên trước, câu trả lời đặt ở cuối câu trước 「〜だ」, như đang bình thản kể lại; こそ không đổi trật tự từ, gắn ngay sau từ được nhấn mạnh, mang tính loại trừ và xúc động “không phải cái gì khác, chính là nó”. Giải thích bình thản → のは〜だ; khẳng định có cảm xúc → こそ (今度こそ、健康こそ)."
             }
           ]
         }

@@ -8955,30 +8955,6 @@
       "id": "nakute-reason",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambas vienen de la forma て: 「て」 por sí sola ya puede expresar causa",
-          "items": [
-            {
-              "id": "te-form-sequence",
-              "title": "〜て（causa）",
-              "diff": "なくて es simplemente la negación del 「て」 causal: 「降って」 es porque llovió; 「降らなくて」 es porque no llovió.",
-              "this": [
-                {
-                  "tag": "Porque no…",
-                  "tr": "Como no llueve, las verduras no crecen."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Porque…",
-                  "tr": "Como llovió, se suspendió el partido."
-                }
-              ],
-              "explain": "Si cambias 「〜て」 por 「〜なくて」, la causa pasa de «hacer, haber» a «no hacer, no haber». En ambos casos la segunda parte solo puede ser un resultado o sentimiento natural, no una petición ni una orden."
-            }
-          ]
-        },
-        {
           "kind": "look",
           "note": "なくて ↔ ないで: las dos son 「ない」 unida a la forma て; solo cambian uno o dos kanas",
           "items": [
@@ -9007,23 +8983,23 @@
           "items": [
             {
               "id": "node",
-              "diff": "Tras なくて solo puede ir un resultado o sentimiento natural; tras ないので también pueden ir peticiones o intenciones.",
+              "diff": "Tras なくて solo puede ir un resultado natural o un sentimiento; tras ないので también puede ir una petición o una intención.",
               "this": [
                 {
                   "tag": "Resultado · sentimiento",
-                  "tr": "Como no tenía tiempo, no pude desayunar."
+                  "tr": "Como no tenía tiempo, no llegué a tiempo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Admite peticiones",
-                  "tr": "No hay tiempo, así que dese prisa, por favor."
+                  "tag": "Admite petición",
+                  "tr": "No hay tiempo, así que dense prisa, por favor."
                 }
               ],
               "wrong": {
-                "why": "Tras なくて no puede ir una petición ni una orden"
+                "why": "Después de なくて no puede ir una petición ni una orden"
               },
-              "explain": "Mira la segunda parte: peticiones, invitaciones o intenciones como 「〜てください」「〜ましょう」 → hay que usar ないので (o ないから); resultados o sentimientos que no se controlan (食べられなかった、困った、残念だ) → なくて queda natural."
+              "explain": "Fíjate en la segunda mitad: una petición, invitación o intención como 「〜てください」 o 「〜ましょう」 → usa ないので (o ないから); un resultado o sentimiento que no se controla (間に合わなかった、困った、残念だ) → なくて suena natural."
             }
           ]
         }
@@ -9055,20 +9031,20 @@
             },
             {
               "id": "ba-conditional",
-              "diff": "なら recoge la intención del otro para darle un consejo; ば dice «basta con hacer esto para que ocurra aquello».",
+              "diff": "なら toma lo que el otro acaba de decir como premisa para dar su postura; con ば uno mismo pone una condición: «si se cumple, entonces…».",
               "this": [
                 {
-                  "tag": "Sobre una intención · consejo",
-                  "tr": "Si vas a estudiar japonés, este libro está bien."
+                  "tag": "Recoge lo dicho · da su postura",
+                  "tr": "Si es tan barato, quizá yo también me lo compre."
                 }
               ],
               "that": [
                 {
-                  "tag": "Condición → resultado",
-                  "tr": "Si estudias japonés, tendrás más oportunidades de trabajo."
+                  "tag": "Condición propia · si se cumple…",
+                  "tr": "Si fuera un poco más barato, lo compraría."
                 }
               ],
-              "explain": "Mira la segunda parte: un consejo sobre lo que el otro piensa hacer, como 「〜がいいですよ」「〜たほうがいい」 → なら; «si haces esto, naturalmente pasará aquello» (チャンスが増える) → ば."
+              "explain": "Los dos significan «si…»; fíjate de dónde viene la primera parte: 「そんなに」 señala lo que el otro acaba de decir y el hablante lo toma como premisa para dar su postura → なら; uno mismo plantea una condición que aún no se cumple (もう少し安ければ) y dice «si se cumpliera, haría…» → ば, que destaca que la primera parte es condición necesaria de la segunda."
             }
           ]
         }
@@ -9084,20 +9060,20 @@
             {
               "id": "sonkeigo-special-verbs",
               "title": "なさる",
-              "diff": "なさる es lenguaje respetuoso, «usted hace»; su imperativo なさい, en cambio, es una orden de arriba abajo.",
+              "diff": "なさる es honorífico, «(usted) hace»; pero su imperativo なさい se ha convertido en una orden de un superior a un inferior.",
               "this": [
                 {
-                  "tag": "De arriba abajo · orden",
+                  "tag": "Superior → inferior · orden",
                   "tr": "¡Haz los deberes ya!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Respetuoso · usted hace",
-                  "tr": "Profesor, ¿qué hace usted el fin de semana?"
+                  "tag": "Honorífico · usted hace",
+                  "tr": "Profesor, ¿qué va a hacer este fin de semana?"
                 }
               ],
-              "explain": "「なさい」 era originalmente el imperativo del respetuoso 「なさる」 y sonaba cortés; con el uso fue perdiendo respeto y acabó siendo una orden de padres o profesores a niños. Mira la frase: preguntar al otro 「なさいますか」 → respeto; tras la forma ます de un verbo para mandar hacer algo, 「〜しなさい」 → orden."
+              "explain": "「なさい」 era en origen el imperativo del honorífico 「なさる」 y conservaba cierta cortesía; con el uso el respeto se fue perdiendo y pasó a ser una orden de padres o maestros a niños. Fíjate en la frase: si se pregunta al otro 「なさいますか」 → honorífico; si va tras la forma ます de un verbo para mandar hacer algo, 「〜しなさい」 → orden."
             }
           ]
         },
@@ -9107,37 +9083,37 @@
           "items": [
             {
               "id": "imperative-form",
-              "diff": "なさい es una orden de un mayor a un menor, suave y educada; la forma imperativa es brusca y dura.",
+              "diff": "なさい es una orden de un mayor a un menor, suave y educada; la forma imperativa es brusca y tajante.",
               "this": [
                 {
-                  "tag": "De mayor · suave",
+                  "tag": "Mayor · suave",
                   "tr": "Ya son las siete. Levántate ya."
                 }
               ],
               "that": [
                 {
-                  "tag": "Duro · brusco",
+                  "tag": "Tajante · brusco",
                   "tr": "¡Eh, levántate ya!"
                 }
               ],
-              "explain": "Mira quién habla y las partículas finales: una madre a su hijo o un profesor a un alumno, a menudo con 「〜よ」 → なさい; un hombre a un menor, en una pelea o una emergencia (おい) → forma imperativa (起きろ、書け、来い)."
+              "explain": "Fíjate en quién habla y en las partículas finales: una madre a su hijo o un maestro a sus alumnos, a menudo con 「〜よ」 → なさい; un hombre a alguien más joven, en una pelea o en una urgencia (おい) → la forma imperativa (起きろ、書け、来い)."
             },
             {
               "id": "te-kudasai",
               "diff": "なさい es una orden de arriba abajo; てください es una petición cortés.",
               "this": [
                 {
-                  "tag": "De arriba abajo · orden",
-                  "tr": "Ya son las diez. ¡A dormir!"
+                  "tag": "Superior → inferior · orden",
+                  "tr": "Ya son las diez. ¡A la cama!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Cortés · para cualquiera",
-                  "tr": "Ya es tarde, descanse pronto, por favor."
+                  "tag": "Cortés · vale con cualquiera",
+                  "tr": "Ya es tarde, así que descanse pronto, por favor."
                 }
               ],
-              "explain": "Mira la relación entre los dos: padres a hijos, profesor a alumno → なさい, que no se puede usar con iguales ni superiores; para pedir algo cortésmente a cualquiera → てください."
+              "explain": "Fíjate en la relación entre los hablantes: de padres a hijos o de maestro a alumno → なさい, que no se usa con iguales ni superiores; una petición cortés a cualquier persona → てください."
             },
             {
               "id": "o-kudasai",
@@ -9151,10 +9127,10 @@
               "that": [
                 {
                   "tag": "A clientes · respetuoso",
-                  "tr": "Señor cliente, siéntese aquí, por favor."
+                  "tr": "Señor, siéntese aquí, por favor."
                 }
               ],
-              "explain": "Mira a quién se le dice: un dependiente a un cliente, o a un superior → お〜ください; una abuela a su nieto, un profesor a un alumno → お〜なさい. Solo cambia 「なさい」 por 「ください」, pero la dirección de la cortesía es totalmente distinta."
+              "explain": "Fíjate a quién se habla: un dependiente a un cliente, o alguien a un superior → お〜ください; una abuela a su nieto, o un maestro a sus alumnos → お〜なさい. Solo cambian 「なさい」 y 「ください」, pero la dirección de la cortesía es totalmente distinta."
             }
           ]
         }
@@ -9170,52 +9146,44 @@
             {
               "id": "sou-mo-nai",
               "thisTitle": "〜なさそう",
-              "diff": "なさそう va tras la negación de adjetivos y sustantivos: «parece que no…»; con verbos, para «no parece que vaya a…», la forma estándar es forma ます＋そうもない.",
+              "diff": "Los dos son el そう de apariencia más una negación: なさそう es el aspecto de «no…» = parece que no…; そうもない es que no hay ni señal de «estar a punto de…» = no parece que vaya a….",
               "this": [
                 {
-                  "tag": "Adjetivo negado · parece que no",
+                  "tag": "Negativo de adjetivo · parece que no",
                   "tr": "Viendo las preguntas, el examen no parece difícil."
                 }
               ],
               "that": [
                 {
                   "tag": "Verbo · no parece que vaya a",
-                  "tr": "El cielo está negrísimo. No parece que vaya a parar de llover."
+                  "tr": "El cielo está negro. No parece que vaya a dejar de llover."
                 }
               ],
-              "explain": "Mira qué palabra va delante de そう: la negación de un adjetivo o sustantivo (難しくない、学生じゃない) → なさそう (難しくなさそう、学生じゃなさそう); con un verbo, para «no parece que vaya a ocurrir» → forma ます＋そうもない／そうにない (やみそうもない), con el matiz de «casi imposible». Al hablar hay quien dice 「やまなさそう」, pero en textos y exámenes se usa そうもない."
+              "explain": "En ambos casos es el 「そう」 de apariencia (cómo se ve algo) más una negación; solo cambia dónde está la negación. なさそう niega primero y luego añade そう: el aspecto de 「難しくない」 → «no parece difícil», describe una cualidad. そうもない añade primero そう y luego niega: no hay ni el aspecto de «estar a punto de parar» (やみそう) → «no parece que vaya a parar», juzga si algo va a ocurrir. Así que mira qué va delante de そう: la negación de un adjetivo o sustantivo (難しくない、学生じゃない) → なさそう; la forma ます de un verbo sin ます (やみ) → そうもない."
             }
           ]
         },
         {
           "kind": "look",
-          "note": "よさそう／なさそう ↔ いいそう／ないそう: todas son 「いい・ない＋そう」; solo las separa una 「さ」",
+          "note": "なさそう ↔ ないそう: solo cambia un kana, 「さ」 o 「い」",
           "items": [
             {
               "id": "sou-da-appearance",
               "title": "〜そうだ（según dicen）",
-              "diff": "Con el そう de «parece», いい／ない pasan a よさそう／なさそう; si dices いいそう／ないそう tal cual, significa «según dicen».",
+              "diff": "Cuando 「ない」 se une al そう de «parece», se convierte en なさそう; si se dice ないそう tal cual, pasa a significar «dicen que no hay».",
               "this": [
                 {
-                  "tag": "よさそう · parece bueno",
-                  "tr": "Vista desde fuera, esta tienda parece buena."
-                },
-                {
                   "tag": "なさそう · parece que no hay",
-                  "tr": "El jefe lleva toda la mañana al teléfono. No parece tener tiempo."
+                  "tr": "El jefe lleva toda la mañana al teléfono. Parece que no tiene tiempo."
                 }
               ],
               "that": [
-                {
-                  "tag": "いいそう · dicen que es bueno",
-                  "tr": "Según me ha dicho un amigo, esta tienda es muy buena."
-                },
                 {
                   "tag": "ないそう · dicen que no hay",
                   "tr": "Según el jefe, hoy no tiene tiempo."
                 }
               ],
-              "explain": "Mira lo que va delante de そう: si tras いい、ない se ha metido una 「さ」 (よさそう、なさそう) → «parece»; si delante va いい／ない completos (いいそうだ、ないそうだ), a menudo con 「〜の話では」「〜によると」 → se transmite algo que has oído: «según dicen»."
+              "explain": "Fíjate si delante de そう va 「なさ」 o 「ない」: なさそうだ → juicio a partir de lo que se ve, «parece que no hay», a menudo precedido de lo observado (部長は朝からずっと電話している); ないそうだ → transmitir algo que se ha oído, «dicen que no hay», a menudo junto con 「〜の話では」 o 「〜によると」."
             }
           ]
         }
@@ -9230,20 +9198,20 @@
           "items": [
             {
               "id": "you-na-ki-ga-suru",
-              "diff": "に気がつく es «darse cuenta» de verdad de un hecho; ような気がする es solo «tener la sensación de que…», sin certeza.",
+              "diff": "に気がつく es que realmente «te diste cuenta» de un hecho; ような気がする es solo «me da la impresión de que…», sin certeza.",
               "this": [
                 {
                   "tag": "Darse cuenta de verdad",
-                  "tr": "Al salir de la tienda me di cuenta de que había olvidado el paraguas."
+                  "tr": "Al salir de la tienda, me di cuenta de que había olvidado el paraguas."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tener la sensación · sin certeza",
-                  "tr": "Tengo la sensación de que me he dejado el paraguas en algún sitio."
+                  "tag": "Impresión · sin certeza",
+                  "tr": "No sé por qué, tengo la sensación de que me he dejado el paraguas en algún sitio."
                 }
               ],
-              "explain": "Mira si el hablante está seguro: 「なんだか」「どうも」＋ような気がする → solo es una sensación y puede ser errónea; 〜ことに気がついた → ya ha confirmado el hecho (el paraguas de verdad se quedó olvidado). Las dos se forman con 「気」 (la mente): 気がつく es que la mente «se adhiere» a algo＝notarlo; 気がする es que la mente «tiene cierta sensación»."
+              "explain": "Fíjate en lo seguro que está el hablante: 「なんだか」 o 「どうも」 + ような気がする → solo una sensación, que puede estar equivocada; 〜ことに気がついた → el hecho ya está confirmado (el paraguas se quedó olvidado de verdad). Los dos se forman con 「気」 (la mente): 気がつく es que la mente «se pega» a algo = darse cuenta; 気がする es «tener cierta sensación» en la mente."
             }
           ]
         }
@@ -9254,62 +9222,73 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "El には de finalidad se parece a ために y のに; el には de «para…, en opinión de» se parece a にとって",
+          "sense": 1,
+          "note": "Ambos expresan finalidad, «para…»",
           "items": [
             {
               "id": "tame-ni",
-              "thisTitle": "〜には（finalidad）",
-              "diff": "Tras には va «qué hace falta, cuánto cuesta»; tras ために va «qué se hace».",
+              "diff": "には dice «para lograr…, hace falta…», seguido de una condición necesaria; ために dice «hacer… para…», seguido de una acción que uno realiza.",
               "this": [
                 {
-                  "tag": "Seguido de una necesidad",
-                  "tr": "Para comprar una casa hace falta mucho dinero."
+                  "tag": "Seguido de una condición necesaria",
+                  "tr": "Para comprar una casa, hay que ahorrar."
                 }
               ],
               "that": [
                 {
-                  "tag": "Seguido de una acción",
-                  "tr": "Estoy ahorrando para comprar una casa."
+                  "tag": "Seguido de una acción propia",
+                  "tr": "Ahorro dinero todos los meses para comprar una casa."
                 }
               ],
-              "explain": "Mira la segunda parte: una necesidad o valoración como 「必要だ」「〜がかかる」「〜がいい」 → には; una acción que uno mismo emprende (貯金している) → ために."
+              "wrong": {
+                "why": "Tras には debe ir una condición necesaria para lograr el fin (必要だ、なければならない), no una acción concreta en curso"
+              },
+              "explain": "Cuando la segunda parte es una condición necesaria para lograr el fin, como 「必要だ」 o 「なければならない」, valen los dos: には habla de la condición, «para… hay que…», y ために habla del fin, «con el fin de…». Cuando la segunda parte es una acción concreta que uno está haciendo o ya hizo (貯めている), solo vale ために."
             },
             {
               "id": "noni-usage",
-              "title": "〜のに（uso）",
-              "thisTitle": "〜には（finalidad）",
-              "diff": "には lleva la condición de «para conseguir…» y admite 「なければならない」 detrás; のに explica objetivamente para qué sirve algo, y suele ir con 「使う・便利だ」.",
+              "title": "〜のに（lo que cuesta hacer algo）",
+              "diff": "Para decir cuánto tiempo o dinero lleva hacer algo valen los dos; tras のに casi solo va 「かかる・必要だ・使う」, mientras que には admite también exigencias como 「なければならない」.",
               "this": [
                 {
-                  "tag": "Para conseguirlo → hay que",
-                  "tr": "Para aprobar el N2, tengo que estudiar más."
+                  "tag": "Seguido de una exigencia",
+                  "tr": "Para aprobar el N2, hay que estudiar todos los días."
                 }
               ],
               "that": [
                 {
-                  "tag": "Uso · sirve para…",
-                  "tr": "Estas tijeras se usan para cortar flores."
+                  "tag": "Seguido de un coste",
+                  "tr": "Aprobar el N2 me llevó un año."
                 }
               ],
-              "explain": "Mira la segunda parte: una condición que hay que cumplir para lograr el objetivo, como 「〜なければならない」 → には; palabras que hablan del uso de algo, como 「使う」「便利だ」「役に立つ」 → のに. 「〜のに、〜なければならない」 se puede entender como «aunque…, tener que», así que para condiciones se usa には."
-            },
+              "wrong": {
+                "why": "のに seguido de 「しなければならない」 se entiende como «aunque…, aun así…»; para expresar una exigencia que hay que cumplir se usa には"
+              },
+              "explain": "Si la segunda parte es 「かかる」 o 「必要だ」, valen los dos (合格するには一年かかる／合格するのに一年かかった), y のに suena más a constatar objetivamente cuánto tiempo o dinero costó; si la segunda parte es una exigencia como 「しなければならない」, solo vale には, porque 「〜のに、〜しなければならない」 se entendería como «aunque…, aun así…»."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Ambos significan «para (alguien)»",
+          "items": [
             {
               "id": "ni-totte",
-              "thisTitle": "〜には（para alguien）",
-              "diff": "には suele ir con juicios directos, como si es fácil o difícil, si se puede o no; にとって suele hablar del valor o el significado que algo tiene para alguien.",
+              "diff": "Los dos pueden significar «para…»: には suele ir con juicios directos tomando a alguien como referencia, como dificultad o tamaño; にとって suele hablar del valor o significado que algo tiene para alguien.",
               "this": [
                 {
-                  "tag": "Poder o no",
-                  "tr": "Este kanji no lo pueden leer los niños."
+                  "tag": "Juicio directo · dificultad",
+                  "tr": "Este libro es demasiado difícil para niños de primaria."
                 }
               ],
               "that": [
                 {
                   "tag": "Valor · significado",
-                  "tr": "Para mí, la familia es lo más importante."
+                  "tr": "Este libro es un libro importante para los niños de primaria."
                 }
               ],
-              "explain": "Mira la segunda parte: si se puede o no, si es difícil o no, como 「読めない」「無理だ」 → には queda más natural; el valor o el significado para alguien, como 「大切だ」「問題だ」「ありがたい」 → にとって."
+              "explain": "Fíjate en la segunda parte: si algo es difícil, grande o posible (難しすぎる、無理だ) → には resulta más natural, aunque にとって también vale; qué valor o significado tiene algo para alguien (大切な、ありがたい、問題だ) → にとって resulta más natural y には suena raro."
             }
           ]
         }
@@ -9325,10 +9304,10 @@
             {
               "id": "ni-yotte",
               "title": "〜によって（causa・medio）",
-              "diff": "によると indica la fuente de una información y al final lleva 「そうだ」; によって indica causa o medio, y al final va directamente el resultado.",
+              "diff": "によると indica la fuente de la información y termina con 「そうだ」; によって indica la causa o el medio, y la frase termina directamente con el resultado.",
               "this": [
                 {
-                  "tag": "Fuente · según",
+                  "tag": "Fuente de información · según dicen",
                   "tr": "Según las noticias, los trenes están parados por el tifón."
                 }
               ],
@@ -9338,30 +9317,30 @@
                   "tr": "Debido al tifón, muchas casas quedaron destruidas."
                 }
               ],
-              "explain": "Mira el final de la frase: si lleva 「そうだ」「らしい」「ということだ」 y delante hay noticias, el parte meteorológico o una persona → によると (o によれば, igual): «según…»; si al final se dice directamente lo que pasó y delante hay una causa o un medio → によって. Las dos vienen de 「よる」 (basarse): basarse en una información → «según dicen»; basarse en una causa → «debido a»."
+              "explain": "Fíjate en el final de la frase: si lleva 「そうだ」, 「らしい」 o 「ということだ」 y delante van las noticias, el parte meteorológico o una persona → によると (によれば es igual), «según…»; si el final dice directamente lo que pasó y delante va una causa o un medio → によって. Los dos vienen de 「よる」 (basarse en): basarse en una información → «según dicen»; basarse en una causa → «debido a»."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas sirven para indicar de dónde viene una información",
+          "note": "Ambos significan «según…»",
           "items": [
             {
-              "id": "to-kiita",
-              "diff": "によると solo indica la fuente, y al final todavía hace falta 「そうだ」; と聞いた ya significa «he oído», así que no hace falta añadir nada al final.",
+              "id": "kagiri-dewa",
+              "diff": "によると transmite datos o lo que dicen otros, y a menudo termina con 「そうだ」; 限りでは es el juicio del propio hablante dentro de ese ámbito, e insinúa que fuera de él no tiene por qué cumplirse.",
               "this": [
                 {
-                  "tag": "Fuente ＋ そうだ",
-                  "tr": "Según Tanaka, la semana que viene hay examen."
+                  "tag": "Transmitir · según dicen",
+                  "tr": "Según esta encuesta, los usuarios están aumentando."
                 }
               ],
               "that": [
                 {
-                  "tag": "Oírlo de alguien",
-                  "tr": "Le he oído a Tanaka que la semana que viene hay examen."
+                  "tag": "Juicio propio · solo por esto",
+                  "tr": "Por lo que muestra esta encuesta, los usuarios están aumentando."
                 }
               ],
-              "explain": "Mira cómo termina la frase: によると (o によれば, igual) va al principio y pide al final 「そうだ」「らしい」; と聞いた va al final, y como ya dice la acción de «oír», la fuente se marca con 「〜から」. Para fuentes que no se «oyen» en persona, como noticias o encuestas, normalmente se usa によると."
+              "explain": "Las dos frases equivalen a «según esta encuesta»; fíjate en la postura del hablante y en el final: によると transmite el contenido de los datos, a menudo con 「そうだ」 o 「らしい」 al final, sin sacar conclusiones propias; 限りでは es el propio hablante quien juzga a partir de esos datos, dejando margen («solo dentro de este ámbito; de lo demás no puedo decir»), y la frase no lleva 「そうだ」."
             }
           ]
         }
@@ -9372,58 +9351,41 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas expresan «difícil de…, no fácil de…»",
+          "note": "Ambos significan «difícil de…»",
           "items": [
             {
               "id": "zurai",
-              "diff": "にくい indica que algo no es fácil de forma objetiva, y también sirve para la naturaleza de las cosas; づらい subraya que a una persona le resulta física o emocionalmente penoso hacerlo.",
+              "diff": "Los dos pueden significar «cuesta…»: にくい dice de forma objetiva que la cosa en sí es difícil de manejar; づらい se centra en la carga física o emocional del propio hablante y es más coloquial.",
               "this": [
                 {
-                  "tag": "Naturaleza de una cosa",
-                  "tr": "Este vaso no se rompe fácilmente aunque se caiga."
+                  "tag": "La cosa en sí · objetivo",
+                  "tr": "Este camino tiene muchas piedras y cuesta andar por él."
                 }
               ],
               "that": [
                 {
-                  "tag": "Malestar de la persona",
-                  "tr": "Me duelen los pies y me cuesta caminar."
+                  "tag": "Carga propia · subjetivo",
+                  "tr": "Me he hecho daño en el pie y me cuesta andar."
                 }
               ],
-              "explain": "Mira el sujeto y la causa: si hablas de cosas como un vaso o una tela que «no se rompen / no se ensucian fácilmente» → にくい; si una persona lo pasa mal al hacer algo por dolor en los pies, por vergüenza, etc. → づらい encaja mejor (言いづらい, 聞きづらい). Cuando a alguien le cuesta hacer algo, a menudo se pueden intercambiar, pero にくい es más objetivo."
+              "explain": "Fíjate en dónde está la causa: el camino, la letra o la herramienta en sí son difíciles de usar (石が多くて) → にくい, descripción objetiva; una carga que viene del propio cuerpo o del estado de ánimo (足をけがして) → づらい encaja mejor y suena más coloquial. Las dos frases también se pueden intercambiar; solo cambia el matiz."
             },
             {
               "id": "gatai",
-              "diff": "にくい es que algo cuesta hacerlo; がたい es «difícil de aceptar, difícil de creer» en lo psicológico, y es de registro escrito.",
+              "diff": "Con la aceptación mental, como 「信じる」 o 「理解する」, valen los dos: にくい es coloquial y más suave; がたい es escrito y más fuerte.",
               "this": [
                 {
-                  "tag": "Cuesta hacerlo",
-                  "tr": "La letra es tan pequeña que cuesta leerla."
+                  "tag": "Coloquial · suave",
+                  "tr": "Esa historia es un poco difícil de creer."
                 }
               ],
               "that": [
                 {
-                  "tag": "Difícil en lo psicológico · escrito",
-                  "tr": "Que alguien tan serio como él mienta… es difícil de creer."
+                  "tag": "Escrito · fuerte",
+                  "tr": "Esa historia es del todo imposible de creer."
                 }
               ],
-              "explain": "Mira el verbo de delante: acciones como 読む, 使う, 歩く que resultan incómodas de hacer → にくい; aceptación psicológica como 信じる, 許す, 忘れる, 理解する → がたい, frecuente en textos y situaciones formales (信じがたい, 許しがたい)."
-            },
-            {
-              "id": "kaneru",
-              "diff": "にくい solo indica que algo cuesta hacerlo; かねます es la forma educada con que un dependiente o una empresa dice «no podemos», en realidad es una negativa.",
-              "this": [
-                {
-                  "tag": "Algo difícil de responder",
-                  "tr": "Esa pregunta es un poco difícil de responder, ¿eh?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Rechazo cortés",
-                  "tr": "Lo sentimos mucho, pero no podemos responder a esa pregunta."
-                }
-              ],
-              "explain": "Mira la situación y el sentido: te parece difícil, pero aún podrías responder → にくい; decirle a un cliente 「申し訳ございませんが、〜かねます」 significa «no podemos», es un rechazo cortés. Ojo: かねます es una forma afirmativa, pero significa «no poder»."
+              "explain": "El mismo verbo 「信じる」 admite los dos; fíjate en el tono y la situación: en una conversación, «cuesta un poco creerlo», a menudo con 「ちょっと」 → にくい; en textos o discursos formales, «difícil de… se mire como se mire», a menudo con 「到底」 → がたい (信じがたい、許しがたい、理解しがたい)."
             }
           ]
         }
@@ -9434,47 +9396,24 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Todas vienen del 「だろう」 de suposición: «probablemente…»",
-          "items": [
-            {
-              "id": "darou-guess",
-              "diff": "だろう es una suposición en la que el hablante confía; al añadir 「の」 y 「か」 se convierte en のだろうか, una pregunta a uno mismo sin seguridad.",
-              "this": [
-                {
-                  "tag": "Pregunta a uno mismo · sin seguridad",
-                  "tr": "¿De verdad vendrá él?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Suposición · con seguridad",
-                  "tr": "Lo prometió, así que seguramente vendrá."
-                }
-              ],
-              "explain": "Mira si hay 「か」 al final y las pistas de delante: con una razón que lo respalda (約束したから) → だろう, el hablante se inclina por «sí vendrá»; のだろうか con 「本当に」 o 「なぜ」 → no está seguro y se lo pregunta a sí mismo, incluso insinuando «me temo que no»."
-            }
-          ]
-        },
-        {
-          "kind": "look",
-          "note": "のだろうか ↔ のではないだろうか: solo se añade 「ではない」",
+          "note": "Ambos vienen de 「だろう」, cuyo sentido original es la suposición «probablemente…»",
           "items": [
             {
               "id": "no-dewa-nai-darou-ka",
-              "diff": "のだろうか expresa duda: «¿de verdad…?»; のではないだろうか es una afirmación suave: «¿no será que…? (creo que sí)».",
+              "diff": "のだろうか es preguntarse a uno mismo, una duda; のではないだろうか es una forma indirecta de decir «creo que…».",
               "this": [
                 {
-                  "tag": "Duda · tiende a «no»",
-                  "tr": "¿De verdad está bien hacerlo de esta manera?"
+                  "tag": "Duda · seguramente no",
+                  "tr": "¿De verdad está bien seguir así?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Opinión · tiende a «sí»",
-                  "tr": "¿No será que, al contrario, esta manera es mejor?"
+                  "tag": "Opinión indirecta · creo que sí",
+                  "tr": "¿No estaría bien seguir así?"
                 }
               ],
-              "explain": "Casi idénticas en la forma, pero con sentidos casi opuestos. のだろうか suele ir con 「本当に」 y expresa duda, con el matiz de «me temo que no»; のではないだろうか, con 「ではない」 añadido, no es una negación: usa una pregunta retórica para expresar con suavidad tu opinión, «creo que…». Es frecuente en artículos de opinión."
+              "explain": "Los dos vienen del 「だろう」 de suposición («probablemente…»). のだろうか añade 「か」 a la suposición y pone un signo de interrogación a «¿es así?» → preguntarse a uno mismo; si además lleva 「本当に」, se vuelve duda e insinúa «seguramente no está bien». のではないだろうか primero supone «no es así» y luego pone un interrogante a esa negación → «¿no será así?» → da un rodeo para expresar con suavidad la propia opinión, «creo que sí». Así que mira si hay 「ではない」: si lo hay → tiende a «está bien»; si no lo hay y aparece 「本当に」 → tiende a «no está bien»."
             }
           ]
         },
@@ -9484,11 +9423,11 @@
           "items": [
             {
               "id": "kana-wonder",
-              "diff": "かな es un soliloquio relajado del habla coloquial; のだろうか es más formal y serio, y aparece sobre todo en textos.",
+              "diff": "かな es hablar con uno mismo de forma relajada en la lengua hablada; のだろうか es más formal y serio, y se ve sobre todo en textos.",
               "this": [
                 {
                   "tag": "Escrito · reflexión seria",
-                  "tr": "¿Por qué sueñan las personas?"
+                  "tr": "¿Por qué trabajan las personas?"
                 }
               ],
               "that": [
@@ -9497,7 +9436,25 @@
                   "tr": "¿Hará buen tiempo en la excursión de mañana?"
                 }
               ],
-              "explain": "Mira el registro: charlando con amigos o hablando solo, con frases cortas y espontáneas → かな (las mujeres también dicen a menudo かしら); en un texto o un discurso en que se reflexiona en serio sobre una cuestión, muchas veces con 「なぜ」 o 「本当に」 → のだろうか."
+              "explain": "Fíjate en el registro: charlando con amigos o hablando solo, con frases cortas y sueltas → かな (las mujeres también dicen a menudo かしら); reflexionando en serio sobre una cuestión en un texto o un discurso, a menudo con 「なぜ」 o 「本当に」 → のだろうか."
+            },
+            {
+              "id": "darou-guess",
+              "title": "〜だろうか（preguntarse）",
+              "diff": "Los dos sirven para preguntarse algo; のだろうか suele usarse al ver una situación y querer saber qué hay detrás; だろうか es simplemente preguntarse cómo saldrá algo.",
+              "this": [
+                {
+                  "tag": "Ve una situación · quiere saber el porqué",
+                  "tr": "La luz está apagada. ¿Ya se habrá acostado?"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Simple curiosidad",
+                  "tr": "¿Podremos ganar el partido de mañana?"
+                }
+              ],
+              "explain": "Los dos son preguntarse «¿será que…?»; fíjate si hay una situación delante que sirva de base: al ver algo como 「電気が消えている」 y querer entender qué pasa → のだろうか, donde 「の」 aporta el sentido de «explicar una situación»; sin base concreta, solo preguntándose cómo irá 「明日の試合」 → basta con だろうか. Lo segundo también admite のだろうか; solo añade un matiz de «¿qué estará pasando realmente?»."
             }
           ]
         }
@@ -9508,24 +9465,24 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas sirven para destacar una parte de la oración",
+          "note": "Ambos enfatizan «es precisamente…»",
           "items": [
             {
               "id": "koso",
-              "diff": "のは〜だ desplaza el foco al final de la oración, con un tono tranquilo; こそ se pega directamente a la palabra que se quiere destacar, con un tono fuerte de «precisamente esto».",
+              "diff": "Los dos pueden significar «es precisamente…»: のは〜だ pone la respuesta al final, como una explicación tranquila; こそ va pegado a la palabra que se enfatiza y tiene un tono fuerte de «esto y no otra cosa».",
               "this": [
                 {
-                  "tag": "Foco al final",
-                  "tr": "Lo importante es seguir haciéndolo todos los días."
+                  "tag": "Explicación tranquila",
+                  "tr": "Lo que llevaba tiempo buscando es este libro."
                 }
               ],
               "that": [
                 {
-                  "tag": "Precisamente · tono fuerte",
-                  "tr": "Seguir haciéndolo todos los días: eso es precisamente lo más importante."
+                  "tag": "Afirmación enérgica",
+                  "tr": "¡Este es justo el libro que llevaba tiempo buscando!"
                 }
               ],
-              "explain": "Las dos frases significan lo mismo; fíjate en la forma de destacar: 「〜のは」 presenta primero lo ya conocido y deja lo que se quiere resaltar al final, delante de 「〜だ」; こそ no cambia el orden, se pega directamente a la palabra destacada y añade la emoción de «no otra cosa, sino precisamente esto». Es muy común en 「今度こそ」 y 「こちらこそ」."
+              "explain": "Las dos frases dicen «este es justamente el libro que llevaba tiempo buscando»; fíjate en el tono: のは〜だ pone primero la parte ya conocida (ずっと探していた) y deja la respuesta al final, antes de 「〜だ」, como quien explica con calma; こそ no cambia el orden y va justo detrás de la palabra enfatizada, con un matiz exclusivo y emocionado de «esto y no otra cosa». Explicación tranquila → のは〜だ; afirmación con emoción → こそ (今度こそ、健康こそ)."
             }
           ]
         }
