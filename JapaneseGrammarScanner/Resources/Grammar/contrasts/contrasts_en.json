@@ -26899,47 +26899,32 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「…かと思う」 — “I wondered if…”",
+          "note": "Both come from the verb 「思う」: 「〜かと思う」 originally means “thinking to yourself: could it be…?”",
           "items": [
             {
               "id": "ka-to-omou",
               "title": "〜かと思った (I thought…)",
-              "diff": "かと思った just says “I thought…”, and the sentence ends there; かと思ったら is followed by something unexpected that happened right after.",
+              "thisTitle": "〜かと思うと (no sooner…than…)",
+              "diff": "かと思うと／かと思ったら means “no sooner…than…”: the next thing happens right after; かと思った means “I thought…”, and what follows says it actually wasn't so.",
               "this": [
                 {
-                  "tag": "Just… and then · More to follow",
-                  "tr": "My brother had only just come home when he went straight back out again."
+                  "tag": "No sooner… · Follows right after",
+                  "tr": "No sooner had my little brother finished eating than he was already dashing outside."
                 }
               ],
               "that": [
                 {
-                  "tag": "I thought · Sentence ends",
-                  "tr": "I heard the door, so I thought my brother had come home."
+                  "tag": "I thought · Actually not",
+                  "tr": "I thought my little brother had already finished eating, but he was still eating."
                 }
               ],
-              "explain": "Look at what follows 「かと思った」: if a full stop ends it → you're just saying what you thought at the time (and it wasn't so); if 「ら、」 and another half follows → the first thing had just happened when an unexpected change came right after."
-            },
-            {
-              "id": "to-omoikiya",
-              "diff": "For “I thought…, but actually…”, かと思ったら is colloquial; かと思いきや is the written version, common in articles.",
-              "this": [
-                {
-                  "tag": "Colloquial · I thought",
-                  "tr": "I thought the exam would be easy, but it turned out to be surprisingly hard."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Written · I thought",
-                  "tr": "I thought the exam would be easy, but it turned out to be surprisingly hard."
-                }
-              ],
-              "explain": "Both sentences mean the same — look at the setting: in conversation say かと思ったら; in news, essays and other writing you often see かと思いきや, with a slightly classical flavor. Also, かと思ったら／かと思うと can mean “no sooner…than…”; かと思いきや can't."
+              "explain": "「〜かと思う」 originally means the thought “could it be…?” pops into your head. If the thought doesn't match the facts → かと思った = “I thought… (but it wasn't so)”; if the next thing has already happened just as the thought pops up → かと思うと／かと思ったら = “no sooner…than…” (when かと思ったら is followed by “but actually it wasn't”, it means “I thought…, but…” — also from the same thought). To tell them apart, look after 「かと思っ」: if it continues with 「と」 or 「たら」 and the second half is a new action that follows right away → no sooner…than…; if it ends with 「かと思った」 or continues with 「が」 and then says what was really the case → I thought."
             }
           ]
         },
         {
           "kind": "meaning",
+          "sense": 1,
           "note": "Both mean “no sooner…than…”",
           "items": [
             {
@@ -26960,7 +26945,7 @@
               "wrong": {
                 "why": "かと思うと isn't used for the speaker's own actions"
               },
-              "explain": "Look at the subject: かと思うと describes a change the speaker observes from the side, with someone or something else as subject (彼は、空が); for “the moment I…” about yourself, use たとたん. かと思ったら is the same — not used for your own actions."
+              "explain": "Look at the subject: かと思うと describes a change the speaker observes from the side, with someone or something else as subject (彼は、空が); for “the moment I…” about yourself (私は), use たとたん. かと思ったら is the same — not used for your own actions."
             },
             {
               "id": "ka-nai-ka-no-uchi-ni",
@@ -26968,7 +26953,7 @@
               "this": [
                 {
                   "tag": "Already happened → Unexpected change",
-                  "tr": "The sky had no sooner darkened than it started pouring."
+                  "tr": "No sooner had the bell rung than the students rushed out of the classroom."
                 }
               ],
               "that": [
@@ -26980,6 +26965,31 @@
               "explain": "Look at the form of the first part: か〜ないかのうちに puts the positive and negative of the same verb side by side (鳴るか鳴らないか), meaning “before … was even finished”, an even tighter timing; かと思うと follows the た-form — the first event has already happened, usually followed by an unexpected change."
             }
           ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Both mean “I thought…, but actually…”",
+          "items": [
+            {
+              "id": "to-omoikiya",
+              "thisTitle": "〜かと思ったら (I thought…, but…)",
+              "diff": "For “I thought…, but actually…”, かと思ったら is colloquial; かと思いきや is the written version, common in articles.",
+              "this": [
+                {
+                  "tag": "Colloquial · I thought",
+                  "tr": "I thought the exam would be easy, but it turned out to be surprisingly hard."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Written · I thought",
+                  "tr": "I thought the exam would be easy, but it turned out to be surprisingly hard."
+                }
+              ],
+              "explain": "Both sentences mean the same — look at the setting: in conversation say かと思ったら; in news, essays and other writing you often see かと思いきや, with a slightly classical flavor. Also, かと思ったら／かと思うと can mean “no sooner…than…”; かと思いきや can't."
+            }
+          ]
         }
       ]
     },
@@ -26988,7 +26998,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「限る」 — “to set a limit or range”",
+          "note": "Both come from 「限る」 — originally “to set a boundary or limit”",
           "items": [
             {
               "id": "kagiri-dewa",
@@ -27006,10 +27016,11 @@
                   "tr": "As far as I know, he's still single."
                 }
               ],
-              "explain": "Look at the verb before 「限り」: verbs of “getting information” like 知る、調べる、聞く、見る, often followed by 「では」 → “as far as … knows”, a cautious tone; states like 生きている、元気な → as long as this state lasts, the second half holds, usually a resolve or judgment."
+              "explain": "「限る」 originally means drawing a boundary. Draw the boundary around a state that continues (生きている限り): as long as you're still inside it, the second part holds → as long as…; draw it around what you know or have found out (知っている限りでは): the judgment holds only inside it, you can't speak for what's outside → as far as I know. To tell them apart, look at the verb before it: verbs of getting information like 知る、調べる、聞く、見る, often followed by 「では」 → as far as… know; states like 生きている、続く → as long as…, and the second half is usually a resolution or a judgment."
             },
             {
               "id": "ni-kagiri",
+              "thisTitle": "〜限り (as long as…)",
               "diff": "Verb＋限り means “as long as … still…”; noun＋に限り means “only for…”, common in ads and notices.",
               "this": [
                 {
@@ -27020,13 +27031,15 @@
               "that": [
                 {
                   "tag": "Only for · Notice",
-                  "tr": "Today only, everything is half price."
+                  "tr": "For members only, shipping is free."
                 }
               ],
-              "explain": "Look at what comes before 「限り」: a verb or adjective (ある、元気な) → as long as that state continues; noun＋に (本日に、学生に) → limited to this scope only, and beyond it there's nothing."
+              "explain": "「限る」 originally means drawing a boundary. Draw it around a state that continues (在庫がある限り): while the state is still inside, the second part keeps holding → as long as…; draw it around a particular group (会員に限り): only what's inside counts, what's outside doesn't → only for…. To tell them apart, look before 「限り」: a verb or the like expressing a state → as long as; noun + に → only for, common in ads and notices."
             },
             {
               "id": "ni-kagitte",
+              "title": "〜に限って (of all times…)",
+              "thisTitle": "〜限り (as long as…)",
               "diff": "限り means “as long as…, then…”; に限って means “of all times, just when…”, usually a complaint.",
               "this": [
                 {
@@ -27037,55 +27050,64 @@
               "that": [
                 {
                   "tag": "Of all times · Complaint",
-                  "tr": "Just when I'm in a hurry, of all times, the train is late."
+                  "tr": "Of all days, I oversleep on the day of an important meeting."
                 }
               ],
-              "explain": "Look at what comes before and the second half: に限って follows a time or noun like 「〜時」「今日」 and is followed by bad luck or something unexpected → “of all times”; 限り follows an ongoing state and is followed by a resolve or guarantee → “as long as”."
+              "explain": "「限る」 originally means drawing a boundary. Draw it around a state that continues (私がいる限り): as long as the state lasts, the second part is guaranteed → as long as…; pin the range down to one particular moment (会議の日に限って): “every other day is fine — it's limited to exactly this day” → of all times, just when…, usually followed by something unlucky or annoying. To tell them apart, look before it: a continuing state + 限り → as long as; a time noun (日、時) + に限って → of all times."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both express conditions: “as long as…, then…” / “unless…, not…”",
+          "sense": 1,
+          "note": "Both mean “as long as this state lasts, …”",
           "items": [
             {
-              "id": "sae-ba",
+              "id": "uchi-ni",
+              "title": "〜うちは (while…)",
               "thisTitle": "〜限り (as long as…)",
-              "diff": "限り means “for as long as this state continues”; さえ〜ば means “as long as this one condition is met”.",
+              "diff": "限り treats the state as a condition: “as long as it's there, I'll keep…”, often with a resolution or a promise; うちは hints that the state will end sooner or later.",
               "this": [
                 {
-                  "tag": "While the state lasts",
-                  "tr": "As long as I'm healthy, I want to keep working."
+                  "tag": "Condition · Resolution",
+                  "tr": "As long as I have the strength, I want to keep working in the fields."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sole condition → Result",
-                  "tr": "As long as you take this medicine, you'll get better right away."
+                  "tag": "Hints it will end",
+                  "tr": "While I still have the strength, I want to keep working in the fields."
                 }
               ],
-              "explain": "Look at both halves: the first part of 限り is a state lasting over time (元気な、生きている), and the second is usually a lasting resolve too (続けたい); the first part of さえ〜ば is a condition you just need to meet (飲みさえすれば), and the second is the result that follows (すぐ治る)."
-            },
+              "explain": "Both sentences work; the difference is how the speaker sees the state: うちは hints it will end sooner or later (people age, strength fades) — “it's fine now, but later who knows”; 限り treats it as a condition — “as long as it's there, I'll keep on…”, often with a resolution or a promise, so for promises 限り is the usual choice (私がいる限り、心配はいらない)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “unless…, (not)…”",
+          "items": [
             {
               "id": "nai-koto-ni-wa",
-              "thisTitle": "〜ない限り",
-              "diff": "After ない限り the second half can be positive or negative; after ないことには it's always a negative or discouraging result.",
+              "thisTitle": "〜ない限り (unless…)",
+              "diff": "ないことには stresses “this step has to come first”, and the second half must be negative or unfavorable; with ない限り the second half can be positive or negative.",
               "this": [
                 {
-                  "tag": "Second half can be positive",
-                  "tr": "Unless it rains, the match will go ahead as planned."
+                  "tag": "Unless · Second half positive or negative",
+                  "tr": "Unless I see the actual item, I can't decide whether to buy it."
                 }
               ],
               "that": [
                 {
-                  "tag": "Second half must be negative",
-                  "tr": "Until I actually see it, I can't say anything for sure."
+                  "tag": "Prerequisite · Second half must be negative",
+                  "tr": "Without first seeing the actual item, I can't decide whether to buy it."
                 }
               ],
               "wrong": {
                 "why": "The second half after ないことには must be negative or discouraging"
               },
-              "explain": "Look at the second half: ないことには can only be followed by negative, discouraging results like 「〜ない」「始まらない」「無理だ」, rather colloquial; ない限り can be followed by a positive arrangement (予定通り行う) and is more written."
+              "explain": "When the second half is negative (決められない), both work: ないことには stresses that the first part is a prerequisite — without doing it first, nothing can happen — and is common in speech; ない限り just says “unless this happens”. When the second half is a positive plan, only ない限り works (雨が降らない限り、試合は予定通り行う)."
             }
           ]
         }
@@ -27096,7 +27118,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「限る」 — “to set a limit or range”",
+          "note": "Both come from 「限る」 — originally “to set a boundary or limit”",
           "items": [
             {
               "id": "kagiri",
@@ -27114,47 +27136,31 @@
                   "tr": "As long as I'm alive, I'll keep this shop going."
                 }
               ],
-              "explain": "Look at the verb before 「限り」: verbs of “getting information” like 知る、調べる、聞く、見る, often followed by 「では」 → “as far as … knows”, a cautious tone; states like 生きている、元気な → as long as this state lasts, the second half holds, usually a resolve or judgment."
+              "explain": "「限る」 originally means drawing a boundary. Draw it around what you know or have found out (知っている限りでは): the judgment holds only inside it, you can't speak for what's outside → as far as I know; draw it around a state that continues (生きている限り): as long as you're still inside it, the second part holds → as long as…. To tell them apart, look at the verb before it: verbs of getting information like 知る、調べる、聞く、見る, often followed by 「では」 → as far as… know; states like 生きている、続く → as long as…, and the second half is usually a resolution or a judgment."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both state the basis for a judgment",
+          "note": "Both mean “judging from…”",
           "items": [
             {
-              "id": "ni-yoru-to",
-              "diff": "限りでは is the speaker judging within their own limited knowledge; によると just cites a source, often paired with 「そうだ」「らしい」.",
-              "this": [
-                {
-                  "tag": "Own scope · Judgment",
-                  "tr": "From what I've found, this restaurant has a good reputation."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Source · Hearsay",
-                  "tr": "According to a magazine, this restaurant has a good reputation."
-                }
-              ],
-              "explain": "Look at what comes before and the sentence ending: 限りでは follows your own action (調べた、知っている) and ends with your own judgment, implying “beyond that, I can't say”; によると／によれば follows a source (雑誌、ニュース) and often ends with 「そうだ」「らしい」, just passing on information."
-            },
-            {
               "id": "kara-miru-to",
-              "diff": "限りでは stresses “only within what I've seen”; から見ると means “seen from a certain angle or standpoint”.",
+              "title": "〜から見ると (judging from…)",
+              "diff": "限りでは judges only within what you've seen, leaving room for doubt; から見ると uses what you've seen as the basis for a conclusion.",
               "this": [
                 {
-                  "tag": "Limited scope · Cautious",
-                  "tr": "From what I saw, there were no particular problems."
+                  "tag": "Only within what's seen · Cautious",
+                  "tr": "As far as I can see from the survey results, customer satisfaction is high."
                 }
               ],
               "that": [
                 {
-                  "tag": "An angle · Standpoint",
-                  "tr": "From an expert's point of view, this plan has a lot of problems."
+                  "tag": "Basis → Inference",
+                  "tr": "Judging from the survey results, customer satisfaction seems to be high."
                 }
               ],
-              "explain": "Both sentences have 「見る」 — look at what's before it: the speaker's own experience (私が見た)＋限りでは → limited scope, cautious tone; a noun (専門家、子ども、データ)＋から見ると → judging from that angle. からすると works the same way."
+              "explain": "Both sentences make a judgment based on the survey results. 限りでは stresses “only as far as what I've seen goes” — nothing beyond that is guaranteed, a cautious tone; から見ると treats the results as the basis for an inference, often ending with 「ようだ」 or 「だろう」. When you mean “I've only looked at this much, I can't speak for everything”, use 限りでは."
             }
           ]
         }
@@ -27165,15 +27171,15 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「兼ねる」 — originally “to do two things at once”, extended to “hard to manage both → hard to…”",
+          "note": "Both come from 「兼ねる」 — originally “to handle two things at once”: can't manage both → hard to… (かねる); add a negative → quite possibly… (かねない)",
           "items": [
             {
               "id": "kaneru",
               "diff": "かねない means “could well (lead to something bad)”; かねる means “find it hard to…, cannot…”, often used for polite refusals.",
               "this": [
                 {
-                  "tag": "Negative form → Could well",
-                  "tr": "If things go on like this, it could well lead to a serious accident."
+                  "tag": "Negative form → Quite possibly",
+                  "tr": "If the lack of sleep keeps up, you could well ruin your health."
                 }
               ],
               "that": [
@@ -27182,7 +27188,7 @@
                   "tr": "We're very sorry, but we're unable to accommodate your request."
                 }
               ],
-              "explain": "Just check whether the ending has 「ない」: かねる ＝ hard to do, so かねます is a polite “cannot”; かねない ＝ “not impossible”, so it means “could well happen”, and only for bad outcomes. Memory tip: かねます ＝ no can do, かねません ＝ might happen."
+              "explain": "「兼ねる」 originally means one person handling two things at once. Can't manage both → 「〜かねる」 = hard to do even if you want to, and 「〜かねます」 became a polite refusal (応じかねます = we can't meet it); add the negative 「ない」 → “not unable” = “not impossible that it happens”, so 「〜かねない」 means “quite possibly (something bad)”. To tell them apart, just look at the ending: かねます = can't; かねない／かねません = quite possibly will."
             }
           ]
         },
@@ -27262,41 +27268,25 @@
         },
         {
           "kind": "meaning",
-          "note": "Both mean “hard to…”",
+          "note": "Both mean “hard to (accept) emotionally”",
           "items": [
             {
               "id": "gatai",
-              "diff": "かねる means you're not in a position to do it, often used to refuse politely; がたい is a judgment that something is “hard to…”.",
+              "thisTitle": "〜かねる (hard to accept)",
+              "diff": "かねる is the speaker politely stating “I can't accept it”; がたい judges the thing itself as “hard to…”, and is rather formal and written.",
               "this": [
                 {
-                  "tag": "Position · Polite refusal",
-                  "tr": "We're very sorry, but we're unable to accept those terms."
+                  "tag": "States one's own position",
+                  "tr": "I find it hard to accept that explanation."
                 }
               ],
               "that": [
                 {
-                  "tag": "Judgment · Hard to accept",
-                  "tr": "Those terms are really hard to accept."
+                  "tag": "Judging the thing · Written",
+                  "tr": "That explanation is hard to accept."
                 }
               ],
-              "explain": "Look at the setting: turning someone down face to face in business (お受けしかねます、お答えしかねます) → かねる, meaning “I'd like to, but my position doesn't allow it”; expressing your own feeling or judgment about something (受け入れがたい、信じがたい) → がたい."
-            },
-            {
-              "id": "nikui",
-              "diff": "かねます politely says “cannot do it” — really a refusal; にくい just means it's awkward to do.",
-              "this": [
-                {
-                  "tag": "Polite refusal",
-                  "tr": "We're very sorry, but we're unable to answer that question."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "A bit hard to answer",
-                  "tr": "That's a bit of a tricky question to answer."
-                }
-              ],
-              "explain": "Look at the setting and meaning: 「申し訳ございませんが、〜かねます」 said to a customer means “cannot”, a tactful refusal; something you find hard but can still manage (答えにくい、読みにくい) → にくい. Note that かねます is affirmative in form yet means “cannot”."
+              "explain": "Both sentences say “this explanation is hard to accept”. かねる states the speaker's own position, usually as 「〜かねます」, a polite way of saying “I can't…” to someone's face; がたい judges the thing itself (anyone would find it hard to…), is rather written, and often comes before a noun (信じがたい話、許しがたい行為). When answering someone directly, use かねます."
             }
           ]
         }
@@ -27307,64 +27297,50 @@
       "groups": [
         {
           "kind": "look",
-          "note": "からいうと ↔ からといって — both built from 「から」 and 「言う」, yet completely different in meaning",
+          "note": "からいって ↔ からといって — the only difference is one 「と」",
           "items": [
             {
               "id": "kara-to-itte",
-              "diff": "からいうと means “in terms of…”, setting a standard for judgment; からといって means “just because…, doesn't mean…”, usually followed by a negative.",
+              "title": "〜からといって (just because… doesn't mean)",
+              "diff": "からいって means “judging from…”, followed by a judgment; からといって means “just because… doesn't mean…”, usually followed by a negative.",
               "this": [
                 {
-                  "tag": "Noun → Standard for judgment",
-                  "tr": "In terms of ability, he should win the championship."
+                  "tag": "Noun → Judgment",
+                  "tr": "Judging from these grades, passing is a sure thing."
                 }
               ],
               "that": [
                 {
-                  "tag": "Clause → Just because",
-                  "tr": "Just because you have the ability doesn't mean you'll win."
+                  "tag": "Clause → Not necessarily",
+                  "tr": "Just because your grades are good doesn't mean you'll pass."
                 }
               ],
-              "explain": "Look at what's before 「から」 and the second half: directly after a noun (実力、立場、経験) → からいうと, followed by the speaker's judgment; after a full clause (実力がある) → からといって, usually followed by negatives like 「とは限らない」「わけではない」. からいえば works the same way."
+              "explain": "The only difference is one 「と」; look at what comes before 「から」: a noun directly (この成績) + からいって → judging from…, followed by the speaker's judgment; a full clause (成績がいい) + からといって → just because… doesn't mean…, usually followed by 「とは限らない」 or 「わけではない」."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both set out a standpoint or angle: “from the standpoint of… / for…”",
+          "note": "Both mean “from the standpoint of…”",
           "items": [
             {
               "id": "kara-miru-to",
-              "diff": "からいうと follows standards like 「品質・立場・経験」; からすると can also follow people: “in …'s eyes”.",
+              "title": "〜からすると (from the standpoint of…)",
+              "thisTitle": "〜からいうと (from the standpoint of…)",
+              "diff": "からすると can attach directly to a person; からいうと with a person usually needs 「〜の立場から」.",
               "this": [
                 {
-                  "tag": "Abstract standard",
-                  "tr": "In terms of quality, this price is cheap."
+                  "tag": "〜の立場から",
+                  "tr": "From a foreigner's standpoint, the signs at this station are hard to understand."
                 }
               ],
               "that": [
                 {
-                  "tag": "After a person · In someone's eyes",
-                  "tr": "From a parent's point of view, a child living alone is worrying."
+                  "tag": "Directly after a person",
+                  "tr": "To a foreigner, the signs at this station are hard to understand."
                 }
               ],
-              "explain": "Look at the noun before: “standards, viewpoints” like 品質、立場、経験 work with both; for a person (親、外国人), to say “in someone's eyes” use からすると／から見ると — からいうと usually doesn't follow people."
-            },
-            {
-              "id": "ni-totte",
-              "diff": "にとって follows a person or organization: “for someone”; からいうと follows a standard or viewpoint: “in terms of something”.",
-              "this": [
-                {
-                  "tag": "Standard, viewpoint",
-                  "tr": "Speaking from experience, this method is the best."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Person → For someone",
-                  "tr": "For me, family is the most important thing."
-                }
-              ],
-              "explain": "Look at the noun before: a person, company or country (私、子ども、会社)＋にとって, followed by an evaluation like 「大切だ、難しい、ありがたい」; a standard for judgment like 経験、立場、点＋からいうと."
+              "explain": "Both sentences mean the same; look at what comes before 「から」: からすると／から見ると can attach directly to a person (外国人、親); からいうと with a person usually needs 「〜の立場から」 or 「〜の観点から」 (外国人の立場から), and more often follows standards of judgment such as 経験 or 品質."
             }
           ]
         }
@@ -27375,7 +27351,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "All rely on the emphatic particle 「こそ」 — “this, and nothing else”; after から／て／ば it emphasizes a reason or condition respectively",
+          "note": "Both come from the emphatic particle 「こそ」 — originally “this one and no other”",
           "items": [
             {
               "id": "koso",
@@ -27393,7 +27369,13 @@
                 }
               ],
               "explain": "こそ itself means “this very one”: on a time word (今年こそ) it means “this time for sure”; only after the reason marker 「から」 does it become “precisely because…”. Check whether 「から」 comes before こそ."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "からこそ ↔ てこそ — the only difference is 「から」 vs 「て」: one means “precisely because…”, the other “only by…”",
+          "items": [
             {
               "id": "te-koso",
               "diff": "からこそ gives the reason for a specific event: “precisely because…”; てこそ gives the condition in a general truth: “only if…”.",
@@ -27410,7 +27392,13 @@
                 }
               ],
               "explain": "Look at the verb form and tense: た-form＋からこそ, followed by a result that already happened (合格できた) → explaining the reason; て-form＋こそ, followed by a general truth (合格できる、意味がある) → it only works if this condition is met."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Both mean “precisely because…”",
+          "items": [
             {
               "id": "ba-koso",
               "diff": "Same meaning, “precisely because…”; ばこそ is a written, slightly old-fashioned way of saying it — in everyday use, say からこそ.",
@@ -27426,7 +27414,10 @@
                   "tr": "It's precisely because I care about my child that I'm strict with him."
                 }
               ],
-              "explain": "Both sentences mean the same — look at the connection and style: ばこそ follows the conditional form (思え＋ばこそ), common in writing and speeches; からこそ follows the plain form (思う＋からこそ) and is common in both speech and writing."
+              "wrong": {
+                "why": "ばこそ must follow the ば-form: 思え + ばこそ"
+              },
+              "explain": "Both sentences mean the same. In everyday speech and writing use からこそ; ばこそ is a written, formal expression, common in articles, speeches and formal addresses (皆様の支えがあればこそです), with a slightly old-fashioned feel. They also attach differently: ばこそ follows the ば-form (思え + ばこそ), からこそ the plain form (思う + からこそ)."
             }
           ]
         }
@@ -27437,28 +27428,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean “made up of…, made from…”",
+          "note": "Both mean “to consist of…”",
           "items": [
             {
               "id": "de-kara-tsukuru",
-              "diff": "からなる says which parts (members, chapters, components) a whole is made up of; から作る／で作る says what raw materials or materials something is made from.",
+              "title": "〜からできている (to consist of)",
+              "diff": "からなる is rather written and can also describe the makeup of groups of people or chapters; からできている is the everyday expression, mostly for what parts or materials a thing is made of.",
               "this": [
                 {
-                  "tag": "Several parts → Make up",
-                  "tr": "This team is made up of five people."
+                  "tag": "Written · Describing structure",
+                  "tr": "This cake consists of three layers."
                 }
               ],
               "that": [
                 {
-                  "tag": "から · Raw material (unrecognizable)",
-                  "tr": "Sake is made from rice."
-                },
-                {
-                  "tag": "で · Material (recognizable)",
-                  "tr": "This desk is made of wood."
+                  "tag": "Spoken · What a thing is made of",
+                  "tr": "This cake is made up of three layers."
                 }
               ],
-              "explain": "Look at the noun and verb: a number of people, chapters or components (５人、三章)＋からなる describes the makeup of a whole, rather written; to say “what it's made from” use 作る: raw materials (米、牛乳)＋から作る, where the original form is unrecognizable in the finished product; recognizable materials (木、紙)＋で作る."
+              "explain": "Both sentences say “the cake consists of three layers”. からなる is rather written and objective, common in manuals and news, and can also describe the makeup of groups of people or chapters (十人からなる委員会、三部からなる小説); からできている is the everyday expression, mostly for what parts or materials a concrete thing is made of, and is generally not used for the makeup of a group of people."
             }
           ]
         }
@@ -27530,31 +27518,8 @@
       "id": "kara-shite",
       "groups": [
         {
-          "kind": "look",
-          "note": "からして ↔ からすると, both 「から＋する」",
-          "items": [
-            {
-              "id": "kara-miru-to",
-              "title": "〜からすると",
-              "diff": "Person＋からして means “even … (let alone everyone else)”; person＋からすると means “in …'s eyes”.",
-              "this": [
-                {
-                  "tag": "Even…",
-                  "tr": "At this company, even the president isn't punctual (let alone everyone else)."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "In …'s eyes",
-                  "tr": "In the president's eyes, employees being late is probably unforgivable."
-                }
-              ],
-              "explain": "Both have 「社長」 before them — look at the second half: if it's about the president's own behavior (時間を守らない), implying “never mind everyone else” → からして; if it's about the president's view or judgment (許せないだろう) → からすると. But when it means “judging from…” (口ぶりからして／口ぶりからすると), the two are interchangeable."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
+          "sense": 1,
           "note": "Both cite one point, implying “never mind the rest”",
           "items": [
             {
@@ -27590,6 +27555,34 @@
                 }
               ],
               "explain": "Both sentences mean the same — look at the style: にしてからが is mostly found in writing, almost always after a person, and specifically “the one who should be setting the example”; からして is used in both speech and writing, and can also follow things like names or clothing."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “guessing from…”",
+          "items": [
+            {
+              "id": "tokoro-wo-miru-to",
+              "thisTitle": "〜からして (judging from…)",
+              "diff": "からして follows a noun (表情、様子); ところを見ると follows a clause describing the situation.",
+              "this": [
+                {
+                  "tag": "Noun + からして",
+                  "tr": "Judging from his expression, something good seems to have happened."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Clause + ところを見ると",
+                  "tr": "Seeing him grinning like that, something good seems to have happened."
+                }
+              ],
+              "wrong": {
+                "why": "ところを見ると must follow a clause (にやにやしている), not a bare noun"
+              },
+              "explain": "Both sentences guess from what you can see, usually followed by 「らしい」 or 「ようだ」. Look at what comes before: a noun (表情、口ぶり、様子) + からして; a whole clause describing the situation (にやにやしている、返事が来ない) + ところを見ると."
             }
           ]
         }

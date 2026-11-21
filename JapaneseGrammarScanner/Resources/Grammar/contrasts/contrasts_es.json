@@ -26899,47 +26899,32 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「…かと思う」: «pensar que quizá…»",
+          "note": "Ambas vienen del verbo 「思う」: 「〜かと思う」 significa en origen «pensar para uno mismo: ¿será que…?»",
           "items": [
             {
               "id": "ka-to-omou",
               "title": "〜かと思った（creía que…）",
-              "diff": "かと思った solo dice «creía que…», y la oración termina ahí; tras かと思ったら va además algo inesperado que ocurre justo después.",
+              "thisTitle": "〜かと思うと（nada más…, ya…）",
+              "diff": "かと思うと／かと思ったら significa «nada más…, ya…»: justo después ocurre otra cosa; かと思った significa «creía que…», y lo que sigue dice que en realidad no era así.",
               "this": [
                 {
-                  "tag": "Nada más… · hay continuación",
-                  "tr": "Mi hermano acababa de volver y enseguida volvió a salir."
+                  "tag": "Nada más… · Sigue enseguida",
+                  "tr": "Nada más terminar de comer, mi hermano ya había salido corriendo a la calle."
                 }
               ],
               "that": [
                 {
-                  "tag": "Creía que · fin de la oración",
-                  "tr": "Oí la puerta y creí que había vuelto mi hermano."
+                  "tag": "Creía que · En realidad no",
+                  "tr": "Creía que mi hermano ya había terminado de comer, pero todavía estaba comiendo."
                 }
               ],
-              "explain": "Fíjate en lo que sigue a 「かと思った」: si la oración termina con un punto → solo dice lo que uno creía en ese momento (y en realidad no era así); si sigue 「ら、」 y otra media oración → lo primero acaba de pasar y justo después se produce un cambio inesperado."
-            },
-            {
-              "id": "to-omoikiya",
-              "diff": "Para «creía que…, pero…», かと思ったら es hablado; かと思いきや es la forma escrita, frecuente en textos.",
-              "this": [
-                {
-                  "tag": "Hablado · creía que",
-                  "tr": "Creía que el examen sería fácil, pero resultó bastante difícil."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Escrito · creía que",
-                  "tr": "Creía que el examen sería fácil, pero resultó bastante difícil."
-                }
-              ],
-              "explain": "Las dos oraciones significan lo mismo; fíjate en el contexto: charlando se dice かと思ったら; en noticias, ensayos y otros textos se ve a menudo かと思いきや, con un toque de lengua clásica. Además, かと思ったら／かと思うと también pueden expresar «nada más…, ya…»; かと思いきや no tiene ese uso."
+              "explain": "「〜かと思う」 significa en origen que te viene a la cabeza la idea «¿será que…?». Si esa idea no coincide con los hechos → かと思った = «creía que… (pero no era así)»; si justo al surgir la idea ya ha ocurrido lo siguiente → かと思うと／かと思ったら = «nada más…, ya…» (cuando a かと思ったら le sigue «pero en realidad no era así», significa «creía que…, pero…», que sale de la misma idea). Para distinguirlas, mira lo que va tras 「かと思っ」: si sigue 「と」 o 「たら」 y la segunda parte es una acción nueva que ocurre enseguida → nada más…, ya…; si la frase termina en 「かと思った」 o sigue con 「が」 y luego cuenta lo que pasaba en realidad → creía que."
             }
           ]
         },
         {
           "kind": "meaning",
+          "sense": 1,
           "note": "Ambas expresan «nada más…, ya…»",
           "items": [
             {
@@ -26960,7 +26945,7 @@
               "wrong": {
                 "why": "かと思うと no se usa para las acciones del propio hablante"
               },
-              "explain": "Fíjate en el sujeto: かと思うと es un cambio que el hablante observa desde fuera, y el sujeto es otra persona o una cosa (彼は、空が); para decir «nada más…, ya…» sobre uno mismo hay que usar たとたん. Lo mismo vale para かと思ったら: no se usa para las propias acciones."
+              "explain": "Fíjate en el sujeto: かと思うと describe un cambio que el hablante observa desde fuera, con otra persona o cosa como sujeto (彼は、空が); para decir «en cuanto yo…» sobre uno mismo (私は), se usa たとたん. Con かと思ったら pasa lo mismo: no se usa para las propias acciones."
             },
             {
               "id": "ka-nai-ka-no-uchi-ni",
@@ -26968,7 +26953,7 @@
               "this": [
                 {
                   "tag": "Ya ocurrió → cambio inesperado",
-                  "tr": "Nada más oscurecerse el cielo, empezó a llover a cántaros."
+                  "tr": "Nada más sonar el timbre, los alumnos salieron corriendo del aula."
                 }
               ],
               "that": [
@@ -26980,6 +26965,31 @@
               "explain": "Fíjate en la forma de la primera parte: か〜ないかのうちに pone juntos el afirmativo y el negativo del mismo verbo (鳴るか鳴らないか), con el sentido de «antes de terminar del todo…, ya…», y el tiempo es aún más justo; delante de かと思うと va la forma た, lo primero ya ocurrió y detrás suele venir un cambio inesperado."
             }
           ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Ambas significan «creía que…, pero en realidad…»",
+          "items": [
+            {
+              "id": "to-omoikiya",
+              "thisTitle": "〜かと思ったら（creía que…, pero…）",
+              "diff": "Para «creía que…, pero…», かと思ったら es hablado; かと思いきや es la forma escrita, frecuente en textos.",
+              "this": [
+                {
+                  "tag": "Hablado · creía que",
+                  "tr": "Creía que el examen sería fácil, pero resultó bastante difícil."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Escrito · creía que",
+                  "tr": "Creía que el examen sería fácil, pero resultó bastante difícil."
+                }
+              ],
+              "explain": "Las dos oraciones significan lo mismo; fíjate en el contexto: charlando se dice かと思ったら; en noticias, ensayos y otros textos se ve a menudo かと思いきや, con un toque de lengua clásica. Además, かと思ったら／かと思うと también pueden expresar «nada más…, ya…»; かと思いきや no tiene ese uso."
+            }
+          ]
         }
       ]
     },
@@ -26988,7 +26998,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「限る」: «trazar un límite, un ámbito»",
+          "note": "Ambas vienen de 「限る」: en origen, «trazar un límite, un ámbito»",
           "items": [
             {
               "id": "kagiri-dewa",
@@ -27006,10 +27016,11 @@
                   "tr": "Por lo que yo sé, él sigue soltero."
                 }
               ],
-              "explain": "Fíjate en el verbo que va delante de 「限り」: verbos de «obtener información» como 知る、調べる、聞く、見る, a menudo seguidos de 「では」 → por lo que…, con tono prudente; estados como 生きている、元気な → mientras ese estado dure, se cumple lo segundo, y la segunda parte suele ser una decisión o un juicio."
+              "explain": "「限る」 significa en origen trazar un límite. Si lo trazas alrededor de un estado que continúa (生きている限り): mientras sigas dentro, lo segundo se cumple siempre → mientras…; si lo trazas alrededor de lo que sabes o has averiguado (知っている限りでは): el juicio solo vale dentro, fuera no puedes asegurar nada → por lo que sé. Para distinguirlas, mira el verbo de delante: verbos de obtener información como 知る、調べる、聞く、見る, a menudo seguidos de 「では」 → por lo que…; estados como 生きている、続く → mientras…, y la segunda parte suele ser una decisión o un juicio."
             },
             {
               "id": "ni-kagiri",
+              "thisTitle": "〜限り（mientras…）",
               "diff": "Verbo + 限り dice «mientras siga…»; sustantivo + に限り dice «solo…, exclusivamente…», frecuente en anuncios y avisos.",
               "this": [
                 {
@@ -27020,13 +27031,15 @@
               "that": [
                 {
                   "tag": "Solo · aviso",
-                  "tr": "Solo por hoy, todos los artículos a mitad de precio."
+                  "tr": "Solo para socios, el envío es gratuito."
                 }
               ],
-              "explain": "Fíjate en lo que va delante de 「限り」: un verbo o un adjetivo (ある、元気な) → mientras ese estado continúe; sustantivo + に (本日に、学生に) → solo dentro de ese ámbito, y fuera de él ya no vale."
+              "explain": "「限る」 significa en origen trazar un límite. Si lo trazas alrededor de un estado que continúa (在庫がある限り): mientras el estado siga dentro, lo segundo se sigue cumpliendo → mientras…; si lo trazas alrededor de un grupo concreto (会員に限り): solo cuenta lo de dentro, lo de fuera no → solo para…. Para distinguirlas, mira lo que va delante de 「限り」: un verbo u otra palabra que expresa un estado → mientras; sustantivo + に → solo para, frecuente en anuncios y avisos."
             },
             {
               "id": "ni-kagitte",
+              "title": "〜に限って（justo cuando…）",
+              "thisTitle": "〜限り（mientras…）",
               "diff": "限り dice «mientras…, entonces…»; に限って dice «justo cuando…», a menudo con queja.",
               "this": [
                 {
@@ -27037,55 +27050,64 @@
               "that": [
                 {
                   "tag": "Justo cuando · queja",
-                  "tr": "Justo cuando tengo prisa, el tren se retrasa."
+                  "tr": "Justo el día de una reunión importante, me quedo dormido."
                 }
               ],
-              "explain": "Fíjate en lo que va delante y en la segunda parte: delante de に限って va una expresión de tiempo o un sustantivo como 「〜時」「今日」, y detrás algo desafortunado o inesperado → justo cuando; delante de 限り va un estado que continúa, y detrás una decisión o una garantía → mientras."
+              "explain": "「限る」 significa en origen trazar un límite. Si lo trazas alrededor de un estado que continúa (私がいる限り): mientras dure el estado, lo segundo está garantizado → mientras…; si reduces el ámbito a un momento concreto (会議の日に限って): «cualquier otro día va bien, pero se limita justo a este» → justo cuando…, y suele seguir algo desafortunado o molesto. Para distinguirlas, mira lo de delante: estado que continúa + 限り → mientras; sustantivo de tiempo (日、時) + に限って → justo cuando."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan condición: «mientras…, entonces…», «si no…, no…»",
+          "sense": 1,
+          "note": "Ambas significan «mientras dure este estado, …»",
           "items": [
             {
-              "id": "sae-ba",
+              "id": "uchi-ni",
+              "title": "〜うちは（mientras…）",
               "thisTitle": "〜限り（mientras…）",
-              "diff": "限り dice «durante el tiempo que dure este estado»; さえ〜ば dice «basta con que se cumpla esta única condición».",
+              "diff": "限り trata el estado como una condición: «mientras exista, seguiré…», a menudo con una decisión o una promesa; うちは insinúa que el estado acabará tarde o temprano.",
               "this": [
                 {
-                  "tag": "Mientras dure el estado",
-                  "tr": "Mientras tenga salud, quiero seguir trabajando."
+                  "tag": "Condición · Decisión",
+                  "tr": "Mientras tenga fuerzas, quiero seguir trabajando en el campo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Única condición → resultado",
-                  "tr": "Basta con que te tomes esta medicina para curarte enseguida."
+                  "tag": "Insinúa que acabará",
+                  "tr": "Mientras aún tenga fuerzas, quiero seguir trabajando en el campo."
                 }
               ],
-              "explain": "Fíjate en las dos mitades: con 限り, la primera parte es un estado que dura cierto tiempo (元気な、生きている), y la segunda suele ser también una decisión duradera (続けたい); con さえ〜ば, la primera parte es una condición que basta con cumplir (飲みさえすれば), y la segunda es el resultado que trae consigo (すぐ治る)."
-            },
+              "explain": "Las dos frases valen; la diferencia está en cómo ve el hablante ese estado: うちは insinúa que acabará tarde o temprano (uno envejece, las fuerzas se van) — «ahora sí, luego ya se verá»; 限り lo trata como una condición — «mientras exista, seguiré…», a menudo con una decisión o una promesa, así que para prometer se suele usar 限り (私がいる限り、心配はいらない)."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Ambas significan «a menos que…, no…»",
+          "items": [
             {
               "id": "nai-koto-ni-wa",
-              "thisTitle": "〜ない限り",
-              "diff": "Con ない限り, la segunda parte puede ser afirmativa o negativa; con ないことには, la segunda parte siempre es un resultado negativo o desfavorable.",
+              "thisTitle": "〜ない限り（a menos que…）",
+              "diff": "ないことには recalca «primero hay que dar este paso», y la segunda parte tiene que ser negativa o desfavorable; con ない限り la segunda parte puede ser afirmativa o negativa.",
               "this": [
                 {
-                  "tag": "Lo segundo puede ser afirmativo",
-                  "tr": "Mientras no llueva, el partido se jugará según lo previsto."
+                  "tag": "A menos que · Segunda parte afirmativa o negativa",
+                  "tr": "A menos que vea el producto en persona, no puedo decidir si comprarlo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Lo segundo debe ser negativo",
-                  "tr": "Si no lo veo con mis propios ojos, no puedo decir nada."
+                  "tag": "Requisito previo · Segunda parte negativa",
+                  "tr": "Sin ver antes el producto en persona, no puedo decidir si comprarlo."
                 }
               ],
               "wrong": {
                 "why": "Tras ないことには la segunda parte tiene que ser negativa o desfavorable"
               },
-              "explain": "Fíjate en la segunda parte: tras ないことには solo pueden ir resultados negativos o desfavorables como 「〜ない」「始まらない」「無理だ」, y es más bien hablado; tras ない限り puede ir un plan afirmativo (予定通り行う), y es más escrito."
+              "explain": "Si la segunda parte es negativa (決められない), valen las dos: ないことには recalca que lo primero es un requisito previo —sin hacerlo antes no hay nada que hacer— y es frecuente al hablar; ない限り solo dice «a menos que ocurra esto». Si la segunda parte es un plan afirmativo, solo vale ない限り (雨が降らない限り、試合は予定通り行う)."
             }
           ]
         }
@@ -27096,7 +27118,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「限る」: «trazar un límite, un ámbito»",
+          "note": "Ambas vienen de 「限る」: en origen, «trazar un límite, un ámbito»",
           "items": [
             {
               "id": "kagiri",
@@ -27114,47 +27136,31 @@
                   "tr": "Mientras yo siga vivo, mantendré abierta esta tienda."
                 }
               ],
-              "explain": "Fíjate en el verbo que va delante de 「限り」: verbos de «obtener información» como 知る、調べる、聞く、見る, a menudo seguidos de 「では」 → por lo que…, con tono prudente; estados como 生きている、元気な → mientras ese estado dure, se cumple lo segundo, y la segunda parte suele ser una decisión o un juicio."
+              "explain": "「限る」 significa en origen trazar un límite. Si lo trazas alrededor de lo que sabes o has averiguado (知っている限りでは): el juicio solo vale dentro, fuera no puedes asegurar nada → por lo que sé; si lo trazas alrededor de un estado que continúa (生きている限り): mientras sigas dentro, lo segundo se cumple siempre → mientras…. Para distinguirlas, mira el verbo de delante: verbos de obtener información como 知る、調べる、聞く、見る, a menudo seguidos de 「では」 → por lo que…; estados como 生きている、続く → mientras…, y la segunda parte suele ser una decisión o un juicio."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas sirven para indicar en qué se basa un juicio",
+          "note": "Ambas significan «a juzgar por…»",
           "items": [
             {
-              "id": "ni-yoru-to",
-              "diff": "Con 限りでは el hablante juzga dentro de lo poco que él mismo conoce; によると solo indica la fuente de la información, y suele ir con 「そうだ」「らしい」.",
-              "this": [
-                {
-                  "tag": "Alcance propio · juicio",
-                  "tr": "Por lo que he investigado, este restaurante tiene buena fama."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Fuente · lo que se cuenta",
-                  "tr": "Según una revista, este restaurante tiene buena fama."
-                }
-              ],
-              "explain": "Fíjate en lo que va delante y al final: delante de 限りでは va una acción propia (調べた、知っている), al final va el juicio propio, y se insinúa «fuera de esto no me atrevo a decir»; delante de によると／によれば va la fuente (雑誌、ニュース), al final suele haber 「そうだ」「らしい」, y solo se transmite lo que se ha oído."
-            },
-            {
               "id": "kara-miru-to",
-              "diff": "限りでは subraya «solo dentro de lo que yo he visto»; から見ると es «visto desde cierto ángulo o postura».",
+              "title": "〜から見ると（a juzgar por…）",
+              "diff": "限りでは juzga solo dentro de lo que has visto y deja margen de duda; から見ると usa lo que has visto como base para sacar una conclusión.",
               "this": [
                 {
-                  "tag": "Alcance limitado · prudente",
-                  "tr": "Por lo que he visto, no había ningún problema en particular."
+                  "tag": "Solo dentro de lo visto · Prudente",
+                  "tr": "Por lo que he visto en los resultados de la encuesta, la satisfacción de los clientes es alta."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cierto ángulo · postura",
-                  "tr": "A ojos de los expertos, este plan tiene muchos problemas."
+                  "tag": "Base → Deducción",
+                  "tr": "A juzgar por los resultados de la encuesta, la satisfacción de los clientes parece alta."
                 }
               ],
-              "explain": "Las dos oraciones tienen 「見る」; fíjate en lo que va delante: experiencia propia del hablante (私が見た) + 限りでは → alcance limitado, tono prudente; sustantivo (専門家、子ども、データ) + から見ると → se juzga desde ese ángulo. Lo mismo vale para からすると."
+              "explain": "Las dos frases juzgan a partir de los resultados de la encuesta. 限りでは recalca «solo en lo que yo he visto»: fuera de eso no se garantiza nada, con tono prudente; から見ると toma los resultados como base para una deducción, y la frase suele terminar en 「ようだ」 o 「だろう」. Cuando quieres decir «solo he visto esto, no puedo hablar de todo», usa 限りでは."
             }
           ]
         }
@@ -27165,15 +27171,15 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「兼ねる」: su sentido original es «compaginar dos cosas», y de ahí «difícil compaginar → difícil de…»",
+          "note": "Ambas vienen de 「兼ねる」: en origen, «ocuparse de dos cosas a la vez»; no poder con ambas → difícilmente… (かねる); con negación → muy posiblemente… (かねない)",
           "items": [
             {
               "id": "kaneru",
               "diff": "かねない es «es muy posible que (pase algo malo)»; かねる es «difícilmente…, no poder…», muy usado para rechazar con cortesía.",
               "this": [
                 {
-                  "tag": "Negativo → puede que pase",
-                  "tr": "Si seguimos así, podría acabar en un accidente grave."
+                  "tag": "Forma negativa → Muy posiblemente",
+                  "tr": "Si sigues durmiendo poco, podrías acabar enfermando."
                 }
               ],
               "that": [
@@ -27182,7 +27188,7 @@
                   "tr": "Lo sentimos mucho, pero no podemos atender esa petición."
                 }
               ],
-              "explain": "Solo mira si al final hay 「ない」: かねる = difícil de hacer, así que かねます es un «no puedo» cortés; かねない = «no es imposible», es decir, «es muy posible que…», y solo se dice de malos resultados. Truco: かねます = no se puede; かねません = puede pasar."
+              "explain": "「兼ねる」 significa en origen que una persona se ocupa de dos cosas a la vez. No poder con ambas → 「〜かねる」 = difícil de hacer aunque quieras, y 「〜かねます」 se convirtió en una negativa cortés (応じかねます = no podemos atenderlo); al añadir la negación 「ない」 → «no es que no pueda» = «no es imposible que pase», así que 「〜かねない」 significa «muy posiblemente (algo malo)». Para distinguirlas basta con mirar la terminación: かねます = no se puede; かねない／かねません = muy posiblemente."
             }
           ]
         },
@@ -27262,41 +27268,25 @@
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan «difícil de…»",
+          "note": "Ambas significan «difícil de… (aceptar) emocionalmente»",
           "items": [
             {
               "id": "gatai",
-              "diff": "かねる es no poder hacer algo por la propia posición, y se usa a menudo para rechazar con cortesía; がたい valora que algo «es difícil de…».",
+              "thisTitle": "〜かねる（difícil de aceptar）",
+              "diff": "かねる es el hablante diciendo con cortesía «no puedo aceptarlo»; がたい valora la cosa en sí como «difícil de…», y es más bien formal y escrito.",
               "this": [
                 {
-                  "tag": "Posición · rechazo cortés",
-                  "tr": "Lo sentimos mucho, pero no podemos aceptar esas condiciones."
+                  "tag": "Expresa la propia postura",
+                  "tr": "Me cuesta aceptar esa explicación."
                 }
               ],
               "that": [
                 {
-                  "tag": "Valoración · difícil de aceptar",
-                  "tr": "Esas condiciones son muy difíciles de aceptar."
+                  "tag": "Valora la cosa · Escrito",
+                  "tr": "Esa explicación es difícil de aceptar."
                 }
               ],
-              "explain": "Fíjate en el contexto: rechazar al otro cara a cara en los negocios (お受けしかねます、お答えしかねます) → かねる, con el sentido de «quisiera, pero desde mi posición no puedo»; expresar lo que uno siente o cómo valora algo (受け入れがたい、信じがたい) → がたい."
-            },
-            {
-              "id": "nikui",
-              "diff": "かねます expresa con cortesía «no poder hacerlo», y en realidad es un rechazo; にくい solo dice que algo cuesta hacerlo.",
-              "this": [
-                {
-                  "tag": "Rechazo cortés",
-                  "tr": "Lo sentimos mucho, pero no podemos responder a esa pregunta."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Algo difícil de responder",
-                  "tr": "Esa pregunta es un poco difícil de responder, ¿eh?"
-                }
-              ],
-              "explain": "Fíjate en el contexto y el significado: decirle a un cliente 「申し訳ございませんが、〜かねます」 significa «no podemos», y es un rechazo indirecto; si a uno le cuesta pero aun así es posible hacerlo (答えにくい、読みにくい) → にくい. Ojo: かねます es afirmativo, pero significa «no poder»."
+              "explain": "Las dos frases dicen «esta explicación es difícil de aceptar». かねる expresa la postura del propio hablante, normalmente como 「〜かねます」, una forma cortés de decir «no puedo…» a la cara; がたい valora la cosa en sí (a cualquiera le costaría…), es más bien escrito y a menudo va delante de un sustantivo (信じがたい話、許しがたい行為). Para responder directamente a alguien, usa かねます."
             }
           ]
         }
@@ -27307,64 +27297,50 @@
       "groups": [
         {
           "kind": "look",
-          "note": "からいうと ↔ からといって: las dos se forman con 「から」 y 「言う」, pero significan cosas totalmente distintas",
+          "note": "からいって ↔ からといって: solo se diferencian en un 「と」",
           "items": [
             {
               "id": "kara-to-itte",
-              "diff": "からいうと es «en cuanto a…, desde el punto de vista de…», y presenta un criterio de juicio; からといって es «no por… necesariamente…», y detrás suele haber una negación.",
+              "title": "〜からといって（que… no quiere decir que…）",
+              "diff": "からいって significa «a juzgar por…», y le sigue un juicio; からといって significa «que… no quiere decir que…», y suele seguirle una negación.",
               "this": [
                 {
-                  "tag": "Sustantivo → criterio",
-                  "tr": "Por su nivel, él debería ganar el campeonato."
+                  "tag": "Sustantivo → Juicio",
+                  "tr": "A juzgar por estas notas, aprobar es seguro."
                 }
               ],
               "that": [
                 {
-                  "tag": "Oración → no por eso",
-                  "tr": "Tener nivel no garantiza ganar el campeonato."
+                  "tag": "Oración → No necesariamente",
+                  "tr": "Que tengas buenas notas no quiere decir que vayas a aprobar."
                 }
               ],
-              "explain": "Fíjate en lo que va delante de 「から」 y en la segunda parte: directamente tras un sustantivo (実力、立場、経験) → からいうと, y detrás va el juicio del hablante; tras una oración completa (実力がある) → からといって, y detrás suele ir una negación como 「とは限らない」「わけではない」. Lo mismo vale para からいえば."
+              "explain": "Solo se diferencian en un 「と」; mira lo que va delante de 「から」: un sustantivo directamente (この成績) + からいって → a juzgar por…, seguido del juicio del hablante; una oración completa (成績がいい) + からといって → que… no quiere decir que…, normalmente seguido de 「とは限らない」 o 「わけではない」."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas sirven para indicar una postura o un punto de vista: «visto desde…, para…»",
+          "note": "Ambas significan «desde el punto de vista de…»",
           "items": [
             {
               "id": "kara-miru-to",
-              "diff": "Delante de からいうと van criterios como 「品質・立場・経験」; からすると también admite personas, con el sentido de «a ojos de alguien».",
+              "title": "〜からすると（desde el punto de vista de…）",
+              "thisTitle": "〜からいうと（desde el punto de vista de…）",
+              "diff": "からすると puede ir directamente tras una persona; からいうと con una persona suele necesitar 「〜の立場から」.",
               "this": [
                 {
-                  "tag": "Criterio abstracto",
-                  "tr": "En cuanto a calidad, este precio es barato."
+                  "tag": "〜の立場から",
+                  "tr": "Desde el punto de vista de un extranjero, las indicaciones de esta estación son difíciles de entender."
                 }
               ],
               "that": [
                 {
-                  "tag": "Persona · a ojos de alguien",
-                  "tr": "A ojos de los padres, que un hijo viva solo es motivo de preocupación."
+                  "tag": "Directamente tras una persona",
+                  "tr": "Para un extranjero, las indicaciones de esta estación son difíciles de entender."
                 }
               ],
-              "explain": "Fíjate en el sustantivo que va delante: con «criterios o puntos de vista» como 品質、立場、経験 valen las dos; si es una persona (親、外国人) y se quiere decir «a ojos de alguien», se usa からすると／から見ると; からいうと normalmente no va tras personas."
-            },
-            {
-              "id": "ni-totte",
-              "diff": "にとって va con personas u organizaciones y dice «para alguien»; からいうと va con criterios o puntos de vista y dice «desde cierto aspecto».",
-              "this": [
-                {
-                  "tag": "Criterio, punto de vista",
-                  "tr": "Por experiencia, este método es el mejor."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Persona → para alguien",
-                  "tr": "Para mí, la familia es lo más importante."
-                }
-              ],
-              "explain": "Fíjate en el sustantivo que va delante: personas, empresas o países (私、子ども、会社) + にとって, y detrás una valoración como 「大切だ、難しい、ありがたい」; criterios de juicio como 経験、立場、点 + からいうと."
+              "explain": "Las dos frases significan lo mismo; mira lo que va delante de 「から」: からすると／から見ると pueden ir directamente tras una persona (外国人、親); からいうと con una persona suele necesitar 「〜の立場から」 o 「〜の観点から」 (外国人の立場から), y va más a menudo tras criterios de juicio como 経験 o 品質."
             }
           ]
         }
@@ -27375,7 +27351,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Todas se apoyan en la partícula enfática 「こそ」, «precisamente esto, y no otra cosa»; unida a から／て／ば, enfatiza respectivamente una causa o una condición",
+          "note": "Ambas vienen de la partícula enfática 「こそ」: en origen, «precisamente esto y no otra cosa»",
           "items": [
             {
               "id": "koso",
@@ -27393,7 +27369,13 @@
                 }
               ],
               "explain": "こそ ya significa por sí misma «precisamente esto»: unida a una expresión de tiempo (今年こそ) es «esta vez sí»; solo tras el 「から」 de causa se convierte en «precisamente porque…». Mira si delante de こそ va 「から」."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "からこそ ↔ てこそ: solo cambia 「から」 por 「て」; una significa «precisamente porque…» y la otra «solo si…»",
+          "items": [
             {
               "id": "te-koso",
               "diff": "からこそ da la causa de un hecho concreto: «precisamente porque…»; てこそ da la condición de una verdad general: «solo si…».",
@@ -27410,7 +27392,13 @@
                 }
               ],
               "explain": "Fíjate en la forma del verbo y el tiempo: forma た + からこそ, y detrás un resultado ya ocurrido (合格できた) → explica la causa; forma て + こそ, y detrás una verdad general (合格できる、意味がある) → solo cumpliendo esa condición se consigue."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "note": "Ambas significan «precisamente porque…»",
+          "items": [
             {
               "id": "ba-koso",
               "diff": "Las dos significan «precisamente porque…»; ばこそ es una forma escrita y algo anticuada; en el día a día se dice からこそ.",
@@ -27426,7 +27414,10 @@
                   "tr": "Precisamente porque piensa en su hijo, es estricto con él."
                 }
               ],
-              "explain": "Las dos oraciones significan lo mismo; fíjate en la unión y el registro: ばこそ va tras la forma condicional (思え + ばこそ) y aparece sobre todo en textos y discursos; からこそ va con la forma simple (思う + からこそ) y es frecuente tanto al hablar como al escribir."
+              "wrong": {
+                "why": "ばこそ debe ir tras la forma condicional en ば: 思え + ばこそ"
+              },
+              "explain": "Las dos frases significan lo mismo. En el habla y la escritura cotidianas se usa からこそ; ばこそ es una expresión escrita y formal, frecuente en artículos, discursos y saludos formales (皆様の支えがあればこそです), con un toque algo anticuado. También se unen de forma distinta: ばこそ va tras la forma condicional en ば (思え + ばこそ) y からこそ tras la forma simple (思う + からこそ)."
             }
           ]
         }
@@ -27437,28 +27428,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas expresan «estar compuesto de…, estar hecho de…»",
+          "note": "Ambas significan «estar compuesto de…»",
           "items": [
             {
               "id": "de-kara-tsukuru",
-              "diff": "からなる dice de qué partes (miembros, capítulos, componentes) se compone un todo; から作る／で作る dice con qué materia prima o material se hace algo.",
+              "title": "〜からできている（estar compuesto de）",
+              "diff": "からなる es más bien escrito y también sirve para la composición de grupos de personas o capítulos; からできている es la expresión cotidiana, sobre todo para las partes o materiales de que está hecha una cosa.",
               "this": [
                 {
-                  "tag": "Varias partes → composición",
-                  "tr": "Este equipo está formado por cinco personas."
+                  "tag": "Escrito · Describe la estructura",
+                  "tr": "Esta tarta consta de tres capas."
                 }
               ],
               "that": [
                 {
-                  "tag": "から · materia prima (irreconocible)",
-                  "tr": "El sake japonés se elabora con arroz."
-                },
-                {
-                  "tag": "で · material (reconocible)",
-                  "tr": "Esta mesa está hecha de madera."
+                  "tag": "Oral · De qué está hecha una cosa",
+                  "tr": "Esta tarta está hecha de tres capas."
                 }
               ],
-              "explain": "Fíjate en el sustantivo y el verbo: número de personas, capítulos o varios componentes (５人、三章) + からなる, que habla de la composición de un todo y es más bien escrito; para decir «con qué se hace» hay que usar 作る: materia prima (米、牛乳) + から作る, cuando en el producto ya no se reconoce la forma original; material reconocible (木、紙) + で作る."
+              "explain": "Las dos frases dicen «la tarta consta de tres capas». からなる es más bien escrito y objetivo, frecuente en manuales y noticias, y también sirve para la composición de grupos de personas o capítulos (十人からなる委員会、三部からなる小説); からできている es la expresión cotidiana, sobre todo para las partes o materiales de que está hecha una cosa concreta, y no se suele usar para la composición de un grupo de personas."
             }
           ]
         }
@@ -27530,31 +27518,8 @@
       "id": "kara-shite",
       "groups": [
         {
-          "kind": "look",
-          "note": "からして ↔ からすると: las dos son 「から + する」",
-          "items": [
-            {
-              "id": "kara-miru-to",
-              "title": "〜からすると",
-              "diff": "Persona + からして es «hasta el propio… (ya no digamos los demás)»; persona + からすると es «a ojos de alguien».",
-              "this": [
-                {
-                  "tag": "Hasta el propio…",
-                  "tr": "En esta empresa ni siquiera el presidente es puntual (ya no digamos los demás)."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "A ojos de…",
-                  "tr": "A ojos del presidente, que los empleados lleguen tarde debe de ser imperdonable."
-                }
-              ],
-              "explain": "Delante va el mismo 「社長」; fíjate en la segunda parte: si habla de cómo se comporta el propio presidente (時間を守らない), insinuando «ya no digamos los demás» → からして; si habla de la opinión o el juicio del presidente (許せないだろう) → からすると. Eso sí, con el sentido de «a juzgar por…» (口ぶりからして／口ぶりからすると), las dos son intercambiables."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
+          "sense": 1,
           "note": "Las dos ponen un ejemplo e insinúan «ya no digamos lo demás»",
           "items": [
             {
@@ -27590,6 +27555,34 @@
                 }
               ],
               "explain": "Las dos oraciones significan lo mismo; fíjate en el registro: にしてからが aparece sobre todo en textos, y delante casi siempre va una persona, precisamente «la que más debería dar ejemplo»; からして se usa al hablar y por escrito, y delante también puede ir una cosa, como un nombre o la ropa."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Ambas significan «deducir a partir de…»",
+          "items": [
+            {
+              "id": "tokoro-wo-miru-to",
+              "thisTitle": "〜からして（a juzgar por…）",
+              "diff": "からして va tras un sustantivo (表情、様子); ところを見ると va tras una oración que describe la situación.",
+              "this": [
+                {
+                  "tag": "Sustantivo + からして",
+                  "tr": "A juzgar por su expresión, parece que le ha pasado algo bueno."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Oración + ところを見ると",
+                  "tr": "Viéndole sonreír así, parece que le ha pasado algo bueno."
+                }
+              ],
+              "wrong": {
+                "why": "ところを見ると debe ir tras una oración (にやにやしている), no directamente tras un sustantivo"
+              },
+              "explain": "Las dos frases deducen algo a partir de lo que se ve, y suelen terminar en 「らしい」 o 「ようだ」. Mira lo que va delante: un sustantivo (表情、口ぶり、様子) + からして; una oración entera que describe la situación (にやにやしている、返事が来ない) + ところを見ると."
             }
           ]
         }
