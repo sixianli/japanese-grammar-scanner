@@ -25461,28 +25461,11 @@
       "groups": [
         {
           "kind": "root",
-          "note": "All come from 「だけ（丈）」 — “a corresponding amount or degree”",
+          "note": "Both come from 「だけ（丈）」 — originally “length, height”, extended to “the amount or degree that matches…”",
           "items": [
             {
-              "id": "dake-atte",
-              "diff": "だけのことはある sits at the end: result first, then the verdict; だけあって sits mid-sentence: identity first, then the result.",
-              "this": [
-                {
-                  "tag": "Sentence-final · Result first",
-                  "tr": "This food is delicious. Just what you'd expect from a pro."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Mid-sentence · Identity first",
-                  "tr": "As you'd expect from a professional, the food is delicious."
-                }
-              ],
-              "explain": "Same meaning — look at the position and order: first state the result you see (おいしいね), then add 「〜だけのことはある」 as your verdict; 「identity＋だけあって、result」 says it all in one sentence. Both often go with 「さすが」."
-            },
-            {
               "id": "dake-ni",
-              "diff": "だけのことはある is only for praise and approval; だけに sits mid-sentence and says “precisely because…, all the more…”, and can express regret or disappointment too.",
+              "diff": "だけのことはある is “it really has the weight to match” → worth it, lives up to its name; だけに is “precisely because it has that weight” → all the more…, and can express regret too.",
               "this": [
                 {
                   "tag": "Sentence-final · Worth it",
@@ -25495,31 +25478,57 @@
                   "tr": "Precisely because we'd struggled so hard to climb up, it was all the more disappointing that the fog hid everything."
                 }
               ],
-              "explain": "Look at the position and the verdict: だけのことはある goes at the end and says “it was worth it / it lives up to its name” about a good result you've already seen; だけに goes mid-sentence and is followed by an “all the more…” feeling, which can also be regret or disappointment (残念だった)."
+              "explain": "「だけ」 was originally 「丈」, meaning length or height, and came to mean “the amount or degree that matches…”. だけのことはある ＝ “it really has the weight to match”: you climbed hard, and the view is worth that effort → worth it, lives up to its name; it goes at the end of the sentence and is only used for good results. だけに ＝ “precisely because it has that weight”: the more you put in, the stronger the feeling that follows → all the more…; it goes mid-sentence and can also express regret or disappointment (残念だった)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both mean “the effort or reputation matches the result”",
+          "sense": 1,
+          "note": "Both mean “just as you'd expect of…”",
           "items": [
             {
-              "id": "kai-ga-aru",
-              "title": "〜かいがある (not in vain)",
-              "diff": "だけのことはある can also judge an identity or reputation as “living up to its name”; かいがある only says your own effort “wasn't wasted”.",
+              "id": "dake-atte",
+              "title": "〜だけあって (just as you'd expect)",
+              "diff": "だけのことはある usually goes at the end: first the result, then the exclamation; だけあって goes mid-sentence: first the identity, then the result.",
               "this": [
                 {
-                  "tag": "Lives up to its name",
-                  "tr": "This is really good. No wonder it's such a popular place."
+                  "tag": "End of sentence · Result first",
+                  "tr": "This dish is really delicious. Just what you'd expect from a pro."
                 }
               ],
               "that": [
                 {
-                  "tag": "Effort → Payoff",
-                  "tr": "Studying late every night paid off — I finally passed."
+                  "tag": "Mid-sentence · Identity first",
+                  "tr": "Just as you'd expect from a professional chef, this dish is really delicious."
                 }
               ],
-              "explain": "Look at what comes before: before かいがある there can only be effort (勉強した、待った、努力の), saying “it wasn't wasted”; だけのことはある can also follow an identity, reputation or price (人気店、プロ、高い), judging that it “truly lives up to its name / is worth the money”."
+              "explain": "Same meaning, “just as you'd expect”; look at the order: first the result you see (本当においしい), then an evaluation added at the end → だけのことはある, with a stronger exclamatory tone; first the identity, then the result in the same sentence → だけあって. Both often go with 「さすが」, and だけのことはある can also go mid-sentence, as in 「さすがプロだけのことはあって、…」."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “the effort was not wasted”",
+          "items": [
+            {
+              "id": "kai-ga-aru",
+              "title": "〜かいがある (not in vain)",
+              "diff": "だけのことはある leans toward evaluation: the result matches the effort; かいがある leans toward feeling: the effort wasn't wasted, and you're glad.",
+              "this": [
+                {
+                  "tag": "Evaluation · Worth it",
+                  "tr": "We queued for three whole hours, and it lived up to it — it was really delicious."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Feeling · Not wasted",
+                  "tr": "Queuing for three whole hours paid off — it was really delicious."
+                }
+              ],
+              "explain": "Both sentences work, with a different focus: だけのことはある evaluates as if from the outside — the result matches what was put in (三時間も並んだ), it was worth it; かいがある describes your own feeling — the effort finally paid off, and you're glad. To say the effort was wasted, use かい (並んだかいがなかった、かいもなく); だけのことはある isn't used for that."
             }
           ]
         }
@@ -25548,40 +25557,6 @@
                 }
               ],
               "explain": "Look at what the thing is: liquids and powders like sweat, blood, oil or mud stuck to the body → まみれ (「泥」 works with both); countable things scattered everywhere, like wounds, holes or mistakes → usually だらけ (傷だらけ、穴だらけ、間違いだらけ)."
-            },
-            {
-              "id": "zukume",
-              "diff": "だらけ is mostly about unwanted things and sounds disapproving; ずくめ means “nothing but”, often used for good things or being dressed all in one color.",
-              "this": [
-                {
-                  "tag": "Messy · Disapproving",
-                  "tr": "This year was one failure after another."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nothing but · Good things",
-                  "tr": "This year was one good thing after another."
-                }
-              ],
-              "explain": "Look at whether it's good or bad: unwanted things like failures, mistakes or debts → だらけ; good or happy things (いいことずくめ), or one color from head to toe (黒ずくめ) → ずくめ. ずくめ has no sense of “messy”."
-            },
-            {
-              "id": "bakari-only",
-              "diff": "ばかり means “only this one kind, nothing else”; だらけ means “so many they're everywhere”, with a sense of mess and dislike.",
-              "this": [
-                {
-                  "tag": "So many they're everywhere",
-                  "tr": "This essay is full of mistakes."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Only this one kind",
-                  "tr": "This class is all girls."
-                }
-              ],
-              "explain": "Look at whether it's about “many” or “only”: だらけ says something is so plentiful it's everywhere (mistakes throughout the essay), almost always bad things; ばかり says that within a range there's only this one kind and nothing else, and works with neutral things like 女の子 — 「女の子だらけ」 would sound exaggerated and chaotic."
             }
           ]
         }
@@ -25592,11 +25567,11 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「しか〜ない」 — “nothing except…”",
+          "note": "Both come from 「しか」 — originally “except for…”, always followed by a negative",
           "items": [
             {
               "id": "shika-nai",
-              "diff": "しか〜ない limits a quantity or range: “only…”; でしかない limits an identity or nature: “nothing more than…”.",
+              "diff": "しか〜ない limits a quantity or range: “only…”; でしかない uses 「で（＝is）」 to limit an identity or nature: “nothing more than…”.",
               "this": [
                 {
                   "tag": "Identity · Nothing more than",
@@ -25609,7 +25584,7 @@
                   "tr": "I only have 1,000 yen in my wallet."
                 }
               ],
-              "explain": "でしかない simply puts the copula 「で（＝is）」 inside 「しか〜ない」: “he is nothing except a child” ＝ he's merely a child. Look at what's before 「しか」: a quantity or thing (千円、水) → “only”; 「noun＋で」 → a judgment of identity or worth, with a “nothing special” tone."
+              "explain": "The basic meaning of 「しか」 is “except for…”, and it is always followed by a negative: “except for this, there is nothing”. When it limits a quantity or thing (千円しかない) → “only”; put the copula 「で（＝is）」 in, and 「子どもでしかない」 ＝ “he is nothing except a child” → “nothing more than”, used to judge identity or worth with a “nothing special” tone. Look at what comes before 「しか」: a quantity or thing → “only”; noun＋で → “nothing more than”."
             },
             {
               "id": "shika-nai-no-choice",
@@ -25626,7 +25601,10 @@
                   "tr": "I have no money, so I have no choice but to give up my dream."
                 }
               ],
-              "explain": "Look at what's before 「しかない」: a verb in dictionary form (諦める、待つ) → there's no other way but to do this ＝ have no choice but to; noun＋で (夢で、言い訳で) → it's nothing except this ＝ nothing more than. When reading, don't mistake 「でしかない」 for “have no choice but”."
+              "wrong": {
+                "why": "After a verb, しかない follows directly, with no 「で」"
+              },
+              "explain": "It's the same 「しか」 (“except for…”) ＋ negative: after a verb in dictionary form (諦める、待つ), it's “there's no other way except doing this” → “have no choice but to”; after noun＋で (夢で、言い訳で), it's “it is nothing except this” → “nothing more than”. When reading, don't mistake 「でしかない」 for “have no choice but”."
             }
           ]
         },
@@ -25667,7 +25645,8 @@
           "items": [
             {
               "id": "mai",
-              "diff": "まい on its own means “probably won't… / will never…”; ではあるまいか adds the rhetorical 「か」 and becomes a tentative claim: “isn't it perhaps…?”.",
+              "title": "〜まい (probably won't…)",
+              "diff": "まい on its own is a negative guess, “probably won't…”; ではあるまいか adds the rhetorical 「か」 and becomes a soft assertion, “isn't it perhaps…?”.",
               "this": [
                 {
                   "tag": "Add か → Tentative claim",
@@ -25677,7 +25656,7 @@
               "that": [
                 {
                   "tag": "On its own → Negative guess",
-                  "tr": "That person probably won't ever come again."
+                  "tr": "Judging by how things look, he probably won't come anymore."
                 }
               ],
               "explain": "「まい」 is a negative guess: 「来るまい」 ＝ “probably won't come”. 「ではあるまい」 ＝ “it probably isn't…”; add the rhetorical 「か」 — “isn't it…?” — and it becomes a tentative positive claim: “it's probably…”. Check the end of the sentence for 「か」: none → negative; there → actually affirming."
@@ -25688,7 +25667,7 @@
               "this": [
                 {
                   "tag": "Sentence-final · Guess",
-                  "tr": "Isn't this plan perhaps a little unrealistic?"
+                  "tr": "Isn't that perhaps overthinking it a little?"
                 }
               ],
               "that": [
@@ -25756,7 +25735,7 @@
               "this": [
                 {
                   "tag": "Sentence-final · No room for it",
-                  "tr": "I'm so busy with work that a trip is out of the question."
+                  "tr": "With a parent in the hospital, a trip is out of the question."
                 }
               ],
               "that": [
@@ -25794,24 +25773,24 @@
         },
         {
           "kind": "meaning",
-          "note": "Both mean “no room for it right now; this isn't the time to…”",
+          "note": "Both mean “now is not the time to…”",
           "items": [
             {
               "id": "te-iru-baai-janai",
-              "diff": "どころではない focuses on “I have no room for it”; ている場合じゃない is often used to warn or urge: “this is no time to be doing that”.",
+              "diff": "どころじゃない describes a situation too tight to leave any room for it; ている場合じゃない is the speaker's judgment that “this shouldn't be done now”, often urging others or scolding oneself.",
               "this": [
                 {
-                  "tag": "No room for it",
-                  "tr": "I've got a fever — studying is out of the question."
+                  "tag": "Situation · No room",
+                  "tr": "The report is due tomorrow, so games are out of the question."
                 }
               ],
               "that": [
                 {
-                  "tag": "Warning · Urging",
-                  "tr": "The exam is almost here — this is no time to be playing games."
+                  "tag": "Judgment · Shouldn't be doing it",
+                  "tr": "The report is due tomorrow, so this is no time to be playing games."
                 }
               ],
-              "explain": "Look at the tone and what it attaches to: どころではない usually follows a noun (勉強、旅行、花見), saying “the situation doesn't allow it, I can't handle it”; ている場合じゃない follows an ongoing action (している、寝ている), often said to others or yourself as “stop that and get to what matters”, very colloquial."
+              "explain": "The two sentences mean the same, with a different focus: どころじゃない talks about the situation — things are too tight, there's simply no room to do it, in a matter-of-fact, resigned tone; ている場合じゃない is the speaker's judgment — this shouldn't be done now, with a tone of urging or self-reproach, often followed by 「早くやろう」. The connection differs too: どころじゃない usually follows a noun or a verb in dictionary form (ゲーム、遊ぶ), while ている場合じゃない follows 「〜ている」."
             },
             {
               "id": "te-wa-irarenai",
@@ -25839,7 +25818,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「ところ（所）」 — here meaning “point, extent”",
+          "note": "Both come from 「ところ（所）」 — originally “place”, extended to “the point” a matter has reached",
           "items": [
             {
               "id": "dokoro-dewa-nai",
@@ -25856,54 +25835,56 @@
                   "tr": "I'm so busy with work that a trip is out of the question."
                 }
               ],
-              "explain": "Look at what follows 「どころ」: if 「か、」 is followed by a completely opposite, even more extreme fact → “far from…, actually…”; if 「ではない。」 ends the sentence → you have no room to do this right now. Literally both say “not at the point of…” — one carries on, the other stops there."
+              "explain": "「ところ」 originally means “place”, and came to mean “the point” a matter has reached. どころか ＝ “how could it be at the point of…?”: it flatly denies the first part, then goes on to state an opposite or more extreme fact (毎日残業だ) → “far from…, actually…”; どころではない ＝ “it's not at a point where … is possible”: it stops there, meaning there's simply no room right now → “no time for…”. Look at what follows 「どころ」: after 「か、」 the sentence continues; with 「ではない。」 the sentence ends."
             }
           ]
         },
         {
           "kind": "look",
-          "note": "どころ ↔ ところ, just one voicing mark apart",
+          "note": "どころか ↔ ところが — the only difference is where the dakuten goes: ど…か ↔ と…が",
           "items": [
             {
-              "id": "tokoro-da",
-              "diff": "どころか means “far from…, actually / not even…”; ところだ means “about to / just did”.",
+              "id": "tokoroga-conjunction",
+              "thisTitle": "それどころか",
+              "diff": "それどころか is “far from…, it's even more…”; ところが is “however, unexpectedly”.",
               "this": [
                 {
-                  "tag": "Far from… actually",
-                  "tr": "Far from finishing my homework, I haven't even started it."
+                  "tag": "どころか · Even worse",
+                  "tr": "The fever didn't go down. On the contrary, it went even higher."
                 }
               ],
               "that": [
                 {
-                  "tag": "Just finished",
-                  "tr": "I've just finished my homework."
+                  "tag": "ところが · Unexpectedly",
+                  "tr": "I took the medicine. However, the fever didn't go down."
                 }
               ],
-              "explain": "First check for the voicing mark: ど ≠ と. Then look at the structure: before どころか is an “expectation”, and after it a completely opposite or more extreme fact, so the sentence contrasts two halves; ところだ only says what point in time the action is at, and the sentence ends there."
+              "explain": "First look at where the dakuten is: 「ど」 at the start and a plain 「か」 → どころか; a plain 「と」 and 「が」 at the end → ところが. Then look at the context: ところが follows an expectation (you took medicine and expected to get better) and introduces an unexpected result (熱は下がらなかった); それどころか follows a fact that's already bad and pushes one step further, to something even more extreme (もっと上がった)."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both mean “not only…, but (even more)”",
+          "note": "Both mean “not only A — even B…”",
           "items": [
             {
               "id": "ba-kari-ka",
+              "title": "〜ばかりか (not only… but even)",
               "thisTitle": "〜どころか (let alone · not even)",
-              "diff": "どころか means “never mind A, not even B…”, often used to overturn the other person's assumption; ばかりか just calmly adds another layer.",
+              "diff": "どころか has an emphatic “the first part isn't even worth mentioning” tone and is common in speech too; ばかりか just calmly adds one more layer and leans written.",
               "this": [
                 {
-                  "tag": "Overturning an assumption · Never mind…",
-                  "tr": "“Can he write kanji?” “Never mind kanji, he can't even write hiragana.”"
+                  "tag": "First part not worth mentioning · Fine in speech",
+                  "tr": "Forget nighttime — around here it's dangerous even during the day."
                 }
               ],
               "that": [
                 {
-                  "tag": "Objective adding",
-                  "tr": "Not only can he not write kanji, he can't write hiragana either."
+                  "tag": "Calm addition · More written",
+                  "tr": "Around here it's dangerous not only at night but also during the day."
                 }
               ],
-              "explain": "Look for an assumption to overturn: the other person thinks “at least he can write kanji”, and you shoot it down with どころか — never mind A, not even the more basic B…, very common in speech; when you're just objectively stacking two facts, use ばかりか, which is more written. どころか can also introduce an opposite outcome (熱が下がるどころか上がった); ばかりか can't."
+              "explain": "Both sentences are fine; look at the tone: どころか brushes 「夜」 aside, as if saying “danger at night goes without saying”, and puts all the weight on the more surprising 「昼間も」; it's often used to overturn what the other person assumed (「夜は危ないの？」「夜どころか、昼間も危ないよ」) and is very common in speech. ばかりか simply adds the two facts together objectively, leans written, and is rarely used when answering someone."
             },
             {
               "id": "wa-oroka",
@@ -25931,44 +25912,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean “tend to…, be prone to…”",
+          "note": "Both mean “tend to…”",
           "items": [
             {
               "id": "yasui",
-              "diff": "やすい means “easy to do” or “likely to happen”, good or bad; がち means “tend to, often (do something undesirable)”, stressing frequency.",
+              "title": "〜やすい (easily happens)",
+              "diff": "がち says something actually happens again and again, often, and is only used for bad things; やすい says that under these conditions it is by nature likely to happen.",
               "this": [
                 {
-                  "tag": "Often · Something undesirable",
-                  "tr": "When I'm busy, I tend to skip meals."
+                  "tag": "Often · Bad things",
+                  "tr": "When I'm tired, I tend to make mistakes."
                 }
               ],
               "that": [
                 {
-                  "tag": "Easy to do",
-                  "tr": "This pen is easy to write with."
+                  "tag": "By nature · Likely to happen",
+                  "tr": "When you're tired, it's easy to make mistakes."
                 }
               ],
-              "wrong": {
-                "why": "がち doesn't mean “easy to do”"
-              },
-              "explain": "Ask whether it means “easy to handle”: easy to write, use or understand — this “easy to do” sense only works with やすい; がち says a person “tends to…” in some situation, mostly things they shouldn't do (食事を抜く、遅れる、休む)."
-            },
-            {
-              "id": "gimi",
-              "diff": "がち is about “frequency”: often…; 気味 is about “degree”: a bit… right now.",
-              "this": [
-                {
-                  "tag": "Often · Frequency",
-                  "tr": "She was often sick as a child."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "A bit · Degree",
-                  "tr": "I feel like I'm coming down with a bit of a cold today."
-                }
-              ],
-              "explain": "Look at the time words: something that recurs over a period, like 「子どもの頃」「冬になると」 → がち; a mild current state, with 「今日は」「最近少し」 → 気味 (風邪気味、疲れ気味、太り気味)."
+              "explain": "Both sentences work, but they look at different things: がち looks at what actually happens — it occurs again and again, often, with the speaker's negative judgment, and is only used for bad things (×成功しがち); やすい looks at the nature — under these conditions it's likely to happen, though it may not actually happen often. For the nature of an object itself, やすい is normally used (割れやすいコップ)."
             },
             {
               "id": "ppoi",
@@ -26060,12 +26022,12 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「掛け（かけ）」 — “an action just started or in progress”",
+          "note": "Both come from 「掛ける」 — originally “to hang, to put on”, extended to “to set about doing; to be partway through”",
           "items": [
             {
               "id": "kakeru-halfway",
               "title": "〜かける (about to · half-done)",
-              "diff": "帰りがけに means “on the way back (and while at it)”; 帰りかける means “about to leave, just starting to go back”.",
+              "diff": "帰りがけに is “on the way back (and while at it)”; 帰りかけた is “was about to leave, had just started to leave”.",
               "this": [
                 {
                   "tag": "On the way · While at it",
@@ -26078,64 +26040,33 @@
                   "tr": "Just as I was about to leave, the department head called me back."
                 }
               ],
-              "explain": "Just one voicing mark apart — the same 「掛け」: 〜かける means an action has just begun or is half done (帰りかける、読みかけの本); voiced as 「がけ」 it's fixed in a few words like 「帰りがけに／行きがけに／出がけに」, meaning on the way there or back or just as you head out, often followed by something done along the way."
+              "explain": "Both come from 「掛ける」: originally to hang or put something on, extended to “set about doing something”. 〜かける means the action has just been taken in hand and isn't finished → about to…, halfway through, so 「帰りかけたとき」 is often followed by something that interrupts it (部長に呼び止められた); when it joins the word before it to form a noun, it's read 「がけ」, fixed in a few words like 「帰りがけ・行きがけ・出がけ」, meaning the time when you're already going, returning or leaving → on the way, followed by something you do in passing (コンビニに寄った). Look at the form: 「がけに」 is noun＋に, while 「かけた／かける」 is a verb."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Both have to do with “on the way, while at it”",
+          "note": "Both mean “on the way there or back”",
           "items": [
             {
-              "id": "tsuide-ni",
-              "diff": "がけに is limited to going, returning or heading out; ついでに can follow all kinds of things, with the focus on “while you're at it”.",
-              "this": [
-                {
-                  "tag": "Only on the way there or back",
-                  "tr": "On my way home from work, I dropped into a bookstore."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Anything · While at it",
-                  "tr": "While I was out shopping, I dropped into a bookstore."
-                }
-              ],
-              "explain": "Look at what comes before: movement words like 「帰り」「行き」「出」 → がけに, meaning “on the way” in time; any activity like shopping, a walk or a business trip → ついでに (買い物のついでに、駅に行くついでに), the focus being “taking the chance to do something else too”."
-            },
-            {
               "id": "tochuu-de",
-              "diff": "途中で just objectively says “on the way”, and can also mean partway through something; がけに usually carries a sense of “doing something along the way”.",
+              "diff": "がけに only attaches to a few words like 「行き・帰り・通り」, works like a set phrase, and often implies doing something in passing; 途中で connects freely and simply says objectively “on the way”.",
               "this": [
                 {
-                  "tag": "On the way · Doing something",
-                  "tr": "On my way to school I mailed a letter."
+                  "tag": "Set phrase · In passing",
+                  "tr": "On my way to school, I dropped by the post office."
                 }
               ],
               "that": [
                 {
-                  "tag": "On the way · Something that happened",
-                  "tr": "On my way to school I got caught in the rain."
+                  "tag": "Free connection · Objective",
+                  "tr": "On the way to school, I stopped at the post office."
                 }
               ],
-              "explain": "Look at the second half: something you chose to do along the way (手紙を出した、寄った) → がけに sounds natural; something that happened to you (雨に降られた、事故を見た), or “partway through” (話の途中で) → use 途中で. 途中で also connects more freely: 行く途中、帰る途中、会議の途中."
-            },
-            {
-              "id": "gatera",
-              "diff": "がてら means “do A and do B at the same time”, where A is itself a purpose; がけに only marks the moment on the way there or back.",
-              "this": [
-                {
-                  "tag": "On the way somewhere",
-                  "tr": "On the way there I stopped by a bakery."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "The walk is a purpose too",
-                  "tr": "I took a walk and stopped by a bakery while I was at it."
-                }
-              ],
-              "explain": "Look at the word before: がてら follows something you want to do anyway (散歩、買い物、見物), combining two things, rather written; がけに only follows 「行き」「帰り」「出」, marking a point on the way, while the reason for going is something else."
+              "wrong": {
+                "why": "がけ only attaches to ます-stem forms like 「行き・帰り・通り」, not to the dictionary form"
+              },
+              "explain": "Both sentences work; look at how they connect and how they feel: がけに only attaches to a few ます-stem forms, 「行き」「帰り」「通り」 (行きがけに、帰りがけに), works like a set phrase, and often carries the sense of “doing something in passing”; 途中で can follow all kinds of movement (行く途中、帰る途中、通勤の途中), just says objectively that you're on the way, and can be followed both by things that happen to you and things you do along the way."
             }
           ]
         }
@@ -26146,41 +26077,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean “how something looks from the outside”",
+          "note": "Both mean “looks…”",
           "items": [
             {
               "id": "sou-da-appearance",
-              "diff": "〜げ mainly describes the feelings or demeanor people show, with a literary flavor; 〜そう is broad and works for people, things and the weather.",
+              "title": "〜そうだ (looks…)",
+              "diff": "〜げ is only used to describe the feelings and expressions people show, and leans written and literary; 〜そう is used in both speech and writing, and can also describe how things look.",
               "this": [
                 {
-                  "tag": "Someone's look · Written",
-                  "tr": "The children are playing happily."
+                  "tag": "Written · Literary",
+                  "tr": "My grandmother was gazing wistfully at the old photo."
                 }
               ],
               "that": [
                 {
-                  "tag": "How things look",
-                  "tr": "This cake looks delicious."
+                  "tag": "Fine in speech and writing",
+                  "tr": "My grandmother was looking at the old photo with a nostalgic look."
                 }
               ],
-              "explain": "For people's moods the two are often interchangeable (楽しげ／楽しそう、寂しげ／寂しそう), but げ is more written and common in novels; for things, the weather or what's about to happen (おいしそう、雨が降りそう、壊れそう), only そう works."
-            },
-            {
-              "id": "garu-third-person",
-              "diff": "〜げ is a feeling read from someone's face or manner; 〜がる is that feeling shown in actions or words.",
-              "this": [
-                {
-                  "tag": "Shows in the manner",
-                  "tr": "Mother said nothing, just smiled a lonely smile."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Shows in words and actions",
-                  "tr": "Mother kept saying 「もう帰るの？」 again and again — she clearly didn't want us to go."
-                }
-              ],
-              "explain": "Look at how the feeling is noticed: if nothing is said and it just shows in the expression or mood (何も言わず) → げ, subtle and literary; if it's clearly shown through words and actions (何度も言って、帰りたがる) → がる, often used to describe other people's feelings."
+              "explain": "When describing someone's expression, the two are often interchangeable (懐かしげ／懐かしそう、寂しげ／寂しそう); げ is more written, common in novels and essays and rarely heard in everyday speech. For how things look (このケーキはおいしそう), normally only そう is used; げ only describes the feelings and expressions people show."
             }
           ]
         }
