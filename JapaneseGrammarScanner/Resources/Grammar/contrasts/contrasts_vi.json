@@ -3511,41 +3511,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều là mẫu câu so sánh",
+          "note": "Đều diễn tả “nhất”",
           "items": [
             {
-              "id": "to-dochira",
-              "diff": "Từ ba thứ trở lên dùng 「の中で〜が一番」; chỉ có hai thứ thì hỏi 「どちらが」.",
+              "id": "hodo-wa-nai",
+              "title": "〜ほど〜はない（không có gì … bằng）",
+              "diff": "の中で〜が一番 khoanh phạm vi trước rồi khách quan chọn ra người đứng đầu; ほど〜はない không khoanh phạm vi, dùng phủ định để nói “không ai sánh bằng”, mang sự khen ngợi chủ quan mạnh mẽ của người nói.",
               "this": [
                 {
-                  "tag": "Từ ba trở lên · nhất",
-                  "tr": "Trong các loại trái cây, bạn thích nhất loại nào?"
+                  "tag": "Khoanh phạm vi · đứng đầu",
+                  "tr": "Trong gia đình, mẹ là người hiền nhất."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hai thứ · cái nào",
-                  "tr": "Táo và quýt, bạn thích cái nào hơn?"
+                  "tag": "Không ai sánh bằng · khen chủ quan",
+                  "tr": "Không có ai hiền bằng mẹ."
                 }
               ],
-              "explain": "Đếm số đối tượng được so sánh: 「果物」 là cả một nhóm lớn, có từ ba thứ trở lên → の中で〜が一番, khi hỏi dùng 「何／どれ」; chỉ có hai thứ là りんご và みかん → AとBとどちらが, trả lời bằng 「〜のほうが」."
-            },
-            {
-              "id": "yori-hou-ga",
-              "diff": "の中で〜が一番 là chọn cái đứng đầu trong một nhóm; より〜のほうが là so sánh hai thứ, B hơn A.",
-              "this": [
-                {
-                  "tag": "Trong một nhóm · nhất",
-                  "tr": "Trong các môn thể thao, tôi thích bóng đá nhất."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "So hai thứ · hơn",
-                  "tr": "So với bóng chày, tôi thích bóng đá hơn."
-                }
-              ],
-              "explain": "Xem có mấy đối tượng so sánh: 「スポーツの中で」 khoanh cả một nhóm lớn → 一番 (nhất); 「野球より」 chỉ lấy một thứ ra so → のほうが (hơn)."
+              "explain": "Cả hai câu đều nói mẹ hiền “nhất”. Xem câu có khoanh phạm vi trước hay không: có phạm vi như 「家族の中で」, dùng câu khẳng định 「〜が一番」 → nói khách quan ai đứng đầu trong phạm vi đó, cũng dùng được để hỏi (誰が一番〜？); không khoanh phạm vi, dùng phủ định 「〜ほど…はいない／はない」 → nói “không ai sánh bằng”, là đánh giá cao mang tính chủ quan của người nói, giọng điệu mạnh hơn."
             }
           ]
         }
@@ -3556,85 +3540,51 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Khi bổ nghĩa cho danh từ, đánh dấu chủ ngữ hay biến câu thành danh từ, đều chia nhau cùng một việc với 「の」",
+          "sense": 6,
+          "note": "Đều đánh dấu chủ ngữ trong mệnh đề bổ nghĩa cho danh từ",
           "items": [
             {
-              "id": "noun-modifying-clause",
-              "diff": "Danh từ bổ nghĩa cho danh từ phải thêm 「の」; động từ, tính từ đuôi い bổ nghĩa cho danh từ thì gắn trực tiếp, không thêm 「の」.",
-              "this": [
-                {
-                  "tag": "Danh từ＋の",
-                  "tr": "Đây là sách của tôi."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Động từ gắn trực tiếp",
-                  "tr": "Đây là cuốn sách tôi mua hôm qua."
-                }
-              ],
-              "wrong": {
-                "why": "Động từ bổ nghĩa cho danh từ thì không thêm 「の」"
-              },
-              "explain": "Xem từ đứng trước là loại từ gì: danh từ như 私、日本 → phải thêm 「の」; động từ, tính từ đuôi い như 買った、行く、高い → gắn trực tiếp vào danh từ. Trong tiếng Việt các trường hợp này đều có thể dùng chữ “của” hay “mà”, nên người học rất dễ thêm thừa 「の」. Thể ない, thể ている bổ nghĩa cho danh từ cũng gắn trực tiếp (行かない人、寝ている猫)."
-            },
-            {
-              "id": "na-adj-modify",
-              "diff": "Danh từ bổ nghĩa cho danh từ dùng 「の」; tính từ đuôi な bổ nghĩa cho danh từ dùng 「な」.",
-              "this": [
-                {
-                  "tag": "Danh từ＋の",
-                  "tr": "Đây là xe của Nhật."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tính từ な＋な",
-                  "tr": "Đây là một chiếc xe đẹp."
-                }
-              ],
-              "wrong": {
-                "why": "Tính từ đuôi な bổ nghĩa cho danh từ phải dùng 「な」"
-              },
-              "explain": "Trước tiên xác định từ phía trước là danh từ hay tính từ đuôi な: 日本、学校 là danh từ → の; きれい、静か、有名 là tính từ đuôi な → な. 「きれい」 tuy kết thúc bằng 「い」 nhưng lại là tính từ đuôi な, rất dễ viết nhầm thành 「きれいの」."
-            },
-            {
               "id": "ga-subject",
-              "title": "〜が（chủ ngữ）",
-              "diff": "Trong mệnh đề bổ nghĩa cho danh từ, chủ ngữ có thể dùng 「の」 thay cho 「が」; chủ ngữ của cả câu thì chỉ dùng được 「が」.",
+              "title": "〜が（chủ ngữ trong mệnh đề）",
+              "diff": "Trong mệnh đề bổ nghĩa cho danh từ, chủ ngữ dùng 「の」 hay 「が」 đều có nghĩa như nhau; の hơi trang trọng, nhẹ nhàng, が thông dụng hơn, trung tính.",
               "this": [
                 {
-                  "tag": "Trong mệnh đề · の＝が",
-                  "tr": "Đây là món ăn mẹ nấu."
+                  "tag": "Chủ ngữ trong mệnh đề · の (nhẹ nhàng)",
+                  "tr": "Đây là bức tranh anh trai tôi vẽ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Chủ ngữ cả câu · が",
-                  "tr": "Mẹ đã nấu món ăn."
+                  "tag": "Chủ ngữ trong mệnh đề · が (trung tính)",
+                  "tr": "Đây là bức tranh anh trai tôi vẽ."
                 }
               ],
-              "explain": "Xem phía sau có danh từ được bổ nghĩa hay không: trong 「母の作った料理」, 「作った」 bổ nghĩa cho 「料理」, lúc này 「の」 tương đương 「が」; câu kết thúc ở 「作った」, phía sau không có danh từ → chỉ dùng được 「が」."
-            },
+              "explain": "Hai câu nghĩa hoàn toàn giống nhau. Trước tiên xem sau 「描いた」 có danh từ được nó bổ nghĩa là 「絵」 hay không: nếu có, chủ ngữ trong mệnh đề dùng の hay が đều được, の hơi trang trọng, nhẹ nhàng, が thông dụng hơn; khi giữa chủ ngữ và động từ có tân ngữ như 「絵を」, dùng の dễ bị hiểu thành “bức tranh của anh trai”, nên thường dùng が; khi câu kết thúc ở động từ, phía sau không có danh từ được bổ nghĩa (兄が絵を描いた), chỉ dùng được が."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 7,
+          "note": "Đều diễn tả “việc làm…”",
+          "items": [
             {
               "id": "koto-nominalizer",
-              "diff": "Đều có thể biến câu thành danh từ; cảnh tượng tận mắt thấy, tận tai nghe chỉ dùng được 「の」, còn 「〜ことができる」 chỉ dùng được 「こと」.",
+              "title": "〜こと（làm chủ ngữ）",
+              "diff": "Đều biến một hành động thành danh từ làm chủ ngữ; の mang tính khẩu ngữ hơn, thường nói cảm nhận của bản thân, こと hơi trang trọng, giống nói về một lẽ chung hơn.",
               "this": [
                 {
-                  "tag": "Cảm nhận · の",
-                  "tr": "Nghe thấy tiếng chim hót."
+                  "tag": "Khẩu ngữ · cảm nhận bản thân",
+                  "tr": "Đi du lịch một mình vui lắm."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khả năng · こと",
-                  "tr": "Biết chơi piano."
+                  "tag": "Hơi trang trọng · lẽ chung",
+                  "tr": "Việc đi du lịch một mình thật thú vị."
                 }
               ],
-              "wrong": {
-                "why": "Trước động từ cảm nhận chỉ dùng được 「の」"
-              },
-              "explain": "Xem động từ cuối cùng: trước các động từ cảm nhận như 「見える」「聞こえる」「見る」 là cảnh tượng cụ thể đang diễn ra trước mắt → の; những cách nói trừu tượng như 「できる」「趣味は〜です」 → こと. Trước 「好き」「上手」 thì dùng cái nào cũng được."
+              "explain": "Cả hai câu đều biến 「一人で旅行する」 thành chủ ngữ, phía sau là từ đánh giá như 「楽しい」 thì dùng の hay こと đều được. Khi trò chuyện hằng ngày nói cảm nhận của mình, thường dùng の; khi viết bài, diễn thuyết nói về một lẽ chung, thường dùng こと, giọng điệu trang trọng hơn một chút."
             }
           ]
         }
@@ -3645,24 +3595,24 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「の＋だ」 — đưa điều phía trước ra như một sự thật",
+          "note": "Đều bắt nguồn từ 「の＋だ」 — 「の」 biến điều phía trước thành một sự việc, 「だ」 khẳng định “chính là như vậy”",
           "items": [
             {
               "id": "n-desu-explanatory",
-              "diff": "ので nằm giữa câu, phía sau còn phải nối kết quả; んです nằm cuối câu, đứng riêng để giải thích tình hình.",
+              "diff": "ので là dạng ngắt giữa câu của 「の＋だ」, đưa nguyên nhân ra như một sự thật trước, phía sau còn phải nối kết quả; んです là 「の＋だ（です）」 đặt ở cuối câu, tự nó dùng để giải thích tình hình cho người nghe.",
               "this": [
                 {
                   "tag": "Giữa câu · nối kết quả",
-                  "tr": "Tôi bị đau đầu nên hôm nay xin về sớm."
+                  "tr": "Đường đang tắc nên tôi sẽ đến muộn một chút."
                 }
               ],
               "that": [
                 {
                   "tag": "Cuối câu · giải thích tình hình",
-                  "tr": "Xin lỗi, tôi bị đau đầu."
+                  "tr": "Xin lỗi tôi đến muộn. Tại đường bị tắc ạ."
                 }
               ],
-              "explain": "Xem câu đã nói hết chưa: sau ので nhất định còn nửa câu nữa (早く帰ります); んです đặt cuối câu là kết thúc, dùng để trả lời 「どうしたんですか」, hoặc giải thích tình hình của mình cho đối phương. Văn viết nói のです, thể thường nói んだ, cách dùng như nhau."
+              "explain": "Cả hai đều từ 「の＋だ」 mà ra: 「の」 gói sự việc 「道が混んでいる」 thành một danh từ, 「だ」 khẳng định “tình hình là như vậy”. Đặt ở cuối câu thành 「んです／のだ」 là đưa tình hình đó ra cho người nghe, giải thích lý do đằng sau; 「だ」 chuyển sang dạng liên dụng 「で」 để nối tiếp thành 「ので」 là đưa nguyên nhân ra như một sự thật đã rồi trước, sau đó nối kết quả (遅れます), vì vậy ので nghe khách quan. Khi phân biệt, xem sau 「の」: là 「です」「だ」 và câu kết thúc → giải thích tình hình; là 「で」, phía sau còn kết quả → vì."
             }
           ]
         },
@@ -3673,75 +3623,41 @@
             {
               "id": "kara-from",
               "title": "〜から（nguyên nhân）",
-              "diff": "ので coi nguyên nhân là sự thật khách quan, giọng nhẹ nhàng; から là lý do chủ quan của người nói, cuối câu dạng 「〜からです」 chỉ dùng được から.",
+              "diff": "Đều diễn tả “vì”; ので đưa nguyên nhân ra như một tình huống khách quan, giọng điệu nhẹ nhàng, hợp với lời nhờ lịch sự; から nhấn mạnh lý do của chính người nói, phía sau có thể là mệnh lệnh trực tiếp.",
               "this": [
                 {
-                  "tag": "Nhẹ nhàng · nhờ vả",
-                  "tr": "Xin lỗi, vì em bị sốt nên cho em về sớm được không ạ?"
+                  "tag": "Khách quan · nhờ lịch sự",
+                  "tr": "Trời đang mưa, xin quý khách mang theo ô."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cuối câu · からです",
-                  "tr": "Hôm qua tôi nghỉ là vì bị sốt."
+                  "tag": "Chủ quan · ra lệnh trực tiếp",
+                  "tr": "Trời đang mưa đấy, cầm ô đi!"
                 }
               ],
-              "wrong": {
-                "why": "Giải thích nguyên nhân ở cuối câu chỉ dùng được 「からです」"
-              },
-              "explain": "Xem hai điểm: khi đưa ra lời nhờ với cấp trên, thầy cô, ので nghe khách quan, không giống đang viện cớ; khi nói kết quả trước rồi bổ sung nguyên nhân ở cuối câu (〜のは〜からです) thì chỉ dùng được から."
+              "explain": "Cả hai câu đều nói “vì trời đang mưa”. Xem nửa sau: nhờ khách hàng, cấp trên một cách lịch sự (お持ちください) thì dùng ので, nghe khách quan, không áp đặt; mệnh lệnh, cấm đoán trực tiếp như 「持っていけ」 thì dùng から mới tự nhiên, ので đi cùng mệnh lệnh thô lỗ nghe rất gượng."
             },
             {
               "id": "te-form-sequence",
               "title": "〜て（nguyên nhân）",
-              "diff": "Sau ので có thể là lời nhờ, ý chí; て khi chỉ nguyên nhân thì phía sau chỉ có thể là cảm xúc hoặc kết quả không kiểm soát được.",
+              "diff": "Sau ので có thể là lời nhờ, ý chí; て khi diễn tả nguyên nhân thì phía sau chỉ có thể là cảm xúc hoặc kết quả không kiểm soát được.",
               "this": [
                 {
                   "tag": "Sau là lời nhờ",
-                  "tr": "Không còn thời gian, xin hãy nhanh lên."
+                  "tr": "Không còn thời gian nữa, xin hãy nhanh lên."
                 }
               ],
               "that": [
                 {
                   "tag": "Sau là cảm xúc",
-                  "tr": "Không có thời gian, khó xử thật."
+                  "tr": "Không có thời gian, thật khó xử."
                 }
               ],
               "wrong": {
-                "why": "「て」 chỉ nguyên nhân không đi với lời nhờ phía sau"
+                "why": "Sau 「て」 chỉ nguyên nhân không thể là lời nhờ"
               },
-              "explain": "Xem nửa sau: lời nhờ, ý chí như 「〜てください」「〜ましょう」 → chỉ dùng được ので (hoặc から); cảm xúc, kết quả tự nhiên như 「困った」「びっくりした」 → có thể dùng て."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "noun-modifying-clause",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Đều dùng để bổ nghĩa cho danh từ, tiếng Việt thường nói thành “danh từ＋(của／mà)…”",
-          "items": [
-            {
-              "id": "no-possessive",
-              "diff": "Động từ, tính từ đuôi い bổ nghĩa cho danh từ thì gắn trực tiếp; danh từ bổ nghĩa cho danh từ mới thêm 「の」.",
-              "this": [
-                {
-                  "tag": "Động từ gắn trực tiếp",
-                  "tr": "Đây là cuốn sách tôi mua hôm qua."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Danh từ＋の",
-                  "tr": "Đây là sách của tôi."
-                }
-              ],
-              "wrong": {
-                "why": "Động từ bổ nghĩa cho danh từ thì không thêm 「の」"
-              },
-              "explain": "Xem từ đứng trước là loại từ gì: động từ, tính từ đuôi い như 買った、読む、高い → đặt thẳng trước danh từ; danh từ như 私、日本 → thêm 「の」. Người học rất dễ viết thành ✗買ったの本、✗高いの本. Thể ない, thể ている bổ nghĩa cho danh từ cũng gắn trực tiếp (行かない人、寝ている猫)."
+              "explain": "Xem nửa sau: lời nhờ dạng 「〜てください」 như 「急いでください」, ý chí dạng 「〜ましょう」 → chỉ dùng được ので (hoặc から); cảm xúc, kết quả tự nhiên như 「困った」「びっくりした」 → có thể dùng て."
             }
           ]
         }
@@ -3751,12 +3667,12 @@
       "id": "question-word-ka",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「từ để hỏi＋trợ từ」 — か (nghi vấn → “cái gì đó” không xác định), も (cũng → “tất cả đều (không)”), でも (dù là → “cái nào cũng”)",
+          "kind": "look",
+          "note": "何か ↔ 何も ↔ 何でも, chỉ khác trợ từ sau từ để hỏi (か／も／でも)",
           "items": [
             {
               "id": "question-word-mo-nai",
-              "diff": "Từ để hỏi＋か là “cái gì đó”; từ để hỏi＋も＋phủ định là “không có cái nào cả”.",
+              "diff": "Từ để hỏi＋か là “một cái nào đó”; từ để hỏi＋も＋phủ định là “không có cái nào cả”.",
               "this": [
                 {
                   "tag": "Một thứ gì đó",
@@ -3766,13 +3682,13 @@
               "that": [
                 {
                   "tag": "Không có gì cả",
-                  "tr": "Trong tủ lạnh chẳng có gì đâu."
+                  "tr": "Trong tủ lạnh chẳng có gì cả."
                 }
               ],
               "wrong": {
                 "why": "Sau 「何も」 phải là phủ định"
               },
-              "explain": "Xem chữ kana sau từ để hỏi và cuối câu: sau 「何か」 khẳng định hay nghi vấn đều được, nghĩa là “một thứ gì đó”; sau 「何も」 nhất định là phủ định (ない), nghĩa là “không có gì cả”. Hỏi 「何かある？」, nếu không có thì trả lời 「何もない」."
+              "explain": "Chỉ cần xem một chữ kana sau từ để hỏi: 「何か」 → một thứ gì đó, phía sau khẳng định hay nghi vấn đều được; 「何も」 → không có thứ gì, phía sau nhất định là phủ định (ない). Hỏi 「何かある？」, nếu không có thì trả lời 「何もない」."
             },
             {
               "id": "demo-but",
@@ -3780,17 +3696,17 @@
               "diff": "Từ để hỏi＋か là “một cái nào đó” (không xác định); từ để hỏi＋でも là “cái nào cũng được” (tất cả).",
               "this": [
                 {
-                  "tag": "Một thứ · không xác định",
-                  "tr": "Đói bụng rồi, muốn ăn gì đó."
+                  "tag": "Thứ gì đó · không xác định",
+                  "tr": "Đói bụng rồi. Muốn ăn gì đó."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cái nào cũng được",
-                  "tr": "Đói bụng rồi, gì cũng được, muốn ăn quá."
+                  "tag": "Gì cũng được",
+                  "tr": "Đói bụng rồi. Gì cũng được, muốn ăn quá."
                 }
               ],
-              "explain": "Xem phía sau đi với gì: 何か chỉ “một thứ gì đó”, không nói là cái nào; sau 何でも thường có 「いい」, nghĩa là “cái nào cũng được”. Chú ý cách đọc: 何か đọc là なにか, 何でも đọc là なんでも."
+              "explain": "Xem sau từ để hỏi: đi với 「か」 → một thứ gì đó, chỉ là không nói ra là cái nào; đi với 「でも」 → cái nào cũng được, phía sau hay đi với 「いい」. Cách đọc cũng khác: 何か đọc là なにか, 何でも đọc là なんでも."
             }
           ]
         }
@@ -3800,16 +3716,34 @@
       "id": "question-word-mo-nai",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ từ nghi vấn＋trợ từ — 「か」 trong 何か chỉ “một cái gì đó” không xác định, 「も」 (cũng) trong 何も đi với phủ định thành “hoàn toàn không”",
+          "kind": "look",
+          "note": "何も ↔ 何か ↔ 何でも, chỉ khác trợ từ sau từ để hỏi (も／か／でも)",
           "items": [
             {
+              "id": "demo-but",
+              "title": "疑問詞＋でも",
+              "diff": "何も＋phủ định là “không… gì cả”; 何でも＋khẳng định là “gì cũng…”.",
+              "this": [
+                {
+                  "tag": "Phủ định toàn bộ",
+                  "tr": "Hôm nay tôi chẳng muốn ăn gì cả."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Khẳng định toàn bộ",
+                  "tr": "Món gì tôi cũng ăn được."
+                }
+              ],
+              "explain": "Xem cuối câu: phủ định → 何も (phủ định toàn bộ); khẳng định → 何でも (khẳng định toàn bộ). Cách đọc cũng khác: 何も đọc là なにも, 何でも đọc là なんでも."
+            },
+            {
               "id": "question-word-ka",
-              "diff": "Từ để hỏi＋も＋phủ định là “không có cái nào cả”; từ để hỏi＋か là “cái gì đó”.",
+              "diff": "Từ để hỏi＋も＋phủ định là “không có cái nào cả”; từ để hỏi＋か là “một cái nào đó”.",
               "this": [
                 {
                   "tag": "Không có gì cả",
-                  "tr": "Trong tủ lạnh chẳng có gì đâu."
+                  "tr": "Trong tủ lạnh chẳng có gì cả."
                 }
               ],
               "that": [
@@ -3821,54 +3755,31 @@
               "wrong": {
                 "why": "Sau 「何も」 phải là phủ định"
               },
-              "explain": "Xem chữ kana sau từ để hỏi và cuối câu: sau 「何も」 nhất định là phủ định (ない), nghĩa là “không có gì cả”; sau 「何か」 khẳng định hay nghi vấn đều được, nghĩa là “một thứ gì đó”. Hỏi 「何かある？」, nếu không có thì trả lời 「何もない」."
-            }
-          ]
-        },
-        {
-          "kind": "look",
-          "note": "何も ↔ 何でも, chỉ khác nhau một chữ 「で」",
-          "items": [
-            {
-              "id": "demo-but",
-              "title": "疑問詞＋でも",
-              "diff": "何も＋phủ định là “không… gì cả”; 何でも＋khẳng định là “cái gì cũng”.",
-              "this": [
-                {
-                  "tag": "Phủ định toàn bộ",
-                  "tr": "Hôm nay tôi không muốn ăn gì cả."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Khẳng định toàn bộ",
-                  "tr": "Tôi ăn được mọi thứ."
-                }
-              ],
-              "explain": "Nhìn cuối câu: phủ định → 何も (phủ định toàn bộ); khẳng định → 何でも (khẳng định toàn bộ). Cách đọc cũng khác: 何も đọc là なにも, 何でも đọc là なんでも."
+              "explain": "Chỉ cần xem một chữ kana sau từ để hỏi: 「何も」 → không có thứ gì, phía sau nhất định là phủ định (ない); 「何か」 → một thứ gì đó, phía sau khẳng định hay nghi vấn đều được. Hỏi 「何かある？」, nếu không có thì trả lời 「何もない」."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “hoàn toàn không”",
+          "note": "Đều diễn tả “không có lấy một cái”",
           "items": [
             {
-              "id": "zenzen-nai",
-              "diff": "何も〜ない phủ định “đồ vật”, không có thứ nào cả; 全然〜ない phủ định “mức độ”, không chút nào.",
+              "id": "toshite-nai",
+              "title": "〜として〜ない（không một thứ nào）",
+              "diff": "何も〜ない là phủ định toàn bộ thường ngày; 何一つとして〜ない trang trọng hơn, nhấn mạnh “không có lấy một cái”.",
               "this": [
                 {
-                  "tag": "Không một thứ nào",
-                  "tr": "Từ sáng đến giờ chưa ăn gì cả."
+                  "tag": "Cách nói thường ngày",
+                  "tr": "Trong phòng không bị mất trộm thứ gì."
                 }
               ],
               "that": [
                 {
-                  "tag": "Hoàn toàn không",
-                  "tr": "Dạo này hoàn toàn không ăn rau."
+                  "tag": "Trang trọng · nhấn mạnh",
+                  "tr": "Trong phòng không bị mất trộm dù chỉ một món đồ."
                 }
               ],
-              "explain": "Xem có tân ngữ hay không: bản thân 何も đã chiếm chỗ của 「を」, trong câu không xuất hiện thứ được ăn nữa; 全然 là phó từ, có thể dùng cùng 「野菜を」, còn có thể bổ nghĩa cho tính từ (全然おいしくない), 何も thì không được."
+              "explain": "Cả hai câu đều nói trong phòng không mất thứ gì. 何も〜ない là cách nói bình thường nhất, dùng được cả trong văn nói lẫn văn viết; 何一つとして〜ない phủ định đến cả 「一つ」, nhấn mạnh “không có lấy một cái”, giọng điệu nặng, thường dùng trong bài viết, tin tức hoặc lời kể trang trọng. Trò chuyện bình thường nói 「何もない」 là đủ."
             }
           ]
         }
@@ -3900,23 +3811,6 @@
                 "why": "Sau 「しか」 nhất định phải là phủ định"
               },
               "explain": "Xem cuối câu: sau しか nhất định là phủ định (ない、〜ません), người nói cảm thấy ít, hay đi cùng 「もう」; sau だけ có thể là khẳng định, chỉ nói số lượng một cách khách quan."
-            },
-            {
-              "id": "bakari-only",
-              "diff": "しか〜ない là ngoài nó ra thì không gì cả; ばかり là “toàn là, cứ toàn”, thứ khác cũng có thể có, thường kèm sự bất mãn.",
-              "this": [
-                {
-                  "tag": "Loại trừ thứ khác",
-                  "tr": "Anh tôi chỉ ăn thịt (thứ khác không ăn)."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Quá nhiều · bất mãn",
-                  "tr": "Anh tôi toàn ăn thịt."
-                }
-              ],
-              "explain": "しか〜ない loại trừ mọi thứ khác, nhấn mạnh “chỉ có cái này”; ばかり nói một thứ gì đó quá nhiều, quá thường xuyên, hay kèm ý phê phán, phía sau là khẳng định (食べている). Tiếng Việt đều có thể nói “chỉ ăn thịt”, xem cuối câu là phủ định hay khẳng định là phân biệt được. Trong văn nói, nói ばっかり cũng như vậy."
             }
           ]
         }
@@ -3982,7 +3876,7 @@
                   "tr": "Vội vàng chạy tới, không ngờ cửa hàng đã đóng cửa rồi."
                 }
               ],
-              "explain": "Xem nửa sau: nêu quan điểm của mình, đặt ra vấn đề → しかし; kể một việc đã xảy ra, trái với dự đoán (thường ở thì quá khứ) → ところが. Sau ところが không thể là ý kiến hay lời nhờ của bản thân."
+              "explain": "Xem nửa sau: nêu quan điểm của mình, đặt ra vấn đề (お金がかかりすぎる) → しかし; kể một việc đã xảy ra, trái với dự đoán (店は閉まっていた, thường ở thì quá khứ) → ところが. Sau ところが không thể là ý kiến hay lời nhờ của bản thân."
             }
           ]
         }
@@ -3993,49 +3887,34 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều có thể diễn tả “sau đó, còn nữa”",
+          "sense": 1,
+          "note": "Đều diễn tả “trước… rồi sau đó…”",
           "items": [
             {
               "id": "soshite-conjunction",
-              "diff": "それから hay dùng trong khẩu ngữ để thêm “còn một việc nữa”; そして hay dùng khi miêu tả, kể chuyện, bổ sung một cách nhẹ nhàng, mang tính văn viết hơn một chút.",
+              "title": "そして（thứ tự: rồi）",
+              "diff": "Đều diễn tả làm xong một việc rồi làm việc tiếp theo; それから hay dùng trong khẩu ngữ khi kể lại sự việc, nhấn mạnh “sau đó”; そして giọng điệu hơi trang trọng, hay dùng khi viết văn, kể chuyện.",
               "this": [
                 {
-                  "tag": "Thêm vào · còn nữa",
-                  "tr": "Cho tôi hai ly cà phê. À còn nữa, thêm một cái bánh ngọt."
+                  "tag": "Khẩu ngữ · kể lại sự việc",
+                  "tr": "Tôi gặp bạn ở nhà ga. Sau đó chúng tôi cùng xem phim."
                 }
               ],
               "that": [
                 {
-                  "tag": "Miêu tả · hơn nữa",
-                  "tr": "Thị trấn này yên tĩnh, hơn nữa còn rất đẹp."
+                  "tag": "Hơi trang trọng · tường thuật",
+                  "tr": "Tôi gặp bạn ở nhà ga. Rồi chúng tôi cùng xem phim."
                 }
               ],
-              "explain": "Xem bối cảnh: khi gọi món, dặn dò công việc mà chợt nhớ ra “còn một việc nữa” → それから; miêu tả thêm một đặc điểm của cùng một thứ, hoặc kể bước tiếp theo của câu chuyện → そして. Khi diễn tả “từ đó trở đi” thì chỉ dùng được それから."
-            },
-            {
-              "id": "soreni-conjunction",
-              "diff": "それから chỉ là “còn một việc nữa”; それに là thêm một lý do, một nhận xét nữa “hơn nữa”.",
-              "this": [
-                {
-                  "tag": "Thêm một việc",
-                  "tr": "Mua sữa về giúp mình nhé. À còn nữa, nhờ mua cả trứng."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Thêm một lý do",
-                  "tr": "Chọn phòng này đi. Rộng, mà lại còn gần ga nữa."
-                }
-              ],
-              "explain": "Xem đang thêm cái gì: việc cần làm, đồ cần mua có thêm một món → それから; để thuyết phục người khác, thêm một ưu điểm, lý do nữa → それに, hay dùng cùng 「〜し」."
+              "explain": "Hai câu nghĩa như nhau, đều là gặp bạn trước rồi xem phim. Khi trò chuyện, kể lần lượt từng việc mình đã làm, thường dùng それから, nó còn có thể đứng riêng để hỏi 「それから？」 (Rồi sao nữa?); khi viết nhật ký, bài văn hoặc kể chuyện, dùng そして tự nhiên hơn, giọng điệu hơi trang trọng."
             },
             {
               "id": "te-kara",
-              "diff": "てから nối “làm A trước rồi làm B” trong một câu; それから đặt ở đầu câu, nối hai câu với nhau.",
+              "diff": "てから nối “trước A rồi B” trong một câu; それから đặt ở đầu câu, nối hai câu với nhau.",
               "this": [
                 {
                   "tag": "Đầu câu · hai câu",
-                  "tr": "Trước tiên làm bài tập. Sau đó mới chơi."
+                  "tr": "Làm bài tập trước. Sau đó mới chơi."
                 }
               ],
               "that": [
@@ -4044,7 +3923,31 @@
                   "tr": "Làm xong bài tập rồi mới chơi."
                 }
               ],
-              "explain": "Nghĩa như nhau, xem vị trí: động từ gắn trực tiếp 「てから」 → nói trong một câu; phía trước ngắt bằng 「。」 rồi mở đầu bằng 「それから」 → tách thành hai câu. Khi vừa nghĩ vừa nói, dặn dò từng việc một thì hay dùng それから."
+              "explain": "Nghĩa như nhau, đều là làm bài tập trước rồi chơi. Xem vị trí: động từ nối thẳng với 「てから」 → nói hết trong một câu, nhấn mạnh hơn “làm xong A mới làm B”; dùng 「まず」 nói việc đầu tiên trước, ngắt bằng dấu chấm, rồi mở đầu câu sau bằng 「それから」 → chia thành hai câu, hay dùng khi vừa nghĩ vừa kể lần lượt từng việc."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều diễn tả “còn nữa” (thêm một mục)",
+          "items": [
+            {
+              "id": "soreni-conjunction",
+              "diff": "Đều thêm một mục vào nội dung đã nói; thêm một món cần mua, một việc cần làm thì hay dùng それから; thêm vào lời đánh giá một ưu điểm hoặc nhược điểm cùng chiều thì dùng それに, mang ý “hơn nữa”.",
+              "this": [
+                {
+                  "tag": "Thêm một việc",
+                  "tr": "Mua sữa về giúp mình nhé. À, nhờ mua cả trứng nữa."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Thêm một lời khen",
+                  "tr": "Quán này rẻ. Hơn nữa đồ ăn cũng ngon."
+                }
+              ],
+              "explain": "Xem điều được thêm vào là gì: thêm một món cần mua, một việc cần làm → それから (nói それに cũng được); thêm một ưu điểm hoặc nhược điểm cùng chiều vào lời đánh giá về cùng một đối tượng (sau 安い nói thêm 料理もおいしい) → それに, mang ý “hơn nữa”, đổi thành それから thì nghe như đang đọc danh sách."
             }
           ]
         }

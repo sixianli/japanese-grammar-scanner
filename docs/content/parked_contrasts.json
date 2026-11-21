@@ -7559,6 +7559,623 @@
           "explain": "ရှေ့ကို ကြည့်ပါ - ကြိယာ (来る) → 来ない။ နာမ် (学生)၊ な နာမဝိသေသန (元気) → じゃない (ယဉ်ကျေးပုံစံ - ではありません)။ မြန်မာလို “မ...ဘူး” နှင့် “မဟုတ်ဘူး” ကွာခြားချက်သည် ဂျပန်လိုတွင် ない နှင့် じゃない ကွာခြားချက် ဖြစ်သည်။"
         }
       }
+    },
+    {
+      "point": "no-naka-de-ichiban",
+      "kind": "meaning",
+      "reason": "标准「意思差不多的」：差别必须是同一个意思里面的差别，且要通过替换测试；「范围内最…」与「两者中哪个更…」是两个不同的比较意思，换用后核心意思改变。三组都不合格。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "to-dochira",
+          "diff": "三个以上用「の中で〜が一番」；只有两个时问「どちらが」。",
+          "this": [
+            {
+              "ja": "~果物:くだもの|*の|*中:なか|*で|、|何:なに|が|*一番:いちばん|好:す|きですか|。",
+              "tag": "三个以上 · 最",
+              "tr": "水果里你最喜欢什么？"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~りんご|*と|~みかん|*と|*どちらが|好:す|きですか|。",
+              "tag": "两个 · 哪个",
+              "tr": "苹果和橘子，你更喜欢哪个？"
+            }
+          ],
+          "explain": "数一数比较的对象：「果物」是一大类，有三个以上 → の中で〜が一番，问的时候用「何／どれ」；只有りんご和みかん两样 → AとBとどちらが，回答用「〜のほうが」。"
+        },
+        "en": {
+          "id": "to-dochira",
+          "diff": "For three or more, use 「の中で〜が一番」; with only two, ask 「どちらが」.",
+          "this": [
+            {
+              "tag": "Three or more · most",
+              "tr": "Of all fruits, which do you like best?"
+            }
+          ],
+          "that": [
+            {
+              "tag": "Two · which",
+              "tr": "Apples or mandarins — which do you like more?"
+            }
+          ],
+          "explain": "Count what's being compared: 「果物」 is a whole category with three or more → の中で〜が一番, and ask with 「何／どれ」; only two things, りんご and みかん → AとBとどちらが, and answer with 「〜のほうが」."
+        },
+        "ko": {
+          "id": "to-dochira",
+          "diff": "셋 이상이면 「の中で〜が一番」, 둘뿐이면 「どちらが」로 묻는다.",
+          "this": [
+            {
+              "tag": "셋 이상 · 가장",
+              "tr": "과일 중에서 무엇을 가장 좋아해요?"
+            }
+          ],
+          "that": [
+            {
+              "tag": "둘 · 어느 쪽",
+              "tr": "사과와 귤 중 어느 쪽을 좋아해요?"
+            }
+          ],
+          "explain": "비교하는 대상의 수를 세어 보자. 「果物」는 큰 범주로 셋 이상 → の中で〜が一番이고 물을 때는 「何／どれ」를 쓴다. りんご와 みかん 둘뿐 → AとBとどちらが이고 대답은 「〜のほうが」로 한다."
+        },
+        "es": {
+          "id": "to-dochira",
+          "diff": "Con tres o más elementos se usa 「の中で〜が一番」; si solo hay dos, se pregunta con 「どちらが」.",
+          "this": [
+            {
+              "tag": "Tres o más · el que más",
+              "tr": "De todas las frutas, ¿cuál te gusta más?"
+            }
+          ],
+          "that": [
+            {
+              "tag": "Dos · cuál",
+              "tr": "¿Qué te gusta más, la manzana o la mandarina?"
+            }
+          ],
+          "explain": "Cuenta los elementos que se comparan: 「果物」 es toda una categoría, con tres o más → の中で〜が一番, y para preguntar se usa 「何／どれ」; si solo hay dos, りんご y みかん → AとBとどちらが, y se responde con 「〜のほうが」."
+        },
+        "vi": {
+          "id": "to-dochira",
+          "diff": "Từ ba thứ trở lên dùng 「の中で〜が一番」; chỉ có hai thứ thì hỏi 「どちらが」.",
+          "this": [
+            {
+              "tag": "Từ ba trở lên · nhất",
+              "tr": "Trong các loại trái cây, bạn thích nhất loại nào?"
+            }
+          ],
+          "that": [
+            {
+              "tag": "Hai thứ · cái nào",
+              "tr": "Táo và quýt, bạn thích cái nào hơn?"
+            }
+          ],
+          "explain": "Đếm số đối tượng được so sánh: 「果物」 là cả một nhóm lớn, có từ ba thứ trở lên → の中で〜が一番, khi hỏi dùng 「何／どれ」; chỉ có hai thứ là りんご và みかん → AとBとどちらが, trả lời bằng 「〜のほうが」."
+        },
+        "my": {
+          "id": "to-dochira",
+          "diff": "သုံးခုနှင့်အထက်ဆိုလျှင်「の中で〜が一番」ကို သုံးသည်။ နှစ်ခုတည်းဆိုလျှင်「どちらが」ဟု မေးသည်။",
+          "this": [
+            {
+              "tag": "သုံးခုနှင့်အထက် · အ...ဆုံး",
+              "tr": "သစ်သီးတွေထဲမှာ ဘာကို အကြိုက်ဆုံးလဲ။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "နှစ်ခု · ဘယ်ဟာ",
+              "tr": "ပန်းသီးနဲ့ လိမ္မော်သီး ဘယ်ဟာကို ပိုကြိုက်လဲ။"
+            }
+          ],
+          "explain": "နှိုင်းယှဉ်သည့် အရာ အရေအတွက်ကို ရေကြည့်ပါ -「果物」သည် အမျိုးအစား ကြီးတစ်ခုဖြစ်ပြီး သုံးခုနှင့်အထက် ရှိသည် → の中で〜が一番 ဖြစ်ပြီး မေးလျှင်「何／どれ」ကို သုံးသည်။ りんご နှင့် みかん နှစ်မျိုးတည်း → AとBとどちらが ဖြစ်ပြီး ဖြေလျှင်「〜のほうが」ကို သုံးသည်။"
+        }
+      }
+    },
+    {
+      "point": "no-possessive",
+      "kind": "meaning",
+      "reason": "标准「意思差不多的」：中文译法一样但意思不同的不收，且要通过替换测试；「私の本」与「昨日買った本」只是接续规则不同（名词加の、动词直接接），不是同一个意思的不同说法。也不属于长得像的或同源。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "noun-modifying-clause",
+          "diff": "名词修饰名词要加「の」；动词、い形容词修饰名词直接接，不加「の」。",
+          "this": [
+            {
+              "ja": "これは|~私:わたし|*の|本:ほん|です|。",
+              "tag": "名词＋の",
+              "tr": "这是我的书。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "これは|~昨日:きのう|*買:か|*った|本:ほん|です|。",
+              "tag": "动词直接接",
+              "tr": "这是昨天买的书。"
+            }
+          ],
+          "wrong": {
+            "ja": "これは昨日買ったの本です",
+            "why": "动词修饰名词时不加「の」"
+          },
+          "explain": "看「的」前面是什么词：私、日本 这类名词 → 要加「の」；買った、行く、高い 这类动词、い形容词 → 直接接名词。中文都有「的」，所以最容易多加一个「の」。ない形、ている形 修饰名词也一样直接接（行かない人、寝ている猫）。"
+        },
+        "en": {
+          "id": "noun-modifying-clause",
+          "diff": "A noun modifying a noun needs 「の」; verbs and i-adjectives modify nouns directly, without 「の」.",
+          "this": [
+            {
+              "tag": "Noun + の",
+              "tr": "This is my book."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Verb attaches directly",
+              "tr": "This is the book I bought yesterday."
+            }
+          ],
+          "wrong": {
+            "why": "Don't add 「の」 when a verb modifies a noun"
+          },
+          "explain": "Look at what kind of word does the modifying: nouns like 私 or 日本 → add 「の」; verbs and i-adjectives like 買った, 行く, 高い → attach directly to the noun. Learners who think of の as “of / 's” often add an extra 「の」 after verbs too. Negative and ている forms also attach directly when modifying a noun (行かない人, 寝ている猫)."
+        },
+        "ko": {
+          "id": "noun-modifying-clause",
+          "diff": "명사가 명사를 꾸밀 때는 「の」를 붙이고, 동사·い형용사가 명사를 꾸밀 때는 「の」 없이 바로 붙인다.",
+          "this": [
+            {
+              "tag": "명사＋の",
+              "tr": "이것은 내 책입니다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "동사 바로 연결",
+              "tr": "이것은 어제 산 책입니다."
+            }
+          ],
+          "wrong": {
+            "why": "동사가 명사를 꾸밀 때는 「の」를 붙이지 않는다"
+          },
+          "explain": "꾸미는 말이 어떤 품사인지 보자. 私, 日本 같은 명사 → 「の」를 붙인다, 買った, 行く, 高い 같은 동사·い형용사 → 명사에 바로 붙인다. 한국어 ‘나의 책’의 ‘의’에 끌려 「買ったの本」처럼 「の」를 하나 더 넣기 쉽다. ない형, ている형이 명사를 꾸밀 때도 마찬가지로 바로 붙는다(行かない人、寝ている猫)."
+        },
+        "es": {
+          "id": "noun-modifying-clause",
+          "diff": "Cuando un sustantivo modifica a otro, se añade 「の」; los verbos y adjetivos い modifican al sustantivo directamente, sin 「の」.",
+          "this": [
+            {
+              "tag": "Sustantivo + の",
+              "tr": "Este es mi libro."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Verbo directo",
+              "tr": "Este es el libro que compré ayer."
+            }
+          ],
+          "wrong": {
+            "why": "Cuando un verbo modifica a un sustantivo no se pone 「の」"
+          },
+          "explain": "Fíjate en la palabra que modifica: sustantivos como 私 o 日本 → hay que añadir 「の」; verbos y adjetivos い como 買った, 行く o 高い → van directamente delante del sustantivo. Como en español decimos «el libro de…» y «el libro que compré», es fácil meter un 「の」 de más. Las formas ない y ている también modifican al sustantivo directamente (行かない人, 寝ている猫)."
+        },
+        "vi": {
+          "id": "noun-modifying-clause",
+          "diff": "Danh từ bổ nghĩa cho danh từ phải thêm 「の」; động từ, tính từ đuôi い bổ nghĩa cho danh từ thì gắn trực tiếp, không thêm 「の」.",
+          "this": [
+            {
+              "tag": "Danh từ＋の",
+              "tr": "Đây là sách của tôi."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Động từ gắn trực tiếp",
+              "tr": "Đây là cuốn sách tôi mua hôm qua."
+            }
+          ],
+          "wrong": {
+            "why": "Động từ bổ nghĩa cho danh từ thì không thêm 「の」"
+          },
+          "explain": "Xem từ đứng trước là loại từ gì: danh từ như 私、日本 → phải thêm 「の」; động từ, tính từ đuôi い như 買った、行く、高い → gắn trực tiếp vào danh từ. Trong tiếng Việt các trường hợp này đều có thể dùng chữ “của” hay “mà”, nên người học rất dễ thêm thừa 「の」. Thể ない, thể ている bổ nghĩa cho danh từ cũng gắn trực tiếp (行かない人、寝ている猫)."
+        },
+        "my": {
+          "id": "noun-modifying-clause",
+          "diff": "နာမ်က နာမ်ကို အထူးပြုလျှင်「の」ထည့်ရသည်။ ကြိယာ၊ い နာမဝိသေသနက နာမ်ကို အထူးပြုလျှင် တိုက်ရိုက် ဆက်ပြီး「の」မထည့်ရ။",
+          "this": [
+            {
+              "tag": "နာမ်＋の",
+              "tr": "ဒါက ကျွန်တော့် စာအုပ်ပါ။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ကြိယာ တိုက်ရိုက်ဆက်",
+              "tr": "ဒါက မနေ့က ဝယ်ခဲ့တဲ့ စာအုပ်ပါ။"
+            }
+          ],
+          "wrong": {
+            "why": "ကြိယာက နာမ်ကို အထူးပြုလျှင်「の」မထည့်ရ"
+          },
+          "explain": "အထူးပြုသော စကားလုံးက ဘာလဲ ကြည့်ပါ - 私、日本 ကဲ့သို့ နာမ် →「の」ထည့်ရသည်။ 買った、行く、高い ကဲ့သို့ ကြိယာ၊ い နာမဝိသေသန → နာမ်နှင့် တိုက်ရိုက် ဆက်သည်။ မြန်မာလို “ရဲ့／တဲ့” ကို နေရာတိုင်း ထည့်ပြောသဖြင့်「の」ကို အပိုထည့်မိတတ်ဆုံး ဖြစ်သည်။ ない形、ている形 က နာမ်ကို အထူးပြုလျှင်လည်း တိုက်ရိုက် ဆက်သည် (行かない人、寝ている猫)။"
+        }
+      }
+    },
+    {
+      "point": "no-possessive",
+      "kind": "meaning",
+      "reason": "标准「意思差不多的」：替换测试不成立（日本な車、きれいの車都不成立），差别只是前接词类和接续，是中文都译「的」的巧合。也不属于长得像的或同源。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "na-adj-modify",
+          "diff": "名词修饰名词用「の」；な形容词修饰名词用「な」。",
+          "this": [
+            {
+              "ja": "これは|~日本:にほん|*の|車:くるま|です|。",
+              "tag": "名词＋の",
+              "tr": "这是日本的车。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "これは|~きれい|*な|車:くるま|です|。",
+              "tag": "な形容词＋な",
+              "tr": "这是一辆漂亮的车。"
+            }
+          ],
+          "wrong": {
+            "ja": "きれいの車",
+            "why": "な形容词修饰名词要用「な」"
+          },
+          "explain": "先判断前面的词是名词还是な形容词：日本、学校 是名词 → の；きれい、静か、有名 是な形容词 → な。「きれい」虽然以「い」结尾，却是な形容词，最容易写成「きれいの」。"
+        },
+        "en": {
+          "id": "na-adj-modify",
+          "diff": "A noun modifying a noun uses 「の」; a na-adjective modifying a noun uses 「な」.",
+          "this": [
+            {
+              "tag": "Noun + の",
+              "tr": "This is a Japanese car."
+            }
+          ],
+          "that": [
+            {
+              "tag": "na-adjective + な",
+              "tr": "This is a beautiful car."
+            }
+          ],
+          "wrong": {
+            "why": "A na-adjective modifying a noun uses 「な」"
+          },
+          "explain": "First decide whether the word before is a noun or a na-adjective: 日本 and 学校 are nouns → の; きれい, 静か, 有名 are na-adjectives → な. Although 「きれい」 ends in 「い」, it's a na-adjective, and is the one most often wrongly written as 「きれいの」."
+        },
+        "ko": {
+          "id": "na-adj-modify",
+          "diff": "명사가 명사를 꾸밀 때는 「の」, な형용사가 명사를 꾸밀 때는 「な」를 쓴다.",
+          "this": [
+            {
+              "tag": "명사＋の",
+              "tr": "이것은 일본 차입니다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "な형용사＋な",
+              "tr": "이것은 예쁜 차입니다."
+            }
+          ],
+          "wrong": {
+            "why": "な형용사가 명사를 꾸밀 때는 「な」를 쓴다"
+          },
+          "explain": "먼저 앞의 말이 명사인지 な형용사인지 판단하자. 日本, 学校는 명사 → の, きれい, 静か, 有名는 な형용사 → な. 「きれい」는 「い」로 끝나지만 な형용사라서 「きれいの」로 잘못 쓰기 가장 쉽다."
+        },
+        "es": {
+          "id": "na-adj-modify",
+          "diff": "Un sustantivo modifica a otro con 「の」; un adjetivo な modifica a un sustantivo con 「な」.",
+          "this": [
+            {
+              "tag": "Sustantivo + の",
+              "tr": "Este es un coche japonés."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Adjetivo な + な",
+              "tr": "Este es un coche bonito."
+            }
+          ],
+          "wrong": {
+            "why": "Un adjetivo な modifica al sustantivo con 「な」"
+          },
+          "explain": "Primero decide si la palabra de delante es un sustantivo o un adjetivo な: 日本 y 学校 son sustantivos → の; きれい, 静か y 有名 son adjetivos な → な. 「きれい」 termina en 「い」, pero es un adjetivo な, y por eso es muy fácil escribir 「きれいの」."
+        },
+        "vi": {
+          "id": "na-adj-modify",
+          "diff": "Danh từ bổ nghĩa cho danh từ dùng 「の」; tính từ đuôi な bổ nghĩa cho danh từ dùng 「な」.",
+          "this": [
+            {
+              "tag": "Danh từ＋の",
+              "tr": "Đây là xe của Nhật."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Tính từ な＋な",
+              "tr": "Đây là một chiếc xe đẹp."
+            }
+          ],
+          "wrong": {
+            "why": "Tính từ đuôi な bổ nghĩa cho danh từ phải dùng 「な」"
+          },
+          "explain": "Trước tiên xác định từ phía trước là danh từ hay tính từ đuôi な: 日本、学校 là danh từ → の; きれい、静か、有名 là tính từ đuôi な → な. 「きれい」 tuy kết thúc bằng 「い」 nhưng lại là tính từ đuôi な, rất dễ viết nhầm thành 「きれいの」."
+        },
+        "my": {
+          "id": "na-adj-modify",
+          "diff": "နာမ်က နာမ်ကို အထူးပြုလျှင်「の」ကို သုံးသည်။ な နာမဝိသေသနက နာမ်ကို အထူးပြုလျှင်「な」ကို သုံးသည်။",
+          "this": [
+            {
+              "tag": "နာမ်＋の",
+              "tr": "ဒါက ဂျပန်ကားပါ။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "な နာမဝိသေသန＋な",
+              "tr": "ဒါက လှပတဲ့ ကားတစ်စီးပါ။"
+            }
+          ],
+          "wrong": {
+            "why": "な နာမဝိသေသနက နာမ်ကို အထူးပြုလျှင်「な」ကို သုံးရမည်"
+          },
+          "explain": "ရှေ့က စကားလုံးက နာမ်လား な နာမဝိသေသနလား အရင် ဆုံးဖြတ်ပါ - 日本、学校 က နာမ် → の။ きれい、静か、有名 က な နာမဝိသေသန → な။「きれい」သည်「い」ဖြင့် ဆုံးသော်လည်း な နာမဝိသေသန ဖြစ်၍「きれいの」ဟု မှားရေးတတ်ဆုံး ဖြစ်သည်။"
+        }
+      }
+    },
+    {
+      "point": "noun-modifying-clause",
+      "kind": "meaning",
+      "reason": "标准「意思差不多的」：中文译法一样但意思不同的不收，差别只能写成「A 表示甲；B 表示乙」的不收；「昨日買った本」与「私の本」只是接续规则不同，替换测试不成立。也不属于长得像的或同源，找不到同表一个意思的合格对象。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "no-possessive",
+          "diff": "动词、い形容词修饰名词直接接；名词修饰名词才加「の」。",
+          "this": [
+            {
+              "ja": "これは|~昨日:きのう|*買:か|*った|本:ほん|です|。",
+              "tag": "动词直接接",
+              "tr": "这是昨天买的书。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "これは|~私:わたし|*の|本:ほん|です|。",
+              "tag": "名词＋の",
+              "tr": "这是我的书。"
+            }
+          ],
+          "wrong": {
+            "ja": "これは昨日買ったの本です",
+            "why": "动词修饰名词时不加「の」"
+          },
+          "explain": "看「的」前面是什么词：買った、読む、高い 这类动词、い形容词 → 直接放在名词前；私、日本 这类名词 → 加「の」。中文都有「的」，最容易写成 ✗買ったの本、✗高いの本。ない形、ている形 修饰名词也一样直接接（行かない人、寝ている猫）。"
+        },
+        "en": {
+          "id": "no-possessive",
+          "diff": "Verbs and i-adjectives modify nouns directly; only a noun modifying a noun takes 「の」.",
+          "this": [
+            {
+              "tag": "Verb attaches directly",
+              "tr": "This is the book I bought yesterday."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Noun + の",
+              "tr": "This is my book."
+            }
+          ],
+          "wrong": {
+            "why": "Don't add 「の」 when a verb modifies a noun"
+          },
+          "explain": "Look at what kind of word does the modifying: verbs and i-adjectives like 買った, 読む, 高い → go straight before the noun; nouns like 私 or 日本 → add 「の」. Learners who think of の as a general linking word often write ✗買ったの本 or ✗高いの本. Negative and ている forms also attach directly when modifying a noun (行かない人, 寝ている猫)."
+        },
+        "ko": {
+          "id": "no-possessive",
+          "diff": "동사·い형용사는 명사에 바로 붙여 꾸미고, 명사가 명사를 꾸밀 때만 「の」를 붙인다.",
+          "this": [
+            {
+              "tag": "동사 바로 연결",
+              "tr": "이것은 어제 산 책입니다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "명사＋の",
+              "tr": "이것은 내 책입니다."
+            }
+          ],
+          "wrong": {
+            "why": "동사가 명사를 꾸밀 때는 「の」를 붙이지 않는다"
+          },
+          "explain": "꾸미는 말이 어떤 품사인지 보자. 買った, 読む, 高い 같은 동사·い형용사 → 명사 앞에 바로 놓는다, 私, 日本 같은 명사 → 「の」를 붙인다. ‘나의 책’의 ‘의’에 끌려 ✗買ったの本, ✗高いの本처럼 쓰기 쉽다. ない형, ている형이 명사를 꾸밀 때도 마찬가지로 바로 붙는다(行かない人、寝ている猫)."
+        },
+        "es": {
+          "id": "no-possessive",
+          "diff": "Los verbos y adjetivos い modifican al sustantivo directamente; solo cuando un sustantivo modifica a otro se añade 「の」.",
+          "this": [
+            {
+              "tag": "Verbo directo",
+              "tr": "Este es el libro que compré ayer."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Sustantivo + の",
+              "tr": "Este es mi libro."
+            }
+          ],
+          "wrong": {
+            "why": "Cuando un verbo modifica a un sustantivo no se pone 「の」"
+          },
+          "explain": "Fíjate en la palabra que modifica: verbos y adjetivos い como 買った, 読む o 高い → van directamente delante del sustantivo; sustantivos como 私 o 日本 → se añade 「の」. Es muy fácil escribir ✗買ったの本 o ✗高いの本. Las formas ない y ている también modifican al sustantivo directamente (行かない人, 寝ている猫)."
+        },
+        "vi": {
+          "id": "no-possessive",
+          "diff": "Động từ, tính từ đuôi い bổ nghĩa cho danh từ thì gắn trực tiếp; danh từ bổ nghĩa cho danh từ mới thêm 「の」.",
+          "this": [
+            {
+              "tag": "Động từ gắn trực tiếp",
+              "tr": "Đây là cuốn sách tôi mua hôm qua."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Danh từ＋の",
+              "tr": "Đây là sách của tôi."
+            }
+          ],
+          "wrong": {
+            "why": "Động từ bổ nghĩa cho danh từ thì không thêm 「の」"
+          },
+          "explain": "Xem từ đứng trước là loại từ gì: động từ, tính từ đuôi い như 買った、読む、高い → đặt thẳng trước danh từ; danh từ như 私、日本 → thêm 「の」. Người học rất dễ viết thành ✗買ったの本、✗高いの本. Thể ない, thể ている bổ nghĩa cho danh từ cũng gắn trực tiếp (行かない人、寝ている猫)."
+        },
+        "my": {
+          "id": "no-possessive",
+          "diff": "ကြိယာ၊ い နာမဝိသေသနက နာမ်ကို အထူးပြုလျှင် တိုက်ရိုက် ဆက်သည်။ နာမ်က နာမ်ကို အထူးပြုမှသာ「の」ထည့်သည်။",
+          "this": [
+            {
+              "tag": "ကြိယာ တိုက်ရိုက်ဆက်",
+              "tr": "ဒါက မနေ့က ဝယ်ခဲ့တဲ့ စာအုပ်ပါ။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "နာမ်＋の",
+              "tr": "ဒါက ကျွန်တော့် စာအုပ်ပါ။"
+            }
+          ],
+          "wrong": {
+            "why": "ကြိယာက နာမ်ကို အထူးပြုလျှင်「の」မထည့်ရ"
+          },
+          "explain": "အထူးပြုသော စကားလုံးက ဘာလဲ ကြည့်ပါ - 買った、読む、高い ကဲ့သို့ ကြိယာ၊ い နာမဝိသေသန → နာမ်ရှေ့တွင် တိုက်ရိုက် ထားသည်။ 私、日本 ကဲ့သို့ နာမ် →「の」ထည့်သည်။ မြန်မာလို “တဲ့／ရဲ့” အမြဲပါသဖြင့် ✗買ったの本、✗高いの本 ဟု မှားရေးတတ်ဆုံး ဖြစ်သည်။ ない形、ている形 က နာမ်ကို အထူးပြုလျှင်လည်း တိုက်ရိုက် ဆက်သည် (行かない人、寝ている猫)။"
+        }
+      }
+    },
+    {
+      "point": "shika-nai",
+      "kind": "meaning",
+      "reason": "标准「意思差不多的」：中文译法一样但意思不同的不收；ばかり 的「净是、老是」与 しか〜ない 的「只有（排除其他）」是两个意思，替换后核心意思改变。组里已有合格的 だけ，不需要换对象。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "bakari-only",
+          "diff": "しか〜ない 是除了它以外都不；ばかり 是「净是、老是」，别的也可能有，多带不满。",
+          "this": [
+            {
+              "ja": "兄:あに|は|肉:にく|*しか|食:た|べ|*ない|。",
+              "tag": "排除其他",
+              "tr": "哥哥只吃肉（别的都不吃）。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "兄:あに|は|肉:にく|*ばかり|食:た|べている|。",
+              "tag": "太多 · 不满",
+              "tr": "哥哥净吃肉。"
+            }
+          ],
+          "explain": "しか〜ない 把其他一切都排除，强调「只有这个」；ばかり 是说某样东西太多、太常，常带批评，后面接肯定（食べている）。中文都能说「只吃肉」，看句尾是否定还是肯定就能分辨。口语里说 ばっかり 也一样。"
+        },
+        "en": {
+          "id": "bakari-only",
+          "diff": "しか〜ない means nothing other than that; ばかり means “nothing but, always”, other things may exist too, and it often sounds disapproving.",
+          "this": [
+            {
+              "tag": "Excludes others",
+              "tr": "My brother eats only meat (nothing else)."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Too much · disapproving",
+              "tr": "My brother eats nothing but meat."
+            }
+          ],
+          "explain": "しか〜ない excludes everything else, stressing “only this”; ばかり says there's too much or too often of something, often with criticism, and is followed by an affirmative (食べている). Both can be translated “only eats meat”, but you can tell them apart by whether the sentence ends negative or affirmative. In casual speech ばっかり works the same way."
+        },
+        "ko": {
+          "id": "bakari-only",
+          "diff": "しか〜ない는 그것 말고는 아무것도 ~않는다는 것이고, ばかり는 ‘~만 잔뜩, 늘 ~만’으로 다른 것도 있을 수 있으며 주로 불만이 담긴다.",
+          "this": [
+            {
+              "tag": "나머지 배제",
+              "tr": "형은 고기밖에 안 먹는다(다른 건 안 먹는다)."
+            }
+          ],
+          "that": [
+            {
+              "tag": "너무 많음 · 불만",
+              "tr": "형은 고기만 먹고 있다."
+            }
+          ],
+          "explain": "しか〜ない는 다른 모든 것을 배제해 ‘이것뿐’임을 강조한다. ばかり는 어떤 것이 너무 많거나 너무 잦다는 말로 비판이 담기는 경우가 많고, 뒤에 긍정(食べている)이 온다. 한국어로는 둘 다 ‘고기만 먹는다’로 옮길 수 있으니 문장 끝이 부정인지 긍정인지 보면 구별된다. 구어에서 ばっかり라고 해도 마찬가지다."
+        },
+        "es": {
+          "id": "bakari-only",
+          "diff": "しか〜ない: nada más que eso; ばかり: «no hace más que…, siempre…», puede haber otras cosas, y suele llevar queja.",
+          "this": [
+            {
+              "tag": "Excluye lo demás",
+              "tr": "Mi hermano solo come carne (no come nada más)."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Demasiado · queja",
+              "tr": "Mi hermano no hace más que comer carne."
+            }
+          ],
+          "explain": "しか〜ない excluye todo lo demás y subraya «solo esto»; ばかり dice que algo es demasiado abundante o frecuente, suele llevar crítica y va con afirmación (食べている). Ambas se pueden traducir por «solo come carne»: fíjate en si el final es negativo o afirmativo para distinguirlas. En la lengua hablada se dice también ばっかり, con el mismo uso."
+        },
+        "vi": {
+          "id": "bakari-only",
+          "diff": "しか〜ない là ngoài nó ra thì không gì cả; ばかり là “toàn là, cứ toàn”, thứ khác cũng có thể có, thường kèm sự bất mãn.",
+          "this": [
+            {
+              "tag": "Loại trừ thứ khác",
+              "tr": "Anh tôi chỉ ăn thịt (thứ khác không ăn)."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Quá nhiều · bất mãn",
+              "tr": "Anh tôi toàn ăn thịt."
+            }
+          ],
+          "explain": "しか〜ない loại trừ mọi thứ khác, nhấn mạnh “chỉ có cái này”; ばかり nói một thứ gì đó quá nhiều, quá thường xuyên, hay kèm ý phê phán, phía sau là khẳng định (食べている). Tiếng Việt đều có thể nói “chỉ ăn thịt”, xem cuối câu là phủ định hay khẳng định là phân biệt được. Trong văn nói, nói ばっかり cũng như vậy."
+        },
+        "my": {
+          "id": "bakari-only",
+          "diff": "しか〜ない သည် ၎င်းမှလွဲ၍ ကျန်တာ မ...ဘူး ဖြစ်သည်။ ばかり သည် “...ချည်းပဲ၊ ...ပဲ အမြဲ” ဖြစ်ပြီး အခြားဟာလည်း ရှိနိုင်ကာ မကျေနပ်ချက် အများအားဖြင့် ပါသည်။",
+          "this": [
+            {
+              "tag": "ကျန်တာ ဖယ်ထုတ်",
+              "tr": "အစ်ကိုက အသားပဲ စားတယ် (တခြားဟာ ဘာမှ မစားဘူး)။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "များလွန်း · မကျေနပ်",
+              "tr": "အစ်ကိုက အသားချည်းပဲ စားနေတယ်။"
+            }
+          ],
+          "explain": "しか〜ない သည် ကျန်အားလုံးကို ဖယ်ထုတ်ပြီး “ဒါပဲ” ကို အလေးပေးသည်။ ばかり သည် တစ်ခုခု များလွန်း၊ မကြာခဏ ဖြစ်လွန်းကြောင်း ပြောပြီး ဝေဖန်ချက် မကြာခဏ ပါကာ နောက်တွင် အဟုတ်ပုံစံ (食べている) လာသည်။ မြန်မာလို နှစ်ခုစလုံး “အသားပဲ စားတယ်” ဟု ပြောနိုင်သဖြင့် ဝါကျအဆုံး ငြင်းလား အဟုတ်လား ကြည့်၍ ခွဲခြားနိုင်သည်။ ပြောစကားတွင် ばっかり ဟု ပြောလည်း အတူတူပင် ဖြစ်သည်။"
+        }
+      }
     }
   ]
 }

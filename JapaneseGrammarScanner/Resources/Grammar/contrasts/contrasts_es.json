@@ -3511,41 +3511,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas son estructuras de comparación",
+          "note": "Ambas expresan «el más…»",
           "items": [
             {
-              "id": "to-dochira",
-              "diff": "Con tres o más elementos se usa 「の中で〜が一番」; si solo hay dos, se pregunta con 「どちらが」.",
+              "id": "hodo-wa-nai",
+              "title": "〜ほど〜はない (no hay nada más… que)",
+              "diff": "の中で〜が一番 primero delimita un grupo y luego señala objetivamente al primero; ほど〜はない no delimita nada y usa una negación para decir «nadie se le compara», con una fuerte admiración subjetiva de quien habla.",
               "this": [
                 {
-                  "tag": "Tres o más · el que más",
-                  "tr": "De todas las frutas, ¿cuál te gusta más?"
+                  "tag": "Grupo delimitado · el primero",
+                  "tr": "En mi familia, mi madre es la más cariñosa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Dos · cuál",
-                  "tr": "¿Qué te gusta más, la manzana o la mandarina?"
+                  "tag": "Nadie se compara · admiración subjetiva",
+                  "tr": "No hay persona tan cariñosa como mi madre."
                 }
               ],
-              "explain": "Cuenta los elementos que se comparan: 「果物」 es toda una categoría, con tres o más → の中で〜が一番, y para preguntar se usa 「何／どれ」; si solo hay dos, りんご y みかん → AとBとどちらが, y se responde con 「〜のほうが」."
-            },
-            {
-              "id": "yori-hou-ga",
-              "diff": "の中で〜が一番 elige el primero de un grupo; より〜のほうが compara dos: B supera a A.",
-              "this": [
-                {
-                  "tag": "En un grupo · el que más",
-                  "tr": "De todos los deportes, el que más me gusta es el fútbol."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Entre dos · más",
-                  "tr": "Me gusta más el fútbol que el béisbol."
-                }
-              ],
-              "explain": "Fíjate en cuántos elementos se comparan: 「スポーツの中で」 delimita toda una categoría → 一番 (el que más); 「野球より」 compara con uno solo → のほうが (más que)."
+              "explain": "Las dos frases dicen que mamá es la «más» cariñosa. Fíjate en si la frase delimita primero un grupo: si hay un grupo como 「家族の中で」, se usa la afirmación 「〜が一番」 → dice objetivamente quién es el primero dentro de ese grupo, y también sirve para preguntar (誰が一番〜？); si no se delimita nada y se usa la negación 「〜ほど…はいない／はない」 → dice «nadie se le compara», una valoración subjetiva muy alta de quien habla, con un tono más fuerte."
             }
           ]
         }
@@ -3556,85 +3540,51 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Al modificar sustantivos, marcar el sujeto o convertir una oración en sustantivo, comparten el mismo trabajo que 「の」",
+          "sense": 6,
+          "note": "Ambas marcan el sujeto dentro de una oración que modifica a un sustantivo",
           "items": [
             {
-              "id": "noun-modifying-clause",
-              "diff": "Cuando un sustantivo modifica a otro, se añade 「の」; los verbos y adjetivos い modifican al sustantivo directamente, sin 「の」.",
-              "this": [
-                {
-                  "tag": "Sustantivo + の",
-                  "tr": "Este es mi libro."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Verbo directo",
-                  "tr": "Este es el libro que compré ayer."
-                }
-              ],
-              "wrong": {
-                "why": "Cuando un verbo modifica a un sustantivo no se pone 「の」"
-              },
-              "explain": "Fíjate en la palabra que modifica: sustantivos como 私 o 日本 → hay que añadir 「の」; verbos y adjetivos い como 買った, 行く o 高い → van directamente delante del sustantivo. Como en español decimos «el libro de…» y «el libro que compré», es fácil meter un 「の」 de más. Las formas ない y ている también modifican al sustantivo directamente (行かない人, 寝ている猫)."
-            },
-            {
-              "id": "na-adj-modify",
-              "diff": "Un sustantivo modifica a otro con 「の」; un adjetivo な modifica a un sustantivo con 「な」.",
-              "this": [
-                {
-                  "tag": "Sustantivo + の",
-                  "tr": "Este es un coche japonés."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Adjetivo な + な",
-                  "tr": "Este es un coche bonito."
-                }
-              ],
-              "wrong": {
-                "why": "Un adjetivo な modifica al sustantivo con 「な」"
-              },
-              "explain": "Primero decide si la palabra de delante es un sustantivo o un adjetivo な: 日本 y 学校 son sustantivos → の; きれい, 静か y 有名 son adjetivos な → な. 「きれい」 termina en 「い」, pero es un adjetivo な, y por eso es muy fácil escribir 「きれいの」."
-            },
-            {
               "id": "ga-subject",
-              "title": "〜が（sujeto）",
-              "diff": "Dentro de una oración que modifica a un sustantivo, el sujeto puede ir con 「の」 en lugar de 「が」; el sujeto de la oración principal solo puede ir con 「が」.",
+              "title": "〜が（sujeto en la subordinada）",
+              "diff": "En una oración que modifica a un sustantivo, marcar el sujeto con 「の」 o con 「が」 significa lo mismo; の es algo más formal y suave, が es más frecuente y neutro.",
               "this": [
                 {
-                  "tag": "En la subordinada · の＝が",
-                  "tr": "Esta es la comida que hizo mi madre."
+                  "tag": "Sujeto de la subordinada · の (suave)",
+                  "tr": "Este es un dibujo que hizo mi hermano mayor."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sujeto principal · が",
-                  "tr": "Mi madre hizo la comida."
+                  "tag": "Sujeto de la subordinada · が (neutro)",
+                  "tr": "Este es un dibujo que hizo mi hermano mayor."
                 }
               ],
-              "explain": "Mira si detrás hay un sustantivo modificado: en 「母の作った料理」, 「作った」 modifica a 「料理」, y ese 「の」 equivale a 「が」; si la oración termina en 「作った」 y no sigue ningún sustantivo → solo 「が」."
-            },
+              "explain": "Las dos frases significan exactamente lo mismo. Primero mira si detrás de 「描いた」 hay un sustantivo modificado por él, 「絵」: si lo hay, el sujeto dentro de la subordinada puede llevar の o が; の es algo más formal y suave, が es más frecuente. Si entre el sujeto y el verbo hay un complemento como 「絵を」, の se entiende fácilmente como «el dibujo de mi hermano», así que normalmente se usa が; si la oración termina en el verbo y no hay ningún sustantivo modificado detrás (兄が絵を描いた), solo se puede usar が."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 7,
+          "note": "Ambas expresan «el hecho de hacer…»",
+          "items": [
             {
               "id": "koto-nominalizer",
-              "diff": "Ambas convierten una oración en sustantivo; para escenas que ves u oyes directamente solo vale 「の」, y en 「〜ことができる」 solo vale 「こと」.",
+              "title": "〜こと（como sujeto）",
+              "diff": "Las dos convierten una acción en un sustantivo que funciona como sujeto; の es más coloquial y suele expresar sensaciones propias, こと es algo más formal y suena más a verdad general.",
               "this": [
                 {
-                  "tag": "Percepción · の",
-                  "tr": "Se oye cantar a los pájaros."
+                  "tag": "Coloquial · sensación propia",
+                  "tr": "Viajar solo es divertido."
                 }
               ],
               "that": [
                 {
-                  "tag": "Capacidad · こと",
-                  "tr": "Sé tocar el piano."
+                  "tag": "Algo formal · verdad general",
+                  "tr": "El hecho de viajar solo resulta agradable."
                 }
               ],
-              "wrong": {
-                "why": "Delante de un verbo de percepción solo vale 「の」"
-              },
-              "explain": "Fíjate en el último verbo: con verbos de percepción como 「見える」, 「聞こえる」 o 「見る」, lo de delante es una escena concreta que ocurre ante ti → の; con expresiones abstractas como 「できる」 o 「趣味は〜です」 → こと. Delante de 「好き」 y 「上手」 valen las dos."
+              "explain": "Las dos frases convierten 「一人で旅行する」 en sujeto, y delante de palabras de valoración como 「楽しい」 sirven tanto の como こと. En la conversación diaria, para contar lo que uno siente, se usa más の; al escribir o en un discurso, para hablar de una verdad general, se usa más こと, con un tono algo más formal."
             }
           ]
         }
@@ -3645,24 +3595,24 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「の + だ」: presentan lo anterior como un hecho",
+          "note": "Ambas vienen de 「の＋だ」: 「の」 convierte lo anterior en un hecho y 「だ」 afirma «así es»",
           "items": [
             {
               "id": "n-desu-explanatory",
-              "diff": "ので va en medio de la oración y le sigue un resultado; んです va al final y explica la situación por sí sola.",
+              "diff": "ので es la forma suspensiva de 「の＋だ」: primero presenta la causa como un hecho y detrás tiene que venir el resultado; んです coloca 「の＋だ（です）」 al final de la oración para explicarle la situación al oyente por sí sola.",
               "this": [
                 {
-                  "tag": "En medio · sigue resultado",
-                  "tr": "Me duele la cabeza, así que hoy me voy pronto."
+                  "tag": "En medio · sigue el resultado",
+                  "tr": "Hay mucho tráfico, así que llegaré un poco tarde."
                 }
               ],
               "that": [
                 {
-                  "tag": "Al final · explica la situación",
-                  "tr": "Perdone, es que me duele la cabeza."
+                  "tag": "Al final · explicar la situación",
+                  "tr": "Perdón por el retraso. Es que había mucho tráfico."
                 }
               ],
-              "explain": "Fíjate en si la oración ha terminado: detrás de ので siempre viene otra parte (早く帰ります); んです va al final y ahí acaba, y sirve para responder a 「どうしたんですか」 o para explicarle al otro tu situación. Por escrito se dice のです y en estilo llano んだ, con el mismo uso."
+              "explain": "Las dos vienen de 「の＋だ」: 「の」 envuelve el hecho 「道が混んでいる」 como un sustantivo y 「だ」 afirma «la situación es esta». Al final de la oración, como 「んです／のだ」, presenta esa situación al oyente y explica el motivo que hay detrás; cuando 「だ」 continúa en su forma conectiva 「で」 y se convierte en 「ので」, primero presenta la causa como un hecho consumado y luego añade el resultado (遅れます), por eso ので suena objetivo. Para distinguirlas, mira lo que va detrás de 「の」: si sigue 「です」 o 「だ」 y la oración termina → explicar una situación; si sigue 「で」 y después viene un resultado → porque."
             }
           ]
         },
@@ -3673,75 +3623,41 @@
             {
               "id": "kara-from",
               "title": "〜から（causa）",
-              "diff": "ので presenta la causa como un hecho objetivo, con tono suave; から es la razón subjetiva del hablante, y al final de la frase, 「〜からです」, solo vale から.",
+              "diff": "Las dos expresan «porque»; ので presenta la causa como una circunstancia objetiva, suena suave y va bien con peticiones corteses; から destaca el motivo personal de quien habla y puede ir seguida de una orden directa.",
               "this": [
                 {
-                  "tag": "Suave · petición",
-                  "tr": "Perdone, tengo fiebre. ¿Podría irme a casa antes?"
+                  "tag": "Objetivo · petición cortés",
+                  "tr": "Está lloviendo, así que, por favor, llévese un paraguas."
                 }
               ],
               "that": [
                 {
-                  "tag": "Al final · からです",
-                  "tr": "Si ayer falté, fue porque tenía fiebre."
+                  "tag": "Subjetivo · orden directa",
+                  "tr": "¡Está lloviendo, llévate el paraguas!"
                 }
               ],
-              "wrong": {
-                "why": "Para dar la causa al final de la frase solo vale 「からです」"
-              },
-              "explain": "Fíjate en dos cosas: al hacer una petición a un jefe o profesor, ので suena objetivo y no parece una excusa; cuando primero dices el resultado y añades la causa al final (〜のは〜からです), solo vale から."
+              "explain": "Las dos frases dicen «porque está lloviendo». Fíjate en la segunda parte: para una petición cortés a un cliente o a un superior (お持ちください) se usa ので, que suena objetivo y no impone; con una orden o prohibición directa como 「持っていけ」 lo natural es から, y ので junto a una orden brusca resulta muy forzado."
             },
             {
               "id": "te-form-sequence",
               "title": "〜て（causa）",
-              "diff": "ので puede ir seguido de una petición o intención; て, cuando expresa causa, solo puede ir seguido de un sentimiento o de un resultado incontrolable.",
+              "diff": "Detrás de ので puede ir una petición o una intención; cuando て expresa causa, detrás solo puede ir un sentimiento o un resultado que no se controla.",
               "this": [
                 {
-                  "tag": "Sigue petición",
-                  "tr": "No hay tiempo, así que date prisa, por favor."
+                  "tag": "Sigue una petición",
+                  "tr": "No queda tiempo; dese prisa, por favor."
                 }
               ],
               "that": [
                 {
                   "tag": "Sigue un sentimiento",
-                  "tr": "No tengo tiempo y estoy en un apuro."
+                  "tr": "No tenía tiempo y me vi en un apuro."
                 }
               ],
               "wrong": {
-                "why": "Detrás de la 「て」 causal no puede ir una petición"
+                "why": "Detrás de 「て」 con valor de causa no puede ir una petición"
               },
-              "explain": "Mira la segunda parte: peticiones o intenciones como 「〜てください」「〜ましょう」 → solo ので (o から); sentimientos o resultados naturales como 「困った」「びっくりした」 → vale て."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "noun-modifying-clause",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Ambas sirven para modificar sustantivos («el … que…», «el … de…»)",
-          "items": [
-            {
-              "id": "no-possessive",
-              "diff": "Los verbos y adjetivos い modifican al sustantivo directamente; solo cuando un sustantivo modifica a otro se añade 「の」.",
-              "this": [
-                {
-                  "tag": "Verbo directo",
-                  "tr": "Este es el libro que compré ayer."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Sustantivo + の",
-                  "tr": "Este es mi libro."
-                }
-              ],
-              "wrong": {
-                "why": "Cuando un verbo modifica a un sustantivo no se pone 「の」"
-              },
-              "explain": "Fíjate en la palabra que modifica: verbos y adjetivos い como 買った, 読む o 高い → van directamente delante del sustantivo; sustantivos como 私 o 日本 → se añade 「の」. Es muy fácil escribir ✗買ったの本 o ✗高いの本. Las formas ない y ている también modifican al sustantivo directamente (行かない人, 寝ている猫)."
+              "explain": "Fíjate en la segunda parte: una petición con 「〜てください」 como 「急いでください」 o una intención con 「〜ましょう」 → solo ので (o から); un sentimiento o un resultado natural como 「困った」「びっくりした」 → puede ir て."
             }
           ]
         }
@@ -3751,15 +3667,15 @@
       "id": "question-word-ka",
       "groups": [
         {
-          "kind": "root",
-          "note": "Todas vienen de «interrogativo + partícula»: か (pregunta → «algún…» indeterminado), も (también → «todo… (no)»), でも (aunque sea → «cualquiera»)",
+          "kind": "look",
+          "note": "何か ↔ 何も ↔ 何でも: solo cambia la partícula tras el interrogativo (か／も／でも)",
           "items": [
             {
               "id": "question-word-mo-nai",
-              "diff": "Interrogativo + か es «algún…»; interrogativo + も + negación es «ninguno».",
+              "diff": "Interrogativo + か es «algo, alguno»; interrogativo + も + negación es «nada, ninguno».",
               "this": [
                 {
-                  "tag": "Alguna cosa",
+                  "tag": "Algo",
                   "tr": "¿Hay algo en la nevera?"
                 }
               ],
@@ -3772,25 +3688,25 @@
               "wrong": {
                 "why": "Detrás de 「何も」 tiene que ir una negación"
               },
-              "explain": "Fíjate en el kana que sigue al interrogativo y en el final de la oración: tras 「何か」 puede ir afirmación o pregunta, y significa «alguna cosa»; tras 「何も」 siempre va negación (ない), y significa «nada». Si preguntan 「何かある？」 y no hay nada, se responde 「何もない」."
+              "explain": "Mira solo el kana que va detrás del interrogativo: 「何か」 → algo, puede ir seguido de afirmación o de pregunta; 「何も」 → nada en absoluto, siempre va seguido de negación (ない). Si te preguntan 「何かある？」 y no hay nada, se responde 「何もない」."
             },
             {
               "id": "demo-but",
               "title": "疑問詞＋でも",
-              "diff": "Interrogativo + か es «alguno» (sin concretar); interrogativo + でも es «cualquiera vale» (todos).",
+              "diff": "Interrogativo + か es «alguno» (sin precisar); interrogativo + でも es «cualquiera» (todos valen).",
               "this": [
                 {
-                  "tag": "Algo · sin concretar",
+                  "tag": "Algo · sin precisar",
                   "tr": "Tengo hambre. Quiero comer algo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cualquiera vale",
-                  "tr": "Tengo hambre. Quiero comer lo que sea."
+                  "tag": "Cualquier cosa vale",
+                  "tr": "Tengo hambre. Quiero comer, me da igual qué."
                 }
               ],
-              "explain": "Fíjate en lo que sigue: 何か se refiere a «alguna cosa» sin decir cuál; tras 何でも suele ir 「いい」 y significa «cualquiera vale». Ojo a la lectura: 何か se lee なにか y 何でも se lee なんでも."
+              "explain": "Mira lo que va detrás del interrogativo: con 「か」 → algo, solo que no se dice qué; con 「でも」 → cualquier cosa vale, y a menudo va seguido de 「いい」. La lectura también cambia: 何か se lee なにか y 何でも se lee なんでも."
             }
           ]
         }
@@ -3800,43 +3716,17 @@
       "id": "question-word-mo-nai",
       "groups": [
         {
-          "kind": "root",
-          "note": "Todas vienen de «interrogativo + partícula»: か (pregunta → «algún…» indeterminado), も (también → «todo… (no)»), でも (aunque sea → «cualquiera»)",
-          "items": [
-            {
-              "id": "question-word-ka",
-              "diff": "Interrogativo + も + negación es «ninguno»; interrogativo + か es «algún…».",
-              "this": [
-                {
-                  "tag": "Nada de nada",
-                  "tr": "En la nevera no hay nada."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Alguna cosa",
-                  "tr": "¿Hay algo en la nevera?"
-                }
-              ],
-              "wrong": {
-                "why": "Detrás de 「何も」 tiene que ir una negación"
-              },
-              "explain": "Fíjate en el kana que sigue al interrogativo y en el final de la oración: tras 「何も」 siempre va negación (ない), y significa «nada»; tras 「何か」 puede ir afirmación o pregunta, y significa «alguna cosa». Si preguntan 「何かある？」 y no hay nada, se responde 「何もない」."
-            }
-          ]
-        },
-        {
           "kind": "look",
-          "note": "何も ↔ 何でも: solo se diferencian en un 「で」",
+          "note": "何も ↔ 何か ↔ 何でも: solo cambia la partícula tras el interrogativo (も／か／でも)",
           "items": [
             {
               "id": "demo-but",
               "title": "疑問詞＋でも",
-              "diff": "何も + negación es «nada»; 何でも + afirmación es «de todo, cualquier cosa».",
+              "diff": "何も + negación es «nada»; 何でも + afirmación es «cualquier cosa, de todo».",
               "this": [
                 {
                   "tag": "Negación total",
-                  "tr": "Hoy no me apetece comer nada."
+                  "tr": "Hoy no tengo ganas de comer nada."
                 }
               ],
               "that": [
@@ -3845,30 +3735,51 @@
                   "tr": "Yo puedo comer de todo."
                 }
               ],
-              "explain": "Mira el final de la frase: negación → 何も (negación total); afirmación → 何でも (afirmación total). La lectura también cambia: 何も se lee なにも y 何でも se lee なんでも."
+              "explain": "Mira el final de la oración: negación → 何も (negación total); afirmación → 何でも (afirmación total). La lectura también cambia: 何も se lee なにも y 何でも se lee なんでも."
+            },
+            {
+              "id": "question-word-ka",
+              "diff": "Interrogativo + も + negación es «nada, ninguno»; interrogativo + か es «algo, alguno».",
+              "this": [
+                {
+                  "tag": "Nada de nada",
+                  "tr": "En la nevera no hay nada."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Algo",
+                  "tr": "¿Hay algo en la nevera?"
+                }
+              ],
+              "wrong": {
+                "why": "Detrás de 「何も」 tiene que ir una negación"
+              },
+              "explain": "Mira solo el kana que va detrás del interrogativo: 「何も」 → nada en absoluto, siempre va seguido de negación (ない); 「何か」 → algo, puede ir seguido de afirmación o de pregunta. Si te preguntan 「何かある？」 y no hay nada, se responde 「何もない」."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas expresan «nada en absoluto»",
+          "note": "Ambas expresan «ni uno solo»",
           "items": [
             {
-              "id": "zenzen-nai",
-              "diff": "何も〜ない niega «cosas»: ni una sola; 全然〜ない niega el «grado»: nada en absoluto.",
+              "id": "toshite-nai",
+              "title": "〜として〜ない (ni una sola cosa)",
+              "diff": "何も〜ない es la negación total de uso diario; 何一つとして〜ない es más formal y subraya «ni uno solo».",
               "this": [
                 {
-                  "tag": "Ni una cosa",
-                  "tr": "No he comido nada desde esta mañana."
+                  "tag": "Uso cotidiano",
+                  "tr": "No robaron nada de la habitación."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nada en absoluto",
-                  "tr": "Últimamente no como nada de verdura."
+                  "tag": "Formal · enfático",
+                  "tr": "De la habitación no robaron ni una sola cosa."
                 }
               ],
-              "explain": "Fíjate en si hay complemento directo: 何も ocupa por sí mismo el lugar de 「を」, así que en la oración ya no aparece lo que se come; 全然 es un adverbio, puede ir junto con 「野菜を」 e incluso modificar adjetivos (全然おいしくない), cosa que 何も no puede hacer."
+              "explain": "Las dos frases dicen que no desapareció nada de la habitación. 何も〜ない es la forma más normal, tanto hablada como escrita; 何一つとして〜ない niega incluso 「一つ」 y subraya «ni uno solo», con un tono pesado, y se usa sobre todo en textos, noticias o relatos formales. En la conversación diaria basta con 「何もない」."
             }
           ]
         }
@@ -3900,23 +3811,6 @@
                 "why": "Detrás de 「しか」 siempre tiene que ir una negación"
               },
               "explain": "Fíjate en el final de la oración: detrás de しか siempre hay negación (ない, 〜ません); quien habla siente que es poco y a menudo va con 「もう」; detrás de だけ puede ir afirmación, y solo indica la cantidad de forma objetiva."
-            },
-            {
-              "id": "bakari-only",
-              "diff": "しか〜ない: nada más que eso; ばかり: «no hace más que…, siempre…», puede haber otras cosas, y suele llevar queja.",
-              "this": [
-                {
-                  "tag": "Excluye lo demás",
-                  "tr": "Mi hermano solo come carne (no come nada más)."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Demasiado · queja",
-                  "tr": "Mi hermano no hace más que comer carne."
-                }
-              ],
-              "explain": "しか〜ない excluye todo lo demás y subraya «solo esto»; ばかり dice que algo es demasiado abundante o frecuente, suele llevar crítica y va con afirmación (食べている). Ambas se pueden traducir por «solo come carne»: fíjate en si el final es negativo o afirmativo para distinguirlas. En la lengua hablada se dice también ばっかり, con el mismo uso."
             }
           ]
         }
@@ -3982,7 +3876,7 @@
                   "tr": "Fui corriendo, pero resulta que la tienda ya estaba cerrada."
                 }
               ],
-              "explain": "Fíjate en la segunda parte: si das tu opinión o planteas un problema → しかし; si cuentas algo que ya pasó y que fue contrario a lo esperado (normalmente en pasado) → ところが. Detrás de ところが no puede ir tu propia opinión ni una petición."
+              "explain": "Fíjate en la segunda parte: si das tu opinión o planteas un problema (お金がかかりすぎる) → しかし; si cuentas algo que ya pasó y que fue contrario a lo esperado (店は閉まっていた, normalmente en pasado) → ところが. Detrás de ところが no puede ir tu propia opinión ni una petición."
             }
           ]
         }
@@ -3993,45 +3887,30 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Todas pueden expresar «luego, además»",
+          "sense": 1,
+          "note": "Ambas expresan «primero…, luego…»",
           "items": [
             {
               "id": "soshite-conjunction",
-              "diff": "それから se usa sobre todo en la conversación para añadir «una cosa más»; そして se usa sobre todo al describir o narrar, para añadir algo de forma fluida, y suena algo más escrito.",
+              "title": "そして（secuencia: y luego）",
+              "diff": "Las dos expresan hacer una cosa después de terminar otra; それから es frecuente en la conversación al contar lo que pasó y destaca «después de eso»; そして tiene un tono algo más formal y se usa más en redacciones y relatos.",
               "this": [
                 {
-                  "tag": "Añadir · y también",
-                  "tr": "Dos cafés, por favor. Y también un pastel."
+                  "tag": "Coloquial · contar lo que pasó",
+                  "tr": "Me encontré con un amigo en la estación. Después, vimos una película juntos."
                 }
               ],
               "that": [
                 {
-                  "tag": "Descripción · además",
-                  "tr": "Este pueblo es tranquilo. Y además, muy bonito."
+                  "tag": "Algo formal · narración",
+                  "tr": "Me encontré con un amigo en la estación. Y luego vimos una película juntos."
                 }
               ],
-              "explain": "Fíjate en la situación: al pedir o encargar algo, cuando te acuerdas de «una cosa más» → それから; al describir otra característica de lo mismo, o al contar el siguiente paso de una historia → そして. Con el sentido de «desde entonces» solo vale それから."
-            },
-            {
-              "id": "soreni-conjunction",
-              "diff": "それから solo añade «una cosa más»; それに suma un argumento más a unas razones o una valoración: «y encima».",
-              "this": [
-                {
-                  "tag": "Una cosa más",
-                  "tr": "Tráeme leche. Y también huevos, por favor."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Una razón más",
-                  "tr": "Quedémonos con esta habitación. Es amplia y, además, está cerca de la estación."
-                }
-              ],
-              "explain": "Fíjate en qué se añade: una tarea más o una cosa más que comprar → それから; una ventaja o razón más para convencer a alguien → それに, que suele ir con 「〜し」."
+              "explain": "Las dos frases significan lo mismo: primero me encontré con un amigo y luego vimos una película. Al conversar y contar lo que hiciste paso a paso, se usa más それから, que además puede ir sola como pregunta: 「それから？」 (¿Y luego?); al escribir un diario o una redacción, o al contar una historia, そして resulta más natural y tiene un tono algo más formal."
             },
             {
               "id": "te-kara",
-              "diff": "てから une «primero A, luego B» dentro de una sola oración; それから va al principio y une dos oraciones.",
+              "diff": "てから une «primero A, luego B» dentro de una sola oración; それから va al principio de una oración y une dos oraciones.",
               "this": [
                 {
                   "tag": "Al inicio · dos oraciones",
@@ -4041,10 +3920,34 @@
               "that": [
                 {
                   "tag": "En medio · una oración",
-                  "tr": "Jugaré después de hacer los deberes."
+                  "tr": "Juego después de hacer los deberes."
                 }
               ],
-              "explain": "Significan lo mismo; fíjate en la posición: el verbo va directamente con 「てから」 → todo en una oración; se corta antes con 「。」 y se empieza con 「それから」 → dos oraciones. Cuando se habla pensando sobre la marcha o se explican cosas una a una, se usa mucho それから."
+              "explain": "El significado es el mismo: primero los deberes y luego jugar. Fíjate en la posición: si 「てから」 va pegado directamente al verbo → todo se dice en una sola oración y se subraya más «solo después de terminar A, B»; si primero se dice lo primero con 「まず」, se corta con un punto y la siguiente empieza con 「それから」 → queda dividido en dos oraciones, algo habitual cuando se va contando paso a paso mientras se piensa."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Ambas expresan «además» (añadir algo más)",
+          "items": [
+            {
+              "id": "soreni-conjunction",
+              "diff": "Las dos añaden algo más a lo que ya se ha dicho; para una cosa más que comprar o que hacer se usa más それから; para sumar a una valoración otra ventaja u otro defecto en la misma línea se usa それに, con el matiz de «además».",
+              "this": [
+                {
+                  "tag": "Una tarea más",
+                  "tr": "Compra leche al volver, por favor. Ah, y huevos también."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Otra cosa buena",
+                  "tr": "Este restaurante es barato. Además, la comida está rica."
+                }
+              ],
+              "explain": "Fíjate en qué se añade: una cosa más que comprar o que hacer → それから (también vale それに); otra ventaja u otro defecto en la misma línea sobre lo mismo (después de 安い, añadir 料理もおいしい) → それに, con el matiz de «además»; si se cambia por それから, suena como si se leyera una lista."
             }
           ]
         }
