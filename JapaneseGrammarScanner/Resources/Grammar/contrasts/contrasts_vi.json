@@ -1351,32 +1351,29 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều chỉ sự tồn tại của sự vật: “có／ở”",
+          "note": "Cả hai đều diễn tả “có”",
           "items": [
             {
-              "id": "wa-ni-aru",
-              "diff": "(nơi chốn)に N がある／いる nói “ở đó có cái gì”; N は(nơi chốn)にある／いる nói “N ở đâu”.",
+              "id": "gozaimasu-aru",
+              "title": "〜ございます (có / ở)",
+              "thisTitle": "〜がある",
+              "diff": "Nghĩa như nhau, đều là “có”; がございます là cách nói trang trọng của があります, nhân viên cửa hàng hay lễ tân dùng khi nói với khách.",
               "this": [
                 {
-                  "tag": "がある · Ở đó có gì",
-                  "tr": "Trên bàn có sách."
-                },
-                {
-                  "tag": "がいる · Ở đó có gì",
-                  "tr": "Trong vườn có con mèo."
+                  "tag": "があります · Lịch sự thông thường",
+                  "tr": "Tầng hai có nhà vệ sinh."
                 }
               ],
               "that": [
                 {
-                  "tag": "にある · Nó ở đâu",
-                  "tr": "Sách của tôi ở trên bàn."
-                },
-                {
-                  "tag": "にいる · Nó ở đâu",
-                  "tr": "Con mèo nhà tôi ở trong vườn."
+                  "tag": "がございます · Trang trọng hơn, nói với khách",
+                  "tr": "Tầng hai có nhà vệ sinh ạ. (nhân viên nói với khách)"
                 }
               ],
-              "explain": "Xem câu muốn trả lời câu hỏi nào: “Trên bàn có gì?” — thông tin mới là đồ vật → nơi chốnに＋Nがある; “Sách của tôi đâu?” — sách là chủ đề đã biết, thông tin mới là địa điểm → Nは＋nơi chốnにある. Khi nói về thứ cụ thể như “sách của tôi”, 「田中さん」 thì thường dùng は. Người và động vật dùng いる, lý lẽ cũng như vậy: 庭に猫がいます／うちの猫は庭にいます."
+              "wrong": {
+                "why": "Nói người ở đâu thì không dùng ございます mà phải dùng おります"
+              },
+              "explain": "Hai câu đổi cho nhau mà nghĩa không đổi, chỉ khác ở mức độ trang trọng: nói chuyện thường ngày, hỏi đường → があります; nhân viên cửa hàng, lễ tân khách sạn nói với khách, hoặc thông báo chính thức → がございます. ございます chỉ thay cho 「ある」 của đồ vật; nói người ở đâu thì dùng おります hoặc いらっしゃいます."
             }
           ]
         }
@@ -1401,54 +1398,10 @@
               "that": [
                 {
                   "tag": "Mong người khác làm",
-                  "tr": "Tôi mong bố sửa xe đạp giúp tôi."
+                  "tr": "Tôi mong bố sửa xe đạp cho mình."
                 }
               ],
-              "explain": "Xem phía trước 「ほしい」: danh từ＋が → muốn có thứ đó; động từ thể て → muốn người khác làm hành động đó, người làm hành động được đánh dấu bằng 「に」. Nói thành てもらいたい cũng vậy (父に直してもらいたい)."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Đều có nghĩa “muốn”",
-          "items": [
-            {
-              "id": "tai",
-              "diff": "ほしい là muốn có một thứ (đi với danh từ); たい là muốn làm một hành động (đi với động từ).",
-              "this": [
-                {
-                  "tag": "Danh từ → ほしい",
-                  "tr": "Muốn có một chiếc ô tô mới."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Động từ → たい",
-                  "tr": "Muốn mua một chiếc ô tô mới."
-                }
-              ],
-              "wrong": {
-                "why": "Sau động từ phải dùng たい"
-              },
-              "explain": "Xem trước chữ “muốn” là đồ vật hay hành động: xe, tiền, thời gian → がほしい; mua, đi, ăn → động từ thể ます＋たい. Tiếng Việt đều nói “muốn”, nên dễ gắn ほしい vào sau động từ."
-            },
-            {
-              "id": "garu-third-person",
-              "title": "〜ほしがる（người khác muốn có）",
-              "diff": "ほしい chỉ nói về bản thân; nói người khác muốn có thì dùng ほしがっている, và 「が」 đổi thành 「を」.",
-              "this": [
-                {
-                  "tag": "Tôi → ほしい",
-                  "tr": "Tôi muốn có trò chơi mới."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Người khác → ほしがる",
-                  "tr": "Em trai tôi muốn có trò chơi mới."
-                }
-              ],
-              "explain": "Nhìn chủ ngữ là ai: tôi (hoặc hỏi người đối diện trong câu hỏi) → がほしい; em trai, bạn bè… tức là người khác → をほしがっている. ほしい là cảm giác trong lòng mình, còn tâm trạng của người khác chỉ có thể nhìn ra qua biểu hiện bên ngoài. Nói tâm trạng hiện tại của người khác thường dùng thể ている: ほしがっている."
+              "explain": "Nhìn vào phía trước 「ほしい」: danh từ＋が → muốn có thứ đó; động từ thể て → muốn người khác làm hành động đó, người làm hành động được đánh dấu bằng 「に」. Nói てもらいたい cũng có nghĩa như vậy (父に直してもらいたい)."
             }
           ]
         }
@@ -1458,101 +1411,53 @@
       "id": "ga-subject",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Hai vai trò của が đều có từ gần nghĩa: khi đánh dấu chủ ngữ thì gần với 「は」, khi chỉ sự đối lập, rào đón thì gần với 「けど」",
+          "kind": "look",
+          "note": "が ↔ は, chỉ khác một trợ từ",
           "items": [
             {
               "id": "wa-topic",
-              "diff": "が đặt trọng tâm vào chủ ngữ (là ai); は nêu chủ đề trước, trọng tâm nằm ở phía sau (thế nào).",
+              "diff": "Chỉ khác một trợ từ: が đặt câu trả lời “là ai” vào chủ ngữ; は nêu người đó ra trước như một chủ đề đã biết, trọng tâm nằm ở phía sau.",
               "this": [
                 {
-                  "tag": "Trọng tâm ở “ai”",
+                  "tag": "が · Trả lời “là ai”",
                   "tr": "Ai đã đến vậy? — Anh Tanaka đã đến."
                 }
               ],
               "that": [
                 {
-                  "tag": "Trọng tâm ở phía sau",
-                  "tr": "Anh Tanaka đến lúc mấy giờ?"
+                  "tag": "は · Nêu chủ đề trước, hỏi phần sau",
+                  "tr": "Anh Tanaka đến lúc nào vậy?"
                 }
               ],
               "wrong": {
-                "why": "Từ để hỏi làm chủ ngữ bắt buộc dùng が"
+                "why": "Từ để hỏi làm chủ ngữ thì bắt buộc dùng が"
               },
-              "explain": "Xem trọng tâm câu nằm ở đâu: muốn biết hoặc trả lời “là ai, là cái gì” → từ đó dùng が; đưa Tanaka ra làm chủ đề đã biết trước, điều muốn nói là thời gian, tình hình phía sau → は."
-            },
-            {
-              "id": "kedo-keredomo",
-              "diff": "Nghĩa gần như giống nhau; が trang trọng, lịch sự hơn, けど mang tính khẩu ngữ, thoải mái hơn.",
-              "this": [
-                {
-                  "tag": "Lịch sự · với người lạ",
-                  "tr": "Xin lỗi, cho hỏi nhà ga ở đâu ạ?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Thoải mái · với bạn bè",
-                  "tr": "Ngại quá, cho mượn cây bút."
-                }
-              ],
-              "explain": "Xem đối tượng và hoàn cảnh: với người lạ, khách, cấp trên, hoặc khi viết văn → が (trước đó thường là です／ます); trò chuyện với bạn bè → けど. Nói 「悪いが」 với bạn sẽ nghe cứng nhắc. けれども là cách nói đầy đủ của けど, trang trọng hơn một chút, cách dùng như nhau."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ga-suki-jouzu",
-      "groups": [
-        {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「〜が好き・〜が上手」 — đối tượng được đánh dấu bằng 「が」; khi thứ mình thích là một hành động thì dùng 「の」 biến nó thành danh từ rồi đặt vào",
-          "items": [
-            {
-              "id": "no-ga-suki",
-              "diff": "Thích một thứ thì nói thẳng 「N が好き」; thích một hành động thì phải thêm 「の」 trước.",
-              "this": [
-                {
-                  "tag": "Danh từ → が好き",
-                  "tr": "Tôi thích âm nhạc."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Động từ → のが好き",
-                  "tr": "Tôi thích hát."
-                }
-              ],
-              "wrong": {
-                "why": "Động từ phải thêm 「の」 để thành danh từ"
-              },
-              "explain": "Xem phía trước 「が好き」: danh từ như 音楽、猫 → nối thẳng; động từ như 歌う、泳ぐ → thêm 「の」 (歌うのが好き). 上手、嫌い cũng vậy."
+              "explain": "Xem sau さん là が hay は, rồi xem đang hỏi gì: khi hỏi 「誰が」 và trả lời “là ai”, từ trả lời dùng が (田中さんが来ました); khi Tanaka đã là chủ đề đã biết, hỏi tiếp anh ấy đến 「いつ」, ra sao thì dùng は (田中さんは…). Từ để hỏi làm chủ ngữ chỉ được dùng が, không nói 「誰は」."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều nói được “biết, giỏi”",
+          "note": "Cả hai đều diễn tả ý trái ngược “…, nhưng …”",
           "items": [
             {
-              "id": "ga-wakaru-dekiru",
-              "title": "〜ができる",
-              "thisTitle": "〜が上手だ",
-              "diff": "上手 là khen người khác làm giỏi; できる chỉ nói biết, dùng được.",
+              "id": "kedo-keredomo",
+              "title": "〜けど (trái ngược)",
+              "thisTitle": "〜が (trái ngược)",
+              "diff": "Nghĩa như nhau, đều là “…, nhưng …”; が thiên về trang trọng, văn viết; けど thiên về khẩu ngữ.",
               "this": [
                 {
-                  "tag": "Khen người khác · làm giỏi",
-                  "tr": "Anh Tanaka nói tiếng Anh giỏi thật đấy."
+                  "tag": "が · Trang trọng, văn viết",
+                  "tr": "Món này hơi cay nhưng rất ngon."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nói về mình · biết",
-                  "tr": "Tôi biết tiếng Anh."
+                  "tag": "けど · Khẩu ngữ, giữa bạn bè",
+                  "tr": "Món này hơi cay, mà ngon cực luôn đó."
                 }
               ],
-              "explain": "Xem nói về ai: khen người khác → 上手; nói về mình → できる (hoặc khiêm tốn nói 「得意」). Tự nói mình 「上手です」 nghe như đang khoe khoang; 「できる」 chỉ nói biết hay không, không đánh giá trình độ."
+              "explain": "Cả hai đều diễn tả ý trái ngược, đổi cho nhau nghĩa không đổi, chỉ khác ở văn phong: が thiên về trang trọng, phía trước thường là 「です」「ます」, dùng khi viết văn hoặc nói với cấp trên, người lạ; けど thiên về khẩu ngữ, nói 「辛いけど」 với bạn bè là tự nhiên nhất. Gắn が ngay sau thể thông thường (辛いが) nghe như văn viết. けれども là dạng đầy đủ của けど, trang trọng hơn một chút."
             }
           ]
         }
@@ -1562,85 +1467,30 @@
       "id": "ga-wakaru-dekiru",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「できる（出来る）」 — nghĩa gốc là “hình thành, xuất hiện”, mở rộng thành “làm được”",
+          "kind": "meaning",
+          "note": "Cả hai đều diễn tả năng lực “biết / có thể”",
           "items": [
             {
               "id": "koto-ga-dekiru",
+              "title": "〜ことができる (năng lực)",
               "thisTitle": "〜ができる",
-              "diff": "Danh từ nối thẳng với 「ができる」; hành động phải nói thành 「động từ thể từ điển＋ことができる」.",
+              "diff": "Đều nói “biết / có thể”; danh từ gắn trực tiếp ができる, hay dùng trong khẩu ngữ; hành động thì phải nói “động từ thể từ điển＋ことができる”, giọng trang trọng hơn.",
               "this": [
                 {
-                  "tag": "Danh từ → ができる",
-                  "tr": "Tôi biết trượt tuyết."
+                  "tag": "Danh từ＋ができる · Hay dùng khi nói",
+                  "tr": "Chị tôi biết tiếng Trung."
                 }
               ],
               "that": [
                 {
-                  "tag": "Động từ → ことができる",
-                  "tr": "Tôi biết bơi."
+                  "tag": "Động từ＋ことができる · Trang trọng hơn",
+                  "tr": "Chị tôi có thể nói tiếng Trung."
                 }
               ],
               "wrong": {
                 "why": "Sau động từ phải thêm 「こと」 trước"
               },
-              "explain": "Xem phía trước 「できる」: danh từ như スキー、テニス、日本語 → Nができる; động từ như 泳ぐ、読む → thêm 「こと」 để thành danh từ (hoặc dùng luôn thể khả năng 泳げる)."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Đều nói được “biết, giỏi”",
-          "items": [
-            {
-              "id": "ga-suki-jouzu",
-              "title": "〜が上手だ",
-              "thisTitle": "〜ができる",
-              "diff": "できる chỉ nói biết, dùng được; 上手 là đánh giá làm giỏi.",
-              "this": [
-                {
-                  "tag": "Nói về mình · biết",
-                  "tr": "Tôi biết tiếng Anh."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Khen người khác · làm giỏi",
-                  "tr": "Anh Tanaka nói tiếng Anh giỏi thật đấy."
-                }
-              ],
-              "explain": "Xem nói về ai: nói về mình → できる, chỉ nói biết hay không; khen người khác → 上手. Tự nói mình 「英語が上手です」 nghe như đang khoe khoang."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "goro-around-time",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Đều có nghĩa “khoảng”",
-          "items": [
-            {
-              "id": "kurai-approximately",
-              "diff": "ごろ đi với mốc thời gian (mấy giờ, ngày mấy); くらい đi với khoảng thời gian hoặc số lượng (mấy tiếng, mấy cái).",
-              "this": [
-                {
-                  "tag": "Mốc thời gian",
-                  "tr": "Khoảng ba giờ tôi sẽ đến ga."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Khoảng thời gian",
-                  "tr": "Đến ga mất khoảng ba tiếng."
-                }
-              ],
-              "wrong": {
-                "why": "Khoảng thời gian không dùng ごろ được"
-              },
-              "explain": "Xem phía trước: thời điểm như “mấy giờ, ngày mấy” → ごろ; độ dài, số lượng như “mấy tiếng, mấy ngày, mấy cái” → くらい (nói ぐらい cũng được). Trong văn nói, 「３時ぐらい」 cũng dùng cho thời điểm được, nhưng 「３時間ごろ」 thì chắc chắn sai."
+              "explain": "Hai câu đổi cho nhau nghĩa không đổi: trước ができる đặt thẳng danh từ (中国語、スキー) để nói mình có kỹ năng đó, dùng nhiều nhất trong khẩu ngữ; trước ことができる đặt động từ (話す、泳ぐ) để nói rõ hành động cụ thể, giọng trang trọng và mang tính văn viết hơn. Hãy xem trước できる là danh từ hay động từ: động từ không thể gắn trực tiếp ができる."
             }
           ]
         }
@@ -1651,28 +1501,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều chỉ được nơi hướng tới của hành động",
+          "note": "Cả hai đều chỉ nơi di chuyển đến “đi đến …”",
           "items": [
             {
               "id": "ni-destination-target",
-              "title": "〜に（điểm đến・đối tượng）",
-              "diff": "Khi đi đến đâu đó thì へ／に đều được; nhưng muốn bổ nghĩa trực tiếp cho danh từ thì chỉ dùng 「への」, còn tặng đồ cho ai thì dùng 「に」.",
+              "title": "〜に (đích đến)",
+              "diff": "Khi đi đến đâu đó, へ／に đều dùng được; へ thiên về “hướng về phía đó”, に thiên về “đến điểm đó”.",
               "this": [
                 {
-                  "tag": "Đi với danh từ → への",
-                  "tr": "Đây là quà tặng mẹ."
+                  "tag": "へ · Hướng về phía đó",
+                  "tr": "Tàu điện hiện đang chạy về hướng Tokyo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Đi với động từ → に",
-                  "tr": "Tôi đã tặng quà cho mẹ."
+                  "tag": "に · Đến điểm đó",
+                  "tr": "Tàu điện sắp đến Tokyo rồi."
                 }
               ],
-              "wrong": {
-                "why": "に không thể thêm 「の」 để bổ nghĩa cho danh từ"
-              },
-              "explain": "「駅へ行く」 và 「駅に行く」 gần như giống nhau, へ nghiêng về “hướng”, に nghiêng về “điểm đến”. Điều cần phân biệt là phía sau đi với gì: nối thẳng với danh từ (プレゼント、手紙) → chỉ dùng への; đi với hành động hướng về một người như 「あげる」, 「会う」 → に."
+              "explain": "「東京へ行く」 và 「東京に行く」 nghĩa như nhau, đều dùng được. Khác nhau ở sắc thái: へ thiên về “đi về hướng đó”, に thiên về “đến điểm đó”. Vì vậy hãy xem động từ phía sau: 向かっています chỉ nói đi về phía nào → hay dùng へ; 着きます nói đến đâu → thường dùng に."
             }
           ]
         }
@@ -1683,140 +1530,42 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều dùng để khuyên, góp ý cho người khác",
+          "note": "Cả hai đều dùng để “khuyên đối phương làm như vậy”",
           "items": [
             {
               "id": "tara-dou",
-              "diff": "ほうがいい nói thẳng “làm vậy thì tốt hơn”, giống lời khuyên; たらどうですか đề xuất bằng hình thức câu hỏi, giọng nhẹ hơn.",
+              "diff": "ほうがいい nói thẳng “như vậy thì tốt hơn”, giống lời khuyên răn; たらどうですか đề xuất bằng hình thức câu hỏi, giọng nhẹ hơn.",
               "this": [
                 {
-                  "tag": "Khuyên · giọng mạnh",
-                  "tr": "Sốt cao thế, tốt nhất là đi bệnh viện ngay đi."
+                  "tag": "Khuyên răn · Giọng mạnh",
+                  "tr": "Sốt cao thế thì nên đi bệnh viện ngay đi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Gợi ý · để ngỏ",
+                  "tag": "Đề xuất · Chừa chỗ lựa chọn",
                   "tr": "Nếu mệt thì nghỉ một chút xem sao?"
                 }
               ],
-              "explain": "Xem việc gấp đến đâu: không làm vậy có thể xảy ra chuyện (sốt cao, sẽ muộn) → ほうがいい; chỉ nhẹ nhàng gợi ý, để người kia tự quyết định → たらどうですか."
+              "explain": "Xem việc đó gấp đến mức nào: nếu không làm có thể gặp chuyện (熱が高い, sắp trễ giờ) → ほうがいい; chỉ nhẹ nhàng gợi ý (疲れているなら), để đối phương tự quyết định → たらどうですか."
             },
             {
               "id": "ba-ii",
-              "diff": "ほうがいい là so sánh rồi đề nghị “làm vậy tốt hơn”; ばいい là chỉ cho người kia cách làm: “chỉ cần làm vậy là được”.",
+              "title": "〜ばいい (lời khuyên / cách làm)",
+              "diff": "Đều là bày cách cho đối phương; ほうがいい là so sánh rồi nói “như vậy thì tốt hơn”, mang ý nhắc nhở; ばいい là “chỉ cần làm vậy là được”, mang ý “đơn giản thôi”.",
               "this": [
                 {
-                  "tag": "Đề nghị · làm vậy tốt hơn",
-                  "tr": "Hình như sắp mưa, tốt nhất là mang theo ô."
+                  "tag": "Như vậy tốt hơn · Nhắc nhở",
+                  "tr": "Không hiểu thì nên hỏi thầy sớm đi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cách làm · làm vậy là được",
-                  "tr": "Đi đến ga thế nào ạ? — Lên chiếc xe buýt kia là được."
+                  "tag": "Làm vậy là được · Đơn giản",
+                  "tr": "Chuyện đó đơn giản mà. Hỏi thầy là được."
                 }
               ],
-              "explain": "Xem có phải đang trả lời “nên làm thế nào” không: người kia hỏi cách làm (どうすればいいですか) → ばいい, nghĩa là “làm thế này là được”; mình chủ động nhắc nhở, thấy làm vậy thì tốt hơn → ほうがいい."
-            },
-            {
-              "id": "beki-da",
-              "diff": "ほうがいい là lời khuyên vì nghĩ cho người kia; べきだ nói về lẽ phải, nghĩa vụ “lẽ ra phải thế”, giọng cứng hơn.",
-              "this": [
-                {
-                  "tag": "Vì bạn · khuyên",
-                  "tr": "Nếu bị cảm thì tốt nhất là đi ngủ sớm."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Lẽ phải · nên",
-                  "tr": "Đã hứa thì phải giữ lời."
-                }
-              ],
-              "explain": "Xem đang nói về hoàn cảnh cụ thể của người kia hay đạo lý chung: nhắm vào chính người trước mặt, “làm vậy tốt cho bạn” → ほうがいい; đạo lý, quy tắc mà ai cũng phải tuân theo → べきだ. Tiếng Việt đều có thể nói “nên”, nhưng dùng べきだ cho chuyện riêng của người khác sẽ nghe như đang lên lớp."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "i-adj-negative",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Đều chỉ phủ định “không…”, khác nhau ở chỗ đi với loại từ nào",
-          "items": [
-            {
-              "id": "ja-nai",
-              "diff": "Tính từ đuôi い đổi 「い」 thành 「くない」; sau tính từ đuôi な, danh từ thì thêm 「じゃない」.",
-              "this": [
-                {
-                  "tag": "Tính từ đuôi い → くない",
-                  "tr": "Căn phòng này không rộng."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tính từ đuôi な → じゃない",
-                  "tr": "Căn phòng này không sạch."
-                }
-              ],
-              "wrong": {
-                "why": "きれい là tính từ đuôi な, phải nói きれいじゃない"
-              },
-              "explain": "Trước hết xác định loại tính từ: tính từ đuôi い như 広い、高い → bỏ い thêm くない; tính từ đuôi な như きれい、静か、有名 (và danh từ) → じゃない. きれい、有名 có cách đọc kết thúc bằng 「い」 nhưng đều là tính từ đuôi な. Thể lịch sự ではありません (じゃありません) cũng vậy."
-            },
-            {
-              "id": "nai-form",
-              "diff": "Động từ chia sang thể ない theo quy tắc; tính từ đuôi い phải đổi 「い」 thành 「く」 rồi mới thêm 「ない」.",
-              "this": [
-                {
-                  "tag": "Tính từ → くない",
-                  "tr": "Hôm nay không lạnh."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Động từ → thể ない",
-                  "tr": "Hôm nay trời không mưa."
-                }
-              ],
-              "wrong": {
-                "why": "Tính từ đuôi い phải đổi thành 「くない」"
-              },
-              "explain": "Xem phía trước 「ない」: động từ chia theo quy tắc (降る→降らない、食べる→食べない); tính từ đuôi い đổi 「い」 cuối thành 「く」 rồi thêm ない (寒い→寒くない), không thể thêm thẳng ない."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "i-adj-past",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Đều chỉ quá khứ",
-          "items": [
-            {
-              "id": "datta-deshita",
-              "diff": "Quá khứ của tính từ đuôi い là 「かったです」; quá khứ của danh từ, tính từ đuôi な là 「でした」.",
-              "this": [
-                {
-                  "tag": "Tính từ đuôi い → かった",
-                  "tr": "Hôm qua trời lạnh."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Tính từ đuôi な → でした",
-                  "tr": "Hôm qua tôi rảnh."
-                }
-              ],
-              "wrong": {
-                "why": "Tính từ đuôi い không đi với 「でした」"
-              },
-              "explain": "Xem đuôi tính từ: tính từ đuôi い như 寒い、楽しい → đổi い thành 「かった」, muốn lịch sự thì thêm です; tính từ đuôi な như 暇、きれい、静か và danh từ → でした. Thể thường cũng vậy: 寒かった／暇だった; phủ định cũng chia thành hai kiểu: 寒くなかった／暇じゃなかった."
+              "explain": "「先生に聞いたほうがいい」 và 「先生に聞けばいい」 đều dùng được, nghĩa không đổi nhưng sắc thái khác: ほうがいい hàm ý so sánh — không làm vậy có thể không hay, nên “tốt nhất” là làm vậy, thường đi cùng lời nhắc như 「早めに」; ばいい là “chỉ cần làm vậy là đủ”, việc không khó, thường theo sau 「簡単だよ」「心配しないで」 để đối phương yên tâm."
             }
           ]
         }

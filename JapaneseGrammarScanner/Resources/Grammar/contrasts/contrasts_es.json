@@ -1351,32 +1351,29 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Todas expresan la existencia de algo: «hay / está»",
+          "note": "Ambos expresan “haber / tener”",
           "items": [
             {
-              "id": "wa-ni-aru",
-              "diff": "(lugar)に N がある／いる dice «qué hay allí»; N は (lugar)にある／いる dice «dónde está N».",
+              "id": "gozaimasu-aru",
+              "title": "〜ございます (haber / estar)",
+              "thisTitle": "〜がある",
+              "diff": "Significan lo mismo, “hay”; がございます es la forma más formal de があります, que usan dependientes o recepcionistas al dirigirse a los clientes.",
               "this": [
                 {
-                  "tag": "がある · Qué hay allí",
-                  "tr": "Hay un libro encima de la mesa."
-                },
-                {
-                  "tag": "がいる · Qué hay allí",
-                  "tr": "Hay un gato en el jardín."
+                  "tag": "があります · Cortesía normal",
+                  "tr": "Hay un baño en el segundo piso."
                 }
               ],
               "that": [
                 {
-                  "tag": "にある · Dónde está",
-                  "tr": "Mi libro está encima de la mesa."
-                },
-                {
-                  "tag": "にいる · Dónde está",
-                  "tr": "Nuestro gato está en el jardín."
+                  "tag": "がございます · Más formal, ante clientes",
+                  "tr": "Hay un baño en el segundo piso. (lo dice un empleado a un cliente)"
                 }
               ],
-              "explain": "Mira qué pregunta quieres responder: «¿Qué hay en la mesa?»: la información nueva es la cosa → lugarに＋Nがある; «¿Dónde está mi libro?»: el libro ya es un tema conocido y la información nueva es el lugar → Nは＋lugarにある. Con cosas concretas como «mi libro» o 「田中さん」 se suele usar は. Con personas y animales se usa いる, con la misma lógica: 庭に猫がいます／うちの猫は庭にいます."
+              "wrong": {
+                "why": "Para decir dónde está una persona no se usa ございます, sino おります"
+              },
+              "explain": "Las dos frases se pueden intercambiar sin cambiar el significado; la diferencia es el grado de formalidad: en la conversación diaria o al preguntar una dirección → があります; dependientes o recepcionistas de hotel ante clientes, o anuncios y avisos formales → がございます. ございます solo sustituye a 「ある」 para cosas; para decir que una persona está en un lugar se usa おります o いらっしゃいます."
             }
           ]
         }
@@ -1400,55 +1397,11 @@
               ],
               "that": [
                 {
-                  "tag": "Que otro lo haga",
-                  "tr": "Quiero que mi padre me arregle la bicicleta."
+                  "tag": "Querer que otro lo haga",
+                  "tr": "Quiero que mi papá me arregle la bicicleta."
                 }
               ],
-              "explain": "Mira lo que va delante de 「ほしい」: sustantivo＋が → quieres esa cosa; forma て del verbo → quieres que otra persona haga esa acción, y quien la hace se marca con 「に」. También se puede decir てもらいたい, con el mismo sentido (父に直してもらいたい)."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Todas expresan «querer»",
-          "items": [
-            {
-              "id": "tai",
-              "diff": "ほしい es querer una cosa (va con sustantivos); たい es querer hacer una acción (va con verbos).",
-              "this": [
-                {
-                  "tag": "Sustantivo → ほしい",
-                  "tr": "Quiero un coche nuevo."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Verbo → たい",
-                  "tr": "Quiero comprar un coche nuevo."
-                }
-              ],
-              "wrong": {
-                "why": "Detrás de un verbo hay que usar たい"
-              },
-              "explain": "Mira si delante de «querer» hay una cosa o una acción: un coche, dinero, tiempo → がほしい; comprar, ir, comer → raíz de ます del verbo＋たい. En español ambos se dicen «quiero», por eso es fácil poner ほしい detrás de un verbo."
-            },
-            {
-              "id": "garu-third-person",
-              "title": "〜ほしがる（otra persona quiere）",
-              "diff": "ほしい solo se usa para uno mismo; para decir que otra persona quiere algo se usa ほしがっている, y 「が」 pasa a ser 「を」.",
-              "this": [
-                {
-                  "tag": "Yo → ほしい",
-                  "tr": "Quiero un videojuego nuevo."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Otra persona → ほしがる",
-                  "tr": "Mi hermano pequeño quiere un videojuego nuevo."
-                }
-              ],
-              "explain": "Mira quién es el sujeto: yo (o el oyente, en una pregunta) → がほしい; otra persona, como tu hermano o un amigo → をほしがっている. ほしい es una sensación interior propia; los sentimientos de otros solo se ven por su comportamiento. Para hablar de lo que siente otra persona en este momento, normalmente se usa la forma ている: ほしがっている."
+              "explain": "Fíjate en lo que va antes de 「ほしい」: sustantivo＋が → quieres esa cosa; verbo en forma て → quieres que otra persona haga esa acción, y quien la hace se marca con 「に」. てもらいたい significa lo mismo (父に直してもらいたい)."
             }
           ]
         }
@@ -1458,101 +1411,53 @@
       "id": "ga-subject",
       "groups": [
         {
-          "kind": "meaning",
-          "note": "Cada una de las dos funciones de が tiene su pareja: como marca de sujeto se parece a 「は」; como contraste o introducción se parece a 「けど」",
+          "kind": "look",
+          "note": "が ↔ は: solo cambia una partícula",
           "items": [
             {
               "id": "wa-topic",
-              "diff": "が pone el foco en el sujeto (quién); は primero presenta el tema y el foco está en lo que sigue (qué pasa con él).",
+              "diff": "Solo cambia la partícula: が pone en el sujeto la respuesta a “quién”; は presenta primero a la persona como tema ya conocido, y el foco está en lo que sigue.",
               "this": [
                 {
-                  "tag": "Foco en «quién»",
-                  "tr": "¿Quién ha venido? — Ha venido Tanaka."
+                  "tag": "が · Responde “quién”",
+                  "tr": "¿Quién vino? — Vino Tanaka."
                 }
               ],
               "that": [
                 {
-                  "tag": "Foco en lo que sigue",
-                  "tr": "¿A qué hora vino Tanaka?"
+                  "tag": "は · Primero el tema, luego la pregunta",
+                  "tr": "¿Cuándo vino Tanaka?"
                 }
               ],
               "wrong": {
-                "why": "Un interrogativo como sujeto tiene que llevar が"
+                "why": "Un interrogativo como sujeto debe llevar が"
               },
-              "explain": "Mira dónde está el foco de la oración: si quieres saber o responder «quién, qué» → esa palabra lleva が; si presentas a Tanaka como tema ya conocido y lo que importa es la hora o la situación → は."
-            },
-            {
-              "id": "kedo-keredomo",
-              "diff": "Significan casi lo mismo; が es más formal y cortés, けど más coloquial y relajado.",
-              "this": [
-                {
-                  "tag": "Cortés · a un desconocido",
-                  "tr": "Perdone, ¿dónde está la estación?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Relajado · a un amigo",
-                  "tr": "Perdona, déjame un boli."
-                }
-              ],
-              "explain": "Mira a quién hablas y en qué situación: a desconocidos, clientes, superiores, o por escrito → が (delante suele ir です／ます); charlando con amigos → けど. Decirle 「悪いが」 a un amigo suena rígido. けれども es la forma completa de けど, un poco más formal, con el mismo uso."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ga-suki-jouzu",
-      "groups": [
-        {
-          "kind": "root",
-          "note": "Ambas vienen de 「〜が好き・〜が上手」: el objeto se marca con 「が」; si lo que gusta es una acción, se convierte en sustantivo con 「の」",
-          "items": [
-            {
-              "id": "no-ga-suki",
-              "diff": "Si lo que gusta es una cosa, se dice directamente 「N が好き」; si es una acción, primero se añade 「の」.",
-              "this": [
-                {
-                  "tag": "Sustantivo → が好き",
-                  "tr": "Me gusta la música."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Verbo → のが好き",
-                  "tr": "Me gusta cantar."
-                }
-              ],
-              "wrong": {
-                "why": "El verbo necesita 「の」 para convertirse en sustantivo"
-              },
-              "explain": "Mira lo que va delante de 「が好き」: un sustantivo como 音楽 o 猫 → va directo; un verbo como 歌う o 泳ぐ → se añade 「の」 (歌うのが好き). Igual con 上手 y 嫌い."
+              "explain": "Mira si después de さん va が o は, y luego qué se pregunta: cuando se pregunta 「誰が」 y se responde “quién”, la palabra de la respuesta lleva が (田中さんが来ました); cuando Tanaka ya es un tema conocido y se pregunta 「いつ」 vino o cómo está, se usa は (田中さんは…). Un interrogativo como sujeto solo puede llevar が; no se dice 「誰は」."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas pueden decir «saber hacer algo, hacerlo bien»",
+          "note": "Ambos expresan contraste: “…, pero …”",
           "items": [
             {
-              "id": "ga-wakaru-dekiru",
-              "title": "〜ができる",
-              "thisTitle": "〜が上手だ",
-              "diff": "上手 es elogiar a alguien por hacerlo bien; できる solo dice que sabes o puedes hacerlo.",
+              "id": "kedo-keredomo",
+              "title": "〜けど (contraste)",
+              "thisTitle": "〜が (contraste)",
+              "diff": "Significan lo mismo, “…, pero …”; が es más formal y escrito, けど más coloquial.",
               "this": [
                 {
-                  "tag": "Elogio a otro · lo hace bien",
-                  "tr": "Tanaka habla inglés muy bien, ¿eh?"
+                  "tag": "が · Formal, escrito",
+                  "tr": "Este plato es un poco picante, pero está muy rico."
                 }
               ],
               "that": [
                 {
-                  "tag": "De uno mismo · saber",
-                  "tr": "Sé inglés."
+                  "tag": "けど · Coloquial, entre amigos",
+                  "tr": "Este plato pica un poco, ¡pero está buenísimo!"
                 }
               ],
-              "explain": "Mira de quién se habla: elogio a otra persona → 上手; de uno mismo → できる (o, con modestia, 「得意」). Decir 「上手です」 de uno mismo suena a presumir; 「できる」 solo dice si sabes o no, sin valorar el nivel."
+              "explain": "Ambos expresan contraste y se pueden intercambiar sin cambiar el significado; la diferencia es el registro: が es más formal, suele ir tras 「です」「ます」 y se usa al escribir o al hablar con un jefe o un desconocido; けど es coloquial, y decirle 「辛いけど」 a un amigo es lo más natural. Poner が directamente tras la forma simple (辛いが) suena a lengua escrita. けれども es la forma completa de けど y es un poco más formal."
             }
           ]
         }
@@ -1562,85 +1467,30 @@
       "id": "ga-wakaru-dekiru",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambas vienen de できる (出来る), originalmente «salir, surgir», y de ahí «poder hacer»",
+          "kind": "meaning",
+          "note": "Ambos expresan capacidad: “saber / poder”",
           "items": [
             {
               "id": "koto-ga-dekiru",
+              "title": "〜ことができる (capacidad)",
               "thisTitle": "〜ができる",
-              "diff": "Un sustantivo va directamente con 「ができる」; una acción se dice «forma de diccionario＋ことができる».",
+              "diff": "Ambos significan “saber / poder”; un sustantivo lleva ができる directamente, muy usado al hablar; para una acción se dice “verbo en forma de diccionario＋ことができる”, que suena más formal.",
               "this": [
                 {
-                  "tag": "Sustantivo → ができる",
-                  "tr": "Sé esquiar."
+                  "tag": "Sustantivo＋ができる · Muy usado al hablar",
+                  "tr": "Mi hermana mayor sabe chino."
                 }
               ],
               "that": [
                 {
-                  "tag": "Verbo → ことができる",
-                  "tr": "Sé nadar."
+                  "tag": "Verbo＋ことができる · Más formal",
+                  "tr": "Mi hermana mayor puede hablar chino."
                 }
               ],
               "wrong": {
-                "why": "Detrás del verbo hay que añadir primero 「こと」"
+                "why": "Al verbo hay que añadirle primero 「こと」"
               },
-              "explain": "Mira lo que va delante de 「できる」: un sustantivo como スキー, テニス, 日本語 → Nができる; un verbo como 泳ぐ o 読む → primero se añade 「こと」 para convertirlo en sustantivo (o se usa directamente la forma potencial 泳げる)."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Ambas pueden decir «saber hacer algo, hacerlo bien»",
-          "items": [
-            {
-              "id": "ga-suki-jouzu",
-              "title": "〜が上手だ",
-              "thisTitle": "〜ができる",
-              "diff": "できる solo dice que sabes o puedes hacerlo; 上手 valora que se hace bien.",
-              "this": [
-                {
-                  "tag": "De uno mismo · saber",
-                  "tr": "Sé inglés."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Elogio a otro · lo hace bien",
-                  "tr": "Tanaka habla inglés muy bien, ¿eh?"
-                }
-              ],
-              "explain": "Mira de quién se habla: de uno mismo → できる, que solo dice si sabes o no; elogio a otra persona → 上手. Decir 「英語が上手です」 de uno mismo suena a presumir."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "goro-around-time",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Todas expresan «aproximadamente»",
-          "items": [
-            {
-              "id": "kurai-approximately",
-              "diff": "ごろ va con un punto en el tiempo (qué hora, qué día); くらい va con una duración o cantidad (cuántas horas, cuántos).",
-              "this": [
-                {
-                  "tag": "Punto en el tiempo",
-                  "tr": "Llego a la estación hacia las tres."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Duración",
-                  "tr": "Hasta la estación se tarda unas tres horas."
-                }
-              ],
-              "wrong": {
-                "why": "Con una duración no se puede usar ごろ"
-              },
-              "explain": "Mira si delante hay un momento como «qué hora, qué día» → ごろ; o una duración o cantidad como «cuántas horas, cuántos días, cuántos» → くらい (también se dice ぐらい). En la lengua hablada 「３時ぐらい」 también puede indicar una hora, pero 「３時間ごろ」 siempre es incorrecto."
+              "explain": "Las dos frases se pueden intercambiar sin cambiar el significado: ができる lleva delante directamente un sustantivo (中国語、スキー) para decir que se domina esa habilidad, y es lo más común al hablar; ことができる lleva delante un verbo (話す、泳ぐ) para nombrar la acción concreta, y suena más formal y escrito. Fíjate si antes de できる hay un sustantivo o un verbo: un verbo no puede llevar ができる directamente."
             }
           ]
         }
@@ -1651,28 +1501,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas pueden indicar hacia dónde va la acción",
+          "note": "Ambos marcan adónde se va: “ir a …”",
           "items": [
             {
               "id": "ni-destination-target",
-              "title": "〜に（destino・destinatario）",
-              "diff": "Para ir a un sitio valen へ／に; pero para modificar directamente un sustantivo solo sirve 「への」, y para dar algo a alguien se usa 「に」.",
+              "title": "〜に (destino)",
+              "diff": "Para ir a un lugar sirven tanto へ como に; へ apunta más a “en esa dirección”, に a “llegar a ese punto”.",
               "this": [
                 {
-                  "tag": "Con sustantivo → への",
-                  "tr": "Esto es un regalo para mi madre."
+                  "tag": "へ · Hacia esa dirección",
+                  "tr": "El tren se dirige ahora a Tokio."
                 }
               ],
               "that": [
                 {
-                  "tag": "Con verbo → に",
-                  "tr": "Le di un regalo a mi madre."
+                  "tag": "に · Llegar a ese punto",
+                  "tr": "El tren llegará pronto a Tokio."
                 }
               ],
-              "wrong": {
-                "why": "A に no se le puede añadir 「の」 para modificar un sustantivo"
-              },
-              "explain": "「駅へ行く」 y 「駅に行く」 son casi iguales: へ apunta más a la «dirección» y に al «punto de llegada». Lo que hay que distinguir es qué va detrás: si va directamente un sustantivo (プレゼント, 手紙) → solo への; si va una acción dirigida a una persona, como 「あげる」「会う」 → に."
+              "explain": "「東京へ行く」 y 「東京に行く」 significan lo mismo y ambos son correctos. La diferencia es de matiz: へ apunta más a “ir en esa dirección”, に a “llegar a ese punto”. Por eso, mira el verbo que sigue: 向かっています solo dice hacia dónde se va → se usa más へ; 着きます dice adónde se llega → normalmente se usa に."
             }
           ]
         }
@@ -1683,140 +1530,42 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Todas sirven para aconsejar al otro",
+          "note": "Ambos sirven para sugerir al otro que haga algo",
           "items": [
             {
               "id": "tara-dou",
-              "diff": "ほうがいい dice directamente «es mejor así», como un consejo firme; たらどうですか propone en forma de pregunta, con un tono más suave.",
+              "diff": "ほうがいい dice directamente “es mejor así”, como un consejo; たらどうですか propone en forma de pregunta, con un tono más suave.",
               "this": [
                 {
-                  "tag": "Consejo · tono fuerte",
-                  "tr": "Tienes mucha fiebre; mejor vete al hospital ya."
+                  "tag": "Consejo · Tono fuerte",
+                  "tr": "Tienes mucha fiebre, así que mejor ve al hospital ya."
                 }
               ],
               "that": [
                 {
-                  "tag": "Sugerencia · deja margen",
+                  "tag": "Sugerencia · Deja margen",
                   "tr": "Si estás cansado, ¿por qué no descansas un poco?"
                 }
               ],
-              "explain": "Mira cuánto importa el asunto: si no hacerlo puede traer problemas (fiebre alta, llegar tarde) → ほうがいい; si solo sugieres una idea y dejas que el otro decida → たらどうですか."
+              "explain": "Mira lo urgente que es el asunto: si no hacerlo puede traer problemas (熱が高い, llegar tarde) → ほうがいい; si solo propones una idea sin insistir (疲れているなら) y dejas que el otro decida → たらどうですか."
             },
             {
               "id": "ba-ii",
-              "diff": "ほうがいい recomienda tras comparar: «es mejor así»; ばいい le indica al otro un método: «basta con hacer esto».",
+              "title": "〜ばいい (consejo / cómo hacerlo)",
+              "diff": "Ambos sirven para aconsejar; ほうがいい compara y dice “es mejor así”, con tono de advertencia; ばいい es “basta con hacer esto”, con el matiz de “es fácil”.",
               "this": [
                 {
-                  "tag": "Recomendar · es mejor",
-                  "tr": "Parece que va a llover; mejor llévate un paraguas."
+                  "tag": "Es mejor así · Advertencia",
+                  "tr": "Si no lo entiendes, mejor pregúntale pronto al profesor."
                 }
               ],
               "that": [
                 {
-                  "tag": "Método · basta con esto",
-                  "tr": "¿Cómo se va a la estación? — Basta con coger ese autobús."
+                  "tag": "Basta con esto · Es fácil",
+                  "tr": "Eso es fácil. Solo tienes que preguntarle al profesor."
                 }
               ],
-              "explain": "Mira si se está respondiendo a «¿qué hago?»: si el otro pregunta cómo hacerlo (どうすればいいですか) → ばいい, «con hacer esto basta»; si avisas por tu cuenta porque crees que es mejor hacerlo así → ほうがいい."
-            },
-            {
-              "id": "beki-da",
-              "diff": "ほうがいい es un consejo pensando en el bien del otro; べきだ dice «así debe ser» por razón u obligación, con un tono más duro.",
-              "this": [
-                {
-                  "tag": "Por tu bien · consejo",
-                  "tr": "Si estás resfriado, mejor acuéstate pronto."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Por principio · deber",
-                  "tr": "Las promesas se deben cumplir."
-                }
-              ],
-              "explain": "Mira si se habla de la situación concreta del otro o de un principio general: «esto te conviene» a la persona que tienes delante → ほうがいい; un principio o norma que todos deben seguir → べきだ. En español ambos pueden traducirse como «deberías», pero usar べきだ con los asuntos personales de otro suena a sermón."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "i-adj-negative",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Todas expresan la negación «no…»; la diferencia está en a qué palabra se unen",
-          "items": [
-            {
-              "id": "ja-nai",
-              "diff": "Los adjetivos-い cambian 「い」 por 「くない」; los adjetivos-な y los sustantivos llevan 「じゃない」.",
-              "this": [
-                {
-                  "tag": "Adjetivo-い → くない",
-                  "tr": "Esta habitación no es amplia."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Adjetivo-な → じゃない",
-                  "tr": "Esta habitación no está limpia."
-                }
-              ],
-              "wrong": {
-                "why": "きれい es un adjetivo-な: se dice きれいじゃない"
-              },
-              "explain": "Primero identifica el tipo de adjetivo: adjetivos-い como 広い o 高い → quita la い y añade くない; adjetivos-な como きれい, 静か, 有名 (y los sustantivos) → じゃない. きれい y 有名 terminan en el sonido 「い」, pero son adjetivos-な. La forma cortés ではありません (じゃありません) funciona igual."
-            },
-            {
-              "id": "nai-form",
-              "diff": "Los verbos pasan a la forma ない según sus reglas; los adjetivos-い cambian primero 「い」 por 「く」 y luego añaden 「ない」.",
-              "this": [
-                {
-                  "tag": "Adjetivo → くない",
-                  "tr": "Hoy no hace frío."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Verbo → forma ない",
-                  "tr": "Hoy no llueve."
-                }
-              ],
-              "wrong": {
-                "why": "Un adjetivo-い tiene que pasar a 「くない」"
-              },
-              "explain": "Mira lo que va delante de 「ない」: los verbos se conjugan según sus reglas (降る→降らない, 食べる→食べない); los adjetivos-い cambian la い final por く y añaden ない (寒い→寒くない); no se puede añadir ない directamente."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "i-adj-past",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Todas expresan pasado",
-          "items": [
-            {
-              "id": "datta-deshita",
-              "diff": "El pasado de los adjetivos-い es 「かったです」; el de sustantivos y adjetivos-な es 「でした」.",
-              "this": [
-                {
-                  "tag": "Adjetivo-い → かった",
-                  "tr": "Ayer hizo frío."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Adjetivo-な → でした",
-                  "tr": "Ayer estuve libre."
-                }
-              ],
-              "wrong": {
-                "why": "Un adjetivo-い no puede ir seguido de 「でした」"
-              },
-              "explain": "Mira cómo termina el adjetivo: adjetivos-い como 寒い o 楽しい → cambia la い por 「かった」 y, para ser cortés, añade です; adjetivos-な como 暇, きれい, 静か, y los sustantivos → でした. En estilo llano es igual: 寒かった／暇だった; la negación también tiene dos series: 寒くなかった／暇じゃなかった."
+              "explain": "「先生に聞いたほうがいい」 y 「先生に聞けばいい」 son correctos y significan lo mismo, pero el matiz cambia: ほうがいい implica una comparación —no hacerlo podría salir mal, así que “lo mejor” es hacerlo— y suele ir con advertencias como 「早めに」; ばいい significa “con hacer esto basta”, el asunto no es difícil, y suele seguir a 「簡単だよ」 o 「心配しないで」 para tranquilizar al otro."
             }
           ]
         }
