@@ -123,6 +123,34 @@ class E2ETestCase: XCTestCase {
         for _ in 0..<4 { app.swipeDown() }
     }
 
+    func scrollClearOfTopBar(_ element: XCUIElement, maxSwipes: Int = 15) {
+        scrollTo(element, maxSwipes: maxSwipes)
+        let window = app.windows.firstMatch.frame
+        var n = 0
+        while element.exists && element.frame.minY < window.minY + window.height * 0.25 && n < 5 {
+            app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.4))
+                .press(forDuration: 0.1, thenDragTo: app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.65)))
+            n += 1
+        }
+        XCTAssertTrue(element.isHittable, "要点的元素应完整露在顶部导航栏下面")
+    }
+
+    func detailTitle(_ title: String) -> XCUIElement {
+        app.descendants(matching: .any)
+            .matching(NSPredicate(format: "identifier == 'detail.title' AND label == %@", title)).firstMatch
+    }
+
+    func openSimilarGrammar(_ similar: XCUIElement, file: StaticString = #filePath, line: UInt = #line) -> (from: String, to: String) {
+        wait(id("detail.title"), "讲解页应有标题", file: file, line: line)
+        let from = id("detail.title").label
+        scrollClearOfTopBar(similar, maxSwipes: 25)
+        similar.tap()
+        let other = app.descendants(matching: .any)
+            .matching(NSPredicate(format: "identifier == 'detail.title' AND label != %@", from)).firstMatch
+        wait(other, "点相近语法应打开另一个语法的讲解页，而不是停在「\(from)」", file: file, line: line)
+        return (from, other.label)
+    }
+
     /// 打开某个语法点的讲解页（通过搜索标签）
     func openDetailBySearch(_ query: String) {
         tab("搜索").tap()
