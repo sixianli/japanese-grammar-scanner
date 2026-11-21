@@ -29364,6 +29364,1045 @@
           "explain": "နောက်က နာမ်နှင့် လေသံကို ကြည့်ပါ - 「〜にかかわる問題、病気」 သည် “ထိခိုက်၊ အန္တရာယ်ပြု” ကို ပြောပြီး ရှေ့တွင် အသက်၊ ယုံကြည်မှု၊ အနာဂတ် လာလေ့ရှိသည်။ 「〜に関する本、資料、質問」 သည် အကြောင်းအရာက ဘာအကြောင်းလဲ ဆိုတာကိုသာ ပြောပြီး “ကြီးလေး” ဆိုသော သဘော မပါပါ။ に関して လည်း အတူတူပင်။"
         }
       }
+    },
+    {
+      "point": "ni-watatte",
+      "kind": "meaning",
+      "reason": "意思差不多的第 3、4 条：から〜にかけて 是「从起点到终点的大致区间」，にわたって 是「长达、遍及整段」，「10日間から…にかけて」「昨夜から今朝にわたって」都不自然，替换测试不成立；原组说明把时间和空间拼在一起。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "kara-ni-kakete",
+          "diff": "にわたって 说整个范围「长达、遍及」，强调规模大；から〜にかけて 说「从……到……一带」，起止模糊。",
+          "this": [
+            {
+              "ja": "~10日間:とおかかん|*にわたって|、|雨:あめ|が|降:ふ|り|続:つづ|いた|。",
+              "tag": "整个范围 · 规模大",
+              "tr": "雨连续下了整整十天。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~昨夜:さくや|*から|~今朝:けさ|*にかけて|、|雨:あめ|が|降:ふ|り|続:つづ|いた|。",
+              "tag": "起点到终点 · 大致",
+              "tr": "从昨晚到今早，雨一直在下。"
+            }
+          ],
+          "explain": "看前面：「10日間」「全国」「長年」这种一整段期间、整片地区，常带数字 → にわたって，强调时间长、范围广；「昨夜から今朝」「関東から東北」这种起点＋终点 → から〜にかけて，只说大致在这一段。"
+        },
+        "en": {
+          "id": "kara-ni-kakete",
+          "diff": "にわたって covers the whole range, “for as long as, throughout”, stressing scale; から〜にかけて means “from… to… or thereabouts”, with fuzzy start and end points.",
+          "this": [
+            {
+              "tag": "Whole range · large scale",
+              "tr": "It rained for ten whole days straight."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Start to end · roughly",
+              "tr": "It rained from last night through this morning."
+            }
+          ],
+          "explain": "Look at what comes before: a whole period or entire area like 「10日間」「全国」「長年」, often with a number → にわたって, stressing how long or widespread; a start point + end point like 「昨夜から今朝」「関東から東北」 → から〜にかけて, only saying roughly in that span."
+        },
+        "ko": {
+          "id": "kara-ni-kakete",
+          "diff": "にわたって는 범위 전체를 ‘~에 걸쳐, ~ 내내’라고 말하며 규모가 큰 것을 강조한다. から〜にかけて는 ‘~부터 ~ 무렵까지’로, 시작과 끝이 흐릿하다.",
+          "this": [
+            {
+              "tag": "범위 전체 · 큰 규모",
+              "tr": "열흘 동안 내내 비가 계속 내렸다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "시작에서 끝까지 · 대략",
+              "tr": "어젯밤부터 오늘 아침에 걸쳐 비가 계속 내렸다."
+            }
+          ],
+          "explain": "앞을 보자. 「10日間」 「全国」 「長年」처럼 한 덩어리의 기간이나 지역 전체이고 숫자가 자주 붙음 → にわたって이며, 시간이 길고 범위가 넓음을 강조한다. 「昨夜から今朝」 「関東から東北」처럼 시작점＋끝점 → から〜にかけて이며, 대략 그 구간이라고만 말한다."
+        },
+        "es": {
+          "id": "kara-ni-kakete",
+          "diff": "にわたって abarca todo el ámbito, «a lo largo de, durante nada menos que», y subraya la magnitud; から〜にかけて es «de… a… aproximadamente», con límites difusos.",
+          "this": [
+            {
+              "tag": "Todo el ámbito · gran magnitud",
+              "tr": "Estuvo lloviendo sin parar durante diez días enteros."
+            }
+          ],
+          "that": [
+            {
+              "tag": "De principio a fin · aproximado",
+              "tr": "Estuvo lloviendo sin parar desde anoche hasta esta mañana."
+            }
+          ],
+          "explain": "Mira lo que va delante: un periodo o una zona entera, como 「10日間」「全国」「長年」, a menudo con cifras → にわたって, que subraya lo largo o lo extenso; un punto de inicio＋un punto final, como 「昨夜から今朝」「関東から東北」 → から〜にかけて, que solo indica que fue más o menos en ese tramo."
+        },
+        "vi": {
+          "id": "kara-ni-kakete",
+          "diff": "にわたって nói toàn bộ phạm vi “kéo dài suốt, trải khắp”, nhấn mạnh quy mô lớn; から〜にかけて nói “từ… đến… khoảng”, điểm đầu cuối không rõ ràng.",
+          "this": [
+            {
+              "tag": "Toàn bộ phạm vi · quy mô lớn",
+              "tr": "Mưa kéo dài suốt mười ngày liền."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Từ điểm đầu đến điểm cuối · đại khái",
+              "tr": "Từ tối qua đến sáng nay, mưa rơi liên tục."
+            }
+          ],
+          "explain": "Nhìn phía trước: cả một khoảng thời gian, cả một vùng như 「10日間」「全国」「長年」, thường kèm con số → にわたって, nhấn mạnh thời gian dài, phạm vi rộng; điểm đầu＋điểm cuối như 「昨夜から今朝」「関東から東北」 → から〜にかけて, chỉ nói đại khái trong khoảng này."
+        },
+        "my": {
+          "id": "kara-ni-kakete",
+          "diff": "にわたって သည် အပိုင်းအခြားတစ်ခုလုံး “...အထိ ကြာ၊ ...တစ်ဝှမ်း” ကို ပြောပြီး ပမာဏကြီးမားကြောင်း အလေးပေးသည်။ から〜にかけて သည် “...မှ ...အထိ ဝန်းကျင်” ကို ပြောပြီး အစနှင့်အဆုံး မရေရာပါ။",
+          "this": [
+            {
+              "tag": "အပိုင်းအခြားတစ်ခုလုံး · ပမာဏကြီး",
+              "tr": "မိုးက ဆယ်ရက်တိုင်တိုင် ဆက်တိုက် ရွာခဲ့တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "အစမှ အဆုံး · ခန့်မှန်း",
+              "tr": "မနေ့ညကနေ ဒီမနက်အထိ မိုးဆက်တိုက် ရွာခဲ့တယ်။"
+            }
+          ],
+          "explain": "ရှေ့ကို ကြည့်ပါ - 「10日間」「全国」「長年」 ကဲ့သို့ ကာလတစ်ခုလုံး၊ ဒေသတစ်ခုလုံးဖြစ်ပြီး ကိန်းဂဏန်း မကြာခဏ ပါလျှင် → にわたって၊ အချိန်ကြာမြင့်ခြင်း၊ နယ်ပယ်ကျယ်ခြင်းကို အလေးပေးသည်။ 「昨夜から今朝」「関東から東北」 ကဲ့သို့ အစ＋အဆုံး → から〜にかけて၊ ဤအပိုင်းဝန်းကျင်ဟု ခန့်မှန်းပြောရုံသာ။"
+        }
+      }
+    },
+    {
+      "point": "ni-watatte",
+      "kind": "meaning",
+      "reason": "意思差不多的第 3、4 条：を通して 说一整个周期里状态始终如此（一年を通して暖かい），にわたって 说事情长达、遍及一段范围，两者互换不自然，差别只能写成两个意思。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "wo-tooshite",
+          "title": "〜を通して（整个期间）",
+          "diff": "にわたって 说活动「长达、遍及」，强调规模；を通して 说一整个周期里「始终如此」。",
+          "this": [
+            {
+              "ja": "~３年:さんねん|*にわたって|、|~工事:こうじ|~が|~続:つづ|~いた|。",
+              "tag": "长达 · 强调规模",
+              "tr": "工程持续了长达三年。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "この|島:しま|は|一年:いちねん|*を|*通:とお|*して|~暖:あたた|~かい|。",
+              "tag": "一年到头 · 状态不变",
+              "tr": "这个岛一年到头都很暖和。"
+            }
+          ],
+          "explain": "看后面是什么：「工事が続いた」「調査を行った」这种活动、事件持续或展开 → にわたって；「暖かい」「にぎやかだ」这种整个周期里一直不变的状态，前面多是「一年、一生」这种完整的周期 → を通して（を通じて 也一样）。"
+        },
+        "en": {
+          "id": "wo-tooshite",
+          "title": "〜を通して (throughout a period)",
+          "diff": "にわたって says an activity spans “as long as, throughout”, stressing scale; を通して says something is “the same all the way through” a whole cycle.",
+          "this": [
+            {
+              "tag": "As long as · stressing scale",
+              "tr": "The construction work went on for as long as three years."
+            }
+          ],
+          "that": [
+            {
+              "tag": "All year round · unchanging state",
+              "tr": "This island is warm all year round."
+            }
+          ],
+          "explain": "Look at what follows: an activity or event that continues or unfolds, like 「工事が続いた」「調査を行った」 → にわたって; a state that stays the same through a whole cycle, like 「暖かい」「にぎやかだ」, usually after a complete cycle like 「一年、一生」 → を通して (を通じて works too)."
+        },
+        "ko": {
+          "id": "wo-tooshite",
+          "title": "〜を通して（기간 내내）",
+          "diff": "にわたって는 활동이 ‘~에 걸쳐, ~ 동안이나’ 이어졌다고 말하며 규모를 강조한다. を通して는 한 주기 전체에서 ‘내내 그렇다’고 말한다.",
+          "this": [
+            {
+              "tag": "~에 걸쳐 · 규모 강조",
+              "tr": "공사가 3년에 걸쳐 계속되었다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "일 년 내내 · 상태가 변하지 않음",
+              "tr": "이 섬은 일 년 내내 따뜻하다."
+            }
+          ],
+          "explain": "뒤에 무엇이 오는지 보자. 「工事が続いた」 「調査を行った」처럼 활동이나 사건이 이어지거나 펼쳐짐 → にわたって. 「暖かい」 「にぎやかだ」처럼 한 주기 내내 변하지 않는 상태이고, 앞에 주로 「一年、一生」 같은 완결된 주기가 옴 → を通して(を通じて도 같다)."
+        },
+        "es": {
+          "id": "wo-tooshite",
+          "title": "〜を通して (durante todo el periodo)",
+          "diff": "にわたって dice que una actividad se extiende «durante nada menos que…» y subraya la magnitud; を通して dice que algo es «siempre así» a lo largo de todo un ciclo.",
+          "this": [
+            {
+              "tag": "Nada menos que · magnitud",
+              "tr": "Las obras se prolongaron durante nada menos que tres años."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Todo el año · estado constante",
+              "tr": "En esta isla hace calor todo el año."
+            }
+          ],
+          "explain": "Mira lo que va detrás: una actividad o un suceso que continúa o se desarrolla, como 「工事が続いた」「調査を行った」 → にわたって; un estado que no cambia durante todo el ciclo, como 「暖かい」「にぎやかだ」, con un ciclo completo delante, como 「一年、一生」 → を通して (también を通じて)."
+        },
+        "vi": {
+          "id": "wo-tooshite",
+          "title": "〜を通して (suốt cả thời kỳ)",
+          "diff": "にわたって nói hoạt động “kéo dài suốt, trải khắp”, nhấn mạnh quy mô; を通して nói “luôn như vậy” trong cả một chu kỳ.",
+          "this": [
+            {
+              "tag": "Kéo dài · nhấn mạnh quy mô",
+              "tr": "Công trình kéo dài suốt ba năm."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Quanh năm · trạng thái không đổi",
+              "tr": "Hòn đảo này ấm áp quanh năm."
+            }
+          ],
+          "explain": "Nhìn phía sau là gì: hoạt động, sự kiện kéo dài hoặc triển khai như 「工事が続いた」「調査を行った」 → にわたって; trạng thái không đổi suốt cả chu kỳ như 「暖かい」「にぎやかだ」, phía trước thường là chu kỳ trọn vẹn như 「一年、一生」 → を通して (を通じて cũng vậy)."
+        },
+        "my": {
+          "id": "wo-tooshite",
+          "title": "〜を通して（ကာလတစ်လျှောက်လုံး）",
+          "diff": "にわたって သည် လှုပ်ရှားမှုက “...အထိ ကြာ၊ ...တစ်ဝှမ်း” ကို ပြောပြီး ပမာဏကို အလေးပေးသည်။ を通して သည် စက်ဝန်းတစ်ခုလုံးအတွင်း “အမြဲ ဒီအတိုင်း” ကို ပြောသည်။",
+          "this": [
+            {
+              "tag": "...အထိ ကြာ · ပမာဏ အလေးပေး",
+              "tr": "ဆောက်လုပ်ရေးလုပ်ငန်းက သုံးနှစ်တိုင်တိုင် ကြာခဲ့တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "တစ်နှစ်ပတ်လုံး · အခြေအနေ မပြောင်း",
+              "tr": "ဒီကျွန်းက တစ်နှစ်ပတ်လုံး နွေးတယ်။"
+            }
+          ],
+          "explain": "နောက်ပိုင်းကို ကြည့်ပါ - 「工事が続いた」「調査を行った」 ကဲ့သို့ လှုပ်ရှားမှု၊ ဖြစ်ရပ် ဆက်လက်ဖြစ်ခြင်း သို့မဟုတ် ပြန့်နှံ့ခြင်း → にわたって။ 「暖かい」「にぎやかだ」 ကဲ့သို့ စက်ဝန်းတစ်ခုလုံးအတွင်း မပြောင်းသော အခြေအနေဖြစ်ပြီး ရှေ့တွင် 「一年、一生」 ကဲ့သို့ ပြည့်စုံသော စက်ဝန်း အများဆုံးလာလျှင် → を通して (を通じて လည်း အတူတူ)။"
+        }
+      }
+    },
+    {
+      "point": "ni-yorazu",
+      "kind": "meaning",
+      "reason": "意思差不多的第 4 条：「不论」义上 によらず 和 を問わず 几乎完全同义，讲解只能靠接续助词 に／を 分辨，说不出同一意思下可靠的选用差别；讲解还混入了 によらず 的其他义项。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "wo-towazu",
+          "diff": "意思几乎一样「不论」；を問わず 是招聘、公告的常用说法，用「を」；によらず 用「に」，还能表示「不靠……」「出乎……」。",
+          "this": [
+            {
+              "ja": "~年齢:ねんれい|*によらず|、|誰:だれ|でも|参加:さんか|できます|。",
+              "tag": "に＋よらず",
+              "tr": "不论年龄，谁都可以参加。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~年齢:ねんれい|*を|*問:と|*わず|、|誰:だれ|でも|参加:さんか|できます|。",
+              "tag": "を＋問わず",
+              "tr": "不分年龄，谁都可以参加。"
+            }
+          ],
+          "wrong": {
+            "ja": "年齢に問わず、誰でも参加できます",
+            "why": "問う 是他动词，要说「を問わず」"
+          },
+          "explain": "两句意思一样，先看前面的助词：「よる（依据）」带「に」→ 〜によらず；「問う（问）」是他动词，带「を」→ 〜を問わず。を問わず 常接「男女、昼夜、経験の有無」这种成对或有范围的词；によらず 还有「見かけによらず（人不可貌相）」「話し合いによらず（不通过商量）」这类 を問わず 没有的用法。"
+        },
+        "en": {
+          "id": "wo-towazu",
+          "diff": "They mean almost the same, “regardless of”; を問わず is a stock phrase in job ads and notices and uses 「を」; によらず uses 「に」 and can also mean “not relying on…” or “contrary to…”.",
+          "this": [
+            {
+              "tag": "に＋よらず",
+              "tr": "Anyone can take part, regardless of age."
+            }
+          ],
+          "that": [
+            {
+              "tag": "を＋問わず",
+              "tr": "Anyone can take part, whatever their age."
+            }
+          ],
+          "wrong": {
+            "why": "問う is transitive, so say 「を問わず」"
+          },
+          "explain": "The two sentences mean the same; first look at the particle before it: 「よる」 (to be based on) takes 「に」 → 〜によらず; 「問う」 (to ask) is transitive and takes 「を」 → 〜を問わず. を問わず often takes paired words or ranges like 「男女、昼夜、経験の有無」; によらず also has uses that を問わず doesn't, like 「見かけによらず」 (you can't judge by appearances) and 「話し合いによらず」 (without going through discussion)."
+        },
+        "ko": {
+          "id": "wo-towazu",
+          "diff": "뜻은 거의 같은 ‘~에 관계없이’이다. を問わず는 모집 공고나 공지에서 흔히 쓰며 「を」를 쓴다. によらず는 「に」를 쓰며, ‘~에 의하지 않고’ ‘~와 달리’라는 뜻도 나타낸다.",
+          "this": [
+            {
+              "tag": "に＋よらず",
+              "tr": "나이에 관계없이 누구나 참가할 수 있습니다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "を＋問わず",
+              "tr": "나이를 불문하고 누구나 참가할 수 있습니다."
+            }
+          ],
+          "wrong": {
+            "why": "問う는 타동사이므로 「を問わず」라고 해야 한다"
+          },
+          "explain": "두 문장은 뜻이 같으니 먼저 앞의 조사를 보자. 「よる（근거하다）」는 「に」를 취함 → 〜によらず. 「問う（묻다）」는 타동사로 「を」를 취함 → 〜を問わず. を問わず는 「男女、昼夜、経験の有無」처럼 짝을 이루거나 범위가 있는 말과 자주 쓴다. によらず에는 「見かけによらず(겉보기와 달리)」 「話し合いによらず(의논을 거치지 않고)」처럼 を問わず에 없는 용법도 있다."
+        },
+        "es": {
+          "id": "wo-towazu",
+          "diff": "Significan casi lo mismo, «sin importar…»; を問わず es habitual en ofertas de empleo y anuncios, y usa 「を」; によらず usa 「に」 y también puede significar «sin depender de…» o «contrario a lo que…».",
+          "this": [
+            {
+              "tag": "に＋よらず",
+              "tr": "Puede participar cualquiera, sea cual sea su edad."
+            }
+          ],
+          "that": [
+            {
+              "tag": "を＋問わず",
+              "tr": "Puede participar cualquiera, sin importar la edad."
+            }
+          ],
+          "wrong": {
+            "why": "問う es transitivo, así que hay que decir 「を問わず」"
+          },
+          "explain": "Las dos frases significan lo mismo; mira primero la partícula: 「よる」 (basarse en) lleva 「に」 → 〜によらず; 「問う」 (preguntar) es transitivo y lleva 「を」 → 〜を問わず. を問わず suele ir con pares o rangos como 「男女、昼夜、経験の有無」; によらず tiene además usos que を問わず no tiene, como 「見かけによらず」 (las apariencias engañan) o 「話し合いによらず」 (sin pasar por el diálogo)."
+        },
+        "vi": {
+          "id": "wo-towazu",
+          "diff": "Nghĩa gần như giống nhau, “bất kể”; を問わず là cách nói thường gặp trong tuyển dụng, thông báo, dùng 「を」; によらず dùng 「に」, còn có thể diễn tả “không dựa vào…”, “trái với…”.",
+          "this": [
+            {
+              "tag": "に＋よらず",
+              "tr": "Bất kể tuổi tác, ai cũng có thể tham gia."
+            }
+          ],
+          "that": [
+            {
+              "tag": "を＋問わず",
+              "tr": "Không phân biệt tuổi tác, ai cũng có thể tham gia."
+            }
+          ],
+          "wrong": {
+            "why": "問う là tha động từ, phải nói 「を問わず」"
+          },
+          "explain": "Hai câu nghĩa giống nhau, trước hết nhìn trợ từ phía trước: 「よる（căn cứ）」 đi với 「に」 → 〜によらず; 「問う（hỏi）」 là tha động từ, đi với 「を」 → 〜を問わず. を問わず thường nối với những từ thành cặp hoặc có phạm vi như 「男女、昼夜、経験の有無」; によらず còn có những cách dùng mà を問わず không có, như 「見かけによらず（không thể trông mặt mà bắt hình dong）」「話し合いによらず（không thông qua bàn bạc）」."
+        },
+        "my": {
+          "id": "wo-towazu",
+          "diff": "အဓိပ္ပာယ် လုနီးပါးတူ “...မရွေး” ဖြစ်သည်။ を問わず သည် အလုပ်ခေါ်စာ၊ ကြေညာချက်တွင် အသုံးများသော ပြောပုံဖြစ်ပြီး 「を」 ကို သုံးသည်။ によらず သည် 「に」 ကို သုံးပြီး “...ကို မမှီခို”、“...နှင့် ဆန့်ကျင်၍” ကိုလည်း ဖော်ပြနိုင်သည်။",
+          "this": [
+            {
+              "tag": "に＋よらず",
+              "tr": "အသက် မရွေး ဘယ်သူမဆို ပါဝင်နိုင်ပါတယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "を＋問わず",
+              "tr": "အသက်အရွယ် ခွဲခြားခြင်းမရှိဘဲ ဘယ်သူမဆို ပါဝင်နိုင်ပါတယ်။"
+            }
+          ],
+          "wrong": {
+            "why": "問う သည် ကံပါကြိယာ ဖြစ်၍ 「を問わず」 ဟု ပြောရမည်"
+          },
+          "explain": "ဝါကျနှစ်ကြောင်း အဓိပ္ပာယ်တူသည်၊ ရှေ့က ဝိဘတ်ကို အရင်ကြည့်ပါ - 「よる（အခြေခံ）」 သည် 「に」 ယူသည် → 〜によらず။ 「問う（မေး）」 သည် ကံပါကြိယာဖြစ်၍ 「を」 ယူသည် → 〜を問わず။ を問わず သည် 「男女、昼夜、経験の有無」 ကဲ့သို့ အစုံလိုက် သို့မဟုတ် အပိုင်းအခြားရှိသော စကားလုံးကို မကြာခဏ တွဲသည်။ によらず တွင် 「見かけによらず（အသွင်အပြင်နဲ့ မဆိုင်ဘူး）」「話し合いによらず（ဆွေးနွေးခြင်းမှတစ်ဆင့် မဟုတ်ဘဲ）」 ကဲ့သို့ を問わず တွင် မရှိသော အသုံးများလည်း ရှိသည်။"
+        }
+      }
+    },
+    {
+      "point": "ni-yotte-wa",
+      "kind": "meaning",
+      "reason": "意思差不多的第 3、4 条：によっては 说「某些情况下可能出现」，次第で 说「结果全看……」，互换后核心意思变了，差别只能写成两个意思；对方例句「決める」也不自然。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "shidai-as-soon-as",
+          "title": "〜次第で（视…而定）",
+          "diff": "によっては 只说某些情况下「可能」出现特别的结果；次第で 是结果「全看……」。",
+          "this": [
+            {
+              "ja": "~天気:てんき|*によっては|、|試合:しあい|が|中止:ちゅうし|に|なる|~こともある|。",
+              "tag": "某些情况 · 可能",
+              "tr": "根据天气，比赛也有可能取消。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~天気:てんき|*次第:しだい|*で|、|試合:しあい|を|する|か|どうか|~決:き|~める|。",
+              "tag": "全看它 · 决定",
+              "tr": "比赛办不办，要看天气来决定。"
+            }
+          ],
+          "explain": "看后半句：「〜こともある」「〜場合もある」只是提醒「有可能」出现某个结果 → によっては；「するかどうか決める」「合否が決まる」这种结果完全由前面左右 → 次第で。"
+        },
+        "en": {
+          "id": "shidai-as-soon-as",
+          "title": "〜次第で (depending on…)",
+          "diff": "によっては only says a special result “may” occur in some cases; 次第で means the outcome “all depends on…”.",
+          "this": [
+            {
+              "tag": "Some cases · possible",
+              "tr": "Depending on the weather, the match may be cancelled."
+            }
+          ],
+          "that": [
+            {
+              "tag": "All depends on it · decides",
+              "tr": "Whether the match goes ahead will be decided by the weather."
+            }
+          ],
+          "explain": "Look at the second half: 「〜こともある」「〜場合もある」 only warns that a certain result “may” happen → によっては; when the outcome is entirely governed by what comes before, like 「するかどうか決める」「合否が決まる」 → 次第で."
+        },
+        "ko": {
+          "id": "shidai-as-soon-as",
+          "title": "〜次第で（~에 달렸다）",
+          "diff": "によっては는 일부 경우에 특별한 결과가 나올 ‘수도 있다’고만 말하고, 次第で는 결과가 ‘전적으로 ~에 달렸다’고 말한다.",
+          "this": [
+            {
+              "tag": "일부 경우 · 가능성",
+              "tr": "날씨에 따라서는 시합이 취소될 수도 있다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "전적으로 달림 · 결정",
+              "tr": "시합을 할지 말지는 날씨를 보고 정한다."
+            }
+          ],
+          "explain": "뒷부분을 보자. 「〜こともある」 「〜場合もある」로 어떤 결과가 나올 ‘가능성이 있다’고 알려 줄 뿐임 → によっては. 「するかどうか決める」 「合否が決まる」처럼 결과가 전적으로 앞에 좌우됨 → 次第で."
+        },
+        "es": {
+          "id": "shidai-as-soon-as",
+          "title": "〜次第で (depende de…)",
+          "diff": "によっては solo dice que en algunos casos «podría» darse un resultado especial; 次第で dice que el resultado «depende por completo de…».",
+          "this": [
+            {
+              "tag": "Algunos casos · posible",
+              "tr": "Según el tiempo, el partido podría suspenderse."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Todo depende de eso · decide",
+              "tr": "Que se juegue o no el partido se decidirá según el tiempo."
+            }
+          ],
+          "explain": "Mira la segunda parte: 「〜こともある」「〜場合もある」 solo avisan de que un resultado es «posible» → によっては; si el resultado depende por completo de lo anterior, como 「するかどうか決める」「合否が決まる」 → 次第で."
+        },
+        "vi": {
+          "id": "shidai-as-soon-as",
+          "title": "〜次第で (tùy vào…)",
+          "diff": "によっては chỉ nói trong một số trường hợp “có thể” xảy ra kết quả đặc biệt; 次第で là kết quả “hoàn toàn tùy vào…”.",
+          "this": [
+            {
+              "tag": "Một số trường hợp · có thể",
+              "tr": "Tùy thời tiết, trận đấu cũng có thể bị hủy."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Hoàn toàn tùy vào · quyết định",
+              "tr": "Có tổ chức trận đấu hay không sẽ tùy thời tiết mà quyết định."
+            }
+          ],
+          "explain": "Nhìn nửa câu sau: 「〜こともある」「〜場合もある」 chỉ nhắc “có khả năng” xảy ra một kết quả nào đó → によっては; kết quả hoàn toàn do yếu tố phía trước chi phối như 「するかどうか決める」「合否が決まる」 → 次第で."
+        },
+        "my": {
+          "id": "shidai-as-soon-as",
+          "title": "〜次第で（...ပေါ်မူတည်）",
+          "diff": "によっては သည် တချို့အခြေအနေတွင် ထူးခြားသော ရလဒ် “ဖြစ်နိုင်” ကြောင်းသာ ပြောသည်။ 次第で သည် ရလဒ်သည် “...အပေါ်မှာပဲ လုံးလုံး မူတည်” ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "တချို့အခြေအနေ · ဖြစ်နိုင်",
+              "tr": "ရာသီဥတုပေါ် မူတည်ပြီး ပွဲ ဖျက်သိမ်းရတာမျိုးလည်း ရှိနိုင်တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "၎င်းအပေါ် လုံးလုံးမူတည် · ဆုံးဖြတ်",
+              "tr": "ပွဲလုပ်မလုပ်ကို ရာသီဥတုကို ကြည့်ပြီး ဆုံးဖြတ်မယ်။"
+            }
+          ],
+          "explain": "နောက်ပိုင်းကို ကြည့်ပါ - 「〜こともある」「〜場合もある」 ကဲ့သို့ ရလဒ်တစ်ခု “ဖြစ်နိုင်” ကြောင်း သတိပေးရုံသာ → によっては။ 「するかどうか決める」「合否が決まる」 ကဲ့သို့ ရလဒ်ကို ရှေ့ကအချက်က လုံးလုံး ထိန်းချုပ်လျှင် → 次第で။"
+        }
+      }
+    },
+    {
+      "point": "nite",
+      "kind": "meaning",
+      "reason": "意思差不多的第 2、3 条：において 没有「手段」义，本条拿 にて 的手段句比 において 的领域句，替换测试不成立；改用场所义时两者都是书面语，差别说不清。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ni-oite",
+          "diff": "にて 多用于通知里的地点、手段（メールにて）；において 还能表示「在……领域、方面」。",
+          "this": [
+            {
+              "ja": "結果:けっか|は|~メール|*にて|お|知:し|らせします|。",
+              "tag": "通知 · 手段",
+              "tr": "结果将通过邮件通知。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~現代:げんだい|~の|~社会:しゃかい|*において|、|英語:えいご|は|欠:か|かせない|。",
+              "tag": "领域 · 方面",
+              "tr": "在现代社会中，英语不可或缺。"
+            }
+          ],
+          "explain": "看前面：「メール、書面、電話」这类手段，或通知里写的地点（受付にて）→ にて；「社会、教育、経済」这类领域、方面 → において（にて 没有这个用法）。两个都是书面语，にて 更像通知、书信里的固定写法。"
+        },
+        "en": {
+          "id": "ni-oite",
+          "diff": "にて is mostly used in notices for a place or means (メールにて); において can also mean “in the field or area of…”.",
+          "this": [
+            {
+              "tag": "Notice · means",
+              "tr": "We will notify you of the results by email."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Field · area",
+              "tr": "In modern society, English is indispensable."
+            }
+          ],
+          "explain": "Look at what comes before: means like 「メール、書面、電話」, or a place given in a notice (受付にて) → にて; fields or areas like 「社会、教育、経済」 → において (にて has no such use). Both are written language; にて reads more like a set phrase in notices and letters."
+        },
+        "ko": {
+          "id": "ni-oite",
+          "diff": "にて는 주로 공지에서 장소나 수단(メールにて)에 쓴다. において는 ‘~ 분야·면에서’도 나타낸다.",
+          "this": [
+            {
+              "tag": "공지 · 수단",
+              "tr": "결과는 메일로 알려 드립니다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "분야 · 측면",
+              "tr": "현대 사회에서 영어는 빼놓을 수 없다."
+            }
+          ],
+          "explain": "앞을 보자. 「メール、書面、電話」 같은 수단, 또는 공지에 적힌 장소(受付にて) → にて. 「社会、教育、経済」 같은 분야·측면 → において(にて에는 이 용법이 없다). 둘 다 문어지만, にて는 공지나 편지에 쓰는 정해진 표현에 더 가깝다."
+        },
+        "es": {
+          "id": "ni-oite",
+          "diff": "にて se usa sobre todo en avisos para el lugar o el medio (メールにて); において también puede significar «en el ámbito de…».",
+          "this": [
+            {
+              "tag": "Aviso · medio",
+              "tr": "Le comunicaremos el resultado por correo electrónico."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Ámbito · aspecto",
+              "tr": "En la sociedad actual, el inglés es imprescindible."
+            }
+          ],
+          "explain": "Mira lo que va delante: un medio, como 「メール、書面、電話」, o el lugar indicado en un aviso (受付にて) → にて; un ámbito o aspecto, como 「社会、教育、経済」 → において (にて no tiene este uso). Las dos son de registro escrito, pero にて suena más a fórmula fija de avisos y cartas."
+        },
+        "vi": {
+          "id": "ni-oite",
+          "diff": "にて hay dùng cho địa điểm, phương tiện trong thông báo (メールにて); において còn có thể diễn tả “trong lĩnh vực, phương diện…”.",
+          "this": [
+            {
+              "tag": "Thông báo · phương tiện",
+              "tr": "Kết quả sẽ được thông báo qua email."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Lĩnh vực · phương diện",
+              "tr": "Trong xã hội hiện đại, tiếng Anh là không thể thiếu."
+            }
+          ],
+          "explain": "Nhìn phía trước: phương tiện như 「メール、書面、電話」, hoặc địa điểm ghi trong thông báo (受付にて) → にて; lĩnh vực, phương diện như 「社会、教育、経済」 → において (にて không có cách dùng này). Cả hai đều là văn viết, にて giống cách viết cố định trong thông báo, thư từ hơn."
+        },
+        "my": {
+          "id": "ni-oite",
+          "diff": "にて သည် အသိပေးချက်ထဲရှိ နေရာ၊ နည်းလမ်း (メールにて) အတွက် အများဆုံး သုံးသည်။ において သည် “...နယ်ပယ်၊ ဘက်တွင်” ကိုလည်း ဖော်ပြနိုင်သည်။",
+          "this": [
+            {
+              "tag": "အသိပေးချက် · နည်းလမ်း",
+              "tr": "ရလဒ်ကို အီးမေးလ်ဖြင့် အကြောင်းကြားပါမည်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "နယ်ပယ် · ဘက်",
+              "tr": "ခေတ်သစ် လူ့အဖွဲ့အစည်းမှာ အင်္ဂလိပ်စာက မရှိမဖြစ် လိုအပ်တယ်။"
+            }
+          ],
+          "explain": "ရှေ့ကို ကြည့်ပါ - 「メール、書面、電話」 ကဲ့သို့ နည်းလမ်း၊ သို့မဟုတ် အသိပေးချက်တွင် ရေးသော နေရာ (受付にて) → にて။ 「社会、教育、経済」 ကဲ့သို့ နယ်ပယ်၊ ဘက် → において (にて တွင် ဤအသုံးမရှိ)။ နှစ်ခုလုံး ရေးဟန်ဖြစ်ပြီး にて သည် အသိပေးချက်၊ စာများတွင် ပုံသေရေးပုံနှင့် ပိုတူသည်။"
+        }
+      }
+    },
+    {
+      "point": "no-dewa-nai-darou-ka",
+      "kind": "look",
+      "reason": "长得像的第 1、3 条：のだろうか 和 のではないだろうか 差了一整段「ではない」，不是一个假名、浊点等小差别，学习者不会看成同一个形式；讲解的线索「むしろ／本当に」也不是决定性的。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "no-darou-ka",
+          "diff": "のではないだろうか 是委婉地主张「是不是……呢（我认为是）」；のだろうか 是怀疑「真的……吗」。",
+          "this": [
+            {
+              "ja": "~むしろ|、|この|やり|方:かた|の|ほうが|いい|*のではないだろうか|。",
+              "tag": "主张 · 我看是这样",
+              "tr": "反倒是这个方法更好，不是吗？"
+            }
+          ],
+          "that": [
+            {
+              "ja": "この|やり|方:かた|で|~本当:ほんとう|~に|いい|*のだろうか|。",
+              "tag": "怀疑 · 真的吗",
+              "tr": "用这个方法真的行吗？"
+            }
+          ],
+          "explain": "多出来的「ではない」并不是否定：のではないだろうか 用反问委婉地说出自己的看法「我觉得是……」，常和「むしろ」一起出现；のだろうか 常和「本当に」一起，表示怀疑，言外之意是「恐怕不行」。"
+        },
+        "en": {
+          "id": "no-darou-ka",
+          "diff": "のではないだろうか is a gentle assertion: “isn't it… (I think it is)”; のだろうか expresses doubt: “is it really…?”.",
+          "this": [
+            {
+              "tag": "Assertion · I think so",
+              "tr": "If anything, wouldn't this method be better?"
+            }
+          ],
+          "that": [
+            {
+              "tag": "Doubt · really?",
+              "tr": "Is this method really all right?"
+            }
+          ],
+          "explain": "The extra 「ではない」 isn't a negation: のではないだろうか uses a rhetorical question to gently state your own view, “I think it's…”, and often appears with 「むしろ」; のだろうか often comes with 「本当に」 and expresses doubt, implying “probably not”."
+        },
+        "ko": {
+          "id": "no-darou-ka",
+          "diff": "のではないだろうか는 ‘~이 아닐까(나는 그렇다고 본다)’라고 완곡하게 주장하는 것이고, のだろうか는 ‘정말 ~일까’라고 의심하는 것이다.",
+          "this": [
+            {
+              "tag": "주장 · 내가 보기엔 그렇다",
+              "tr": "오히려 이 방법이 더 낫지 않을까?"
+            }
+          ],
+          "that": [
+            {
+              "tag": "의심 · 정말일까",
+              "tr": "이 방법으로 정말 괜찮을까?"
+            }
+          ],
+          "explain": "더 붙은 「ではない」는 부정이 아니다. のではないだろうか는 반문의 형태로 ‘나는 ~라고 생각한다’는 자기 의견을 완곡하게 말하며, 「むしろ」와 함께 자주 나온다. のだろうか는 「本当に」와 함께 자주 쓰여 의심을 나타내며, 속뜻은 ‘아마 안 될 것 같다’이다."
+        },
+        "es": {
+          "id": "no-darou-ka",
+          "diff": "のではないだろうか es afirmar con suavidad: «¿no será que…? (creo que sí)»; のだろうか es dudar: «¿de verdad…?».",
+          "this": [
+            {
+              "tag": "Afirmación · yo creo que sí",
+              "tr": "¿No sería mejor, más bien, este método?"
+            }
+          ],
+          "that": [
+            {
+              "tag": "Duda · ¿de verdad?",
+              "tr": "¿De verdad está bien hacerlo así?"
+            }
+          ],
+          "explain": "El 「ではない」 añadido no es una negación: のではないだろうか expresa la propia opinión con suavidad mediante una pregunta retórica («creo que…») y suele ir con 「むしろ」; のだろうか suele ir con 「本当に」 y expresa duda, con el sobrentendido de «me temo que no»."
+        },
+        "vi": {
+          "id": "no-darou-ka",
+          "diff": "のではないだろうか là uyển chuyển đưa ra chủ trương “phải chăng là… (tôi nghĩ là vậy)”; のだろうか là nghi ngờ “thật sự… sao”.",
+          "this": [
+            {
+              "tag": "Chủ trương · tôi thấy là vậy",
+              "tr": "Ngược lại, phải chăng cách làm này lại tốt hơn?"
+            }
+          ],
+          "that": [
+            {
+              "tag": "Nghi ngờ · thật sao",
+              "tr": "Làm theo cách này thật sự có ổn không?"
+            }
+          ],
+          "explain": "Phần 「ではない」 thêm vào không phải là phủ định: のではないだろうか dùng câu hỏi tu từ để uyển chuyển nói ra ý kiến của mình “tôi cho rằng là…”, hay đi cùng 「むしろ」; のだろうか hay đi cùng 「本当に」, diễn tả nghi ngờ, hàm ý là “e là không ổn”."
+        },
+        "my": {
+          "id": "no-darou-ka",
+          "diff": "のではないだろうか သည် “...မဟုတ်ဘူးလား (ကျွန်တော်ကတော့ ဟုတ်တယ်ထင်တယ်)” ဟု သွယ်ဝိုက်စွာ အမြင်ပြောခြင်းဖြစ်သည်။ のだろうか သည် “တကယ်ပဲ ...လား” ဟု သံသယဖြစ်ခြင်းဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "အမြင်ပြော · ကျွန်တော်ကတော့ ဒီလိုထင်",
+              "tr": "တကယ်တော့ ဒီနည်းက ပိုကောင်းတာ မဟုတ်ဘူးလား။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "သံသယ · တကယ်လား",
+              "tr": "ဒီနည်းနဲ့ တကယ်ပဲ ရပါ့မလား။"
+            }
+          ],
+          "explain": "ပိုလာသော 「ではない」 သည် အငြင်းမဟုတ်ပါ - のではないだろうか သည် ပြန်မေးခွန်းဖြင့် ကိုယ့်အမြင် “...လို့ ထင်တယ်” ကို သွယ်ဝိုက်စွာ ပြောခြင်းဖြစ်ပြီး 「むしろ」 နှင့် မကြာခဏ တွဲသည်။ のだろうか သည် 「本当に」 နှင့် မကြာခဏ တွဲပြီး သံသယကို ဖော်ပြကာ “မရလောက်ဘူး” ဟု အဓိပ္ပာယ်သက်ရောက်သည်။"
+        }
+      }
+    },
+    {
+      "point": "no-moto-de",
+      "kind": "root",
+      "reason": "同一个词变来的第 1、2 条：「下（もと）」与「基（もと）」是否同一个词词源存疑，讲解也没讲出从本义分别到两边意思的路径；两者意思不同（在…之下／依据），不能放「意思差不多的」，形状也不像。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ni-motozuite",
+          "diff": "のもとに 说处在某种制度、条件「之下」的状态；に基づいて 说行动「依照」规则、数据来做。",
+          "this": [
+            {
+              "ja": "すべての|国民:こくみん|は|、|法:ほう|*の|*下:もと|*に|~平等:びょうどう|~である|。",
+              "tag": "在…之下 · 处境",
+              "tr": "所有国民在法律面前一律平等。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "警察:けいさつ|は|法:ほう|*に|*基:もと|*づいて|、|彼:かれ|を|~逮捕:たいほ|~した|。",
+              "tag": "依照 · 行动的根据",
+              "tr": "警察依法逮捕了他。"
+            }
+          ],
+          "explain": "同样是「法」，看后半句：说的是一种处境、状态（平等である、自由に暮らす）→ のもとで／のもとに；说的是依照它去采取行动、做判断（逮捕した、判断する）→ に基づいて。前面是人或体制（先生、政府）时也只能用 のもとで。「基づく」本来就是「基（もと）＋付く」——贴着根基。"
+        },
+        "en": {
+          "id": "ni-motozuite",
+          "diff": "のもとに describes being in a state “under” some system or condition; に基づいて describes actions taken “in accordance with” rules or data.",
+          "this": [
+            {
+              "tag": "Under · situation",
+              "tr": "All citizens are equal under the law."
+            }
+          ],
+          "that": [
+            {
+              "tag": "In accordance with · basis for action",
+              "tr": "The police arrested him in accordance with the law."
+            }
+          ],
+          "explain": "It's the same 「法」, so look at the second half: a situation or state (平等である、自由に暮らす) → のもとで／のもとに; taking action or making judgments in accordance with it (逮捕した、判断する) → に基づいて. When what comes before is a person or a regime (先生、政府), only のもとで works. 「基づく」 is originally 「基（もと）＋付く」 — stuck close to the foundation."
+        },
+        "ko": {
+          "id": "ni-motozuite",
+          "diff": "のもとに는 어떤 제도나 조건 ‘아래’에 있는 상태를 말하고, に基づいて는 규칙이나 데이터에 ‘따라’ 행동하는 것을 말한다.",
+          "this": [
+            {
+              "tag": "~ 아래에서 · 처지",
+              "tr": "모든 국민은 법 아래 평등하다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "따름 · 행동의 근거",
+              "tr": "경찰은 법에 근거해 그를 체포했다."
+            }
+          ],
+          "explain": "똑같은 「法」인데, 뒷부분을 보자. 어떤 처지나 상태를 말함(平等である、自由に暮らす) → のもとで／のもとに. 그에 따라 행동하거나 판단함(逮捕した、判断する) → に基づいて. 앞이 사람이나 체제(先生、政府)일 때도 のもとで만 쓸 수 있다. 「基づく」는 원래 「基（もと）＋付く」, 즉 밑바탕에 딱 붙어 있다는 뜻이다."
+        },
+        "es": {
+          "id": "ni-motozuite",
+          "diff": "のもとに describe el estado de estar «bajo» un sistema o una condición; に基づいて dice que una acción se hace «conforme a» normas o datos.",
+          "this": [
+            {
+              "tag": "Bajo · situación",
+              "tr": "Todos los ciudadanos son iguales ante la ley."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Conforme a · base de la acción",
+              "tr": "La policía lo detuvo conforme a la ley."
+            }
+          ],
+          "explain": "Con el mismo 「法」, mira la segunda parte: si describe una situación o un estado (平等である、自由に暮らす) → のもとで／のもとに; si describe una acción o un juicio basado en ello (逮捕した、判断する) → に基づいて. Si delante va una persona o un sistema (先生、政府), solo vale のもとで. 「基づく」 es en origen 「基（もと）＋付く」: pegado a la base."
+        },
+        "vi": {
+          "id": "ni-motozuite",
+          "diff": "のもとに nói trạng thái ở “dưới” một chế độ, điều kiện nào đó; に基づいて nói hành động được làm “theo” quy tắc, dữ liệu.",
+          "this": [
+            {
+              "tag": "Dưới… · hoàn cảnh",
+              "tr": "Mọi công dân đều bình đẳng trước pháp luật."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Theo · căn cứ hành động",
+              "tr": "Cảnh sát đã bắt giữ anh ta theo đúng pháp luật."
+            }
+          ],
+          "explain": "Cùng là 「法」, nhìn nửa câu sau: nói về một hoàn cảnh, trạng thái (平等である、自由に暮らす) → のもとで／のもとに; nói về việc căn cứ vào đó để hành động, phán đoán (逮捕した、判断する) → に基づいて. Khi phía trước là người hoặc thể chế (先生、政府) cũng chỉ dùng được のもとで. 「基づく」 vốn là 「基（もと）＋付く」 — bám sát vào nền móng."
+        },
+        "my": {
+          "id": "ni-motozuite",
+          "diff": "のもとに သည် စနစ်၊ အခြေအနေတစ်ခု၏ “အောက်တွင်” ရှိနေသော အခြေအနေကို ပြောသည်။ に基づいて သည် လုပ်ရပ်ကို စည်းမျဉ်း၊ ဒေတာ “အတိုင်း” လုပ်ခြင်းကို ပြောသည်။",
+          "this": [
+            {
+              "tag": "...အောက်တွင် · အခြေအနေ",
+              "tr": "နိုင်ငံသားအားလုံးဟာ ဥပဒေရှေ့မှာ တန်းတူ ဖြစ်သည်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "...အတိုင်း · လုပ်ရပ်၏ အခြေခံ",
+              "tr": "ရဲက ဥပဒေနဲ့အညီ သူ့ကို ဖမ်းဆီးခဲ့တယ်။"
+            }
+          ],
+          "explain": "「法」 ချင်းတူသော်လည်း နောက်ပိုင်းကို ကြည့်ပါ - အခြေအနေ၊ ရှိနေပုံ (平等である、自由に暮らす) ကို ပြောလျှင် → のもとで／のもとに။ ၎င်းအတိုင်း လုပ်ဆောင်ခြင်း၊ ဆုံးဖြတ်ခြင်း (逮捕した、判断する) ကို ပြောလျှင် → に基づいて။ ရှေ့တွင် လူ သို့မဟုတ် စနစ် (先生、政府) ဖြစ်လျှင်လည်း のもとで ကိုသာ သုံးနိုင်သည်။ 「基づく」 ကိုယ်တိုင်က 「基（もと）＋付く」 — အမြစ်ပေါ်တွင် ကပ်လျက်။"
+        }
+      }
+    },
+    {
+      "point": "no-ue-dewa",
+      "kind": "root",
+      "reason": "同一个词变来的第 1 条：「上（じょう）」是汉字音读，「上（うえ）」是训读，不是由同一个词变来；两者意思相同，不能放「长得像的」；本页第 3 个义项就是 上（じょう），放「意思差不多的」等于和自己比。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "jou-standpoint",
+          "diff": "意思一样；上（じょう）直接贴在汉语名词后，更简洁、书面；の上では 中间加「の」，和语名词也能接。",
+          "this": [
+            {
+              "ja": "~暦:こよみ|の|*上:うえ|*では|もう|春:はる|だが|、|まだ|寒:さむ|い|。",
+              "tag": "の上では · 和语名词",
+              "tr": "按日历已经是春天了，可还很冷。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "~法律:ほうりつ|*上:じょう|は|問題:もんだい|ない|が|、|道徳的:どうとくてき|には|どうだろう|。",
+              "tag": "上（じょう）· 汉语名词",
+              "tr": "法律上没有问题，但道德上怎么样呢？"
+            }
+          ],
+          "explain": "看前面的名词和读音：上（じょう）只能直接贴在汉语词后面（法律上、計算上、形式上）；の上（うえ）では 中间有「の」，像「暦（こよみ）」这样的和语名词也能接。两者都常暗示「表面上如此，实际未必」，后面常有「が」转折。"
+        },
+        "en": {
+          "id": "jou-standpoint",
+          "diff": "They mean the same; 上（じょう） attaches directly to Sino-Japanese nouns and is more concise and formal; の上では has 「の」 in between and also works with native Japanese nouns.",
+          "this": [
+            {
+              "tag": "の上では · native Japanese noun",
+              "tr": "By the calendar it's already spring, but it's still cold."
+            }
+          ],
+          "that": [
+            {
+              "tag": "上（じょう）· Sino-Japanese noun",
+              "tr": "Legally there's no problem, but what about morally?"
+            }
+          ],
+          "explain": "Look at the noun before it and the reading: 上（じょう） can only attach directly to Sino-Japanese words (法律上、計算上、形式上); の上（うえ）では has 「の」 in between, so it also works with native Japanese nouns like 「暦（こよみ）」. Both often hint “so it seems on the surface, but not necessarily in reality”, often followed by a contrasting 「が」."
+        },
+        "ko": {
+          "id": "jou-standpoint",
+          "diff": "뜻은 같다. 上（じょう）는 한자어 명사 바로 뒤에 붙어 더 간결하고 문어적이다. の上では는 사이에 「の」가 들어가서 고유어 명사에도 붙을 수 있다.",
+          "this": [
+            {
+              "tag": "の上では · 고유어 명사",
+              "tr": "달력상으로는 벌써 봄인데 아직 춥다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "上（じょう）· 한자어 명사",
+              "tr": "법률상으로는 문제없지만 도덕적으로는 어떨까?"
+            }
+          ],
+          "explain": "앞의 명사와 읽는 법을 보자. 上（じょう）는 한자어 바로 뒤에만 붙는다(法律上、計算上、形式上). の上（うえ）では는 사이에 「の」가 있어서 「暦（こよみ）」 같은 고유어 명사에도 붙을 수 있다. 둘 다 ‘겉으로는 그렇지만 실제로는 꼭 그렇지 않다’는 뉘앙스를 자주 풍기며, 뒤에 「が」로 이어지는 역접이 자주 온다."
+        },
+        "es": {
+          "id": "jou-standpoint",
+          "diff": "Significan lo mismo; 上（じょう） se pega directamente a sustantivos de origen chino y es más conciso y escrito; の上では lleva 「の」 en medio y admite también sustantivos de origen japonés.",
+          "this": [
+            {
+              "tag": "の上では · palabra japonesa",
+              "tr": "Según el calendario ya es primavera, pero todavía hace frío."
+            }
+          ],
+          "that": [
+            {
+              "tag": "上（じょう）· palabra de origen chino",
+              "tr": "Legalmente no hay problema, pero ¿y moralmente?"
+            }
+          ],
+          "explain": "Mira el sustantivo y la lectura: 上（じょう） solo se pega directamente a palabras de origen chino (法律上、計算上、形式上); の上（うえ）では lleva 「の」 en medio y admite también palabras de origen japonés como 「暦（こよみ）」. Las dos suelen insinuar «en apariencia es así, pero en la realidad no necesariamente», y detrás suele ir un contraste con 「が」."
+        },
+        "vi": {
+          "id": "jou-standpoint",
+          "diff": "Nghĩa giống nhau; 上（じょう） dính trực tiếp sau danh từ Hán ngữ, gọn hơn, văn viết hơn; の上では có thêm 「の」 ở giữa, nối được cả danh từ thuần Nhật.",
+          "this": [
+            {
+              "tag": "の上では · danh từ thuần Nhật",
+              "tr": "Theo lịch thì đã là mùa xuân, vậy mà vẫn còn lạnh."
+            }
+          ],
+          "that": [
+            {
+              "tag": "上（じょう）· danh từ Hán ngữ",
+              "tr": "Về mặt pháp luật thì không có vấn đề, nhưng về mặt đạo đức thì sao?"
+            }
+          ],
+          "explain": "Nhìn danh từ phía trước và cách đọc: 上（じょう） chỉ dính trực tiếp sau từ Hán ngữ (法律上、計算上、形式上); の上（うえ）では có 「の」 ở giữa, nối được cả danh từ thuần Nhật như 「暦（こよみ）」. Cả hai đều hay ngầm ý “bề ngoài thì vậy, thực tế chưa chắc”, phía sau thường có 「が」 chuyển ý."
+        },
+        "my": {
+          "id": "jou-standpoint",
+          "diff": "အဓိပ္ပာယ် အတူတူ။ 上（じょう）သည် ခန်းဂျိစကားလုံး (漢語) နောက်တွင် တိုက်ရိုက်ကပ်ပြီး ပို၍ တိုတောင်းကာ ရေးဟန်ဆန်သည်။ の上では သည် ကြားတွင် 「の」 ပါ၍ ဂျပန်မူရင်းစကားလုံး (和語) ကိုလည်း တွဲနိုင်သည်။",
+          "this": [
+            {
+              "tag": "の上では · ဂျပန်မူရင်း နာမ်",
+              "tr": "ပြက္ခဒိန်အရတော့ နွေဦးရောက်ပြီ၊ ဒါပေမဲ့ အေးနေတုန်းပဲ။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "上（じょう）· ခန်းဂျိ နာမ်",
+              "tr": "ဥပဒေအရတော့ ပြဿနာ မရှိဘူး၊ ဒါပေမဲ့ ကိုယ်ကျင့်တရားအရ ဘယ်လိုလဲ။"
+            }
+          ],
+          "explain": "ရှေ့က နာမ်နှင့် အသံထွက်ကို ကြည့်ပါ - 上（じょう）သည် ခန်းဂျိစကားလုံးနောက်တွင်သာ တိုက်ရိုက်ကပ်နိုင်သည် (法律上、計算上、形式上)။ の上（うえ）では သည် ကြားတွင် 「の」 ပါ၍ 「暦（こよみ）」 ကဲ့သို့ ဂျပန်မူရင်း နာမ်ကိုလည်း တွဲနိုင်သည်။ နှစ်ခုလုံး “အပေါ်ယံအရ ဒီလို၊ တကယ်တော့ မသေချာ” ဟု မကြာခဏ ညွှန်းဆိုပြီး နောက်တွင် 「が」 ဖြင့် အဓိပ္ပာယ်လှည့်ခြင်း မကြာခဏ ပါသည်။"
+        }
+      }
+    },
+    {
+      "point": "no-ue-dewa",
+      "kind": "meaning",
+      "reason": "意思差不多的第 3、4 条：「数字の点では」「値段の上では」互换都不自然，差别只能写成「表面 vs 实际」对「这一点 vs 另一点」两个意思。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "ten-aspect",
+          "diff": "の上では 常暗示「表面上如此，实际不一定」；点では 是在几个方面里挑出一个来评价。",
+          "this": [
+            {
+              "ja": "数字:すうじ|の|*上:うえ|*では|景気:けいき|は|回復:かいふく|している|が|、|~実感:じっかん|~はない|。",
+              "tag": "表面 vs 实际",
+              "tr": "从数字上看经济在复苏，但没有实际感受。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "この|車:くるま|は|、|値段:ねだん|*の|*点:てん|*では|満足:まんぞく|だ|が|、|~デザイン|~が|いまいちだ|。",
+              "tag": "这一点 vs 别的方面",
+              "tr": "这辆车在价格方面很满意，但设计差点意思。"
+            }
+          ],
+          "explain": "看「が」后面拿什么来对比：の上では 后面对比的是「实际情况」（実感はない），意思是「纸面上如此」；点では 后面对比的是「另一个方面」（デザイン），意思是「就这一点而言」。"
+        },
+        "en": {
+          "id": "ten-aspect",
+          "diff": "の上では often hints “so it seems on the surface, but not necessarily in reality”; 点では picks out one of several aspects to evaluate.",
+          "this": [
+            {
+              "tag": "Surface vs reality",
+              "tr": "On paper the economy is recovering, but nobody actually feels it."
+            }
+          ],
+          "that": [
+            {
+              "tag": "This aspect vs others",
+              "tr": "I'm happy with this car in terms of price, but the design is a bit lacking."
+            }
+          ],
+          "explain": "Look at what's contrasted after 「が」: の上では is contrasted with “the actual situation” (実感はない), meaning “on paper it's like this”; 点では is contrasted with “another aspect” (デザイン), meaning “as far as this point goes”."
+        },
+        "ko": {
+          "id": "ten-aspect",
+          "diff": "の上では는 ‘겉으로는 그렇지만 실제로는 꼭 그렇지 않다’는 것을 자주 암시한다. 点では는 여러 측면 중 하나를 골라 평가한다.",
+          "this": [
+            {
+              "tag": "겉보기 vs 실제",
+              "tr": "수치상으로는 경기가 회복되고 있지만 체감은 없다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "이 점 vs 다른 측면",
+              "tr": "이 차는 가격 면에서는 만족스럽지만 디자인이 좀 아쉽다."
+            }
+          ],
+          "explain": "「が」 뒤에서 무엇과 대비하는지 보자. の上では 뒤에는 ‘실제 상황’(実感はない)과 대비하며, ‘서류상으로는 그렇다’는 뜻이다. 点では 뒤에는 ‘다른 측면’(デザイン)과 대비하며, ‘이 점에 관해서는’이라는 뜻이다."
+        },
+        "es": {
+          "id": "ten-aspect",
+          "diff": "の上では suele insinuar «en apariencia es así, pero en la realidad no necesariamente»; 点では elige un aspecto entre varios para valorarlo.",
+          "this": [
+            {
+              "tag": "Apariencia vs. realidad",
+              "tr": "Según las cifras la economía se está recuperando, pero no se nota."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Este aspecto vs. otros",
+              "tr": "Con este coche estoy satisfecho en cuanto al precio, pero el diseño deja que desear."
+            }
+          ],
+          "explain": "Mira con qué se contrasta después de 「が」: con の上では se contrasta con «la realidad» (実感はない), es decir, «sobre el papel es así»; con 点では se contrasta con «otro aspecto» (デザイン), es decir, «en lo que respecta a este punto»."
+        },
+        "vi": {
+          "id": "ten-aspect",
+          "diff": "の上では thường ngầm ý “bề ngoài thì vậy, thực tế chưa chắc”; 点では là chọn ra một phương diện trong số nhiều phương diện để đánh giá.",
+          "this": [
+            {
+              "tag": "Bề ngoài vs thực tế",
+              "tr": "Nhìn con số thì kinh tế đang phục hồi, nhưng không cảm nhận được thực tế."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Điểm này vs phương diện khác",
+              "tr": "Chiếc xe này về mặt giá cả thì hài lòng, nhưng thiết kế thì hơi kém."
+            }
+          ],
+          "explain": "Nhìn sau 「が」 lấy gì để so sánh: sau の上では là so với “tình hình thực tế” (実感はない), nghĩa là “trên giấy tờ thì vậy”; sau 点では là so với “một phương diện khác” (デザイン), nghĩa là “riêng về điểm này”."
+        },
+        "my": {
+          "id": "ten-aspect",
+          "diff": "の上では သည် “အပေါ်ယံအရ ဒီလို၊ တကယ်တော့ မသေချာ” ဟု မကြာခဏ ညွှန်းသည်။ 点では သည် ဘက်များစွာထဲမှ တစ်ခုကို ရွေးထုတ်၍ အကဲဖြတ်သည်။",
+          "this": [
+            {
+              "tag": "အပေါ်ယံ vs လက်တွေ့",
+              "tr": "ကိန်းဂဏန်းအရတော့ စီးပွားရေး ပြန်ကောင်းလာနေတယ်၊ ဒါပေမဲ့ လက်တွေ့ ခံစားလို့ မရဘူး။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ဒီအချက် vs တခြားဘက်",
+              "tr": "ဒီကားက ဈေးနှုန်းဘက်မှာတော့ ကျေနပ်တယ်၊ ဒါပေမဲ့ ဒီဇိုင်းကတော့ သိပ်မဟုတ်ဘူး။"
+            }
+          ],
+          "explain": "「が」 ၏ နောက်တွင် ဘာနှင့် နှိုင်းယှဉ်သလဲ ကြည့်ပါ - の上では ၏ နောက်တွင် “လက်တွေ့အခြေအနေ” (実感はない) နှင့် နှိုင်းယှဉ်ပြီး “စာရွက်ပေါ်မှာတော့ ဒီလို” ဟု ဆိုလိုသည်။ 点では ၏ နောက်တွင် “တခြားဘက်တစ်ခု” (デザイン) နှင့် နှိုင်းယှဉ်ပြီး “ဒီအချက်နဲ့ပတ်သက်ရင်တော့” ဟု ဆိုလိုသည်။"
+        }
+      }
     }
   ]
 }

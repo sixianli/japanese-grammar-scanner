@@ -31091,36 +31091,13 @@
       "id": "ni-tsuki",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambas vienen de 「に＋付く」: «estar pegado a…» → «acerca de» (につき es la forma continuativa; について, la forma て)",
-          "items": [
-            {
-              "id": "ni-tsuite",
-              "thisTitle": "〜につき (acerca de)",
-              "diff": "Las dos significan «acerca de»; について vale en cualquier situación; につき es la forma escrita y solemne, y al hablar se suele decir 「につきまして」.",
-              "this": [
-                {
-                  "tag": "Solemne · negocios",
-                  "tr": "Sobre este asunto, nos pondremos en contacto con usted más adelante."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "General · día a día",
-                  "tr": "Estoy investigando sobre la historia de Japón."
-                }
-              ],
-              "explain": "Las dos vienen de 「に＋付く」: について es la forma て y につき la forma continuativa. Mira el contexto: conversaciones y textos corrientes → について; comunicados de empresa, reuniones o trato formal con clientes (本件、後日、いたします) → につき／につきまして."
-            }
-          ]
-        },
-        {
           "kind": "look",
           "note": "につき ↔ につけ: solo cambia el último kana",
           "items": [
             {
               "id": "ni-tsuke",
               "diff": "につき es «debido a…» o «por cada…» en avisos; につけ es «cada vez que… (surge un sentimiento)».",
+              "explain": "Solo cambia el último kana, pero el significado es totalmente distinto. Mira lo que va delante y dónde se usa: sustantivos como 「定休日、工事中」＋につき, que aparecen en la puerta de las tiendas o en avisos para explicar el motivo (「一人につき」, en cambio, es «por persona»); verbos como 「見る、聞く、思う」＋につけ, seguidos de recuerdos o emociones.",
               "this": [
                 {
                   "tag": "Aviso · debido a",
@@ -31132,38 +31109,49 @@
                   "tag": "Cada vez que · surge un sentimiento",
                   "tr": "Cada vez que veo esta foto, me acuerdo de mi infancia."
                 }
-              ],
-              "explain": "Solo cambia el último kana, pero el significado es totalmente distinto. Mira lo que va delante y dónde se usa: sustantivos como 「定休日、工事中」＋につき, que aparecen en la puerta de las tiendas o en avisos para explicar el motivo (「一人につき」, en cambio, es «por persona»); verbos como 「見る、聞く、思う」＋につけ, seguidos de recuerdos o emociones."
+              ]
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Coinciden respectivamente con dos usos: «debido a» y «por cada…»",
+          "sense": 1,
+          "note": "Ambas significan «porque»",
           "items": [
             {
               "id": "tame-ni",
               "title": "〜ために (causa)",
               "thisTitle": "〜につき (debido a)",
-              "diff": "につき se usa casi solo en avisos y comunicados, directamente tras sustantivos; ため vale en todo tipo de textos, y con sustantivo necesita 「の」.",
+              "diff": "につき va directamente tras un sustantivo y da una razón breve en avisos y comunicados; ため necesita 「の」 tras un sustantivo, también puede ir tras un verbo y sirve en cualquier tipo de texto.",
+              "explain": "Fíjate en lo que va delante y dónde se usa: sustantivo directo＋につき (工事中につき、定休日につき) aparece casi solo en avisos y comunicados, para dar una razón breve; ため necesita 「の」 tras un sustantivo (工事のため), también va tras un verbo (大雨が降ったため) y se usa en noticias, diarios y textos explicativos. Cuando delante hay un hecho o una acción, solo sirve ため.",
+              "wrong": {
+                "why": "につき va directamente tras el sustantivo; no se puede intercalar 「の」"
+              },
               "this": [
                 {
-                  "tag": "Aviso · breve",
+                  "tag": "Aviso · directo tras sustantivo",
                   "tr": "Por obras, prohibido el paso."
                 }
               ],
               "that": [
                 {
-                  "tag": "Frase corriente",
-                  "tr": "Ayer, por unas obras, no se podía pasar por la calle."
+                  "tag": "Texto general · tras verbo",
+                  "tr": "Ayer se canceló el partido porque llovió mucho."
                 }
-              ],
-              "explain": "Mira dónde aparece: carteles en puertas o en la calle que explican el motivo en pocas palabras (工事中につき、定休日につき) → につき; frases corrientes de noticias, diarios o explicaciones → ため. Con sustantivo, につき va directamente (工事中につき), mientras que ため necesita 「の」 (工事のため)."
-            },
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Ambas significan «por cada…»",
+          "items": [
             {
               "id": "atari-per",
               "thisTitle": "〜につき (por cada…)",
               "diff": "につき se usa para fijar cuánto se cobra o se da por unidad, y es muy formal; 当たり se usa sobre todo para promedios calculados en estadísticas.",
+              "explain": "Mira de dónde sale la cifra: avisos o listas de precios que fijan cuánto se cobra o se da por unidad → につき; datos que reparten un total en promedio para comparar (消費量、収入、売り上げ) → 当たり.",
               "this": [
                 {
                   "tag": "Norma · tarifa",
@@ -31175,8 +31163,32 @@
                   "tag": "Estadística · promedio",
                   "tr": "El consumo de arroz por habitante en Japón disminuye año tras año."
                 }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Ambas significan «sobre, acerca de»",
+          "items": [
+            {
+              "id": "ni-tsuite",
+              "thisTitle": "〜につき (acerca de)",
+              "diff": "Ambas significan «sobre»; につき es una expresión formal de comunicados y negocios; について sirve en cualquier situación, y al hablar de forma casual solo se usa について.",
+              "explain": "Las dos frases tratan del mismo asunto; fíjate en la situación y el tono: ante clientes, o en comunicados y reuniones, con expresiones formales como 「ご連絡いたします」 → につき (también につきまして); al decir de forma casual a un amigo o compañero 「電話するね」 → solo について. について también sirve en contextos formales, pero につき no cabe en el habla casual.",
+              "this": [
+                {
+                  "tag": "Solemne · negocios",
+                  "tr": "Sobre este asunto, nos pondremos en contacto con usted más adelante."
+                }
               ],
-              "explain": "Mira de dónde sale la cifra: avisos o listas de precios que fijan cuánto se cobra o se da por unidad → につき; datos que reparten un total en promedio para comparar (消費量、収入、売り上げ) → 当たり."
+              "that": [
+                {
+                  "tag": "General · habla casual",
+                  "tr": "Te llamo luego para hablar de este asunto, ¿vale?"
+                }
+              ]
             }
           ]
         }
@@ -31192,6 +31204,7 @@
             {
               "id": "wa-iu-ni-oyobazu",
               "diff": "には及ばない va al final de la frase y significa «no hace falta…»; 言うに及ばず va en medio y significa «por no hablar de…», y detrás se añade algo más.",
+              "explain": "Ambas vienen de 「及ぶ」 («alcanzar»). には及ばない: el asunto no alcanza el grado que requiera preocuparse o molestarse → no hace falta; 言うに及ばず: ni siquiera hace falta «decirlo» → ni que decir tiene → por supuesto. Fíjate en la posición: al final de la frase, rechazando con cortesía la preocupación o amabilidad del otro → には及ばない; en medio de la frase, seguida de algo como 「海外でも」, que añade otro nivel con 「〜でも」 o 「〜も」 → 言うに及ばず.",
               "this": [
                 {
                   "tag": "Final de frase · no hace falta",
@@ -31203,12 +31216,12 @@
                   "tag": "En medio · por no hablar de",
                   "tr": "Este cantante es popular no solo en su país, por supuesto, sino también en el extranjero."
                 }
-              ],
-              "explain": "言うに及ばず es la forma clásica de 「言うに及ばない」 (no hace falta decirlo): ni hace falta decirlo → por supuesto. Mira la posición: al final de la frase, para rechazar con cortesía la preocupación o la amabilidad del otro → には及ばない; en medio, seguido de 「〜でも」「〜も」 para añadir un nivel más → 言うに及ばず."
+              ]
             },
             {
               "id": "ni-oyonde",
               "diff": "には及ばない es «no llega al punto de necesitar…» ＝ no hace falta; に及んで es «la situación ya ha llegado al punto de…».",
+              "explain": "及ぶ＝llegar a. En negativo, には及ばない: la cosa no llega a ese punto → no hace falta; en afirmativo, に及んで: la situación ya ha llegado hasta ahí (この期に及んで＝a estas alturas), y detrás suele ir un reproche. Para distinguirlas, mira si hay 「ない／ません」.",
               "this": [
                 {
                   "tag": "Negativo · no llega a tanto",
@@ -31220,8 +31233,7 @@
                   "tag": "Afirmativo · ya ha llegado",
                   "tr": "¿A estas alturas todavía vas a poner excusas?"
                 }
-              ],
-              "explain": "及ぶ＝llegar a. En negativo, には及ばない: la cosa no llega a ese punto → no hace falta; en afirmativo, に及んで: la situación ya ha llegado hasta ahí (この期に及んで＝a estas alturas), y detrás suele ir un reproche. Para distinguirlas, mira si hay 「ない／ません」."
+              ]
             }
           ]
         },
@@ -31232,6 +31244,7 @@
             {
               "id": "koto-wa-nai",
               "diff": "には及ばない es más solemne y cortés, y se usa a menudo para rechazar la amabilidad del otro; ことはない es el «no hace falta» coloquial que se dice a conocidos.",
+              "explain": "Mira a quién se lo dices: a un superior o a un cliente, para decir con cortesía «no se moleste» → には及ばない, normalmente en forma cortés: 「ご心配には及びません」; para tranquilizar sin más a amigos o familia (〜よ) → ことはない.",
               "this": [
                 {
                   "tag": "Solemne · a un superior",
@@ -31243,12 +31256,12 @@
                   "tag": "Coloquial · a conocidos",
                   "tr": "No hace falta que te preocupes tanto, hombre."
                 }
-              ],
-              "explain": "Mira a quién se lo dices: a un superior o a un cliente, para decir con cortesía «no se moleste» → には及ばない, normalmente en forma cortés: 「ご心配には及びません」; para tranquilizar sin más a amigos o familia (〜よ) → ことはない."
+              ]
             },
             {
               "id": "made-mo-nai",
               "diff": "には及ばない es decirle con cortesía al otro «no se moleste»; までもない es «es tan evidente que no hace falta llegar a eso».",
+              "explain": "Mira el motivo: el otro quiere hacer algo por ti (見舞い、心配、送迎) y lo rechazas con cortesía → には及ばない; la cosa es tan obvia, como 「誰でも知っている」「明らかだ」 → までもない (lo más común es 「言うまでもない」; en medio de la frase, までもなく).",
               "this": [
                 {
                   "tag": "Rechazar con cortesía un favor",
@@ -31260,8 +31273,7 @@
                   "tag": "Evidente · no hace falta",
                   "tr": "Es algo que sabe todo el mundo, así que no hace falta explicarlo."
                 }
-              ],
-              "explain": "Mira el motivo: el otro quiere hacer algo por ti (見舞い、心配、送迎) y lo rechazas con cortesía → には及ばない; la cosa es tan obvia, como 「誰でも知っている」「明らかだ」 → までもない (lo más común es 「言うまでもない」; en medio de la frase, までもなく)."
+              ]
             }
           ]
         }
@@ -31272,42 +31284,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas indican un ámbito de tiempo o espacio",
+          "note": "Ambas significan «durante nada menos que…»",
           "items": [
             {
-              "id": "kara-ni-kakete",
-              "diff": "にわたって abarca todo el ámbito, «a lo largo de, durante nada menos que», y subraya la magnitud; から〜にかけて es «de… a… aproximadamente», con límites difusos.",
+              "id": "ni-oyonde",
+              "title": "〜に及ぶ (extensión, alcance)",
+              "diff": "Ambas significan «durante nada menos que…»; にわたって dice que algo se prolongó durante todo ese periodo; に及ぶ funciona él mismo como predicado y dice que llegó nada menos que a esa duración.",
+              "explain": "Las dos frases dicen que la negociación duró diez horas; fíjate en lo que sigue: tras にわたって viene una acción como 「続いた」 o 「行われた」, que indica que se prolongó durante todo ese tiempo; に及ぶ es él mismo el predicado (10時間に及んだ) y pone el foco en que el tiempo llegó nada menos que a eso, con un matiz de «más largo de lo esperado». Lo mismo al modificar un sustantivo: 「10時間にわたる交渉」, 「10時間に及ぶ交渉」.",
               "this": [
                 {
-                  "tag": "Todo el ámbito · gran magnitud",
-                  "tr": "Estuvo lloviendo sin parar durante diez días enteros."
+                  "tag": "Todo el periodo · continuo",
+                  "tr": "La negociación se prolongó durante diez horas seguidas."
                 }
               ],
               "that": [
                 {
-                  "tag": "De principio a fin · aproximado",
-                  "tr": "Estuvo lloviendo sin parar desde anoche hasta esta mañana."
+                  "tag": "Llegó a tanto · como predicado",
+                  "tr": "La negociación llegó a durar nada menos que diez horas."
                 }
-              ],
-              "explain": "Mira lo que va delante: un periodo o una zona entera, como 「10日間」「全国」「長年」, a menudo con cifras → にわたって, que subraya lo largo o lo extenso; un punto de inicio＋un punto final, como 「昨夜から今朝」「関東から東北」 → から〜にかけて, que solo indica que fue más o menos en ese tramo."
-            },
-            {
-              "id": "wo-tooshite",
-              "title": "〜を通して (durante todo el periodo)",
-              "diff": "にわたって dice que una actividad se extiende «durante nada menos que…» y subraya la magnitud; を通して dice que algo es «siempre así» a lo largo de todo un ciclo.",
-              "this": [
-                {
-                  "tag": "Nada menos que · magnitud",
-                  "tr": "Las obras se prolongaron durante nada menos que tres años."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Todo el año · estado constante",
-                  "tr": "En esta isla hace calor todo el año."
-                }
-              ],
-              "explain": "Mira lo que va detrás: una actividad o un suceso que continúa o se desarrolla, como 「工事が続いた」「調査を行った」 → にわたって; un estado que no cambia durante todo el ciclo, como 「暖かい」「にぎやかだ」, con un ciclo completo delante, como 「一年、一生」 → を通して (también を通じて)."
+              ]
             }
           ]
         }
@@ -31324,6 +31319,7 @@
               "id": "ni-yotte",
               "title": "〜によって (varía según…)",
               "diff": "によらず es «sea cual sea…, da igual»; によって es «varía según…».",
+              "explain": "よる＝basarse en. によって: se reparte según la edad → cada caso es distinto; によらず (ず＝no): no depende de la edad → igual para todos. Mira la segunda parte: 「違う」「異なる」 → によって; 「誰でも」「一律」 → によらず. 「見かけによらず」 (las apariencias engañan) va en la misma línea: no tiene que ver con el aspecto.",
               "this": [
                 {
                   "tag": "Sea cual sea · da igual",
@@ -31335,34 +31331,7 @@
                   "tag": "Varía según…",
                   "tr": "La cuota de participación varía según la edad."
                 }
-              ],
-              "explain": "よる＝basarse en. によって: se reparte según la edad → cada caso es distinto; によらず (ず＝no): no depende de la edad → igual para todos. Mira la segunda parte: 「違う」「異なる」 → によって; 「誰でも」「一律」 → によらず. 「見かけによらず」 (las apariencias engañan) va en la misma línea: no tiene que ver con el aspecto."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Ambas significan «sea cual sea…, sin importar…»",
-          "items": [
-            {
-              "id": "wo-towazu",
-              "diff": "Significan casi lo mismo, «sin importar…»; を問わず es habitual en ofertas de empleo y anuncios, y usa 「を」; によらず usa 「に」 y también puede significar «sin depender de…» o «contrario a lo que…».",
-              "this": [
-                {
-                  "tag": "に＋よらず",
-                  "tr": "Puede participar cualquiera, sea cual sea su edad."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "を＋問わず",
-                  "tr": "Puede participar cualquiera, sin importar la edad."
-                }
-              ],
-              "wrong": {
-                "why": "問う es transitivo, así que hay que decir 「を問わず」"
-              },
-              "explain": "Las dos frases significan lo mismo; mira primero la partícula: 「よる」 (basarse en) lleva 「に」 → 〜によらず; 「問う」 (preguntar) es transitivo y lleva 「を」 → 〜を問わず. を問わず suele ir con pares o rangos como 「男女、昼夜、経験の有無」; によらず tiene además usos que を問わず no tiene, como 「見かけによらず」 (las apariencias engañan) o 「話し合いによらず」 (sin pasar por el diálogo)."
+              ]
             }
           ]
         }
@@ -31378,6 +31347,10 @@
             {
               "id": "you-ni-yotte-wa",
               "diff": "Sustantivo＋によっては es «en algunos casos…»; raíz de la forma ます＋ようによっては es «si se cambia la manera de…».",
+              "explain": "Mira lo que va delante: sustantivos como 「人、国、場合」 → によっては, para decir que la situación varía; raíz de la forma ます＋よう, como 「考え、見、やり」 → ようによっては, para decir «si cambias la forma de verlo o de hacerlo, la conclusión cambia», y detrás suele ir una valoración positiva inesperada.",
+              "wrong": {
+                "why": "よう debe ir tras la ます形 de un verbo (考えよう、見よう); no puede ir directamente tras un sustantivo"
+              },
               "this": [
                 {
                   "tag": "Sustantivo · según el caso",
@@ -31389,8 +31362,7 @@
                   "tag": "Forma ます＋よう · otra forma de verlo",
                   "tr": "Según cómo se mire, un fracaso también es una buena experiencia."
                 }
-              ],
-              "explain": "Mira lo que va delante: sustantivos como 「人、国、場合」 → によっては, para decir que la situación varía; raíz de la forma ます＋よう, como 「考え、見、やり」 → ようによっては, para decir «si cambias la forma de verlo o de hacerlo, la conclusión cambia», y detrás suele ir una valoración positiva inesperada."
+              ]
             }
           ]
         },
@@ -31402,6 +31374,7 @@
               "id": "ni-yotte",
               "title": "〜によって (varía según…)",
               "diff": "によっては solo destaca una parte: «en algunos casos…»; によって habla del conjunto: «varía según…».",
+              "explain": "Un 「は」 de más reduce el alcance a «algunos de ellos». Mira la segunda parte: 「〜こともある」「〜場合もある」, que indican que en algunos casos se da un resultado especial (normalmente negativo) → によっては; 「違う」「さまざまだ」, que indican diferencias en el conjunto → によって.",
               "this": [
                 {
                   "tag": "Destaca una parte",
@@ -31413,13 +31386,13 @@
                   "tag": "Conjunto · cada caso es distinto",
                   "tr": "El efecto del medicamento varía según la persona."
                 }
-              ],
-              "explain": "Un 「は」 de más reduce el alcance a «algunos de ellos». Mira la segunda parte: 「〜こともある」「〜場合もある」, que indican que en algunos casos se da un resultado especial (normalmente negativo) → によっては; 「違う」「さまざまだ」, que indican diferencias en el conjunto → によって."
+              ]
             },
             {
               "id": "ikan-de-wa",
               "title": "〜いかんによっては (según cómo resulte, podría…)",
               "diff": "Las dos significan «según cómo sea…, a veces…»; いかんによっては es más rígido y escrito, y aparece sobre todo en documentos oficiales y reglamentos.",
+              "explain": "Mira el tipo de texto: un médico o un profesor explicando la situación cara a cara → によっては; cláusulas de reglamentos, contratos o documentos oficiales (資格を取り消す場合がある) → いかんによっては, que además necesita 「の」 delante (結果のいかん).",
               "this": [
                 {
                   "tag": "Hablado y escrito",
@@ -31431,26 +31404,7 @@
                   "tag": "Documento oficial · rígido",
                   "tr": "Según el resultado de la evaluación, la acreditación podrá ser revocada."
                 }
-              ],
-              "explain": "Mira el tipo de texto: un médico o un profesor explicando la situación cara a cara → によっては; cláusulas de reglamentos, contratos o documentos oficiales (資格を取り消す場合がある) → いかんによっては, que además necesita 「の」 delante (結果のいかん)."
-            },
-            {
-              "id": "shidai-as-soon-as",
-              "title": "〜次第で (depende de…)",
-              "diff": "によっては solo dice que en algunos casos «podría» darse un resultado especial; 次第で dice que el resultado «depende por completo de…».",
-              "this": [
-                {
-                  "tag": "Algunos casos · posible",
-                  "tr": "Según el tiempo, el partido podría suspenderse."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Todo depende de eso · decide",
-                  "tr": "Que se juegue o no el partido se decidirá según el tiempo."
-                }
-              ],
-              "explain": "Mira la segunda parte: 「〜こともある」「〜場合もある」 solo avisan de que un resultado es «posible» → によっては; si el resultado depende por completo de lo anterior, como 「するかどうか決める」「合否が決まる」 → 次第で."
+              ]
             }
           ]
         }
@@ -31461,11 +31415,13 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas equivalen a 「で」 para indicar lugar o medio",
+          "note": "Ambas significan «en… (un lugar)»",
           "items": [
             {
               "id": "de-means",
-              "diff": "で es la forma más común en el día a día; にて significa lo mismo, pero solo se usa en documentos formales como avisos, anuncios o invitaciones.",
+              "title": "〜で (lugar)",
+              "diff": "Ambas significan «celebrarse en…»; にて se usa solo en documentos formales como avisos, comunicados e invitaciones; で sirve en cualquier situación, y al hablar normalmente solo se usa で.",
+              "explain": "Las dos frases hablan del mismo lugar; fíjate en el estilo: avisos, invitaciones y comunicados de una escuela o empresa, con expresiones formales como 「行います」 → にて; al hablar normalmente con alguien (やるんだって) → で; en el habla no se dice にて.",
               "this": [
                 {
                   "tag": "Aviso · formal",
@@ -31475,27 +31431,9 @@
               "that": [
                 {
                   "tag": "Día a día · coloquial",
-                  "tr": "Después de clase, juguemos al baloncesto en el gimnasio."
+                  "tr": "Dicen que la ceremonia de ingreso de mañana será en el gimnasio n.º 1."
                 }
-              ],
-              "explain": "Mira el tipo de texto: avisos, invitaciones o anuncios de un colegio o una empresa (〜にて行います) → にて; al hablar normalmente → で. 「これにて終了します」 (con esto damos por terminado) y 「メールにて」 también son usos fijos de にて; en el habla se dice これで y メールで."
-            },
-            {
-              "id": "ni-oite",
-              "diff": "にて se usa sobre todo en avisos para el lugar o el medio (メールにて); において también puede significar «en el ámbito de…».",
-              "this": [
-                {
-                  "tag": "Aviso · medio",
-                  "tr": "Le comunicaremos el resultado por correo electrónico."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Ámbito · aspecto",
-                  "tr": "En la sociedad actual, el inglés es imprescindible."
-                }
-              ],
-              "explain": "Mira lo que va delante: un medio, como 「メール、書面、電話」, o el lugar indicado en un aviso (受付にて) → にて; un ámbito o aspecto, como 「社会、教育、経済」 → において (にて no tiene este uso). Las dos son de registro escrito, pero にて suena más a fórmula fija de avisos y cartas."
+              ]
             }
           ]
         }
@@ -31505,52 +31443,30 @@
       "id": "no-dewa-nai-darou-ka",
       "groups": [
         {
-          "kind": "look",
-          "note": "のだろうか ↔ のではないだろうか: solo se añade 「ではない」",
-          "items": [
-            {
-              "id": "no-darou-ka",
-              "diff": "のではないだろうか es afirmar con suavidad: «¿no será que…? (creo que sí)»; のだろうか es dudar: «¿de verdad…?».",
-              "this": [
-                {
-                  "tag": "Afirmación · yo creo que sí",
-                  "tr": "¿No sería mejor, más bien, este método?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Duda · ¿de verdad?",
-                  "tr": "¿De verdad está bien hacerlo así?"
-                }
-              ],
-              "explain": "El 「ではない」 añadido no es una negación: のではないだろうか expresa la propia opinión con suavidad mediante una pregunta retórica («creo que…») y suele ir con 「むしろ」; のだろうか suele ir con 「本当に」 y expresa duda, con el sobrentendido de «me temo que no»."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Ambas usan una pregunta negativa para dar con suavidad una suposición u opinión: «me temo que…, ¿no?»",
+          "note": "Ambas expresan una suposición suave: «me temo que…, ¿no?»",
           "items": [
             {
               "id": "no-de-wa-nai-ka",
-              "diff": "Significan lo mismo; のではないだろうか añade una capa más de suposición con 「だろう」 y es más suave, adecuada para textos y discursos; のではないか es más directa, y en el habla se dice んじゃない.",
+              "diff": "Ambas significan «me temo que…, ¿no?»; のではないだろうか añade una capa más de 「だろう」, así que es más suave y adecuada para textos y discursos; のではないか es más directa, y en el habla se dice んじゃないか.",
+              "explain": "Las dos frases suponen lo mismo; fíjate en el contexto y el tono: en textos o discursos, si quieres expresar la suposición con más cortesía y dejando margen, añades una capa más de 「だろう」 → のではないだろうか; charlando con amigos o compañeros se dice directamente → んじゃないか (por escrito, のではないか).",
               "this": [
                 {
-                  "tag": "Más suave · textos",
-                  "tr": "Me temo que este precio es un poco caro para un estudiante, ¿no?"
+                  "tag": "Más suave · textos, discursos",
+                  "tr": "Si sigue así, me temo que la falta de personal continuará también el año que viene."
                 }
               ],
               "that": [
                 {
                   "tag": "Más directa · coloquial",
-                  "tr": "Oye, ¿no es un poco caro este precio?"
+                  "tr": "Si sigue así, el año que viene seguiremos cortos de personal, ¿no crees?"
                 }
-              ],
-              "explain": "Mira el contexto y el tono: charlando con amigos se dice directamente 「〜んじゃない？」 (por escrito, のではないか); en textos o discursos, si quieres dar tu opinión con más cortesía y dejando margen, añades una capa más de 「だろう」 → のではないだろうか."
+              ]
             },
             {
               "id": "de-wa-nakarou-ka",
               "diff": "Significan lo mismo; ではなかろうか es una forma literaria, más arcaica, frecuente en editoriales y textos académicos.",
+              "explain": "「なかろう」 es la forma literaria de 「ないだろう」, así que las dos frases significan exactamente lo mismo; ではなかろうか solo suena más anticuada y culta, y casi no se usa en la conversación diaria. Ojo con los sustantivos: のではないだろうか necesita 「な」 (本質なのでは), mientras que ではなかろうか va directamente (本質ではなかろうか).",
               "this": [
                 {
                   "tag": "Escrito general",
@@ -31562,12 +31478,12 @@
                   "tag": "Literaria · más arcaica",
                   "tr": "¿No será precisamente eso la esencia del problema?"
                 }
-              ],
-              "explain": "「なかろう」 es la forma literaria de 「ないだろう」, así que las dos frases significan exactamente lo mismo; ではなかろうか solo suena más anticuada y culta, y casi no se usa en la conversación diaria. Ojo con los sustantivos: のではないだろうか necesita 「な」 (本質なのでは), mientras que ではなかろうか va directamente (本質ではなかろうか)."
+              ]
             },
             {
               "id": "de-wa-arumai-ka",
               "diff": "Significan lo mismo; ではあるまいか usa 「まい」, la suposición negativa del japonés clásico, y es aún más rígida que ではなかろうか; prácticamente solo aparece por escrito.",
+              "explain": "「まい」 es la suposición negativa del japonés antiguo (＝ないだろう), así que ではあるまいか es la versión clásica de ではないだろうか. Hoy solo aparece de vez en cuando en novelas o ensayos; al hablar se usa のではないだろうか o 「んじゃないかな」.",
               "this": [
                 {
                   "tag": "Escrito general",
@@ -31579,8 +31495,7 @@
                   "tag": "Literaria · muy rígida",
                   "tr": "Si las cosas siguen así, me temo que la cultura tradicional acabará desapareciendo, ¿no?"
                 }
-              ],
-              "explain": "「まい」 es la suposición negativa del japonés antiguo (＝ないだろう), así que ではあるまいか es la versión clásica de ではないだろうか. Hoy solo aparece de vez en cuando en novelas o ensayos; al hablar se usa のではないだろうか o 「んじゃないかな」."
+              ]
             }
           ]
         }
@@ -31590,42 +31505,25 @@
       "id": "no-moto-de",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambas vienen de 「もと」, cuyo sentido original es «base, raíz»",
+          "kind": "look",
+          "note": "のもとに ↔ をもとに: solo cambia una partícula",
           "items": [
             {
               "id": "wo-moto-ni",
-              "diff": "のもとで es «bajo…» (su guía, protección o control); をもとに es «a partir de…, tomando como material o base».",
+              "diff": "の＋もとに significa «bajo…» (bajo la guía, protección o control de algo); を＋もとに significa «a partir de…, tomando… como base».",
+              "explain": "Solo cambia la partícula de delante, pero el significado es totalmente distinto. Fíjate en la partícula y el sustantivo anterior: la guía de alguien o una condición, como 「指導、管理、協力」, ＋の → のもとに, que indica estar «bajo» ello; materiales como 「データ、資料、事実」 ＋を → をもとに, que indica usarlos como base para crear algo nuevo.",
               "this": [
                 {
-                  "tag": "Bajo · con la guía de",
+                  "tag": "の＋もとに · bajo…",
                   "tr": "Escribí la tesis bajo la dirección de mi profesor."
                 }
               ],
               "that": [
                 {
-                  "tag": "A partir de · material",
+                  "tag": "を＋もとに · a partir de…",
                   "tr": "Escribí la tesis a partir de los datos que reuní."
                 }
-              ],
-              "explain": "Mira primero la partícula: の＋もとで／もとに → estar «bajo» una persona o una condición; を＋もとに → usarlo como «base» para crear algo nuevo. Luego mira el sustantivo: personas o supervisión, como 先生、指導、親 → のもとで; materiales, como データ、事実、資料 → をもとに. 「のもとに」 y 「をもとに」 solo se diferencian en una partícula, así que hay que leer con atención."
-            },
-            {
-              "id": "ni-motozuite",
-              "diff": "のもとに describe el estado de estar «bajo» un sistema o una condición; に基づいて dice que una acción se hace «conforme a» normas o datos.",
-              "this": [
-                {
-                  "tag": "Bajo · situación",
-                  "tr": "Todos los ciudadanos son iguales ante la ley."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Conforme a · base de la acción",
-                  "tr": "La policía lo detuvo conforme a la ley."
-                }
-              ],
-              "explain": "Con el mismo 「法」, mira la segunda parte: si describe una situación o un estado (平等である、自由に暮らす) → のもとで／のもとに; si describe una acción o un juicio basado en ello (逮捕した、判断する) → に基づいて. Si delante va una persona o un sistema (先生、政府), solo vale のもとで. 「基づく」 es en origen 「基（もと）＋付く」: pegado a la base."
+              ]
             }
           ]
         }
@@ -31641,6 +31539,7 @@
             {
               "id": "to-ittara-nai",
               "diff": "Las dos significan «…una barbaridad»; のなんのって es muy coloquial, como cuando cuentas algo; といったらない se puede usar también por escrito.",
+              "explain": "Mira el tono: のなんのって es para contarle algo a alguien exagerando en una charla; lo que sigue a menudo se omite, y suele ir con muletillas como 「もう」「いやあ」; といったらない suele llevar un sustantivo delante (悔しさ、寒さ), cierra la frase completa y no desentona por escrito.",
               "this": [
                 {
                   "tag": "Coloquial · contándoselo a alguien",
@@ -31652,25 +31551,24 @@
                   "tag": "También escrito · narración",
                   "tr": "La rabia que sentí al perder el partido no se puede describir."
                 }
-              ],
-              "explain": "Mira el tono: のなんのって es para contarle algo a alguien exagerando en una charla; lo que sigue a menudo se omite, y suele ir con muletillas como 「もう」「いやあ」; といったらない suele llevar un sustantivo delante (悔しさ、寒さ), cierra la frase completa y no desentona por escrito."
+              ]
             },
             {
               "id": "te-tamaranai",
-              "diff": "てたまらない expresa una sensación que uno no aguanta «ahora mismo»; のなんのって suele usarse para contarle a otro algo pasado, exagerando.",
+              "diff": "Ambas significan «insoportablemente…»; のなんのって es un tono exagerado al contárselo a otros, y suele llevar a una consecuencia; てたまらない expresa con sencillez lo que uno siente y cierra la frase completa.",
+              "explain": "Las dos frases dicen que ayer hacía un calor insoportable; fíjate en cómo se dice: のなんのって se usa al contárselo a otros en una charla, exagerando, y suele llevar a una consecuencia (汗が止まらなかった) o directamente omite la segunda parte; てたまらない expresa con sencillez lo que uno siente, la frase termina completa en 「たまらなかった」 y también queda natural en un diario o una redacción. La conexión también cambia: 暑い＋のなんのって, 暑くて＋たまらない.",
               "this": [
                 {
-                  "tag": "Contarlo después · exagerando",
-                  "tr": "Ayer la muela picada me dolía una barbaridad; no pegué ojo en toda la noche."
+                  "tag": "Contándolo · lleva a una consecuencia",
+                  "tr": "¡Ayer en la obra hacía un calor que no veas, no paraba de sudar!"
                 }
               ],
               "that": [
                 {
-                  "tag": "Sensación de ahora",
-                  "tr": "Ahora mismo me duele la muela picada que no lo aguanto."
+                  "tag": "Expresa el sentimiento con sencillez",
+                  "tr": "Ayer en la obra hacía un calor insoportable."
                 }
-              ],
-              "explain": "Mira el momento y el destinatario: una sensación que estás soportando 「今」 → てたまらない; contarle a otro lo que viviste 「昨日」, añadiendo la consecuencia (一晩中眠れなかった) → のなんのって. La conjugación también cambia: 痛くて＋たまらない, 痛い＋のなんのって."
+              ]
             }
           ]
         }
@@ -31684,26 +31582,10 @@
           "note": "Ambas vienen de 「上（うえ）」, cuyo sentido original es «encima», y que pasó a significar «en el plano de…»",
           "items": [
             {
-              "id": "jou-standpoint",
-              "diff": "Significan lo mismo; 上（じょう） se pega directamente a sustantivos de origen chino y es más conciso y escrito; の上では lleva 「の」 en medio y admite también sustantivos de origen japonés.",
-              "this": [
-                {
-                  "tag": "の上では · palabra japonesa",
-                  "tr": "Según el calendario ya es primavera, pero todavía hace frío."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "上（じょう）· palabra de origen chino",
-                  "tr": "Legalmente no hay problema, pero ¿y moralmente?"
-                }
-              ],
-              "explain": "Mira el sustantivo y la lectura: 上（じょう） solo se pega directamente a palabras de origen chino (法律上、計算上、形式上); の上（うえ）では lleva 「の」 en medio y admite también palabras de origen japonés como 「暦（こよみ）」. Las dos suelen insinuar «en apariencia es así, pero en la realidad no necesariamente», y detrás suele ir un contraste con 「が」."
-            },
-            {
               "id": "ue-de",
-              "title": "〜上で (en cuanto a…)",
+              "title": "〜上で (al hacer…)",
               "diff": "Sustantivo＋の上では dice «visto desde ese plano, es así»; verbo＋上で dice «al hacer eso, en ese aspecto».",
+              "explain": "El significado original de 「上（うえ）」 es «la parte de arriba, la superficie». Sustantivo＋の上では: los datos o normas se ven como una «superficie» y se mira desde ella (計算の上では) → «a juzgar por…, sobre el papel», por eso suele insinuar «así sobre el papel, pero no necesariamente en la realidad»; verbo en 辞書形＋上で: lo que se va a hacer se ve como un «escenario» en el que uno está (生活する上で) → «al hacer…», normalmente seguido de 「大切だ・必要だ」. Para distinguirlos, mira lo que va antes de 「上」: un sustantivo＋の o un verbo en 辞書形.",
               "this": [
                 {
                   "tag": "Sustantivo＋の上では · en apariencia",
@@ -31715,31 +31597,31 @@
                   "tag": "Verbo＋上で · al hacer algo",
                   "tr": "Para vivir en el extranjero, el idioma es muy importante."
                 }
-              ],
-              "explain": "Mira lo que va delante de 「上」: sustantivo＋の上では, «visto desde ese plano, es así», que a menudo insinúa una diferencia con la realidad; forma de diccionario del verbo＋上で, «al hacer eso, en ese aspecto», y detrás suele ir 「大切だ・必要だ・問題がある」."
+              ]
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Ambas significan «desde el punto de vista de…» y acotan el ángulo del juicio",
+          "note": "Ambas significan «a juzgar por…»",
           "items": [
             {
-              "id": "ten-aspect",
-              "diff": "の上では suele insinuar «en apariencia es así, pero en la realidad no necesariamente»; 点では elige un aspecto entre varios para valorarlo.",
+              "id": "kara-iu-to",
+              "title": "〜からいうと (según un criterio)",
+              "diff": "Ambas significan «a juzgar por…»; の上では lleva el matiz de «así sobre el papel, pero no necesariamente en la realidad» y suele ir seguida de un contraste; からいうと simplemente emite un juicio según ese criterio.",
+              "explain": "Las dos frases se basan en las cifras; fíjate en lo que sigue: の上では lleva el matiz de «así es sobre el papel» y suele pasar a la realidad contraria (が、実感はない); からいうと simplemente juzga según las cifras, el hablante acepta esa conclusión y la frase sigue en la misma línea (順調に伸びている).",
               "this": [
                 {
-                  "tag": "Apariencia vs. realidad",
-                  "tr": "Según las cifras la economía se está recuperando, pero no se nota."
+                  "tag": "Sobre el papel · con contraste",
+                  "tr": "Sobre el papel, las ventas están creciendo, pero no se nota."
                 }
               ],
               "that": [
                 {
-                  "tag": "Este aspecto vs. otros",
-                  "tr": "Con este coche estoy satisfecho en cuanto al precio, pero el diseño deja que desear."
+                  "tag": "Juicio según criterio · sin contraste",
+                  "tr": "A juzgar por las cifras, las ventas crecen sin problemas."
                 }
-              ],
-              "explain": "Mira con qué se contrasta después de 「が」: con の上では se contrasta con «la realidad» (実感はない), es decir, «sobre el papel es así»; con 点では se contrasta con «otro aspecto» (デザイン), es decir, «en lo que respecta a este punto»."
+              ]
             }
           ]
         }

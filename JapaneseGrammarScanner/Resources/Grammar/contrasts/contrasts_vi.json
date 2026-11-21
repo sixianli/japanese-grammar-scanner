@@ -31091,36 +31091,13 @@
       "id": "ni-tsuki",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「に＋付く」 — “bám vào…” → “về…” (につき là thể liên dụng, について là thể て)",
-          "items": [
-            {
-              "id": "ni-tsuite",
-              "thisTitle": "〜につき (về)",
-              "diff": "Nghĩa giống nhau, đều là “về”; について dùng được trong mọi hoàn cảnh, につき là cách nói văn viết trang trọng, khi nói thường dùng 「につきまして」.",
-              "this": [
-                {
-                  "tag": "Trang trọng · kinh doanh",
-                  "tr": "Về việc này, chúng tôi sẽ liên lạc lại với quý khách sau."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Dùng chung · đời thường",
-                  "tr": "Tôi đang tìm hiểu về lịch sử Nhật Bản."
-                }
-              ],
-              "explain": "Cả hai đều bắt nguồn từ 「に＋付く」: について là thể て, につき là thể liên dụng. Nhìn hoàn cảnh: nói chuyện, viết văn thường ngày → について; thông báo của công ty, cuộc họp, dịp trang trọng với khách hàng (本件、後日、いたします) → につき／につきまして."
-            }
-          ]
-        },
-        {
           "kind": "look",
           "note": "につき ↔ につけ, chỉ khác chữ kana cuối cùng",
           "items": [
             {
               "id": "ni-tsuke",
               "diff": "につき là “vì…”, “mỗi…” trên bảng thông báo; につけ là “mỗi khi… thì (dâng lên cảm xúc)”.",
+              "explain": "Chỉ khác chữ kana cuối, nghĩa hoàn toàn khác. Nhìn phía trước và nơi sử dụng: danh từ 「定休日、工事中」＋につき, hay xuất hiện ở cửa hàng, trên thông báo, nêu lý do (「一人につき」 thì là “mỗi người”); động từ 「見る、聞く、思う」＋につけ, phía sau là hồi tưởng, cảm khái.",
               "this": [
                 {
                   "tag": "Bảng thông báo · vì",
@@ -31132,38 +31109,49 @@
                   "tag": "Mỗi khi · dâng lên cảm xúc",
                   "tr": "Mỗi khi nhìn bức ảnh này, tôi lại nhớ về thời thơ ấu."
                 }
-              ],
-              "explain": "Chỉ khác chữ kana cuối, nghĩa hoàn toàn khác. Nhìn phía trước và nơi sử dụng: danh từ 「定休日、工事中」＋につき, hay xuất hiện ở cửa hàng, trên thông báo, nêu lý do (「一人につき」 thì là “mỗi người”); động từ 「見る、聞く、思う」＋につけ, phía sau là hồi tưởng, cảm khái."
+              ]
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Lần lượt có nghĩa giống hai cách dùng “vì” và “mỗi…”",
+          "sense": 1,
+          "note": "Đều mang nghĩa “vì”",
           "items": [
             {
               "id": "tame-ni",
               "title": "〜ために (nguyên nhân)",
               "thisTitle": "〜につき (vì)",
-              "diff": "につき gần như chỉ dùng trong bảng thông báo, thông báo, nối trực tiếp danh từ; ため dùng được trong mọi loại văn bản, nối danh từ phải thêm 「の」.",
+              "diff": "につき chỉ gắn thẳng vào danh từ, dùng trong biển báo, thông báo để nêu lý do ngắn gọn; ため sau danh từ phải thêm 「の」, cũng gắn được sau động từ, dùng được trong mọi loại văn bản.",
+              "explain": "Nhìn phía trước gắn gì và dùng ở đâu: danh từ gắn thẳng＋につき (工事中につき、定休日につき) gần như chỉ xuất hiện trên biển báo, thông báo, nêu lý do ngắn gọn; ため gắn với danh từ phải thêm 「の」 (工事のため), còn gắn được sau động từ (大雨が降ったため), dùng được trong tin tức, nhật ký, văn thuyết minh. Khi phía trước là một sự việc, một hành động thì chỉ dùng được ため.",
+              "wrong": {
+                "why": "につき gắn thẳng vào danh từ, không được chen 「の」 vào giữa"
+              },
               "this": [
                 {
-                  "tag": "Bảng thông báo · ngắn gọn",
+                  "tag": "Biển báo · gắn thẳng danh từ",
                   "tr": "Đang thi công, cấm đi qua."
                 }
               ],
               "that": [
                 {
-                  "tag": "Câu thông thường",
-                  "tr": "Hôm qua vì thi công nên không đi qua đường được."
+                  "tag": "Văn bản thường · sau động từ",
+                  "tr": "Hôm qua vì mưa to nên trận đấu bị hủy."
                 }
-              ],
-              "explain": "Nhìn nơi xuất hiện: bảng thông báo dán ở cửa, bên đường, nêu lý do ngắn gọn (工事中につき、定休日につき) → につき; câu thông thường như tin tức, nhật ký, giải thích → ため. Khi nối danh từ, につき nối trực tiếp (工事中につき), ため phải thêm 「の」 (工事のため)."
-            },
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều mang nghĩa “mỗi…”",
+          "items": [
             {
               "id": "atari-per",
               "thisTitle": "〜につき (mỗi…)",
               "diff": "につき dùng để quy định mỗi đơn vị thu bao nhiêu, cấp bao nhiêu, rất trang trọng; 当たり hay dùng cho số bình quân tính ra từ thống kê.",
+              "explain": "Nhìn con số từ đâu mà có: trong thông báo, bảng giá quy định mỗi đơn vị thu bao nhiêu, phát bao nhiêu → につき; dữ liệu chia bình quân từ tổng số để so sánh (消費量、収入、売り上げ) → 当たり.",
               "this": [
                 {
                   "tag": "Quy định · thu phí",
@@ -31175,8 +31163,32 @@
                   "tag": "Thống kê · bình quân",
                   "tr": "Lượng gạo tiêu thụ bình quân đầu người của Nhật Bản giảm dần qua từng năm."
                 }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Đều mang nghĩa “về”",
+          "items": [
+            {
+              "id": "ni-tsuite",
+              "thisTitle": "〜につき (về)",
+              "diff": "Nghĩa giống nhau đều là “về”; につき là cách nói trang trọng trong thông báo, công việc; について dùng được trong mọi hoàn cảnh, nói chuyện thoải mái thì chỉ dùng について.",
+              "explain": "Hai câu nói về cùng một việc, nhìn hoàn cảnh và giọng điệu: nói với khách hàng, trong thông báo hay cuộc họp, dùng cách nói trang trọng như 「ご連絡いたします」 → につき (cũng nói につきまして); nói thoải mái với bạn bè, đồng nghiệp 「電話するね」 → chỉ dùng được について. について dùng được cả ở nơi trang trọng, còn につき thì không đưa vào lời nói thường ngày được.",
+              "this": [
+                {
+                  "tag": "Trang trọng · kinh doanh",
+                  "tr": "Về việc này, chúng tôi sẽ liên lạc lại với quý khách sau."
+                }
               ],
-              "explain": "Nhìn con số từ đâu mà có: trong thông báo, bảng giá quy định mỗi đơn vị thu bao nhiêu, phát bao nhiêu → につき; dữ liệu chia bình quân từ tổng số để so sánh (消費量、収入、売り上げ) → 当たり."
+              "that": [
+                {
+                  "tag": "Dùng chung · nói thoải mái",
+                  "tr": "Chuyện này để lát nữa mình gọi điện cho cậu nhé."
+                }
+              ]
             }
           ]
         }
@@ -31192,6 +31204,7 @@
             {
               "id": "wa-iu-ni-oyobazu",
               "diff": "には及ばない ở cuối câu, nói “không cần…”; 言うに及ばず ở giữa câu, nói “… thì khỏi phải nói”, phía sau còn có ý tăng tiến.",
+              "explain": "Cả hai đều từ 「及ぶ」 (đạt tới). には及ばない: sự việc không tới mức cần phải lo lắng, bận tâm → không cần; 言うに及ばず: đến cả “nói” cũng không cần → khỏi phải nói → đương nhiên. Nhìn vị trí: kết thúc ở cuối câu, lịch sự từ chối sự lo lắng, ý tốt của đối phương → には及ばない; nằm giữa câu, phía sau có 「海外でも」 kiểu 「〜でも」「〜も」 thêm một tầng → 言うに及ばず.",
               "this": [
                 {
                   "tag": "Cuối câu · không cần",
@@ -31203,12 +31216,12 @@
                   "tag": "Giữa câu · khỏi phải nói",
                   "tr": "Ca sĩ này ở trong nước thì khỏi phải nói, ở nước ngoài cũng rất được yêu thích."
                 }
-              ],
-              "explain": "言うに及ばず chính là cách nói văn cổ của 「言うに及ばない（không cần nói）」: đến nói cũng không cần nói → đương nhiên. Nhìn vị trí: kết thúc ở cuối câu, khách sáo gạt đi nỗi lo, ý tốt của đối phương → には及ばない; ở giữa câu, phía sau nối 「〜でも」「〜も」 để thêm một tầng nữa → 言うに及ばず."
+              ]
             },
             {
               "id": "ni-oyonde",
               "diff": "には及ばない là “chưa đến mức cần phải…” ＝ không cần; に及んで là “sự việc đã đến mức…”.",
+              "explain": "及ぶ＝đạt đến. Dạng phủ định には及ばない: sự việc chưa đến bước đó → không cần; dạng khẳng định に及んで: sự việc đã phát triển đến bước này (この期に及んで＝đến lúc này rồi), phía sau thường là lời trách móc. Nhìn xem có 「ない／ません」 hay không là phân biệt được.",
               "this": [
                 {
                   "tag": "Phủ định · chưa đến mức đó",
@@ -31220,8 +31233,7 @@
                   "tag": "Khẳng định · đã đến mức",
                   "tr": "Đến nước này rồi mà cậu còn định viện cớ nữa à?"
                 }
-              ],
-              "explain": "及ぶ＝đạt đến. Dạng phủ định には及ばない: sự việc chưa đến bước đó → không cần; dạng khẳng định に及んで: sự việc đã phát triển đến bước này (この期に及んで＝đến lúc này rồi), phía sau thường là lời trách móc. Nhìn xem có 「ない／ません」 hay không là phân biệt được."
+              ]
             }
           ]
         },
@@ -31232,6 +31244,7 @@
             {
               "id": "koto-wa-nai",
               "diff": "には及ばない trang trọng, khách sáo hơn, hay dùng để từ chối ý tốt của đối phương; ことはない là khẩu ngữ nói với người quen “chẳng cần phải”.",
+              "explain": "Nhìn xem nói với ai: khách sáo nói với cấp trên, khách hàng “ngài không cần bận tâm” → には及ばない, hay dùng thể kính trọng 「ご心配には及びません」; tiện miệng an ủi bạn bè, người nhà (〜よ) → ことはない.",
               "this": [
                 {
                   "tag": "Trang trọng · với cấp trên",
@@ -31243,12 +31256,12 @@
                   "tag": "Khẩu ngữ · với người quen",
                   "tr": "Chẳng cần phải lo lắng đến thế đâu."
                 }
-              ],
-              "explain": "Nhìn xem nói với ai: khách sáo nói với cấp trên, khách hàng “ngài không cần bận tâm” → には及ばない, hay dùng thể kính trọng 「ご心配には及びません」; tiện miệng an ủi bạn bè, người nhà (〜よ) → ことはない."
+              ]
             },
             {
               "id": "made-mo-nai",
               "diff": "には及ばない là khách sáo nói với đối phương “ngài không cần bận tâm”; までもない là “sự việc đã quá rõ ràng, chẳng cần phải làm đến mức đó”.",
+              "explain": "Nhìn lý do: đối phương định làm gì đó cho mình (見舞い、心配、送迎), khách sáo gạt đi → には及ばない; sự việc quá rõ ràng như 「誰でも知っている」「明らかだ」 → までもない (「言うまでもない」 thường gặp nhất, đặt giữa câu thì nói までもなく).",
               "this": [
                 {
                   "tag": "Khách sáo từ chối ý tốt",
@@ -31260,8 +31273,7 @@
                   "tag": "Hiển nhiên · không cần",
                   "tr": "Đây là chuyện ai cũng biết, chẳng cần phải giải thích."
                 }
-              ],
-              "explain": "Nhìn lý do: đối phương định làm gì đó cho mình (見舞い、心配、送迎), khách sáo gạt đi → には及ばない; sự việc quá rõ ràng như 「誰でも知っている」「明らかだ」 → までもない (「言うまでもない」 thường gặp nhất, đặt giữa câu thì nói までもなく)."
+              ]
             }
           ]
         }
@@ -31272,42 +31284,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả phạm vi thời gian, không gian",
+          "note": "Đều mang nghĩa “kéo dài tới…”",
           "items": [
             {
-              "id": "kara-ni-kakete",
-              "diff": "にわたって nói toàn bộ phạm vi “kéo dài suốt, trải khắp”, nhấn mạnh quy mô lớn; から〜にかけて nói “từ… đến… khoảng”, điểm đầu cuối không rõ ràng.",
+              "id": "ni-oyonde",
+              "title": "〜に及ぶ (kéo dài, lan tới)",
+              "diff": "Đều mang nghĩa “kéo dài tới…”; にわたって nói sự việc diễn ra liên tục suốt cả khoảng thời gian đó; に及ぶ tự làm vị ngữ, nói rằng nó đã lên tới mức dài như vậy.",
+              "explain": "Cả hai câu đều nói cuộc đàm phán kéo dài mười tiếng, nhìn phía sau: sau にわたって còn có động tác như 「続いた」「行われた」, nói sự việc diễn ra suốt cả khoảng thời gian đó; に及ぶ tự nó là vị ngữ (10時間に及んだ), trọng tâm là thời gian đã lên tới mức dài như vậy, mang sắc thái “dài hơn tưởng tượng”. Khi bổ nghĩa cho danh từ cũng vậy: 「10時間にわたる交渉」「10時間に及ぶ交渉」.",
               "this": [
                 {
-                  "tag": "Toàn bộ phạm vi · quy mô lớn",
-                  "tr": "Mưa kéo dài suốt mười ngày liền."
+                  "tag": "Cả khoảng thời gian · liên tục",
+                  "tr": "Cuộc đàm phán kéo dài suốt mười tiếng đồng hồ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Từ điểm đầu đến điểm cuối · đại khái",
-                  "tr": "Từ tối qua đến sáng nay, mưa rơi liên tục."
+                  "tag": "Lên tới tận · làm vị ngữ",
+                  "tr": "Cuộc đàm phán kéo dài tới tận mười tiếng."
                 }
-              ],
-              "explain": "Nhìn phía trước: cả một khoảng thời gian, cả một vùng như 「10日間」「全国」「長年」, thường kèm con số → にわたって, nhấn mạnh thời gian dài, phạm vi rộng; điểm đầu＋điểm cuối như 「昨夜から今朝」「関東から東北」 → から〜にかけて, chỉ nói đại khái trong khoảng này."
-            },
-            {
-              "id": "wo-tooshite",
-              "title": "〜を通して (suốt cả thời kỳ)",
-              "diff": "にわたって nói hoạt động “kéo dài suốt, trải khắp”, nhấn mạnh quy mô; を通して nói “luôn như vậy” trong cả một chu kỳ.",
-              "this": [
-                {
-                  "tag": "Kéo dài · nhấn mạnh quy mô",
-                  "tr": "Công trình kéo dài suốt ba năm."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Quanh năm · trạng thái không đổi",
-                  "tr": "Hòn đảo này ấm áp quanh năm."
-                }
-              ],
-              "explain": "Nhìn phía sau là gì: hoạt động, sự kiện kéo dài hoặc triển khai như 「工事が続いた」「調査を行った」 → にわたって; trạng thái không đổi suốt cả chu kỳ như 「暖かい」「にぎやかだ」, phía trước thường là chu kỳ trọn vẹn như 「一年、一生」 → を通して (を通じて cũng vậy)."
+              ]
             }
           ]
         }
@@ -31324,6 +31319,7 @@
               "id": "ni-yotte",
               "title": "〜によって (khác nhau tùy…)",
               "diff": "によらず là “bất kể… đều như nhau”; によって là “khác nhau tùy theo…”.",
+              "explain": "よる＝căn cứ vào. によって: căn cứ vào tuổi tác để phân → mỗi người một khác; によらず (ず＝không): không căn cứ vào tuổi tác → ai cũng như nhau. Nhìn nửa câu sau: 「違う」「異なる」 → によって; 「誰でも」「一律」 → によらず. 「見かけによらず」 (không thể trông mặt mà bắt hình dong) cũng mang nghĩa này: không liên quan đến vẻ bề ngoài.",
               "this": [
                 {
                   "tag": "Bất kể · đều như nhau",
@@ -31335,34 +31331,7 @@
                   "tag": "Khác nhau tùy…",
                   "tr": "Phí tham gia khác nhau tùy theo độ tuổi."
                 }
-              ],
-              "explain": "よる＝căn cứ vào. によって: căn cứ vào tuổi tác để phân → mỗi người một khác; によらず (ず＝không): không căn cứ vào tuổi tác → ai cũng như nhau. Nhìn nửa câu sau: 「違う」「異なる」 → によって; 「誰でも」「一律」 → によらず. 「見かけによらず」 (không thể trông mặt mà bắt hình dong) cũng mang nghĩa này: không liên quan đến vẻ bề ngoài."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Đều diễn tả “bất kể…”",
-          "items": [
-            {
-              "id": "wo-towazu",
-              "diff": "Nghĩa gần như giống nhau, “bất kể”; を問わず là cách nói thường gặp trong tuyển dụng, thông báo, dùng 「を」; によらず dùng 「に」, còn có thể diễn tả “không dựa vào…”, “trái với…”.",
-              "this": [
-                {
-                  "tag": "に＋よらず",
-                  "tr": "Bất kể tuổi tác, ai cũng có thể tham gia."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "を＋問わず",
-                  "tr": "Không phân biệt tuổi tác, ai cũng có thể tham gia."
-                }
-              ],
-              "wrong": {
-                "why": "問う là tha động từ, phải nói 「を問わず」"
-              },
-              "explain": "Hai câu nghĩa giống nhau, trước hết nhìn trợ từ phía trước: 「よる（căn cứ）」 đi với 「に」 → 〜によらず; 「問う（hỏi）」 là tha động từ, đi với 「を」 → 〜を問わず. を問わず thường nối với những từ thành cặp hoặc có phạm vi như 「男女、昼夜、経験の有無」; によらず còn có những cách dùng mà を問わず không có, như 「見かけによらず（không thể trông mặt mà bắt hình dong）」「話し合いによらず（không thông qua bàn bạc）」."
+              ]
             }
           ]
         }
@@ -31378,6 +31347,10 @@
             {
               "id": "you-ni-yotte-wa",
               "diff": "Danh từ＋によっては là “có… thì sẽ”; thể ます của động từ＋ようによっては là “nếu đổi cách… thì”.",
+              "explain": "Nhìn phía trước nối với gì: danh từ như 「人、国、場合」 → によっては, nói tình hình khác nhau; thể ます của động từ＋よう như 「考え、見、やり」 → ようによっては, nói “cách nhìn, cách làm đổi đi thì kết luận cũng khác”, phía sau thường là đánh giá tích cực bất ngờ.",
+              "wrong": {
+                "why": "Trước よう phải là ます形 của động từ (考えよう、見よう), không gắn thẳng vào danh từ được"
+              },
               "this": [
                 {
                   "tag": "Danh từ · tùy tình hình",
@@ -31389,8 +31362,7 @@
                   "tag": "Thể ます＋よう · đổi cách nghĩ",
                   "tr": "Nếu nghĩ theo hướng khác thì thất bại cũng là một kinh nghiệm tốt."
                 }
-              ],
-              "explain": "Nhìn phía trước nối với gì: danh từ như 「人、国、場合」 → によっては, nói tình hình khác nhau; thể ます của động từ＋よう như 「考え、見、やり」 → ようによっては, nói “cách nhìn, cách làm đổi đi thì kết luận cũng khác”, phía sau thường là đánh giá tích cực bất ngờ."
+              ]
             }
           ]
         },
@@ -31402,6 +31374,7 @@
               "id": "ni-yotte",
               "title": "〜によって (khác nhau tùy…)",
               "diff": "によっては chỉ chọn ra một phần “có… thì sẽ…”; によって nói tổng thể “khác nhau tùy…”.",
+              "explain": "Thêm một chữ 「は」 là thu hẹp phạm vi lại thành “một số trong đó”. Nhìn nửa câu sau: 「〜こともある」「〜場合もある」 nói một số trường hợp sẽ xuất hiện kết quả đặc biệt (thường là không tốt) → によっては; 「違う」「さまざまだ」 nói tổng thể có khác biệt → によって.",
               "this": [
                 {
                   "tag": "Chọn ra một phần",
@@ -31413,13 +31386,13 @@
                   "tag": "Tổng thể · mỗi người một khác",
                   "tr": "Tác dụng của thuốc khác nhau tùy người."
                 }
-              ],
-              "explain": "Thêm một chữ 「は」 là thu hẹp phạm vi lại thành “một số trong đó”. Nhìn nửa câu sau: 「〜こともある」「〜場合もある」 nói một số trường hợp sẽ xuất hiện kết quả đặc biệt (thường là không tốt) → によっては; 「違う」「さまざまだ」 nói tổng thể có khác biệt → によって."
+              ]
             },
             {
               "id": "ikan-de-wa",
               "title": "〜いかんによっては (tùy tình hình có thể)",
               "diff": "Nghĩa giống nhau, đều là “tùy tình hình…, có khi sẽ…”; いかんによっては là văn viết cứng hơn, hay gặp trong công văn, quy định.",
+              "explain": "Nhìn loại văn bản: bác sĩ, giáo viên trực tiếp giải thích tình hình → によっては; điều khoản trong quy định, hợp đồng, công văn (資格を取り消す場合がある) → いかんによっては, hơn nữa phía trước phải thêm 「の」 (結果のいかん).",
               "this": [
                 {
                   "tag": "Khẩu ngữ, văn viết đều được",
@@ -31431,26 +31404,7 @@
                   "tag": "Công văn · cứng",
                   "tr": "Tùy theo kết quả thẩm định, có trường hợp sẽ bị hủy tư cách."
                 }
-              ],
-              "explain": "Nhìn loại văn bản: bác sĩ, giáo viên trực tiếp giải thích tình hình → によっては; điều khoản trong quy định, hợp đồng, công văn (資格を取り消す場合がある) → いかんによっては, hơn nữa phía trước phải thêm 「の」 (結果のいかん)."
-            },
-            {
-              "id": "shidai-as-soon-as",
-              "title": "〜次第で (tùy vào…)",
-              "diff": "によっては chỉ nói trong một số trường hợp “có thể” xảy ra kết quả đặc biệt; 次第で là kết quả “hoàn toàn tùy vào…”.",
-              "this": [
-                {
-                  "tag": "Một số trường hợp · có thể",
-                  "tr": "Tùy thời tiết, trận đấu cũng có thể bị hủy."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Hoàn toàn tùy vào · quyết định",
-                  "tr": "Có tổ chức trận đấu hay không sẽ tùy thời tiết mà quyết định."
-                }
-              ],
-              "explain": "Nhìn nửa câu sau: 「〜こともある」「〜場合もある」 chỉ nhắc “có khả năng” xảy ra một kết quả nào đó → によっては; kết quả hoàn toàn do yếu tố phía trước chi phối như 「するかどうか決める」「合否が決まる」 → 次第で."
+              ]
             }
           ]
         }
@@ -31461,11 +31415,13 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều tương đương với 「で」 chỉ nơi chốn, phương tiện",
+          "note": "Đều mang nghĩa “tại… (địa điểm)”",
           "items": [
             {
               "id": "de-means",
-              "diff": "で là cách nói thông dụng nhất hằng ngày; にて nghĩa giống vậy, nhưng chỉ dùng trong văn bản trang trọng như thông báo, bảng tin, thiệp mời.",
+              "title": "〜で (địa điểm)",
+              "diff": "Nghĩa giống nhau đều là “tổ chức tại…”; にて chỉ dùng trong văn bản trang trọng như thông báo, cáo thị, thiệp mời; で dùng được trong mọi hoàn cảnh, nói chuyện bình thường chỉ dùng で.",
+              "explain": "Hai câu nói về cùng một địa điểm, nhìn văn phong: thông báo, thiệp mời, cáo thị do trường học, công ty phát ra, dùng cách nói trang trọng như 「行います」 → にて; nói chuyện bình thường với người khác (やるんだって) → で, khẩu ngữ không nói にて.",
               "this": [
                 {
                   "tag": "Thông báo · trang trọng",
@@ -31475,27 +31431,9 @@
               "that": [
                 {
                   "tag": "Đời thường · khẩu ngữ",
-                  "tr": "Tan học rồi ra nhà thi đấu chơi bóng rổ đi."
+                  "tr": "Nghe nói lễ nhập học ngày mai tổ chức ở nhà thể chất số 1."
                 }
-              ],
-              "explain": "Nhìn loại văn bản: thông báo, thiệp mời, bảng tin do trường học, công ty phát ra (〜にて行います) → にて; nói chuyện bình thường → で. 「これにて終了します（đến đây là kết thúc）」「メールにて」 cũng là cách dùng cố định của にて, khẩu ngữ thì nói これで, メールで."
-            },
-            {
-              "id": "ni-oite",
-              "diff": "にて hay dùng cho địa điểm, phương tiện trong thông báo (メールにて); において còn có thể diễn tả “trong lĩnh vực, phương diện…”.",
-              "this": [
-                {
-                  "tag": "Thông báo · phương tiện",
-                  "tr": "Kết quả sẽ được thông báo qua email."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Lĩnh vực · phương diện",
-                  "tr": "Trong xã hội hiện đại, tiếng Anh là không thể thiếu."
-                }
-              ],
-              "explain": "Nhìn phía trước: phương tiện như 「メール、書面、電話」, hoặc địa điểm ghi trong thông báo (受付にて) → にて; lĩnh vực, phương diện như 「社会、教育、経済」 → において (にて không có cách dùng này). Cả hai đều là văn viết, にて giống cách viết cố định trong thông báo, thư từ hơn."
+              ]
             }
           ]
         }
@@ -31505,52 +31443,30 @@
       "id": "no-dewa-nai-darou-ka",
       "groups": [
         {
-          "kind": "look",
-          "note": "のだろうか ↔ のではないだろうか, chỉ thêm 「ではない」",
-          "items": [
-            {
-              "id": "no-darou-ka",
-              "diff": "のではないだろうか là uyển chuyển đưa ra chủ trương “phải chăng là… (tôi nghĩ là vậy)”; のだろうか là nghi ngờ “thật sự… sao”.",
-              "this": [
-                {
-                  "tag": "Chủ trương · tôi thấy là vậy",
-                  "tr": "Ngược lại, phải chăng cách làm này lại tốt hơn?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nghi ngờ · thật sao",
-                  "tr": "Làm theo cách này thật sự có ổn không?"
-                }
-              ],
-              "explain": "Phần 「ではない」 thêm vào không phải là phủ định: のではないだろうか dùng câu hỏi tu từ để uyển chuyển nói ra ý kiến của mình “tôi cho rằng là…”, hay đi cùng 「むしろ」; のだろうか hay đi cùng 「本当に」, diễn tả nghi ngờ, hàm ý là “e là không ổn”."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Đều dùng câu hỏi phủ định để uyển chuyển nói ra suy đoán hoặc ý kiến của mình “e là… chăng”",
+          "note": "Đều diễn tả suy đoán uyển chuyển “e là… chăng”",
           "items": [
             {
               "id": "no-de-wa-nai-ka",
-              "diff": "Nghĩa giống nhau; のではないだろうか thêm một tầng suy đoán 「だろう」, uyển chuyển hơn, hợp với bài viết, diễn thuyết; のではないか trực tiếp hơn, khẩu ngữ nói thành んじゃない.",
+              "diff": "Nghĩa giống nhau đều là “e là… chăng”; のではないだろうか thêm một tầng 「だろう」, uyển chuyển hơn, hợp với bài viết, diễn thuyết; のではないか trực tiếp hơn, khẩu ngữ nói thành んじゃないか.",
+              "explain": "Hai câu cùng suy đoán một việc, nhìn hoàn cảnh và giọng điệu: trong bài viết, diễn thuyết muốn nói suy đoán khách sáo hơn, chừa khoảng trống hơn thì thêm một tầng 「だろう」 → のではないだろうか; nói chuyện với bạn bè, đồng nghiệp thì nói thẳng → んじゃないか (văn viết là のではないか).",
               "this": [
                 {
-                  "tag": "Uyển chuyển hơn · bài viết",
-                  "tr": "Mức giá này đối với sinh viên e là hơi đắt chăng."
+                  "tag": "Uyển chuyển hơn · bài viết, diễn thuyết",
+                  "tr": "Cứ thế này thì e là sang năm vẫn sẽ tiếp tục thiếu nhân lực chăng."
                 }
               ],
               "that": [
                 {
                   "tag": "Trực tiếp hơn · khẩu ngữ",
-                  "tr": "Này, giá này có hơi đắt không?"
+                  "tr": "Cứ thế này chắc sang năm vẫn thiếu người thôi nhỉ."
                 }
-              ],
-              "explain": "Nhìn hoàn cảnh và giọng điệu: nói chuyện với bạn bè thì nói thẳng 「〜んじゃない？」 (văn viết là のではないか); trong bài viết, diễn thuyết muốn nói ý kiến khách sáo hơn, chừa khoảng trống hơn thì thêm một tầng 「だろう」 → のではないだろうか."
+              ]
             },
             {
               "id": "de-wa-nakarou-ka",
               "diff": "Nghĩa giống nhau; ではなかろうか là cách nói văn cổ, cổ kính hơn, hay gặp trong xã luận, bài viết học thuật.",
+              "explain": "「なかろう」 chính là dạng văn cổ của 「ないだろう」, nên hai câu nghĩa hoàn toàn như nhau, chỉ là ではなかろうか cổ điển hơn, mang hơi hướng sách vở hơn, hội thoại thường ngày gần như không dùng. Chú ý khi nối danh từ: のではないだろうか phải thêm 「な」 (本質なのでは), ではなかろうか nối trực tiếp được (本質ではなかろうか).",
               "this": [
                 {
                   "tag": "Văn viết thông thường",
@@ -31562,12 +31478,12 @@
                   "tag": "Văn cổ · cổ kính hơn",
                   "tr": "E rằng đó mới chính là bản chất của vấn đề."
                 }
-              ],
-              "explain": "「なかろう」 chính là dạng văn cổ của 「ないだろう」, nên hai câu nghĩa hoàn toàn như nhau, chỉ là ではなかろうか cổ điển hơn, mang hơi hướng sách vở hơn, hội thoại thường ngày gần như không dùng. Chú ý khi nối danh từ: のではないだろうか phải thêm 「な」 (本質なのでは), ではなかろうか nối trực tiếp được (本質ではなかろうか)."
+              ]
             },
             {
               "id": "de-wa-arumai-ka",
               "diff": "Nghĩa giống nhau; ではあるまいか dùng 「まい」 là suy đoán phủ định trong văn cổ, còn cứng hơn cả ではなかろうか, về cơ bản chỉ thấy trong văn viết.",
+              "explain": "「まい」 là suy đoán phủ định trong tiếng cổ (＝ないだろう), nên ではあるまいか chính là phiên bản văn cổ của ではないだろうか. Ngày nay chỉ thỉnh thoảng thấy trong tiểu thuyết, bình luận, khi nói thì dùng のではないだろうか hoặc 「んじゃないかな」.",
               "this": [
                 {
                   "tag": "Văn viết thông thường",
@@ -31579,8 +31495,7 @@
                   "tag": "Văn cổ · rất cứng",
                   "tr": "Cứ thế này thì e rằng văn hóa truyền thống sẽ biến mất."
                 }
-              ],
-              "explain": "「まい」 là suy đoán phủ định trong tiếng cổ (＝ないだろう), nên ではあるまいか chính là phiên bản văn cổ của ではないだろうか. Ngày nay chỉ thỉnh thoảng thấy trong tiểu thuyết, bình luận, khi nói thì dùng のではないだろうか hoặc 「んじゃないかな」."
+              ]
             }
           ]
         }
@@ -31590,42 +31505,25 @@
       "id": "no-moto-de",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「もと」 — nghĩa gốc là “nền móng, gốc rễ”",
+          "kind": "look",
+          "note": "のもとに ↔ をもとに, chỉ khác một trợ từ",
           "items": [
             {
               "id": "wo-moto-ni",
-              "diff": "のもとで là “dưới…” (chịu sự chỉ dẫn, bảo hộ, chi phối); をもとに là “lấy… làm tư liệu, căn cứ”.",
+              "diff": "の＋もとに là “dưới…” (chịu sự chỉ đạo, bảo hộ, chi phối); を＋もとに là “lấy… làm chất liệu, căn cứ”.",
+              "explain": "Chỉ khác một trợ từ phía trước nhưng nghĩa hoàn toàn khác. Nhìn trợ từ và danh từ phía trước: sự chỉ đạo của người khác hay một điều kiện như 「指導、管理、協力」＋の → のもとに, nói ở “dưới” nó; tư liệu như 「データ、資料、事実」＋を → をもとに, nói lấy nó làm căn cứ để tạo ra cái mới.",
               "this": [
                 {
-                  "tag": "Dưới… · chịu chỉ dẫn",
+                  "tag": "の＋もとに · dưới…",
                   "tr": "Đã viết luận văn dưới sự hướng dẫn của thầy."
                 }
               ],
               "that": [
                 {
-                  "tag": "Lấy… làm căn cứ · tư liệu",
+                  "tag": "を＋もとに · căn cứ vào…",
                   "tr": "Đã viết luận văn dựa trên dữ liệu thu thập được."
                 }
-              ],
-              "explain": "Trước hết nhìn trợ từ: の＋もとで／もとに → ở “dưới” một người, một điều kiện nào đó; を＋もとに → lấy nó làm “nền móng” để tạo ra thứ mới. Rồi nhìn danh từ phía trước: người hoặc sự quản lý như 先生、指導、親 → のもとで; tư liệu như データ、事実、資料 → をもとに. 「のもとに」 và 「をもとに」 chỉ khác một trợ từ, khi đọc cần đặc biệt chú ý."
-            },
-            {
-              "id": "ni-motozuite",
-              "diff": "のもとに nói trạng thái ở “dưới” một chế độ, điều kiện nào đó; に基づいて nói hành động được làm “theo” quy tắc, dữ liệu.",
-              "this": [
-                {
-                  "tag": "Dưới… · hoàn cảnh",
-                  "tr": "Mọi công dân đều bình đẳng trước pháp luật."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Theo · căn cứ hành động",
-                  "tr": "Cảnh sát đã bắt giữ anh ta theo đúng pháp luật."
-                }
-              ],
-              "explain": "Cùng là 「法」, nhìn nửa câu sau: nói về một hoàn cảnh, trạng thái (平等である、自由に暮らす) → のもとで／のもとに; nói về việc căn cứ vào đó để hành động, phán đoán (逮捕した、判断する) → に基づいて. Khi phía trước là người hoặc thể chế (先生、政府) cũng chỉ dùng được のもとで. 「基づく」 vốn là 「基（もと）＋付く」 — bám sát vào nền móng."
+              ]
             }
           ]
         }
@@ -31641,6 +31539,7 @@
             {
               "id": "to-ittara-nai",
               "diff": "Nghĩa giống nhau, đều là “… vô cùng”; のなんのって rất khẩu ngữ, như đang kể chuyện; といったらない viết vào bài cũng được.",
+              "explain": "Nhìn giọng điệu: のなんのって là khi trò chuyện thêm mắm thêm muối kể cho người khác nghe, phía sau thường lược bỏ, hay kèm những từ đệm như 「もう」「いやあ」; trước といったらない thường là danh từ (悔しさ、寒さ), câu kết thúc trọn vẹn, viết vào bài cũng không lạc lõng.",
               "this": [
                 {
                   "tag": "Khẩu ngữ · kể cho người khác",
@@ -31652,25 +31551,24 @@
                   "tag": "Văn viết cũng được · tường thuật",
                   "tr": "Nỗi ấm ức khi thua trận thật không sao tả xiết."
                 }
-              ],
-              "explain": "Nhìn giọng điệu: のなんのって là khi trò chuyện thêm mắm thêm muối kể cho người khác nghe, phía sau thường lược bỏ, hay kèm những từ đệm như 「もう」「いやあ」; trước といったらない thường là danh từ (悔しさ、寒さ), câu kết thúc trọn vẹn, viết vào bài cũng không lạc lõng."
+              ]
             },
             {
               "id": "te-tamaranai",
-              "diff": "てたまらない nói cảm giác không chịu nổi của bản thân “ngay lúc này”; のなんのって thường là sau đó kể lại cho người khác một cách phóng đại.",
+              "diff": "Đều mang nghĩa “… không chịu nổi”; のなんのって là giọng phóng đại khi kể cho người khác nghe, hay kéo theo hậu quả; てたまらない nói thẳng cảm giác của mình một cách bình thường, câu kết thúc trọn vẹn.",
+              "explain": "Cả hai câu đều nói hôm qua nóng không chịu nổi, nhìn cách nói: のなんのって là khi tán gẫu, thêm mắm thêm muối kể cho người khác nghe, phía sau hay kéo theo hậu quả (汗が止まらなかった) hoặc bỏ luôn nửa câu sau; てたまらない nói thẳng cảm giác của mình một cách bình thường, câu kết thúc trọn vẹn ở 「たまらなかった」, viết vào nhật ký, bài văn cũng tự nhiên. Cách nối cũng khác: 暑い＋のなんのって, 暑くて＋たまらない.",
               "this": [
                 {
-                  "tag": "Kể lại sau đó · phóng đại",
-                  "tr": "Hôm qua răng sâu đau kinh khủng, cả đêm không ngủ được luôn."
+                  "tag": "Kể cho người khác · kéo theo hậu quả",
+                  "tr": "Hôm qua ở công trường nóng gì đâu, mồ hôi chảy không ngừng luôn."
                 }
               ],
               "that": [
                 {
-                  "tag": "Cảm giác lúc này",
-                  "tr": "Bây giờ răng sâu đau không chịu nổi."
+                  "tag": "Nói cảm giác bình thường",
+                  "tr": "Hôm qua ở công trường nóng không chịu nổi."
                 }
-              ],
-              "explain": "Nhìn thời gian và đối tượng: cảm giác bản thân đang chịu đựng 「今」 → てたまらない; kể trải nghiệm 「昨日」 cho người khác nghe, còn nêu cả hậu quả (一晩中眠れなかった) → のなんのって. Cách nối cũng khác: 痛くて＋たまらない, 痛い＋のなんのって."
+              ]
             }
           ]
         }
@@ -31684,26 +31582,10 @@
           "note": "Đều bắt nguồn từ 「上（うえ）」 — nghĩa gốc là “phía trên”, nghĩa mở rộng là “trên phương diện…”",
           "items": [
             {
-              "id": "jou-standpoint",
-              "diff": "Nghĩa giống nhau; 上（じょう） dính trực tiếp sau danh từ Hán ngữ, gọn hơn, văn viết hơn; の上では có thêm 「の」 ở giữa, nối được cả danh từ thuần Nhật.",
-              "this": [
-                {
-                  "tag": "の上では · danh từ thuần Nhật",
-                  "tr": "Theo lịch thì đã là mùa xuân, vậy mà vẫn còn lạnh."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "上（じょう）· danh từ Hán ngữ",
-                  "tr": "Về mặt pháp luật thì không có vấn đề, nhưng về mặt đạo đức thì sao?"
-                }
-              ],
-              "explain": "Nhìn danh từ phía trước và cách đọc: 上（じょう） chỉ dính trực tiếp sau từ Hán ngữ (法律上、計算上、形式上); の上（うえ）では có 「の」 ở giữa, nối được cả danh từ thuần Nhật như 「暦（こよみ）」. Cả hai đều hay ngầm ý “bề ngoài thì vậy, thực tế chưa chắc”, phía sau thường có 「が」 chuyển ý."
-            },
-            {
               "id": "ue-de",
-              "title": "〜上で (về mặt…)",
+              "title": "〜上で (khi làm…)",
               "diff": "Danh từ＋の上では nói “xét từ phương diện này thì là vậy”; động từ＋上で nói “trong quá trình làm việc này, về mặt này”.",
+              "explain": "Nghĩa gốc của 「上（うえ）」 là “phía trên, bề mặt”. Danh từ＋の上では: coi số liệu, quy định là một “mặt”, đứng trên mặt đó mà nhìn (計算の上では) → “xét trên…”, nên hay ngụ ý trên giấy tờ là vậy nhưng thực tế chưa chắc; động từ 辞書形＋上で: coi việc cần làm là một “bối cảnh”, ở trong bối cảnh đó (生活する上で) → “khi làm…”, phía sau thường là 「大切だ・必要だ」. Phân biệt bằng cách nhìn trước 「上」: là danh từ＋の hay động từ 辞書形.",
               "this": [
                 {
                   "tag": "Danh từ＋の上では · bề ngoài",
@@ -31715,31 +31597,31 @@
                   "tag": "Động từ＋上で · khi làm việc gì",
                   "tr": "Khi sống ở nước ngoài, ngôn ngữ rất quan trọng."
                 }
-              ],
-              "explain": "Nhìn phía trước 「上」: danh từ＋の上では, nói “xét từ phương diện này thì như vậy”, thường ngầm ý có khoảng cách với thực tế; thể từ điển của động từ＋上で, nói “khi làm việc này, về mặt này”, phía sau thường là 「大切だ・必要だ・問題がある」."
+              ]
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “xét về mặt…”, giới hạn góc độ phán đoán",
+          "note": "Đều mang nghĩa “xét trên…”",
           "items": [
             {
-              "id": "ten-aspect",
-              "diff": "の上では thường ngầm ý “bề ngoài thì vậy, thực tế chưa chắc”; 点では là chọn ra một phương diện trong số nhiều phương diện để đánh giá.",
+              "id": "kara-iu-to",
+              "title": "〜からいうと (xét theo tiêu chuẩn…)",
+              "diff": "Đều mang nghĩa “xét trên…”; の上では mang ý “trên giấy tờ là vậy, thực tế chưa chắc”, hay đi kèm chuyển ý; からいうと chỉ đưa ra phán đoán theo tiêu chuẩn đó.",
+              "explain": "Cả hai câu đều lấy con số làm căn cứ, nhìn phía sau nói thế nào: の上では mang ý “trên giấy tờ là vậy”, phía sau hay chuyển sang thực tế ngược lại (が、実感はない); からいうと chỉ phán đoán theo con số, người nói tán thành kết luận đó, phía sau nói tiếp cùng chiều (順調に伸びている).",
               "this": [
                 {
-                  "tag": "Bề ngoài vs thực tế",
-                  "tr": "Nhìn con số thì kinh tế đang phục hồi, nhưng không cảm nhận được thực tế."
+                  "tag": "Trên giấy tờ · có chuyển ý",
+                  "tr": "Xét trên số liệu thì doanh thu đang tăng, nhưng không thấy thực tế như vậy."
                 }
               ],
               "that": [
                 {
-                  "tag": "Điểm này vs phương diện khác",
-                  "tr": "Chiếc xe này về mặt giá cả thì hài lòng, nhưng thiết kế thì hơi kém."
+                  "tag": "Phán đoán theo tiêu chuẩn · nói tiếp cùng chiều",
+                  "tr": "Xét theo con số thì doanh thu đang tăng đều đặn."
                 }
-              ],
-              "explain": "Nhìn sau 「が」 lấy gì để so sánh: sau の上では là so với “tình hình thực tế” (実感はない), nghĩa là “trên giấy tờ thì vậy”; sau 点では là so với “một phương diện khác” (デザイン), nghĩa là “riêng về điểm này”."
+              ]
             }
           ]
         }
