@@ -42126,24 +42126,22 @@
           "items": [
             {
               "id": "ni-kakatte-iru",
-              "diff": "にかかったら／にかかっては means “once it falls into the hands of… (this happens)”, preceded by a person; にかかっている means “it all depends on…”, and ends the sentence.",
+              "title": "〜にかかっている (depends on)",
+              "thisTitle": "〜にかかったら",
+              "diff": "にかかったら is a condition — what happens once a matter lands in this person's hands — and a result must follow; にかかっている says the outcome rests entirely on some factor, and the sentence ends there.",
               "this": [
                 {
-                  "tag": "にかかったら · he can handle anything",
-                  "tr": "Once it gets to him, even the hardest problem is solved right away."
-                },
-                {
-                  "tag": "にかかっては · no match for her",
-                  "tr": "Up against her, with that silver tongue, nobody stands a chance."
+                  "tag": "Condition · result follows",
+                  "tr": "Even the hardest problem gets sorted out in no time once it's in his hands."
                 }
               ],
               "that": [
                 {
-                  "tag": "Depends on · end of sentence",
-                  "tr": "Whether we win the match all depends on your effort."
+                  "tag": "Depends on · sentence ends here",
+                  "tr": "Whether the operation succeeds all depends on his skill."
                 }
               ],
-              "explain": "Both are 「かかる」: the matter “hangs on” someone. Look at the position and the word before it: sentence-final にかかっている usually follows things like “effort, weather, skill” and means the outcome depends on it; mid-sentence にかかったら／にかかっては follows a person, and the rest says what happens once things are in that person's hands — either it's easily handled, or nobody can do anything against them."
+              "explain": "Both come from 「かかる」: to hang or land on something. An outcome hangs on some factor → 「AはBにかかっている」: how A turns out rests entirely on B, i.e. “depends on”. A matter lands in someone's hands (the かかる of 「医者にかかる」 and 「名医の手にかかる」) → 「人にかかったら」: what happens once it's handed to him. To tell them apart, look at where the sentence ends: にかかっている sits at the end, often with 「〜かどうかは」 stating the outcome in front; にかかったら is a condition, so another half-sentence with the result always follows, often something like 「どんな難問も…」 — “even the hardest gets handled”."
             }
           ]
         },
@@ -42173,26 +42171,26 @@
         },
         {
           "kind": "meaning",
-          "note": "Both mean “with someone's ability, anything can be done”",
+          "note": "Both mean “once it's in someone's hands, even hard things get done”",
           "items": [
             {
               "id": "wo-motte-sureba",
               "title": "〜をもってすれば",
               "thisTitle": "〜にかかったら",
-              "diff": "をもってすれば follows an ability or skill and is written; にかかったら follows a person directly, is spoken, and often exaggerates.",
+              "diff": "にかかったら is spoken and exaggerates, talking as if the result were already certain; をもってすれば is written and formal, a measured assessment.",
               "this": [
                 {
-                  "tag": "Follows a person · spoken",
-                  "tr": "In Tanaka's hands, a breakdown like this gets fixed in five minutes."
+                  "tag": "Spoken · exaggerated",
+                  "tr": "In that coach's hands, even a weak team gets strong in no time."
                 }
               ],
               "that": [
                 {
-                  "tag": "Follows an ability · written",
-                  "tr": "With Tanaka's skills, this breakdown should be fixed soon."
+                  "tag": "Written · assessment",
+                  "tr": "With that coach, rebuilding the team is no longer just a dream."
                 }
               ],
-              "explain": "Look at the noun in front: 「田中さん」 himself → にかかったら, often with an exaggerated tone like 「こんな〜なんて」 or 「あっという間に」; an ability like 「田中さんの技術」 or 「実力」 → をもってすれば, mostly seen in writing and formal speeches."
+              "explain": "Both sentences say “with that coach, even hard things can be done”, and both can put a person directly in front. Look at the tone and the second half: にかかったら is spoken and often goes with 「あっという間に」, 「すぐ」 or 「〜てしまう」, exaggerating as if the result were already settled; をもってすれば belongs to writing and speeches, often follows words like 「実力」 or 「技術」, and is usually followed by a calm assessment like 「夢ではない」, 「可能だ」 or 「〜だろう」."
             }
           ]
         }
@@ -42203,41 +42201,25 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean “use one thing as an occasion to do another”",
+          "note": "Both mean “under the banner of…”",
           "items": [
             {
-              "id": "wo-ii-koto-ni",
-              "diff": "にかこつけて follows a “reason” given to others, while the real purpose is something else; をいいことに follows a “situation” that happens to favor you, taking advantage of it to do something you shouldn't.",
+              "id": "no-moto-de",
+              "title": "〜の名のもとに (in the name of…)",
+              "diff": "にかこつけて is used in speech and writing, usually about an individual using something as an excuse to have fun or slack off, and can be self-mocking; の名のもとに is written, usually about organizations or those in power doing something improper behind a lofty banner, with strong criticism.",
               "this": [
                 {
-                  "tag": "Reason used as a cover",
-                  "tr": "Under the pretext of a business trip, I went and enjoyed a hot-spring trip."
+                  "tag": "Personal · can be self-mocking",
+                  "tr": "Using the training as an excuse, I squeezed in a bit of sightseeing too."
                 }
               ],
               "that": [
                 {
-                  "tag": "Taking advantage of a situation",
-                  "tr": "Taking advantage of my parents being away, I played games until dawn."
+                  "tag": "Organization · criticism",
+                  "tr": "In the name of training, they make new employees work for free."
                 }
               ],
-              "explain": "Look at what comes before: a pretext you can tell people, like 「出張」, 「仕事」 or 「病気」 → にかこつけて, with the real purpose after it; a situation that happens to favor you, like 「親が留守」 or 「誰も見ていない」 → をいいことに, meaning “exploit a loophole”."
-            },
-            {
-              "id": "wo-kanete",
-              "diff": "を兼ねて openly means “also serving as, doubling as” — both are real purposes; にかこつけて implies the first one is just an excuse.",
-              "this": [
-                {
-                  "tag": "First part is just an excuse",
-                  "tr": "Using a walk as an excuse, I sneaked off to play pachinko."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Both purposes are real",
-                  "tr": "I went shopping near the station, which doubled as a walk."
-                }
-              ],
-              "explain": "Check for “concealment”: with にかこつけて, the first part is only the official story, often followed by 「こっそり」 or 「実は」 — the real purpose is something to hide, implying criticism or self-mockery; with を兼ねて, both things are true and can be said openly, with no negative nuance."
+              "explain": "Both sentences mean “using training as a front to do something else”. Look at who is doing it and how heavy the tone is: you yourself using some pretext to have fun or slack off, said lightly — you can add 「ちょっと」 to poke fun at yourself → にかこつけて; a company or authority doing something improper under a grand name like 「研修」, 「正義」 or 「改革」 (such as making people do 「ただ働き」) is harsh written criticism → の名のもとに. Saying 「研修の名のもとに、ちょっと観光も」 the other way round sounds wildly overblown."
             }
           ]
         }
@@ -42251,21 +42233,22 @@
           "note": "Both mean “only focusing on one thing and neglecting others”",
           "items": [
             {
-              "id": "wa-socchinoke",
-              "diff": "にかまけて follows “the thing you're absorbed in”; はそっちのけで follows “the thing that gets neglected”.",
+              "id": "bakari-de",
+              "title": "〜ばかりで (only doing… and not…)",
+              "diff": "にかまけて follows a noun, is fairly formal, and is mostly about yourself, with a note of regret or excuse; ばかりで is spoken and mostly used to scold others: “only doing… and not…”.",
               "this": [
                 {
-                  "tag": "Before = what you're absorbed in",
-                  "tr": "I was so wrapped up in work that I had no time to spend with my family."
+                  "tag": "About yourself · regret",
+                  "tr": "I got so caught up in games that I kept putting off my homework."
                 }
               ],
               "that": [
                 {
-                  "tag": "Before = what gets neglected",
-                  "tr": "Pushing my family aside, I did nothing but work."
+                  "tag": "Scolding others · spoken",
+                  "tr": "My son does nothing but look at his phone and won't even touch his homework."
                 }
               ],
-              "explain": "Both sentences describe the same situation; look at the role of the noun in front: 「仕事」 is what you're absorbed in → 仕事にかまけて; 「家族」 is what's neglected → 家族はそっちのけで. にかまけて often carries an apologetic or reflective tone; letters often say 「忙しさにかまけて、ご無沙汰しております」."
+              "explain": "Both sentences mean “absorbed in one thing, neglecting what should be done”, and you can say both 「ゲームにかまけて」 and 「ゲームばかりで」. Look at who is being talked about and the tone: にかまけて is mostly about yourself, often with 「つい」 or 「〜てしまった」, carrying regret or an excuse — in letters people write 「忙しさにかまけて、ご無沙汰しております」; ばかりで is spoken, often scolding someone else as in 「息子は」 or 「彼は」, with annoyance, and can also follow a verb (遊んでばかりで)."
             }
           ]
         }
@@ -42304,7 +42287,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean “about, related to…”",
+          "note": "Both mean “about…”",
           "items": [
             {
               "id": "ni-kanshite",
@@ -42322,23 +42305,6 @@
                 }
               ],
               "explain": "Look at the noun that follows: story-like things such as 「伝説」, 「エピソード」, 「謎」 or 「怖い話」 → にまつわる; objective, formal things such as 「資料」, 「法律」 or 「調査」 → に関する (に関して when modifying a verb). 「城にまつわる資料」 sounds unnatural."
-            },
-            {
-              "id": "wo-megutte",
-              "diff": "をめぐって is followed by disputes and conflicts; にまつわる is followed by stories and topics, with no conflict.",
-              "this": [
-                {
-                  "tag": "Related stories",
-                  "tr": "I heard a strange story about this painting."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Contest · conflict",
-                  "tr": "The two brothers are fighting over this painting."
-                }
-              ],
-              "explain": "Look at the second half: things where parties disagree, like 「争う」, 「議論」 or 「対立」 → をめぐって; stories that circulate around something, like 「話」, 「伝説」 or 「思い出」 → にまつわる."
             }
           ]
         }
@@ -42351,23 +42317,6 @@
           "kind": "meaning",
           "note": "Both mean “too…” — the degree goes beyond the limit",
           "items": [
-            {
-              "id": "kiwamaru",
-              "diff": "にもほどがある is a spoken “there's a limit to…”, said angrily at someone; 極まりない is a written “extremely…”, a calm judgment.",
-              "this": [
-                {
-                  "tag": "Spoken · angry, face to face",
-                  "tr": "Forgetting our plans three times — how rude can you get!"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Written · calm judgment",
-                  "tr": "That attitude toward customers is rude in the extreme."
-                }
-              ],
-              "explain": "Look at the tone and setting: 「〜なんて、〜にもほどがある（よ）」 is often said to the person in front of you, with surprise and anger; 極まりない is a judgment in writing or formal settings, usually after Sino-Japanese words like 「失礼」, 「危険」 or 「不愉快」 (the same goes for 極まる)."
-            },
             {
               "id": "sugiru",
               "diff": "すぎる just means “too…”, mild or strong; にもほどがある means it's so absurd you can't stand it: “this is going way too far”.",
@@ -42402,33 +42351,37 @@
               "this": [
                 {
                   "tag": "Last year was hot · this year even hotter",
-                  "tr": "This summer is even hotter than last year."
+                  "tr": "This August is even hotter than last year."
                 }
               ],
               "that": [
                 {
                   "tag": "Plain comparison",
-                  "tr": "This summer is hotter than last year."
+                  "tr": "This August is hotter than last year."
                 }
               ],
               "explain": "The two sentences differ by just one word. 「去年より暑い」 only says this year is hotter than last year, with nothing about whether last year was hot; 「去年にもまして暑い」 assumes “last year was already hot enough”, and this year is even more so. Also, にもまして can be used in 「何にもまして (more than anything)」."
             },
             {
               "id": "ijou-ni",
-              "diff": "以上に usually has an “expectation” as its baseline, meaning it exceeded expectations; にもまして has a baseline that was already high — “before, or something else”.",
+              "title": "〜以上に (more… than)",
+              "diff": "以上に is common in both speech and writing; にもまして leans formal, carries the sense that “the baseline was already quite…”, and can follow 「いつ」 to make 「いつにもまして」.",
               "this": [
                 {
-                  "tag": "Worked hard before · even more now",
-                  "tr": "I'm putting even more effort into practice than before."
+                  "tag": "Formal-leaning · last time was already a lot",
+                  "tr": "This tournament has even more participants than the last one."
                 }
               ],
               "that": [
                 {
-                  "tag": "Beyond expectations",
-                  "tr": "The exam was harder than I expected."
+                  "tag": "Everyday · more than last time",
+                  "tr": "This tournament has more participants than the last one."
                 }
               ],
-              "explain": "Look at the word before it: expectations like 「予想」, 「想像」 or 「思った」 → 以上に, meaning “beyond expectations”; baselines like 「以前」, 「去年」 or 「何」 → にもまして, implying the baseline itself was already high (I worked hard before, too); 「何にもまして」＝ more than anything."
+              "explain": "The two sentences mean the same, and both work. にもまして leans formal and carries the tone “last time already had plenty, and this time even more”; 以上に is common in speech and writing alike and sounds plain. Also look at the word in front: for “more than usual”, にもまして follows 「いつ」 as 「いつにもまして」, while 以上に needs 「いつも」 as 「いつも以上に」 — you can't say 「いつ以上に」.",
+              "wrong": {
+                "why": "以上に needs 「いつも」 in front: いつも以上に. 「いつ」 only pairs with にもまして: いつにもまして."
+              }
             }
           ]
         }
@@ -42468,29 +42421,6 @@
       "id": "ni-nai-cannot",
       "groups": [
         {
-          "kind": "look",
-          "note": "Both are “same verb ＋ に ＋ same verb”",
-          "items": [
-            {
-              "id": "ni-ni-te",
-              "diff": "〜に〜ない means “want to… but can't”; 〜に〜て／た means “…and… again”, stressing repetition or an extreme degree.",
-              "this": [
-                {
-                  "tag": "Want to… but can't",
-                  "tr": "It was a failure that left me not knowing whether to laugh or cry."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "…and… again · extreme",
-                  "tr": "I cried and cried all night long."
-                }
-              ],
-              "explain": "Look at the form of the first verb and the ending of the second: dictionary form (泣く) ＋ に ＋ negative potential (泣けない) → want to but can't; masu-stem (泣き) ＋ に ＋ te-form or ta-form of the same verb (泣いた) → do it over and over, to the extreme. 泣くに泣けない is “can't even cry about it”; 泣きに泣いた is “cried my heart out”."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
           "note": "Both mean “want to do something but can't”",
           "items": [
@@ -42510,23 +42440,6 @@
                 }
               ],
               "explain": "The two sentences differ only in 「帰る」 vs 「帰ろう」. Look at the reason: objective obstacles like heavy snow or stopped trains, “can't do it even if I try” → volitional form ＋ にも; personal or social considerations like the boss still being there or the other person getting hurt, “I could but don't feel I can” → dictionary form ＋ に."
-            },
-            {
-              "id": "wake-ni-wa-ikanai",
-              "diff": "わけにはいかない calmly says “I can't, as a matter of principle or duty”; 〜に〜ない highlights the frustration of “really wanting to but being unable to”.",
-              "this": [
-                {
-                  "tag": "Want to but can't · frustrated",
-                  "tr": "I'm afraid of hurting my friend, so I want to tell the truth but can't bring myself to."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Can't on principle · calm",
-                  "tr": "I promised to keep it secret, so I can't tell the truth."
-                }
-              ],
-              "explain": "Look at the reason and the feeling: not allowed on principle or duty, like “I promised” or “the rules” → わけにはいかない, calm in tone, and the speaker doesn't necessarily want to do it; really wanting to but unable to say or do it out of hesitation → 〜に〜ない, with a sense of being torn and helpless."
             }
           ]
         }
@@ -42541,20 +42454,21 @@
           "items": [
             {
               "id": "yara-yara",
-              "diff": "〜やら〜やら gives a sense of “a chaotic jumble, too much to handle”, usually negative; 〜に〜に stresses adding item after item, and works for good things too.",
+              "title": "〜やら〜やら (listing things)",
+              "diff": "〜やら〜やら gives a sense of “a pile of things all jumbled together” and is mostly used to complain; 〜に〜にと simply counts things off one by one, and also works when you're busy in a fulfilling way.",
               "this": [
                 {
-                  "tag": "Adding up one by one · positive",
-                  "tr": "The table was laden with a feast — sushi, tempura, cake."
+                  "tag": "Counting off · can be positive",
+                  "tr": "Between work and my hobbies, every day feels full."
                 }
               ],
               "that": [
                 {
-                  "tag": "Chaotic · overwhelming",
-                  "tr": "What with moving and all the paperwork, I'm run off my feet."
+                  "tag": "Jumbled · complaining",
+                  "tr": "What with work and moving house, every day is hectic."
                 }
               ],
-              "explain": "Look at the feel of the whole sentence: やら〜やら is often followed by 「で大変だ」 or 「で忙しい」, complaining about “a chaotic jumble”; 〜に〜に adds things one by one and can describe something lavish or complete (ごちそう, プレゼント); you also often hear 「〜に〜にと忙しい」."
+              "explain": "Both can list the things you have on your plate. Look at the feel of the second half: 〜やら〜やら is usually followed by 「で」 and then a complaint like 「慌ただしい」 or 「大変だ」, with the messiness of “everything piling up at once”; 〜に〜にと counts things off one by one and can be followed by something positive like 「充実した」, which やら〜やら normally isn't used for."
             },
             {
               "id": "dano-dano",
