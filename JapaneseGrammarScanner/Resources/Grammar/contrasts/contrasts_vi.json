@@ -5838,7 +5838,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều đi kèm với phủ định, diễn tả mức độ phủ định (hoàn toàn không／không… lắm／không chút nào)",
+          "note": "Đều chỉ “hoàn toàn không…”",
           "items": [
             {
               "id": "mattaku-nai",
@@ -5858,41 +5858,24 @@
               "explain": "Xem văn phong: giữa bạn bè, cách nói thoải mái có 「よ」 → 全然; kính ngữ, công việc, bài viết (存じませんでした、問題ございません) → まったく."
             },
             {
-              "id": "amari-nai",
-              "diff": "全然〜ない là “hoàn toàn không”; あまり〜ない là “không… lắm”.",
-              "this": [
-                {
-                  "tag": "Hoàn toàn không",
-                  "tr": "Tôi hoàn toàn không hiểu tiếng Nhật."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Không… lắm",
-                  "tr": "Tôi không hiểu tiếng Nhật lắm."
-                }
-              ],
-              "explain": "Hai câu chỉ khác phó từ: 全然 là không chút nào, giọng rất nặng; あまり chỉ là mức độ không cao, vẫn hiểu được một ít. Muốn nói nhẹ nhàng hơn (ví dụ nhận xét món ăn người khác nấu) thì dùng あまり."
-            },
-            {
               "id": "chittomo-nai",
-              "diff": "ちっとも cũng là “không chút nào”, thường kèm sự bất mãn; hơn nữa không thể đi với khẳng định như 全然.",
+              "diff": "Đều là “chẳng… chút nào”; ちっとも mang cảm xúc hơn, hay dùng để than phiền, và phía sau nhất định phải là phủ định.",
               "this": [
                 {
-                  "tag": "Khẩu ngữ · đi với khẳng định",
-                  "tr": "Đừng lo, hoàn toàn không sao đâu."
+                  "tag": "Cách nói thông thường",
+                  "tr": "Nói bao nhiêu lần rồi mà con trai tôi hoàn toàn không học."
                 }
               ],
               "that": [
                 {
-                  "tag": "Không chút nào · bất mãn",
-                  "tr": "Nói bao nhiêu lần rồi mà con trai tôi chẳng chịu học chút nào."
+                  "tag": "Than phiền · cảm xúc",
+                  "tr": "Nói bao nhiêu lần rồi mà con trai tôi chẳng học chút nào."
                 }
               ],
               "wrong": {
-                "why": "Sau ちっとも nhất định phải là phủ định"
+                "why": "Sau ちっとも nhất định phải là phủ định, không thể đi với khẳng định như 全然"
               },
-              "explain": "ちっとも chỉ dùng được với phủ định, hay dùng để phàn nàn (ちっとも勉強しない、ちっとも来ない); 全然 trong khẩu ngữ còn đi được với khẳng định (全然大丈夫), nhưng trong hoàn cảnh trang trọng thì nên tránh."
+              "explain": "Hai câu chỉ khác phó từ, nghĩa như nhau. ちっとも mang cảm xúc của người nói, nên khi than phiền về người khác như thế này thì sự bực bội rõ hơn; 全然 trung tính hơn, dùng rộng hơn, trong văn nói còn đi được với khẳng định (全然大丈夫), ちっとも thì không."
             }
           ]
         }
@@ -5903,86 +5886,53 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều liên quan đến “trong một khoảng thời gian”",
+          "sense": 1,
+          "note": "Đều chỉ “trong lúc…”",
           "items": [
             {
-              "id": "toki-when",
-              "thisTitle": "〜間（suốt khoảng thời gian）",
-              "diff": "間 là cả một khoảng thời gian, trạng thái phía sau kéo dài từ đầu đến cuối; とき chỉ là “lúc đó”, phía sau nói một việc xảy ra trong khoảng ấy.",
-              "this": [
-                {
-                  "tag": "Cả khoảng · suốt",
-                  "tr": "Suốt kỳ nghỉ hè tôi ở trong nước."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Lúc đó · một việc",
-                  "tr": "Kỳ nghỉ hè tôi đã về nước một chuyến."
-                }
-              ],
-              "explain": "Nhìn nửa câu sau: trạng thái kéo dài suốt cả khoảng thời gian như 「ずっと〜ていた」 → 間; một việc xảy ra trong khoảng thời gian đó (一度帰った) → とき."
-            },
-            {
-              "id": "uchi-ni",
-              "thisTitle": "〜間に（một lúc trong khoảng đó）",
-              "diff": "間に chỉ nói khách quan “trong khoảng thời gian này”; うちに mang sắc thái “nhân lúc… chưa thay đổi thì làm ngay”.",
-              "this": [
-                {
-                  "tag": "Khoảng thời gian khách quan",
-                  "tr": "Trong lúc mẹ đi vắng, tôi đã dọn phòng."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nhân lúc · chưa thay đổi",
-                  "tr": "Nhân lúc mẹ chưa về, mau dọn phòng thôi."
-                }
-              ],
-              "explain": "Nhìn phía trước gắn gì: một khoảng thời gian có bắt đầu và kết thúc rõ ràng (出かけている間) → 間に; trạng thái sẽ sớm thay đổi như 「〜ない」「若い」「熱い」 → うちに, nghĩa là “qua lúc đó thì không kịp nữa”, phía sau thường là lời thúc giục như 「〜よう」."
-            },
-            {
-              "id": "nagara",
-              "title": "〜ながら（vừa… vừa…）",
-              "thisTitle": "〜間（suốt khoảng thời gian）",
-              "diff": "ながら là một người làm hai việc cùng lúc; 間 lấy một khoảng thời gian làm nền, hai vế có thể là hai người khác nhau.",
-              "this": [
-                {
-                  "tag": "Hai người khác nhau",
-                  "tr": "Trong lúc mẹ nấu ăn, tôi nghe nhạc suốt."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Cùng một người",
-                  "tr": "Tôi vừa nghe nhạc vừa nấu ăn."
-                }
-              ],
-              "wrong": {
-                "why": "Hai vế của ながら phải cùng một người"
-              },
-              "explain": "Nhìn chủ ngữ của hai hành động: hai người khác nhau (母が……、私は……) → 間; cùng một người vừa làm A vừa làm B → ながら."
-            },
-            {
               "id": "juu-chuu-throughout",
-              "diff": "〜中 chỉ gắn được với danh từ; phía trước là động từ (いる、〜ている) thì phải dùng 「間」「間に」.",
+              "title": "〜中 (đang trong lúc)",
+              "thisTitle": "〜間 (suốt khoảng thời gian)",
+              "diff": "Đều là “trong lúc…”; 〜中 gắn thẳng sau danh từ chỉ hành động, ngắn gọn, trang trọng, hay dùng trong thông báo; 〜の間 giống lời nói hằng ngày hơn và nhấn mạnh cả khoảng thời gian.",
               "this": [
                 {
-                  "tag": "間 · gắn được động từ",
-                  "tr": "Trong thời gian ở Nhật, tôi luôn sống trong ký túc xá."
-                },
-                {
-                  "tag": "間に · gắn được động từ",
-                  "tr": "Trong lúc tôi ngủ thì trời đã mưa."
+                  "tag": "Lời nói · cả khoảng thời gian",
+                  "tr": "Trong suốt giờ học, xin đừng dùng điện thoại."
                 }
               ],
               "that": [
                 {
-                  "tag": "中 · chỉ gắn danh từ",
+                  "tag": "Thông báo · ngắn gọn",
                   "tr": "Trong giờ học xin đừng dùng điện thoại."
                 }
               ],
-              "explain": "Nhìn phía trước là danh từ hay động từ: danh từ như 授業、会議、夏休み → 〜中 (ちゅう); động từ như いる、寝ている → 〜間／〜間に. Danh từ cũng có thể nói 「授業の間」, nhưng phải thêm 「の」."
+              "explain": "Hai câu nghĩa như nhau, chỉ khác 「の間」 và 「中」. 授業中 gắn 「中」 thẳng sau danh từ chỉ hành động, ngắn gọn, trang trọng, là cách nói cố định trong thông báo, bảng chỉ dẫn; 授業の間 phải thêm 「の」 sau danh từ, nghe giống lời nói hằng ngày hơn và nhấn mạnh “cả khoảng thời gian từ lúc bắt đầu đến lúc kết thúc giờ học”."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều chỉ “nhân lúc…”",
+          "items": [
+            {
+              "id": "uchi-ni",
+              "title": "〜うちに (nhân lúc)",
+              "thisTitle": "〜間に (vào lúc nào đó trong khoảng)",
+              "diff": "Đều là “làm gì đó trong lúc…”; 間に chỉ khách quan nói trong khoảng thời gian đó, うちに mang ý “nhân lúc trạng thái chưa thay đổi, mau làm”.",
+              "this": [
+                {
+                  "tag": "Khách quan · trong khoảng đó",
+                  "tr": "Trong lúc em bé ngủ, tôi đã đi mua đồ."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Nhân lúc · trạng thái sẽ đổi",
+                  "tr": "Nhân lúc em bé còn ngủ, tôi đã tranh thủ đi mua đồ."
+                }
+              ],
+              "explain": "Cả hai câu đều đúng, chỉ khác 「間に」 và 「うちに」. 間に chỉ khách quan nói đã làm việc đó “trong khoảng thời gian em bé ngủ”; うちに thêm cảm giác gấp gáp “em bé có thể thức dậy bất cứ lúc nào, phải làm trước lúc đó”. Khi phía trước là trạng thái thay đổi nhanh, qua rồi là không kịp, như 「温かい」「若い」, thường dùng うちに."
             }
           ]
         }
@@ -6017,38 +5967,45 @@
             },
             {
               "id": "to-quotation",
-              "title": "〜と（hễ… là）",
-              "diff": "ば nói “phải thỏa điều kiện này thì mới…”, kết quả chưa xảy ra; と còn kể được việc thật đã xảy ra trong quá khứ kiểu “vừa… thì phát hiện”.",
+              "title": "〜と (hễ… là)",
+              "diff": "Đều là “hễ… thì…”; と nhấn mạnh vế trước vừa xảy ra thì vế sau tất yếu theo sau, vế sau không được là nhờ vả, ý chí; ば đặt trọng tâm vào điều kiện ở vế trước.",
               "this": [
                 {
-                  "tag": "Giả định · chưa xảy ra",
-                  "tr": "Nếu ngày mai trời quang thì chắc sẽ nhìn thấy núi Phú Sĩ."
+                  "tag": "Điều kiện · bấm thì sáng",
+                  "tr": "Nếu bấm nút này thì đèn sẽ sáng."
                 }
               ],
               "that": [
                 {
-                  "tag": "Vừa… thì · phát hiện trong quá khứ",
-                  "tr": "Vừa mở cửa sổ ra thì đã nhìn thấy núi Phú Sĩ."
+                  "tag": "Hễ… là · tất yếu",
+                  "tr": "Hễ bấm nút này là đèn sáng."
                 }
               ],
-              "explain": "Nhìn thì của nửa câu sau: 「見えるでしょう」 là giả định về tương lai → ば; 「見えた」 là một trải nghiệm đã xảy ra, vừa làm xong hành động trước thì phát hiện ra việc sau → dùng と (cũng có thể dùng たら); ば thường không dùng để kể một trải nghiệm đơn lẻ trong quá khứ."
+              "wrong": {
+                "why": "Vế sau của と không được là nhờ vả, mệnh lệnh; phải nói 「暇なら」「暇だったら」"
+              },
+              "explain": "Cả hai câu đều đúng, chỉ khác 「押せば」 và 「押すと」. と nói “bấm là đèn tất yếu sáng”, giống như nói về phản ứng cố định của máy móc, quy luật tự nhiên; ば đặt trọng tâm vào “chỉ cần thỏa điều kiện bấm nút”. Khi vế sau là nhờ vả, ý chí như 「〜てください」「〜よう」 thì không dùng được と."
             },
             {
               "id": "nara",
-              "diff": "ば là làm vế trước thì mới có kết quả ở vế sau; なら là tiếp lời đối phương “nếu đã định… thì”, rồi đưa ra lời khuyên.",
+              "title": "〜なら (giả định chung)",
+              "diff": "Đều là “nếu…”; なら mang giọng phán đoán “nếu vậy thì”, như chấp nhận tiền đề trước rồi mới nói dự định; ば chỉ đơn thuần nói điều kiện.",
               "this": [
                 {
-                  "tag": "Làm → thì có kết quả",
-                  "tr": "Cứ đi thẳng con đường này là đến ga."
+                  "tag": "Điều kiện đơn thuần",
+                  "tr": "Nếu trời đẹp thì đi dạo nhé."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tiếp lời → lời khuyên",
-                  "tr": "Tuần sau tôi đi Kyoto. — Nếu đi Kyoto thì đi tàu Shinkansen tiện lắm đấy."
+                  "tag": "Chấp nhận tiền đề · văn nói",
+                  "tr": "Trời đẹp thì vậy mình đi dạo nhé."
                 }
               ],
-              "explain": "Nhìn tiền đề đến từ đâu: tiếp lời đối phương vừa nói rồi dựa vào đó khuyên → なら, mà việc được khuyên (đi Shinkansen) xảy ra trước việc “đi Kyoto” cũng không sao; tự mình làm vế trước (đi thẳng) thì sẽ có kết quả vế sau (đến ga) → ば."
+              "wrong": {
+                "why": "Khi việc ở vế sau phải làm trước việc ở vế trước thì không dùng ば được; phải nói 「日本に行くなら」"
+              },
+              "explain": "Cả hai câu đều đúng, nghĩa gần như nhau. ば chỉ nói thỏa điều kiện “trời đẹp” thì đi; なら giống như chấp nhận tiền đề “trời đẹp” trước rồi nói dự định của mình, trong văn nói hay nghe hơn. Khi vế trước là hành động và việc ở vế sau phải làm trước nó, chỉ dùng được なら (日本に行くなら、先に日本語を勉強しておこう)."
             }
           ]
         }
@@ -6093,7 +6050,7 @@
                   "tr": "Bia hôm nay không lạnh bằng hôm qua."
                 }
               ],
-              "explain": "Nhìn phía trước ほど và cuối câu: phía trước là thể ば như 「冷たければ」 lại lặp cùng một từ → càng… càng…; phía trước là đối tượng so sánh (昨日), cuối câu là phủ định 「ない」 → không… bằng…."
+              "explain": "ほど nghĩa gốc là “mức độ”. ば〜ほど nói lại cùng một từ hai lần: 冷たければ冷たいほど ＝ “lạnh đến mức nào thì ngon đến mức đó”, mức độ cùng tăng nên là càng… càng…; danh từ＋ほど〜ない lấy mức độ của đối tượng so sánh làm thước đo, “không đạt tới mức của hôm qua”, nên là không… bằng…. Khi phân biệt hãy nhìn trước ほど: thể ば lặp lại cùng một từ → càng… càng…; phía trước là đối tượng so sánh (昨日), cuối câu là 「ない」 → không… bằng…."
             }
           ]
         },
@@ -6103,23 +6060,20 @@
           "items": [
             {
               "id": "ni-tsurete",
-              "diff": "につれて nói thay đổi từng chút theo thời gian; ば〜ほど còn dùng được để nói đạo lý chung, đưa ra đánh giá (càng… càng tốt).",
+              "diff": "Đều là “thay đổi theo…”; ば〜ほど phải nói cùng một từ hai lần, hay dùng trong văn nói, nhấn mạnh mức độ hai bên cùng tăng; につれて thiên về văn viết, nhấn mạnh thay đổi từng bước theo quá trình.",
               "this": [
                 {
-                  "tag": "Đạo lý · đánh giá",
-                  "tr": "Trả lời càng sớm càng tốt."
+                  "tag": "Văn nói · càng… càng…",
+                  "tr": "Càng leo lên núi, không khí càng lạnh."
                 }
               ],
               "that": [
                 {
-                  "tag": "Theo · dần dần thay đổi",
-                  "tr": "Càng có tuổi, sức khỏe càng yếu đi."
+                  "tag": "Văn viết · thay đổi dần",
+                  "tr": "Theo đà leo lên núi, không khí dần trở nên lạnh."
                 }
               ],
-              "wrong": {
-                "why": "Sau につれて phải là sự thay đổi dần dần, không đi với đánh giá như 「いい」"
-              },
-              "explain": "Nhìn nửa câu sau: đánh giá hoặc đạo lý chung như 「いい」「おいしい」 → chỉ dùng được ば〜ほど; sự thay đổi diễn ra từng chút theo thời gian (弱くなってきた) → につれて rất tự nhiên, thiên về văn viết (ば〜ほど cũng dùng được, khẩu ngữ hơn)."
+              "explain": "Cả hai câu đều đúng. ば〜ほど nói 「登る」 hai lần (登れば登るほど), nhấn mạnh leo càng cao thì càng lạnh, rất hay dùng trong văn nói; につれて chỉ nói một lần (登るにつれて), như đang tường thuật khách quan một quá trình thay đổi dần, thiên về văn viết. Khi vế sau không phải là sự thay đổi mà là đánh giá như 「いい」, chỉ dùng được ば〜ほど (返事は早ければ早いほどいい)."
             }
           ]
         }
@@ -6204,42 +6158,43 @@
         },
         {
           "kind": "meaning",
-          "note": "Đều chỉ hối hận, tiếc nuối",
+          "note": "Đều chỉ hối hận “giá lúc đó… thì tốt”",
           "items": [
             {
-              "id": "te-shimau",
-              "title": "〜てしまった（tiếc nuối）",
-              "diff": "ばよかった là tưởng tượng một cách làm khác “giá mà… thì tốt”; てしまった là nói thẳng “đã lỡ làm (việc không nên làm)”.",
+              "id": "hou-ga-ii",
+              "title": "〜たほうがよかった (hối hận)",
+              "diff": "Đều là hối hận vì lúc đó đã không làm vậy; ばよかった là nói thẳng sự tiếc nuối, たほうがよかった mang ý so sánh, như tự kiểm điểm bình tĩnh sau sự việc.",
               "this": [
                 {
-                  "tag": "Giá mà không… thì tốt",
-                  "tr": "Chuyện như thế, giá mà đừng nói ra thì tốt."
+                  "tag": "Tiếc nuối · trực tiếp",
+                  "tr": "Giá mà xem dự báo thời tiết trước khi ra ngoài thì tốt rồi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Đã làm rồi · tiếc nuối",
-                  "tr": "Tôi lỡ miệng nói ra chuyện như thế."
+                  "tag": "So sánh · kiểm điểm",
+                  "tr": "Lẽ ra xem dự báo thời tiết trước khi ra ngoài thì hơn."
                 }
               ],
-              "explain": "Cùng là hối hận vì lỡ lời: ばよかった nói “giá lúc đầu làm khác đi”, phía trước là giả định trái với sự thật (言わなければ); てしまった chỉ trình bày sự thật “đã làm rồi, không rút lại được”, thường đi với 「つい」「うっかり」."
+              "explain": "Cả hai câu đều hối hận vì đã không xem dự báo thời tiết. ばよかった là “giá mà… thì tốt”, nói thẳng sự tiếc nuối, hay thêm 「なあ」; たほうがよかった là “làm vậy thì tốt hơn”, mang ý so sánh hai cách làm, nghe giống tự kiểm điểm bình tĩnh sau sự việc, cũng hay dùng để nói với người khác “lúc đó làm vậy thì tốt hơn”."
             },
             {
-              "id": "ba-noni",
-              "diff": "ばよかった hối hận về lựa chọn của mình trong quá khứ; ば〜のに than “thực tế không như vậy, tiếc thật”, cũng dùng được cho chuyện hiện tại.",
+              "id": "beki-da",
+              "title": "〜べきだった (lẽ ra phải)",
+              "diff": "Đều là hối hận vì lúc đó đã không làm vậy; べきだった là “theo lẽ phải thì đáng ra phải làm vậy”, tự trách nặng hơn, thiên về văn viết; ばよかった chỉ là “giá mà… thì tốt”.",
               "this": [
                 {
-                  "tag": "Hối hận · lựa chọn trong quá khứ",
-                  "tr": "Hôm qua giá mà ngủ sớm hơn thì tốt."
+                  "tag": "Tiếc nuối · văn nói",
+                  "tr": "Giá mà đi hỏi ý kiến bác sĩ sớm hơn thì tốt rồi."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tiếc nuối · thực tế hiện tại",
-                  "tr": "Giá mà có tiền thì đã mua được rồi (tiếc là không có)."
+                  "tag": "Lẽ ra phải · tự trách",
+                  "tr": "Lẽ ra tôi phải đi hỏi ý kiến bác sĩ sớm hơn."
                 }
               ],
-              "explain": "Nhìn cách kết thúc câu: ばよかった dừng ở đó, hối hận về việc mình đã không làm trong quá khứ; ば〜のに ở giữa còn có một kết quả khác (買える), nói về tình huống trái với thực tế, có thể là hiện tại (giờ không có tiền nên không mua được)."
+              "explain": "Cả hai câu đều hối hận vì đã không đi khám sớm. べきだった lấy “theo lẽ phải, theo trách nhiệm thì đáng ra phải vậy” làm thước đo, ý tự trách nặng, dùng với người khác thì thành trách móc, thiên về văn viết; ばよかった chỉ nói “giá mà vậy thì tốt”, giọng nhẹ, văn nói hằng ngày dùng nhiều hơn."
             }
           ]
         }
@@ -6250,28 +6205,12 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều có thể chỉ “khi…, nếu…”",
+          "note": "Đều chỉ “nếu…”",
           "items": [
             {
-              "id": "toki-when",
-              "diff": "場合は nói tình huống giả định, thường dùng trong quy định và hướng dẫn; とき nói thời điểm thực tế.",
-              "this": [
-                {
-                  "tag": "Giả định · quy định",
-                  "tr": "Khi xảy ra hỏa hoạn, xin đừng sử dụng thang máy."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Thời kỳ thực tế",
-                  "tr": "Hồi nhỏ tôi hay chơi ở con sông này."
-                }
-              ],
-              "explain": "場合は là “trong trường hợp chẳng may…”, dùng trong quy định, sách hướng dẫn, thông báo, nói về giả định chưa xảy ra, giọng trang trọng; việc đã từng xảy ra, một giai đoạn trong đời (子どものとき) chỉ dùng được とき."
-            },
-            {
               "id": "tara",
-              "diff": "Đều là giả định “nếu…”; 場合は dùng trong thông báo, quy định, たら dùng khi nói chuyện hằng ngày.",
+              "title": "〜たら (điều kiện giả định)",
+              "diff": "Đều là giả định “nếu…”; 場合は dùng trong thông báo, quy định, giọng trang trọng; たら là cách nói hằng ngày.",
               "this": [
                 {
                   "tag": "Thông báo · trang trọng",
@@ -6280,28 +6219,32 @@
               ],
               "that": [
                 {
-                  "tag": "Nói chuyện · khẩu ngữ",
-                  "tr": "Nếu trời mưa thì ở nhà chơi game nhé."
+                  "tag": "Trò chuyện · văn nói",
+                  "tr": "Nếu mưa thì chắc hội thao bị hủy nhỉ."
                 }
               ],
-              "explain": "Nhìn hoàn cảnh: thông báo, quy định của trường học, công ty, sách hướng dẫn → 場合は; bàn bạc với bạn bè → たら. Ngoài ra khi gắn với danh từ, 場合 phải thêm 「の」 (雨の場合は), còn たら phải nói 「雨だったら」."
+              "wrong": {
+                "why": "Sau danh từ, 場合 phải thêm 「の」: 雨の場合は"
+              },
+              "explain": "Hai câu nghĩa như nhau, hãy xem hoàn cảnh: thông báo, quy định, sách hướng dẫn của trường, công ty → 場合は; nói chuyện với bạn bè, gia đình → たら. Khi đi với danh từ, trước 場合 phải thêm 「の」 (雨の場合は), còn たら thì nói 「雨だったら」."
             },
             {
               "id": "sai-ni",
-              "diff": "場合は nói “nếu chẳng may xảy ra tình huống này”; 際は nói “vào lúc làm một việc nào đó”, việc đó chắc chắn sẽ làm.",
+              "title": "〜際は (khi gặp trường hợp)",
+              "diff": "Đều là “khi gặp trường hợp…”; 際は trang trọng hơn, thiên về văn viết, hay thấy trong bảng thông báo, phát thanh; 場合は là cách nói thông thường, dùng cả trong văn nói và văn viết.",
               "this": [
                 {
-                  "tag": "Chẳng may · chưa chắc xảy ra",
-                  "tr": "Nếu chẳng may xảy ra động đất, hãy chui xuống gầm bàn."
+                  "tag": "Cách nói thông thường",
+                  "tr": "Nếu máy bị hỏng, xin hãy báo cho nhân viên."
                 }
               ],
               "that": [
                 {
-                  "tag": "Khi làm… · chắc chắn sẽ làm",
-                  "tr": "Khi xuống tàu, xin chú ý bước chân."
+                  "tag": "Thông báo · trang trọng hơn",
+                  "tr": "Khi xảy ra sự cố, xin quý khách vui lòng báo cho nhân viên."
                 }
               ],
-              "explain": "Nhìn việc phía trước có chắc xảy ra không: tình huống chưa chắc xảy ra như động đất, đến muộn, hỏng hóc → 場合は, thường đi với 「万一」; việc chắc chắn sẽ làm như xuống tàu, sử dụng, vào cửa → 際は, hay gặp trong thông báo ở nhà ga, sách hướng dẫn."
+              "explain": "Cả hai câu đều đúng, chỉ khác 「場合は」 và 「際は」, hãy xem mức độ trang trọng: 際は nghe trang trọng hơn, hay gặp trong bảng thông báo, sách hướng dẫn, phát thanh ở nhà ga; 場合は là cách nói thông thường, nói chuyện hằng ngày cũng dùng. Ngoài ra khi phía trước là 「〜ない」 (連絡がない場合は) thì thường chỉ dùng 場合は."
             }
           ]
         }
@@ -6312,11 +6255,11 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「ばかり」 — nghĩa gốc là “chỉ có chừng ấy”",
+          "note": "Đều bắt nguồn từ 「ばかり」 — biến từ 「量る」, nghĩa gốc là lượng đo ra, giới hạn",
           "items": [
             {
               "id": "ta-bakari",
-              "diff": "Danh từ＋ばかり nói “toàn là”; thể た＋ばかり nói “vừa mới…”.",
+              "diff": "Danh từ＋ばかり là “toàn là”; thể た＋ばかり là “vừa mới…”.",
               "this": [
                 {
                   "tag": "Danh từ → toàn là",
@@ -6326,18 +6269,21 @@
               "that": [
                 {
                   "tag": "Thể た → vừa mới",
-                  "tr": "Cái máy tính này mới mua."
+                  "tr": "Cái máy tính này tôi vừa mới mua."
                 }
               ],
-              "explain": "Cùng một 「ばかり」, nghĩa gốc là “chỉ có chừng này”. Nhìn phía trước: danh từ (物) → về chủng loại “chỉ có mỗi loại này” ＝ toàn là; thể た (買った) → về thời gian “mới trôi qua chừng này” ＝ vừa mới. Văn nói nói thành 「ばっかり」 cũng vậy."
+              "wrong": {
+                "why": "Khi diễn đạt “vừa mới…”, trước ばかり phải dùng thể た: さっき駅に着いたばかりです"
+              },
+              "explain": "ばかり biến từ động từ 「量る」 (đo, cân), nghĩa gốc là lượng đo ra, giới hạn, rồi mở rộng thành “chỉ có chừng này”. Phía trước là danh từ (物) → loại đồ vật chỉ giới hạn ở một loại này ＝ toàn là; phía trước là thể た (買った) → từ lúc việc đó xảy ra mới qua có chút thời gian ＝ vừa mới. Văn nói nói thành 「ばっかり」 cũng vậy."
             },
             {
               "id": "te-bakari-iru",
-              "diff": "Danh từ＋ばかり giới hạn “đồ vật”: chỉ ăn mỗi thứ này; thể て＋ばかりいる giới hạn “hành động”: suốt ngày ăn.",
+              "diff": "Danh từ＋ばかり giới hạn “đồ vật”: chỉ ăn thứ này; thể て＋ばかりいる giới hạn “hành động”: suốt ngày ăn.",
               "this": [
                 {
                   "tag": "Danh từ → chỉ ăn thứ này",
-                  "tr": "Em gái tôi chỉ toàn ăn đồ ngọt."
+                  "tr": "Em gái tôi toàn ăn đồ ngọt."
                 }
               ],
               "that": [
@@ -6346,7 +6292,7 @@
                   "tr": "Em gái tôi cả ngày chỉ lo ăn."
                 }
               ],
-              "explain": "Nhìn phía trước ばかり: danh từ (甘い物) → đồ ăn quá đơn điệu, không ăn thứ khác; thể て của động từ (食べて) → cứ làm mãi hành động này, không làm việc gì khác. Cả hai đều thường mang ý bất mãn."
+              "explain": "ばかり nghĩa gốc là giới hạn đo ra, “chỉ giới hạn ở những thứ này”. Giới hạn đồ vật: danh từ＋ばかり (甘い物ばかり) → đồ ăn chỉ giới hạn ở một loại này ＝ chỉ ăn thứ này; giới hạn hành động: thể て＋ばかりいる (食べてばかりいる) → thời gian dồn hết vào một hành động này ＝ suốt ngày làm việc đó. Phân biệt bằng cách xem trước ばかり là danh từ hay thể て của động từ. Cả hai đều hay mang ý bất mãn."
             },
             {
               "id": "bakari-de-naku",
@@ -6363,13 +6309,14 @@
                   "tr": "Anh trai tôi không chỉ ăn thịt mà còn ăn nhiều rau."
                 }
               ],
-              "explain": "Nhìn sau ばかり có 「でなく」 không: có thì nghĩa đổi hẳn, thành “không chỉ cái này”, phía sau thường có 「〜も」 bổ sung thêm một thứ khác. Khi đọc đừng hiểu 「ばかりでなく」 thành “toàn là”."
+              "explain": "ばかり nghĩa gốc là giới hạn đo ra, “chỉ giới hạn ở những thứ này”. Chỉ dùng ばかり (肉ばかり) → phạm vi chỉ có thịt ＝ toàn là; thêm phủ định 「でなく」 phía sau → “không chỉ giới hạn ở thịt” ＝ không chỉ…, phía sau hay có 「野菜も」 để thêm một thứ khác. Khi đọc văn hãy xem sau ばかり có 「でなく」 không, đừng hiểu 「ばかりでなく」 thành “toàn là”."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "Đều chỉ “chỉ, toàn” hoặc “khoảng”",
+          "sense": 1,
+          "note": "Đều chỉ “chỉ, toàn”",
           "items": [
             {
               "id": "dake-only",
@@ -6404,7 +6351,14 @@
                 }
               ],
               "explain": "Nhìn cuối câu: sau ばかり là khẳng định (食べている), nói một thứ quá nhiều, quá thường xuyên; sau しか nhất định là phủ định (食べない), loại trừ tất cả những thứ khác."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Đều chỉ “khoảng”",
+          "items": [
             {
               "id": "kurai-approximately",
               "diff": "Từ chỉ số lượng＋ばかり không phải “chỉ” mà là “khoảng”, giống ぐらい, chỉ trang trọng hơn và hơi cũ.",
@@ -6427,122 +6381,73 @@
       ]
     },
     {
-      "id": "bikago-o-go",
-      "groups": [
-        {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「御」 — thêm vào trước từ để thể hiện tôn kính, lịch sự",
-          "items": [
-            {
-              "id": "o-ni-naru",
-              "diff": "お＋danh từ chỉ làm cho từ đó lịch sự hơn; お＋thể ます của động từ＋になる là tôn kính hành động của đối phương.",
-              "this": [
-                {
-                  "tag": "お＋danh từ",
-                  "tr": "Bài nói của thầy lúc nào cũng thú vị."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "お＋thể ます＋になる",
-                  "tr": "Sau đây xin mời thầy phát biểu."
-                }
-              ],
-              "explain": "Nhìn phía sau 「お〜」: trực tiếp là danh từ (お話、お名前) → danh từ lịch sự, trang nhã; thể ます của động từ, phía sau còn có 「になる」 (お話しになる) → tôn kính ngữ, nói về hành động của đối phương. ご cũng vậy (ご説明 ／ ご説明になる)."
-            },
-            {
-              "id": "o-suru-humble",
-              "diff": "お＋danh từ chỉ là nói về đồ vật một cách lịch sự; お＋thể ます của động từ＋する là khiêm nhường ngữ, nghĩa là “tôi làm cho anh/chị”.",
-              "this": [
-                {
-                  "tag": "お＋danh từ",
-                  "tr": "Hành lý xin để ở phía này ạ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "お＋thể ます＋する · tôi làm giúp",
-                  "tr": "Trông nặng quá nhỉ. Để tôi xách giúp ạ."
-                }
-              ],
-              "explain": "Nhìn sau 「お」 là danh từ hay thể ます của động từ: お荷物、お茶 → chỉ làm cách nói lịch sự hơn; お持ちする、お送りする → khiêm nhường ngữ, chủ ngữ là “tôi”, hành động làm cho đối phương. ご cũng vậy: ご連絡 là danh từ, ご連絡します là “tôi sẽ liên lạc với anh/chị”."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "casual-question-no",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ danh từ hình thức 「の」 — coi một sự việc như một “tình huống” để hỏi",
-          "items": [
-            {
-              "id": "n-desu-explanatory",
-              "diff": "〜の？ là thể thông thường của んですか, dùng với bạn bè, gia đình; んですか dùng để hỏi han tình huống một cách lịch sự.",
-              "this": [
-                {
-                  "tag": "Thể thông thường",
-                  "tr": "Này, sao thế?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Lịch sự",
-                  "tr": "Thưa thầy, thầy sao vậy ạ?"
-                }
-              ],
-              "explain": "Đều là thấy dáng vẻ của đối phương rồi hỏi lý do, nhìn xem nói với ai: bạn bè, gia đình → 「〜の？」 lên giọng; thầy cô, cấp trên, người không thân → 〜んですか (văn viết nói のですか cũng vậy)."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "Đều là đuôi câu hỏi trong khẩu ngữ thể thông thường",
+          "sense": 1,
+          "note": "Đều là câu hỏi có/không ở thể thường “…không?”",
           "items": [
             {
               "id": "ka-question",
-              "title": "〜か（câu hỏi thể thông thường）",
-              "diff": "〜の？ nhẹ nhàng, nam nữ đều dùng, lại có ý quan tâm; thể thông thường gắn thẳng か nghe cứng, thường là nam giới nói.",
+              "title": "〜か (câu hỏi thể thường)",
+              "diff": "〜の？ mềm mại, nam nữ đều dùng, còn mang ý quan tâm; thể thường thêm thẳng か nghe cứng, phần lớn là nam giới nói.",
               "this": [
                 {
-                  "tag": "Nhẹ nhàng · quan tâm",
+                  "tag": "Mềm mại · quan tâm",
                   "tr": "Thật sự không sao chứ?"
                 }
               ],
               "that": [
                 {
                   "tag": "Cứng · nam giới",
-                  "tr": "Thật sự không sao chứ? (giọng nam giới)"
+                  "tr": "Thật sự không sao à? (giọng nam)"
                 }
               ],
-              "explain": "Hai câu nghĩa như nhau, nghe khác nhau: thể thông thường gắn thẳng 「か」 rất trực tiếp, thường là nam giới nói với người quen, người dưới; nữ giới, trẻ em và trong hoàn cảnh thông thường đều dùng 「〜の？」. Chú ý sau danh từ, tính từ đuôi な phải thêm 「な」: 大丈夫なの？"
+              "explain": "Hai câu nghĩa như nhau nhưng nghe khác nhau: 〜の？ mềm mại, nam nữ đều dùng, còn mang sự quan tâm kiểu “cậu sao vậy”; thêm thẳng 「か」 sau thể thường thì thẳng thừng, cứng, phần lớn là nam giới nói với người quen, người dưới; trong hội thoại hằng ngày thường dùng 「〜の？」 hoặc lên giọng. Lưu ý sau danh từ, tính từ đuôi な phải thêm 「な」: 大丈夫なの？"
             },
             {
               "id": "kai-dai-question",
-              "diff": "〜の？ thông dụng nhất; 〜かい／〜だい mang giọng thân mật của người lớn tuổi, nam giới, hay gặp trong tiểu thuyết, phim hoạt hình.",
+              "title": "〜かい (câu hỏi có/không)",
+              "diff": "〜の？ thông dụng nhất; 〜かい mang giọng thân mật của người lớn tuổi hoặc nam giới nói với người dưới, hay gặp trong tiểu thuyết, anime.",
               "this": [
                 {
-                  "tag": "Câu hỏi có/không · thông dụng",
-                  "tr": "Ngày mai cũng đến à?"
-                },
-                {
-                  "tag": "Câu hỏi có từ nghi vấn · thông dụng",
-                  "tr": "Đi đâu đấy?"
+                  "tag": "Thông dụng",
+                  "tr": "Mai cũng đến à?"
                 }
               ],
               "that": [
                 {
-                  "tag": "かい · câu hỏi có/không",
-                  "tr": "Ngày mai cũng đến à? (giọng người lớn tuổi)"
-                },
-                {
-                  "tag": "だい · câu hỏi có từ nghi vấn",
-                  "tr": "Định đi đâu thế? (giọng người lớn tuổi)"
+                  "tag": "Giọng người lớn · thân mật",
+                  "tr": "Mai cũng đến chứ hả? (giọng người lớn tuổi)"
                 }
               ],
-              "explain": "Xem có từ nghi vấn không: không có (来る？) → かい; có (どこ、何、どうして) → だい, hai cái không thay cho nhau được. Cả hai đều mang giọng người lớn tuổi, nam giới nói với người dưới; khi tự mình nói thì dùng 「〜の？」 là tự nhiên nhất."
+              "explain": "Cả hai câu đều hỏi “mai cũng đến à”, chỉ khác cuối câu. かい mang giọng thân mật của người lớn tuổi hoặc nam giới nói với người dưới, hay gặp trong tiểu thuyết, anime; khi tự mình nói thì dùng 「〜の？」 là tự nhiên nhất."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Đều hỏi vặn “tại sao…”",
+          "items": [
+            {
+              "id": "n-desu-explanatory",
+              "title": "〜んですか (hỏi lý do)",
+              "diff": "Đều là yêu cầu đối phương giải thích lý do; 〜の？ là thể thường, dùng với bạn bè, gia đình; 〜んですか là cách nói lịch sự, dùng với thầy cô, cấp trên, người không thân.",
+              "this": [
+                {
+                  "tag": "Thể thường · người quen",
+                  "tr": "Sao không nghe điện thoại?"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Lịch sự · cấp trên",
+                  "tr": "Sao anh/chị lại không nghe điện thoại ạ?"
+                }
+              ],
+              "explain": "Cả hai câu đều hỏi vặn lý do, chỉ khác cuối câu, hãy xem nói với ai: bạn bè, gia đình → 「〜の？」 lên giọng; thầy cô, cấp trên, người không thân → 〜んですか. Trong văn viết cũng viết là 「のですか」."
             }
           ]
         }

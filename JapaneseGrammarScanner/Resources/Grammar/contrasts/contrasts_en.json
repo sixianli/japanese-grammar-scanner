@@ -5838,7 +5838,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "All pair with a negative to express its degree (not at all / not very / not one bit)",
+          "note": "All mean “not … at all”",
           "items": [
             {
               "id": "mattaku-nai",
@@ -5858,41 +5858,24 @@
               "explain": "Look at the register: casual talk among friends with 「よ」 → 全然; honorific language, business or writing (存じませんでした, 問題ございません) → まったく."
             },
             {
-              "id": "amari-nai",
-              "diff": "全然〜ない is “not at all”; あまり〜ない is “not very”.",
-              "this": [
-                {
-                  "tag": "Not at all",
-                  "tr": "I don't understand Japanese at all."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Not very",
-                  "tr": "I don't understand Japanese very well."
-                }
-              ],
-              "explain": "The two sentences differ only in the adverb: 全然 means not a bit, and is strong; あまり just means not to a high degree — you still understand some. To be more tactful (say, when commenting on someone's cooking), use あまり."
-            },
-            {
               "id": "chittomo-nai",
-              "diff": "ちっとも also means “not one bit”, often with dissatisfaction; and unlike 全然, it can't be used with an affirmative.",
+              "diff": "Both mean “not … one bit”; ちっとも is more emotional, often used to complain, and must always be followed by a negative.",
               "this": [
                 {
-                  "tag": "Spoken · with affirmative",
-                  "tr": "Don't worry. It's totally fine."
+                  "tag": "Neutral",
+                  "tr": "No matter how many times I tell him, my son doesn't study at all."
                 }
               ],
               "that": [
                 {
-                  "tag": "Not one bit · frustrated",
+                  "tag": "Complaining · emotional",
                   "tr": "No matter how many times I tell him, my son doesn't study one bit."
                 }
               ],
               "wrong": {
-                "why": "ちっとも must always be followed by a negative"
+                "why": "ちっとも must be followed by a negative; unlike 全然, it can't go with an affirmative"
               },
-              "explain": "ちっとも can only be used with negatives, often to complain (ちっとも勉強しない, ちっとも来ない); in casual speech 全然 can also go with an affirmative (全然大丈夫), but it's best avoided in formal settings."
+              "explain": "The two sentences differ only in the adverb and mean the same. ちっとも carries the speaker's feelings, so when complaining about someone like this it sounds more annoyed; 全然 is more neutral and used more widely, and in casual speech it can even go with an affirmative (全然大丈夫) — ちっとも can't."
             }
           ]
         }
@@ -5903,86 +5886,53 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "All relate to “during a certain period”",
+          "sense": 1,
+          "note": "Both mean “during …”",
           "items": [
             {
-              "id": "toki-when",
-              "thisTitle": "〜間 (all through the period)",
-              "diff": "間 is a whole stretch of time, and the state that follows lasts from start to finish; とき is just “at that time”, followed by one event that happened then.",
-              "this": [
-                {
-                  "tag": "Whole stretch · all along",
-                  "tr": "I stayed in my home country for the whole summer vacation."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "At that time · one event",
-                  "tr": "During summer vacation I went back to my home country once."
-                }
-              ],
-              "explain": "Look at the second half: a state that lasts through the whole period, like 「ずっと〜ていた」 → 間; a single event that happened during that time (一度帰った) → とき."
-            },
-            {
-              "id": "uchi-ni",
-              "thisTitle": "〜間に (at some point during)",
-              "diff": "間に just objectively says “during this period”; うちに has the tone of “hurry, while … hasn't changed yet”.",
-              "this": [
-                {
-                  "tag": "Objective period",
-                  "tr": "While my mother was out, I cleaned my room."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "While · before it changes",
-                  "tr": "Let's hurry and clean the room before Mom gets back."
-                }
-              ],
-              "explain": "Look at what comes before it: a period with a clear start and end (出かけている間) → 間に; a state that will change before long, like 「〜ない」「若い」「熱い」 → うちに, meaning “once it's passed it'll be too late”, often followed by urging like 「〜よう」."
-            },
-            {
-              "id": "nagara",
-              "title": "〜ながら (while doing)",
-              "thisTitle": "〜間 (all through the period)",
-              "diff": "ながら is one person doing two things at once; 間 uses a stretch of time as the background, and the two halves can be about different people.",
-              "this": [
-                {
-                  "tag": "Different people",
-                  "tr": "While my mother was cooking, I was listening to music."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Same person",
-                  "tr": "I cooked while listening to music."
-                }
-              ],
-              "wrong": {
-                "why": "With ながら, both actions must be done by the same person"
-              },
-              "explain": "Look at the subjects of the two actions: different people (母が……, 私は……) → 間; the same person doing B while doing A → ながら."
-            },
-            {
               "id": "juu-chuu-throughout",
-              "diff": "〜中 can only follow a noun; if a verb comes before it (いる, 〜ている), use 「間」「間に」.",
+              "title": "〜中 (in the middle of)",
+              "thisTitle": "〜間 (throughout the period)",
+              "diff": "Both mean “during …”; 〜中 attaches directly to an action noun and is short and formal, common on notices; 〜の間 sounds more like everyday speech and highlights the whole stretch of time.",
               "this": [
                 {
-                  "tag": "間 · can follow verbs",
-                  "tr": "While I was in Japan, I lived in a dorm the whole time."
-                },
-                {
-                  "tag": "間に · can follow verbs",
-                  "tr": "It rained while I was asleep."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "中 · nouns only",
+                  "tag": "Speech · whole stretch",
                   "tr": "Please don't use your phone during class."
                 }
               ],
-              "explain": "Look at whether a noun or a verb comes before it: nouns like 授業, 会議, 夏休み → 〜中 (ちゅう); verbs like いる, 寝ている → 〜間／〜間に. Nouns can also take 「授業の間」, but you need to add 「の」."
+              "that": [
+                {
+                  "tag": "Notice · short",
+                  "tr": "No phone use during class, please."
+                }
+              ],
+              "explain": "The two sentences mean the same; they differ only in 「の間」 and 「中」. 授業中 attaches 「中」 straight to the action noun — short and formal, a set phrase on notices and announcements; 授業の間 needs 「の」 after the noun, sounds more like everyday speech, and highlights “the whole stretch from the start of class to the end”."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both mean “while … (taking the chance)”",
+          "items": [
+            {
+              "id": "uchi-ni",
+              "title": "〜うちに (while … still)",
+              "thisTitle": "〜間に (at some point during)",
+              "diff": "Both mean “do something while …”; 間に just states objectively that it happened during that time, while うちに adds “hurry, before that state changes”.",
+              "this": [
+                {
+                  "tag": "Objective · during that time",
+                  "tr": "While the baby was sleeping, I went shopping."
+                }
+              ],
+              "that": [
+                {
+                  "tag": "While · state will change",
+                  "tr": "I hurried out shopping while the baby was still asleep."
+                }
+              ],
+              "explain": "Both sentences work; they differ only in 「間に」 and 「うちに」. 間に simply states objectively that it was done “during the time the baby was sleeping”; うちに adds a sense of urgency — “the baby could wake up any moment, so it had to be done before then”. When what comes before is a state that changes quickly and can't be got back once it's gone, like 「温かい」 or 「若い」, うちに is normally used."
             }
           ]
         }
@@ -6017,38 +5967,45 @@
             },
             {
               "id": "to-quotation",
-              "title": "〜と (as soon as)",
-              "diff": "ば says “only if this condition is met will…”, and the result hasn't happened yet; と can also describe something that really happened in the past, “as soon as I…, I found…”.",
+              "title": "〜と (whenever / as soon as)",
+              "diff": "Both mean “when … then …”; と stresses that once the first part happens the second inevitably follows, and the second half can't be a request or intention; ば puts the focus on the first part as a condition.",
               "this": [
                 {
-                  "tag": "Hypothetical · not yet",
-                  "tr": "If it's clear tomorrow, you should be able to see Mt. Fuji."
+                  "tag": "Condition · press and it lights",
+                  "tr": "If you press this button, the light comes on."
                 }
               ],
               "that": [
                 {
-                  "tag": "As soon as · past discovery",
-                  "tr": "When I opened the window, I could see Mt. Fuji."
+                  "tag": "Whenever · inevitable",
+                  "tr": "When you press this button, the light comes on."
                 }
               ],
-              "explain": "Look at the tense of the second half: 「見えるでしょう」 is a hypothesis about the future → ば; 「見えた」 is an experience that already happened once, discovering the second thing right after the first action → と (or たら); ば isn't usually used to narrate a single past experience like this."
+              "wrong": {
+                "why": "After と the second half can't be a request or command; say 「暇なら」 or 「暇だったら」"
+              },
+              "explain": "Both sentences work; they differ only in 「押せば」 and 「押すと」. と says “press it and the light inevitably comes on”, like describing a machine's fixed response or a law of nature; ば puts the focus on “as long as the condition of pressing the button is met”. When the second half is a request or intention such as 「〜てください」 or 「〜よう」, と can't be used."
             },
             {
               "id": "nara",
-              "diff": "With ば, the result comes about only after the first part is done; なら picks up what the other person said, “if you're going to…”, and then gives advice.",
+              "title": "〜なら (if that's the case)",
+              "diff": "Both mean “if …”; なら has a judging tone of “if that's so”, as if accepting the premise first and then stating a plan; ば simply states a condition.",
               "this": [
                 {
-                  "tag": "Do it → result follows",
-                  "tr": "If you go straight along this road, you'll reach the station."
+                  "tag": "Simple condition",
+                  "tr": "If the weather is nice, let's go for a walk."
                 }
               ],
               "that": [
                 {
-                  "tag": "Picking up the topic → advice",
-                  "tr": "I'm going to Kyoto next week. — If you're going to Kyoto, the shinkansen is convenient."
+                  "tag": "Accepting premise · spoken",
+                  "tr": "If the weather's nice, then let's go for a walk."
                 }
               ],
-              "explain": "Look at where the premise comes from: picking up what the other person just said and giving advice based on it → なら, and it's fine even if the advice (taking the shinkansen) happens before “going to Kyoto”; you do the first part yourself (go straight) and get the result (reach the station) → ば."
+              "wrong": {
+                "why": "When the second half has to happen before the first, ば can't be used; say 「日本に行くなら」"
+              },
+              "explain": "Both sentences work and mean nearly the same. ば just says we'll go once the condition “nice weather” is met; なら is more like accepting the premise “the weather's nice” first and then stating your plan, and is heard more in conversation. When the first part is an action and the second half has to be done before it, only なら works (日本に行くなら、先に日本語を勉強しておこう)."
             }
           ]
         }
@@ -6080,11 +6037,11 @@
             },
             {
               "id": "hodo-nai-comparison",
-              "diff": "ば〜ほど is “the more…, the more…”; noun＋ほど〜ない is “not as … as…”.",
+              "diff": "ば〜ほど means “the more …, the more …”; noun＋ほど〜ない means “not as … as …”.",
               "this": [
                 {
-                  "tag": "The more…, the more…",
-                  "tr": "The colder the beer, the better it tastes."
+                  "tag": "The more … the more",
+                  "tr": "The colder beer is, the better it tastes."
                 }
               ],
               "that": [
@@ -6093,7 +6050,7 @@
                   "tr": "Today's beer isn't as cold as yesterday's."
                 }
               ],
-              "explain": "Look at what comes before ほど and how the sentence ends: a ば-form like 「冷たければ」 before it, with the same word repeated → the more…, the more…; the thing being compared (昨日) before it and a negative 「ない」 at the end → not as … as…."
+              "explain": "ほど originally means “degree”. ば〜ほど says the same word twice: 冷たければ冷たいほど ＝ “however cold it gets, that's how good it gets” — the degrees rise together, hence “the more …, the more …”. Noun＋ほど〜ない uses the degree of the thing compared as a yardstick: “doesn't reach yesterday's level”, hence “not as … as”. To tell them apart, look before ほど: the ば形 with the same word repeated → “the more …, the more …”; the thing being compared (昨日) with 「ない」 at the end → “not as … as”."
             }
           ]
         },
@@ -6103,23 +6060,20 @@
           "items": [
             {
               "id": "ni-tsurete",
-              "diff": "につれて describes gradual change as time goes on; ば〜ほど can also state a general principle or make an evaluation (“the … the better”).",
+              "diff": "Both mean “change as … changes”; ば〜ほど repeats the same word, is common in speech, and stresses both degrees rising together; につれて is more written and stresses step-by-step change over a process.",
               "this": [
                 {
-                  "tag": "Principle · evaluation",
-                  "tr": "The sooner you reply, the better."
+                  "tag": "Spoken · the more … the more",
+                  "tr": "The higher you climb the mountain, the colder the air gets."
                 }
               ],
               "that": [
                 {
-                  "tag": "Along with · gradual change",
-                  "tr": "As I've gotten older, my body has grown weaker."
+                  "tag": "Written · gradual change",
+                  "tr": "As one climbs the mountain, the air grows colder."
                 }
               ],
-              "wrong": {
-                "why": "につれて must be followed by a gradual change, not an evaluation like 「いい」"
-              },
-              "explain": "Look at the second half: an evaluation or general principle like 「いい」「おいしい」 → only ば〜ほど; a change that happens little by little over time (弱くなってきた) → につれて is natural and somewhat formal (ば〜ほど also works and is more conversational)."
+              "explain": "Both sentences work. ば〜ほど says 「登る」 twice (登れば登るほど), stressing that the higher you climb, the colder it gets — very common in speech; につれて says it only once (登るにつれて), like an objective account of a gradually changing process, and is more written. When the second half is not a change but an evaluation like 「いい」, only ば〜ほど works (返事は早ければ早いほどいい)."
             }
           ]
         }
@@ -6204,42 +6158,43 @@
         },
         {
           "kind": "meaning",
-          "note": "Both express regret",
+          "note": "All express regret: “I should have …”",
           "items": [
             {
-              "id": "te-shimau",
-              "title": "〜てしまった (regret)",
-              "diff": "ばよかった imagines another way, “if only I had…”; てしまった directly says “I've gone and done (something I shouldn't have)”.",
+              "id": "hou-ga-ii",
+              "title": "〜たほうがよかった (regret)",
+              "diff": "Both regret not having done something; ばよかった is regret voiced directly, while たほうがよかった involves a comparison, like calm reflection afterwards.",
               "this": [
                 {
-                  "tag": "If only I hadn't…",
-                  "tr": "I wish I hadn't said something like that."
+                  "tag": "Regret · direct",
+                  "tr": "I wish I'd checked the weather forecast before going out."
                 }
               ],
               "that": [
                 {
-                  "tag": "Already done · regret",
-                  "tr": "I went and said something like that without thinking."
+                  "tag": "Comparison · reflection",
+                  "tr": "It would have been better to check the weather forecast before going out."
                 }
               ],
-              "explain": "Both regret saying the wrong thing: ばよかった is about “if only I had done it differently back then”, preceded by a hypothesis contrary to fact (言わなければ); てしまった just states the fact that “it's done and can't be taken back”, often with 「つい」「うっかり」."
+              "explain": "Both sentences regret not checking the forecast. ばよかった is “if only I had …”, a direct expression of regret, often with 「なあ」; たほうがよかった is “doing that would have been better”, comparing two courses of action — it sounds more like calm reflection after the fact, and is also often said to others: “that would have been better back then”."
             },
             {
-              "id": "ba-noni",
-              "diff": "ばよかった regrets your own past choice; ば〜のに laments “reality isn't like this, what a shame”, and can also be about the present.",
+              "id": "beki-da",
+              "title": "〜べきだった (should have)",
+              "diff": "Both regret not having done something; べきだった is “by rights I should have done it”, with stronger self-blame and a more written feel; ばよかった is just “if only …”.",
               "this": [
                 {
-                  "tag": "Regret · past choice",
-                  "tr": "I should have gone to bed earlier last night."
+                  "tag": "Regret · spoken",
+                  "tr": "If only I'd seen a doctor sooner."
                 }
               ],
               "that": [
                 {
-                  "tag": "Shame · present reality",
-                  "tr": "If I had money, I could buy it (but sadly I don't)."
+                  "tag": "Should have · self-blame",
+                  "tr": "I should have consulted a doctor sooner."
                 }
               ],
-              "explain": "Look at how the sentence ends: ばよかった stops there, regretting something you didn't do in the past; ば〜のに has another result in the middle (買える), describing a situation contrary to reality, which can be in the present (I don't have money now, so I can't buy it)."
+              "explain": "Both sentences regret not seeing a doctor sooner. べきだった measures things against “what by reason or duty should have been done”, so the self-blame is strong — said about someone else it becomes criticism — and it's more written; ばよかった just says “it would have been nice if …”, a lighter tone, more common in everyday speech."
             }
           ]
         }
@@ -6250,28 +6205,12 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "All can mean “when…” or “if…”",
+          "note": "All mean “if …”",
           "items": [
             {
-              "id": "toki-when",
-              "diff": "場合は describes a hypothetical situation, mostly in rules and instructions; とき describes an actual time.",
-              "this": [
-                {
-                  "tag": "Hypothetical · rule",
-                  "tr": "In case of fire, do not use the elevator."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Actual period",
-                  "tr": "When I was a child, I often played in this river."
-                }
-              ],
-              "explain": "場合は is “in the event that…”, used in rules, manuals and notices for hypotheticals that haven't happened yet, with a formal tone; things that have already happened, or a period of life (子どものとき), can only take とき."
-            },
-            {
               "id": "tara",
-              "diff": "Both mean a hypothetical “if…”; 場合は is used in notices and rules, たら in everyday chat.",
+              "title": "〜たら (hypothetical condition)",
+              "diff": "Both are a hypothetical “if …”; 場合は is used in notices and rules with a formal tone; たら is the everyday spoken form.",
               "this": [
                 {
                   "tag": "Notice · formal",
@@ -6281,27 +6220,31 @@
               "that": [
                 {
                   "tag": "Chat · spoken",
-                  "tr": "If it rains, let's play games at home."
+                  "tr": "If it rains, the sports day'll be canceled, I guess."
                 }
               ],
-              "explain": "Look at the setting: school or company notices, rules, manuals → 場合は; making plans with friends → たら. Also, after a noun, 場合 needs 「の」 (雨の場合は), while たら becomes 「雨だったら」."
+              "wrong": {
+                "why": "After a noun, 場合 needs 「の」: 雨の場合は"
+              },
+              "explain": "The two sentences mean the same, so look at the setting: school or company notices, rules, manuals → 場合は; chatting with friends or family → たら. After a noun, 場合 needs 「の」 (雨の場合は), while たら becomes 「雨だったら」."
             },
             {
               "id": "sai-ni",
-              "diff": "場合は means “if this situation should arise”; 際は means “at the time you do something”, and that thing will definitely be done.",
+              "title": "〜際は (on the occasion of)",
+              "diff": "Both mean “in the event of …”; 際は is more formal and written, common on notices and in announcements; 場合は is the general form, used in both speech and writing.",
               "this": [
                 {
-                  "tag": "In case · may not happen",
-                  "tr": "In the unlikely event of an earthquake, please get under a desk."
+                  "tag": "General",
+                  "tr": "If something breaks down, please let a staff member know."
                 }
               ],
               "that": [
                 {
-                  "tag": "When doing · will happen",
-                  "tr": "Please watch your step when getting off."
+                  "tag": "Notice · more formal",
+                  "tr": "In the event of a malfunction, please inform a staff member."
                 }
               ],
-              "explain": "Check whether the thing before it will actually happen: situations that may not happen, like earthquakes, being late or breakdowns → 場合は, often with 「万一」; things that will definitely be done, like getting off, using or entering → 際は, common in station announcements and manuals."
+              "explain": "Both sentences work; they differ only in 「場合は」 and 「際は」, so it's about how formal it sounds: 際は sounds more formal and is common on notices, in manuals and in station announcements; 場合は is the general form, also used in everyday speech. Also, when what comes before is 「〜ない」 (連絡がない場合は), normally only 場合は is used."
             }
           ]
         }
@@ -6312,45 +6255,48 @@
       "groups": [
         {
           "kind": "root",
-          "note": "All come from 「ばかり」 — originally “only this much”",
+          "note": "All come from 「ばかり」 — derived from 「量る」, originally meaning a measured amount or limit",
           "items": [
             {
               "id": "ta-bakari",
-              "diff": "Noun＋ばかり says “nothing but, all”; た-form＋ばかり says “just did…”.",
+              "diff": "Noun＋ばかり means “nothing but, all”; た形＋ばかり means “just did”.",
               "this": [
                 {
                   "tag": "Noun → nothing but",
-                  "tr": "This shop has nothing but expensive stuff."
+                  "tr": "This shop sells nothing but expensive things."
                 }
               ],
               "that": [
                 {
-                  "tag": "た-form → just now",
+                  "tag": "た形 → just",
                   "tr": "I just bought this computer."
                 }
               ],
-              "explain": "The same 「ばかり」, originally meaning “only this”. Look at what comes before it: a noun (物) → “only this one kind” = nothing but; a た-form (買った) → “only this little time has passed” = just. Saying 「ばっかり」 in casual speech is the same."
+              "wrong": {
+                "why": "To mean “just did”, ばかり must follow the た形: さっき駅に着いたばかりです"
+              },
+              "explain": "ばかり comes from the verb 「量る」 (to measure); its original sense is a measured amount or limit, extended to “only this much”. After a noun (物) → the kinds of things are limited to this one ＝ nothing but; after the た形 (買った) → only this little time has passed since it happened ＝ just. Saying 「ばっかり」 in casual speech means the same."
             },
             {
               "id": "te-bakari-iru",
-              "diff": "Noun＋ばかり limits the “thing”: eats only this one kind; て-form＋ばかりいる limits the “action”: does nothing but eat.",
+              "diff": "Noun＋ばかり limits the “thing”: eats only this; て形＋ばかりいる limits the “action”: is always eating.",
               "this": [
                 {
-                  "tag": "Noun → eats only this",
+                  "tag": "Noun → only this kind",
                   "tr": "My little sister eats nothing but sweets."
                 }
               ],
               "that": [
                 {
-                  "tag": "て-form → always eating",
+                  "tag": "て形 → always eating",
                   "tr": "My little sister does nothing but eat all day."
                 }
               ],
-              "explain": "Look at what comes before ばかり: a noun (甘い物) → what she eats is too limited, she won't eat anything else; a verb's て-form (食べて) → she keeps doing this action and nothing else. Both often express dissatisfaction."
+              "explain": "ばかり originally means a measured limit, “restricted to just this”. Limiting the thing: noun＋ばかり (甘い物ばかり) → what she eats is limited to this one kind ＝ eats only this; limiting the action: て形＋ばかりいる (食べてばかりいる) → all her time goes into this one action ＝ is always doing it. To tell them apart, check whether ばかり follows a noun or a verb's て形. Both often carry dissatisfaction."
             },
             {
               "id": "bakari-de-naku",
-              "diff": "ばかり is “nothing but”; ばかりでなく is “not only… (but also…)”.",
+              "diff": "ばかり means “nothing but”; ばかりでなく means “not only … (but also …)”.",
               "this": [
                 {
                   "tag": "Nothing but",
@@ -6359,17 +6305,18 @@
               ],
               "that": [
                 {
-                  "tag": "Not only… but also",
-                  "tr": "My older brother eats not only meat but plenty of vegetables, too."
+                  "tag": "Not only … but also",
+                  "tr": "My older brother not only eats meat, he eats plenty of vegetables too."
                 }
               ],
-              "explain": "Check whether ばかり is followed by 「でなく」: if so, the meaning changes to “not just this”, and another item is usually added after it with 「〜も」. When reading, don't mistake 「ばかりでなく」 for “nothing but”."
+              "explain": "ばかり originally means a measured limit, “restricted to just this”. ばかり alone (肉ばかり) → the range is only meat ＝ nothing but; add the negative 「でなく」 → “not limited to meat” ＝ not only …, usually followed by something like 「野菜も」 adding another item. When reading, check whether 「でなく」 follows ばかり, and don't take 「ばかりでなく」 as “nothing but”."
             }
           ]
         },
         {
           "kind": "meaning",
-          "note": "All mean “only, just” or “about”",
+          "sense": 1,
+          "note": "All mean “only, nothing but”",
           "items": [
             {
               "id": "dake-only",
@@ -6404,7 +6351,14 @@
                 }
               ],
               "explain": "Look at the end of the sentence: ばかり is followed by an affirmative (食べている), saying there's too much of something or it's too frequent; しか is always followed by a negative (食べない), excluding everything else."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Both mean “about, approximately”",
+          "items": [
             {
               "id": "kurai-approximately",
               "diff": "Quantity word＋ばかり doesn't mean “only” but “about”, like ぐらい, just more formal and a bit old-fashioned.",
@@ -6427,122 +6381,73 @@
       ]
     },
     {
-      "id": "bikago-o-go",
-      "groups": [
-        {
-          "kind": "root",
-          "note": "All come from 「御」 — added before a word to show respect or politeness",
-          "items": [
-            {
-              "id": "o-ni-naru",
-              "diff": "お＋noun just makes the word sound polite; お＋verb ます-stem＋になる shows respect for the other person's action.",
-              "this": [
-                {
-                  "tag": "お＋noun",
-                  "tr": "The teacher's talks are always interesting."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "お＋ます-stem＋になる",
-                  "tr": "Next, the teacher will speak."
-                }
-              ],
-              "explain": "Look at what follows 「お〜」: directly a noun (お話, お名前) → a polite, refined noun; a verb's ます-stem followed by 「になる」 (お話しになる) → honorific language, about an action the other person is doing. ご works the same way (ご説明 ／ ご説明になる)."
-            },
-            {
-              "id": "o-suru-humble",
-              "diff": "お＋noun just refers to the thing politely; お＋verb ます-stem＋する is humble language, meaning “I'll do it for you”.",
-              "this": [
-                {
-                  "tag": "お＋noun",
-                  "tr": "Please put your luggage over here."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "お＋ます-stem＋する · I'll do it for you",
-                  "tr": "That looks heavy. Let me carry it for you."
-                }
-              ],
-              "explain": "Check whether a noun or a verb's ます-stem follows 「お」: お荷物, お茶 → just a polite way of saying it; お持ちする, お送りする → humble language, where the subject is “I” and the action is done for the other person. ご works the same way: ご連絡 is a noun, ご連絡します is “I'll contact you”."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "casual-question-no",
       "groups": [
         {
-          "kind": "root",
-          "note": "Both come from the nominalizer 「の」 — asking about something as a “situation”",
-          "items": [
-            {
-              "id": "n-desu-explanatory",
-              "diff": "〜の？ is the casual form of んですか, used with friends and family; んですか politely asks about the situation.",
-              "this": [
-                {
-                  "tag": "Casual",
-                  "tr": "Hey, what's wrong?"
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Polite",
-                  "tr": "Sensei, is something wrong?"
-                }
-              ],
-              "explain": "Both ask for the reason after noticing how the other person seems — look at who you're talking to: friends, family → 「〜の？」 with rising intonation; teachers, bosses, people you don't know well → 〜んですか (のですか in writing is the same)."
-            }
-          ]
-        },
-        {
           "kind": "meaning",
-          "note": "All are question endings in casual plain-style speech",
+          "sense": 1,
+          "note": "All are plain-style yes/no questions “…?”",
           "items": [
             {
               "id": "ka-question",
-              "title": "〜か (plain-style question)",
-              "diff": "〜の？ is soft, used by both men and women, and shows concern; adding か directly to the plain form sounds blunt and is mostly said by men.",
+              "title": "〜か (plain-form question)",
+              "diff": "〜の？ is soft, used by everyone, and shows concern; adding か directly to the plain form sounds blunt and is mostly used by men.",
               "this": [
                 {
-                  "tag": "Soft · caring",
+                  "tag": "Soft · concerned",
                   "tr": "Are you really okay?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Blunt · masculine",
-                  "tr": "You really okay? (masculine tone)"
+                  "tag": "Blunt · male",
+                  "tr": "You really okay? (male speech)"
                 }
               ],
-              "explain": "Same meaning, different feel: adding 「か」 directly to the plain form is very direct, mostly said by men to people they know well or to juniors; women, children and people in general use 「〜の？」. Note that nouns and な-adjectives need 「な」: 大丈夫なの？"
+              "explain": "The two sentences mean the same but sound different: 〜の？ is soft, used by both men and women, and carries concern like “what's wrong?”; adding 「か」 straight after the plain form is direct and blunt, mostly used by men to friends or juniors — in everyday speech people usually say 「〜の？」 or just use rising intonation. Note that nouns and な-adjectives need 「な」 before it: 大丈夫なの？"
             },
             {
               "id": "kai-dai-question",
-              "diff": "〜の？ is the most versatile; 〜かい／〜だい has a warm tone typical of older people or men, and is common in novels and anime.",
+              "title": "〜かい (yes/no question)",
+              "diff": "〜の？ is the most general; 〜かい has the friendly tone of an older person or a man talking to someone younger, and is mostly found in novels and anime.",
               "this": [
                 {
-                  "tag": "Yes/no question · general",
+                  "tag": "General",
                   "tr": "Are you coming tomorrow too?"
-                },
-                {
-                  "tag": "Question-word question · general",
-                  "tr": "Where are you going?"
                 }
               ],
               "that": [
                 {
-                  "tag": "かい · yes/no question",
-                  "tr": "Coming tomorrow too, are you? (older speaker's tone)"
-                },
-                {
-                  "tag": "だい · question-word question",
-                  "tr": "Where are you off to, then? (older speaker's tone)"
+                  "tag": "Elder's tone · friendly",
+                  "tr": "Coming tomorrow too, are you? (elder's tone)"
                 }
               ],
-              "explain": "Check for a question word: none (来る？) → かい; one present (どこ, 何, どうして) → だい — the two aren't interchangeable. Both have the flavor of an older person or a man talking to someone younger; when speaking yourself, 「〜の？」 is the most natural."
+              "explain": "Both sentences ask “are you coming tomorrow too?” and differ only in the ending. かい has the friendly tone of an older person or a man speaking to someone younger, mostly found in novels and anime; when you speak yourself, 「〜の？」 is the most natural."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 2,
+          "note": "Both press for a reason: “why …?”",
+          "items": [
+            {
+              "id": "n-desu-explanatory",
+              "title": "〜んですか (asking for reasons)",
+              "diff": "Both ask the other person to explain why; 〜の？ is plain style, for friends and family; 〜んですか is polite, for teachers, bosses and people you don't know well.",
+              "this": [
+                {
+                  "tag": "Plain · close people",
+                  "tr": "Why didn't you answer the phone?"
+                }
+              ],
+              "that": [
+                {
+                  "tag": "Polite · superiors",
+                  "tr": "Why was it that you didn't answer the phone?"
+                }
+              ],
+              "explain": "Both sentences press for a reason and differ only in the ending, so it depends on who you're talking to: friends, family → 「〜の？」 with rising intonation; teachers, bosses, people you don't know well → 〜んですか. In writing it also appears as 「のですか」."
             }
           ]
         }
