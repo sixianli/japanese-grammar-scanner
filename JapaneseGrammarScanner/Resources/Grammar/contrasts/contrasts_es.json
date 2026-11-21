@@ -3556,20 +3556,20 @@
             {
               "id": "hodo-wa-nai",
               "title": "〜ほど〜はない (no hay nada más… que)",
-              "diff": "の中で〜が一番 primero delimita un grupo y luego señala objetivamente al primero; ほど〜はない no delimita nada y usa una negación para decir «nadie se le compara», con una fuerte admiración subjetiva de quien habla.",
+              "diff": "の中で〜が一番 usa una frase afirmativa para señalar objetivamente al primero; 〜ほど〜はいない usa una negativa para decir «nadie se le compara», con una fuerte admiración subjetiva del hablante.",
               "this": [
                 {
-                  "tag": "Grupo delimitado · el primero",
+                  "tag": "Afirmativa · primero objetivo",
                   "tr": "En mi familia, mi madre es la más cariñosa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Nadie se compara · admiración subjetiva",
-                  "tr": "No hay persona tan cariñosa como mi madre."
+                  "tag": "Negativa · admiración subjetiva",
+                  "tr": "En mi familia, no hay nadie tan cariñoso como mi madre."
                 }
               ],
-              "explain": "Las dos frases dicen que mamá es la «más» cariñosa. Fíjate en si la frase delimita primero un grupo: si hay un grupo como 「家族の中で」, se usa la afirmación 「〜が一番」 → dice objetivamente quién es el primero dentro de ese grupo, y también sirve para preguntar (誰が一番〜？); si no se delimita nada y se usa la negación 「〜ほど…はいない／はない」 → dice «nadie se le compara», una valoración subjetiva muy alta de quien habla, con un tono más fuerte."
+              "explain": "Las dos frases dicen, dentro de 「家族の中で」, que mamá es la más cariñosa; fíjate en la estructura: la afirmativa 「〜が一番」 → señala objetivamente al primero y también sirve para preguntar (家族の中で誰が一番優しい？); la negativa 「〜ほど…はいない／はない」 → dice «nadie se le compara», una valoración subjetiva muy alta del hablante, con un tono más fuerte, y no se usa para preguntar."
             }
           ]
         }
@@ -3633,29 +3633,6 @@
     {
       "id": "node",
       "groups": [
-        {
-          "kind": "root",
-          "note": "Ambas vienen de 「の＋だ」: 「の」 convierte lo anterior en un hecho y 「だ」 afirma «así es»",
-          "items": [
-            {
-              "id": "n-desu-explanatory",
-              "diff": "ので es la forma suspensiva de 「の＋だ」: primero presenta la causa como un hecho y detrás tiene que venir el resultado; んです coloca 「の＋だ（です）」 al final de la oración para explicarle la situación al oyente por sí sola.",
-              "this": [
-                {
-                  "tag": "En medio · sigue el resultado",
-                  "tr": "Hay mucho tráfico, así que llegaré un poco tarde."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Al final · explicar la situación",
-                  "tr": "Perdón por el retraso. Es que había mucho tráfico."
-                }
-              ],
-              "explain": "Las dos vienen de 「の＋だ」: 「の」 envuelve el hecho 「道が混んでいる」 como un sustantivo y 「だ」 afirma «la situación es esta». Al final de la oración, como 「んです／のだ」, presenta esa situación al oyente y explica el motivo que hay detrás; cuando 「だ」 continúa en su forma conectiva 「で」 y se convierte en 「ので」, primero presenta la causa como un hecho consumado y luego añade el resultado (遅れます), por eso ので suena objetivo. Para distinguirlas, mira lo que va detrás de 「の」: si sigue 「です」 o 「だ」 y la oración termina → explicar una situación; si sigue 「で」 y después viene un resultado → porque."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Todas expresan causa: «porque…»",
@@ -9139,8 +9116,8 @@
       "id": "no-darou-ka",
       "groups": [
         {
-          "kind": "root",
-          "note": "Ambos vienen de 「だろう」, cuyo sentido original es la suposición «probablemente…»",
+          "kind": "look",
+          "note": "のだろうか ↔ のではないだろうか, solo cambia 「ではない」",
           "items": [
             {
               "id": "no-dewa-nai-darou-ka",
@@ -9157,7 +9134,7 @@
                   "tr": "¿No estaría bien seguir así?"
                 }
               ],
-              "explain": "Los dos vienen del 「だろう」 de suposición («probablemente…»). のだろうか añade 「か」 a la suposición y pone un signo de interrogación a «¿es así?» → preguntarse a uno mismo; si además lleva 「本当に」, se vuelve duda e insinúa «seguramente no está bien». のではないだろうか primero supone «no es así» y luego pone un interrogante a esa negación → «¿no será así?» → da un rodeo para expresar con suavidad la propia opinión, «creo que sí». Así que mira si hay 「ではない」: si lo hay → tiende a «está bien»; si no lo hay y aparece 「本当に」 → tiende a «no está bien»."
+              "explain": "Las dos frases solo se diferencian en 「ではない」, pero el sentido cambia mucho. Mira si después de 「の」 aparece 「ではない」: si no → のだろうか, que pone un signo de interrogación a «¿será así?»; con 「本当に」 se vuelve duda, con el trasfondo de «seguramente no». Si aparece → のではないだろうか, literalmente «¿no será así?», pero en realidad es una forma suave de dar tu opinión: «yo creo que sí»."
             }
           ]
         },
@@ -9230,7 +9207,7 @@
                   "tr": "¡Este es justo el libro que llevaba tiempo buscando!"
                 }
               ],
-              "explain": "Las dos frases dicen «este es justamente el libro que llevaba tiempo buscando»; fíjate en el tono: のは〜だ pone primero la parte ya conocida (ずっと探していた) y deja la respuesta al final, antes de 「〜だ」, como quien explica con calma; こそ no cambia el orden y va justo detrás de la palabra enfatizada, con un matiz exclusivo y emocionado de «esto y no otra cosa». Explicación tranquila → のは〜だ; afirmación con emoción → こそ (今度こそ、健康こそ)."
+              "explain": "Las dos frases dicen «el libro que llevaba tiempo buscando es justo este»; fíjate en el tono: のは〜だ pone primero lo ya sabido (ずっと探していた) y deja la respuesta al final, antes de 「〜だ」, como quien lo explica con calma; こそ no cambia el orden y va pegado justo detrás de la palabra resaltada, con un tono exclusivo y emocionado de «no otro, sino este». Explicación tranquila → のは〜だ; afirmación con emoción → こそ (これこそ, 健康こそ)."
             }
           ]
         }
@@ -9569,7 +9546,7 @@
         },
         {
           "kind": "meaning",
-          "note": "Ambas significan «(yo) le pregunto a usted»",
+          "note": "Ambos expresan humildad: «rebajar la propia acción»",
           "items": [
             {
               "id": "kenjougo-special-verbs",
@@ -9696,7 +9673,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Todas usan el auxiliar 「れる・られる」: «recibir la acción de otro»",
+          "note": "Ambos vienen de la pasiva 「られる」: originalmente «recibir la acción de otro»",
           "items": [
             {
               "id": "causative-passive",
@@ -9705,7 +9682,7 @@
               "this": [
                 {
                   "tag": "Otro lo hace · yo salgo perjudicado",
-                  "tr": "Mi hermano menor se comió mi pastel."
+                  "tr": "Mi hermano pequeño se me comió el pastel."
                 }
               ],
               "that": [
@@ -9714,7 +9691,7 @@
                   "tr": "Mi madre me obligó a comer verdura."
                 }
               ],
-              "explain": "Mira quién come: en la pasiva 食べられた, quien come es mi hermano menor (弟に) y yo soy el perjudicado; en させられた, quien come soy yo, porque mi madre (母に) me hizo (obligó a) comer. Con el 「させ」 de más, quien hace la acción pasa de ser el otro a ser uno mismo. Los verbos godan usan れる (読まれる) del mismo modo."
+              "explain": "Ambos vienen de 「られる」, cuyo sentido original es «recibir la acción de otro». Si lo que recibes es la acción de «comer» de otro → 弟に食べられた: quien come es tu hermano, y tú eres el perjudicado; si lo que recibes es la acción de «hacerte comer» de otro (el causativo 食べさせる) → 母に食べさせられた: quien come eres tú, obligado por tu madre. Así que mira si hay 「させ」 delante de 「られる」: no → otro lo hizo y te afectó; sí → otro te hizo hacerlo y lo hiciste obligado."
             }
           ]
         },
@@ -19257,7 +19234,7 @@
                 }
               ],
               "wrong": {
-                "why": "Para dar la causa al final de la oración solo vale 「からだ」, no se puede cambiar por ので"
+                "why": "ので no puede llevar 「だ」 al final de la frase; para dar la causa al final se usa 「からだ」 (por escrito, también 「ためだ」)"
               },
               "explain": "Las dos oraciones dicen lo mismo, pero el foco es distinto: cuando te preguntan «¿por qué llegaste tarde?» o quieres destacar la causa, el resultado ya conocido 「遅刻した」 va en 「〜のは」 y la causa al final → のは〜からだ; en una narración normal, primero la causa y luego el efecto → から."
             },
@@ -19313,39 +19290,22 @@
           "note": "Ambas muestran respeto hacia la acción del otro: «usted…»",
           "items": [
             {
-              "id": "o-ni-naru",
-              "diff": "お〜になる es el honorífico estándar y vale en cualquier tiempo; お〜です es más conciso y sobre todo describe el estado actual o los planes del otro.",
-              "this": [
-                {
-                  "tag": "Estado · conciso",
-                  "tr": "El director ya se ha ido a casa."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Acción · estándar",
-                  "tr": "El director se fue a casa hace un rato."
-                }
-              ],
-              "explain": "お〜です equivale a 「〜ている」 o 「〜する予定だ」 y describe el estado del otro en este momento (もうお帰りです = ya no está); para decir que hizo una acción en un momento pasado (さっき帰った), お〜になりました es más natural. Además, お〜です solo se usa con unos pocos verbos frecuentes (お待ち、お持ち、お探し、お帰り)."
-            },
-            {
               "id": "passive",
               "title": "〜れる・〜られる (honorífico)",
               "diff": "Mismo significado; お〜です muestra más respeto pero solo sirve con unos pocos verbos; れる・られる es algo más ligero y se une a casi cualquier verbo.",
               "this": [
                 {
-                  "tag": "Mucho respeto · a visitas",
-                  "tr": "El presidente ha salido en este momento."
+                  "tag": "Más respeto · más formal",
+                  "tr": "El jefe de departamento ha salido ahora mismo."
                 }
               ],
               "that": [
                 {
-                  "tag": "Respeto más ligero · dentro de la empresa",
-                  "tr": "El presidente ha salido ahora mismo."
+                  "tag": "Algo menos de respeto · más común",
+                  "tr": "El jefe de departamento está fuera ahora mismo."
                 }
               ],
-              "explain": "Las dos oraciones significan lo mismo: dicen con respeto que el presidente no está. La diferencia está en el grado de respeto y en los verbos posibles: お〜です es más respetuoso y es habitual cuando recepción informa a las visitas, pero solo funciona con unos pocos verbos cotidianos como お待ち, お持ち, お出かけ, お帰り; れる・られる es algo más ligero, frecuente al hablar de un superior dentro de la empresa, y se une a casi cualquier verbo (「調べられています」, 「出張されています」)."
+              "explain": "Las dos frases significan lo mismo: decirle con respeto a un compañero, dentro de la empresa, que el jefe no está. La diferencia está en el grado de respeto y en los verbos posibles: お〜です expresa más respeto y es más formal, pero solo sirve con unos pocos verbos comunes como お待ち, お持ち, お出かけ, お帰り; れる・られる expresa algo menos de respeto y se une a casi cualquier verbo (調べられています, 出張されています). Ojo: al hablar con alguien de fuera de la empresa sobre gente de tu propia empresa no se usa ninguno de los dos, sino lenguaje humilde (部長の田中はただいま外出しております)."
             }
           ]
         }
@@ -30529,20 +30489,20 @@
           "items": [
             {
               "id": "ni-kotaete",
-              "diff": "に応じて es aceptar o acceder a una petición que alguien hace; にこたえて es esforzarse por no defraudar las expectativas de alguien.",
+              "diff": "Significan lo mismo: ambos responden a lo que pide la otra persona; に応じて tiende a «hacer lo que se pide», mientras que にこたえて transmite el esfuerzo por dejar satisfecha a la otra persona.",
               "this": [
                 {
-                  "tag": "おうじて · aceptar una petición",
-                  "tr": "Acepté la invitación de mi amigo y fui a la fiesta."
+                  "tag": "おうじて · hacer lo pedido",
+                  "tr": "Atendiendo a las peticiones de los clientes, ampliamos el menú."
                 }
               ],
               "that": [
                 {
-                  "tag": "こたえて · cumplir expectativas",
-                  "tr": "El novato respondió a las expectativas del entrenador y brilló en el partido."
+                  "tag": "こたえて · esforzarse por satisfacer",
+                  "tr": "Para responder a las peticiones de los clientes, ampliamos el menú."
                 }
               ],
-              "explain": "Los dos responden a otra persona. Fíjate en lo que va delante: una petición que alguien hace, como 「誘い」, 「取材」 o 「交渉」, que simplemente aceptas o atiendes → に応じて; esperanzas que otros ponen en ti, como 「期待」 o 「声援」, que cumples con tu actuación → にこたえて (no se dice 「期待に応じて」). Con 「要望」 o 「リクエスト」 sirven los dos: に応じて es solo hacer lo que se pidió; にこたえて recalca el esfuerzo por dejar satisfecha a la otra persona. Ojo también a la lectura: 応じて＝おうじて, 応えて＝こたえて."
+              "explain": "Las dos frases dicen que se amplió el menú a petición de los clientes, y al intercambiarlas el significado no cambia; la diferencia está en el matiz: に応じて es hacer objetivamente lo que pide la otra parte, como quien informa de cómo se resolvió algo; にこたえて lleva la intención de «esforzarse por satisfacerlos y no decepcionarlos», y suena más cálido. Si delante va una esperanza que otros ponen en ti, como 「期待」 o 「声援」, se usa más にこたえて; si es una petición que hace alguien, como 「取材」 o 「交渉」, se usa más に応じて. Distingue también la lectura: 応じて＝おうじて, 応えて＝こたえて."
             }
           ]
         }
@@ -31363,27 +31323,24 @@
       "groups": [
         {
           "kind": "look",
-          "note": "によっては ↔ ようによっては: solo se añade 「よう」",
+          "note": "によっては ↔ にとっては, solo cambia un kana: よ/と",
           "items": [
             {
-              "id": "you-ni-yotte-wa",
-              "diff": "Sustantivo＋によっては es «en algunos casos…»; raíz de la forma ます＋ようによっては es «si se cambia la manera de…».",
-              "explain": "Mira lo que va delante: sustantivos como 「人、国、場合」 → によっては, para decir que la situación varía; raíz de la forma ます＋よう, como 「考え、見、やり」 → ようによっては, para decir «si cambias la forma de verlo o de hacerlo, la conclusión cambia», y detrás suele ir una valoración positiva inesperada.",
-              "wrong": {
-                "why": "よう debe ir tras la ます形 de un verbo (考えよう、見よう); no puede ir directamente tras un sustantivo"
-              },
+              "id": "ni-totte",
+              "diff": "によっては significa «según …, algunos …», es decir, que los casos varían; にとっては significa «para …», y valora algo desde el punto de vista de alguien.",
               "this": [
                 {
-                  "tag": "Sustantivo · según el caso",
-                  "tr": "Según el caso, el plan también podría cambiar."
+                  "tag": "según…, algunos · los casos varían",
+                  "tr": "Algunos estudiantes trabajan a tiempo parcial todos los días."
                 }
               ],
               "that": [
                 {
-                  "tag": "Forma ます＋よう · otra forma de verlo",
-                  "tr": "Según cómo se mire, un fracaso también es una buena experiencia."
+                  "tag": "para… · valoración",
+                  "tr": "Para los estudiantes, los ingresos del trabajo a tiempo parcial son importantes."
                 }
-              ]
+              ],
+              "explain": "Solo se diferencian en un kana: よ ↔ と. Fíjate en lo que dice la segunda parte: si dice que «algunos hacen tal cosa», porque cada caso es distinto (hay estudiantes que trabajan todos los días) → によっては; si es una valoración desde el punto de vista de alguien, como 「大切だ」 o 「難しい」 → にとっては."
             }
           ]
         },
@@ -31413,17 +31370,17 @@
               "id": "ikan-de-wa",
               "title": "〜いかんによっては (según cómo resulte, podría…)",
               "diff": "Las dos significan «según cómo sea…, a veces…»; いかんによっては es más rígido y escrito, y aparece sobre todo en documentos oficiales y reglamentos.",
-              "explain": "Mira el tipo de texto: un médico o un profesor explicando la situación cara a cara → によっては; cláusulas de reglamentos, contratos o documentos oficiales (資格を取り消す場合がある) → いかんによっては, que además necesita 「の」 delante (結果のいかん).",
+              "explain": "Significan lo mismo, «según cómo sea …, puede que …»; fíjate en la situación y el estilo: un médico o un profesor que explica algo en persona → によっては; una cláusula de un reglamento, contrato o documento oficial → いかんによっては, que suena rígido y formal. いかん va detrás de un sustantivo, directamente (結果いかんによっては) o con 「の」 (結果のいかんによっては).",
               "this": [
                 {
-                  "tag": "Hablado y escrito",
+                  "tag": "Explicación en persona · oral o escrito",
                   "tr": "Según el resultado, puede que haya que repetir la prueba."
                 }
               ],
               "that": [
                 {
-                  "tag": "Documento oficial · rígido",
-                  "tr": "Según el resultado de la evaluación, la acreditación podrá ser revocada."
+                  "tag": "Cláusula oficial · rígido",
+                  "tr": "Según el resultado de la evaluación, la acreditación puede ser revocada."
                 }
               ]
             }

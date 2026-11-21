@@ -3556,20 +3556,20 @@
             {
               "id": "hodo-wa-nai",
               "title": "〜ほど〜はない（không có gì … bằng）",
-              "diff": "の中で〜が一番 khoanh phạm vi trước rồi khách quan chọn ra người đứng đầu; ほど〜はない không khoanh phạm vi, dùng phủ định để nói “không ai sánh bằng”, mang sự khen ngợi chủ quan mạnh mẽ của người nói.",
+              "diff": "の中で〜が一番 dùng câu khẳng định để xếp hạng nhất một cách khách quan; 〜ほど〜はいない dùng câu phủ định để nói 「không ai sánh bằng」, mang sự tán thưởng chủ quan mạnh mẽ của người nói.",
               "this": [
                 {
-                  "tag": "Khoanh phạm vi · đứng đầu",
+                  "tag": "Khẳng định · hạng nhất khách quan",
                   "tr": "Trong gia đình, mẹ là người hiền nhất."
                 }
               ],
               "that": [
                 {
-                  "tag": "Không ai sánh bằng · khen chủ quan",
-                  "tr": "Không có ai hiền bằng mẹ."
+                  "tag": "Phủ định · tán thưởng chủ quan",
+                  "tr": "Trong nhà, không ai dịu dàng bằng mẹ."
                 }
               ],
-              "explain": "Cả hai câu đều nói mẹ hiền “nhất”. Xem câu có khoanh phạm vi trước hay không: có phạm vi như 「家族の中で」, dùng câu khẳng định 「〜が一番」 → nói khách quan ai đứng đầu trong phạm vi đó, cũng dùng được để hỏi (誰が一番〜？); không khoanh phạm vi, dùng phủ định 「〜ほど…はいない／はない」 → nói “không ai sánh bằng”, là đánh giá cao mang tính chủ quan của người nói, giọng điệu mạnh hơn."
+              "explain": "Cả hai câu đều nói trong phạm vi 「家族の中で」 mẹ là người dịu dàng nhất; hãy xem mẫu câu: câu khẳng định 「〜が一番」 → xếp hạng nhất một cách khách quan, cũng dùng được để hỏi (家族の中で誰が一番優しい？); câu phủ định 「〜ほど…はいない／はない」 → nói 「không ai sánh bằng」, là đánh giá cao mang tính chủ quan của người nói, giọng mạnh hơn, không dùng để hỏi."
             }
           ]
         }
@@ -3633,29 +3633,6 @@
     {
       "id": "node",
       "groups": [
-        {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「の＋だ」 — 「の」 biến điều phía trước thành một sự việc, 「だ」 khẳng định “chính là như vậy”",
-          "items": [
-            {
-              "id": "n-desu-explanatory",
-              "diff": "ので là dạng ngắt giữa câu của 「の＋だ」, đưa nguyên nhân ra như một sự thật trước, phía sau còn phải nối kết quả; んです là 「の＋だ（です）」 đặt ở cuối câu, tự nó dùng để giải thích tình hình cho người nghe.",
-              "this": [
-                {
-                  "tag": "Giữa câu · nối kết quả",
-                  "tr": "Đường đang tắc nên tôi sẽ đến muộn một chút."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Cuối câu · giải thích tình hình",
-                  "tr": "Xin lỗi tôi đến muộn. Tại đường bị tắc ạ."
-                }
-              ],
-              "explain": "Cả hai đều từ 「の＋だ」 mà ra: 「の」 gói sự việc 「道が混んでいる」 thành một danh từ, 「だ」 khẳng định “tình hình là như vậy”. Đặt ở cuối câu thành 「んです／のだ」 là đưa tình hình đó ra cho người nghe, giải thích lý do đằng sau; 「だ」 chuyển sang dạng liên dụng 「で」 để nối tiếp thành 「ので」 là đưa nguyên nhân ra như một sự thật đã rồi trước, sau đó nối kết quả (遅れます), vì vậy ので nghe khách quan. Khi phân biệt, xem sau 「の」: là 「です」「だ」 và câu kết thúc → giải thích tình hình; là 「で」, phía sau còn kết quả → vì."
-            }
-          ]
-        },
         {
           "kind": "meaning",
           "note": "Đều diễn tả nguyên nhân “vì…”",
@@ -9139,8 +9116,8 @@
       "id": "no-darou-ka",
       "groups": [
         {
-          "kind": "root",
-          "note": "Đều bắt nguồn từ 「だろう」 — nghĩa gốc là phỏng đoán “chắc là…”",
+          "kind": "look",
+          "note": "のだろうか ↔ のではないだろうか, chỉ khác 「ではない」",
           "items": [
             {
               "id": "no-dewa-nai-darou-ka",
@@ -9157,7 +9134,7 @@
                   "tr": "Cứ thế này chẳng phải cũng ổn sao?"
                 }
               ],
-              "explain": "Cả hai đều bắt nguồn từ 「だろう」 phỏng đoán (chắc là…). のだろうか là thêm 「か」 sau phỏng đoán, đặt dấu hỏi cho “có phải vậy không” → tự hỏi; thêm 「本当に」 thì thành nghi ngờ, ngụ ý “e là không ổn”. のではないだろうか là trước tiên phỏng đoán “không phải vậy”, rồi đặt dấu hỏi cho phủ định ấy → “chẳng phải là vậy sao” → vòng lại để nói uyển chuyển ý kiến của mình “tôi thấy là vậy”. Vì vậy hãy xem có 「ではない」 không: có → nghiêng về “được”; không có, lại kèm 「本当に」 → nghiêng về “không được”."
+              "explain": "Hai câu chỉ khác nhau ở 「ではない」 nhưng nghĩa khác xa. Hãy xem sau 「の」 có 「ではない」 không: không có → のだろうか, là đặt dấu hỏi cho 「có phải vậy không」, thêm 「本当に」 thì thành hoài nghi, hàm ý 「e là không được」; có → のではないだろうか, nghĩa đen là 「chẳng phải là vậy sao」, thực ra là cách nói khéo ý kiến của mình 「tôi thấy là vậy」."
             }
           ]
         },
@@ -9230,7 +9207,7 @@
                   "tr": "Đây chính là cuốn sách tôi tìm bấy lâu nay!"
                 }
               ],
-              "explain": "Hai câu đều nói “thứ tôi tìm bấy lâu chính là cuốn sách này”, hãy nhìn giọng điệu: のは〜だ đưa phần đã biết (ずっと探していた) lên trước, câu trả lời đặt ở cuối câu trước 「〜だ」, như đang bình thản kể lại; こそ không đổi trật tự từ, gắn ngay sau từ được nhấn mạnh, mang tính loại trừ và xúc động “không phải cái gì khác, chính là nó”. Giải thích bình thản → のは〜だ; khẳng định có cảm xúc → こそ (今度こそ、健康こそ)."
+              "explain": "Cả hai câu đều nói 「thứ tôi tìm mãi chính là cuốn sách này」; hãy xem giọng điệu: のは〜だ nói phần đã biết (ずっと探していた) trước, đặt câu trả lời ở cuối câu trước 「〜だ」, như bình tĩnh trình bày; こそ không đổi trật tự câu, gắn ngay sau từ được nhấn mạnh, mang ý loại trừ và xúc động 「không phải gì khác, chính là nó」. Trình bày bình tĩnh → のは〜だ; khẳng định đầy cảm xúc → こそ (これこそ, 健康こそ)."
             }
           ]
         }
@@ -9569,7 +9546,7 @@
         },
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “(tôi) xin hỏi ngài”",
+          "note": "Đều biểu thị khiêm nhường 「hạ thấp hành động của mình」",
           "items": [
             {
               "id": "kenjougo-special-verbs",
@@ -9696,7 +9673,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều dùng trợ động từ 「れる・られる」 — diễn tả “chịu hành động của người khác”",
+          "note": "Đều bắt nguồn từ bị động 「られる」 — nghĩa gốc là 「chịu hành động của người khác」",
           "items": [
             {
               "id": "causative-passive",
@@ -9705,7 +9682,7 @@
               "this": [
                 {
                   "tag": "Người khác làm · tôi chịu thiệt",
-                  "tr": "Bánh bị em trai ăn mất."
+                  "tr": "Bánh của tôi bị em trai ăn mất."
                 }
               ],
               "that": [
@@ -9714,7 +9691,7 @@
                   "tr": "Tôi bị mẹ bắt ăn rau."
                 }
               ],
-              "explain": "Nhìn xem ai là người “ăn”: ở bị động 食べられた, người ăn là em trai (弟に), tôi là bên bị thiệt; ở させられた, người ăn là chính tôi, do mẹ (母に) bắt (ép) tôi ăn. Thêm một 「させ」, người làm hành động chuyển từ đối phương sang chính mình. Động từ nhóm 1 dùng れる (読まれる), nguyên lý tương tự."
+              "explain": "Cả hai đều bắt nguồn từ 「られる」, nghĩa gốc là 「chịu hành động của người khác」. Nếu cái mình chịu là hành động 「ăn」 của người khác → 弟に食べられた: người ăn là em trai, mình là bên bị thiệt; nếu cái mình chịu là hành động 「bắt mình ăn」 của người khác (sai khiến 食べさせる) → 母に食べさせられた: người ăn là chính mình, bị mẹ bắt ăn. Vì vậy hãy xem trước 「られる」 có 「させ」 không: không có → người khác làm, mình chịu ảnh hưởng; có → người khác bắt mình làm, mình bị ép làm."
             }
           ]
         },
@@ -19257,7 +19234,7 @@
                 }
               ],
               "wrong": {
-                "why": "Nói nguyên nhân ở cuối câu chỉ dùng được 「からだ」, không thể đổi thành ので"
+                "why": "ので không thể gắn 「だ」 để đặt ở cuối câu; nói nguyên nhân ở cuối câu phải dùng 「からだ」 (văn viết cũng có thể dùng 「ためだ」)"
               },
               "explain": "Hai câu nội dung giống nhau, trọng tâm khác nhau: khi người khác hỏi “sao lại đến muộn?” hoặc muốn nhấn mạnh nguyên nhân, đặt kết quả đã biết 「遅刻した」 vào 「〜のは」, nguyên nhân ở cuối câu → のは〜からだ; kể thông thường thì nguyên nhân trước, kết quả sau → から."
             },
@@ -19313,39 +19290,22 @@
           "note": "Đều tôn kính hành động của đối phương: “ngài…”",
           "items": [
             {
-              "id": "o-ni-naru",
-              "diff": "お〜になる là tôn kính ngữ chuẩn, dùng được ở mọi thì; お〜です ngắn gọn hơn, chủ yếu nói trạng thái hiện tại hoặc dự định của đối phương.",
-              "this": [
-                {
-                  "tag": "Trạng thái · ngắn gọn",
-                  "tr": "Trưởng phòng đã về rồi ạ."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Hành động · chuẩn",
-                  "tr": "Trưởng phòng vừa về lúc nãy ạ."
-                }
-              ],
-              "explain": "お〜です tương đương 「〜ている」, 「〜する予定だ」, mô tả trạng thái của đối phương lúc này (もうお帰りです＝đã không còn ở đây); nói về việc đã làm một hành động ở một thời điểm trong quá khứ (さっき帰った) thì dùng お〜になりました tự nhiên hơn. Ngoài ra お〜です chỉ dùng cho một số ít động từ thông dụng (お待ち、お持ち、お探し、お帰り)."
-            },
-            {
               "id": "passive",
               "title": "〜れる・〜られる（tôn kính）",
               "diff": "Nghĩa giống nhau; お〜です tôn kính cao hơn nhưng chỉ dùng với một số ít động từ; れる・られる tôn kính nhẹ hơn một chút, gắn được với hầu hết động từ.",
               "this": [
                 {
-                  "tag": "Tôn kính cao · với khách",
-                  "tr": "Giám đốc hiện đang đi ra ngoài ạ."
+                  "tag": "Kính trọng cao hơn · trang trọng hơn",
+                  "tr": "Trưởng phòng hiện đang ra ngoài ạ."
                 }
               ],
               "that": [
                 {
-                  "tag": "Tôn kính nhẹ hơn · trong công ty",
-                  "tr": "Giám đốc hiện đã đi ra ngoài rồi."
+                  "tag": "Kính trọng nhẹ hơn · thông dụng hơn",
+                  "tr": "Trưởng phòng bây giờ đang đi ra ngoài."
                 }
               ],
-              "explain": "Hai câu nghĩa giống nhau, đều nói một cách tôn kính rằng giám đốc không có ở đây. Khác nhau ở mức độ tôn kính và động từ dùng được: お〜です tôn kính cao hơn, thường dùng khi lễ tân giải thích cho khách đến thăm, nhưng chỉ dùng với một số ít động từ thông dụng như お待ち, お持ち, お出かけ, お帰り; れる・られる tôn kính nhẹ hơn một chút, hay dùng khi nói về cấp trên trong nội bộ công ty, gắn được với hầu hết động từ (「調べられています」, 「出張されています」)."
+              "explain": "Hai câu nghĩa như nhau, đều là nói một cách kính trọng với đồng nghiệp trong công ty rằng trưởng phòng không có mặt. Khác nhau ở mức độ kính trọng và động từ dùng được: お〜です kính trọng cao hơn, trang trọng hơn, nhưng chỉ dùng được với một số ít động từ thông dụng như お待ち, お持ち, お出かけ, お帰り; れる・られる kính trọng nhẹ hơn, gắn được với hầu hết mọi động từ (調べられています, 出張されています). Lưu ý: khi nói với người ngoài công ty về người trong công ty mình thì không dùng cả hai, phải đổi sang khiêm nhường ngữ (部長の田中はただいま外出しております)."
             }
           ]
         }
@@ -30529,20 +30489,20 @@
           "items": [
             {
               "id": "ni-kotaete",
-              "diff": "に応じて là đồng ý, chấp nhận lời đề nghị mà người khác đưa ra; にこたえて là cố gắng làm được để không phụ kỳ vọng của người khác.",
+              "diff": "Nghĩa giống nhau, đều là đáp lại yêu cầu của đối phương; に応じて nghiêng về làm theo đúng lời đối phương, còn にこたえて mang sắc thái cố gắng làm để đối phương hài lòng.",
               "this": [
                 {
-                  "tag": "おうじて · nhận lời đề nghị",
-                  "tr": "Tôi nhận lời mời của bạn và đã đi dự tiệc."
+                  "tag": "おうじて · làm theo yêu cầu",
+                  "tr": "Theo yêu cầu của khách hàng, chúng tôi đã bổ sung thêm món vào thực đơn."
                 }
               ],
               "that": [
                 {
-                  "tag": "こたえて · không phụ kỳ vọng",
-                  "tr": "Không phụ kỳ vọng của huấn luyện viên, cầu thủ mới đã tỏa sáng trong trận đấu."
+                  "tag": "こたえて · cố gắng đáp ứng",
+                  "tr": "Để đáp ứng yêu cầu của khách hàng, chúng tôi đã bổ sung thêm món vào thực đơn."
                 }
               ],
-              "explain": "Cả hai đều là đáp lại người khác. Hãy nhìn phía trước: lời đề nghị người khác đưa ra như 「誘い」「取材」「交渉」, mình chỉ đồng ý, làm theo → に応じて; những mong mỏi người khác đặt vào mình như 「期待」「声援」, phải dùng thành tích để đáp lại → にこたえて (không nói 「期待に応じて」). Với 「要望」「リクエスト」 thì dùng cả hai được: に応じて chỉ là làm theo điều được yêu cầu, にこたえて nhấn mạnh việc cố gắng làm cho đối phương hài lòng. Cũng cần phân biệt cách đọc: 応じて＝おうじて, 応えて＝こたえて."
+              "explain": "Cả hai câu đều nói thêm món vào thực đơn theo yêu cầu của khách, đổi cho nhau nghĩa vẫn không đổi; khác nhau ở sắc thái: に応じて là làm theo yêu cầu của đối phương một cách khách quan, giống như thông báo kết quả xử lý; にこたえて mang tấm lòng 「cố gắng đáp ứng, không phụ lòng đối phương」, giàu cảm xúc hơn. Nếu phía trước là niềm hy vọng người khác đặt vào mình như 「期待」「声援」 thì thường dùng にこたえて; nếu là lời đề nghị đối phương đưa ra như 「取材」「交渉」 thì thường dùng に応じて. Cũng cần phân biệt cách đọc: 応じて＝おうじて, 応えて＝こたえて."
             }
           ]
         }
@@ -31363,27 +31323,24 @@
       "groups": [
         {
           "kind": "look",
-          "note": "によっては ↔ ようによっては, chỉ thêm 「よう」",
+          "note": "によっては ↔ にとっては, chỉ khác một chữ kana よ／と",
           "items": [
             {
-              "id": "you-ni-yotte-wa",
-              "diff": "Danh từ＋によっては là “có… thì sẽ”; thể ます của động từ＋ようによっては là “nếu đổi cách… thì”.",
-              "explain": "Nhìn phía trước nối với gì: danh từ như 「人、国、場合」 → によっては, nói tình hình khác nhau; thể ます của động từ＋よう như 「考え、見、やり」 → ようによっては, nói “cách nhìn, cách làm đổi đi thì kết luận cũng khác”, phía sau thường là đánh giá tích cực bất ngờ.",
-              "wrong": {
-                "why": "Trước よう phải là ます形 của động từ (考えよう、見よう), không gắn thẳng vào danh từ được"
-              },
+              "id": "ni-totte",
+              "diff": "によっては là 「tùy …, có người/có trường hợp sẽ …」, nói rằng mỗi trường hợp mỗi khác; にとっては là 「đối với …」, đánh giá từ lập trường của ai đó.",
               "this": [
                 {
-                  "tag": "Danh từ · tùy tình hình",
-                  "tr": "Tùy tình hình, kế hoạch cũng có thể thay đổi."
+                  "tag": "tùy… có người · mỗi trường hợp khác",
+                  "tr": "Tùy sinh viên, có người ngày nào cũng đi làm thêm."
                 }
               ],
               "that": [
                 {
-                  "tag": "Thể ます＋よう · đổi cách nghĩ",
-                  "tr": "Nếu nghĩ theo hướng khác thì thất bại cũng là một kinh nghiệm tốt."
+                  "tag": "đối với… · đánh giá",
+                  "tr": "Đối với sinh viên, thu nhập từ việc làm thêm rất quan trọng."
                 }
-              ]
+              ],
+              "explain": "Hai cái chỉ khác nhau một chữ kana: よ ↔ と. Hãy xem nửa sau câu nói gì: nói 「có người sẽ thế này」, mỗi người một hoàn cảnh (có sinh viên ngày nào cũng làm thêm) → によっては; là lời đánh giá từ lập trường của ai đó như 「大切だ」「難しい」 → にとっては."
             }
           ]
         },
@@ -31413,17 +31370,17 @@
               "id": "ikan-de-wa",
               "title": "〜いかんによっては (tùy tình hình có thể)",
               "diff": "Nghĩa giống nhau, đều là “tùy tình hình…, có khi sẽ…”; いかんによっては là văn viết cứng hơn, hay gặp trong công văn, quy định.",
-              "explain": "Nhìn loại văn bản: bác sĩ, giáo viên trực tiếp giải thích tình hình → によっては; điều khoản trong quy định, hợp đồng, công văn (資格を取り消す場合がある) → いかんによっては, hơn nữa phía trước phải thêm 「の」 (結果のいかん).",
+              "explain": "Nghĩa giống nhau, đều là 「tùy tình hình …, có khi sẽ …」; hãy xem bối cảnh và văn phong: bác sĩ, giáo viên giải thích trực tiếp tình hình → によっては; điều khoản trong quy định, hợp đồng, công văn → いかんによっては, nghe cứng và trang trọng. Trước いかん là danh từ, có thể gắn trực tiếp (結果いかんによっては) hoặc thêm 「の」 (結果のいかんによっては).",
               "this": [
                 {
-                  "tag": "Khẩu ngữ, văn viết đều được",
+                  "tag": "Giải thích trực tiếp · nói hay viết đều được",
                   "tr": "Tùy kết quả kiểm tra, có thể phải kiểm tra thêm một lần nữa."
                 }
               ],
               "that": [
                 {
-                  "tag": "Công văn · cứng",
-                  "tr": "Tùy theo kết quả thẩm định, có trường hợp sẽ bị hủy tư cách."
+                  "tag": "Điều khoản công văn · cứng",
+                  "tr": "Tùy theo kết quả xét duyệt, có trường hợp sẽ bị hủy tư cách."
                 }
               ]
             }
