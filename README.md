@@ -1,81 +1,50 @@
 # 日语语法扫描（Japanese Grammar Scanner）
 
-> © 2026 sixianli. 保留所有权利。本仓库源码仅供在 GitHub 上浏览，未经作者书面许可，禁止复制、修改、分发或用于任何用途（包括上架应用商店）。
->
-> © 2026 sixianli. All rights reserved. This source code is published for viewing on GitHub only. No permission is granted to copy, modify, distribute, or use it for any purpose (including publishing to app stores) without the author's prior written consent.
+一款 iOS App：用相机扫描书本上的日文，或从相册选一张图片，App 会找出文中的语法点并全部高亮，点一下高亮就能看讲解。
 
-一个 iOS App：用相机扫描书本上的日文（或从相册选图片），自动识别文本中的语法点并**全部高亮**，点击高亮即可查看该语法点的详细讲解。
+## 主要功能
 
-- **完全离线、不使用任何大模型**：OCR 使用 Apple 端侧 Vision 框架；语法识别使用内置的规则（正则）；全部讲解资料是打包在 App 里的静态 JSON。
-- 讲解内容包括：**意思、用法（接续 + 要点）、使用场景、词源、例句、相似/相近语法的扩展对比**（可直接跳转到相近语法）。
-- **收藏**：在列表或讲解页点 ☆ 收藏，“收藏”页可查看、排序、删除。
-- **语法覆盖**：收录 JLPT N5–N1 全部常见语法点（共 936 个，见 `tools/grammar_catalog.json`）。
-- **多语言**：界面与全部语法讲解支持 English、한국어、Español、Tiếng Việt、简体中文、繁體中文。跟随系统语言（也可在 iOS 设置 → 本 App → 语言 中单独切换），其它语言回退为英语。
+- **扫描即高亮**：实时取景时语法点直接标在画面上，颜色对应 JLPT（日本语能力考试）等级；也可以定格画面或选相册图片，做更精确的识别。
+- **详细讲解**：每个语法点有意思、接续与用法要点、使用场景、词源、例句，以及和相近语法的对比，可以直接跳到相近语法。
+- **语法库**：收录 JLPT N5–N1 常见语法 969 个，按等级浏览，可搜索标题、读音、意思和例句。
+- **收藏**：把想复习的语法点收藏起来，随时查看。
+- **完全离线**：文字识别用 Apple 设备端的 Vision 框架，语法识别用内置规则，讲解资料打包在 App 里；不联网，不上传图片。
+- **多语言**：界面和讲解支持简体中文、繁體中文、English、한국어、Español、Tiếng Việt，跟随系统语言。
 
-## 功能
+## 系统要求
 
-| 页面 | 说明 |
-| --- | --- |
-| 扫描 | 实时取景，画面上的语法点实时高亮（颜色按 JLPT 等级），顶部显示识别到的语法点标签。点击高亮/标签进入讲解。快门按钮“定格”当前画面做高精度识别；左下角从相册选图。右下角补光灯。 |
-| 识别结果 | 图片上高亮所有语法点 + 下方列出全部语法点（含出现次数）+ 识别文本中高亮。多个语法点重叠时弹出选择。OCR 有错可“编辑文本”后重新识别。 |
-| 语法库 | 按 N5–N1 浏览全部内置语法，支持搜索标题、读音、意思、例句。 |
-| 收藏 | 收藏的语法点，本地保存（UserDefaults）。 |
+- iPhone，iOS 17 或更高版本（扫描需要相机，模拟器上只能用相册图片）
+- 构建需要 Xcode 26 或更高版本
 
-## 运行
-
-要求：Xcode 26+（App Store 上传要求 iOS 26 SDK），App 支持 iOS 17+（相机功能需要真机）。
+## 从源码构建
 
 ```bash
 open JapaneseGrammarScanner.xcodeproj
 ```
 
-在 Signing & Capabilities 里选择自己的 Team，必要时修改 Bundle Identifier（默认 `com.example.JapaneseGrammarScanner`），连接 iPhone 运行即可。模拟器上没有相机，可以用相册图片测试。
+在 Signing & Capabilities 里选择自己的开发者 Team，按需修改 Bundle Identifier（App 的唯一标识），然后连接 iPhone 运行。
 
-> 工程使用 Xcode 16 的“文件夹同步”格式，`JapaneseGrammarScanner/` 目录下新增的文件会自动加入工程。若使用更旧的 Xcode，可用 [XcodeGen](https://github.com/yonaskolb/XcodeGen) 通过 `project.yml` 重新生成工程。
+修改语法资料、多语言文本或识别规则前，请先读 [开发说明](docs/development.md)。
 
-## 目录结构
+## 项目结构
 
 ```
-JapaneseGrammarScanner/
-  App/                     App 入口、TabView
-  Models/                  GrammarPoint（语法点数据模型）、扫描结果模型
-  Services/
-    GrammarLibrary.swift   加载 Bundle 中的语法 JSON
-    GrammarMatcher.swift   基于正则的语法识别 + 重叠合并/抑制
-    TextRecognizer.swift   Vision 日文 OCR，拼接多行文本并保留每段子串的位置
-    ScanAnalyzer.swift     把语法命中映射回图片坐标，生成高亮框
-    CameraController.swift 相机采集 + 节流的实时识别
-    FavoritesStore.swift   收藏
-  Views/                   扫描、识别结果、讲解、语法库、收藏
-  Resources/Grammar/       语法静态资源 grammar_*.json、l10n/（多语言讲解）、furigana.json（注音）
-tools/
-  validate_grammar.py      校验语法资源（字段、引用、正则、例句必须能被识别）
-  scan_text.py             命令行模拟识别，用于调试正则
-```
-
-## 识别原理
-
-1. **OCR**：`VNRecognizeTextRequest`（`ja-JP`，accurate）。书本排版的换行是任意的，因此各行直接拼接（只在句末标点后换行），这样跨行的语法也能识别。
-2. **语法识别**：每个语法点在 JSON 的 `patterns` 中定义若干正则（用前后断言排除常见误判）。同一语法的重叠命中会合并；`subsumes` 用于抑制被更长语法“包含”的命中（如「なければならない」里的「ば」）。
-3. **高亮**：重叠的命中合并为一个可点击的高亮块；通过 `VNRecognizedText.boundingBox(for:)` 拿到子串在图片上的位置，跨行的命中会在每一行分别画框。
-
-## 多语言
-
-- 界面文字：`JapaneseGrammarScanner/Localizable.xcstrings`、`InfoPlist.xcstrings`（由 `tools/make_strings.py` 生成）。
-- 语法讲解：基础文件 `grammar_*.json` 含日语例句、识别规则与简体中文讲解；`Resources/Grammar/l10n/l10n_<语言>_<等级>.json` 为其它语言的讲解，App 启动时按语言覆盖。
-- 繁体中文由 `tools/make_zh_hant.py`（OpenCC，台湾用语）从简体生成，日语片段保持不变；带中文说明的标题由 `tools/l10n_titles.py` 写入。
-- `tools/validate_grammar.py` 会检查每种语言的条目、顺序、数组长度，以及译文是否残留中文。
-
-## 扩充语法资料
-
-在 `JapaneseGrammarScanner/Resources/Grammar/` 下编辑或新增 `grammar_*.json`（格式见现有文件），然后运行：
-
-```bash
-python3 tools/validate_grammar.py           # 校验：每个例句都必须被本语法的 patterns 命中
-python3 tools/scan_text.py "雨が降りそうだから、傘を持っていったほうがいい。"   # 看识别效果
+JapaneseGrammarScanner/        App 源码（界面、文字识别、语法识别、本地数据）
+  Resources/Grammar/           语法资料和各语言讲解（JSON 数据文件）
+JapaneseGrammarScannerTests/   单元测试
+tools/                         资料生成与校验脚本
+docs/                          开发说明、隐私政策、App Store 资料
 ```
 
 ## 已知限制
 
-- 规则识别无法真正做句法分析，个别语法存在歧义（如被动与可能形的「られる」、样态与传闻的「そうだ」），App 会同时提示，由用户选择。
-- Vision 对竖排（縦書き）文本的支持有限，横排效果最好。
+- 语法识别基于规则，不做完整的句法分析。少数形式相同、意思不同的语法（例如被动和可能的「られる」、样态和传闻的「そうだ」）会同时列出，由用户判断。
+- 竖排文字的识别效果不如横排。
+
+## 版权
+
+© 2026 sixianli. 保留所有权利。本仓库源码仅供在 GitHub 上浏览，未经作者书面许可，禁止复制、修改、分发或用于任何用途（包括上架应用商店）。
+
+© 2026 sixianli. All rights reserved. This source code is published for viewing on GitHub only. No permission is granted to copy, modify, distribute, or use it for any purpose (including publishing to app stores) without the author's prior written consent.
+
+构建时使用的第三方开源组件见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
