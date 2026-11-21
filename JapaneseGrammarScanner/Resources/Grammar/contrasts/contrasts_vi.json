@@ -32272,34 +32272,6 @@
       ]
     },
     {
-      "id": "roku-ni-nai",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Đều hô ứng với phủ định, diễn tả mức độ rất thấp “không… mấy／không… chút nào”",
-          "items": [
-            {
-              "id": "chittomo-nai",
-              "diff": "ろくに〜ない là có làm một chút nhưng còn lâu mới đủ, mang ý bất mãn; ちっとも〜ない là hoàn toàn không có chút nào.",
-              "this": [
-                {
-                  "tag": "Không đủ · ngủ không ngon",
-                  "tr": "Vì lo lắng nên tối qua chẳng ngủ được mấy."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Hoàn toàn không",
-                  "tr": "Vì lo lắng nên tối qua không ngủ được chút nào."
-                }
-              ],
-              "explain": "Hai câu chỉ khác phó từ: ろくに là “ra hồn, tử tế”, phủ định thành “không ngủ được ra hồn” — ngủ thì có ngủ, nhưng còn lâu mới đủ; ちっとも là “một chút”, phủ định thành “không ngủ được chút nào”. ろくに còn hay mang giọng than phiền, tự giễu."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "sei-ka",
       "groups": [
         {
@@ -32321,30 +32293,7 @@
                   "tr": "Tại thiếu ngủ mà tôi đã đến muộn cuộc họp quan trọng."
                 }
               ],
-              "explain": "Chỉ khác một chữ: か diễn tả “không chắc chắn”, nên せいか là phỏng đoán mà chính người nói cũng không dám chắc, phía sau thường là những trạng thái khó nói rõ nguyên nhân như tình trạng cơ thể, bầu không khí; せいで là khẳng định chính là nguyên nhân này, mang ý trách móc “tại nó cả”."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Đều diễn tả nguyên nhân",
-          "items": [
-            {
-              "id": "koto-mo-atte",
-              "diff": "せいか là suy đoán không chắc chắn “có lẽ là do…”; こともあって là chắc chắn “một phần cũng vì… (một trong các nguyên nhân)”.",
-              "this": [
-                {
-                  "tag": "Suy đoán · không chắc",
-                  "tr": "Có lẽ do là kỳ nghỉ dài nên đường rất đông."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Chắc chắn · một trong các nguyên nhân",
-                  "tr": "Một phần cũng vì là kỳ nghỉ dài nên đường rất đông."
-                }
-              ],
-              "explain": "Nhìn xem người nói có chắc chắn không: せいか có 「か」, là phỏng đoán, có thể đúng có thể không; こともあって là sự thật người nói đã xác nhận, chỉ ngầm ý “còn có nguyên nhân khác”. Tin tức, báo cáo khi giải thích nguyên nhân hay dùng こともあって."
+              "explain": "Nghĩa gốc của せい là “nguyên nhân (của kết quả xấu), chỗ phải chịu trách nhiệm”. Thêm 「で」 chỉ nguyên nhân thì thành khẳng định “chính là vì nó” → せいで “tại…, đều tại…”, phía sau là việc đã xảy ra và có thể đổ lỗi rõ ràng (遅刻した). Thêm 「か」 nghi vấn thì thành “có phải vì nó không nhỉ” → せいか “có lẽ vì…”, phía sau thường là trạng thái không rõ nguyên nhân (ぼんやりする). Chỉ cần nhìn sau せい là 「か」 hay 「で」."
             }
           ]
         }
@@ -32355,7 +32304,8 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "次第 kiêm hai vai, mỗi vai có cách nói gần nghĩa riêng: “vừa… là…” ≈ たとたん, “tùy thuộc vào, tùy… mà định” ≈ にかかっている・によっては",
+          "sense": 1,
+          "note": "Đều diễn tả “vừa… là…”",
           "items": [
             {
               "id": "ta-totan",
@@ -32377,15 +32327,23 @@
                 "why": "Sau 次第 không thể nối sự việc bất ngờ đã xảy ra"
               },
               "explain": "Nhìn nửa câu sau: 「ご連絡します」 là việc chưa làm, định chủ động làm → 次第 (nối với thể ます: 着き＋次第); 「雨が降り出した」 là sự việc bất ngờ đã xảy ra, bản thân không kiểm soát được → たとたん (nối với thể た: 着いた＋とたん)."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Đều diễn tả “tùy thuộc vào…”",
+          "items": [
             {
               "id": "ni-kakatte-iru",
+              "title": "〜にかかっている (tùy thuộc vào)",
               "thisTitle": "〜次第だ (tùy thuộc vào)",
-              "diff": "Đều diễn tả “tùy thuộc vào”; 次第だ chỉ nói “do nó quyết định”, việc lớn việc nhỏ đều dùng được; にかかっている nhấn mạnh “thành bại hoàn toàn đặt cả vào nó”.",
+              "diff": "Đều nghĩa là “tùy thuộc vào”; 次第だ trung tính, còn có thể mang nghĩa “tùy cậu quyết”; にかかっている nhấn mạnh “thành bại hoàn toàn đặt cả vào đó”, chỉ dùng cho thành bại, kết quả.",
               "this": [
                 {
-                  "tag": "Do nó quyết định · thông thường",
-                  "tr": "Đi hay không còn tùy thời tiết."
+                  "tag": "Tùy cậu · trung tính",
+                  "tr": "Tối nay ăn gì thì tùy cậu đấy."
                 }
               ],
               "that": [
@@ -32394,25 +32352,33 @@
                   "tr": "Trận đấu có thắng được hay không là hoàn toàn trông vào sự cố gắng của cậu đấy."
                 }
               ],
-              "explain": "Nhìn xem đang nói về gì: những việc tùy tình hình mà định như “đi hay không”, “mua hay không” → 次第だ; thành bại trọng đại như trận đấu, dự án, đặt cả lên vai một người, một việc → にかかっている, mang cảm giác “trọng trách trên vai”. Ngoài ra 次第 còn có thể nói thành 「次第で」 đặt ở giữa câu."
-            },
+              "explain": "Xem phía trước nói về gì: việc do người ta tự chọn như 「何にするか」 thì chỉ dùng được 次第だ, nghĩa là “tùy cậu quyết”; thành bại, kết quả như 「勝てるかどうか」 thì dùng cả hai được (君の頑張り次第だ cũng tự nhiên), dùng にかかっている sẽ nhấn mạnh hơn “thành bại đặt cả vào đây”, giọng nặng hơn."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Đều diễn tả “tùy vào… mà có thể…”",
+          "items": [
             {
-              "id": "ni-yotte-wa",
+              "id": "ikan-de-wa",
+              "title": "〜いかんでは (tùy tình hình, có thể)",
               "thisTitle": "〜次第では (tùy… có thể)",
-              "diff": "次第では chú trọng kết quả, mức độ của vế trước ra sao; によっては chú trọng chọn ra một vài trường hợp riêng lẻ trong số nhiều trường hợp.",
+              "diff": "Nghĩa giống nhau, đều là “tùy vào… mà có thể…”; 次第では dùng được cả khi nói lẫn khi viết, いかんでは là cách nói văn viết cứng nhắc.",
               "this": [
                 {
-                  "tag": "Xem kết quả ra sao",
-                  "tr": "Tùy kết quả kiểm tra, có thể sẽ cần phẫu thuật."
+                  "tag": "Văn nói · cũng dùng khi viết",
+                  "tr": "Tùy thời tiết ngày mai, có khi sẽ hủy buổi dã ngoại."
                 }
               ],
               "that": [
                 {
-                  "tag": "Có người · chọn ra riêng lẻ",
-                  "tr": "Có người uống thuốc này sẽ bị buồn ngủ."
+                  "tag": "Văn viết · thông báo",
+                  "tr": "Tùy tình hình thời tiết hôm đó, đại hội có thể sẽ bị hủy."
                 }
               ],
-              "explain": "Nhìn danh từ phía trước: những thứ “có thể tốt xấu, mức độ thay đổi” như 結果、天気、やり方 → 次第では; những thứ “có thể chia thành nhiều loại” như 人、場所、国、場合 → によっては, nghĩa là “trong đó có…”."
+              "explain": "Xem hoàn cảnh: trong thông báo, công văn thì dùng cả hai được (当日の天候次第では cũng được), いかんでは cứng và trang trọng hơn; trong văn nói giữa bạn bè, như câu kết thúc bằng 「かも」, thì chỉ dùng được 次第では, nói 「天気いかんでは」 sẽ quá cứng."
             }
           ]
         }
@@ -32423,7 +32389,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều diễn tả “(sau khi đã làm)…, rồi…”, nối hai sự việc trước và sau",
+          "note": "Đều diễn tả “sau khi…, rốt cuộc…”",
           "items": [
             {
               "id": "ageku",
@@ -32431,16 +32397,16 @@
               "this": [
                 {
                   "tag": "Trung tính · đi đến quyết định",
-                  "tr": "Trăn trở rất lâu, cuối cùng quyết định đi du học."
+                  "tr": "Phân vân mãi, cuối cùng tôi quyết định đi du học."
                 }
               ],
               "that": [
                 {
-                  "tag": "Kết quả xấu · uổng công",
+                  "tag": "Công cốc · thất vọng",
                   "tr": "Đắn đo mãi, rốt cuộc chẳng mua gì cả."
                 }
               ],
-              "explain": "Nhìn kết quả ở nửa câu sau: trải qua suy nghĩ, nỗ lực nghiêm túc rồi đi đến một kết luận hay thành quả → 末に, thường gặp trong văn viết; trải qua một hồi loay hoay rồi rơi vào kết cục đáng thất vọng như uổng công, cãi nhau, thất bại → あげく, mang giọng “thật là hết nói nổi”."
+              "explain": "Nửa đầu giống nhau, đều đã trải qua một phen loay hoay, nên xem kết quả ở nửa sau: có được quyết định, thành quả như 「決めた」 → 末に, thiên về văn viết, trung tính; kết cục công cốc, đáng thất vọng như 「買わなかった」 → あげく, mang giọng bực bội “thật là…”."
             },
             {
               "id": "kekka",
@@ -32458,26 +32424,6 @@
                 }
               ],
               "explain": "Trước 末に thường là quá trình tốn thời gian, công sức như 「悩む・迷う・長い話し合い・苦労」, phía sau hay có 「やっと・ついに」; 結果 chỉ bình tĩnh thuật lại “làm A, thế là B”, dùng nhiều nhất trong báo cáo điều tra, kiểm tra, thí nghiệm."
-            },
-            {
-              "id": "ta-ato-de",
-              "diff": "末に là sau khi trải qua một quá trình thì “cuối cùng” có kết quả; たあとで chỉ nói thứ tự thời gian. Thứ tự trước sau đơn thuần thì không dùng được 末に.",
-              "this": [
-                {
-                  "tag": "Quá trình quanh co · cuối cùng",
-                  "tr": "Thất bại không biết bao nhiêu lần, cuối cùng sản phẩm mới đã hoàn thành."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Trước sau đơn thuần",
-                  "tr": "Ăn cơm xong thì đánh răng."
-                }
-              ],
-              "wrong": {
-                "why": "Thứ tự trước sau đơn thuần thì không dùng được 末に"
-              },
-              "explain": "Xem vế trước có phải là một “quá trình” hay không: những trải nghiệm vất vả như thất bại nhiều lần, trăn trở rất lâu, phía sau có 「ついに」→ 末に; các hành động thường ngày như ăn cơm, tắm chỉ là xếp thứ tự trước sau → たあとで."
             }
           ]
         }
@@ -32488,24 +32434,28 @@
       "groups": [
         {
           "kind": "look",
-          "note": "〜たものではない ↔ 〜ものではない, chỉ khác nhau một chữ 「た」",
+          "note": "〜たものではない ↔ 〜ものではない: phần đuôi giống nhau, chỉ khác phía trước là thể khả năng + た hay thể từ điển",
           "items": [
             {
               "id": "mono-dewa-nai",
+              "title": "〜ものではない (khuyên răn)",
               "diff": "たものではない gắn với thể た của thể khả năng, nghĩa là “hoàn toàn không thể…”; ものではない gắn với thể từ điển, nghĩa là “không nên…”.",
               "this": [
                 {
                   "tag": "Hoàn toàn không thể · chê bai",
-                  "tr": "Món dở thế này thì đúng là không thể nào ăn nổi."
+                  "tr": "Món súp này mặn đến mức không thể nào uống nổi."
                 }
               ],
               "that": [
                 {
                   "tag": "Không nên · khuyên răn",
-                  "tr": "Không nên để thừa đồ ăn."
+                  "tr": "Không nên húp súp thành tiếng."
                 }
               ],
-              "explain": "Nhìn phía trước 「もの」: thể た của thể khả năng (食べられた、見られた、聞けた) → chê bai sự vật “hoàn toàn không thể…”, thường đi với 「こんな」; thể từ điển thông thường (残す、言う) → khuyên răn theo lẽ thường “không nên…”, thường là lời người lớn nói với người nhỏ."
+              "wrong": {
+                "why": "Muốn nói “không thể nào…” phải dùng thể た của thể khả năng 「飲めた」, thể た thường 「飲んだ」 thì không được"
+              },
+              "explain": "Đuôi đều là 「ものではない」, nên xem động từ phía trước: thể た của thể khả năng (飲めた、食べられた、聞けた) → たものではない, chê đối tượng quá tệ đến mức “không thể nào…”; thể từ điển (飲む、言う) → ものではない, khuyên răn theo lẽ thường “không nên…”, thường là người lớn nói với người nhỏ."
             }
           ]
         },
@@ -32515,10 +32465,10 @@
           "items": [
             {
               "id": "totemo-nai",
-              "diff": "たものではない là vì đối tượng quá tệ nên không thể…, mang ý chê bai; とても〜ない là vì lượng quá nhiều, quá khó nên bản thân không làm nổi.",
+              "diff": "たものではない chỉ dùng để chê đối tượng: “tệ đến mức không thể…”; とても〜ない chỉ nói “không tài nào làm được”, lý do gì cũng được.",
               "this": [
                 {
-                  "tag": "Đối tượng quá tệ · chê bai",
+                  "tag": "Chê đối tượng",
                   "tr": "Món này dở đến mức không tài nào nuốt nổi."
                 }
               ],
@@ -32528,7 +32478,7 @@
                   "tr": "Món này nhiều quá, thật sự ăn không hết."
                 }
               ],
-              "explain": "Nhìn nguyên nhân: lời chê chất lượng của sự vật như 「まずくて」「下手で」→ たものではない, hàm ý “thứ này không ra gì”; vượt quá khả năng của bản thân như 「多すぎて」「難しすぎて」→ とても〜ない, vấn đề là ở mình không làm nổi, không phải chê sự vật."
+              "explain": "Câu chê đồ vật tệ như 「まずくて」 thì dùng cả hai được: たものではない mang sự khinh chê, ghét bỏ mạnh, còn とても食べられない chỉ nói là ăn không nổi. Khi lý do là quá nhiều, quá khó như 「多すぎて」「難しすぎて」, bản thân đồ vật không tệ, thì chỉ dùng được とても〜ない."
             }
           ]
         }
@@ -32539,7 +32489,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Đều bắt nguồn từ 「ところ（所）」 — đặt một sự việc vào một “thời điểm” nào đó",
+          "note": "Đều bắt nguồn từ 「ところ（所）」 — nghĩa gốc là “nơi chốn”, mở rộng thành “thời điểm” mà sự việc đang ở",
           "items": [
             {
               "id": "tokoro-da",
@@ -32556,8 +32506,14 @@
                   "tr": "Tàu điện vừa mới chạy."
                 }
               ],
-              "explain": "Nhìn phía sau ところ: đi với 「で」, phía sau còn nửa câu nữa, và phần nhiều là kết quả phủ định hoặc “vô ích” → dù có… cũng; đi với 「だ」 để kết thúc câu → vừa mới."
-            },
+              "explain": "Cả hai đều bắt nguồn từ 「ところ」: nghĩa gốc là “nơi chốn”, mở rộng thành “thời điểm” mà sự việc đã tiến tới. たところだ là “đang ở thời điểm vừa làm xong hành động” → vừa mới, dùng 「だ」 để kết thúc câu; たところで là “dù đã tới thời điểm làm xong”, tình hình phía sau vẫn không đổi (間に合わない) → dù… cũng vô ích."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "〜たところで ↔ 〜たところ: chỉ khác một chữ 「で」",
+          "items": [
             {
               "id": "ta-tokoro-result",
               "diff": "Sau たところで là phán đoán “cũng vô ích”; sau たところ、 là sự thật “làm rồi thì thấy rằng…”.",
@@ -32573,7 +32529,7 @@
                   "tr": "Tôi hỏi thầy giáo, thế là thầy chỉ cho tôi ngay."
                 }
               ],
-              "explain": "Chỉ khác nhau một chữ 「で」: sau たところ、 nhất định là kết quả đã xảy ra, cả câu ở thì quá khứ; sau たところで là phán đoán phủ định, “vô ích”, phía trước thường có 「今さら」「いくら」."
+              "explain": "Chỉ khác một chữ 「で」, nên xem nửa sau: sau たところ、 là kết quả thực tế xảy ra sau khi làm (すぐ教えてくれた), cả câu nói về việc đã qua; sau たところで là nhận định “vô ích” (もう遅い), phía trước hay có 「今さら」「いくら」."
             }
           ]
         },
@@ -32597,23 +32553,6 @@
                 }
               ],
               "explain": "Hai câu nghĩa như nhau, xem giọng điệu: bạn bè nói chuyện với nhau, cuối câu thường có 「よ」→ たって; văn viết hoặc tình huống khá trang trọng → たところで."
-            },
-            {
-              "id": "te-mo-hajimaranai",
-              "diff": "たところで đặt giữa câu, phía sau có thể nối với đủ loại phán đoán phủ định; ても始まらない cố định ở cuối câu để đưa ra phán đoán.",
-              "this": [
-                {
-                  "tag": "Giữa câu · nối phán đoán phía sau",
-                  "tr": "Đến nước này thì dù có hối hận cũng chẳng thay đổi được gì."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Cuối câu · cách nói cố định",
-                  "tr": "Đến nước này có hối hận cũng chẳng ích gì."
-                }
-              ],
-              "explain": "Xem “cũng vô ích” nằm ở đâu: bản thân ても始まらない là phần kết câu, nghĩa là “có làm cũng chẳng ích gì”; たところで chỉ là nửa câu đầu, phía sau còn phải nói ra kết quả cụ thể (何も変わらない、間に合わない)."
             },
             {
               "id": "to-shita-tokoro-de",
@@ -32646,21 +32585,22 @@
           "items": [
             {
               "id": "ta-mono-da",
+              "title": "〜たものだ (hồi tưởng)",
               "thisTitle": "〜たいものだ",
               "diff": "たいものだ là “thật muốn…”, nói mong ước cho tương lai; たものだ là “trước kia thường hay…”, hồi tưởng quá khứ.",
               "this": [
                 {
                   "tag": "Mong ước · tương lai",
-                  "tr": "Thật muốn có ngày được bơi lại ở vùng biển ấy một lần nữa."
+                  "tr": "Ước gì một ngày nào đó lại được xem phim ở rạp đó."
                 }
               ],
               "that": [
                 {
                   "tag": "Hồi tưởng · quá khứ",
-                  "tr": "Hồi nhỏ tôi hay bơi ở vùng biển ấy."
+                  "tr": "Hồi nhỏ, tôi hay xem phim ở rạp đó."
                 }
               ],
-              "explain": "Xem từ chỉ thời gian và dạng động từ: 「いつか」＋thể ます (泳ぎ)＋たい → mong ước cho tương lai; 「子どもの頃」＋thể た (泳いだ) → hồi tưởng đầy hoài niệm về việc trước kia thường làm. Chỉ khác một chữ 「い」, một bên hướng về tương lai, một bên nhìn về quá khứ."
+              "explain": "Cách viết chỉ khác một chữ 「い」, nên xem câu nói về lúc nào: việc tương lai như 「いつか」 → 見たいものだ, mong ước “thật muốn…”; hồi tưởng việc ngày xưa hay làm như 「子どもの頃」 → 見たものだ, “ngày xưa thường…”. Với động từ nhóm 1 thì dạng phía trước cũng khác (泳ぎたい／泳いだ), còn động từ nhóm 2 (見る、食べる) chỉ khác đúng một chữ 「い」 này nên dễ nhìn nhầm nhất."
             }
           ]
         },
@@ -32693,16 +32633,16 @@
               "this": [
                 {
                   "tag": "Hướng tới xã hội · cảm khái",
-                  "tr": "Thật mong giới trẻ đọc sách nhiều hơn."
+                  "tr": "Thật mong người trẻ nói lên ý kiến của mình nhiều hơn."
                 }
               ],
               "that": [
                 {
                   "tag": "Hướng tới người cụ thể",
-                  "tr": "Tôi mong con trai đọc sách nhiều hơn."
+                  "tr": "Mong con trai nói lên ý kiến của mình nhiều hơn."
                 }
               ],
-              "explain": "Xem đối tượng và giọng điệu: bày tỏ kỳ vọng kiểu cảm khái tới một nhóm như 「若い人」「政府」, hơi mang tính lên lớp → てほしいものだ, dùng nhiều trong bài viết, diễn thuyết; nói yêu cầu của mình với một người cụ thể bên cạnh → てほしい. 「てもらいたい」 cũng vậy."
+              "explain": "Xem đối tượng và giọng điệu: bày tỏ kỳ vọng mang tính cảm thán với một tập thể như 「若い人」「政府」, hơi có giọng răn dạy → てほしいものだ, hay dùng trong bài viết, diễn văn; nói yêu cầu của mình với một người cụ thể gần gũi như 「息子」 → てほしい. 「てもらいたい」 cũng vậy."
             },
             {
               "id": "nai-mono-ka",
@@ -32756,13 +32696,13 @@
               "this": [
                 {
                   "tag": "Ung dung · ra vẻ",
-                  "tr": "Cậu, lại đây một chút."
+                  "tr": "Cậu kia, đến phòng tôi một chút."
                 }
               ],
               "that": [
                 {
                   "tag": "Trực tiếp · thô lỗ",
-                  "tr": "Này, lại đây mau!"
+                  "tr": "Này, đến phòng tao!"
                 }
               ],
               "explain": "Xem cách xưng hô và giọng điệu: 「おい」＋thể mệnh lệnh là mệnh lệnh to tiếng giữa nam giới với nhau, lúc gấp gáp; 「君」＋たまえ là sai bảo từ trên xuống nhưng vẫn giữ phong thái, gắn với thể ます (来＋たまえ). Các thể mệnh lệnh khác (食べろ、行け) cũng trực tiếp như vậy."
@@ -32821,7 +32761,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Đều là bảo đối phương làm việc gì đó",
+          "note": "Đều là lời nhờ “làm ơn…”",
           "items": [
             {
               "id": "te-kudasai",
@@ -32841,21 +32781,22 @@
               "explain": "Xem đối tượng được gọi: 「〜ちゃん」, người nhà, bạn bè thân → てちょうだい, phần nhiều là giọng của phụ nữ hoặc người lớn tuổi; người lạ, khách, cấp trên → chỉ dùng được てください. Nói てちょうだい với cấp trên là rất thất lễ."
             },
             {
-              "id": "nasai",
-              "diff": "てちょうだい là nhờ vả, giọng mềm, phần nhiều là bản thân người nói mong đối phương làm vậy; なさい là ra lệnh, dạy bảo, không có chỗ thương lượng.",
+              "id": "te-moraemasenka",
+              "title": "〜てくれない？ (nhờ vả thân mật)",
+              "diff": "Đều là lời nhờ giữa những người thân thiết; てちょうだい thường là giọng trìu mến của phụ nữ hoặc người lớn với trẻ con, người nhà; てくれない？ nam nữ đều dùng, hỏi ý đối phương bằng câu hỏi.",
               "this": [
                 {
-                  "tag": "Nhờ vả · giọng mềm",
-                  "tr": "Mẹ đang bận lắm, con im lặng một chút được không."
+                  "tag": "Trìu mến · giọng phụ nữ, người lớn",
+                  "tr": "Ken à, bê giúp cái hộp này nhé."
                 }
               ],
               "that": [
                 {
-                  "tag": "Ra lệnh · dạy bảo",
-                  "tr": "Chín giờ rồi đấy. Mau đi ngủ đi."
+                  "tag": "Hỏi ý · ai cũng dùng",
+                  "tr": "Này, bê giúp tớ cái hộp này được không?"
                 }
               ],
-              "explain": "Xem đó là nhu cầu của ai: mẹ tự mình bận, mệt, nhờ con phối hợp → てちょうだい; dạy con việc phải làm theo nề nếp (寝る、勉強する) → なさい, là mệnh lệnh không có chỗ thương lượng."
+              "explain": "Hai câu nghĩa như nhau, nên xem người nói và giọng điệu: gọi trẻ con là 「〜ちゃん」, hay trong gia đình, phụ nữ hoặc người lớn trìu mến sai bảo → てちょうだい; nam hay nữ đều được, hỏi bạn bè, đồng nghiệp “giúp mình được không?” bằng câu hỏi → てくれない？, cuối câu lên giọng."
             }
           ]
         }

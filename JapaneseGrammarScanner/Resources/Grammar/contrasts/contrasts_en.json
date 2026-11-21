@@ -32272,34 +32272,6 @@
       ]
     },
     {
-      "id": "roku-ni-nai",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Both pair with a negative to express a very low degree: “hardly…／not at all…”",
-          "items": [
-            {
-              "id": "chittomo-nai",
-              "diff": "ろくに〜ない means you did a little but nowhere near enough, with dissatisfaction; ちっとも〜ない means not at all.",
-              "this": [
-                {
-                  "tag": "Not enough · slept badly",
-                  "tr": "I was so worried I barely slept last night."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Not at all",
-                  "tr": "I was so worried I didn't sleep a wink last night."
-                }
-              ],
-              "explain": "The two sentences differ only in the adverb: ろくに means “properly”, so with the negative it's “didn't sleep properly” — you did sleep, but nowhere near enough; ちっとも means “a bit”, so with the negative it's “didn't sleep at all”. ろくに also often has a complaining or self-mocking tone."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "sei-ka",
       "groups": [
         {
@@ -32321,30 +32293,7 @@
                   "tr": "Thanks to lack of sleep, I was late for an important meeting."
                 }
               ],
-              "explain": "Only one kana differs: か marks “uncertainty”, so せいか is a guess the speaker isn't sure about, usually followed by a physical condition or mood whose cause is hard to pin down; せいで asserts that this is the cause, with a note of blame: “it's all its fault”."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Both express a cause",
-          "items": [
-            {
-              "id": "koto-mo-atte",
-              "diff": "せいか is an uncertain guess: “maybe because of…”; こともあって is certain: “partly because of… (one of the causes)”.",
-              "this": [
-                {
-                  "tag": "Guess · not sure",
-                  "tr": "Maybe it was because of the long weekend, but the roads were jammed."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Certain · one of the causes",
-                  "tr": "Partly because it was a long weekend, the roads were jammed."
-                }
-              ],
-              "explain": "Check whether the speaker is sure: せいか has 「か」 and is a guess — it may or may not be the cause; こともあって is a fact the speaker has confirmed, only hinting “there are other causes too”. News and reports usually use こともあって when explaining causes."
+              "explain": "せい originally means “the cause (of a bad result), where the blame lies”. Add 「で」, which marks a cause, and it becomes a firm “it is because of that” → せいで “it’s all the fault of…”, followed by something that already happened and can clearly be blamed on it (遅刻した). Add the question particle 「か」 and it becomes “is it because of that?” → せいか “maybe because…”, usually followed by a state whose cause is unclear (ぼんやりする). To tell them apart, just look at whether 「か」 or 「で」 follows せい."
             }
           ]
         }
@@ -32355,7 +32304,8 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "次第 has two jobs, each with a close equivalent: “as soon as…” ≈ たとたん, and “depends on…” ≈ にかかっている・によっては",
+          "sense": 1,
+          "note": "Both mean “as soon as…”",
           "items": [
             {
               "id": "ta-totan",
@@ -32377,15 +32327,23 @@
                 "why": "次第 can't be followed by an unexpected event that has already happened"
               },
               "explain": "Look at the second half: 「ご連絡します」 is something not yet done that you intend to do → 次第 (attaches to the ます-stem: 着き＋次第); 「雨が降り出した」 is an unexpected event that already happened and was beyond your control → たとたん (attaches to the た-form: 着いた＋とたん)."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Both mean “depends on…”",
+          "items": [
             {
               "id": "ni-kakatte-iru",
+              "title": "〜にかかっている (depends on)",
               "thisTitle": "〜次第だ (depends on)",
-              "diff": "Both mean “depends on”; 次第だ just says “it's decided by this” and works for big or small things; にかかっている stresses that “success or failure rests entirely on it”.",
+              "diff": "Both mean “depends on”; 次第だ is neutral and can also mean “it’s your call”; にかかっている stresses that “success or failure rests entirely on it” and is used only for outcomes.",
               "this": [
                 {
-                  "tag": "Decided by it · general",
-                  "tr": "Whether we go depends on the weather."
+                  "tag": "Your call · neutral",
+                  "tr": "What we have for dinner is up to you."
                 }
               ],
               "that": [
@@ -32394,25 +32352,33 @@
                   "tr": "Whether we win the match all depends on your effort."
                 }
               ],
-              "explain": "Look at what's being talked about: things that depend on circumstances, like whether to go or whether to buy → 次第だ; major successes or failures, like a match or a project, resting on someone or something → にかかっている, with a sense of “a heavy responsibility on your shoulders”. 次第 can also be used mid-sentence as 「次第で」."
-            },
+              "explain": "Look at what comes before: for something a person chooses, like 「何にするか」, only 次第だ works, meaning “it’s up to you”. For success or an outcome, like 「勝てるかどうか」, both work (君の頑張り次第だ is natural too), but にかかっている puts more weight on “everything rides on this” and sounds heavier."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Both mean “depending on…, it may…”",
+          "items": [
             {
-              "id": "ni-yotte-wa",
+              "id": "ikan-de-wa",
+              "title": "〜いかんでは (possibly, depending on the situation)",
               "thisTitle": "〜次第では (possibly, depending on…)",
-              "diff": "次第では focuses on how the preceding result or degree turns out; によっては focuses on picking out particular cases from several.",
+              "diff": "Same meaning, “depending on…, it may…”; 次第では works in both speech and writing, while いかんでは is stiff written language.",
               "this": [
                 {
-                  "tag": "Depends on how it turns out",
-                  "tr": "Depending on the test results, surgery may be necessary."
+                  "tag": "Spoken · also written",
+                  "tr": "Depending on tomorrow’s weather, we might call off the picnic."
                 }
               ],
               "that": [
                 {
-                  "tag": "Some people · picking out cases",
-                  "tr": "For some people, this medicine causes drowsiness."
+                  "tag": "Written · notices",
+                  "tr": "Depending on the weather on the day, the tournament may be cancelled."
                 }
               ],
-              "explain": "Look at the noun before it: things that can turn out well or badly or vary in degree, like 結果、天気、やり方 → 次第では; things that can be divided into many kinds, like 人、場所、国、場合 → によっては, meaning “some of them…”."
+              "explain": "Look at the setting: in notices and official documents both work (当日の天候次第では is fine too), and いかんでは sounds stiffer and more formal. In casual talk between friends, like a sentence ending in 「かも」, only 次第では works — 「天気いかんでは」 would sound far too stiff."
             }
           ]
         }
@@ -32423,7 +32389,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both mean “after (doing)…, …”, linking two events",
+          "note": "Both mean “after…, in the end…”",
           "items": [
             {
               "id": "ageku",
@@ -32431,16 +32397,16 @@
               "this": [
                 {
                   "tag": "Neutral · reaching a decision",
-                  "tr": "After agonizing for a long time, I finally decided to study abroad."
+                  "tr": "After going back and forth for a long time, I finally decided to study abroad."
                 }
               ],
               "that": [
                 {
-                  "tag": "Bad outcome · wasted effort",
+                  "tag": "Wasted effort · disappointment",
                   "tr": "After dithering forever, I ended up buying nothing."
                 }
               ],
-              "explain": "Look at the outcome in the second half: careful thought or effort leading to a conclusion or achievement → 末に, common in writing; a lot of fuss ending in something disappointing like wasted effort, a quarrel or failure → あげく, with a “seriously…” tone."
+              "explain": "The first half is the same — both involve a lot of back and forth — so look at the result in the second half: a decision or an achievement, like 「決めた」 → 末に, rather written and neutral; a disappointing end where all the effort was wasted, like 「買わなかった」 → あげく, with a tone of annoyance."
             },
             {
               "id": "kekka",
@@ -32458,26 +32424,6 @@
                 }
               ],
               "explain": "末に is often preceded by a time-consuming, troublesome process such as 「悩む・迷う・長い話し合い・苦労」, and followed by 「やっと・ついに」; 結果 just calmly reports “did A, so B”, and is most common in investigation, inspection and lab reports."
-            },
-            {
-              "id": "ta-ato-de",
-              "diff": "末に means “in the end” after going through a process; たあとで only gives the order in time. Plain sequence cannot use 末に.",
-              "this": [
-                {
-                  "tag": "Winding process · in the end",
-                  "tr": "After failing many times, we finally completed the new product."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Plain sequence",
-                  "tr": "I brush my teeth after eating."
-                }
-              ],
-              "wrong": {
-                "why": "Plain sequence can't use 末に"
-              },
-              "explain": "Check whether the first part is a “process”: a hard-won experience like failing many times or agonizing for a long time, followed by 「ついに」 → 末に; everyday actions like eating or bathing that are just put in order → たあとで."
             }
           ]
         }
@@ -32488,24 +32434,28 @@
       "groups": [
         {
           "kind": "look",
-          "note": "〜たものではない ↔ 〜ものではない — only one 「た」 apart",
+          "note": "〜たものではない ↔ 〜ものではない: same ending; the only difference is what comes before it — potential form + た, or dictionary form",
           "items": [
             {
               "id": "mono-dewa-nai",
+              "title": "〜ものではない (admonition)",
               "diff": "たものではない attaches to the た-form of the potential form and means “simply can't…”; ものではない attaches to the dictionary form and means “shouldn't…”.",
               "this": [
                 {
                   "tag": "Simply can't · disparaging",
-                  "tr": "This awful food is simply inedible."
+                  "tr": "This soup is so salty it’s simply undrinkable."
                 }
               ],
               "that": [
                 {
                   "tag": "Shouldn't · admonishing",
-                  "tr": "You shouldn't leave food uneaten."
+                  "tr": "You shouldn’t slurp your soup noisily."
                 }
               ],
-              "explain": "Look before 「もの」: the た-form of the potential form (食べられた、見られた、聞けた) → putting something down, “simply can't…”, often with 「こんな」; a plain dictionary form (残す、言う) → advice based on common sense, “you shouldn't…”, often said by elders to younger people."
+              "wrong": {
+                "why": "To say “simply can’t…” you need the た形 of the potential form, 「飲めた」; the plain た形 「飲んだ」 doesn’t work"
+              },
+              "explain": "Both end in 「ものではない」, so look at the verb before it: the た形 of the potential form (飲めた、食べられた、聞けた) → たものではない, complaining that the thing is so bad you “simply can’t…”; the dictionary form (飲む、言う) → ものではない, a common-sense admonition “you shouldn’t…”, often said by elders to younger people."
             }
           ]
         },
@@ -32515,10 +32465,10 @@
           "items": [
             {
               "id": "totemo-nai",
-              "diff": "たものではない means you can't because the thing is too bad, and is disparaging; とても〜ない means you can't manage it because it's too much or too hard.",
+              "diff": "たものではない is used only to put the thing down: “so bad you can’t…”; とても〜ない just says “can’t possibly do it”, for any reason.",
               "this": [
                 {
-                  "tag": "Thing too bad · disparaging",
+                  "tag": "Putting the thing down",
                   "tr": "This food is so awful it's impossible to get down."
                 }
               ],
@@ -32528,7 +32478,7 @@
                   "tr": "There's so much of this food that I can't possibly finish it."
                 }
               ],
-              "explain": "Look at the reason: a criticism of quality like 「まずくて」「下手で」 → たものではない, implying “this thing is no good”; something beyond your ability like 「多すぎて」「難しすぎて」 → とても〜ない — the problem is that you can't manage it, not that the thing is bad."
+              "explain": "In a sentence complaining that the thing is bad, like 「まずくて」, both work: たものではない carries strong contempt and disgust, while とても食べられない just says you can’t eat it. When the reason is too much or too hard, like 「多すぎて」「難しすぎて」, and the thing itself isn’t bad, only とても〜ない works."
             }
           ]
         }
@@ -32539,7 +32489,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Both come from 「ところ（所）」 — placing an event at a certain “point in time”",
+          "note": "Both come from 「ところ（所）」 — originally “place”, later extended to the “point in time” where things stand",
           "items": [
             {
               "id": "tokoro-da",
@@ -32556,8 +32506,14 @@
                   "tr": "The train has just left."
                 }
               ],
-              "explain": "Look after ところ: followed by 「で」 with another clause after it, usually a negative or “no use” outcome → even if…; followed by 「だ」, ending the sentence → just now."
-            },
+              "explain": "Both come from 「ところ」: originally “place”, later extended to “the point” a situation has reached. たところだ is “being at the point right after the action is done” → just now, and 「だ」 ends the sentence. たところで is “even having reached the point where it is done”, the situation that follows stays the same (間に合わない) → even if…, it’s no use."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "〜たところで ↔ 〜たところ: they differ by just one 「で」",
+          "items": [
             {
               "id": "ta-tokoro-result",
               "diff": "たところで is followed by a “it's no use” judgment; たところ、 is followed by the fact “I did it, and found that…”.",
@@ -32573,7 +32529,7 @@
                   "tr": "I asked the teacher, and she told me right away."
                 }
               ],
-              "explain": "Only a 「で」 apart: たところ、 is always followed by an outcome that has already happened, and the whole sentence is in the past; たところで is followed by a negative or “no use” judgment, often with 「今さら」「いくら」 before it."
+              "explain": "They differ by just one 「で」, so look at the second half: after たところ、 comes what actually happened after doing it (すぐ教えてくれた), and the whole sentence is about the past; after たところで comes a judgment that it’s “no use” (もう遅い), often with 「今さら」「いくら」 before it."
             }
           ]
         },
@@ -32597,23 +32553,6 @@
                 }
               ],
               "explain": "The two sentences mean the same; look at the tone: talking among friends, often with 「よ」 at the end → たって; writing or fairly formal situations → たところで."
-            },
-            {
-              "id": "te-mo-hajimaranai",
-              "diff": "たところで comes mid-sentence and can be followed by all sorts of negative judgments; ても始まらない is a fixed judgment at the end of the sentence.",
-              "this": [
-                {
-                  "tag": "Mid-sentence · judgment follows",
-                  "tr": "Even if you regret it now, nothing will change."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Sentence end · set phrase",
-                  "tr": "There's no point regretting it now."
-                }
-              ],
-              "explain": "Look at where “no use” goes: ても始まらない is itself the end of the sentence, meaning “doing it gets you nowhere”; たところで is only the first half, and the second half still has to state the specific outcome (何も変わらない、間に合わない)."
             },
             {
               "id": "to-shita-tokoro-de",
@@ -32646,21 +32585,22 @@
           "items": [
             {
               "id": "ta-mono-da",
+              "title": "〜たものだ (reminiscing)",
               "thisTitle": "〜たいものだ",
               "diff": "たいものだ means “I'd really like to…”, a wish for the future; たものだ means “used to often…”, recalling the past.",
               "this": [
                 {
                   "tag": "Wish · future",
-                  "tr": "I'd really love to swim in that sea again someday."
+                  "tr": "Someday I’d love to watch a movie at that theater again."
                 }
               ],
               "that": [
                 {
                   "tag": "Memory · past",
-                  "tr": "When I was a child, I'd often swim in that sea."
+                  "tr": "When I was a kid, I often watched movies at that theater."
                 }
               ],
-              "explain": "Look at the time words and verb forms: 「いつか」＋ます-stem (泳ぎ)＋たい → a wish for the future; 「子どもの頃」＋た-form (泳いだ) → fondly recalling something you often did. Just one 「い」 apart: one looks to the future, the other to the past."
+              "explain": "The spelling differs by just one 「い」, so look at when the sentence is set: something in the future, like 「いつか」 → 見たいものだ, a wish “I’d really love to…”; looking back on something you used to do, like 「子どもの頃」 → 見たものだ, “I used to…”. With godan verbs the form before it also differs (泳ぎたい／泳いだ), but with ichidan verbs (見る、食べる) the only difference is this one 「い」, which makes them the easiest to misread."
             }
           ]
         },
@@ -32693,16 +32633,16 @@
               "this": [
                 {
                   "tag": "Toward society · heartfelt",
-                  "tr": "I really wish young people would read more books."
+                  "tr": "I really wish young people would speak their minds more."
                 }
               ],
               "that": [
                 {
                   "tag": "Toward a specific person",
-                  "tr": "I want my son to read more books."
+                  "tr": "I want my son to speak his mind more."
                 }
               ],
-              "explain": "Look at the target and tone: a heartfelt, somewhat preachy wish aimed at a group like 「若い人」「政府」 → てほしいものだ, mostly in writing or speeches; your own request to a specific person close to you → てほしい. 「てもらいたい」 works the same way."
+              "explain": "Look at who it’s aimed at and the tone: a reflective wish aimed at a group like 「若い人」 or 「政府」, a little preachy → てほしいものだ, common in writing and speeches; telling a specific person close to you, like 「息子」, what you want → てほしい. 「てもらいたい」 works the same way."
             },
             {
               "id": "nai-mono-ka",
@@ -32756,13 +32696,13 @@
               "this": [
                 {
                   "tag": "Calm · lordly",
-                  "tr": "You there, come over here a moment."
+                  "tr": "You there, come along to my room."
                 }
               ],
               "that": [
                 {
                   "tag": "Blunt · rough",
-                  "tr": "Hey, get over here!"
+                  "tr": "Hey, get over to my room!"
                 }
               ],
               "explain": "Look at the form of address and tone: 「おい」＋imperative is a gruff command between men or in an emergency; 「君」＋たまえ is a condescending but composed instruction, attached to the ます-stem (来＋たまえ). Other imperatives (食べろ、行け) are just as blunt."
@@ -32821,7 +32761,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Both ask someone to do something",
+          "note": "Both make a request: “please…”",
           "items": [
             {
               "id": "te-kudasai",
@@ -32841,21 +32781,22 @@
               "explain": "Look at who's being addressed: 「〜ちゃん」, family, close friends → てちょうだい, usually from a woman or an older person; strangers, customers, superiors → only てください. Saying てちょうだい to a superior would be very rude."
             },
             {
-              "id": "nasai",
-              "diff": "てちょうだい is a request with a soft tone, usually what the speaker personally wants the other person to do; なさい is a command or instruction that leaves no room for discussion.",
+              "id": "te-moraemasenka",
+              "title": "〜てくれない？ (casual request)",
+              "diff": "Both are requests between people who are close; てちょうだい is usually the affectionate tone of a woman or an older person toward a child or family member; てくれない？ is used by both men and women and asks in the form of a question.",
               "this": [
                 {
-                  "tag": "Request · soft tone",
-                  "tr": "Mommy's busy right now. Could you be a bit quieter, please?"
+                  "tag": "Affectionate · tone of a woman or elder",
+                  "tr": "Ken, carry this box for me, would you?"
                 }
               ],
               "that": [
                 {
-                  "tag": "Command · instruction",
-                  "tr": "It's already nine o'clock. Go to bed now."
+                  "tag": "Asking · used by anyone",
+                  "tr": "Hey, could you carry this box for me?"
                 }
               ],
-              "explain": "Look at whose need it is: Mom is busy or tired herself and asks the child to cooperate → てちょうだい; instructing the child to do what the rules say (寝る、勉強する) → なさい, a command not open to negotiation."
+              "explain": "Same meaning, so look at the speaker and tone: calling a child 「〜ちゃん」, or within the family, a woman or older person affectionately telling someone to do something → てちょうだい; anyone, male or female, asking a friend or coworker “could you help me?” as a question → てくれない？, with rising intonation at the end."
             }
           ]
         }

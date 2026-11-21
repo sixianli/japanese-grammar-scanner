@@ -32272,34 +32272,6 @@
       ]
     },
     {
-      "id": "roku-ni-nai",
-      "groups": [
-        {
-          "kind": "meaning",
-          "note": "Ambas van con negación e indican un grado muy bajo: «apenas…／nada de…»",
-          "items": [
-            {
-              "id": "chittomo-nai",
-              "diff": "ろくに〜ない es que se hizo algo, pero muy lejos de lo suficiente, con un tono de queja; ちっとも〜ない es nada en absoluto.",
-              "this": [
-                {
-                  "tag": "Insuficiente · dormir mal",
-                  "tr": "Por la preocupación, anoche apenas pude dormir."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Nada en absoluto",
-                  "tr": "Por la preocupación, anoche no pegué ojo."
-                }
-              ],
-              "explain": "Las dos frases solo cambian el adverbio: ろくに es «como es debido», y con negación es «no dormir como es debido»: algo dormiste, pero muy poco; ちっとも es «ni un poco», y con negación es «no dormir nada». ろくに además suele llevar un tono de queja o de autocrítica."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "sei-ka",
       "groups": [
         {
@@ -32321,30 +32293,7 @@
                   "tr": "Por culpa de la falta de sueño, llegué tarde a una reunión importante."
                 }
               ],
-              "explain": "Solo cambia un carácter: か indica «duda», así que せいか es una conjetura de la que ni el propio hablante está seguro, y detrás suele ir un estado de causa poco clara, como cómo se siente uno o el ambiente; せいで da por hecho que esa es la causa y lleva un reproche: «todo es culpa de eso»."
-            }
-          ]
-        },
-        {
-          "kind": "meaning",
-          "note": "Ambas expresan causa",
-          "items": [
-            {
-              "id": "koto-mo-atte",
-              "diff": "せいか es una suposición insegura: «quizá sea por…»; こともあって es seguro: «en parte también por… (una de las causas)».",
-              "this": [
-                {
-                  "tag": "Suposición · sin seguridad",
-                  "tr": "Quizá por ser un puente festivo, había mucho tráfico."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Seguro · una de las causas",
-                  "tr": "Como además era un puente festivo, había mucho tráfico."
-                }
-              ],
-              "explain": "Mira si el hablante está seguro: せいか lleva 「か」 y es una conjetura; puede que sea así o puede que no; こともあって es un hecho que el hablante da por cierto, y solo insinúa que «hay otras causas». En noticias e informes, para explicar causas, se usa más こともあって."
+              "explain": "El sentido original de せい es «la causa (de algo malo), dónde está la culpa». Con 「で」, que marca causa, se afirma «es por eso» → せいで «todo por culpa de…», seguido de algo que ya pasó y que se le puede achacar claramente (遅刻した). Con la partícula interrogativa 「か」 se convierte en «¿será por eso?» → せいか «quizá porque…», normalmente seguido de un estado cuya causa no está clara (ぼんやりする). Para distinguirlos, basta mirar si después de せい va 「か」 o 「で」."
             }
           ]
         }
@@ -32355,7 +32304,8 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "次第 tiene dos usos, y cada uno tiene una expresión de sentido parecido: «en cuanto…» ≈ たとたん; «depende de…, según…» ≈ にかかっている・によっては",
+          "sense": 1,
+          "note": "Ambos significan «en cuanto…»",
           "items": [
             {
               "id": "ta-totan",
@@ -32377,15 +32327,23 @@
                 "why": "Detrás de 次第 no puede ir un imprevisto que ya ocurrió"
               },
               "explain": "Mira la segunda parte: 「ご連絡します」 es algo que aún no se ha hecho y que uno piensa hacer por iniciativa propia → 次第 (tras la raíz de la forma ます: 着き＋次第); 「雨が降り出した」 es un imprevisto que ya ocurrió y que uno no controla → たとたん (tras la forma た: 着いた＋とたん)."
-            },
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 3,
+          "note": "Ambos significan «depende de…»",
+          "items": [
             {
               "id": "ni-kakatte-iru",
+              "title": "〜にかかっている (depende de)",
               "thisTitle": "〜次第だ (depende de)",
-              "diff": "Las dos significan «depende de»; 次第だ solo dice «lo decide eso», y vale para cosas grandes o pequeñas; にかかっている subraya que «el éxito o el fracaso recae por completo en eso».",
+              "diff": "Ambos significan «depende de»; 次第だ es neutro y también puede significar «tú decides»; にかかっている recalca que «el éxito o el fracaso recae por completo en eso» y solo se usa para resultados.",
               "this": [
                 {
-                  "tag": "Lo decide eso · general",
-                  "tr": "Que vayamos o no depende del tiempo."
+                  "tag": "Tú decides · neutro",
+                  "tr": "Lo que cenamos lo decides tú."
                 }
               ],
               "that": [
@@ -32394,25 +32352,33 @@
                   "tr": "Que ganemos el partido o no depende por completo de tu esfuerzo."
                 }
               ],
-              "explain": "Mira de qué se habla: cosas que dependen de las circunstancias, como «ir o no ir» o «comprar o no comprar» → 次第だ; el éxito o el fracaso de algo importante, como un partido o un proyecto, que recae en alguien o en algo → にかかっている, con la sensación de «una gran responsabilidad sobre los hombros». Además, 次第 también puede usarse en medio de la frase como 「次第で」."
-            },
+              "explain": "Mira de qué se habla delante: con algo que uno elige, como 「何にするか」, solo vale 次第だ, con el sentido de «tú decides»; con un éxito o un resultado, como 「勝てるかどうか」, valen los dos (君の頑張り次第だ también es natural), pero にかかっている recalca más que «todo depende de esto» y suena más grave."
+            }
+          ]
+        },
+        {
+          "kind": "meaning",
+          "sense": 4,
+          "note": "Ambos significan «según…, puede que…»",
+          "items": [
             {
-              "id": "ni-yotte-wa",
+              "id": "ikan-de-wa",
+              "title": "〜いかんでは (según la situación, podría)",
               "thisTitle": "〜次第では (según…, podría)",
-              "diff": "次第では se centra en cómo resulte o en qué grado se dé lo anterior; によっては se centra en destacar casos concretos entre varias posibilidades.",
+              "diff": "Significan lo mismo, «según…, puede que…»; 次第では sirve tanto al hablar como por escrito, mientras que いかんでは es lenguaje escrito y rígido.",
               "this": [
                 {
-                  "tag": "Según cómo resulte",
-                  "tr": "Según el resultado de las pruebas, podría ser necesaria una operación."
+                  "tag": "Hablado · también escrito",
+                  "tr": "Según el tiempo que haga mañana, igual cancelamos el pícnic."
                 }
               ],
               "that": [
                 {
-                  "tag": "Algunas personas · casos concretos",
-                  "tr": "A algunas personas este medicamento les da sueño."
+                  "tag": "Escrito · avisos",
+                  "tr": "Según el tiempo que haga ese día, el torneo podría suspenderse."
                 }
               ],
-              "explain": "Mira el sustantivo de delante: cosas que «pueden salir bien o mal, o variar en grado», como 結果、天気、やり方 → 次第では; cosas que «pueden dividirse en muchos tipos», como 人、場所、国、場合 → によっては, que significa «algunos de ellos…»."
+              "explain": "Mira el contexto: en avisos y documentos oficiales valen los dos (当日の天候次第では también sirve), e いかんでは suena más rígido y formal; en una conversación informal entre amigos, como una frase que termina en 「かも」, solo vale 次第では: decir 「天気いかんでは」 sonaría demasiado rígido."
             }
           ]
         }
@@ -32423,7 +32389,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas significan «(tras haber hecho algo)…, después…» y unen dos hechos sucesivos",
+          "note": "Ambos significan «tras…, al final…»",
           "items": [
             {
               "id": "ageku",
@@ -32431,16 +32397,16 @@
               "this": [
                 {
                   "tag": "Neutro · se llega a una decisión",
-                  "tr": "Tras darle muchas vueltas, al final decidí irme a estudiar al extranjero."
+                  "tr": "Después de dudarlo mucho, al final decidí irme a estudiar al extranjero."
                 }
               ],
               "that": [
                 {
-                  "tag": "Mal resultado · en balde",
+                  "tag": "Esfuerzo inútil · decepción",
                   "tr": "Después de dudar un buen rato, al final no compré nada."
                 }
               ],
-              "explain": "Mira el resultado de la segunda parte: tras pensarlo o esforzarse en serio se llega a una conclusión o un logro → 末に, frecuente en la lengua escrita; tras mucho ajetreo se acaba en algo decepcionante (trabajo en balde, una pelea, un fracaso) → あげく, con un tono de «¡vaya por Dios!»."
+              "explain": "La primera mitad es igual: en las dos hubo muchas vueltas. Mira el resultado de la segunda mitad: una decisión o un logro, como 「決めた」 → 末に, más escrito y neutro; un final decepcionante en el que todo el esfuerzo fue en vano, como 「買わなかった」 → あげく, con un tono de fastidio."
             },
             {
               "id": "kekka",
@@ -32458,26 +32424,6 @@
                 }
               ],
               "explain": "Delante de 末に suele haber un proceso que lleva tiempo y esfuerzo, como 「悩む・迷う・長い話し合い・苦労」, y detrás a menudo aparece 「やっと・ついに」; 結果 se limita a contar con frialdad «se hizo A, y por eso B», y es lo más habitual en informes de investigaciones, revisiones o experimentos."
-            },
-            {
-              "id": "ta-ato-de",
-              "diff": "末に indica que, tras pasar por un proceso, «finalmente» se obtiene un resultado; たあとで solo marca el orden temporal. Para una simple secuencia no se puede usar 末に.",
-              "this": [
-                {
-                  "tag": "Proceso difícil · finalmente",
-                  "tr": "Tras fracasar muchas veces, por fin se terminó el nuevo producto."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Simple secuencia",
-                  "tr": "Después de comer me lavo los dientes."
-                }
-              ],
-              "wrong": {
-                "why": "Para una simple secuencia no se puede usar 末に"
-              },
-              "explain": "Fíjate en si lo primero es un «proceso»: experiencias que costaron mucho, como fracasar muchas veces o darle vueltas durante mucho tiempo, seguidas de 「ついに」 → 末に; acciones cotidianas como comer o bañarse que solo se ordenan en el tiempo → たあとで."
             }
           ]
         }
@@ -32488,24 +32434,28 @@
       "groups": [
         {
           "kind": "look",
-          "note": "〜たものではない ↔ 〜ものではない: solo se diferencian en una 「た」",
+          "note": "〜たものではない ↔ 〜ものではない: terminan igual; solo cambia lo que va delante: forma potencial + た o forma de diccionario",
           "items": [
             {
               "id": "mono-dewa-nai",
+              "title": "〜ものではない (amonestación)",
               "diff": "たものではない va tras la forma た del potencial y significa «es imposible…»; ものではない va tras la forma de diccionario y significa «no se debe…».",
               "this": [
                 {
                   "tag": "Imposible · desprecio",
-                  "tr": "Una comida tan mala es imposible de comer."
+                  "tr": "Esta sopa está tan salada que no hay quien se la beba."
                 }
               ],
               "that": [
                 {
                   "tag": "No se debe · consejo",
-                  "tr": "No se debe dejar comida en el plato."
+                  "tr": "La sopa no se toma haciendo ruido."
                 }
               ],
-              "explain": "Fíjate en lo que hay delante de 「もの」: forma た del potencial (食べられた, 見られた, 聞けた) → desprecio hacia algo, «es imposible…», a menudo con 「こんな」; forma de diccionario normal (残す, 言う) → consejo según el sentido común, «no se debe…», típico de un mayor hablando a alguien más joven."
+              "wrong": {
+                "why": "Para decir «es imposible…» hace falta la forma た del potencial, 「飲めた」; la forma た normal, 「飲んだ」, no sirve"
+              },
+              "explain": "Los dos terminan en 「ものではない」, así que mira el verbo de delante: forma た del potencial (飲めた、食べられた、聞けた) → たものではない, se queja de que algo es tan malo que «no hay manera de…»; forma de diccionario (飲む、言う) → ものではない, una amonestación según el sentido común, «no se debe…», que suelen decir los mayores a los jóvenes."
             }
           ]
         },
@@ -32515,10 +32465,10 @@
           "items": [
             {
               "id": "totemo-nai",
-              "diff": "たものではない indica que no se puede porque el objeto es malísimo, con desprecio; とても〜ない indica que uno no puede porque es demasiado (cantidad, dificultad).",
+              "diff": "たものではない solo sirve para despreciar algo: «tan malo que no se puede…»; とても〜ない solo dice «no puedo de ninguna manera», por cualquier motivo.",
               "this": [
                 {
-                  "tag": "Objeto malo · desprecio",
+                  "tag": "Desprecio por la cosa",
                   "tr": "Esta comida está tan mala que es imposible tragarla."
                 }
               ],
@@ -32528,7 +32478,7 @@
                   "tr": "Esta comida es demasiada; no hay manera de terminarla."
                 }
               ],
-              "explain": "Mira la causa: críticas a la calidad de algo, como 「まずくて」 o 「下手で」 → たものではない, con el sobrentendido «esto no vale»; algo que supera la propia capacidad, como 「多すぎて」 o 「難しすぎて」 → とても〜ない: el problema es que uno no puede, no se está criticando la cosa."
+              "explain": "En una frase que critica que algo es malo, como 「まずくて」, valen los dos: たものではない lleva un fuerte desprecio y asco, y とても食べられない solo dice que no se puede comer. Cuando el motivo es que hay demasiado o es demasiado difícil, como 「多すぎて」「難しすぎて」, y la cosa en sí no es mala, solo vale とても〜ない."
             }
           ]
         }
@@ -32539,7 +32489,7 @@
       "groups": [
         {
           "kind": "root",
-          "note": "Ambas vienen de 「ところ」 (所, «lugar»): sitúan un hecho en un «punto del tiempo»",
+          "note": "Ambos vienen de 「ところ（所）」: su sentido original es «lugar», y se amplió al «momento» en que está algo",
           "items": [
             {
               "id": "tokoro-da",
@@ -32556,8 +32506,14 @@
                   "tr": "El tren acaba de salir."
                 }
               ],
-              "explain": "Mira lo que va tras ところ: si lleva 「で」 y sigue otra media frase, normalmente negativa o de «no sirve de nada» → «aunque…»; si lleva 「だ」 y cierra la frase → «acabar de…»."
-            },
+              "explain": "Los dos vienen de 「ところ」: su sentido original es «lugar», y se amplió a «el punto» al que ha llegado algo. たところだ es «estar en el punto justo después de terminar la acción» → acabar de, y 「だ」 cierra la frase; たところで es «aun llegado el punto de haberlo hecho», la situación que sigue no cambia (間に合わない) → aunque…, no sirve de nada."
+            }
+          ]
+        },
+        {
+          "kind": "look",
+          "note": "〜たところで ↔ 〜たところ: solo se diferencian en un 「で」",
+          "items": [
             {
               "id": "ta-tokoro-result",
               "diff": "Tras たところで viene el juicio «no sirve de nada»; tras たところ、 viene el hecho «al hacerlo, resultó que…».",
@@ -32573,7 +32529,7 @@
                   "tr": "Le pregunté al profesor y me lo explicó enseguida."
                 }
               ],
-              "explain": "Solo se diferencian en una 「で」: tras たところ、 siempre viene un resultado que ya ocurrió, y toda la frase está en pasado; tras たところで viene un juicio negativo o de «no sirve de nada», y delante suele aparecer 「今さら」 o 「いくら」."
+              "explain": "Solo se diferencian en un 「で」, así que mira la segunda mitad: después de たところ、 va lo que de verdad pasó tras hacerlo (すぐ教えてくれた), y toda la frase habla del pasado; después de たところで va un juicio de que «no sirve de nada» (もう遅い), a menudo con 「今さら」「いくら」 delante."
             }
           ]
         },
@@ -32597,23 +32553,6 @@
                 }
               ],
               "explain": "Las dos frases significan lo mismo; fíjate en el tono: entre amigos, con 「よ」 al final → たって; en textos o situaciones más formales → たところで."
-            },
-            {
-              "id": "te-mo-hajimaranai",
-              "diff": "たところで va en mitad de la frase y puede ir seguido de muchos juicios negativos; ても始まらない es una expresión fija que va al final como juicio.",
-              "this": [
-                {
-                  "tag": "En medio · sigue un juicio",
-                  "tr": "A estas alturas, por mucho que te arrepientas, no cambiará nada."
-                }
-              ],
-              "that": [
-                {
-                  "tag": "Al final · expresión fija",
-                  "tr": "A estas alturas, arrepentirse no sirve de nada."
-                }
-              ],
-              "explain": "Mira dónde aparece el «no sirve de nada»: ても始まらない es por sí mismo el final de la frase y significa «hacerlo no sirve de nada»; たところで es solo la primera mitad, y después hay que decir el resultado concreto (何も変わらない, 間に合わない)."
             },
             {
               "id": "to-shita-tokoro-de",
@@ -32646,21 +32585,22 @@
           "items": [
             {
               "id": "ta-mono-da",
+              "title": "〜たものだ (recordar el pasado)",
               "thisTitle": "〜たいものだ",
               "diff": "たいものだ es «¡cómo me gustaría…!», un deseo para el futuro; たものだ es «antes solía…», un recuerdo del pasado.",
               "this": [
                 {
                   "tag": "Deseo · futuro",
-                  "tr": "¡Cómo me gustaría volver a nadar algún día en ese mar!"
+                  "tr": "Algún día me encantaría volver a ver una película en ese cine."
                 }
               ],
               "that": [
                 {
                   "tag": "Recuerdo · pasado",
-                  "tr": "De niño solía nadar a menudo en ese mar."
+                  "tr": "De niño, solía ver películas en ese cine."
                 }
               ],
-              "explain": "Mira las palabras de tiempo y la forma del verbo: 「いつか」 + forma ます (泳ぎ) + たい → deseo para el futuro; 「子どもの頃」 + forma た (泳いだ) → recuerdo nostálgico de lo que se hacía a menudo. Solo cambia una 「い」: una mira al futuro y la otra al pasado."
+              "explain": "Solo cambia una 「い」, así que mira de qué momento habla la frase: algo futuro, como 「いつか」 → 見たいものだ, el deseo «cuánto me gustaría…»; recordar algo que se hacía a menudo, como 「子どもの頃」 → 見たものだ, «solía…». Con los verbos godan también cambia la forma de delante (泳ぎたい／泳いだ), pero con los verbos ichidan (見る、食べる) solo cambia esa 「い」, y es donde más fácil es confundirlos."
             }
           ]
         },
@@ -32693,16 +32633,16 @@
               "this": [
                 {
                   "tag": "A la sociedad · con emoción",
-                  "tr": "¡Ojalá los jóvenes leyeran más libros!"
+                  "tr": "Ojalá los jóvenes dijeran más lo que piensan."
                 }
               ],
               "that": [
                 {
                   "tag": "A una persona concreta",
-                  "tr": "Quiero que mi hijo lea más libros."
+                  "tr": "Quiero que mi hijo diga más lo que piensa."
                 }
               ],
-              "explain": "Mira a quién se dirige y el tono: un deseo exclamativo dirigido a colectivos como 「若い人」 o 「政府」, con algo de sermón → てほしいものだ, frecuente en textos y discursos; una petición propia a una persona concreta del entorno → てほしい. 「てもらいたい」 funciona igual."
+              "explain": "Mira a quién va dirigido y el tono: un deseo reflexivo dirigido a un grupo como 「若い人」 o 「政府」, algo sermoneador → てほしいものだ, frecuente en textos y discursos; decirle lo que quieres a una persona concreta y cercana, como 「息子」 → てほしい. 「てもらいたい」 funciona igual."
             },
             {
               "id": "nai-mono-ka",
@@ -32756,13 +32696,13 @@
               "this": [
                 {
                   "tag": "Sereno · con aires",
-                  "tr": "Tú, ven aquí un momento."
+                  "tr": "Tú, ven a mi cuarto."
                 }
               ],
               "that": [
                 {
                   "tag": "Directo · brusco",
-                  "tr": "¡Eh, ven aquí!"
+                  "tr": "¡Eh, ven a mi cuarto!"
                 }
               ],
               "explain": "Mira cómo se llama al otro y el tono: 「おい」 + imperativo es una orden brusca entre hombres o en una urgencia; 「君」 + たまえ es una orden desde arriba pero con elegancia, y va tras la forma ます (来 + たまえ). Los demás imperativos (食べろ, 行け) son igual de directos."
@@ -32821,7 +32761,7 @@
       "groups": [
         {
           "kind": "meaning",
-          "note": "Ambas sirven para pedir a alguien que haga algo",
+          "note": "Ambos expresan una petición: «por favor…»",
           "items": [
             {
               "id": "te-kudasai",
@@ -32841,21 +32781,22 @@
               "explain": "Mira a quién se dirige: 「〜ちゃん」, la familia o amigos íntimos → てちょうだい, sobre todo en boca de mujeres o personas mayores; desconocidos, clientes o superiores → solo てください. Decirle てちょうだい a un superior sería una falta de respeto."
             },
             {
-              "id": "nasai",
-              "diff": "てちょうだい es un ruego de tono suave, normalmente porque el hablante quiere que el otro lo haga; なさい es una orden o enseñanza, sin margen para negociar.",
+              "id": "te-moraemasenka",
+              "title": "〜てくれない？ (petición coloquial)",
+              "diff": "Las dos son peticiones entre personas cercanas; てちょうだい suele ser el tono cariñoso de una mujer o de un mayor hacia un niño o un familiar; てくれない？ lo usan hombres y mujeres, y pide en forma de pregunta.",
               "this": [
                 {
-                  "tag": "Ruego · tono suave",
-                  "tr": "Mamá está muy ocupada ahora, así que estate un poco calladito, ¿vale?"
+                  "tag": "Cariñoso · tono de mujer o de mayor",
+                  "tr": "Ken, llévame esta caja, anda."
                 }
               ],
               "that": [
                 {
-                  "tag": "Orden · enseñanza",
-                  "tr": "Ya son las nueve. Venga, a la cama."
+                  "tag": "Preguntando · lo usa cualquiera",
+                  "tr": "Oye, ¿me llevas esta caja?"
                 }
               ],
-              "explain": "Mira de quién es la necesidad: la madre está ocupada o cansada y le pide al niño que colabore → てちょうだい; se le enseña al niño lo que debe hacer según las normas (寝る, 勉強する) → なさい, una orden innegociable."
+              "explain": "Significan lo mismo, así que mira quién habla y el tono: llamar a un niño 「〜ちゃん」, o en familia, una mujer o una persona mayor que pide algo con cariño → てちょうだい; cualquiera, hombre o mujer, que le pregunta a un amigo o compañero «¿me ayudas?» → てくれない？, con entonación ascendente al final."
             }
           ]
         }
