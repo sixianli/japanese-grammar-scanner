@@ -47417,6 +47417,118 @@
           "explain": "ように見える သည် အပြင်ပန်းက ပေးသော အထင်အမြင်ကိုသာ ပြောပြီး နောက်တွင် 「が、実は……」ဖြင့် ပြန်ငြင်းလေ့ ရှိသည်။ とみえる သည် လက္ခဏာ (何度もあくびをしている) ကို အခြေခံ၍ ရသော ဆုံးဖြတ်ချက်ဖြစ်ပြီး ပြောသူက အခြေခံအားဖြင့် ယုံကြည်သည်၊ 「よほど」နှင့် မကြာခဏ တွဲပြီး စာပေဆန်သည်။"
         }
       }
+    },
+    {
+      "point": "tokoro-wo-miru-to",
+      "kind": "meaning",
+      "reason": "意思差不多的要求替换测试成立、差别在同一意思内部：ところを見ると 在句中提出根据、后面还要接推测，とみえる 是句末推测本身，两者能在同一句里共现，不能互换，差别只是句法位置分工（标准「意思差不多的」第3、4条）。看过的替换候选：kara-shite（〜からして，从…来判断）只接名词，和组里已有的 kara-miru-to 讲的是同一个接续差别，重复无新卖点；to-mieru 第2义项「〜とみえて」先说推测再说根据，同样不能与 ところを見ると 互换；rashii-typical／you-da 都是句末推测，问题相同。都不合格，组里仍留 kara-miru-to、tokoro-kara 两条。",
+      "date": "2026-11-21",
+      "content": {
+        "zh-Hans": {
+          "id": "to-mieru",
+          "diff": "ところを見ると 在句子前半提出根据；とみえる 放在句尾，本身就是推测。",
+          "this": [
+            {
+              "ja": "何度:なんど|電話:でんわ|しても|出:で|ない|*ところを|*見:み|*ると|、|まだ|寝:ね|ている|らしい|。",
+              "tag": "根据在前 · 再推测",
+              "tr": "打了好几次电话都不接，看来他还在睡。"
+            }
+          ],
+          "that": [
+            {
+              "ja": "何度:なんど|電話:でんわ|しても|出:で|ない|。|まだ|寝:ね|ている|*とみえる|。",
+              "tag": "放句尾 · 推测本身",
+              "tr": "打了好几次电话都不接。看样子他还在睡。"
+            }
+          ],
+          "explain": "看位置：ところを見ると 在句子前半，后面还要接「らしい」「ようだ」才完整；とみえる 放在句末，前面直接是推测的内容，根据通常在前一句。"
+        },
+        "en": {
+          "id": "to-mieru",
+          "diff": "ところを見ると gives the evidence in the first half of the sentence; とみえる sits at the end and is itself the guess.",
+          "this": [
+            {
+              "tag": "Evidence first · then the guess",
+              "tr": "He's not answering no matter how many times I call, so he must still be asleep."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Sentence end · the guess itself",
+              "tr": "He's not answering no matter how many times I call. He must still be asleep."
+            }
+          ],
+          "explain": "Look at the position: ところを見ると is in the first half, and needs 「らしい」「ようだ」 after it to be complete; とみえる sits at the end, directly after the content of the guess, with the evidence usually in the previous sentence."
+        },
+        "ko": {
+          "id": "to-mieru",
+          "diff": "ところを見ると는 문장 앞부분에서 근거를 내놓고, とみえる는 문장 끝에 놓여 그 자체가 추측이다.",
+          "this": [
+            {
+              "tag": "근거가 먼저 · 이어서 추측",
+              "tr": "몇 번을 전화해도 받지 않는 걸 보니 아직 자고 있는 것 같다."
+            }
+          ],
+          "that": [
+            {
+              "tag": "문장 끝 · 추측 자체",
+              "tr": "몇 번을 전화해도 받지 않는다. 아직 자고 있는 모양이다."
+            }
+          ],
+          "explain": "위치를 보자. ところを見ると는 문장 앞부분에 있어 뒤에 「らしい」「ようだ」가 더 붙어야 완성된다. とみえる는 문장 끝에 놓이고 앞에 바로 추측 내용이 오며 근거는 보통 앞 문장에 있다."
+        },
+        "es": {
+          "id": "to-mieru",
+          "diff": "ところを見ると presenta la base en la primera mitad de la frase; とみえる va al final y es en sí la suposición.",
+          "this": [
+            {
+              "tag": "Primero la base · luego la suposición",
+              "tr": "Le he llamado varias veces y no contesta; parece que todavía está durmiendo."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Al final · la suposición misma",
+              "tr": "Le he llamado varias veces y no contesta. Por lo visto, sigue durmiendo."
+            }
+          ],
+          "explain": "Mira la posición: ところを見ると va en la primera mitad, y para completar la frase hace falta 「らしい」 o 「ようだ」 detrás; とみえる va al final, justo tras el contenido supuesto, y la base suele estar en la frase anterior."
+        },
+        "vi": {
+          "id": "to-mieru",
+          "diff": "ところを見ると đưa ra căn cứ ở nửa đầu câu; とみえる đặt ở cuối câu, bản thân nó là suy đoán.",
+          "this": [
+            {
+              "tag": "Căn cứ trước · rồi suy đoán",
+              "tr": "Gọi mấy lần rồi mà không nghe máy, xem ra anh ấy vẫn đang ngủ."
+            }
+          ],
+          "that": [
+            {
+              "tag": "Đặt cuối câu · chính là suy đoán",
+              "tr": "Gọi mấy lần rồi mà không nghe máy. Xem chừng anh ấy vẫn đang ngủ."
+            }
+          ],
+          "explain": "Xem vị trí: ところを見ると ở nửa đầu câu, phía sau còn phải có 「らしい」「ようだ」 mới trọn vẹn; とみえる đặt ở cuối câu, phía trước trực tiếp là nội dung suy đoán, căn cứ thường nằm ở câu trước."
+        },
+        "my": {
+          "id": "to-mieru",
+          "diff": "ところを見ると သည် ဝါကျ၏ ရှေ့ပိုင်းတွင် အထောက်အထားကို တင်ပြသည်။ とみえる ကို ဝါကျအဆုံးတွင် ထားပြီး ကိုယ်တိုင်က ခန့်မှန်းချက် ဖြစ်သည်။",
+          "this": [
+            {
+              "tag": "အထောက်အထား ရှေ့ · ပြီးမှ ခန့်မှန်း",
+              "tr": "ဖုန်း ဘယ်နှစ်ခါ ဆက်ဆက် မကိုင်ဘူး ဆိုတော့ သူ အိပ်နေတုန်းပဲ ထင်တယ်။"
+            }
+          ],
+          "that": [
+            {
+              "tag": "ဝါကျအဆုံး · ခန့်မှန်းချက်ကိုယ်တိုင်",
+              "tr": "ဖုန်း ဘယ်နှစ်ခါ ဆက်ဆက် မကိုင်ဘူး။ ကြည့်ရတာ သူ အိပ်နေတုန်းပဲ။"
+            }
+          ],
+          "explain": "နေရာကို ကြည့်ပါ - ところを見ると သည် ဝါကျ၏ ရှေ့ပိုင်းတွင်ရှိပြီး နောက်တွင် 「らしい」「ようだ」 ထပ်ဆက်မှ ပြည့်စုံသည်။ とみえる ကို ဝါကျအဆုံးတွင် ထားပြီး ရှေ့တွင် ခန့်မှန်းသည့် အကြောင်းအရာကို တိုက်ရိုက်ဆက်ကာ အထောက်အထားမှာ အများအားဖြင့် ရှေ့ဝါကျတွင် ရှိသည်။"
+        }
+      }
     }
   ]
 }
