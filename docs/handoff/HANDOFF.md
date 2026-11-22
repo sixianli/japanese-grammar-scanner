@@ -263,7 +263,9 @@ Build 17 包含的内容（详见 PR #6 描述）：Build 16 的全部反馈修�
 - Build 18：版本号 1.0（Andy 决定首发改回 1.0），提交 `e3acedc`，单元测试和 e2e 4 组全绿后上传 App Store Connect 成功。
 - Build 19（分支 `claude/project-thread-93x500`，PR #8）：Build 18 反馈 1、2 已实现（首页复习一行 + 铃铛 + 樱花飘过；收藏樱花 + 巾着标签 + 飘进收藏）；商店文案去掉「完全离线」、补复习、写明免费；合入相近语法按质量规范全量重做（PR #12，`fac9984`，两道内容门槛通过）。
 - 发现并修好：CI 宽屏模拟器上导航栏按钮挪到右侧竖排时，自绘的樱花按钮留在页面右上角、往下滑就消失；改成图片资源 SakuraOutline / SakuraFilled 做按钮标签（定向 e2e 已通过）。
-- 待办：整套 CI 全绿后发 Build 19（版本 1.0）；Andy 已同意测试全绿后把 #12→#10→#8→#6→#5 逐个合进 main。
+- Build 19：1.0 (19)，提交 `9245e28`，单元测试和 e2e 全绿（2 组因 CI 机器故障重跑后通过）后上传成功。
+- 2026-11-22 事故：1.0 的构建在 TestFlight 首页看不到（首页只显示版本号最高的 1.3，1.0 的在「以前のビルド」里）。Andy 改定**上架版本用 1.4**。门槛：`release.yml` 新增 `version-check` 任务（`tools/require_version_not_lower.py`），版本号低于 TestFlight 上已有的最高版本就拦下；单元测试 `tools/tests/test_require_version_not_lower.py`。
+- PR #8 已改为直接合进 main（本分支已包含 #5、#6、#10、#12 的全部提交并合并了 main），Andy 已同意测试全绿后合。
 
 ## Build 18 体验反馈清单（等用户说「反馈完了」再统一改）
 

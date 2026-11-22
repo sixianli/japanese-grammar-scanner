@@ -36,7 +36,7 @@
 
 ## 5. 上传构建
 
-先把 PR 合并到 `main`，然后：仓库 → **Actions** → **Release to App Store Connect** → **Run workflow** → 填版本号 `1.0` → Run。
+先把 PR 合并到 `main`，然后：仓库 → **Actions** → **Release to App Store Connect** → **Run workflow** → 填版本号 `1.4`（不能低于 TestFlight 上已有的版本，否则发版会被拦下） → Run。
 成功后 10–30 分钟，App Store Connect → 你的 App → **TestFlight** 会出现该构建；可先用 TestFlight 在自己 iPhone 上试用。
 
 ## 5.5 配置内购（免费试用 + 一次性买断）
@@ -66,7 +66,7 @@
 
 ## 6. 填写商店信息并提交审核
 
-App Store Connect → 你的 App → **App Store** 标签页 → 1.0 版本：
+App Store Connect → 你的 App → **App Store** 标签页 → 1.4 版本：
 
 - 截图：从 CI 的 **iOS Build & Test** → **screenshots** 产物下载（6.9 英寸 iPhone 尺寸，可直接上传）
 - 宣传文本、描述、关键词、支持网址、隐私政策网址：复制 `docs/appstore/metadata.md`

@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "版本号 (MARKETING_VERSION)，如 1.0"
+        description: "版本号 (MARKETING_VERSION)，如 1.4；不能低于 TestFlight 上已有的版本"
         required: true
-        default: "1.0"
+        default: "1.4"
       dry_run:
         description: "只归档并检查，不上传"
         type: boolean
@@ -21,7 +21,22 @@ permissions:
   checks: read
 
 jobs:
+  version-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install pyjwt cryptography
+      - name: Version must not be lower than TestFlight
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+          BUNDLE_ID: ${{ vars.BUNDLE_ID }}
+        run: python3 tools/require_version_not_lower.py "${{ inputs.version }}"
+
   upload:
+    needs: version-check
     runs-on: xcode-27
     timeout-minutes: 60
     steps:
