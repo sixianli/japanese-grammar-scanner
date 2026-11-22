@@ -1,13 +1,11 @@
 import XCTest
 
-/// 识别结果页：高亮框、放大查看（按钮 / 双指 / 下滑关闭）、手动修正文字、扫描页相册
 final class ScanResultTests: E2ETestCase {
     func testHighlightBoxOpensGrammarOrChooser() {
-        openSampleFromHome()
+        openSamplePage()
         let box = id("highlight.box")
         wait(box, "示例书页上应有高亮框")
         box.tap()
-        // 一个框里有多个语法点时先弹出选择
         let detail = detailScreen
         if !detail.waitForExistence(timeout: 4) {
             let options = app.buttons.matching(NSPredicate(format: "label CONTAINS '(N'"))
@@ -17,14 +15,12 @@ final class ScanResultTests: E2ETestCase {
         }
         back()
         waitForScanResult()
-        // 回归（Build 16）：返回后刚才点的框还停在「选中」样式，和其他框不一样，看起来像 bug。
-        // 现在所有框统一淡橙色实线；点中只在按下那一下加深，返回后全部恢复同一种样式
         wait(id("highlight.box"), "返回后框仍在")
         XCTAssertFalse(id("highlight.box.selected").waitForExistence(timeout: 2), "返回后不应留有选中样式的框")
     }
 
     func testZoomButtonDoubleTapAndClose() {
-        openSampleFromHome()
+        openSamplePage()
         id("result.zoomButton").tap()
         wait(id("zoom.close"), "点放大按钮应进入全屏")
         app.doubleTap()
@@ -35,7 +31,7 @@ final class ScanResultTests: E2ETestCase {
     }
 
     func testPinchOpensZoomAndPinchInCloses() {
-        openSampleFromHome()
+        openSamplePage()
         id("result.image").pinch(withScale: 2.5, velocity: 2)
         wait(id("zoom.close"), "在结果页双指放大应进入全屏")
         app.pinch(withScale: 0.4, velocity: -2)
@@ -43,7 +39,7 @@ final class ScanResultTests: E2ETestCase {
     }
 
     func testSwipeDownClosesZoom() {
-        openSampleFromHome()
+        openSamplePage()
         id("result.zoomButton").tap()
         wait(id("zoom.close"), "进入全屏")
         app.swipeDown(velocity: .fast)
@@ -51,7 +47,7 @@ final class ScanResultTests: E2ETestCase {
     }
 
     func testEditTextAndReanalyze() {
-        openSampleFromHome()
+        openSamplePage()
         scrollTo(id("result.editText"))
         id("result.editText").tap()
         let editor = id("result.editor")
@@ -65,7 +61,7 @@ final class ScanResultTests: E2ETestCase {
     }
 
     func testEditTextCancel() {
-        openSampleFromHome()
+        openSamplePage()
         scrollTo(id("result.editText"))
         id("result.editText").tap()
         wait(id("result.editor"), "应打开修正文字")
@@ -83,7 +79,7 @@ final class ScanResultTests: E2ETestCase {
     }
 
     func testResultRowsAllOpenDetail() {
-        openSampleFromHome()
+        openSamplePage()
         let rows = ids("result.grammarRow")
         let count = min(rows.count, 3)
         XCTAssertGreaterThan(count, 0)
@@ -97,9 +93,8 @@ final class ScanResultTests: E2ETestCase {
         }
     }
 
-    /// 从识别结果进入讲解：顶部显示「你扫到的：…」，对应的用法高亮，点一下跳到该用法
     func testScannedMatchBannerOnDetail() {
-        openSampleFromHome()
+        openSamplePage()
         let rows = ids("result.grammarRow")
         wait(rows.firstMatch, "应列出语法点")
         var found = false
@@ -115,7 +110,6 @@ final class ScanResultTests: E2ETestCase {
                 XCTAssertTrue(text(containing: "你扫到的").exists, "横幅应写明「你扫到的」")
                 if id("detail.senseRow.matched").exists {
                     found = true
-                    // 点横幅跳到该用法的详细讲解（大纲里的那一行会滚出屏幕）
                     banner.tap()
                     XCTAssertTrue(detailScreen.waitForExistence(timeout: 3), "跳转后仍在讲解页")
                 }
@@ -128,15 +122,13 @@ final class ScanResultTests: E2ETestCase {
         XCTAssertTrue(found, "示例书页里至少有一个多用法语法点应定位到具体用法")
     }
 
-    /// 从搜索进入的讲解页不显示「你扫到的」
     func testNoScannedBannerFromSearch() {
         openDetailBySearch("ようになる")
         XCTAssertFalse(id("detail.scannedMatch").waitForExistence(timeout: 2))
     }
 
-    /// 一个框里有多个语法点时，选项后面附上各自命中的原文
     func testChooserOptionsShowMatchedText() {
-        openSampleFromHome()
+        openSamplePage()
         let boxes = ids("highlight.box")
         wait(boxes.firstMatch, "示例书页上应有高亮框")
         let options = app.buttons.matching(NSPredicate(format: "label CONTAINS '(N'"))
@@ -150,7 +142,6 @@ final class ScanResultTests: E2ETestCase {
                 for j in 0..<options.count {
                     XCTAssertTrue(options.element(boundBy: j).label.contains("「"), "选项应附上命中的原文：\(options.element(boundBy: j).label)")
                 }
-                // iOS 26 的选择框没有「取消」按钮，点框外关闭
                 let cancel = app.buttons["取消"].firstMatch
                 if cancel.exists { cancel.tap() } else { app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.06)).tap() }
                 break

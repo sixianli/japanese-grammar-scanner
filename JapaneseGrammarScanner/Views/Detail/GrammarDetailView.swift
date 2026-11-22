@@ -1,24 +1,15 @@
 import SwiftUI
 
-/// 语法点详细讲解：一整页连续阅读的讲义（不分卡片），铺满屏幕宽度，只保留标准阅读边距。
-/// 文字颜色规则（Build 17 反馈 8，见 CLAUDE.md「界面文字颜色」）：要读懂必须读的字用主文字色；
-/// 翻译、小节标签、出处小字用一种灰（.secondary）；主题色只给能点的东西和例句里的语法高亮；.tertiary 只用于箭头图标。
 struct GrammarDetailView: View {
     let grammarID: String
-    /// 从扫描结果打开时，原文里命中的文字（用于显示「你扫到的」并找出对应的用法）
     var matchedText: String? = nil
-    /// 从首页「快要忘了」进来复习时，之后还要复习的语法（nil = 不是从复习进来的）
     var reviewQueue: [String]? = nil
     @EnvironmentObject private var library: GrammarLibrary
     @EnvironmentObject private var favorites: FavoritesStore
     @EnvironmentObject private var entitlements: EntitlementStore
     @EnvironmentObject private var history: HistoryStore
-    /// 滚动相关的状态放在单独的对象里：只有标题浮层读取它，滚动时不会让整页内容重新排版（否则会卡顿、闪烁）。
     @State private var scroll = DetailScrollModel()
-    /// iOS 26+：自己画的标题栏在导航栏区域以下的高度（标题一行或两行 + 等级），页面标题要从它下面开始
-    @State private var barContentHeight: CGFloat = TitleBarLayout.navBarHeight
 
-    /// iOS 26+ 导航栏透明（Liquid Glass），标题可以直接“飞”进导航栏；更早的系统用淡入方式。
     private var usesFlyingTitle: Bool {
         if #available(iOS 26.0, *) { return true }
         return false
@@ -27,8 +18,6 @@ struct GrammarDetailView: View {
     var body: some View {
         if let point = library.point(id: grammarID) {
             content(point)
-                // 复习自评条只在从首页「快要忘了」进来时出现；从语法库、搜索、扫描结果等打开都不出现。
-                // 复习时隐藏底部标签栏，自评条独占底部。
                 .safeAreaInset(edge: .bottom, spacing: 0) {
                     if let reviewQueue {
                         ReviewBar(grammarID: point.id, queue: reviewQueue)
@@ -50,11 +39,9 @@ struct GrammarDetailView: View {
         return ScrollViewReader { proxy in
             ScrollView {
                 if usesFlyingTitle {
-                    // 页面大标题正常随内容滚走，滚到标题栏下面就被不透明的标题栏盖住；
-                    // 标题栏里的小标题按滚动距离一比一从下往上移到正中（Build 17 反馈 1）
                     header(p)
                         .padding(.horizontal, Theme.margin)
-                        .padding(.top, TitleBarLayout.headerTopPadding(barContentHeight: barContentHeight))
+                        .padding(.top, TitleBarLayout.topPadding)
                 }
                 LazyVStack(alignment: .leading, spacing: 0) {
                     if !usesFlyingTitle {
@@ -64,7 +51,6 @@ struct GrammarDetailView: View {
                             })
                     }
 
-                    // 从扫描结果进来：先告诉用户扫到的原文对应这里的哪个用法
                     let focus = matchedText.flatMap { Self.bestSense(for: $0, in: p) }
                     if let matchedText {
                         ScannedMatchBanner(matched: matchedText, senseIndex: focus,
@@ -74,11 +60,9 @@ struct GrammarDetailView: View {
                         .padding(.top, 14)
                     }
 
-                    // 概述
                     RubyText(explanation: p.meaning, style: .init(font: .body, lineSpacing: 7))
                         .padding(.top, 14)
 
-                    // 义项目录：整行可点，跳到下方对应用法
                     SenseOutline(point: p, showsLevels: showsSenseLevels, tappable: entitlements.hasFullAccess,
                                  highlighted: focus) { i in
                         withAnimation(.easeInOut) { proxy.scrollTo("sense-\(i)", anchor: .top) }
@@ -88,7 +72,6 @@ struct GrammarDetailView: View {
                     if !entitlements.hasFullAccess {
                         LockedContentCard().padding(.top, 28)
                     } else {
-                        // 每个义项作为单独的一项，长页面只排版看得见的部分
                         DocSectionTitle("用法", icon: "text.book.closed")
                             .padding(.top, 40)
                             .padding(.bottom, 14)
@@ -117,7 +100,6 @@ struct GrammarDetailView: View {
                             }
                         }
 
-                        // 词源与组词逻辑内容高度重合，合并为一节；组词逻辑更完整，优先使用
                         let origin = p.formation.isEmpty ? p.etymology : p.formation
                         if !origin.isEmpty {
                             DocSection("来源与构成", icon: "puzzlepiece.extension") {
@@ -126,7 +108,6 @@ struct GrammarDetailView: View {
                         }
 
                         if let contrasts = library.contrasts(for: p.id) {
-                            // 新版：分三组 + 对比例句。新版资料里没有合格内容（groups 为空）时整节不显示，不退回旧版列表
                             if !contrasts.groups.isEmpty {
                                 DocSection("相近语法", icon: "arrow.triangle.branch", anchor: "section-similar") {
                                     ContrastSection(contrasts: contrasts, currentTitle: p.titleForm)
@@ -148,7 +129,6 @@ struct GrammarDetailView: View {
                 .padding(.top, usesFlyingTitle ? 0 : 8)
                 .padding(.bottom, 16)
 
-                // 讲解有误时的反馈入口
                 Button {
                     NotificationCenter.default.post(name: .showFeedback, object: "grammar: \(p.id) \(p.titleForm)")
                 } label: {
@@ -169,18 +149,16 @@ struct GrammarDetailView: View {
             .modifier(ScrollOffsetTracker(scroll: scroll))
             .overlay(alignment: .top) {
                 if usesFlyingTitle {
-                    DetailTitleBar(title: p.titleForm, level: p.level, scroll: scroll, contentHeight: $barContentHeight)
+                    FlyingTitle(point: p, scroll: scroll)
                 }
             }
             .modifier(DemoScrollOffset())
             .onAppear {
-                // CI 截图：滚动到指定位置
                 if let anchor = DemoMode.scrollAnchor {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { proxy.scrollTo(anchor, anchor: .top) }
                 }
             }
             .onPreferenceChange(HeaderFrameKey.self) { [scroll] frame in
-                // 旧系统：以初始位置为基准，标题向上移出自身高度的过程中，进度从 0 平滑变到 1
                 if scroll.headerBaseline == nil { scroll.headerBaseline = frame.minY }
                 let moved = (scroll.headerBaseline ?? frame.minY) - frame.minY
                 let progress = min(1, max(0, moved / max(frame.height, 1)))
@@ -203,14 +181,16 @@ struct GrammarDetailView: View {
                     }
                 }
             }
-            ToolbarItem(placement: .topBarTrailing) {
-                FavoriteSakuraButton(id: p.id)
-                    .accessibilityIdentifier("detail.favorite")
+            if !favorites.isFavorite(p.id) {
+                ToolbarItem(placement: .topBarTrailing) {
+                    FavoriteSakuraButton(id: p.id, flightStyle: reviewQueue == nil ? .intoPouch : .away,
+                                         confirmsSaved: reviewQueue != nil)
+                        .accessibilityIdentifier("detail.favorite")
+                }
             }
         }
     }
 
-    /// 一个义项可能有多种接续方式（用「；」分隔），拆成多行显示。
     static func connectionLines(_ s: String) -> [String] {
         let parts = s.split(whereSeparator: { $0 == "；" || $0 == ";" })
             .map { $0.trimmingCharacters(in: .whitespaces) }
@@ -218,20 +198,39 @@ struct GrammarDetailView: View {
         return parts.isEmpty ? [s] : parts
     }
 
-    /// 页面顶部：标题居中（汉字上方注假名），下面一行居中放等级和「必考」。
     private func header(_ p: GrammarPoint) -> some View {
         VStack(alignment: .center, spacing: 10) {
-            RubyText(japanese: p.titleForm, style: .init(font: .largeTitle.bold(), rubySize: 12, lineSpacing: 2,
-                                                       alignment: .center))
-            DetailTags(level: p.level, mustKnow: p.frequency == .high)
+            headerTitle(p)
+            HStack(spacing: 8) {
+                DetailTags(level: p.level, mustKnow: p.frequency == .high)
+                FavoritedTag(id: p.id)
+            }
         }
         .frame(maxWidth: .infinity)
-        // 端到端测试用：页面最顶部的标记（label 是语法标题），用来确认打开的是哪个语法、页面是否在顶部
-        .overlay(alignment: .top) {
+        .overlay(alignment: .bottomLeading) {
             Color.clear.frame(width: 2, height: 2)
                 .accessibilityElement()
                 .accessibilityLabel(Text(verbatim: p.titleForm))
                 .accessibilityIdentifier("detail.title")
+        }
+    }
+
+    static let titleStyle = RubyText.Style(font: .largeTitle.bold(), rubySize: 12, lineSpacing: 2, alignment: .center)
+
+    @ViewBuilder
+    private func headerTitle(_ p: GrammarPoint) -> some View {
+        let title = RubyText(japanese: p.titleForm, style: Self.titleStyle)
+        if usesFlyingTitle {
+            title
+                .opacity(0)
+                .accessibilityHidden(true)
+                .onGeometryChange(for: CGSize.self) { $0.size } action: { [scroll] size in
+                    if abs(size.width - scroll.titleSize.width) > 0.5 || abs(size.height - scroll.titleSize.height) > 0.5 {
+                        scroll.titleSize = size
+                    }
+                }
+        } else {
+            title
         }
     }
 
@@ -268,7 +267,6 @@ struct GrammarDetailView: View {
 
 // MARK: - 组件
 
-/// 讲义中的一节：线条图标 + 标题 + 内容，节与节之间只用留白分隔，不分卡片。
 private struct DocSection<Content: View>: View {
     let title: LocalizedStringKey
     let icon: String
@@ -293,7 +291,6 @@ private struct DocSection<Content: View>: View {
     }
 }
 
-/// 义项序号：主题色粗体数字 + 主题色浅底实心圆（Build 17 反馈 6：原来的灰色细圈不够显眼）。
 private struct NumberBadge: View {
     let number: Int
 
@@ -307,7 +304,6 @@ private struct NumberBadge: View {
     }
 }
 
-/// 列表行按下时整行轻微变暗（iOS 系统列表的反馈方式）。
 struct RowPressStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
@@ -320,7 +316,6 @@ struct RowPressStyle: ButtonStyle {
     }
 }
 
-/// 义项目录：编号 + 义项名 + 接续；整行可点，右侧淡灰「›」提示可跳转。
 private struct SenseOutline: View {
     let point: GrammarPoint
     let showsLevels: Bool
@@ -370,7 +365,6 @@ private struct SenseOutline: View {
     }
 }
 
-/// 一个义项的完整讲解：编号 + 标题，下面依次是意思讲解、接续、例句。
 private struct SenseBlock: View {
     let index: Int
     let sense: GrammarPoint.Sense
@@ -412,7 +406,6 @@ private struct SenseBlock: View {
     }
 }
 
-/// 日语例句（注音 + 语法部分用主色标出）+ 译文。
 private struct ExampleView: View {
     let example: GrammarPoint.Example
     let regexes: [NSRegularExpression]
@@ -440,7 +433,6 @@ private struct ExampleView: View {
     }
 }
 
-/// 一组场景（日常生活 / 职场）：分类名用正文色 + 线条图标，醒目但不抢例句。
 private struct SceneGroup: View {
     let label: LocalizedStringKey
     let icon: String
@@ -469,7 +461,6 @@ private struct SceneGroup: View {
     }
 }
 
-/// 「注意」中的一条：讲解文字 + 单独成行的 ✕ 错误句 / ○ 正确句（红叉、绿勾），按原文顺序排列。
 private struct NoteView: View {
     let note: String
 
@@ -483,7 +474,6 @@ private struct NoteView: View {
                         RubyText(explanation: t, style: .init(font: i == 0 ? .body : .callout,
                                                               color: i == 0 ? .primary : .secondary, lineSpacing: 6))
                     case .example(let correct, let sentence):
-                        // 图标与句子的正文行对齐（有注音时，正文在注音行下方）
                         let rubyLine = FuriganaStore.shared.hasRuby(sentence)
                             ? ceil(UIFontMetrics(forTextStyle: .body).scaledValue(for: 9) * 1.3) : 0
                         let lineHeight = UIFont.preferredFont(forTextStyle: .body).lineHeight
@@ -504,7 +494,6 @@ private struct NoteView: View {
     }
 }
 
-/// 从注意事项文字中拆出「✕「…」」「○「…」」例句，按原文顺序返回文字与例句。
 enum NoteParser {
     enum Item: Equatable {
         case text(String)
@@ -543,12 +532,10 @@ enum NoteParser {
         let t = isFirst
             ? s.trimmingCharacters(in: .whitespaces).trimmingCharacters(in: CharacterSet(charactersIn: "：:，,、→ "))
             : s.trimmingCharacters(in: junk)
-        // 只剩箭头、标点、括号时视为空
         return t.unicodeScalars.allSatisfy { junk.contains($0) } ? "" : t
     }
 }
 
-/// 节标题：线条图标 + 标题。
 private struct DocSectionTitle: View {
     let title: LocalizedStringKey
     let icon: String
@@ -574,18 +561,14 @@ private struct DocSectionTitle: View {
 
 // MARK: - 滚动与标题
 
-/// 详情页的滚动状态。用 Observation：只有读取这些值的小视图（标题浮层、导航栏标题）会随滚动刷新，
-/// 整页讲解不会因为滚动而重新排版。
 @Observable
 final class DetailScrollModel {
-    /// 旧系统：大标题滚出的进度 0~1
     var progress: CGFloat = 0
-    /// iOS 26+：往上滚了多少（0 = 在顶部）
     var offset: CGFloat = 0
+    var titleSize: CGSize = .zero
     @ObservationIgnored var headerBaseline: CGFloat?
 }
 
-/// QA 截图：按启动参数 -demoScrollY 把讲解页滚到指定位置（iOS 18+）
 private struct DemoScrollOffset: ViewModifier {
     func body(content: Content) -> some View {
         if #available(iOS 18.0, *), let y = DemoMode.scrollY {
@@ -611,112 +594,195 @@ private struct DemoScrollOffset: ViewModifier {
     }
 }
 
-/// iOS 26+ 标题栏的几何（纯计算，单元测试覆盖）。
-/// 页面大标题随内容滚动，滚到标题栏下沿就被不透明的标题栏盖住；此后每滚 1pt，标题栏里的小标题从下往上移 1pt，
-/// 移到标题栏正中后停住；往回滚时反过来。标题字号固定，不缩放。
 enum TitleBarLayout {
-    /// 系统导航栏高度（返回、收藏按钮所在的一行）
     static let navBarHeight: CGFloat = 44
-    /// 页面标题和标题栏下沿之间的距离
     static let topPadding: CGFloat = 8
-    /// 标题栏里标题块上下的留白
-    static let barVerticalPadding: CGFloat = 6
-    /// 左右各留出一个按钮（44）加边距的宽度
-    static let sideInset: CGFloat = 68
+    static let maxPinnedScale: CGFloat = 0.5
+    static let tagsGap: CGFloat = 2
+    static let tagsHeight: CGFloat = 20
+    static let barSideInset: CGFloat = 68
+    static let glassBelowContent: CGFloat = 6
+    static let edgeFade: CGFloat = 22
+    static let glassFadeDistance: CGFloat = 12
 
-    /// 标题栏（状态栏以下部分）的高度：至少一行导航栏高，标题两行时变高
-    static func barContentHeight(titleBlockHeight: CGFloat) -> CGFloat {
-        max(navBarHeight, titleBlockHeight + 2 * barVerticalPadding)
+    struct State: Equatable {
+        var titleTop: CGFloat
+        var scale: CGFloat
+        var pinnedScale: CGFloat
+        var progress: CGFloat
+        var lineOpacity: Double
+        var tagsTop: CGFloat
+        var tagsOpacity: Double
+        var glassBottom: CGFloat
+        var glassOpacity: Double
     }
 
-    /// 页面标题的上边距：标题栏比系统导航栏高出的部分也要让出来，没滚动时页面标题不被盖住
-    static func headerTopPadding(barContentHeight: CGFloat) -> CGFloat {
-        max(0, barContentHeight - navBarHeight) + topPadding
+    static func pinnedScale(lineWidth: CGFloat, containerWidth: CGFloat) -> CGFloat {
+        guard lineWidth > 0 else { return maxPinnedScale }
+        let available = max(0, containerWidth - 2 * barSideInset)
+        return min(maxPinnedScale, available / lineWidth)
     }
 
-    /// 标题栏里的小标题相对正中位置往下偏移多少（0 = 在正中；等于 travel = 完全藏在标题栏下沿以下）
-    static func titleOffset(scrolled: CGFloat, barContentHeight: CGFloat) -> CGFloat {
-        let travel = barContentHeight
-        return min(travel, max(0, travel - (scrolled - topPadding)))
-    }
-
-    /// 标题栏下沿分隔线的不透明度：页面标题碰到标题栏下沿时开始出现
-    static func dividerOpacity(scrolled: CGFloat) -> Double {
-        Double(min(1, max(0, scrolled / topPadding)))
+    static func state(scrolled: CGFloat, titleHeight: CGFloat, lineSize: CGSize, containerWidth: CGFloat, safeTop: CGFloat) -> State {
+        let pinned = pinnedScale(lineWidth: lineSize.width, containerWidth: containerWidth)
+        let lineHeight = lineSize.height > 0 ? lineSize.height : titleHeight
+        let rest = safeTop + topPadding
+        let current = rest - scrolled
+        let pinnedGroup = lineHeight * pinned + tagsGap + tagsHeight
+        let barCenter = safeTop - navBarHeight / 2
+        let pinnedTop = max(safeTop - navBarHeight + 2, barCenter - pinnedGroup / 2)
+        let travel = max(1, rest - pinnedTop)
+        let progress = min(1, max(0, scrolled / travel))
+        let scale = 1 - (1 - pinned) * progress
+        let top = max(pinnedTop, current)
+        let wraps = titleHeight > lineHeight + 1
+        return State(
+            titleTop: top,
+            scale: scale,
+            pinnedScale: pinned,
+            progress: progress,
+            lineOpacity: wraps ? Double(min(1, max(0, (progress - 0.3) / 0.4))) : 1,
+            tagsTop: top + lineHeight * scale + tagsGap,
+            tagsOpacity: Double(min(1, max(0, (progress - 0.7) / 0.3))),
+            glassBottom: max(safeTop, pinnedTop + pinnedGroup + glassBelowContent),
+            glassOpacity: Double(min(1, max(0, scrolled / glassFadeDistance)))
+        )
     }
 }
 
-/// iOS 26+：详情页顶部自己画的标题栏。毛玻璃但几乎不透明，铺到屏幕顶端；返回、收藏按钮由系统导航栏画在它上面。
-/// 标题居中、最多两行、字号不缩小，等级在标题正下方居中。
-private struct DetailTitleBar: View {
-    let title: String
-    let level: JLPTLevel
+private struct FlyingTitle: View {
+    let point: GrammarPoint
     let scroll: DetailScrollModel
-    @Binding var contentHeight: CGFloat
+    @EnvironmentObject private var favorites: FavoritesStore
+    @State private var lineSize: CGSize = .zero
 
     var body: some View {
-        // 铺满整个滚动视图量出安全区高度（状态栏 + 系统导航栏），标题栏从屏幕顶端画起
         GeometryReader { proxy in
-            let safeTop = proxy.safeAreaInsets.top
-            let offset = TitleBarLayout.titleOffset(scrolled: scroll.offset, barContentHeight: contentHeight)
-            VStack(spacing: 0) {
-                VStack(spacing: 0) {
-                    // 安全区顶部包含状态栏和系统导航栏；标题区从系统导航栏那一行开始，和返回、收藏按钮同一行起
-                    Color.clear.frame(height: max(0, safeTop - TitleBarLayout.navBarHeight))
-                    ZStack {
-                        // 量高度用的一份（不显示、读屏读不到）：标题一行还是两行，决定标题栏多高
-                        titleBlock(withIDs: false)
-                            .hidden()
-                            .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { h in
-                                let bar = TitleBarLayout.barContentHeight(titleBlockHeight: h)
-                                if abs(bar - contentHeight) > 0.5 { contentHeight = bar }
-                            }
-                        // 显示的一份：完全藏起来时干脆不放（页面上已有大标题，否则读屏会读两遍）
-                        if offset < contentHeight {
-                            titleBlock(withIDs: true)
-                                .offset(y: offset)
-                        }
+            let size = scroll.titleSize
+            let s = TitleBarLayout.state(scrolled: scroll.offset, titleHeight: size.height, lineSize: lineSize,
+                                         containerWidth: proxy.size.width, safeTop: proxy.safeAreaInsets.top)
+            ZStack(alignment: .top) {
+                EdgeGlass(bottom: s.glassBottom)
+                    .opacity(s.glassOpacity)
+                if size.height > 0 {
+                    if s.lineOpacity < 1 {
+                        RubyText(japanese: point.titleForm, style: GrammarDetailView.titleStyle)
+                            .frame(width: size.width, height: size.height)
+                            .scaleEffect(s.scale, anchor: .top)
+                            .offset(y: s.titleTop)
+                            .opacity(1 - s.lineOpacity)
+                            .accessibilityHidden(true)
                     }
-                    .frame(maxWidth: .infinity)
-                    .frame(height: contentHeight)
-                    .clipped()
+                    RubyText(japanese: point.titleForm, style: GrammarDetailView.titleStyle)
+                        .fixedSize()
+                        .onGeometryChange(for: CGSize.self) { $0.size } action: { lineSize = $0 }
+                        .scaleEffect(s.scale, anchor: .top)
+                        .offset(y: s.titleTop)
+                        .opacity(s.lineOpacity)
+                        .accessibilityElement(children: .ignore)
+                        .accessibilityLabel(Text(verbatim: point.titleForm))
+                        .accessibilityAddTraits(.isHeader)
+                        .accessibilityIdentifier("detail.barTitle")
                 }
-                .background {
-                    ZStack(alignment: .bottom) {
-                        Rectangle().fill(.regularMaterial)
-                        Rectangle().fill(Theme.background.opacity(0.94))
-                        Rectangle().fill(Color.primary.opacity(0.12)).frame(height: 0.5)
-                            .opacity(TitleBarLayout.dividerOpacity(scrolled: scroll.offset))
-                    }
+                if s.tagsOpacity > 0 {
+                    BarTags(level: point.level, mustKnow: point.frequency == .high, favorited: favorites.isFavorite(point.id))
+                        .opacity(s.tagsOpacity)
+                        .offset(y: s.tagsTop)
                 }
-                .accessibilityElement(children: .contain)
-                .accessibilityIdentifier("detail.titleBar")
-                Spacer(minLength: 0)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .ignoresSafeArea(edges: .top)
         }
         .allowsHitTesting(false)
     }
 }
 
-extension DetailTitleBar {
-    @ViewBuilder
-    func titleBlock(withIDs: Bool) -> some View {
-        VStack(spacing: 2) {
-            Text(verbatim: title)
-                .font(.headline)
-                .multilineTextAlignment(.center)
-                .lineLimit(2)
-                .accessibilityIdentifier(withIDs ? "detail.barTitle" : "")
-            LevelText(level: level, small: true)
-                .accessibilityIdentifier(withIDs ? "detail.barLevel" : "")
+private struct BarTags: View {
+    let level: JLPTLevel
+    let mustKnow: Bool
+    let favorited: Bool
+
+    var body: some View {
+        HStack(spacing: 5) {
+            LevelBadge(level: level, prefixed: true)
+                .accessibilityIdentifier("detail.barLevel")
+            if mustKnow {
+                MustKnowBadge(identifier: "detail.barMustKnow")
+            }
+            if favorited {
+                HStack(spacing: 3) {
+                    Image("Kinchaku")
+                        .renderingMode(.template)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 12)
+                        .foregroundStyle(Sakura.center)
+                    Text(localized: "已收藏")
+                        .font(TagMetrics.font)
+                        .foregroundStyle(.secondary)
+                }
+                .accessibilityElement(children: .combine)
+                .accessibilityIdentifier("detail.barFavorited")
+            }
         }
-        .padding(.horizontal, TitleBarLayout.sideInset)
-        .fixedSize(horizontal: false, vertical: true)
+        .frame(height: TitleBarLayout.tagsHeight)
+        .fixedSize()
     }
 }
 
-/// 记录详情页往上滚了多少（iOS 18+ 才有滚动几何回调；更早的系统用旧的淡入方式，不需要）
+private struct EdgeGlass: View {
+    let bottom: CGFloat
+
+    var body: some View {
+        let total = bottom + TitleBarLayout.edgeFade
+        Rectangle()
+            .fill(.regularMaterial)
+            .overlay(Theme.background.opacity(0.35))
+            .frame(height: total)
+            .mask(
+                LinearGradient(stops: [.init(color: .black, location: 0),
+                                       .init(color: .black, location: bottom / total),
+                                       .init(color: .clear, location: 1)],
+                               startPoint: .top, endPoint: .bottom)
+            )
+            .frame(maxWidth: .infinity)
+            .accessibilityElement()
+            .accessibilityIdentifier("detail.titleBar")
+    }
+}
+
+private struct FavoritedTag: View {
+    let id: String
+    @EnvironmentObject private var favorites: FavoritesStore
+    @State private var confirming = false
+
+    var body: some View {
+        if favorites.isFavorite(id) {
+            Button { confirming = true } label: {
+                HStack(spacing: 4) {
+                    Image("Kinchaku")
+                        .renderingMode(.template)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 15)
+                        .foregroundStyle(Sakura.center)
+                    Text(localized: "已收藏")
+                        .foregroundStyle(.secondary)
+                }
+                .font(.subheadline.weight(.semibold))
+                .padding(.vertical, 4)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityIdentifier("detail.favorited")
+            .accessibilityHint(Text(localized: "点按可取消收藏"))
+            .confirmationDialog(tr("已收藏"), isPresented: $confirming, titleVisibility: .hidden) {
+                Button(role: .destructive) { favorites.toggle(id) } label: { Text(localized: "取消收藏") }
+            }
+        }
+    }
+}
+
 private struct ScrollOffsetTracker: ViewModifier {
     let scroll: DetailScrollModel
 
@@ -733,7 +799,6 @@ private struct ScrollOffsetTracker: ViewModifier {
     }
 }
 
-/// 旧系统（iOS 17–25）：大标题随滚动淡出。
 private struct FadingHeader<Content: View>: View {
     let scroll: DetailScrollModel
     @ViewBuilder let content: Content
@@ -743,7 +808,6 @@ private struct FadingHeader<Content: View>: View {
     }
 }
 
-/// 旧系统：导航栏标题随大标题滚出而淡入。
 private struct LegacyNavTitle<Content: View>: View {
     let scroll: DetailScrollModel
     @ViewBuilder let content: Content
@@ -763,8 +827,6 @@ private struct HeaderFrameKey: PreferenceKey {
 }
 
 extension GrammarDetailView {
-    /// 扫描到的原文最接近哪一个用法：比较原文与各用法的接续说明、例句的最长公共片段（平假名、片假名视为相同）。
-    /// 只有一个用法、或无法区分时返回 nil。
     static func bestSense(for matched: String, in p: GrammarPoint) -> Int? {
         guard p.senses.count > 1 else { return nil }
         func norm(_ s: String) -> [Character] {
@@ -793,7 +855,6 @@ extension GrammarDetailView {
     }
 }
 
-/// 讲解页顶部：你扫到的原文，以及它对应的用法
 private struct ScannedMatchBanner: View {
     let matched: String
     let senseIndex: Int?

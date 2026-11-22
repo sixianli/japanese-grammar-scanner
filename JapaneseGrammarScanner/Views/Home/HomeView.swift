@@ -1,9 +1,7 @@
 import PhotosUI
 import SwiftUI
 
-/// 首页：扫描入口、继续上次、快要忘了、最近查看（新用户：今日语法、从 N5 开始）。打开 App 先来到这里，相机只在用户点击扫描后才启动。
 struct HomeView: View {
-    /// 切换到「扫描」标签页（打开相机）。
     let openCamera: () -> Void
 
     @EnvironmentObject private var library: GrammarLibrary
@@ -19,18 +17,15 @@ struct HomeView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 32) {
                     scanEntry
-                    // 有要复习的语法时，扫描按钮下面一行安静的提醒；没有就不显示
                     reviewCard
                     if entitlements.showsTrialEndingReminder { trialReminder }
                     if isNewUser {
-                        // 新用户：入门引导
                         if let today = todayGrammar { todaySection(today) }
                         starterSection
                     } else {
                         if let last = history.scans.first { continueSection(last) }
                         recentViewedSection
                     }
-                    // 反馈入口
                     Button {
                         NotificationCenter.default.post(name: .showFeedback, object: nil)
                     } label: {
@@ -46,13 +41,11 @@ struct HomeView: View {
                 .padding(.top, 12)
                 .padding(.bottom, 32)
             }
-            // 搜索框 + 设置固定在顶部，页面往下滑也一直看得到；内容从它下面滑过
             .safeAreaInset(edge: .top, spacing: 0) {
                 searchEntry
                     .padding(.horizontal, Theme.margin)
                     .padding(.bottom, 8)
                     .background(alignment: .top) {
-                        // 顶部渐隐的背景色：滑上来的内容不会和按钮的字叠在一起看不清
                         LinearGradient(stops: [.init(color: Theme.background, location: 0),
                                                .init(color: Theme.background, location: 0.7),
                                                .init(color: Theme.background.opacity(0), location: 1)],
@@ -62,9 +55,7 @@ struct HomeView: View {
                     }
             }
             .background(Theme.background)
-            // 底部标签栏已标明「首页」，这里不再显示大标题，把空间留给内容
             .navigationTitle(tr("首页"))
-            // 用 inline 标题再隐藏导航栏：避免下拉时系统为大标题预留空间而让页面突然跳动
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(.hidden, for: .navigationBar)
             .withAppRoutes()
@@ -93,7 +84,6 @@ struct HomeView: View {
     private var searchEntry: some View {
         HStack(spacing: 10) {
             searchField
-            // 设置入口：外观（主题色、背景色）、反馈等
             Button {
                 NotificationCenter.default.post(name: .showSettings, object: nil)
             } label: {
@@ -132,57 +122,56 @@ struct HomeView: View {
 
     // MARK: 扫描入口
 
-    /// 首页唯一的主操作：一个醒目的主按钮（相机扫描）+ 两个次要按钮（相册、示例）。
     private var scanEntry: some View {
-        VStack(alignment: .leading, spacing: 18) {
-            VStack(alignment: .leading, spacing: 6) {
-                Text(localized: "扫描日文，找出语法")
-                    .font(.largeTitle.bold())
-                    .fixedSize(horizontal: false, vertical: true)
-                Text(localized: "对准书页或选一张截图，句子里的语法会被标出来。")
-                    .font(.body)
-                    .foregroundStyle(.secondary)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            .padding(.top, 4)
-
+        VStack(spacing: 12) {
             Button(action: openCamera) {
-                Label(tr("相机扫描"), systemImage: "camera.viewfinder")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 10)
+                VStack(spacing: 3) {
+                    Label(tr("相机扫描"), systemImage: "camera.viewfinder")
+                        .font(.headline)
+                    Text(localized: "对准书页，标出句子里的语法")
+                        .font(.caption.weight(.medium))
+                        .opacity(0.9)
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 6)
             }
             .prominentGlassButton()
             .controlSize(.large)
             .buttonBorderShape(.capsule)
             .accessibilityIdentifier("home.camera")
 
-            HStack(spacing: 12) {
-                PhotosPicker(selection: $photoItem, matching: .images) {
-                    Label(tr("从相册识别"), systemImage: "photo.on.rectangle")
-                        .font(.subheadline.weight(.semibold))
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 6)
-                }
-                .secondaryGlassButton()
-                .buttonBorderShape(.capsule)
-                .accessibilityIdentifier("home.photos")
+            PhotosPicker(selection: $photoItem, matching: .images) {
+                Label(tr("从相册识别"), systemImage: "photo.on.rectangle")
+                    .font(.subheadline.weight(.semibold))
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 6)
+            }
+            .secondaryGlassButton()
+            .buttonBorderShape(.capsule)
+            .controlSize(.large)
+            .accessibilityIdentifier("home.photos")
+
+            if HomeLayout.showsSampleLink(scanCount: history.scans.count) {
                 Button {
                     if let image = UIImage(named: "SamplePage") {
                         path.append(.scan(ScanImage(image: image.normalizedForOCR(), isSample: true)))
                     }
                 } label: {
-                    Label(tr("试试示例"), systemImage: "book.pages")
-                        .font(.subheadline.weight(.semibold))
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 6)
+                    HStack(spacing: 2) {
+                        Text(localized: "没有日文材料？试试示例")
+                        Image(systemName: "chevron.right").font(.caption2.weight(.semibold))
+                    }
+                    .font(.footnote.weight(.medium))
+                    .foregroundStyle(Theme.accentText)
+                    .padding(.vertical, 4)
+                    .frame(maxWidth: .infinity)
+                    .contentShape(Rectangle())
                 }
-                .secondaryGlassButton()
-                .buttonBorderShape(.capsule)
+                .buttonStyle(.plain)
                 .accessibilityIdentifier("home.sample")
             }
-            .controlSize(.large)
         }
+        .padding(.top, 4)
     }
 
     // MARK: 试用提醒（只在最后 2 天和结束后出现）
@@ -217,7 +206,6 @@ struct HomeView: View {
 
     // MARK: 今日语法（新用户）
 
-    /// 按日期固定选出一个可扫描的语法点，每天不同。
     private var todayGrammar: GrammarPoint? {
         let candidates = library.points.filter(\.scannable)
         guard !candidates.isEmpty else { return nil }
@@ -290,7 +278,6 @@ struct HomeView: View {
     // MARK: 复习提醒（FSRS，没有到期的语法时整行隐藏）
 
     private var dueItems: [GrammarPoint] {
-        // 重要性：在你扫描的材料里出现越多、或已收藏的语法，同样快忘时更优先
         history.dueForReview(limit: 50) { id in
             1 + 0.25 * Double(min(history.scanCount(of: id), 8)) + (favorites.isFavorite(id) ? 0.5 : 0)
         }
@@ -323,7 +310,6 @@ struct HomeView: View {
 
 // MARK: - 首页组件
 
-/// 首页的一个模块：标题（+ 可选说明、右侧「全部」）+ 内容。
 private struct HomeSection<Content: View>: View {
     let title: LocalizedStringKey
     var subtitle: LocalizedStringKey? = nil
@@ -357,7 +343,6 @@ private struct SeeAllLabel: View {
     }
 }
 
-/// 紧凑的语法列表：每条一行（语法 + 右上角等级），可选显示一行意思。
 struct CompactGrammarList: View {
     let points: [GrammarPoint]
     var showsMeaning = false
@@ -392,7 +377,6 @@ struct CompactGrammarList: View {
     }
 }
 
-/// 完整列表页（「全部」）。
 struct GrammarListPage: View {
     @EnvironmentObject private var library: GrammarLibrary
     let title: LocalizedStringKey
@@ -409,7 +393,6 @@ struct GrammarListPage: View {
     }
 }
 
-/// 最近查看的完整列表，可清除。
 struct RecentViewedPage: View {
     @EnvironmentObject private var library: GrammarLibrary
     @EnvironmentObject private var history: HistoryStore
@@ -434,7 +417,6 @@ struct RecentViewedPage: View {
     }
 }
 
-/// 全部扫描记录
 struct AllScansView: View {
     @EnvironmentObject private var history: HistoryStore
     @State private var confirm = false
@@ -498,13 +480,13 @@ private struct ScanThumb: View {
     }
 }
 
-/// 首页的复习提醒（Build 18 反馈 1：App 要克制，提醒但不制造压力）：普通卡片样式的一行
-/// 「🔔 N 个语法可以复习了 ›」，点一下按顺序复习。没有到期的语法时整行不显示（由 HomeView 控制）。
-/// 每次来到首页：铃铛摇一下，接着几朵樱花从这一行上飘过去，只播一次；「减弱动态效果」打开时不播。
 struct ReviewRow: View {
     let ids: [String]
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.scenePhase) private var scenePhase
     @State private var playStart: Date?
+    @State private var onScreen = false
+    @State private var foregroundReplay = ForegroundReplay()
 
     var body: some View {
         NavigationLink(value: Route.review(ids[0], Array(ids.dropFirst()))) {
@@ -532,14 +514,27 @@ struct ReviewRow: View {
         .buttonStyle(RowPressStyle())
         .accessibilityIdentifier("home.review")
         .onAppear {
-            if DecorativeMotion.enabled(reduceMotion: reduceMotion) { playStart = Date() }
+            onScreen = true
+            play()
         }
-        .onDisappear { playStart = nil }
-        .task(id: playStart) {
-            guard playStart != nil else { return }
-            try? await Task.sleep(for: .seconds(SakuraDrift.duration + 0.1))
+        .onDisappear {
+            onScreen = false
             playStart = nil
         }
+        .onChange(of: scenePhase) { _, phase in
+            if foregroundReplay.shouldReplay(on: phase), onScreen { play() }
+        }
+        .task(id: playStart) {
+            guard let playStart else { return }
+            let remaining = playStart.timeIntervalSinceNow + SakuraDrift.duration + 0.1
+            try? await Task.sleep(for: .seconds(max(0, remaining)))
+            self.playStart = nil
+        }
+    }
+
+    private func play() {
+        guard DecorativeMotion.enabled(reduceMotion: reduceMotion) else { return }
+        playStart = Date().addingTimeInterval(SakuraDrift.appearDelay)
     }
 
     private var bell: some View {
@@ -554,3 +549,6 @@ struct ReviewRow: View {
     }
 }
 
+enum HomeLayout {
+    static func showsSampleLink(scanCount: Int) -> Bool { scanCount == 0 }
+}

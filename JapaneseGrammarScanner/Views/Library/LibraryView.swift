@@ -1,11 +1,11 @@
 import SwiftUI
 
-/// 语法库：按 JLPT 等级浏览、搜索全部内置语法点。
 struct LibraryView: View {
     @EnvironmentObject private var library: GrammarLibrary
     @State private var query = DemoMode.screen == "library" ? (DemoMode.search ?? "") : ""
     @State private var levelFilter: JLPTLevel?
     @State private var path: [Route] = []
+    @State private var scrolled: CGFloat = 0
 
     private var availableLevels: [JLPTLevel] {
         JLPTLevel.allCases.filter { !library.points(for: $0).isEmpty }
@@ -13,18 +13,18 @@ struct LibraryView: View {
 
     private var isSearching: Bool { !query.trimmingCharacters(in: .whitespaces).isEmpty }
 
+    private var levelPicker: some View {
+        Picker(tr("等级"), selection: $levelFilter) {
+            Text(localized: "全部").tag(JLPTLevel?.none)
+            ForEach(availableLevels) { Text($0.rawValue).tag(JLPTLevel?.some($0)) }
+        }
+        .pickerStyle(.segmented)
+        .accessibilityIdentifier("library.levelFilter")
+    }
+
     var body: some View {
         NavigationStack(path: $path) {
             List {
-                Section {
-                    Picker(tr("等级"), selection: $levelFilter) {
-                        Text(localized: "全部").tag(JLPTLevel?.none)
-                        ForEach(availableLevels) { Text($0.rawValue).tag(JLPTLevel?.some($0)) }
-                    }
-                    .pickerStyle(.segmented)
-                    .listRowBackground(Color.clear)
-                    .listRowInsets(EdgeInsets())
-                }
                 if isSearching {
                     searchSections
                 } else {
@@ -37,10 +37,27 @@ struct LibraryView: View {
                 }
             }
             .themedList()
+            .modifier(PinnedHeaderGlass(scrolled: $scrolled))
+            .safeAreaInset(edge: .top, spacing: 0) {
+                levelPicker
+                    .padding(.horizontal, Theme.margin)
+                    .padding(.top, 4)
+                    .padding(.bottom, 10)
+                    .background {
+                        Rectangle()
+                            .fill(.regularMaterial)
+                            .overlay(Theme.background.opacity(0.35))
+                            .overlay(alignment: .bottom) {
+                                Rectangle().fill(Color.primary.opacity(0.12)).frame(height: 0.5)
+                            }
+                            .opacity(LibraryHeader.glassOpacity(scrolled: scrolled))
+                            .ignoresSafeArea(edges: .top)
+                    }
+            }
             .dismissesKeyboardOnTapAndScroll()
             .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: tr("搜索语法或意思"))
             .navigationTitle(tr("语法库"))
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.large)
             .withAppRoutes()
         }
         .environment(\.pushRoute, { path.append($0) })
@@ -49,8 +66,6 @@ struct LibraryView: View {
         }
     }
 
-    /// 浏览：选了等级时，列出该等级的全部语法（合并后的语法点只要有义项属于该等级就会出现）；
-    /// 「全部」时每个语法点只出现一次，放在它最低的等级下。
     @ViewBuilder
     private var browseSections: some View {
         ForEach(availableLevels.filter { levelFilter == nil || $0 == levelFilter }) { level in
@@ -67,7 +82,6 @@ struct LibraryView: View {
         }
     }
 
-    /// 搜索：按相关度排序；只在例句里出现的单独列在后面。
     @ViewBuilder
     private var searchSections: some View {
         let main = searchResults
@@ -101,10 +115,34 @@ struct LibraryView: View {
 
     private var searchResults: [GrammarPoint] { applyFilter(library.search(query)) }
 
-    /// 主结果为空时才列出「在例句中出现」，避免干扰。
     private var exampleResults: [GrammarPoint] {
         let main = library.search(query)
         guard main.isEmpty else { return [] }
         return applyFilter(library.searchInExamples(query, excluding: main))
+    }
+}
+
+enum LibraryHeader {
+    static let glassFadeDistance: CGFloat = 12
+
+    static func glassOpacity(scrolled: CGFloat) -> Double {
+        Double(min(1, max(0, scrolled / glassFadeDistance)))
+    }
+}
+
+private struct PinnedHeaderGlass: ViewModifier {
+    @Binding var scrolled: CGFloat
+
+    func body(content: Content) -> some View {
+        if #available(iOS 18.0, *) {
+            content.onScrollGeometryChange(for: CGFloat.self) { g in
+                g.contentOffset.y + g.contentInsets.top
+            } action: { _, y in
+                let clamped = min(max(y, 0), LibraryHeader.glassFadeDistance)
+                if abs(clamped - scrolled) > 0.5 { scrolled = clamped }
+            }
+        } else {
+            content.onAppear { scrolled = LibraryHeader.glassFadeDistance }
+        }
     }
 }
