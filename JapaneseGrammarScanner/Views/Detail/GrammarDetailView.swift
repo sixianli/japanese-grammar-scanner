@@ -221,14 +221,26 @@ struct GrammarDetailView: View {
     private func headerTitle(_ p: GrammarPoint) -> some View {
         let title = RubyText(japanese: p.titleForm, style: Self.titleStyle)
         if usesFlyingTitle {
-            title
-                .opacity(0)
-                .accessibilityHidden(true)
-                .onGeometryChange(for: CGSize.self) { $0.size } action: { [scroll] size in
-                    if abs(size.width - scroll.titleSize.width) > 0.5 || abs(size.height - scroll.titleSize.height) > 0.5 {
-                        scroll.titleSize = size
-                    }
+            let scale = TitleBarLayout.expandedScale(lineWidth: scroll.lineSize.width, contentWidth: scroll.contentWidth)
+            Color.clear
+                .frame(maxWidth: .infinity)
+                .frame(height: scroll.lineSize.height * scale)
+                .onGeometryChange(for: CGFloat.self) { $0.size.width } action: { [scroll] width in
+                    if abs(width - scroll.contentWidth) > 0.5 { scroll.contentWidth = width }
                 }
+                .overlay {
+                    title
+                        .fixedSize()
+                        .opacity(0)
+                        .accessibilityHidden(true)
+                        .onGeometryChange(for: CGSize.self) { $0.size } action: { [scroll] size in
+                            if abs(size.width - scroll.lineSize.width) > 0.5 || abs(size.height - scroll.lineSize.height) > 0.5 {
+                                scroll.lineSize = size
+                            }
+                        }
+                }
+                .accessibilityElement(children: .ignore)
+                .accessibilityIdentifier("detail.titleColumn")
         } else {
             title
         }
@@ -565,7 +577,8 @@ private struct DocSectionTitle: View {
 final class DetailScrollModel {
     var progress: CGFloat = 0
     var offset: CGFloat = 0
-    var titleSize: CGSize = .zero
+    var lineSize: CGSize = .zero
+    var contentWidth: CGFloat = 0
     @ObservationIgnored var headerBaseline: CGFloat?
 }
 
@@ -608,41 +621,44 @@ enum TitleBarLayout {
     struct State: Equatable {
         var titleTop: CGFloat
         var scale: CGFloat
+        var expandedScale: CGFloat
         var pinnedScale: CGFloat
         var progress: CGFloat
-        var lineOpacity: Double
         var tagsTop: CGFloat
         var tagsOpacity: Double
         var glassBottom: CGFloat
         var glassOpacity: Double
     }
 
-    static func pinnedScale(lineWidth: CGFloat, containerWidth: CGFloat) -> CGFloat {
-        guard lineWidth > 0 else { return maxPinnedScale }
-        let available = max(0, containerWidth - 2 * barSideInset)
-        return min(maxPinnedScale, available / lineWidth)
+    static func expandedScale(lineWidth: CGFloat, contentWidth: CGFloat) -> CGFloat {
+        guard lineWidth > 0, contentWidth > 0 else { return 1 }
+        return min(1, contentWidth / lineWidth)
     }
 
-    static func state(scrolled: CGFloat, titleHeight: CGFloat, lineSize: CGSize, containerWidth: CGFloat, safeTop: CGFloat) -> State {
-        let pinned = pinnedScale(lineWidth: lineSize.width, containerWidth: containerWidth)
-        let lineHeight = lineSize.height > 0 ? lineSize.height : titleHeight
+    static func pinnedScale(lineWidth: CGFloat, viewWidth: CGFloat) -> CGFloat {
+        guard lineWidth > 0, viewWidth > 0 else { return maxPinnedScale }
+        return min(maxPinnedScale, max(0, viewWidth - 2 * barSideInset) / lineWidth)
+    }
+
+    static func state(scrolled: CGFloat, lineSize: CGSize, viewWidth: CGFloat, safeTop: CGFloat) -> State {
+        let expanded = expandedScale(lineWidth: lineSize.width, contentWidth: viewWidth - 2 * Theme.margin)
+        let pinned = min(expanded, pinnedScale(lineWidth: lineSize.width, viewWidth: viewWidth))
         let rest = safeTop + topPadding
         let current = rest - scrolled
-        let pinnedGroup = lineHeight * pinned + tagsGap + tagsHeight
+        let pinnedGroup = lineSize.height * pinned + tagsGap + tagsHeight
         let barCenter = safeTop - navBarHeight / 2
         let pinnedTop = max(safeTop - navBarHeight + 2, barCenter - pinnedGroup / 2)
         let travel = max(1, rest - pinnedTop)
         let progress = min(1, max(0, scrolled / travel))
-        let scale = 1 - (1 - pinned) * progress
+        let scale = expanded + (pinned - expanded) * progress
         let top = max(pinnedTop, current)
-        let wraps = titleHeight > lineHeight + 1
         return State(
             titleTop: top,
             scale: scale,
+            expandedScale: expanded,
             pinnedScale: pinned,
             progress: progress,
-            lineOpacity: wraps ? Double(min(1, max(0, (progress - 0.3) / 0.4))) : 1,
-            tagsTop: top + lineHeight * scale + tagsGap,
+            tagsTop: top + lineSize.height * scale + tagsGap,
             tagsOpacity: Double(min(1, max(0, (progress - 0.7) / 0.3))),
             glassBottom: max(safeTop, pinnedTop + pinnedGroup + glassBelowContent),
             glassOpacity: Double(min(1, max(0, scrolled / glassFadeDistance)))
@@ -654,35 +670,25 @@ private struct FlyingTitle: View {
     let point: GrammarPoint
     let scroll: DetailScrollModel
     @EnvironmentObject private var favorites: FavoritesStore
-    @State private var lineSize: CGSize = .zero
 
     var body: some View {
         GeometryReader { proxy in
-            let size = scroll.titleSize
-            let s = TitleBarLayout.state(scrolled: scroll.offset, titleHeight: size.height, lineSize: lineSize,
-                                         containerWidth: proxy.size.width, safeTop: proxy.safeAreaInsets.top)
+            let width = proxy.size.width
+            let size = scroll.lineSize
+            let s = TitleBarLayout.state(scrolled: scroll.offset, lineSize: size, viewWidth: width, safeTop: proxy.safeAreaInsets.top)
             ZStack(alignment: .top) {
                 EdgeGlass(bottom: s.glassBottom)
                     .opacity(s.glassOpacity)
                 if size.height > 0 {
-                    if s.lineOpacity < 1 {
-                        RubyText(japanese: point.titleForm, style: GrammarDetailView.titleStyle)
-                            .frame(width: size.width, height: size.height)
-                            .scaleEffect(s.scale, anchor: .top)
-                            .offset(y: s.titleTop)
-                            .opacity(1 - s.lineOpacity)
-                            .accessibilityHidden(true)
-                    }
                     RubyText(japanese: point.titleForm, style: GrammarDetailView.titleStyle)
                         .fixedSize()
-                        .onGeometryChange(for: CGSize.self) { $0.size } action: { lineSize = $0 }
-                        .scaleEffect(s.scale, anchor: .top)
-                        .offset(y: s.titleTop)
-                        .opacity(s.lineOpacity)
                         .accessibilityElement(children: .ignore)
                         .accessibilityLabel(Text(verbatim: point.titleForm))
                         .accessibilityAddTraits(.isHeader)
                         .accessibilityIdentifier("detail.barTitle")
+                        .frame(width: width, height: size.height)
+                        .scaleEffect(s.scale, anchor: .top)
+                        .offset(y: s.titleTop)
                 }
                 if s.tagsOpacity > 0 {
                     BarTags(level: point.level, mustKnow: point.frequency == .high, favorited: favorites.isFavorite(point.id))
@@ -690,7 +696,8 @@ private struct FlyingTitle: View {
                         .offset(y: s.tagsTop)
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            .frame(width: width)
+            .frame(maxHeight: .infinity, alignment: .top)
             .ignoresSafeArea(edges: .top)
         }
         .allowsHitTesting(false)

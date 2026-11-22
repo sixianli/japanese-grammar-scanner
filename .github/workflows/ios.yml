@@ -281,7 +281,22 @@ jobs:
               xcrun simctl terminate "$UDID" "$BID" 2>/dev/null || true
               xcrun simctl launch "$UDID" "$BID" -AppleLanguages "($lang)" -demoUnlocked -demoScreen "$screen"
               sleep 8
-              xcrun simctl io "$UDID" screenshot "screenshots/$lang/${i}_${screen}.png"
+              out="screenshots/$lang/${i}_${screen}.png"
+              xcrun simctl io "$UDID" screenshot "$out"
+              if [ "$screen" = "result" ]; then
+                settled=0
+                for try in $(seq 1 20); do
+                  sleep 3
+                  xcrun simctl io "$UDID" screenshot "$out.next"
+                  if cmp -s "$out" "$out.next"; then settled=1; break; fi
+                  mv "$out.next" "$out"
+                done
+                rm -f "$out.next"
+                if [ "$settled" != 1 ]; then
+                  echo "::error::结果页截图 $lang 一直在变化（识别没有完成），不能当商店截图用"
+                  shotfail=1
+                fi
+              fi
               i=$((i+1))
             done
           done
@@ -303,6 +318,11 @@ jobs:
           qa favorites_sorted -demoScreen favorites
           qa detail_title_bar -demoScreen detail -demoGrammar izen -demoScroll sense-0
           for y in 20 45 70 100; do qa detail_title_fly_$y -demoScreen detail -demoGrammar you-ni-naru -demoScrollY $y; done
+          qa title_long_mamani -demoScreen detail -demoGrammar mama-ni-follow
+          qa title_long_mamani_pinned -demoScreen detail -demoGrammar mama-ni-follow -demoScrollY 300
+          qa title_long_ikan -demoScreen detail -demoGrammar ikan-de-wa
+          qa title_long_ikan_pinned -demoScreen detail -demoGrammar ikan-de-wa -demoScrollY 300
+          qa title_long_mamani_mid -demoScreen detail -demoGrammar mama-ni-follow -demoScrollY 45
           qa review_bar -demoScreen review -demoGrammar you-ni-naru
           qa contrast_collapsed -demoScreen detail -demoGrammar tokoro-da -demoScroll section-similar
           qa contrast_open -demoScreen detail -demoGrammar tokoro-da -demoScroll section-similar -demoContrastOpen 1
@@ -326,7 +346,9 @@ jobs:
           mkdir -p screenshots/qa/crash
           cp ~/Library/Logs/DiagnosticReports/JapaneseGrammarScanner* screenshots/qa/crash/ 2>/dev/null || true
           find screenshots -name "*.png" | sort
+          [ -z "${shotfail:-}" ]
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: screenshots
           path: screenshots
