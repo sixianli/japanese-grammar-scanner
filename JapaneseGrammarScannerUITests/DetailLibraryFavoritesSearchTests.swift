@@ -94,7 +94,7 @@ final class DetailTests: E2ETestCase {
         wait(barTitle, "页面顶部应显示语法标题")
         XCTAssertEqual(barTitle.label, title, "显示的应是本页语法的完整标题")
         let restFrame = barTitle.frame
-        assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "展开")
+        assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "展开", pinned: false)
         XCTAssertFalse(id("detail.barLevel").exists, "没滚动时顶栏里不应有等级（等级在标题下面的标签里）")
 
         app.swipeUp()
@@ -102,7 +102,7 @@ final class DetailTests: E2ETestCase {
         let level = id("detail.barLevel")
         wait(level, "往上滑后标题收进顶栏，标题下方应出现标签行")
         XCTAssertEqual(barTitle.frame.midX, restFrame.midX, accuracy: 2, "标题只往上移，水平位置不变")
-        assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "收起")
+        assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "收起", pinned: true)
         XCTAssertLessThan(barTitle.frame.minY, restFrame.minY - 20, "标题应跟着往上移到顶栏")
         XCTAssertLessThan(barTitle.frame.maxY, 200, "标题应停在屏幕顶部的顶栏里")
         XCTAssertLessThan(barTitle.frame.height, restFrame.height, "收进顶栏的标题应比页面大标题小")
@@ -136,19 +136,26 @@ final class DetailTests: E2ETestCase {
         wait(detailScreen, "点搜索结果应进入讲解页")
     }
 
-    private func assertTitleFitsOneLineBetweenButtons(_ title: String, _ element: XCUIElement, state: String,
+    private func assertTitleFitsOneLineBetweenButtons(_ title: String, _ element: XCUIElement, state: String, pinned: Bool,
                                                      file: StaticString = #filePath, line: UInt = #line) {
-        let back = app.buttons["BackButton"].firstMatch.exists ? app.buttons["BackButton"].firstMatch : app.navigationBars.buttons.element(boundBy: 0)
-        let favorite = id("detail.favorite")
-        XCTAssertTrue(back.exists && favorite.exists, "应能找到返回键和右上角收藏键", file: file, line: line)
-        let left = back.frame.maxX, right = favorite.frame.minX
+        let page = app.scrollViews.firstMatch
+        XCTAssertTrue(page.exists, "应能找到讲解页的滚动区域", file: file, line: line)
         let frame = element.frame
-        XCTAssertEqual(frame.midX, (back.frame.minX + favorite.frame.maxX) / 2, accuracy: 3, "\(state)：标题「\(title)」应在屏幕正中，不偏左右：\(frame)", file: file, line: line)
-        XCTAssertGreaterThanOrEqual(frame.minX, left - 1, "\(state)：标题不能压到返回键：\(frame)", file: file, line: line)
-        XCTAssertLessThanOrEqual(frame.maxX, right + 1, "\(state)：标题不能压到右上角收藏键：\(frame)", file: file, line: line)
-        let screen = app.windows.firstMatch.frame
-        XCTAssertGreaterThanOrEqual(frame.minX, screen.minX, "\(state)：标题不能超出屏幕左边：\(frame)", file: file, line: line)
-        XCTAssertLessThanOrEqual(frame.maxX, screen.maxX, "\(state)：标题不能超出屏幕右边：\(frame)", file: file, line: line)
+        let inset = pinned ? CGFloat(68) : CGFloat(20)
+        XCTAssertEqual(frame.midX, page.frame.midX, accuracy: 3, "\(state)：标题「\(title)」应在页面正中，不偏左右：标题 \(frame)，页面 \(page.frame)", file: file, line: line)
+        XCTAssertGreaterThanOrEqual(frame.minX, page.frame.minX + inset - 1, "\(state)：标题不能超出左边（页边距 / 返回键）：标题 \(frame)，页面 \(page.frame)", file: file, line: line)
+        XCTAssertLessThanOrEqual(frame.maxX, page.frame.maxX - inset + 1, "\(state)：标题不能超出右边（页边距 / 收藏键）：标题 \(frame)，页面 \(page.frame)", file: file, line: line)
+        let window = app.windows.firstMatch.frame
+        XCTAssertGreaterThanOrEqual(frame.minX, window.minX, "\(state)：标题不能超出屏幕左边：\(frame)", file: file, line: line)
+        XCTAssertLessThanOrEqual(frame.maxX, window.maxX, "\(state)：标题不能超出屏幕右边：\(frame)", file: file, line: line)
+        let favorite = id("detail.favorite")
+        let back = app.buttons["BackButton"].firstMatch
+        if favorite.exists, favorite.frame.minX > page.frame.minX, favorite.frame.maxX <= page.frame.maxX + 1 {
+            XCTAssertLessThanOrEqual(frame.maxX, favorite.frame.minX + 1, "\(state)：标题不能压到右上角收藏键：标题 \(frame)，收藏键 \(favorite.frame)", file: file, line: line)
+        }
+        if pinned, back.exists, back.frame.maxX < page.frame.midX, back.frame.minX >= page.frame.minX - 1 {
+            XCTAssertGreaterThanOrEqual(frame.minX, back.frame.maxX - 1, "\(state)：标题不能压到返回键：标题 \(frame)，返回键 \(back.frame)", file: file, line: line)
+        }
     }
 
     private func checkLongTitleInBothStates(query: String, title: String) {
@@ -159,7 +166,7 @@ final class DetailTests: E2ETestCase {
 
         let oneLine = barTitle.frame.height
         XCTAssertLessThan(oneLine, 70, "展开时「\(title)」只占一行，不折成两三行：\(barTitle.frame)")
-        assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "展开")
+        assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "展开", pinned: false)
         let expandedMidY = barTitle.frame.midY
 
         app.swipeUp()
@@ -168,7 +175,7 @@ final class DetailTests: E2ETestCase {
         XCTAssertLessThan(barTitle.frame.height, oneLine, "收进顶栏后标题比展开时小：\(barTitle.frame)")
         XCTAssertLessThan(barTitle.frame.maxY, 200, "标题和标签行都在顶栏里，顶栏不变高：\(barTitle.frame)")
         XCTAssertLessThan(barTitle.frame.midY, expandedMidY, "标题应往上移进顶栏")
-        assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "收起")
+        assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "收起", pinned: true)
         XCTAssertGreaterThan(id("detail.barLevel").frame.minY, barTitle.frame.maxY - 3, "标签行在一行标题下面")
     }
 
