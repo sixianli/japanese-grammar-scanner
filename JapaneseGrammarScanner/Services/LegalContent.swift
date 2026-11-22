@@ -1,11 +1,5 @@
 import SwiftUI
 
-/// 隐私政策与使用条款的内容（App 内页面、网站 docs/index.html 都由这里生成）。
-///
-/// 硬门槛：tools/validate_compliance.py 扫描代码里实际用到的权限、框架、iCloud 上报字段、本机存储，
-/// 对照 tools/compliance/privacy_inventory.json，再检查这里每一节都写到了；
-/// 代码里多了没写的、写了代码里已经没有的、清单变了却没更新「最后更新」和 privacyInventoryHash，CI 都不通过。
-/// 改了这里的文字后运行 `python3 tools/validate_compliance.py --write-web` 重新生成网站上的隐私政策。
 enum LegalContent {
     struct Section: Identifiable {
         let id: String
@@ -14,14 +8,10 @@ enum LegalContent {
         var when: Condition = .always
     }
 
-    /// 这一节在什么版本里显示（和代码实际行为一致）
     enum Condition {
         case always
-        /// 打开了 iCloud 上报（编译条件 CLOUD_FEEDBACK）的版本
         case cloud
-        /// 没有打开 iCloud 上报的版本
         case noCloud
-        /// 开启了购买的版本
         case payments
 
         var isActive: Bool {
@@ -36,9 +26,8 @@ enum LegalContent {
 
     // MARK: 隐私政策
 
-    static let privacyUpdated = "2026-11-20"
-    /// 数据清单（privacy_inventory.json）的指纹：清单一变，这里和「最后更新」必须一起改，否则 CI 不通过
-    static let privacyInventoryHash = "5bf473423877"
+    static let privacyUpdated = "2026-11-22"
+    static let privacyInventoryHash = "a390007f6007"
 
     static let privacyAll: [Section] = [
         Section(id: "summary", title: "一句话说明",
@@ -63,14 +52,12 @@ enum LegalContent {
                 body: "对本隐私政策有任何疑问，可以在「设置 → 反馈」中告诉我们。"),
     ]
 
-    /// 当前版本实际显示的隐私政策
     static var privacySections: [Section] { privacyAll.filter(\.when.isActive) }
 
     // MARK: 使用条款
 
     static let termsUpdated = "2026-11-20"
 
-    /// 使用条款：与功能有关的事实（试用天数、一次性购买）直接取自代码里的设置，代码一改，条款自动跟着变
     static var termsSections: [Section] {
         var list: [Section] = [
             Section(id: "eula", title: "许可协议", body: "本 App 的使用适用 Apple 标准最终用户许可协议（EULA）。"),

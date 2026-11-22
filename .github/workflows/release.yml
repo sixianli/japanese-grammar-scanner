@@ -67,6 +67,10 @@ jobs:
           python3 tools/review_contrasts.py --check
           python3 tools/validate_compliance.py
           python3 tools/check_strings.py
+      - name: App homepage privacy policy matches the app
+        env:
+          CLOUD_FEEDBACK: ${{ inputs.cloud_feedback && 'true' || vars.CLOUD_FEEDBACK }}
+        run: python3 tools/privacy_mirror.py --check-live --cloud "${CLOUD_FEEDBACK:-false}"
       - name: Write API key
         env:
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
