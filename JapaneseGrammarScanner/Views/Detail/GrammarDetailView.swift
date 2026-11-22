@@ -149,7 +149,7 @@ struct GrammarDetailView: View {
             .modifier(ScrollOffsetTracker(scroll: scroll))
             .overlay(alignment: .top) {
                 if usesFlyingTitle {
-                    FlyingTitle(title: p.titleForm, level: p.level, scroll: scroll)
+                    FlyingTitle(point: p, scroll: scroll)
                 }
             }
             .modifier(DemoScrollOffset())
@@ -597,9 +597,10 @@ private struct DemoScrollOffset: ViewModifier {
 enum TitleBarLayout {
     static let navBarHeight: CGFloat = 44
     static let topPadding: CGFloat = 8
-    static let pinnedScale: CGFloat = 0.5
-    static let levelGap: CGFloat = 2
-    static let levelHeight: CGFloat = 16
+    static let maxPinnedScale: CGFloat = 0.5
+    static let tagsGap: CGFloat = 2
+    static let tagsHeight: CGFloat = 20
+    static let barSideInset: CGFloat = 68
     static let glassBelowContent: CGFloat = 6
     static let edgeFade: CGFloat = 22
     static let glassFadeDistance: CGFloat = 12
@@ -607,29 +608,42 @@ enum TitleBarLayout {
     struct State: Equatable {
         var titleTop: CGFloat
         var scale: CGFloat
+        var pinnedScale: CGFloat
         var progress: CGFloat
-        var levelTop: CGFloat
-        var levelOpacity: Double
+        var lineOpacity: Double
+        var tagsTop: CGFloat
+        var tagsOpacity: Double
         var glassBottom: CGFloat
         var glassOpacity: Double
     }
 
-    static func state(scrolled: CGFloat, titleHeight: CGFloat, safeTop: CGFloat, levelHeight: CGFloat = levelHeight) -> State {
+    static func pinnedScale(lineWidth: CGFloat, containerWidth: CGFloat) -> CGFloat {
+        guard lineWidth > 0 else { return maxPinnedScale }
+        let available = max(0, containerWidth - 2 * barSideInset)
+        return min(maxPinnedScale, available / lineWidth)
+    }
+
+    static func state(scrolled: CGFloat, titleHeight: CGFloat, lineSize: CGSize, containerWidth: CGFloat, safeTop: CGFloat) -> State {
+        let pinned = pinnedScale(lineWidth: lineSize.width, containerWidth: containerWidth)
+        let lineHeight = lineSize.height > 0 ? lineSize.height : titleHeight
         let rest = safeTop + topPadding
         let current = rest - scrolled
-        let pinnedGroup = titleHeight * pinnedScale + levelGap + levelHeight
+        let pinnedGroup = lineHeight * pinned + tagsGap + tagsHeight
         let barCenter = safeTop - navBarHeight / 2
         let pinnedTop = max(safeTop - navBarHeight + 2, barCenter - pinnedGroup / 2)
         let travel = max(1, rest - pinnedTop)
         let progress = min(1, max(0, scrolled / travel))
-        let scale = 1 - (1 - pinnedScale) * progress
+        let scale = 1 - (1 - pinned) * progress
         let top = max(pinnedTop, current)
+        let wraps = titleHeight > lineHeight + 1
         return State(
             titleTop: top,
             scale: scale,
+            pinnedScale: pinned,
             progress: progress,
-            levelTop: top + titleHeight * scale + levelGap,
-            levelOpacity: Double(min(1, max(0, (progress - 0.7) / 0.3))),
+            lineOpacity: wraps ? Double(min(1, max(0, (progress - 0.3) / 0.4))) : 1,
+            tagsTop: top + lineHeight * scale + tagsGap,
+            tagsOpacity: Double(min(1, max(0, (progress - 0.7) / 0.3))),
             glassBottom: max(safeTop, pinnedTop + pinnedGroup + glassBelowContent),
             glassOpacity: Double(min(1, max(0, scrolled / glassFadeDistance)))
         )
@@ -637,39 +651,82 @@ enum TitleBarLayout {
 }
 
 private struct FlyingTitle: View {
-    let title: String
-    let level: JLPTLevel
+    let point: GrammarPoint
     let scroll: DetailScrollModel
+    @EnvironmentObject private var favorites: FavoritesStore
+    @State private var lineSize: CGSize = .zero
 
     var body: some View {
         GeometryReader { proxy in
             let size = scroll.titleSize
-            let s = TitleBarLayout.state(scrolled: scroll.offset, titleHeight: size.height, safeTop: proxy.safeAreaInsets.top)
+            let s = TitleBarLayout.state(scrolled: scroll.offset, titleHeight: size.height, lineSize: lineSize,
+                                         containerWidth: proxy.size.width, safeTop: proxy.safeAreaInsets.top)
             ZStack(alignment: .top) {
                 EdgeGlass(bottom: s.glassBottom)
                     .opacity(s.glassOpacity)
                 if size.height > 0 {
-                    RubyText(japanese: title, style: GrammarDetailView.titleStyle)
-                        .frame(width: size.width, height: size.height)
+                    if s.lineOpacity < 1 {
+                        RubyText(japanese: point.titleForm, style: GrammarDetailView.titleStyle)
+                            .frame(width: size.width, height: size.height)
+                            .scaleEffect(s.scale, anchor: .top)
+                            .offset(y: s.titleTop)
+                            .opacity(1 - s.lineOpacity)
+                            .accessibilityHidden(true)
+                    }
+                    RubyText(japanese: point.titleForm, style: GrammarDetailView.titleStyle)
+                        .fixedSize()
+                        .onGeometryChange(for: CGSize.self) { $0.size } action: { lineSize = $0 }
                         .scaleEffect(s.scale, anchor: .top)
                         .offset(y: s.titleTop)
+                        .opacity(s.lineOpacity)
                         .accessibilityElement(children: .ignore)
-                        .accessibilityLabel(Text(verbatim: title))
+                        .accessibilityLabel(Text(verbatim: point.titleForm))
                         .accessibilityAddTraits(.isHeader)
                         .accessibilityIdentifier("detail.barTitle")
                 }
-                if s.levelOpacity > 0 {
-                    LevelText(level: level, small: true)
-                        .frame(height: TitleBarLayout.levelHeight)
-                        .opacity(s.levelOpacity)
-                        .offset(y: s.levelTop)
-                        .accessibilityIdentifier("detail.barLevel")
+                if s.tagsOpacity > 0 {
+                    BarTags(level: point.level, mustKnow: point.frequency == .high, favorited: favorites.isFavorite(point.id))
+                        .opacity(s.tagsOpacity)
+                        .offset(y: s.tagsTop)
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .ignoresSafeArea(edges: .top)
         }
         .allowsHitTesting(false)
+    }
+}
+
+private struct BarTags: View {
+    let level: JLPTLevel
+    let mustKnow: Bool
+    let favorited: Bool
+
+    var body: some View {
+        HStack(spacing: 5) {
+            LevelBadge(level: level, prefixed: true)
+                .accessibilityIdentifier("detail.barLevel")
+            if mustKnow {
+                MustKnowBadge(identifier: "detail.barMustKnow")
+            }
+            if favorited {
+                HStack(spacing: 3) {
+                    Image("Kinchaku")
+                        .renderingMode(.template)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 12)
+                        .foregroundStyle(Sakura.center)
+                    Text(localized: "已收藏")
+                        .font(TagMetrics.font)
+                        .foregroundStyle(.secondary)
+                }
+                .accessibilityElement(children: .combine)
+                .accessibilityIdentifier("detail.barFavorited")
+            }
+        }
+        .frame(height: TitleBarLayout.tagsHeight)
+        .fixedSize()
     }
 }
 

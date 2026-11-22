@@ -99,19 +99,71 @@ final class DetailTests: E2ETestCase {
         app.swipeUp()
         app.swipeUp()
         let level = id("detail.barLevel")
-        wait(level, "往上滑后标题收进顶栏，标题下方应出现等级")
+        wait(level, "往上滑后标题收进顶栏，标题下方应出现标签行")
         XCTAssertEqual(barTitle.frame.midX, restFrame.midX, accuracy: 2, "标题只往上移，水平位置和页面大标题一样居中（大屏时右侧有竖排标签栏，以内容区为准）")
         XCTAssertLessThan(barTitle.frame.minY, restFrame.minY - 20, "标题应跟着往上移到顶栏")
         XCTAssertLessThan(barTitle.frame.maxY, 200, "标题应停在屏幕顶部的顶栏里")
         XCTAssertLessThan(barTitle.frame.height, restFrame.height, "收进顶栏的标题应比页面大标题小")
         XCTAssertTrue(level.label.hasPrefix("JLPT N"), "等级应写成「JLPT N…」")
         XCTAssertGreaterThan(level.frame.minY, barTitle.frame.minY, "等级应在标题下方")
-        XCTAssertEqual(level.frame.midX, barTitle.frame.midX, accuracy: 2, "等级应在标题正下方居中")
+        let mustKnow = id("detail.barMustKnow")
+        XCTAssertTrue(mustKnow.exists, "ようになる 是必考语法，顶栏里的标签行也应有「必考」")
+        XCTAssertEqual(mustKnow.frame.midY, level.frame.midY, accuracy: 2, "等级和必考在顶栏里排成一行")
+        XCTAssertGreaterThan(mustKnow.frame.minX, level.frame.maxX, "必考跟在等级右边")
+        XCTAssertFalse(id("detail.barFavorited").exists, "没收藏的语法，顶栏里不应有「已收藏」")
+        let row = level.frame.union(mustKnow.frame)
+        XCTAssertEqual(row.midX, barTitle.frame.midX, accuracy: 2, "标签行应在标题正下方居中")
 
         scrollToTop()
-        waitGone(level, "回到顶部后顶栏里的等级应藏起来")
+        waitGone(level, "回到顶部后顶栏里的标签行应藏起来")
         XCTAssertEqual(barTitle.frame.minY, restFrame.minY, accuracy: 2, "回到顶部后标题应回到原来的位置")
         XCTAssertEqual(barTitle.frame.height, restFrame.height, accuracy: 2, "回到顶部后标题恢复原来的大小")
+    }
+
+    func testLongTitleStaysOnOneLineInBar() {
+        let title = "〜んです・〜のです・〜んだ"
+        tab("搜索").tap()
+        let field = app.searchFields.firstMatch
+        wait(field, "搜索页应有搜索框")
+        field.tap()
+        field.typeText("のです")
+        let hasTitle = NSPredicate(format: "label CONTAINS %@", title)
+        let direct = ids("search.result").matching(hasTitle).firstMatch
+        let result = direct.waitForExistence(timeout: 8) ? direct : ids("search.result").containing(hasTitle).firstMatch
+        wait(result, "搜索「のです」应找到「\(title)」")
+        result.tap()
+        wait(detailScreen, "点搜索结果应进入讲解页")
+        let barTitle = id("detail.barTitle")
+        wait(barTitle, "页面顶部应有标题")
+        let restFrame = barTitle.frame
+
+        app.swipeUp()
+        app.swipeUp()
+        let level = id("detail.barLevel")
+        wait(level, "往上滑后顶栏里应出现标签行")
+        XCTAssertEqual(barTitle.label, title)
+        XCTAssertLessThan(barTitle.frame.height, 34, "长标题收进顶栏后只占一行，不折成两行：\(barTitle.frame)")
+        XCTAssertLessThan(barTitle.frame.width, app.windows.firstMatch.frame.width - 120, "一行标题要缩到两个圆按钮之间")
+        XCTAssertEqual(barTitle.frame.midX, restFrame.midX, accuracy: 2, "标题居中")
+        XCTAssertGreaterThan(level.frame.minY, barTitle.frame.maxY - 2, "标签行在一行标题下面")
+        XCTAssertLessThan(level.frame.maxY, 200, "标题和标签行都在顶栏里，顶栏不变高")
+    }
+
+    func testFavoritedTagJoinsBarRow() {
+        openDetailBySearch("にもかかわらず")
+        id("detail.favorite").tap()
+        wait(id("detail.favorited"), "收藏后标题下方应出现「已收藏」")
+        app.swipeUp()
+        app.swipeUp()
+        let level = id("detail.barLevel")
+        let favorited = id("detail.barFavorited")
+        wait(favorited, "收藏过的语法，往上滑后顶栏标签行里应有「已收藏」")
+        XCTAssertEqual(favorited.frame.midY, level.frame.midY, accuracy: 2, "已收藏和等级排在同一行")
+        XCTAssertGreaterThan(favorited.frame.minX, level.frame.maxX, "已收藏排在等级后面")
+        scrollToTop()
+        id("detail.favorited").tap()
+        app.buttons["取消收藏"].firstMatch.tap()
+        wait(id("detail.favorite"), "取消收藏后右上角的收藏按钮回来")
     }
 
     func testDetailFeedbackLink() {

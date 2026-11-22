@@ -43,7 +43,9 @@
 | 讲解 | 收藏后右上角按钮消失、标题下出现「已收藏」→ 收藏页左滑「取消收藏」→ 回讲解页按钮重新出现 | `DetailTests.testFavoriteHidesButtonAndUnfavoriteBySwipeInList` |
 | 讲解 | 点「已收藏」→「取消收藏」→ 按钮重新出现、收藏页为空 | `DetailTests.testUnfavoriteFromFavoritedTagOnDetail` |
 | 讲解（反向） | 没收藏时按钮一直在、没有「已收藏」 | `DetailTests.testUnfavoritedGrammarKeepsButtonAndHasNoTag` |
-| 讲解 | 往上滑时大标题跟着移进顶栏正中并缩小、出现等级；回到顶部复原 | `DetailTests.testTitleFollowsScrollIntoCenteredBar` |
+| 讲解 | 往上滑时大标题跟着移进顶栏正中并缩小、标题下出现一行缩小的标签（等级、必考），没收藏的没有「已收藏」；回到顶部复原 | `DetailTests.testTitleFollowsScrollIntoCenteredBar` |
+| 讲解 | 长标题（〜んです・〜のです・〜んだ）收进顶栏后只占一行，缩到两个圆按钮之间 | `DetailTests.testLongTitleStaysOnOneLineInBar` |
+| 讲解 | 收藏过的语法，顶栏标签行里「已收藏」和等级排在同一行 | `DetailTests.testFavoritedTagJoinsBarRow` |
 | 复习 | 复习页收藏 → 顶部提示「已收进收藏」→ 按钮消失、出现「已收藏」 | `ReviewTests.testFavoriteDuringReviewHidesButtonAndConfirms` |
 | 动效 | 樱花落进袋子、标签图标变粉时仍能点「收藏」标签 | `SakuraAnimationTests.testFavoritesTabReachableWhenPouchTurnsPink` |
 | 语法库 | 列表 → 讲解 → 返回 | `EndToEndTests.testLibraryOpensDetail` |
