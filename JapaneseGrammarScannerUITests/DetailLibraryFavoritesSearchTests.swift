@@ -95,6 +95,7 @@ final class DetailTests: E2ETestCase {
         XCTAssertEqual(barTitle.label, title, "显示的应是本页语法的完整标题")
         let restFrame = barTitle.frame
         assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "展开", pinned: false)
+        assertNoHorizontalOverflow(state: "展开")
         XCTAssertFalse(id("detail.barLevel").exists, "没滚动时顶栏里不应有等级（等级在标题下面的标签里）")
 
         app.swipeUp()
@@ -103,6 +104,7 @@ final class DetailTests: E2ETestCase {
         wait(level, "往上滑后标题收进顶栏，标题下方应出现标签行")
         XCTAssertEqual(barTitle.frame.midX, restFrame.midX, accuracy: 2, "标题只往上移，水平位置不变")
         assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "收起", pinned: true)
+        assertNoHorizontalOverflow(state: "收起")
         XCTAssertLessThan(barTitle.frame.minY, restFrame.minY - 20, "标题应跟着往上移到顶栏")
         XCTAssertLessThan(barTitle.frame.maxY, 200, "标题应停在屏幕顶部的顶栏里")
         XCTAssertLessThan(barTitle.frame.height, restFrame.height, "收进顶栏的标题应比页面大标题小")
@@ -155,6 +157,15 @@ final class DetailTests: E2ETestCase {
         }
         if pinned, back.exists, back.frame.maxY > frame.minY, back.frame.minY < frame.maxY {
             XCTAssertGreaterThanOrEqual(frame.minX, back.frame.maxX - 1, "\(state)：标题不能压到返回键：标题 \(frame)，返回键 \(back.frame)", file: file, line: line)
+        }
+    }
+
+    private func assertNoHorizontalOverflow(state: String, file: StaticString = #filePath, line: UInt = #line) {
+        let window = app.windows.firstMatch.frame
+        for text in app.staticTexts.allElementsBoundByIndex where text.exists && text.frame.height > 0 && text.frame.minY < window.maxY && text.frame.maxY > window.minY {
+            let f = text.frame
+            XCTAssertGreaterThanOrEqual(f.minX, window.minX - 1, "\(state)：页面内容不能超出屏幕左边：「\(text.label)」\(f)", file: file, line: line)
+            XCTAssertLessThanOrEqual(f.maxX, window.maxX + 1, "\(state)：页面内容不能超出屏幕右边：「\(text.label)」\(f)", file: file, line: line)
         }
     }
 
