@@ -47,7 +47,9 @@ final class TitleBarLayoutTests: XCTestCase {
         let s = state(400)
         let group = oneLine * TitleBarLayout.pinnedScale + TitleBarLayout.levelGap + TitleBarLayout.levelHeight
         let barCenter = safeTop - TitleBarLayout.navBarHeight / 2
-        XCTAssertEqual(s.titleTop + group / 2, barCenter, accuracy: 0.5)
+        let expectedTop = max(safeTop - TitleBarLayout.navBarHeight + 2, barCenter - group / 2)
+        XCTAssertEqual(s.titleTop, expectedTop, accuracy: 0.5, "标题和等级在导航栏那一行居中，太高时贴着状态栏下沿")
+        XCTAssertLessThanOrEqual(abs(s.titleTop + group / 2 - barCenter), 4, "停住的位置离导航栏正中不超过几 pt")
         XCTAssertEqual(s.levelTop, s.titleTop + oneLine * TitleBarLayout.pinnedScale + TitleBarLayout.levelGap, accuracy: 0.001)
         XCTAssertEqual(s.levelOpacity, 1)
         XCTAssertEqual(s.glassOpacity, 1)
