@@ -1,56 +1,79 @@
 import XCTest
 @testable import JapaneseGrammarScanner
 
-/// 讲解页标题栏的几何。Build 17 反馈 1：标题要在正中、字号不缩小、长标题两行、跟手地移到正中。
 final class TitleBarLayoutTests: XCTestCase {
-    private let oneLine = TitleBarLayout.barContentHeight(titleBlockHeight: 22 + 2 + 16)
-    private let twoLines = TitleBarLayout.barContentHeight(titleBlockHeight: 44 + 2 + 16)
+    private let safeTop: CGFloat = 103
+    private let oneLine: CGFloat = 56
+    private let twoLines: CGFloat = 100
 
-    func testBarIsAtLeastNavigationBarHighAndGrowsForTwoLines() {
-        XCTAssertEqual(TitleBarLayout.barContentHeight(titleBlockHeight: 10), TitleBarLayout.navBarHeight)
-        XCTAssertGreaterThan(twoLines, oneLine, "两行标题时标题栏要变高，而不是缩小字号")
-        XCTAssertEqual(twoLines, 44 + 2 + 16 + 2 * TitleBarLayout.barVerticalPadding)
+    private func state(_ scrolled: CGFloat, title: CGFloat = 56) -> TitleBarLayout.State {
+        TitleBarLayout.state(scrolled: scrolled, titleHeight: title, safeTop: safeTop)
     }
 
-    func testPageTitleStartsBelowATallerBar() {
-        XCTAssertEqual(TitleBarLayout.headerTopPadding(barContentHeight: TitleBarLayout.navBarHeight), TitleBarLayout.topPadding)
-        XCTAssertEqual(TitleBarLayout.headerTopPadding(barContentHeight: twoLines),
-                       twoLines - TitleBarLayout.navBarHeight + TitleBarLayout.topPadding,
-                       "没滚动时，页面标题不能被变高的标题栏盖住")
+    private var pinnedScroll: CGFloat {
+        (1...600).map(CGFloat.init).first { state($0).progress >= 1 } ?? .infinity
     }
 
-    func testAtRestBarTitleIsHiddenBelowTheBar() {
-        for bar in [oneLine, twoLines] {
-            XCTAssertEqual(TitleBarLayout.titleOffset(scrolled: 0, barContentHeight: bar), bar)
-            XCTAssertEqual(TitleBarLayout.titleOffset(scrolled: -40, barContentHeight: bar), bar, "下拉回弹时也不出现")
-        }
-        XCTAssertEqual(TitleBarLayout.dividerOpacity(scrolled: 0), 0)
+    func testAtRestTitleIsFullSizeBelowBarAndGlassHidden() {
+        let s = state(0)
+        XCTAssertEqual(s.titleTop, safeTop + TitleBarLayout.topPadding)
+        XCTAssertEqual(s.scale, 1)
+        XCTAssertEqual(s.levelOpacity, 0)
+        XCTAssertEqual(s.glassOpacity, 0)
     }
 
-    /// 跟手：页面标题碰到标题栏下沿之后，每滚 1pt，标题栏里的标题上移 1pt，没有跳变
-    func testFollowsScrollOneToOne() {
-        let bar = twoLines
-        var last = TitleBarLayout.titleOffset(scrolled: 0, barContentHeight: bar)
-        for s in stride(from: CGFloat(1), through: 300, by: 1) {
-            let now = TitleBarLayout.titleOffset(scrolled: s, barContentHeight: bar)
-            XCTAssertLessThanOrEqual(now, last + 0.0001, "往上滚时标题不应往下走（滚动 \(s)）")
-            XCTAssertLessThanOrEqual(last - now, 1.0001, "每滚 1pt 最多移动 1pt（滚动 \(s)）")
-            if s > TitleBarLayout.topPadding && s <= TitleBarLayout.topPadding + bar {
-                XCTAssertEqual(last - now, 1, accuracy: 0.0001, "这一段应该一比一跟手（滚动 \(s)）")
-            }
-            last = now
+    func testTitleFollowsFingerOneToOneUntilPinned() {
+        let end = pinnedScroll
+        for scrolled in stride(from: CGFloat(0), to: end, by: 2) {
+            XCTAssertEqual(state(scrolled).titleTop, safeTop + TitleBarLayout.topPadding - scrolled, accuracy: 0.001)
         }
     }
 
-    /// 移到正中后停住，继续滚也不动；往回滚时按原路返回
-    func testStopsCenteredAndReverses() {
-        let bar = oneLine
-        let end = TitleBarLayout.topPadding + bar
-        for s: CGFloat in [end, end + 100, 5000] {
-            XCTAssertEqual(TitleBarLayout.titleOffset(scrolled: s, barContentHeight: bar), 0)
+    func testTitleShrinksGraduallyWhileMovingUp() {
+        let end = pinnedScroll
+        var last = state(0).scale
+        var distinct = Set<Int>()
+        for scrolled in stride(from: CGFloat(1), through: end, by: 1) {
+            let s = state(scrolled).scale
+            XCTAssertLessThanOrEqual(s, last, "滑得越多标题越小，不回弹")
+            distinct.insert(Int(s * 1000))
+            last = s
         }
-        let mid = TitleBarLayout.topPadding + bar / 2
-        XCTAssertEqual(TitleBarLayout.titleOffset(scrolled: mid, barContentHeight: bar), bar / 2, accuracy: 0.0001)
-        XCTAssertEqual(TitleBarLayout.dividerOpacity(scrolled: end), 1)
+        XCTAssertGreaterThan(distinct.count, 10, "缩小是渐进的，不是一下子跳过去")
+        XCTAssertEqual(last, TitleBarLayout.pinnedScale, accuracy: 0.001)
+    }
+
+    func testPinnedTitleAndLevelSitCenteredInNavBarRow() {
+        let s = state(400)
+        let group = oneLine * TitleBarLayout.pinnedScale + TitleBarLayout.levelGap + TitleBarLayout.levelHeight
+        let barCenter = safeTop - TitleBarLayout.navBarHeight / 2
+        XCTAssertEqual(s.titleTop + group / 2, barCenter, accuracy: 0.5)
+        XCTAssertEqual(s.levelTop, s.titleTop + oneLine * TitleBarLayout.pinnedScale + TitleBarLayout.levelGap, accuracy: 0.001)
+        XCTAssertEqual(s.levelOpacity, 1)
+        XCTAssertEqual(s.glassOpacity, 1)
+        XCTAssertEqual(state(800).titleTop, s.titleTop, "停住以后再往下滑，标题不再移动")
+    }
+
+    func testGlassCoversPinnedTitleAndLevel() {
+        for title in [oneLine, twoLines] {
+            let s = state(600, title: title)
+            XCTAssertGreaterThanOrEqual(s.glassBottom, s.levelTop + TitleBarLayout.levelHeight, "毛玻璃要盖住标题和等级")
+            XCTAssertGreaterThanOrEqual(s.glassBottom, safeTop, "毛玻璃至少盖到导航栏下沿")
+            XCTAssertGreaterThanOrEqual(s.titleTop, safeTop - TitleBarLayout.navBarHeight, "两行标题也不顶进状态栏")
+        }
+    }
+
+    func testPullDownBounceKeepsTitleFullSizeAndFollowing() {
+        let s = state(-40)
+        XCTAssertEqual(s.scale, 1)
+        XCTAssertEqual(s.titleTop, safeTop + TitleBarLayout.topPadding + 40)
+        XCTAssertEqual(s.glassOpacity, 0)
+        XCTAssertEqual(s.levelOpacity, 0)
+    }
+
+    func testLevelFadesInOnlyNearTheEnd() {
+        let end = pinnedScroll
+        XCTAssertEqual(state(end * 0.5).levelOpacity, 0, "滑到一半时等级还不出现（页面上已有等级标签）")
+        XCTAssertGreaterThan(state(end * 0.9).levelOpacity, 0)
     }
 }

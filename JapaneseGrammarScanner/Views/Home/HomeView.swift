@@ -123,55 +123,55 @@ struct HomeView: View {
     // MARK: 扫描入口
 
     private var scanEntry: some View {
-        VStack(alignment: .leading, spacing: 18) {
-            VStack(alignment: .leading, spacing: 6) {
-                Text(localized: "扫描日文，找出语法")
-                    .font(.largeTitle.bold())
-                    .fixedSize(horizontal: false, vertical: true)
-                Text(localized: "对准书页或选一张截图，句子里的语法会被标出来。")
-                    .font(.body)
-                    .foregroundStyle(.secondary)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            .padding(.top, 4)
-
+        VStack(spacing: 12) {
             Button(action: openCamera) {
-                Label(tr("相机扫描"), systemImage: "camera.viewfinder")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 10)
+                VStack(spacing: 3) {
+                    Label(tr("相机扫描"), systemImage: "camera.viewfinder")
+                        .font(.headline)
+                    Text(localized: "对准书页，标出句子里的语法")
+                        .font(.caption.weight(.medium))
+                        .opacity(0.9)
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 6)
             }
             .prominentGlassButton()
             .controlSize(.large)
             .buttonBorderShape(.capsule)
             .accessibilityIdentifier("home.camera")
 
-            HStack(spacing: 12) {
-                PhotosPicker(selection: $photoItem, matching: .images) {
-                    Label(tr("从相册识别"), systemImage: "photo.on.rectangle")
-                        .font(.subheadline.weight(.semibold))
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 6)
-                }
-                .secondaryGlassButton()
-                .buttonBorderShape(.capsule)
-                .accessibilityIdentifier("home.photos")
+            PhotosPicker(selection: $photoItem, matching: .images) {
+                Label(tr("从相册识别"), systemImage: "photo.on.rectangle")
+                    .font(.subheadline.weight(.semibold))
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 6)
+            }
+            .secondaryGlassButton()
+            .buttonBorderShape(.capsule)
+            .controlSize(.large)
+            .accessibilityIdentifier("home.photos")
+
+            if HomeLayout.showsSampleLink(scanCount: history.scans.count) {
                 Button {
                     if let image = UIImage(named: "SamplePage") {
                         path.append(.scan(ScanImage(image: image.normalizedForOCR(), isSample: true)))
                     }
                 } label: {
-                    Label(tr("试试示例"), systemImage: "book.pages")
-                        .font(.subheadline.weight(.semibold))
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 6)
+                    HStack(spacing: 2) {
+                        Text(localized: "没有日文材料？试试示例")
+                        Image(systemName: "chevron.right").font(.caption2.weight(.semibold))
+                    }
+                    .font(.footnote.weight(.medium))
+                    .foregroundStyle(Theme.accentText)
+                    .padding(.vertical, 4)
+                    .frame(maxWidth: .infinity)
+                    .contentShape(Rectangle())
                 }
-                .secondaryGlassButton()
-                .buttonBorderShape(.capsule)
+                .buttonStyle(.plain)
                 .accessibilityIdentifier("home.sample")
             }
-            .controlSize(.large)
         }
+        .padding(.top, 4)
     }
 
     // MARK: 试用提醒（只在最后 2 天和结束后出现）
@@ -549,3 +549,6 @@ struct ReviewRow: View {
     }
 }
 
+enum HomeLayout {
+    static func showsSampleLink(scanCount: Int) -> Bool { scanCount == 0 }
+}

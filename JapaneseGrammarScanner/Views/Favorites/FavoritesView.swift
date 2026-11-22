@@ -1,6 +1,5 @@
 import SwiftUI
 
-/// 收藏的语法点，可按「快遗忘了 / 最近收藏 / 最多查看」排序。
 struct FavoritesView: View {
     enum SortOrder: String, CaseIterable, Identifiable {
         case forgetting, recent, mostViewed
@@ -29,14 +28,12 @@ struct FavoritesView: View {
 
     private var sort: SortOrder { SortOrder(rawValue: sortRaw) ?? .recent }
 
-    /// 按当前排序方式排列的收藏 id
     private var sortedIDs: [String] {
         let ids = favorites.ids.filter { library.point(id: $0) != nil }
         switch sort {
         case .recent:
             return ids
         case .forgetting:
-            // 保持率越低越靠前；没看过讲解的视为最需要看
             let now = Date()
             return ids.enumerated().sorted { a, b in
                 let ra = history.retention(of: a.element, now: now) ?? -1
@@ -68,11 +65,15 @@ struct FavoritesView: View {
                                 NavigationLink(value: Route.grammar(id)) { GrammarRow(point: p) }
                                     .accessibilityIdentifier("favorites.row")
                                     .listRowBackground(Theme.card)
+                                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                                        Button(role: .destructive) {
+                                            withAnimation { favorites.toggle(id) }
+                                        } label: {
+                                            Label(tr("取消收藏"), systemImage: "minus.circle")
+                                        }
+                                        .accessibilityIdentifier("favorites.unfavorite")
+                                    }
                             }
-                        }
-                        // 取消收藏：点星号，或向左轻扫（系统标准操作）。不再单独提供「编辑」按钮。
-                        .onDelete { offsets in
-                            for id in offsets.map({ ids[$0] }) { favorites.toggle(id) }
                         }
                     }
                     .themedList()

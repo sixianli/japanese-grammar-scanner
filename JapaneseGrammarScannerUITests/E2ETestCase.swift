@@ -38,7 +38,7 @@ class E2ETestCase: XCTestCase {
             .firstMatch
     }
 
-    var detailScreen: XCUIElement { id("detail.favorite") }
+    var detailScreen: XCUIElement { id("detail.title") }
 
     func button(startingWith label: String, file: StaticString = #filePath, line: UInt = #line) -> XCUIElement {
         let b = app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", label)).firstMatch
@@ -103,9 +103,10 @@ class E2ETestCase: XCTestCase {
         wait(id("result.grammarRow"), "识别结果页应列出语法点", timeout: 45, file: file, line: line)
     }
 
-    func openSampleFromHome() {
-        scrollToTop()
-        id("home.sample").tap()
+    func openSamplePage() {
+        tab("扫描").tap()
+        wait(id("scan.trySample"), "扫描页应有「试试示例书页」")
+        id("scan.trySample").tap()
         waitForScanResult()
     }
 

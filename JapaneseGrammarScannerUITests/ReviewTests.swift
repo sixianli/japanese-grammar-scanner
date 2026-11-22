@@ -1,19 +1,14 @@
 import XCTest
 
-/// 复习（FSRS）：首页一行提醒「N 个语法可以复习了」→ 讲解页底部自评 → 下一个 / 先到这里 → 全部复习完这一行消失。
-/// 端到端测试的固定数据里有 5 个 10 天前看过的语法（已到期：ni-mo-kakawarazu、you-ni-naru、okage-de、te-shimau、rashii-typical）
-/// 和 5 个刚看过的（未到期）。
 final class ReviewTests: E2ETestCase {
     private var card: XCUIElement { id("home.review") }
 
-    /// 「下一个：〜X」按钮上写的下一个语法标题
     private func nextTitle() -> String {
         let label = id("review.next").label
         guard let r = label.range(of: "：") else { return label }
         return String(label[r.upperBound...]).trimmingCharacters(in: .whitespaces)
     }
 
-    /// 复习页的状态：三个按钮都在、没有残留「已记录」、标签栏隐藏
     private func assertFreshReviewPage(_ step: String, file: StaticString = #filePath, line: UInt = #line) {
         wait(id("review.grade.1"), "\(step)：应显示自评按钮", file: file, line: line)
         XCTAssertTrue(id("review.grade.2").exists && id("review.grade.3").exists, "\(step)：三个按钮都应在", file: file, line: line)
@@ -21,7 +16,6 @@ final class ReviewTests: E2ETestCase {
         XCTAssertFalse(tab("首页").isHittable, "\(step)：复习时底部标签栏应隐藏", file: file, line: line)
     }
 
-    /// Build 18 反馈 1：复习提醒是安静的一行（没有列表、没有「开始复习」大按钮）
     func testReviewReminderIsOneQuietRow() {
         scrollToTop()
         wait(card, "有到期的语法时首页应显示复习提醒")
@@ -31,7 +25,22 @@ final class ReviewTests: E2ETestCase {
         XCTAssertFalse(id("home.review.row").exists, "不再列出要复习的语法")
     }
 
-    /// 回归（Build 16）：点「下一个」后没有重新出现三个按钮，而是带着上一个的「已记录」；页面停在上一页的滚动位置
+    func testFavoriteDuringReviewHidesButtonAndConfirms() {
+        scrollToTop()
+        wait(card, "有到期的语法时首页应显示复习提醒")
+        card.tap()
+        wait(id("review.bar"), "复习时讲解页底部应有自评条")
+        XCTAssertFalse(id("favorite.toast").exists, "还没收藏时不应有提示")
+        id("detail.favorite").tap()
+        let toast = id("favorite.toast")
+        wait(toast, "复习页收藏后顶部应提示「已收进收藏」", timeout: 5)
+        XCTAssertTrue(toast.label.contains("已收进收藏"), "提示文字应是「已收进收藏」：\(toast.label)")
+        waitGone(id("detail.favorite"), "复习页收藏后右上角的收藏按钮应消失")
+        wait(id("detail.favorited"), "复习页收藏后标题下方应出现「已收藏」")
+        waitGone(toast, "提示过一会儿应自动消失", timeout: 8)
+        XCTAssertTrue(id("review.grade.1").exists, "收藏不影响下面的自评按钮")
+    }
+
     func testReviewNextThenStop() {
         scrollToTop()
         wait(card, "有到期的语法时首页应显示复习提醒")
@@ -46,7 +55,6 @@ final class ReviewTests: E2ETestCase {
         XCTAssertTrue(text(containing: "还剩 4 个要复习").exists, "应显示还剩几个")
         XCTAssertFalse(id("review.grade.1").exists, "自评后不再显示三个按钮")
 
-        // 先往下滚一段，换到下一个后应从顶部开始
         app.swipeUp()
         let next = nextTitle()
         id("review.next").tap()
@@ -67,7 +75,6 @@ final class ReviewTests: E2ETestCase {
         XCTAssertTrue(tab("首页").isHittable, "回到首页后标签栏应恢复")
     }
 
-    /// 回归（Build 16）：把队列一路「下一个」走完，数字只减了 1（后面的根本没评上分）
     func testReviewAllHidesCard() {
         scrollToTop()
         wait(card, "首页应显示复习提醒")
@@ -88,7 +95,6 @@ final class ReviewTests: E2ETestCase {
         waitGone(card, "5 个都评过分后复习提醒应整块消失")
     }
 
-    /// 每复习一个就回首页：数字每次刚好少 1
     func testCountDropsByOneEachTime() {
         for remaining in stride(from: 5, to: 2, by: -1) {
             scrollToTop()
@@ -104,14 +110,10 @@ final class ReviewTests: E2ETestCase {
         XCTAssertTrue(text(containing: "2 个语法可以复习了").waitForExistence(timeout: 5), "复习了 3 个，应剩 2 个")
     }
 
-    /// 回归（Build 16）：从语法库点进一个到期的语法，底部也出现了复习栏。
-    /// 复习栏只在从首页「快要忘了」进来时出现；语法库、搜索、扫描结果打开到期的语法都不出现，标签栏照常显示。
     func testDueGrammarFromOtherEntriesHasNoReviewBar() {
-        // 搜索
         openDetailBySearch("にもかかわらず")
         XCTAssertFalse(id("review.bar").waitForExistence(timeout: 3), "从搜索打开到期的语法不应出现复习栏")
 
-        // 语法库
         tab("语法库").tap()
         let field = app.searchFields.firstMatch
         wait(field, "语法库应有搜索框")
@@ -123,8 +125,6 @@ final class ReviewTests: E2ETestCase {
         XCTAssertFalse(id("review.bar").waitForExistence(timeout: 3), "从语法库打开到期的语法不应出现复习栏")
         XCTAssertTrue(tab("语法库").isHittable, "不是复习时标签栏照常显示")
 
-        // 扫描结果（固定数据里的扫描记录含 te-shimau，已到期）。首页「继续上次」是最近一条扫描记录
-        // （scanRecord 只在「全部扫描记录」页里，首页没有）
         tab("首页").tap()
         wait(id("home.search"), "点「首页」标签应回到首页")
         scrollTo(id("home.continueScan"))

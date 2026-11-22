@@ -15,7 +15,8 @@
 | 引导 | 「跳过」→「先用示例书页试试」→ 识别结果 | `FreshInstallTests.testOnboardingSkipThenTrySample` |
 | 空状态 | 收藏为空、搜索页没有浏览记录 | `FreshInstallTests.testEmptyStates` |
 | 首页 | 相机扫描 → 扫描标签 | `HomeTests.testCameraButtonOpensScanTab` |
-| 首页 | 试试示例 → 识别结果 → 返回 | `HomeTests.testSampleButtonOpensResult` |
+| 首页 | 没有大标题，相机按钮里一行说明；扫描过以后不显示「试试示例」 | `HomeTests.testHomeHasNoHeadlineAndHidesSampleLinkAfterScanning` |
+| 首页（新用户） | 还没扫描过时显示「试试示例」小链接 → 识别结果 | `FreshInstallTests.testNewUserHomeShowsSmallSampleLink` |
 | 首页 | 从相册识别 → 选照片 → 识别结果 | `HomeTests.testPhotoPickerOpensResult` |
 | 首页 | 底部反馈入口 → 反馈页 → 取消 | `HomeTests.testFeedbackLinkOpensFeedback` |
 | 首页 | 搜索框 → 搜索标签并获得焦点 | `EndToEndTests.testHomeSearchEntryOpensSearchTab` |
@@ -39,13 +40,19 @@
 | 讲解 | 点义项 → 页内跳转 | `DetailTests.testSenseRowsJumpWithinPage` |
 | 讲解 | 相近语法 → 另一个讲解 → 返回原讲解 → 返回搜索 | `DetailTests.testSimilarGrammarPushesAndBackReturns` |
 | 讲解 | 底部「讲解有误？告诉我们」→ 反馈页 → 取消 | `DetailTests.testDetailFeedbackLink` |
-| 讲解 | 收藏 → 收藏页 → 列表里点星号取消收藏 | `DetailTests.testFavoriteFromDetailAndUnfavoriteFromList` |
+| 讲解 | 收藏后右上角按钮消失、标题下出现「已收藏」→ 收藏页左滑「取消收藏」→ 回讲解页按钮重新出现 | `DetailTests.testFavoriteHidesButtonAndUnfavoriteBySwipeInList` |
+| 讲解 | 点「已收藏」→「取消收藏」→ 按钮重新出现、收藏页为空 | `DetailTests.testUnfavoriteFromFavoritedTagOnDetail` |
+| 讲解（反向） | 没收藏时按钮一直在、没有「已收藏」 | `DetailTests.testUnfavoritedGrammarKeepsButtonAndHasNoTag` |
+| 讲解 | 往上滑时大标题跟着移进顶栏正中并缩小、出现等级；回到顶部复原 | `DetailTests.testTitleFollowsScrollIntoCenteredBar` |
+| 复习 | 复习页收藏 → 顶部提示「已收进收藏」→ 按钮消失、出现「已收藏」 | `ReviewTests.testFavoriteDuringReviewHidesButtonAndConfirms` |
+| 动效 | 樱花落进袋子、标签图标变粉时仍能点「收藏」标签 | `SakuraAnimationTests.testFavoritesTabReachableWhenPouchTurnsPink` |
 | 语法库 | 列表 → 讲解 → 返回 | `EndToEndTests.testLibraryOpensDetail` |
 | 语法库 | N5–N1、全部 等级筛选 | `LibraryTests.testLevelFilters` |
+| 语法库 | 往上滑后搜索框和等级筛选固定在顶部，仍能点 N3 筛选 | `LibraryTests.testLevelFilterStaysPinnedWhenScrolling` |
 | 语法库 | 搜索 → 讲解；无结果 | `LibraryTests.testLibrarySearchOpensDetail` / `testLibrarySearchNoResults` |
 | 语法库 | 讲解 → 切首页 → 切回仍在讲解 → 再点回到列表 | `LibraryTests.testTabKeepsItsOwnPage` |
 | 收藏 | 语法库点星号收藏 3 个 → 三种排序 | `FavoritesTests.testSortMenuAllOptions` |
-| 收藏 | 左滑删除 | `FavoritesTests.testSwipeToDelete` |
+| 收藏 | 左滑「取消收藏」 | `FavoritesTests.testSwipeToUnfavorite` |
 | 收藏 | 打开讲解 → 再点收藏标签回到列表 | `FavoritesTests.testOpenDetailAndRetapTab` |
 | 搜索 | 点搜索标签自动获得焦点；从讲解页切走再回来，回到搜索页并获得焦点 | `EndToEndTests.testSearchTabFocusesFieldEveryTime` |
 | 搜索 | 未输入时显示最近查看 → 打开 | `SearchTests.testRecentViewsShownWhenEmpty` |

@@ -65,7 +65,6 @@ final class DetailTests: E2ETestCase {
         XCTAssertTrue(id("tag.mustKnow").waitForExistence(timeout: 5), "について 是必考语法，应显示「必考」")
     }
 
-    /// 列表行里的「必考」只是标签：点到它也要进讲解页，不能弹出说明（Build 18 前 e2e 发现：点行中间正好落在标签上）
     func testTappingMustKnowTagInRowOpensDetail() {
         tab("搜索").tap()
         let field = app.searchFields.firstMatch
@@ -86,40 +85,41 @@ final class DetailTests: E2ETestCase {
         XCTAssertFalse(id("tag.mustKnow").exists, "〜たち 不是必考语法，不应显示「必考」")
     }
 
-    func testTitleBarShowsCenteredTitleAfterScrolling() {
+    func testTitleFollowsScrollIntoCenteredBar() {
         openDetailBySearch("ようになる")
         let pageTitle = id("detail.title")
         wait(pageTitle, "讲解页顶部应有标题")
         let title = pageTitle.label
         let barTitle = id("detail.barTitle")
-        XCTAssertFalse(barTitle.exists, "没滚动时标题栏里不应显示标题（页面上已经有大标题）")
+        wait(barTitle, "页面顶部应显示语法标题")
+        XCTAssertEqual(barTitle.label, title, "显示的应是本页语法的完整标题")
+        let restFrame = barTitle.frame
+        XCTAssertFalse(id("detail.barLevel").exists, "没滚动时顶栏里不应有等级（等级在标题下面的标签里）")
 
         app.swipeUp()
         app.swipeUp()
-        wait(barTitle, "往上滑后标题栏应显示标题")
-        XCTAssertEqual(barTitle.label, title, "标题栏显示的应是本页语法的完整标题")
-        // 以讲解页自己的标题栏为准：大屏模拟器上页面右侧可能还有系统按钮栏，页面不等于整块屏幕
-        let bar = id("detail.titleBar")
-        let screen = bar.exists ? bar.frame : app.windows.firstMatch.frame
-        XCTAssertEqual(barTitle.frame.midX, screen.midX, accuracy: 2, "标题应在页面水平正中（页面 \(screen)）")
-        XCTAssertLessThan(barTitle.frame.maxY, 200, "标题应在屏幕顶部的标题栏里")
         let level = id("detail.barLevel")
-        XCTAssertTrue(level.exists, "标题栏里标题下方应有等级")
+        wait(level, "往上滑后标题收进顶栏，标题下方应出现等级")
+        let screen = app.windows.firstMatch.frame
+        XCTAssertEqual(barTitle.frame.midX, screen.midX, accuracy: 2, "收进顶栏的标题应在水平正中")
+        XCTAssertLessThan(barTitle.frame.minY, restFrame.minY - 20, "标题应跟着往上移到顶栏")
+        XCTAssertLessThan(barTitle.frame.maxY, 200, "标题应停在屏幕顶部的顶栏里")
+        XCTAssertLessThan(barTitle.frame.height, restFrame.height, "收进顶栏的标题应比页面大标题小")
         XCTAssertTrue(level.label.hasPrefix("JLPT N"), "等级应写成「JLPT N…」")
         XCTAssertGreaterThan(level.frame.minY, barTitle.frame.minY, "等级应在标题下方")
         XCTAssertEqual(level.frame.midX, screen.midX, accuracy: 2, "等级应居中")
 
         scrollToTop()
-        XCTAssertTrue(pageTitle.isHittable, "回到顶部后页面大标题可见")
-        waitGone(barTitle, "回到顶部后标题栏里的标题应藏起来")
+        waitGone(level, "回到顶部后顶栏里的等级应藏起来")
+        XCTAssertEqual(barTitle.frame.minY, restFrame.minY, accuracy: 2, "回到顶部后标题应回到原来的位置")
+        XCTAssertEqual(barTitle.frame.height, restFrame.height, accuracy: 2, "回到顶部后标题恢复原来的大小")
     }
 
     func testDetailFeedbackLink() {
         openDetailBySearch("ように")
         let link = id("detail.feedback")
         scrollTo(link, maxSwipes: 40)
-        // 大屏 iPhone 上导航栏按钮在右侧竖排；樱花按钮曾因为不是图片标签而留在页面右上角，滑下来就不见了
-        XCTAssertTrue(detailScreen.isHittable, "滑到页面底部后，右上角的收藏按钮仍应可点")
+        XCTAssertTrue(id("detail.favorite").isHittable, "滑到页面底部后，右上角的收藏按钮仍应可点")
         link.tap()
         wait(navBar("反馈"), "讲解页底部的反馈入口应打开反馈页")
         navBar("反馈").buttons["取消"].tap()
@@ -127,15 +127,47 @@ final class DetailTests: E2ETestCase {
         wait(detailScreen, "关闭反馈后仍在讲解页")
     }
 
-    func testFavoriteFromDetailAndUnfavoriteFromList() {
+    func testFavoriteHidesButtonAndUnfavoriteBySwipeInList() {
         openDetailBySearch("にもかかわらず")
         XCTAssertEqual(id("detail.favorite").label, "收藏", "没收藏时右上角是线条樱花，读作「收藏」")
+        XCTAssertFalse(id("detail.favorited").exists, "没收藏时标题下不应有「已收藏」")
         id("detail.favorite").tap()
-        XCTAssertEqual(id("detail.favorite").label, "取消收藏", "收藏后变成粉色樱花，读作「取消收藏」")
+        waitGone(id("detail.favorite"), "收藏后右上角的收藏按钮应消失")
+        wait(id("detail.favorited"), "收藏后标题下方应出现「已收藏」")
+        XCTAssertFalse(id("favorite.toast").exists, "讲解页收藏时樱花飘进标签栏的「收藏」，不弹文字提示")
         tab("收藏").tap()
-        wait(id("favorites.row"), "收藏后应出现在收藏页")
-        id("row.star").tap()
-        wait(text(containing: "还没有收藏"), "在列表里点樱花取消收藏后应为空")
+        let row = id("favorites.row")
+        wait(row, "收藏后应出现在收藏页")
+        row.swipeLeft()
+        let unfavorite = app.buttons["取消收藏"].firstMatch
+        wait(unfavorite, "在收藏页左滑一行应出现「取消收藏」")
+        unfavorite.tap()
+        wait(text(containing: "还没有收藏"), "左滑取消收藏后应为空")
+        tab("搜索").tap()
+        wait(id("detail.favorite"), "取消收藏后回到讲解页，右上角的收藏按钮应重新出现")
+        XCTAssertFalse(id("detail.favorited").exists, "取消收藏后「已收藏」应消失")
+    }
+
+    func testUnfavoriteFromFavoritedTagOnDetail() {
+        openDetailBySearch("にもかかわらず")
+        id("detail.favorite").tap()
+        let tag = id("detail.favorited")
+        wait(tag, "收藏后标题下方应出现「已收藏」")
+        tag.tap()
+        let confirm = app.buttons["取消收藏"].firstMatch
+        wait(confirm, "点「已收藏」应弹出「取消收藏」")
+        confirm.tap()
+        waitGone(tag, "取消收藏后「已收藏」应消失")
+        wait(id("detail.favorite"), "取消收藏后右上角的收藏按钮应重新出现")
+        tab("收藏").tap()
+        wait(text(containing: "还没有收藏"), "在讲解页取消收藏后收藏页应为空")
+    }
+
+    func testUnfavoritedGrammarKeepsButtonAndHasNoTag() {
+        openDetailBySearch("にもかかわらず")
+        wait(id("detail.favorite"), "讲解页右上角应有收藏按钮")
+        XCTAssertFalse(id("detail.favorited").exists, "没收藏的语法不应显示「已收藏」")
+        assertStays(id("detail.favorite"), "没点收藏时按钮应一直在")
     }
 }
 
@@ -148,6 +180,22 @@ final class LibraryTests: E2ETestCase {
         }
         button(startingWith: "全部").tap()
         wait(id("library.row"), "全部")
+    }
+
+    func testLevelFilterStaysPinnedWhenScrolling() {
+        tab("语法库").tap()
+        let filter = id("library.levelFilter")
+        wait(filter, "语法库应有等级筛选")
+        let search = app.searchFields.firstMatch
+        wait(search, "语法库应有搜索框")
+        for _ in 0..<4 { app.swipeUp() }
+        XCTAssertTrue(filter.isHittable, "往上滑后等级筛选应仍固定在顶部、可点")
+        XCTAssertTrue(search.exists && app.windows.firstMatch.frame.contains(search.frame), "往上滑后搜索框也应固定在顶部")
+        XCTAssertGreaterThan(filter.frame.minY, search.frame.minY, "等级筛选应在搜索框下面")
+        XCTAssertLessThan(filter.frame.maxY, 260, "等级筛选应停在屏幕顶部")
+        filter.buttons["N3"].tap()
+        wait(id("library.row"), "滑到下面后点 N3 也应能筛选")
+        XCTAssertTrue(filter.buttons["N3"].isSelected, "N3 应被选中")
     }
 
     func testLibrarySearchOpensDetail() {
@@ -204,12 +252,13 @@ final class FavoritesTests: E2ETestCase {
         }
     }
 
-    func testSwipeToDelete() {
+    func testSwipeToUnfavorite() {
         favoriteThreeFromLibrary()
         ids("favorites.row").firstMatch.swipeLeft()
-        let delete = app.buttons.matching(NSPredicate(format: "label == '删除' OR label == 'Delete'")).firstMatch
-        wait(delete, "左滑应出现删除")
-        delete.tap()
+        let unfavorite = app.buttons["取消收藏"].firstMatch
+        wait(unfavorite, "左滑应出现「取消收藏」")
+        XCTAssertFalse(app.buttons["删除"].exists, "左滑按钮应写「取消收藏」，不是「删除」")
+        unfavorite.tap()
         let p = expectation(for: NSPredicate(format: "count == 2"), evaluatedWith: ids("favorites.row"))
         wait(for: [p], timeout: 8)
     }
@@ -280,11 +329,9 @@ final class SearchTests: E2ETestCase {
     }
 }
 
-/// 樱花动画照常播放时（-playAnimations）：动画不挡操作（Build 18 反馈 1、2）
 final class SakuraAnimationTests: E2ETestCase {
     override var extraLaunchArguments: [String] { ["-playAnimations"] }
 
-    /// 首页复习提醒上樱花飘过时，提醒照样能点
     func testReviewRowTappableWhileSakuraDrifts() {
         scrollToTop()
         let row = id("home.review")
@@ -293,7 +340,15 @@ final class SakuraAnimationTests: E2ETestCase {
         wait(id("review.bar"), "樱花飘过时点复习提醒也应进入复习")
     }
 
-    /// 收藏时樱花飘进「收藏」标签：动画期间和之后都能马上切到收藏页
+    func testFavoritesTabReachableWhenPouchTurnsPink() {
+        openDetailBySearch("にもかかわらず")
+        id("detail.favorite").tap()
+        Thread.sleep(forTimeInterval: FlightTiming.pouchGlowStart)
+        XCTAssertTrue(tab("收藏").exists, "樱花落进袋子、标签图标变粉时仍应找得到「收藏」标签")
+        tab("收藏").tap()
+        wait(id("favorites.row"), "标签图标变粉时点「收藏」应能打开收藏页")
+    }
+
     func testFavoriteFlightDoesNotBlockTabs() {
         openDetailBySearch("にもかかわらず")
         id("detail.favorite").tap()
@@ -302,4 +357,8 @@ final class SakuraAnimationTests: E2ETestCase {
         id("row.star").tap()
         wait(text(containing: "还没有收藏"), "取消收藏后应为空")
     }
+}
+
+private enum FlightTiming {
+    static let pouchGlowStart: TimeInterval = 2.9
 }
