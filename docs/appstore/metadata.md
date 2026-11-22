@@ -10,66 +10,18 @@
 | 副标题 (30 字以内) | 学日语 JLPT N1-N5 语法拍照识别 |
 | 主要类别 | 教育 (Education) |
 | 次要类别 | 参考 (Reference) |
-| 年龄分级 | 4+（问卷全部选“无”） |
+| 年龄分级 | 4+（「酒精、烟草或药物的使用或提及」选“偶尔”，例句里约 70 句提到酒或烟；其余选“无”或“否”） |
 | 价格 | 免费（全部功能免费，无内购） |
 | 主要语言 | 简体中文 |
 | Bundle ID | 需改为你自己的，如 `com.<你的名字>.JapaneseGrammarScanner` |
 | SKU | japanese-grammar-scanner |
 | 版权 | © 2026 <你的名字> |
 
-## 宣传文本 (170 字以内)
+## 商店文案、网址和截图（各语言）
 
-把相机对准日语书，文中的语法点立刻高亮！点一下就能看到意思、用法、使用场景、词源和相近语法对比；看过的语法到时间提醒你复习。全部免费。
-
-## 描述
-
-读日语书时遇到看不懂的语法？打开「日语语法速查」，对准书页即可。
-
-【拍照即识别】
-• 实时取景：相机画面中的语法点实时高亮，颜色按 JLPT 等级区分
-• 定格精读：拍下当前页面，所有语法点在图片和文字中全部高亮
-• 相册识别：从相册选择截图或照片同样可以识别
-• 重叠的语法点会让你选择要看哪一个
-
-【讲解详尽】
-每个语法点都有：
-• 意思：多义用法逐条说明
-• 用法：接续方式、活用变化、注意事项
-• 使用场景：书面/口语、什么场合用
-• 词源：语法从哪里来，帮助真正理解
-• 例句：日文 + 中文翻译，语法部分高亮
-• 相近语法对比：讲清区别，一键跳转
-
-【语法库与收藏】
-• 内置 N5–N1 共 878 个语法点，可按等级浏览、搜索
-• 收藏重点语法，随时翻看
-
-【到时间就复习】
-• 查过的语法按遗忘规律排好复习时间
-• 首页提示「N 个语法可以复习了」，点一下看讲解、自评记住了没有
-
-【隐私】
-• 文字识别在手机本地完成，不上传任何图片；没网也能扫描和看讲解
-• 不需要注册，不含广告与追踪
-• 只收集匿名使用统计和你主动提交的反馈，不与身份关联
-
-## 关键词 (100 字符以内，逗号分隔)
-
-N2,N3,N4,日文,日语学习,文法,能力考,日本語,标日,新标准日本语,五十音,扫描,OCR,读书,考试,自学,备考,词典,入门
-
-（名称、副标题里已有的词——日语、语法、学、JLPT、N1、N5、拍照、识别——不要在关键词里重复，重复不会增加搜索权重；副标题写的是「N1-N5」，中间的 N2、N3、N4 不一定能被搜到，所以单独放进关键词。）
-
-## URL
-
-App 主页放在开发者的博客 SiBlog（https://sinimite.work）上，中英日三种语言：
-
-| 字段 | 简体中文 / 繁體中文 | English 及其他语言 |
-| --- | --- | --- |
-| 支持网址（必填） | https://sinimite.work/works/grammar-scanner/ | https://sinimite.work/en/works/grammar-scanner/ |
-| 营销网址（可选） | 同支持网址 | 同支持网址 |
-| 隐私政策网址（必填，在「App 信息」页） | https://sinimite.work/works/grammar-scanner/privacy/ | https://sinimite.work/en/works/grammar-scanner/privacy/ |
-
-博客上的隐私政策由 `python3 tools/privacy_mirror.py --write-siblog <SiBlog 目录>` 按 App 里的政策生成；发版工作流会打开这三个语言的页面逐节对比，和 App 对不上就拦下。
+名称、副标题、宣传文本、描述、关键词、支持网址、营销网址、隐私政策网址和截图，都放在 `docs/appstore/listing/<语言>.json`
+和 `docs/appstore/screenshots/<文件夹>/`，简体中文是 `listing/zh-Hans.json`。改了以后用 GitHub Actions 的
+「App Store listing」任务上传，说明见 `metadata-localized.md`。
 
 ## App 隐私（App Store Connect → App 隐私）
 
@@ -100,11 +52,7 @@ Info.plist 已设置 `ITSAppUsesNonExemptEncryption = NO`，上传后无需额�
 
 ## 截图要求
 
-必填的是「iPhone with Dynamic Island (medium display)」一组，只收 1206×2622 或 1179×2556，至少 1 张（最多 10 张）；CI 截的是 1320×2868（属于 large display 一组），要先缩放成 1206×2622 再上传。建议拍摄：
-1. 扫描页实时高亮
-2. 识别结果页（图片 + 语法点列表）
-3. 语法讲解页
-4. 语法库
-5. 收藏
-
-`tools/` 中的 CI 截图产物（见 GitHub Actions 的 screenshots artifact）可作为基础，再加标题文字。
+必填的是「iPhone with Dynamic Island (medium display)」一组（API 里叫 `APP_IPHONE_61`），只收 1206×2622 或 1179×2556，
+每种语言 1 到 10 张。CI 的 screenshots 产物是 1320×2868（属于 large display 一组），要先缩放成 1206×2622 再放进
+`docs/appstore/screenshots/`。扫描页的截图不要用：模拟器没有相机，画面上是「此设备无法使用相机」。
+`tools/appstore_listing.py --check` 会检查尺寸和张数。
