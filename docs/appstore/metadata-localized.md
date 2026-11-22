@@ -1,20 +1,21 @@
 # App Store 多语言商店信息
 
-在 App Store Connect → App 信息 → 右上角语言菜单中添加以下本地化：English (U.S.)、한국어、Español (México / España)、Tiếng Việt、简体中文、繁體中文。
-（App 界面另有缅甸语，App Store 没有缅甸语商店页，缅甸用户看英文页。）
+主要语言是简体中文（见 `metadata.md`）。另外添加这些本地化：English (U.S.)、English (U.K.)、한국어、Español (México)、Español (España)、Tiếng Việt、繁體中文。两种英文、两种西班牙文用同一份文案。
+（App 界面另有缅甸语，App Store 没有缅甸语商店页；缅甸店面的默认语言是 English (U.K.)，所以必须加 English (U.K.)，否则缅甸用户会看到简体中文页。）
+名称、副标题里已有的词不要在关键词里重复（Apple 的规则，重复不加权重）；副标题写了「N1-N5」，所以关键词只补 N2、N3、N4。
 每种语言需填写：名称、副标题（App 信息页）；宣传文本、描述、关键词（版本页）。截图可各语言共用（CI 也可用 `-AppleLanguages` 生成各语言截图）。
 
 ---
 
-## English (U.S.) — 建议设为主要语言
+## English (U.S.) / English (U.K.)
 
 - **Name**: Japanese Grammar Lookup
 - **Subtitle**: JLPT N5-N1 grammar by photo
 - **Promotional Text**: Point your camera at any Japanese book and every grammar point lights up. Tap to see meaning, usage, origin and similar grammar, then review at the right time. Free.
-- **Keywords**: nihongo,bunpo,learn,study,reading,textbook,camera,scanner,ocr,n5,n4,n3,n2,n1,exam,dictionary
+- **Keywords**: nihongo,bunpo,learn,study,reading,textbook,camera,scanner,ocr,n4,n3,n2,exam,dictionary
 - **Description**:
 
-Reading Japanese and stuck on the grammar? Point your camera at the page and Grammar Scan highlights every grammar point it finds.
+Reading Japanese and stuck on the grammar? Point your camera at the page and Japanese Grammar Lookup highlights every grammar point it finds.
 
 SCAN ANYTHING
 • Live camera: grammar points are highlighted in real time, color-coded by JLPT level
@@ -32,7 +33,7 @@ For every grammar point:
 • Similar grammar — clear comparisons, one tap away
 
 LIBRARY & FAVORITES
-• Built-in JLPT N5–N1 grammar, browse by level or search
+• 878 JLPT N5–N1 grammar points built in — browse by level or search
 • Save the grammar you want to keep
 
 REVIEW AT THE RIGHT TIME
@@ -55,7 +56,7 @@ Explanations available in English, 한국어, Español, Tiếng Việt, မြ�
 - **이름**: 일본어 문법 사전
 - **부제**: 일본어 공부 JLPT N1-N5 문법 사진 인식
 - **프로모션 텍스트**: 카메라를 일본어 책에 대면 문법이 바로 하이라이트됩니다. 누르면 의미, 용법, 어원, 비슷한 문법 비교까지. 잊기 전에 복습 알림. 무료.
-- **키워드**: 문법,일본어공부,JPT,독해,교재,카메라,스캔,N5,N4,N3,N2,N1,시험,사전,일본어문법
+- **키워드**: JPT,독해,교재,카메라,스캔,N4,N3,N2,시험,독학,일어,니혼고
 - **설명**:
 
 일본어 책을 읽다가 문법이 막히셨나요? 카메라를 페이지에 대기만 하세요.
@@ -70,7 +71,7 @@ Explanations available in English, 한국어, Español, Tiếng Việt, မြ�
 • 의미 · 용법(접속) · 사용 장면 · 어원 · 예문 · 비슷한 문법 비교
 
 【문법 사전과 즐겨찾기】
-• JLPT N5–N1 전체 문법 수록, 레벨별 보기·검색
+• JLPT N5–N1 문법 878개 수록, 레벨별 보기·검색
 • 중요한 문법은 즐겨찾기에 저장
 
 【제때 복습】
@@ -86,12 +87,12 @@ Explanations available in English, 한국어, Español, Tiếng Việt, မြ�
 
 ---
 
-## Español
+## Español (México) / Español (España)
 
 - **Nombre**: Gramática japonesa: consulta
 - **Subtítulo**: Japonés JLPT N1-N5 con fotos
 - **Texto promocional**: Apunta la cámara a un libro en japonés y cada punto gramatical se resalta. Toca para ver significado, uso, origen y gramática similar, y repasa a tiempo. Gratis.
-- **Palabras clave**: japonés,gramática,nihongo,estudio,lectura,libro,cámara,escáner,ocr,n5,n4,n3,n2,n1,examen,diccionario
+- **Palabras clave**: nihongo,estudio,lectura,libro,cámara,escáner,ocr,n4,n3,n2,examen,diccionario
 - **Descripción**:
 
 ¿Lees en japonés y te atascas con la gramática? Apunta la cámara a la página y la app resaltará todos los puntos gramaticales.
@@ -106,7 +107,7 @@ EXPLICACIONES CLARAS
 • Significado · Uso y formación · Cuándo se usa · Origen · Ejemplos traducidos · Comparación con gramática similar
 
 BIBLIOTECA Y FAVORITOS
-• Gramática JLPT N5–N1 completa incluida, por nivel o con búsqueda
+• 878 puntos gramaticales JLPT N5–N1 incluidos, por nivel o con búsqueda
 • Guarda la gramática que quieras conservar
 
 REPASA A TIEMPO
@@ -127,7 +128,7 @@ Totalmente gratis, sin compras dentro de la app.
 - **Tên**: Tra Ngữ Pháp Tiếng Nhật
 - **Phụ đề**: Tiếng Nhật JLPT N1-N5 qua ảnh
 - **Văn bản quảng cáo**: Hướng camera vào sách tiếng Nhật, mọi mẫu ngữ pháp được tô sáng ngay. Nhấn để xem ý nghĩa, cách dùng, nguồn gốc và ngữ pháp tương tự, rồi ôn đúng lúc. Miễn phí.
-- **Từ khóa**: ngữ pháp,học tiếng nhật,nihongo,đọc hiểu,giáo trình,camera,quét,ocr,n5,n4,n3,n2,n1,thi,từ điển
+- **Từ khóa**: học,nihongo,đọc hiểu,giáo trình,camera,quét,ocr,n4,n3,n2,thi,từ điển,tự học
 - **Mô tả**:
 
 Đọc sách tiếng Nhật mà vướng ngữ pháp? Chỉ cần hướng camera vào trang sách.
@@ -142,7 +143,7 @@ Totalmente gratis, sin compras dentro de la app.
 • Ý nghĩa · Cách dùng · Tình huống sử dụng · Nguồn gốc · Ví dụ có dịch · So sánh ngữ pháp tương tự
 
 【TỪ ĐIỂN VÀ YÊU THÍCH】
-• Toàn bộ ngữ pháp JLPT N5–N1, xem theo cấp độ hoặc tìm kiếm
+• 878 mẫu ngữ pháp JLPT N5–N1, xem theo cấp độ hoặc tìm kiếm
 • Lưu các mẫu muốn giữ lại
 
 【ÔN ĐÚNG LÚC】
@@ -169,10 +170,10 @@ Hoàn toàn miễn phí, không mua trong ứng dụng.
 - **名稱**：日語文法速查
 - **副標題**：學日文 JLPT N1-N5 文法拍照辨識
 - **宣傳文字**：把相機對準日語書，文中的語法點立刻反白標示！點一下就能看到意思、用法、使用場景、詞源和相近語法比較；看過的語法到時間提醒你複習。全部免費。
-- **關鍵字**：日語,日檢,語法,能力考,日本語,五十音,掃描,OCR,讀書,考試,自學,備考,字典,入門
+- **關鍵字**：N2,N3,N4,日檢,語法,能力考,日本語,五十音,掃描,OCR,讀書,考試,自學,備考,字典,入門
 - **描述**：
 
-讀日文書時遇到看不懂的語法？打開「語法掃描」，對準書頁即可。
+讀日文書時遇到看不懂的語法？打開「日語文法速查」，對準書頁即可。
 
 【拍照即辨識】
 • 即時取景：畫面中的語法點即時標示，顏色依 JLPT 等級區分
@@ -184,7 +185,7 @@ Hoàn toàn miễn phí, không mua trong ứng dụng.
 • 意思 · 用法（接續）· 使用場景 · 詞源 · 例句 · 相近語法比較
 
 【語法庫與收藏】
-• 內建 N5–N1 全部語法，可依等級瀏覽、搜尋
+• 內建 N5–N1 共 878 個語法點，可依等級瀏覽、搜尋
 • 收藏重點語法，隨時翻看
 
 【到時間就複習】
