@@ -30,6 +30,8 @@ jobs:
           python3 tools/validate_contrasts.py
           python3 tools/validate_compliance.py
           python3 tools/check_strings.py
+          python3 tools/privacy_mirror.py --check
+          python3 tools/appstore_listing.py --check
           python3 -m unittest discover -s tools/tests
 
   build-and-test:

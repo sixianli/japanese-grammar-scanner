@@ -5,7 +5,7 @@
 ## 1. 在 App Store Connect 创建 App（约 5 分钟）
 
 1. 打开 <https://appstoreconnect.apple.com> → **App** → 左上角 **＋** → **新建 App**
-2. 平台：iOS；名称：`语法扫描 - 日语语法拍照识别`（被占用就换一个）；主要语言：简体中文
+2. 平台：iOS；名称：`日语语法速查`；主要语言：简体中文
 3. **套装 ID (Bundle ID)**：如果下拉框里没有，先到 <https://developer.apple.com/account/resources/identifiers/list> 点 **＋** → App IDs → App，填写例如 `com.你的名字.grammarscanner`（不需要勾选任何 Capability），再回来选择它
 4. SKU：`japanese-grammar-scanner`
 
@@ -28,15 +28,13 @@
 | Variable | `APPLE_TEAM_ID` | Team ID |
 | Variable | `BUNDLE_ID` | 第 1 步中的 Bundle ID |
 
-## 4. 发布隐私政策页面（GitHub Pages）
+## 4. 隐私政策与支持网页
 
-仓库 **Settings** → **Pages** → Source 选 **Deploy from a branch** → Branch 选 `main`、目录 `/docs` → Save。
-几分钟后隐私政策网址为：`https://<你的 GitHub 用户名>.github.io/japanese-grammar-scanner/#privacy`
-（仓库需为公开仓库，或账号支持私有仓库 Pages。也可以把 `docs/index.html` 放到任何你自己的网站上。）
+放在开发者的博客 SiBlog（https://sinimite.work）上，网址见 `metadata.md`。不需要开 GitHub Pages。
 
 ## 5. 上传构建
 
-先把 PR 合并到 `main`，然后：仓库 → **Actions** → **Release to App Store Connect** → **Run workflow** → 填版本号 `1.0` → Run。
+先把 PR 合并到 `main`，然后：仓库 → **Actions** → **Release to App Store Connect** → **Run workflow** → 填版本号 `1.4`（不能低于 TestFlight 上已有的版本，否则发版会被拦下） → Run。
 成功后 10–30 分钟，App Store Connect → 你的 App → **TestFlight** 会出现该构建；可先用 TestFlight 在自己 iPhone 上试用。
 
 ## 5.5 配置内购（免费试用 + 一次性买断）
@@ -66,7 +64,7 @@
 
 ## 6. 填写商店信息并提交审核
 
-App Store Connect → 你的 App → **App Store** 标签页 → 1.0 版本：
+App Store Connect → 你的 App → **App Store** 标签页 → 1.4 版本：
 
 - 截图：从 CI 的 **iOS Build & Test** → **screenshots** 产物下载（6.9 英寸 iPhone 尺寸，可直接上传）
 - 宣传文本、描述、关键词、支持网址、隐私政策网址：复制 `docs/appstore/metadata.md`

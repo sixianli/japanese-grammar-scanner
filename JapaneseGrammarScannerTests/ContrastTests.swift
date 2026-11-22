@@ -1,7 +1,6 @@
 import XCTest
 @testable import JapaneseGrammarScanner
 
-/// 新版「相近语法」对比资料：能加载、引用的语法点存在、例句都标出了语法、每种语言都有翻译。
 final class ContrastTests: XCTestCase {
     func testContrastsLoadAndReferencesExist() {
         let lib = GrammarLibrary(language: .zhHans)
@@ -22,15 +21,12 @@ final class ContrastTests: XCTestCase {
                 }
             }
         }
-        // 新版资料里审过、但没有合格对比的语法点：有资料、分组为空（讲解页整节不显示，不退回旧版列表）
         let none = lib.contrasts(for: "mou-ta-already")
         XCTAssertNotNil(none, "审过的语法点应有新版资料")
         XCTAssertEqual(none?.groups.isEmpty, true)
-        // N4–N1 也已全部生成新版资料（以前这里断言 te-shimau 还没有）
         XCTAssertNotNil(lib.contrasts(for: "te-shimau"))
     }
 
-    /// N5–N1 全部生成了新版资料：每个语法点都有（可以为空），引用都存在，例句都标出了语法
     func testEveryPointHasContrasts() {
         let lib = GrammarLibrary(language: .zhHans)
         for p in lib.points {
@@ -64,7 +60,6 @@ final class ContrastTests: XCTestCase {
             guard let c = lib.contrasts(for: "tokoro-da") else { XCTFail("\(lang.rawValue)"); continue }
             XCTAssertEqual(c.groups.count, b.groups.count, lang.rawValue)
             let first = c.groups[0].items[0], bFirst = b.groups[0].items[0]
-            // 日语例句不翻译
             XCTAssertEqual(first.current.map(\.plain), bFirst.current.map(\.plain), lang.rawValue)
             if lang != .zhHant {
                 XCTAssertNotEqual(first.diff, bFirst.diff, "\(lang.rawValue) 缺少翻译")
@@ -74,15 +69,12 @@ final class ContrastTests: XCTestCase {
         }
     }
 
-    // MARK: 多形式语法点（反馈：あまり〜ない 的相近语法里，あまり／あまりに／あまりの 只给了一句例句）
-
     private struct FormsEntry: Decodable {
         struct Form: Decodable { let key: String }
         let type: String
         let forms: [Form]?
     }
 
-    /// 用法不同的几种形式（forms.json 里 type=A）：没有用 title / thisTitle 点明只比哪一种时，每种形式都要有一句例句
     func testMultiFormPointsHaveSentenceForEveryForm() throws {
         let url = try XCTUnwrap(["Grammar/contrasts", "contrasts", nil].lazy.compactMap {
             Bundle.main.url(forResource: "forms", withExtension: "json", subdirectory: $0)
@@ -114,7 +106,6 @@ final class ContrastTests: XCTestCase {
         }
     }
 
-    /// 回归：あまり〜ない 对比 〜あまり・〜あまりに・〜あまりの 时，三种形式各有一句
     func testAmariHasThreeForms() throws {
         let lib = GrammarLibrary(language: .zhHans)
         let item = try XCTUnwrap(lib.contrasts(for: "amari-nai")?.groups.flatMap(\.items).first { $0.id == "amari-ni" })
@@ -123,7 +114,6 @@ final class ContrastTests: XCTestCase {
         }
     }
 
-    /// 翻译文件里每句例句的标签和翻译按位置覆盖；句数和基础文件一致
     func testMultiSentenceTranslationsAlign() {
         let base = GrammarLibrary(language: .zhHans)
         for lang in ContentLanguage.allCases where lang != .zhHans {
@@ -138,5 +128,81 @@ final class ContrastTests: XCTestCase {
                 }
             }
         }
+    }
+
+    func testCuesJoinAdjacentSegments() {
+        let s = GrammarContrasts.Sentence(ja: "今:いま|から|走:はし|っ|*たところで|、|~間:ま|~に|~合:あ|~わない|。", tag: "", tr: "")
+        XCTAssertEqual(s.segments.filter(\.cue).map(\.text).joined(), "間に合わない")
+    }
+
+    func testCueRangesInExplanation() {
+        let text = "看「いつか」：今天想要的 → こんな；去年結婚した。说「今」的时候"
+        let ns = text as NSString
+        XCTAssertEqual(RubyText.cueRanges(in: text, cues: ["いつか"]).map { ns.substring(with: $0) }, ["いつか"])
+        let r = RubyText.cueRanges(in: text, cues: ["今"])
+        XCTAssertEqual(r.count, 1)
+        XCTAssertEqual(r.first.map { ns.substring(with: NSRange(location: $0.location - 1, length: 3)) }, "「今」")
+        XCTAssertTrue(RubyText.cueRanges(in: text, cues: ["結婚"]).isEmpty, "去年結婚した 里的 結婚 前后都是汉字，不算")
+        XCTAssertTrue(RubyText.cueRanges(in: text, cues: []).isEmpty)
+    }
+
+    func testApplyMarksKeepsOtherFlags() {
+        let segs = [RubySegment(text: "看"), RubySegment(text: "いつか"), RubySegment(text: "今", ruby: "いま", highlighted: true)]
+        let out = RubyText.applyMarks(segs, ranges: [NSRange(location: 1, length: 3), NSRange(location: 4, length: 1)], mark: \.cue)
+        XCTAssertEqual(out.map(\.text), ["看", "いつか", "今"])
+        XCTAssertEqual(out.map(\.cue), [false, true, true])
+        XCTAssertEqual(out.last?.highlighted, true, "加线索不能丢掉原来的高亮")
+        XCTAssertEqual(out.last?.ruby, "いま")
+    }
+
+    func testEveryCueIsNamedInExplainInEveryLanguage() {
+        for lang in ContentLanguage.allCases {
+            let lib = GrammarLibrary(language: lang)
+            for p in lib.points {
+                for item in lib.contrasts(for: p.id)?.groups.flatMap(\.items) ?? [] {
+                    for cue in item.cues where RubyText.cueRanges(in: item.explain, cues: [cue]).isEmpty {
+                        XCTFail("\(lang.rawValue) \(p.id) → \(item.id)：「怎么分辨」没有点名线索 \(cue)")
+                    }
+                }
+            }
+        }
+    }
+
+    func testTeIruAndTaAreNotListedAsSameMeaning() {
+        let lib = GrammarLibrary(language: .zhHans)
+        for (a, b) in [("te-iru", "ta-form"), ("ta-form", "te-iru")] {
+            let meaning = lib.contrasts(for: a)?.groups.first { $0.kind == .meaning }
+            XCTAssertFalse(meaning?.items.contains { $0.id == b } ?? false, "\(a) 的「意思差不多的」里不应有 \(b)")
+        }
+        let ta = lib.contrasts(for: "ta-form")?.groups.first { $0.kind == .meaning }
+        XCTAssertTrue(ta?.items.contains { $0.id == "masu-forms" } ?? false)
+    }
+
+    func testTameNiHasOneMeaningGroupPerSense() throws {
+        for lang in ContentLanguage.allCases {
+            let lib = GrammarLibrary(language: lang)
+            let c = try XCTUnwrap(lib.contrasts(for: "tame-ni"), lang.rawValue)
+            let meaning = c.groups.filter { $0.kind == .meaning }
+            XCTAssertTrue(c.splitsMeaningBySense, lang.rawValue)
+            XCTAssertEqual(meaning.map(\.sense), [1, 2], lang.rawValue)
+            XCTAssertEqual(meaning.map { $0.items.map(\.id) }, [["ni-wa-purpose"], ["kara-from"]], lang.rawValue)
+            XCTAssertFalse(meaning.flatMap(\.items).contains { $0.id == "you-na-example" }, "\(lang.rawValue)：〜ような 那一页讲比喻，不该出现在「为了」组")
+            XCTAssertEqual(Set(meaning.map(\.note)).count, 2, "\(lang.rawValue)：两组说明应各写一个意思")
+        }
+        let zh = GrammarLibrary(language: .zhHans).contrasts(for: "tame-ni")?.groups.filter { $0.kind == .meaning }.map(\.note)
+        XCTAssertEqual(zh, ["都表示「为了」", "都表示「因为」"])
+    }
+
+    func testSingleMeaningGroupDoesNotSplit() throws {
+        let c = try XCTUnwrap(GrammarLibrary(language: .zhHans).contrasts(for: "you-ni-naru"))
+        XCTAssertLessThanOrEqual(c.groups.filter { $0.kind == .meaning }.count, 1)
+        XCTAssertFalse(c.splitsMeaningBySense)
+    }
+
+    func testGroupWithoutSenseDecodes() throws {
+        let json = #"{"points":[{"id":"x","groups":[{"kind":"meaning","note":"n","items":[]}]}]}"#
+        let file = try JSONDecoder().decode(GrammarContrasts.File.self, from: Data(json.utf8))
+        XCTAssertNil(file.points.first?.groups.first?.sense)
+        XCTAssertEqual(file.points.first?.splitsMeaningBySense, false)
     }
 }

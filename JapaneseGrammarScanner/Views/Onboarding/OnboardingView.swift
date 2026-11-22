@@ -39,8 +39,8 @@ struct OnboardingView: View {
                     illustration: { DetailIllustration() }
                 ).tag(2)
                 OnboardingPage(
-                    title: "快要忘了就复习",
-                    message: "看过的语法快要忘记时，首页会提醒你。点「开始复习」，看完选「忘了」「有点模糊」或「记得」，App 会按你的记忆安排下次复习。",
+                    title: "到时间就复习",
+                    message: "看过的语法快要忘记时，首页会出现一行「N 个语法可以复习了」。点一下开始复习，看完选「忘了」「有点模糊」或「记得」，App 会按你的记忆安排下次复习。",
                     illustration: { ReviewIllustration() }
                 ).tag(3)
                 OnboardingPage(
@@ -226,7 +226,7 @@ private struct WelcomeIllustration: View {
     }
 }
 
-private struct ScanIllustration: View {
+struct ScanIllustration: View {
     @State private var scanY: CGFloat = -70
 
     var body: some View {
@@ -247,7 +247,7 @@ private struct ScanIllustration: View {
     }
 }
 
-private struct DetailIllustration: View {
+struct DetailIllustration: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 8) {
@@ -272,15 +272,27 @@ private struct DetailIllustration: View {
     }
 }
 
-private struct ReviewIllustration: View {
+struct ReviewIllustration: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text(localized: "有 \(3) 个快要忘了").font(.headline)
-            ForEach(["〜ようになる", "〜にもかかわらず", "〜おかげで"], id: \.self) { t in
-                Text(verbatim: t).font(.subheadline)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal, 12).padding(.vertical, 8)
-                    .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 10))
+        VStack(alignment: .leading, spacing: 14) {
+            // 首页的复习提醒：一行，前面一个铃铛，飘过几朵樱花（静止画面）
+            HStack(spacing: 10) {
+                Image(systemName: "bell").foregroundStyle(Theme.accentText)
+                Text(localized: "\(3) 个语法可以复习了").font(.subheadline.weight(.medium))
+                Spacer(minLength: 4)
+                Image(systemName: "chevron.right").font(.caption.weight(.semibold)).foregroundStyle(.tertiary)
+            }
+            .padding(.horizontal, 14)
+            .frame(minHeight: 46)
+            .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 14))
+            .overlay(alignment: .topTrailing) {
+                HStack(spacing: 10) {
+                    SakuraFlower(size: 14).rotationEffect(.degrees(20))
+                    SakuraPetalShape().fill(Sakura.petal).frame(width: 6, height: 9).rotationEffect(.degrees(-30)).offset(y: 14)
+                    SakuraFlower(size: 10).rotationEffect(.degrees(-15)).offset(y: 6)
+                }
+                .padding(.trailing, 60)
+                .offset(y: -4)
             }
             HStack(spacing: 6) {
                 ForEach(FSRS.Grade.allCases, id: \.self) { g in
@@ -296,7 +308,7 @@ private struct ReviewIllustration: View {
     }
 }
 
-private struct ReadyIllustration: View {
+struct ReadyIllustration: View {
     var body: some View {
         ZStack {
             BookPage().rotationEffect(.degrees(-4))

@@ -1,12 +1,4 @@
 #!/usr/bin/env python3
-"""生成界面文字的多语言文件。
-- 界面文字：每种语言一个 xx.lproj/Localizable.strings（带复数的写进 Localizable.stringsdict）。
-  不用 String Catalog（.xcstrings）：新版 Xcode 把它编译成整包的语言表，App 内切换语言时
-  SwiftUI 按所选语言去 xx.lproj 里找普通文字会找不到，只有带复数的文字能切换。
-- InfoPlist.xcstrings（App 名称、相机权限说明）：由系统读取，仍用 String Catalog。
-源语言为简体中文（代码中的字符串即 key）；繁体中文由 OpenCC 自动转换。
-用法: python3 tools/make_strings.py
-"""
 import json
 import os
 import re
@@ -17,7 +9,6 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = os.path.join(ROOT, "JapaneseGrammarScanner")
 cc = OpenCC("s2twp")
 
-# key(简体中文) : (en, ko, es, vi)
 S = {
     "你扫到的：": ("You scanned: ", "스캔한 문장: ", "Escaneaste: ", "Bạn đã quét: "),
     "对应 用法 ": ("Matches usage ", "해당 용법 ", "Corresponde al uso ", "Ứng với cách dùng "),
@@ -36,6 +27,7 @@ S = {
     "收起": ("Hide", "접기", "Ocultar", "Thu gọn"),
     "怎么分辨": ("How to tell them apart", "구별하는 법", "Cómo distinguirlos", "Cách phân biệt"),
     "本页": ("This page", "이 문법", "Esta página", "Trang này"),
+    "本页第 %lld 个意思：%@": ("Meaning %lld on this page: %@", "이 문법의 %lld번째 뜻: %@", "Significado %lld de esta página: %@", "Nghĩa thứ %lld của trang này: %@"),
     "有 %lld 个快要忘了": ({"one": "%lld grammar point fading", "other": "%lld grammar points fading"}, "잊어버릴 것 같은 문법 %lld개", {"one": "%lld punto se te está olvidando", "other": "%lld puntos se te están olvidando"}, "%lld mẫu sắp quên"),
     "趁还记得，花 1 分钟复习一下": ("Take a minute to review while you still remember.", "아직 기억날 때 1분만 복습해 보세요.", "Repásalos un minuto mientras aún los recuerdas.", "Dành 1 phút ôn lại khi bạn vẫn còn nhớ."),
     "开始复习": ("Start Review", "복습 시작", "Empezar a repasar", "Bắt đầu ôn tập"),
@@ -217,8 +209,7 @@ S = {
     "按遗忘曲线排序：最快要忘记的排在最前面。点开回顾一遍即完成复习。": ("Ordered by the forgetting curve: what you're closest to forgetting comes first. Open one to review it.", "망각 곡선 순서: 가장 먼저 잊을 문법이 맨 위에 있습니다. 열어서 한 번 보면 복습 완료.", "Ordenado por la curva del olvido: lo que estás más cerca de olvidar va primero. Ábrelo para repasarlo.", "Sắp xếp theo đường cong lãng quên: mẫu sắp quên nhất ở trên cùng. Mở ra xem lại là hoàn thành."),
     "记忆约 %lld%%": ("~%lld%% recall", "기억 약 %lld%%", "~%lld%% recuerdo", "Nhớ ~%lld%%"),
     "出题频率": ("Exam Frequency", "출제 빈도", "Frecuencia en el examen", "Tần suất ra đề"),
-    "常考": ("Often Tested", "자주 출제", "Muy frecuente", "Hay thi"),
-    "考过": ("Has Appeared", "출제된 적 있음", "Ha salido", "Đã từng thi"),
+    "必考": ("Must-Know", "필수", "Imprescindible", "Trọng tâm"),
     "根据公开的考试复原资料与教材整理，仅供参考。": ("Compiled from publicly available exam recollections and textbooks. For reference only.", "공개된 시험 복원 자료와 교재를 바탕으로 정리한 참고용 정보입니다.", "Recopilado de reconstrucciones públicas del examen y libros de texto. Solo como referencia.", "Tổng hợp từ tài liệu phục dựng đề thi công khai và giáo trình, chỉ mang tính tham khảo."),
     "继续上次": ("Pick Up Where You Left Off", "이어서 보기", "Continuar donde lo dejaste", "Tiếp tục lần trước"),
     "全部扫描记录": ("All Scans", "전체 스캔 기록", "Todos los escaneos", "Tất cả lần quét"),
@@ -353,7 +344,6 @@ S = {
     "帮助我们了解有多少人在用、来自哪些地区、哪些语法最常被查，以便改进。不包含任何能识别你或你设备的信息。": ("Helps us learn how many people use the app, where they are and which grammar is looked up most, so we can improve it. Contains nothing that identifies you or your device.", "몇 명이 사용하는지, 어느 지역에서 쓰는지, 어떤 문법을 가장 많이 찾는지 파악해 앱을 개선하는 데 도움이 됩니다. 사용자나 기기를 식별할 수 있는 정보는 포함되지 않습니다.", "Nos ayuda a saber cuántas personas usan la app, desde dónde y qué gramática se consulta más, para mejorarla. No contiene nada que te identifique a ti ni a tu dispositivo.", "Giúp chúng tôi biết có bao nhiêu người dùng, đến từ đâu và ngữ pháp nào được tra nhiều nhất để cải thiện ứng dụng. Không chứa thông tin nào nhận dạng bạn hoặc thiết bị của bạn."),
     "为了解有多少人在用、来自哪些国家或地区、在什么时段使用、哪些语法点最常被查，App 每天会匿名上报一条使用汇总：当天打开次数、按小时的使用分布、查看过的语法点及其等级、App Store 所在的国家或地区、界面语言和 App 版本。不包含姓名、账号、设备编号或任何能识别你的信息，通过 Apple 的 iCloud（CloudKit）保存，只用于改进 App。可以随时在「设置 → 匿名使用统计」中关闭。": ("To learn how many people use the app, which countries or regions they are in, when they use it and which grammar points are looked up most, the app sends one anonymous daily summary: how many times it was opened that day, usage by hour, the grammar points viewed and their levels, the App Store country or region, the interface language and the app version. It contains no name, account, device ID or anything that identifies you, is stored via Apple's iCloud (CloudKit) and is used only to improve the app. You can turn it off at any time in Settings → Anonymous Usage Statistics.", "얼마나 많은 사람이 쓰는지, 어느 국가·지역에서 쓰는지, 언제 쓰는지, 어떤 문법을 가장 많이 찾는지 알기 위해 앱은 하루에 한 번 익명 사용 요약을 보냅니다. 그날 앱을 연 횟수, 시간대별 사용량, 본 문법과 그 급수, App Store 국가·지역, 화면 언어, 앱 버전이 포함됩니다. 이름, 계정, 기기 ID 등 사용자를 식별할 수 있는 정보는 포함되지 않으며, Apple iCloud(CloudKit)에 저장되어 앱 개선에만 사용됩니다. 「설정 → 익명 사용 통계」에서 언제든 끌 수 있습니다.", "Para saber cuántas personas usan la app, en qué países o regiones están, cuándo la usan y qué puntos gramaticales se consultan más, la app envía un resumen diario anónimo: cuántas veces se abrió ese día, el uso por horas, los puntos gramaticales vistos y su nivel, el país o región de la App Store, el idioma de la interfaz y la versión de la app. No contiene nombre, cuenta, identificador del dispositivo ni nada que te identifique; se guarda mediante iCloud (CloudKit) de Apple y solo se usa para mejorar la app. Puedes desactivarlo en cualquier momento en Ajustes → Estadísticas de uso anónimas.", "Để biết có bao nhiêu người dùng, họ ở quốc gia hoặc khu vực nào, dùng vào lúc nào và ngữ pháp nào được tra nhiều nhất, ứng dụng gửi một bản tóm tắt ẩn danh mỗi ngày: số lần mở trong ngày, mức sử dụng theo giờ, các điểm ngữ pháp đã xem và cấp độ, quốc gia hoặc khu vực của App Store, ngôn ngữ giao diện và phiên bản ứng dụng. Không có tên, tài khoản, mã thiết bị hay thông tin nào nhận dạng bạn; dữ liệu được lưu qua iCloud (CloudKit) của Apple và chỉ dùng để cải thiện ứng dụng. Bạn có thể tắt bất cứ lúc nào trong Cài đặt → Thống kê sử dụng ẩn danh."),
     "书页弯曲较大，个别高亮可能落在相邻的行。把书页压平、正对拍摄，效果更好。": ("The page is strongly curved, so a few highlights may land on a neighboring line. Flatten the page and shoot straight on for better results.", "페이지가 많이 휘어 있어 일부 하이라이트가 옆 줄에 표시될 수 있습니다. 페이지를 펴고 정면에서 찍으면 더 정확합니다.", "La página está muy curvada, así que algún resaltado puede caer en la línea vecina. Aplana la página y fotografíala de frente para mejores resultados.", "Trang sách bị cong nhiều nên một vài chỗ tô sáng có thể rơi vào dòng bên cạnh. Hãy ép phẳng trang và chụp thẳng để có kết quả tốt hơn."),
-    # ── 使用指南（AppFeature.guide）、入门引导、法律文本 ──
     "扫描日语": ("Scan Japanese", "일본어 스캔", "Escanear japonés", "Quét tiếng Nhật"),
     "相机取景、拍照定格、从相册选图": ("Live camera view, capture a shot, or pick from Photos", "카메라로 비추기, 촬영해서 고정, 사진에서 선택", "Vista de cámara, captura fija o imagen de Fotos", "Ngắm bằng camera, chụp cố định, chọn từ thư viện ảnh"),
     "手边没有日语书时，在首页点「试试示例」，用内置的示例书页体验一下。": (
@@ -601,6 +591,21 @@ S = {
     "核心功能": ("Core Features", "핵심 기능", "Funciones principales", "Tính năng chính"),
     "更多功能": ("More Features", "기타 기능", "Más funciones", "Tính năng khác"),
     "再看一遍入门引导": ("Replay the Introduction", "시작 안내 다시 보기", "Volver a ver la introducción", "Xem lại phần giới thiệu"),
+    "点橙色框": ("Tap an Orange Box", "주황색 상자 누르기", "Toca un recuadro naranja", "Nhấn vào khung cam"),
+    "对准书页按快门，或从相册选一张截图。": ("Point at the page and press the shutter, or pick a screenshot from Photos.", "책 페이지에 맞추고 셔터를 누르거나, 사진 앱에서 스크린샷을 고르세요.", "Apunta a la página y pulsa el obturador, o elige una captura de Fotos.", "Hướng vào trang sách rồi bấm chụp, hoặc chọn một ảnh chụp màn hình từ Ảnh."),
+    "橙色框里就是语法，点一下打开讲解。": ("Each orange box is a grammar point. Tap it to open the explanation.", "주황색 상자가 문법입니다. 누르면 설명이 열립니다.", "Cada recuadro naranja es un punto gramatical. Tócalo para abrir la explicación.", "Mỗi khung cam là một điểm ngữ pháp. Nhấn để mở phần giải thích."),
+    "每种用法都有讲解、接续和带注音的例句。": ("Every usage has an explanation, how it connects, and example sentences with furigana.", "용법마다 설명, 접속 방법, 후리가나가 달린 예문이 있습니다.", "Cada uso tiene explicación, forma de conexión y ejemplos con furigana.", "Mỗi cách dùng đều có giải thích, cách nối và câu ví dụ có furigana."),
+    "点「看例句对比」，看清和相近语法的差别。": ("Tap “Compare examples” to see how it differs from similar grammar.", "“예문으로 비교”를 누르면 비슷한 문법과의 차이가 보입니다.", "Toca «Comparar ejemplos» para ver en qué se diferencia de gramática similar.", "Nhấn “So sánh ví dụ” để thấy rõ khác biệt với ngữ pháp tương tự."),
+    "首页提醒时点「开始复习」，看完自评记得程度。": ("When Home reminds you, tap “Start Review”, then rate how well you remembered.", "홈에서 알려 주면 “복습 시작”을 누르고, 다 본 뒤 얼마나 기억했는지 고르세요.", "Cuando Inicio te avise, toca «Empezar a repasar» y luego indica cuánto recordabas.", "Khi Trang chủ nhắc, nhấn “Bắt đầu ôn tập”, xem xong tự đánh giá mức độ còn nhớ."),
+    "%lld 个语法可以复习了": ({"one": "%lld grammar point ready to review", "other": "%lld grammar points ready to review"}, "복습할 문법 %lld개", {"one": "%lld punto listo para repasar", "other": "%lld puntos listos para repasar"}, "%lld mẫu ngữ pháp có thể ôn lại"),
+    "到时间就复习": ("Review When It's Time", "때가 되면 복습", "Repasa cuando toque", "Đến lúc thì ôn lại"),
+    "首页出现「N 个语法可以复习了」时点一下，看完自评。": ("When Home shows “N grammar points ready to review”, tap it, then rate yourself.", "홈에 “복습할 문법 N개”가 보이면 눌러 보고, 다 본 뒤 스스로 평가하세요.", "Cuando Inicio muestre «N puntos listos para repasar», tócalo y luego evalúate.", "Khi Trang chủ hiện “N mẫu ngữ pháp có thể ôn lại”, hãy nhấn vào, xem xong tự đánh giá."),
+    "看过的语法快要忘记时，首页会出现一行「N 个语法可以复习了」。点一下开始复习，看完选「忘了」「有点模糊」或「记得」，App 会按你的记忆安排下次复习。": (
+        "When grammar you've read is about to slip away, Home shows a line saying “N grammar points ready to review”. Tap it to start, and after reading choose “Forgot”, “A bit fuzzy” or “Remembered”; the app schedules your next review based on your memory.",
+        "본 문법을 곧 잊어버릴 때가 되면 홈에 “복습할 문법 N개”라는 한 줄이 나타납니다. 눌러서 복습을 시작하고, 다 읽은 뒤 “잊었어요”, “조금 헷갈려요”, “기억해요” 중 하나를 고르면 앱이 기억 상태에 맞춰 다음 복습을 정합니다.",
+        "Cuando estás a punto de olvidar gramática que ya leíste, Inicio muestra una línea: «N puntos listos para repasar». Tócala para empezar y, al terminar, elige «Lo olvidé», «Un poco borroso» o «Lo recuerdo»; la app programará el próximo repaso según tu memoria.",
+        "Khi ngữ pháp đã xem sắp bị quên, Trang chủ sẽ hiện một dòng “N mẫu ngữ pháp có thể ôn lại”. Nhấn vào để bắt đầu, xem xong chọn “Quên rồi”, “Hơi mơ hồ” hoặc “Còn nhớ”, ứng dụng sẽ sắp xếp lần ôn tiếp theo theo trí nhớ của bạn."),
+    "在语法讲解页或列表中点一下樱花，就能收进这里。": ("Tap the cherry blossom on a grammar page or in a list to collect it here.", "문법 설명 페이지나 목록에서 벚꽃을 누르면 여기에 모입니다.", "Toca la flor de cerezo en una página de gramática o en una lista para guardarla aquí.", "Nhấn vào hoa anh đào ở trang ngữ pháp hoặc trong danh sách để cất vào đây."),
     "使用指南": ("User Guide", "사용 가이드", "Guía de uso", "Hướng dẫn sử dụng"),
     "第 %lld 步": ("Step %lld", "%lld단계", "Paso %lld", "Bước %lld"),
     "前 %lld 天免费使用全部功能。之后可一次性购买，永久解锁完整讲解；不是订阅，不会自动扣费。购买在同一 Apple ID 的设备间通用，可以在「设置 → 购买」中恢复。": (
@@ -613,7 +618,6 @@ S = {
     ),
 }
 
-# 缅甸语（my，Myanmar Unicode）。缅甸语没有复数变化，统一用普通字符串。
 MY = {
     "你扫到的：": "စကင်ဖတ်ထားသည်- ",
     "对应 用法 ": "သက်ဆိုင်သော အသုံး ",
@@ -632,6 +636,7 @@ MY = {
     "收起": "ပိတ်ရန်",
     "怎么分辨": "ခွဲခြားနည်း",
     "本页": "ဤသဒ္ဒါ",
+    "本页第 %lld 个意思：%@": "ဤသဒ္ဒါ၏ အဓိပ္ပာယ် %lld: %@",
     "有 %lld 个快要忘了": "မေ့တော့မည့် သဒ္ဒါ %lld ခု",
     "趁还记得，花 1 分钟复习一下": "မှတ်မိနေတုန်း ၁ မိနစ်လောက် ပြန်လေ့လာလိုက်ပါ။",
     "开始复习": "ပြန်လေ့လာမည်",
@@ -773,8 +778,7 @@ MY = {
     "按遗忘曲线排序：最快要忘记的排在最前面。点开回顾一遍即完成复习。": "မေ့လျော့မှုမျဉ်းကွေးအလိုက် စီထားပါတယ်- အမေ့နီးဆုံး သဒ္ဒါက ထိပ်ဆုံးမှာ ရှိပါတယ်။ ဖွင့်ပြီး တစ်ခေါက် ပြန်ကြည့်ရင် ပြန်လေ့လာမှု ပြီးပါပြီ။",
     "记忆约 %lld%%": "မှတ်မိနှုန်း ~%lld%%",
     "出题频率": "စာမေးပွဲ ထွက်နှုန်း",
-    "常考": "မကြာခဏ ထွက်",
-    "考过": "ထွက်ဖူးသည်",
+    "必考": "မဖြစ်မနေ သိရမည်",
     "根据公开的考试复原资料与教材整理，仅供参考。": "အများသိ စာမေးပွဲ ပြန်လည်မှတ်တမ်းများနှင့် ဖတ်စာအုပ်များမှ စုစည်းထားခြင်း ဖြစ်ပါသည်။ ကိုးကားရန်သာ ဖြစ်ပါသည်။",
     "继续上次": "ရပ်ခဲ့သည့်နေရာမှ ဆက်ရန်",
     "全部扫描记录": "စကင်ဖတ်မှု အားလုံး",
@@ -961,6 +965,17 @@ MY = {
     "核心功能": "အဓိက လုပ်ဆောင်ချက်များ",
     "更多功能": "အခြား လုပ်ဆောင်ချက်များ",
     "再看一遍入门引导": "မိတ်ဆက်လမ်းညွှန်ကို ပြန်ကြည့်ရန်",
+    "点橙色框": "လိမ္မော်ရောင်ဘောင်ကို နှိပ်ပါ",
+    "对准书页按快门，或从相册选一张截图。": "စာမျက်နှာကို ချိန်ပြီး ရိုက်ပါ၊ သို့မဟုတ် ဓာတ်ပုံများမှ screenshot တစ်ပုံ ရွေးပါ။",
+    "橙色框里就是语法，点一下打开讲解。": "လိမ္မော်ရောင်ဘောင်တိုင်းသည် သဒ္ဒါဖြစ်ပါသည်။ နှိပ်လိုက်လျှင် ရှင်းလင်းချက် ပွင့်ပါမည်။",
+    "每种用法都有讲解、接续和带注音的例句。": "အသုံးပြုပုံတိုင်းတွင် ရှင်းလင်းချက်၊ ဆက်စပ်ပုံနှင့် ဖူရီဂါနာပါ ဥပမာဝါကျများ ပါပါသည်။",
+    "点「看例句对比」，看清和相近语法的差别。": "“ဥပမာဝါကျ နှိုင်းယှဉ်ကြည့်ရန်” ကို နှိပ်ပြီး ဆင်တူသဒ္ဒါနှင့် ကွာခြားချက်ကို ကြည့်ပါ။",
+    "首页提醒时点「开始复习」，看完自评记得程度。": "ပင်မစာမျက်နှာက သတိပေးသည့်အခါ “ပြန်လေ့လာမည်” ကို နှိပ်ပြီး ဖတ်ပြီးလျှင် မည်မျှ မှတ်မိသည်ကို ရွေးပါ။",
+    "%lld 个语法可以复习了": "ပြန်လေ့လာနိုင်သော သဒ္ဒါ %lld ခု",
+    "到时间就复习": "အချိန်ကျရင် ပြန်လေ့လာပါ",
+    "首页出现「N 个语法可以复习了」时点一下，看完自评。": "ပင်မစာမျက်နှာတွင် “ပြန်လေ့လာနိုင်သော သဒ္ဒါ N ခု” ပေါ်လာလျှင် နှိပ်ပြီး ဖတ်ပြီးနောက် ကိုယ်တိုင် အကဲဖြတ်ပါ။",
+    "看过的语法快要忘记时，首页会出现一行「N 个语法可以复习了」。点一下开始复习，看完选「忘了」「有点模糊」或「记得」，App 会按你的记忆安排下次复习。": "ကြည့်ခဲ့ဖူးသော သဒ္ဒါကို မေ့တော့မည့်အချိန်တွင် ပင်မစာမျက်နှာ၌ “ပြန်လေ့လာနိုင်သော သဒ္ဒါ N ခု” ဟူသော စာကြောင်းတစ်ကြောင်း ပေါ်လာပါမည်။ နှိပ်၍ ပြန်လေ့လာပြီး ဖတ်ပြီးလျှင် “မေ့သွားပြီ”၊ “နည်းနည်း ဝေဝါးတယ်” သို့မဟုတ် “မှတ်မိတယ်” ကို ရွေးပါ။ App သည် သင်၏ မှတ်မိမှုအလိုက် နောက်တစ်ကြိမ် ပြန်လေ့လာမည့်အချိန်ကို စီစဉ်ပေးပါမည်။",
+    "在语法讲解页或列表中点一下樱花，就能收进这里。": "သဒ္ဒါရှင်းလင်းချက် စာမျက်နှာ သို့မဟုတ် စာရင်းထဲရှိ ချယ်ရီပန်းကို နှိပ်လိုက်လျှင် ဤနေရာသို့ စုထားပါမည်။",
     "使用指南": "အသုံးပြုသူ လမ်းညွှန်",
     "第 %lld 步": "အဆင့် %lld",
     "前 %lld 天免费使用全部功能。之后可一次性购买，永久解锁完整讲解；不是订阅，不会自动扣费。购买在同一 Apple ID 的设备间通用，可以在「设置 → 购买」中恢复。": "ပထမ %lld ရက်အတွင်း လုပ်ဆောင်ချက်အားလုံးကို အခမဲ့ သုံးနိုင်ပါသည်။ ထို့နောက် တစ်ကြိမ်တည်း ဝယ်ယူ၍ ရှင်းလင်းချက် အပြည့်အစုံကို အမြဲတမ်း ဖွင့်နိုင်ပါသည်။ လစဉ်ကြေး မဟုတ်ပါ၊ အလိုအလျောက် ငွေဖြတ်ခြင်း မရှိပါ။ ဝယ်ယူမှုကို Apple ID တစ်ခုတည်းသုံးသော စက်များတွင် အတူသုံးနိုင်ပြီး “ဆက်တင်များ → ဝယ်ယူမှု” တွင် ပြန်ယူနိုင်ပါသည်။",

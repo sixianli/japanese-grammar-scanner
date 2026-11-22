@@ -1,6 +1,5 @@
 import XCTest
 
-/// 讲解页：义项跳转、相近语法、反馈入口、收藏
 final class DetailTests: E2ETestCase {
     func testSenseRowsJumpWithinPage() {
         openDetailBySearch("ように")
@@ -20,7 +19,6 @@ final class DetailTests: E2ETestCase {
         XCTAssertTrue(app.searchFields.firstMatch.waitForExistence(timeout: 8), "再返回应回到搜索页")
     }
 
-    /// 新版相近语法：默认收起只显示差别；点「看例句对比」展开例句和「怎么分辨」，再点收起；点语法名跳到对方讲解页
     func testContrastSectionExpandCollapseAndNavigate() {
         openDetailBySearch("ようになる")
         let toggle = id("detail.contrast.toggle")
@@ -39,28 +37,108 @@ final class DetailTests: E2ETestCase {
         waitGone(detailTitle(pages.to), "返回后不应还停在「\(pages.to)」")
     }
 
+    func testMeaningGroupSplitsBySenseOnTameNi() {
+        openDetailBySearch("ために")
+        let headers = ids("detail.contrast.senseHeader")
+        let purpose = headers.matching(NSPredicate(format: "label CONTAINS %@", "为了")).firstMatch
+        scrollTo(purpose, maxSwipes: 25)
+        wait(purpose, "ために 的「意思差不多的」应有「为了」小节")
+        XCTAssertTrue(purpose.label.contains("本页第 1 个意思"), "「为了」小节应写明对应本页第 1 个意思：\(purpose.label)")
+        let cause = headers.matching(NSPredicate(format: "label CONTAINS %@", "因为")).firstMatch
+        scrollTo(cause, maxSwipes: 10)
+        wait(cause, "ために 的「意思差不多的」应有「因为」小节")
+        XCTAssertTrue(cause.label.contains("本页第 2 个意思"), "「因为」小节应写明对应本页第 2 个意思：\(cause.label)")
+        XCTAssertEqual(headers.count, 2, "两个意思各一个小节")
+    }
+
+    func testSingleMeaningPageHasNoSenseSubsections() {
+        openDetailBySearch("ようになる")
+        let toggle = id("detail.contrast.toggle")
+        scrollTo(toggle)
+        wait(toggle, "相近语法应有对比卡片")
+        XCTAssertEqual(ids("detail.contrast.senseHeader").count, 0, "只有一个意思的语法点不按意思分小节")
+    }
+
+    func testMustKnowTagOnlyOnHighFrequencyGrammar() {
+        openDetailBySearch("について")
+        wait(id("detail.level"), "标题下方应有等级标签")
+        XCTAssertTrue(id("tag.mustKnow").waitForExistence(timeout: 5), "について 是必考语法，应显示「必考」")
+    }
+
+    /// 列表行里的「必考」只是标签：点到它也要进讲解页，不能弹出说明（Build 18 前 e2e 发现：点行中间正好落在标签上）
+    func testTappingMustKnowTagInRowOpensDetail() {
+        tab("搜索").tap()
+        let field = app.searchFields.firstMatch
+        wait(field, "搜索页应有搜索框")
+        field.tap()
+        field.typeText("ようになる")
+        let row = id("search.result")
+        wait(row, "应有搜索结果")
+        let tag = row.descendants(matching: .any).matching(identifier: "tag.mustKnow").firstMatch
+        wait(tag, "〜ようになる 的结果行应有「必考」")
+        tag.tap()
+        wait(detailScreen, "点结果行里的「必考」也应进入讲解页")
+    }
+
+    func testNoMustKnowTagOnLowFrequencyGrammar() {
+        openDetailBySearch("たち")
+        wait(id("detail.level"), "标题下方应有等级标签")
+        XCTAssertFalse(id("tag.mustKnow").exists, "〜たち 不是必考语法，不应显示「必考」")
+    }
+
+    func testTitleBarShowsCenteredTitleAfterScrolling() {
+        openDetailBySearch("ようになる")
+        let pageTitle = id("detail.title")
+        wait(pageTitle, "讲解页顶部应有标题")
+        let title = pageTitle.label
+        let barTitle = id("detail.barTitle")
+        XCTAssertFalse(barTitle.exists, "没滚动时标题栏里不应显示标题（页面上已经有大标题）")
+
+        app.swipeUp()
+        app.swipeUp()
+        wait(barTitle, "往上滑后标题栏应显示标题")
+        XCTAssertEqual(barTitle.label, title, "标题栏显示的应是本页语法的完整标题")
+        // 以讲解页自己的标题栏为准：大屏模拟器上页面右侧可能还有系统按钮栏，页面不等于整块屏幕
+        let bar = id("detail.titleBar")
+        let screen = bar.exists ? bar.frame : app.windows.firstMatch.frame
+        XCTAssertEqual(barTitle.frame.midX, screen.midX, accuracy: 2, "标题应在页面水平正中（页面 \(screen)）")
+        XCTAssertLessThan(barTitle.frame.maxY, 200, "标题应在屏幕顶部的标题栏里")
+        let level = id("detail.barLevel")
+        XCTAssertTrue(level.exists, "标题栏里标题下方应有等级")
+        XCTAssertTrue(level.label.hasPrefix("JLPT N"), "等级应写成「JLPT N…」")
+        XCTAssertGreaterThan(level.frame.minY, barTitle.frame.minY, "等级应在标题下方")
+        XCTAssertEqual(level.frame.midX, screen.midX, accuracy: 2, "等级应居中")
+
+        scrollToTop()
+        XCTAssertTrue(pageTitle.isHittable, "回到顶部后页面大标题可见")
+        waitGone(barTitle, "回到顶部后标题栏里的标题应藏起来")
+    }
+
     func testDetailFeedbackLink() {
         openDetailBySearch("ように")
         let link = id("detail.feedback")
         scrollTo(link, maxSwipes: 40)
+        // 大屏 iPhone 上导航栏按钮在右侧竖排；樱花按钮曾因为不是图片标签而留在页面右上角，滑下来就不见了
+        XCTAssertTrue(detailScreen.isHittable, "滑到页面底部后，右上角的收藏按钮仍应可点")
         link.tap()
         wait(navBar("反馈"), "讲解页底部的反馈入口应打开反馈页")
         navBar("反馈").buttons["取消"].tap()
         waitGone(navBar("反馈"), "取消后关闭")
-        XCTAssertTrue(detailScreen.exists, "关闭反馈后仍在讲解页")
+        wait(detailScreen, "关闭反馈后仍在讲解页")
     }
 
     func testFavoriteFromDetailAndUnfavoriteFromList() {
         openDetailBySearch("にもかかわらず")
+        XCTAssertEqual(id("detail.favorite").label, "收藏", "没收藏时右上角是线条樱花，读作「收藏」")
         id("detail.favorite").tap()
+        XCTAssertEqual(id("detail.favorite").label, "取消收藏", "收藏后变成粉色樱花，读作「取消收藏」")
         tab("收藏").tap()
         wait(id("favorites.row"), "收藏后应出现在收藏页")
         id("row.star").tap()
-        wait(text(containing: "还没有收藏"), "在列表里点星号取消收藏后应为空")
+        wait(text(containing: "还没有收藏"), "在列表里点樱花取消收藏后应为空")
     }
 }
 
-/// 语法库：等级筛选、搜索、例句中出现、无结果
 final class LibraryTests: E2ETestCase {
     func testLevelFilters() {
         tab("语法库").tap()
@@ -106,7 +184,6 @@ final class LibraryTests: E2ETestCase {
     }
 }
 
-/// 收藏：排序、左滑删除、打开讲解、再次点标签回到列表
 final class FavoritesTests: E2ETestCase {
     private func favoriteThreeFromLibrary() {
         tab("语法库").tap()
@@ -146,7 +223,6 @@ final class FavoritesTests: E2ETestCase {
     }
 }
 
-/// 搜索：最近查看、无结果、例句中出现、中文意思搜索
 final class SearchTests: E2ETestCase {
     private var field: XCUIElement { app.searchFields.firstMatch }
 
@@ -184,7 +260,6 @@ final class SearchTests: E2ETestCase {
         wait(id("search.result"), "按中文意思搜索应有结果")
     }
 
-    /// 输入后点键盘以外的空白处，键盘收起，输入的文字保留（无结果和有结果两种页面）
     func testTapOutsideDismissesKeyboard() {
         tab("搜索").tap()
         wait(field, "搜索框")
@@ -196,12 +271,35 @@ final class SearchTests: E2ETestCase {
 
         field.tap()
         XCTAssertTrue(waitForFocus(field), "再点搜索框应重新弹出键盘")
-        // 有结果时：点结果以外的空白处也收起键盘，结果仍可点开
         field.typeText(XCUIKeyboardKey.delete.rawValue + XCUIKeyboardKey.delete.rawValue + XCUIKeyboardKey.delete.rawValue + XCUIKeyboardKey.delete.rawValue + "ように")
         wait(id("search.result"), "应有结果")
         app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.03)).tap()
         waitGone(app.keyboards.firstMatch, "点空白处应收起键盘")
         id("search.result").tap()
         wait(detailScreen, "收起键盘后结果仍能打开讲解")
+    }
+}
+
+/// 樱花动画照常播放时（-playAnimations）：动画不挡操作（Build 18 反馈 1、2）
+final class SakuraAnimationTests: E2ETestCase {
+    override var extraLaunchArguments: [String] { ["-playAnimations"] }
+
+    /// 首页复习提醒上樱花飘过时，提醒照样能点
+    func testReviewRowTappableWhileSakuraDrifts() {
+        scrollToTop()
+        let row = id("home.review")
+        wait(row, "有到期的语法时应显示复习提醒")
+        row.tap()
+        wait(id("review.bar"), "樱花飘过时点复习提醒也应进入复习")
+    }
+
+    /// 收藏时樱花飘进「收藏」标签：动画期间和之后都能马上切到收藏页
+    func testFavoriteFlightDoesNotBlockTabs() {
+        openDetailBySearch("にもかかわらず")
+        id("detail.favorite").tap()
+        tab("收藏").tap()
+        wait(id("favorites.row"), "收藏后马上切到收藏页应能看到")
+        id("row.star").tap()
+        wait(text(containing: "还没有收藏"), "取消收藏后应为空")
     }
 }

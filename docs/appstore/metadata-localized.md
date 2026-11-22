@@ -1,163 +1,40 @@
-# App Store 多语言商店信息
+# App Store 多语言商店页
 
-在 App Store Connect → App 信息 → 右上角语言菜单中添加以下本地化：English (U.S.)、한국어、Español (México / España)、Tiếng Việt、简体中文、繁體中文。
-每种语言需填写：名称、副标题（App 信息页）；宣传文本、描述、关键词（版本页）。截图可各语言共用（CI 也可用 `-AppleLanguages` 生成各语言截图）。
+## 放在哪里
 
----
+- 文案：`docs/appstore/listing/<语言>.json`，每个文件一种 App Store 语言，字段是
+  `name`（名称）、`subtitle`（副标题）、`privacyPolicyUrl`（隐私政策网址）、`promotionalText`（宣传文本）、
+  `description`（描述）、`keywords`（关键词）、`supportUrl`（支持网址）、`marketingUrl`（营销网址）、
+  `screenshots`（用 `docs/appstore/screenshots/` 下哪个文件夹的截图）。
+- 截图：`docs/appstore/screenshots/<文件夹>/`，按文件名顺序就是商店里的顺序。
 
-## English (U.S.) — 建议设为主要语言
+## 有哪些语言
 
-- **Name**: Japanese Grammar Lookup
-- **Subtitle**: JLPT N5-N1 grammar by photo
-- **Promotional Text**: Point your camera at any Japanese book and every grammar point lights up. Tap to see meaning, usage, when to use it, origin and similar grammar. 100% offline.
-- **Keywords**: nihongo,bunpo,learn,study,reading,textbook,camera,scanner,ocr,n5,n4,n3,n2,n1,exam,dictionary
-- **Description**:
+主要语言是简体中文（`zh-Hans`）。另外是 English (U.S.)（`en-US`）、English (U.K.)（`en-GB`）、한국어（`ko`）、
+Español (México)（`es-MX`）、Español (España)（`es-ES`）、Tiếng Việt（`vi`）、繁體中文（`zh-Hant`），
+和 App 界面的语言一一对应；两种英文、两种西班牙文用同一份文案。
 
-Reading Japanese and stuck on the grammar? Point your camera at the page and Grammar Scan highlights every grammar point it finds.
+App 界面另有缅甸语，但 App Store 没有缅甸语商店页。缅甸店面的默认语言是 English (U.K.)，所以必须有 `en-GB`，
+否则缅甸用户会看到简体中文页（来源：https://developer.apple.com/help/app-store-connect/reference/app-store-localizations/ ）。
 
-SCAN ANYTHING
-• Live camera: grammar points are highlighted in real time, color-coded by JLPT level
-• Capture a page for a detailed analysis — every grammar point is highlighted in the image and the text
-• Works with screenshots and photos from your library too
-• Overlapping grammar? Choose which one to read
+博客上的 App 主页只有中文、英文、日文三种，所以繁体中文用中文主页，其余语言用英文主页（`/en/`）。
 
-CLEAR EXPLANATIONS
-For every grammar point:
-• Meaning — each sense explained
-• Usage — formation, conjugation and pitfalls
-• When to use — spoken vs. written, polite vs. casual
-• Origin — where the grammar comes from
-• Examples — Japanese with translations, grammar highlighted
-• Similar grammar — clear comparisons, one tap away
+## 规则（`python3 tools/appstore_listing.py --check` 会检查，CI 的 validate-data 也会跑）
 
-LIBRARY & FAVORITES
-• Built-in JLPT N5–N1 grammar, browse by level or search
-• Save the grammar you want to review
+- 名称、副标题不超过 30 个字符，宣传文本不超过 170，关键词不超过 100，描述不超过 4000。
+- 关键词里不要放名称、副标题里已有的词：Apple 会把名称和副标题一起用来搜索，重复不加权重
+  （来源：https://developer.apple.com/app-store/search/ ）。副标题写了「N1-N5」，所以关键词只补 N2、N3、N4。
+- 语法数量写实数（878），不写「全部」。
+- 每种语言 1 到 10 张截图，尺寸 1206×2622 或 1179×2556。
 
-PRIVATE & OFFLINE
-• Text recognition runs entirely on your iPhone — no images are uploaded
-• No account, no internet, no ads, no tracking
+## 怎样上传到 App Store Connect
 
-Explanations available in English, 한국어, Español, Tiếng Việt, 简体中文 and 繁體中文 — the app follows your device language.
+GitHub 仓库 → Actions → 「App Store listing」→ Run workflow：
 
----
+- `version` 填 App Store Connect 里待提交的版本号（例如 1.4）。
+- 不勾 `upload`：只连上 App Store Connect 列出会改什么，不写入。
+- 勾上 `upload`：写入。只改有变化的字段；截图和后台不一样时，删掉后台那一组再按顺序重传。
 
-## 한국어
-
-- **이름**: 일본어 문법 사전
-- **부제**: 일본어 공부 JLPT N1-N5 문법 사진 인식
-- **프로모션 텍스트**: 카메라를 일본어 책에 대면 문법이 바로 하이라이트됩니다. 누르면 의미, 용법, 사용 장면, 어원, 비슷한 문법 비교까지. 완전 오프라인.
-- **키워드**: 문법,일본어공부,JPT,독해,교재,카메라,스캔,N5,N4,N3,N2,N1,시험,사전,일본어문법
-- **설명**:
-
-일본어 책을 읽다가 문법이 막히셨나요? 카메라를 페이지에 대기만 하세요.
-
-【찍으면 바로 인식】
-• 실시간 카메라: 화면 속 문법을 실시간으로 하이라이트 (JLPT 레벨별 색상)
-• 촬영 후 정밀 분석: 이미지와 텍스트의 모든 문법을 하이라이트
-• 사진 앨범의 사진·스크린샷도 인식
-• 문법이 겹치면 원하는 것을 선택
-
-【자세한 설명】
-• 의미 · 용법(접속) · 사용 장면 · 어원 · 예문 · 비슷한 문법 비교
-
-【문법 사전과 즐겨찾기】
-• JLPT N5–N1 전체 문법 수록, 레벨별 보기·검색
-• 중요한 문법은 즐겨찾기로 복습
-
-【개인정보 보호·오프라인】
-• 문자 인식은 기기 안에서만 처리되며 이미지는 업로드되지 않습니다
-• 계정·인터넷·광고·추적 없음
-
----
-
-## Español
-
-- **Nombre**: Gramática japonesa: consulta
-- **Subtítulo**: Japonés JLPT N1-N5 con fotos
-- **Texto promocional**: Apunta la cámara a un libro en japonés y cada punto gramatical se resalta. Toca para ver significado, uso, contexto, origen y gramática similar. Sin conexión.
-- **Palabras clave**: japonés,gramática,nihongo,estudio,lectura,libro,cámara,escáner,ocr,n5,n4,n3,n2,n1,examen,diccionario
-- **Descripción**:
-
-¿Lees en japonés y te atascas con la gramática? Apunta la cámara a la página y la app resaltará todos los puntos gramaticales.
-
-ESCANEA
-• Cámara en vivo: la gramática se resalta en tiempo real, con colores según el nivel JLPT
-• Captura una página para un análisis detallado: todo se resalta en la imagen y en el texto
-• También funciona con fotos y capturas de pantalla
-• Si varios puntos se superponen, eliges cuál ver
-
-EXPLICACIONES CLARAS
-• Significado · Uso y formación · Cuándo se usa · Origen · Ejemplos traducidos · Comparación con gramática similar
-
-BIBLIOTECA Y FAVORITOS
-• Gramática JLPT N5–N1 completa incluida, por nivel o con búsqueda
-• Guarda la gramática que quieras repasar
-
-PRIVADO Y SIN CONEXIÓN
-• El reconocimiento de texto se hace en tu iPhone; no se sube ninguna imagen
-• Sin cuenta, sin internet, sin anuncios ni rastreo
-
----
-
-## Tiếng Việt
-
-- **Tên**: Tra Ngữ Pháp Tiếng Nhật
-- **Phụ đề**: Tiếng Nhật JLPT N1-N5 qua ảnh
-- **Văn bản quảng cáo**: Hướng camera vào sách tiếng Nhật, mọi mẫu ngữ pháp được tô sáng ngay. Nhấn để xem ý nghĩa, cách dùng, tình huống, nguồn gốc và ngữ pháp tương tự. Hoàn toàn ngoại tuyến.
-- **Từ khóa**: ngữ pháp,học tiếng nhật,nihongo,đọc hiểu,giáo trình,camera,quét,ocr,n5,n4,n3,n2,n1,thi,từ điển
-- **Mô tả**:
-
-Đọc sách tiếng Nhật mà vướng ngữ pháp? Chỉ cần hướng camera vào trang sách.
-
-【CHỤP LÀ NHẬN DIỆN】
-• Camera trực tiếp: tô sáng ngữ pháp theo thời gian thực, màu theo cấp độ JLPT
-• Chụp để phân tích chi tiết: tô sáng mọi mẫu ngữ pháp trên ảnh và văn bản
-• Nhận dạng cả ảnh và ảnh chụp màn hình trong thư viện
-• Ngữ pháp chồng nhau? Bạn chọn mẫu muốn xem
-
-【GIẢI THÍCH CHI TIẾT】
-• Ý nghĩa · Cách dùng · Tình huống sử dụng · Nguồn gốc · Ví dụ có dịch · So sánh ngữ pháp tương tự
-
-【TỪ ĐIỂN VÀ YÊU THÍCH】
-• Toàn bộ ngữ pháp JLPT N5–N1, xem theo cấp độ hoặc tìm kiếm
-• Lưu các mẫu cần ôn tập
-
-【RIÊNG TƯ VÀ NGOẠI TUYẾN】
-• Nhận dạng chữ ngay trên iPhone, không tải ảnh lên
-• Không tài khoản, không cần mạng, không quảng cáo, không theo dõi
-
----
-
-## 简体中文
-
-见 `metadata.md`。
-
----
-
-## 繁體中文
-
-- **名稱**：日語文法速查
-- **副標題**：學日文 JLPT N1-N5 文法拍照辨識
-- **宣傳文字**：把相機對準日語書，文中的語法點立刻反白標示！點一下就能看到意思、用法、使用場景、詞源和相近語法比較。完全離線。
-- **關鍵字**：日語,日檢,語法,能力考,日本語,五十音,掃描,OCR,讀書,考試,自學,備考,字典,入門
-- **描述**：
-
-讀日文書時遇到看不懂的語法？打開「語法掃描」，對準書頁即可。
-
-【拍照即辨識】
-• 即時取景：畫面中的語法點即時標示，顏色依 JLPT 等級區分
-• 定格精讀：所有語法點在圖片與文字中全部標示
-• 相簿辨識：截圖或照片同樣可以辨識
-• 重疊的語法點可自行選擇
-
-【講解詳盡】
-• 意思 · 用法（接續）· 使用場景 · 詞源 · 例句 · 相近語法比較
-
-【語法庫與收藏】
-• 內建 N5–N1 全部語法，可依等級瀏覽、搜尋
-• 收藏重點語法，隨時複習
-
-【隱私與離線】
-• 文字辨識在手機本機完成，不上傳任何圖片
-• 不需網路，無廣告、無追蹤
+这个任务用的是发版也在用的 App Store Connect API 密钥（仓库 Secrets 里的 `ASC_KEY_ID`、`ASC_ISSUER_ID`、`ASC_KEY_P8`），
+不会把密钥写进日志。改了 `listing/`、`screenshots/` 或上传工具的 PR 会自动跑一次只读的检查，在日志里列出会改什么。
+已经提交审核的版本不能再改，工具会直接停下。审核联系人信息和审核备注不归这个工具管，在网页上填。

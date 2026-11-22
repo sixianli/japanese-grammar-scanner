@@ -1,0 +1,43 @@
+name: App Store listing
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "要改商店信息的 iOS 版本号（App Store Connect 里待提交的那个版本）"
+        required: true
+        default: "1.4"
+      upload:
+        description: "写入 App Store Connect；不勾只列出会改什么"
+        type: boolean
+        default: false
+  pull_request:
+    paths:
+      - "docs/appstore/listing/**"
+      - "docs/appstore/screenshots/**"
+      - "tools/appstore_listing.py"
+      - ".github/workflows/store-listing.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: store-listing-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  listing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install pyjwt cryptography
+      - name: Sync store listing
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+          BUNDLE_ID: ${{ vars.BUNDLE_ID }}
+          VERSION: ${{ inputs.version || '1.4' }}
+          MODE: ${{ inputs.upload && '--upload' || '--dry-run' }}
+        run: python3 tools/appstore_listing.py "$MODE" --version "$VERSION"

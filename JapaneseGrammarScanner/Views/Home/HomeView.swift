@@ -19,7 +19,7 @@ struct HomeView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 32) {
                     scanEntry
-                    // 有要复习的语法时，紧跟在扫描按钮下面，是首页最醒目的一块；没有就整块不显示
+                    // 有要复习的语法时，扫描按钮下面一行安静的提醒；没有就不显示
                     reviewCard
                     if entitlements.showsTrialEndingReminder { trialReminder }
                     if isNewUser {
@@ -287,7 +287,7 @@ struct HomeView: View {
         }
     }
 
-    // MARK: 快要忘了（FSRS，没有到期的语法时整块隐藏）
+    // MARK: 复习提醒（FSRS，没有到期的语法时整行隐藏）
 
     private var dueItems: [GrammarPoint] {
         // 重要性：在你扫描的材料里出现越多、或已收藏的语法，同样快忘时更优先
@@ -301,7 +301,7 @@ struct HomeView: View {
     private var reviewCard: some View {
         let items = dueItems
         if !items.isEmpty {
-            ReviewCard(items: items, lastReview: { id in history.viewRecords[id].map(HistoryStore.lastReview) })
+            ReviewRow(ids: items.map(\.id))
         }
     }
 
@@ -368,9 +368,9 @@ struct CompactGrammarList: View {
                 NavigationLink(value: Route.grammar(p.id)) {
                     HStack(spacing: 8) {
                         VStack(alignment: .leading, spacing: 3) {
-                            HStack(alignment: .top, spacing: 3) {
+                            HStack(alignment: .center, spacing: 6) {
                                 Text(p.displayTitle).font(.body.weight(.medium)).foregroundStyle(Color.primary).lineLimit(1)
-                                LevelBadge(level: p.level, small: true)
+                                LevelBadge(level: p.level)
                             }
                             if showsMeaning {
                                 Text(p.meaning).font(.subheadline).foregroundStyle(.secondary).lineLimit(2)
@@ -498,93 +498,59 @@ private struct ScanThumb: View {
     }
 }
 
-/// 首页「快要忘了」卡片：浅主题色底的大卡片，标题直接写数量，列出最该复习的 3 个，下面一个「开始复习」。
-/// 点某一条或「开始复习」都进入复习：依次复习，讲解页底部自评后可以直接「下一个」。
-struct ReviewCard: View {
-    let items: [GrammarPoint]
-    let lastReview: (String) -> Date?
-
-    private var ids: [String] { items.map(\.id) }
+/// 首页的复习提醒（Build 18 反馈 1：App 要克制，提醒但不制造压力）：普通卡片样式的一行
+/// 「🔔 N 个语法可以复习了 ›」，点一下按顺序复习。没有到期的语法时整行不显示（由 HomeView 控制）。
+/// 每次来到首页：铃铛摇一下，接着几朵樱花从这一行上飘过去，只播一次；「减弱动态效果」打开时不播。
+struct ReviewRow: View {
+    let ids: [String]
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var playStart: Date?
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        NavigationLink(value: Route.review(ids[0], Array(ids.dropFirst()))) {
             HStack(spacing: 10) {
-                Image(systemName: "clock.arrow.circlepath")
-                    .font(.system(size: 18, weight: .semibold))
-                    .foregroundStyle(.white)
-                    .frame(width: 38, height: 38)
-                    .background(Theme.accentText, in: RoundedRectangle(cornerRadius: 11, style: .continuous))
-                VStack(alignment: .leading, spacing: 1) {
-                    Text(localized: "有 \(items.count) 个快要忘了")
-                        .font(.title3.weight(.heavy))
-                        .foregroundStyle(Theme.accentText)
-                        .accessibilityAddTraits(.isHeader)
-                    Text(localized: "趁还记得，花 1 分钟复习一下")
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
-                }
+                bell
+                Text(localized: "\(ids.count) 个语法可以复习了")
+                    .font(.body.weight(.medium))
+                    .foregroundStyle(Color.primary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.85)
+                Spacer(minLength: 4)
+                Image(systemName: "chevron.right")
+                    .font(.footnote.weight(.semibold))
+                    .foregroundStyle(.tertiary)
             }
-
-            VStack(spacing: 0) {
-                ForEach(Array(items.prefix(3).enumerated()), id: \.element.id) { i, p in
-                    NavigationLink(value: Route.review(p.id, ids.filter { $0 != p.id })) {
-                        HStack(spacing: 8) {
-                            VStack(alignment: .leading, spacing: 3) {
-                                HStack(alignment: .top, spacing: 3) {
-                                    Text(p.displayTitle).font(.body.weight(.semibold)).foregroundStyle(Color.primary).lineLimit(1)
-                                    LevelBadge(level: p.level, small: true)
-                                }
-                                Text(p.meaning).font(.footnote).foregroundStyle(.secondary).lineLimit(1)
-                            }
-                            Spacer(minLength: 4)
-                            if let date = lastReview(p.id) {
-                                Text(verbatim: Self.relative(date))
-                                    .font(.caption)
-                                    .foregroundStyle(.tertiary)
-                                    .lineLimit(1)
-                                    .fixedSize()
-                            }
-                            Image(systemName: "chevron.right").font(.footnote.weight(.semibold)).foregroundStyle(.tertiary)
-                        }
-                        .padding(.horizontal, 14)
-                        .padding(.vertical, 11)
-                        .contentShape(Rectangle())
-                    }
-                    .buttonStyle(.plain)
-                    .accessibilityIdentifier("home.review.row")
-                    if i < min(items.count, 3) - 1 { Divider().padding(.leading, 14) }
-                }
+            .padding(.horizontal, 16)
+            .frame(maxWidth: .infinity, minHeight: 52)
+            .background(Theme.card)
+            .overlay {
+                if let playStart { SakuraDriftOverlay(start: playStart) }
             }
-            .background(Theme.card, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
-
-            NavigationLink(value: Route.review(ids[0], Array(ids.dropFirst()))) {
-                HStack(spacing: 6) {
-                    Text(localized: "开始复习")
-                    Image(systemName: "chevron.right").font(.footnote.weight(.bold))
-                }
-                .font(.body.weight(.bold))
-                .foregroundStyle(.white)
-                .frame(maxWidth: .infinity, minHeight: 48)
-                .background(Theme.accentText, in: Capsule())
-                .contentShape(Capsule())
-            }
-            .buttonStyle(.plain)
-            .accessibilityIdentifier("home.review.start")
+            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .contentShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
         }
-        .padding(16)
-        .background(Theme.accentFill, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).strokeBorder(Theme.accent.opacity(0.3), lineWidth: 1))
-        .shadow(color: Theme.accent.opacity(0.15), radius: 10, y: 4)
-        .accessibilityElement(children: .contain)
+        .buttonStyle(RowPressStyle())
         .accessibilityIdentifier("home.review")
+        .onAppear {
+            if DecorativeMotion.enabled(reduceMotion: reduceMotion) { playStart = Date() }
+        }
+        .onDisappear { playStart = nil }
+        .task(id: playStart) {
+            guard playStart != nil else { return }
+            try? await Task.sleep(for: .seconds(SakuraDrift.duration + 0.1))
+            playStart = nil
+        }
     }
 
-    /// 「4 天前」「昨天」这类相对时间（按 App 内所选语言）
-    static func relative(_ date: Date, now: Date = Date()) -> String {
-        let f = RelativeDateTimeFormatter()
-        f.locale = AppLanguage.selected.locale ?? .current
-        f.dateTimeStyle = .named
-        f.unitsStyle = .short
-        return f.localizedString(for: date, relativeTo: now)
+    private var bell: some View {
+        TimelineView(.animation(paused: playStart == nil)) { context in
+            let elapsed = playStart.map { context.date.timeIntervalSince($0) } ?? -1
+            Image(systemName: "bell")
+                .font(.body.weight(.medium))
+                .foregroundStyle(Theme.accentText)
+                .rotationEffect(.degrees(SakuraDrift.bellAngle(elapsed: elapsed)), anchor: .top)
+        }
+        .accessibilityHidden(true)
     }
 }
+
