@@ -33,6 +33,7 @@ class FakeApi:
         self.version_state = version_state
         self.existing_shots = existing_shots or []
         self.next_id = 0
+        self.ver_locs = {"zh-Hans": {"id": "vl-zh", "attributes": dict(listing(), locale="zh-Hans")}}
 
     def new_id(self, prefix):
         self.next_id += 1
@@ -51,8 +52,7 @@ class FakeApi:
                 return {"data": [{"id": "il-zh", "attributes": {"locale": "zh-Hans", "name": "旧名", "subtitle": "副标题",
                                                                   "privacyPolicyUrl": "https://example.com/privacy/"}}]}
             if path.startswith("/appStoreVersions/ver/appStoreVersionLocalizations"):
-                a = dict(listing(), locale="zh-Hans")
-                return {"data": [{"id": "vl-zh", "attributes": a}]}
+                return {"data": [copy.deepcopy(v) for v in self.ver_locs.values()]}
             if path == "/appStoreVersionLocalizations/vl-zh/appScreenshotSets":
                 return {"data": [{"id": "set-zh", "attributes": {"screenshotDisplayType": al.DISPLAY_TYPE}}]}
             if path.endswith("/appScreenshotSets"):
@@ -67,8 +67,23 @@ class FakeApi:
                 {"method": "PUT", "url": "https://upload.example/1", "offset": 0, "length": size // 2, "requestHeaders": []},
                 {"method": "PUT", "url": "https://upload.example/2", "offset": size // 2, "length": size - size // 2,
                  "requestHeaders": []}]}}}
+        if method == "POST" and path == "/appStoreVersionLocalizations":
+            locale = body["data"]["attributes"]["locale"]
+            if locale in self.ver_locs:
+                raise SystemExit(f"HTTP 409 Entity with locale: {locale} already exists")
+            created = {"id": self.new_id("vl-"), "attributes": dict(body["data"]["attributes"])}
+            self.ver_locs[locale] = created
+            return {"data": copy.deepcopy(created)}
         if method == "POST":
-            return {"data": {"id": self.new_id(path.strip("/")), "attributes": body["data"]["attributes"]}}
+            created = {"id": self.new_id(path.strip("/")), "attributes": body["data"]["attributes"]}
+            if path == "/appInfoLocalizations":
+                locale = body["data"]["attributes"]["locale"]
+                self.ver_locs.setdefault(locale, {"id": self.new_id("vl-auto-"), "attributes": {"locale": locale}})
+            return {"data": created}
+        if method == "PATCH" and path.startswith("/appStoreVersionLocalizations/"):
+            loc = next(v for v in self.ver_locs.values() if v["id"] == body["data"]["id"])
+            loc["attributes"].update(body["data"]["attributes"])
+            return {"data": copy.deepcopy(loc)}
         if method == "PATCH" and "relationships" not in path:
             return {"data": {"id": body["data"]["id"], "attributes": body["data"]["attributes"]}}
         return {}
@@ -119,6 +134,14 @@ class AppStoreListingTests(unittest.TestCase):
         self.assertEqual(len(problems), 1)
         self.assertIn("JLPT", problems[0])
 
+    def test_burmese_script_is_rejected_because_app_store_refuses_it(self):
+        listings = self.listings()
+        listings["en-GB"]["description"] = "Explanations in English, \u1019\u103c\u1014\u103a\u1019\u102c and more"
+        problems = al.check(listings, self.shots)
+        self.assertEqual(len(problems), 1)
+        self.assertIn("en-GB", problems[0])
+        self.assertIn("description", problems[0])
+
     def test_large_display_screenshot_size_is_rejected(self):
         with open(os.path.join(self.shots, "en", "1.png"), "wb") as f:
             f.write(png(1320, 2868))
@@ -143,9 +166,10 @@ class AppStoreListingTests(unittest.TestCase):
         self.assertEqual(len(patches), 1)
         self.assertEqual(set(patches[0][1]["data"]["attributes"]), {"name", "subtitle"})
         self.assertFalse(any(p == "/appStoreVersionLocalizations/vl-zh" for m, p, _ in api.calls if m == "PATCH"))
-        created = [b["data"]["attributes"]["locale"] for m, p, b in api.calls
-                   if m == "POST" and p == "/appStoreVersionLocalizations"]
-        self.assertEqual(sorted(created), sorted(al.REQUIRED_LOCALES - {"zh-Hans"}))
+        self.assertEqual(set(api.ver_locs), al.REQUIRED_LOCALES)
+        for locale, loc in api.ver_locs.items():
+            self.assertEqual({f: loc["attributes"].get(f) for f in al.VERSION_FIELDS},
+                             {f: self.listings()[locale][f] for f in al.VERSION_FIELDS})
         self.assertFalse(any(p.startswith("/appScreenshots/old") for _, p in api.writes()))
 
     def test_new_language_screenshots_are_uploaded_committed_and_ordered(self):
