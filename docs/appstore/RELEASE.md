@@ -5,7 +5,7 @@
 ## 1. 在 App Store Connect 创建 App（约 5 分钟）
 
 1. 打开 <https://appstoreconnect.apple.com> → **App** → 左上角 **＋** → **新建 App**
-2. 平台：iOS；名称：`语法扫描 - 日语语法拍照识别`（被占用就换一个）；主要语言：简体中文
+2. 平台：iOS；名称：`日语语法速查`；主要语言：简体中文
 3. **套装 ID (Bundle ID)**：如果下拉框里没有，先到 <https://developer.apple.com/account/resources/identifiers/list> 点 **＋** → App IDs → App，填写例如 `com.你的名字.grammarscanner`（不需要勾选任何 Capability），再回来选择它
 4. SKU：`japanese-grammar-scanner`
 
