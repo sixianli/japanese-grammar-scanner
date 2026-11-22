@@ -1,0 +1,46 @@
+# 每周一汇总 App 内的匿名使用统计（用户数、日活 / 周活 / 月活、国家、时段、热门语法、等级），发到开发者邮箱。
+# 和反馈转发共用配置（见 docs/feedback/SETUP.md）。定时任务只在默认分支（main）上运行；也可在 Actions 页面手动运行。
+name: Usage Report
+
+on:
+  schedule:
+    - cron: "17 1 * * 1"   # 每周一 09:17（北京时间）
+  workflow_dispatch:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check configuration
+        id: cfg
+        env:
+          KEY_ID: ${{ secrets.CLOUDKIT_KEY_ID }}
+          SMTP_USER: ${{ secrets.FEEDBACK_SMTP_USER }}
+        run: |
+          if [ -z "$KEY_ID" ] || [ -z "$SMTP_USER" ]; then
+            echo "尚未配置 CloudKit / 邮箱（见 docs/feedback/SETUP.md），跳过。"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Install dependencies
+        if: steps.cfg.outputs.ready == 'true'
+        run: pip install --quiet cryptography
+      - name: Build and send report
+        if: steps.cfg.outputs.ready == 'true'
+        env:
+          CLOUDKIT_CONTAINER: iCloud.${{ vars.BUNDLE_ID }}
+          CLOUDKIT_KEY_ID: ${{ secrets.CLOUDKIT_KEY_ID }}
+          CLOUDKIT_PRIVATE_KEY: ${{ secrets.CLOUDKIT_PRIVATE_KEY }}
+          FEEDBACK_SMTP_HOST: ${{ secrets.FEEDBACK_SMTP_HOST }}
+          FEEDBACK_SMTP_PORT: ${{ secrets.FEEDBACK_SMTP_PORT }}
+          FEEDBACK_SMTP_USER: ${{ secrets.FEEDBACK_SMTP_USER }}
+          FEEDBACK_SMTP_PASSWORD: ${{ secrets.FEEDBACK_SMTP_PASSWORD }}
+          FEEDBACK_TO: ${{ secrets.FEEDBACK_TO }}
+        run: python3 tools/usage_report.py | tee report.txt
+      - name: Job summary
+        if: steps.cfg.outputs.ready == 'true' && always()
+        run: |
+          { echo '```'; cat report.txt 2>/dev/null; echo '```'; } >> "$GITHUB_STEP_SUMMARY"

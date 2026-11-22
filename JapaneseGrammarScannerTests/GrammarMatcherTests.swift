@@ -1,3 +1,4 @@
+import SwiftUI
 import XCTest
 @testable import JapaneseGrammarScanner
 
@@ -80,6 +81,48 @@ final class GrammarMatcherTests: XCTestCase {
         XCTAssertEqual(clusters[0].grammarIDs, ["a", "b"])
         XCTAssertEqual(clusters[1].grammarIDs, ["c"])
     }
+
+    /// 长跨度的语法（や……など）只框「や」「など」，中间的别的语法不会被合并进来
+    func testLongSpanMatchesOnlyBoxKeyParts() {
+        let text = "写真が撮れる店やアニメに出てきた料理が食べられる店などができた"
+        let ns = text as NSString
+        let yaNado = GrammarMatch(grammarID: "ya-nado", range: NSRange(location: ns.range(of: "や").location,
+                                                                         length: NSMaxRange(ns.range(of: "など")) - ns.range(of: "や").location))
+        let teKuru = GrammarMatch(grammarID: "te-kuru", range: ns.range(of: "てき"))
+        let rareru = GrammarMatch(grammarID: "rareru", range: ns.range(of: "られる"))
+        let clusters = GrammarMatcher.clusters(from: [yaNado, teKuru, rareru], text: text)
+        XCTAssertEqual(clusters.count, 3, "や…など 不应把中间的 てくる、られる 合并成一个框")
+        let ya = clusters.first { $0.grammarIDs == ["ya-nado"] }
+        XCTAssertEqual(ya?.ranges.map { ns.substring(with: $0) }, ["や", "など"])
+        XCTAssertEqual(ya?.matchedTexts["ya-nado"]?.hasPrefix("や"), true)
+    }
+
+    /// 9 个字以内整段框：「お詫び申し上げます」不应只框「お」和「げ」
+    func testMediumSpanIsBoxedWhole() {
+        let text = "心よりお詫び申し上げます。"
+        let ns = text as NSString
+        let r = ns.range(of: "お詫び申し上げます")
+        XCTAssertEqual(GrammarMatcher.displaySegments(for: r, in: ns), [r])
+    }
+
+    /// 长跨度时开头的平假名最多取 5 个：「なかなか」不应被截成「なかな」
+    func testLongSpanKeepsWholeLeadingKana() {
+        let text = "なかなか眠れなくて困っていない"
+        let ns = text as NSString
+        let r = NSRange(location: 0, length: ns.length)
+        let segs = GrammarMatcher.displaySegments(for: r, in: ns).map { ns.substring(with: $0) }
+        XCTAssertEqual(segs.first, "なかなか")
+    }
+
+    /// 从扫描进入讲解时，「がきっかけで」应对应「〜をきっかけに」的用法②
+    func testBestSenseForScannedText() {
+        guard let p = GrammarLibrary.shared.point(id: "wo-kikkake-ni") ?? GrammarLibrary.shared.points.first(where: { $0.title.contains("きっかけ") }) else {
+            return XCTFail("找不到「〜をきっかけに」")
+        }
+        let i = GrammarDetailView.bestSense(for: "がきっかけで", in: p)
+        XCTAssertNotNil(i)
+        if let i { XCTAssertTrue(p.senses[i].connection.contains("がきっかけ"), "应定位到「がきっかけで」那个用法") }
+    }
 }
 
 final class ScanAnalyzerTests: XCTestCase {
@@ -127,6 +170,7 @@ final class LocalizationTests: XCTestCase {
         XCTAssertEqual(ContentLanguage.from(identifier: "ko-KR"), .ko)
         XCTAssertEqual(ContentLanguage.from(identifier: "es-MX"), .es)
         XCTAssertEqual(ContentLanguage.from(identifier: "vi"), .vi)
+        XCTAssertEqual(ContentLanguage.from(identifier: "my-MM"), .my)
         XCTAssertEqual(ContentLanguage.from(identifier: "en-GB"), .en)
         XCTAssertEqual(ContentLanguage.from(identifier: "fr"), .en, "不支持的语言回退到英语")
     }
@@ -172,11 +216,245 @@ final class EntitlementTests: XCTestCase {
         let start = Date(timeIntervalSince1970: 1_800_000_000)
         typealias S = EntitlementStore
         XCTAssertEqual(S.access(purchases: [:], now: start), .notStarted)
-        if case .trial = S.access(purchases: [S.ProductID.trial: start], now: start.addingTimeInterval(6 * 86_400)) {} else {
-            XCTFail("第 6 天应仍在试用期")
+        if case .trial = S.access(purchases: [S.ProductID.trial: start], now: start.addingTimeInterval(13 * 86_400)) {} else {
+            XCTFail("第 13 天应仍在试用期")
         }
-        XCTAssertEqual(S.access(purchases: [S.ProductID.trial: start], now: start.addingTimeInterval(8 * 86_400)), .trialExpired)
+        XCTAssertEqual(S.access(purchases: [S.ProductID.trial: start], now: start.addingTimeInterval(15 * 86_400)), .trialExpired)
         XCTAssertEqual(S.access(purchases: [S.ProductID.trial: start, S.ProductID.lifetime: start], now: start.addingTimeInterval(30 * 86_400)), .unlocked)
         XCTAssertEqual(S.access(purchases: [S.ProductID.lifetime: start], now: start), .unlocked)
+    }
+}
+
+final class ContentRulesTests: XCTestCase {
+    let library = GrammarLibrary(language: .zhHans)
+
+    /// 相近语法必须都能跳转到语法库中的语法点，且不能指向自己。
+    func testEverySimilarIsLinkable() {
+        for p in library.points {
+            for s in p.similar {
+                let target = s.id.flatMap { library.point(id: $0) }
+                XCTAssertNotNil(target, "\(p.id) 的相近语法「\(s.title)」无法跳转")
+                XCTAssertNotEqual(target?.id, p.id, "\(p.id) 的相近语法指向了自己")
+            }
+        }
+    }
+
+    func testFormationAndNotesPresent() {
+        for p in library.points {
+            XCTAssertFalse(p.formation.isEmpty, "\(p.id) 缺少组词逻辑")
+            XCTAssertFalse(p.notes.isEmpty, "\(p.id) 缺少注意")
+        }
+    }
+
+    /// 汉字写法可以搜索到。
+    func testKanjiFormIsSearchable() {
+        for p in library.points {
+            guard let k = p.kanji else { continue }
+            XCTAssertTrue(library.search(k).contains(p), "用「\(k)」搜不到 \(p.id)")
+        }
+    }
+
+    /// 同形语法已合并：旧 id 仍能找到合并后的语法点；标题不带中文说明，也不再有同名语法点。
+    func testMergedSameFormGrammar() {
+        guard let p = library.point(id: "sou-da-hearsay") else { return XCTFail() }
+        XCTAssertEqual(p.id, "sou-da-appearance")
+        XCTAssertEqual(p.titleForm, "〜そうだ")
+        XCTAssertGreaterThanOrEqual(p.senses.count, 2)
+        let titles = library.points.map(\.title)
+        XCTAssertEqual(titles.count, Set(titles).count, "有重复的语法标题")
+        for t in titles {
+            XCTAssertNil(t.range(of: "（[^）ぁ-んァ-ヶ]*[一-龥][^）ぁ-んァ-ヶ]*）", options: .regularExpression), "标题带中文说明: \(t)")
+        }
+        // 「〜まで」：N5 和 N3 的义项都在，N3 列表里也能找到它
+        guard let made = library.point(id: "made-even") else { return XCTFail() }
+        XCTAssertEqual(made.level, .n5)
+        XCTAssertTrue(made.levels.contains(.n3))
+        XCTAssertTrue(library.points(for: .n3).contains(made))
+    }
+
+    /// 搜索按相关度：语法形式命中优先，例句里出现不算。
+    func testSearchRelevance() {
+        let areba = library.search("あれば")
+        XCTAssertEqual(areba.first?.id, "to-areba")
+        for unrelated in ["nari-nari", "nari-tomo", "ba-koso"] {
+            XCTAssertFalse(areba.contains { $0.id == unrelated }, "「あれば」不应搜到 \(unrelated)")
+        }
+        XCTAssertEqual(library.search("にもかかわらず").first?.id, "ni-mo-kakawarazu")
+        XCTAssertEqual(library.search("にも関わらず").first?.id, "ni-mo-kakawarazu")
+        XCTAssertEqual(library.search("ニモカカワラズ").first?.id, "ni-mo-kakawarazu")
+        XCTAssertFalse(library.search("尽管").isEmpty)
+        // 按意思搜索：近义说法也能找到；讲解正文里顺带出现的不算
+        let notSo = library.search("不那么").map(\.id)
+        XCTAssertEqual(notSo.first, "amari-nai")
+        XCTAssertFalse(notSo.contains("kamoshirenai"), "「不那么」不应搜到〜かもしれない")
+        XCTAssertEqual(library.search("てしまう").first?.id, "te-shimau")
+    }
+
+    /// 「识别到 N 个语法点」与列表条目数一致：旧 id 换新、去重、只保留库里有的。
+    func testDisplayableIDs() {
+        let ids = library.displayableIDs(["te-shimau", "sou-da-hearsay", "sou-da-appearance", "no-such-id", "te-shimau"])
+        XCTAssertEqual(ids, ["te-shimau", "sou-da-appearance"])
+    }
+}
+
+@MainActor
+final class HistoryStoreTests: XCTestCase {
+    private func freshStore(_ name: String) -> HistoryStore {
+        let defaults = UserDefaults(suiteName: name)!
+        defaults.removePersistentDomain(forName: name)
+        return HistoryStore(defaults: defaults)
+    }
+
+    /// 第一次看过约 1.2 天后到期（按真实时间，不按日历天）；只是再打开看看不会重新计时，自评才会
+    func testSpacedReviewUsesRealTimeAndSelfRating() {
+        let store = freshStore("HistoryStoreTests")
+        let t0 = Date(timeIntervalSince1970: 1_800_000_000)
+        let day = 86_400.0
+        store.recordViewed("te-shimau", now: t0)
+        XCTAssertTrue(store.dueForReview(now: t0.addingTimeInterval(3600)).isEmpty, "刚看过不需要复习")
+        XCTAssertTrue(store.dueForReview(now: t0.addingTimeInterval(1.1 * day)).isEmpty, "按真实时间：1.1 天还没到期")
+        XCTAssertEqual(store.dueForReview(now: t0.addingTimeInterval(1.3 * day)).map(\.id), ["te-shimau"], "约 1.2 天后到期")
+        // 到期后只是打开看看：仍然到期
+        store.recordViewed("te-shimau", now: t0.addingTimeInterval(1.3 * day))
+        XCTAssertTrue(store.isDue("te-shimau", now: t0.addingTimeInterval(1.31 * day)), "没有自评，不应重新计时")
+        // 自评「记得」：间隔变长
+        store.rate("te-shimau", .good, now: t0.addingTimeInterval(1.3 * day))
+        XCTAssertFalse(store.isDue("te-shimau", now: t0.addingTimeInterval(3 * day)))
+        let next = store.nextReview(of: "te-shimau")!
+        XCTAssertGreaterThan(next.timeIntervalSince(t0.addingTimeInterval(1.3 * day)), 3 * day, "记得 → 下次复习在 3 天以后")
+        XCTAssertTrue(store.isDue("te-shimau", now: next.addingTimeInterval(60)))
+        XCTAssertTrue(store.learnedIDs.contains("te-shimau"))
+        XCTAssertEqual(store.viewCount(of: "te-shimau"), 2)
+        XCTAssertEqual(store.viewCount(of: "never-seen"), 0)
+        store.clearViewed()
+    }
+
+    /// 忘了 → 很快再复习；有点模糊 → 间隔比记得短
+    func testGradesChangeInterval() {
+        let t0 = Date(timeIntervalSince1970: 1_800_000_000)
+        let due = t0.addingTimeInterval(2 * 86_400)
+        var intervals: [FSRS.Grade: TimeInterval] = [:]
+        for g in FSRS.Grade.allCases {
+            let store = freshStore("HistoryStoreTestsGrade\(g.rawValue)")
+            store.recordViewed("tai", now: t0)
+            store.rate("tai", g, now: due)
+            intervals[g] = store.nextReview(of: "tai")!.timeIntervalSince(due)
+            store.clearViewed()
+        }
+        XCTAssertLessThan(intervals[.again]!, intervals[.hard]!)
+        XCTAssertLessThan(intervals[.hard]!, intervals[.good]!)
+        XCTAssertLessThan(intervals[.again]!, 86_400, "忘了 → 一天之内再复习")
+    }
+
+    /// 遗忘越多（记住率越低）的排在越前面
+    func testReviewPrioritizesLowestRetention() {
+        let store = freshStore("HistoryStoreTests2")
+        let t0 = Date(timeIntervalSince1970: 1_800_000_000)
+        store.recordViewed("tai", now: t0)                              // 看过 10 天
+        store.recordViewed("nagara", now: t0.addingTimeInterval(8 * 86_400)) // 看过 2 天
+        let due = store.dueForReview(now: t0.addingTimeInterval(10 * 86_400))
+        XCTAssertEqual(due.map(\.id), ["tai", "nagara"])
+        XCTAssertLessThan(due[0].retention, due[1].retention)
+        store.clearViewed()
+    }
+
+    /// 旧版本的记录（只有复习阶段）换算成 FSRS：阶段对应的间隔天数就是记住率降到 90% 的时间
+    func testLegacyRecordsMigrate() {
+        let t0 = Date(timeIntervalSince1970: 1_800_000_000)
+        let legacy = HistoryStore.ViewRecord(id: "x", firstViewed: t0, lastViewed: t0, stage: 2)   // 旧版 7 天间隔
+        XCTAssertEqual(HistoryStore.retention(legacy, now: t0.addingTimeInterval(7 * 86_400)), 0.9, accuracy: 1e-9)
+        XCTAssertFalse(HistoryStore.isDue(legacy, now: t0.addingTimeInterval(6 * 86_400)))
+        XCTAssertTrue(HistoryStore.isDue(legacy, now: t0.addingTimeInterval(7.01 * 86_400)))
+    }
+}
+
+/// FSRS 算法本身
+final class FSRSTests: XCTestCase {
+    func testRetrievabilityAtStabilityIsTarget() {
+        for s in [0.5, 1, 3.7, 20, 180] {
+            XCTAssertEqual(FSRS.retrievability(elapsedDays: s, stability: s), 0.9, accuracy: 1e-9)
+            XCTAssertEqual(FSRS.interval(stability: s), s, accuracy: 1e-9)
+        }
+        XCTAssertEqual(FSRS.retrievability(elapsedDays: 0, stability: 2), 1)
+    }
+
+    func testReviewOrdering() {
+        let m = FSRS.initial(.good)
+        let again = FSRS.review(m, elapsedDays: m.stability, grade: .again)
+        let hard = FSRS.review(m, elapsedDays: m.stability, grade: .hard)
+        let good = FSRS.review(m, elapsedDays: m.stability, grade: .good)
+        XCTAssertLessThan(again.stability, m.stability, "忘了 → 稳定度下降")
+        XCTAssertGreaterThan(hard.stability, m.stability)
+        XCTAssertGreaterThan(good.stability, hard.stability)
+        XCTAssertGreaterThan(again.difficulty, m.difficulty, "忘了 → 变难")
+        XCTAssertLessThanOrEqual(good.difficulty, m.difficulty + 1e-9)
+        for x in [again, hard, good] { XCTAssert((1...10).contains(x.difficulty)) }
+    }
+
+    func testRepeatedGoodGrowsInterval() {
+        var m = FSRS.initial(.hard)
+        var last = m.stability
+        for _ in 0..<5 {
+            m = FSRS.review(m, elapsedDays: m.stability, grade: .good)
+            XCTAssertGreaterThan(m.stability, last)
+            last = m.stability
+        }
+        XCTAssertGreaterThan(last, 30, "连续 5 次记得后，间隔应超过一个月")
+    }
+}
+
+
+/// 渲染详情页（重点覆盖合并后的语法点），确保不会卡死或崩溃、渲染不过慢。
+@MainActor
+final class DetailRenderTests: XCTestCase {
+    func testEveryDetailPageRenders() {
+        let library = GrammarLibrary(language: .zhHans)
+        let suite = "DetailRenderTests"
+        let defaults = UserDefaults(suiteName: suite)!
+        defaults.removePersistentDomain(forName: suite)
+        let favorites = FavoritesStore(defaults: defaults)
+        let history = HistoryStore(defaults: defaults)
+        let entitlements = EntitlementStore(unlockedForTesting: true)
+        let priority = ["made-until", "izen", "oouseru", "to-quotation", "ni-destination-target", "you-na-example"]
+        // 合并后的语法点（义项多、等级多）+ 每隔 40 个抽一个，覆盖各等级又不拖慢 CI
+        let merged = library.points.filter { $0.levels.count > 1 || $0.senses.count >= 7 }.map(\.id)
+        let sampled = library.points.enumerated().filter { $0.offset % 40 == 0 }.map(\.element.id)
+        var ids: [String] = []
+        for id in priority + merged + sampled where !ids.contains(id) { ids.append(id) }
+        // 先渲染一次做预热（首次加载注音表、字体等一次性开销不计入单页耗时）
+        let warmup = ImageRenderer(content: GrammarDetailView(grammarID: ids[0])
+            .environmentObject(library).environmentObject(favorites)
+            .environmentObject(entitlements).environmentObject(history).frame(width: 430))
+        warmup.proposedSize = ProposedViewSize(width: 430, height: 3000)
+        _ = warmup.uiImage
+        for id in ids {
+            let view = GrammarDetailView(grammarID: id)
+                .environmentObject(library)
+                .environmentObject(favorites)
+                .environmentObject(entitlements)
+                .environmentObject(history)
+                .frame(width: 430)
+            let renderer = ImageRenderer(content: view)
+            renderer.proposedSize = ProposedViewSize(width: 430, height: 3000)
+            let start = Date()
+            XCTAssertNotNil(renderer.uiImage, "\(id) 详情页渲染失败")
+            let elapsed = Date().timeIntervalSince(start)
+            XCTAssertLessThan(elapsed, 3, "\(id) 详情页渲染过慢: \(elapsed)s")
+        }
+    }
+}
+
+
+final class NoteParserTests: XCTestCase {
+    func testSplitsWrongAndRightSentences() {
+        let items = NoteParser.parse("修饰名词必须加「の」：×「日本について本」→ ○「日本についての本」（或「日本に関する本」）。")
+        XCTAssertEqual(items.first, .text("修饰名词必须加「の」"))
+        XCTAssertTrue(items.contains(.example(correct: false, sentence: "日本について本")))
+        XCTAssertTrue(items.contains(.example(correct: true, sentence: "日本についての本")))
+        XCTAssertEqual(items.last, .text("或「日本に関する本」"))
+    }
+
+    func testPlainNoteUnchanged() {
+        XCTAssertEqual(NoteParser.parse("没有例句的说明。"), [.text("没有例句的说明。")])
     }
 }

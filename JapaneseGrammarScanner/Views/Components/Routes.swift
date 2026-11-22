@@ -4,16 +4,55 @@ import UIKit
 /// 导航目的地。
 enum Route: Hashable {
     case grammar(String)
+    /// 从扫描结果打开讲解：附带原文里命中的文字，讲解页据此显示「你扫到的」并定位到对应的用法
+    case grammarMatch(String, String)
     case scan(ScanImage)
+    /// 打开「最近扫描」中保存的一次扫描
+    case scanRecord(UUID)
+    /// 首页各模块的「查看全部」页。
+    /// 注意：同一个导航栈里只能用「按值跳转」（NavigationLink(value:)）。如果用 NavigationLink { 页面 } 推入一页、
+    /// 再在那一页里按值跳转，SwiftUI 会把导航栈弄乱（例如在「全部扫描记录」里一直原地打转）。
+    case allScans
+    case recentViewed
+    /// 复习「快要忘了」：当前要复习的语法 + 之后还要复习的（按顺序）
+    case review(String, [String])
 }
 
 /// 要做识别的一张图片（来自相机定格或相册）。
 struct ScanImage: Hashable, Identifiable {
     let id = UUID()
     let image: UIImage
+    /// 从「最近扫描」打开时对应的记录（不再重复保存）
+    var historyID: UUID? = nil
+    /// 内置示例书页（不保存到最近扫描）
+    var isSample = false
 
     static func == (lhs: ScanImage, rhs: ScanImage) -> Bool { lhs.id == rhs.id }
     func hash(into hasher: inout Hasher) { hasher.combine(id) }
+}
+
+/// 把一个页面压入当前标签的导航栈（由各标签的 NavigationStack 提供）。
+/// 识别结果页点高亮后用它打开讲解，保证与「相近语法」等普通跳转使用同一套导航，
+/// 不会出现新页面被旧页面盖住、看起来“跳回原来那个语法点”的问题。
+private struct PushRouteKey: EnvironmentKey {
+    static let defaultValue: ((Route) -> Void)? = nil
+}
+
+/// 用新页面替换当前最上面的一页（复习时「下一个」：不在导航栈里越压越深）
+private struct ReplaceRouteKey: EnvironmentKey {
+    static let defaultValue: ((Route) -> Void)? = nil
+}
+
+extension EnvironmentValues {
+    var pushRoute: ((Route) -> Void)? {
+        get { self[PushRouteKey.self] }
+        set { self[PushRouteKey.self] = newValue }
+    }
+
+    var replaceRoute: ((Route) -> Void)? {
+        get { self[ReplaceRouteKey.self] }
+        set { self[ReplaceRouteKey.self] = newValue }
+    }
 }
 
 extension View {
@@ -23,22 +62,50 @@ extension View {
             switch route {
             case .grammar(let id):
                 GrammarDetailView(grammarID: id)
+            case .grammarMatch(let id, let matched):
+                GrammarDetailView(grammarID: id, matchedText: matched.isEmpty ? nil : matched)
             case .scan(let scanImage):
                 ScanResultView(scanImage: scanImage)
+            case .scanRecord(let id):
+                SavedScanView(recordID: id)
+            case .allScans:
+                AllScansView()
+            case .recentViewed:
+                RecentViewedPage()
+            case .review(let id, let queue):
+                // 「下一个」会原地替换这一页：按语法 id 区分页面身份，换成下一个时是全新的页面
+                // （从顶部开始、重新显示自评按钮），不会带着上一个语法的「已记录」和滚动位置
+                GrammarDetailView(grammarID: id, reviewQueue: queue)
+                    .id(id)
             }
         }
     }
 }
 
 extension JLPTLevel {
-    /// 高亮颜色按 JLPT 等级区分。
-    var color: Color {
-        switch self {
-        case .n5: Color(red: 0.20, green: 0.70, blue: 0.40)
-        case .n4: Color(red: 0.15, green: 0.55, blue: 0.95)
-        case .n3: Color(red: 0.98, green: 0.60, blue: 0.10)
-        case .n2: Color(red: 0.65, green: 0.35, blue: 0.90)
-        case .n1: Color(red: 0.92, green: 0.25, blue: 0.30)
+    /// 统一使用主色（不再按等级区分五种颜色）。
+    var color: Color { Theme.accentText }
+}
+
+/// 从本地记录加载图片后显示识别结果
+struct SavedScanView: View {
+    let recordID: UUID
+    @EnvironmentObject private var history: HistoryStore
+    @State private var scanImage: ScanImage?
+
+    var body: some View {
+        Group {
+            if let scanImage {
+                ScanResultView(scanImage: scanImage)
+            } else {
+                ProgressView()
+            }
+        }
+        .onAppear {
+            guard scanImage == nil,
+                  let record = history.scans.first(where: { $0.id == recordID }),
+                  let image = history.image(for: record) else { return }
+            scanImage = ScanImage(image: image, historyID: record.id)
         }
     }
 }

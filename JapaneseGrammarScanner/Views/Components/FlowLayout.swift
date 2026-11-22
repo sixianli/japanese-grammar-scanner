@@ -4,6 +4,8 @@ import SwiftUI
 /// 用于逐字/逐词排版带假名注音的文本（SwiftUI 的 Text 不支持 ruby）。
 struct FlowLayout: Layout {
     var lineSpacing: CGFloat = 4
+    /// 每行在可用宽度里居中（页面标题用）
+    var centered = false
 
     struct Cache {
         var sizes: [CGSize] = []
@@ -18,14 +20,15 @@ struct FlowLayout: Layout {
         let lines = arrange(maxWidth: maxWidth, subviews: subviews, sizes: cache.sizes)
         let width = lines.map(\.width).max() ?? 0
         let height = lines.map(\.height).reduce(0, +) + CGFloat(max(lines.count - 1, 0)) * lineSpacing
-        return CGSize(width: proposal.width ?? width, height: height)
+        // 只占内容实际宽度（不把整行撑满），这样标题后面的等级标签能紧贴在文字右上角
+        return CGSize(width: min(width, maxWidth), height: height)
     }
 
     func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout Cache) {
         let lines = arrange(maxWidth: bounds.width, subviews: subviews, sizes: cache.sizes)
         var y = bounds.minY
         for line in lines {
-            var x = bounds.minX
+            var x = centered ? bounds.minX + max(0, (bounds.width - line.width) / 2) : bounds.minX
             for index in line.indices {
                 let size = cache.sizes[index]
                 subviews[index].place(

@@ -4,6 +4,7 @@ import SwiftUI
 struct OnboardingView: View {
     /// 用户点「开始使用」或「先用示例书页试试」时调用；参数表示是否要打开示例。
     let onFinish: (_ openSample: Bool) -> Void
+    @EnvironmentObject private var store: EntitlementStore
     @State private var page = 0
     private let pageCount = 5
 
@@ -12,7 +13,8 @@ struct OnboardingView: View {
             HStack {
                 Spacer()
                 if page < pageCount - 1 {
-                    Button("跳过") { onFinish(false) }
+                    // 跳到最后一页（那里写明了试用时长与到期后的价格）
+                    Button(tr("跳过")) { withAnimation { page = pageCount - 1 } }
                         .font(.subheadline.weight(.medium))
                         .padding(.horizontal, 20)
                         .padding(.top, 8)
@@ -28,18 +30,18 @@ struct OnboardingView: View {
                 ).tag(0)
                 OnboardingPage(
                     title: "扫描书本或截图",
-                    message: "把相机对准书页，语法会实时高亮，颜色代表 JLPT 等级。按中间的快门定格画面做精细识别，也可以从相册选择截图。",
+                    message: "把相机对准书页，文中的语法会实时用橙色框框出来。按中间的快门定格画面做精细识别，也可以从相册选择截图。",
                     illustration: { ScanIllustration() }
                 ).tag(1)
                 OnboardingPage(
-                    title: "点击高亮，查看讲解",
-                    message: "每个语法点都有意思、用法、例句、使用场景、词源和相近语法对比。例句里的汉字都标注了假名。",
+                    title: "点橙色框，查看讲解",
+                    message: "每个语法点都有意思、用法、例句和词源，例句里的汉字都标了假名。下方的「相近语法」分三组对比，展开就能看到例句里的差别。",
                     illustration: { DetailIllustration() }
                 ).tag(2)
                 OnboardingPage(
-                    title: "语法库与收藏",
-                    message: "在「语法库」按等级浏览或搜索全部语法，点 ☆ 收藏需要复习的语法。讲解会跟随手机语言显示。",
-                    illustration: { LibraryIllustration() }
+                    title: "到时间就复习",
+                    message: "看过的语法快要忘记时，首页会出现一行「N 个语法可以复习了」。点一下开始复习，看完选「忘了」「有点模糊」或「记得」，App 会按你的记忆安排下次复习。",
+                    illustration: { ReviewIllustration() }
                 ).tag(3)
                 OnboardingPage(
                     title: "准备好了",
@@ -58,32 +60,56 @@ struct OnboardingView: View {
                     Button {
                         withAnimation { page += 1 }
                     } label: {
-                        Text("下一步").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 6)
+                        Text(localized: "下一步").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 6)
                     }
                     .buttonStyle(.borderedProminent)
                 } else {
                     Button {
                         onFinish(false)
                     } label: {
-                        Text("开始使用").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 6)
+                        Group {
+                            if Features.paymentsEnabled { Text(localized: "免费开始使用") } else { Text(localized: "开始使用") }
+                        }
+                        .font(.headline).frame(maxWidth: .infinity).padding(.vertical, 6)
                     }
                     .buttonStyle(.borderedProminent)
-                    Button("先用示例书页试试") { onFinish(true) }
+                    Button(tr("先用示例书页试试")) { onFinish(true) }
                         .font(.subheadline.weight(.medium))
-                        .padding(.top, 4)
+                        .padding(.top, 2)
+                    if Features.paymentsEnabled { trialNote }
                 }
             }
             .tint(Brand.red)
             .padding(.horizontal, 28)
             .padding(.bottom, 24)
-            .frame(height: 110, alignment: .top)
+            .frame(height: 150, alignment: .top)
         }
-        .background(Color(.systemBackground))
+        .background(Theme.background)
+        .tint(Theme.accent)
+    }
+
+    /// 审核要求（Guideline 3.1.1）：试用开始前写明时长、到期后需要付费的内容与价格。
+    private var trialNote: some View {
+        Group {
+            if store.access == .unlocked {
+                EmptyView()
+            } else if let price = store.lifetimeProduct?.displayPrice {
+                Text(localized: "前 \(EntitlementStore.trialDays) 天免费使用全部功能。之后可一次性 \(price) 永久解锁完整讲解，不订阅、不自动扣费。")
+            } else {
+                Text(localized: "前 \(EntitlementStore.trialDays) 天免费使用全部功能。之后可一次性购买永久解锁完整讲解，不订阅、不自动扣费。")
+            }
+        }
+        .font(.caption)
+        .foregroundStyle(.secondary)
+        .multilineTextAlignment(.center)
+        .fixedSize(horizontal: false, vertical: true)
+        .padding(.top, 2)
     }
 }
 
 enum Brand {
-    static let red = Color(red: 0.84, green: 0.20, blue: 0.16)
+    /// 统一使用主色
+    static var red: Color { Theme.accent }
     static let paper = Color(red: 1.0, green: 0.988, blue: 0.96)
     static let marker = Color(red: 1.0, green: 0.80, blue: 0.27)
 }
@@ -100,10 +126,10 @@ private struct OnboardingPage<Illustration: View>: View {
                 .frame(height: 300)
                 .accessibilityHidden(true)
             VStack(spacing: 14) {
-                Text(title)
+                Text(localized: title)
                     .font(.title2.bold())
                     .multilineTextAlignment(.center)
-                Text(message)
+                Text(localized: message)
                     .font(.body)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
@@ -152,7 +178,7 @@ private struct ViewfinderCorners: Shape {
 private struct TextLine: View {
     let text: String
     var highlight: String? = nil
-    var color: Color = .blue
+    var color: Color = Theme.accentText
 
     var body: some View {
         HStack(spacing: 0) {
@@ -176,9 +202,9 @@ private struct BookPage: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             TextLine(text: "駅に着いたとき、", highlight: nil)
-            TextLine(text: "雨が降りそうだった。", highlight: "そうだ", color: .blue)
-            TextLine(text: "傘を買っておいた。", highlight: "ておい", color: .blue)
-            TextLine(text: "道に迷ってしまった。", highlight: "てしまっ", color: .blue)
+            TextLine(text: "雨が降りそうだった。", highlight: "そうだ", color: Theme.scanHighlight)
+            TextLine(text: "傘を買っておいた。", highlight: "ておい", color: Theme.scanHighlight)
+            TextLine(text: "道に迷ってしまった。", highlight: "てしまっ", color: Theme.scanHighlight)
         }
         .padding(22)
         .background(Brand.paper, in: RoundedRectangle(cornerRadius: 16))
@@ -200,7 +226,7 @@ private struct WelcomeIllustration: View {
     }
 }
 
-private struct ScanIllustration: View {
+struct ScanIllustration: View {
     @State private var scanY: CGFloat = -70
 
     var body: some View {
@@ -221,22 +247,20 @@ private struct ScanIllustration: View {
     }
 }
 
-private struct DetailIllustration: View {
+struct DetailIllustration: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 8) {
                 Text(verbatim: "〜てしまう").font(.title2.bold())
-                Text(verbatim: "N4").font(.caption2.bold()).foregroundStyle(.white)
-                    .padding(.horizontal, 6).padding(.vertical, 2).background(Color.blue, in: Capsule())
+                LevelBadge(level: .n4)
             }
-            ForEach(Array([("lightbulb.max.fill", Color.orange), ("list.bullet.rectangle.portrait.fill", .blue),
-                           ("person.2.wave.2.fill", .green), ("scroll.fill", .brown), ("arrow.triangle.branch", .purple)].enumerated()),
+            ForEach(Array([("lightbulb.max.fill", Color.secondary), ("list.bullet.rectangle.portrait.fill", .secondary),
+                           ("person.2.wave.2.fill", .secondary), ("scroll.fill", .secondary), ("arrow.triangle.branch", .secondary)].enumerated()),
                     id: \.offset) { i, item in
                 HStack(spacing: 10) {
                     Image(systemName: item.0)
-                        .font(.system(size: 13, weight: .bold)).foregroundStyle(.white)
+                        .font(.system(size: 15, weight: .medium)).foregroundStyle(item.1)
                         .frame(width: 28, height: 28)
-                        .background(item.1, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
                     RoundedRectangle(cornerRadius: 4).fill(Color.secondary.opacity(0.22))
                         .frame(width: CGFloat([150, 180, 130, 165, 140][i]), height: 10)
                 }
@@ -248,26 +272,43 @@ private struct DetailIllustration: View {
     }
 }
 
-private struct LibraryIllustration: View {
+struct ReviewIllustration: View {
     var body: some View {
-        VStack(spacing: 10) {
-            ForEach(Array([("〜ようになる", Color.blue, true), ("〜にもかかわらず", Color.purple, true), ("〜おかげで", Color.orange, false), ("〜たい", Color.green, false)].enumerated()), id: \.offset) { _, row in
-                HStack {
-                    RoundedRectangle(cornerRadius: 2).fill(row.1).frame(width: 4, height: 28)
-                    Text(verbatim: row.0).font(.headline)
-                    Spacer()
-                    Image(systemName: row.2 ? "star.fill" : "star")
-                        .foregroundStyle(row.2 ? Color.yellow : Color.secondary)
+        VStack(alignment: .leading, spacing: 14) {
+            // 首页的复习提醒：一行，前面一个铃铛，飘过几朵樱花（静止画面）
+            HStack(spacing: 10) {
+                Image(systemName: "bell").foregroundStyle(Theme.accentText)
+                Text(localized: "\(3) 个语法可以复习了").font(.subheadline.weight(.medium))
+                Spacer(minLength: 4)
+                Image(systemName: "chevron.right").font(.caption.weight(.semibold)).foregroundStyle(.tertiary)
+            }
+            .padding(.horizontal, 14)
+            .frame(minHeight: 46)
+            .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 14))
+            .overlay(alignment: .topTrailing) {
+                HStack(spacing: 10) {
+                    SakuraFlower(size: 14).rotationEffect(.degrees(20))
+                    SakuraPetalShape().fill(Sakura.petal).frame(width: 6, height: 9).rotationEffect(.degrees(-30)).offset(y: 14)
+                    SakuraFlower(size: 10).rotationEffect(.degrees(-15)).offset(y: 6)
                 }
-                .padding(.horizontal, 14).padding(.vertical, 10)
-                .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 12))
+                .padding(.trailing, 60)
+                .offset(y: -4)
+            }
+            HStack(spacing: 6) {
+                ForEach(FSRS.Grade.allCases, id: \.self) { g in
+                    Text(localized: ReviewBar.label(g))
+                        .font(.caption.weight(.bold))
+                        .foregroundStyle(ReviewBar.color(g))
+                        .frame(maxWidth: .infinity, minHeight: 34)
+                        .background(ReviewBar.color(g).opacity(0.14), in: RoundedRectangle(cornerRadius: 10))
+                }
             }
         }
         .frame(width: 290)
     }
 }
 
-private struct ReadyIllustration: View {
+struct ReadyIllustration: View {
     var body: some View {
         ZStack {
             BookPage().rotationEffect(.degrees(-4))

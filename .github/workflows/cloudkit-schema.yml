@@ -1,0 +1,31 @@
+# 把 cloudkit/schema.ckdb（反馈的数据结构）导入 CloudKit 开发环境。
+# 导入后需要在 CloudKit Console 点一次「Deploy Schema Changes」发布到正式环境（TestFlight 和 App Store 用的是正式环境）。
+# 配置方法见 docs/feedback/SETUP.md。
+name: CloudKit Schema
+
+on:
+  workflow_dispatch:
+  # 数据结构或这个任务改动时，在 PR 上自动导入开发环境（手动触发只在默认分支上可用）
+  pull_request:
+    paths:
+      - cloudkit/schema.ckdb
+      - .github/workflows/cloudkit-schema.yml
+
+jobs:
+  import:
+    runs-on: xcode-27
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode
+        run: sudo xcode-select -s "$(ls -d /Applications/Xcode_27*.app | sort -V | tail -1)"
+      - name: Import schema to development
+        env:
+          CLOUDKIT_MANAGEMENT_TOKEN: ${{ secrets.CLOUDKIT_MANAGEMENT_TOKEN }}
+          TEAM_ID: ${{ vars.APPLE_TEAM_ID }}
+          BUNDLE_ID: ${{ vars.BUNDLE_ID }}
+        run: |
+          if [ -z "$CLOUDKIT_MANAGEMENT_TOKEN" ]; then echo "::error::缺少 CLOUDKIT_MANAGEMENT_TOKEN（见 docs/feedback/SETUP.md）"; exit 1; fi
+          xcrun cktool validate-schema --team-id "$TEAM_ID" --container-id "iCloud.$BUNDLE_ID" --environment development --file cloudkit/schema.ckdb
+          xcrun cktool import-schema --team-id "$TEAM_ID" --container-id "iCloud.$BUNDLE_ID" --environment development --file cloudkit/schema.ckdb
+          echo "✅ 已导入开发环境。请到 CloudKit Console → Schema → Deploy Schema Changes 发布到正式环境。"

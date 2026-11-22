@@ -5,6 +5,11 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+    inputs:
+      e2e_only:
+        description: "只跑指定的端对端测试（例如 SettingsTests/testEveryLanguage，逗号分隔）；留空跑全部"
+        required: false
+        default: ""
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -16,16 +21,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Validate grammar resources
-        run: python3 tools/validate_grammar.py
+        run: |
+          python3 tools/validate_grammar.py
+          python3 tools/validate_contrasts.py
+          python3 tools/validate_compliance.py
+          python3 tools/check_strings.py
+          python3 -m unittest discover -s tools/tests
 
   build-and-test:
-    runs-on: macos-15
+    runs-on: xcode-27
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - name: Show Xcode
         run: |
-          sudo xcode-select -s "$(ls -d /Applications/Xcode_26*.app | sort -V | tail -1)"
+          sudo xcode-select -s "$(ls -d /Applications/Xcode_27*.app | sort -V | tail -1)"
           xcodebuild -version
           xcrun simctl list devices available | grep -E "iPhone" | head -20
       - name: Pick simulator
@@ -45,9 +55,22 @@ jobs:
             -project JapaneseGrammarScanner.xcodeproj \
             -scheme JapaneseGrammarScanner \
             -destination "id=${{ steps.sim.outputs.udid }}" \
+            -only-testing:JapaneseGrammarScannerTests \
             CODE_SIGNING_ALLOWED=NO \
             | tee build.log | grep -E "error:|warning: .*JapaneseGrammarScanner|Test Case .* (passed|failed)|Executed|\*\* (TEST|BUILD)" || true
           grep -q "\*\* TEST SUCCEEDED \*\*" build.log
+      - name: Test with CLOUD_FEEDBACK (TestFlight configuration)
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project JapaneseGrammarScanner.xcodeproj \
+            -scheme JapaneseGrammarScanner \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -only-testing:JapaneseGrammarScannerTests/GuideAndLegalTests \
+            CODE_SIGNING_ALLOWED=NO \
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS=\$(inherited) CLOUD_FEEDBACK" \
+            | tee build-cloud.log | grep -E "error:|Test Case .* (passed|failed)|Executed|\*\* (TEST|BUILD)" || true
+          grep -q "\*\* TEST SUCCEEDED \*\*" build-cloud.log
       - name: Build for device (Release, unsigned)
         run: |
           set -o pipefail
@@ -64,15 +87,147 @@ jobs:
           name: build-log
           path: build.log
 
+  e2e-plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Split end-to-end tests into groups
+        id: plan
+        env:
+          E2E_ONLY: ${{ inputs.e2e_only }}
+        run: |
+          if [ -n "$E2E_ONLY" ]; then
+            M=$(python3 tools/e2e_shards.py --only "$E2E_ONLY")
+          else
+            M=$(python3 tools/e2e_shards.py)
+          fi
+          echo "$M"
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+
+  e2e-shard:
+    needs: e2e-plan
+    name: e2e-shard-${{ matrix.shard }}
+    runs-on: xcode-27
+    timeout-minutes: 75
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.e2e-plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pick simulator
+        id: sim
+        run: |
+          sudo xcode-select -s "$(ls -d /Applications/Xcode_27*.app | sort -V | tail -1)"
+          UDID=$(xcrun simctl list devices available -j | python3 -c "
+          import json,sys
+          d=json.load(sys.stdin)['devices']
+          c=[(k,x) for k,v in d.items() if 'iOS' in k for x in v if x['name'].startswith('iPhone')]
+          c.sort(key=lambda t:(t[0], t[1]['name'].endswith('Pro Max')))
+          print(c[-1][1]['udid'])")
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+      - name: Boot simulator and add sample photos in background
+        run: |
+          UDID="${{ steps.sim.outputs.udid }}"
+          defaults write com.apple.iphonesimulator ConnectHardwareKeyboard -bool false
+          (
+            set -e
+            echo "$(date +%T) boot"
+            xcrun simctl boot "$UDID" || true
+            xcrun simctl bootstatus "$UDID" -b
+            echo "$(date +%T) booted, adding photos"
+            xcrun simctl addmedia "$UDID" tests/ocr/samples/IMG_8936.jpg tests/ocr/samples/IMG_8939.jpg
+            echo "$(date +%T) photos added"
+            touch sim-ready
+          ) > sim-prep.log 2>&1 &
+          echo $! > sim-prep.pid
+      - name: Build for testing
+        run: |
+          set -o pipefail
+          xcodebuild build-for-testing \
+            -project JapaneseGrammarScanner.xcodeproj \
+            -scheme JapaneseGrammarScanner \
+            -destination "id=${{ steps.sim.outputs.udid }}" -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO | tail -3
+      - name: Wait for simulator and sample photos
+        run: |
+          PID=$(cat sim-prep.pid)
+          while kill -0 "$PID" 2>/dev/null; do sleep 5; done
+          cat sim-prep.log
+          test -f sim-ready
+      - name: End-to-end tests
+        run: |
+          set -o pipefail
+          UDID="${{ steps.sim.outputs.udid }}"
+          APP=$(ls -d build/Build/Products/Debug-iphonesimulator/JapaneseGrammarScanner.app)
+          BID=$(/usr/libexec/PlistBuddy -c "Print CFBundleIdentifier" "$APP/Info.plist")
+          xcrun simctl install "$UDID" "$APP"
+          xcrun simctl launch "$UDID" "$BID" -e2e -demoUnlocked || true
+          sleep 30
+          xcrun simctl terminate "$UDID" "$BID" || true
+          xcodebuild test-without-building \
+            -project JapaneseGrammarScanner.xcodeproj \
+            -scheme JapaneseGrammarScanner \
+            -destination "id=$UDID" -derivedDataPath build \
+            -only-testing:JapaneseGrammarScannerUITests/SearchTests/testNoResults \
+            CODE_SIGNING_ALLOWED=NO > warmup.log 2>&1 || true
+          grep -E "Test Case .* (passed|failed)" warmup.log || true
+          xcodebuild test-without-building \
+            -project JapaneseGrammarScanner.xcodeproj \
+            -scheme JapaneseGrammarScanner \
+            -destination "id=$UDID" -derivedDataPath build \
+            ${{ matrix.only }} \
+            -resultBundlePath e2e.xcresult \
+            CODE_SIGNING_ALLOWED=NO \
+            | tee e2e.log | grep -E "error:|Test Case .* (passed|failed)|XCTAssert|Executed|\*\* (TEST|BUILD)" || true
+          grep -qE "\*\* TEST (EXECUTE )?SUCCEEDED \*\*" e2e.log
+      - name: Export failure screenshots
+        if: failure()
+        run: |
+          mkdir -p e2e-attachments
+          xcrun xcresulttool export attachments --path e2e.xcresult --output-path e2e-attachments 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: e2e-${{ matrix.shard }}
+          path: |
+            e2e.log
+            e2e-attachments
+
+  e2e:
+    needs: e2e-shard
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: e2e-*
+          path: e2e-logs
+      - name: Every group passed and every test ran
+        env:
+          SHARDS: ${{ needs.e2e-shard.result }}
+          E2E_ONLY: ${{ inputs.e2e_only }}
+        run: |
+          if [ "$SHARDS" != "success" ]; then
+            echo "::error::端对端测试有分组没有通过（$SHARDS），看 e2e-shard-* 任务"
+            exit 1
+          fi
+          cat e2e-logs/*/e2e.log > e2e-all.log
+          if [ -z "$E2E_ONLY" ]; then python3 tools/check_e2e_ran_all.py e2e-all.log; fi
+
   screenshots:
-    runs-on: macos-15
+    needs: e2e-shard
+    if: ${{ !cancelled() }}
+    runs-on: xcode-27
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - name: Boot iPhone Pro Max simulator
         id: sim
         run: |
-          sudo xcode-select -s "$(ls -d /Applications/Xcode_26*.app | sort -V | tail -1)"
+          sudo xcode-select -s "$(ls -d /Applications/Xcode_27*.app | sort -V | tail -1)"
           UDID=$(xcrun simctl list devices available -j | python3 -c "
           import json,sys
           d=json.load(sys.stdin)['devices']
@@ -96,10 +251,10 @@ jobs:
           xcrun simctl install "$UDID" "$APP"
           xcrun simctl privacy "$UDID" grant camera "$BID" || true
           xcrun simctl privacy "$UDID" grant photos "$BID" || true
-          for lang in en ko es vi zh-Hans zh-Hant; do
+          for lang in en ko es vi my zh-Hans zh-Hant; do
             mkdir -p "screenshots/$lang"
             i=1
-            for screen in onboarding result detail scan library favorites; do
+            for screen in onboarding home result detail scan library favorites; do
               xcrun simctl terminate "$UDID" "$BID" 2>/dev/null || true
               xcrun simctl launch "$UDID" "$BID" -AppleLanguages "($lang)" -demoUnlocked -demoScreen "$screen"
               sleep 8
@@ -107,6 +262,46 @@ jobs:
               i=$((i+1))
             done
           done
+          mkdir -p screenshots/qa
+          qa() { name=$1; shift
+            xcrun simctl terminate "$UDID" "$BID" 2>/dev/null || true
+            xcrun simctl launch "$UDID" "$BID" -AppleLanguages "(zh-Hans)" -demoUnlocked "$@"
+            sleep 8
+            xcrun simctl io "$UDID" screenshot "screenshots/qa/$name.png"
+          }
+          qa detail_izen -demoScreen detail -demoGrammar izen
+          qa detail_made -demoScreen detail -demoGrammar made-until
+          sleep 6; xcrun simctl io "$UDID" screenshot "screenshots/qa/detail_made_later.png"
+          xcrun simctl spawn "$UDID" log show --last 40s --style compact --predicate 'process == "JapaneseGrammarScanner"' > screenshots/qa/detail_made.log 2>&1 || true
+          qa home_history -demoScreen home -demoHistory 1
+          qa search_areba -demoScreen library -demoSearch あれば
+          qa library_n3 -demoScreen library -demoSearch N3
+          qa search_tab -demoScreen search -demoSearch ように
+          qa favorites_sorted -demoScreen favorites
+          qa detail_title_bar -demoScreen detail -demoGrammar izen -demoScroll sense-0
+          for y in 20 45 70 100; do qa detail_title_fly_$y -demoScreen detail -demoGrammar you-ni-naru -demoScrollY $y; done
+          qa review_bar -demoScreen review -demoGrammar you-ni-naru
+          qa contrast_collapsed -demoScreen detail -demoGrammar tokoro-da -demoScroll section-similar
+          qa contrast_open -demoScreen detail -demoGrammar tokoro-da -demoScroll section-similar -demoContrastOpen 1
+          qa contrast_open_en -demoScreen detail -demoGrammar you-ni-naru -demoScroll section-similar -demoContrastOpen 1 -demoAppLanguage en
+          qa detail_notes -demoScreen detail -demoGrammar ni-tsuite -demoScroll section-notes
+          qa detail_scenes -demoScreen detail -demoGrammar nagara -demoScroll section-scenes
+          qa detail_similar -demoScreen detail -demoGrammar dake-ni -demoScroll section-similar
+          qa result_zoom -demoScreen result -demoZoom 1
+          qa settings_en -demoScreen settings -demoAppLanguage en
+          qa settings_my -demoScreen settings -demoAppLanguage my
+          qa library_en -demoScreen library -demoSearch N3 -demoAppLanguage en
+          xcrun simctl ui "$UDID" appearance dark
+          qa detail_oouseru_dark -demoScreen detail -demoGrammar oouseru
+          qa detail_izen_dark -demoScreen detail -demoGrammar izen
+          qa detail_title_fly_dark -demoScreen detail -demoGrammar you-ni-naru -demoScrollY 45
+          qa home_dark -demoScreen home -demoHistory 1
+          xcrun simctl ui "$UDID" appearance light
+          xcrun simctl ui "$UDID" content_size extra-extra-large
+          qa detail_oouseru_xxl -demoScreen detail -demoGrammar oouseru
+          xcrun simctl ui "$UDID" content_size large
+          mkdir -p screenshots/qa/crash
+          cp ~/Library/Logs/DiagnosticReports/JapaneseGrammarScanner* screenshots/qa/crash/ 2>/dev/null || true
           find screenshots -name "*.png" | sort
       - uses: actions/upload-artifact@v4
         with:

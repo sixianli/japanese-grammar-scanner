@@ -1,0 +1,4489 @@
+{
+ "overall": {
+  "base/raw": {
+   "images": 95,
+   "charAccuracy": 0.6663007853899224,
+   "charRecall": 0.8320275680270602,
+   "charPrecision": 0.8674090907487106,
+   "kanaInsertRate": 0.07003704852393168,
+   "foreignInsertRate": 0.021776119680815907,
+   "grammarRecall": 0.8991793669402111,
+   "grammarPrecision": 0.9680269246949937,
+   "grammarF1": 0.9323338735818476,
+   "pageExact": 0.21052631578947367,
+   "expectedGrammar": 2559,
+   "boxExactRate": 0.9975328947368421,
+   "boxRejectedRate": 0.0024671052631578946,
+   "secondsPerImage": 2.8765210954766522
+  },
+  "tiled/raw": {
+   "images": 95,
+   "charAccuracy": 0.4662269238112938,
+   "charRecall": 0.8477341082567303,
+   "charPrecision": 0.8382174094706556,
+   "kanaInsertRate": 0.1813754692291548,
+   "foreignInsertRate": 0.025904805722353316,
+   "grammarRecall": 0.8976162563501368,
+   "grammarPrecision": 0.9622957687473817,
+   "grammarF1": 0.928831378892034,
+   "pageExact": 0.17894736842105263,
+   "expectedGrammar": 2559,
+   "secondsPerImage": 10.459403339185213
+  }
+ },
+ "byTag": {
+  "base/raw": {
+   "curved": {
+    "images": 22,
+    "charAccuracy": 0.7109022153559589,
+    "charRecall": 0.8723631611777525,
+    "charPrecision": 0.8873617277914704,
+    "kanaInsertRate": 0.07041226094125141,
+    "foreignInsertRate": 0.01678826106469701,
+    "grammarRecall": 0.9059929494712103,
+    "grammarPrecision": 0.9625468164794008,
+    "grammarF1": 0.9334140435835351,
+    "pageExact": 0.045454545454545456,
+    "expectedGrammar": 851,
+    "boxExactRate": 0.9976993865030674,
+    "boxRejectedRate": 0.0023006134969325155,
+    "secondsPerImage": 3.214468630877408
+   },
+   "dark-background": {
+    "images": 11,
+    "charAccuracy": 0.6912955958193207,
+    "charRecall": 0.8497329409037865,
+    "charPrecision": 0.8564267813628488,
+    "kanaInsertRate": 0.07355208812018779,
+    "foreignInsertRate": 0.012504688821118957,
+    "grammarRecall": 0.8623481781376519,
+    "grammarPrecision": 0.9551569506726457,
+    "grammarF1": 0.9063829787234041,
+    "pageExact": 0.18181818181818182,
+    "expectedGrammar": 247,
+    "boxExactRate": 0.9967532467532467,
+    "boxRejectedRate": 0.003246753246753247,
+    "secondsPerImage": 2.1921357133171777
+   },
+   "furigana": {
+    "images": 66,
+    "charAccuracy": 0.6205005851676293,
+    "charRecall": 0.8079159031884752,
+    "charPrecision": 0.8281953238813685,
+    "kanaInsertRate": 0.07853710276065412,
+    "foreignInsertRate": 0.027473944809190787,
+    "grammarRecall": 0.8817280453257791,
+    "grammarPrecision": 0.9547546012269938,
+    "grammarF1": 0.9167893961708395,
+    "pageExact": 0.18181818181818182,
+    "expectedGrammar": 1412,
+    "boxExactRate": 0.9967654986522911,
+    "boxRejectedRate": 0.003234501347708895,
+    "secondsPerImage": 2.8834396853591455
+   },
+   "handwriting": {
+    "images": 29,
+    "charAccuracy": 0.6641263060312882,
+    "charRecall": 0.8510564199172435,
+    "charPrecision": 0.8818391815349886,
+    "kanaInsertRate": 0.08416975951826827,
+    "foreignInsertRate": 0.021355079857916192,
+    "grammarRecall": 0.9355608591885441,
+    "grammarPrecision": 0.981226533166458,
+    "grammarF1": 0.9578497251069029,
+    "pageExact": 0.3793103448275862,
+    "expectedGrammar": 838,
+    "boxExactRate": 0.9975589910496339,
+    "boxRejectedRate": 0.0024410089503661514,
+    "secondsPerImage": 3.2959366420219682
+   },
+   "illustrations": {
+    "images": 14,
+    "charAccuracy": 0.6738782512142193,
+    "charRecall": 0.8145796820581562,
+    "charPrecision": 0.8736467914086731,
+    "kanaInsertRate": 0.07023507134486708,
+    "foreignInsertRate": 0.022150302606666863,
+    "grammarRecall": 0.8692307692307693,
+    "grammarPrecision": 0.9300411522633745,
+    "grammarF1": 0.8986083499005965,
+    "pageExact": 0.21428571428571427,
+    "expectedGrammar": 260,
+    "boxExactRate": 0.9901477832512315,
+    "boxRejectedRate": 0.009852216748768473,
+    "secondsPerImage": 2.4835972104753767
+   },
+   "multilingual": {
+    "images": 28,
+    "charAccuracy": 0.47840975071092384,
+    "charRecall": 0.7661549182826938,
+    "charPrecision": 0.7601102405475911,
+    "kanaInsertRate": 0.10581530455477203,
+    "foreignInsertRate": 0.04522052096844989,
+    "grammarRecall": 0.7973421926910299,
+    "grammarPrecision": 0.9056603773584906,
+    "grammarF1": 0.8480565371024734,
+    "pageExact": 0.21428571428571427,
+    "expectedGrammar": 301,
+    "boxExactRate": 0.994535519125683,
+    "boxRejectedRate": 0.00546448087431694,
+    "secondsPerImage": 3.000450061900275
+   },
+   "occluded": {
+    "images": 4,
+    "charAccuracy": 0.6628467763243913,
+    "charRecall": 0.8305197648520363,
+    "charPrecision": 0.8219036351482314,
+    "kanaInsertRate": 0.050497521737357554,
+    "foreignInsertRate": 0.03312488113905112,
+    "grammarRecall": 0.926829268292683,
+    "grammarPrecision": 0.9827586206896551,
+    "grammarF1": 0.9539748953974895,
+    "pageExact": 0.25,
+    "expectedGrammar": 123,
+    "boxExactRate": 0.9946808510638298,
+    "boxRejectedRate": 0.005319148936170213,
+    "secondsPerImage": 2.870863765478134
+   },
+   "other-pages": {
+    "images": 40,
+    "charAccuracy": 0.6398249266128081,
+    "charRecall": 0.8499704002031531,
+    "charPrecision": 0.8346720421359151,
+    "kanaInsertRate": 0.08901301927894582,
+    "foreignInsertRate": 0.022095401209870247,
+    "grammarRecall": 0.9110320284697508,
+    "grammarPrecision": 0.9472710453283997,
+    "grammarF1": 0.928798185941043,
+    "pageExact": 0.075,
+    "expectedGrammar": 1124,
+    "boxExactRate": 0.9970077797725913,
+    "boxRejectedRate": 0.002992220227408737,
+    "secondsPerImage": 3.0228266417980194
+   },
+   "show-through": {
+    "images": 30,
+    "charAccuracy": 0.6629789903037728,
+    "charRecall": 0.8389852477776634,
+    "charPrecision": 0.9139346042523898,
+    "kanaInsertRate": 0.07691825556353601,
+    "foreignInsertRate": 0.015289133268301081,
+    "grammarRecall": 0.8926487747957993,
+    "grammarPrecision": 0.9782608695652174,
+    "grammarF1": 0.9334960341671752,
+    "pageExact": 0.23333333333333334,
+    "expectedGrammar": 857,
+    "boxExactRate": 0.9984674329501916,
+    "boxRejectedRate": 0.0015325670498084292,
+    "secondsPerImage": 2.8355591773986815
+   },
+   "skewed": {
+    "images": 65,
+    "charAccuracy": 0.6449735638225033,
+    "charRecall": 0.8211091842708363,
+    "charPrecision": 0.8661411574350011,
+    "kanaInsertRate": 0.07966094510142643,
+    "foreignInsertRate": 0.020013917005302053,
+    "grammarRecall": 0.8924960085151676,
+    "grammarPrecision": 0.9649021864211738,
+    "grammarF1": 0.9272878075753387,
+    "pageExact": 0.18461538461538463,
+    "expectedGrammar": 1879,
+    "boxExactRate": 0.9981378026070763,
+    "boxRejectedRate": 0.00186219739292365,
+    "secondsPerImage": 2.89659605209644
+   }
+  },
+  "tiled/raw": {
+   "curved": {
+    "images": 22,
+    "charAccuracy": 0.46013597378494325,
+    "charRecall": 0.8764965592623422,
+    "charPrecision": 0.8722697430626059,
+    "kanaInsertRate": 0.19802867038884184,
+    "foreignInsertRate": 0.01981602778833436,
+    "grammarRecall": 0.8954171562867215,
+    "grammarPrecision": 0.9536921151439299,
+    "grammarF1": 0.9236363636363636,
+    "pageExact": 0.0,
+    "expectedGrammar": 851,
+    "secondsPerImage": 11.09818708896637
+   },
+   "dark-background": {
+    "images": 11,
+    "charAccuracy": 0.5348815706241744,
+    "charRecall": 0.8469555913250476,
+    "charPrecision": 0.8231861482762411,
+    "kanaInsertRate": 0.16884120634338592,
+    "foreignInsertRate": 0.01460612485603506,
+    "grammarRecall": 0.854251012145749,
+    "grammarPrecision": 0.9419642857142857,
+    "grammarF1": 0.8959660297239915,
+    "pageExact": 0.09090909090909091,
+    "expectedGrammar": 247,
+    "secondsPerImage": 8.504314747723667
+   },
+   "furigana": {
+    "images": 66,
+    "charAccuracy": 0.40367787808468863,
+    "charRecall": 0.8229744115548454,
+    "charPrecision": 0.7974253648527856,
+    "kanaInsertRate": 0.20034337075059755,
+    "foreignInsertRate": 0.03279536239151567,
+    "grammarRecall": 0.8774787535410765,
+    "grammarPrecision": 0.9494252873563218,
+    "grammarF1": 0.9120353330879647,
+    "pageExact": 0.18181818181818182,
+    "expectedGrammar": 1412,
+    "secondsPerImage": 10.516939486518051
+   },
+   "handwriting": {
+    "images": 29,
+    "charAccuracy": 0.46360792473489065,
+    "charRecall": 0.8710767390899441,
+    "charPrecision": 0.8452982795358175,
+    "kanaInsertRate": 0.19334806921603048,
+    "foreignInsertRate": 0.027478541565447163,
+    "grammarRecall": 0.9236276849642004,
+    "grammarPrecision": 0.9723618090452262,
+    "grammarF1": 0.9473684210526316,
+    "pageExact": 0.27586206896551724,
+    "expectedGrammar": 838,
+    "secondsPerImage": 11.004646469806803
+   },
+   "illustrations": {
+    "images": 14,
+    "charAccuracy": 0.5166254046181568,
+    "charRecall": 0.8236702174696436,
+    "charPrecision": 0.8380813791154802,
+    "kanaInsertRate": 0.13620111821120226,
+    "foreignInsertRate": 0.02373316862597168,
+    "grammarRecall": 0.8653846153846154,
+    "grammarPrecision": 0.9297520661157025,
+    "grammarF1": 0.896414342629482,
+    "pageExact": 0.21428571428571427,
+    "expectedGrammar": 260,
+    "secondsPerImage": 9.683644439492907
+   },
+   "multilingual": {
+    "images": 28,
+    "charAccuracy": 0.19884566001358225,
+    "charRecall": 0.7838369720893317,
+    "charPrecision": 0.7198653385969377,
+    "kanaInsertRate": 0.26008998470290134,
+    "foreignInsertRate": 0.053901395737940415,
+    "grammarRecall": 0.8073089700996677,
+    "grammarPrecision": 0.9204545454545454,
+    "grammarF1": 0.8601769911504424,
+    "pageExact": 0.21428571428571427,
+    "expectedGrammar": 301,
+    "secondsPerImage": 11.064590905393873
+   },
+   "occluded": {
+    "images": 4,
+    "charAccuracy": 0.29401512531391927,
+    "charRecall": 0.8509195569179969,
+    "charPrecision": 0.7698473265446726,
+    "kanaInsertRate": 0.23543527911435158,
+    "foreignInsertRate": 0.06003848590525385,
+    "grammarRecall": 0.9024390243902439,
+    "grammarPrecision": 0.9736842105263158,
+    "grammarF1": 0.9367088607594938,
+    "pageExact": 0.25,
+    "expectedGrammar": 123,
+    "secondsPerImage": 10.88161051273346
+   },
+   "other-pages": {
+    "images": 40,
+    "charAccuracy": 0.40582234669017475,
+    "charRecall": 0.8536418186812237,
+    "charPrecision": 0.8091300607621332,
+    "kanaInsertRate": 0.21419419139796195,
+    "foreignInsertRate": 0.026073921013572646,
+    "grammarRecall": 0.8985765124555161,
+    "grammarPrecision": 0.9377901578458682,
+    "grammarF1": 0.9177646524307134,
+    "pageExact": 0.05,
+    "expectedGrammar": 1124,
+    "secondsPerImage": 10.93459030687809
+   },
+   "show-through": {
+    "images": 30,
+    "charAccuracy": 0.5226525460158291,
+    "charRecall": 0.8678389348879232,
+    "charPrecision": 0.8826474985314019,
+    "kanaInsertRate": 0.16024820364284137,
+    "foreignInsertRate": 0.019696524914442615,
+    "grammarRecall": 0.9054842473745625,
+    "grammarPrecision": 0.9748743718592965,
+    "grammarF1": 0.9388989715668481,
+    "pageExact": 0.2,
+    "expectedGrammar": 857,
+    "secondsPerImage": 10.129662601153056
+   },
+   "skewed": {
+    "images": 65,
+    "charAccuracy": 0.4429753976131162,
+    "charRecall": 0.8392114386425628,
+    "charPrecision": 0.8351407937314309,
+    "kanaInsertRate": 0.1886746616178436,
+    "foreignInsertRate": 0.025166681858876466,
+    "grammarRecall": 0.8924960085151676,
+    "grammarPrecision": 0.9577384351798972,
+    "grammarF1": 0.9239669421487604,
+    "pageExact": 0.15384615384615385,
+    "expectedGrammar": 1879,
+    "secondsPerImage": 10.589542275208693
+   }
+  }
+ },
+ "perImage": {
+  "base/raw": [
+   {
+    "image": "IMG_8862",
+    "tp": 29,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 4.804293990135193,
+    "boxes": {
+     "estimated": 0,
+     "exact": 35,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8466135458167331,
+    "charRecall": 0.9043824701195219,
+    "charPrecision": 0.8680688336520076,
+    "kanaInsertRate": 0.06500956022944551,
+    "foreignInsertRate": 0.017208413001912046
+   },
+   {
+    "image": "IMG_8863",
+    "tp": 31,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "sa-nominal"
+    ],
+    "extra": [],
+    "seconds": 2.84424889087677,
+    "boxes": {
+     "estimated": 0,
+     "exact": 45,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8811410459587956,
+    "charRecall": 0.8954041204437401,
+    "charPrecision": 0.9775086505190311,
+    "kanaInsertRate": 0.00865051903114187,
+    "foreignInsertRate": 0.0
+   },
+   {
+    "image": "IMG_8864",
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 3.68375301361084,
+    "boxes": {
+     "estimated": 0,
+     "exact": 3,
+     "rejected": 0
+    },
+    "charAccuracy": 0.40888888888888886,
+    "charRecall": 0.74,
+    "charPrecision": 0.7040169133192389,
+    "kanaInsertRate": 0.09090909090909091,
+    "foreignInsertRate": 0.080338266384778
+   },
+   {
+    "image": "IMG_8865",
+    "tp": 21,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 2.5654380321502686,
+    "boxes": {
+     "estimated": 0,
+     "exact": 28,
+     "rejected": 0
+    },
+    "charAccuracy": 0.7693920335429769,
+    "charRecall": 0.8951781970649895,
+    "charPrecision": 0.9426048565121413,
+    "kanaInsertRate": 0.039735099337748346,
+    "foreignInsertRate": 0.004415011037527594
+   },
+   {
+    "image": "IMG_8866",
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 2.5147019624710083,
+    "boxes": {
+     "estimated": 0,
+     "exact": 0,
+     "rejected": 0
+    },
+    "charAccuracy": 0.25761772853185594,
+    "charRecall": 0.556786703601108,
+    "charPrecision": 0.7584905660377359,
+    "kanaInsertRate": 0.12075471698113208,
+    "foreignInsertRate": 0.022641509433962263
+   },
+   {
+    "image": "IMG_8867",
+    "tp": 28,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "ka-suffix"
+    ],
+    "extra": [],
+    "seconds": 2.1808069944381714,
+    "boxes": {
+     "estimated": 0,
+     "exact": 39,
+     "rejected": 0
+    },
+    "charAccuracy": 0.7391304347826086,
+    "charRecall": 0.7634782608695653,
+    "charPrecision": 0.9669603524229075,
+    "kanaInsertRate": 0.011013215859030838,
+    "foreignInsertRate": 0.0
+   },
+   {
+    "image": "IMG_8868",
+    "tp": 3,
+    "fp": 1,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "komu-compound"
+    ],
+    "seconds": 3.3342210054397583,
+    "boxes": {
+     "estimated": 0,
+     "exact": 4,
+     "rejected": 0
+    },
+    "charAccuracy": 0.4865470852017937,
+    "charRecall": 0.7757847533632287,
+    "charPrecision": 0.7018255578093306,
+    "kanaInsertRate": 0.08924949290060852,
+    "foreignInsertRate": 0.05476673427991886
+   },
+   {
+    "image": "IMG_8869",
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 3.21419095993042,
+    "boxes": {
+     "estimated": 0,
+     "exact": 3,
+     "rejected": 0
+    },
+    "charAccuracy": 0.37555555555555553,
+    "charRecall": 0.7511111111111111,
+    "charPrecision": 0.7316017316017316,
+    "kanaInsertRate": 0.06926406926406926,
+    "foreignInsertRate": 0.047619047619047616
+   },
+   {
+    "image": "IMG_8870",
+    "tp": 4,
+    "fp": 0,
+    "fn": 2,
+    "missed": [
+     "juu-chuu-throughout",
+     "kenjougo-special-verbs"
+    ],
+    "extra": [],
+    "seconds": 3.238759994506836,
+    "boxes": {
+     "estimated": 0,
+     "exact": 4,
+     "rejected": 0
+    },
+    "charAccuracy": 0.3360433604336044,
+    "charRecall": 0.8672086720867209,
+    "charPrecision": 0.8,
+    "kanaInsertRate": 0.2425,
+    "foreignInsertRate": 0.0725
+   },
+   {
+    "image": "IMG_8871",
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "kata-way-of-doing"
+    ],
+    "extra": [],
+    "seconds": 3.9224380254745483,
+    "boxes": {
+     "estimated": 0,
+     "exact": 3,
+     "rejected": 0
+    },
+    "charAccuracy": 0.5592417061611374,
+    "charRecall": 0.7938388625592417,
+    "charPrecision": 0.788235294117647,
+    "kanaInsertRate": 0.07764705882352942,
+    "foreignInsertRate": 0.02823529411764706
+   },
+   {
+    "image": "IMG_8872",
+    "tp": 3,
+    "fp": 1,
+    "fn": 2,
+    "missed": [
+     "jou-standpoint",
+     "shidai-as-soon-as"
+    ],
+    "extra": [
+     "wa-ga-double-subject"
+    ],
+    "seconds": 3.2190439701080322,
+    "boxes": {
+     "estimated": 0,
+     "exact": 5,
+     "rejected": 0
+    },
+    "charAccuracy": 0.40476190476190477,
+    "charRecall": 0.8166666666666667,
+    "charPrecision": 0.7622222222222222,
+    "kanaInsertRate": 0.11555555555555555,
+    "foreignInsertRate": 0.028888888888888888
+   },
+   {
+    "image": "IMG_8873",
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 2.7586899995803833,
+    "boxes": {
+     "estimated": 0,
+     "exact": 0,
+     "rejected": 0
+    },
+    "charAccuracy": 0.5796703296703296,
+    "charRecall": 0.7032967032967034,
+    "charPrecision": 0.7191011235955056,
+    "kanaInsertRate": 0.08146067415730338,
+    "foreignInsertRate": 0.02247191011235955
+   },
+   {
+    "image": "IMG_8874",
+    "tp": 5,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 3.0813459157943726,
+    "boxes": {
+     "estimated": 0,
+     "exact": 4,
+     "rejected": 0
+    },
+    "charAccuracy": 0.6235565819861432,
+    "charRecall": 0.7852193995381063,
+    "charPrecision": 0.74235807860262,
+    "kanaInsertRate": 0.05021834061135371,
+    "foreignInsertRate": 0.04585152838427948
+   },
+   {
+    "image": "IMG_8875",
+    "tp": 26,
+    "fp": 0,
+    "fn": 9,
+    "missed": [
+     "demo-but",
+     "ku-naru-ni-naru",
+     "metta-ni-nai",
+     "n-desu-explanatory",
+     "question-word-mo-nai",
+     "sue-ni",
+     "tara-ta-discovery",
+     "wa-tomokaku",
+     "you-na-example"
+    ],
+    "extra": [],
+    "seconds": 3.957013964653015,
+    "boxes": {
+     "estimated": 0,
+     "exact": 29,
+     "rejected": 0
+    },
+    "charAccuracy": 0.44933078393881454,
+    "charRecall": 0.8451242829827916,
+    "charPrecision": 0.6606875934230194,
+    "kanaInsertRate": 0.03736920777279522,
+    "foreignInsertRate": 0.17488789237668162
+   },
+   {
+    "image": "IMG_8876",
+    "tp": 11,
+    "fp": 2,
+    "fn": 7,
+    "missed": [
+     "juu-chuu-throughout",
+     "kara-made",
+     "ni-tsuite",
+     "noni-usage",
+     "question-word-temo",
+     "sa-nominal",
+     "wa-ga-double-subject"
+    ],
+    "extra": [
+     "adj-te-connect",
+     "you-da"
+    ],
+    "seconds": 3.809877038002014,
+    "boxes": {
+     "estimated": 0,
+     "exact": 20,
+     "rejected": 0
+    },
+    "charAccuracy": 0.4925373134328358,
+    "charRecall": 0.7356076759061834,
+    "charPrecision": 0.7293868921775899,
+    "kanaInsertRate": 0.10993657505285412,
+    "foreignInsertRate": 0.08879492600422834
+   },
+   {
+    "image": "IMG_8877",
+    "tp": 6,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "to-omou"
+    ],
+    "extra": [],
+    "seconds": 2.8220419883728027,
+    "boxes": {
+     "estimated": 0,
+     "exact": 10,
+     "rejected": 0
+    },
+    "charAccuracy": 0.5465393794749404,
+    "charRecall": 0.7613365155131265,
+    "charPrecision": 0.7876543209876543,
+    "kanaInsertRate": 0.05432098765432099,
+    "foreignInsertRate": 0.0345679012345679
+   },
+   {
+    "image": "IMG_8879",
+    "tp": 4,
+    "fp": 1,
+    "fn": 1,
+    "missed": [
+     "teki-suffix"
+    ],
+    "extra": [
+     "muke"
+    ],
+    "seconds": 5.3385169506073,
+    "boxes": {
+     "estimated": 0,
+     "exact": 5,
+     "rejected": 0
+    },
+    "charAccuracy": 0.24933687002652516,
+    "charRecall": 0.7931034482758621,
+    "charPrecision": 0.7085308056872038,
+    "kanaInsertRate": 0.2156398104265403,
+    "foreignInsertRate": 0.03317535545023697
+   },
+   {
+    "image": "IMG_8880",
+    "tp": 2,
+    "fp": 1,
+    "fn": 1,
+    "missed": [
+     "teki-suffix"
+    ],
+    "extra": [
+     "to-quotation"
+    ],
+    "seconds": 2.9561209678649902,
+    "boxes": {
+     "estimated": 0,
+     "exact": 3,
+     "rejected": 0
+    },
+    "charAccuracy": 0.36450839328537166,
+    "charRecall": 0.762589928057554,
+    "charPrecision": 0.8091603053435115,
+    "kanaInsertRate": 0.23918575063613232,
+    "foreignInsertRate": 0.03816793893129771
+   },
+   {
+    "image": "IMG_8881",
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 2.0737040042877197,
+    "boxes": {
+     "estimated": 0,
+     "exact": 2,
+     "rejected": 0
+    },
+    "charAccuracy": 0.5042016806722689,
+    "charRecall": 0.7478991596638656,
+    "charPrecision": 0.7416666666666667,
+    "kanaInsertRate": 0.058333333333333334,
+    "foreignInsertRate": 0.05
+   },
+   {
+    "image": "IMG_8882",
+    "tp": 2,
+    "fp": 0,
+    "fn": 3,
+    "missed": [
+     "adj-adverbial",
+     "kakeru-halfway",
+     "tochuu-de"
+    ],
+    "extra": [],
+    "seconds": 2.812780976295471,
+    "boxes": {
+     "estimated": 0,
+     "exact": 2,
+     "rejected": 0
+    },
+    "charAccuracy": 0.3493333333333334,
+    "charRecall": 0.7093333333333334,
+    "charPrecision": 0.7228260869565217,
+    "kanaInsertRate": 0.17391304347826086,
+    "foreignInsertRate": 0.04619565217391304
+   },
+   {
+    "image": "IMG_8883",
+    "tp": 1,
+    "fp": 1,
+    "fn": 1,
+    "missed": [
+     "ni-oujite"
+    ],
+    "extra": [
+     "passive"
+    ],
+    "seconds": 3.03739595413208,
+    "boxes": {
+     "estimated": 0,
+     "exact": 5,
+     "rejected": 0
+    },
+    "charAccuracy": 0.33684210526315794,
+    "charRecall": 0.8315789473684211,
+    "charPrecision": 0.7596153846153846,
+    "kanaInsertRate": 0.10817307692307693,
+    "foreignInsertRate": 0.038461538461538464
+   },
+   {
+    "image": "IMG_8884",
+    "tp": 4,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "teki-suffix"
+    ],
+    "extra": [],
+    "seconds": 2.8553669452667236,
+    "boxes": {
+     "estimated": 0,
+     "exact": 5,
+     "rejected": 0
+    },
+    "charAccuracy": 0.24930747922437668,
+    "charRecall": 0.7174515235457064,
+    "charPrecision": 0.7038043478260869,
+    "kanaInsertRate": 0.13043478260869565,
+    "foreignInsertRate": 0.03804347826086957
+   },
+   {
+    "image": "IMG_8885",
+    "tp": 3,
+    "fp": 0,
+    "fn": 2,
+    "missed": [
+     "naosu-redo",
+     "ni-motozuite"
+    ],
+    "extra": [],
+    "seconds": 2.1205499172210693,
+    "boxes": {
+     "estimated": 0,
+     "exact": 4,
+     "rejected": 0
+    },
+    "charAccuracy": 0.3832853025936599,
+    "charRecall": 0.7723342939481268,
+    "charPrecision": 0.7362637362637363,
+    "kanaInsertRate": 0.07692307692307693,
+    "foreignInsertRate": 0.04120879120879121
+   },
+   {
+    "image": "IMG_8886",
+    "tp": 3,
+    "fp": 3,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "mono-da",
+     "passive",
+     "to-quotation"
+    ],
+    "seconds": 2.3333460092544556,
+    "boxes": {
+     "estimated": 0,
+     "exact": 6,
+     "rejected": 0
+    },
+    "charAccuracy": 0.24369747899159666,
+    "charRecall": 0.680672268907563,
+    "charPrecision": 0.6445623342175066,
+    "kanaInsertRate": 0.2493368700265252,
+    "foreignInsertRate": 0.08222811671087533
+   },
+   {
+    "image": "IMG_8887",
+    "tp": 30,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "koso"
+    ],
+    "extra": [],
+    "seconds": 5.144636034965515,
+    "boxes": {
+     "estimated": 0,
+     "exact": 48,
+     "rejected": 1
+    },
+    "charAccuracy": 0.8357050452781372,
+    "charRecall": 0.8965071151358344,
+    "charPrecision": 0.8930412371134021,
+    "kanaInsertRate": 0.03221649484536082,
+    "foreignInsertRate": 0.023195876288659795
+   },
+   {
+    "image": "IMG_8888",
+    "tp": 22,
+    "fp": 1,
+    "fn": 2,
+    "missed": [
+     "houdai",
+     "te-aru"
+    ],
+    "extra": [
+     "causative-passive"
+    ],
+    "seconds": 3.1867799758911133,
+    "boxes": {
+     "estimated": 0,
+     "exact": 40,
+     "rejected": 1
+    },
+    "charAccuracy": 0.773356401384083,
+    "charRecall": 0.9307958477508651,
+    "charPrecision": 0.8922056384742952,
+    "kanaInsertRate": 0.07628524046434494,
+    "foreignInsertRate": 0.02321724709784411
+   },
+   {
+    "image": "IMG_8889",
+    "tp": 31,
+    "fp": 3,
+    "fn": 3,
+    "missed": [
+     "doushi",
+     "naa-exclamation",
+     "nakute-mo-ii"
+    ],
+    "extra": [
+     "mi-nominal",
+     "particle-plus-no",
+     "question-word-temo"
+    ],
+    "seconds": 3.109268069267273,
+    "boxes": {
+     "estimated": 0,
+     "exact": 36,
+     "rejected": 0
+    },
+    "charAccuracy": 0.6890343698854338,
+    "charRecall": 0.7986906710310966,
+    "charPrecision": 0.8486956521739131,
+    "kanaInsertRate": 0.10782608695652174,
+    "foreignInsertRate": 0.03304347826086956
+   },
+   {
+    "image": "IMG_8890",
+    "tp": 29,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 2.8306089639663696,
+    "boxes": {
+     "estimated": 0,
+     "exact": 41,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8628691983122363,
+    "charRecall": 0.9219409282700421,
+    "charPrecision": 0.9258474576271186,
+    "kanaInsertRate": 0.036016949152542374,
+    "foreignInsertRate": 0.025423728813559324
+   },
+   {
+    "image": "IMG_8891",
+    "tp": 36,
+    "fp": 1,
+    "fn": 2,
+    "missed": [
+     "naosu-redo",
+     "te-yokatta"
+    ],
+    "extra": [
+     "ni-suru-decide"
+    ],
+    "seconds": 3.395964026451111,
+    "boxes": {
+     "estimated": 0,
+     "exact": 54,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8369942196531792,
+    "charRecall": 0.8913294797687862,
+    "charPrecision": 0.8882488479262672,
+    "kanaInsertRate": 0.041474654377880185,
+    "foreignInsertRate": 0.01728110599078341
+   },
+   {
+    "image": "IMG_8892",
+    "tp": 42,
+    "fp": 0,
+    "fn": 10,
+    "missed": [
+     "causative",
+     "ga-suki-jouzu",
+     "kamoshirenai",
+     "kiru-complete",
+     "ni-wa-purpose",
+     "te-iku",
+     "te-iru",
+     "te-kureru",
+     "te-morau",
+     "to-iu-called"
+    ],
+    "extra": [],
+    "seconds": 2.463683009147644,
+    "boxes": {
+     "estimated": 0,
+     "exact": 49,
+     "rejected": 0
+    },
+    "charAccuracy": 0.6028708133971292,
+    "charRecall": 0.6124401913875598,
+    "charPrecision": 0.9516728624535316,
+    "kanaInsertRate": 0.0055762081784386614,
+    "foreignInsertRate": 0.0037174721189591076
+   },
+   {
+    "image": "IMG_8893",
+    "tp": 30,
+    "fp": 0,
+    "fn": 3,
+    "missed": [
+     "ba-conditional",
+     "ni-awasete",
+     "ya-nado"
+    ],
+    "extra": [],
+    "seconds": 2.5685389041900635,
+    "boxes": {
+     "estimated": 0,
+     "exact": 47,
+     "rejected": 0
+    },
+    "charAccuracy": 0.6930983847283407,
+    "charRecall": 0.8766519823788547,
+    "charPrecision": 0.8870728083209509,
+    "kanaInsertRate": 0.0713224368499257,
+    "foreignInsertRate": 0.01188707280832095
+   },
+   {
+    "image": "IMG_8894",
+    "tp": 18,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 1.7843730449676514,
+    "boxes": {
+     "estimated": 0,
+     "exact": 31,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8354978354978355,
+    "charRecall": 0.8636363636363636,
+    "charPrecision": 0.8827433628318584,
+    "kanaInsertRate": 0.02654867256637168,
+    "foreignInsertRate": 0.01991150442477876
+   },
+   {
+    "image": "IMG_8895",
+    "tp": 15,
+    "fp": 1,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "wa-wa"
+    ],
+    "seconds": 2.3046810626983643,
+    "boxes": {
+     "estimated": 0,
+     "exact": 23,
+     "rejected": 0
+    },
+    "charAccuracy": 0.6901408450704225,
+    "charRecall": 0.8286384976525821,
+    "charPrecision": 0.8936708860759494,
+    "kanaInsertRate": 0.09873417721518987,
+    "foreignInsertRate": 0.035443037974683546
+   },
+   {
+    "image": "IMG_8896",
+    "tp": 37,
+    "fp": 1,
+    "fn": 2,
+    "missed": [
+     "dasu-burst-out",
+     "teki-suffix"
+    ],
+    "extra": [
+     "hodo-nai-comparison"
+    ],
+    "seconds": 3.108499050140381,
+    "boxes": {
+     "estimated": 0,
+     "exact": 48,
+     "rejected": 0
+    },
+    "charAccuracy": 0.9017264276228419,
+    "charRecall": 0.9282868525896414,
+    "charPrecision": 0.938255033557047,
+    "kanaInsertRate": 0.004026845637583893,
+    "foreignInsertRate": 0.01476510067114094
+   },
+   {
+    "image": "IMG_8897",
+    "tp": 39,
+    "fp": 0,
+    "fn": 2,
+    "missed": [
+     "naide-without",
+     "te-kudasai"
+    ],
+    "extra": [],
+    "seconds": 3.248844027519226,
+    "boxes": {
+     "estimated": 0,
+     "exact": 69,
+     "rejected": 0
+    },
+    "charAccuracy": 0.76375,
+    "charRecall": 0.865,
+    "charPrecision": 0.9440654843110505,
+    "kanaInsertRate": 0.054570259208731244,
+    "foreignInsertRate": 0.008185538881309686
+   },
+   {
+    "image": "IMG_8898",
+    "tp": 16,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 2.2754420042037964,
+    "boxes": {
+     "estimated": 0,
+     "exact": 18,
+     "rejected": 0
+    },
+    "charAccuracy": 0.7392739273927393,
+    "charRecall": 0.8844884488448845,
+    "charPrecision": 0.8993288590604027,
+    "kanaInsertRate": 0.08389261744966443,
+    "foreignInsertRate": 0.006711409395973154
+   },
+   {
+    "image": "IMG_8899",
+    "tp": 33,
+    "fp": 1,
+    "fn": 1,
+    "missed": [
+     "no-mae-position"
+    ],
+    "extra": [
+     "to-wa-kagiranai"
+    ],
+    "seconds": 2.9226189851760864,
+    "boxes": {
+     "estimated": 0,
+     "exact": 44,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8471337579617835,
+    "charRecall": 0.9251592356687898,
+    "charPrecision": 0.881638846737481,
+    "kanaInsertRate": 0.03945371775417299,
+    "foreignInsertRate": 0.018209408194233688
+   },
+   {
+    "image": "IMG_8900",
+    "tp": 25,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 2.191698908805847,
+    "boxes": {
+     "estimated": 0,
+     "exact": 31,
+     "rejected": 0
+    },
+    "charAccuracy": 0.9004524886877828,
+    "charRecall": 0.9547511312217195,
+    "charPrecision": 0.9193899782135077,
+    "kanaInsertRate": 0.032679738562091505,
+    "foreignInsertRate": 0.017429193899782137
+   },
+   {
+    "image": "IMG_8901",
+    "tp": 25,
+    "fp": 2,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "aida-during",
+     "causative"
+    ],
+    "seconds": 2.729101061820984,
+    "boxes": {
+     "estimated": 0,
+     "exact": 43,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8259052924791086,
+    "charRecall": 0.8593314763231198,
+    "charPrecision": 0.8641456582633054,
+    "kanaInsertRate": 0.018207282913165267,
+    "foreignInsertRate": 0.012605042016806723
+   },
+   {
+    "image": "IMG_8902",
+    "tp": 42,
+    "fp": 0,
+    "fn": 2,
+    "missed": [
+     "mae-ni",
+     "te-kara"
+    ],
+    "extra": [],
+    "seconds": 5.760098934173584,
+    "boxes": {
+     "estimated": 0,
+     "exact": 67,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8457269700332963,
+    "charRecall": 0.8990011098779135,
+    "charPrecision": 0.8950276243093923,
+    "kanaInsertRate": 0.016574585635359115,
+    "foreignInsertRate": 0.016574585635359115
+   },
+   {
+    "image": "IMG_8903",
+    "tp": 14,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 1.6100729703903198,
+    "boxes": {
+     "estimated": 0,
+     "exact": 19,
+     "rejected": 0
+    },
+    "charAccuracy": 0.9603960396039604,
+    "charRecall": 0.9752475247524752,
+    "charPrecision": 0.9656862745098039,
+    "kanaInsertRate": 0.0,
+    "foreignInsertRate": 0.014705882352941176
+   },
+   {
+    "image": "IMG_8904",
+    "tp": 16,
+    "fp": 2,
+    "fn": 2,
+    "missed": [
+     "ka-suffix",
+     "teki-suffix"
+    ],
+    "extra": [
+     "causative",
+     "mama-unchanged"
+    ],
+    "seconds": 3.23513400554657,
+    "boxes": {
+     "estimated": 0,
+     "exact": 22,
+     "rejected": 0
+    },
+    "charAccuracy": 0.3384615384615385,
+    "charRecall": 0.6803418803418804,
+    "charPrecision": 0.805668016194332,
+    "kanaInsertRate": 0.22469635627530365,
+    "foreignInsertRate": 0.024291497975708502
+   },
+   {
+    "image": "IMG_8905",
+    "tp": 41,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 2.6114439964294434,
+    "boxes": {
+     "estimated": 0,
+     "exact": 53,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8067632850241546,
+    "charRecall": 0.8679549114331723,
+    "charPrecision": 0.9213675213675213,
+    "kanaInsertRate": 0.03247863247863248,
+    "foreignInsertRate": 0.006837606837606838
+   },
+   {
+    "image": "IMG_8906",
+    "tp": 15,
+    "fp": 1,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "no-mae-position"
+    ],
+    "seconds": 3.2813349962234497,
+    "boxes": {
+     "estimated": 0,
+     "exact": 22,
+     "rejected": 0
+    },
+    "charAccuracy": 0.6185567010309279,
+    "charRecall": 0.8694158075601375,
+    "charPrecision": 0.8057324840764332,
+    "kanaInsertRate": 0.09235668789808917,
+    "foreignInsertRate": 0.03503184713375796
+   },
+   {
+    "image": "IMG_8907",
+    "tp": 50,
+    "fp": 0,
+    "fn": 6,
+    "missed": [
+     "ni-awasete",
+     "ni-kuwaete",
+     "ni-tsuite",
+     "question-word-temo",
+     "ta-tokoro-result",
+     "to-ieru"
+    ],
+    "extra": [],
+    "seconds": 3.7505489587783813,
+    "boxes": {
+     "estimated": 0,
+     "exact": 80,
+     "rejected": 1
+    },
+    "charAccuracy": 0.8009535160905841,
+    "charRecall": 0.8545887961859356,
+    "charPrecision": 0.8690909090909091,
+    "kanaInsertRate": 0.025454545454545455,
+    "foreignInsertRate": 0.0012121212121212121
+   },
+   {
+    "image": "IMG_8908",
+    "tp": 39,
+    "fp": 1,
+    "fn": 5,
+    "missed": [
+     "de-gozaimasu",
+     "kenjougo-special-verbs",
+     "ni-oujite",
+     "o-suru-humble",
+     "toki-when"
+    ],
+    "extra": [
+     "kosoado-konna"
+    ],
+    "seconds": 2.2407230138778687,
+    "boxes": {
+     "estimated": 0,
+     "exact": 56,
+     "rejected": 0
+    },
+    "charAccuracy": 0.776796973518285,
+    "charRecall": 0.7969735182849937,
+    "charPrecision": 0.9253294289897511,
+    "kanaInsertRate": 0.01171303074670571,
+    "foreignInsertRate": 0.0029282576866764276
+   },
+   {
+    "image": "IMG_8909",
+    "tp": 40,
+    "fp": 0,
+    "fn": 8,
+    "missed": [
+     "kanarazushimo-nai",
+     "koto-nominalizer",
+     "soreni-conjunction",
+     "sugiru",
+     "ta-koto-ga-aru",
+     "te-kureru",
+     "teki-suffix",
+     "to-shite"
+    ],
+    "extra": [],
+    "seconds": 1.988306999206543,
+    "boxes": {
+     "estimated": 0,
+     "exact": 43,
+     "rejected": 0
+    },
+    "charAccuracy": 0.5787451984635084,
+    "charRecall": 0.5915492957746479,
+    "charPrecision": 0.9221556886227545,
+    "kanaInsertRate": 0.00998003992015968,
+    "foreignInsertRate": 0.013972055888223553
+   },
+   {
+    "image": "IMG_8910",
+    "tp": 20,
+    "fp": 0,
+    "fn": 4,
+    "missed": [
+     "kara-to-itte",
+     "nara",
+     "tame-ni",
+     "tara"
+    ],
+    "extra": [],
+    "seconds": 1.4566318988800049,
+    "boxes": {
+     "estimated": 0,
+     "exact": 28,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8339100346020761,
+    "charRecall": 0.8408304498269896,
+    "charPrecision": 0.9382239382239382,
+    "kanaInsertRate": 0.003861003861003861,
+    "foreignInsertRate": 0.007722007722007722
+   },
+   {
+    "image": "IMG_8911",
+    "tp": 39,
+    "fp": 1,
+    "fn": 8,
+    "missed": [
+     "ippou-de",
+     "n-desu-explanatory",
+     "ni-mukatte",
+     "no-mae-position",
+     "soshite-conjunction",
+     "te-kureru",
+     "teki-suffix",
+     "to-iu-quote"
+    ],
+    "extra": [
+     "o-suru-humble"
+    ],
+    "seconds": 2.2971930503845215,
+    "boxes": {
+     "estimated": 0,
+     "exact": 71,
+     "rejected": 0
+    },
+    "charAccuracy": 0.7259174311926606,
+    "charRecall": 0.8211009174311926,
+    "charPrecision": 0.8668280871670703,
+    "kanaInsertRate": 0.04116222760290557,
+    "foreignInsertRate": 0.023002421307506054
+   },
+   {
+    "image": "IMG_8912",
+    "tp": 60,
+    "fp": 1,
+    "fn": 5,
+    "missed": [
+     "dake-de-naku",
+     "question-word-temo",
+     "tara",
+     "te-kudasai",
+     "te-oku"
+    ],
+    "extra": [
+     "tara-ta-discovery"
+    ],
+    "seconds": 3.4935230016708374,
+    "boxes": {
+     "estimated": 0,
+     "exact": 89,
+     "rejected": 0
+    },
+    "charAccuracy": 0.5523809523809524,
+    "charRecall": 0.8857142857142857,
+    "charPrecision": 0.967833491012299,
+    "kanaInsertRate": 0.17786187322611163,
+    "foreignInsertRate": 0.01608325449385052
+   },
+   {
+    "image": "IMG_8913",
+    "tp": 36,
+    "fp": 1,
+    "fn": 1,
+    "missed": [
+     "kurai-approximately"
+    ],
+    "extra": [
+     "koto-nominalizer"
+    ],
+    "seconds": 3.419727921485901,
+    "boxes": {
+     "estimated": 0,
+     "exact": 51,
+     "rejected": 0
+    },
+    "charAccuracy": 0.6831578947368422,
+    "charRecall": 0.9347368421052632,
+    "charPrecision": 0.8612997090203686,
+    "kanaInsertRate": 0.06595538312318137,
+    "foreignInsertRate": 0.012609117361784675
+   },
+   {
+    "image": "IMG_8914",
+    "tp": 46,
+    "fp": 1,
+    "fn": 1,
+    "missed": [
+     "deshou-guess"
+    ],
+    "extra": [
+     "toka-listing"
+    ],
+    "seconds": 2.4483309984207153,
+    "boxes": {
+     "estimated": 0,
+     "exact": 103,
+     "rejected": 0
+    },
+    "charAccuracy": 0.9521367521367521,
+    "charRecall": 0.9803418803418803,
+    "charPrecision": 0.9870912220309811,
+    "kanaInsertRate": 0.01549053356282272,
+    "foreignInsertRate": 0.0034423407917383822
+   },
+   {
+    "image": "IMG_8915",
+    "tp": 46,
+    "fp": 0,
+    "fn": 3,
+    "missed": [
+     "koto-da-advice",
+     "koto-wa-nai",
+     "o-suru-humble"
+    ],
+    "extra": [],
+    "seconds": 4.55091404914856,
+    "boxes": {
+     "estimated": 0,
+     "exact": 84,
+     "rejected": 1
+    },
+    "charAccuracy": 0.8452066842568162,
+    "charRecall": 0.9023746701846965,
+    "charPrecision": 0.9633802816901409,
+    "kanaInsertRate": 0.03286384976525822,
+    "foreignInsertRate": 0.007511737089201878
+   },
+   {
+    "image": "IMG_8916",
+    "tp": 19,
+    "fp": 2,
+    "fn": 1,
+    "missed": [
+     "goto-ni"
+    ],
+    "extra": [
+     "no-mae-position",
+     "sa-nominal"
+    ],
+    "seconds": 3.362558960914612,
+    "boxes": {
+     "estimated": 0,
+     "exact": 37,
+     "rejected": 1
+    },
+    "charAccuracy": 0.7426829268292683,
+    "charRecall": 0.9109756097560976,
+    "charPrecision": 0.9790301441677588,
+    "kanaInsertRate": 0.0563564875491481,
+    "foreignInsertRate": 0.01310615989515072
+   },
+   {
+    "image": "IMG_8917",
+    "tp": 19,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 1.9729089736938477,
+    "boxes": {
+     "estimated": 0,
+     "exact": 32,
+     "rejected": 0
+    },
+    "charAccuracy": 0.49282296650717705,
+    "charRecall": 0.9314194577352473,
+    "charPrecision": 0.9700996677740864,
+    "kanaInsertRate": 0.2026578073089701,
+    "foreignInsertRate": 0.023255813953488372
+   },
+   {
+    "image": "IMG_8918",
+    "tp": 17,
+    "fp": 0,
+    "fn": 28,
+    "missed": [
+     "adj-adverbial",
+     "aida-during",
+     "dasu-burst-out",
+     "de-aru",
+     "hitsuyou-ga-aru",
+     "hou-ga-ii",
+     "kata-way-of-doing",
+     "koso",
+     "koto-nominalizer",
+     "kurai-approximately",
+     "mama-unchanged",
+     "mono-da",
+     "muke",
+     "n-desu-explanatory",
+     "n-to-suru",
+     "nakereba-naranai",
+     "ni-soutte",
+     "ni-wa-purpose",
+     "node",
+     "o-kudasai",
+     "o-suru-humble",
+     "soshite-conjunction",
+     "sugiru",
+     "tame-ni",
+     "te-kuru",
+     "toki-when",
+     "wo-to-suru",
+     "you-to-suru"
+    ],
+    "extra": [],
+    "seconds": 1.8379930257797241,
+    "boxes": {
+     "estimated": 0,
+     "exact": 20,
+     "rejected": 0
+    },
+    "charAccuracy": 0.2966751918158568,
+    "charRecall": 0.30008525149190113,
+    "charPrecision": 0.9859943977591037,
+    "kanaInsertRate": 0.0028011204481792717,
+    "foreignInsertRate": 0.0056022408963585435
+   },
+   {
+    "image": "IMG_8919",
+    "tp": 54,
+    "fp": 2,
+    "fn": 6,
+    "missed": [
+     "deshou-guess",
+     "koto-da-advice",
+     "ni-taishite",
+     "no-wa-emphasis",
+     "teki-suffix",
+     "to-itte-ita"
+    ],
+    "extra": [
+     "koto-de-means",
+     "to-wa-kagiranai"
+    ],
+    "seconds": 3.0273239612579346,
+    "boxes": {
+     "estimated": 0,
+     "exact": 82,
+     "rejected": 0
+    },
+    "charAccuracy": 0.7024128686327078,
+    "charRecall": 0.8659517426273459,
+    "charPrecision": 0.9651394422310757,
+    "kanaInsertRate": 0.10159362549800798,
+    "foreignInsertRate": 0.008964143426294821
+   },
+   {
+    "image": "IMG_8920",
+    "tp": 36,
+    "fp": 0,
+    "fn": 11,
+    "missed": [
+     "deshou-guess",
+     "ja-nakute",
+     "kata-way-of-doing",
+     "koto-ni-naru",
+     "n-desu-ga-preface",
+     "no-mae-position",
+     "node",
+     "question-word-ka",
+     "te-miru",
+     "to-iu-koto-nominalizer",
+     "tsumari"
+    ],
+    "extra": [],
+    "seconds": 2.1404149532318115,
+    "boxes": {
+     "estimated": 0,
+     "exact": 86,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8068376068376069,
+    "charRecall": 0.8153846153846154,
+    "charPrecision": 0.9896265560165975,
+    "kanaInsertRate": 0.002074688796680498,
+    "foreignInsertRate": 0.007261410788381743
+   },
+   {
+    "image": "IMG_8921",
+    "tp": 43,
+    "fp": 0,
+    "fn": 5,
+    "missed": [
+     "node",
+     "o-suru-humble",
+     "tame-ni",
+     "teki-suffix",
+     "to-shite"
+    ],
+    "extra": [],
+    "seconds": 2.6001399755477905,
+    "boxes": {
+     "estimated": 0,
+     "exact": 80,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8317008014247551,
+    "charRecall": 0.9510240427426536,
+    "charPrecision": 0.9717925386715196,
+    "kanaInsertRate": 0.05004549590536852,
+    "foreignInsertRate": 0.00272975432211101
+   },
+   {
+    "image": "IMG_8922",
+    "tp": 68,
+    "fp": 3,
+    "fn": 4,
+    "missed": [
+     "betsu-ni-nai",
+     "ni-taishite",
+     "teki-suffix",
+     "tokoroga-conjunction"
+    ],
+    "extra": [
+     "ga-hoshii",
+     "ippou-de",
+     "you-na-example"
+    ],
+    "seconds": 3.6163439750671387,
+    "boxes": {
+     "estimated": 0,
+     "exact": 130,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8749040675364543,
+    "charRecall": 0.9600920951650038,
+    "charPrecision": 0.9571537872991583,
+    "kanaInsertRate": 0.045141545524101,
+    "foreignInsertRate": 0.0045906656465187455
+   },
+   {
+    "image": "IMG_8923",
+    "tp": 60,
+    "fp": 1,
+    "fn": 2,
+    "missed": [
+     "koto-da-advice",
+     "ni-oujite"
+    ],
+    "extra": [
+     "nai-to"
+    ],
+    "seconds": 3.7718899250030518,
+    "boxes": {
+     "estimated": 0,
+     "exact": 120,
+     "rejected": 0
+    },
+    "charAccuracy": 0.9121951219512195,
+    "charRecall": 0.967479674796748,
+    "charPrecision": 0.9754098360655737,
+    "kanaInsertRate": 0.028688524590163935,
+    "foreignInsertRate": 0.003278688524590164
+   },
+   {
+    "image": "IMG_8924",
+    "tp": 56,
+    "fp": 0,
+    "fn": 7,
+    "missed": [
+     "imperative-form",
+     "nakanaka-nai",
+     "ni-tsurete",
+     "soreni-conjunction",
+     "te-touzen-da",
+     "to-sarete-iru",
+     "wake-dewa-nai"
+    ],
+    "extra": [],
+    "seconds": 3.8130040168762207,
+    "boxes": {
+     "estimated": 0,
+     "exact": 132,
+     "rejected": 0
+    },
+    "charAccuracy": 0.778318276580959,
+    "charRecall": 0.8936761640027797,
+    "charPrecision": 0.976461655277145,
+    "kanaInsertRate": 0.05087319665907365,
+    "foreignInsertRate": 0.0037965072133637054
+   },
+   {
+    "image": "IMG_8925",
+    "tp": 25,
+    "fp": 0,
+    "fn": 9,
+    "missed": [
+     "demo-demo",
+     "ga-wakaru-dekiru",
+     "kata-way-of-doing",
+     "koto-ni-naru",
+     "koto-nominalizer",
+     "nakute-mo-ii",
+     "te-iku",
+     "to-omou",
+     "wa-yori-comparison"
+    ],
+    "extra": [],
+    "seconds": 2.1087499856948853,
+    "boxes": {
+     "estimated": 0,
+     "exact": 46,
+     "rejected": 0
+    },
+    "charAccuracy": 0.6743027888446216,
+    "charRecall": 0.6852589641434262,
+    "charPrecision": 0.9899280575539569,
+    "kanaInsertRate": 0.0057553956834532375,
+    "foreignInsertRate": 0.004316546762589928
+   },
+   {
+    "image": "IMG_8926",
+    "tp": 18,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "sorekara-conjunction"
+    ],
+    "extra": [],
+    "seconds": 1.9528239965438843,
+    "boxes": {
+     "estimated": 0,
+     "exact": 34,
+     "rejected": 0
+    },
+    "charAccuracy": 0.7224334600760456,
+    "charRecall": 0.8605830164765526,
+    "charPrecision": 0.9883551673944687,
+    "kanaInsertRate": 0.050946142649199416,
+    "foreignInsertRate": 0.00727802037845706
+   },
+   {
+    "image": "IMG_8927",
+    "tp": 19,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 3.1422699689865112,
+    "boxes": {
+     "estimated": 0,
+     "exact": 32,
+     "rejected": 0
+    },
+    "charAccuracy": 0.5191693290734825,
+    "charRecall": 0.9201277955271565,
+    "charPrecision": 0.964824120603015,
+    "kanaInsertRate": 0.17420435510887772,
+    "foreignInsertRate": 0.018425460636515914
+   },
+   {
+    "image": "IMG_8928",
+    "tp": 27,
+    "fp": 2,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "juu-chuu-throughout",
+     "sa-nominal"
+    ],
+    "seconds": 3.8964240550994873,
+    "boxes": {
+     "estimated": 0,
+     "exact": 38,
+     "rejected": 0
+    },
+    "charAccuracy": 0.6556149732620321,
+    "charRecall": 0.8973262032085562,
+    "charPrecision": 0.9688221709006929,
+    "kanaInsertRate": 0.08660508083140878,
+    "foreignInsertRate": 0.016166281755196306
+   },
+   {
+    "image": "IMG_8929",
+    "tp": 48,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "sae"
+    ],
+    "extra": [],
+    "seconds": 2.9784140586853027,
+    "boxes": {
+     "estimated": 0,
+     "exact": 69,
+     "rejected": 0
+    },
+    "charAccuracy": 0.9611528822055138,
+    "charRecall": 0.9849624060150376,
+    "charPrecision": 0.9751861042183623,
+    "kanaInsertRate": 0.0012406947890818859,
+    "foreignInsertRate": 0.008684863523573201
+   },
+   {
+    "image": "IMG_8930",
+    "tp": 30,
+    "fp": 4,
+    "fn": 1,
+    "missed": [
+     "o-kudasai"
+    ],
+    "extra": [
+     "giving-receiving-verbs",
+     "ja-nai",
+     "n-desu-explanatory",
+     "no-de-wa-nai-ka"
+    ],
+    "seconds": 2.8279919624328613,
+    "boxes": {
+     "estimated": 0,
+     "exact": 37,
+     "rejected": 0
+    },
+    "charAccuracy": 0.7942176870748299,
+    "charRecall": 0.9336734693877551,
+    "charPrecision": 0.9119601328903655,
+    "kanaInsertRate": 0.07475083056478406,
+    "foreignInsertRate": 0.0049833887043189366
+   },
+   {
+    "image": "IMG_8931",
+    "tp": 49,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 2.5967609882354736,
+    "boxes": {
+     "estimated": 0,
+     "exact": 80,
+     "rejected": 0
+    },
+    "charAccuracy": 0.9540873460246361,
+    "charRecall": 0.975363941769317,
+    "charPrecision": 0.9699331848552338,
+    "kanaInsertRate": 0.0077951002227171495,
+    "foreignInsertRate": 0.0066815144766146995
+   },
+   {
+    "image": "IMG_8932",
+    "tp": 27,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 2.839479088783264,
+    "boxes": {
+     "estimated": 0,
+     "exact": 38,
+     "rejected": 0
+    },
+    "charAccuracy": 0.7757475083056479,
+    "charRecall": 0.9285714285714286,
+    "charPrecision": 0.8456883509833586,
+    "kanaInsertRate": 0.05143721633888049,
+    "foreignInsertRate": 0.015128593040847202
+   },
+   {
+    "image": "IMG_8933",
+    "tp": 70,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "nazenara"
+    ],
+    "extra": [],
+    "seconds": 3.778337001800537,
+    "boxes": {
+     "estimated": 0,
+     "exact": 110,
+     "rejected": 1
+    },
+    "charAccuracy": 0.934720908230842,
+    "charRecall": 0.9772942289498581,
+    "charPrecision": 0.9772942289498581,
+    "kanaInsertRate": 0.013245033112582781,
+    "foreignInsertRate": 0.004730368968779565
+   },
+   {
+    "image": "IMG_8934",
+    "tp": 55,
+    "fp": 0,
+    "fn": 2,
+    "missed": [
+     "particle-plus-no",
+     "shikashi-conjunction"
+    ],
+    "extra": [],
+    "seconds": 3.52577805519104,
+    "boxes": {
+     "estimated": 0,
+     "exact": 80,
+     "rejected": 0
+    },
+    "charAccuracy": 0.9578256794751641,
+    "charRecall": 0.9803186504217432,
+    "charPrecision": 0.9658356417359187,
+    "kanaInsertRate": 0.0018467220683287165,
+    "foreignInsertRate": 0.0110803324099723
+   },
+   {
+    "image": "IMG_8935",
+    "tp": 30,
+    "fp": 0,
+    "fn": 3,
+    "missed": [
+     "baai-wa",
+     "kata-way-of-doing",
+     "te-miru"
+    ],
+    "extra": [],
+    "seconds": 2.7966530323028564,
+    "boxes": {
+     "estimated": 0,
+     "exact": 50,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8984375,
+    "charRecall": 0.90234375,
+    "charPrecision": 0.9390243902439024,
+    "kanaInsertRate": 0.006097560975609756,
+    "foreignInsertRate": 0.012195121951219513
+   },
+   {
+    "image": "IMG_8936",
+    "tp": 16,
+    "fp": 1,
+    "fn": 3,
+    "missed": [
+     "no-mae-position",
+     "question-word-ka",
+     "to-quotation"
+    ],
+    "extra": [
+     "imperative-form"
+    ],
+    "seconds": 2.3115299940109253,
+    "boxes": {
+     "estimated": 0,
+     "exact": 34,
+     "rejected": 1
+    },
+    "charAccuracy": 0.8457142857142858,
+    "charRecall": 0.8685714285714285,
+    "charPrecision": 0.9020771513353115,
+    "kanaInsertRate": 0.01483679525222552,
+    "foreignInsertRate": 0.020771513353115726
+   },
+   {
+    "image": "IMG_8937",
+    "tp": 27,
+    "fp": 0,
+    "fn": 5,
+    "missed": [
+     "adj-adverbial",
+     "koto-nominalizer",
+     "passive",
+     "te-miru",
+     "te-shimau"
+    ],
+    "extra": [],
+    "seconds": 2.2903140783309937,
+    "boxes": {
+     "estimated": 0,
+     "exact": 38,
+     "rejected": 0
+    },
+    "charAccuracy": 0.7909407665505226,
+    "charRecall": 0.818815331010453,
+    "charPrecision": 0.9233791748526523,
+    "kanaInsertRate": 0.01768172888015717,
+    "foreignInsertRate": 0.011787819253438114
+   },
+   {
+    "image": "IMG_8938",
+    "tp": 21,
+    "fp": 1,
+    "fn": 1,
+    "missed": [
+     "tochuu-de"
+    ],
+    "extra": [
+     "juu-chuu-throughout"
+    ],
+    "seconds": 2.8237630128860474,
+    "boxes": {
+     "estimated": 0,
+     "exact": 25,
+     "rejected": 0
+    },
+    "charAccuracy": 0.785140562248996,
+    "charRecall": 0.8152610441767069,
+    "charPrecision": 0.8511530398322851,
+    "kanaInsertRate": 0.008385744234800839,
+    "foreignInsertRate": 0.018867924528301886
+   },
+   {
+    "image": "IMG_8939",
+    "tp": 23,
+    "fp": 3,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "hou-ga-ii",
+     "to-wa-kagiranai",
+     "wa-ga-double-subject"
+    ],
+    "seconds": 2.308337092399597,
+    "boxes": {
+     "estimated": 0,
+     "exact": 31,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8140161725067385,
+    "charRecall": 0.9299191374663073,
+    "charPrecision": 0.8603491271820449,
+    "kanaInsertRate": 0.0798004987531172,
+    "foreignInsertRate": 0.007481296758104738
+   },
+   {
+    "image": "IMG_8940",
+    "tp": 16,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 2.398401975631714,
+    "boxes": {
+     "estimated": 0,
+     "exact": 31,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8797814207650273,
+    "charRecall": 0.8797814207650273,
+    "charPrecision": 0.9470588235294117,
+    "kanaInsertRate": 0.0058823529411764705,
+    "foreignInsertRate": 0.0
+   },
+   {
+    "image": "IMG_8941",
+    "tp": 18,
+    "fp": 3,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "giving-receiving-verbs",
+     "te-mo-ii",
+     "to-wa-kagiranai"
+    ],
+    "seconds": 2.9749759435653687,
+    "boxes": {
+     "estimated": 0,
+     "exact": 30,
+     "rejected": 0
+    },
+    "charAccuracy": 0.6122881355932204,
+    "charRecall": 0.8072033898305084,
+    "charPrecision": 0.7514792899408284,
+    "kanaInsertRate": 0.09467455621301775,
+    "foreignInsertRate": 0.009861932938856016
+   },
+   {
+    "image": "IMG_8942",
+    "tp": 15,
+    "fp": 2,
+    "fn": 1,
+    "missed": [
+     "kosoado-konna"
+    ],
+    "extra": [
+     "giving-receiving-verbs",
+     "te-mo-ii"
+    ],
+    "seconds": 2.950610041618347,
+    "boxes": {
+     "estimated": 0,
+     "exact": 24,
+     "rejected": 1
+    },
+    "charAccuracy": 0.7338935574229692,
+    "charRecall": 0.8907563025210085,
+    "charPrecision": 0.801007556675063,
+    "kanaInsertRate": 0.06801007556675064,
+    "foreignInsertRate": 0.02518891687657431
+   },
+   {
+    "image": "IMG_8943",
+    "tp": 21,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 1.9265989065170288,
+    "boxes": {
+     "estimated": 0,
+     "exact": 28,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8107142857142857,
+    "charRecall": 0.8892857142857142,
+    "charPrecision": 0.8861209964412812,
+    "kanaInsertRate": 0.07473309608540925,
+    "foreignInsertRate": 0.021352313167259787
+   },
+   {
+    "image": "IMG_8944",
+    "tp": 15,
+    "fp": 0,
+    "fn": 15,
+    "missed": [
+     "deshou-guess",
+     "ga-aru-iru",
+     "kosoado-konna",
+     "n-desu-explanatory",
+     "nakanaka-nai",
+     "ni-tsuite",
+     "passive",
+     "te-iru",
+     "te-kudasai",
+     "te-miru",
+     "toki-when",
+     "volitional-form",
+     "wa-dou-desu-ka",
+     "wa-ga-double-subject",
+     "wake-da"
+    ],
+    "extra": [],
+    "seconds": 1.7025469541549683,
+    "boxes": {
+     "estimated": 0,
+     "exact": 15,
+     "rejected": 0
+    },
+    "charAccuracy": 0.37356321839080464,
+    "charRecall": 0.3793103448275862,
+    "charPrecision": 0.9565217391304348,
+    "kanaInsertRate": 0.014492753623188406,
+    "foreignInsertRate": 0.0
+   },
+   {
+    "image": "IMG_8945",
+    "tp": 26,
+    "fp": 3,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "ten-aspect",
+     "to-wa-definition",
+     "wa-ga-double-subject"
+    ],
+    "seconds": 2.9083889722824097,
+    "boxes": {
+     "estimated": 0,
+     "exact": 48,
+     "rejected": 1
+    },
+    "charAccuracy": 0.7520525451559934,
+    "charRecall": 0.8883415435139573,
+    "charPrecision": 0.8234398782343988,
+    "kanaInsertRate": 0.0243531202435312,
+    "foreignInsertRate": 0.030441400304414
+   },
+   {
+    "image": "IMG_8946",
+    "tp": 25,
+    "fp": 0,
+    "fn": 3,
+    "missed": [
+     "adj-adverbial",
+     "naosu-redo",
+     "to-omou"
+    ],
+    "extra": [],
+    "seconds": 2.476046919822693,
+    "boxes": {
+     "estimated": 0,
+     "exact": 40,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8971428571428571,
+    "charRecall": 0.94,
+    "charPrecision": 0.9267605633802817,
+    "kanaInsertRate": 0.01971830985915493,
+    "foreignInsertRate": 0.011267605633802818
+   },
+   {
+    "image": "IMG_8947",
+    "tp": 10,
+    "fp": 0,
+    "fn": 2,
+    "missed": [
+     "hitsuyou-ga-aru",
+     "kenjougo-special-verbs"
+    ],
+    "extra": [],
+    "seconds": 1.784764051437378,
+    "boxes": {
+     "estimated": 0,
+     "exact": 8,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8452380952380952,
+    "charRecall": 0.9285714285714286,
+    "charPrecision": 0.975,
+    "kanaInsertRate": 0.04375,
+    "foreignInsertRate": 0.0
+   },
+   {
+    "image": "IMG_8948",
+    "tp": 14,
+    "fp": 1,
+    "fn": 3,
+    "missed": [
+     "kata-way-of-doing",
+     "nagara",
+     "ni-kotaete"
+    ],
+    "extra": [
+     "ka-suffix"
+    ],
+    "seconds": 2.285851001739502,
+    "boxes": {
+     "estimated": 0,
+     "exact": 32,
+     "rejected": 0
+    },
+    "charAccuracy": 0.7142857142857143,
+    "charRecall": 0.7933130699088146,
+    "charPrecision": 0.8642384105960265,
+    "kanaInsertRate": 0.04966887417218543,
+    "foreignInsertRate": 0.016556291390728478
+   },
+   {
+    "image": "IMG_8949",
+    "tp": 6,
+    "fp": 2,
+    "fn": 6,
+    "missed": [
+     "adj-adverbial",
+     "nan-to-iu-exclamation",
+     "ni-sakidatte",
+     "o-suru-humble",
+     "particle-plus-no",
+     "volitional-form"
+    ],
+    "extra": [
+     "ku-naru-ni-naru",
+     "to-wa-kagiranai"
+    ],
+    "seconds": 2.735023021697998,
+    "boxes": {
+     "estimated": 0,
+     "exact": 16,
+     "rejected": 0
+    },
+    "charAccuracy": 0.34063260340632606,
+    "charRecall": 0.7712895377128953,
+    "charPrecision": 0.6215686274509804,
+    "kanaInsertRate": 0.17058823529411765,
+    "foreignInsertRate": 0.07254901960784314
+   },
+   {
+    "image": "IMG_8950",
+    "tp": 14,
+    "fp": 1,
+    "fn": 2,
+    "missed": [
+     "adj-adverbial",
+     "tara"
+    ],
+    "extra": [
+     "koto-ni-natte-iru"
+    ],
+    "seconds": 2.1681019067764282,
+    "boxes": {
+     "estimated": 0,
+     "exact": 27,
+     "rejected": 0
+    },
+    "charAccuracy": 0.8028169014084507,
+    "charRecall": 0.8338028169014085,
+    "charPrecision": 0.9396825396825397,
+    "kanaInsertRate": 0.0380952380952381,
+    "foreignInsertRate": 0.0
+   },
+   {
+    "image": "IMG_8951",
+    "tp": 10,
+    "fp": 1,
+    "fn": 1,
+    "missed": [
+     "ya-nado"
+    ],
+    "extra": [
+     "toki-when"
+    ],
+    "seconds": 2.349515914916992,
+    "boxes": {
+     "estimated": 0,
+     "exact": 12,
+     "rejected": 0
+    },
+    "charAccuracy": 0.0,
+    "charRecall": 0.8466257668711656,
+    "charPrecision": 0.4194528875379939,
+    "kanaInsertRate": 0.24012158054711247,
+    "foreignInsertRate": 0.030395136778115502
+   },
+   {
+    "image": "IMG_8952",
+    "tp": 7,
+    "fp": 2,
+    "fn": 15,
+    "missed": [
+     "ga-aru-iru",
+     "kana-wonder",
+     "komu-compound",
+     "n-desu-explanatory",
+     "nagara",
+     "ni-tsuite",
+     "no-mae-position",
+     "o-kudasai",
+     "particle-plus-no",
+     "sonkeigo-special-verbs",
+     "te-iku",
+     "te-iru",
+     "te-kara",
+     "to-tomo-ni",
+     "toki-when"
+    ],
+    "extra": [
+     "deshou-guess",
+     "n-desu-ga-preface"
+    ],
+    "seconds": 1.9644399881362915,
+    "boxes": {
+     "estimated": 0,
+     "exact": 10,
+     "rejected": 0
+    },
+    "charAccuracy": 0.2524084778420038,
+    "charRecall": 0.29672447013487474,
+    "charPrecision": 0.850828729281768,
+    "kanaInsertRate": 0.11049723756906077,
+    "foreignInsertRate": 0.027624309392265192
+   },
+   {
+    "image": "IMG_8953",
+    "tp": 29,
+    "fp": 5,
+    "fn": 3,
+    "missed": [
+     "question-word-mo-nai",
+     "te-miru",
+     "volitional-form"
+    ],
+    "extra": [
+     "hou-ga-ii",
+     "ja-nai",
+     "ku-naru-ni-naru",
+     "no-de-wa-nai-ka",
+     "te-mo-ii"
+    ],
+    "seconds": 3.071386933326721,
+    "boxes": {
+     "estimated": 0,
+     "exact": 43,
+     "rejected": 0
+    },
+    "charAccuracy": 0.4904761904761905,
+    "charRecall": 0.8873015873015873,
+    "charPrecision": 0.706700379266751,
+    "kanaInsertRate": 0.12895069532237674,
+    "foreignInsertRate": 0.018963337547408345
+   },
+   {
+    "image": "IMG_8954",
+    "tp": 27,
+    "fp": 2,
+    "fn": 2,
+    "missed": [
+     "tachi-plural",
+     "volitional-form"
+    ],
+    "extra": [
+     "o-suru-humble",
+     "ten-aspect"
+    ],
+    "seconds": 2.5397050380706787,
+    "boxes": {
+     "estimated": 0,
+     "exact": 32,
+     "rejected": 0
+    },
+    "charAccuracy": 0.6405529953917051,
+    "charRecall": 0.9124423963133641,
+    "charPrecision": 0.8232848232848233,
+    "kanaInsertRate": 0.1891891891891892,
+    "foreignInsertRate": 0.004158004158004158
+   },
+   {
+    "image": "IMG_8955",
+    "tp": 13,
+    "fp": 0,
+    "fn": 3,
+    "missed": [
+     "ageru-compound",
+     "ga-aru-iru",
+     "kata-way-of-doing"
+    ],
+    "extra": [],
+    "seconds": 1.9309850931167603,
+    "boxes": {
+     "estimated": 0,
+     "exact": 25,
+     "rejected": 0
+    },
+    "charAccuracy": 0.5925925925925926,
+    "charRecall": 0.7065527065527065,
+    "charPrecision": 0.9185185185185185,
+    "kanaInsertRate": 0.07037037037037037,
+    "foreignInsertRate": 0.003703703703703704
+   },
+   {
+    "image": "IMG_8956",
+    "tp": 24,
+    "fp": 1,
+    "fn": 4,
+    "missed": [
+     "komu-compound",
+     "no-hitotsu-da",
+     "te-miru",
+     "ya-nado"
+    ],
+    "extra": [
+     "kosoado-konna"
+    ],
+    "seconds": 3.0232479572296143,
+    "boxes": {
+     "estimated": 0,
+     "exact": 40,
+     "rejected": 0
+    },
+    "charAccuracy": 0.7198364008179959,
+    "charRecall": 0.8752556237218814,
+    "charPrecision": 0.8246628131021194,
+    "kanaInsertRate": 0.10211946050096339,
+    "foreignInsertRate": 0.0038535645472061657
+   },
+   {
+    "image": "IMG_8957",
+    "tp": 25,
+    "fp": 6,
+    "fn": 3,
+    "missed": [
+     "n-desu-ga-preface",
+     "no-hitotsu-da",
+     "te-miru"
+    ],
+    "extra": [
+     "dake-only",
+     "gata-type",
+     "giving-receiving-verbs",
+     "n-desu-explanatory",
+     "to-iu-quote",
+     "to-wa-kagiranai"
+    ],
+    "seconds": 2.8713399171829224,
+    "boxes": {
+     "estimated": 0,
+     "exact": 43,
+     "rejected": 0
+    },
+    "charAccuracy": 0.7642276422764227,
+    "charRecall": 0.8983739837398373,
+    "charPrecision": 0.8911290322580645,
+    "kanaInsertRate": 0.07862903225806452,
+    "foreignInsertRate": 0.004032258064516129
+   }
+  ],
+  "tiled/raw": [
+   {
+    "image": "IMG_8862",
+    "tp": 29,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 10.449313998222351,
+    "boxes": null,
+    "charAccuracy": 0.7569721115537849,
+    "charRecall": 0.9063745019920318,
+    "charPrecision": 0.8666666666666667,
+    "kanaInsertRate": 0.07809523809523809,
+    "foreignInsertRate": 0.02666666666666667
+   },
+   {
+    "image": "IMG_8863",
+    "tp": 31,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "sa-nominal"
+    ],
+    "extra": [],
+    "seconds": 10.628242015838623,
+    "boxes": null,
+    "charAccuracy": 0.9207606973058637,
+    "charRecall": 0.9334389857369255,
+    "charPrecision": 0.9515347334410339,
+    "kanaInsertRate": 0.0210016155088853,
+    "foreignInsertRate": 0.0
+   },
+   {
+    "image": "IMG_8864",
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 11.264392018318176,
+    "boxes": null,
+    "charAccuracy": 0.2088888888888889,
+    "charRecall": 0.7844444444444445,
+    "charPrecision": 0.6948818897637795,
+    "kanaInsertRate": 0.2440944881889764,
+    "foreignInsertRate": 0.06299212598425197
+   },
+   {
+    "image": "IMG_8865",
+    "tp": 21,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 9.943359971046448,
+    "boxes": null,
+    "charAccuracy": 0.8658280922431866,
+    "charRecall": 0.9140461215932913,
+    "charPrecision": 0.9121338912133892,
+    "kanaInsertRate": 0.029288702928870293,
+    "foreignInsertRate": 0.0041841004184100415
+   },
+   {
+    "image": "IMG_8866",
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 10.141425967216492,
+    "boxes": null,
+    "charAccuracy": 0.16066481994459836,
+    "charRecall": 0.6011080332409973,
+    "charPrecision": 0.7457044673539519,
+    "kanaInsertRate": 0.27491408934707906,
+    "foreignInsertRate": 0.07903780068728522
+   },
+   {
+    "image": "IMG_8867",
+    "tp": 28,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "ka-suffix"
+    ],
+    "extra": [],
+    "seconds": 10.3142009973526,
+    "boxes": null,
+    "charAccuracy": 0.7321739130434783,
+    "charRecall": 0.8173913043478261,
+    "charPrecision": 0.9494949494949495,
+    "kanaInsertRate": 0.048484848484848485,
+    "foreignInsertRate": 0.0
+   },
+   {
+    "image": "IMG_8868",
+    "tp": 3,
+    "fp": 1,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "komu-compound"
+    ],
+    "seconds": 12.196215033531189,
+    "boxes": null,
+    "charAccuracy": 0.06278026905829592,
+    "charRecall": 0.8183856502242153,
+    "charPrecision": 0.6381118881118881,
+    "kanaInsertRate": 0.2762237762237762,
+    "foreignInsertRate": 0.11188811188811189
+   },
+   {
+    "image": "IMG_8869",
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 11.437983989715576,
+    "boxes": null,
+    "charAccuracy": 0.0955555555555555,
+    "charRecall": 0.7822222222222223,
+    "charPrecision": 0.6666666666666666,
+    "kanaInsertRate": 0.26325757575757575,
+    "foreignInsertRate": 0.06439393939393939
+   },
+   {
+    "image": "IMG_8870",
+    "tp": 4,
+    "fp": 0,
+    "fn": 2,
+    "missed": [
+     "juu-chuu-throughout",
+     "kenjougo-special-verbs"
+    ],
+    "extra": [],
+    "seconds": 11.73917305469513,
+    "boxes": null,
+    "charAccuracy": 0.2195121951219512,
+    "charRecall": 0.8644986449864499,
+    "charPrecision": 0.7631578947368421,
+    "kanaInsertRate": 0.2607655502392344,
+    "foreignInsertRate": 0.03827751196172249
+   },
+   {
+    "image": "IMG_8871",
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "kata-way-of-doing"
+    ],
+    "extra": [],
+    "seconds": 13.396330952644348,
+    "boxes": null,
+    "charAccuracy": 0.15876777251184837,
+    "charRecall": 0.7630331753554502,
+    "charPrecision": 0.7385321100917431,
+    "kanaInsertRate": 0.3165137614678899,
+    "foreignInsertRate": 0.027522935779816515
+   },
+   {
+    "image": "IMG_8872",
+    "tp": 2,
+    "fp": 1,
+    "fn": 3,
+    "missed": [
+     "jou-standpoint",
+     "ni-suru-decide",
+     "shidai-as-soon-as"
+    ],
+    "extra": [
+     "wa-ga-double-subject"
+    ],
+    "seconds": 13.285536050796509,
+    "boxes": null,
+    "charAccuracy": 0.0976190476190476,
+    "charRecall": 0.7976190476190477,
+    "charPrecision": 0.6781376518218624,
+    "kanaInsertRate": 0.29554655870445345,
+    "foreignInsertRate": 0.03441295546558704
+   },
+   {
+    "image": "IMG_8873",
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 11.085512042045593,
+    "boxes": null,
+    "charAccuracy": 0.05494505494505497,
+    "charRecall": 0.7472527472527473,
+    "charPrecision": 0.655421686746988,
+    "kanaInsertRate": 0.2457831325301205,
+    "foreignInsertRate": 0.0746987951807229
+   },
+   {
+    "image": "IMG_8874",
+    "tp": 5,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 11.979182004928589,
+    "boxes": null,
+    "charAccuracy": 0.14087759815242495,
+    "charRecall": 0.7990762124711316,
+    "charPrecision": 0.7163561076604554,
+    "kanaInsertRate": 0.2919254658385093,
+    "foreignInsertRate": 0.055900621118012424
+   },
+   {
+    "image": "IMG_8875",
+    "tp": 25,
+    "fp": 0,
+    "fn": 10,
+    "missed": [
+     "betsu-ni-nai",
+     "demo-but",
+     "ku-naru-ni-naru",
+     "marude-you-da",
+     "metta-ni-nai",
+     "n-desu-explanatory",
+     "sue-ni",
+     "tara-ta-discovery",
+     "to-wa-kagiranai",
+     "you-na-example"
+    ],
+    "extra": [],
+    "seconds": 14.036581039428711,
+    "boxes": null,
+    "charAccuracy": 0.0,
+    "charRecall": 0.887189292543021,
+    "charPrecision": 0.5763975155279503,
+    "kanaInsertRate": 0.3267080745341615,
+    "foreignInsertRate": 0.21490683229813665
+   },
+   {
+    "image": "IMG_8876",
+    "tp": 13,
+    "fp": 1,
+    "fn": 5,
+    "missed": [
+     "kara-made",
+     "ni-tsuite",
+     "question-word-temo",
+     "sa-nominal",
+     "wa-ga-double-subject"
+    ],
+    "extra": [
+     "adj-te-connect"
+    ],
+    "seconds": 10.304497003555298,
+    "boxes": null,
+    "charAccuracy": 0.03837953091684432,
+    "charRecall": 0.7569296375266524,
+    "charPrecision": 0.7001972386587771,
+    "kanaInsertRate": 0.38461538461538464,
+    "foreignInsertRate": 0.10650887573964497
+   },
+   {
+    "image": "IMG_8877",
+    "tp": 6,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "to-omou"
+    ],
+    "extra": [],
+    "seconds": 12.178084015846252,
+    "boxes": null,
+    "charAccuracy": 0.11455847255369933,
+    "charRecall": 0.8329355608591885,
+    "charPrecision": 0.7554112554112554,
+    "kanaInsertRate": 0.3225108225108225,
+    "foreignInsertRate": 0.06060606060606061
+   },
+   {
+    "image": "IMG_8879",
+    "tp": 4,
+    "fp": 1,
+    "fn": 1,
+    "missed": [
+     "teki-suffix"
+    ],
+    "extra": [
+     "me-ordinal"
+    ],
+    "seconds": 17.07618999481201,
+    "boxes": null,
+    "charAccuracy": 0.053050397877984046,
+    "charRecall": 0.8249336870026526,
+    "charPrecision": 0.6835164835164835,
+    "kanaInsertRate": 0.3252747252747253,
+    "foreignInsertRate": 0.04835164835164835
+   },
+   {
+    "image": "IMG_8880",
+    "tp": 2,
+    "fp": 1,
+    "fn": 1,
+    "missed": [
+     "teki-suffix"
+    ],
+    "extra": [
+     "to-quotation"
+    ],
+    "seconds": 9.646670937538147,
+    "boxes": null,
+    "charAccuracy": 0.18944844124700244,
+    "charRecall": 0.7937649880095923,
+    "charPrecision": 0.7371937639198218,
+    "kanaInsertRate": 0.2962138084632517,
+    "foreignInsertRate": 0.028953229398663696
+   },
+   {
+    "image": "IMG_8881",
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 10.753167986869812,
+    "boxes": null,
+    "charAccuracy": 0.03081232492997199,
+    "charRecall": 0.7927170868347339,
+    "charPrecision": 0.6373873873873874,
+    "kanaInsertRate": 0.28153153153153154,
+    "foreignInsertRate": 0.0945945945945946
+   },
+   {
+    "image": "IMG_8882",
+    "tp": 2,
+    "fp": 0,
+    "fn": 3,
+    "missed": [
+     "adj-adverbial",
+     "kakeru-halfway",
+     "tochuu-de"
+    ],
+    "extra": [],
+    "seconds": 10.531974077224731,
+    "boxes": null,
+    "charAccuracy": 0.09866666666666668,
+    "charRecall": 0.776,
+    "charPrecision": 0.7238805970149254,
+    "kanaInsertRate": 0.2512437810945274,
+    "foreignInsertRate": 0.024875621890547265
+   },
+   {
+    "image": "IMG_8883",
+    "tp": 1,
+    "fp": 1,
+    "fn": 1,
+    "missed": [
+     "ni-oujite"
+    ],
+    "extra": [
+     "passive"
+    ],
+    "seconds": 10.80323600769043,
+    "boxes": null,
+    "charAccuracy": 0.15526315789473688,
+    "charRecall": 0.8236842105263158,
+    "charPrecision": 0.7162471395881007,
+    "kanaInsertRate": 0.28604118993135014,
+    "foreignInsertRate": 0.018306636155606407
+   },
+   {
+    "image": "IMG_8884",
+    "tp": 4,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "teki-suffix"
+    ],
+    "extra": [],
+    "seconds": 8.55994200706482,
+    "boxes": null,
+    "charAccuracy": 0.03601108033240996,
+    "charRecall": 0.7590027700831025,
+    "charPrecision": 0.6555023923444976,
+    "kanaInsertRate": 0.3062200956937799,
+    "foreignInsertRate": 0.03827751196172249
+   },
+   {
+    "image": "IMG_8885",
+    "tp": 3,
+    "fp": 0,
+    "fn": 2,
+    "missed": [
+     "naosu-redo",
+     "ni-motozuite"
+    ],
+    "extra": [],
+    "seconds": 9.450985074043274,
+    "boxes": null,
+    "charAccuracy": 0.17291066282420753,
+    "charRecall": 0.7665706051873199,
+    "charPrecision": 0.7131367292225201,
+    "kanaInsertRate": 0.23056300268096513,
+    "foreignInsertRate": 0.0160857908847185
+   },
+   {
+    "image": "IMG_8886",
+    "tp": 3,
+    "fp": 3,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "mono-da",
+     "passive",
+     "to-quotation"
+    ],
+    "seconds": 10.677536010742188,
+    "boxes": null,
+    "charAccuracy": 0.05882352941176472,
+    "charRecall": 0.6918767507002801,
+    "charPrecision": 0.6144278606965174,
+    "kanaInsertRate": 0.3482587064676617,
+    "foreignInsertRate": 0.07960199004975124
+   },
+   {
+    "image": "IMG_8887",
+    "tp": 30,
+    "fp": 1,
+    "fn": 1,
+    "missed": [
+     "koso"
+    ],
+    "extra": [
+     "aida-during"
+    ],
+    "seconds": 12.868636965751648,
+    "boxes": null,
+    "charAccuracy": 0.5523932729624839,
+    "charRecall": 0.9016817593790427,
+    "charPrecision": 0.8604938271604938,
+    "kanaInsertRate": 0.19382716049382717,
+    "foreignInsertRate": 0.02962962962962963
+   },
+   {
+    "image": "IMG_8888",
+    "tp": 22,
+    "fp": 2,
+    "fn": 2,
+    "missed": [
+     "te-aru",
+     "toki-when"
+    ],
+    "extra": [
+     "causative-passive",
+     "izen"
+    ],
+    "seconds": 12.26300299167633,
+    "boxes": null,
+    "charAccuracy": 0.46366782006920415,
+    "charRecall": 0.9186851211072664,
+    "charPrecision": 0.8648208469055375,
+    "kanaInsertRate": 0.21009771986970685,
+    "foreignInsertRate": 0.02768729641693811
+   },
+   {
+    "image": "IMG_8889",
+    "tp": 31,
+    "fp": 4,
+    "fn": 3,
+    "missed": [
+     "doushi",
+     "naa-exclamation",
+     "nakute-mo-ii"
+    ],
+    "extra": [
+     "juu-chuu-throughout",
+     "mi-nominal",
+     "particle-plus-no",
+     "question-word-temo"
+    ],
+    "seconds": 11.442415952682495,
+    "boxes": null,
+    "charAccuracy": 0.39607201309328965,
+    "charRecall": 0.839607201309329,
+    "charPrecision": 0.8040752351097179,
+    "kanaInsertRate": 0.22100313479623823,
+    "foreignInsertRate": 0.032915360501567396
+   },
+   {
+    "image": "IMG_8890",
+    "tp": 28,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "i-adj-negative"
+    ],
+    "extra": [],
+    "seconds": 9.411318063735962,
+    "boxes": null,
+    "charAccuracy": 0.5042194092827004,
+    "charRecall": 0.869198312236287,
+    "charPrecision": 0.7938342967244701,
+    "kanaInsertRate": 0.2119460500963391,
+    "foreignInsertRate": 0.046242774566473986
+   },
+   {
+    "image": "IMG_8891",
+    "tp": 35,
+    "fp": 1,
+    "fn": 3,
+    "missed": [
+     "au-mutual",
+     "naosu-redo",
+     "te-yokatta"
+    ],
+    "extra": [
+     "ni-suru-decide"
+    ],
+    "seconds": 10.560956954956055,
+    "boxes": null,
+    "charAccuracy": 0.4416184971098266,
+    "charRecall": 0.8774566473988439,
+    "charPrecision": 0.8654503990877993,
+    "kanaInsertRate": 0.23831242873432154,
+    "foreignInsertRate": 0.026225769669327253
+   },
+   {
+    "image": "IMG_8892",
+    "tp": 42,
+    "fp": 0,
+    "fn": 10,
+    "missed": [
+     "causative",
+     "ga-suki-jouzu",
+     "kamoshirenai",
+     "kiru-complete",
+     "ni-wa-purpose",
+     "te-iku",
+     "te-iru",
+     "te-kureru",
+     "te-morau",
+     "to-iu-called"
+    ],
+    "extra": [],
+    "seconds": 9.35701596736908,
+    "boxes": null,
+    "charAccuracy": 0.5765550239234449,
+    "charRecall": 0.6483253588516746,
+    "charPrecision": 0.9409722222222222,
+    "kanaInsertRate": 0.078125,
+    "foreignInsertRate": 0.003472222222222222
+   },
+   {
+    "image": "IMG_8893",
+    "tp": 30,
+    "fp": 0,
+    "fn": 3,
+    "missed": [
+     "ba-conditional",
+     "ni-awasete",
+     "ya-nado"
+    ],
+    "extra": [],
+    "seconds": 8.44012200832367,
+    "boxes": null,
+    "charAccuracy": 0.44640234948604995,
+    "charRecall": 0.8737151248164464,
+    "charPrecision": 0.875,
+    "kanaInsertRate": 0.22647058823529412,
+    "foreignInsertRate": 0.014705882352941176
+   },
+   {
+    "image": "IMG_8894",
+    "tp": 18,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 8.254926085472107,
+    "boxes": null,
+    "charAccuracy": 0.7705627705627706,
+    "charRecall": 0.8722943722943723,
+    "charPrecision": 0.8799126637554585,
+    "kanaInsertRate": 0.08078602620087336,
+    "foreignInsertRate": 0.024017467248908297
+   },
+   {
+    "image": "IMG_8895",
+    "tp": 15,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 9.299618005752563,
+    "boxes": null,
+    "charAccuracy": 0.511737089201878,
+    "charRecall": 0.8262910798122066,
+    "charPrecision": 0.8543689320388349,
+    "kanaInsertRate": 0.13349514563106796,
+    "foreignInsertRate": 0.03398058252427184
+   },
+   {
+    "image": "IMG_8896",
+    "tp": 36,
+    "fp": 1,
+    "fn": 3,
+    "missed": [
+     "dasu-burst-out",
+     "tara-tokoro-da",
+     "teki-suffix"
+    ],
+    "extra": [
+     "hodo-nai-comparison"
+    ],
+    "seconds": 13.541621923446655,
+    "boxes": null,
+    "charAccuracy": 0.7822045152722443,
+    "charRecall": 0.9296148738379814,
+    "charPrecision": 0.922266139657444,
+    "kanaInsertRate": 0.05401844532279315,
+    "foreignInsertRate": 0.022397891963109356
+   },
+   {
+    "image": "IMG_8897",
+    "tp": 39,
+    "fp": 0,
+    "fn": 2,
+    "missed": [
+     "naide-without",
+     "te-kudasai"
+    ],
+    "extra": [],
+    "seconds": 10.351147055625916,
+    "boxes": null,
+    "charAccuracy": 0.60375,
+    "charRecall": 0.86875,
+    "charPrecision": 0.9430122116689281,
+    "kanaInsertRate": 0.1546811397557666,
+    "foreignInsertRate": 0.013568521031207599
+   },
+   {
+    "image": "IMG_8898",
+    "tp": 16,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 9.550975918769836,
+    "boxes": null,
+    "charAccuracy": 0.7524752475247525,
+    "charRecall": 0.8910891089108911,
+    "charPrecision": 0.8463949843260188,
+    "kanaInsertRate": 0.07523510971786834,
+    "foreignInsertRate": 0.006269592476489028
+   },
+   {
+    "image": "IMG_8899",
+    "tp": 33,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "no-mae-position"
+    ],
+    "extra": [],
+    "seconds": 10.435060977935791,
+    "boxes": null,
+    "charAccuracy": 0.6257961783439491,
+    "charRecall": 0.9219745222929936,
+    "charPrecision": 0.856508875739645,
+    "kanaInsertRate": 0.14940828402366865,
+    "foreignInsertRate": 0.022189349112426034
+   },
+   {
+    "image": "IMG_8900",
+    "tp": 25,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 7.227257013320923,
+    "boxes": null,
+    "charAccuracy": 0.5791855203619909,
+    "charRecall": 0.9524886877828054,
+    "charPrecision": 0.913232104121475,
+    "kanaInsertRate": 0.18872017353579176,
+    "foreignInsertRate": 0.02386117136659436
+   },
+   {
+    "image": "IMG_8901",
+    "tp": 25,
+    "fp": 2,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "aida-during",
+     "causative"
+    ],
+    "seconds": 21.577841997146606,
+    "boxes": null,
+    "charAccuracy": 0.3857938718662952,
+    "charRecall": 0.8565459610027855,
+    "charPrecision": 0.8471074380165289,
+    "kanaInsertRate": 0.2603305785123967,
+    "foreignInsertRate": 0.01928374655647383
+   },
+   {
+    "image": "IMG_8902",
+    "tp": 41,
+    "fp": 0,
+    "fn": 3,
+    "missed": [
+     "mae-ni",
+     "te-kara",
+     "te-kudasai"
+    ],
+    "extra": [],
+    "seconds": 13.815022945404053,
+    "boxes": null,
+    "charAccuracy": 0.5960044395116537,
+    "charRecall": 0.9056603773584906,
+    "charPrecision": 0.8717948717948718,
+    "kanaInsertRate": 0.11645299145299146,
+    "foreignInsertRate": 0.029914529914529916
+   },
+   {
+    "image": "IMG_8903",
+    "tp": 13,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "tame-ni"
+    ],
+    "extra": [],
+    "seconds": 8.620034098625183,
+    "boxes": null,
+    "charAccuracy": 0.7475247524752475,
+    "charRecall": 0.9455445544554455,
+    "charPrecision": 0.8883720930232558,
+    "kanaInsertRate": 0.07906976744186046,
+    "foreignInsertRate": 0.013953488372093023
+   },
+   {
+    "image": "IMG_8904",
+    "tp": 16,
+    "fp": 2,
+    "fn": 2,
+    "missed": [
+     "ka-suffix",
+     "teki-suffix"
+    ],
+    "extra": [
+     "adj-adverbial",
+     "causative"
+    ],
+    "seconds": 14.370504021644592,
+    "boxes": null,
+    "charAccuracy": 0.3025641025641026,
+    "charRecall": 0.7264957264957265,
+    "charPrecision": 0.7352941176470589,
+    "kanaInsertRate": 0.3217993079584775,
+    "foreignInsertRate": 0.020761245674740483
+   },
+   {
+    "image": "IMG_8905",
+    "tp": 40,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "te-sumimasen"
+    ],
+    "extra": [],
+    "seconds": 12.104350924491882,
+    "boxes": null,
+    "charAccuracy": 0.7632850241545894,
+    "charRecall": 0.9082125603864735,
+    "charPrecision": 0.8867924528301887,
+    "kanaInsertRate": 0.09119496855345911,
+    "foreignInsertRate": 0.007861635220125786
+   },
+   {
+    "image": "IMG_8906",
+    "tp": 15,
+    "fp": 1,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "no-mae-position"
+    ],
+    "seconds": 9.879668951034546,
+    "boxes": null,
+    "charAccuracy": 0.6632302405498282,
+    "charRecall": 0.8694158075601375,
+    "charPrecision": 0.8322368421052632,
+    "kanaInsertRate": 0.0756578947368421,
+    "foreignInsertRate": 0.013157894736842105
+   },
+   {
+    "image": "IMG_8907",
+    "tp": 46,
+    "fp": 0,
+    "fn": 10,
+    "missed": [
+     "darou-to-omou",
+     "ni-awasete",
+     "ni-kuwaete",
+     "ni-tsuite",
+     "no-wa-emphasis",
+     "question-word-temo",
+     "ta-tokoro-result",
+     "to-ieru",
+     "you-to-omou",
+     "zutsu-each"
+    ],
+    "extra": [],
+    "seconds": 11.756664991378784,
+    "boxes": null,
+    "charAccuracy": 0.4851013110846245,
+    "charRecall": 0.8545887961859356,
+    "charPrecision": 0.8617788461538461,
+    "kanaInsertRate": 0.21394230769230768,
+    "foreignInsertRate": 0.001201923076923077
+   },
+   {
+    "image": "IMG_8908",
+    "tp": 40,
+    "fp": 1,
+    "fn": 4,
+    "missed": [
+     "de-gozaimasu",
+     "kenjougo-special-verbs",
+     "ni-oujite",
+     "o-suru-humble"
+    ],
+    "extra": [
+     "kosoado-konna"
+    ],
+    "seconds": 9.21853494644165,
+    "boxes": null,
+    "charAccuracy": 0.6431273644388398,
+    "charRecall": 0.8335435056746532,
+    "charPrecision": 0.9231843575418994,
+    "kanaInsertRate": 0.12569832402234637,
+    "foreignInsertRate": 0.006983240223463687
+   },
+   {
+    "image": "IMG_8909",
+    "tp": 41,
+    "fp": 0,
+    "fn": 7,
+    "missed": [
+     "kanarazushimo-nai",
+     "koto-nominalizer",
+     "soreni-conjunction",
+     "sugiru",
+     "ta-koto-ga-aru",
+     "te-kureru",
+     "teki-suffix"
+    ],
+    "extra": [],
+    "seconds": 6.890545010566711,
+    "boxes": null,
+    "charAccuracy": 0.4673495518565941,
+    "charRecall": 0.6209987195902689,
+    "charPrecision": 0.9099437148217636,
+    "kanaInsertRate": 0.0825515947467167,
+    "foreignInsertRate": 0.01876172607879925
+   },
+   {
+    "image": "IMG_8910",
+    "tp": 24,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 5.724974036216736,
+    "boxes": null,
+    "charAccuracy": 0.6920415224913494,
+    "charRecall": 0.9377162629757786,
+    "charPrecision": 0.9033333333333333,
+    "kanaInsertRate": 0.11,
+    "foreignInsertRate": 0.016666666666666666
+   },
+   {
+    "image": "IMG_8911",
+    "tp": 38,
+    "fp": 1,
+    "fn": 9,
+    "missed": [
+     "ippou-de",
+     "n-desu-explanatory",
+     "ni-mukatte",
+     "no-mae-position",
+     "soshite-conjunction",
+     "te-kureru",
+     "teki-suffix",
+     "to-iu-called",
+     "to-iu-quote"
+    ],
+    "extra": [
+     "o-suru-humble"
+    ],
+    "seconds": 8.043920040130615,
+    "boxes": null,
+    "charAccuracy": 0.5630733944954128,
+    "charRecall": 0.8256880733944955,
+    "charPrecision": 0.8602150537634409,
+    "kanaInsertRate": 0.14575866188769415,
+    "foreignInsertRate": 0.026284348864994027
+   },
+   {
+    "image": "IMG_8912",
+    "tp": 61,
+    "fp": 1,
+    "fn": 4,
+    "missed": [
+     "question-word-temo",
+     "tara",
+     "tara-dou",
+     "te-kudasai"
+    ],
+    "extra": [
+     "tara-ta-discovery"
+    ],
+    "seconds": 9.79602599143982,
+    "boxes": null,
+    "charAccuracy": 0.5445887445887445,
+    "charRecall": 0.8987012987012987,
+    "charPrecision": 0.9342934293429342,
+    "kanaInsertRate": 0.1854185418541854,
+    "foreignInsertRate": 0.018001800180018002
+   },
+   {
+    "image": "IMG_8913",
+    "tp": 35,
+    "fp": 2,
+    "fn": 2,
+    "missed": [
+     "kurai-approximately",
+     "to-shite"
+    ],
+    "extra": [
+     "koto-nominalizer",
+     "wo-to-suru"
+    ],
+    "seconds": 9.616669058799744,
+    "boxes": null,
+    "charAccuracy": 0.52,
+    "charRecall": 0.9442105263157895,
+    "charPrecision": 0.8591954022988506,
+    "kanaInsertRate": 0.15996168582375478,
+    "foreignInsertRate": 0.013409961685823755
+   },
+   {
+    "image": "IMG_8914",
+    "tp": 45,
+    "fp": 1,
+    "fn": 2,
+    "missed": [
+     "deshou-guess",
+     "shikashi-conjunction"
+    ],
+    "extra": [
+     "toka-listing"
+    ],
+    "seconds": 9.796882033348083,
+    "boxes": null,
+    "charAccuracy": 0.6051282051282052,
+    "charRecall": 0.9717948717948718,
+    "charPrecision": 0.9603040540540541,
+    "kanaInsertRate": 0.15287162162162163,
+    "foreignInsertRate": 0.004222972972972973
+   },
+   {
+    "image": "IMG_8915",
+    "tp": 46,
+    "fp": 0,
+    "fn": 3,
+    "missed": [
+     "koto-da-advice",
+     "koto-wa-nai",
+     "o-suru-humble"
+    ],
+    "extra": [],
+    "seconds": 16.81990897655487,
+    "boxes": null,
+    "charAccuracy": 0.6904133685136324,
+    "charRecall": 0.9041336851363236,
+    "charPrecision": 0.9553903345724907,
+    "kanaInsertRate": 0.10687732342007435,
+    "foreignInsertRate": 0.008364312267657992
+   },
+   {
+    "image": "IMG_8916",
+    "tp": 19,
+    "fp": 2,
+    "fn": 1,
+    "missed": [
+     "goto-ni"
+    ],
+    "extra": [
+     "no-mae-position",
+     "sa-nominal"
+    ],
+    "seconds": 11.021229982376099,
+    "boxes": null,
+    "charAccuracy": 0.6024390243902439,
+    "charRecall": 0.9146341463414634,
+    "charPrecision": 0.97911227154047,
+    "kanaInsertRate": 0.10704960835509138,
+    "foreignInsertRate": 0.014360313315926894
+   },
+   {
+    "image": "IMG_8917",
+    "tp": 19,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 7.392881989479065,
+    "boxes": null,
+    "charAccuracy": 0.419457735247209,
+    "charRecall": 0.9266347687400319,
+    "charPrecision": 0.8481751824817518,
+    "kanaInsertRate": 0.2291970802919708,
+    "foreignInsertRate": 0.020437956204379562
+   },
+   {
+    "image": "IMG_8918",
+    "tp": 28,
+    "fp": 0,
+    "fn": 17,
+    "missed": [
+     "adj-adverbial",
+     "dasu-burst-out",
+     "hitsuyou-ga-aru",
+     "hou-ga-ii",
+     "kata-way-of-doing",
+     "koso",
+     "mono-da",
+     "muke",
+     "n-desu-explanatory",
+     "nakereba-naranai",
+     "ni-wa-purpose",
+     "soshite-conjunction",
+     "sugiru",
+     "tame-ni",
+     "te-kuru",
+     "toki-when",
+     "wo-to-suru"
+    ],
+    "extra": [],
+    "seconds": 8.877490997314453,
+    "boxes": null,
+    "charAccuracy": 0.4194373401534527,
+    "charRecall": 0.5038363171355499,
+    "charPrecision": 0.985,
+    "kanaInsertRate": 0.06,
+    "foreignInsertRate": 0.008333333333333333
+   },
+   {
+    "image": "IMG_8919",
+    "tp": 53,
+    "fp": 2,
+    "fn": 7,
+    "missed": [
+     "deshou-guess",
+     "koto-da-advice",
+     "ni-taishite",
+     "no-wa-emphasis",
+     "teki-suffix",
+     "to-itte-ita",
+     "to-ittemo"
+    ],
+    "extra": [
+     "koto-de-means",
+     "to-wa-kagiranai"
+    ],
+    "seconds": 8.952733039855957,
+    "boxes": null,
+    "charAccuracy": 0.48972296693476314,
+    "charRecall": 0.870420017873101,
+    "charPrecision": 0.9567779960707269,
+    "kanaInsertRate": 0.22593320235756384,
+    "foreignInsertRate": 0.007858546168958742
+   },
+   {
+    "image": "IMG_8920",
+    "tp": 36,
+    "fp": 0,
+    "fn": 11,
+    "missed": [
+     "deshou-guess",
+     "ja-nakute",
+     "koto-ni-naru",
+     "n-desu-ga-preface",
+     "no-mae-position",
+     "node",
+     "question-word-ka",
+     "shikashi-conjunction",
+     "te-miru",
+     "to-iu-koto-nominalizer",
+     "tsumari"
+    ],
+    "extra": [],
+    "seconds": 8.186377048492432,
+    "boxes": null,
+    "charAccuracy": 0.6863247863247863,
+    "charRecall": 0.8333333333333334,
+    "charPrecision": 0.9808853118712274,
+    "kanaInsertRate": 0.07545271629778671,
+    "foreignInsertRate": 0.008048289738430584
+   },
+   {
+    "image": "IMG_8921",
+    "tp": 43,
+    "fp": 0,
+    "fn": 5,
+    "missed": [
+     "node",
+     "o-suru-humble",
+     "tame-ni",
+     "te-kudasai",
+     "teki-suffix"
+    ],
+    "extra": [],
+    "seconds": 9.126415967941284,
+    "boxes": null,
+    "charAccuracy": 0.4906500445235975,
+    "charRecall": 0.9492430988423864,
+    "charPrecision": 0.9647058823529412,
+    "kanaInsertRate": 0.21085972850678733,
+    "foreignInsertRate": 0.0027149321266968325
+   },
+   {
+    "image": "IMG_8922",
+    "tp": 67,
+    "fp": 3,
+    "fn": 5,
+    "missed": [
+     "betsu-ni-nai",
+     "n-desu-ga-preface",
+     "ni-taishite",
+     "teki-suffix",
+     "tokoroga-conjunction"
+    ],
+    "extra": [
+     "ga-hoshii",
+     "ippou-de",
+     "you-na-example"
+    ],
+    "seconds": 11.763710975646973,
+    "boxes": null,
+    "charAccuracy": 0.6239447429009977,
+    "charRecall": 0.9608595548733692,
+    "charPrecision": 0.9528158295281582,
+    "kanaInsertRate": 0.18493150684931506,
+    "foreignInsertRate": 0.0045662100456621
+   },
+   {
+    "image": "IMG_8923",
+    "tp": 57,
+    "fp": 2,
+    "fn": 5,
+    "missed": [
+     "hazu-da",
+     "koto-da-advice",
+     "koto-ka",
+     "ni-oujite",
+     "tatoe-temo"
+    ],
+    "extra": [
+     "nai-to",
+     "sura"
+    ],
+    "seconds": 9.729490995407104,
+    "boxes": null,
+    "charAccuracy": 0.5577235772357724,
+    "charRecall": 0.9617886178861789,
+    "charPrecision": 0.9517296862429606,
+    "kanaInsertRate": 0.17860016090104586,
+    "foreignInsertRate": 0.0056315366049879325
+   },
+   {
+    "image": "IMG_8924",
+    "tp": 56,
+    "fp": 1,
+    "fn": 7,
+    "missed": [
+     "imperative-form",
+     "nakanaka-nai",
+     "ni-tsurete",
+     "soreni-conjunction",
+     "te-touzen-da",
+     "to-sarete-iru",
+     "wake-dewa-nai"
+    ],
+    "extra": [
+     "aida-during"
+    ],
+    "seconds": 13.820889949798584,
+    "boxes": null,
+    "charAccuracy": 0.46073662265462123,
+    "charRecall": 0.8936761640027797,
+    "charPrecision": 0.976461655277145,
+    "kanaInsertRate": 0.23158694001518604,
+    "foreignInsertRate": 0.0037965072133637054
+   },
+   {
+    "image": "IMG_8925",
+    "tp": 28,
+    "fp": 0,
+    "fn": 6,
+    "missed": [
+     "ba-ii",
+     "demo-demo",
+     "kata-way-of-doing",
+     "koto-ni-naru",
+     "ta-ato-de",
+     "wa-yori-comparison"
+    ],
+    "extra": [],
+    "seconds": 9.125983953475952,
+    "boxes": null,
+    "charAccuracy": 0.7161354581673307,
+    "charRecall": 0.8555776892430279,
+    "charPrecision": 0.9772468714448237,
+    "kanaInsertRate": 0.03526734926052332,
+    "foreignInsertRate": 0.006825938566552901
+   },
+   {
+    "image": "IMG_8926",
+    "tp": 18,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "sorekara-conjunction"
+    ],
+    "extra": [],
+    "seconds": 8.802111029624939,
+    "boxes": null,
+    "charAccuracy": 0.6210392902408112,
+    "charRecall": 0.8605830164765526,
+    "charPrecision": 0.9883551673944687,
+    "kanaInsertRate": 0.09170305676855896,
+    "foreignInsertRate": 0.008733624454148471
+   },
+   {
+    "image": "IMG_8927",
+    "tp": 19,
+    "fp": 1,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "wo-to-suru"
+    ],
+    "seconds": 11.50220000743866,
+    "boxes": null,
+    "charAccuracy": 0.3817891373801917,
+    "charRecall": 0.9265175718849841,
+    "charPrecision": 0.8682634730538922,
+    "kanaInsertRate": 0.2844311377245509,
+    "foreignInsertRate": 0.016467065868263474
+   },
+   {
+    "image": "IMG_8928",
+    "tp": 27,
+    "fp": 2,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "juu-chuu-throughout",
+     "sa-nominal"
+    ],
+    "seconds": 12.671069025993347,
+    "boxes": null,
+    "charAccuracy": 0.5593582887700534,
+    "charRecall": 0.9090909090909091,
+    "charPrecision": 0.8937960042060988,
+    "kanaInsertRate": 0.1587802313354364,
+    "foreignInsertRate": 0.019978969505783387
+   },
+   {
+    "image": "IMG_8929",
+    "tp": 48,
+    "fp": 1,
+    "fn": 1,
+    "missed": [
+     "sae"
+    ],
+    "extra": [
+     "to-shite"
+    ],
+    "seconds": 9.78195595741272,
+    "boxes": null,
+    "charAccuracy": 0.6892230576441103,
+    "charRecall": 0.9786967418546366,
+    "charPrecision": 0.9342105263157895,
+    "kanaInsertRate": 0.12320574162679426,
+    "foreignInsertRate": 0.01555023923444976
+   },
+   {
+    "image": "IMG_8930",
+    "tp": 30,
+    "fp": 4,
+    "fn": 1,
+    "missed": [
+     "o-kudasai"
+    ],
+    "extra": [
+     "giving-receiving-verbs",
+     "ja-nai",
+     "n-desu-explanatory",
+     "no-de-wa-nai-ka"
+    ],
+    "seconds": 8.602890014648438,
+    "boxes": null,
+    "charAccuracy": 0.5272108843537415,
+    "charRecall": 0.935374149659864,
+    "charPrecision": 0.9136212624584718,
+    "kanaInsertRate": 0.14950166112956811,
+    "foreignInsertRate": 0.009966777408637873
+   },
+   {
+    "image": "IMG_8931",
+    "tp": 49,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 8.508478999137878,
+    "boxes": null,
+    "charAccuracy": 0.6954087346024636,
+    "charRecall": 0.975363941769317,
+    "charPrecision": 0.9699331848552338,
+    "kanaInsertRate": 0.13251670378619154,
+    "foreignInsertRate": 0.0077951002227171495
+   },
+   {
+    "image": "IMG_8932",
+    "tp": 25,
+    "fp": 1,
+    "fn": 2,
+    "missed": [
+     "meku",
+     "o-suru-humble"
+    ],
+    "extra": [
+     "wa-ga-double-subject"
+    ],
+    "seconds": 12.10123598575592,
+    "boxes": null,
+    "charAccuracy": 0.4817275747508306,
+    "charRecall": 0.9285714285714286,
+    "charPrecision": 0.8281481481481482,
+    "kanaInsertRate": 0.18814814814814815,
+    "foreignInsertRate": 0.023703703703703703
+   },
+   {
+    "image": "IMG_8933",
+    "tp": 68,
+    "fp": 1,
+    "fn": 3,
+    "missed": [
+     "komu-compound",
+     "mono-da",
+     "nazenara"
+    ],
+    "extra": [
+     "i-adj-past"
+    ],
+    "seconds": 12.533138990402222,
+    "boxes": null,
+    "charAccuracy": 0.5193945127719962,
+    "charRecall": 0.9668874172185431,
+    "charPrecision": 0.9436749769159741,
+    "kanaInsertRate": 0.23822714681440443,
+    "foreignInsertRate": 0.007386888273314866
+   },
+   {
+    "image": "IMG_8934",
+    "tp": 54,
+    "fp": 0,
+    "fn": 3,
+    "missed": [
+     "kamoshirenai",
+     "particle-plus-no",
+     "shikashi-conjunction"
+    ],
+    "extra": [],
+    "seconds": 13.683801054954529,
+    "boxes": null,
+    "charAccuracy": 0.5576382380506092,
+    "charRecall": 0.9746954076850984,
+    "charPrecision": 0.9506398537477148,
+    "kanaInsertRate": 0.1636197440585009,
+    "foreignInsertRate": 0.011882998171846435
+   },
+   {
+    "image": "IMG_8935",
+    "tp": 29,
+    "fp": 1,
+    "fn": 4,
+    "missed": [
+     "baai-wa",
+     "hou-ga-ii",
+     "kata-way-of-doing",
+     "te-miru"
+    ],
+    "extra": [
+     "totemo-nai"
+    ],
+    "seconds": 9.57952892780304,
+    "boxes": null,
+    "charAccuracy": 0.634765625,
+    "charRecall": 0.908203125,
+    "charPrecision": 0.93,
+    "kanaInsertRate": 0.16,
+    "foreignInsertRate": 0.014
+   },
+   {
+    "image": "IMG_8936",
+    "tp": 16,
+    "fp": 1,
+    "fn": 3,
+    "missed": [
+     "no-mae-position",
+     "question-word-ka",
+     "to-quotation"
+    ],
+    "extra": [
+     "imperative-form"
+    ],
+    "seconds": 9.059210062026978,
+    "boxes": null,
+    "charAccuracy": 0.6971428571428571,
+    "charRecall": 0.88,
+    "charPrecision": 0.8901734104046243,
+    "kanaInsertRate": 0.08670520231213873,
+    "foreignInsertRate": 0.02023121387283237
+   },
+   {
+    "image": "IMG_8937",
+    "tp": 31,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "te-shimau"
+    ],
+    "extra": [],
+    "seconds": 9.079074025154114,
+    "boxes": null,
+    "charAccuracy": 0.662020905923345,
+    "charRecall": 0.8623693379790941,
+    "charPrecision": 0.9183673469387755,
+    "kanaInsertRate": 0.14471243042671614,
+    "foreignInsertRate": 0.01855287569573284
+   },
+   {
+    "image": "IMG_8938",
+    "tp": 20,
+    "fp": 2,
+    "fn": 2,
+    "missed": [
+     "to-omotte-iru",
+     "tochuu-de"
+    ],
+    "extra": [
+     "juu-chuu-throughout",
+     "to-omou"
+    ],
+    "seconds": 9.56363308429718,
+    "boxes": null,
+    "charAccuracy": 0.5261044176706827,
+    "charRecall": 0.8132530120481928,
+    "charPrecision": 0.819838056680162,
+    "kanaInsertRate": 0.10323886639676114,
+    "foreignInsertRate": 0.02631578947368421
+   },
+   {
+    "image": "IMG_8939",
+    "tp": 22,
+    "fp": 2,
+    "fn": 1,
+    "missed": [
+     "n-desu-ga-preface"
+    ],
+    "extra": [
+     "hou-ga-ii",
+     "to-wa-kagiranai"
+    ],
+    "seconds": 8.524348974227905,
+    "boxes": null,
+    "charAccuracy": 0.49595687331536387,
+    "charRecall": 0.8787061994609164,
+    "charPrecision": 0.8511749347258486,
+    "kanaInsertRate": 0.25326370757180156,
+    "foreignInsertRate": 0.010443864229765013
+   },
+   {
+    "image": "IMG_8940",
+    "tp": 16,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 8.819692969322205,
+    "boxes": null,
+    "charAccuracy": 0.8715846994535519,
+    "charRecall": 0.9098360655737705,
+    "charPrecision": 0.9487179487179487,
+    "kanaInsertRate": 0.019943019943019943,
+    "foreignInsertRate": 0.0
+   },
+   {
+    "image": "IMG_8941",
+    "tp": 18,
+    "fp": 2,
+    "fn": 0,
+    "missed": [],
+    "extra": [
+     "giving-receiving-verbs",
+     "to-wa-kagiranai"
+    ],
+    "seconds": 11.13812506198883,
+    "boxes": null,
+    "charAccuracy": 0.4152542372881356,
+    "charRecall": 0.8135593220338984,
+    "charPrecision": 0.735632183908046,
+    "kanaInsertRate": 0.2164750957854406,
+    "foreignInsertRate": 0.011494252873563218
+   },
+   {
+    "image": "IMG_8942",
+    "tp": 15,
+    "fp": 1,
+    "fn": 1,
+    "missed": [
+     "kosoado-konna"
+    ],
+    "extra": [
+     "giving-receiving-verbs"
+    ],
+    "seconds": 9.404738068580627,
+    "boxes": null,
+    "charAccuracy": 0.47619047619047616,
+    "charRecall": 0.8991596638655462,
+    "charPrecision": 0.7535211267605634,
+    "kanaInsertRate": 0.21830985915492956,
+    "foreignInsertRate": 0.025821596244131457
+   },
+   {
+    "image": "IMG_8943",
+    "tp": 21,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": [],
+    "seconds": 8.865224957466125,
+    "boxes": null,
+    "charAccuracy": 0.5535714285714286,
+    "charRecall": 0.9071428571428571,
+    "charPrecision": 0.8758620689655172,
+    "kanaInsertRate": 0.23103448275862068,
+    "foreignInsertRate": 0.02413793103448276
+   },
+   {
+    "image": "IMG_8944",
+    "tp": 18,
+    "fp": 0,
+    "fn": 12,
+    "missed": [
+     "deshou-guess",
+     "ga-aru-iru",
+     "kosoado-konna",
+     "n-desu-explanatory",
+     "nakanaka-nai",
+     "passive",
+     "te-iru",
+     "te-kudasai",
+     "toki-when",
+     "wa-dou-desu-ka",
+     "wa-ga-double-subject",
+     "wake-da"
+    ],
+    "extra": [],
+    "seconds": 7.760823965072632,
+    "boxes": null,
+    "charAccuracy": 0.39655172413793105,
+    "charRecall": 0.46551724137931033,
+    "charPrecision": 0.9585798816568047,
+    "kanaInsertRate": 0.10650887573964497,
+    "foreignInsertRate": 0.0
+   },
+   {
+    "image": "IMG_8945",
+    "tp": 24,
+    "fp": 2,
+    "fn": 2,
+    "missed": [
+     "koto-de-means",
+     "no-mae-position"
+    ],
+    "extra": [
+     "ten-aspect",
+     "to-wa-definition"
+    ],
+    "seconds": 11.734055042266846,
+    "boxes": null,
+    "charAccuracy": 0.4893267651888341,
+    "charRecall": 0.8555008210180624,
+    "charPrecision": 0.7650513950073421,
+    "kanaInsertRate": 0.1262848751835536,
+    "foreignInsertRate": 0.033773861967694566
+   },
+   {
+    "image": "IMG_8946",
+    "tp": 25,
+    "fp": 1,
+    "fn": 3,
+    "missed": [
+     "adj-adverbial",
+     "naosu-redo",
+     "to-omou"
+    ],
+    "extra": [
+     "kosoado-konna"
+    ],
+    "seconds": 9.382027983665466,
+    "boxes": null,
+    "charAccuracy": 0.5857142857142856,
+    "charRecall": 0.9371428571428572,
+    "charPrecision": 0.8840970350404312,
+    "kanaInsertRate": 0.1509433962264151,
+    "foreignInsertRate": 0.02425876010781671
+   },
+   {
+    "image": "IMG_8947",
+    "tp": 10,
+    "fp": 0,
+    "fn": 2,
+    "missed": [
+     "hitsuyou-ga-aru",
+     "kenjougo-special-verbs"
+    ],
+    "extra": [],
+    "seconds": 6.670956015586853,
+    "boxes": null,
+    "charAccuracy": 0.8690476190476191,
+    "charRecall": 0.9285714285714286,
+    "charPrecision": 0.975,
+    "kanaInsertRate": 0.04375,
+    "foreignInsertRate": 0.0
+   },
+   {
+    "image": "IMG_8948",
+    "tp": 14,
+    "fp": 1,
+    "fn": 3,
+    "missed": [
+     "kata-way-of-doing",
+     "nagara",
+     "ni-kotaete"
+    ],
+    "extra": [
+     "ka-suffix"
+    ],
+    "seconds": 7.862229943275452,
+    "boxes": null,
+    "charAccuracy": 0.541033434650456,
+    "charRecall": 0.8601823708206687,
+    "charPrecision": 0.8372781065088757,
+    "kanaInsertRate": 0.1952662721893491,
+    "foreignInsertRate": 0.011834319526627219
+   },
+   {
+    "image": "IMG_8949",
+    "tp": 9,
+    "fp": 4,
+    "fn": 3,
+    "missed": [
+     "nan-to-iu-exclamation",
+     "ni-sakidatte",
+     "o-suru-humble"
+    ],
+    "extra": [
+     "hou-ga-ii",
+     "kara-aru",
+     "koto-nominalizer",
+     "ku-naru-ni-naru"
+    ],
+    "seconds": 10.770691990852356,
+    "boxes": null,
+    "charAccuracy": 0.0,
+    "charRecall": 0.7834549878345499,
+    "charPrecision": 0.5375626043405676,
+    "kanaInsertRate": 0.27712854757929883,
+    "foreignInsertRate": 0.06844741235392321
+   },
+   {
+    "image": "IMG_8950",
+    "tp": 14,
+    "fp": 1,
+    "fn": 2,
+    "missed": [
+     "adj-adverbial",
+     "tara"
+    ],
+    "extra": [
+     "koto-ni-natte-iru"
+    ],
+    "seconds": 8.571689009666443,
+    "boxes": null,
+    "charAccuracy": 0.8366197183098592,
+    "charRecall": 0.8788732394366198,
+    "charPrecision": 0.9258160237388724,
+    "kanaInsertRate": 0.04154302670623145,
+    "foreignInsertRate": 0.0
+   },
+   {
+    "image": "IMG_8951",
+    "tp": 10,
+    "fp": 2,
+    "fn": 1,
+    "missed": [
+     "ya-nado"
+    ],
+    "extra": [
+     "koto-nominalizer",
+     "to-quotation"
+    ],
+    "seconds": 8.147478103637695,
+    "boxes": null,
+    "charAccuracy": 0.0,
+    "charRecall": 0.7423312883435583,
+    "charPrecision": 0.3418079096045198,
+    "kanaInsertRate": 0.3220338983050847,
+    "foreignInsertRate": 0.02824858757062147
+   },
+   {
+    "image": "IMG_8952",
+    "tp": 7,
+    "fp": 0,
+    "fn": 15,
+    "missed": [
+     "ga-aru-iru",
+     "kana-wonder",
+     "komu-compound",
+     "n-desu-explanatory",
+     "nagara",
+     "ni-tsuite",
+     "no-mae-position",
+     "o-kudasai",
+     "particle-plus-no",
+     "sonkeigo-special-verbs",
+     "te-iku",
+     "te-iru",
+     "te-kara",
+     "to-tomo-ni",
+     "toki-when"
+    ],
+    "extra": [],
+    "seconds": 9.033367991447449,
+    "boxes": null,
+    "charAccuracy": 0.24662813102119463,
+    "charRecall": 0.2832369942196532,
+    "charPrecision": 0.8546511627906976,
+    "kanaInsertRate": 0.05813953488372093,
+    "foreignInsertRate": 0.046511627906976744
+   },
+   {
+    "image": "IMG_8953",
+    "tp": 26,
+    "fp": 6,
+    "fn": 6,
+    "missed": [
+     "ni-tsuite",
+     "particle-plus-no",
+     "question-word-mo-nai",
+     "tara-ta-discovery",
+     "te-miru",
+     "volitional-form"
+    ],
+    "extra": [
+     "hou-ga-ii",
+     "ja-nai",
+     "ku-naru-ni-naru",
+     "no-de-wa-nai-ka",
+     "tara",
+     "te-mo-ii"
+    ],
+    "seconds": 10.9724440574646,
+    "boxes": null,
+    "charAccuracy": 0.265079365079365,
+    "charRecall": 0.8746031746031746,
+    "charPrecision": 0.6827757125154895,
+    "kanaInsertRate": 0.2342007434944238,
+    "foreignInsertRate": 0.01734820322180917
+   },
+   {
+    "image": "IMG_8954",
+    "tp": 25,
+    "fp": 5,
+    "fn": 4,
+    "missed": [
+     "koto-ni-natte-iru",
+     "tachi-plural",
+     "te-wa-ikenai",
+     "volitional-form"
+    ],
+    "extra": [
+     "giving-receiving-verbs",
+     "ku-naru-ni-naru",
+     "o-suru-humble",
+     "ten-aspect",
+     "to-wa-definition"
+    ],
+    "seconds": 9.556221008300781,
+    "boxes": null,
+    "charAccuracy": 0.35944700460829493,
+    "charRecall": 0.9078341013824884,
+    "charPrecision": 0.7406015037593985,
+    "kanaInsertRate": 0.2650375939849624,
+    "foreignInsertRate": 0.007518796992481203
+   },
+   {
+    "image": "IMG_8955",
+    "tp": 13,
+    "fp": 1,
+    "fn": 3,
+    "missed": [
+     "ageru-compound",
+     "ga-aru-iru",
+     "kata-way-of-doing"
+    ],
+    "extra": [
+     "sei-ka"
+    ],
+    "seconds": 8.99324893951416,
+    "boxes": null,
+    "charAccuracy": 0.7008547008547008,
+    "charRecall": 0.8005698005698005,
+    "charPrecision": 0.9093851132686084,
+    "kanaInsertRate": 0.06472491909385113,
+    "foreignInsertRate": 0.003236245954692557
+   },
+   {
+    "image": "IMG_8956",
+    "tp": 23,
+    "fp": 3,
+    "fn": 5,
+    "missed": [
+     "komu-compound",
+     "no-dewa-nai-darou-ka",
+     "no-hitotsu-da",
+     "te-miru",
+     "ya-nado"
+    ],
+    "extra": [
+     "giving-receiving-verbs",
+     "juu-chuu-throughout",
+     "kosoado-konna"
+    ],
+    "seconds": 9.951960921287537,
+    "boxes": null,
+    "charAccuracy": 0.5071574642126789,
+    "charRecall": 0.8916155419222904,
+    "charPrecision": 0.8180112570356473,
+    "kanaInsertRate": 0.21575984990619138,
+    "foreignInsertRate": 0.00375234521575985
+   },
+   {
+    "image": "IMG_8957",
+    "tp": 24,
+    "fp": 6,
+    "fn": 4,
+    "missed": [
+     "n-desu-ga-preface",
+     "no-dewa-nai-darou-ka",
+     "no-hitotsu-da",
+     "te-miru"
+    ],
+    "extra": [
+     "dake-only",
+     "gata-type",
+     "giving-receiving-verbs",
+     "n-desu-explanatory",
+     "to-iu-quote",
+     "to-wa-kagiranai"
+    ],
+    "seconds": 11.103103995323181,
+    "boxes": null,
+    "charAccuracy": 0.5630081300813008,
+    "charRecall": 0.8983739837398373,
+    "charPrecision": 0.8735177865612648,
+    "kanaInsertRate": 0.17786561264822134,
+    "foreignInsertRate": 0.003952569169960474
+   }
+  ]
+ }
+}

@@ -13,6 +13,9 @@ final class CameraController: NSObject, ObservableObject {
     @Published private(set) var liveResult: ScanResult = .empty
     /// 方向校正后（竖屏）的帧尺寸，用于把归一化坐标换算到屏幕。
     @Published private(set) var frameSize: CGSize = .zero
+    /// 本次启动后是否已经收到新画面。没收到之前取景层保持隐藏，
+    /// 避免显示上一次停留时残留的旧画面（切回扫描页时会「闪一下」）。
+    @Published private(set) var hasLiveFrame = false
     @Published var torchOn = false {
         didSet { applyTorch() }
     }
@@ -30,8 +33,11 @@ final class CameraController: NSObject, ObservableObject {
     private var lastAnalysis = Date.distantPast
     private let analysisInterval: TimeInterval = 0.6
     private var latestBuffer: CVPixelBuffer?
+    private var awaitingFirstFrame = false
     private let bufferLock = NSLock()
     private let ciContext = CIContext()
+    /// 只在 analysisQueue 上使用
+    private let stabilizer = LiveResultStabilizer()
 
     init(matcher: GrammarMatcher) {
         self.matcher = matcher
@@ -56,6 +62,8 @@ final class CameraController: NSObject, ObservableObject {
     }
 
     func stop() {
+        hasLiveFrame = false
+        liveResult = .empty
         sessionQueue.async { [weak self] in
             guard let self else { return }
             if self.session.isRunning { self.session.stopRunning() }
@@ -85,7 +93,13 @@ final class CameraController: NSObject, ObservableObject {
                     return
                 }
             }
-            if !self.session.isRunning { self.session.startRunning() }
+            if !self.session.isRunning {
+                self.bufferLock.lock()
+                self.latestBuffer = nil
+                self.awaitingFirstFrame = true
+                self.bufferLock.unlock()
+                self.session.startRunning()
+            }
             self.setStatus(.running)
         }
     }
@@ -135,7 +149,16 @@ extension CameraController: AVCaptureVideoDataOutputSampleBufferDelegate {
         guard let buffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         bufferLock.lock()
         latestBuffer = buffer
+        let isFirstFrame = awaitingFirstFrame
+        awaitingFirstFrame = false
         bufferLock.unlock()
+        if isFirstFrame {
+            stabilizer.reset()
+            DispatchQueue.main.async {
+                self.liveResult = .empty // 丢掉停止前还在路上的旧识别结果
+                self.hasLiveFrame = true
+            }
+        }
 
         // 在 analysisQueue（串行）上执行，所以这里同步识别即可；按时间间隔节流。
         guard !isAnalyzing, Date().timeIntervalSince(lastAnalysis) >= analysisInterval else { return }
@@ -150,7 +173,7 @@ extension CameraController: AVCaptureVideoDataOutputSampleBufferDelegate {
         let orientedSize = CGSize(width: height, height: width) // .right 旋转后宽高互换
 
         guard let ocr = try? TextRecognizer.recognize(pixelBuffer: buffer, orientation: frameOrientation) else { return }
-        let result = ScanAnalyzer.analyze(text: ocr.text, lines: ocr.lines, matcher: matcher)
+        let result = stabilizer.update(ScanAnalyzer.analyze(text: ocr.text, lines: ocr.lines, matcher: matcher))
         DispatchQueue.main.async {
             self.frameSize = orientedSize
             self.liveResult = result
