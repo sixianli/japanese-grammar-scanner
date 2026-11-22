@@ -1,11 +1,9 @@
 import XCTest
 @testable import JapaneseGrammarScanner
 
-/// Build 18 反馈 1、2：樱花动画的轨迹、时长和开关。
 final class SakuraTests: XCTestCase {
     private let row = CGSize(width: 360, height: 52)
 
-    /// 首页复习提醒：约 4 朵樱花 + 约 4 片花瓣，整段约 4 秒
     func testDriftHasFlowersAndPetalsAndLastsAboutFourSeconds() {
         let kinds = SakuraDrift.particles.map(\.kind)
         XCTAssertEqual(kinds.filter { $0 == .flower }.count, 4)
@@ -13,7 +11,6 @@ final class SakuraTests: XCTestCase {
         XCTAssertEqual(SakuraDrift.duration, 4, accuracy: 0.5)
     }
 
-    /// 从左边外面飘进来、从右边飘出去，中途一直在这一行的高度范围附近，飘完就消失
     func testDriftGoesLeftToRightAndEnds() {
         for p in SakuraDrift.particles {
             XCTAssertNil(SakuraDrift.state(p, elapsed: p.delay - 0.01, in: row), "出发前不显示")
@@ -30,7 +27,6 @@ final class SakuraTests: XCTestCase {
         }
     }
 
-    /// 铃铛先摇，樱花在铃铛摇起来之后才出发；摇完回到原位
     func testBellRingsFirstThenStops() {
         XCTAssertNotEqual(SakuraDrift.bellAngle(elapsed: 0.06), 0)
         XCTAssertEqual(SakuraDrift.bellAngle(elapsed: 1.0), 0)
@@ -38,7 +34,6 @@ final class SakuraTests: XCTestCase {
         XCTAssertGreaterThan(SakuraDrift.particles.map(\.delay).min() ?? 0, 0.2)
     }
 
-    /// 「减弱动态效果」打开时不播；端到端测试默认不播，传 -playAnimations 才播
     func testDecorativeMotionSwitch() {
         XCTAssertTrue(DecorativeMotion.enabled(reduceMotion: false, arguments: []))
         XCTAssertFalse(DecorativeMotion.enabled(reduceMotion: true, arguments: []))
@@ -47,7 +42,26 @@ final class SakuraTests: XCTestCase {
         XCTAssertFalse(DecorativeMotion.enabled(reduceMotion: true, arguments: ["-e2e", "-playAnimations"]))
     }
 
-    /// 樱花形状：五片花瓣都在方框里
+    func testReviewMotionReplaysWhenAppComesBackFromBackground() {
+        var replay = ForegroundReplay()
+        XCTAssertFalse(replay.shouldReplay(on: .inactive))
+        XCTAssertFalse(replay.shouldReplay(on: .background))
+        XCTAssertFalse(replay.shouldReplay(on: .inactive))
+        XCTAssertTrue(replay.shouldReplay(on: .active))
+        XCTAssertFalse(replay.shouldReplay(on: .active))
+    }
+
+    func testReviewMotionDoesNotReplayForControlCenterOrNotifications() {
+        var replay = ForegroundReplay()
+        XCTAssertFalse(replay.shouldReplay(on: .inactive))
+        XCTAssertFalse(replay.shouldReplay(on: .active))
+    }
+
+    func testReviewMotionStartsAfterLaunchTransition() {
+        XCTAssertGreaterThanOrEqual(SakuraDrift.appearDelay, 0.5)
+        XCTAssertEqual(SakuraDrift.bellAngle(elapsed: -SakuraDrift.appearDelay / 2), 0)
+    }
+
     func testFlowerShapeFitsItsFrame() {
         let rect = CGRect(x: 0, y: 0, width: 40, height: 40)
         let b = SakuraFlowerShape().path(in: rect).boundingRect
@@ -60,7 +74,6 @@ final class SakuraTests: XCTestCase {
     private let from = CGPoint(x: 360, y: 60)
     private let to = CGPoint(x: 250, y: 800)
 
-    /// 两朵小樱花 + 三片花瓣，一段飞完，约 1.2 秒
     func testFlightIsOneShortArc() {
         let kinds = FlightPath.particles.map(\.kind)
         XCTAssertEqual(kinds.filter { $0 == .flower }.count, 2)
@@ -69,7 +82,6 @@ final class SakuraTests: XCTestCase {
         XCTAssertLessThan(FlightPath.total, 1.8)
     }
 
-    /// 从收藏按钮出发、落进「收藏」标签；中途一直往下走（一段，不先炸开再飞回来）
     func testFlightStartsAtButtonAndEndsInPouch() {
         for p in FlightPath.particles {
             let a = try! XCTUnwrap(FlightPath.state(p, elapsed: p.delay, from: from, to: to))
@@ -90,7 +102,6 @@ final class SakuraTests: XCTestCase {
         }
     }
 
-    /// 到达时小布袋鼓一下，之后恢复
     func testPouchPuffsOnArrival() {
         XCTAssertNil(FlightPath.puffScale(elapsed: 0.2), "还没到时不鼓")
         let peak = (0...40).compactMap { FlightPath.puffScale(elapsed: FlightPath.arrival - 0.2 + Double($0) * 0.01) }.max() ?? 0
@@ -98,7 +109,6 @@ final class SakuraTests: XCTestCase {
         XCTAssertNil(FlightPath.puffScale(elapsed: FlightPath.total + 0.1), "鼓完就不显示")
     }
 
-    /// 只有「收藏」才飞，取消收藏不飞；减弱动态效果时不飞
     func testOnlyFavoritingLaunches() {
         XCTAssertTrue(FavoriteFlight.shouldLaunch(wasFavorite: false, reduceMotion: false, arguments: []))
         XCTAssertFalse(FavoriteFlight.shouldLaunch(wasFavorite: true, reduceMotion: false, arguments: []))
