@@ -21,6 +21,7 @@ SCREENSHOT_SIZES = {(1206, 2622), (1179, 2556)}
 LIMITS = {"name": 30, "subtitle": 30, "promotionalText": 170, "keywords": 100, "description": 4000}
 APP_INFO_FIELDS = ("name", "subtitle", "privacyPolicyUrl")
 VERSION_FIELDS = ("description", "keywords", "promotionalText", "supportUrl", "marketingUrl")
+REFUSED_SCRIPTS = {"缅甸文": ((0x1000, 0x109F), (0xA9E0, 0xA9FF), (0xAA60, 0xAA7F))}
 EDITABLE_STATES = {"PREPARE_FOR_SUBMISSION", "DEVELOPER_REJECTED", "REJECTED", "METADATA_REJECTED"}
 
 
@@ -53,6 +54,13 @@ def keyword_repeats(listing):
     return [k for k in (w.strip() for w in listing["keywords"].split(",")) if k and k.lower() in title]
 
 
+def refused_script(text):
+    for script, ranges in REFUSED_SCRIPTS.items():
+        if any(lo <= ord(ch) <= hi for ch in text for lo, hi in ranges):
+            return script
+    return None
+
+
 def check(listings, screenshot_dir=SCREENSHOT_DIR):
     problems = []
     for locale in sorted(REQUIRED_LOCALES - listings.keys()):
@@ -65,6 +73,10 @@ def check(listings, screenshot_dir=SCREENSHOT_DIR):
         for field, limit in LIMITS.items():
             if len(listing[field]) > limit:
                 problems.append(f"{locale}：{field} 有 {len(listing[field])} 个字符，超过 App Store 的上限 {limit}")
+        for field in APP_INFO_FIELDS + VERSION_FIELDS:
+            script = refused_script(listing[field])
+            if script:
+                problems.append(f"{locale}：{field} 里有{script}，App Store Connect 不收这种文字，改用拉丁字母写")
         for field in ("privacyPolicyUrl", "supportUrl", "marketingUrl"):
             if not listing[field].startswith("https://"):
                 problems.append(f"{locale}：{field} 必须是 https 网址")
@@ -217,13 +229,14 @@ def sync(api, bundle_id, version, listings, apply, log=print, screenshot_dir=SCR
     info = find_app_info(api, app["id"])
     ver = find_version(api, app["id"], version)
     info_locs = by_locale(api.call("GET", f"/appInfos/{info['id']}/appInfoLocalizations?limit=50")["data"])
-    ver_locs = by_locale(api.call("GET", f"/appStoreVersions/{ver['id']}/appStoreVersionLocalizations?limit=50")["data"])
     primary = attrs(app).get("primaryLocale")
     order = sorted(listings, key=lambda loc: (loc != primary, loc))
     for locale in order:
-        listing = listings[locale]
         sync_localization(api, "App 信息（名称、副标题、隐私政策网址）", "appInfo", info["id"], info_locs, locale,
-                          listing, APP_INFO_FIELDS, apply, log)
+                          listings[locale], APP_INFO_FIELDS, apply, log)
+    ver_locs = by_locale(api.call("GET", f"/appStoreVersions/{ver['id']}/appStoreVersionLocalizations?limit=50")["data"])
+    for locale in order:
+        listing = listings[locale]
         version_loc = sync_localization(api, "版本页文案（描述、关键词、宣传文本、网址）", "appStoreVersion", ver["id"],
                                         ver_locs, locale, listing, VERSION_FIELDS, apply, log)
         sync_screenshots(api, version_loc, locale, screenshot_files(listing, screenshot_dir), apply, log)
