@@ -150,10 +150,10 @@ final class DetailTests: E2ETestCase {
         XCTAssertLessThanOrEqual(frame.maxX, window.maxX, "\(state)：标题不能超出屏幕右边：\(frame)", file: file, line: line)
         let favorite = id("detail.favorite")
         let back = app.buttons["BackButton"].firstMatch
-        if favorite.exists, favorite.frame.minX > page.frame.minX, favorite.frame.maxX <= page.frame.maxX + 1 {
+        if favorite.exists, favorite.frame.maxY > frame.minY, favorite.frame.minY < frame.maxY {
             XCTAssertLessThanOrEqual(frame.maxX, favorite.frame.minX + 1, "\(state)：标题不能压到右上角收藏键：标题 \(frame)，收藏键 \(favorite.frame)", file: file, line: line)
         }
-        if pinned, back.exists, back.frame.maxX < page.frame.midX, back.frame.minX >= page.frame.minX - 1 {
+        if pinned, back.exists, back.frame.maxY > frame.minY, back.frame.minY < frame.maxY {
             XCTAssertGreaterThanOrEqual(frame.minX, back.frame.maxX - 1, "\(state)：标题不能压到返回键：标题 \(frame)，返回键 \(back.frame)", file: file, line: line)
         }
     }
