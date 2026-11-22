@@ -143,6 +143,10 @@ final class DetailTests: E2ETestCase {
         let page = app.windows.firstMatch
         XCTAssertTrue(page.exists, "应能找到 App 窗口", file: file, line: line)
         let frame = element.frame
+        let scrolls = app.scrollViews.allElementsBoundByIndex.map { "\($0.frame)" }.joined(separator: " | ")
+        let layoutNote = "状态=\(state) 窗口=\(app.windows.firstMatch.frame) App=\(app.frame) 滚动区=\(scrolls) 返回=\(app.buttons["BackButton"].firstMatch.frame) 收藏=\(id("detail.favorite").frame)"
+        print("LAYOUT \(layoutNote)")
+        XCTContext.runActivity(named: layoutNote) { _ in }
         let inset = pinned ? CGFloat(68) : CGFloat(20)
         XCTAssertEqual(frame.midX, page.frame.midX, accuracy: 3, "\(state)：标题「\(title)」应在页面正中，不偏左右：标题 \(frame)，页面 \(page.frame)", file: file, line: line)
         XCTAssertGreaterThanOrEqual(frame.minX, page.frame.minX + inset - 1, "\(state)：标题不能超出左边（页边距 / 返回键）：标题 \(frame)，页面 \(page.frame)", file: file, line: line)
