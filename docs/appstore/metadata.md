@@ -95,7 +95,7 @@ Info.plist 已设置 `ITSAppUsesNonExemptEncryption = NO`，上传后无需额�
 
 ## 截图要求
 
-需要 6.9 英寸 (1320×2868) 或 6.7 英寸 (1290×2796) iPhone 截图至少 1 张（最多 10 张）。建议拍摄：
+必填的是「iPhone with Dynamic Island (medium display)」一组，只收 1206×2622 或 1179×2556，至少 1 张（最多 10 张）；CI 截的是 1320×2868（属于 large display 一组），要先缩放成 1206×2622 再上传。建议拍摄：
 1. 扫描页实时高亮
 2. 识别结果页（图片 + 语法点列表）
 3. 语法讲解页
