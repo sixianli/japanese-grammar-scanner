@@ -141,7 +141,8 @@ jobs:
         run: |
           UDID="${{ steps.sim.outputs.udid }}"
           defaults write com.apple.iphonesimulator ConnectHardwareKeyboard -bool false
-          (while true; do echo "== $(date +%T) load $(sysctl -n vm.loadavg) procs $(ps ax | wc -l)"; top -l 2 -s 5 -n 8 -o cpu -stats pid,command,cpu | awk '/^Processes:/{n++} n==2' | grep -E "^CPU usage|^[0-9]"; sleep 10; done) > cpu.log 2>&1 &
+          # 每 30 秒记一次机器负载，对照用例耗时看是不是机器满载拖慢
+          (while true; do echo "$(date +%T) load $(sysctl -n vm.loadavg)"; sleep 30; done) > cpu.log 2>&1 &
           (
             set -e
             echo "$(date +%T) boot"
@@ -186,7 +187,9 @@ jobs:
             -only-testing:JapaneseGrammarScannerUITests/SearchTests/testNoResults \
             CODE_SIGNING_ALLOWED=NO > warmup.log 2>&1 || true
           grep -E "Test Case .* (passed|failed)" warmup.log || true
-          ITERATIONS=()
+          # CI 机器开跑前后长时间满载（CPU 空闲 0%），偶发超时；失败的用例自动重跑一次，
+          # 汇总任务会列出「重跑才过」的用例。连跑（e2e_repeat > 1）时不重跑，任何一遍失败都算失败。
+          ITERATIONS=(-retry-tests-on-failure -test-iterations 2)
           if [ "$E2E_REPEAT" -gt 1 ]; then ITERATIONS=(-test-iterations "$E2E_REPEAT"); fi
           xcodebuild test-without-building \
             -project JapaneseGrammarScanner.xcodeproj \

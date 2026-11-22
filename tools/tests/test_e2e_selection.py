@@ -29,6 +29,10 @@ def passed_line(cls, method):
     return f"Test Case '-[JapaneseGrammarScannerUITests.{cls} {method}]' passed (3.1 seconds).\n"
 
 
+def failed_line(cls, method):
+    return f"Test Case '-[JapaneseGrammarScannerUITests.{cls} {method}]' failed (90.0 seconds).\n"
+
+
 class E2ESelectionTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
@@ -112,6 +116,33 @@ class E2ESelectionTests(unittest.TestCase):
             check_e2e_ran_all.rerun_value(["DetailTests.testTitleBar", "SearchTests.testNoResults"]),
             "DetailTests/testTitleBar,SearchTests/testNoResults",
         )
+
+    def test_test_that_passed_only_on_retry_is_reported_as_retried(self):
+        log = self.write_log(
+            failed_line("DetailTests", "testTitleBar") + passed_line("DetailTests", "testTitleBar")
+            + passed_line("DetailTests", "testFavorite")
+        )
+
+        self.assertEqual(check_e2e_ran_all.missing(log, "DetailTests", self.root), [])
+        self.assertEqual(check_e2e_ran_all.retried(log), ["DetailTests.testTitleBar"])
+
+    def test_test_that_failed_every_attempt_is_missing_not_retried(self):
+        log = self.write_log(failed_line("DetailTests", "testTitleBar") + failed_line("DetailTests", "testTitleBar"))
+
+        self.assertEqual(check_e2e_ran_all.missing(log, "DetailTests/testTitleBar", self.root), ["DetailTests.testTitleBar"])
+        self.assertEqual(check_e2e_ran_all.retried(log), [])
+
+    def test_command_line_prints_retried_tests_but_still_passes(self):
+        log = self.write_log(failed_line("SearchTests", "testNoResults") + passed_line("SearchTests", "testNoResults"))
+
+        result = subprocess.run(
+            [sys.executable, os.path.join(TOOLS, "check_e2e_ran_all.py"), log, "--only", "SearchTests/testNoResults"],
+            capture_output=True, text=True,
+        )
+
+        self.assertEqual(result.returncode, 0)
+        self.assertIn("SearchTests/testNoResults", result.stdout)
+        self.assertIn("重跑", result.stdout)
 
     def test_command_line_rejects_unknown_selection_with_exit_code(self):
         result = subprocess.run(

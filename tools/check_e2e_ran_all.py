@@ -23,9 +23,18 @@ def declared(root=ROOT):
     return tests
 
 
-def passed(log):
-    pat = re.compile(r"Test Case '-\[JapaneseGrammarScannerUITests\.(\w+) (\w+)\]' passed")
+def results(log, outcome):
+    pat = re.compile(r"Test Case '-\[JapaneseGrammarScannerUITests\.(\w+) (\w+)\]' " + outcome)
     return {f"{a}.{b}" for a, b in pat.findall(open(log, encoding="utf-8", errors="replace").read())}
+
+
+def passed(log):
+    return results(log, "passed")
+
+
+def retried(log):
+    """失败过、重跑后通过的用例（CI 机器满载时的偶发失败，仍要留意）"""
+    return sorted(results(log, "failed") & passed(log))
 
 
 def selection_names(only):
@@ -62,6 +71,14 @@ def main():
     want = expected(args.only)
     gone = missing(args.log, args.only)
     print(f"端对端测试：应跑 {len(want)} 个，通过 {len(want) - len(gone)} 个")
+    flaky = retried(args.log)
+    if flaky:
+        print(f"其中 {len(flaky)} 个第一次失败、重跑才过（偶发，若反复出现要查）：")
+        for t in flaky:
+            print("  - " + t)
+        print("连跑几遍确认：手动触发 iOS Build & Test，e2e_repeat 填 5，e2e_only 填")
+        print("  " + rerun_value(flaky))
+        print(f"::warning::{len(flaky)} 个端对端用例重跑才过：{rerun_value(flaky)}")
     if gone:
         print("没有通过记录（失败、被跳过或没跑到）:")
         for t in gone:
