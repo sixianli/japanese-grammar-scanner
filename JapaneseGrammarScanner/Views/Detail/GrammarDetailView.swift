@@ -689,7 +689,8 @@ private struct EdgeGlass: View {
                                startPoint: .top, endPoint: .bottom)
             )
             .frame(maxWidth: .infinity)
-            .accessibilityHidden(true)
+            .accessibilityElement()
+            .accessibilityIdentifier("detail.titleBar")
     }
 }
 

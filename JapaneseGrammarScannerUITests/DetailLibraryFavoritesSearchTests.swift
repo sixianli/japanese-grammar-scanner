@@ -100,7 +100,8 @@ final class DetailTests: E2ETestCase {
         app.swipeUp()
         let level = id("detail.barLevel")
         wait(level, "往上滑后标题收进顶栏，标题下方应出现等级")
-        let screen = app.windows.firstMatch.frame
+        let bar = id("detail.titleBar")
+        let screen = bar.exists ? bar.frame : app.windows.firstMatch.frame
         XCTAssertEqual(barTitle.frame.midX, screen.midX, accuracy: 2, "收进顶栏的标题应在水平正中")
         XCTAssertLessThan(barTitle.frame.minY, restFrame.minY - 20, "标题应跟着往上移到顶栏")
         XCTAssertLessThan(barTitle.frame.maxY, 200, "标题应停在屏幕顶部的顶栏里")
@@ -144,7 +145,13 @@ final class DetailTests: E2ETestCase {
         unfavorite.tap()
         wait(text(containing: "还没有收藏"), "左滑取消收藏后应为空")
         tab("搜索").tap()
-        wait(id("detail.favorite"), "取消收藏后回到讲解页，右上角的收藏按钮应重新出现")
+        let field = app.searchFields.firstMatch
+        wait(field, "搜索页应有搜索框")
+        field.tap()
+        field.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: 20) + "にもかかわらず")
+        wait(id("search.result"), "搜索应有结果")
+        id("search.result").tap()
+        wait(id("detail.favorite"), "取消收藏后再打开讲解页，右上角的收藏按钮应重新出现")
         XCTAssertFalse(id("detail.favorited").exists, "取消收藏后「已收藏」应消失")
     }
 
