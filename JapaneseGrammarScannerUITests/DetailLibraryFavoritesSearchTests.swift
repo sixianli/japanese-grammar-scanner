@@ -94,13 +94,15 @@ final class DetailTests: E2ETestCase {
         wait(barTitle, "页面顶部应显示语法标题")
         XCTAssertEqual(barTitle.label, title, "显示的应是本页语法的完整标题")
         let restFrame = barTitle.frame
+        assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "展开")
         XCTAssertFalse(id("detail.barLevel").exists, "没滚动时顶栏里不应有等级（等级在标题下面的标签里）")
 
         app.swipeUp()
         app.swipeUp()
         let level = id("detail.barLevel")
         wait(level, "往上滑后标题收进顶栏，标题下方应出现标签行")
-        XCTAssertEqual(barTitle.frame.midX, restFrame.midX, accuracy: 2, "标题只往上移，水平位置和页面大标题一样居中（大屏时右侧有竖排标签栏，以内容区为准）")
+        XCTAssertEqual(barTitle.frame.midX, restFrame.midX, accuracy: 2, "标题只往上移，水平位置不变")
+        assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "收起")
         XCTAssertLessThan(barTitle.frame.minY, restFrame.minY - 20, "标题应跟着往上移到顶栏")
         XCTAssertLessThan(barTitle.frame.maxY, 200, "标题应停在屏幕顶部的顶栏里")
         XCTAssertLessThan(barTitle.frame.height, restFrame.height, "收进顶栏的标题应比页面大标题小")
@@ -120,33 +122,66 @@ final class DetailTests: E2ETestCase {
         XCTAssertEqual(barTitle.frame.height, restFrame.height, accuracy: 2, "回到顶部后标题恢复原来的大小")
     }
 
-    func testLongTitleStaysOnOneLineInBar() {
-        let title = "〜んです・〜のです・〜んだ"
+    private func openDetailBySearch(_ query: String, titleContains title: String) {
         tab("搜索").tap()
         let field = app.searchFields.firstMatch
         wait(field, "搜索页应有搜索框")
         field.tap()
-        field.typeText("のです")
+        field.typeText(query)
         let hasTitle = NSPredicate(format: "label CONTAINS %@", title)
         let direct = ids("search.result").matching(hasTitle).firstMatch
         let result = direct.waitForExistence(timeout: 8) ? direct : ids("search.result").containing(hasTitle).firstMatch
-        wait(result, "搜索「のです」应找到「\(title)」")
+        wait(result, "搜索「\(query)」应找到「\(title)」")
         result.tap()
         wait(detailScreen, "点搜索结果应进入讲解页")
+    }
+
+    private func assertTitleFitsOneLineBetweenButtons(_ title: String, _ element: XCUIElement, state: String,
+                                                     file: StaticString = #filePath, line: UInt = #line) {
+        let back = app.buttons["BackButton"].firstMatch.exists ? app.buttons["BackButton"].firstMatch : app.navigationBars.buttons.element(boundBy: 0)
+        let favorite = id("detail.favorite")
+        XCTAssertTrue(back.exists && favorite.exists, "应能找到返回键和右上角收藏键", file: file, line: line)
+        let left = back.frame.maxX, right = favorite.frame.minX
+        let frame = element.frame
+        XCTAssertEqual(frame.midX, (back.frame.minX + favorite.frame.maxX) / 2, accuracy: 3, "\(state)：标题「\(title)」应在屏幕正中，不偏左右：\(frame)", file: file, line: line)
+        XCTAssertGreaterThanOrEqual(frame.minX, left - 1, "\(state)：标题不能压到返回键：\(frame)", file: file, line: line)
+        XCTAssertLessThanOrEqual(frame.maxX, right + 1, "\(state)：标题不能压到右上角收藏键：\(frame)", file: file, line: line)
+        let screen = app.windows.firstMatch.frame
+        XCTAssertGreaterThanOrEqual(frame.minX, screen.minX, "\(state)：标题不能超出屏幕左边：\(frame)", file: file, line: line)
+        XCTAssertLessThanOrEqual(frame.maxX, screen.maxX, "\(state)：标题不能超出屏幕右边：\(frame)", file: file, line: line)
+    }
+
+    private func checkLongTitleInBothStates(query: String, title: String) {
+        openDetailBySearch(query, titleContains: title)
         let barTitle = id("detail.barTitle")
         wait(barTitle, "页面顶部应有标题")
-        let restFrame = barTitle.frame
+        XCTAssertEqual(barTitle.label, title, "显示的应是本页语法的完整标题")
+
+        let oneLine = barTitle.frame.height
+        XCTAssertLessThan(oneLine, 70, "展开时「\(title)」只占一行，不折成两三行：\(barTitle.frame)")
+        assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "展开")
+        let expandedMidY = barTitle.frame.midY
 
         app.swipeUp()
         app.swipeUp()
-        let level = id("detail.barLevel")
-        wait(level, "往上滑后顶栏里应出现标签行")
-        XCTAssertEqual(barTitle.label, title)
-        XCTAssertLessThan(barTitle.frame.height, 34, "长标题收进顶栏后只占一行，不折成两行：\(barTitle.frame)")
-        XCTAssertLessThan(barTitle.frame.width, app.windows.firstMatch.frame.width - 120, "一行标题要缩到两个圆按钮之间")
-        XCTAssertEqual(barTitle.frame.midX, restFrame.midX, accuracy: 2, "标题居中")
-        XCTAssertGreaterThan(level.frame.minY, barTitle.frame.maxY - 2, "标签行在一行标题下面")
-        XCTAssertLessThan(level.frame.maxY, 200, "标题和标签行都在顶栏里，顶栏不变高")
+        wait(id("detail.barLevel"), "往上滑后顶栏里应出现标签行")
+        XCTAssertLessThan(barTitle.frame.height, oneLine, "收进顶栏后标题比展开时小：\(barTitle.frame)")
+        XCTAssertLessThan(barTitle.frame.maxY, 200, "标题和标签行都在顶栏里，顶栏不变高：\(barTitle.frame)")
+        XCTAssertLessThan(barTitle.frame.midY, expandedMidY, "标题应往上移进顶栏")
+        assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "收起")
+        XCTAssertGreaterThan(id("detail.barLevel").frame.minY, barTitle.frame.maxY - 3, "标签行在一行标题下面")
+    }
+
+    func testLongTitleMamaniStaysOneLineCenteredInBothStates() {
+        checkLongTitleInBothStates(query: "ままに", title: "〜ままに・〜られるままに・〜がままに")
+    }
+
+    func testLongTitleIkanDeWaStaysOneLineCenteredInBothStates() {
+        checkLongTitleInBothStates(query: "いかんで", title: "〜いかんで（は）／〜いかんによっては")
+    }
+
+    func testLongTitleNdesuStaysOneLineCenteredInBothStates() {
+        checkLongTitleInBothStates(query: "のです", title: "〜んです・〜のです・〜んだ")
     }
 
     func testFavoritedTagJoinsBarRow() {
