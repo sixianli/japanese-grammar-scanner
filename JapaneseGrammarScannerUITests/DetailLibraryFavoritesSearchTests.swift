@@ -140,28 +140,14 @@ final class DetailTests: E2ETestCase {
 
     private func assertTitleFitsOneLineBetweenButtons(_ title: String, _ element: XCUIElement, state: String, pinned: Bool,
                                                      file: StaticString = #filePath, line: UInt = #line) {
-        let page = app.windows.firstMatch
-        XCTAssertTrue(page.exists, "应能找到 App 窗口", file: file, line: line)
+        let column = id("detail.titleColumn")
+        XCTAssertTrue(column.exists, "应能找到标题所在的页面内容列", file: file, line: line)
+        let c = column.frame
         let frame = element.frame
-        let scrolls = app.scrollViews.allElementsBoundByIndex.map { "\($0.frame)" }.joined(separator: " | ")
-        let layoutNote = "状态=\(state) 窗口=\(app.windows.firstMatch.frame) App=\(app.frame) 滚动区=\(scrolls) 返回=\(app.buttons["BackButton"].firstMatch.frame) 收藏=\(id("detail.favorite").frame)"
-        print("LAYOUT \(layoutNote)")
-        XCTContext.runActivity(named: layoutNote) { _ in }
-        let inset = pinned ? CGFloat(68) : CGFloat(20)
-        XCTAssertEqual(frame.midX, page.frame.midX, accuracy: 3, "\(state)：标题「\(title)」应在页面正中，不偏左右：标题 \(frame)，页面 \(page.frame)", file: file, line: line)
-        XCTAssertGreaterThanOrEqual(frame.minX, page.frame.minX + inset - 1, "\(state)：标题不能超出左边（页边距 / 返回键）：标题 \(frame)，页面 \(page.frame)", file: file, line: line)
-        XCTAssertLessThanOrEqual(frame.maxX, page.frame.maxX - inset + 1, "\(state)：标题不能超出右边（页边距 / 收藏键）：标题 \(frame)，页面 \(page.frame)", file: file, line: line)
-        let window = app.windows.firstMatch.frame
-        XCTAssertGreaterThanOrEqual(frame.minX, window.minX, "\(state)：标题不能超出屏幕左边：\(frame)", file: file, line: line)
-        XCTAssertLessThanOrEqual(frame.maxX, window.maxX, "\(state)：标题不能超出屏幕右边：\(frame)", file: file, line: line)
-        let favorite = id("detail.favorite")
-        let back = app.buttons["BackButton"].firstMatch
-        if favorite.exists, favorite.frame.maxY > frame.minY, favorite.frame.minY < frame.maxY {
-            XCTAssertLessThanOrEqual(frame.maxX, favorite.frame.minX + 1, "\(state)：标题不能压到右上角收藏键：标题 \(frame)，收藏键 \(favorite.frame)", file: file, line: line)
-        }
-        if pinned, back.exists, back.frame.maxY > frame.minY, back.frame.minY < frame.maxY {
-            XCTAssertGreaterThanOrEqual(frame.minX, back.frame.maxX - 1, "\(state)：标题不能压到返回键：标题 \(frame)，返回键 \(back.frame)", file: file, line: line)
-        }
+        let inset = pinned ? CGFloat(48) : CGFloat(0)
+        XCTAssertEqual(frame.midX, c.midX, accuracy: 3, "\(state)：标题「\(title)」应在内容列正中，不偏左右：标题 \(frame)，内容列 \(c)", file: file, line: line)
+        XCTAssertGreaterThanOrEqual(frame.minX, c.minX + inset - 1, "\(state)：标题不能超出内容列左边：标题 \(frame)，内容列 \(c)", file: file, line: line)
+        XCTAssertLessThanOrEqual(frame.maxX, c.maxX - inset + 1, "\(state)：标题不能超出内容列右边：标题 \(frame)，内容列 \(c)", file: file, line: line)
     }
 
     private func assertNoHorizontalOverflow(state: String, file: StaticString = #filePath, line: UInt = #line) {

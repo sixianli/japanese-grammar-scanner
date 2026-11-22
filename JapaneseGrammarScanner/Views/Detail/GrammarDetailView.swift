@@ -239,7 +239,8 @@ struct GrammarDetailView: View {
                             }
                         }
                 }
-                .accessibilityHidden(true)
+                .accessibilityElement(children: .ignore)
+                .accessibilityIdentifier("detail.titleColumn")
         } else {
             title
         }
