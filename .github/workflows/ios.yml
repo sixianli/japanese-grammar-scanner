@@ -260,7 +260,22 @@ jobs:
               xcrun simctl terminate "$UDID" "$BID" 2>/dev/null || true
               xcrun simctl launch "$UDID" "$BID" -AppleLanguages "($lang)" -demoUnlocked -demoScreen "$screen"
               sleep 8
-              xcrun simctl io "$UDID" screenshot "screenshots/$lang/${i}_${screen}.png"
+              out="screenshots/$lang/${i}_${screen}.png"
+              xcrun simctl io "$UDID" screenshot "$out"
+              if [ "$screen" = "result" ]; then
+                settled=0
+                for try in $(seq 1 20); do
+                  sleep 3
+                  xcrun simctl io "$UDID" screenshot "$out.next"
+                  if cmp -s "$out" "$out.next"; then settled=1; break; fi
+                  mv "$out.next" "$out"
+                done
+                rm -f "$out.next"
+                if [ "$settled" != 1 ]; then
+                  echo "::error::结果页截图 $lang 一直在变化（识别没有完成），不能当商店截图用"
+                  exit 1
+                fi
+              fi
               i=$((i+1))
             done
           done
