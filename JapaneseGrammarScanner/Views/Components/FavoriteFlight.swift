@@ -1,132 +1,199 @@
 import SwiftUI
 import UIKit
 
-/// 收藏 = 收集樱花（Build 18 反馈 2）：点收藏后，樱花化作两朵小樱花和三片花瓣，沿一条弧线（一段，不停顿）
-/// 飘进底部「收藏」标签的小布袋（巾着袋）；到达时小布袋轻轻鼓一下、变粉。取消收藏不播；
-/// 「减弱动态效果」打开时不播；不震动。
 @MainActor
 final class FavoriteFlight: ObservableObject {
+    enum Style: Equatable { case intoPouch, away }
+
     struct Flight: Identifiable, Equatable {
         let id = UUID()
+        let style: Style
         let from: CGPoint
         let to: CGPoint
         let start: Date
     }
 
     @Published private(set) var flights: [Flight] = []
+    @Published private(set) var pouchGlowing = false
+    @Published private(set) var toast: UUID?
+    private var glowToken: UUID?
 
-    /// 点了收藏按钮：只有「从没收藏变成收藏」才飞
+    nonisolated static let toastDuration: Double = 2.4
+
     nonisolated static func shouldLaunch(wasFavorite: Bool, reduceMotion: Bool, arguments: [String] = ProcessInfo.processInfo.arguments) -> Bool {
         !wasFavorite && DecorativeMotion.enabled(reduceMotion: reduceMotion, arguments: arguments)
     }
 
-    func launch(from: CGPoint) {
-        let to = TabBarLocator.favoritesTabCenter() ?? TabBarLocator.estimatedFavoritesTabCenter()
-        let f = Flight(from: from, to: to, start: Date())
+    func launch(from: CGPoint, style: Style = .intoPouch) {
+        let to = style == .intoPouch ? (TabBarLocator.favoritesTabCenter() ?? TabBarLocator.estimatedFavoritesTabCenter()) : from
+        let f = Flight(style: style, from: from, to: to, start: Date())
         flights.append(f)
+        if style == .intoPouch {
+            Task { [weak self] in
+                try? await Task.sleep(for: .seconds(FlightPath.arrival(.intoPouch) - 0.15))
+                self?.glowPouch()
+            }
+        }
         Task { [weak self] in
-            try? await Task.sleep(for: .seconds(FlightPath.total + 0.1))
+            try? await Task.sleep(for: .seconds(FlightPath.total(style) + 0.1))
             self?.flights.removeAll { $0.id == f.id }
+        }
+    }
+
+    func confirmSaved() {
+        let token = UUID()
+        toast = token
+        UIAccessibility.post(notification: .announcement, argument: tr("已收进收藏"))
+        Task { [weak self] in
+            try? await Task.sleep(for: .seconds(Self.toastDuration))
+            if self?.toast == token { self?.toast = nil }
+        }
+    }
+
+    private func glowPouch() {
+        let token = UUID()
+        glowToken = token
+        pouchGlowing = true
+        Task { [weak self] in
+            try? await Task.sleep(for: .seconds(FlightPath.glow))
+            if self?.glowToken == token { self?.pouchGlowing = false }
         }
     }
 }
 
-/// 飞行轨迹（纯计算，方便单元测试）：一条向上拱起的二次贝塞尔曲线，几片樱花前后错开，像一串。
 enum FlightPath {
     enum Kind { case flower, petal }
     struct Particle {
         let kind: Kind
         let size: CGFloat
         let delay: Double
-        /// 偏离主轨迹的距离（pt），让几片不完全重合
+        let duration: Double
         let drift: CGFloat
         let turns: Double
     }
 
-    /// 每片飞的时间
-    static let flight: Double = 0.9
-    static let particles: [Particle] = [
-        .init(kind: .flower, size: 16, delay: 0.00, drift: 0, turns: 0.5),
-        .init(kind: .petal, size: 9, delay: 0.06, drift: 10, turns: 1.2),
-        .init(kind: .flower, size: 12, delay: 0.12, drift: -8, turns: -0.6),
-        .init(kind: .petal, size: 8, delay: 0.18, drift: 14, turns: -1.1),
-        .init(kind: .petal, size: 8, delay: 0.24, drift: -12, turns: 1.4),
-    ]
-    /// 最后一片到达的时间
-    static var arrival: Double { (particles.map(\.delay).max() ?? 0) + flight }
-    /// 到达后小布袋鼓一下、变粉的时间
-    static let puff: Double = 0.35
-    /// 整段约 1.2 秒（+ 鼓一下）
-    static var total: Double { arrival + puff }
+    static let flowerSize: CGFloat = 40
+    static let buttonScale: CGFloat = 0.55
+    static let glow: Double = 0.9
 
-    /// 弧线的控制点：从起点往左下方拱出去（起点在右上角，终点在底部）
+    static func particles(_ style: FavoriteFlight.Style) -> [Particle] {
+        switch style {
+        case .intoPouch:
+            [.init(kind: .flower, size: flowerSize, delay: 0, duration: 2.1, drift: 0, turns: 0.7),
+             .init(kind: .petal, size: 18, delay: 0.30, duration: 2.4, drift: -46, turns: 1.3),
+             .init(kind: .petal, size: 17, delay: 0.40, duration: 2.6, drift: 38, turns: -1.5),
+             .init(kind: .petal, size: 16, delay: 0.50, duration: 2.3, drift: -70, turns: 1.7)]
+        case .away:
+            [.init(kind: .flower, size: flowerSize, delay: 0, duration: 2.0, drift: 0, turns: 0.75),
+             .init(kind: .petal, size: 18, delay: 0.30, duration: 2.2, drift: -60, turns: 1.2),
+             .init(kind: .petal, size: 16, delay: 0.40, duration: 2.4, drift: 30, turns: -1.4)]
+        }
+    }
+
+    static func arrival(_ style: FavoriteFlight.Style) -> Double {
+        particles(style).map { $0.delay + $0.duration }.max() ?? 0
+    }
+
+    static func total(_ style: FavoriteFlight.Style) -> Double {
+        arrival(style) + (style == .intoPouch ? glow : 0)
+    }
+
     static func control(from a: CGPoint, to b: CGPoint) -> CGPoint {
         CGPoint(x: min(a.x, b.x) - 0.15 * abs(a.x - b.x) - 30, y: a.y + 0.35 * (b.y - a.y))
     }
 
-    /// 第 i 片在 elapsed 秒时的位置、角度、大小、透明度；没出发或已到达时返回 nil
-    static func state(_ p: Particle, elapsed: Double, from a: CGPoint, to b: CGPoint) -> (point: CGPoint, angle: Double, scale: CGFloat, opacity: Double)? {
-        let unclamped = (elapsed - p.delay) / flight
+    static func smooth(_ x: Double) -> Double { x * x * (3 - 2 * x) }
+
+    static func state(_ p: Particle, style: FavoriteFlight.Style, elapsed: Double, from a: CGPoint, to b: CGPoint)
+        -> (point: CGPoint, angle: Double, scale: CGFloat, opacity: Double)? {
+        let unclamped = (elapsed - p.delay) / p.duration
         guard unclamped >= 0, unclamped <= 1 + 1e-9 else { return nil }
         let raw = min(unclamped, 1)
-        // 先快后慢地落进袋子
-        let t = 1 - pow(1 - raw, 2)
+        switch style {
+        case .intoPouch: return intoPouch(p, raw: raw, from: a, to: b)
+        case .away: return away(p, raw: raw, from: a)
+        }
+    }
+
+    private static func intoPouch(_ p: Particle, raw: Double, from a: CGPoint, to b: CGPoint)
+        -> (point: CGPoint, angle: Double, scale: CGFloat, opacity: Double) {
+        let t = smooth(raw)
         let c = control(from: a, to: b)
         let u = 1 - t
-        var x = u * u * a.x + 2 * u * t * c.x + t * t * b.x
-        var y = u * u * a.y + 2 * u * t * c.y + t * t * b.y
-        // 中途左右散开一点，越接近袋子越收拢
         let spread = p.drift * CGFloat(sin(.pi * t))
-        x += spread
-        y += spread * 0.3
-        let scale = 1 - 0.45 * CGFloat(t)
-        let opacity = raw > 0.9 ? (1 - raw) / 0.1 : 1
+        let x = u * u * a.x + 2 * u * t * c.x + t * t * b.x + spread
+        let y = u * u * a.y + 2 * u * t * c.y + t * t * b.y + spread * 0.3
+        let scale: CGFloat
+        let opacity: Double
+        switch p.kind {
+        case .flower:
+            if raw < 0.12 {
+                scale = buttonScale + (1 - buttonScale) * CGFloat(raw / 0.12)
+            } else {
+                scale = 1 - 0.6 * CGFloat(pow((raw - 0.12) / 0.88, 2.2))
+            }
+            opacity = raw > 0.9 ? (1 - raw) / 0.1 : 1
+        case .petal:
+            scale = 1 - 0.4 * CGFloat(t)
+            opacity = raw < 0.1 ? raw / 0.1 : (raw > 0.85 ? (1 - raw) / 0.15 : 1)
+        }
         return (CGPoint(x: x, y: y), 360 * p.turns * t, scale, opacity)
     }
 
-    /// 到达后小布袋鼓起的比例（0 = 不显示）
-    static func puffScale(elapsed: Double) -> CGFloat? {
-        let e = elapsed - arrival + 0.15
-        guard e >= 0, e <= puff else { return nil }
-        return 1 + 0.25 * CGFloat(sin(.pi * e / puff))
+    private static func away(_ p: Particle, raw: Double, from a: CGPoint)
+        -> (point: CGPoint, angle: Double, scale: CGFloat, opacity: Double) {
+        switch p.kind {
+        case .flower:
+            let t = smooth(raw)
+            let x = a.x - 120 * CGFloat(t)
+            let y = a.y + 140 * CGFloat(sin(.pi * 0.75 * t))
+            let scale = raw < 0.2 ? buttonScale + (1 - buttonScale) * CGFloat(raw / 0.2) : 1 - 0.65 * CGFloat((raw - 0.2) / 0.8)
+            let opacity = raw < 0.6 ? 1 : (1 - raw) / 0.4
+            return (CGPoint(x: x, y: y), 360 * p.turns * t, scale, opacity)
+        case .petal:
+            let x = a.x + p.drift * CGFloat(sin(.pi * raw)) - 40 * CGFloat(raw)
+            let y = a.y + 30 + 220 * CGFloat(raw)
+            let opacity = raw < 0.1 ? raw / 0.1 : (raw > 0.7 ? (1 - raw) / 0.3 : 1)
+            return (CGPoint(x: x, y: y), 360 * p.turns * raw, 1, opacity)
+        }
     }
 }
 
-/// 根视图上的一层：显示正在飞的樱花和到达时鼓起的小布袋（不接收点击，读屏不读）
 struct FavoriteFlightOverlay: View {
     @ObservedObject var model: FavoriteFlight
 
     var body: some View {
-        ZStack {
-            ForEach(model.flights) { f in
-                TimelineView(.animation) { context in
-                    let e = context.date.timeIntervalSince(f.start)
-                    ZStack {
-                        ForEach(Array(FlightPath.particles.enumerated()), id: \.offset) { _, p in
-                            if let s = FlightPath.state(p, elapsed: e, from: f.from, to: f.to) {
-                                particle(p)
-                                    .scaleEffect(s.scale)
-                                    .rotationEffect(.degrees(s.angle))
-                                    .opacity(s.opacity)
-                                    .position(s.point)
+        ZStack(alignment: .top) {
+            ZStack {
+                ForEach(model.flights) { f in
+                    TimelineView(.animation) { context in
+                        let e = context.date.timeIntervalSince(f.start)
+                        ZStack {
+                            ForEach(Array(FlightPath.particles(f.style).enumerated()), id: \.offset) { _, p in
+                                if let s = FlightPath.state(p, style: f.style, elapsed: e, from: f.from, to: f.to) {
+                                    particle(p)
+                                        .scaleEffect(s.scale)
+                                        .rotationEffect(.degrees(s.angle))
+                                        .opacity(s.opacity)
+                                        .position(s.point)
+                                }
                             }
-                        }
-                        if let puff = FlightPath.puffScale(elapsed: e) {
-                            KinchakuShape()
-                                .fill(Sakura.petal)
-                                .overlay(KinchakuShape().stroke(Sakura.center, style: StrokeStyle(lineWidth: 1.6, lineCap: .round, lineJoin: .round)))
-                                .frame(width: 25, height: 25)
-                                .scaleEffect(puff)
-                                .position(f.to)
                         }
                     }
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .ignoresSafeArea()
+            .accessibilityHidden(true)
+
+            if model.toast != nil {
+                SavedToast()
+                    .padding(.top, 52)
+                    .transition(.move(edge: .top).combined(with: .opacity))
+            }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .ignoresSafeArea()
+        .animation(.spring(duration: 0.35), value: model.toast)
         .allowsHitTesting(false)
-        .accessibilityHidden(true)
     }
 
     @ViewBuilder
@@ -135,37 +202,28 @@ struct FavoriteFlightOverlay: View {
         case .flower: SakuraFlower(size: p.size)
         case .petal:
             SakuraPetalShape().fill(Sakura.petal)
-                .overlay(SakuraPetalShape().stroke(Sakura.center.opacity(0.35), lineWidth: 0.5))
+                .overlay(SakuraPetalShape().stroke(Sakura.center.opacity(0.45), lineWidth: 0.6))
                 .frame(width: p.size * 0.7, height: p.size)
         }
     }
 }
 
-/// 巾着袋（和标签栏图标 Kinchaku.imageset 的 SVG 同一个形状，25×25 坐标）
-struct KinchakuShape: Shape {
-    func path(in rect: CGRect) -> Path {
-        let s = min(rect.width, rect.height) / 25
-        func p(_ x: CGFloat, _ y: CGFloat) -> CGPoint { CGPoint(x: rect.minX + x * s, y: rect.minY + y * s) }
-        var path = Path()
-        // 袋身
-        path.move(to: p(8.6, 9.2))
-        path.addCurve(to: p(5.1, 18.6), control1: p(5.4, 11.6), control2: p(4.4, 15.2))
-        path.addCurve(to: p(12.5, 22.8), control1: p(5.8, 21.6), control2: p(8.6, 22.8))
-        path.addCurve(to: p(19.9, 18.6), control1: p(16.4, 22.8), control2: p(19.2, 21.6))
-        path.addCurve(to: p(16.4, 9.2), control1: p(20.6, 15.2), control2: p(19.6, 11.6))
-        path.addCurve(to: p(8.6, 9.2), control1: p(15.2, 9.9), control2: p(9.8, 9.9))
-        // 收口上面的褶边
-        path.move(to: p(8.6, 9.2))
-        path.addLine(to: p(7.2, 4.6))
-        path.addCurve(to: p(10.4, 4.2), control1: p(8.6, 5.4), control2: p(9.6, 5.2))
-        path.addCurve(to: p(14.6, 4.2), control1: p(11.2, 5.2), control2: p(13.8, 5.2))
-        path.addCurve(to: p(17.8, 4.6), control1: p(15.4, 5.2), control2: p(16.4, 5.4))
-        path.addLine(to: p(16.4, 9.2))
-        return path
+private struct SavedToast: View {
+    var body: some View {
+        HStack(spacing: 6) {
+            Image("Kinchaku").renderingMode(.template).resizable().scaledToFit().frame(height: 16)
+            Text(localized: "已收进收藏")
+        }
+        .font(.subheadline.weight(.semibold))
+        .foregroundStyle(.white)
+        .padding(.horizontal, 14)
+        .padding(.vertical, 9)
+        .background(Color.black.opacity(0.78), in: Capsule())
+        .accessibilityElement(children: .combine)
+        .accessibilityIdentifier("favorite.toast")
     }
 }
 
-/// 找底部「收藏」标签在屏幕上的位置（樱花飞去的终点）
 enum TabBarLocator {
     @MainActor
     static func favoritesTabCenter() -> CGPoint? {
@@ -174,7 +232,8 @@ enum TabBarLocator {
         var found: UIView?
         func search(_ v: UIView) {
             if found != nil { return }
-            if v.accessibilityIdentifier == "Kinchaku" || (v is UIControl && v.accessibilityLabel == tr("收藏") && v.accessibilityIdentifier != "detail.favorite") {
+            if v.accessibilityIdentifier?.hasPrefix("Kinchaku") == true
+                || (v is UIControl && v.accessibilityLabel == tr("收藏") && v.accessibilityIdentifier != "detail.favorite") {
                 found = v
                 return
             }
@@ -183,24 +242,25 @@ enum TabBarLocator {
         search(window)
         guard let v = found, !v.isHidden, v.window != nil else { return nil }
         let r = v.convert(v.bounds, to: window)
-        return r.isEmpty ? nil : CGPoint(x: r.midX, y: r.midY)
+        guard !r.isEmpty else { return nil }
+        let iconLift = v is UIImageView ? 0 : r.height * 0.15
+        return CGPoint(x: r.midX, y: r.midY - iconLift)
     }
 
-    /// 找不到时按常见布局估一个：底部标签栏，五个标签里的第四个
     @MainActor
     static func estimatedFavoritesTabCenter() -> CGPoint {
         let screen = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.first?.screen.bounds
             ?? CGRect(x: 0, y: 0, width: 390, height: 844)
-        return CGPoint(x: screen.width * 0.62, y: screen.height - 50)
+        return CGPoint(x: screen.width * 0.62, y: screen.height - 56)
     }
 }
 
-/// 收藏按钮：未收藏 = 线条樱花，已收藏 = 粉色樱花。点了收藏时樱花飘进底部「收藏」标签。
 struct FavoriteSakuraButton: View {
     let id: String
-    /// nil：用图片本来的大小（24pt，放在导航栏里用）
     var size: CGFloat? = nil
     var outlineColor: Color = Theme.accentText
+    var flightStyle: FavoriteFlight.Style = .intoPouch
+    var confirmsSaved = false
     @EnvironmentObject private var favorites: FavoritesStore
     @EnvironmentObject private var flight: FavoriteFlight
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
@@ -211,10 +271,9 @@ struct FavoriteSakuraButton: View {
         Button {
             let launch = FavoriteFlight.shouldLaunch(wasFavorite: isFavorite, reduceMotion: reduceMotion)
             favorites.toggle(id)
-            if launch { flight.launch(from: center) }
+            if launch { flight.launch(from: center, style: flightStyle) }
+            if !isFavorite, confirmsSaved { flight.confirmSaved() }
         } label: {
-            // 标签必须是一张图片：大屏 iPhone 上导航栏按钮会挪到右侧竖排的按钮栏里，
-            // 只有图片标签会被挪过去；自己画的视图会留在页面右上角，往下滑就看不到了。
             icon(isFavorite)
         }
         .foregroundStyle(outlineColor)

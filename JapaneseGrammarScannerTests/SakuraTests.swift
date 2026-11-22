@@ -1,11 +1,10 @@
 import XCTest
+import UIKit
 @testable import JapaneseGrammarScanner
 
-/// Build 18 反馈 1、2：樱花动画的轨迹、时长和开关。
 final class SakuraTests: XCTestCase {
     private let row = CGSize(width: 360, height: 52)
 
-    /// 首页复习提醒：约 4 朵樱花 + 约 4 片花瓣，整段约 4 秒
     func testDriftHasFlowersAndPetalsAndLastsAboutFourSeconds() {
         let kinds = SakuraDrift.particles.map(\.kind)
         XCTAssertEqual(kinds.filter { $0 == .flower }.count, 4)
@@ -13,7 +12,6 @@ final class SakuraTests: XCTestCase {
         XCTAssertEqual(SakuraDrift.duration, 4, accuracy: 0.5)
     }
 
-    /// 从左边外面飘进来、从右边飘出去，中途一直在这一行的高度范围附近，飘完就消失
     func testDriftGoesLeftToRightAndEnds() {
         for p in SakuraDrift.particles {
             XCTAssertNil(SakuraDrift.state(p, elapsed: p.delay - 0.01, in: row), "出发前不显示")
@@ -30,7 +28,6 @@ final class SakuraTests: XCTestCase {
         }
     }
 
-    /// 铃铛先摇，樱花在铃铛摇起来之后才出发；摇完回到原位
     func testBellRingsFirstThenStops() {
         XCTAssertNotEqual(SakuraDrift.bellAngle(elapsed: 0.06), 0)
         XCTAssertEqual(SakuraDrift.bellAngle(elapsed: 1.0), 0)
@@ -38,7 +35,6 @@ final class SakuraTests: XCTestCase {
         XCTAssertGreaterThan(SakuraDrift.particles.map(\.delay).min() ?? 0, 0.2)
     }
 
-    /// 「减弱动态效果」打开时不播；端到端测试默认不播，传 -playAnimations 才播
     func testDecorativeMotionSwitch() {
         XCTAssertTrue(DecorativeMotion.enabled(reduceMotion: false, arguments: []))
         XCTAssertFalse(DecorativeMotion.enabled(reduceMotion: true, arguments: []))
@@ -47,7 +43,26 @@ final class SakuraTests: XCTestCase {
         XCTAssertFalse(DecorativeMotion.enabled(reduceMotion: true, arguments: ["-e2e", "-playAnimations"]))
     }
 
-    /// 樱花形状：五片花瓣都在方框里
+    func testReviewMotionReplaysWhenAppComesBackFromBackground() {
+        var replay = ForegroundReplay()
+        XCTAssertFalse(replay.shouldReplay(on: .inactive))
+        XCTAssertFalse(replay.shouldReplay(on: .background))
+        XCTAssertFalse(replay.shouldReplay(on: .inactive))
+        XCTAssertTrue(replay.shouldReplay(on: .active))
+        XCTAssertFalse(replay.shouldReplay(on: .active))
+    }
+
+    func testReviewMotionDoesNotReplayForControlCenterOrNotifications() {
+        var replay = ForegroundReplay()
+        XCTAssertFalse(replay.shouldReplay(on: .inactive))
+        XCTAssertFalse(replay.shouldReplay(on: .active))
+    }
+
+    func testReviewMotionStartsAfterLaunchTransition() {
+        XCTAssertGreaterThanOrEqual(SakuraDrift.appearDelay, 0.5)
+        XCTAssertEqual(SakuraDrift.bellAngle(elapsed: -SakuraDrift.appearDelay / 2), 0)
+    }
+
     func testFlowerShapeFitsItsFrame() {
         let rect = CGRect(x: 0, y: 0, width: 40, height: 40)
         let b = SakuraFlowerShape().path(in: rect).boundingRect
@@ -60,45 +75,79 @@ final class SakuraTests: XCTestCase {
     private let from = CGPoint(x: 360, y: 60)
     private let to = CGPoint(x: 250, y: 800)
 
-    /// 两朵小樱花 + 三片花瓣，一段飞完，约 1.2 秒
-    func testFlightIsOneShortArc() {
-        let kinds = FlightPath.particles.map(\.kind)
-        XCTAssertEqual(kinds.filter { $0 == .flower }.count, 2)
+    func testPouchFlightIsOneBigFlowerWithThreePetalsAndSlow() {
+        let kinds = FlightPath.particles(.intoPouch).map(\.kind)
+        XCTAssertEqual(kinds.filter { $0 == .flower }.count, 1)
         XCTAssertEqual(kinds.filter { $0 == .petal }.count, 3)
-        XCTAssertEqual(FlightPath.arrival, 1.2, accuracy: 0.2)
-        XCTAssertLessThan(FlightPath.total, 1.8)
+        XCTAssertGreaterThanOrEqual(FlightPath.flowerSize, 36, "樱花要大到看得清是樱花（Build 19 反馈 4）")
+        for p in FlightPath.particles(.intoPouch) where p.kind == .petal {
+            XCTAssertGreaterThanOrEqual(p.size, 15, "花瓣也要看得清")
+        }
+        let flower = FlightPath.particles(.intoPouch).first { $0.kind == .flower }!
+        XCTAssertGreaterThanOrEqual(flower.duration, 1.8, "落得慢一点，看得清（Build 19 反馈 4）")
+        XCTAssertLessThan(FlightPath.total(.intoPouch), 4.5, "整段不能拖太久")
     }
 
-    /// 从收藏按钮出发、落进「收藏」标签；中途一直往下走（一段，不先炸开再飞回来）
-    func testFlightStartsAtButtonAndEndsInPouch() {
-        for p in FlightPath.particles {
-            let a = try! XCTUnwrap(FlightPath.state(p, elapsed: p.delay, from: from, to: to))
-            let b = try! XCTUnwrap(FlightPath.state(p, elapsed: p.delay + FlightPath.flight, from: from, to: to))
+    func testPouchFlightStartsAtButtonAndEndsInPouch() {
+        for p in FlightPath.particles(.intoPouch) {
+            let a = try! XCTUnwrap(FlightPath.state(p, style: .intoPouch, elapsed: p.delay, from: from, to: to))
+            let b = try! XCTUnwrap(FlightPath.state(p, style: .intoPouch, elapsed: p.delay + p.duration, from: from, to: to))
             XCTAssertEqual(a.point.x, from.x, accuracy: 0.5)
             XCTAssertEqual(a.point.y, from.y, accuracy: 0.5)
             XCTAssertEqual(b.point.x, to.x, accuracy: 0.5)
             XCTAssertEqual(b.point.y, to.y, accuracy: 0.5)
+            XCTAssertEqual(b.opacity, 0, accuracy: 0.001, "落进袋子时淡出")
             var lastY = -CGFloat.infinity
-            for k in 0...20 {
-                let e = p.delay + FlightPath.flight * Double(k) / 20
-                let s = try! XCTUnwrap(FlightPath.state(p, elapsed: e, from: from, to: to))
+            for k in 0...40 {
+                let e = p.delay + p.duration * Double(k) / 40
+                let s = try! XCTUnwrap(FlightPath.state(p, style: .intoPouch, elapsed: e, from: from, to: to))
                 XCTAssertGreaterThanOrEqual(s.point.y, lastY - 0.5, "一直往下飘，不往回走")
                 lastY = s.point.y
             }
-            XCTAssertLessThan(b.scale, a.scale, "越接近袋子越小")
-            XCTAssertNil(FlightPath.state(p, elapsed: p.delay + FlightPath.flight + 0.01, from: from, to: to), "到了就消失")
+            XCTAssertNil(FlightPath.state(p, style: .intoPouch, elapsed: p.delay + p.duration + 0.01, from: from, to: to), "到了就消失")
         }
     }
 
-    /// 到达时小布袋鼓一下，之后恢复
-    func testPouchPuffsOnArrival() {
-        XCTAssertNil(FlightPath.puffScale(elapsed: 0.2), "还没到时不鼓")
-        let peak = (0...40).compactMap { FlightPath.puffScale(elapsed: FlightPath.arrival - 0.2 + Double($0) * 0.01) }.max() ?? 0
-        XCTAssertGreaterThan(peak, 1.15)
-        XCTAssertNil(FlightPath.puffScale(elapsed: FlightPath.total + 0.1), "鼓完就不显示")
+    func testFlowerGrowsFromButtonSizeThenShrinksIntoPouch() {
+        let flower = FlightPath.particles(.intoPouch).first { $0.kind == .flower }!
+        func scale(_ f: Double) -> CGFloat {
+            FlightPath.state(flower, style: .intoPouch, elapsed: flower.duration * f, from: from, to: to)!.scale
+        }
+        XCTAssertEqual(scale(0), FlightPath.buttonScale, accuracy: 0.001, "从按钮大小开始")
+        XCTAssertEqual(scale(0.12), 1, accuracy: 0.01, "先放大到完整大小")
+        XCTAssertGreaterThan(scale(0.5), 0.85, "大部分路程都保持大朵")
+        XCTAssertLessThan(scale(1), 0.5, "落进袋子时变小")
     }
 
-    /// 只有「收藏」才飞，取消收藏不飞；减弱动态效果时不飞
+    func testPouchTurnsPinkOnlyAfterFlowerArrives() {
+        let flower = FlightPath.particles(.intoPouch).first { $0.kind == .flower }!
+        XCTAssertGreaterThan(FlightPath.arrival(.intoPouch) - 0.15, flower.delay + flower.duration * 0.9, "樱花快落进袋子时袋子才变粉")
+        XCTAssertGreaterThan(FlightPath.glow, 0.5)
+        XCTAssertEqual(FlightPath.total(.intoPouch), FlightPath.arrival(.intoPouch) + FlightPath.glow, accuracy: 0.001)
+    }
+
+    func testReviewFlightFloatsAwayFromButtonWithoutTabBar() {
+        let parts = FlightPath.particles(.away)
+        XCTAssertEqual(parts.filter { $0.kind == .flower }.count, 1)
+        XCTAssertEqual(parts.filter { $0.kind == .petal }.count, 2)
+        XCTAssertEqual(FlightPath.total(.away), FlightPath.arrival(.away), "复习页没有标签栏，不等袋子变粉")
+        for p in parts {
+            let start = try! XCTUnwrap(FlightPath.state(p, style: .away, elapsed: p.delay, from: from, to: from))
+            let end = try! XCTUnwrap(FlightPath.state(p, style: .away, elapsed: p.delay + p.duration, from: from, to: from))
+            XCTAssertLessThan(end.opacity, 0.01, "飘走后淡出")
+            XCTAssertLessThan(hypot(start.point.x - from.x, start.point.y - from.y), 40, "从收藏按钮附近出发")
+            XCTAssertGreaterThan(hypot(end.point.x - from.x, end.point.y - from.y), 80, "飘离按钮")
+            XCTAssertLessThan(end.point.y, 400, "不落到屏幕下方的自评按钮上")
+        }
+    }
+
+    func testPouchIconMatchesSystemTabIconHeight() throws {
+        let icon = try XCTUnwrap(UIImage(named: "Kinchaku"))
+        XCTAssertEqual(icon.size.height, 28, accuracy: 0.5, "巾着标签图标按系统标签图标的高度画（Build 19 反馈 1）")
+        let pink = try XCTUnwrap(UIImage(named: "KinchakuPink"))
+        XCTAssertEqual(pink.size, icon.size, "变粉的图标和原图标一样大，换图时不跳动")
+    }
+
     func testOnlyFavoritingLaunches() {
         XCTAssertTrue(FavoriteFlight.shouldLaunch(wasFavorite: false, reduceMotion: false, arguments: []))
         XCTAssertFalse(FavoriteFlight.shouldLaunch(wasFavorite: true, reduceMotion: false, arguments: []))

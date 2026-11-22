@@ -1,14 +1,9 @@
 import SwiftUI
 
-/// 樱花（Build 18 反馈 1、2）：首页复习提醒里飘过的樱花、收藏图标、收藏时飘进「收藏」标签的花瓣。
-/// 颜色固定为日本樱花的粉色，不跟主题色走（主题色可能是抹茶绿、柿子橙）。
 enum Sakura {
-    /// 花瓣
     static let petal = Color(red: 0xF6 / 255, green: 0xB3 / 255, blue: 0xC6 / 255)
-    /// 花心、描边
     static let center = Color(red: 0xE8 / 255, green: 0x7A / 255, blue: 0x9A / 255)
 
-    /// 一片花瓣：根部在 (0, 0)，尖端朝上、长度为 r，尖端中间有一个小缺口（樱花瓣的特征）
     static func petalPath(length r: CGFloat) -> Path {
         var p = Path()
         p.move(to: .zero)
@@ -21,7 +16,6 @@ enum Sakura {
     }
 }
 
-/// 五瓣樱花（填满 rect 的最大正方形）
 struct SakuraFlowerShape: Shape {
     func path(in rect: CGRect) -> Path {
         let r = min(rect.width, rect.height) / 2
@@ -36,7 +30,6 @@ struct SakuraFlowerShape: Shape {
     }
 }
 
-/// 一片散落的花瓣（根部在 rect 下方中间）
 struct SakuraPetalShape: Shape {
     func path(in rect: CGRect) -> Path {
         Sakura.petalPath(length: rect.height)
@@ -44,7 +37,6 @@ struct SakuraPetalShape: Shape {
     }
 }
 
-/// 一朵樱花：实心粉色 + 花心；`outline` 时只有线条（未收藏的样子，用当前文字颜色）
 struct SakuraFlower: View {
     var size: CGFloat
     var outline = false
@@ -65,28 +57,21 @@ struct SakuraFlower: View {
     }
 }
 
-/// 樱花飘过的轨迹（首页复习提醒）：几朵樱花和几片花瓣从左边飘到右边，边飘边转，上下轻轻起伏。
-/// 纯计算，方便单元测试。
 struct SakuraDrift {
     enum Kind { case flower, petal }
 
     struct Particle {
         let kind: Kind
         let size: CGFloat
-        /// 出发时间（秒）
         let delay: Double
-        /// 纵向位置（0 = 顶，1 = 底）
         let lane: CGFloat
-        /// 上下起伏的幅度（pt）
         let sway: CGFloat
-        /// 转动圈数（整段路程）
         let turns: Double
         let phase: Double
     }
 
-    /// 铃铛先摇（0–0.7 秒），樱花接着出发
     static let start: Double = 0.45
-    /// 每朵花从左到右用的时间
+    static let appearDelay: Double = 0.6
     static let travel: Double = 2.6
     static let particles: [Particle] = [
         .init(kind: .flower, size: 18, delay: start + 0.00, lane: 0.30, sway: 5, turns: 0.6, phase: 0.0),
@@ -98,7 +83,6 @@ struct SakuraDrift {
         .init(kind: .flower, size: 11, delay: start + 1.10, lane: 0.28, sway: 5, turns: -0.6, phase: 0.25),
         .init(kind: .petal, size: 8, delay: start + 1.25, lane: 0.55, sway: 6, turns: -1.3, phase: 0.7),
     ]
-    /// 整段动画的时长（约 4 秒）
     static var duration: Double { (particles.map(\.delay).max() ?? 0) + travel }
 
     struct State: Equatable {
@@ -108,19 +92,16 @@ struct SakuraDrift {
         var opacity: Double
     }
 
-    /// 第 i 朵在 elapsed 秒时的位置；还没出发或已经飘出去时返回 nil
     static func state(_ p: Particle, elapsed: Double, in size: CGSize) -> State? {
         let unclamped = (elapsed - p.delay) / travel
         guard unclamped >= 0, unclamped <= 1 + 1e-9 else { return nil }
         let t = min(unclamped, 1)
         let x = -p.size + CGFloat(t) * (size.width + 2 * p.size)
         let y = p.lane * size.height + p.sway * CGFloat(sin(2 * .pi * (t * 1.3 + p.phase)))
-        // 两头淡入淡出
         let opacity = min(1, min(t, 1 - t) / 0.12)
         return State(x: x, y: y, angle: 360 * p.turns * t, opacity: opacity)
     }
 
-    /// 铃铛摇的角度（前 0.7 秒左右来回摆，越摆越小）
     static func bellAngle(elapsed: Double) -> Double {
         let d = 0.7
         guard elapsed >= 0, elapsed < d else { return 0 }
@@ -128,7 +109,6 @@ struct SakuraDrift {
     }
 }
 
-/// 首页复习提醒上飘过的樱花层（不接收点击，读屏不读）
 struct SakuraDriftOverlay: View {
     let start: Date
 
@@ -162,8 +142,23 @@ struct SakuraDriftOverlay: View {
     }
 }
 
-/// 动画只在用户没有打开「减弱动态效果」时播放；端到端测试里默认不播（避免拖慢测试），
-/// 传 `-playAnimations` 时照常播放。
+struct ForegroundReplay {
+    private var cameFromBackground = false
+
+    mutating func shouldReplay(on phase: ScenePhase) -> Bool {
+        switch phase {
+        case .background:
+            cameFromBackground = true
+            return false
+        case .active:
+            defer { cameFromBackground = false }
+            return cameFromBackground
+        default:
+            return false
+        }
+    }
+}
+
 enum DecorativeMotion {
     static func enabled(reduceMotion: Bool, arguments: [String] = ProcessInfo.processInfo.arguments) -> Bool {
         if reduceMotion { return false }
