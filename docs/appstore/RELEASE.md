@@ -28,11 +28,9 @@
 | Variable | `APPLE_TEAM_ID` | Team ID |
 | Variable | `BUNDLE_ID` | 第 1 步中的 Bundle ID |
 
-## 4. 发布隐私政策页面（GitHub Pages）
+## 4. 隐私政策与支持网页
 
-仓库 **Settings** → **Pages** → Source 选 **Deploy from a branch** → Branch 选 `main`、目录 `/docs` → Save。
-几分钟后隐私政策网址为：`https://<你的 GitHub 用户名>.github.io/japanese-grammar-scanner/#privacy`
-（仓库需为公开仓库，或账号支持私有仓库 Pages。也可以把 `docs/index.html` 放到任何你自己的网站上。）
+放在开发者的博客 SiBlog（https://sinimite.work）上，网址见 `metadata.md`。不需要开 GitHub Pages。
 
 ## 5. 上传构建
 

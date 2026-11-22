@@ -61,8 +61,15 @@
 
 ## URL
 
-- 支持网址（必填）：可使用 GitHub 仓库页或 Issues 页
-- 隐私政策网址（必填）：https://sixianli.github.io/japanese-grammar-scanner/#privacy（docs/index.html，由 App 内的隐私政策自动生成）
+App 主页放在开发者的博客 SiBlog（https://sinimite.work）上，中英日三种语言：
+
+| 字段 | 简体中文 / 繁體中文 | English 及其他语言 |
+| --- | --- | --- |
+| 支持网址（必填） | https://sinimite.work/works/grammar-scanner/ | https://sinimite.work/en/works/grammar-scanner/ |
+| 营销网址（可选） | 同支持网址 | 同支持网址 |
+| 隐私政策网址（必填，在「App 信息」页） | https://sinimite.work/works/grammar-scanner/privacy/ | https://sinimite.work/en/works/grammar-scanner/privacy/ |
+
+博客上的隐私政策由 `python3 tools/privacy_mirror.py --write-siblog <SiBlog 目录>` 按 App 里的政策生成；发版工作流会打开这三个语言的页面逐节对比，和 App 对不上就拦下。
 
 ## App 隐私（App Store Connect → App 隐私）
 
