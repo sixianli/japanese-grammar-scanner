@@ -138,8 +138,8 @@ final class DetailTests: E2ETestCase {
 
     private func assertTitleFitsOneLineBetweenButtons(_ title: String, _ element: XCUIElement, state: String, pinned: Bool,
                                                      file: StaticString = #filePath, line: UInt = #line) {
-        let page = app.scrollViews.firstMatch
-        XCTAssertTrue(page.exists, "应能找到讲解页的滚动区域", file: file, line: line)
+        let page = app.windows.firstMatch
+        XCTAssertTrue(page.exists, "应能找到 App 窗口", file: file, line: line)
         let frame = element.frame
         let inset = pinned ? CGFloat(68) : CGFloat(20)
         XCTAssertEqual(frame.midX, page.frame.midX, accuracy: 3, "\(state)：标题「\(title)」应在页面正中，不偏左右：标题 \(frame)，页面 \(page.frame)", file: file, line: line)
