@@ -85,9 +85,14 @@ App 主页放在开发者的博客 SiBlog（https://sinimite.work）上，中英
 
 ## 审核备注 (App Review Information → Notes)
 
-本 App 全部功能免费，无内购，无需登录账号。扫描、讲解、复习都在设备上完成，不联网也能使用；联网时会通过 CloudKit 上传匿名使用统计和用户主动提交的反馈（不与身份关联）。
-使用方法：在“扫描”页将相机对准任意印刷的日文文字（或点左下角“相册”选择含日文的图片），识别出的语法点会高亮显示，点击即可查看讲解。
-相机权限仅用于在设备端识别文字。
+审核员不一定看得懂中文，用英文：
+
+```
+All features are free. No in-app purchases, no account or sign-in required.
+Scanning, explanations and review all run on the device and work offline. When online, the app uploads anonymous usage statistics and feedback the user chooses to send, via CloudKit (not linked to identity).
+How to test: on the Scan tab, point the camera at any printed Japanese text (or tap "相册" (Photos) at the bottom left to pick an image containing Japanese). Detected grammar points are highlighted; tap one to see its explanation. Without Japanese text at hand, tap "试试示例" (Try a sample) on the Home or Scan screen to scan a built-in sample page.
+The camera is used only for on-device text recognition.
+```
 
 ## 出口合规
 
