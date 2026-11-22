@@ -100,15 +100,13 @@ final class DetailTests: E2ETestCase {
         app.swipeUp()
         let level = id("detail.barLevel")
         wait(level, "往上滑后标题收进顶栏，标题下方应出现等级")
-        let bar = id("detail.titleBar")
-        let screen = bar.exists ? bar.frame : app.windows.firstMatch.frame
-        XCTAssertEqual(barTitle.frame.midX, screen.midX, accuracy: 2, "收进顶栏的标题应在水平正中")
+        XCTAssertEqual(barTitle.frame.midX, restFrame.midX, accuracy: 2, "标题只往上移，水平位置和页面大标题一样居中（大屏时右侧有竖排标签栏，以内容区为准）")
         XCTAssertLessThan(barTitle.frame.minY, restFrame.minY - 20, "标题应跟着往上移到顶栏")
         XCTAssertLessThan(barTitle.frame.maxY, 200, "标题应停在屏幕顶部的顶栏里")
         XCTAssertLessThan(barTitle.frame.height, restFrame.height, "收进顶栏的标题应比页面大标题小")
         XCTAssertTrue(level.label.hasPrefix("JLPT N"), "等级应写成「JLPT N…」")
         XCTAssertGreaterThan(level.frame.minY, barTitle.frame.minY, "等级应在标题下方")
-        XCTAssertEqual(level.frame.midX, screen.midX, accuracy: 2, "等级应居中")
+        XCTAssertEqual(level.frame.midX, barTitle.frame.midX, accuracy: 2, "等级应在标题正下方居中")
 
         scrollToTop()
         waitGone(level, "回到顶部后顶栏里的等级应藏起来")
