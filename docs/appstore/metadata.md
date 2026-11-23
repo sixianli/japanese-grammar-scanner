@@ -42,7 +42,7 @@
 ```
 All features are free. No in-app purchases, no account or sign-in required.
 Scanning, explanations and review all run on the device and work offline. When online, the app uploads anonymous usage statistics and feedback the user chooses to send, via CloudKit (not linked to identity).
-How to test: on the Scan tab, point the camera at any printed Japanese text (or tap "相册" (Photos) at the bottom left to pick an image containing Japanese). Detected grammar points are highlighted; tap one to see its explanation. Without Japanese text at hand, tap "没有日文材料？试试示例" (No Japanese text? Try a sample) on the Home screen (shown until the first scan), or "试试示例" (Try a sample) at the top of the Scan screen, to scan a built-in sample page.
+How to test: the app follows the device language (English, Chinese, Korean, Spanish, Vietnamese, Burmese); labels below are as shown in English. On the Scan tab, point the camera at any printed Japanese text, or tap "Photos" to pick an image containing Japanese. Detected grammar points are highlighted; tap one to see its explanation. Without Japanese text at hand, tap "No Japanese text handy? Try a sample" on the Home tab (shown until the first scan), or "Try Sample" at the top of the Scan tab, to scan a built-in sample page.
 The camera is used only for on-device text recognition.
 ```
 
