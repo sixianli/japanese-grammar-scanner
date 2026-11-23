@@ -414,7 +414,7 @@ final class SearchTests: E2ETestCase {
         wait(field, "搜索框")
         XCTAssertTrue(waitForFocus(field), "进入搜索页应弹出键盘")
         field.typeText("sstv")
-        app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.45)).tap()
+        app.staticTexts.matching(NSPredicate(format: "label CONTAINS %@", "sstv")).firstMatch.tap()
         waitGone(app.keyboards.firstMatch, "无结果时点空白处应收起键盘")
         XCTAssertEqual(field.value as? String, "sstv", "收起键盘后输入的文字应保留")
 

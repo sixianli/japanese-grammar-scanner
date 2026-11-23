@@ -142,8 +142,6 @@ final class ScanResultTests: E2ETestCase {
                 for j in 0..<options.count {
                     XCTAssertTrue(options.element(boundBy: j).label.contains("「"), "选项应附上命中的原文：\(options.element(boundBy: j).label)")
                 }
-                let cancel = app.buttons["取消"].firstMatch
-                if cancel.exists { cancel.tap() } else { app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.06)).tap() }
                 break
             }
             if detailScreen.waitForExistence(timeout: 2) {
