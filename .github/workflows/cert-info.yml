@@ -20,17 +20,21 @@ jobs:
           from appstore_listing import Api
           from cryptography import x509
           api = Api()
-          certs = api.call("GET", "/certificates?limit=200")["data"]
-          for c in certs:
-              a = c["attributes"]
-              line = f"{a.get('certificateType')} | {a.get('displayName') or a.get('name')} | expires {a.get('expirationDate')} | platform {a.get('platform')}"
-              content = a.get("certificateContent")
+          import plistlib, re
+          profiles = api.call("GET", "/profiles?limit=200")["data"]
+          for p in profiles:
+              a = p["attributes"]
+              print(f"PROFILE {a.get('profileType')} | {a.get('name')} | {a.get('profileState')} | expires {a.get('expirationDate')}")
+              content = a.get("profileContent")
               if not content:
-                  print(line, "| no content"); continue
-              der = base64.b64decode(content)
-              cert = x509.load_der_x509_certificate(der)
-              n = cert.public_key().public_numbers().n
-              print(line)
-              print("  SHA1:", hashlib.sha1(der).hexdigest().upper())
-              print("  MODULUS:", format(n, "X"))
+                  print("  no content"); continue
+              raw = base64.b64decode(content)
+              m = re.search(rb"<\?xml.*?</plist>", raw, re.S)
+              pl = plistlib.loads(m.group(0))
+              print("  app id:", pl.get("Entitlements", {}).get("application-identifier"))
+              for der in pl.get("DeveloperCertificates", []):
+                  cert = x509.load_der_x509_certificate(der)
+                  print("  CERT:", cert.subject.rfc4514_string(), "| until", cert.not_valid_after_utc.date())
+                  print("    SHA1:", hashlib.sha1(der).hexdigest().upper())
+                  print("    MODULUS:", format(cert.public_key().public_numbers().n, "X"))
           PY
