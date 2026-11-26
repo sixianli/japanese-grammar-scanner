@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from check_e2e_ran_all import ROOT, declared, selection_names
 
 SHARDS = [
-    ["SettingsTests"],
+    ["SettingsTests", "LineSelectFlowTests"],
     ["ScanResultTests", "HomeTests", "SakuraAnimationTests"],
     ["DetailTests", "ReviewTests"],
     ["EndToEndTests", "FavoritesTests", "SearchTests", "LibraryTests", "FreshInstallTests"],
