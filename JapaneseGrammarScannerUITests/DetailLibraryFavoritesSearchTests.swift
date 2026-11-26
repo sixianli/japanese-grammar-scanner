@@ -484,3 +484,23 @@ final class SakuraAnimationTests: E2ETestCase {
 private enum FlightTiming {
     static let pouchGlowStart: TimeInterval = 2.9
 }
+
+final class DetailScrollTests: E2ETestCase {
+    func testDetailScrollNeverJumpsBackWhileScrollingDown() {
+        openDetailBySearch("だけ")
+        let column = id("detail.titleColumn")
+        wait(column, "讲解页应有标题")
+        let feedback = id("detail.feedback")
+        var positions = [column.frame.minY]
+        for _ in 0..<40 where !(feedback.exists && feedback.isHittable) {
+            app.swipeUp(velocity: .slow)
+            positions.append(column.frame.minY)
+        }
+        let moves = zip(positions, positions.dropFirst()).map { $1 - $0 }
+        XCTAssertTrue(feedback.exists && feedback.isHittable, "一直往下滑应能滑到底：\(positions)")
+        XCTAssertTrue(moves.allSatisfy { $0 <= 1 }, "一直往下滑，页面不应往回跳：每次滑动后的标题位置 \(positions)")
+        let bottom = feedback.frame.minY
+        Thread.sleep(forTimeInterval: 1.5)
+        XCTAssertEqual(feedback.frame.minY, bottom, accuracy: 1, "滑到底停住后不应往回弹")
+    }
+}
