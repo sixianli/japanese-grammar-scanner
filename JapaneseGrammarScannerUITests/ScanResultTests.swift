@@ -203,7 +203,8 @@ final class LineSelectFlowTests: E2ETestCase {
         openSampleForSelection()
         let from = selectLine(containing: "おかげで"), to = selectLine(containing: "と思う")
         from.coordinate(withNormalizedOffset: CGVector(dx: 0.3, dy: 0.5))
-            .press(forDuration: 0.2, thenDragTo: to.coordinate(withNormalizedOffset: CGVector(dx: 0.6, dy: 0.5)))
+            .press(forDuration: 0.2, thenDragTo: to.coordinate(withNormalizedOffset: CGVector(dx: 0.6, dy: 0.5)),
+                   withVelocity: .slow, thenHoldForDuration: 0.3)
         let selected = ids("select.line.selected")
         wait(selected.firstMatch, "拖动后应选中几行")
         XCTAssertEqual(selected.count, 3, "从「おかげで」那行拖到「と思う」那行，应选中整整 3 行")
