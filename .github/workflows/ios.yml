@@ -163,7 +163,12 @@ jobs:
             -project JapaneseGrammarScanner.xcodeproj \
             -scheme JapaneseGrammarScanner \
             -destination "id=${{ steps.sim.outputs.udid }}" -derivedDataPath build \
-            CODE_SIGNING_ALLOWED=NO | tail -3
+            CODE_SIGNING_ALLOWED=NO > build-for-testing.log 2>&1 || {
+              grep -E ": error:" -A3 build-for-testing.log | head -120
+              tail -5 build-for-testing.log
+              exit 65
+            }
+          tail -3 build-for-testing.log
       - name: Wait for simulator and sample photos
         run: |
           PID=$(cat sim-prep.pid)
@@ -265,7 +270,12 @@ jobs:
         run: |
           set -o pipefail
           xcodebuild build -project JapaneseGrammarScanner.xcodeproj -scheme JapaneseGrammarScanner \
-            -destination "id=${{ steps.sim.outputs.udid }}" -derivedDataPath build CODE_SIGNING_ALLOWED=NO | tail -5
+            -destination "id=${{ steps.sim.outputs.udid }}" -derivedDataPath build CODE_SIGNING_ALLOWED=NO > build-app.log 2>&1 || {
+              grep -E ": error:" -A3 build-app.log | head -120
+              tail -5 build-app.log
+              exit 65
+            }
+          tail -5 build-app.log
       - name: Capture screenshots (all languages)
         run: |
           UDID=${{ steps.sim.outputs.udid }}
