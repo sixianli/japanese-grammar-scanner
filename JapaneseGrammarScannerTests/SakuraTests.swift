@@ -5,11 +5,24 @@ import UIKit
 final class SakuraTests: XCTestCase {
     private let row = CGSize(width: 360, height: 52)
 
-    func testDriftHasFlowersAndPetalsAndLastsAboutFourSeconds() {
-        let kinds = SakuraDrift.particles.map(\.kind)
-        XCTAssertEqual(kinds.filter { $0 == .flower }.count, 4)
-        XCTAssertEqual(kinds.filter { $0 == .petal }.count, 4)
-        XCTAssertEqual(SakuraDrift.duration, 4, accuracy: 0.5)
+    func testDriftHasBigFlowersAndPetalsAndLastsAboutThreeAndAHalfSeconds() {
+        let flowers = SakuraDrift.particles.filter { $0.kind == .flower }.map(\.size)
+        let petals = SakuraDrift.particles.filter { $0.kind == .petal }.map(\.size)
+        XCTAssertEqual(flowers, [27, 20, 23, 17], "樱花再大一点（Build 25 反馈 6）")
+        XCTAssertEqual(petals, [14, 12, 15, 12], "花瓣画大一点（Build 25 反馈 6）")
+        XCTAssertEqual(SakuraDrift.duration, 3.42, accuracy: 0.05)
+    }
+
+    func testDriftIsTwentyPercentFasterThanBefore() {
+        XCTAssertEqual(SakuraDrift.travel, 2.17, accuracy: 0.01, "飘过一行原来要 2.6 秒，提速 20% 后约 2.17 秒")
+    }
+
+    func testFirstFlowerDriftsInTogetherWithNumberRoll() {
+        XCTAssertEqual(SakuraDrift.particles.map(\.delay).min(), 0, "樱花和数字滚动同时开始，不等数字滚完")
+        let row = CGSize(width: 360, height: 64)
+        let first = SakuraDrift.particles[0]
+        XCTAssertNotNil(SakuraDrift.state(first, elapsed: 0.1, in: row), "数字刚开始滚时第一朵樱花已经出现")
+        XCTAssertLessThan(ReviewNudge.shownCount(target: 25, elapsed: 0.1), 25, "这时数字还在滚")
     }
 
     func testDriftGoesLeftToRightAndEnds() {
@@ -28,13 +41,6 @@ final class SakuraTests: XCTestCase {
         }
     }
 
-    func testBellRingsFirstThenStops() {
-        XCTAssertNotEqual(SakuraDrift.bellAngle(elapsed: 0.06), 0)
-        XCTAssertEqual(SakuraDrift.bellAngle(elapsed: 1.0), 0)
-        XCTAssertEqual(SakuraDrift.bellAngle(elapsed: -1), 0, "没在播放时铃铛不动")
-        XCTAssertGreaterThan(SakuraDrift.particles.map(\.delay).min() ?? 0, 0.2)
-    }
-
     func testDecorativeMotionSwitch() {
         XCTAssertTrue(DecorativeMotion.enabled(reduceMotion: false, arguments: []))
         XCTAssertFalse(DecorativeMotion.enabled(reduceMotion: true, arguments: []))
@@ -43,24 +49,65 @@ final class SakuraTests: XCTestCase {
         XCTAssertFalse(DecorativeMotion.enabled(reduceMotion: true, arguments: ["-e2e", "-playAnimations"]))
     }
 
-    func testReviewMotionReplaysWhenAppComesBackFromBackground() {
-        var replay = ForegroundReplay()
-        XCTAssertFalse(replay.shouldReplay(on: .inactive))
-        XCTAssertFalse(replay.shouldReplay(on: .background))
-        XCTAssertFalse(replay.shouldReplay(on: .inactive))
-        XCTAssertTrue(replay.shouldReplay(on: .active))
-        XCTAssertFalse(replay.shouldReplay(on: .active))
+    func testNudgePlaysOnColdLaunchButNotWhenComingBackToHome() {
+        let schedule = ReviewNudgeSchedule()
+        XCTAssertTrue(schedule.takeTurn(), "打开 App 时提醒一次")
+        XCTAssertFalse(schedule.takeTurn(), "从别的页面返回首页不再提醒")
     }
 
-    func testReviewMotionDoesNotReplayForControlCenterOrNotifications() {
-        var replay = ForegroundReplay()
-        XCTAssertFalse(replay.shouldReplay(on: .inactive))
-        XCTAssertFalse(replay.shouldReplay(on: .active))
+    func testNudgeDoesNotReplayAfterShortTimeInBackground() {
+        let schedule = ReviewNudgeSchedule()
+        _ = schedule.takeTurn()
+        let left = Date(timeIntervalSince1970: 1_000_000)
+        schedule.sceneChanged(to: .inactive, now: left)
+        schedule.sceneChanged(to: .background, now: left)
+        schedule.sceneChanged(to: .inactive, now: left.addingTimeInterval(29 * 60))
+        schedule.sceneChanged(to: .active, now: left.addingTimeInterval(29 * 60))
+        XCTAssertFalse(schedule.takeTurn(), "离开不到 30 分钟切回来不提醒")
+    }
+
+    func testNudgeReplaysOnceAfterThirtyMinutesInBackground() {
+        let schedule = ReviewNudgeSchedule()
+        _ = schedule.takeTurn()
+        let left = Date(timeIntervalSince1970: 1_000_000)
+        schedule.sceneChanged(to: .background, now: left)
+        schedule.sceneChanged(to: .active, now: left.addingTimeInterval(30 * 60))
+        XCTAssertTrue(schedule.takeTurn(), "离开 30 分钟后切回来提醒一次")
+        XCTAssertFalse(schedule.takeTurn(), "只提醒一次")
+    }
+
+    func testNudgeIgnoresControlCenterAndNotifications() {
+        let schedule = ReviewNudgeSchedule()
+        _ = schedule.takeTurn()
+        let now = Date(timeIntervalSince1970: 1_000_000)
+        schedule.sceneChanged(to: .inactive, now: now)
+        schedule.sceneChanged(to: .active, now: now.addingTimeInterval(3600))
+        XCTAssertFalse(schedule.takeTurn(), "只是拉下控制中心，没有进后台，不提醒")
+    }
+
+    func testNumberRollsFromZeroToCount() {
+        XCTAssertEqual(ReviewNudge.shownCount(target: 25, elapsed: -0.3), 0, "开始前显示 0")
+        XCTAssertEqual(ReviewNudge.shownCount(target: 25, elapsed: 0), 0)
+        let mid = ReviewNudge.shownCount(target: 25, elapsed: 0.3)
+        XCTAssertTrue((1...24).contains(mid), "滚动中途在 0 和 25 之间：\(mid)")
+        XCTAssertEqual(ReviewNudge.shownCount(target: 25, elapsed: 0.8), 25)
+        XCTAssertEqual(ReviewNudge.shownCount(target: 25, elapsed: .infinity), 25, "不播放时直接显示数量")
+    }
+
+    func testGlowHoldsThenFadesOut() {
+        XCTAssertEqual(ReviewNudge.glowOpacity(elapsed: -0.1), 0)
+        XCTAssertEqual(ReviewNudge.glowOpacity(elapsed: 0.3), 1)
+        XCTAssertEqual(ReviewNudge.glowOpacity(elapsed: 1.35), 0.5, accuracy: 0.01)
+        XCTAssertEqual(ReviewNudge.glowOpacity(elapsed: 2.0), 0, "约 2 秒后完全消失")
+    }
+
+    func testReduceMotionKeepsOnlyHaptic() {
+        XCTAssertEqual(ReviewNudge.plan(reduceMotion: true, arguments: []), .init(haptic: true, motion: false))
+        XCTAssertEqual(ReviewNudge.plan(reduceMotion: false, arguments: []), .init(haptic: true, motion: true))
     }
 
     func testReviewMotionStartsAfterLaunchTransition() {
         XCTAssertGreaterThanOrEqual(SakuraDrift.appearDelay, 0.5)
-        XCTAssertEqual(SakuraDrift.bellAngle(elapsed: -SakuraDrift.appearDelay / 2), 0)
     }
 
     func testFlowerShapeFitsItsFrame() {
@@ -69,8 +116,6 @@ final class SakuraTests: XCTestCase {
         XCTAssertTrue(rect.insetBy(dx: -0.5, dy: -0.5).contains(b), "樱花不应超出方框：\(b)")
         XCTAssertGreaterThan(b.width, 30)
     }
-
-    // MARK: 收藏时樱花飘进「收藏」标签
 
     private let from = CGPoint(x: 360, y: 60)
     private let to = CGPoint(x: 250, y: 800)

@@ -440,6 +440,19 @@ final class SakuraAnimationTests: E2ETestCase {
         wait(id("review.bar"), "樱花飘过时点复习提醒也应进入复习")
     }
 
+    func testReviewReminderDoesNotReplayWhenComingBackToHome() {
+        scrollToTop()
+        let row = id("home.review")
+        wait(row, "有到期的语法时应显示复习提醒")
+        Thread.sleep(forTimeInterval: 2)
+        row.tap()
+        wait(id("review.bar"), "点复习提醒应进入复习")
+        back()
+        wait(row, "返回首页后仍有复习提醒")
+        XCTAssertFalse(app.staticTexts["0 个语法可以复习了"].exists, "从别的页面返回首页不应再把数字从 0 滚一遍")
+        XCTAssertTrue(text(containing: "个语法可以复习了").exists, "返回后直接显示数量")
+    }
+
     func testFavoritesTabReachableWhenPouchTurnsPink() {
         openDetailBySearch("にもかかわらず")
         id("detail.favorite").tap()

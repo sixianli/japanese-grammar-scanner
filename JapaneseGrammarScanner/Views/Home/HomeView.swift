@@ -493,66 +493,105 @@ struct ReviewRow: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.scenePhase) private var scenePhase
     @State private var playStart: Date?
+    @State private var hapticAt: Date?
+    @State private var buzz = 0
     @State private var onScreen = false
-    @State private var foregroundReplay = ForegroundReplay()
+
+    private static let shape = RoundedRectangle(cornerRadius: 16, style: .continuous)
 
     var body: some View {
         NavigationLink(value: Route.review(ids[0], Array(ids.dropFirst()))) {
-            HStack(spacing: 10) {
-                bell
-                Text(localized: "\(ids.count) 个语法可以复习了")
-                    .font(.body.weight(.medium))
-                    .foregroundStyle(Color.primary)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.85)
+            HStack(spacing: 12) {
+                TimelineView(.animation(paused: playStart == nil)) { context in
+                    let elapsed = playStart.map { context.date.timeIntervalSince($0) } ?? .infinity
+                    Text(Self.sentence(count: ReviewNudge.shownCount(target: ids.count, elapsed: elapsed)))
+                        .foregroundStyle(Color.primary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
+                }
                 Spacer(minLength: 4)
                 Image(systemName: "chevron.right")
                     .font(.footnote.weight(.semibold))
                     .foregroundStyle(.tertiary)
             }
             .padding(.horizontal, 16)
-            .frame(maxWidth: .infinity, minHeight: 52)
+            .frame(maxWidth: .infinity, minHeight: 64)
             .background(Theme.card)
             .overlay {
                 if let playStart { SakuraDriftOverlay(start: playStart) }
             }
-            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-            .contentShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .clipShape(Self.shape)
+            .overlay {
+                if let playStart { ReviewGlow(start: playStart, shape: Self.shape) }
+            }
+            .contentShape(Self.shape)
         }
         .buttonStyle(RowPressStyle())
         .accessibilityIdentifier("home.review")
+        .sensoryFeedback(.impact(weight: .light), trigger: buzz)
         .onAppear {
             onScreen = true
-            play()
+            if ReviewNudgeSchedule.shared.takeTurn() { play() }
         }
         .onDisappear {
             onScreen = false
             playStart = nil
+            hapticAt = nil
         }
         .onChange(of: scenePhase) { _, phase in
-            if foregroundReplay.shouldReplay(on: phase), onScreen { play() }
+            ReviewNudgeSchedule.shared.sceneChanged(to: phase)
+            if phase == .active, onScreen, ReviewNudgeSchedule.shared.takeTurn() { play() }
+        }
+        .task(id: hapticAt) {
+            guard let hapticAt else { return }
+            try? await Task.sleep(for: .seconds(max(0, hapticAt.timeIntervalSinceNow)))
+            guard !Task.isCancelled else { return }
+            buzz += 1
         }
         .task(id: playStart) {
             guard let playStart else { return }
-            let remaining = playStart.timeIntervalSinceNow + SakuraDrift.duration + 0.1
+            let remaining = playStart.timeIntervalSinceNow + max(SakuraDrift.duration, ReviewNudge.glowDuration) + 0.1
             try? await Task.sleep(for: .seconds(max(0, remaining)))
+            guard !Task.isCancelled else { return }
             self.playStart = nil
         }
     }
 
     private func play() {
-        guard DecorativeMotion.enabled(reduceMotion: reduceMotion) else { return }
-        playStart = Date().addingTimeInterval(SakuraDrift.appearDelay)
+        let start = Date().addingTimeInterval(SakuraDrift.appearDelay)
+        let plan = ReviewNudge.plan(reduceMotion: reduceMotion)
+        if plan.haptic { hapticAt = start }
+        if plan.motion { playStart = start }
     }
 
-    private var bell: some View {
-        TimelineView(.animation(paused: playStart == nil)) { context in
-            let elapsed = playStart.map { context.date.timeIntervalSince($0) } ?? -1
-            Image(systemName: "bell")
-                .font(.body.weight(.medium))
-                .foregroundStyle(Theme.accentText)
-                .rotationEffect(.degrees(SakuraDrift.bellAngle(elapsed: elapsed)), anchor: .top)
+    static func sentence(count: Int) -> AttributedString {
+        let text = String.localizedStringWithFormat(tr("%lld 个语法可以复习了"), count)
+        var out = AttributedString(text)
+        out.font = .body.weight(.medium)
+        if let first = text.firstIndex(where: \.isNumber) {
+            let last = text[first...].firstIndex(where: { !$0.isNumber }) ?? text.endIndex
+            if let range = out.range(of: String(text[first..<last])) {
+                out[range].font = .system(size: 28, weight: .bold).monospacedDigit()
+                out[range].foregroundColor = Theme.accentText
+            }
         }
+        return out
+    }
+}
+
+private struct ReviewGlow: View {
+    let start: Date
+    let shape: RoundedRectangle
+
+    var body: some View {
+        TimelineView(.animation) { context in
+            let opacity = ReviewNudge.glowOpacity(elapsed: context.date.timeIntervalSince(start))
+            shape
+                .strokeBorder(Theme.accent, lineWidth: 2)
+                .shadow(color: Theme.accent.opacity(0.45), radius: 12)
+                .opacity(opacity)
+        }
+        .allowsHitTesting(false)
         .accessibilityHidden(true)
     }
 }
