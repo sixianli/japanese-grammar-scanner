@@ -13,9 +13,9 @@ struct ScanHomeView: View {
             ZStack {
                 Color.black.ignoresSafeArea()
                 cameraLayer.ignoresSafeArea()
-                VStack(spacing: 0) {
-                    livePanel
+                VStack(spacing: 14) {
                     Spacer()
+                    hintCapsule
                     controls
                 }
             }
@@ -74,26 +74,25 @@ struct ScanHomeView: View {
         .padding()
     }
 
-    private var livePanel: some View {
-        HStack {
-            Image(systemName: "text.viewfinder")
+    private var hintCapsule: some View {
+        HStack(spacing: 10) {
             Text(localized: "对准书页，按快门拍下来")
-                .font(.subheadline.weight(.medium))
+                .font(.subheadline)
+                .lineLimit(2)
                 .accessibilityIdentifier("scan.hint")
-            Spacer()
             Button(tr("试试示例"), action: openSample)
                 .accessibilityIdentifier("scan.trySample")
-                .font(.caption.weight(.semibold))
+                .font(.footnote.weight(.semibold))
                 .padding(.horizontal, 10)
-                .padding(.vertical, 5)
-                .glassBackground(in: Capsule(), interactive: true)
+                .padding(.vertical, 4)
+                .background(.white.opacity(0.18), in: Capsule())
         }
         .foregroundStyle(.white)
-        .padding(12)
-        .glassBackground(in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-        .environment(\.colorScheme, .dark)
+        .padding(.leading, 14)
+        .padding(.trailing, 8)
+        .padding(.vertical, 8)
+        .background(.black.opacity(0.55), in: Capsule())
         .padding(.horizontal)
-        .padding(.top, 8)
     }
 
     private var controls: some View {
