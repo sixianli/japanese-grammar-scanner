@@ -57,6 +57,7 @@ final class ReviewTests: E2ETestCase {
 
         app.swipeUp()
         let next = nextTitle()
+        XCTAssertTrue(id("review.done").label.contains("下一个：\(next)"), "下一个语法名应写在「还剩几个」那行：\(id("review.done").label)")
         id("review.next").tap()
         assertFreshReviewPage("第 2 个")
         wait(id("detail.title"), "讲解页应有标题")

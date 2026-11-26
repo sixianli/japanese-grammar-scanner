@@ -620,6 +620,7 @@ S = {
     '把相机对准书页，按中间的快门拍下来，也可以从相册选择截图。拍好后点一行，或按住上下拖动选几行，只看你想看的句子；想看整页就点「分析整页」。': ('Point the camera at a page and tap the shutter in the middle, or pick a screenshot from Photos. Then tap a line, or hold and drag up or down to pick several, to see just the sentences you want. To see everything, tap “Analyze Whole Page”.', '카메라를 페이지에 맞추고 가운데 셔터를 누르거나, 사진에서 스크린샷을 고르세요. 찍은 뒤 한 줄을 누르거나 누른 채 위아래로 끌어 여러 줄을 고르면, 보고 싶은 문장만 볼 수 있어요. 전체를 보려면 “페이지 전체 분석”을 누르세요.', 'Apunta la cámara a una página y pulsa el obturador central, o elige una captura de Fotos. Después toca una línea, o mantén pulsado y arrastra arriba o abajo para elegir varias, y verás solo las frases que quieras. Para verlo todo, toca «Analizar toda la página».', 'Hướng camera vào trang sách rồi bấm nút chụp ở giữa, hoặc chọn ảnh chụp màn hình từ Ảnh. Sau đó nhấn một dòng, hoặc giữ và kéo lên xuống để chọn nhiều dòng, để chỉ xem những câu bạn muốn. Muốn xem cả trang thì nhấn “Phân tích cả trang”.'),
     "点照片上别的行就改看那一行；按住再上下拖可以选几行。点高亮看讲解。": ("Tap another line in the photo to switch to it, or hold and drag up or down to pick several lines. Tap a highlight for its explanation.", "사진에서 다른 줄을 누르면 그 줄로 바뀌고, 누른 채 위아래로 끌면 여러 줄을 고를 수 있어요. 강조 표시를 누르면 설명을 봅니다.", "Toca otra línea de la foto para cambiar a ella, o mantén pulsado y arrastra arriba o abajo para elegir varias. Toca un resaltado para ver su explicación.", "Nhấn dòng khác trên ảnh để chuyển sang dòng đó, hoặc giữ và kéo lên xuống để chọn nhiều dòng. Nhấn vào phần tô sáng để xem giải thích."),
     "点一行改看这一行，按住拖动可选几行；点高亮看讲解": ("Tap a line to switch to it, or hold and drag to pick several; tap a highlight for its explanation", "줄을 누르면 그 줄로 바뀌고, 누른 채 끌면 여러 줄을 고릅니다. 강조 표시를 누르면 설명을 봅니다", "Toca una línea para cambiar a ella o mantén pulsado y arrastra para elegir varias; toca un resaltado para ver su explicación", "Nhấn một dòng để chuyển sang dòng đó, hoặc giữ và kéo để chọn nhiều dòng; nhấn phần tô sáng để xem giải thích"),
+    "下一个": ("Next", "다음", "Siguiente", "Tiếp theo"),
 }
 
 MY = {
@@ -996,6 +997,7 @@ MY = {
     '把相机对准书页，按中间的快门拍下来，也可以从相册选择截图。拍好后点一行，或按住上下拖动选几行，只看你想看的句子；想看整页就点「分析整页」。': 'ကင်မရာကို စာမျက်နှာသို့ ချိန်ပြီး အလယ်ရှိ ရှပ်တာကို နှိပ်ပါ၊ သို့မဟုတ် ဓာတ်ပုံများမှ ဖန်သားပြင်ပုံကို ရွေးပါ။ ပြီးလျှင် စာကြောင်းတစ်ကြောင်းကို နှိပ်ပါ၊ သို့မဟုတ် ဖိထားပြီး အပေါ်အောက် ဆွဲ၍ စာကြောင်းများစွာ ရွေးကာ ကြည့်လိုသော စာကြောင်းများကိုသာ ကြည့်ပါ။ စာမျက်နှာတစ်ခုလုံး ကြည့်လိုလျှင် “စာမျက်နှာတစ်ခုလုံး ခွဲခြမ်းရန်” ကို နှိပ်ပါ။',
     "点照片上别的行就改看那一行；按住再上下拖可以选几行。点高亮看讲解。": "ဓာတ်ပုံထဲရှိ အခြားစာကြောင်းကို နှိပ်လျှင် ထိုစာကြောင်းသို့ ပြောင်းပါမည်။ ဖိထားပြီး အပေါ်အောက် ဆွဲလျှင် စာကြောင်းများစွာ ရွေးနိုင်ပါသည်။ အရောင်ခြယ်ထားသည့်နေရာကို နှိပ်လျှင် ရှင်းလင်းချက် ကြည့်နိုင်ပါသည်။",
     "点一行改看这一行，按住拖动可选几行；点高亮看讲解": "စာကြောင်းကို နှိပ်လျှင် ထိုစာကြောင်းသို့ ပြောင်းမည်၊ ဖိပြီးဆွဲလျှင် စာကြောင်းများစွာ ရွေးမည်။ အရောင်ခြယ်ထားသည့်နေရာကို နှိပ်လျှင် ရှင်းလင်းချက် ကြည့်ပါ",
+    "下一个": "နောက်တစ်ခု",
 }
 
 INFO = {
