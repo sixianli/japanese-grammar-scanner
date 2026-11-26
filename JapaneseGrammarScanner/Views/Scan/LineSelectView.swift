@@ -30,8 +30,12 @@ struct LineSelectView: View {
 
     private var hint: some View {
         ZStack(alignment: .top) {
-            hintText(Text(localized: "点一行只看这一行的语法；按住上下拖动可以选几行。双指可放大照片。"), shown: selected.isEmpty)
-            hintText(Text(localized: "再点别的行可以加选，点已选的行取消。"), shown: !selected.isEmpty)
+            emptyHint.hidden().accessibilityHidden(true)
+            selectedHint.hidden().accessibilityHidden(true)
+            Group {
+                if selected.isEmpty { emptyHint } else { selectedHint }
+            }
+            .accessibilityIdentifier("select.hint")
         }
         .font(.footnote)
         .foregroundStyle(.secondary)
@@ -41,50 +45,46 @@ struct LineSelectView: View {
         .padding(.vertical, 8)
     }
 
-    private func hintText(_ text: Text, shown: Bool) -> some View {
-        text
+    private var emptyHint: some View {
+        Text(localized: "点一行只看这一行的语法；按住上下拖动可以选几行。双指可放大照片。")
             .fixedSize(horizontal: false, vertical: true)
-            .opacity(shown ? 1 : 0)
-            .accessibilityHidden(!shown)
-            .accessibilityIdentifier("select.hint")
+    }
+
+    private var selectedHint: some View {
+        Text(localized: "再点别的行可以加选，点已选的行取消。")
+            .fixedSize(horizontal: false, vertical: true)
     }
 
     private var bottomBar: some View {
         ZStack(alignment: .bottom) {
-            wholePageButtons
-                .opacity(selected.isEmpty ? 1 : 0)
-                .allowsHitTesting(selected.isEmpty)
-                .accessibilityHidden(!selected.isEmpty)
-            selectedButtons
-                .opacity(selected.isEmpty ? 0 : 1)
-                .allowsHitTesting(!selected.isEmpty)
-                .accessibilityHidden(selected.isEmpty)
+            selectedButtons(tagged: false).hidden().accessibilityHidden(true).allowsHitTesting(false)
+            if selected.isEmpty {
+                Button(action: onAnalyzeAll) {
+                    Text(localized: "分析整页").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 8)
+                }
+                .buttonStyle(.borderedProminent)
+                .accessibilityIdentifier("select.analyzeAll")
+            } else {
+                selectedButtons(tagged: true)
+            }
         }
         .tint(Theme.accent)
         .padding(.horizontal)
         .padding(.bottom, 12)
     }
 
-    private var wholePageButtons: some View {
-        Button(action: onAnalyzeAll) {
-            Text(localized: "分析整页").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 8)
-        }
-        .buttonStyle(.borderedProminent)
-        .accessibilityIdentifier("select.analyzeAll")
-    }
-
-    private var selectedButtons: some View {
+    private func selectedButtons(tagged: Bool) -> some View {
         VStack(spacing: 8) {
             Button(action: onAnalyzeSelected) {
-                Text(localized: "分析这 \(selected.count) 行").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 8)
+                Text(localized: "分析这 \(max(selected.count, 1)) 行").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 8)
             }
             .buttonStyle(.borderedProminent)
-            .accessibilityIdentifier("select.analyzeSelected")
+            .accessibilityIdentifier(tagged ? "select.analyzeSelected" : "")
             Button(action: onAnalyzeAll) {
                 Text(localized: "改为分析整页").font(.subheadline.weight(.medium)).frame(maxWidth: .infinity).padding(.vertical, 4)
             }
             .buttonStyle(.bordered)
-            .accessibilityIdentifier("select.analyzeAll")
+            .accessibilityIdentifier(tagged ? "select.analyzeAll" : "")
         }
     }
 
