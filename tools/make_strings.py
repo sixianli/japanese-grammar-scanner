@@ -100,7 +100,6 @@ S = {
     "已收藏": ("In Favorites", "즐겨찾기에 있음", "En favoritos", "Đã yêu thích"),
     "已收进收藏": ("Added to Favorites", "즐겨찾기에 넣었어요", "Añadido a favoritos", "Đã thêm vào Yêu thích"),
     "点按可取消收藏": ("Tap to remove from Favorites", "탭하면 즐겨찾기에서 빠져요", "Toca para quitar de favoritos", "Chạm để bỏ yêu thích"),
-    "对准书页，标出句子里的语法": ("Point at a page to mark its grammar", "책을 비추면 문장 속 문법을 표시해요", "Apunta a una página y marca su gramática", "Hướng vào trang sách để đánh dấu ngữ pháp"),
     "没有日文材料？试试示例": ("No Japanese text handy? Try a sample", "일본어 자료가 없나요? 예시로 해 보기", "¿Sin texto en japonés? Prueba un ejemplo", "Chưa có tài liệu tiếng Nhật? Thử mẫu"),
     "意思": ("Meaning", "의미", "Significado", "Ý nghĩa"),
     "用法": ("Usage", "용법", "Uso", "Cách dùng"),
@@ -621,6 +620,8 @@ S = {
     "点照片上别的行就改看那一行；按住再上下拖可以选几行。点高亮看讲解。": ("Tap another line in the photo to switch to it, or hold and drag up or down to pick several lines. Tap a highlight for its explanation.", "사진에서 다른 줄을 누르면 그 줄로 바뀌고, 누른 채 위아래로 끌면 여러 줄을 고를 수 있어요. 강조 표시를 누르면 설명을 봅니다.", "Toca otra línea de la foto para cambiar a ella, o mantén pulsado y arrastra arriba o abajo para elegir varias. Toca un resaltado para ver su explicación.", "Nhấn dòng khác trên ảnh để chuyển sang dòng đó, hoặc giữ và kéo lên xuống để chọn nhiều dòng. Nhấn vào phần tô sáng để xem giải thích."),
     "点一行改看这一行，按住拖动可选几行；点高亮看讲解": ("Tap a line to switch to it, or hold and drag to pick several; tap a highlight for its explanation", "줄을 누르면 그 줄로 바뀌고, 누른 채 끌면 여러 줄을 고릅니다. 강조 표시를 누르면 설명을 봅니다", "Toca una línea para cambiar a ella o mantén pulsado y arrastra para elegir varias; toca un resaltado para ver su explicación", "Nhấn một dòng để chuyển sang dòng đó, hoặc giữ và kéo để chọn nhiều dòng; nhấn phần tô sáng để xem giải thích"),
     "下一个": ("Next", "다음", "Siguiente", "Tiếp theo"),
+    "拍下书页，再选要看的行": ("Snap a page, then pick lines", "책을 찍고 볼 줄을 고르세요", "Fotografía la página y elige líneas", "Chụp trang rồi chọn dòng muốn xem"),
+    "截图、照片都可以": ("Screenshots or photos", "스크린샷도 사진도 괜찮아요", "Capturas o fotos", "Ảnh chụp màn hình hay ảnh đều được"),
 }
 
 MY = {
@@ -714,7 +715,6 @@ MY = {
     "已收藏": "အကြိုက်ဆုံးထဲ ရှိပြီး",
     "已收进收藏": "အကြိုက်ဆုံးထဲ ထည့်လိုက်ပါပြီ",
     "点按可取消收藏": "တို့ပြီး အကြိုက်ဆုံးမှ ဖယ်နိုင်သည်",
-    "对准书页，标出句子里的语法": "စာမျက်နှာကို ချိန်ပြီး သဒ္ဒါကို အမှတ်အသားပြုပါ",
     "没有日文材料？试试示例": "ဂျပန်စာ မရှိသေးဘူးလား။ နမူနာ စမ်းကြည့်ပါ",
     "意思": "အဓိပ္ပာယ်",
     "用法": "အသုံးပြုပုံ",
@@ -998,6 +998,8 @@ MY = {
     "点照片上别的行就改看那一行；按住再上下拖可以选几行。点高亮看讲解。": "ဓာတ်ပုံထဲရှိ အခြားစာကြောင်းကို နှိပ်လျှင် ထိုစာကြောင်းသို့ ပြောင်းပါမည်။ ဖိထားပြီး အပေါ်အောက် ဆွဲလျှင် စာကြောင်းများစွာ ရွေးနိုင်ပါသည်။ အရောင်ခြယ်ထားသည့်နေရာကို နှိပ်လျှင် ရှင်းလင်းချက် ကြည့်နိုင်ပါသည်။",
     "点一行改看这一行，按住拖动可选几行；点高亮看讲解": "စာကြောင်းကို နှိပ်လျှင် ထိုစာကြောင်းသို့ ပြောင်းမည်၊ ဖိပြီးဆွဲလျှင် စာကြောင်းများစွာ ရွေးမည်။ အရောင်ခြယ်ထားသည့်နေရာကို နှိပ်လျှင် ရှင်းလင်းချက် ကြည့်ပါ",
     "下一个": "နောက်တစ်ခု",
+    "拍下书页，再选要看的行": "စာမျက်နှာကို ရိုက်ပြီး ကြည့်ချင်တဲ့ စာကြောင်းကို ရွေးပါ",
+    "截图、照片都可以": "ဖန်သားပြင်ပုံ၊ ဓာတ်ပုံ ဘာမဆိုရပါတယ်",
 }
 
 INFO = {

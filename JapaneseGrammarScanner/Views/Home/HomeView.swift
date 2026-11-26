@@ -79,8 +79,6 @@ struct HomeView: View {
         })
     }
 
-    // MARK: 搜索入口（点一下进入搜索标签并直接开始输入）
-
     private var searchEntry: some View {
         HStack(spacing: 10) {
             searchField
@@ -120,36 +118,22 @@ struct HomeView: View {
         .accessibilityIdentifier("home.search")
     }
 
-    // MARK: 扫描入口
-
     private var scanEntry: some View {
         VStack(spacing: 12) {
-            Button(action: openCamera) {
-                VStack(spacing: 3) {
-                    Label(tr("相机扫描"), systemImage: "camera.viewfinder")
-                        .font(.headline)
-                    Text(localized: "对准书页，标出句子里的语法")
-                        .font(.caption.weight(.medium))
-                        .opacity(0.9)
+            HStack(alignment: .top, spacing: 12) {
+                Button(action: openCamera) {
+                    EntryCard(icon: "camera.viewfinder", title: tr("相机扫描"), subtitle: tr("拍下书页，再选要看的行"), highlighted: true)
                 }
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 6)
-            }
-            .prominentGlassButton()
-            .controlSize(.large)
-            .buttonBorderShape(.capsule)
-            .accessibilityIdentifier("home.camera")
+                .buttonStyle(.plain)
+                .accessibilityIdentifier("home.camera")
 
-            PhotosPicker(selection: $photoItem, matching: .images) {
-                Label(tr("从相册识别"), systemImage: "photo.on.rectangle")
-                    .font(.subheadline.weight(.semibold))
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 6)
+                PhotosPicker(selection: $photoItem, matching: .images) {
+                    EntryCard(icon: "photo.on.rectangle", title: tr("从相册识别"), subtitle: tr("截图、照片都可以"), highlighted: false)
+                }
+                .buttonStyle(.plain)
+                .accessibilityIdentifier("home.photos")
             }
-            .secondaryGlassButton()
-            .buttonBorderShape(.capsule)
-            .controlSize(.large)
-            .accessibilityIdentifier("home.photos")
+            .fixedSize(horizontal: false, vertical: true)
 
             if HomeLayout.showsSampleLink(scanCount: history.scans.count) {
                 Button {
@@ -173,8 +157,6 @@ struct HomeView: View {
         }
         .padding(.top, 4)
     }
-
-    // MARK: 试用提醒（只在最后 2 天和结束后出现）
 
     private var trialReminder: some View {
         Button { showPaywall = true } label: {
@@ -204,8 +186,6 @@ struct HomeView: View {
         .buttonStyle(.plain)
     }
 
-    // MARK: 今日语法（新用户）
-
     private var todayGrammar: GrammarPoint? {
         let candidates = library.points.filter(\.scannable)
         guard !candidates.isEmpty else { return nil }
@@ -227,8 +207,6 @@ struct HomeView: View {
             CompactGrammarList(points: Array(starters))
         }
     }
-
-    // MARK: 继续上次
 
     private func continueSection(_ record: HistoryStore.ScanRecord) -> some View {
         let ids = library.displayableIDs(record.grammarIDs)
@@ -275,8 +253,6 @@ struct HomeView: View {
         }
     }
 
-    // MARK: 复习提醒（FSRS，没有到期的语法时整行隐藏）
-
     private var dueItems: [GrammarPoint] {
         history.dueForReview(limit: 50) { id in
             1 + 0.25 * Double(min(history.scanCount(of: id), 8)) + (favorites.isFavorite(id) ? 0.5 : 0)
@@ -292,8 +268,6 @@ struct HomeView: View {
         }
     }
 
-    // MARK: 最近查看
-
     @ViewBuilder
     private var recentViewedSection: some View {
         let points = history.recentGrammarIDs.compactMap { library.point(id: $0) }
@@ -308,7 +282,41 @@ struct HomeView: View {
     }
 }
 
-// MARK: - 首页组件
+private struct EntryCard: View {
+    let icon: String
+    let title: String
+    let subtitle: String
+    let highlighted: Bool
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Image(systemName: icon)
+                .font(.system(size: 20, weight: .medium))
+                .foregroundStyle(Theme.accentText)
+                .frame(width: 38, height: 38)
+                .background(Theme.accentFill, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+            VStack(alignment: .leading, spacing: 2) {
+                Text(verbatim: title)
+                    .font(.headline)
+                    .foregroundStyle(.primary)
+                Text(verbatim: subtitle)
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer(minLength: 0)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+        .padding(14)
+        .background(Theme.card, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .strokeBorder(highlighted ? Theme.accent.opacity(0.45) : Color.primary.opacity(0.08), lineWidth: 1)
+        }
+        .contentShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .accessibilityElement(children: .combine)
+    }
+}
 
 private struct HomeSection<Content: View>: View {
     let title: LocalizedStringKey
@@ -319,12 +327,12 @@ private struct HomeSection<Content: View>: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .firstTextBaseline) {
-                Text(localized: title).font(.title3.bold()).accessibilityAddTraits(.isHeader)
+                Text(verbatim: title).font(.title3.bold()).accessibilityAddTraits(.isHeader)
                 Spacer()
                 if let trailing { trailing }
             }
             if let subtitle {
-                Text(localized: subtitle).font(.footnote).foregroundStyle(.secondary)
+                Text(verbatim: subtitle).font(.footnote).foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
             content
