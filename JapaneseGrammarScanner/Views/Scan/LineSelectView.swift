@@ -216,21 +216,80 @@ struct LineSpotlight: View {
     }
 }
 
-struct SelectedLinesShade: View {
+struct ResultLineLayer: View {
     let lines: [RecognizedLine]
-    let selected: Set<Int>
-    let imageSize: CGSize
+    let chosen: Set<Int>?
+    var lineWidth: CGFloat = 2
+    var tapSlack: CGFloat = 12
+    let onDragging: (Bool) -> Void
+    let onChoose: (Set<Int>) -> Void
+
+    @State private var preview: Set<Int>?
+    @State private var dragStartLine: Int?
 
     var body: some View {
         GeometryReader { geo in
-            let display = ImageFit.fit.displayedRect(imageSize: imageSize, in: geo.size)
+            let display = CGRect(origin: .zero, size: geo.size)
             let quads = LineSelection.lineQuads(lines).map { q in
-                q.map { CGPoint(x: display.minX + $0.x * display.width, y: display.minY + $0.y * display.height) }
+                q.map { CGPoint(x: $0.x * display.width, y: $0.y * display.height) }
             }
-            LineSpotlight(outlines: LineSelection.outlines(selected: selected, quads: quads, pad: 4),
-                          display: display, lineWidth: 2)
+            let shown = preview ?? chosen ?? []
+            ZStack(alignment: .topLeading) {
+                LineSpotlight(outlines: LineSelection.outlines(selected: shown, quads: quads, pad: 4),
+                              display: display, lineWidth: lineWidth)
+                    .animation(.easeOut(duration: 0.12), value: shown)
+                lineElements(quads: quads, shown: shown)
+            }
+            .frame(width: geo.size.width, height: geo.size.height, alignment: .topLeading)
+            .contentShape(Rectangle())
+            .gesture(
+                SpatialTapGesture()
+                    .onEnded { value in
+                        guard let line = LineSelection.line(at: value.location, quads: quads, slack: tapSlack),
+                              chosen != [line] else { return }
+                        onChoose([line])
+                    }
+            )
+            .simultaneousGesture(dragGesture(quads: quads))
         }
-        .allowsHitTesting(false)
-        .accessibilityHidden(true)
+    }
+
+    private func dragGesture(quads: [[CGPoint]]) -> some Gesture {
+        LongPressGesture(minimumDuration: 0.3)
+            .sequenced(before: DragGesture(minimumDistance: 0))
+            .onChanged { value in
+                guard case .second(true, let drag?) = value else { return }
+                if dragStartLine == nil {
+                    dragStartLine = LineSelection.line(at: drag.startLocation, quads: quads, slack: .infinity)
+                    onDragging(true)
+                }
+                guard let start = dragStartLine,
+                      let current = LineSelection.line(at: drag.location, quads: quads, slack: .infinity) else { return }
+                preview = LineSelection.span(from: start, to: current)
+            }
+            .onEnded { _ in
+                let picked = preview
+                preview = nil
+                if dragStartLine != nil { onDragging(false) }
+                dragStartLine = nil
+                if let picked, !picked.isEmpty, picked != chosen { onChoose(picked) }
+            }
+    }
+
+    private func lineElements(quads: [[CGPoint]], shown: Set<Int>) -> some View {
+        ForEach(Array(quads.enumerated()), id: \.offset) { i, q in
+            let bounds = HighlightGeometry.bounds(q)
+            let isSelected = shown.contains(i)
+            Rectangle()
+                .fill(Color.white.opacity(0.001))
+                .frame(width: max(bounds.width, 1), height: max(bounds.height, 1))
+                .position(x: bounds.midX, y: bounds.midY)
+                .allowsHitTesting(false)
+                .accessibilityElement()
+                .accessibilityLabel(Text(verbatim: lines[i].text))
+                .accessibilityAddTraits(isSelected ? [.isButton, .isSelected] : .isButton)
+                .accessibilityIdentifier(isSelected ? "result.line.selected" : "result.line")
+                .accessibilityAction { onChoose([i]) }
+        }
     }
 }

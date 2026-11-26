@@ -228,19 +228,81 @@ final class LineSelectFlowTests: E2ETestCase {
         XCTAssertFalse(id("select.analyzeSelected").exists)
     }
 
-    func testAnalyzeWholePageThenReselectOneLine() {
+    private func resultLine(containing text: String) -> XCUIElement {
+        let matches = app.descendants(matching: .any)
+            .matching(NSPredicate(format: "identifier BEGINSWITH 'result.line' AND label CONTAINS %@", text))
+        wait(matches.firstMatch, "结果页照片上应有一行包含「\(text)」")
+        return matches.allElementsBoundByIndex.max { $0.frame.width < $1.frame.width } ?? matches.firstMatch
+    }
+
+    private func tapResultLine(containing text: String) {
+        resultLine(containing: text).coordinate(withNormalizedOffset: CGVector(dx: 0.03, dy: 0.5)).tap()
+    }
+
+    private func analyzeOnlyLine(containing text: String) {
         openSampleForSelection()
-        id("select.analyzeAll").tap()
+        tapLine(containing: text)
+        id("select.analyzeSelected").tap()
+        wait(row(containing: text), "分析后应列出这一行的语法")
+    }
+
+    func testTapAnotherLineOnResultSwitchesToThatLine() {
+        analyzeOnlyLine(containing: "ながら")
+        XCTAssertFalse(row(containing: "らしい").exists, "还没改选时不应有最后一行的「らしい」")
+
+        tapResultLine(containing: "らしい")
+
+        wait(row(containing: "らしい"), "点照片上最后一行后应改看那一行")
+        XCTAssertTrue(id("result.headline").label.contains("这一行有"), "标题：\(id("result.headline").label)")
+        XCTAssertFalse(row(containing: "ながら").exists, "改选后原来那行的「ながら」不应再列出")
+        XCTAssertEqual(ids("result.line.selected").count, 1, "照片上应只框出新选的这一行")
+    }
+
+    func testTapSameLineOnResultKeepsResult() {
+        analyzeOnlyLine(containing: "ながら")
+        let before = ids("result.grammarRow").count
+
+        tapResultLine(containing: "ながら")
+
+        XCTAssertTrue(row(containing: "ながら").waitForExistence(timeout: 2))
+        XCTAssertEqual(ids("result.grammarRow").count, before, "点已经选中的那一行，结果不变")
+        XCTAssertFalse(app.buttons.matching(NSPredicate(format: "label CONTAINS '(N'")).firstMatch.exists, "点行首不应打开语法选择")
+    }
+
+    func testHoldAndDragOnResultSelectsSeveralLines() {
+        analyzeOnlyLine(containing: "ながら")
+        let from = resultLine(containing: "おかげで"), to = resultLine(containing: "と思う")
+
+        from.coordinate(withNormalizedOffset: CGVector(dx: 0.03, dy: 0.5))
+            .press(forDuration: 0.6, thenDragTo: to.coordinate(withNormalizedOffset: CGVector(dx: 0.03, dy: 0.5)))
+
+        wait(row(containing: "おかげで"), "拖过的几行里的「おかげで」应列出来")
+        XCTAssertTrue(id("result.headline").label.contains("这 3 行有"), "标题应写明 3 行：\(id("result.headline").label)")
+        XCTAssertFalse(row(containing: "ながら").exists, "没拖到的行里的「ながら」不应列出")
+    }
+
+    func testResultAnalyzeAllButtonShowsWholePage() {
+        analyzeOnlyLine(containing: "ながら")
+        XCTAssertFalse(id("result.reselect").exists, "「重新选行」按钮已去掉")
+
+        id("result.analyzeAll").tap()
+
         wait(row(containing: "らしい"), "分析整页应列出最后一行的「らしい」")
         XCTAssertTrue(id("result.headline").label.contains("识别到"), "整页标题：\(id("result.headline").label)")
-        let wholePage = ids("result.grammarRow").count
+        waitGone(id("result.analyzeAll"), "已经是整页时不再显示「分析整页」")
+    }
 
-        id("result.reselect").tap()
-        waitForLineSelection()
-        tapLine(containing: "ながら")
-        id("select.analyzeSelected").tap()
-        wait(row(containing: "ながら"), "重新选行后应列出这一行的语法")
-        XCTAssertLessThan(ids("result.grammarRow").count, wholePage, "只看一行时语法点应比整页少")
+    func testZoomedPhotoCanSwitchLine() {
+        analyzeOnlyLine(containing: "ながら")
+        id("result.zoomButton").tap()
+        wait(id("zoom.close"), "进入全屏")
+
+        tapResultLine(containing: "らしい")
+        id("zoom.close").tap()
+        waitGone(id("zoom.close"), "退出全屏")
+
+        wait(row(containing: "らしい"), "全屏里点最后一行后，结果应改成那一行")
+        XCTAssertFalse(row(containing: "ながら").exists, "改选后原来那行的「ながら」不应再列出")
     }
 
     func testSwitchToWholePageAfterSelecting() {
