@@ -296,6 +296,7 @@ final class LibraryTests: E2ETestCase {
         wait(filter, "语法库应有等级筛选")
         let search = app.searchFields.firstMatch
         wait(search, "语法库应有搜索框")
+        XCTAssertLessThanOrEqual(search.frame.maxY, filter.frame.minY + 1, "没滑动时搜索框和等级筛选不重叠：搜索框 \(search.frame)，筛选 \(filter.frame)")
         for _ in 0..<4 { app.swipeUp() }
         XCTAssertTrue(filter.isHittable, "往上滑后等级筛选应仍固定在顶部、可点")
         XCTAssertTrue(search.exists && app.windows.firstMatch.frame.contains(search.frame), "往上滑后搜索框也应固定在顶部")
