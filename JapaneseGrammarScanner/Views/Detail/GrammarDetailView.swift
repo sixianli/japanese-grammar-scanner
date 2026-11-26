@@ -43,7 +43,7 @@ struct GrammarDetailView: View {
                         .padding(.horizontal, Theme.margin)
                         .padding(.top, TitleBarLayout.topPadding)
                 }
-                LazyVStack(alignment: .leading, spacing: 0) {
+                VStack(alignment: .leading, spacing: 0) {
                     if !usesFlyingTitle {
                         FadingHeader(scroll: scroll) { header(p) }
                             .background(GeometryReader { g in
