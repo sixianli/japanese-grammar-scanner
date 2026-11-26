@@ -27,8 +27,9 @@ def listing(name="Japanese Grammar Lookup", shots="en"):
 
 
 class FakeApi:
-    def __init__(self, version_state="PREPARE_FOR_SUBMISSION", existing_shots=None):
+    def __init__(self, version_state="PREPARE_FOR_SUBMISSION", existing_shots=None, info_state="PREPARE_FOR_SUBMISSION"):
         self.calls = []
+        self.info_state = info_state
         self.parts = []
         self.version_state = version_state
         self.existing_shots = existing_shots or []
@@ -45,7 +46,7 @@ class FakeApi:
             if path.startswith("/apps?"):
                 return {"data": [{"id": "app", "attributes": {"primaryLocale": "zh-Hans"}}]}
             if path == "/apps/app/appInfos":
-                return {"data": [{"id": "info", "attributes": {"state": "PREPARE_FOR_SUBMISSION"}}]}
+                return {"data": [{"id": "info", "attributes": {"state": self.info_state}}]}
             if path.startswith("/apps/app/appStoreVersions"):
                 return {"data": [{"id": "ver", "attributes": {"appVersionState": self.version_state}}]}
             if path.startswith("/appInfos/info/appInfoLocalizations"):
@@ -196,6 +197,21 @@ class AppStoreListingTests(unittest.TestCase):
 
     def test_submitted_version_is_not_touched(self):
         api = FakeApi(version_state="WAITING_FOR_REVIEW")
+        with self.assertRaises(SystemExit):
+            al.sync(api, "bundle", "1.4", self.listings(), apply=True, log=lambda _: None, screenshot_dir=self.shots)
+        self.assertEqual(api.writes(), [])
+
+
+    def test_dry_run_without_editable_version_compares_with_live_listing(self):
+        api = FakeApi(version_state="READY_FOR_DISTRIBUTION", info_state="READY_FOR_DISTRIBUTION")
+        log = []
+        al.sync(api, "bundle", "1.4", self.listings(), apply=False, log=log.append, screenshot_dir=self.shots)
+        self.assertEqual(api.writes(), [])
+        self.assertTrue(any("线上" in line for line in log))
+        self.assertTrue(any(line.startswith("zh-Hans：App 信息") and "更新 name" in line for line in log))
+
+    def test_upload_without_editable_version_is_refused(self):
+        api = FakeApi(version_state="READY_FOR_DISTRIBUTION", info_state="READY_FOR_DISTRIBUTION")
         with self.assertRaises(SystemExit):
             al.sync(api, "bundle", "1.4", self.listings(), apply=True, log=lambda _: None, screenshot_dir=self.shots)
         self.assertEqual(api.writes(), [])

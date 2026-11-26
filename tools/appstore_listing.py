@@ -134,7 +134,10 @@ def find_app(api, bundle_id):
     return data[0]
 
 
-def find_version(api, app_id, version):
+LIVE_INFO_STATES = ("READY_FOR_DISTRIBUTION", "READY_FOR_SALE")
+
+
+def find_version(api, app_id, version, apply, log):
     q = urllib.parse.urlencode({"filter[platform]": "IOS", "filter[versionString]": version, "limit": "5"})
     data = api.call("GET", f"/apps/{app_id}/appStoreVersions?{q}")["data"]
     if not data:
@@ -142,17 +145,23 @@ def find_version(api, app_id, version):
     v = data[0]
     state = attrs(v).get("appVersionState") or attrs(v).get("appStoreState")
     if state not in EDITABLE_STATES:
-        raise SystemExit(f"iOS {version} 现在的状态是 {state}，不能再改商店信息")
+        if apply:
+            raise SystemExit(f"iOS {version} 现在的状态是 {state}，不能再改商店信息")
+        log(f"iOS {version} 现在的状态是 {state}，不能写入；下面只和这个版本线上的文案做对比")
     return v
 
 
-def find_app_info(api, app_id):
+def find_app_info(api, app_id, apply, log):
     infos = api.call("GET", f"/apps/{app_id}/appInfos")["data"]
-    for info in infos:
-        state = attrs(info).get("state") or attrs(info).get("appStoreState")
-        if state not in ("READY_FOR_DISTRIBUTION", "READY_FOR_SALE", "REPLACED_WITH_NEW_INFO"):
+    states = [(info, attrs(info).get("state") or attrs(info).get("appStoreState")) for info in infos]
+    for info, state in states:
+        if state not in LIVE_INFO_STATES + ("REPLACED_WITH_NEW_INFO",):
             return info
-    raise SystemExit("找不到可以编辑的 App 信息（appInfo），可能当前没有待提交的版本")
+    live = [info for info, state in states if state in LIVE_INFO_STATES]
+    if apply or not live:
+        raise SystemExit("找不到可以编辑的 App 信息（appInfo），可能当前没有待提交的版本")
+    log("当前没有待提交的版本，App 信息（名称、副标题）只和线上的做对比，不能写入")
+    return live[0]
 
 
 def changed_fields(current, wanted, fields):
@@ -226,8 +235,8 @@ def by_locale(resources):
 
 def sync(api, bundle_id, version, listings, apply, log=print, screenshot_dir=SCREENSHOT_DIR):
     app = find_app(api, bundle_id)
-    info = find_app_info(api, app["id"])
-    ver = find_version(api, app["id"], version)
+    info = find_app_info(api, app["id"], apply, log)
+    ver = find_version(api, app["id"], version, apply, log)
     info_locs = by_locale(api.call("GET", f"/appInfos/{info['id']}/appInfoLocalizations?limit=50")["data"])
     primary = attrs(app).get("primaryLocale")
     order = sorted(listings, key=lambda loc: (loc != primary, loc))

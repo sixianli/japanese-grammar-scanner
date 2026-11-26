@@ -23,8 +23,17 @@ App 界面另有缅甸语，但 App Store 没有缅甸语商店页。缅甸店�
 
 - 名称、副标题不超过 30 个字符，宣传文本不超过 170，关键词不超过 100，描述不超过 4000。
 - 关键词里不要放名称、副标题里已有的词：Apple 会把名称和副标题一起用来搜索，重复不加权重
-  （来源：https://developer.apple.com/app-store/search/ ）。副标题写了「N1-N5」，所以关键词只补 N2、N3、N4。
+  （来源：https://developer.apple.com/app-store/search/ ）。名称写了「N5-N1」，所以关键词只补 N2、N3、N4。
 - 语法数量写实数（878），不写「全部」。
+
+## 起名原则（2026-11-26 Andy 定：只看好看和搜得到）
+
+- 名称在搜索里分量最大，开头放该语言用户最常搜的词（参考 App Store 搜索框的联想词，例如「日语语法」「日語學習 / 日文學習」「日檢」
+  「japanese grammar」「일본어 공부」「ngữ pháp tiếng nhật n5 - n1」），用「 - 」隔开补充词。「速查 / Lookup / 사전 / consulta」这类很少有人搜的词放进副标题或关键词。
+- 简体中文名暂时保持「日语语法速查」：阿里云 App 备案登记的就是这个名称，备案办完再改成「日语语法 - 日语学习 JLPT N5-N1 拍照识别」。
+- 手机桌面上显示的名字（CFBundleDisplayName，在 `tools/make_strings.py` 的 INFO 里）和商店名分开管。在最窄的 iPhone SE 上实拍过：
+  汉字 6 个以内完整显示；拉丁字母大约 11 到 12 个就会先挤掉空格、再截成「…」。`tools/check_strings.py` 只放行实拍过的名字（HOME_SCREEN_FITS），
+  换桌面名要先实拍、再加进这个名单。
 - 每种语言 1 到 10 张截图，尺寸 1206×2622 或 1179×2556。
 
 ## 怎样上传到 App Store Connect
@@ -37,4 +46,4 @@ GitHub 仓库 → Actions → 「App Store listing」→ Run workflow：
 
 这个任务用的是发版也在用的 App Store Connect API 密钥（仓库 Secrets 里的 `ASC_KEY_ID`、`ASC_ISSUER_ID`、`ASC_KEY_P8`），
 不会把密钥写进日志。改了 `listing/`、`screenshots/` 或上传工具的 PR 会自动跑一次只读的检查，在日志里列出会改什么。
-已经提交审核的版本不能再改，工具会直接停下。审核联系人信息和审核备注不归这个工具管，在网页上填。
+已经提交审核或已上架的版本不能再改：勾了 `upload` 时工具会直接停下；不勾时（包括 PR 上自动跑的那次）改为和线上的文案做对比，照样列出会改什么。审核联系人信息和审核备注不归这个工具管，在网页上填。
