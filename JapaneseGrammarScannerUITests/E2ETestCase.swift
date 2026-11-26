@@ -133,7 +133,7 @@ class E2ETestCase: XCTestCase {
 
     func openSamplePage() {
         tab("扫描").tap()
-        wait(id("scan.trySample"), "扫描页应有「试试示例书页」")
+        wait(id("scan.trySample"), "扫描页应有「试试示例」")
         id("scan.trySample").tap()
         waitForScanResult()
     }

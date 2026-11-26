@@ -65,10 +65,6 @@ struct ScanHomeView: View {
                 Button(tr("打开设置")) { UIApplication.shared.open(url) }
                     .buttonStyle(.borderedProminent)
             }
-            Button(tr("试试示例书页"), action: openSample)
-                .accessibilityIdentifier("scan.trySample")
-                .buttonStyle(.bordered)
-                .tint(.white)
         }
         .foregroundStyle(.white)
         .padding()

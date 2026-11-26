@@ -173,6 +173,7 @@ final class LineSelectFlowTests: E2ETestCase {
         XCTAssertTrue(id("scan.hint").label.contains("按快门"), "提示应说明先拍下来：\(id("scan.hint").label)")
         let hint = id("scan.hint").frame
         let shutter = id("scan.shutter").frame
+        XCTAssertEqual(ids("scan.trySample").count, 1, "扫描页只有一个「试试示例」，在快门上方的提示里")
         let sample = id("scan.trySample").frame
         XCTAssertLessThanOrEqual(hint.maxY, shutter.minY, "提示应在快门上方：提示 \(hint)，快门 \(shutter)")
         XCTAssertLessThan(shutter.minY - hint.maxY, shutter.height, "提示应紧挨快门，不应留在取景框顶部：提示 \(hint)，快门 \(shutter)")
