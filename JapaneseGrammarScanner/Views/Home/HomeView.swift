@@ -567,12 +567,12 @@ struct ReviewRow: View {
     static func sentence(count: Int) -> AttributedString {
         let text = String.localizedStringWithFormat(tr("%lld 个语法可以复习了"), count)
         var out = AttributedString(text)
-        out.font = .body.weight(.medium)
+        out.swiftUI.font = Font.body.weight(.medium)
         if let first = text.firstIndex(where: \.isNumber) {
             let last = text[first...].firstIndex(where: { !$0.isNumber }) ?? text.endIndex
             if let range = out.range(of: String(text[first..<last])) {
-                out[range].font = .system(size: 28, weight: .bold).monospacedDigit()
-                out[range].foregroundColor = Theme.accentText
+                out[range].swiftUI.font = Font.system(size: 28, weight: .bold).monospacedDigit()
+                out[range].swiftUI.foregroundColor = Theme.accentText
             }
         }
         return out
