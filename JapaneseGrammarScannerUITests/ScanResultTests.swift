@@ -184,9 +184,13 @@ final class LineSelectFlowTests: E2ETestCase {
 
     func testTapOneLineShowsOnlyThatLinesGrammar() {
         openSampleForSelection()
+        let before = selectLine(containing: "ながら").frame
         tapLine(containing: "ながら")
         wait(id("select.line.selected"), "点一行后这一行应被选中")
         XCTAssertEqual(ids("select.line.selected").count, 1)
+        let after = id("select.line.selected").frame
+        XCTAssertEqual(after.minY, before.minY, accuracy: 1, "选中后照片不能挪动或缩放，否则拖动时手指下的行会变")
+        XCTAssertEqual(after.height, before.height, accuracy: 1, "选中后照片不能挪动或缩放，否则拖动时手指下的行会变")
         let analyze = id("select.analyzeSelected")
         wait(analyze, "选了行之后应出现「分析这 1 行」")
         XCTAssertTrue(analyze.label.contains("1"), "按钮应写明选了几行：\(analyze.label)")
@@ -203,8 +207,7 @@ final class LineSelectFlowTests: E2ETestCase {
         openSampleForSelection()
         let from = selectLine(containing: "おかげで"), to = selectLine(containing: "と思う")
         from.coordinate(withNormalizedOffset: CGVector(dx: 0.3, dy: 0.5))
-            .press(forDuration: 0.2, thenDragTo: to.coordinate(withNormalizedOffset: CGVector(dx: 0.6, dy: 0.5)),
-                   withVelocity: .slow, thenHoldForDuration: 0.3)
+            .press(forDuration: 0.2, thenDragTo: to.coordinate(withNormalizedOffset: CGVector(dx: 0.6, dy: 0.5)))
         let selected = ids("select.line.selected")
         wait(selected.firstMatch, "拖动后应选中几行")
         XCTAssertEqual(selected.count, 3, "从「おかげで」那行拖到「と思う」那行，应选中整整 3 行")

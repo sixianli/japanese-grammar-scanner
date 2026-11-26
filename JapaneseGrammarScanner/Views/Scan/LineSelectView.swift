@@ -29,46 +29,63 @@ struct LineSelectView: View {
     }
 
     private var hint: some View {
-        Group {
-            if selected.isEmpty {
-                Text(localized: "点一行只看这一行的语法；按住上下拖动可以选几行。双指可放大照片。")
-            } else {
-                Text(localized: "再点别的行可以加选，点已选的行取消。")
-            }
+        ZStack(alignment: .top) {
+            hintText(Text(localized: "点一行只看这一行的语法；按住上下拖动可以选几行。双指可放大照片。"), shown: selected.isEmpty)
+            hintText(Text(localized: "再点别的行可以加选，点已选的行取消。"), shown: !selected.isEmpty)
         }
-            .font(.footnote)
-            .foregroundStyle(.secondary)
-            .multilineTextAlignment(.center)
-            .frame(maxWidth: .infinity)
-            .padding(.horizontal)
-            .padding(.vertical, 8)
+        .font(.footnote)
+        .foregroundStyle(.secondary)
+        .multilineTextAlignment(.center)
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal)
+        .padding(.vertical, 8)
+    }
+
+    private func hintText(_ text: Text, shown: Bool) -> some View {
+        text
+            .fixedSize(horizontal: false, vertical: true)
+            .opacity(shown ? 1 : 0)
+            .accessibilityHidden(!shown)
             .accessibilityIdentifier("select.hint")
     }
 
     private var bottomBar: some View {
-        VStack(spacing: 8) {
-            if selected.isEmpty {
-                Button(action: onAnalyzeAll) {
-                    Text(localized: "分析整页").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 8)
-                }
-                .buttonStyle(.borderedProminent)
-                .accessibilityIdentifier("select.analyzeAll")
-            } else {
-                Button(action: onAnalyzeSelected) {
-                    Text(localized: "分析这 \(selected.count) 行").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 8)
-                }
-                .buttonStyle(.borderedProminent)
-                .accessibilityIdentifier("select.analyzeSelected")
-                Button(action: onAnalyzeAll) {
-                    Text(localized: "改为分析整页").font(.subheadline.weight(.medium)).frame(maxWidth: .infinity).padding(.vertical, 4)
-                }
-                .buttonStyle(.bordered)
-                .accessibilityIdentifier("select.analyzeAll")
-            }
+        ZStack(alignment: .bottom) {
+            wholePageButtons
+                .opacity(selected.isEmpty ? 1 : 0)
+                .allowsHitTesting(selected.isEmpty)
+                .accessibilityHidden(!selected.isEmpty)
+            selectedButtons
+                .opacity(selected.isEmpty ? 0 : 1)
+                .allowsHitTesting(!selected.isEmpty)
+                .accessibilityHidden(selected.isEmpty)
         }
         .tint(Theme.accent)
         .padding(.horizontal)
         .padding(.bottom, 12)
+    }
+
+    private var wholePageButtons: some View {
+        Button(action: onAnalyzeAll) {
+            Text(localized: "分析整页").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 8)
+        }
+        .buttonStyle(.borderedProminent)
+        .accessibilityIdentifier("select.analyzeAll")
+    }
+
+    private var selectedButtons: some View {
+        VStack(spacing: 8) {
+            Button(action: onAnalyzeSelected) {
+                Text(localized: "分析这 \(selected.count) 行").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 8)
+            }
+            .buttonStyle(.borderedProminent)
+            .accessibilityIdentifier("select.analyzeSelected")
+            Button(action: onAnalyzeAll) {
+                Text(localized: "改为分析整页").font(.subheadline.weight(.medium)).frame(maxWidth: .infinity).padding(.vertical, 4)
+            }
+            .buttonStyle(.bordered)
+            .accessibilityIdentifier("select.analyzeAll")
+        }
     }
 
     private var photo: some View {
