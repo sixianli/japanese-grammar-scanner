@@ -159,11 +159,21 @@ final class DetailTests: E2ETestCase {
 
     private func assertNoHorizontalOverflow(state: String, file: StaticString = #filePath, line: UInt = #line) {
         let window = app.windows.firstMatch.frame
-        for text in app.staticTexts.allElementsBoundByIndex where text.exists && text.frame.height > 0 && text.frame.minY < window.maxY && text.frame.maxY > window.minY {
-            let f = text.frame
-            XCTAssertGreaterThanOrEqual(f.minX, window.minX - 1, "\(state)：页面内容不能超出屏幕左边：「\(text.label)」\(f)", file: file, line: line)
-            XCTAssertLessThanOrEqual(f.maxX, window.maxX + 1, "\(state)：页面内容不能超出屏幕右边：「\(text.label)」\(f)", file: file, line: line)
+        guard let root = try? app.snapshot() else {
+            XCTFail("\(state)：取不到界面快照", file: file, line: line)
+            return
         }
+        var pending: [XCUIElementSnapshot] = [root]
+        var visibleTexts = 0
+        while let node = pending.popLast() {
+            pending.append(contentsOf: node.children)
+            let f = node.frame
+            guard node.elementType == .staticText, f.height > 0, f.minY < window.maxY, f.maxY > window.minY else { continue }
+            visibleTexts += 1
+            XCTAssertGreaterThanOrEqual(f.minX, window.minX - 1, "\(state)：页面内容不能超出屏幕左边：「\(node.label)」\(f)", file: file, line: line)
+            XCTAssertLessThanOrEqual(f.maxX, window.maxX + 1, "\(state)：页面内容不能超出屏幕右边：「\(node.label)」\(f)", file: file, line: line)
+        }
+        XCTAssertGreaterThan(visibleTexts, 0, "\(state)：屏幕上应能找到文字", file: file, line: line)
     }
 
     private func checkLongTitleInBothStates(query: String, title: String) {
