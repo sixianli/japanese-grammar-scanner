@@ -997,6 +997,10 @@ INFO = {
     )),
 }
 
+ZH_HANT_INFO = {
+    "CFBundleDisplayName": "日語文法速查",
+}
+
 MY_INFO = {
     "CFBundleDisplayName": "ဂျပန်သဒ္ဒါ",
     "NSCameraUsageDescription": "စာအုပ်ထဲရှိ ဂျပန်စာကို စကင်ဖတ်ပြီး သဒ္ဒါများကို ရှာဖွေရန် ကင်မရာကို အသုံးပြုပါသည်။ ပုံများကို သင့်စက်ပေါ်တွင်သာ လုပ်ဆောင်ပါသည်။",
@@ -1082,7 +1086,7 @@ def main():
         l = {lang: unit(v) for lang, v in zip(LANGS, vals)}
         l["my"] = unit(MY_INFO[key])
         l["zh-Hans"] = unit(zh)
-        l["zh-Hant"] = unit(cc.convert(zh))
+        l["zh-Hant"] = unit(ZH_HANT_INFO.get(key) or cc.convert(zh))
         info[key] = {"extractionState": "manual", "localizations": l}
     with open(os.path.join(APP, "InfoPlist.xcstrings"), "w", encoding="utf-8") as f:
         json.dump(catalog(info), f, ensure_ascii=False, indent=2, sort_keys=True)
