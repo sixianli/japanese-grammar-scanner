@@ -1,8 +1,6 @@
 import SwiftUI
 
-/// 新用户使用引导：首次启动时全屏显示，可左右滑动；设置页可重新打开。
 struct OnboardingView: View {
-    /// 用户点「开始使用」或「先用示例书页试试」时调用；参数表示是否要打开示例。
     let onFinish: (_ openSample: Bool) -> Void
     @EnvironmentObject private var store: EntitlementStore
     @State private var page = 0
@@ -13,7 +11,6 @@ struct OnboardingView: View {
             HStack {
                 Spacer()
                 if page < pageCount - 1 {
-                    // 跳到最后一页（那里写明了试用时长与到期后的价格）
                     Button(tr("跳过")) { withAnimation { page = pageCount - 1 } }
                         .font(.subheadline.weight(.medium))
                         .padding(.horizontal, 20)
@@ -30,7 +27,7 @@ struct OnboardingView: View {
                 ).tag(0)
                 OnboardingPage(
                     title: "扫描书本或截图",
-                    message: "把相机对准书页，文中的语法会实时用橙色框框出来。按中间的快门定格画面做精细识别，也可以从相册选择截图。",
+                    message: "把相机对准书页，按中间的快门拍下来，也可以从相册选择截图。拍好后点一行，或按住上下拖动选几行，只看你想看的句子；想看整页就点「分析整页」。",
                     illustration: { ScanIllustration() }
                 ).tag(1)
                 OnboardingPage(
@@ -88,7 +85,6 @@ struct OnboardingView: View {
         .tint(Theme.accent)
     }
 
-    /// 审核要求（Guideline 3.1.1）：试用开始前写明时长、到期后需要付费的内容与价格。
     private var trialNote: some View {
         Group {
             if store.access == .unlocked {
@@ -108,7 +104,6 @@ struct OnboardingView: View {
 }
 
 enum Brand {
-    /// 统一使用主色
     static var red: Color { Theme.accent }
     static let paper = Color(red: 1.0, green: 0.988, blue: 0.96)
     static let marker = Color(red: 1.0, green: 0.80, blue: 0.27)
@@ -158,9 +153,6 @@ private struct PageDots: View {
     }
 }
 
-// MARK: - 插图（纯 SwiftUI 绘制，支持深色模式与动态效果）
-
-/// 取景框四角
 private struct ViewfinderCorners: Shape {
     var length: CGFloat = 26
     func path(in r: CGRect) -> Path {
@@ -174,7 +166,6 @@ private struct ViewfinderCorners: Shape {
     }
 }
 
-/// 一行“书页文字”，其中一段被高亮
 private struct TextLine: View {
     let text: String
     var highlight: String? = nil
@@ -275,7 +266,6 @@ struct DetailIllustration: View {
 struct ReviewIllustration: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
-            // 首页的复习提醒：一行，前面一个铃铛，飘过几朵樱花（静止画面）
             HStack(spacing: 10) {
                 Image(systemName: "bell").foregroundStyle(Theme.accentText)
                 Text(localized: "\(3) 个语法可以复习了").font(.subheadline.weight(.medium))

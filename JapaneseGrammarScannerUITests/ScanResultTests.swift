@@ -75,7 +75,7 @@ final class ScanResultTests: E2ETestCase {
         wait(id("scan.photos"), "扫描页应有相册按钮")
         id("scan.photos").tap()
         pickFirstPhoto()
-        wait(navBar("识别结果"), "扫描页从相册选图后应进入识别结果页", timeout: 30)
+        waitForScanFlow()
     }
 
     func testResultRowsAllOpenDetail() {
@@ -152,5 +152,99 @@ final class ScanResultTests: E2ETestCase {
         if !sawChooser {
             print("示例书页上没有多语法点的框，跳过选项检查")
         }
+    }
+}
+
+final class LineSelectFlowTests: E2ETestCase {
+    private func openSampleForSelection() {
+        tab("扫描").tap()
+        wait(id("scan.trySample"), "扫描页应有「试试示例」")
+        id("scan.trySample").tap()
+        waitForLineSelection()
+    }
+
+    private func row(containing text: String) -> XCUIElement {
+        ids("result.grammarRow").matching(NSPredicate(format: "label CONTAINS %@", text)).firstMatch
+    }
+
+    func testScanTabOnlyFramesWithoutRecognizing() {
+        tab("扫描").tap()
+        wait(id("scan.hint"), "扫描页顶部应提示按快门拍照")
+        XCTAssertTrue(id("scan.hint").label.contains("按快门"), "提示应说明先拍下来：\(id("scan.hint").label)")
+        XCTAssertFalse(id("highlight.box").exists, "取景时不应有语法框")
+    }
+
+    func testPhotoShowsLinesWithoutGrammarBoxesBeforeAnalyzing() {
+        openSampleForSelection()
+        wait(id("select.photo"), "选行页应显示拍下的照片")
+        XCTAssertGreaterThan(ids("select.line").count, 5, "示例书页应认出多行文字")
+        XCTAssertFalse(id("highlight.box").exists, "选好行之前照片上不应有语法框")
+        XCTAssertFalse(id("result.grammarRow").exists, "选好行之前不应列出语法点")
+    }
+
+    func testTapOneLineShowsOnlyThatLinesGrammar() {
+        openSampleForSelection()
+        tapLine(containing: "ながら")
+        wait(id("select.line.selected"), "点一行后这一行应被选中")
+        XCTAssertEqual(ids("select.line.selected").count, 1)
+        let analyze = id("select.analyzeSelected")
+        wait(analyze, "选了行之后应出现「分析这 1 行」")
+        XCTAssertTrue(analyze.label.contains("1"), "按钮应写明选了几行：\(analyze.label)")
+        analyze.tap()
+
+        wait(navBar("识别结果"), "分析后进入识别结果")
+        wait(row(containing: "ながら"), "这一行的「ながら」应列出来")
+        XCTAssertTrue(id("result.headline").label.contains("这一行有"), "标题应说明只看这一行：\(id("result.headline").label)")
+        XCTAssertFalse(row(containing: "らしい").exists, "最后一行的「らしい」不在选中的行里，不应列出")
+        XCTAssertFalse(row(containing: "たことがある").exists, "第一行的「たことがある」不在选中的行里，不应列出")
+    }
+
+    func testDragSelectsSeveralWholeLines() {
+        openSampleForSelection()
+        let from = selectLine(containing: "おかげで"), to = selectLine(containing: "と思う")
+        from.coordinate(withNormalizedOffset: CGVector(dx: 0.3, dy: 0.5))
+            .press(forDuration: 0.2, thenDragTo: to.coordinate(withNormalizedOffset: CGVector(dx: 0.6, dy: 0.5)))
+        let selected = ids("select.line.selected")
+        wait(selected.firstMatch, "拖动后应选中几行")
+        XCTAssertEqual(selected.count, 3, "从「おかげで」那行拖到「と思う」那行，应选中整整 3 行")
+        id("select.analyzeSelected").tap()
+
+        wait(row(containing: "おかげで"), "选中的几行里的「おかげで」应列出来")
+        XCTAssertTrue(id("result.headline").label.contains("这 3 行有"), "标题应写明选了 3 行：\(id("result.headline").label)")
+        XCTAssertFalse(row(containing: "ながら").exists, "没选中的行里的「ながら」不应列出")
+    }
+
+    func testTapSelectedLineAgainDeselectsIt() {
+        openSampleForSelection()
+        tapLine(containing: "ながら")
+        wait(id("select.line.selected"), "第一次点：选中")
+        tapLine(containing: "ながら")
+        waitGone(id("select.line.selected"), "再点一次：取消选中")
+        wait(id("select.analyzeAll"), "没有选中的行时只剩「分析整页」")
+        XCTAssertFalse(id("select.analyzeSelected").exists)
+    }
+
+    func testAnalyzeWholePageThenReselectOneLine() {
+        openSampleForSelection()
+        id("select.analyzeAll").tap()
+        wait(row(containing: "らしい"), "分析整页应列出最后一行的「らしい」")
+        XCTAssertTrue(id("result.headline").label.contains("识别到"), "整页标题：\(id("result.headline").label)")
+        let wholePage = ids("result.grammarRow").count
+
+        id("result.reselect").tap()
+        waitForLineSelection()
+        tapLine(containing: "ながら")
+        id("select.analyzeSelected").tap()
+        wait(row(containing: "ながら"), "重新选行后应列出这一行的语法")
+        XCTAssertLessThan(ids("result.grammarRow").count, wholePage, "只看一行时语法点应比整页少")
+    }
+
+    func testSwitchToWholePageAfterSelecting() {
+        openSampleForSelection()
+        tapLine(containing: "ながら")
+        wait(id("select.analyzeSelected"), "选了行")
+        id("select.analyzeAll").tap()
+        wait(row(containing: "らしい"), "改为分析整页后应列出整页的语法")
+        XCTAssertTrue(id("result.headline").label.contains("识别到"), "整页标题：\(id("result.headline").label)")
     }
 }

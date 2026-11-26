@@ -21,7 +21,7 @@ final class HomeTests: E2ETestCase {
         scrollToTop()
         id("home.photos").tap()
         pickFirstPhoto()
-        wait(navBar("识别结果"), "从相册选图后应进入识别结果页", timeout: 30)
+        waitForScanFlow()
         back()
         wait(id("home.search"), "返回应回到首页")
     }

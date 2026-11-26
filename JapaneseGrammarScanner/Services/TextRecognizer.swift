@@ -2,21 +2,15 @@ import CoreGraphics
 import ImageIO
 import Vision
 
-/// 使用 Apple Vision 框架做端侧日文 OCR（不联网、不使用大模型）。
 enum TextRecognizer {
-    /// 识别图片中的文字，返回按阅读顺序拼好的整段文本和每一行的位置信息。
     static func recognize(
         cgImage: CGImage,
         orientation: CGImagePropertyOrientation = .up,
         fast: Bool = false
     ) throws -> (text: String, lines: [RecognizedLine]) {
         let request = VNRecognizeTextRequest()
-        request.recognitionLevel = .accurate // 日文只在 accurate 模式下支持
+        request.recognitionLevel = .accurate
         request.recognitionLanguages = ["ja-JP", "en-US"]
-        // 不用 Vision 的语言纠错：纠错会改写识别出的文字（例如把「温泉」改成一个字），
-        // 但每个字的位置仍按改写前算，改写处之后的高亮会整体往右错一个字。
-        // 在 95 张实拍照片上：关掉后约 20% 错位的高亮回到正确位置，语法召回率只低 0.9 个百分点，识别还更快
-        // （docs/ocr-eval/runs/2026-11-19_textband-nolc.md）。
         request.usesLanguageCorrection = false
         request.minimumTextHeight = fast ? 0.02 : 0
 
@@ -24,18 +18,12 @@ enum TextRecognizer {
         try handler.perform([request])
         let observations = request.results ?? []
         var result = assemble(observations)
-        // 精细识别（拍照定格、相册）时，在弯曲的书页上找出每行真正的文字带，让高亮框贴着字
         if !fast, orientation == .up {
             TextBandFinder.refine(&result.lines, image: cgImage)
         }
         return result
     }
 
-    /// 把 Vision 的各行拼成一段文字，用于语法匹配：
-    /// - 同一段落里因为排版折行的句子接起来；标题、列表项、不同段落之间换行，语法规则不会跨行误匹配
-    ///   （例如标题「〜とは限らない」和下一行「意味）〜が…」被连成「は限らない意味）〜が」而命中「〜は〜が〜」）；
-    /// - 几乎没有假名的行（中文、英文、越南文、韩文释义）不参与匹配；行内的外文片段用空白替换（保持位置不变，框不会错位）。
-    /// 规则在 95 张实拍照片上评测过，见 docs/ocr-eval/runs/。
     static func assemble(_ observations: [VNRecognizedTextObservation]) -> (text: String, lines: [RecognizedLine]) {
         var text = ""
         var lines: [RecognizedLine] = []
@@ -61,7 +49,6 @@ enum TextRecognizer {
             let range = NSRange(location: start, length: (lineText as NSString).length)
             previous = obs.boundingBox
 
-            // trim 之后需要重新在原始字符串中定位
             let original = candidate.string
             let offsetInOriginal = (original as NSString).range(of: trimmed).location
 
@@ -87,7 +74,6 @@ enum TextRecognizer {
         return (text, lines)
     }
 
-    /// 正文行的典型行高（至少 4 个日文字的行的中位数）
     static func medianBodyLineHeight(_ observations: [VNRecognizedTextObservation]) -> CGFloat? {
         let heights = observations.compactMap { obs -> CGFloat? in
             guard let s = obs.topCandidates(1).first?.string else { return nil }
@@ -98,7 +84,6 @@ enum TextRecognizer {
         return heights[heights.count / 2]
     }
 
-    /// 邻页入镜：贴着照片边缘被截断、字号又明显和正文不同的行（多半是旁边另一页或另一本书），不参与识别
     static func isCutOffNeighbor(_ box: CGRect, bodyHeight: CGFloat?) -> Bool {
         let edge: CGFloat = 0.005
         let touches = box.minX < edge || box.maxX > 1 - edge || box.minY < edge || box.maxY > 1 - edge
@@ -106,8 +91,6 @@ enum TextRecognizer {
         return box.height > body * 1.3 || box.height < body * 0.5
     }
 
-    /// 下一行是不是上一行的折行续写（Vision 归一化坐标，原点在左下角）：
-    /// 两行上下相邻（斜拍时行框会互相重叠，允许重叠）、上一行基本写满（右端不比下一行短太多）、下一行没有明显缩进。
     static func isContinuation(previous p: CGRect, next n: CGRect) -> Bool {
         let lineHeight = max(min(p.height, n.height), 1e-6)
         let gap = (p.minY - n.maxY) / lineHeight
@@ -117,7 +100,6 @@ enum TextRecognizer {
     }
 }
 
-/// 判断文字是不是日文（用于排除教材里的中文、英文等释义）
 enum JapaneseText {
     static func isKana(_ u: Unicode.Scalar) -> Bool {
         (0x3041...0x3096).contains(u.value) || (0x30A1...0x30FA).contains(u.value) || u.value == 0x30FC
@@ -127,7 +109,6 @@ enum JapaneseText {
         (0x3400...0x9FFF).contains(u.value) || u == "々" || u == "〆"
     }
 
-    /// 非日文：没有任何假名和汉字（英文、韩文、越南文等），或者 4 个字以上却几乎没有假名（中文）
     static func isForeign<S: StringProtocol>(_ s: S) -> Bool {
         let letters = s.unicodeScalars.filter { CharacterSet.letters.contains($0) }
         guard !letters.isEmpty else { return false }
@@ -139,8 +120,6 @@ enum JapaneseText {
 
     private static let separators: Set<Character> = ["（", "）", "(", ")", "／", "/", "｜", "|", "：", ":"]
 
-    /// 行内的外文片段（如「夜市：night market／夜市／야시장」里的英文、韩文）换成等长的全角空格，
-    /// 保证每个字在整行里的位置不变（高亮框按位置定位）
     static func maskForeignSegments(_ line: String) -> String {
         var out = ""
         var segment = ""
@@ -162,23 +141,5 @@ enum JapaneseText {
         }
         flush()
         return out
-    }
-}
-
-extension TextRecognizer {
-    /// 相机实时帧识别。
-    static func recognize(
-        pixelBuffer: CVPixelBuffer,
-        orientation: CGImagePropertyOrientation
-    ) throws -> (text: String, lines: [RecognizedLine]) {
-        let request = VNRecognizeTextRequest()
-        request.recognitionLevel = .accurate
-        request.recognitionLanguages = ["ja-JP", "en-US"]
-        request.usesLanguageCorrection = false
-        request.minimumTextHeight = 0.015
-
-        let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: orientation, options: [:])
-        try handler.perform([request])
-        return assemble(request.results ?? [])
     }
 }
