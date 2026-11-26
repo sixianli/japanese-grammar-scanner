@@ -327,12 +327,12 @@ private struct HomeSection<Content: View>: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .firstTextBaseline) {
-                Text(verbatim: title).font(.title3.bold()).accessibilityAddTraits(.isHeader)
+                Text(localized: title).font(.title3.bold()).accessibilityAddTraits(.isHeader)
                 Spacer()
                 if let trailing { trailing }
             }
             if let subtitle {
-                Text(verbatim: subtitle).font(.footnote).foregroundStyle(.secondary)
+                Text(localized: subtitle).font(.footnote).foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
             content
