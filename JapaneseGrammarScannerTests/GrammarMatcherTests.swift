@@ -74,6 +74,21 @@ final class GrammarMatcherTests: XCTestCase {
         XCTAssertTrue(ids.contains("dake-only"), "\(ids)")
     }
 
+    func testResultListPutsLongerGrammarFirstWhenStartingAtSameCharacter() {
+        let result = ScanResult(
+            text: "教示いただけますと幸いです",
+            matches: [
+                GrammarMatch(grammarID: "short", range: NSRange(location: 2, length: 4)),
+                GrammarMatch(grammarID: "later", range: NSRange(location: 8, length: 1)),
+                GrammarMatch(grammarID: "long", range: NSRange(location: 2, length: 9)),
+                GrammarMatch(grammarID: "first", range: NSRange(location: 0, length: 2))
+            ],
+            clusters: [],
+            boxes: []
+        )
+        XCTAssertEqual(result.orderedGrammarIDs, ["first", "long", "short", "later"])
+    }
+
     func testEmptyText() {
         XCTAssertTrue(matcher.matches(in: "").isEmpty)
     }
