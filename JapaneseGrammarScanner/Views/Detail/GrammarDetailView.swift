@@ -147,6 +147,7 @@ struct GrammarDetailView: View {
             }
             .coordinateSpace(name: "detailScroll")
             .modifier(ScrollOffsetTracker(scroll: scroll))
+            .modifier(ContentHeightProbe())
             .overlay(alignment: .top) {
                 if usesFlyingTitle {
                     FlyingTitle(point: p, scroll: scroll)
@@ -791,6 +792,31 @@ private struct ScrollOffsetTracker: ViewModifier {
             } action: { _, y in
                 if abs(y - scroll.offset) > 0.25 { scroll.offset = y }
             }
+        } else {
+            content
+        }
+    }
+}
+
+private struct ContentHeightProbe: ViewModifier {
+    @State private var height: CGFloat = 0
+
+    func body(content: Content) -> some View {
+        if #available(iOS 18.0, *), DemoMode.e2e {
+            content
+                .onScrollGeometryChange(for: CGFloat.self) { g in
+                    g.contentSize.height
+                } action: { _, h in
+                    height = h
+                }
+                .overlay(alignment: .bottomTrailing) {
+                    Color.clear
+                        .frame(width: 1, height: 1)
+                        .accessibilityElement()
+                        .accessibilityLabel(Text(verbatim: "contentHeight"))
+                        .accessibilityValue(Text(verbatim: String(Int(height.rounded()))))
+                        .accessibilityIdentifier("detail.contentHeight")
+                }
         } else {
             content
         }

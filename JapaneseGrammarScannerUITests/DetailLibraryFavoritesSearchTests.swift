@@ -491,13 +491,20 @@ final class DetailScrollTests: E2ETestCase {
         let column = id("detail.titleColumn")
         wait(column, "讲解页应有标题")
         let feedback = id("detail.feedback")
+        let probe = id("detail.contentHeight")
+        wait(probe, "测试模式下讲解页应报告内容总高度")
+        Thread.sleep(forTimeInterval: 1)
+        var heights = [probe.value as? String ?? ""]
+        XCTAssertGreaterThan(Int(heights[0]) ?? 0, 0, "内容总高度应是正数：\(heights[0])")
         var positions = [column.frame.minY]
         for _ in 0..<40 where !(feedback.exists && feedback.isHittable) {
             app.swipeUp(velocity: .slow)
             positions.append(column.frame.minY)
+            heights.append(probe.value as? String ?? "")
         }
         let moves = zip(positions, positions.dropFirst()).map { $1 - $0 }
         XCTAssertTrue(feedback.exists && feedback.isHittable, "一直往下滑应能滑到底：\(positions)")
+        XCTAssertEqual(Set(heights).count, 1, "往下滑时内容总高度不应变（变了滚动条就不准、页面会往回跳）：每次滑动后的高度 \(heights)")
         XCTAssertTrue(moves.allSatisfy { $0 <= 1 }, "一直往下滑，页面不应往回跳：每次滑动后的标题位置 \(positions)")
         let bottom = feedback.frame.minY
         Thread.sleep(forTimeInterval: 1.5)
