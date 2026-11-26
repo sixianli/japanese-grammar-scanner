@@ -46,4 +46,4 @@ GitHub 仓库 → Actions → 「App Store listing」→ Run workflow：
 
 这个任务用的是发版也在用的 App Store Connect API 密钥（仓库 Secrets 里的 `ASC_KEY_ID`、`ASC_ISSUER_ID`、`ASC_KEY_P8`），
 不会把密钥写进日志。改了 `listing/`、`screenshots/` 或上传工具的 PR 会自动跑一次只读的检查，在日志里列出会改什么。
-已经提交审核的版本不能再改，工具会直接停下。审核联系人信息和审核备注不归这个工具管，在网页上填。
+已经提交审核或已上架的版本不能再改：勾了 `upload` 时工具会直接停下；不勾时（包括 PR 上自动跑的那次）改为和线上的文案做对比，照样列出会改什么。审核联系人信息和审核备注不归这个工具管，在网页上填。
