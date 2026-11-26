@@ -6,9 +6,10 @@ final class TitleBarLayoutTests: XCTestCase {
     private let width: CGFloat = 390
     private let shortLine = CGSize(width: 150, height: 56)
     private let longLine = CGSize(width: 900, height: 56)
+    private let restTags: CGFloat = 30
 
     private func state(_ scrolled: CGFloat, line: CGSize? = nil, width: CGFloat? = nil) -> TitleBarLayout.State {
-        TitleBarLayout.state(scrolled: scrolled, lineSize: line ?? shortLine, viewWidth: width ?? self.width, safeTop: safeTop)
+        TitleBarLayout.state(scrolled: scrolled, lineSize: line ?? shortLine, restTagsHeight: restTags, viewWidth: width ?? self.width, safeTop: safeTop)
     }
 
     private func pinnedScroll(line: CGSize? = nil) -> CGFloat {
@@ -22,7 +23,8 @@ final class TitleBarLayoutTests: XCTestCase {
         let s = state(0)
         XCTAssertEqual(s.titleTop, safeTop + TitleBarLayout.topPadding)
         XCTAssertEqual(s.scale, 1)
-        XCTAssertEqual(s.tagsOpacity, 0)
+        XCTAssertEqual(s.tagsScale, 1, "没滚动时标签是页面上的大小")
+        XCTAssertEqual(s.tagsTop, s.titleTop + shortLine.height + 10, accuracy: 0.001, "标签就在页面标题下方原来的位置")
         XCTAssertEqual(s.glassOpacity, 0)
     }
 
@@ -88,7 +90,7 @@ final class TitleBarLayoutTests: XCTestCase {
         XCTAssertEqual(s.titleTop, expectedTop, accuracy: 0.5, "标题和标签行在导航栏那一行居中，太高时贴着状态栏下沿")
         XCTAssertLessThanOrEqual(abs(s.titleTop + group / 2 - barCenter), 5, "停住的位置离导航栏正中不超过几 pt")
         XCTAssertEqual(s.tagsTop, s.titleTop + shortLine.height * TitleBarLayout.maxPinnedScale + TitleBarLayout.tagsGap, accuracy: 0.001)
-        XCTAssertEqual(s.tagsOpacity, 1)
+        XCTAssertEqual(restTags * s.tagsScale, TitleBarLayout.tagsHeight, accuracy: 0.001, "收进顶栏后标签缩到顶栏标签行的高度")
         XCTAssertEqual(s.glassOpacity, 1)
         XCTAssertEqual(state(800).titleTop, s.titleTop, "停住以后再往下滑，标题不再移动")
     }
@@ -107,17 +109,28 @@ final class TitleBarLayoutTests: XCTestCase {
         XCTAssertEqual(s.scale, 1)
         XCTAssertEqual(s.titleTop, safeTop + TitleBarLayout.topPadding + 40)
         XCTAssertEqual(s.glassOpacity, 0)
-        XCTAssertEqual(s.tagsOpacity, 0)
+        XCTAssertEqual(s.tagsScale, 1)
     }
 
-    func testTagsFadeInOnlyNearTheEnd() {
+    func testTagsShrinkTogetherWithTitleAsOneSet() {
         let end = pinnedScroll()
-        XCTAssertEqual(state(end * 0.5).tagsOpacity, 0, "滑到一半时顶栏里的标签还不出现（页面上已有标签）")
-        XCTAssertGreaterThan(state(end * 0.9).tagsOpacity, 0)
+        var lastScale = state(0).tagsScale
+        var distinct = Set<Int>()
+        for scrolled in stride(from: CGFloat(1), through: end, by: 1) {
+            let s = state(scrolled)
+            let titleBottom = s.titleTop + shortLine.height * s.scale
+            XCTAssertLessThanOrEqual(s.tagsScale, lastScale, "标签跟着标题一起越滑越小")
+            XCTAssertGreaterThanOrEqual(s.tagsTop, titleBottom + TitleBarLayout.tagsGap - 0.001, "标签始终在标题下面，不和标题重叠")
+            XCTAssertLessThanOrEqual(s.tagsTop, titleBottom + 10 + 0.001, "标签紧跟标题，不落在后面")
+            distinct.insert(Int(s.tagsScale * 1000))
+            lastScale = s.tagsScale
+        }
+        XCTAssertGreaterThan(distinct.count, 10, "标签是渐渐缩小的，不是换成另一组")
     }
 
     func testBeforeMeasuringTitleKeepsDefaults() {
         XCTAssertEqual(TitleBarLayout.expandedScale(lineWidth: 0, contentWidth: 350), 1)
         XCTAssertEqual(TitleBarLayout.pinnedScale(lineWidth: 0, viewWidth: 390), TitleBarLayout.maxPinnedScale)
+        XCTAssertEqual(TitleBarLayout.pinnedTagsScale(restTagsHeight: 0), 1)
     }
 }
