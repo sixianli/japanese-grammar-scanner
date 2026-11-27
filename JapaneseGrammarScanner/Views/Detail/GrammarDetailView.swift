@@ -79,15 +79,16 @@ struct GrammarDetailView: View {
                             SenseBlock(index: i + 1, sense: sense,
                                        level: showsSenseLevels ? p.level(of: sense) : nil,
                                        regexes: regexes)
+                                .accessibilityElement(children: .contain)
+                                .accessibilityIdentifier("detail.sense")
                                 .padding(.bottom, i < p.senses.count - 1 ? 34 : 0)
                                 .background(alignment: .top) {
                                     Color.clear
                                         .frame(height: 1)
                                         .alignmentGuide(.top) { _ in senseJumpGap }
                                         .id("sense-\(i)")
+                                        .accessibilityHidden(true)
                                 }
-                                .accessibilityElement(children: .contain)
-                                .accessibilityIdentifier("detail.sense")
                         }
 
                         if !p.notes.isEmpty {
@@ -709,11 +710,11 @@ private struct FlyingTitle: View {
                 if size.height > 0 {
                     RubyText(japanese: point.titleForm, style: GrammarDetailView.titleStyle)
                         .fixedSize()
-                        .background { GlassPill(scale: s.scale, horizontal: 14, vertical: 4).opacity(s.pillOpacity) }
                         .accessibilityElement(children: .ignore)
                         .accessibilityLabel(Text(verbatim: point.titleForm))
                         .accessibilityAddTraits(.isHeader)
                         .accessibilityIdentifier("detail.barTitle")
+                        .background { GlassPill(scale: s.scale, horizontal: 14, vertical: 4).opacity(s.pillOpacity) }
                         .frame(width: width, height: size.height)
                         .scaleEffect(s.scale, anchor: .top)
                         .offset(y: s.titleTop)
