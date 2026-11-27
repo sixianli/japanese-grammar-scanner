@@ -19,13 +19,13 @@ final class TitleBarLayoutTests: XCTestCase {
     private var contentWidth: CGFloat { width - 2 * Theme.margin }
     private var barSpace: CGFloat { width - 2 * TitleBarLayout.barSideInset }
 
-    func testAtRestShortTitleIsFullSizeBelowBarAndGlassHidden() {
+    func testAtRestShortTitleIsFullSizeBelowBarAndPillsHidden() {
         let s = state(0)
         XCTAssertEqual(s.titleTop, safeTop + TitleBarLayout.topPadding)
         XCTAssertEqual(s.scale, 1)
         XCTAssertEqual(s.tagsScale, 1, "没滚动时标签是页面上的大小")
         XCTAssertEqual(s.tagsTop, s.titleTop + shortLine.height + 10, accuracy: 0.001, "标签就在页面标题下方原来的位置")
-        XCTAssertEqual(s.glassOpacity, 0)
+        XCTAssertEqual(s.pillOpacity, 0)
     }
 
     func testAtRestLongTitleShrinksToOneLineInsideThePageMargins() {
@@ -91,15 +91,15 @@ final class TitleBarLayoutTests: XCTestCase {
         XCTAssertLessThanOrEqual(abs(s.titleTop + group / 2 - barCenter), 5, "停住的位置离导航栏正中不超过几 pt")
         XCTAssertEqual(s.tagsTop, s.titleTop + shortLine.height * TitleBarLayout.maxPinnedScale + TitleBarLayout.tagsGap, accuracy: 0.001)
         XCTAssertEqual(restTags * s.tagsScale, TitleBarLayout.tagsHeight, accuracy: 0.001, "收进顶栏后标签缩到顶栏标签行的高度")
-        XCTAssertEqual(s.glassOpacity, 1)
+        XCTAssertEqual(s.pillOpacity, 1)
         XCTAssertEqual(state(800).titleTop, s.titleTop, "停住以后再往下滑，标题不再移动")
     }
 
-    func testGlassCoversPinnedTitleAndTags() {
+    func testTitleBarAreaCoversPinnedTitleAndTags() {
         for line in [shortLine, longLine] {
             let s = state(600, line: line)
-            XCTAssertGreaterThanOrEqual(s.glassBottom, s.tagsTop + TitleBarLayout.tagsHeight, "毛玻璃要盖住标题和标签行")
-            XCTAssertGreaterThanOrEqual(s.glassBottom, safeTop, "毛玻璃至少盖到导航栏下沿")
+            XCTAssertGreaterThanOrEqual(s.barBottom, s.tagsTop + TitleBarLayout.tagsHeight, "标题栏区域要盖住标题和标签行")
+            XCTAssertGreaterThanOrEqual(s.barBottom, safeTop, "标题栏区域至少到导航栏下沿")
             XCTAssertGreaterThanOrEqual(s.titleTop, safeTop - TitleBarLayout.navBarHeight, "标题不顶进状态栏")
         }
     }
@@ -108,7 +108,7 @@ final class TitleBarLayoutTests: XCTestCase {
         let s = state(-40)
         XCTAssertEqual(s.scale, 1)
         XCTAssertEqual(s.titleTop, safeTop + TitleBarLayout.topPadding + 40)
-        XCTAssertEqual(s.glassOpacity, 0)
+        XCTAssertEqual(s.pillOpacity, 0)
         XCTAssertEqual(s.tagsScale, 1)
     }
 

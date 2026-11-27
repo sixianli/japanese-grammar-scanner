@@ -8,13 +8,6 @@ final class HomeAndLibraryLayoutTests: XCTestCase {
         XCTAssertFalse(HomeLayout.showsSampleLink(scanCount: 40))
     }
 
-    func testLibraryHeaderGlassAppearsOnlyAfterScrolling() {
-        XCTAssertEqual(LibraryHeader.glassOpacity(scrolled: 0), 0)
-        XCTAssertEqual(LibraryHeader.glassOpacity(scrolled: -30), 0, "下拉回弹时不出现")
-        XCTAssertEqual(LibraryHeader.glassOpacity(scrolled: LibraryHeader.glassFadeDistance / 2), 0.5, accuracy: 0.001)
-        XCTAssertEqual(LibraryHeader.glassOpacity(scrolled: 500), 1)
-    }
-
     func testLevelFilterFollowsPullDownLikeSearchField() {
         XCTAssertEqual(LibraryHeader.pullOffset(scrolled: -40), 40, "往下拉 40 pt，筛选条跟着搜索框一起往下 40 pt")
         XCTAssertEqual(LibraryHeader.pullOffset(scrolled: 0), 0, "不拉时在原位")

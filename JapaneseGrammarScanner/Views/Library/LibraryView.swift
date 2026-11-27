@@ -40,19 +40,11 @@ struct LibraryView: View {
             .modifier(ScrollTracker(scrolled: $scrolled))
             .safeAreaInset(edge: .top, spacing: 0) {
                 levelPicker
+                    .padding(4)
+                    .glassBackground(in: Capsule())
                     .padding(.horizontal, Theme.margin)
                     .padding(.top, 4)
                     .padding(.bottom, 10)
-                    .background {
-                        Rectangle()
-                            .fill(.regularMaterial)
-                            .overlay(Theme.background.opacity(0.35))
-                            .overlay(alignment: .bottom) {
-                                Rectangle().fill(Color.primary.opacity(0.12)).frame(height: 0.5)
-                            }
-                            .opacity(LibraryHeader.glassOpacity(scrolled: scrolled))
-                            .ignoresSafeArea(edges: .top)
-                    }
                     .offset(y: LibraryHeader.pullOffset(scrolled: scrolled))
             }
             .dismissesKeyboardOnTapAndScroll()
@@ -124,11 +116,7 @@ struct LibraryView: View {
 }
 
 enum LibraryHeader {
-    static let glassFadeDistance: CGFloat = 12
-
-    static func glassOpacity(scrolled: CGFloat) -> Double {
-        Double(min(1, max(0, scrolled / glassFadeDistance)))
-    }
+    static let trackedDistance: CGFloat = 12
 
     static func pullOffset(scrolled: CGFloat) -> CGFloat {
         max(0, -scrolled)
@@ -143,11 +131,11 @@ private struct ScrollTracker: ViewModifier {
             content.onScrollGeometryChange(for: CGFloat.self) { g in
                 g.contentOffset.y + g.contentInsets.top
             } action: { _, y in
-                let clamped = min(y, LibraryHeader.glassFadeDistance)
+                let clamped = min(y, LibraryHeader.trackedDistance)
                 if abs(clamped - scrolled) > 0.5 { scrolled = clamped }
             }
         } else {
-            content.onAppear { scrolled = LibraryHeader.glassFadeDistance }
+            content.onAppear { scrolled = LibraryHeader.trackedDistance }
         }
     }
 }

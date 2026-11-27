@@ -45,14 +45,6 @@ struct HomeView: View {
                 searchEntry
                     .padding(.horizontal, Theme.margin)
                     .padding(.bottom, 8)
-                    .background(alignment: .top) {
-                        LinearGradient(stops: [.init(color: Theme.background, location: 0),
-                                               .init(color: Theme.background, location: 0.7),
-                                               .init(color: Theme.background.opacity(0), location: 1)],
-                                       startPoint: .top, endPoint: .bottom)
-                            .ignoresSafeArea(edges: .top)
-                            .allowsHitTesting(false)
-                    }
             }
             .background(Theme.background)
             .navigationTitle(tr("首页"))

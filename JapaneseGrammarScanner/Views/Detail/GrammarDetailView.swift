@@ -618,9 +618,7 @@ enum TitleBarLayout {
     static let restTagsGap: CGFloat = 10
     static let tagsHeight: CGFloat = 20
     static let barSideInset: CGFloat = 68
-    static let glassBelowContent: CGFloat = 6
-    static let edgeFade: CGFloat = 22
-    static let glassFadeDistance: CGFloat = 12
+    static let barBelowContent: CGFloat = 6
 
     struct State: Equatable {
         var titleTop: CGFloat
@@ -630,8 +628,8 @@ enum TitleBarLayout {
         var progress: CGFloat
         var tagsTop: CGFloat
         var tagsScale: CGFloat
-        var glassBottom: CGFloat
-        var glassOpacity: Double
+        var barBottom: CGFloat
+        var pillOpacity: Double
     }
 
     static func expandedScale(lineWidth: CGFloat, contentWidth: CGFloat) -> CGFloat {
@@ -669,8 +667,8 @@ enum TitleBarLayout {
             progress: progress,
             tagsTop: top + lineSize.height * scale + restTagsGap + (tagsGap - restTagsGap) * progress,
             tagsScale: 1 + (pinnedTagsScale(restTagsHeight: restTagsHeight) - 1) * progress,
-            glassBottom: max(safeTop, pinnedTop + pinnedGroup + glassBelowContent),
-            glassOpacity: Double(min(1, max(0, scrolled / glassFadeDistance)))
+            barBottom: max(safeTop, pinnedTop + pinnedGroup + barBelowContent),
+            pillOpacity: Double(progress)
         )
     }
 }
@@ -686,12 +684,11 @@ private struct FlyingTitle: View {
             let s = TitleBarLayout.state(scrolled: scroll.offset, lineSize: size, restTagsHeight: scroll.tagsHeight,
                                          viewWidth: width, safeTop: proxy.safeAreaInsets.top)
             ZStack(alignment: .top) {
-                EdgeGlass(bottom: s.glassBottom)
-                    .opacity(s.glassOpacity)
-                    .allowsHitTesting(false)
+                TitleBarArea(bottom: s.barBottom)
                 if size.height > 0 {
                     RubyText(japanese: point.titleForm, style: GrammarDetailView.titleStyle)
                         .fixedSize()
+                        .background { GlassPill(scale: s.scale, horizontal: 14, vertical: 4).opacity(s.pillOpacity) }
                         .accessibilityElement(children: .ignore)
                         .accessibilityLabel(Text(verbatim: point.titleForm))
                         .accessibilityAddTraits(.isHeader)
@@ -704,6 +701,7 @@ private struct FlyingTitle: View {
                 if size.height > 0, scroll.tagsHeight > 0 {
                     HeaderTags(point: point)
                         .fixedSize()
+                        .background { GlassPill(scale: s.tagsScale, horizontal: 6, vertical: 3).opacity(s.pillOpacity) }
                         .frame(width: width, height: scroll.tagsHeight)
                         .scaleEffect(s.tagsScale, anchor: .top)
                         .offset(y: s.tagsTop)
@@ -729,24 +727,32 @@ private struct HeaderTags: View {
     }
 }
 
-private struct EdgeGlass: View {
+private struct TitleBarArea: View {
     let bottom: CGFloat
 
     var body: some View {
-        let total = bottom + TitleBarLayout.edgeFade
-        Rectangle()
-            .fill(.regularMaterial)
-            .overlay(Theme.background.opacity(0.35))
-            .frame(height: total)
-            .mask(
-                LinearGradient(stops: [.init(color: .black, location: 0),
-                                       .init(color: .black, location: bottom / total),
-                                       .init(color: .clear, location: 1)],
-                               startPoint: .top, endPoint: .bottom)
-            )
+        Color.clear
+            .frame(height: bottom)
             .frame(maxWidth: .infinity)
+            .allowsHitTesting(false)
             .accessibilityElement()
             .accessibilityIdentifier("detail.titleBar")
+    }
+}
+
+private struct GlassPill: View {
+    let scale: CGFloat
+    let horizontal: CGFloat
+    let vertical: CGFloat
+
+    var body: some View {
+        let s = max(scale, 0.1)
+        Color.clear
+            .glassBackground(in: Capsule())
+            .padding(.horizontal, -horizontal / s)
+            .padding(.vertical, -vertical / s)
+            .allowsHitTesting(false)
+            .accessibilityHidden(true)
     }
 }
 
