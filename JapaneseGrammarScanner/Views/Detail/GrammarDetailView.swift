@@ -77,6 +77,11 @@ struct GrammarDetailView: View {
                             .padding(.top, 40)
                             .padding(.bottom, 14)
                         ForEach(Array(p.senses.enumerated()), id: \.offset) { i, sense in
+                            Color.clear
+                                .frame(height: jumpGap)
+                                .id("sense-\(i)")
+                                .frame(height: 0, alignment: .bottom)
+                                .accessibilityHidden(true)
                             SenseBlock(index: i + 1, sense: sense,
                                        level: showsSenseLevels ? p.level(of: sense) : nil,
                                        regexes: regexes)
@@ -84,13 +89,6 @@ struct GrammarDetailView: View {
                                 .accessibilityIdentifier("detail.sense")
                                 .accessibilityValue(Text(verbatim: DemoMode.e2e ? "gap \(jumpGap) bar \(scroll.barBottom) top \(scroll.frameTop) inset \(scroll.insetTop)" : ""))
                                 .padding(.bottom, i < p.senses.count - 1 ? 34 : 0)
-                                .background(alignment: .top) {
-                                    Color.clear
-                                        .frame(height: 1)
-                                        .alignmentGuide(.top) { _ in jumpGap }
-                                        .id("sense-\(i)")
-                                        .accessibilityHidden(true)
-                                }
                         }
 
                         if !p.notes.isEmpty {
@@ -235,7 +233,7 @@ struct GrammarDetailView: View {
 
     private var senseJumpGap: CGFloat {
         guard usesFlyingTitle else { return TitleBarLayout.jumpBreathingRoom }
-        return TitleBarLayout.jumpGap(barBottom: scroll.barBottom, visibleTop: scroll.frameTop + scroll.insetTop)
+        return TitleBarLayout.jumpGap(barBottom: scroll.barBottom, visibleTop: scroll.frameTop)
     }
 
     @ViewBuilder
