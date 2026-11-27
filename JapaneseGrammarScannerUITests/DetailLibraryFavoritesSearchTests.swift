@@ -89,7 +89,7 @@ final class DetailTests: E2ETestCase {
         let bar = id("detail.titleBar")
         let deadline = Date().addingTimeInterval(3)
         while abs(target.frame.minY - bar.frame.maxY) > 60 && Date() < deadline { Thread.sleep(forTimeInterval: 0.2) }
-        XCTAssertGreaterThanOrEqual(target.frame.minY, bar.frame.maxY - 1, "跳过去后第二个意思的标题要完整露在标题栏下面：意思 \(target.frame)，标题栏 \(bar.frame)，测量 \(target.value ?? "")")
+        XCTAssertGreaterThanOrEqual(target.frame.minY, bar.frame.maxY - 1, "跳过去后第二个意思的标题要完整露在标题栏下面：意思 \(target.frame)，标题栏 \(bar.frame)")
         XCTAssertLessThanOrEqual(target.frame.minY - bar.frame.maxY, 40, "停在标题栏下方，只留一点空隙：意思 \(target.frame)，标题栏 \(bar.frame)")
     }
 

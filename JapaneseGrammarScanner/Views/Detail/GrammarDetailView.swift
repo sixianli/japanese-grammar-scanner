@@ -36,7 +36,6 @@ struct GrammarDetailView: View {
     private func content(_ p: GrammarPoint) -> some View {
         let regexes = p.patterns.compactMap { try? NSRegularExpression(pattern: $0) }
         let showsSenseLevels = p.levels.count > 1
-        let jumpGap = senseJumpGap
         return ScrollViewReader { proxy in
             ScrollView {
                 if usesFlyingTitle {
@@ -56,7 +55,7 @@ struct GrammarDetailView: View {
                     if let matchedText {
                         ScannedMatchBanner(matched: matchedText, senseIndex: focus,
                                            senseLabel: focus.map { p.senses[$0].label }) {
-                            if let focus { withAnimation(.easeInOut) { proxy.scrollTo("sense-\(focus)", anchor: .top) } }
+                            if let focus { jump(to: focus, proxy: proxy) }
                         }
                         .padding(.top, 14)
                     }
@@ -66,7 +65,7 @@ struct GrammarDetailView: View {
 
                     SenseOutline(point: p, showsLevels: showsSenseLevels, tappable: entitlements.hasFullAccess,
                                  highlighted: focus) { i in
-                        withAnimation(.easeInOut) { proxy.scrollTo("sense-\(i)", anchor: .top) }
+                        jump(to: i, proxy: proxy)
                     }
                     .padding(.top, 18)
 
@@ -77,17 +76,15 @@ struct GrammarDetailView: View {
                             .padding(.top, 40)
                             .padding(.bottom, 14)
                         ForEach(Array(p.senses.enumerated()), id: \.offset) { i, sense in
-                            Color.clear
-                                .frame(height: jumpGap)
-                                .id("sense-\(i)")
-                                .frame(height: 0, alignment: .bottom)
-                                .accessibilityHidden(true)
                             SenseBlock(index: i + 1, sense: sense,
                                        level: showsSenseLevels ? p.level(of: sense) : nil,
                                        regexes: regexes)
                                 .accessibilityElement(children: .contain)
                                 .accessibilityIdentifier("detail.sense")
-                                .accessibilityValue(Text(verbatim: DemoMode.e2e ? "gap \(jumpGap) bar \(scroll.barBottom) top \(scroll.frameTop) inset \(scroll.insetTop)" : ""))
+                                .onGeometryChange(for: CGFloat.self) { $0.frame(in: .global).minY } action: { [scroll] y in
+                                    scroll.senseTops[i] = y
+                                }
+                                .id("sense-\(i)")
                                 .padding(.bottom, i < p.senses.count - 1 ? 34 : 0)
                         }
 
@@ -161,7 +158,7 @@ struct GrammarDetailView: View {
                     FlyingTitle(point: p, scroll: scroll)
                 }
             }
-            .modifier(DemoScrollOffset())
+            .modifier(DetailScrollPosition(scroll: scroll))
             .onAppear {
                 if let anchor = DemoMode.scrollAnchor {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { proxy.scrollTo(anchor, anchor: .top) }
@@ -231,9 +228,12 @@ struct GrammarDetailView: View {
 
     static let titleStyle = RubyText.Style(font: .largeTitle.bold(), rubySize: 12, lineSpacing: 2, alignment: .center)
 
-    private var senseJumpGap: CGFloat {
-        guard usesFlyingTitle else { return TitleBarLayout.jumpBreathingRoom }
-        return TitleBarLayout.jumpGap(barBottom: scroll.barBottom, visibleTop: scroll.frameTop)
+    private func jump(to sense: Int, proxy: ScrollViewProxy) {
+        guard usesFlyingTitle, let top = scroll.senseTops[sense] else {
+            withAnimation(.easeInOut) { proxy.scrollTo("sense-\(sense)", anchor: .top) }
+            return
+        }
+        scroll.jump = .init(y: TitleBarLayout.jumpOffset(current: scroll.offset, targetTop: top, barBottom: scroll.barBottom))
     }
 
     @ViewBuilder
@@ -597,29 +597,42 @@ final class DetailScrollModel {
     var contentWidth: CGFloat = 0
     var tagsHeight: CGFloat = 0
     var barBottom: CGFloat = 0
-    var frameTop: CGFloat = 0
-    var insetTop: CGFloat = 0
+    var jump: JumpRequest?
+    @ObservationIgnored var senseTops: [Int: CGFloat] = [:]
     @ObservationIgnored var headerBaseline: CGFloat?
+
+    struct JumpRequest: Equatable {
+        let id = UUID()
+        let y: CGFloat
+    }
 }
 
-private struct DemoScrollOffset: ViewModifier {
+private struct DetailScrollPosition: ViewModifier {
+    let scroll: DetailScrollModel
+
     func body(content: Content) -> some View {
-        if #available(iOS 18.0, *), let y = DemoMode.scrollY {
-            Scrolled(content: content, y: y)
+        if #available(iOS 18.0, *) {
+            Positioned(content: content, scroll: scroll)
         } else {
             content
         }
     }
 
     @available(iOS 18.0, *)
-    private struct Scrolled: View {
+    private struct Positioned: View {
         let content: Content
-        let y: CGFloat
+        let scroll: DetailScrollModel
         @State private var position = ScrollPosition(edge: .top)
+
         var body: some View {
             content
                 .scrollPosition($position)
+                .onChange(of: scroll.jump) { _, jump in
+                    guard let jump else { return }
+                    withAnimation(.easeInOut) { position.scrollTo(y: jump.y) }
+                }
                 .task {
+                    guard let y = DemoMode.scrollY else { return }
                     try? await Task.sleep(for: .milliseconds(800))
                     position.scrollTo(y: y)
                 }
@@ -651,8 +664,8 @@ enum TitleBarLayout {
 
     static let jumpBreathingRoom: CGFloat = 12
 
-    static func jumpGap(barBottom: CGFloat, visibleTop: CGFloat) -> CGFloat {
-        max(0, barBottom - visibleTop) + jumpBreathingRoom
+    static func jumpOffset(current: CGFloat, targetTop: CGFloat, barBottom: CGFloat) -> CGFloat {
+        max(0, current + targetTop - barBottom - jumpBreathingRoom)
     }
 
     static func expandedScale(lineWidth: CGFloat, contentWidth: CGFloat) -> CGFloat {
@@ -847,14 +860,6 @@ private struct ScrollOffsetTracker: ViewModifier {
                     g.contentOffset.y + g.contentInsets.top
                 } action: { _, y in
                     if abs(y - scroll.offset) > 0.25 { scroll.offset = y }
-                }
-                .onScrollGeometryChange(for: CGFloat.self) { g in
-                    g.contentInsets.top
-                } action: { _, inset in
-                    if abs(inset - scroll.insetTop) > 0.5 { scroll.insetTop = inset }
-                }
-                .onGeometryChange(for: CGFloat.self) { $0.frame(in: .global).minY } action: { y in
-                    if abs(y - scroll.frameTop) > 0.5 { scroll.frameTop = y }
                 }
         } else {
             content

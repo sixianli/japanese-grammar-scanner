@@ -134,11 +134,15 @@ final class TitleBarLayoutTests: XCTestCase {
         XCTAssertEqual(TitleBarLayout.pinnedTagsScale(restTagsHeight: 0), 1)
     }
 
-    func testSenseJumpStopsTwelvePointsBelowABarThatHangsIntoTheContent() {
-        XCTAssertEqual(TitleBarLayout.jumpGap(barBottom: 88, visibleTop: 62), 38, "跳到的意思停在标题栏下沿再往下 12 pt")
+    func testSenseJumpScrollsSoTheSenseStopsTwelvePointsBelowTheBar() {
+        XCTAssertEqual(TitleBarLayout.jumpOffset(current: 100, targetTop: 600, barBottom: 88), 600, "意思现在在 600，要停到 88 + 12 = 100，所以再往下滚 500")
     }
 
-    func testSenseJumpKeepsBreathingRoomWhenBarEndsAboveTheContent() {
-        XCTAssertEqual(TitleBarLayout.jumpGap(barBottom: 50, visibleTop: 62), 12, "标题栏没伸进内容区时，只留 12 pt")
+    func testSenseJumpScrollsBackUpWhenTheSenseIsAlreadyAbove() {
+        XCTAssertEqual(TitleBarLayout.jumpOffset(current: 800, targetTop: 40, barBottom: 88), 740, "意思在标题栏后面时往回滚 60")
+    }
+
+    func testSenseJumpNeverScrollsAboveTheTop() {
+        XCTAssertEqual(TitleBarLayout.jumpOffset(current: 0, targetTop: 50, barBottom: 88), 0, "第一个意思离顶部很近时停在最顶上，不滚出负数")
     }
 }
