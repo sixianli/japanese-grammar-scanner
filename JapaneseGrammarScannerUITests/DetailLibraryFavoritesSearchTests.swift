@@ -499,13 +499,28 @@ final class SakuraAnimationTests: E2ETestCase {
         XCTAssertTrue(text(containing: "个语法可以复习了").exists, "返回后直接显示数量")
     }
 
-    func testFavoritesTabReachableWhenPouchTurnsPink() {
+    func testFavoritesTabReachableWhilePouchDips() {
         openDetailBySearch("にもかかわらず")
         id("detail.favorite").tap()
-        Thread.sleep(forTimeInterval: FlightTiming.pouchGlowStart)
-        XCTAssertTrue(tab("收藏").exists, "樱花落进袋子、标签图标变粉时仍应找得到「收藏」标签")
+        Thread.sleep(forTimeInterval: FlightTiming.pouchDipStart)
+        XCTAssertTrue(tab("收藏").exists, "樱花落进袋口、布袋往下一沉时仍应找得到「收藏」标签")
         tab("收藏").tap()
-        wait(id("favorites.row"), "标签图标变粉时点「收藏」应能打开收藏页")
+        wait(id("favorites.row"), "布袋动的时候点「收藏」应能打开收藏页")
+    }
+
+    func testSakuraFliesIntoTheFavoritesTabPouch() {
+        openDetailBySearch("にもかかわらず")
+        let pouch = tab("收藏")
+        wait(pouch, "标签栏应有「收藏」")
+
+        id("detail.favorite").tap()
+
+        let target = id("favorite.flightTarget")
+        wait(target, "收藏后应有樱花飞向标签栏")
+        let point = CGPoint(x: target.frame.midX, y: target.frame.midY)
+        XCTAssertEqual(point.x, pouch.frame.midX, accuracy: 3, "樱花要落在「收藏」标签正上方，不偏左偏右：落点 \(point)，标签 \(pouch.frame)")
+        XCTAssertGreaterThanOrEqual(point.y, pouch.frame.minY, "落点在「收藏」标签里：落点 \(point)，标签 \(pouch.frame)")
+        XCTAssertLessThan(point.y, pouch.frame.midY, "落在布袋上部的袋口，不是图标正中或文字上：落点 \(point)，标签 \(pouch.frame)")
     }
 
     func testFavoriteFlightDoesNotBlockTabs() {
@@ -519,7 +534,7 @@ final class SakuraAnimationTests: E2ETestCase {
 }
 
 private enum FlightTiming {
-    static let pouchGlowStart: TimeInterval = 2.9
+    static let pouchDipStart: TimeInterval = 2.9
 }
 
 final class DetailScrollTests: E2ETestCase {

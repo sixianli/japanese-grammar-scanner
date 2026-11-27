@@ -14,9 +14,7 @@ final class FavoriteFlight: ObservableObject {
     }
 
     @Published private(set) var flights: [Flight] = []
-    @Published private(set) var pouchGlowing = false
     @Published private(set) var toast: UUID?
-    private var glowToken: UUID?
 
     nonisolated static let toastDuration: Double = 2.4
 
@@ -25,13 +23,13 @@ final class FavoriteFlight: ObservableObject {
     }
 
     func launch(from: CGPoint, style: Style = .intoPouch) {
-        let to = style == .intoPouch ? (TabBarLocator.favoritesTabCenter() ?? TabBarLocator.estimatedFavoritesTabCenter()) : from
+        let to = style == .intoPouch ? (TabBarLocator.pouchMouth() ?? TabBarLocator.estimatedPouchMouth()) : from
         let f = Flight(style: style, from: from, to: to, start: Date())
         flights.append(f)
         if style == .intoPouch {
             Task { [weak self] in
                 try? await Task.sleep(for: .seconds(FlightPath.arrival(.intoPouch) - 0.15))
-                self?.glowPouch()
+                self?.catchInPouch()
             }
         }
         Task { [weak self] in
@@ -50,14 +48,10 @@ final class FavoriteFlight: ObservableObject {
         }
     }
 
-    private func glowPouch() {
-        let token = UUID()
-        glowToken = token
-        pouchGlowing = true
-        Task { [weak self] in
-            try? await Task.sleep(for: .seconds(FlightPath.glow))
-            if self?.glowToken == token { self?.pouchGlowing = false }
-        }
+    private func catchInPouch() {
+        guard DecorativeMotion.enabled(reduceMotion: UIAccessibility.isReduceMotionEnabled),
+              let icon = TabBarLocator.pouchIcon() else { return }
+        PouchDip.play(on: icon.layer)
     }
 }
 
@@ -74,7 +68,7 @@ enum FlightPath {
 
     static let flowerSize: CGFloat = 40
     static let buttonScale: CGFloat = 0.55
-    static let glow: Double = 0.9
+    static let landing: Double = 0.9
 
     static func particles(_ style: FavoriteFlight.Style) -> [Particle] {
         switch style {
@@ -95,7 +89,7 @@ enum FlightPath {
     }
 
     static func total(_ style: FavoriteFlight.Style) -> Double {
-        arrival(style) + (style == .intoPouch ? glow : 0)
+        arrival(style) + (style == .intoPouch ? landing : 0)
     }
 
     static func control(from a: CGPoint, to b: CGPoint) -> CGPoint {
@@ -186,6 +180,17 @@ struct FavoriteFlightOverlay: View {
             .ignoresSafeArea()
             .accessibilityHidden(true)
 
+            if DemoMode.e2e, let target = model.flights.last(where: { $0.style == .intoPouch })?.to {
+                Color.clear
+                    .frame(width: 2, height: 2)
+                    .position(target)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .ignoresSafeArea()
+                    .accessibilityElement()
+                    .accessibilityLabel(Text(verbatim: "flight target"))
+                    .accessibilityIdentifier("favorite.flightTarget")
+            }
+
             if model.toast != nil {
                 SavedToast()
                     .padding(.top, 52)
@@ -224,34 +229,118 @@ private struct SavedToast: View {
     }
 }
 
-enum TabBarLocator {
+enum PouchDip {
+    static let duration: Double = 0.35
+    static let squash: Double = 0.1
+
+    static func scale(progress p: Double) -> (x: Double, y: Double) {
+        let t = min(1, max(0, p))
+        let y = 1 - squash * sin(.pi * t) + 0.03 * sin(2 * .pi * t) * (1 - t)
+        return (2 - y, y)
+    }
+
     @MainActor
-    static func favoritesTabCenter() -> CGPoint? {
-        guard let window = UIApplication.shared.connectedScenes
-            .compactMap({ $0 as? UIWindowScene }).flatMap(\.windows).first(where: \.isKeyWindow) else { return nil }
+    static func play(on layer: CALayer) {
+        let steps = 12
+        let height = layer.bounds.height
+        let values: [CATransform3D] = (0...steps).map { i in
+            let s = scale(progress: Double(i) / Double(steps))
+            let lift = height * (1 - s.y) / 2
+            return CATransform3DConcat(CATransform3DMakeScale(s.x, s.y, 1), CATransform3DMakeTranslation(0, lift, 0))
+        }
+        let animation = CAKeyframeAnimation(keyPath: "transform")
+        animation.values = values
+        animation.duration = duration
+        animation.calculationMode = .linear
+        layer.add(animation, forKey: "pouchDip")
+    }
+}
+
+enum TabBarLocator {
+    static let mouthDepth: CGFloat = 0.25
+
+    @MainActor
+    private static var keyWindow: UIWindow? {
+        UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }.flatMap(\.windows).first(where: \.isKeyWindow)
+    }
+
+    @MainActor
+    static func favoritesTabButton() -> UIView? {
+        guard let window = keyWindow else { return nil }
         var found: UIView?
+        func isFavoritesTab(_ v: UIView) -> Bool {
+            if v.accessibilityIdentifier == "detail.favorite" { return false }
+            if v.accessibilityIdentifier?.hasPrefix("Kinchaku") == true { return true }
+            return v.isAccessibilityElement && v.accessibilityLabel == tr("收藏")
+                && v.accessibilityTraits.contains(.button) && hasTabBarAncestor(v)
+        }
         func search(_ v: UIView) {
-            if found != nil { return }
-            if v.accessibilityIdentifier?.hasPrefix("Kinchaku") == true
-                || (v is UIControl && v.accessibilityLabel == tr("收藏") && v.accessibilityIdentifier != "detail.favorite") {
+            if found != nil || v.isHidden { return }
+            if isFavoritesTab(v) {
                 found = v
                 return
             }
             v.subviews.forEach(search)
         }
         search(window)
-        guard let v = found, !v.isHidden, v.window != nil else { return nil }
-        let r = v.convert(v.bounds, to: window)
-        guard !r.isEmpty else { return nil }
-        let iconLift = v is UIImageView ? 0 : r.height * 0.15
-        return CGPoint(x: r.midX, y: r.midY - iconLift)
+        return found
     }
 
     @MainActor
-    static func estimatedFavoritesTabCenter() -> CGPoint {
-        let screen = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.first?.screen.bounds
-            ?? CGRect(x: 0, y: 0, width: 390, height: 844)
-        return CGPoint(x: screen.width * 0.62, y: screen.height - 56)
+    private static func hasTabBarAncestor(_ v: UIView) -> Bool {
+        var p = v.superview
+        while let current = p {
+            if current is UITabBar { return true }
+            p = current.superview
+        }
+        return false
+    }
+
+    @MainActor
+    static func pouchIcon() -> UIView? {
+        guard let button = favoritesTabButton() else { return nil }
+        if button is UIImageView { return button }
+        var icon: UIImageView?
+        func search(_ v: UIView) {
+            if icon != nil { return }
+            if let iv = v as? UIImageView, iv.image != nil, !iv.isHidden, iv.bounds.width > 8 {
+                icon = iv
+                return
+            }
+            v.subviews.forEach(search)
+        }
+        search(button)
+        return icon
+    }
+
+    @MainActor
+    static func pouchMouth() -> CGPoint? {
+        guard let window = keyWindow else { return nil }
+        if let icon = pouchIcon(), icon.window != nil {
+            let r = icon.convert(icon.bounds, to: window)
+            if !r.isEmpty { return mouth(ofIcon: r) }
+        }
+        guard let button = favoritesTabButton(), button.window != nil else { return nil }
+        let r = button.convert(button.bounds, to: window)
+        guard !r.isEmpty else { return nil }
+        return CGPoint(x: r.midX, y: r.minY + r.height * 0.3)
+    }
+
+    static func mouth(ofIcon r: CGRect) -> CGPoint {
+        CGPoint(x: r.midX, y: r.minY + r.height * mouthDepth)
+    }
+
+    static func estimatedMouth(tabBar: CGRect, tabCount: Int, index: Int) -> CGPoint {
+        let width = tabBar.width / CGFloat(max(tabCount, 1))
+        return CGPoint(x: tabBar.minX + width * (CGFloat(index) + 0.5), y: tabBar.minY + tabBar.height * 0.3)
+    }
+
+    @MainActor
+    static func estimatedPouchMouth() -> CGPoint {
+        let screen = keyWindow?.bounds ?? CGRect(x: 0, y: 0, width: 390, height: 844)
+        let bar = CGRect(x: 0, y: screen.height - 83, width: screen.width, height: 49)
+        return estimatedMouth(tabBar: bar, tabCount: AppTab.count, index: AppTab.favorites)
     }
 }
 

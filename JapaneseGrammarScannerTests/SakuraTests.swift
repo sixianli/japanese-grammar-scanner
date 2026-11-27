@@ -164,18 +164,46 @@ final class SakuraTests: XCTestCase {
         XCTAssertLessThan(scale(1), 0.5, "落进袋子时变小")
     }
 
-    func testPouchTurnsPinkOnlyAfterFlowerArrives() {
+    func testPouchDipsOnlyAfterFlowerArrives() {
         let flower = FlightPath.particles(.intoPouch).first { $0.kind == .flower }!
-        XCTAssertGreaterThan(FlightPath.arrival(.intoPouch) - 0.15, flower.delay + flower.duration * 0.9, "樱花快落进袋子时袋子才变粉")
-        XCTAssertGreaterThan(FlightPath.glow, 0.5)
-        XCTAssertEqual(FlightPath.total(.intoPouch), FlightPath.arrival(.intoPouch) + FlightPath.glow, accuracy: 0.001)
+        XCTAssertGreaterThan(FlightPath.arrival(.intoPouch) - 0.15, flower.delay + flower.duration * 0.9, "樱花快落进袋口时袋子才往下一沉")
+        XCTAssertEqual(FlightPath.total(.intoPouch), FlightPath.arrival(.intoPouch) + FlightPath.landing, accuracy: 0.001)
+    }
+
+    func testPouchDipSquashesAboutTenPercentThenSettles() {
+        let start = PouchDip.scale(progress: 0), middle = PouchDip.scale(progress: 0.5), end = PouchDip.scale(progress: 1)
+
+        XCTAssertEqual(start.y, 1, accuracy: 0.001)
+        XCTAssertEqual(middle.y, 0.9, accuracy: 0.01, "最低时压扁约 10%")
+        XCTAssertGreaterThan(middle.x, 1, "压扁时横向略微变宽")
+        XCTAssertEqual(end.y, 1, accuracy: 0.001, "最后回到原样")
+        XCTAssertEqual(end.x, 1, accuracy: 0.001)
+        XCTAssertLessThan(PouchDip.duration, 0.5, "动作要短")
+    }
+
+    func testLandingPointIsThePouchMouthNotTheIconCenter() {
+        let icon = CGRect(x: 280, y: 780, width: 28, height: 28)
+
+        let mouth = TabBarLocator.mouth(ofIcon: icon)
+
+        XCTAssertEqual(mouth.x, 294, accuracy: 0.001, "横向对准图标正中")
+        XCTAssertEqual(mouth.y, 787, accuracy: 0.001, "纵向落在图标上沿往下约 1/4，也就是袋口")
+    }
+
+    func testEstimatedMouthUsesTheFourthOfFiveTabs() {
+        let bar = CGRect(x: 0, y: 761, width: 400, height: 49)
+
+        let mouth = TabBarLocator.estimatedMouth(tabBar: bar, tabCount: 5, index: 3)
+
+        XCTAssertEqual(mouth.x, 280, accuracy: 0.001, "5 个标签时收藏在第 4 格正中（70%），不是旧的 62%")
+        XCTAssertLessThan(mouth.y, bar.midY, "落在标签图标的上半部")
     }
 
     func testReviewFlightFloatsAwayFromButtonWithoutTabBar() {
         let parts = FlightPath.particles(.away)
         XCTAssertEqual(parts.filter { $0.kind == .flower }.count, 1)
         XCTAssertEqual(parts.filter { $0.kind == .petal }.count, 2)
-        XCTAssertEqual(FlightPath.total(.away), FlightPath.arrival(.away), "复习页没有标签栏，不等袋子变粉")
+        XCTAssertEqual(FlightPath.total(.away), FlightPath.arrival(.away), "复习页没有标签栏，不等布袋接住")
         for p in parts {
             let start = try! XCTUnwrap(FlightPath.state(p, style: .away, elapsed: p.delay, from: from, to: from))
             let end = try! XCTUnwrap(FlightPath.state(p, style: .away, elapsed: p.delay + p.duration, from: from, to: from))
@@ -189,8 +217,7 @@ final class SakuraTests: XCTestCase {
     func testPouchIconMatchesSystemTabIconHeight() throws {
         let icon = try XCTUnwrap(UIImage(named: "Kinchaku"))
         XCTAssertEqual(icon.size.height, 28, accuracy: 0.5, "巾着标签图标按系统标签图标的高度画（Build 19 反馈 1）")
-        let pink = try XCTUnwrap(UIImage(named: "KinchakuPink"))
-        XCTAssertEqual(pink.size, icon.size, "变粉的图标和原图标一样大，换图时不跳动")
+        XCTAssertNil(UIImage(named: "KinchakuPink"), "收藏时布袋不再变粉")
     }
 
     func testOnlyFavoritingLaunches() {

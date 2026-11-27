@@ -72,6 +72,7 @@ extension Notification.Name {
 
 enum AppTab {
     static let home = 0, scan = 1, library = 2, favorites = 3, search = 4
+    static let count = 5
 }
 
 struct RootTabView: View {
@@ -203,8 +204,6 @@ struct RootTabView: View {
         for id in ["izen", "made-until", "sou-da-appearance", "nagara", "dake-ni"] { history.recordViewed(id) }
     }
 
-    private var pouchImage: String { favoriteFlight.pouchGlowing ? "KinchakuPink" : "Kinchaku" }
-
     @ViewBuilder
     private var tabs: some View {
         if #available(iOS 18.0, *) {
@@ -212,7 +211,7 @@ struct RootTabView: View {
                 Tab(tr("首页"), systemImage: "house", value: AppTab.home) { HomeView(openCamera: { tab = AppTab.scan }) }
                 Tab(tr("扫描"), systemImage: "text.viewfinder", value: AppTab.scan) { ScanHomeView() }
                 Tab(tr("语法库"), systemImage: "books.vertical", value: AppTab.library) { LibraryView() }
-                Tab(tr("收藏"), image: pouchImage, value: AppTab.favorites) { FavoritesView() }
+                Tab(tr("收藏"), image: "Kinchaku", value: AppTab.favorites) { FavoritesView() }
                 Tab(tr("搜索"), systemImage: "magnifyingglass", value: AppTab.search, role: .search) { SearchView() }
             }
         } else {
@@ -224,7 +223,7 @@ struct RootTabView: View {
                 LibraryView()
                     .tabItem { Label(tr("语法库"), systemImage: "books.vertical") }.tag(AppTab.library)
                 FavoritesView()
-                    .tabItem { Label(tr("收藏"), image: pouchImage) }.tag(AppTab.favorites)
+                    .tabItem { Label(tr("收藏"), image: "Kinchaku") }.tag(AppTab.favorites)
                 SearchView()
                     .tabItem { Label(tr("搜索"), systemImage: "magnifyingglass") }.tag(AppTab.search)
             }
