@@ -1,6 +1,5 @@
 import XCTest
 
-/// 设置：外观、全部语言、三种反馈（含截图、发送）、使用引导、隐私政策、使用条款、开源许可、版本
 final class SettingsTests: E2ETestCase {
     private func openSettings() {
         scrollToTop()
@@ -8,8 +7,6 @@ final class SettingsTests: E2ETestCase {
         wait(navBar("设置"), "应打开设置")
     }
 
-    /// 关闭设置面板。「完成」（settings.done）只在设置首页的导航栏上；停在二级页（隐私、使用指南、指南条目…）时
-    /// 那里只有返回按钮，先逐级返回到设置首页再点「完成」。
     private func closeSettings(file: StaticString = #filePath, line: UInt = #line) {
         let done = id("settings.done")
         var levels = 0
@@ -49,13 +46,11 @@ final class SettingsTests: E2ETestCase {
             ("English", "Language"), ("한국어", "언어"), ("Español", "Idioma"), ("Tiếng Việt", "Ngôn ngữ"),
             ("မြန်မာဘာသာ", "ဘာသာစကား"), ("繁體中文", "語言"), ("简体中文", "语言"),
         ]
-        // 页面标题和页脚（普通文字）都要换成所选语言
         let footers = ["English": "switch together", "한국어": "함께 바뀝니다", "Español": "cambian juntos", "Tiếng Việt": "cùng lúc",
                        "မြန်မာဘာသာ": "ပူးတွဲ", "繁體中文": "一起切換", "简体中文": "一起切换"]
         for (name, title) in expected {
             let row = button(startingWith: name)
             row.tap()
-            // 切换语言时不能关掉设置面板、跳回首页再弹回来：语言列表要一直在屏幕上
             assertStays(app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", name)).firstMatch,
                         "切换到 \(name) 时语言页不应消失（不应先跳回首页再弹回）")
             wait(navBar(title), "切换到 \(name) 后页面标题应变成「\(title)」")
@@ -74,10 +69,8 @@ final class SettingsTests: E2ETestCase {
         button(startingWith: "English").tap()
         wait(navBar("Language"), "英文")
         back()
-        // 返回设置页：设置页本身也已经是英文（就地刷新，不需要重新打开）
         wait(navBar("Settings"), "返回后设置页标题应是英文")
         navBar("Settings").buttons["Done"].tap()
-        // 关掉设置后仍在首页（切换语言不改变当前标签）
         wait(id("home.search"), "关闭设置后应仍在首页")
         tab("Grammar").tap()
         wait(id("library.row"), "语法库")
@@ -97,16 +90,13 @@ final class SettingsTests: E2ETestCase {
             editor.tap()
             editor.typeText("自动化测试：\(kind)")
             navBar("反馈").buttons["发送"].tap()
-            // App 内提交未开通时，弹出系统分享面板
             let share = app.descendants(matching: .any)["ActivityListView"]
             wait(share, "点发送后应弹出分享面板（或提交成功提示）", timeout: 10)
-            // iOS 26 的分享面板有时下滑一次关不掉：最多试三次，有「关闭」按钮就点它
             for _ in 0..<3 where share.exists {
                 let close = app.buttons.matching(NSPredicate(format: "label == '关闭' OR label == 'Close'")).firstMatch
                 if close.exists && close.isHittable { close.tap() } else { app.swipeDown(velocity: .fast) }
                 _ = XCTWaiter().wait(for: [expectation(for: NSPredicate(format: "exists == false"), evaluatedWith: share)], timeout: 3)
             }
-            // 下滑关分享面板时，反馈页有时也一起关了
             if navBar("反馈").exists {
                 navBar("反馈").buttons["取消"].tap()
                 waitGone(navBar("反馈"), "取消后关闭反馈页")
@@ -121,8 +111,6 @@ final class SettingsTests: E2ETestCase {
         wait(navBar("反馈"), "反馈页")
         button(startingWith: "添加截图").tap()
         pickFirstPhoto()
-        // 多选的照片选择器要再点确认（iOS 26 是右上角的 ✓，名字也叫「完成」）。
-        // 设置页（被盖住）和键盘上的「完成」有自己的标识，排除掉，剩下的就是照片选择器的
         let confirm = app.buttons.matching(NSPredicate(format: "(label IN {'添加', 'Add', '完成', 'Done', '确定', 'OK'}) AND NOT (identifier IN {'settings.done', 'keyboard.done'})")).firstMatch
         if confirm.waitForExistence(timeout: 8) {
             confirm.tap()
@@ -134,7 +122,6 @@ final class SettingsTests: E2ETestCase {
         navBar("反馈").buttons["取消"].tap()
     }
 
-    /// 使用指南只有一页：核心功能 5 张图文卡片，没有二级入口、没有「再看一遍入门引导」（Build 17 反馈 3）
     func testGuideIsOnePageOfCoreCards() {
         openSettings()
         scrollTo(id("settings.guide"))
@@ -159,7 +146,6 @@ final class SettingsTests: E2ETestCase {
         id("settings.privacy").tap()
         wait(id("legal.summary"), "隐私页应显示隐私政策")
         XCTAssertTrue(id("legal.camera").exists, "隐私政策应有「相机与照片」")
-        // 「联系我们」是政策的最后一节，在屏幕下方；列表只把屏幕上的行放进界面层级，要滑到它出现
         scrollTo(id("legal.contact"))
         XCTAssertTrue(id("legal.contact").exists, "隐私政策最后应有「联系我们」")
         back()
@@ -178,7 +164,6 @@ final class SettingsTests: E2ETestCase {
         closeSettings()
     }
 
-    /// Build 16 反馈：隐私那一块不要放在设置首页（吓退用户）。现在在「关于 → 隐私」二级页里。
     func testPrivacyMovedIntoSubpage() {
         openSettings()
         XCTAssertFalse(id("settings.usageStats").exists, "设置首页不应直接出现匿名统计开关")
@@ -186,21 +171,25 @@ final class SettingsTests: E2ETestCase {
         scrollTo(id("settings.privacy"))
         id("settings.privacy").tap()
         wait(id("legal.summary"), "隐私页应显示隐私政策")
-        // 说的和做的一致：有统计开关的版本，政策里一定写了匿名使用统计；没有开关的版本，政策里也不写
         let hasToggle = id("settings.usageStats").waitForExistence(timeout: 2)
         XCTAssertEqual(hasToggle, id("legal.usage-stats").exists, "统计开关和政策里的「匿名使用统计」必须同时有或同时没有")
-        XCTAssertNotEqual(id("legal.feedback").exists, id("legal.feedback-offline").exists, "反馈说明只能出现与当前版本相符的一种")
+        let feedback = id("legal.feedback")
+        let offlineFeedback = id("legal.feedback-offline")
+        var swipes = 0
+        while !feedback.exists && !offlineFeedback.exists && swipes < 8 {
+            app.swipeUp()
+            swipes += 1
+        }
+        XCTAssertNotEqual(feedback.exists, offlineFeedback.exists, "反馈说明只能出现与当前版本相符的一种")
         closeSettings()
     }
 
-    /// 匿名使用统计开关（只在会上报的版本里有）：默认打开，关掉后重新打开设置仍是关闭
     func testUsageStatsToggle() {
         openSettings()
         scrollTo(id("settings.privacy"))
         id("settings.privacy").tap()
         let toggle = id("settings.usageStats")
         guard toggle.waitForExistence(timeout: 3) else {
-            // 没有开通 iCloud 上报的版本：不显示开关，政策里也不能写「匿名使用统计」
             XCTAssertFalse(id("legal.usage-stats").exists, "不上报的版本，隐私政策里不应写匿名使用统计")
             closeSettings()
             return
@@ -220,7 +209,6 @@ final class SettingsTests: E2ETestCase {
         closeSettings()
     }
 
-    /// 反馈描述输入后，点键盘上方的「完成」收起键盘，文字保留
     func testFeedbackKeyboardDone() {
         openSettings()
         button(startingWith: "体验与建议").tap()
@@ -237,7 +225,6 @@ final class SettingsTests: E2ETestCase {
         closeSettings()
     }
 
-    /// 诊断：切换到英文前后，各种查找翻译的方式实际得到什么（只打印，不判失败）
     func testLanguageDiagnostics() {
         func dump(_ tag: String) {
             let info = id("lang.debug")
