@@ -35,7 +35,7 @@ final class HistoryStore: ObservableObject {
     private let directory: URL
     private var thumbnails: [String: UIImage] = [:]
 
-    static var defaultDirectory: URL {
+    nonisolated static var defaultDirectory: URL {
         FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
             .appendingPathComponent("ScanHistory", isDirectory: true)
     }
