@@ -88,7 +88,7 @@ struct LibraryView: View {
         if !main.isEmpty {
             Section {
                 ForEach(main) { p in
-                    NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p, shownLevel: GrammarLibrary.level(named: query) ?? levelFilter) }
+                    NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p, shownLevel: levelFilter) }
                         .accessibilityIdentifier("library.row")
                         .listRowBackground(Theme.card)
                 }
@@ -98,7 +98,7 @@ struct LibraryView: View {
         if !inExamples.isEmpty {
             Section {
                 ForEach(inExamples) { p in
-                    NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p, shownLevel: GrammarLibrary.level(named: query) ?? levelFilter) }
+                    NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p, shownLevel: levelFilter) }
                         .accessibilityIdentifier("library.row")
                         .listRowBackground(Theme.card)
                 }

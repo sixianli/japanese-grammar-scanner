@@ -64,8 +64,7 @@ final class GrammarLibrary: ObservableObject {
         let q = query.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !q.isEmpty else { return points }
         if let level = GrammarLibrary.level(named: q) {
-            let all = points(for: level)
-            return all.filter { $0.level == level } + all.filter { $0.level != level }
+            return points(for: level)
         }
         let key = GrammarLibrary.fold(q)
         guard !key.isEmpty else { return [] }
