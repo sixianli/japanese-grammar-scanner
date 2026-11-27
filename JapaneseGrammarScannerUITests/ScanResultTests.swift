@@ -312,6 +312,22 @@ final class LineSelectFlowTests: E2ETestCase {
         XCTAssertFalse(row(containing: "ながら").exists, "改选后原来那行的「ながら」不应再列出")
     }
 
+    func testDraggingZoomedPhotoUpKeepsOneCloseButtonAndOneHint() {
+        analyzeOnlyLine(containing: "ながら")
+        id("result.zoomButton").tap()
+        wait(id("zoom.close"), "进入全屏")
+        tapResultLine(containing: "らしい")
+        wait(row(containing: "らしい"), "全屏里点最后一行后结果改成那一行")
+
+        let from = resultLine(containing: "らしい").coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
+        from.press(forDuration: 0.05, thenDragTo: from.withOffset(CGVector(dx: 0, dy: -80)))
+
+        wait(id("zoom.close"), "往上拖一小段不应退出全屏")
+        let hint = app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH '点一行改看这一行'"))
+        XCTAssertEqual(ids("zoom.close").count, 1, "全屏里只应有一个关闭按钮")
+        XCTAssertEqual(hint.count, 1, "全屏里只应有一行提示")
+    }
+
     func testSwitchToWholePageAfterSelecting() {
         openSampleForSelection()
         tapLine(containing: "ながら")
