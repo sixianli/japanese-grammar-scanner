@@ -318,6 +318,17 @@ final class LibraryTests: E2ETestCase {
         waitGone(id("library.row"), "无结果时不应列出语法点")
     }
 
+    func testLibrarySearchByLevelShowsThatLevel() {
+        tab("语法库").tap()
+        let field = app.searchFields.firstMatch
+        wait(field, "语法库应有搜索框")
+        field.tap()
+        field.typeText("N3")
+        assertOnlyLevelBadges("JLPT N3")
+        field.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: 2) + "N6")
+        waitGone(id("library.row"), "搜不存在的等级「N6」不应列出语法点")
+    }
+
     func testTabKeepsItsOwnPage() {
         tab("语法库").tap()
         wait(id("library.row"), "语法库列表")
@@ -391,6 +402,14 @@ final class SearchTests: E2ETestCase {
         waitGone(id("search.result"), "无结果时不应列出语法点")
     }
 
+    func testSearchByLevelShowsThatLevel() {
+        tab("搜索").tap()
+        wait(field, "搜索框")
+        _ = waitForFocus(field)
+        field.typeText("N3")
+        assertOnlyLevelBadges("JLPT N3")
+    }
+
     func testFoundOnlyInExamples() {
         tab("搜索").tap()
         wait(field, "搜索框")
@@ -461,4 +480,13 @@ final class SakuraAnimationTests: E2ETestCase {
 
 private enum FlightTiming {
     static let pouchGlowStart: TimeInterval = 2.9
+}
+
+private extension E2ETestCase {
+    func assertOnlyLevelBadges(_ label: String, file: StaticString = #filePath, line: UInt = #line) {
+        let badges = ids("row.level")
+        wait(badges.matching(NSPredicate(format: "label == %@", label)).firstMatch, "结果行应显示「\(label)」", file: file, line: line)
+        let others = badges.allElementsBoundByIndex.map(\.label).filter { $0 != label }
+        XCTAssertTrue(others.isEmpty, "结果行的等级标签都应是「\(label)」，却有：\(others)", file: file, line: line)
+    }
 }

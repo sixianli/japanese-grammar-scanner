@@ -1,14 +1,12 @@
 import SwiftUI
 
-/// 语法点列表行：标题、等级标签、「必考」（只有必考的语法显示）、意思摘要、收藏按钮。
 struct GrammarRow: View {
     let point: GrammarPoint
     var occurrences: Int? = nil
-    /// 在某个等级的列表里显示时，标签显示该等级（合并后的语法点可能横跨多个等级）。
     var shownLevel: JLPTLevel? = nil
     @EnvironmentObject private var favorites: FavoritesStore
 
-    private var badgeLevel: JLPTLevel {
+    static func badgeLevel(for point: GrammarPoint, shownLevel: JLPTLevel?) -> JLPTLevel {
         if let shownLevel, point.levels.contains(shownLevel) { return shownLevel }
         return point.level
     }
@@ -18,7 +16,8 @@ struct GrammarRow: View {
             VStack(alignment: .leading, spacing: 4) {
                 HStack(alignment: .center, spacing: 6) {
                     Text(point.displayTitle).font(.headline)
-                    LevelBadge(level: badgeLevel)
+                    LevelBadge(level: GrammarRow.badgeLevel(for: point, shownLevel: shownLevel))
+                        .accessibilityIdentifier("row.level")
                     if point.frequency == .high {
                         MustKnowBadge()
                     }
