@@ -9,6 +9,33 @@ final class DetailTests: E2ETestCase {
         XCTAssertTrue(detailScreen.exists, "点义项应在本页内跳转，不离开讲解页")
     }
 
+    func testNoteExamplesMarkRightAndWrongWithLabels() {
+        openDetailBySearch("てしまう")
+        let wrong = id("note.wrong"), right = id("note.correct")
+        scrollTo(wrong)
+
+        wait(wrong, "「注意」里的错句前应有错误标记")
+        wait(right, "「注意」里的对句前应有正确标记")
+        XCTAssertEqual(wrong.label, "错误", "错句标记要能被读屏读出「错误」，不只靠颜色区分")
+        XCTAssertEqual(right.label, "正确", "对句标记要能被读屏读出「正确」")
+    }
+
+    func testSenseJumpStopsBelowTheTitleBar() {
+        openDetailBySearch("ように")
+        let rows = ids("detail.senseRow")
+        wait(rows.firstMatch, "讲解页应列出义项")
+        XCTAssertGreaterThan(rows.count, 1, "「ように」应有两个以上意思")
+
+        rows.element(boundBy: 1).tap()
+
+        let target = ids("detail.sense").element(boundBy: 1)
+        let bar = id("detail.titleBar")
+        let deadline = Date().addingTimeInterval(3)
+        while abs(target.frame.minY - bar.frame.maxY) > 60 && Date() < deadline { Thread.sleep(forTimeInterval: 0.2) }
+        XCTAssertGreaterThanOrEqual(target.frame.minY, bar.frame.maxY - 1, "跳过去后第二个意思的标题要完整露在标题栏下面：意思 \(target.frame)，标题栏 \(bar.frame)")
+        XCTAssertLessThanOrEqual(target.frame.minY - bar.frame.maxY, 40, "停在标题栏下方，只留一点空隙：意思 \(target.frame)，标题栏 \(bar.frame)")
+    }
+
     func testSimilarGrammarPushesAndBackReturns() {
         openDetailBySearch("だけに")
         let pages = openSimilarGrammar(id("detail.similar"))

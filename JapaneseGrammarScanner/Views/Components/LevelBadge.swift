@@ -13,7 +13,7 @@ struct LevelBadge: View {
     var large = false
 
     var body: some View {
-        Text(verbatim: large ? "JLPT \(level.rawValue)" : level.rawValue)
+        Text(verbatim: level.rawValue)
             .font(large ? TagMetrics.largeFont : TagMetrics.font)
             .monospacedDigit()
             .foregroundStyle(level.badgeColor)
@@ -30,7 +30,8 @@ struct LevelText: View {
     var small = false
 
     var body: some View {
-        Text(verbatim: "JLPT \(level.rawValue)")
+        Text(verbatim: level.rawValue)
+            .accessibilityLabel(Text(verbatim: "JLPT \(level.rawValue)"))
             .font(small ? .caption.weight(.semibold) : .subheadline.weight(.semibold))
             .monospacedDigit()
             .foregroundStyle(level.badgeColor)

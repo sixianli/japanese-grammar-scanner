@@ -80,7 +80,14 @@ struct GrammarDetailView: View {
                                        level: showsSenseLevels ? p.level(of: sense) : nil,
                                        regexes: regexes)
                                 .padding(.bottom, i < p.senses.count - 1 ? 34 : 0)
-                                .id("sense-\(i)")
+                                .background(alignment: .top) {
+                                    Color.clear
+                                        .frame(height: 1)
+                                        .alignmentGuide(.top) { _ in senseJumpGap }
+                                        .id("sense-\(i)")
+                                }
+                                .accessibilityElement(children: .contain)
+                                .accessibilityIdentifier("detail.sense")
                         }
 
                         if !p.notes.isEmpty {
@@ -222,6 +229,12 @@ struct GrammarDetailView: View {
     }
 
     static let titleStyle = RubyText.Style(font: .largeTitle.bold(), rubySize: 12, lineSpacing: 2, alignment: .center)
+
+    private var senseJumpGap: CGFloat {
+        guard usesFlyingTitle else { return TitleBarLayout.jumpBreathingRoom }
+        return TitleBarLayout.jumpGap(lineSize: scroll.lineSize, restTagsHeight: scroll.tagsHeight,
+                                      viewWidth: scroll.contentWidth + 2 * Theme.margin)
+    }
 
     @ViewBuilder
     private func headerTitle(_ p: GrammarPoint) -> some View {
@@ -494,13 +507,11 @@ private struct NoteView: View {
                             ? ceil(UIFontMetrics(forTextStyle: .body).scaledValue(for: 9) * 1.3) : 0
                         let lineHeight = UIFont.preferredFont(forTextStyle: .body).lineHeight
                         HStack(alignment: .top, spacing: 8) {
-                            Image(systemName: correct ? "checkmark.circle.fill" : "xmark.circle.fill")
-                                .font(.system(size: 16))
-                                .foregroundStyle(correct ? Color.green : Color.red)
+                            VerdictIcon(correct: correct)
                                 .frame(height: lineHeight)
                                 .padding(.top, rubyLine)
-                                .accessibilityLabel(correct ? Text(localized: "正确") : Text(localized: "错误"))
-                            RubyText(japanese: sentence, style: .init(font: .body, rubySize: 9, lineSpacing: 4))
+                            RubyText(japanese: sentence, style: .init(font: .body, rubySize: 9,
+                                                                      color: correct ? .primary : .secondary, lineSpacing: 4))
                         }
                         .padding(.leading, 2)
                     }
@@ -632,6 +643,13 @@ enum TitleBarLayout {
         var pillOpacity: Double
     }
 
+    static let jumpBreathingRoom: CGFloat = 12
+
+    static func jumpGap(lineSize: CGSize, restTagsHeight: CGFloat, viewWidth: CGFloat) -> CGFloat {
+        let pinned = state(scrolled: 100_000, lineSize: lineSize, restTagsHeight: restTagsHeight, viewWidth: viewWidth, safeTop: 0)
+        return max(0, pinned.barBottom) + jumpBreathingRoom
+    }
+
     static func expandedScale(lineWidth: CGFloat, contentWidth: CGFloat) -> CGFloat {
         guard lineWidth > 0, contentWidth > 0 else { return 1 }
         return min(1, contentWidth / lineWidth)
@@ -724,6 +742,29 @@ private struct HeaderTags: View {
         }
         .accessibilityElement(children: .contain)
         .accessibilityIdentifier("detail.tags")
+    }
+}
+
+private struct VerdictIcon: View {
+    let correct: Bool
+    @ScaledMetric(relativeTo: .body) private var side: CGFloat = 20
+
+    var body: some View {
+        let shape = RoundedRectangle(cornerRadius: side * 0.27, style: .continuous)
+        Image(systemName: correct ? "checkmark" : "xmark")
+            .font(.system(size: side * 0.5, weight: .semibold))
+            .foregroundStyle(correct ? Theme.accentText : Color.secondary)
+            .frame(width: side, height: side)
+            .background {
+                if correct {
+                    shape.fill(Theme.accent.opacity(0.18))
+                } else {
+                    shape.strokeBorder(Color.secondary.opacity(0.6), lineWidth: 1)
+                }
+            }
+            .accessibilityElement()
+            .accessibilityLabel(correct ? Text(localized: "正确") : Text(localized: "错误"))
+            .accessibilityIdentifier(correct ? "note.correct" : "note.wrong")
     }
 }
 

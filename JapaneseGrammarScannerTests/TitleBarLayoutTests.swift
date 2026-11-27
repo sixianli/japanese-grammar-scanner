@@ -133,4 +133,12 @@ final class TitleBarLayoutTests: XCTestCase {
         XCTAssertEqual(TitleBarLayout.pinnedScale(lineWidth: 0, viewWidth: 390), TitleBarLayout.maxPinnedScale)
         XCTAssertEqual(TitleBarLayout.pinnedTagsScale(restTagsHeight: 0), 1)
     }
+
+    func testSenseJumpGapClearsThePinnedTitleAndTags() {
+        for line in [shortLine, longLine] {
+            let pinned = TitleBarLayout.state(scrolled: 600, lineSize: line, restTagsHeight: restTags, viewWidth: width, safeTop: safeTop)
+            let gap = TitleBarLayout.jumpGap(lineSize: line, restTagsHeight: restTags, viewWidth: width)
+            XCTAssertGreaterThanOrEqual(safeTop + gap, pinned.tagsTop + TitleBarLayout.tagsHeight + 12, "跳到的意思要停在标签行下面，再留 12 pt")
+        }
+    }
 }
