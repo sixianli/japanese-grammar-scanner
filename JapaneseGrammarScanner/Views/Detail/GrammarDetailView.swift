@@ -36,6 +36,7 @@ struct GrammarDetailView: View {
     private func content(_ p: GrammarPoint) -> some View {
         let regexes = p.patterns.compactMap { try? NSRegularExpression(pattern: $0) }
         let showsSenseLevels = p.levels.count > 1
+        let jumpGap = senseJumpGap
         return ScrollViewReader { proxy in
             ScrollView {
                 if usesFlyingTitle {
@@ -85,7 +86,7 @@ struct GrammarDetailView: View {
                                 .background(alignment: .top) {
                                     Color.clear
                                         .frame(height: 1)
-                                        .alignmentGuide(.top) { _ in senseJumpGap }
+                                        .alignmentGuide(.top) { _ in jumpGap }
                                         .id("sense-\(i)")
                                         .accessibilityHidden(true)
                                 }
