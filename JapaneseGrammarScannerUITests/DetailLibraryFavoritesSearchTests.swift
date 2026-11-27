@@ -20,6 +20,63 @@ final class DetailTests: E2ETestCase {
         XCTAssertEqual(right.label, "正确", "对句标记要能被读屏读出「正确」")
     }
 
+    private func exampleSentence(_ ja: String) -> XCUIElement {
+        app.descendants(matching: .any)
+            .matching(NSPredicate(format: "identifier == 'detail.example.ja' AND label == %@", ja)).firstMatch
+    }
+
+    private func firstWordPoint(of sentence: XCUIElement) -> XCUICoordinate {
+        sentence.coordinate(withNormalizedOffset: .zero).withOffset(CGVector(dx: 8, dy: 30))
+    }
+
+    private func copiedText(from sentence: XCUIElement) -> String {
+        let end = Date().addingTimeInterval(5)
+        while ((sentence.value as? String) ?? "").isEmpty && Date() < end { Thread.sleep(forTimeInterval: 0.2) }
+        return (sentence.value as? String) ?? ""
+    }
+
+    func testHoldWordInExampleCopiesThatWordWithoutFurigana() {
+        openDetailBySearch("てしまう")
+        let sentence = exampleSentence("宿題を全部やってしまった。")
+        scrollTo(sentence)
+        wait(sentence, "「〜てしまう」第一个意思的第一句例句应在讲解页上")
+
+        firstWordPoint(of: sentence).press(forDuration: 0.8)
+
+        wait(id("pick.menu"), "长按例句里的词应弹出菜单")
+        XCTAssertTrue(id("pick.lookup").exists, "菜单里应有「查询」")
+        XCTAssertTrue(id("pick.translate").exists, "菜单里应有「翻译」")
+        XCTAssertTrue(id("pick.copySentence").exists, "菜单里应有「拷贝整句」")
+        id("pick.copy").tap()
+
+        XCTAssertEqual(copiedText(from: sentence), "宿題", "按在「宿」上应拷贝整个词「宿題」，不带注音")
+        waitGone(id("pick.menu"), "拷贝后菜单应收起")
+    }
+
+    func testCopySentenceCopiesTheWholeExampleWithoutFurigana() {
+        openDetailBySearch("てしまう")
+        let sentence = exampleSentence("宿題を全部やってしまった。")
+        scrollTo(sentence)
+        wait(sentence, "「〜てしまう」第一个意思的第一句例句应在讲解页上")
+
+        firstWordPoint(of: sentence).press(forDuration: 0.8)
+        wait(id("pick.copySentence"), "长按后菜单里应有「拷贝整句」")
+        id("pick.copySentence").tap()
+
+        XCTAssertEqual(copiedText(from: sentence), "宿題を全部やってしまった。", "拷贝整句只拷正文，不夹带「しゅくだい」这类注音")
+    }
+
+    func testQuickTapOnExampleDoesNotOpenTheMenu() {
+        openDetailBySearch("てしまう")
+        let sentence = exampleSentence("宿題を全部やってしまった。")
+        scrollTo(sentence)
+        wait(sentence, "「〜てしまう」第一个意思的第一句例句应在讲解页上")
+
+        firstWordPoint(of: sentence).tap()
+
+        XCTAssertFalse(id("pick.menu").waitForExistence(timeout: 2), "轻点例句不应弹出拷贝菜单，只有长按才弹")
+    }
+
     func testSenseJumpStopsBelowTheTitleBar() {
         openDetailBySearch("ように")
         let rows = ids("detail.senseRow")

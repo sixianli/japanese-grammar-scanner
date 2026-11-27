@@ -1,4 +1,5 @@
 import SwiftUI
+import Translation
 
 struct RubySegment: Hashable {
     var text: String
@@ -13,6 +14,7 @@ private struct Atom: Hashable {
     var highlighted = false
     var cue = false
     var isLineBreak = false
+    var range = NSRange(location: 0, length: 0)
 }
 
 private enum AtomBuilder {
@@ -27,30 +29,45 @@ private enum AtomBuilder {
 
     static func atoms(from segments: [RubySegment]) -> [Atom] {
         var out: [Atom] = []
+        var offset = 0
         for seg in segments {
             if let ruby = seg.ruby {
-                out.append(Atom(text: seg.text, ruby: ruby, highlighted: seg.highlighted, cue: seg.cue))
+                let length = (seg.text as NSString).length
+                out.append(Atom(text: seg.text, ruby: ruby, highlighted: seg.highlighted, cue: seg.cue,
+                                range: NSRange(location: offset, length: length)))
+                offset += length
                 continue
             }
             var word = ""
+            var wordStart = offset
             func flushWord() {
                 if !word.isEmpty {
-                    out.append(Atom(text: word, ruby: nil, highlighted: seg.highlighted, cue: seg.cue))
+                    out.append(Atom(text: word, ruby: nil, highlighted: seg.highlighted, cue: seg.cue,
+                                    range: NSRange(location: wordStart, length: offset - wordStart)))
                     word = ""
                 }
+                wordStart = offset
             }
             for ch in seg.text {
+                let length = (String(ch) as NSString).length
                 if ch == "\n" {
                     flushWord()
-                    out.append(Atom(text: "", isLineBreak: true))
+                    out.append(Atom(text: "", isLineBreak: true, range: NSRange(location: offset, length: length)))
+                    offset += length
+                    wordStart = offset
                 } else if isCJK(ch) || noLineStart.contains(ch) || noLineEnd.contains(ch) {
                     flushWord()
-                    out.append(Atom(text: String(ch), ruby: nil, highlighted: seg.highlighted, cue: seg.cue))
+                    out.append(Atom(text: String(ch), ruby: nil, highlighted: seg.highlighted, cue: seg.cue,
+                                    range: NSRange(location: offset, length: length)))
+                    offset += length
+                    wordStart = offset
                 } else if ch == " " {
                     word.append(ch)
+                    offset += length
                     flushWord()
                 } else {
                     word.append(ch)
+                    offset += length
                 }
             }
             flushWord()
@@ -102,6 +119,11 @@ struct RubyText: View {
     private let groups: [[Atom]]
     private let hasRuby: Bool
     private var style: Style
+    private var isPickable = false
+    @State private var picked: NSRange?
+    @State private var lookup: PickedWord?
+    @State private var translating: PickedWord?
+    @State private var copied: String?
 
     init(japanese: String, highlights: [NSRange] = [], style: Style = Style()) {
         plain = japanese
@@ -144,8 +166,16 @@ struct RubyText: View {
         groups = AtomBuilder.groups(AtomBuilder.atoms(from: segs))
     }
 
+    func pickable(_ on: Bool = true) -> RubyText {
+        var copy = self
+        copy.isPickable = on
+        return copy
+    }
+
     var body: some View {
-        if hasRuby || segments.contains(where: { $0.highlighted || $0.cue }) {
+        if isPickable {
+            pickableFlow
+        } else if hasRuby || segments.contains(where: { $0.highlighted || $0.cue }) {
             flow
         } else {
             Text(plain)
@@ -166,7 +196,11 @@ struct RubyText: View {
                 } else {
                     HStack(alignment: .bottom, spacing: 0) {
                         ForEach(Array(group.enumerated()), id: \.offset) { _, atom in
-                            atomView(atom)
+                            if isPickable {
+                                pickableAtom(atom)
+                            } else {
+                                atomView(atom)
+                            }
                         }
                     }
                 }
@@ -175,6 +209,74 @@ struct RubyText: View {
         .padding(.top, hasRuby ? Self.rubyLine(style) : 0)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(plain)
+    }
+
+    private var pickableFlow: some View {
+        flow
+            .accessibilityValue(Text(verbatim: DemoMode.e2e ? copied ?? "" : ""))
+            .sensoryFeedback(.selection, trigger: picked) { _, new in new != nil }
+            .accessibilityAction(named: Text(localized: "拷贝整句")) { copy(plain) }
+            .sheet(item: $lookup) { word in
+                DictionaryLookup(term: word.text).ignoresSafeArea()
+            }
+            .modifier(SystemTranslation(word: $translating))
+    }
+
+    private var atomRanges: [NSRange] {
+        groups.flatMap { $0 }.filter { !$0.isLineBreak }.map(\.range)
+    }
+
+    private var pickedText: String {
+        guard let picked else { return "" }
+        return (plain as NSString).substring(with: picked)
+    }
+
+    private func pickableAtom(_ atom: Atom) -> some View {
+        let inPick = picked.map { NSIntersectionRange($0, atom.range).length > 0 } ?? false
+        let anchorsMenu = picked?.location == atom.range.location
+        return atomView(atom)
+            .background {
+                if inPick {
+                    RoundedRectangle(cornerRadius: 4, style: .continuous)
+                        .fill(Theme.accentFill)
+                        .padding(.horizontal, -1)
+                }
+            }
+            .contentShape(Rectangle())
+            .onLongPressGesture(minimumDuration: 0.4) {
+                picked = WordPick.range(in: plain, unbreakable: atomRanges, at: atom.range.location)
+            }
+            .popover(isPresented: Binding(get: { anchorsMenu }, set: { if !$0 { picked = nil } }),
+                     arrowEdge: .bottom) {
+                PickMenu(
+                    canTranslate: SystemTranslation.isAvailable,
+                    onCopy: { copy(pickedText) },
+                    onLookup: { present(.lookup) },
+                    onTranslate: { present(.translate) },
+                    onCopySentence: { copy(plain) }
+                )
+                .presentationCompactAdaptation(.popover)
+            }
+    }
+
+    private func copy(_ text: String) {
+        UIPasteboard.general.string = text
+        copied = text
+        picked = nil
+    }
+
+    private enum PickAction { case lookup, translate }
+
+    private func present(_ action: PickAction) {
+        let word = PickedWord(text: pickedText)
+        picked = nil
+        Task { @MainActor in
+            try? await Task.sleep(for: .milliseconds(350))
+            switch action {
+            case .lookup: lookup = word
+            case .translate: translating = word
+            }
+        }
     }
 
     static func rubyLine(_ style: Style) -> CGFloat {
@@ -293,5 +395,77 @@ private struct DashedLine: Shape {
         p.move(to: CGPoint(x: rect.minX, y: rect.midY))
         p.addLine(to: CGPoint(x: rect.maxX, y: rect.midY))
         return p
+    }
+}
+
+struct PickedWord: Identifiable, Equatable {
+    let id = UUID()
+    let text: String
+}
+
+private struct PickMenu: View {
+    let canTranslate: Bool
+    let onCopy: () -> Void
+    let onLookup: () -> Void
+    let onTranslate: () -> Void
+    let onCopySentence: () -> Void
+
+    var body: some View {
+        HStack(spacing: 0) {
+            item("拷贝", id: "pick.copy", action: onCopy)
+            Divider()
+            item("查询", id: "pick.lookup", action: onLookup)
+            if canTranslate {
+                Divider()
+                item("翻译", id: "pick.translate", action: onTranslate)
+            }
+            Divider()
+            item("拷贝整句", id: "pick.copySentence", action: onCopySentence)
+        }
+        .fixedSize()
+        .padding(.vertical, 2)
+        .accessibilityElement(children: .contain)
+        .accessibilityIdentifier("pick.menu")
+    }
+
+    private func item(_ title: LocalizedStringKey, id: String, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Text(localized: title)
+                .font(.subheadline)
+                .foregroundStyle(Color.primary)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 10)
+        }
+        .accessibilityIdentifier(id)
+    }
+}
+
+private struct DictionaryLookup: UIViewControllerRepresentable {
+    let term: String
+
+    func makeUIViewController(context: Context) -> UIReferenceLibraryViewController {
+        UIReferenceLibraryViewController(term: term)
+    }
+
+    func updateUIViewController(_ controller: UIReferenceLibraryViewController, context: Context) {}
+}
+
+private struct SystemTranslation: ViewModifier {
+    @Binding var word: PickedWord?
+
+    static var isAvailable: Bool {
+        if #available(iOS 17.4, *) { return true }
+        return false
+    }
+
+    func body(content: Content) -> some View {
+        if #available(iOS 17.4, *) {
+            content.translationPresentation(
+                isPresented: Binding(get: { word != nil }, set: { if !$0 { word = nil } }),
+                text: word?.text ?? ""
+            )
+        } else {
+            content
+        }
     }
 }

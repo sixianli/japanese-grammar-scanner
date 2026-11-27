@@ -448,6 +448,8 @@ private struct ExampleView: View {
                     highlights: highlightRanges,
                     style: .init(font: .title3, rubySize: 10, highlightColor: Theme.accentText, lineSpacing: 6)
                 )
+                .pickable()
+                .accessibilityIdentifier("detail.example.ja")
                 Text(example.translation)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
@@ -512,6 +514,7 @@ private struct NoteView: View {
                                 .padding(.top, rubyLine)
                             RubyText(japanese: sentence, style: .init(font: .body, rubySize: 9,
                                                                       color: correct ? .primary : .secondary, lineSpacing: 4))
+                            .pickable()
                         }
                         .padding(.leading, 2)
                     }
