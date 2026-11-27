@@ -82,6 +82,7 @@ struct GrammarDetailView: View {
                                        regexes: regexes)
                                 .accessibilityElement(children: .contain)
                                 .accessibilityIdentifier("detail.sense")
+                                .accessibilityValue(Text(verbatim: DemoMode.e2e ? "gap \(jumpGap) bar \(scroll.barBottom) top \(scroll.frameTop) inset \(scroll.insetTop)" : ""))
                                 .padding(.bottom, i < p.senses.count - 1 ? 34 : 0)
                                 .background(alignment: .top) {
                                     Color.clear
