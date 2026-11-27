@@ -74,7 +74,7 @@ struct SearchView: View {
     }
 
     private func row(_ p: GrammarPoint) -> some View {
-        NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p) }
+        NavigationLink(value: Route.grammar(p.id)) { GrammarRow(point: p, shownLevel: GrammarLibrary.level(named: trimmed)) }
             .listRowBackground(Theme.card)
             .accessibilityIdentifier("search.result")
     }
