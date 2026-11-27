@@ -233,8 +233,7 @@ struct GrammarDetailView: View {
 
     private var senseJumpGap: CGFloat {
         guard usesFlyingTitle else { return TitleBarLayout.jumpBreathingRoom }
-        return TitleBarLayout.jumpGap(lineSize: scroll.lineSize, restTagsHeight: scroll.tagsHeight,
-                                      viewWidth: scroll.contentWidth + 2 * Theme.margin)
+        return TitleBarLayout.jumpGap(barBottom: scroll.barBottom, visibleTop: scroll.frameTop + scroll.insetTop)
     }
 
     @ViewBuilder
@@ -597,6 +596,9 @@ final class DetailScrollModel {
     var lineSize: CGSize = .zero
     var contentWidth: CGFloat = 0
     var tagsHeight: CGFloat = 0
+    var barBottom: CGFloat = 0
+    var frameTop: CGFloat = 0
+    var insetTop: CGFloat = 0
     @ObservationIgnored var headerBaseline: CGFloat?
 }
 
@@ -649,9 +651,8 @@ enum TitleBarLayout {
 
     static let jumpBreathingRoom: CGFloat = 12
 
-    static func jumpGap(lineSize: CGSize, restTagsHeight: CGFloat, viewWidth: CGFloat) -> CGFloat {
-        let pinned = state(scrolled: 100_000, lineSize: lineSize, restTagsHeight: restTagsHeight, viewWidth: viewWidth, safeTop: 0)
-        return max(0, pinned.barBottom) + jumpBreathingRoom
+    static func jumpGap(barBottom: CGFloat, visibleTop: CGFloat) -> CGFloat {
+        max(0, barBottom - visibleTop) + jumpBreathingRoom
     }
 
     static func expandedScale(lineWidth: CGFloat, contentWidth: CGFloat) -> CGFloat {
@@ -707,6 +708,9 @@ private struct FlyingTitle: View {
                                          viewWidth: width, safeTop: proxy.safeAreaInsets.top)
             ZStack(alignment: .top) {
                 TitleBarArea(bottom: s.barBottom)
+                    .onGeometryChange(for: CGFloat.self) { $0.frame(in: .global).maxY } action: { [scroll] y in
+                        if abs(y - scroll.barBottom) > 0.5 { scroll.barBottom = y }
+                    }
                 if size.height > 0 {
                     RubyText(japanese: point.titleForm, style: GrammarDetailView.titleStyle)
                         .fixedSize()
@@ -838,11 +842,20 @@ private struct ScrollOffsetTracker: ViewModifier {
 
     func body(content: Content) -> some View {
         if #available(iOS 18.0, *) {
-            content.onScrollGeometryChange(for: CGFloat.self) { g in
-                g.contentOffset.y + g.contentInsets.top
-            } action: { _, y in
-                if abs(y - scroll.offset) > 0.25 { scroll.offset = y }
-            }
+            content
+                .onScrollGeometryChange(for: CGFloat.self) { g in
+                    g.contentOffset.y + g.contentInsets.top
+                } action: { _, y in
+                    if abs(y - scroll.offset) > 0.25 { scroll.offset = y }
+                }
+                .onScrollGeometryChange(for: CGFloat.self) { g in
+                    g.contentInsets.top
+                } action: { _, inset in
+                    if abs(inset - scroll.insetTop) > 0.5 { scroll.insetTop = inset }
+                }
+                .onGeometryChange(for: CGFloat.self) { $0.frame(in: .global).minY } action: { y in
+                    if abs(y - scroll.frameTop) > 0.5 { scroll.frameTop = y }
+                }
         } else {
             content
         }

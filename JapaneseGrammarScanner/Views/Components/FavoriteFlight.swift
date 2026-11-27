@@ -272,8 +272,7 @@ enum TabBarLocator {
         func isFavoritesTab(_ v: UIView) -> Bool {
             if v.accessibilityIdentifier == "detail.favorite" { return false }
             if v.accessibilityIdentifier?.hasPrefix("Kinchaku") == true { return true }
-            return v.isAccessibilityElement && v.accessibilityLabel == tr("收藏")
-                && v.accessibilityTraits.contains(.button) && hasTabBarAncestor(v)
+            return v is UIControl && v.accessibilityLabel == tr("收藏")
         }
         func search(_ v: UIView) {
             if found != nil || v.isHidden { return }
@@ -285,16 +284,6 @@ enum TabBarLocator {
         }
         search(window)
         return found
-    }
-
-    @MainActor
-    private static func hasTabBarAncestor(_ v: UIView) -> Bool {
-        var p = v.superview
-        while let current = p {
-            if current is UITabBar { return true }
-            p = current.superview
-        }
-        return false
     }
 
     @MainActor
