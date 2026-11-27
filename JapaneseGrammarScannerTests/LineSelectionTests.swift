@@ -163,54 +163,13 @@ final class LineSelectionTests: XCTestCase {
         XCTAssertTrue(firstLine.boxes.allSatisfy { $0.source?.line == 0 })
     }
 
-    func testPinchKeepsThePointUnderTheFingers() {
-        var zoom = SelectionZoom()
-        let fingers = CGPoint(x: 120, y: 200)
-
-        zoom.pinchBegan(at: fingers)
-        zoom.pinchChanged(ratio: 3, at: fingers)
-
-        XCTAssertEqual(zoom.scale, 3, accuracy: 0.0001)
-        let under = zoom.contentPoint(fingers)
-        XCTAssertEqual(under.x, 120, accuracy: 0.0001)
-        XCTAssertEqual(under.y, 200, accuracy: 0.0001)
+    func testPhotosWithOneOrTwoLinesAreAnalyzedRightAway() {
+        XCTAssertTrue(LineSelection.analyzesRightAway(lineCount: 1))
+        XCTAssertTrue(LineSelection.analyzesRightAway(lineCount: 2))
     }
 
-    func testMovingTheFingersWhilePinchingPansThePhoto() {
-        var zoom = SelectionZoom()
-        zoom.pinchBegan(at: CGPoint(x: 100, y: 100))
-
-        zoom.pinchChanged(ratio: 2, at: CGPoint(x: 60, y: 40))
-
-        let under = zoom.contentPoint(CGPoint(x: 60, y: 40))
-        XCTAssertEqual(under.x, 100, accuracy: 0.0001)
-        XCTAssertEqual(under.y, 100, accuracy: 0.0001)
-    }
-
-    func testSettleNeverShrinksBelowFullSizeOrShowsEmptyEdges() {
-        var shrunk = SelectionZoom()
-        shrunk.pinchBegan(at: CGPoint(x: 50, y: 50))
-        shrunk.pinchChanged(ratio: 0.5, at: CGPoint(x: 50, y: 50))
-        var panned = SelectionZoom()
-        panned.pinchBegan(at: CGPoint(x: 0, y: 0))
-        panned.pinchChanged(ratio: 2, at: CGPoint(x: 300, y: 300))
-
-        shrunk.settle(in: CGSize(width: 400, height: 600))
-        panned.settle(in: CGSize(width: 400, height: 600))
-
-        XCTAssertEqual(shrunk.scale, 1, accuracy: 0.0001)
-        XCTAssertEqual(shrunk.offset, .zero)
-        XCTAssertEqual(panned.scale, 2, accuracy: 0.0001)
-        XCTAssertEqual(panned.offset, .zero)
-    }
-
-    func testSettleCapsTheZoom() {
-        var zoom = SelectionZoom()
-        zoom.pinchBegan(at: .zero)
-        zoom.pinchChanged(ratio: 20, at: .zero)
-
-        zoom.settle(in: CGSize(width: 400, height: 600))
-
-        XCTAssertEqual(zoom.scale, 6, accuracy: 0.0001)
+    func testPhotosWithThreeOrMoreLinesWaitForTheUserToChoose() {
+        XCTAssertFalse(LineSelection.analyzesRightAway(lineCount: 3))
+        XCTAssertFalse(LineSelection.analyzesRightAway(lineCount: 30))
     }
 }

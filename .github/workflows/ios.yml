@@ -341,10 +341,10 @@ jobs:
           qa detail_scenes -demoScreen detail -demoGrammar nagara -demoScroll section-scenes
           qa detail_similar -demoScreen detail -demoGrammar dake-ni -demoScroll section-similar
           qa result_zoom -demoScreen result -demoZoom 1
-          qa select_none -demoScreen result -demoSelectStep 1
-          qa select_one -demoScreen result -demoSelectStep 1 -demoLines 4
-          qa select_three -demoScreen result -demoSelectStep 1 -demoLines 6,7,8
-          qa select_one_es -demoScreen result -demoSelectStep 1 -demoLines 4 -demoAppLanguage es
+          qa choose_none -demoScreen result -demoSelectStep 1
+          qa choose_none_es -demoScreen result -demoSelectStep 1 -demoAppLanguage es
+          qa choose_zoom -demoScreen result -demoSelectStep 1 -demoZoom 1
+          qa result_one_line_zoom -demoScreen result -demoLines 4 -demoZoom 1
           qa result_one_line -demoScreen result -demoLines 4
           qa result_three_lines -demoScreen result -demoLines 6,7,8
           qa settings_en -demoScreen settings -demoAppLanguage en
@@ -355,7 +355,7 @@ jobs:
           qa detail_izen_dark -demoScreen detail -demoGrammar izen
           qa detail_title_fly_dark -demoScreen detail -demoGrammar you-ni-naru -demoScrollY 45
           qa home_dark -demoScreen home -demoHistory 1
-          qa select_three_dark -demoScreen result -demoSelectStep 1 -demoLines 6,7,8
+          qa choose_none_dark -demoScreen result -demoSelectStep 1
           qa result_three_lines_dark -demoScreen result -demoLines 6,7,8
           xcrun simctl ui "$UDID" appearance light
           xcrun simctl ui "$UDID" content_size extra-extra-large

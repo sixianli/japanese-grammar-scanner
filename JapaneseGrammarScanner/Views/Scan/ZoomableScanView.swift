@@ -9,6 +9,7 @@ final class ScanZoomModel {
     var origin: CGPoint = .zero
     var dim: Double = 0
     private(set) var settledScale: CGFloat = 1
+    var previewLineCount: Int?
 
     @ObservationIgnored var sourceFrame: CGRect = .zero
     @ObservationIgnored var container: CGRect = .zero
@@ -114,21 +115,6 @@ final class ScanZoomModel {
         } else {
             settle()
         }
-    }
-
-    func doubleTap(at location: CGPoint) {
-        guard isOpen else { return }
-        withAnimation(.spring(response: 0.35, dampingFraction: 0.88)) {
-            if scale > 1.05 {
-                scale = 1
-                origin = target.origin
-            } else {
-                let c = local(location)
-                let p = CGPoint(x: (c.x - origin.x) / scale, y: (c.y - origin.y) / scale)
-                scale = 2.5
-                origin = clamped(CGPoint(x: c.x - 2.5 * p.x, y: c.y - 2.5 * p.y), scale: 2.5)
-            }
-        } completion: { [self] in settledScale = scale }
     }
 
     func open() {
@@ -295,7 +281,9 @@ struct ScanZoomStage: View {
     struct LineChoice {
         let lines: [RecognizedLine]
         let chosen: Set<Int>?
+        let isWholePage: Bool
         let onChoose: (Set<Int>) -> Void
+        let onAnalyzeAll: () -> Void
     }
 
     let model: ScanZoomModel
@@ -318,6 +306,7 @@ struct ScanZoomStage: View {
                 settledScale: model.settledScale,
                 lineChoice: model.isOpen ? lineChoice : nil,
                 onDragging: { model.lineDragging = $0 },
+                onPreview: { model.previewLineCount = $0?.count },
                 onSelect: { cluster in
                     guard model.isOpen else { return }
                     model.close { onSelect(cluster) }
@@ -342,29 +331,38 @@ struct ScanZoomStage: View {
                 .onChanged { value in model.panChanged(value.translation) }
                 .onEnded { value in model.panEnded(value.translation, onClosed: onClosed) }
         )
-        .simultaneousGesture(
-            SpatialTapGesture(count: 2, coordinateSpace: .global)
-                .onEnded { model.doubleTap(at: $0.location) }
-        )
-        .overlay(alignment: .topTrailing) {
+        .overlay(alignment: .top) {
             if model.isOpen {
-                Button { model.close(then: onClosed) } label: {
-                    Image(systemName: "xmark")
-                        .font(.headline)
-                        .foregroundStyle(.white)
-                        .frame(width: 40, height: 40)
-                        .background(.black.opacity(0.5), in: Circle())
+                HStack {
+                    if let lineChoice, !lineChoice.isWholePage {
+                        Button { lineChoice.onAnalyzeAll() } label: {
+                            Text(localized: "分析整页")
+                                .font(.subheadline.weight(.semibold))
+                                .foregroundStyle(.white)
+                                .padding(.horizontal, 16)
+                                .frame(height: 40)
+                                .background(.black.opacity(0.5), in: Capsule())
+                        }
+                        .accessibilityIdentifier("zoom.analyzeAll")
+                    }
+                    Spacer()
+                    Button { model.close(then: onClosed) } label: {
+                        Image(systemName: "xmark")
+                            .font(.headline)
+                            .foregroundStyle(.white)
+                            .frame(width: 40, height: 40)
+                            .background(.black.opacity(0.5), in: Circle())
+                    }
+                    .accessibilityLabel(Text(localized: "关闭"))
+                    .accessibilityIdentifier("zoom.close")
                 }
-                .accessibilityLabel(Text(localized: "关闭"))
-                .accessibilityIdentifier("zoom.close")
                 .padding()
                 .padding(.top, 44)
-                .transition(.opacity)
             }
         }
         .overlay(alignment: .bottom) {
             if model.isOpen {
-                Text(lineChoice == nil ? tr("双指缩放查看原文，点击高亮查看讲解") : tr("点一行改看这一行，按住拖动可选几行；点高亮看讲解"))
+                hint
                     .font(.footnote)
                     .foregroundStyle(.white)
                     .padding(.horizontal, 14)
@@ -372,11 +370,21 @@ struct ScanZoomStage: View {
                     .background(.black.opacity(0.5), in: Capsule())
                     .padding(.bottom, 34)
                     .allowsHitTesting(false)
-                    .transition(.opacity)
+                    .accessibilityIdentifier("zoom.hint")
             }
         }
-        .animation(.easeInOut(duration: 0.2), value: model.isOpen)
         .ignoresSafeArea()
+    }
+
+    @ViewBuilder
+    private var hint: some View {
+        if lineChoice == nil {
+            Text(localized: "双指缩放查看原文，点击高亮查看讲解")
+        } else if let count = model.previewLineCount {
+            Text(localized: "正在选：\(count) 行")
+        } else {
+            Text(localized: "点一行，或按住拖几行")
+        }
     }
 }
 
@@ -388,6 +396,7 @@ private struct ScanZoomContent: View, Equatable {
     let settledScale: CGFloat
     let lineChoice: ScanZoomStage.LineChoice?
     let onDragging: (Bool) -> Void
+    let onPreview: (Set<Int>?) -> Void
     let onSelect: (HighlightCluster) -> Void
 
     static func == (a: Self, b: Self) -> Bool {
@@ -408,6 +417,7 @@ private struct ScanZoomContent: View, Equatable {
                                     lineWidth: 2 / max(settledScale, 1),
                                     tapSlack: 12 / max(settledScale, 1),
                                     onDragging: onDragging,
+                                    onPreview: onPreview,
                                     onChoose: lineChoice.onChoose)
                 }
             }

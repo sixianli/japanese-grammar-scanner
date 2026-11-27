@@ -1,6 +1,6 @@
+import ImageIO
 import UIKit
 
-/// 本地学习记录：最近查看的语法点、最近的扫描（图片 + 识别到的语法点）。只保存在本机。
 @MainActor
 final class HistoryStore: ObservableObject {
     struct ScanRecord: Codable, Identifiable, Hashable {
@@ -10,22 +10,16 @@ final class HistoryStore: ObservableObject {
         let imageFile: String
     }
 
-    /// 一个语法点的学习记录（用于“最近查看”“快要忘了”“学习进度”）。
     struct ViewRecord: Codable, Hashable {
         let id: String
         var firstViewed: Date
         var lastViewed: Date
-        /// 旧版复习阶段（0,1,2…，对应间隔 1/3/7/14/30 天）。只用于把旧记录换算成 FSRS 的初始状态
         var stage: Int
-        /// 查看次数（旧版本没有记录，视为 1）
         var viewCount: Int? = nil
-        /// FSRS 记忆状态（旧版本没有，按 stage 换算）
         var memory: FSRS.Memory? = nil
-        /// 上一次复习（第一次看、或自评）的时间：遗忘曲线从这里开始算。只是打开看看、没有自评，不会重新计时
         var lastReview: Date? = nil
     }
 
-    /// 旧版的复习间隔（天）：旧记录按所处阶段换算 FSRS 的记忆稳定度
     nonisolated static let legacyIntervals: [Double] = [1, 3, 7, 14, 30, 60]
 
     private static let viewedKey = "recentGrammarIDs"
@@ -39,18 +33,22 @@ final class HistoryStore: ObservableObject {
 
     private let defaults: UserDefaults
     private let directory: URL
+    private var thumbnails: [String: UIImage] = [:]
 
-    init(defaults: UserDefaults = .standard) {
+    static var defaultDirectory: URL {
+        FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent("ScanHistory", isDirectory: true)
+    }
+
+    init(defaults: UserDefaults = .standard, directory: URL = HistoryStore.defaultDirectory) {
         self.defaults = defaults
-        let base = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
-        directory = base.appendingPathComponent("ScanHistory", isDirectory: true)
+        self.directory = directory
         let recentIDs = defaults.stringArray(forKey: Self.viewedKey) ?? []
         recentGrammarIDs = recentIDs
         if let data = defaults.data(forKey: Self.recordsKey),
            let records = try? JSONDecoder().decode([String: ViewRecord].self, from: data) {
             viewRecords = records
         } else {
-            // 旧版本只记录了 id 列表：迁移为今天查看过
             let now = Date()
             var migrated: [String: ViewRecord] = [:]
             for id in recentIDs { migrated[id] = ViewRecord(id: id, firstViewed: now, lastViewed: now, stage: 0) }
@@ -65,16 +63,12 @@ final class HistoryStore: ObservableObject {
 
     private var indexURL: URL { directory.appendingPathComponent("index.json") }
 
-    // MARK: 最近查看
-
     func recordViewed(_ id: String, now: Date = Date()) {
         if var r = viewRecords[id] {
-            // 只是打开看看：不改变记忆状态（要靠「快要忘了」里的自评来更新）
             r.lastViewed = now
             r.viewCount = (r.viewCount ?? 1) + 1
             viewRecords[id] = r
         } else {
-            // 第一次看：只是读过、没有测过记没记住，按「有点模糊」作为初始状态（约 1 天后第一次复习）
             viewRecords[id] = ViewRecord(id: id, firstViewed: now, lastViewed: now, stage: 0, viewCount: 1,
                                          memory: FSRS.initial(.hard), lastReview: now)
         }
@@ -92,10 +86,8 @@ final class HistoryStore: ObservableObject {
         defaults.removeObject(forKey: Self.recordsKey)
     }
 
-    /// 复习阈值：估计的记住率降到 90% 以下就该复习
     nonisolated static let reviewThreshold = FSRS.targetRetention
 
-    /// 记忆状态：新记录直接用保存的 FSRS 状态；旧记录按旧阶段换算（旧阶段的间隔正好是记住率降到 90% 的天数，即 FSRS 的稳定度）
     nonisolated static func memory(_ r: ViewRecord) -> FSRS.Memory {
         if let m = r.memory { return m }
         return FSRS.Memory(stability: legacyIntervals[min(max(r.stage, 0), legacyIntervals.count - 1)], difficulty: 5)
@@ -103,23 +95,19 @@ final class HistoryStore: ObservableObject {
 
     nonisolated static func lastReview(_ r: ViewRecord) -> Date { r.lastReview ?? r.lastViewed }
 
-    /// FSRS 遗忘曲线估算的当前记住率（按真实经过的时间）
     nonisolated static func retention(_ r: ViewRecord, now: Date) -> Double {
         let days = max(0, now.timeIntervalSince(lastReview(r)) / 86_400)
         return FSRS.retrievability(elapsedDays: days, stability: memory(r).stability)
     }
 
-    /// 是否到了复习时间
     nonisolated static func isDue(_ r: ViewRecord, now: Date) -> Bool {
         retention(r, now: now) <= reviewThreshold + 1e-9
     }
 
-    /// 某个语法点现在是否该复习（没看过的不算）
     func isDue(_ id: String, now: Date = Date()) -> Bool {
         viewRecords[id].map { Self.isDue($0, now: now) } ?? false
     }
 
-    /// 复习时的自评：按 FSRS 更新记忆状态，下次复习时间随之改变
     func rate(_ id: String, _ grade: FSRS.Grade, now: Date = Date()) {
         guard var r = viewRecords[id] else { return }
         let days = max(0, now.timeIntervalSince(Self.lastReview(r)) / 86_400)
@@ -130,7 +118,6 @@ final class HistoryStore: ObservableObject {
         saveRecords()
     }
 
-    /// 下一次该复习的时间
     func nextReview(of id: String) -> Date? {
         guard let r = viewRecords[id] else { return nil }
         return Self.lastReview(r).addingTimeInterval(FSRS.interval(stability: Self.memory(r).stability) * 86_400)
@@ -138,12 +125,9 @@ final class HistoryStore: ObservableObject {
 
     struct ReviewItem: Hashable {
         let id: String
-        /// 估计的记忆保持率 0~1
         let retention: Double
     }
 
-    /// 今天该复习的语法点：按“最快要忘掉”优先（保持率越低越靠前），
-    /// 同时按重要性加权（在扫描材料中出现次数、是否收藏）。
     func dueForReview(now: Date = Date(), limit: Int = 5, importance: (String) -> Double = { _ in 1 }) -> [ReviewItem] {
         viewRecords.values
             .filter { Self.isDue($0, now: now) }
@@ -156,26 +140,21 @@ final class HistoryStore: ObservableObject {
             .map { $0.0 }
     }
 
-    /// 查看次数（没看过为 0）
     func viewCount(of id: String) -> Int {
         guard let r = viewRecords[id] else { return 0 }
         return r.viewCount ?? 1
     }
 
-    /// 估计的当前记忆保持率；没看过返回 nil
     func retention(of id: String, now: Date = Date()) -> Double? {
         viewRecords[id].map { Self.retention($0, now: now) }
     }
 
-    /// 某个语法点出现在多少次扫描中
     func scanCount(of id: String) -> Int {
         scans.reduce(0) { $0 + ($1.grammarIDs.contains(id) ? 1 : 0) }
     }
 
-    /// 学过（看过讲解）的语法点
     var learnedIDs: Set<String> { Set(viewRecords.keys) }
 
-    /// 在扫描记录里出现过、但还没看过讲解的语法点，按出现在多少次扫描中排序
     func frequentUnlearned(limit: Int = 5) -> [(id: String, count: Int)] {
         var counts: [String: Int] = [:]
         for s in scans { for id in Set(s.grammarIDs) { counts[id, default: 0] += 1 } }
@@ -186,7 +165,6 @@ final class HistoryStore: ObservableObject {
             .map { (id: $0.key, count: $0.value) }
     }
 
-    /// 同形语法合并后，把记录里的旧 id 换成新 id：同一语法点保留最近一次查看、较高的阶段。
     func migrate(aliases: [String: String]) {
         let needs = recentGrammarIDs.contains { aliases[$0] != nil }
             || viewRecords.keys.contains { aliases[$0] != nil }
@@ -222,30 +200,55 @@ final class HistoryStore: ObservableObject {
         if let data = try? JSONEncoder().encode(viewRecords) { defaults.set(data, forKey: Self.recordsKey) }
     }
 
-    // MARK: 最近扫描
-
-    /// 保存一次扫描，返回记录 id。
     @discardableResult
     func recordScan(image: UIImage, grammarIDs: [String]) -> UUID? {
         let id = UUID()
         let file = "\(id.uuidString).jpg"
-        let scaled = image.normalizedForOCR(maxDimension: 2000)
-        guard let data = scaled.jpegData(compressionQuality: 0.8) else { return nil }
-        do {
-            try data.write(to: directory.appendingPathComponent(file), options: .atomic)
-        } catch {
-            return nil
-        }
+        let url = directory.appendingPathComponent(file)
         scans.insert(ScanRecord(id: id, date: Date(), grammarIDs: grammarIDs, imageFile: file), at: 0)
         while scans.count > Self.maxScans {
             let removed = scans.removeLast()
+            thumbnails[removed.imageFile] = nil
             try? FileManager.default.removeItem(at: directory.appendingPathComponent(removed.imageFile))
         }
-        saveIndex()
+        pendingWrites[file] = Task.detached(priority: .utility) {
+            let data = image.normalizedForOCR(maxDimension: 2000).jpegData(compressionQuality: 0.8)
+            let written = (try? data?.write(to: url, options: .atomic)) != nil
+            let thumb = written ? Self.downsampled(url) : nil
+            await self.finishWrite(file: file, written: written, thumbnail: thumb)
+        }
         return id
     }
 
-    /// 用户修正文本后更新该次扫描识别到的语法点。
+    private var pendingWrites: [String: Task<Void, Never>] = [:]
+
+    private func finishWrite(file: String, written: Bool, thumbnail: UIImage?) {
+        pendingWrites[file] = nil
+        if written {
+            thumbnails[file] = thumbnail
+            saveIndex()
+            objectWillChange.send()
+        } else {
+            scans.removeAll { $0.imageFile == file }
+        }
+    }
+
+    func waitForPendingWrites() async {
+        for task in pendingWrites.values { await task.value }
+    }
+
+    nonisolated static func downsampled(_ url: URL, maxPixel: Int = 320) -> UIImage? {
+        guard let source = CGImageSourceCreateWithURL(url as CFURL, [kCGImageSourceShouldCache: false] as CFDictionary) else { return nil }
+        let options: [CFString: Any] = [
+            kCGImageSourceCreateThumbnailFromImageAlways: true,
+            kCGImageSourceCreateThumbnailWithTransform: true,
+            kCGImageSourceShouldCacheImmediately: true,
+            kCGImageSourceThumbnailMaxPixelSize: maxPixel
+        ]
+        guard let cg = CGImageSourceCreateThumbnailAtIndex(source, 0, options as CFDictionary) else { return nil }
+        return UIImage(cgImage: cg)
+    }
+
     func updateScan(_ id: UUID, grammarIDs: [String]) {
         guard let i = scans.firstIndex(where: { $0.id == id }) else { return }
         scans[i].grammarIDs = grammarIDs
@@ -257,11 +260,16 @@ final class HistoryStore: ObservableObject {
     }
 
     func thumbnail(for record: ScanRecord) -> UIImage? {
-        image(for: record)?.preparingThumbnail(of: CGSize(width: 240, height: 320))
+        if let cached = thumbnails[record.imageFile] { return cached }
+        guard pendingWrites[record.imageFile] == nil,
+              let thumb = Self.downsampled(directory.appendingPathComponent(record.imageFile)) else { return nil }
+        thumbnails[record.imageFile] = thumb
+        return thumb
     }
 
     func clearScans() {
         for s in scans { try? FileManager.default.removeItem(at: directory.appendingPathComponent(s.imageFile)) }
+        thumbnails = [:]
         scans = []
         saveIndex()
     }

@@ -2,6 +2,10 @@ import CoreGraphics
 import Foundation
 
 enum LineSelection {
+    static func analyzesRightAway(lineCount: Int) -> Bool {
+        lineCount <= 2
+    }
+
     static func lineQuads(_ lines: [RecognizedLine]) -> [[CGPoint]] {
         lines.map { line in
             let box = line.boundingBox
@@ -102,43 +106,5 @@ extension ScanResult {
         var result = ScanResult(text: text, matches: kept, clusters: keptClusters, boxes: keptBoxes)
         result.pageIsCurved = pageIsCurved
         return result
-    }
-}
-
-struct SelectionZoom: Equatable {
-    static let maxScale: CGFloat = 6
-
-    var scale: CGFloat = 1
-    var offset: CGPoint = .zero
-    private var baseScale: CGFloat = 1
-    private var anchor: CGPoint = .zero
-    private var ratioBase: CGFloat = 1
-
-    func contentPoint(_ p: CGPoint) -> CGPoint {
-        CGPoint(x: (p.x - offset.x) / scale, y: (p.y - offset.y) / scale)
-    }
-
-    mutating func pinchBegan(at p: CGPoint) {
-        rebase(ratio: 1, at: p)
-    }
-
-    mutating func rebase(ratio: CGFloat, at p: CGPoint) {
-        baseScale = scale
-        anchor = contentPoint(p)
-        ratioBase = ratio
-    }
-
-    mutating func pinchChanged(ratio: CGFloat, at p: CGPoint) {
-        let s = min(max(baseScale * ratio / max(ratioBase, 0.0001), 0.8), Self.maxScale * 1.2)
-        scale = s
-        offset = CGPoint(x: p.x - s * anchor.x, y: p.y - s * anchor.y)
-    }
-
-    mutating func settle(in size: CGSize) {
-        scale = min(max(scale, 1), Self.maxScale)
-        func axis(_ v: CGFloat, _ length: CGFloat) -> CGFloat {
-            min(0, max(length - length * scale, v))
-        }
-        offset = CGPoint(x: axis(offset.x, size.width), y: axis(offset.y, size.height))
     }
 }

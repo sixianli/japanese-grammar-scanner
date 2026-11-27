@@ -97,38 +97,37 @@ class E2ETestCase: XCTestCase {
     }
 
     func waitForLineSelection(file: StaticString = #filePath, line: UInt = #line) {
-        wait(navBar("选择要看的行"), "拍完或选图后应先进入「选择要看的行」", timeout: 45, file: file, line: line)
-        wait(id("select.analyzeAll"), "选行页应有「分析整页」", file: file, line: line)
+        wait(id("result.chooseHint"), "拍完或选图后应先显示照片，提示点一行或按住拖几行", timeout: 45, file: file, line: line)
+        wait(id("result.analyzeAll"), "照片角上应有「分析整页」", file: file, line: line)
     }
 
     func waitForScanResult(file: StaticString = #filePath, line: UInt = #line) {
-        let analyzeAll = id("select.analyzeAll"), row = id("result.grammarRow")
+        let choose = id("result.chooseHint"), row = id("result.grammarRow")
         let end = Date().addingTimeInterval(45)
-        while !analyzeAll.exists && !row.exists && Date() < end {
+        while !choose.exists && !row.exists && Date() < end {
             Thread.sleep(forTimeInterval: 0.25)
         }
-        if analyzeAll.exists {
-            analyzeAll.tap()
+        if choose.exists {
+            id("result.analyzeAll").tap()
         }
         wait(navBar("识别结果"), "应进入识别结果页", file: file, line: line)
         wait(row, "识别结果页应列出语法点", timeout: 45, file: file, line: line)
     }
 
     func waitForScanFlow(timeout: TimeInterval = 30, file: StaticString = #filePath, line: UInt = #line) {
-        let screen = app.navigationBars.matching(NSPredicate(format: "identifier IN {'选择要看的行', '识别结果'}")).firstMatch
-        wait(screen, "选图后应进入选行页（认出日文时）或识别结果页（没认出日文时）", timeout: timeout, file: file, line: line)
+        wait(navBar("识别结果"), "选图后应进入识别结果页", timeout: timeout, file: file, line: line)
     }
 
     func selectLine(containing text: String, file: StaticString = #filePath, line: UInt = #line) -> XCUIElement {
-        let element = app.descendants(matching: .any)
-            .matching(NSPredicate(format: "identifier BEGINSWITH 'select.line' AND label CONTAINS %@", text)).firstMatch
-        wait(element, "选行页应有一行包含「\(text)」", file: file, line: line)
-        return element
+        let matches = app.descendants(matching: .any)
+            .matching(NSPredicate(format: "identifier BEGINSWITH 'result.line' AND label CONTAINS %@", text))
+        wait(matches.firstMatch, "照片上应有一行包含「\(text)」", file: file, line: line)
+        return matches.allElementsBoundByIndex.max { $0.frame.width < $1.frame.width } ?? matches.firstMatch
     }
 
     func tapLine(containing text: String, file: StaticString = #filePath, line: UInt = #line) {
         selectLine(containing: text, file: file, line: line)
-            .coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
+            .coordinate(withNormalizedOffset: CGVector(dx: 0.03, dy: 0.5)).tap()
     }
 
     func openSamplePage() {
