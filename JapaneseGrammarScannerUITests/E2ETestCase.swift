@@ -17,7 +17,6 @@ class E2ETestCase: XCTestCase {
         }
     }
 
-    // MARK: 查找
 
     func id(_ identifier: String) -> XCUIElement {
         app.descendants(matching: .any).matching(identifier: identifier).firstMatch
@@ -52,7 +51,6 @@ class E2ETestCase: XCTestCase {
 
     func navBar(_ title: String) -> XCUIElement { app.navigationBars[title] }
 
-    // MARK: 操作
 
     func wait(_ element: XCUIElement, _ message: String, timeout: TimeInterval = 15,
               file: StaticString = #filePath, line: UInt = #line) {
@@ -98,14 +96,43 @@ class E2ETestCase: XCTestCase {
         app.keyboards.firstMatch.waitForExistence(timeout: timeout)
     }
 
+    func waitForLineSelection(file: StaticString = #filePath, line: UInt = #line) {
+        wait(id("result.chooseHint"), "拍完或选图后应先显示照片，提示点一行或按住拖几行", timeout: 45, file: file, line: line)
+        wait(id("result.analyzeAll"), "照片角上应有「分析整页」", file: file, line: line)
+    }
+
     func waitForScanResult(file: StaticString = #filePath, line: UInt = #line) {
+        let choose = id("result.chooseHint"), row = id("result.grammarRow")
+        let end = Date().addingTimeInterval(45)
+        while !choose.exists && !row.exists && Date() < end {
+            Thread.sleep(forTimeInterval: 0.25)
+        }
+        if choose.exists {
+            id("result.analyzeAll").tap()
+        }
         wait(navBar("识别结果"), "应进入识别结果页", file: file, line: line)
-        wait(id("result.grammarRow"), "识别结果页应列出语法点", timeout: 45, file: file, line: line)
+        wait(row, "识别结果页应列出语法点", timeout: 45, file: file, line: line)
+    }
+
+    func waitForScanFlow(timeout: TimeInterval = 30, file: StaticString = #filePath, line: UInt = #line) {
+        wait(navBar("识别结果"), "选图后应进入识别结果页", timeout: timeout, file: file, line: line)
+    }
+
+    func selectLine(containing text: String, file: StaticString = #filePath, line: UInt = #line) -> XCUIElement {
+        let matches = app.descendants(matching: .any)
+            .matching(NSPredicate(format: "identifier BEGINSWITH 'result.line' AND label CONTAINS %@", text))
+        wait(matches.firstMatch, "照片上应有一行包含「\(text)」", file: file, line: line)
+        return matches.allElementsBoundByIndex.max { $0.frame.width < $1.frame.width } ?? matches.firstMatch
+    }
+
+    func tapLine(containing text: String, file: StaticString = #filePath, line: UInt = #line) {
+        selectLine(containing: text, file: file, line: line)
+            .coordinate(withNormalizedOffset: CGVector(dx: 0.03, dy: 0.5)).tap()
     }
 
     func openSamplePage() {
         tab("扫描").tap()
-        wait(id("scan.trySample"), "扫描页应有「试试示例书页」")
+        wait(id("scan.trySample"), "扫描页应有「试试示例」")
         id("scan.trySample").tap()
         waitForScanResult()
     }

@@ -1,6 +1,5 @@
 import SwiftUI
 
-/// 对一张图片（相机定格或相册）做高精度识别，把所有语法点在图片和文本中高亮，供用户选择查看。
 struct ScanResultView: View {
     let scanImage: ScanImage
 
@@ -15,17 +14,41 @@ struct ScanResultView: View {
     @State private var isEditing = false
     @State private var draftText = ""
     @State private var textWasEdited = false
-    /// 放大查看（手势中的缩放、位置都在这个模型里，结果页本身不随手势重绘）
     @State private var zoom = ScanZoomModel()
-    /// 照片里笔画的分布（荧光笔样式把语法所在的字染成主题色时用）
+    @State private var fullResult: ScanResult = .empty
+    @State private var lines: [RecognizedLine] = []
+    @State private var chosenLines: Set<Int>?
+    @State private var lineDragging = false
 
     enum Phase {
         case loading
+        case choosing
         case done(ScanResult)
         case failed(String)
     }
 
     var body: some View {
+        resultPage
+        .toolbar(zoom.isOpen ? .hidden : .automatic, for: .tabBar)
+        .toolbar(zoom.isOpen ? .hidden : .automatic, for: .navigationBar)
+        .statusBarHidden(zoom.isOpen)
+        .onAppear {
+            zoom.imageSize = scanImage.image.size
+            selectedClusterID = nil
+        }
+        .navigationTitle(tr("识别结果"))
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationDestination(item: $pushedGrammarID) { id in
+            GrammarDetailView(grammarID: id)
+        }
+        .grammarChooser(cluster: $tappedCluster, library: library) { id, matched in
+            if let pushRoute { pushRoute(.grammarMatch(id, matched ?? "")) } else { pushedGrammarID = id }
+        }
+        .sheet(isPresented: $isEditing) { editSheet }
+        .task { await analyze() }
+    }
+
+    private var resultPage: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 imageSection
@@ -42,12 +65,14 @@ struct ScanResultView: View {
                     ContentUnavailableView(tr("识别失败"), systemImage: "exclamationmark.triangle", description: Text(message))
                 case .done(let result):
                     resultSections(result)
+                case .choosing:
+                    choosingCard
                 }
             }
             .padding()
         }
+        .scrollDisabled(lineDragging)
         .background(Theme.background)
-        // 记录全屏覆盖层的位置（放大的终点）
         .overlay {
             GeometryReader { g in
                 Color.clear
@@ -58,36 +83,48 @@ struct ScanResultView: View {
             .allowsHitTesting(false)
         }
         .overlay { zoomStage }
-        .toolbar(zoom.isOpen ? .hidden : .automatic, for: .navigationBar, .tabBar)
-        .statusBarHidden(zoom.isOpen)
-        .onAppear {
-            zoom.imageSize = scanImage.image.size
-            // 点中框时底色加深只是按下那一下的反馈：从讲解页回来后恢复，所有框样式一致
-            selectedClusterID = nil
-        }
-        .navigationTitle(tr("识别结果"))
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationDestination(item: $pushedGrammarID) { id in
-            GrammarDetailView(grammarID: id)
-        }
-        .grammarChooser(cluster: $tappedCluster, library: library) { id, matched in
-            if let pushRoute { pushRoute(.grammarMatch(id, matched ?? "")) } else { pushedGrammarID = id }
-        }
-        .sheet(isPresented: $isEditing) { editSheet }
-        .task { await analyze() }
     }
 
-    private var isDone: Bool {
-        if case .done = phase { return true }
+    private var canChooseLines: Bool {
+        switch phase {
+        case .choosing: return true
+        case .done: return !textWasEdited && !lines.isEmpty
+        default: return false
+        }
+    }
+
+    private var isWholePage: Bool {
+        if case .done = phase { return chosenLines == nil }
         return false
     }
 
-    // MARK: - 图片 + 高亮框
+    private var choosingCard: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(localized: "点一行，或按住拖几行")
+                .font(.headline)
+            Text(localized: "点一行，马上分析这一行；按住再上下拖，可以选几行，松手就出结果。不想选，点照片左下角「分析整页」。")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(16)
+        .background(Theme.card, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .accessibilityElement(children: .combine)
+        .accessibilityIdentifier("result.chooseHint")
+    }
 
     private var imageSection: some View {
         Image(uiImage: scanImage.image)
             .resizable()
             .scaledToFit()
+            .overlay {
+                if canChooseLines {
+                    ResultLineLayer(lines: lines, chosen: chosenLines,
+                                    onDragging: { lineDragging = $0 },
+                                    onChoose: { confirm($0) })
+                }
+            }
             .overlay {
                 if case .done(let result) = phase, !textWasEdited {
                     HighlightOverlay(
@@ -103,6 +140,25 @@ struct ScanResultView: View {
                 }
             }
             .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(alignment: .bottomLeading) {
+                if canChooseLines && !isWholePage {
+                    Button { confirm(nil) } label: {
+                        Label {
+                            Text(localized: "分析整页")
+                        } icon: {
+                            Image(systemName: "doc.text.magnifyingglass")
+                        }
+                        .font(.footnote.weight(.semibold))
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 12)
+                        .frame(height: 32)
+                        .background(.black.opacity(0.6), in: Capsule())
+                        .padding(8)
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityIdentifier("result.analyzeAll")
+                }
+            }
             .overlay(alignment: .bottomTrailing) {
                 Button { zoom.open() } label: {
                     Image(systemName: "arrow.up.left.and.arrow.down.right")
@@ -116,21 +172,16 @@ struct ScanResultView: View {
                 .accessibilityLabel(Text(localized: "放大查看"))
                 .accessibilityIdentifier("result.zoomButton")
             }
-            .contentShape(Rectangle())
-            .onTapGesture { zoom.open() }
             .accessibilityElement(children: .contain)
             .accessibilityIdentifier("result.image")
             .frame(maxWidth: .infinity)
             .frame(maxHeight: 460)
-            // 记录图片在屏幕上的位置：放大从这里开始，缩小回到这里（不触发重绘）
             .background(GeometryReader { g in
                 Color.clear
                     .onAppear { zoom.sourceFrame = g.frame(in: .global) }
                     .onChange(of: g.frame(in: .global)) { _, f in zoom.sourceFrame = f }
             })
-            // 放大时原位置的图片隐藏，由覆盖层接管
             .opacity(zoom.presented ? 0.001 : 1)
-            // 直接在结果页双指放大：以两指中点为中心、按手指分开的比例实时放大，松手后铺满全屏
             .scanPinch(
                 began: { zoom.pinchBegan(at: $0) },
                 changed: { zoom.pinchChanged(ratio: $0, at: $1) },
@@ -139,7 +190,6 @@ struct ScanResultView: View {
             )
     }
 
-    /// 放大查看覆盖层
     @ViewBuilder
     private var zoomStage: some View {
         if zoom.presented {
@@ -153,6 +203,10 @@ struct ScanResultView: View {
                 result: result,
                 library: library,
                 selectedClusterID: selectedClusterID,
+                lineChoice: canChooseLines ? ScanZoomStage.LineChoice(
+                    lines: lines, chosen: chosenLines, isWholePage: isWholePage,
+                    onChoose: { confirm($0) }, onAnalyzeAll: { confirm(nil) }
+                ) : nil,
                 onClosed: {}
             ) { cluster in
                 selectedClusterID = cluster.id
@@ -160,8 +214,6 @@ struct ScanResultView: View {
             }
         }
     }
-
-    // MARK: - 结果
 
     @ViewBuilder
     private func resultSections(_ result: ScanResult) -> some View {
@@ -171,11 +223,10 @@ struct ScanResultView: View {
                                    description: Text(localized: "请让文字清晰、光线充足，尽量正对书页拍摄。"))
         } else {
             VStack(alignment: .leading, spacing: 10) {
-                HStack {
-                    (ids.isEmpty ? Text(localized: "没有识别到收录的语法点") : Text(localized: "识别到 \(ids.count) 个语法点"))
-                        .font(.title3.bold())
-                }
-                if !ids.isEmpty {
+                headline(count: ids.count)
+                    .font(.title3.bold())
+                    .accessibilityIdentifier("result.headline")
+                if !canChooseLines && !ids.isEmpty {
                     Text(localized: "点击高亮或下方列表查看讲解；双指可直接放大图片。")
                         .font(.footnote).foregroundStyle(.secondary)
                 }
@@ -207,7 +258,6 @@ struct ScanResultView: View {
                 .background(Theme.card, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
             }
 
-            // 识别错字导致漏掉语法时的补救入口：平时不打扰
             Button {
                 draftText = result.text
                 isEditing = true
@@ -230,6 +280,50 @@ struct ScanResultView: View {
         }
     }
 
+    @ViewBuilder
+    private func headline(count: Int) -> some View {
+        if let lineCount = chosenLines?.count ?? (LineSelection.analyzesRightAway(lineCount: lines.count) ? lines.count : nil), lineCount > 0, !textWasEdited,
+           count > 0 || chosenLines != nil {
+            if count == 0 {
+                Text(localized: "选中的行里没有收录的语法点")
+            } else if lineCount == 1 {
+                Text(localized: "这一行有 \(count) 个语法点")
+            } else {
+                Text(localized: "这 \(lineCount) 行有 \(count) 个语法点")
+            }
+        } else if count == 0 {
+            Text(localized: "没有识别到收录的语法点")
+        } else if textWasEdited || lines.isEmpty {
+            Text(localized: "识别到 \(count) 个语法点")
+        } else {
+            Text(localized: "整页有 \(count) 个语法点")
+        }
+    }
+
+    private func displayed(_ full: ScanResult) -> ScanResult {
+        guard let chosen = chosenLines else { return full }
+        return full.limited(toLines: chosen, of: lines)
+    }
+
+    private func confirm(_ chosen: Set<Int>?) {
+        chosenLines = chosen.flatMap { $0.isEmpty ? nil : $0 }
+        selectedClusterID = nil
+        let result = displayed(fullResult)
+        phase = .done(result)
+        record(library.displayableIDs(result.orderedGrammarIDs))
+    }
+
+    private func record(_ ids: [String]) {
+        if let recordID {
+            history.updateScan(recordID, grammarIDs: ids)
+        } else if let existing = scanImage.historyID {
+            recordID = existing
+            history.updateScan(existing, grammarIDs: ids)
+        } else if !scanImage.isSample, !fullResult.text.isEmpty, DemoMode.screen == nil {
+            recordID = history.recordScan(image: scanImage.image, grammarIDs: ids)
+        }
+    }
+
     private var editSheet: some View {
         NavigationStack {
             TextEditor(text: $draftText)
@@ -247,6 +341,7 @@ struct ScanResultView: View {
                         Button(tr("重新识别")) {
                             let result = ScanAnalyzer.analyze(text: draftText, lines: [], matcher: library.matcher)
                             textWasEdited = true
+                            chosenLines = nil
                             selectedClusterID = nil
                             phase = .done(result)
                             if let recordID { history.updateScan(recordID, grammarIDs: library.displayableIDs(result.orderedGrammarIDs)) }
@@ -256,8 +351,6 @@ struct ScanResultView: View {
                 }
         }
     }
-
-    // MARK: -
 
     private func analyze() async {
         guard case .loading = phase else { return }
@@ -275,25 +368,26 @@ struct ScanResultView: View {
             }
         }.value
         switch outcome {
-        case .success(let (r, lines)):
-            phase = .done(r)
+        case .success(let (r, recognized)):
+            fullResult = r
+            lines = recognized
+            if r.text.isEmpty || recognized.isEmpty {
+                phase = .done(r)
+            } else if DemoMode.screen != nil {
+                if DemoMode.staysOnLineSelection { phase = .choosing } else { confirm(DemoMode.lines) }
+            } else if LineSelection.analyzesRightAway(lineCount: recognized.count) {
+                confirm(nil)
+            } else {
+                phase = .choosing
+            }
             if DemoMode.opensZoom {
                 try? await Task.sleep(for: .milliseconds(600))
                 zoom.open()
             }
-            let ids = library.displayableIDs(r.orderedGrammarIDs)
-            if let existing = scanImage.historyID {
-                recordID = existing
-                // 重新识别的结果可能与保存时略有不同：以现在显示的为准，首页「继续上次」的数字随之一致
-                history.updateScan(existing, grammarIDs: ids)
-            } else if !scanImage.isSample, !r.text.isEmpty, DemoMode.screen == nil {
-                recordID = history.recordScan(image: scanImage.image, grammarIDs: ids)
-            }
-            // 第二步：切竖条重新识别，把高亮框挪到更准的位置（弯曲、斜拍的书页上尤其明显）。
-            // 先显示第一步的结果，不让用户干等；语法点列表不变，只是框的位置更准
-            if image.imageOrientation == .up, let cg = image.cgImage {
-                let refined = await Task.detached(priority: .userInitiated) { StripLocator.refine(r, lines: lines, image: cg) }.value
-                if case .done = phase { phase = .done(refined) }
+            if image.imageOrientation == .up, let cg = image.cgImage, !r.boxes.isEmpty {
+                let refined = await Task.detached(priority: .userInitiated) { StripLocator.refine(r, lines: recognized, image: cg) }.value
+                fullResult = refined
+                if case .done = phase, !textWasEdited { phase = .done(displayed(refined)) }
             }
         case .failure(let e): phase = .failed(e.localizedDescription)
         }

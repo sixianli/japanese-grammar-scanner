@@ -1,11 +1,7 @@
 import SwiftUI
 
-/// 讲解页底部的复习自评条（只在从首页「快要忘了」进来时出现，复习时底部标签栏隐藏）。
-/// 先问「还记得吗」，三个按钮：忘了 / 有点模糊 / 记得（固定红黄绿三色，不随主题；不显示下次复习时间）。
-/// 自评后：还有要复习的 → 「先到这里」或「下一个：…」；都复习完 → 「回首页」。
 struct ReviewBar: View {
     let grammarID: String
-    /// 之后还要复习的语法
     let queue: [String]
     @EnvironmentObject private var history: HistoryStore
     @EnvironmentObject private var library: GrammarLibrary
@@ -31,7 +27,6 @@ struct ReviewBar: View {
                 .ignoresSafeArea(edges: .bottom)
         )
         .overlay(alignment: .top) { Divider() }
-        // 点评分按钮时震动：三个按钮手感不同
         .sensoryFeedback(trigger: rated) { _, new in new.map(Self.haptic) }
         .accessibilityElement(children: .contain)
         .accessibilityIdentifier("review.bar")
@@ -73,10 +68,14 @@ struct ReviewBar: View {
             VStack(alignment: .leading, spacing: 2) {
                 (Text(localized: "已记录：") + Text(localized: Self.label(g)))
                     .font(.subheadline.weight(.semibold))
-                if queue.isEmpty {
-                    Text(localized: "今天的复习都完成了").font(.footnote).foregroundStyle(.secondary)
+                if let next = queue.first {
+                    (Text(localized: "还剩 \(queue.count) 个要复习") + Text(verbatim: " · ")
+                        + Text(localized: "下一个：") + Text(verbatim: nextTitle(next)))
+                        .font(.footnote).foregroundStyle(.secondary)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
                 } else {
-                    Text(localized: "还剩 \(queue.count) 个要复习").font(.footnote).foregroundStyle(.secondary)
+                    Text(localized: "今天的复习都完成了").font(.footnote).foregroundStyle(.secondary)
                 }
             }
             .accessibilityElement(children: .combine)
@@ -100,18 +99,18 @@ struct ReviewBar: View {
                     if let replaceRoute { replaceRoute(route) } else { pushRoute?(route) }
                 } label: {
                     HStack(spacing: 4) {
-                        Text(localized: "下一个：") + Text(verbatim: library.point(id: next)?.titleForm ?? next)
+                        Text(localized: "下一个")
                         Image(systemName: "chevron.right").font(.footnote.weight(.bold))
                     }
                     .font(.body.weight(.bold))
                     .lineLimit(1)
-                    .minimumScaleFactor(0.8)
                     .foregroundStyle(Color(.systemBackground))
                     .frame(maxWidth: .infinity, minHeight: 48)
                     .background(Theme.accentText, in: Capsule())
                     .contentShape(Capsule())
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel(Text(localized: "下一个：") + Text(verbatim: nextTitle(next)))
                 .accessibilityIdentifier("review.next")
             }
         } else {
@@ -128,6 +127,10 @@ struct ReviewBar: View {
         }
     }
 
+    private func nextTitle(_ id: String) -> String {
+        library.point(id: id)?.titleForm ?? id
+    }
+
     private func goHome() {
         NotificationCenter.default.post(name: .popToRoot, object: AppTab.home)
     }
@@ -140,7 +143,6 @@ struct ReviewBar: View {
         }
     }
 
-    /// 固定三色，不随主题：忘了＝柔和珊瑚红，有点模糊＝琥珀黄，记得＝抹茶绿（浅色 / 深色模式各一档，文字对比度 ≥ 4.5:1）
     static let colorHex: [FSRS.Grade: (light: UInt32, dark: UInt32)] = [
         .again: (0xB4553F, 0xE8947F),
         .hard: (0x8F6514, 0xE3BC62),
@@ -152,7 +154,6 @@ struct ReviewBar: View {
         return Theme.dynamic(hex.light, hex.dark)
     }
 
-    /// 震动：忘了＝轻柔一下，有点模糊＝普通轻震，记得＝成功提示
     static func haptic(_ g: FSRS.Grade) -> SensoryFeedback {
         switch g {
         case .again: .impact(flexibility: .soft, intensity: 0.6)

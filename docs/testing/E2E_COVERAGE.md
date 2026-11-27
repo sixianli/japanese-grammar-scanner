@@ -28,6 +28,13 @@
 | 首页 | 列表里的语法点 → 讲解 → 收藏 → 收藏标签 → 打开 | `EndToEndTests.testHomeGrammarRowOpensDetailAndFavorite` |
 | 扫描 | 扫描标签 → 试试示例 → 结果 → 放大 / 关闭 → 讲解 → 切标签再切回 → 再点扫描回到首页 | `EndToEndTests.testSampleScanResultZoomAndTabs` |
 | 扫描 | 扫描标签 → 相册 → 选照片 → 识别结果 | `ScanResultTests.testScanTabPhotoPicker` |
+| 扫描 | 取景时只提示拍照，画面上没有语法框 | `LineSelectFlowTests.testScanTabOnlyFramesWithoutRecognizing` |
+| 选行 | 拍完先显示照片和认出的行，没有语法框、没有语法列表 | `LineSelectFlowTests.testPhotoShowsLinesWithoutGrammarBoxesBeforeAnalyzing` |
+| 选行 | 点一行 →「分析这 1 行」→ 只列这一行的语法（反向：别的行的「らしい」「たことがある」不出现） | `LineSelectFlowTests.testTapOneLineShowsOnlyThatLinesGrammar` |
+| 选行 | 按住从一行拖到下面第二行 → 正好选中 3 行 → 只列这 3 行的语法（反向：「ながら」不出现） | `LineSelectFlowTests.testDragSelectsSeveralWholeLines` |
+| 选行 | 再点已选的行取消选择 | `LineSelectFlowTests.testTapSelectedLineAgainDeselectsIt` |
+| 选行 | 分析整页 → 重新选行 → 只看一行，语法点比整页少 | `LineSelectFlowTests.testAnalyzeWholePageThenReselectOneLine` |
+| 选行 | 选了行后改为分析整页 | `LineSelectFlowTests.testSwitchToWholePageAfterSelecting` |
 | 识别结果 | 点高亮框 → 讲解（多个语法点时先选择） | `ScanResultTests.testHighlightBoxOpensGrammarOrChooser` |
 | 识别结果 | 列表中每个语法点 → 讲解 → 返回 | `ScanResultTests.testResultRowsAllOpenDetail` |
 | 识别结果 | 进入讲解后顶部显示「你扫到的：…」，对应用法高亮，点横幅跳到该用法；从搜索进入不显示 | `ScanResultTests.testScannedMatchBannerOnDetail` / `testNoScannedBannerFromSearch` |
@@ -75,7 +82,7 @@
 
 | 功能 | 原因 | 替代验证 |
 |---|---|---|
-| 相机实时取景、实时高亮、快门定格、补光 | 模拟器没有相机 | 稳定化逻辑有单元测试（`LiveResultStabilizerTests`）；真机由测试人员在 TestFlight 版本上验证 |
+| 相机取景、快门拍照、补光 | 模拟器没有相机 | 拍照之后的选行、分析流程用示例书页覆盖（`LineSelectFlowTests`）；取景和快门由测试人员在 TestFlight 版本上验证 |
 | 双指缩放的跟手程度、滑动流畅度 | 属于主观手感，UI 测试只能验证功能是否正确 | TestFlight 真机体验 |
 | App 内一键提交反馈（CloudKit） | 需要开发者账号开通 iCloud 容器和 iCloud 登录 | 开通后用 TestFlight 版本实际提交一次，并确认邮件转发 |
 | 付费（试用、购买、恢复购买） | 当前版本已关闭收费（`Features.paymentsEnabled = false`） | 重新开启收费时补充 StoreKit 测试 |

@@ -24,10 +24,8 @@ enum LegalContent {
         }
     }
 
-    // MARK: 隐私政策
-
-    static let privacyUpdated = "2026-11-22"
-    static let privacyInventoryHash = "a390007f6007"
+    static let privacyUpdated = "2026-11-28"
+    static let privacyInventoryHash = "56332ce24f0a"
 
     static let privacyAll: [Section] = [
         Section(id: "summary", title: "一句话说明",
@@ -36,6 +34,8 @@ enum LegalContent {
                 body: "相机画面和你从相册选择的图片，只在你的设备上由 Apple Vision 识别文字，不会上传。拍照或从相册识别的图片保存在本机的「最近扫描」中，方便回看，可以随时删除。"),
         Section(id: "local", title: "收藏、浏览与复习记录",
                 body: "收藏、浏览记录、复习记录（每个语法的记忆状态和下次复习时间）和设置只保存在本机，删除 App 即一并删除。"),
+        Section(id: "lookup", title: "查词与翻译",
+                body: "在讲解页长按日文选「查询」或「翻译」时，由 iOS 自带的词典和翻译功能处理，App 本身不上传任何内容。词典在本机查询；翻译时如果设备上还没下载对应语言，你选中的文字可能会由 Apple 的翻译服务处理，适用 Apple 的隐私政策。"),
         Section(id: "usage-stats", title: "匿名使用统计",
                 body: "为了解有多少人在用、来自哪些国家或地区、在什么时段使用、哪些语法点最常被查，App 每天会匿名上报一条使用汇总：日期、是否新安装、是否本周或本月第一次使用、当天打开次数、按小时的使用分布、查看过的语法点及其等级、App Store 所在的国家或地区、界面语言和 App 版本。不包含姓名、账号、设备编号或任何能识别你的信息，通过 Apple 的 iCloud（CloudKit）保存，只用于改进 App。可以随时在「设置 → 隐私」中关闭。",
                 when: .cloud),
@@ -53,8 +53,6 @@ enum LegalContent {
     ]
 
     static var privacySections: [Section] { privacyAll.filter(\.when.isActive) }
-
-    // MARK: 使用条款
 
     static let termsUpdated = "2026-11-20"
 

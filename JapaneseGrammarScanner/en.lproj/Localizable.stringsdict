@@ -114,6 +114,22 @@
 			<string>All features are free for the first %lld days. After that, you can make a one-time purchase to unlock full explanations forever. It's not a subscription and you won't be charged automatically. The purchase works on all devices using the same Apple ID and can be restored in “Settings → Purchase”.</string>
 		</dict>
 	</dict>
+	<key>整页有 %lld 个语法点</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@n@</string>
+		<key>n</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld Grammar Point on This Page</string>
+			<key>other</key>
+			<string>%lld Grammar Points on This Page</string>
+		</dict>
+	</dict>
 	<key>有 %lld 个快要忘了</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -130,6 +146,22 @@
 			<string>%lld grammar points fading</string>
 		</dict>
 	</dict>
+	<key>正在选：%lld 行</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@n@</string>
+		<key>n</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>Selecting: %lld line</string>
+			<key>other</key>
+			<string>Selecting: %lld lines</string>
+		</dict>
+	</dict>
 	<key>识别到 %lld 个语法点</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -144,22 +176,6 @@
 			<string>%lld Grammar Point Found</string>
 			<key>other</key>
 			<string>%lld Grammar Points Found</string>
-		</dict>
-	</dict>
-	<key>识别到 %lld 个语法点，点击高亮或下方标签查看</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@n@</string>
-		<key>n</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>%lld grammar point found — tap a highlight or tag</string>
-			<key>other</key>
-			<string>%lld grammar points found — tap a highlight or tag</string>
 		</dict>
 	</dict>
 	<key>还剩 %lld 个要复习</key>
@@ -192,6 +208,22 @@
 			<string>%lld not viewed yet</string>
 			<key>other</key>
 			<string>%lld not viewed yet</string>
+		</dict>
+	</dict>
+	<key>这一行有 %lld 个语法点</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@n@</string>
+		<key>n</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld Grammar Point in This Line</string>
+			<key>other</key>
+			<string>%lld Grammar Points in This Line</string>
 		</dict>
 	</dict>
 </dict>

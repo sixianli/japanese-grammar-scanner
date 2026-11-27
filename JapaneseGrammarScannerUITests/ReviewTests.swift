@@ -25,6 +25,26 @@ final class ReviewTests: E2ETestCase {
         XCTAssertFalse(id("home.review.row").exists, "不再列出要复习的语法")
     }
 
+    func testReviewReminderTextIsCenteredInTheCard() {
+        scrollToTop()
+        wait(card, "有到期的语法时首页应显示复习提醒")
+        let number = id("home.review.count"), words = id("home.review.text")
+        wait(number, "提醒里应有数字")
+
+        XCTAssertEqual(number.frame.midY, card.frame.midY, accuracy: 1, "数字应在卡片正中：数字 \(number.frame)，卡片 \(card.frame)")
+        XCTAssertEqual(words.frame.midY, card.frame.midY, accuracy: 1, "「个语法可以复习了」应在卡片正中，不往下沉：文字 \(words.frame)，卡片 \(card.frame)")
+    }
+
+    func testReviewReminderHasCaptionBelow() {
+        scrollToTop()
+        wait(card, "有到期的语法时首页应显示复习提醒")
+        let caption = id("home.review.caption")
+
+        wait(caption, "复习提醒下面应有一行说明")
+        XCTAssertTrue(caption.label.contains("遗忘曲线"), "说明应讲提醒是怎么来的：\(caption.label)")
+        XCTAssertGreaterThanOrEqual(caption.frame.minY, card.frame.maxY, "说明在卡片下面")
+    }
+
     func testFavoriteDuringReviewHidesButtonAndConfirms() {
         scrollToTop()
         wait(card, "有到期的语法时首页应显示复习提醒")
@@ -57,6 +77,7 @@ final class ReviewTests: E2ETestCase {
 
         app.swipeUp()
         let next = nextTitle()
+        XCTAssertTrue(id("review.done").label.contains("下一个：\(next)"), "下一个语法名应写在「还剩几个」那行：\(id("review.done").label)")
         id("review.next").tap()
         assertFreshReviewPage("第 2 个")
         wait(id("detail.title"), "讲解页应有标题")

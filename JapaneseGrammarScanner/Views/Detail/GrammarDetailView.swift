@@ -43,7 +43,7 @@ struct GrammarDetailView: View {
                         .padding(.horizontal, Theme.margin)
                         .padding(.top, TitleBarLayout.topPadding)
                 }
-                LazyVStack(alignment: .leading, spacing: 0) {
+                VStack(alignment: .leading, spacing: 0) {
                     if !usesFlyingTitle {
                         FadingHeader(scroll: scroll) { header(p) }
                             .background(GeometryReader { g in
@@ -55,7 +55,7 @@ struct GrammarDetailView: View {
                     if let matchedText {
                         ScannedMatchBanner(matched: matchedText, senseIndex: focus,
                                            senseLabel: focus.map { p.senses[$0].label }) {
-                            if let focus { withAnimation(.easeInOut) { proxy.scrollTo("sense-\(focus)", anchor: .top) } }
+                            if let focus { jump(to: focus, proxy: proxy) }
                         }
                         .padding(.top, 14)
                     }
@@ -65,7 +65,7 @@ struct GrammarDetailView: View {
 
                     SenseOutline(point: p, showsLevels: showsSenseLevels, tappable: entitlements.hasFullAccess,
                                  highlighted: focus) { i in
-                        withAnimation(.easeInOut) { proxy.scrollTo("sense-\(i)", anchor: .top) }
+                        jump(to: i, proxy: proxy)
                     }
                     .padding(.top, 18)
 
@@ -79,8 +79,13 @@ struct GrammarDetailView: View {
                             SenseBlock(index: i + 1, sense: sense,
                                        level: showsSenseLevels ? p.level(of: sense) : nil,
                                        regexes: regexes)
-                                .padding(.bottom, i < p.senses.count - 1 ? 34 : 0)
+                                .accessibilityElement(children: .contain)
+                                .accessibilityIdentifier("detail.sense")
+                                .onGeometryChange(for: CGFloat.self) { $0.frame(in: .global).minY } action: { [scroll] y in
+                                    scroll.senseTops[i] = y
+                                }
                                 .id("sense-\(i)")
+                                .padding(.bottom, i < p.senses.count - 1 ? 34 : 0)
                         }
 
                         if !p.notes.isEmpty {
@@ -147,12 +152,13 @@ struct GrammarDetailView: View {
             }
             .coordinateSpace(name: "detailScroll")
             .modifier(ScrollOffsetTracker(scroll: scroll))
+            .modifier(ContentHeightProbe())
             .overlay(alignment: .top) {
                 if usesFlyingTitle {
                     FlyingTitle(point: p, scroll: scroll)
                 }
             }
-            .modifier(DemoScrollOffset())
+            .modifier(DetailScrollPosition(scroll: scroll))
             .onAppear {
                 if let anchor = DemoMode.scrollAnchor {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { proxy.scrollTo(anchor, anchor: .top) }
@@ -201,9 +207,14 @@ struct GrammarDetailView: View {
     private func header(_ p: GrammarPoint) -> some View {
         VStack(alignment: .center, spacing: 10) {
             headerTitle(p)
-            HStack(spacing: 8) {
-                DetailTags(level: p.level, mustKnow: p.frequency == .high)
-                FavoritedTag(id: p.id)
+            if usesFlyingTitle {
+                HeaderTags(point: p)
+                    .hidden()
+                    .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { [scroll] height in
+                        if abs(height - scroll.tagsHeight) > 0.5 { scroll.tagsHeight = height }
+                    }
+            } else {
+                HeaderTags(point: p)
             }
         }
         .frame(maxWidth: .infinity)
@@ -216,6 +227,14 @@ struct GrammarDetailView: View {
     }
 
     static let titleStyle = RubyText.Style(font: .largeTitle.bold(), rubySize: 12, lineSpacing: 2, alignment: .center)
+
+    private func jump(to sense: Int, proxy: ScrollViewProxy) {
+        guard usesFlyingTitle, let top = scroll.senseTops[sense] else {
+            withAnimation(.easeInOut) { proxy.scrollTo("sense-\(sense)", anchor: .top) }
+            return
+        }
+        scroll.jump = .init(y: TitleBarLayout.jumpOffset(current: scroll.offset, targetTop: top, barBottom: scroll.barBottom))
+    }
 
     @ViewBuilder
     private func headerTitle(_ p: GrammarPoint) -> some View {
@@ -276,8 +295,6 @@ struct GrammarDetailView: View {
         }
     }
 }
-
-// MARK: - 组件
 
 private struct DocSection<Content: View>: View {
     let title: LocalizedStringKey
@@ -431,6 +448,8 @@ private struct ExampleView: View {
                     highlights: highlightRanges,
                     style: .init(font: .title3, rubySize: 10, highlightColor: Theme.accentText, lineSpacing: 6)
                 )
+                .pickable()
+                .accessibilityIdentifier("detail.example.ja")
                 Text(example.translation)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
@@ -490,13 +509,12 @@ private struct NoteView: View {
                             ? ceil(UIFontMetrics(forTextStyle: .body).scaledValue(for: 9) * 1.3) : 0
                         let lineHeight = UIFont.preferredFont(forTextStyle: .body).lineHeight
                         HStack(alignment: .top, spacing: 8) {
-                            Image(systemName: correct ? "checkmark.circle.fill" : "xmark.circle.fill")
-                                .font(.system(size: 16))
-                                .foregroundStyle(correct ? Color.green : Color.red)
+                            VerdictIcon(correct: correct)
                                 .frame(height: lineHeight)
                                 .padding(.top, rubyLine)
-                                .accessibilityLabel(correct ? Text(localized: "正确") : Text(localized: "错误"))
-                            RubyText(japanese: sentence, style: .init(font: .body, rubySize: 9, lineSpacing: 4))
+                            RubyText(japanese: sentence, style: .init(font: .body, rubySize: 9,
+                                                                      color: correct ? .primary : .secondary, lineSpacing: 4))
+                            .pickable()
                         }
                         .padding(.leading, 2)
                     }
@@ -571,35 +589,50 @@ private struct DocSectionTitle: View {
     }
 }
 
-// MARK: - 滚动与标题
-
 @Observable
 final class DetailScrollModel {
     var progress: CGFloat = 0
     var offset: CGFloat = 0
     var lineSize: CGSize = .zero
     var contentWidth: CGFloat = 0
+    var tagsHeight: CGFloat = 0
+    var barBottom: CGFloat = 0
+    var jump: JumpRequest?
+    @ObservationIgnored var senseTops: [Int: CGFloat] = [:]
     @ObservationIgnored var headerBaseline: CGFloat?
+
+    struct JumpRequest: Equatable {
+        let id = UUID()
+        let y: CGFloat
+    }
 }
 
-private struct DemoScrollOffset: ViewModifier {
+private struct DetailScrollPosition: ViewModifier {
+    let scroll: DetailScrollModel
+
     func body(content: Content) -> some View {
-        if #available(iOS 18.0, *), let y = DemoMode.scrollY {
-            Scrolled(content: content, y: y)
+        if #available(iOS 18.0, *) {
+            Positioned(content: content, scroll: scroll)
         } else {
             content
         }
     }
 
     @available(iOS 18.0, *)
-    private struct Scrolled: View {
+    private struct Positioned: View {
         let content: Content
-        let y: CGFloat
+        let scroll: DetailScrollModel
         @State private var position = ScrollPosition(edge: .top)
+
         var body: some View {
             content
                 .scrollPosition($position)
+                .onChange(of: scroll.jump) { _, jump in
+                    guard let jump else { return }
+                    withAnimation(.easeInOut) { position.scrollTo(y: jump.y) }
+                }
                 .task {
+                    guard let y = DemoMode.scrollY else { return }
                     try? await Task.sleep(for: .milliseconds(800))
                     position.scrollTo(y: y)
                 }
@@ -612,11 +645,10 @@ enum TitleBarLayout {
     static let topPadding: CGFloat = 8
     static let maxPinnedScale: CGFloat = 0.5
     static let tagsGap: CGFloat = 2
+    static let restTagsGap: CGFloat = 10
     static let tagsHeight: CGFloat = 20
     static let barSideInset: CGFloat = 68
-    static let glassBelowContent: CGFloat = 6
-    static let edgeFade: CGFloat = 22
-    static let glassFadeDistance: CGFloat = 12
+    static let barBelowContent: CGFloat = 6
 
     struct State: Equatable {
         var titleTop: CGFloat
@@ -625,9 +657,15 @@ enum TitleBarLayout {
         var pinnedScale: CGFloat
         var progress: CGFloat
         var tagsTop: CGFloat
-        var tagsOpacity: Double
-        var glassBottom: CGFloat
-        var glassOpacity: Double
+        var tagsScale: CGFloat
+        var barBottom: CGFloat
+        var pillOpacity: Double
+    }
+
+    static let jumpBreathingRoom: CGFloat = 12
+
+    static func jumpOffset(current: CGFloat, targetTop: CGFloat, barBottom: CGFloat) -> CGFloat {
+        max(0, current + targetTop - barBottom - jumpBreathingRoom)
     }
 
     static func expandedScale(lineWidth: CGFloat, contentWidth: CGFloat) -> CGFloat {
@@ -640,7 +678,12 @@ enum TitleBarLayout {
         return min(maxPinnedScale, max(0, viewWidth - 2 * barSideInset) / lineWidth)
     }
 
-    static func state(scrolled: CGFloat, lineSize: CGSize, viewWidth: CGFloat, safeTop: CGFloat) -> State {
+    static func pinnedTagsScale(restTagsHeight: CGFloat) -> CGFloat {
+        guard restTagsHeight > 0 else { return 1 }
+        return min(1, tagsHeight / restTagsHeight)
+    }
+
+    static func state(scrolled: CGFloat, lineSize: CGSize, restTagsHeight: CGFloat, viewWidth: CGFloat, safeTop: CGFloat) -> State {
         let expanded = expandedScale(lineWidth: lineSize.width, contentWidth: viewWidth - 2 * Theme.margin)
         let pinned = min(expanded, pinnedScale(lineWidth: lineSize.width, viewWidth: viewWidth))
         let rest = safeTop + topPadding
@@ -658,10 +701,10 @@ enum TitleBarLayout {
             expandedScale: expanded,
             pinnedScale: pinned,
             progress: progress,
-            tagsTop: top + lineSize.height * scale + tagsGap,
-            tagsOpacity: Double(min(1, max(0, (progress - 0.7) / 0.3))),
-            glassBottom: max(safeTop, pinnedTop + pinnedGroup + glassBelowContent),
-            glassOpacity: Double(min(1, max(0, scrolled / glassFadeDistance)))
+            tagsTop: top + lineSize.height * scale + restTagsGap + (tagsGap - restTagsGap) * progress,
+            tagsScale: 1 + (pinnedTagsScale(restTagsHeight: restTagsHeight) - 1) * progress,
+            barBottom: max(safeTop, pinnedTop + pinnedGroup + barBelowContent),
+            pillOpacity: Double(progress)
         )
     }
 }
@@ -669,16 +712,18 @@ enum TitleBarLayout {
 private struct FlyingTitle: View {
     let point: GrammarPoint
     let scroll: DetailScrollModel
-    @EnvironmentObject private var favorites: FavoritesStore
 
     var body: some View {
         GeometryReader { proxy in
             let width = proxy.size.width
             let size = scroll.lineSize
-            let s = TitleBarLayout.state(scrolled: scroll.offset, lineSize: size, viewWidth: width, safeTop: proxy.safeAreaInsets.top)
+            let s = TitleBarLayout.state(scrolled: scroll.offset, lineSize: size, restTagsHeight: scroll.tagsHeight,
+                                         viewWidth: width, safeTop: proxy.safeAreaInsets.top)
             ZStack(alignment: .top) {
-                EdgeGlass(bottom: s.glassBottom)
-                    .opacity(s.glassOpacity)
+                TitleBarArea(bottom: s.barBottom)
+                    .onGeometryChange(for: CGFloat.self) { $0.frame(in: .global).maxY } action: { [scroll] y in
+                        if abs(y - scroll.barBottom) > 0.5 { scroll.barBottom = y }
+                    }
                 if size.height > 0 {
                     RubyText(japanese: point.titleForm, style: GrammarDetailView.titleStyle)
                         .fixedSize()
@@ -686,13 +731,18 @@ private struct FlyingTitle: View {
                         .accessibilityLabel(Text(verbatim: point.titleForm))
                         .accessibilityAddTraits(.isHeader)
                         .accessibilityIdentifier("detail.barTitle")
+                        .background { GlassPill(scale: s.scale, horizontal: 14, vertical: 4).opacity(s.pillOpacity) }
                         .frame(width: width, height: size.height)
                         .scaleEffect(s.scale, anchor: .top)
                         .offset(y: s.titleTop)
+                        .allowsHitTesting(false)
                 }
-                if s.tagsOpacity > 0 {
-                    BarTags(level: point.level, mustKnow: point.frequency == .high, favorited: favorites.isFavorite(point.id))
-                        .opacity(s.tagsOpacity)
+                if size.height > 0, scroll.tagsHeight > 0 {
+                    HeaderTags(point: point)
+                        .fixedSize()
+                        .background { GlassPill(scale: s.tagsScale, horizontal: 6, vertical: 3).opacity(s.pillOpacity) }
+                        .frame(width: width, height: scroll.tagsHeight)
+                        .scaleEffect(s.tagsScale, anchor: .top)
                         .offset(y: s.tagsTop)
                 }
             }
@@ -700,61 +750,71 @@ private struct FlyingTitle: View {
             .frame(maxHeight: .infinity, alignment: .top)
             .ignoresSafeArea(edges: .top)
         }
-        .allowsHitTesting(false)
     }
 }
 
-private struct BarTags: View {
-    let level: JLPTLevel
-    let mustKnow: Bool
-    let favorited: Bool
+private struct HeaderTags: View {
+    let point: GrammarPoint
 
     var body: some View {
-        HStack(spacing: 5) {
-            LevelBadge(level: level, prefixed: true)
-                .accessibilityIdentifier("detail.barLevel")
-            if mustKnow {
-                MustKnowBadge(identifier: "detail.barMustKnow")
-            }
-            if favorited {
-                HStack(spacing: 3) {
-                    Image("Kinchaku")
-                        .renderingMode(.template)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 12)
-                        .foregroundStyle(Sakura.center)
-                    Text(localized: "已收藏")
-                        .font(TagMetrics.font)
-                        .foregroundStyle(.secondary)
-                }
-                .accessibilityElement(children: .combine)
-                .accessibilityIdentifier("detail.barFavorited")
-            }
+        HStack(spacing: 8) {
+            DetailTags(level: point.level, mustKnow: point.frequency == .high)
+            FavoritedTag(id: point.id)
         }
-        .frame(height: TitleBarLayout.tagsHeight)
-        .fixedSize()
+        .accessibilityElement(children: .contain)
+        .accessibilityIdentifier("detail.tags")
     }
 }
 
-private struct EdgeGlass: View {
+private struct VerdictIcon: View {
+    let correct: Bool
+    @ScaledMetric(relativeTo: .body) private var side: CGFloat = 20
+
+    var body: some View {
+        let shape = RoundedRectangle(cornerRadius: side * 0.27, style: .continuous)
+        Image(systemName: correct ? "checkmark" : "xmark")
+            .font(.system(size: side * 0.5, weight: .semibold))
+            .foregroundStyle(correct ? Theme.accentText : Color.secondary)
+            .frame(width: side, height: side)
+            .background {
+                if correct {
+                    shape.fill(Theme.accent.opacity(0.18))
+                } else {
+                    shape.strokeBorder(Color.secondary.opacity(0.6), lineWidth: 1)
+                }
+            }
+            .accessibilityElement()
+            .accessibilityLabel(correct ? Text(localized: "正确") : Text(localized: "错误"))
+            .accessibilityIdentifier(correct ? "note.correct" : "note.wrong")
+    }
+}
+
+private struct TitleBarArea: View {
     let bottom: CGFloat
 
     var body: some View {
-        let total = bottom + TitleBarLayout.edgeFade
-        Rectangle()
-            .fill(.regularMaterial)
-            .overlay(Theme.background.opacity(0.35))
-            .frame(height: total)
-            .mask(
-                LinearGradient(stops: [.init(color: .black, location: 0),
-                                       .init(color: .black, location: bottom / total),
-                                       .init(color: .clear, location: 1)],
-                               startPoint: .top, endPoint: .bottom)
-            )
+        Color.clear
+            .frame(height: bottom)
             .frame(maxWidth: .infinity)
+            .allowsHitTesting(false)
             .accessibilityElement()
             .accessibilityIdentifier("detail.titleBar")
+    }
+}
+
+private struct GlassPill: View {
+    let scale: CGFloat
+    let horizontal: CGFloat
+    let vertical: CGFloat
+
+    var body: some View {
+        let s = max(scale, 0.1)
+        Color.clear
+            .glassBackground(in: Capsule())
+            .padding(.horizontal, -horizontal / s)
+            .padding(.vertical, -vertical / s)
+            .allowsHitTesting(false)
+            .accessibilityHidden(true)
     }
 }
 
@@ -795,11 +855,37 @@ private struct ScrollOffsetTracker: ViewModifier {
 
     func body(content: Content) -> some View {
         if #available(iOS 18.0, *) {
-            content.onScrollGeometryChange(for: CGFloat.self) { g in
-                g.contentOffset.y + g.contentInsets.top
-            } action: { _, y in
-                if abs(y - scroll.offset) > 0.25 { scroll.offset = y }
-            }
+            content
+                .onScrollGeometryChange(for: CGFloat.self) { g in
+                    g.contentOffset.y + g.contentInsets.top
+                } action: { _, y in
+                    if abs(y - scroll.offset) > 0.25 { scroll.offset = y }
+                }
+        } else {
+            content
+        }
+    }
+}
+
+private struct ContentHeightProbe: ViewModifier {
+    @State private var height: CGFloat = 0
+
+    func body(content: Content) -> some View {
+        if #available(iOS 18.0, *), DemoMode.e2e {
+            content
+                .onScrollGeometryChange(for: CGFloat.self) { g in
+                    g.contentSize.height
+                } action: { _, h in
+                    height = h
+                }
+                .overlay(alignment: .bottomTrailing) {
+                    Color.clear
+                        .frame(width: 1, height: 1)
+                        .accessibilityElement()
+                        .accessibilityLabel(Text(verbatim: "contentHeight"))
+                        .accessibilityValue(Text(verbatim: String(Int(height.rounded()))))
+                        .accessibilityIdentifier("detail.contentHeight")
+                }
         } else {
             content
         }

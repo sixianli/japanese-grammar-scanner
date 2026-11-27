@@ -7,6 +7,7 @@
 "一次性购买永久解锁，不订阅" = "Desbloqueo para siempre con un pago único. Sin suscripción.";
 "三组对比，展开看例句" = "Tres grupos de comparación; despliega para ver ejemplos";
 "三组相近语法" = "Tres grupos de gramática similar";
+"下一个" = "Siguiente";
 "下一个，或者先到这里" = "Siguiente, o parar aquí";
 "下一个：" = "Siguiente: ";
 "下一步" = "Siguiente";
@@ -59,6 +60,7 @@
 "再看一遍入门引导" = "Volver a ver la introducción";
 "准备好了" = "Todo listo";
 "出题频率" = "Frecuencia en el examen";
+"分析整页" = "Analizar toda la página";
 "删除截图" = "Quitar captura";
 "到时间就复习" = "Repasa cuando toque";
 "前 %lld 天免费使用全部功能。之后可一次性 %@ 永久解锁完整讲解，不订阅、不自动扣费。" = "Todas las funciones gratis durante los primeros %lld días. Después, desbloquea las explicaciones completas para siempre con una compra única de %@. Sin suscripción ni cargos automáticos.";
@@ -93,6 +95,7 @@
 "在反馈页点「发送」后，会打开系统的邮件或分享面板，由你决定用哪个 App、发给谁；内容是你选择的反馈类型、填写的描述、附上的截图、所在的页面，以及 App 版本、系统版本、设备型号和界面语言。App 本身不会上传任何内容。" = "Al pulsar «Enviar» en la pantalla de comentarios, se abre el correo o el menú de compartir del sistema y tú decides con qué app y a quién enviarlo. El contenido es el tipo de comentario que elegiste, tu descripción, las capturas adjuntas, la pantalla en la que estabas y la versión de la app, la versión de iOS, el modelo del dispositivo y el idioma de la interfaz. La app no sube nada por sí misma.";
 "在底部选「忘了」「有点模糊」或「记得」，App 按你的记忆情况安排下次复习的时间。" = "Abajo, elige «Lo olvidé», «Un poco borroso» o «Lo recuerdo», y la app programa el próximo repaso según lo bien que lo recuerdes.";
 "在讲解页点星星收藏；「收藏」页可以排序，向左滑动可以取消收藏。" = "Toca la estrella en una explicación para guardarla. En «Favoritos» puedes ordenar la lista y deslizar a la izquierda para quitar un elemento.";
+"在讲解页长按日文选「查询」或「翻译」时，由 iOS 自带的词典和翻译功能处理，App 本身不上传任何内容。词典在本机查询；翻译时如果设备上还没下载对应语言，你选中的文字可能会由 Apple 的翻译服务处理，适用 Apple 的隐私政策。" = "Si mantienes pulsado un texto japonés en una página de explicación y eliges Consultar o Traducir, lo gestionan el diccionario y la traducción integrados en iOS; la app no sube nada. Las consultas del diccionario se hacen en tu dispositivo. Al traducir, si los idiomas aún no están descargados en tu dispositivo, el texto seleccionado puede procesarlo el servicio de traducción de Apple, conforme a la política de privacidad de Apple.";
 "在语法讲解页或列表中点一下樱花，就能收进这里。" = "Toca la flor de cerezo en una página de gramática o en una lista para guardarla aquí.";
 "在语法讲解页或列表中点击 ☆ 即可收藏。" = "Toca ☆ en una explicación o en la lista para guardarla aquí.";
 "复习「快要忘了」" = "Repasar «A punto de olvidar»";
@@ -103,14 +106,11 @@
 "学习进度" = "Progreso";
 "完全离线，无广告，无追踪" = "Totalmente sin conexión. Sin anuncios ni rastreo.";
 "完成" = "Listo";
-"定格并精细识别" = "Capturar y analizar";
 "对准书页或选择截图，所有语法点都会被高亮出来。" = "Apunta a una página o elige una captura: se resaltará cada punto gramatical.";
-"对准书页按快门，或从相册选一张截图。" = "Apunta a la página y pulsa el obturador, o elige una captura de Fotos.";
-"对准书页，标出句子里的语法" = "Apunta a una página y marca su gramática";
+"对准书页，按快门拍下来" = "Encuadra la página y pulsa el obturador";
 "对准日文，语法一目了然" = "Apunta al japonés y verás la gramática";
 "对应 用法 " = "Corresponde al uso ";
 "对本隐私政策有任何疑问，可以在「设置 → 反馈」中告诉我们。" = "Si tienes alguna pregunta sobre esta política de privacidad, cuéntanosla en \"Ajustes → Comentarios\".";
-"将相机对准书本上的日文" = "Apunta la cámara a un texto en japonés";
 "展开看例句对比" = "Despliega para comparar ejemplos";
 "已收到，谢谢你的反馈" = "Recibido, gracias por tus comentarios";
 "已收藏" = "En favoritos";
@@ -135,6 +135,7 @@
 "意思" = "Significado";
 "意思差不多的" = "Significado parecido";
 "我们会尽快查看并改进。" = "Lo revisaremos y mejoraremos lo antes posible.";
+"截图、照片都可以" = "Capturas o fotos";
 "截图、照片都可以：点「从相册识别」选一张，同样会识别出里面的语法。" = "Sirven capturas y fotos: toca «Desde Fotos», elige una y se reconocerá la gramática igual que con la cámara.";
 "截图（可选，最多 4 张）" = "Capturas (opcional, hasta 4)";
 "手动修正文字" = "Corregir el texto";
@@ -149,16 +150,22 @@
 "扫描过的书页会保存在这里，方便回看。" = "Las páginas que escanees se guardan aquí para volver a verlas.";
 "找不到该语法点" = "No se encontró el punto gramatical";
 "把相机对准书页" = "Apunta la cámara a una página";
-"把相机对准书页，文中的语法会实时用橙色框框出来。按中间的快门定格画面做精细识别，也可以从相册选择截图。" = "Apunta la cámara a una página y la gramática se enmarcará en naranja al instante. Pulsa el obturador central para fijar la imagen y hacer un análisis detallado, o elige una captura de Fotos.";
+"把相机对准书页，按中间的快门拍下来，也可以从相册选择截图。拍好后点一行，或按住上下拖动选几行，只看你想看的句子；想看整页就点「分析整页」。" = "Apunta la cámara a una página y pulsa el obturador central, o elige una captura de Fotos. Después toca una línea, o mantén pulsado y arrastra arriba o abajo para elegir varias, y verás solo las frases que quieras. Para verlo todo, toca «Analizar toda la página».";
 "把相机对准书页，语法会实时高亮，颜色代表 JLPT 等级。按中间的快门定格画面做精细识别，也可以从相册选择截图。" = "Apunta la cámara a una página y la gramática se resalta al instante, con colores según el nivel JLPT. Pulsa el obturador para un análisis detallado o elige una captura de Fotos.";
 "抹茶绿" = "Matcha";
+"拍下书页或选一张截图，再点一下要看的行。" = "Haz una foto de la página o elige una captura y toca las líneas que quieras leer.";
+"拍下书页，再选要看的行" = "Fotografía la página y elige líneas";
+"拍照" = "Tomar foto";
 "拍照或从相册识别过的页面会保存在首页的「最近扫描」里，点开就能再看。" = "Las páginas que fotografiaste o reconociste desde Fotos se guardan en «Escaneos recientes» en Inicio; tócalas para volver a verlas.";
+"拷贝" = "Copiar";
+"拷贝整句" = "Copiar frase";
 "按下面的快门，定格这一页做更精细的识别，框得更准。" = "Pulsa el obturador de abajo para fijar la página y hacer un análisis más detallado, con recuadros más precisos.";
 "按义项分段的用法、接续与例句" = "Usos por significado, con formación y ejemplos";
 "按快门定格" = "Pulsa el obturador para capturar";
 "按用法跳转" = "Salta por usos";
 "按等级浏览" = "Explora por nivel";
 "按等级浏览、收藏需要复习的语法" = "Explora por nivel y guarda la gramática que quieras repasar";
+"按遗忘曲线估算，看过的语法快忘时会提醒你" = "Según una curva del olvido, te avisamos cuando estés por olvidar la gramática que leíste";
 "按遗忘曲线安排，点开回顾一遍即完成复习。" = "Organizado según la curva del olvido. Ábrelo para repasarlo.";
 "按遗忘曲线排序：最快要忘记的排在最前面。点开回顾一遍即完成复习。" = "Ordenado por la curva del olvido: lo que estás más cerca de olvidar va primero. Ábrelo para repasarlo.";
 "排序" = "Ordenar";
@@ -204,6 +211,8 @@
 "查看 Apple 标准最终用户许可协议" = "Ver el EULA estándar de Apple";
 "查看解锁方式" = "Ver opciones de desbloqueo";
 "查看讲解" = "Ver";
+"查词与翻译" = "Consultar y traducir";
+"查询" = "Consultar";
 "柿子橙" = "Caqui";
 "核心功能" = "Funciones principales";
 "根据公开的考试复原资料与教材整理，仅供参考。" = "Recopilado de reconstrucciones públicas del examen y libros de texto. Solo como referencia.";
@@ -216,7 +225,7 @@
 "每一项收起时就显示一句话的差别，扫一眼就知道区别在哪。" = "Aun plegado, cada elemento muestra la diferencia en una frase, así que la ves de un vistazo.";
 "每个语法点都有意思、用法、例句、使用场景、词源和相近语法对比。例句里的汉字都标注了假名。" = "Cada punto gramatical incluye significado, uso, ejemplos, situaciones reales, origen y gramática similar. Los kanji de los ejemplos llevan furigana.";
 "每个语法点都有意思、用法、例句和词源，例句里的汉字都标了假名。下方的「相近语法」分三组对比，展开就能看到例句里的差别。" = "Cada punto gramatical tiene significado, uso, ejemplos y origen, y todos los kanji de los ejemplos llevan furigana. Debajo, «Gramática similar» compara en tres grupos; despliega un elemento para ver la diferencia en los ejemplos.";
-"每种用法都有讲解、接续和带注音的例句。" = "Cada uso tiene explicación, forma de conexión y ejemplos con furigana.";
+"每种用法有讲解和注音例句，长按例句里的词可拷贝、查询。" = "Cada uso tiene explicación y ejemplos con furigana. Mantén pulsada una palabra para copiarla o consultarla.";
 "永久解锁 · 无需订阅" = "Desbloqueo para siempre · Sin suscripción";
 "没有日文材料？试试示例" = "¿Sin texto en japonés? Prueba un ejemplo";
 "没有相机权限。\n请在「设置」中允许访问相机，或从相册选择图片。" = "Sin acceso a la cámara.\nPermite el acceso en Ajustes o elige una foto.";
@@ -237,6 +246,8 @@
 "点「手动修正文字」改一下文字，再点「重新识别」。" = "Toca «Corregir el texto», corrígelo y luego toca «Analizar».";
 "点「看例句对比」，看两句只换了语法的例句和「怎么分辨」；对方有几种形式时，每种形式各有一句。" = "Toca «Comparar ejemplos» para ver dos frases que solo cambian en la gramática y «Cómo distinguirlos». Si la otra gramática tiene varias formas, hay una frase para cada forma.";
 "点「看例句对比」，看清和相近语法的差别。" = "Toca «Comparar ejemplos» para ver en qué se diferencia de gramática similar.";
+"点一行，或按住拖几行" = "Toca una línea o mantén pulsado y arrastra";
+"点一行，马上分析这一行；按住再上下拖，可以选几行，松手就出结果。不想选，点照片左下角「分析整页」。" = "Toca una línea para analizarla al momento. Mantén pulsado y arrastra arriba o abajo para elegir varias; el resultado aparece al soltar. Si no quieres elegir, toca «Analizar toda la página» abajo a la izquierda de la foto.";
 "点击图片或文本中的高亮，或下方列表，查看详细讲解。" = "Toca un resaltado en la imagen o el texto, o un elemento de la lista, para ver la explicación.";
 "点击高亮或下方列表查看讲解；双指可直接放大图片。" = "Toca un resaltado o un elemento para ver la explicación. Pellizca la foto para ampliarla.";
 "点击高亮或下方列表查看讲解；点击图片可放大查看原文。" = "Toca un resaltado o un elemento para ver la explicación. Toca la foto para ampliarla.";
@@ -290,6 +301,7 @@
 "继续上次" = "Continuar donde lo dejaste";
 "编辑" = "Editar";
 "编辑文本" = "Editar texto";
+"翻译" = "Traducir";
 "职场" = "En el trabajo";
 "联系我们" = "Contacto";
 "自评记得程度，按记忆规律提醒" = "Valora cuánto recuerdas; los recordatorios siguen la curva de la memoria";
@@ -313,7 +325,6 @@
 "词源" = "Origen";
 "词源与相近语法对比" = "Origen y comparación con gramática similar";
 "试试示例" = "Probar ejemplo";
-"试试示例书页" = "Probar una página de ejemplo";
 "语法库" = "Gramática";
 "语法库与收藏" = "Biblioteca y favoritos";
 "语言" = "Idioma";
@@ -332,9 +343,11 @@
 "输入就能找" = "Escribe y encuentra";
 "输入语法、读音或意思，例如「ようになる」「にもかかわらず」「尽管」。" = "Escribe una forma gramatical, su lectura o su significado, p. ej. 「ようになる」, 「にもかかわらず」 o «a pesar de».";
 "还没有收藏" = "Aún no hay favoritos";
+"这 %lld 行有 %lld 个语法点" = "Gramática en estas %1$lld líneas: %2$lld";
 "这些语法你看过，按遗忘曲线快要忘了，再看一眼吧。" = "Ya las viste, pero según la curva del olvido estás a punto de olvidarlas. Échales otro vistazo.";
 "这台设备没有登录 iCloud，无法在 App 内直接提交" = "Este dispositivo no ha iniciado sesión en iCloud, por lo que no se pueden enviar comentarios directamente desde la app";
 "这里有多个语法点，请选择" = "Aquí se superponen varios puntos gramaticales. Elige uno:";
+"选中的行里没有收录的语法点" = "No hay gramática de la biblioteca en las líneas elegidas";
 "通用" = "General";
 "遇到 bug、讲解有误或有任何建议，都可以附上截图告诉我们。" = "¿Un error, una explicación incorrecta o una idea? Cuéntanoslo, con capturas si quieres.";
 "遇到问题或有建议？反馈给我们" = "¿Problemas o ideas? Envíanos comentarios";

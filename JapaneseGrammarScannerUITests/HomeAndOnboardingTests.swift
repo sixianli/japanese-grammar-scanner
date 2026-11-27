@@ -11,17 +11,28 @@ final class HomeTests: E2ETestCase {
     func testHomeHasNoHeadlineAndHidesSampleLinkAfterScanning() {
         scrollToTop()
         wait(id("home.camera"), "首页应有相机扫描按钮")
-        XCTAssertTrue(id("home.camera").label.contains("对准书页，标出句子里的语法"), "相机按钮里应有一行说明：\(id("home.camera").label)")
+        XCTAssertTrue(id("home.camera").label.contains("拍下书页，再选要看的行"), "相机卡片里应有新流程的说明：\(id("home.camera").label)")
         XCTAssertFalse(text(containing: "扫描日文，找出语法").exists, "首页不再有大标题")
         XCTAssertFalse(id("home.sample").exists, "扫描过以后首页不再显示「试试示例」")
         XCTAssertTrue(id("home.photos").exists, "首页仍有「从相册识别」")
+    }
+
+    func testScanEntriesAreTwoCardsSideBySide() {
+        scrollToTop()
+        let camera = id("home.camera"), photos = id("home.photos")
+        wait(camera, "首页应有相机扫描卡片")
+        XCTAssertTrue(photos.label.contains("截图、照片都可以"), "相册卡片里应有说明：\(photos.label)")
+        XCTAssertLessThanOrEqual(camera.frame.maxX, photos.frame.minX, "两张卡片应左右并排：相机 \(camera.frame)，相册 \(photos.frame)")
+        XCTAssertEqual(camera.frame.minY, photos.frame.minY, accuracy: 1, "两张卡片应顶部对齐")
+        XCTAssertEqual(camera.frame.height, photos.frame.height, accuracy: 1, "两张卡片应一样高")
+        XCTAssertEqual(camera.frame.width, photos.frame.width, accuracy: 1, "两张卡片应一样宽")
     }
 
     func testPhotoPickerOpensResult() {
         scrollToTop()
         id("home.photos").tap()
         pickFirstPhoto()
-        wait(navBar("识别结果"), "从相册选图后应进入识别结果页", timeout: 30)
+        waitForScanFlow()
         back()
         wait(id("home.search"), "返回应回到首页")
     }
@@ -106,6 +117,8 @@ final class FreshInstallTests: E2ETestCase {
         wait(link, "还没扫描过时首页应有「试试示例」小链接")
         XCTAssertTrue(link.label.contains("试试示例"), "链接文字应包含「试试示例」：\(link.label)")
         XCTAssertLessThan(link.frame.height, id("home.photos").frame.height, "「试试示例」应是一行小链接，比按钮矮")
+        XCTAssertFalse(id("home.review").exists, "没有要复习的语法时不显示复习提醒")
+        XCTAssertFalse(id("home.review.caption").exists, "复习提醒不出现时，下面的说明小字也不出现")
         link.tap()
         waitForScanResult()
     }

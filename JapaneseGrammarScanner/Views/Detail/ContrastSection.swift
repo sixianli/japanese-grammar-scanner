@@ -196,6 +196,7 @@ struct ContrastSection: View {
             }
             RubyText(segments: s.segments,
                      style: .init(font: .body, rubySize: 9, highlightColor: color, lineSpacing: 6))
+                .pickable()
             Text(s.tr)
                 .font(.subheadline)
                 .foregroundStyle(.secondary)

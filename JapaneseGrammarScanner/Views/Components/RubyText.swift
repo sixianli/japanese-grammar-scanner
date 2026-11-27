@@ -1,65 +1,73 @@
 import SwiftUI
+import Translation
 
-/// 注音文本的一个片段。
 struct RubySegment: Hashable {
     var text: String
     var ruby: String?
     var highlighted = false
-    /// 线索：下方画虚线（「相近语法」对比例句里，帮助分辨的那几个词）
     var cue = false
 }
 
-/// 文本中的一个最小排版单元（不可再拆分换行）。
 private struct Atom: Hashable {
     var text: String
     var ruby: String?
     var highlighted = false
     var cue = false
     var isLineBreak = false
+    var range = NSRange(location: 0, length: 0)
 }
 
-/// 把带注音的片段拆成可换行的单元：
-/// - 有注音的汉字词整体作为一个单元；
-/// - 日文/中文逐字拆分（可在任意字间换行）；
-/// - 拉丁字母等按单词（含后面的空格）拆分；
-/// - 句读点、右括号等不能出现在行首，并入前一个单元；左括号并入后一个单元（避头尾）。
 private enum AtomBuilder {
     static let noLineStart: Set<Character> = ["、", "。", "，", "．", "」", "』", "）", ")", "！", "？", "!", "?", "：", "；", ":", ";", ",", ".", "…", "ー", "ゃ", "ゅ", "ょ", "っ", "ャ", "ュ", "ョ", "ッ", "ぁ", "ぃ", "ぅ", "ぇ", "ぉ", "〜", "”", "’"]
     static let noLineEnd: Set<Character> = ["「", "『", "（", "(", "“", "‘"]
 
     static func isCJK(_ c: Character) -> Bool {
         guard let s = c.unicodeScalars.first?.value else { return false }
-        // 日文假名、CJK 汉字、全角符号可在任意字间换行；韩文按空格分词，不算在内
         return (0x3000...0x30FF).contains(s) || (0x3400...0x9FFF).contains(s) || (0xF900...0xFAFF).contains(s)
             || (0xFF00...0xFFEF).contains(s)
     }
 
     static func atoms(from segments: [RubySegment]) -> [Atom] {
         var out: [Atom] = []
+        var offset = 0
         for seg in segments {
             if let ruby = seg.ruby {
-                out.append(Atom(text: seg.text, ruby: ruby, highlighted: seg.highlighted, cue: seg.cue))
+                let length = (seg.text as NSString).length
+                out.append(Atom(text: seg.text, ruby: ruby, highlighted: seg.highlighted, cue: seg.cue,
+                                range: NSRange(location: offset, length: length)))
+                offset += length
                 continue
             }
             var word = ""
+            var wordStart = offset
             func flushWord() {
                 if !word.isEmpty {
-                    out.append(Atom(text: word, ruby: nil, highlighted: seg.highlighted, cue: seg.cue))
+                    out.append(Atom(text: word, ruby: nil, highlighted: seg.highlighted, cue: seg.cue,
+                                    range: NSRange(location: wordStart, length: offset - wordStart)))
                     word = ""
                 }
+                wordStart = offset
             }
             for ch in seg.text {
+                let length = (String(ch) as NSString).length
                 if ch == "\n" {
                     flushWord()
-                    out.append(Atom(text: "", isLineBreak: true))
+                    out.append(Atom(text: "", isLineBreak: true, range: NSRange(location: offset, length: length)))
+                    offset += length
+                    wordStart = offset
                 } else if isCJK(ch) || noLineStart.contains(ch) || noLineEnd.contains(ch) {
                     flushWord()
-                    out.append(Atom(text: String(ch), ruby: nil, highlighted: seg.highlighted, cue: seg.cue))
+                    out.append(Atom(text: String(ch), ruby: nil, highlighted: seg.highlighted, cue: seg.cue,
+                                    range: NSRange(location: offset, length: length)))
+                    offset += length
+                    wordStart = offset
                 } else if ch == " " {
                     word.append(ch)
+                    offset += length
                     flushWord()
                 } else {
                     word.append(ch)
+                    offset += length
                 }
             }
             flushWord()
@@ -67,7 +75,6 @@ private enum AtomBuilder {
         return out
     }
 
-    /// 避头尾：把单元合并成不可拆分的组。
     static func groups(_ atoms: [Atom]) -> [[Atom]] {
         var groups: [[Atom]] = []
         var pendingOpen: [Atom] = []
@@ -94,11 +101,9 @@ private enum AtomBuilder {
     }
 }
 
-/// 带假名注音、可高亮的富文本。没有任何注音时退化为普通 Text（原生排版，支持所有语言换行）。
 struct RubyText: View {
     struct Style {
         var font: Font = .body
-        /// 假名字号（pt）
         var rubySize: CGFloat = 8
         var color: Color = .primary
         var highlightColor: Color = .accentColor
@@ -111,14 +116,15 @@ struct RubyText: View {
 
     private let plain: String
     private let segments: [RubySegment]
-    /// 排版分组在初始化时算好，重绘时不再重复计算
     private let groups: [[Atom]]
     private let hasRuby: Bool
     private var style: Style
+    private var isPickable = false
+    @State private var picked: NSRange?
+    @State private var lookup: PickedWord?
+    @State private var translating: PickedWord?
+    @State private var copied: String?
 
-    /// - Parameters:
-    ///   - japanese: 整段日语（例句），整体查注音表。
-    ///   - highlights: 需要高亮的 UTF-16 范围（例如语法本体）。
     init(japanese: String, highlights: [NSRange] = [], style: Style = Style()) {
         plain = japanese
         self.style = style
@@ -128,7 +134,6 @@ struct RubyText: View {
         groups = AtomBuilder.groups(AtomBuilder.atoms(from: segments))
     }
 
-    /// 已经拆好的片段（自带注音、高亮、线索），例如「相近语法」的对比例句。
     init(segments: [RubySegment], style: Style = Style()) {
         plain = segments.map(\.text).joined()
         self.style = style
@@ -137,8 +142,6 @@ struct RubyText: View {
         groups = AtomBuilder.groups(AtomBuilder.atoms(from: segments))
     }
 
-    /// 讲解文字（任意语言），其中「」『』里的日语会自动注音。
-    /// `cues`：「相近语法」对比例句里的线索词；讲解里出现时同样画虚线（规则见 `cueRanges`）。
     init(explanation: String, cues: [String] = [], style: Style = Style()) {
         plain = explanation
         self.style = style
@@ -163,45 +166,130 @@ struct RubyText: View {
         groups = AtomBuilder.groups(AtomBuilder.atoms(from: segs))
     }
 
+    func pickable(_ on: Bool = true) -> RubyText {
+        var copy = self
+        copy.isPickable = on
+        return copy
+    }
+
     var body: some View {
-        if hasRuby || segments.contains(where: { $0.highlighted || $0.cue }) {
+        if isPickable {
+            pickableFlow
+        } else if hasRuby || segments.contains(where: { $0.highlighted || $0.cue }) {
             flow
         } else {
             Text(plain)
                 .font(style.font)
                 .fontWeight(style.weight)
                 .foregroundStyle(style.color)
-                .lineSpacing(style.lineSpacing)
+                .lineSpacing(Self.lineGap(style))
                 .multilineTextAlignment(style.alignment)
                 .fixedSize(horizontal: false, vertical: true)
         }
     }
 
     private var flow: some View {
-        // 注音行本身已经占了一定高度，这里把行距收紧，避免段落显得松散
-        return FlowLayout(lineSpacing: max(2, style.lineSpacing - 4), centered: style.alignment == .center) {
+        return FlowLayout(lineSpacing: Self.lineGap(style), centered: style.alignment == .center) {
             ForEach(Array(groups.enumerated()), id: \.offset) { _, group in
                 if group.first?.isLineBreak == true {
                     Color.clear.frame(width: 0, height: 0).layoutValue(key: LineBreakKey.self, value: true)
                 } else {
                     HStack(alignment: .bottom, spacing: 0) {
                         ForEach(Array(group.enumerated()), id: \.offset) { _, atom in
-                            atomView(atom)
+                            if isPickable {
+                                pickableAtom(atom)
+                            } else {
+                                atomView(atom)
+                            }
                         }
                     }
                 }
             }
         }
+        .padding(.top, hasRuby ? Self.rubyLine(style) : 0)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(plain)
     }
 
-    /// 一个排版单元：正文 + 正上方居中的假名。
-    /// 每个单元顶部都预留一行假名的高度（无论有没有注音），假名画在这块预留区域里，
-    /// 永远不会和本行或上一行的汉字重叠；假名不改变正文宽度，过长时自动缩小。
+    private var pickableFlow: some View {
+        flow
+            .accessibilityValue(Text(verbatim: DemoMode.e2e ? copied ?? "" : ""))
+            .sensoryFeedback(.selection, trigger: picked) { _, new in new != nil }
+            .accessibilityAction(named: Text(localized: "拷贝整句")) { copy(plain) }
+            .sheet(item: $lookup) { word in
+                DictionaryLookup(term: word.text).ignoresSafeArea()
+            }
+            .modifier(SystemTranslation(word: $translating))
+    }
+
+    private var atomRanges: [NSRange] {
+        groups.flatMap { $0 }.filter { !$0.isLineBreak }.map(\.range)
+    }
+
+    private var pickedText: String {
+        guard let picked else { return "" }
+        return (plain as NSString).substring(with: picked)
+    }
+
+    private func pickableAtom(_ atom: Atom) -> some View {
+        let inPick = picked.map { NSIntersectionRange($0, atom.range).length > 0 } ?? false
+        let anchorsMenu = picked?.location == atom.range.location
+        return atomView(atom)
+            .background {
+                if inPick {
+                    RoundedRectangle(cornerRadius: 4, style: .continuous)
+                        .fill(Theme.accentFill)
+                        .padding(.horizontal, -1)
+                }
+            }
+            .contentShape(Rectangle())
+            .onLongPressGesture(minimumDuration: 0.4) {
+                picked = WordPick.range(in: plain, unbreakable: atomRanges, at: atom.range.location)
+            }
+            .popover(isPresented: Binding(get: { anchorsMenu }, set: { if !$0 { picked = nil } }),
+                     arrowEdge: .bottom) {
+                PickMenu(
+                    canTranslate: SystemTranslation.isAvailable,
+                    onCopy: { copy(pickedText) },
+                    onLookup: { present(.lookup) },
+                    onTranslate: { present(.translate) },
+                    onCopySentence: { copy(plain) }
+                )
+                .presentationCompactAdaptation(.popover)
+            }
+    }
+
+    private func copy(_ text: String) {
+        UIPasteboard.general.string = text
+        copied = text
+        picked = nil
+    }
+
+    private enum PickAction { case lookup, translate }
+
+    private func present(_ action: PickAction) {
+        let word = PickedWord(text: pickedText)
+        picked = nil
+        Task { @MainActor in
+            try? await Task.sleep(for: .milliseconds(350))
+            switch action {
+            case .lookup: lookup = word
+            case .translate: translating = word
+            }
+        }
+    }
+
+    static func rubyLine(_ style: Style) -> CGFloat {
+        ceil(UIFontMetrics(forTextStyle: .body).scaledValue(for: style.rubySize) * 1.3)
+    }
+
+    static func lineGap(_ style: Style) -> CGFloat {
+        max(style.lineSpacing, rubyLine(style))
+    }
+
     private func atomView(_ atom: Atom) -> some View {
         let rubySize = UIFontMetrics(forTextStyle: .body).scaledValue(for: style.rubySize)
-        let rubyLine = ceil(rubySize * 1.3)
+        let rubyLine = Self.rubyLine(style)
         return Text(atom.text)
             .font(style.font)
             .fontWeight(atom.highlighted ? .semibold : style.weight)
@@ -211,14 +299,12 @@ struct RubyText: View {
             .background(atom.highlighted ? style.highlightColor.opacity(0.14) : Color.clear)
             .overlay(alignment: .bottom) {
                 if atom.cue {
-                    // 线索：正文下方一条虚线
                     DashedLine()
                         .stroke(Color.secondary, style: StrokeStyle(lineWidth: 1.2, dash: [2, 2.5]))
                         .frame(height: 1.2)
                         .offset(y: 2)
                 }
             }
-            .padding(.top, rubyLine)
             .overlay(alignment: .top) {
                 if let ruby = atom.ruby {
                     Text(ruby)
@@ -229,13 +315,11 @@ struct RubyText: View {
                         .frame(maxWidth: .infinity)
                         .padding(.horizontal, -4)
                         .frame(height: rubyLine, alignment: .bottom)
+                        .offset(y: -rubyLine)
                 }
             }
     }
 
-    /// 把高亮范围（UTF-16）映射到片段上；必要时拆分无注音片段，使高亮边界精确。
-    /// 线索词在讲解里出现的位置（UTF-16）。含假名的词直接按字面找；全是汉字的词（如「去年」）
-    /// 前后紧挨着汉字时不算，免得把中文里的「今天」当成线索「今」。validate_contrasts.py 用同一条规则。
     static func cueRanges(in text: String, cues: [String]) -> [NSRange] {
         let ns = text as NSString
         func isHan(_ c: unichar) -> Bool { (0x4E00...0x9FFF).contains(c) || c == 0x3005 }
@@ -261,7 +345,6 @@ struct RubyText: View {
         applyMarks(segs, ranges: highlights, mark: \.highlighted)
     }
 
-    /// 把落在 ranges 里的字标上 mark（高亮或线索）；带注音的词不拆分，有重叠就整体标上
     static func applyMarks(_ segs: [RubySegment], ranges highlights: [NSRange], mark: WritableKeyPath<RubySegment, Bool>) -> [RubySegment] {
         guard !highlights.isEmpty else { return segs }
         var out: [RubySegment] = []
@@ -273,13 +356,11 @@ struct RubyText: View {
             let segRange = NSRange(location: offset, length: len)
             defer { offset += len }
             if ruby != nil {
-                // 注音词不拆分：有任何重叠就整体高亮
                 var marked = seg
                 if highlights.contains(where: { NSIntersectionRange($0, segRange).length > 0 }) { marked[keyPath: mark] = true }
                 out.append(marked)
                 continue
             }
-            // 按字符逐个判断是否在范围内，再合并相邻同状态字符（其它标记保持原样）
             func piece(_ t: String, _ hit: Bool) -> RubySegment {
                 var p = seg
                 p.text = t
@@ -308,12 +389,83 @@ struct RubyText: View {
     }
 }
 
-/// 水平虚线（线索标记用）。
 private struct DashedLine: Shape {
     func path(in rect: CGRect) -> Path {
         var p = Path()
         p.move(to: CGPoint(x: rect.minX, y: rect.midY))
         p.addLine(to: CGPoint(x: rect.maxX, y: rect.midY))
         return p
+    }
+}
+
+struct PickedWord: Identifiable, Equatable {
+    let id = UUID()
+    let text: String
+}
+
+private struct PickMenu: View {
+    let canTranslate: Bool
+    let onCopy: () -> Void
+    let onLookup: () -> Void
+    let onTranslate: () -> Void
+    let onCopySentence: () -> Void
+
+    var body: some View {
+        HStack(spacing: 0) {
+            item("拷贝", id: "pick.copy", action: onCopy)
+            Divider()
+            item("查询", id: "pick.lookup", action: onLookup)
+            if canTranslate {
+                Divider()
+                item("翻译", id: "pick.translate", action: onTranslate)
+            }
+            Divider()
+            item("拷贝整句", id: "pick.copySentence", action: onCopySentence)
+        }
+        .fixedSize()
+        .padding(.vertical, 2)
+        .accessibilityElement(children: .contain)
+        .accessibilityIdentifier("pick.menu")
+    }
+
+    private func item(_ title: LocalizedStringKey, id: String, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Text(localized: title)
+                .font(.subheadline)
+                .foregroundStyle(Color.primary)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 10)
+        }
+        .accessibilityIdentifier(id)
+    }
+}
+
+private struct DictionaryLookup: UIViewControllerRepresentable {
+    let term: String
+
+    func makeUIViewController(context: Context) -> UIReferenceLibraryViewController {
+        UIReferenceLibraryViewController(term: term)
+    }
+
+    func updateUIViewController(_ controller: UIReferenceLibraryViewController, context: Context) {}
+}
+
+private struct SystemTranslation: ViewModifier {
+    @Binding var word: PickedWord?
+
+    static var isAvailable: Bool {
+        if #available(iOS 17.4, *) { return true }
+        return false
+    }
+
+    func body(content: Content) -> some View {
+        if #available(iOS 17.4, *) {
+            content.translationPresentation(
+                isPresented: Binding(get: { word != nil }, set: { if !$0 { word = nil } }),
+                text: word?.text ?? ""
+            )
+        } else {
+            content
+        }
     }
 }
