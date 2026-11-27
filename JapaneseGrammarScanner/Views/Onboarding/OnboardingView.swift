@@ -267,7 +267,7 @@ struct ReviewIllustration: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 10) {
-                Text(ReviewRow.sentence(count: 3))
+                ReviewCountLabel(count: 3)
                 Spacer(minLength: 4)
                 Image(systemName: "chevron.right").font(.caption.weight(.semibold)).foregroundStyle(.tertiary)
             }

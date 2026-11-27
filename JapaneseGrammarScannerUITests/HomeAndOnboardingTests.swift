@@ -117,6 +117,8 @@ final class FreshInstallTests: E2ETestCase {
         wait(link, "还没扫描过时首页应有「试试示例」小链接")
         XCTAssertTrue(link.label.contains("试试示例"), "链接文字应包含「试试示例」：\(link.label)")
         XCTAssertLessThan(link.frame.height, id("home.photos").frame.height, "「试试示例」应是一行小链接，比按钮矮")
+        XCTAssertFalse(id("home.review").exists, "没有要复习的语法时不显示复习提醒")
+        XCTAssertFalse(id("home.review.caption").exists, "复习提醒不出现时，下面的说明小字也不出现")
         link.tap()
         waitForScanResult()
     }

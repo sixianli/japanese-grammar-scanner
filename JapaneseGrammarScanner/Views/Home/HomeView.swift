@@ -256,7 +256,15 @@ struct HomeView: View {
     private var reviewCard: some View {
         let items = dueItems
         if !items.isEmpty {
-            ReviewRow(ids: items.map(\.id))
+            VStack(alignment: .leading, spacing: 8) {
+                ReviewRow(ids: items.map(\.id))
+                Text(localized: "按遗忘曲线估算，看过的语法快忘时会提醒你")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.horizontal, 6)
+                    .accessibilityIdentifier("home.review.caption")
+            }
         }
     }
 
@@ -496,10 +504,8 @@ struct ReviewRow: View {
             HStack(spacing: 12) {
                 TimelineView(.animation(paused: playStart == nil)) { context in
                     let elapsed = playStart.map { context.date.timeIntervalSince($0) } ?? .infinity
-                    Text(Self.sentence(count: ReviewNudge.shownCount(target: ids.count, elapsed: elapsed)))
-                        .foregroundStyle(Color.primary)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.8)
+                    let count = ReviewNudge.shownCount(target: ids.count, elapsed: elapsed)
+                    ReviewCountLabel(count: count)
                 }
                 Spacer(minLength: 4)
                 Image(systemName: "chevron.right")
@@ -556,18 +562,43 @@ struct ReviewRow: View {
         if plan.motion { playStart = start }
     }
 
-    static func sentence(count: Int) -> AttributedString {
-        let text = String.localizedStringWithFormat(tr("%lld 个语法可以复习了"), count)
-        var out = AttributedString(text)
-        out.swiftUI.font = Font.body.weight(.medium)
-        if let first = text.firstIndex(where: \.isNumber) {
-            let last = text[first...].firstIndex(where: { !$0.isNumber }) ?? text.endIndex
-            if let range = out.range(of: String(text[first..<last])) {
-                out[range].swiftUI.font = Font.system(size: 28, weight: .bold).monospacedDigit()
-                out[range].swiftUI.foregroundColor = Theme.accentText
+    static func sentence(count: Int) -> String {
+        String.localizedStringWithFormat(tr("%lld 个语法可以复习了"), count)
+    }
+
+    static func parts(of sentence: String) -> (before: String, number: String, after: String) {
+        guard let first = sentence.firstIndex(where: \.isNumber) else { return (sentence, "", "") }
+        let last = sentence[first...].firstIndex(where: { !$0.isNumber }) ?? sentence.endIndex
+        return (String(sentence[..<first]).trimmingCharacters(in: .whitespaces),
+                String(sentence[first..<last]),
+                String(sentence[last...]).trimmingCharacters(in: .whitespaces))
+    }
+}
+
+struct ReviewCountLabel: View {
+    let count: Int
+
+    var body: some View {
+        let sentence = ReviewRow.sentence(count: count)
+        let parts = ReviewRow.parts(of: sentence)
+        HStack(alignment: .center, spacing: 6) {
+            if !parts.before.isEmpty { Text(verbatim: parts.before) }
+            Text(verbatim: parts.number)
+                .font(.system(size: 28, weight: .bold).monospacedDigit())
+                .foregroundStyle(Theme.accentText)
+                .accessibilityIdentifier("home.review.count")
+            if !parts.after.isEmpty {
+                Text(verbatim: parts.after)
+                    .accessibilityIdentifier("home.review.text")
             }
         }
-        return out
+        .font(.body.weight(.medium))
+        .foregroundStyle(Color.primary)
+        .lineLimit(1)
+        .minimumScaleFactor(0.8)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text(verbatim: sentence))
+        .accessibilityAddTraits(.isStaticText)
     }
 }
 
