@@ -267,8 +267,7 @@ struct ReviewIllustration: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 10) {
-                Image(systemName: "bell").foregroundStyle(Theme.accentText)
-                Text(localized: "\(3) 个语法可以复习了").font(.subheadline.weight(.medium))
+                Text(ReviewRow.sentence(count: 3))
                 Spacer(minLength: 4)
                 Image(systemName: "chevron.right").font(.caption.weight(.semibold)).foregroundStyle(.tertiary)
             }

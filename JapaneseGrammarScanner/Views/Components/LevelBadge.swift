@@ -11,10 +11,9 @@ enum TagMetrics {
 struct LevelBadge: View {
     let level: JLPTLevel
     var large = false
-    var prefixed = false
 
     var body: some View {
-        Text(verbatim: large || prefixed ? "JLPT \(level.rawValue)" : level.rawValue)
+        Text(verbatim: large ? "JLPT \(level.rawValue)" : level.rawValue)
             .font(large ? TagMetrics.largeFont : TagMetrics.font)
             .monospacedDigit()
             .foregroundStyle(level.badgeColor)
@@ -42,14 +41,13 @@ struct LevelText: View {
 struct MustKnowBadge: View {
     var large = false
     var showsInfo = false
-    var identifier = "tag.mustKnow"
     @State private var showInfo = false
 
     var body: some View {
         if showsInfo {
             Button { showInfo = true } label: { label }
                 .buttonStyle(.plain)
-                .accessibilityIdentifier(identifier)
+                .accessibilityIdentifier("tag.mustKnow")
                 .alert(tr("出题频率"), isPresented: $showInfo) {
                     Button(tr("好")) {}
                 } message: {
@@ -57,7 +55,7 @@ struct MustKnowBadge: View {
                 }
         } else {
             label
-                .accessibilityIdentifier(identifier)
+                .accessibilityIdentifier("tag.mustKnow")
         }
     }
 

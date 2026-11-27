@@ -79,8 +79,6 @@ struct HomeView: View {
         })
     }
 
-    // MARK: 搜索入口（点一下进入搜索标签并直接开始输入）
-
     private var searchEntry: some View {
         HStack(spacing: 10) {
             searchField
@@ -120,36 +118,22 @@ struct HomeView: View {
         .accessibilityIdentifier("home.search")
     }
 
-    // MARK: 扫描入口
-
     private var scanEntry: some View {
         VStack(spacing: 12) {
-            Button(action: openCamera) {
-                VStack(spacing: 3) {
-                    Label(tr("相机扫描"), systemImage: "camera.viewfinder")
-                        .font(.headline)
-                    Text(localized: "对准书页，标出句子里的语法")
-                        .font(.caption.weight(.medium))
-                        .opacity(0.9)
+            HStack(alignment: .top, spacing: 12) {
+                Button(action: openCamera) {
+                    EntryCard(icon: "camera.viewfinder", title: tr("相机扫描"), subtitle: tr("拍下书页，再选要看的行"), highlighted: true)
                 }
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 6)
-            }
-            .prominentGlassButton()
-            .controlSize(.large)
-            .buttonBorderShape(.capsule)
-            .accessibilityIdentifier("home.camera")
+                .buttonStyle(.plain)
+                .accessibilityIdentifier("home.camera")
 
-            PhotosPicker(selection: $photoItem, matching: .images) {
-                Label(tr("从相册识别"), systemImage: "photo.on.rectangle")
-                    .font(.subheadline.weight(.semibold))
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 6)
+                PhotosPicker(selection: $photoItem, matching: .images) {
+                    EntryCard(icon: "photo.on.rectangle", title: tr("从相册识别"), subtitle: tr("截图、照片都可以"), highlighted: false)
+                }
+                .buttonStyle(.plain)
+                .accessibilityIdentifier("home.photos")
             }
-            .secondaryGlassButton()
-            .buttonBorderShape(.capsule)
-            .controlSize(.large)
-            .accessibilityIdentifier("home.photos")
+            .fixedSize(horizontal: false, vertical: true)
 
             if HomeLayout.showsSampleLink(scanCount: history.scans.count) {
                 Button {
@@ -173,8 +157,6 @@ struct HomeView: View {
         }
         .padding(.top, 4)
     }
-
-    // MARK: 试用提醒（只在最后 2 天和结束后出现）
 
     private var trialReminder: some View {
         Button { showPaywall = true } label: {
@@ -204,8 +186,6 @@ struct HomeView: View {
         .buttonStyle(.plain)
     }
 
-    // MARK: 今日语法（新用户）
-
     private var todayGrammar: GrammarPoint? {
         let candidates = library.points.filter(\.scannable)
         guard !candidates.isEmpty else { return nil }
@@ -227,8 +207,6 @@ struct HomeView: View {
             CompactGrammarList(points: Array(starters))
         }
     }
-
-    // MARK: 继续上次
 
     private func continueSection(_ record: HistoryStore.ScanRecord) -> some View {
         let ids = library.displayableIDs(record.grammarIDs)
@@ -275,8 +253,6 @@ struct HomeView: View {
         }
     }
 
-    // MARK: 复习提醒（FSRS，没有到期的语法时整行隐藏）
-
     private var dueItems: [GrammarPoint] {
         history.dueForReview(limit: 50) { id in
             1 + 0.25 * Double(min(history.scanCount(of: id), 8)) + (favorites.isFavorite(id) ? 0.5 : 0)
@@ -292,8 +268,6 @@ struct HomeView: View {
         }
     }
 
-    // MARK: 最近查看
-
     @ViewBuilder
     private var recentViewedSection: some View {
         let points = history.recentGrammarIDs.compactMap { library.point(id: $0) }
@@ -308,7 +282,41 @@ struct HomeView: View {
     }
 }
 
-// MARK: - 首页组件
+private struct EntryCard: View {
+    let icon: String
+    let title: String
+    let subtitle: String
+    let highlighted: Bool
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Image(systemName: icon)
+                .font(.system(size: 20, weight: .medium))
+                .foregroundStyle(Theme.accentText)
+                .frame(width: 38, height: 38)
+                .background(Theme.accentFill, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+            VStack(alignment: .leading, spacing: 2) {
+                Text(verbatim: title)
+                    .font(.headline)
+                    .foregroundStyle(.primary)
+                Text(verbatim: subtitle)
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer(minLength: 0)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+        .padding(14)
+        .background(Theme.card, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .strokeBorder(highlighted ? Theme.accent.opacity(0.45) : Color.primary.opacity(0.08), lineWidth: 1)
+        }
+        .contentShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .accessibilityElement(children: .combine)
+    }
+}
 
 private struct HomeSection<Content: View>: View {
     let title: LocalizedStringKey
@@ -485,66 +493,105 @@ struct ReviewRow: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.scenePhase) private var scenePhase
     @State private var playStart: Date?
+    @State private var hapticAt: Date?
+    @State private var buzz = 0
     @State private var onScreen = false
-    @State private var foregroundReplay = ForegroundReplay()
+
+    private static let shape = RoundedRectangle(cornerRadius: 16, style: .continuous)
 
     var body: some View {
         NavigationLink(value: Route.review(ids[0], Array(ids.dropFirst()))) {
-            HStack(spacing: 10) {
-                bell
-                Text(localized: "\(ids.count) 个语法可以复习了")
-                    .font(.body.weight(.medium))
-                    .foregroundStyle(Color.primary)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.85)
+            HStack(spacing: 12) {
+                TimelineView(.animation(paused: playStart == nil)) { context in
+                    let elapsed = playStart.map { context.date.timeIntervalSince($0) } ?? .infinity
+                    Text(Self.sentence(count: ReviewNudge.shownCount(target: ids.count, elapsed: elapsed)))
+                        .foregroundStyle(Color.primary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
+                }
                 Spacer(minLength: 4)
                 Image(systemName: "chevron.right")
                     .font(.footnote.weight(.semibold))
                     .foregroundStyle(.tertiary)
             }
             .padding(.horizontal, 16)
-            .frame(maxWidth: .infinity, minHeight: 52)
+            .frame(maxWidth: .infinity, minHeight: 64)
             .background(Theme.card)
             .overlay {
                 if let playStart { SakuraDriftOverlay(start: playStart) }
             }
-            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-            .contentShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .clipShape(Self.shape)
+            .overlay {
+                if let playStart { ReviewGlow(start: playStart, shape: Self.shape) }
+            }
+            .contentShape(Self.shape)
         }
         .buttonStyle(RowPressStyle())
         .accessibilityIdentifier("home.review")
+        .sensoryFeedback(.impact(weight: .light), trigger: buzz)
         .onAppear {
             onScreen = true
-            play()
+            if ReviewNudgeSchedule.shared.takeTurn() { play() }
         }
         .onDisappear {
             onScreen = false
             playStart = nil
+            hapticAt = nil
         }
         .onChange(of: scenePhase) { _, phase in
-            if foregroundReplay.shouldReplay(on: phase), onScreen { play() }
+            ReviewNudgeSchedule.shared.sceneChanged(to: phase)
+            if phase == .active, onScreen, ReviewNudgeSchedule.shared.takeTurn() { play() }
+        }
+        .task(id: hapticAt) {
+            guard let hapticAt else { return }
+            try? await Task.sleep(for: .seconds(max(0, hapticAt.timeIntervalSinceNow)))
+            guard !Task.isCancelled else { return }
+            buzz += 1
         }
         .task(id: playStart) {
             guard let playStart else { return }
-            let remaining = playStart.timeIntervalSinceNow + SakuraDrift.duration + 0.1
+            let remaining = playStart.timeIntervalSinceNow + max(SakuraDrift.duration, ReviewNudge.glowDuration) + 0.1
             try? await Task.sleep(for: .seconds(max(0, remaining)))
+            guard !Task.isCancelled else { return }
             self.playStart = nil
         }
     }
 
     private func play() {
-        guard DecorativeMotion.enabled(reduceMotion: reduceMotion) else { return }
-        playStart = Date().addingTimeInterval(SakuraDrift.appearDelay)
+        let start = Date().addingTimeInterval(SakuraDrift.appearDelay)
+        let plan = ReviewNudge.plan(reduceMotion: reduceMotion)
+        if plan.haptic { hapticAt = start }
+        if plan.motion { playStart = start }
     }
 
-    private var bell: some View {
-        TimelineView(.animation(paused: playStart == nil)) { context in
-            let elapsed = playStart.map { context.date.timeIntervalSince($0) } ?? -1
-            Image(systemName: "bell")
-                .font(.body.weight(.medium))
-                .foregroundStyle(Theme.accentText)
-                .rotationEffect(.degrees(SakuraDrift.bellAngle(elapsed: elapsed)), anchor: .top)
+    static func sentence(count: Int) -> AttributedString {
+        let text = String.localizedStringWithFormat(tr("%lld 个语法可以复习了"), count)
+        var out = AttributedString(text)
+        out.swiftUI.font = Font.body.weight(.medium)
+        if let first = text.firstIndex(where: \.isNumber) {
+            let last = text[first...].firstIndex(where: { !$0.isNumber }) ?? text.endIndex
+            if let range = out.range(of: String(text[first..<last])) {
+                out[range].swiftUI.font = Font.system(size: 28, weight: .bold).monospacedDigit()
+                out[range].swiftUI.foregroundColor = Theme.accentText
+            }
         }
+        return out
+    }
+}
+
+private struct ReviewGlow: View {
+    let start: Date
+    let shape: RoundedRectangle
+
+    var body: some View {
+        TimelineView(.animation) { context in
+            let opacity = ReviewNudge.glowOpacity(elapsed: context.date.timeIntervalSince(start))
+            shape
+                .strokeBorder(Theme.accent, lineWidth: 2)
+                .shadow(color: Theme.accent.opacity(0.45), radius: 12)
+                .opacity(opacity)
+        }
+        .allowsHitTesting(false)
         .accessibilityHidden(true)
     }
 }

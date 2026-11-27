@@ -19,6 +19,7 @@ struct ScanResultView: View {
     @State private var lines: [RecognizedLine] = []
     @State private var selectedLines: Set<Int> = []
     @State private var chosenLines: Set<Int>?
+    @State private var lineDragging = false
 
     enum Phase {
         case loading
@@ -88,6 +89,7 @@ struct ScanResultView: View {
             }
             .padding()
         }
+        .scrollDisabled(lineDragging)
         .background(Theme.background)
         .overlay {
             GeometryReader { g in
@@ -101,6 +103,11 @@ struct ScanResultView: View {
         .overlay { zoomStage }
     }
 
+    private var canChooseLines: Bool {
+        guard case .done = phase else { return false }
+        return !textWasEdited && !lines.isEmpty
+    }
+
     private var isDone: Bool {
         if case .done = phase { return true }
         return false
@@ -111,8 +118,10 @@ struct ScanResultView: View {
             .resizable()
             .scaledToFit()
             .overlay {
-                if case .done = phase, !textWasEdited, let chosen = chosenLines {
-                    SelectedLinesShade(lines: lines, selected: chosen, imageSize: scanImage.image.size)
+                if canChooseLines {
+                    ResultLineLayer(lines: lines, chosen: chosenLines,
+                                    onDragging: { lineDragging = $0 },
+                                    onChoose: { confirm($0) })
                 }
             }
             .overlay {
@@ -143,8 +152,6 @@ struct ScanResultView: View {
                 .accessibilityLabel(Text(localized: "放大查看"))
                 .accessibilityIdentifier("result.zoomButton")
             }
-            .contentShape(Rectangle())
-            .onTapGesture { zoom.open() }
             .accessibilityElement(children: .contain)
             .accessibilityIdentifier("result.image")
             .frame(maxWidth: .infinity)
@@ -176,6 +183,7 @@ struct ScanResultView: View {
                 result: result,
                 library: library,
                 selectedClusterID: selectedClusterID,
+                lineChoice: canChooseLines ? ScanZoomStage.LineChoice(lines: lines, chosen: chosenLines, onChoose: { confirm($0) }) : nil,
                 onClosed: {}
             ) { cluster in
                 selectedClusterID = cluster.id
@@ -197,9 +205,9 @@ struct ScanResultView: View {
                         .font(.title3.bold())
                         .accessibilityIdentifier("result.headline")
                     Spacer(minLength: 8)
-                    if !textWasEdited && !lines.isEmpty {
-                        Button { reselect() } label: {
-                            Text(localized: "重新选行")
+                    if canChooseLines && chosenLines != nil {
+                        Button { confirm(nil) } label: {
+                            Text(localized: "分析整页")
                                 .font(.subheadline.weight(.medium))
                                 .foregroundStyle(Theme.accentText)
                                 .padding(.horizontal, 12)
@@ -207,10 +215,14 @@ struct ScanResultView: View {
                                 .background(Theme.accentFill, in: Capsule())
                         }
                         .buttonStyle(.plain)
-                        .accessibilityIdentifier("result.reselect")
+                        .accessibilityIdentifier("result.analyzeAll")
                     }
                 }
-                if !ids.isEmpty {
+                if canChooseLines {
+                    Text(localized: "点照片上别的行就改看那一行；按住再上下拖可以选几行。点高亮看讲解。")
+                        .font(.footnote).foregroundStyle(.secondary)
+                        .accessibilityIdentifier("result.hint")
+                } else if !ids.isEmpty {
                     Text(localized: "点击高亮或下方列表查看讲解；双指可直接放大图片。")
                         .font(.footnote).foregroundStyle(.secondary)
                 }
@@ -292,12 +304,6 @@ struct ScanResultView: View {
         let result = displayed(fullResult)
         phase = .done(result)
         record(library.displayableIDs(result.orderedGrammarIDs))
-    }
-
-    private func reselect() {
-        selectedLines = chosenLines ?? []
-        selectedClusterID = nil
-        phase = .selecting
     }
 
     private func record(_ ids: [String]) {

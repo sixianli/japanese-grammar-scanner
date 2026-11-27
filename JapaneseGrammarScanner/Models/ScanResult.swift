@@ -79,7 +79,11 @@ struct ScanResult {
 
     var orderedGrammarIDs: [String] {
         var seen = Set<String>()
-        return matches.sorted { $0.range.location < $1.range.location }
+        return matches.sorted {
+            if $0.range.location != $1.range.location { return $0.range.location < $1.range.location }
+            if $0.range.length != $1.range.length { return $0.range.length > $1.range.length }
+            return $0.grammarID < $1.grammarID
+        }
             .compactMap { seen.insert($0.grammarID).inserted ? $0.grammarID : nil }
     }
 }

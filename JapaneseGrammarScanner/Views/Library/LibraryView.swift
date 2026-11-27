@@ -37,7 +37,7 @@ struct LibraryView: View {
                 }
             }
             .themedList()
-            .modifier(PinnedHeaderGlass(scrolled: $scrolled))
+            .modifier(ScrollTracker(scrolled: $scrolled))
             .safeAreaInset(edge: .top, spacing: 0) {
                 levelPicker
                     .padding(.horizontal, Theme.margin)
@@ -53,6 +53,7 @@ struct LibraryView: View {
                             .opacity(LibraryHeader.glassOpacity(scrolled: scrolled))
                             .ignoresSafeArea(edges: .top)
                     }
+                    .offset(y: LibraryHeader.pullOffset(scrolled: scrolled))
             }
             .dismissesKeyboardOnTapAndScroll()
             .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: tr("搜索语法或意思"))
@@ -128,9 +129,13 @@ enum LibraryHeader {
     static func glassOpacity(scrolled: CGFloat) -> Double {
         Double(min(1, max(0, scrolled / glassFadeDistance)))
     }
+
+    static func pullOffset(scrolled: CGFloat) -> CGFloat {
+        max(0, -scrolled)
+    }
 }
 
-private struct PinnedHeaderGlass: ViewModifier {
+private struct ScrollTracker: ViewModifier {
     @Binding var scrolled: CGFloat
 
     func body(content: Content) -> some View {
@@ -138,7 +143,7 @@ private struct PinnedHeaderGlass: ViewModifier {
             content.onScrollGeometryChange(for: CGFloat.self) { g in
                 g.contentOffset.y + g.contentInsets.top
             } action: { _, y in
-                let clamped = min(max(y, 0), LibraryHeader.glassFadeDistance)
+                let clamped = min(y, LibraryHeader.glassFadeDistance)
                 if abs(clamped - scrolled) > 0.5 { scrolled = clamped }
             }
         } else {

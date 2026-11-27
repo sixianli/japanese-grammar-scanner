@@ -70,18 +70,17 @@ struct SakuraDrift {
         let phase: Double
     }
 
-    static let start: Double = 0.45
     static let appearDelay: Double = 0.6
-    static let travel: Double = 2.6
+    static let travel: Double = 2.6 / 1.2
     static let particles: [Particle] = [
-        .init(kind: .flower, size: 18, delay: start + 0.00, lane: 0.30, sway: 5, turns: 0.6, phase: 0.0),
-        .init(kind: .petal, size: 9, delay: start + 0.15, lane: 0.72, sway: 6, turns: 1.2, phase: 0.3),
-        .init(kind: .flower, size: 13, delay: start + 0.35, lane: 0.62, sway: 4, turns: -0.5, phase: 0.6),
-        .init(kind: .petal, size: 8, delay: start + 0.55, lane: 0.22, sway: 5, turns: -1.0, phase: 0.1),
-        .init(kind: .flower, size: 15, delay: start + 0.75, lane: 0.45, sway: 6, turns: 0.7, phase: 0.8),
-        .init(kind: .petal, size: 10, delay: start + 0.90, lane: 0.80, sway: 4, turns: 1.4, phase: 0.45),
-        .init(kind: .flower, size: 11, delay: start + 1.10, lane: 0.28, sway: 5, turns: -0.6, phase: 0.25),
-        .init(kind: .petal, size: 8, delay: start + 1.25, lane: 0.55, sway: 6, turns: -1.3, phase: 0.7),
+        .init(kind: .flower, size: 27, delay: 0.00, lane: 0.30, sway: 5, turns: 0.6, phase: 0.0),
+        .init(kind: .petal, size: 14, delay: 0.15, lane: 0.72, sway: 6, turns: 1.2, phase: 0.3),
+        .init(kind: .flower, size: 20, delay: 0.35, lane: 0.62, sway: 4, turns: -0.5, phase: 0.6),
+        .init(kind: .petal, size: 12, delay: 0.55, lane: 0.22, sway: 5, turns: -1.0, phase: 0.1),
+        .init(kind: .flower, size: 23, delay: 0.75, lane: 0.45, sway: 6, turns: 0.7, phase: 0.8),
+        .init(kind: .petal, size: 15, delay: 0.90, lane: 0.80, sway: 4, turns: 1.4, phase: 0.45),
+        .init(kind: .flower, size: 17, delay: 1.10, lane: 0.28, sway: 5, turns: -0.6, phase: 0.25),
+        .init(kind: .petal, size: 12, delay: 1.25, lane: 0.55, sway: 6, turns: -1.3, phase: 0.7),
     ]
     static var duration: Double { (particles.map(\.delay).max() ?? 0) + travel }
 
@@ -102,11 +101,6 @@ struct SakuraDrift {
         return State(x: x, y: y, angle: 360 * p.turns * t, opacity: opacity)
     }
 
-    static func bellAngle(elapsed: Double) -> Double {
-        let d = 0.7
-        guard elapsed >= 0, elapsed < d else { return 0 }
-        return 16 * sin(elapsed * 2 * .pi * 4) * (1 - elapsed / d)
-    }
 }
 
 struct SakuraDriftOverlay: View {
@@ -138,23 +132,6 @@ struct SakuraDriftOverlay: View {
             SakuraPetalShape().fill(Sakura.petal)
                 .overlay(SakuraPetalShape().stroke(Sakura.center.opacity(0.35), lineWidth: 0.5))
                 .frame(width: p.size * 0.7, height: p.size)
-        }
-    }
-}
-
-struct ForegroundReplay {
-    private var cameFromBackground = false
-
-    mutating func shouldReplay(on phase: ScenePhase) -> Bool {
-        switch phase {
-        case .background:
-            cameFromBackground = true
-            return false
-        case .active:
-            defer { cameFromBackground = false }
-            return cameFromBackground
-        default:
-            return false
         }
     }
 }

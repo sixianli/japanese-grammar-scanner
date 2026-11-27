@@ -1,7 +1,6 @@
 import SwiftUI
 import UIKit
 
-/// 外观设置：主题色 + 浅色 / 深色模式各自的护眼背景色。保存在本机，在「设置 → 外观」中修改。
 final class AppearanceStore: ObservableObject {
     static let shared = AppearanceStore()
 
@@ -17,7 +16,6 @@ final class AppearanceStore: ObservableObject {
             case .celadon: "青磁绿"
             }
         }
-        /// (浅色填充, 浅色文字, 深色填充, 深色文字)
         var hex: (UInt32, UInt32, UInt32, UInt32) {
             switch self {
             case .matcha: (0x7A9E5C, 0x587D3E, 0x9CBF7E, 0xAACB8E)
@@ -40,7 +38,6 @@ final class AppearanceStore: ObservableObject {
             case .gray: "浅灰"
             }
         }
-        /// (页面背景, 卡片, 填充)
         var hex: (UInt32, UInt32, UInt32) {
             switch self {
             case .paper: (0xF6F1E6, 0xFFFCF6, 0xECE5D6)
@@ -84,7 +81,6 @@ final class AppearanceStore: ObservableObject {
         dark = DarkBackground(rawValue: defaults.string(forKey: "appearance.dark") ?? "") ?? .charcoal
     }
 
-    /// 外观变化的标识：根视图用它整体刷新配色。
     var key: String { "\(accent.rawValue)-\(light.rawValue)-\(dark.rawValue)" }
 
     private func save() {
@@ -94,34 +90,23 @@ final class AppearanceStore: ObservableObject {
     }
 }
 
-/// 全 App 配色：一个主题色 + 护眼背景 + 系统文字色。颜色只用来表达含义（重点、可点击、选中），不做装饰。
 enum Theme {
     private static var store: AppearanceStore { AppearanceStore.shared }
 
-    /// 主题色（按钮、选中状态、底色）。
     static var accent: Color { dynamic(store.accent.hex.0, store.accent.hex.2) }
-    /// 用在文字上的主题色（加深一档，保证对比度）：例句里的目标语法、链接。
-    /// 照片 / 取景画面上语法框的颜色：固定的淡橙色，不随主题、不随深浅色模式变化
-    /// （照片里的纸面总是浅色，绿色等主题色在纸面上不显眼；取景、拍照后、相册图片三处统一）
     static let scanHighlightHex: UInt32 = 0xF08A24
     static var scanHighlight: Color { Color(uiColor: color(scanHighlightHex)) }
     static var accentText: Color { dynamic(store.accent.hex.1, store.accent.hex.3) }
-    /// 「相近语法」对比例句里，另一个语法的颜色：与主题色明显不同（绿色系主题配赭橙，暖色系主题配靛蓝）。
     static var contrastText: Color {
         switch store.accent {
         case .matcha, .celadon: dynamic(0xA8501F, 0xF0A57E)
         case .kaki, .sakura, .orange: dynamic(0x3D5F99, 0x9DB8E8)
         }
     }
-    /// 主题色浅底：目标语法底色、浅色填充。
     static var accentFill: Color { accent.opacity(0.18) }
-    /// 页面背景
     static var background: Color { dynamic(store.light.hex.0, store.dark.hex.0) }
-    /// 卡片、列表行
     static var card: Color { dynamic(store.light.hex.1, store.dark.hex.1) }
-    /// 输入框、接续框等浅填充
     static var fill: Color { dynamic(store.light.hex.2, store.dark.hex.2) }
-    /// 内容区左右边距（HIG 标准阅读边距）。
     static let margin: CGFloat = 20
 
     static func color(_ hex: UInt32) -> UIColor {
@@ -136,7 +121,6 @@ enum Theme {
 }
 
 extension JLPTLevel {
-    /// 等级标签的淡彩色：N5 绿、N4 蓝、N3 黄、N2 橙、N1 红（低饱和，一眼区分等级）。
     var badgeColor: Color {
         switch self {
         case .n5: Theme.dynamic(0x3F8F5E, 0x7FC79A)
@@ -149,7 +133,6 @@ extension JLPTLevel {
 }
 
 extension View {
-    /// iOS 26+ 使用 Liquid Glass；更早的系统退回系统材质，外观一致、功能相同。
     @ViewBuilder
     func glassBackground<S: Shape>(in shape: S, interactive: Bool = false) -> some View {
         if #available(iOS 26.0, *) {
@@ -159,33 +142,10 @@ extension View {
         }
     }
 
-    /// 主操作按钮：iOS 26+ 为带主色的 Liquid Glass 按钮，旧系统为主色填充按钮。
-    @ViewBuilder
-    func prominentGlassButton() -> some View {
-        if #available(iOS 26.0, *) {
-            self.buttonStyle(.glassProminent)
-        } else {
-            self.buttonStyle(.borderedProminent)
-        }
-    }
-
-    /// 次要按钮：iOS 26+ 为 Liquid Glass 按钮，旧系统为浅色描边按钮。
-    @ViewBuilder
-    func secondaryGlassButton() -> some View {
-        if #available(iOS 26.0, *) {
-            self.buttonStyle(.glass)
-        } else {
-            self.buttonStyle(.bordered)
-        }
-    }
-
-    /// 列表页统一使用护眼背景。
     func themedList() -> some View {
         self.scrollContentBackground(.hidden).background(Theme.background)
     }
 }
-
-// MARK: - 收起键盘
 
 extension UIApplication {
     static func dismissKeyboard() {
@@ -194,12 +154,10 @@ extension UIApplication {
 }
 
 extension View {
-    /// 列表 + 搜索框：拖动列表就收起键盘（点空白处收键盘由 KeyboardDismisser 在窗口上统一处理）
     func dismissesKeyboardOnTapAndScroll() -> some View {
         scrollDismissesKeyboard(.immediately)
     }
 
-    /// 多行输入：键盘上方加「完成」，下拉表单也能收起（点输入框内部仍是继续编辑）
     func keyboardDoneButton() -> some View {
         scrollDismissesKeyboard(.interactively)
             .toolbar {
@@ -212,9 +170,6 @@ extension View {
     }
 }
 
-/// 全局「点键盘以外的地方收起键盘」：在窗口上挂一个不拦截触摸的点击手势。
-/// 不能用 SwiftUI 的 onTapGesture / simultaneousGesture 挂在列表上——那样会吃掉列表行的点击（点搜索结果进不去讲解页）。
-/// 点在输入框（搜索框、反馈描述）里的不处理，正常编辑。
 final class KeyboardDismisser: NSObject, UIGestureRecognizerDelegate {
     static let shared = KeyboardDismisser()
     private var installed = Set<ObjectIdentifier>()

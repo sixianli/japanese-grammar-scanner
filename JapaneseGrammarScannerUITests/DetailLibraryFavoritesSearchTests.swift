@@ -96,12 +96,17 @@ final class DetailTests: E2ETestCase {
         let restFrame = barTitle.frame
         assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "展开", pinned: false)
         assertNoHorizontalOverflow(state: "展开")
-        XCTAssertFalse(id("detail.barLevel").exists, "没滚动时顶栏里不应有等级（等级在标题下面的标签里）")
+        let level = id("detail.level")
+        wait(level, "标题下方应有等级标签")
+        XCTAssertEqual(ids("detail.level").count, 1, "页面上只有一组标签")
+        XCTAssertGreaterThan(level.frame.minY, barTitle.frame.maxY - 3, "没滚动时标签在大标题下面")
+        let restLevel = level.frame
 
         app.swipeUp()
         app.swipeUp()
-        let level = id("detail.barLevel")
-        wait(level, "往上滑后标题收进顶栏，标题下方应出现标签行")
+        XCTAssertEqual(ids("detail.level").count, 1, "滑动后仍只有一组标签，不会另出一组叠在一起")
+        XCTAssertLessThan(level.frame.height, restLevel.height, "标签跟着标题一起缩小")
+        XCTAssertLessThanOrEqual(level.frame.maxY, id("detail.titleBar").frame.maxY, "缩小后的标签在顶栏里")
         XCTAssertEqual(barTitle.frame.midX, restFrame.midX, accuracy: 2, "标题只往上移，水平位置不变")
         assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "收起", pinned: true)
         assertNoHorizontalOverflow(state: "收起")
@@ -110,16 +115,18 @@ final class DetailTests: E2ETestCase {
         XCTAssertLessThan(barTitle.frame.height, restFrame.height, "收进顶栏的标题应比页面大标题小")
         XCTAssertTrue(level.label.hasPrefix("JLPT N"), "等级应写成「JLPT N…」")
         XCTAssertGreaterThan(level.frame.minY, barTitle.frame.minY, "等级应在标题下方")
-        let mustKnow = id("detail.barMustKnow")
+        let mustKnow = id("tag.mustKnow")
         XCTAssertTrue(mustKnow.exists, "ようになる 是必考语法，顶栏里的标签行也应有「必考」")
+        XCTAssertEqual(ids("tag.mustKnow").count, 1, "「必考」只有一个")
         XCTAssertEqual(mustKnow.frame.midY, level.frame.midY, accuracy: 2, "等级和必考在顶栏里排成一行")
         XCTAssertGreaterThan(mustKnow.frame.minX, level.frame.maxX, "必考跟在等级右边")
-        XCTAssertFalse(id("detail.barFavorited").exists, "没收藏的语法，顶栏里不应有「已收藏」")
+        XCTAssertFalse(id("detail.favorited").exists, "没收藏的语法，顶栏里不应有「已收藏」")
         let row = level.frame.union(mustKnow.frame)
         XCTAssertEqual(row.midX, barTitle.frame.midX, accuracy: 2, "标签行应在标题正下方居中")
 
         scrollToTop()
-        waitGone(level, "回到顶部后顶栏里的标签行应藏起来")
+        XCTAssertEqual(level.frame.height, restLevel.height, accuracy: 1, "回到顶部后标签恢复原来的大小")
+        XCTAssertEqual(level.frame.minY, restLevel.minY, accuracy: 2, "回到顶部后标签回到大标题下面")
         XCTAssertEqual(barTitle.frame.minY, restFrame.minY, accuracy: 2, "回到顶部后标题应回到原来的位置")
         XCTAssertEqual(barTitle.frame.height, restFrame.height, accuracy: 2, "回到顶部后标题恢复原来的大小")
     }
@@ -152,11 +159,21 @@ final class DetailTests: E2ETestCase {
 
     private func assertNoHorizontalOverflow(state: String, file: StaticString = #filePath, line: UInt = #line) {
         let window = app.windows.firstMatch.frame
-        for text in app.staticTexts.allElementsBoundByIndex where text.exists && text.frame.height > 0 && text.frame.minY < window.maxY && text.frame.maxY > window.minY {
-            let f = text.frame
-            XCTAssertGreaterThanOrEqual(f.minX, window.minX - 1, "\(state)：页面内容不能超出屏幕左边：「\(text.label)」\(f)", file: file, line: line)
-            XCTAssertLessThanOrEqual(f.maxX, window.maxX + 1, "\(state)：页面内容不能超出屏幕右边：「\(text.label)」\(f)", file: file, line: line)
+        guard let root = try? app.snapshot() else {
+            XCTFail("\(state)：取不到界面快照", file: file, line: line)
+            return
         }
+        var pending: [XCUIElementSnapshot] = [root]
+        var visibleTexts = 0
+        while let node = pending.popLast() {
+            pending.append(contentsOf: node.children)
+            let f = node.frame
+            guard node.elementType == .staticText, f.height > 0, f.minY < window.maxY, f.maxY > window.minY else { continue }
+            visibleTexts += 1
+            XCTAssertGreaterThanOrEqual(f.minX, window.minX - 1, "\(state)：页面内容不能超出屏幕左边：「\(node.label)」\(f)", file: file, line: line)
+            XCTAssertLessThanOrEqual(f.maxX, window.maxX + 1, "\(state)：页面内容不能超出屏幕右边：「\(node.label)」\(f)", file: file, line: line)
+        }
+        XCTAssertGreaterThan(visibleTexts, 0, "\(state)：屏幕上应能找到文字", file: file, line: line)
     }
 
     private func checkLongTitleInBothStates(query: String, title: String) {
@@ -172,12 +189,12 @@ final class DetailTests: E2ETestCase {
 
         app.swipeUp()
         app.swipeUp()
-        wait(id("detail.barLevel"), "往上滑后顶栏里应出现标签行")
         XCTAssertLessThan(barTitle.frame.height, oneLine, "收进顶栏后标题比展开时小：\(barTitle.frame)")
         XCTAssertLessThan(barTitle.frame.maxY, 200, "标题和标签行都在顶栏里，顶栏不变高：\(barTitle.frame)")
         XCTAssertLessThan(barTitle.frame.midY, expandedMidY, "标题应往上移进顶栏")
         assertTitleFitsOneLineBetweenButtons(title, barTitle, state: "收起", pinned: true)
-        XCTAssertGreaterThan(id("detail.barLevel").frame.minY, barTitle.frame.maxY - 3, "标签行在一行标题下面")
+        XCTAssertGreaterThan(id("detail.level").frame.minY, barTitle.frame.maxY - 3, "标签行在一行标题下面")
+        XCTAssertEqual(ids("detail.level").count, 1, "只有一组标签")
     }
 
     func testLongTitleMamaniStaysOneLineCenteredInBothStates() {
@@ -198,9 +215,10 @@ final class DetailTests: E2ETestCase {
         wait(id("detail.favorited"), "收藏后标题下方应出现「已收藏」")
         app.swipeUp()
         app.swipeUp()
-        let level = id("detail.barLevel")
-        let favorited = id("detail.barFavorited")
+        let level = id("detail.level")
+        let favorited = id("detail.favorited")
         wait(favorited, "收藏过的语法，往上滑后顶栏标签行里应有「已收藏」")
+        XCTAssertEqual(ids("detail.favorited").count, 1, "「已收藏」只有一个")
         XCTAssertEqual(favorited.frame.midY, level.frame.midY, accuracy: 2, "已收藏和等级排在同一行")
         XCTAssertGreaterThan(favorited.frame.minX, level.frame.maxX, "已收藏排在等级后面")
         scrollToTop()
@@ -288,6 +306,7 @@ final class LibraryTests: E2ETestCase {
         wait(filter, "语法库应有等级筛选")
         let search = app.searchFields.firstMatch
         wait(search, "语法库应有搜索框")
+        XCTAssertLessThanOrEqual(search.frame.maxY, filter.frame.minY + 1, "没滑动时搜索框和等级筛选不重叠：搜索框 \(search.frame)，筛选 \(filter.frame)")
         for _ in 0..<4 { app.swipeUp() }
         XCTAssertTrue(filter.isHittable, "往上滑后等级筛选应仍固定在顶部、可点")
         XCTAssertTrue(search.exists && app.windows.firstMatch.frame.contains(search.frame), "往上滑后搜索框也应固定在顶部")
@@ -440,6 +459,19 @@ final class SakuraAnimationTests: E2ETestCase {
         wait(id("review.bar"), "樱花飘过时点复习提醒也应进入复习")
     }
 
+    func testReviewReminderDoesNotReplayWhenComingBackToHome() {
+        scrollToTop()
+        let row = id("home.review")
+        wait(row, "有到期的语法时应显示复习提醒")
+        Thread.sleep(forTimeInterval: 2)
+        row.tap()
+        wait(id("review.bar"), "点复习提醒应进入复习")
+        back()
+        wait(row, "返回首页后仍有复习提醒")
+        XCTAssertFalse(app.staticTexts["0 个语法可以复习了"].exists, "从别的页面返回首页不应再把数字从 0 滚一遍")
+        XCTAssertTrue(text(containing: "个语法可以复习了").exists, "返回后直接显示数量")
+    }
+
     func testFavoritesTabReachableWhenPouchTurnsPink() {
         openDetailBySearch("にもかかわらず")
         id("detail.favorite").tap()
@@ -461,4 +493,31 @@ final class SakuraAnimationTests: E2ETestCase {
 
 private enum FlightTiming {
     static let pouchGlowStart: TimeInterval = 2.9
+}
+
+final class DetailScrollTests: E2ETestCase {
+    func testDetailScrollNeverJumpsBackWhileScrollingDown() {
+        openDetailBySearch("だけ")
+        let column = id("detail.titleColumn")
+        wait(column, "讲解页应有标题")
+        let feedback = id("detail.feedback")
+        let probe = id("detail.contentHeight")
+        wait(probe, "测试模式下讲解页应报告内容总高度")
+        Thread.sleep(forTimeInterval: 1)
+        var heights = [probe.value as? String ?? ""]
+        XCTAssertGreaterThan(Int(heights[0]) ?? 0, 0, "内容总高度应是正数：\(heights[0])")
+        var positions = [column.frame.minY]
+        for _ in 0..<40 where !(feedback.exists && feedback.isHittable) {
+            app.swipeUp(velocity: .slow)
+            positions.append(column.frame.minY)
+            heights.append(probe.value as? String ?? "")
+        }
+        let moves = zip(positions, positions.dropFirst()).map { $1 - $0 }
+        XCTAssertTrue(feedback.exists && feedback.isHittable, "一直往下滑应能滑到底：\(positions)")
+        XCTAssertEqual(Set(heights).count, 1, "往下滑时内容总高度不应变（变了滚动条就不准、页面会往回跳）：每次滑动后的高度 \(heights)")
+        XCTAssertTrue(moves.allSatisfy { $0 <= 1 }, "一直往下滑，页面不应往回跳：每次滑动后的标题位置 \(positions)")
+        let bottom = feedback.frame.minY
+        Thread.sleep(forTimeInterval: 1.5)
+        XCTAssertEqual(feedback.frame.minY, bottom, accuracy: 1, "滑到底停住后不应往回弹")
+    }
 }

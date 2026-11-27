@@ -9,7 +9,7 @@ from check_e2e_ran_all import ROOT, declared, selection_names
 SHARDS = [
     ["SettingsTests", "LineSelectFlowTests"],
     ["ScanResultTests", "HomeTests", "SakuraAnimationTests"],
-    ["DetailTests", "ReviewTests"],
+    ["DetailTests", "DetailScrollTests", "ReviewTests"],
     ["EndToEndTests", "FavoritesTests", "SearchTests", "LibraryTests", "FreshInstallTests"],
 ]
 

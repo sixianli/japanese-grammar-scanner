@@ -100,7 +100,6 @@ S = {
     "已收藏": ("In Favorites", "즐겨찾기에 있음", "En favoritos", "Đã yêu thích"),
     "已收进收藏": ("Added to Favorites", "즐겨찾기에 넣었어요", "Añadido a favoritos", "Đã thêm vào Yêu thích"),
     "点按可取消收藏": ("Tap to remove from Favorites", "탭하면 즐겨찾기에서 빠져요", "Toca para quitar de favoritos", "Chạm để bỏ yêu thích"),
-    "对准书页，标出句子里的语法": ("Point at a page to mark its grammar", "책을 비추면 문장 속 문법을 표시해요", "Apunta a una página y marca su gramática", "Hướng vào trang sách để đánh dấu ngữ pháp"),
     "没有日文材料？试试示例": ("No Japanese text handy? Try a sample", "일본어 자료가 없나요? 예시로 해 보기", "¿Sin texto en japonés? Prueba un ejemplo", "Chưa có tài liệu tiếng Nhật? Thử mẫu"),
     "意思": ("Meaning", "의미", "Significado", "Ý nghĩa"),
     "用法": ("Usage", "용법", "Uso", "Cách dùng"),
@@ -261,7 +260,6 @@ S = {
         "Tìm thấy %lld mẫu ngữ pháp",
     ),
     "试试示例": ("Try Sample", "예시 보기", "Probar ejemplo", "Thử mẫu"),
-    "试试示例书页": ("Try a Sample Page", "예시 페이지로 체험하기", "Probar una página de ejemplo", "Thử với trang mẫu"),
     "打开设置": ("Open Settings", "설정 열기", "Abrir Ajustes", "Mở Cài đặt"),
     "没有相机权限。\n请在「设置」中允许访问相机，或从相册选择图片。": (
         "No camera access.\nAllow camera access in Settings, or choose a photo instead.",
@@ -611,7 +609,6 @@ S = {
     '分析整页': ('Analyze Whole Page', '페이지 전체 분석', 'Analizar toda la página', 'Phân tích cả trang'),
     '分析这 %lld 行': ({'one': 'Analyze %lld Line', 'other': 'Analyze %lld Lines'}, '%lld줄 분석', {'one': 'Analizar %lld línea', 'other': 'Analizar %lld líneas'}, 'Phân tích %lld dòng'),
     '改为分析整页': ('Analyze Whole Page Instead', '대신 페이지 전체 분석', 'Analizar toda la página', 'Phân tích cả trang thay vào đó'),
-    '重新选行': ('Choose Lines', '줄 다시 선택', 'Elegir líneas', 'Chọn lại dòng'),
     '选中的行里没有收录的语法点': ('No grammar from the library in the selected lines', '선택한 줄에 수록된 문법이 없습니다', 'No hay gramática de la biblioteca en las líneas elegidas', 'Không có mẫu ngữ pháp nào trong các dòng đã chọn'),
     '这一行有 %lld 个语法点': ({'one': '%lld Grammar Point in This Line', 'other': '%lld Grammar Points in This Line'}, '이 줄의 문법 %lld개', {'one': '%lld punto gramatical en esta línea', 'other': '%lld puntos gramaticales en esta línea'}, 'Dòng này có %lld mẫu ngữ pháp'),
     '这 %lld 行有 %lld 个语法点': ('Grammar in These %1$lld Lines: %2$lld', '이 %1$lld줄의 문법 %2$lld개', 'Gramática en estas %1$lld líneas: %2$lld', '%1$lld dòng này có %2$lld mẫu ngữ pháp'),
@@ -619,6 +616,11 @@ S = {
     '拍照': ('Take Photo', '사진 찍기', 'Tomar foto', 'Chụp ảnh'),
     '拍下书页或选一张截图，再点一下要看的行。': ('Take a photo of the page or pick a screenshot, then tap the lines you want to read.', '책 페이지를 찍거나 스크린샷을 고른 뒤, 보고 싶은 줄을 누르세요.', 'Haz una foto de la página o elige una captura y toca las líneas que quieras leer.', 'Chụp trang sách hoặc chọn ảnh chụp màn hình, rồi nhấn vào dòng muốn xem.'),
     '把相机对准书页，按中间的快门拍下来，也可以从相册选择截图。拍好后点一行，或按住上下拖动选几行，只看你想看的句子；想看整页就点「分析整页」。': ('Point the camera at a page and tap the shutter in the middle, or pick a screenshot from Photos. Then tap a line, or hold and drag up or down to pick several, to see just the sentences you want. To see everything, tap “Analyze Whole Page”.', '카메라를 페이지에 맞추고 가운데 셔터를 누르거나, 사진에서 스크린샷을 고르세요. 찍은 뒤 한 줄을 누르거나 누른 채 위아래로 끌어 여러 줄을 고르면, 보고 싶은 문장만 볼 수 있어요. 전체를 보려면 “페이지 전체 분석”을 누르세요.', 'Apunta la cámara a una página y pulsa el obturador central, o elige una captura de Fotos. Después toca una línea, o mantén pulsado y arrastra arriba o abajo para elegir varias, y verás solo las frases que quieras. Para verlo todo, toca «Analizar toda la página».', 'Hướng camera vào trang sách rồi bấm nút chụp ở giữa, hoặc chọn ảnh chụp màn hình từ Ảnh. Sau đó nhấn một dòng, hoặc giữ và kéo lên xuống để chọn nhiều dòng, để chỉ xem những câu bạn muốn. Muốn xem cả trang thì nhấn “Phân tích cả trang”.'),
+    "点照片上别的行就改看那一行；按住再上下拖可以选几行。点高亮看讲解。": ("Tap another line in the photo to switch to it, or hold and drag up or down to pick several lines. Tap a highlight for its explanation.", "사진에서 다른 줄을 누르면 그 줄로 바뀌고, 누른 채 위아래로 끌면 여러 줄을 고를 수 있어요. 강조 표시를 누르면 설명을 봅니다.", "Toca otra línea de la foto para cambiar a ella, o mantén pulsado y arrastra arriba o abajo para elegir varias. Toca un resaltado para ver su explicación.", "Nhấn dòng khác trên ảnh để chuyển sang dòng đó, hoặc giữ và kéo lên xuống để chọn nhiều dòng. Nhấn vào phần tô sáng để xem giải thích."),
+    "点一行改看这一行，按住拖动可选几行；点高亮看讲解": ("Tap a line to switch to it, or hold and drag to pick several; tap a highlight for its explanation", "줄을 누르면 그 줄로 바뀌고, 누른 채 끌면 여러 줄을 고릅니다. 강조 표시를 누르면 설명을 봅니다", "Toca una línea para cambiar a ella o mantén pulsado y arrastra para elegir varias; toca un resaltado para ver su explicación", "Nhấn một dòng để chuyển sang dòng đó, hoặc giữ và kéo để chọn nhiều dòng; nhấn phần tô sáng để xem giải thích"),
+    "下一个": ("Next", "다음", "Siguiente", "Tiếp theo"),
+    "拍下书页，再选要看的行": ("Snap a page, then pick lines", "책을 찍고 볼 줄을 고르세요", "Fotografía la página y elige líneas", "Chụp trang rồi chọn dòng muốn xem"),
+    "截图、照片都可以": ("Screenshots or photos", "스크린샷도 사진도 괜찮아요", "Capturas o fotos", "Ảnh chụp màn hình hay ảnh đều được"),
 }
 
 MY = {
@@ -712,7 +714,6 @@ MY = {
     "已收藏": "အကြိုက်ဆုံးထဲ ရှိပြီး",
     "已收进收藏": "အကြိုက်ဆုံးထဲ ထည့်လိုက်ပါပြီ",
     "点按可取消收藏": "တို့ပြီး အကြိုက်ဆုံးမှ ဖယ်နိုင်သည်",
-    "对准书页，标出句子里的语法": "စာမျက်နှာကို ချိန်ပြီး သဒ္ဒါကို အမှတ်အသားပြုပါ",
     "没有日文材料？试试示例": "ဂျပန်စာ မရှိသေးဘူးလား။ နမူနာ စမ်းကြည့်ပါ",
     "意思": "အဓိပ္ပာယ်",
     "用法": "အသုံးပြုပုံ",
@@ -828,7 +829,6 @@ MY = {
     "在语法讲解页或列表中点击 ☆ 即可收藏。": "သဒ္ဒါ စာမျက်နှာ သို့မဟုတ် စာရင်းတွင် ☆ ကို နှိပ်၍ ဤနေရာတွင် သိမ်းနိုင်ပါသည်။",
     "识别到 %lld 个语法点": "သဒ္ဒါ %lld ခု တွေ့ရှိသည်",
     "试试示例": "နမူနာ စမ်းရန်",
-    "试试示例书页": "နမူနာ စာမျက်နှာ စမ်းကြည့်ရန်",
     "打开设置": "ဆက်တင်များ ဖွင့်ရန်",
     "没有相机权限。\n请在「设置」中允许访问相机，或从相册选择图片。": "ကင်မရာ သုံးခွင့် မရှိပါ။\nဆက်တင်များတွင် ကင်မရာ သုံးခွင့်ပေးပါ သို့မဟုတ် ဓာတ်ပုံတစ်ပုံ ရွေးပါ။",
     "此设备无法使用相机。\n可以从相册选择图片进行识别。": "ဤစက်တွင် ကင်မရာ သုံး၍ မရပါ။\nဓာတ်ပုံတစ်ပုံကို ရွေး၍ ဖတ်ယူနိုင်ပါသည်။",
@@ -986,7 +986,6 @@ MY = {
     '分析整页': 'စာမျက်နှာတစ်ခုလုံး ခွဲခြမ်းရန်',
     '分析这 %lld 行': 'စာကြောင်း %lld ကြောင်း ခွဲခြမ်းရန်',
     '改为分析整页': 'စာမျက်နှာတစ်ခုလုံးကို ခွဲခြမ်းရန် ပြောင်းပါ',
-    '重新选行': 'စာကြောင်း ပြန်ရွေးရန်',
     '选中的行里没有收录的语法点': 'ရွေးထားသော စာကြောင်းများတွင် ပါဝင်သော သဒ္ဒါ မရှိပါ',
     '这一行有 %lld 个语法点': 'ဤစာကြောင်းတွင် သဒ္ဒါ %lld ခု',
     '这 %lld 行有 %lld 个语法点': 'ဤစာကြောင်း %lld ကြောင်းတွင် သဒ္ဒါ %lld ခု',
@@ -994,6 +993,11 @@ MY = {
     '拍照': 'ဓာတ်ပုံရိုက်ရန်',
     '拍下书页或选一张截图，再点一下要看的行。': 'စာမျက်နှာကို ဓာတ်ပုံရိုက်ပါ သို့မဟုတ် ဖန်သားပြင်ပုံ ရွေးပြီး ကြည့်လိုသော စာကြောင်းကို နှိပ်ပါ။',
     '把相机对准书页，按中间的快门拍下来，也可以从相册选择截图。拍好后点一行，或按住上下拖动选几行，只看你想看的句子；想看整页就点「分析整页」。': 'ကင်မရာကို စာမျက်နှာသို့ ချိန်ပြီး အလယ်ရှိ ရှပ်တာကို နှိပ်ပါ၊ သို့မဟုတ် ဓာတ်ပုံများမှ ဖန်သားပြင်ပုံကို ရွေးပါ။ ပြီးလျှင် စာကြောင်းတစ်ကြောင်းကို နှိပ်ပါ၊ သို့မဟုတ် ဖိထားပြီး အပေါ်အောက် ဆွဲ၍ စာကြောင်းများစွာ ရွေးကာ ကြည့်လိုသော စာကြောင်းများကိုသာ ကြည့်ပါ။ စာမျက်နှာတစ်ခုလုံး ကြည့်လိုလျှင် “စာမျက်နှာတစ်ခုလုံး ခွဲခြမ်းရန်” ကို နှိပ်ပါ။',
+    "点照片上别的行就改看那一行；按住再上下拖可以选几行。点高亮看讲解。": "ဓာတ်ပုံထဲရှိ အခြားစာကြောင်းကို နှိပ်လျှင် ထိုစာကြောင်းသို့ ပြောင်းပါမည်။ ဖိထားပြီး အပေါ်အောက် ဆွဲလျှင် စာကြောင်းများစွာ ရွေးနိုင်ပါသည်။ အရောင်ခြယ်ထားသည့်နေရာကို နှိပ်လျှင် ရှင်းလင်းချက် ကြည့်နိုင်ပါသည်။",
+    "点一行改看这一行，按住拖动可选几行；点高亮看讲解": "စာကြောင်းကို နှိပ်လျှင် ထိုစာကြောင်းသို့ ပြောင်းမည်၊ ဖိပြီးဆွဲလျှင် စာကြောင်းများစွာ ရွေးမည်။ အရောင်ခြယ်ထားသည့်နေရာကို နှိပ်လျှင် ရှင်းလင်းချက် ကြည့်ပါ",
+    "下一个": "နောက်တစ်ခု",
+    "拍下书页，再选要看的行": "စာမျက်နှာကို ရိုက်ပြီး ကြည့်ချင်တဲ့ စာကြောင်းကို ရွေးပါ",
+    "截图、照片都可以": "ဖန်သားပြင်ပုံ၊ ဓာတ်ပုံ ဘာမဆိုရပါတယ်",
 }
 
 INFO = {
